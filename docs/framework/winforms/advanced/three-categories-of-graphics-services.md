@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651518"
 ---
 # <a name="three-categories-of-graphics-services"></a>Drei Kategorien von Grafikdiensten
 Die Grafik-Angebote im Windows Forms fallen in die folgenden drei Kategorien:  
   
--   Vektorgrafiken für zweidimensionale (2D)  
+- Vektorgrafiken für zweidimensionale (2D)  
   
--   Abbilderstellung  
+- Abbilderstellung  
   
--   Typografie  
+- Typografie  
   
 ## <a name="2-d-vector-graphics"></a>2-D-Vektorgrafiken  
  Zweidimensionale Vektorgrafik sind primitive Typen. wie Linien, Kurven und Abbildungen; durch Gruppen von Datenpunkten in einem Koordinatensystem angegeben werden. Z. B. eine gerade Linie von den beiden Endpunkten angegeben ist, und ein Rechteck wird durch einen Punkt, sodass den Speicherort der oberen linken Ecke und ein Paar von Zahlen, sodass die Breite und Höhe angegeben. Durch ein Array von Punkten, die durch gerade Linien miteinander verbunden sind, wird ein einfacher Pfad angegeben. Eine Béziersplinekurve ist eine anspruchsvolle Kurve, die durch vier Kontrollpunkten angegeben.  

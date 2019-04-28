@@ -3,11 +3,11 @@ title: Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663712"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
 Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, verfügbar gemacht zu werden, sowie nützliche Tipps zur Verwendung von WebHost.  
@@ -22,11 +22,11 @@ Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, ver
   
  Mithilfe der folgenden Tipps können Sie verhindern, dass der Inhalt einer Ablaufverfolgungsdatei unbeabsichtigt verfügbar gemacht wird:  
   
--   Stellen Sie sicher, dass die Protokolldateien durch Access Control Lists (ACL) sowohl bei WebHost als auch bei selbst gehosteten Szenarien geschützt werden.  
+- Stellen Sie sicher, dass die Protokolldateien durch Access Control Lists (ACL) sowohl bei WebHost als auch bei selbst gehosteten Szenarien geschützt werden.  
   
--   Wählen Sie eine Dateierweiterung aus, die nicht leicht mit einer Webanforderung ausgegeben werden kann. Die Dateierweiterung .xml ist z. B. nicht sicher. Sie finden im IIS-Administratorhandbuch eine Liste aller Erweiterungen, die bereitgestellt werden können.  
+- Wählen Sie eine Dateierweiterung aus, die nicht leicht mit einer Webanforderung ausgegeben werden kann. Die Dateierweiterung .xml ist z. B. nicht sicher. Sie finden im IIS-Administratorhandbuch eine Liste aller Erweiterungen, die bereitgestellt werden können.  
   
--   Geben Sie einen absoluten Pfad für den Protokolldateispeicherort an, der sich außerhalb des öffentlichen vroot-Verzeichnisses von WebHost befinden sollte, um einen Zugriff von externer Seite mithilfe eines Webbrowsers zu verhindern.  
+- Geben Sie einen absoluten Pfad für den Protokolldateispeicherort an, der sich außerhalb des öffentlichen vroot-Verzeichnisses von WebHost befinden sollte, um einen Zugriff von externer Seite mithilfe eines Webbrowsers zu verhindern.  
   
  Standardmäßig werden Schlüssel und personenbezogene Informationen (PII, personally identifiable information), wie z. B. Benutzername und Passwort, nicht in Ablaufverfolgungen und protokollierten Nachrichten protokolliert. Ein Computeradministrator kann jedoch das `enableLoggingKnownPII`-Attribut im `machineSettings`-Element der Datei Machine.config verwenden, um Anwendungen, die auf dem Computer ausgeführt werden, zu ermöglichen, bekannte personenbezogene Informationen (PII) wie folgt zu protokollieren:  
   

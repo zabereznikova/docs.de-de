@@ -7,11 +7,11 @@ helpviewer_keywords:
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
 ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699726"
 ---
 # <a name="application-settings-attributes"></a>Attribute für Anwendungseinstellungen
 Architektur der Anwendungseinstellungen enthält viele Attribute, die entweder auf die Anwendungen Einstellungen-Wrapperklasse oder ihre individuellen Eigenschaften angewendet werden können. Diese Attribute werden zur Laufzeit durch die Einstellungen Anwendungsstruktur, häufig speziell der Einstellungsanbieter, untersucht, um anzupassen, die funktioniert auf die angegebenen Anforderungen von den benutzerdefinierten Wrapper.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607538"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters werden Verbindungen mit einer Datenbank hergestellt, Befehle ausgeführt und Ergebnisse abgerufen. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter sind einfach. Sie erstellen eine Ebene von minimaler Größe zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne auf Funktionalität verzichten zu müssen.  

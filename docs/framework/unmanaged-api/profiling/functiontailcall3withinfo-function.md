@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4352d006c95a5b85341625220e6c7e62a86b482a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598765"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo-Funktion
 Benachrichtigt den Profiler, der aktuell ausgeführte Funktion einen Endeaufruf an eine andere Funktion auszuführen, und stellt ein Handle übergeben werden kann, die die [ICorProfilerInfo3:: Getfunctiontailcall3info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) zum Abrufen der Stapelrahmen.  
@@ -48,9 +48,9 @@ void __stdcall FunctionTailcall3WithInfo(
   
  Die ausführungs-Engine werden keine Register gespeichert, vor dem Aufrufen dieser Funktion.  
   
--   Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
+- Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
   
--   Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
+- Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
   
  Die Implementierung der `FunctionTailcall3WithInfo` sollten nicht blockiert werden, da die Garbagecollection verzögert wird. Die Implementierung sollten eine Garbagecollection nicht versuchen, da der Stapel möglicherweise nicht in eine Garbage Collection geeigneten Zustand. Wenn eine Garbagecollection versucht wird, wird die Laufzeit blockiert, bis `FunctionTailcall3WithInfo` zurückgibt.  
   

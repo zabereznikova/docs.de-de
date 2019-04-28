@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664258"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Abrufen von Daten, die mit "DataReader"
 Zum Abrufen von Daten mithilfe einer **DataReader**, erstellen Sie eine Instanz von der **Befehl** Objekt aus, und erstellen Sie eine **DataReader** durch Aufrufen von **Command.ExecuteReader**  um Zeilen aus einer Datenquelle abzurufen. Die **DataReader** enthält einen nicht gepufferten Datenstream, mit der prozeduralen Logik, die Ergebnisse aus einer Datenquelle effizient sequenziell zu verarbeiten zu können. Die **DataReader** ist eine gute Wahl, wenn Sie große Mengen von Daten abgerufen werden, da die Daten nicht im Arbeitsspeicher zwischengespeichert werden.

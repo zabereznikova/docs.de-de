@@ -6,24 +6,24 @@ dev_langs:
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
 ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614959"
 ---
 # <a name="query-execution"></a>Abfrageausführung
 Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Befehlsstruktur konvertiert. Eine Befehlsstruktur ist eine Darstellung einer Abfrage, die mit dem Entity Framework kompatibel ist. Die Befehlsstruktur wird dann für die Datenquelle ausgeführt. Während der Ausführung der Abfrage werden alle Abfrageausdrücke (d. h. alle Komponenten der Abfrage) ausgewertet, einschließlich der Ausdrücke, die für die Materialisierung der Ergebnisse verwendet werden.  
   
- An welchem Punkt Abfrageausdrücke ausgeführt werden ist unterschiedlich. LINQ-Abfragen werden nicht bei der Erstellung der Abfragevariablen, sondern beim Durchlaufen der Abfragevariablen ausgeführt. Hierbei spricht *verzögerte Ausführung*. Eine sofortige Ausführung der Abfrage kann auch erzwungen werden. Dies ist für die Zwischenspeicherung von Abfrageergebnissen sinnvoll. Dies wird weiter unten in diesem Thema beschrieben.  
+ An welchem Punkt Abfrageausdrücke ausgeführt werden ist unterschiedlich. LINQ-Abfragen werden nicht bei der Erstellung der Abfragevariablen, sondern beim Durchlaufen der Abfragevariablen ausgeführt. Dies wird als bezeichnet *verzögerte Ausführung*. Eine sofortige Ausführung der Abfrage kann auch erzwungen werden. Dies ist für die Zwischenspeicherung von Abfrageergebnissen sinnvoll. Dies wird weiter unten in diesem Thema beschrieben.  
   
  Beim Ausführen einer LINQ to Entities-Abfrage werden möglicherweise einige Ausdrücke auf dem Server und andere lokal auf dem Client ausgeführt. Ein Ausdruck wird auf dem Client ausgewertet, bevor die Abfrage auf dem Server ausgeführt wird. Wenn ein Ausdruck auf dem Client ausgewertet wird, wird dieser Ausdruck in der Abfrage durch das Ergebnis der Auswertung ersetzt. Anschließend wird die Abfrage auf dem Server ausgeführt. Da Abfragen für die Datenquelle ausgeführt werden, wird das auf dem Client festgelegte Verhalten von der Konfiguration der Datenquelle überschrieben. Zum Beispiel hängen die Behandlung von NULL-Werten und die numerische Genauigkeit von den Servereinstellungen ab. Alle Ausnahmen, die bei der Abfrageausführung auf dem Server ausgelöst wurden, werden direkt an den Client weitergegeben.  
  
 > [!TIP]
-> Eine praktische Übersicht Abfrageoperatoren im Tabellenformat, in dem Sie das Ausführungsverhalten für einen Operator schnell erkennen können, finden Sie unter [Klassifizierung von Standardabfrageoperatoren durch die Art und Weise der Ausführung (c#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Eine Zusammenfassung der Abfrageoperatoren in Tabellenformat, in dem Sie das Ausführungsverhalten des Operators schnell identifizieren können, finden Sie unter [Klassifizierung von Standardabfrageoperatoren durch die Art und Weise der Ausführung (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Verzögerte Abfrageausführung  
- In einer Abfrage, die eine Sequenz von Werten zurückgibt, enthält die Abfragevariable selbst niemals die Abfrageergebnisse, sondern immer nur die Abfragebefehle. Die Ausführung der Abfrage wird verzögert, bis die Abfragevariable in einer `foreach`- oder `For Each`-Schleife durchlaufen wird. Dies bezeichnet man *verzögerte Ausführung*; d. h. Abfrage wird ausgeführt und einige Zeit, nachdem die Abfrage erstellt wird. Auf diese Weise können Sie die Abfrage so häufig ausführen, wie Sie dies wünschen. Dies bietet sich z. B. dann an, wenn Sie eine Datenbank haben, die von anderen Anwendungen aktualisiert wird. Sie können in Ihrer Anwendung eine Abfrage erstellen, mit der die neuesten Informationen abgerufen werden, und diese Abfrage wiederholt ausführen, wobei jedes Mal die aktualisierten Informationen zurückgegeben werden.  
+ In einer Abfrage, die eine Sequenz von Werten zurückgibt, enthält die Abfragevariable selbst niemals die Abfrageergebnisse, sondern immer nur die Abfragebefehle. Die Ausführung der Abfrage wird verzögert, bis die Abfragevariable in einer `foreach`- oder `For Each`-Schleife durchlaufen wird. Dies bezeichnet man als *verzögerte Ausführung*; d. h. Abfrage wird zu einem späteren Zeitpunkt die Abfrage erstellt wird. Auf diese Weise können Sie die Abfrage so häufig ausführen, wie Sie dies wünschen. Dies bietet sich z. B. dann an, wenn Sie eine Datenbank haben, die von anderen Anwendungen aktualisiert wird. Sie können in Ihrer Anwendung eine Abfrage erstellen, mit der die neuesten Informationen abgerufen werden, und diese Abfrage wiederholt ausführen, wobei jedes Mal die aktualisierten Informationen zurückgegeben werden.  
   
  Die verzögerte Ausführung ermöglicht die Kombination mehrerer Abfragen oder die Erweiterung einer bestehenden Abfrage. durch das Hinzufügen neuer Operationen. Die Änderungen werden dann bei der Ausführung der Abfrage berücksichtigt. Im folgenden Beispiel gibt die erste Abfrage alle Produkte zurück. Die zweite Abfrage erweitert die erste, indem sie `Where` verwendet, um alle Produkte der Größe "L" zurückzugeben:  
   
@@ -87,13 +87,13 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
   
  Folgende Beispiele zeigen einige Unterschiede im Verhalten zwischen der CLR und SQL Server:  
   
--   SQL Server sortiert GUIDs anders als die CLR.  
+- SQL Server sortiert GUIDs anders als die CLR.  
   
--   Es können auch Unterschiede in der Ergebnisgenauigkeit beim Arbeiten mit dem Decimal-Typ auf SQL Server auftreten. Der Grund dafür sind die Anforderungen fester Präzision des Dezimaltyps von SQL Server. Beispielsweise ist der Durchschnitt der <xref:System.Decimal>-Werte 0,0 und 0,0 und 1,0 im Arbeitsspeicher des Clients 0,3333333333333333333333333333 und im Speicher 0,333333 (für die Standardpräzision des Dezimaltyps von SQL Server).  
+- Es können auch Unterschiede in der Ergebnisgenauigkeit beim Arbeiten mit dem Decimal-Typ auf SQL Server auftreten. Der Grund dafür sind die Anforderungen fester Präzision des Dezimaltyps von SQL Server. Beispielsweise ist der Durchschnitt der <xref:System.Decimal>-Werte 0,0 und 0,0 und 1,0 im Arbeitsspeicher des Clients 0,3333333333333333333333333333 und im Speicher 0,333333 (für die Standardpräzision des Dezimaltyps von SQL Server).  
   
--   Einige Zeichenfolgenvergleichsvorgänge werden in SQL Server ebenfalls anders behandelt als in der CLR. Das Verhalten bei Zeichenfolgenvergleichen hängt von den Sortiereinstellungen auf dem Server ab.  
+- Einige Zeichenfolgenvergleichsvorgänge werden in SQL Server ebenfalls anders behandelt als in der CLR. Das Verhalten bei Zeichenfolgenvergleichen hängt von den Sortiereinstellungen auf dem Server ab.  
   
--   Funktions- oder Methodenaufrufe, die in einer LINQ to Entities-Abfrage enthalten sind, werden kanonischen Funktionen im Entity Framework zugeordnet, die wiederum in Transact-SQL übersetzt und in der SQL Server-Datenbank ausgeführt werden. Es gibt Fälle, in denen sich das Verhalten dieser zugeordneten Funktionen von dem der Implementierung in den Basisklassenbibliotheken unterscheidet. Ein Aufruf der <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>-Methode und der <xref:System.String.EndsWith%2A>-Methode mit einer leeren Zeichenfolge als Parameter gibt bei der Ausführung in der CLR `true` zurück und bei der Ausführung in SQL Server `false`. Die <xref:System.String.EndsWith%2A>-Methode kann ebenfalls unterschiedliche Ergebnisse zurückgeben, da zwei Zeichenfolgen, die sich nur in nachfolgenden Leerzeichen unterscheiden, in SQL Server als gleich aufgefasst werden, in der CLR jedoch nicht. Dies wird im folgenden Beispiel illustriert:  
+- Funktions- oder Methodenaufrufe, die in einer LINQ to Entities-Abfrage enthalten sind, werden kanonischen Funktionen im Entity Framework zugeordnet, die wiederum in Transact-SQL übersetzt und in der SQL Server-Datenbank ausgeführt werden. Es gibt Fälle, in denen sich das Verhalten dieser zugeordneten Funktionen von dem der Implementierung in den Basisklassenbibliotheken unterscheidet. Ein Aufruf der <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>-Methode und der <xref:System.String.EndsWith%2A>-Methode mit einer leeren Zeichenfolge als Parameter gibt bei der Ausführung in der CLR `true` zurück und bei der Ausführung in SQL Server `false`. Die <xref:System.String.EndsWith%2A>-Methode kann ebenfalls unterschiedliche Ergebnisse zurückgeben, da zwei Zeichenfolgen, die sich nur in nachfolgenden Leerzeichen unterscheiden, in SQL Server als gleich aufgefasst werden, in der CLR jedoch nicht. Dies wird im folgenden Beispiel illustriert:  
   
  [!code-csharp[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#canonicalfuncvsclrbasetype)]
  [!code-vb[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#canonicalfuncvsclrbasetype)]

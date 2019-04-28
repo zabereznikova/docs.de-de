@@ -14,18 +14,18 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640400"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)
 Sie können einen abgeleiteten Knoten in einer Windows Forms erstellen <xref:System.Windows.Forms.TreeView> Steuerelement oder ein abgeleitetes Element in einem <xref:System.Windows.Forms.ListView> Steuerelement. Durch Ableitung können Sie jegliche Felder, die Sie benötigen, sowie die benutzerdefinierten Methoden und Konstruktoren für deren Behandlung hinzufügen. Eine Verwendung dieser Funktion ist das Anfügen eines Customer-Objekts an jeden Strukturknoten oder jedes Listenelement. Die hier aufgeführten Beispiele gelten für eine <xref:System.Windows.Forms.TreeView> -Steuerelement, aber der gleiche Ansatz kann für verwendet werden eine <xref:System.Windows.Forms.ListView> Steuerelement.  
   
 ### <a name="to-derive-a-tree-node"></a>So leiten Sie einen Strukturknoten ab  
   
--   Erstellen Sie eine neuen Knotenklasse, abgeleitet von der <xref:System.Windows.Forms.TreeNode> Klasse, die ein benutzerdefiniertes Feld für einen Dateipfad verfügt.  
+- Erstellen Sie eine neuen Knotenklasse, abgeleitet von der <xref:System.Windows.Forms.TreeNode> Klasse, die ein benutzerdefiniertes Feld für einen Dateipfad verfügt.  
   
     ```vb  
     Class myTreeNode  

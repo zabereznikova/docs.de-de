@@ -3,11 +3,11 @@ title: F#-Sprachreferenz
 description: Suchen F# Language Featureinformationen von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
 ms.date: 05/16/2016
 ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666442"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 

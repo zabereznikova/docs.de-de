@@ -3,11 +3,11 @@ title: Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschr�
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607489"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 Die **Keyref** -Element können Sie zum Herstellen von Links zwischen Elementen in einem Dokument. Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar. Wenn ein Schema gibt an, die **Keyref** Element und das Element wird konvertiert, während die Schemazuordnungsprozesses in eine entsprechende fremdschlüsseleinschränkung für die Spalten in den Tabellen der der <xref:System.Data.DataSet>. In der Standardeinstellung die **Keyref** Element generiert, sondern eine Relation auch mit der **ParentTable**, **untergeordneteTabelle**, **ParentColumn**, und  **ChildColumn** Eigenschaften der Beziehung angegeben.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  Darüber hinaus die **DataSet** definiert die folgenden Einschränkungen:  
   
--   Eine eindeutige Einschränkung für die **Reihenfolge** Tabelle.  
+- Eine eindeutige Einschränkung für die **Reihenfolge** Tabelle.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen. Die **geschachtelte** -Eigenschaftensatz auf **"false"** , da die zwei Elemente im Schema nicht geschachtelt sind.  
+- Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen. Die **geschachtelte** -Eigenschaftensatz auf **"false"** , da die zwei Elemente im Schema nicht geschachtelt sind.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Eine foreign Key-Einschränkung für die **OrderDetail** Tabelle.  
+- Eine foreign Key-Einschränkung für die **OrderDetail** Tabelle.  
   
     ```  
               ConstraintName: OrderNoRef  

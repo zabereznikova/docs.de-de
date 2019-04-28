@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673679"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<Entfernen Sie >-Element für \<Listener > für \<Ablaufverfolgung >
 Entfernt einen Listener aus der **Listener** Auflistung.  

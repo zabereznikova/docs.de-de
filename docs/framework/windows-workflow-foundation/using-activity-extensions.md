@@ -3,11 +3,11 @@ title: Verwenden von Aktivitätserweiterungen
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
 ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669510"
 ---
 # <a name="using-activity-extensions"></a>Verwenden von Aktivitätserweiterungen
 Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die es dem Host ermöglichen, weitere Funktionen bereitzustellen, die nicht explizit im Workflow modelliert wurden.  In diesem Thema wird beschrieben, wie eine Erweiterung erstellt und verwendet wird, mit der die Häufigkeit der Ausführung einer Aktivität erfasst werden kann.

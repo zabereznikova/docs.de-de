@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665766"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic
 Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die Ihren Code zugreifen können, ohne ihn. Beim Aufrufen von Code Namen einer Klasse oder Struktur, aber keine Eigenschaft, und der Kontext ermöglicht den Zugriff auf eine Eigenschaft, Visual Basic löst den Zugriff auf diese Klasse oder Struktur Standardeigenschaft, falls vorhanden.  

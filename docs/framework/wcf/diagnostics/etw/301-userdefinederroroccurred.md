@@ -3,19 +3,19 @@ title: 301 - UserDefinedErrorOccurred
 ms.date: 03/30/2017
 ms.assetid: a0285d1c-550f-4c14-9c36-a96e97f1c4e4
 ms.openlocfilehash: 6eb80d6f0b20af9aae6e7de5248323088e352b26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596478"
 ---
 # <a name="301---userdefinederroroccurred"></a>301 - UserDefinedErrorOccurred
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|Id|301|  
-|Stichwörter|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
+|ID|301|  
+|Schlüsselwörter|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |Ebene|Fehler|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
@@ -29,6 +29,6 @@ ms.locfileid: "33459478"
   
 |Datenelementname|Datenelementtyp|Beschreibung|  
 |--------------------|--------------------|-----------------|  
-|name|`xs:string`|Der benutzerdefinierte Name des Ereignisses.|  
+|Name|`xs:string`|Der benutzerdefinierte Name des Ereignisses.|  
 |HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Das Format ist definiert als "Website Namen virtueller Anwendungspfad&#124;virtueller Dienstpfad&#124;ServiceName". Beispiel: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
 |Payload|`xs:string`|Die benutzerdefinierte Nutzlast des Ereignisses.|

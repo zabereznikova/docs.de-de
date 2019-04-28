@@ -3,11 +3,11 @@ title: Konstruktionstypen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605830"
 ---
 # <a name="constructing-types-entity-sql"></a>Konstruktionstypen (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt drei Arten von Konstruktoren bereit: Zeilenkonstruktoren, Konstruktoren benannter Typen und Auflistungskonstruktoren.  
@@ -21,9 +21,9 @@ ms.locfileid: "59073779"
   
  Die folgenden Regeln gelten für Ausdrucksaliasing in einem Zeilenkonstruktor:  
   
--   Ausdrücke in einem Zeilenkonstruktor können nicht auf andere Aliase im gleichen Konstruktor verweisen.  
+- Ausdrücke in einem Zeilenkonstruktor können nicht auf andere Aliase im gleichen Konstruktor verweisen.  
   
--   Zwei Ausdrücke im gleichen Zeilenkonstruktor können nicht über den gleichen Alias verfügen.  
+- Zwei Ausdrücke im gleichen Zeilenkonstruktor können nicht über den gleichen Alias verfügen.  
   
  Weitere Informationen zu Zeilenkonstruktoren finden Sie unter [Zeile](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669094"
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumerationen: Einfache Enumerationen und Flags-Enumerationen.  
@@ -48,17 +48,17 @@ Enumerationen sind eine besondere Art von Werttyp. Es gibt zwei Arten von Enumer
   
  **✓ CONSIDER** mit <xref:System.Int32> (die Standardeinstellung in den meisten Programmiersprachen) als zugrunde liegende Typ einer Enumeration, wenn eine der folgenden Aussagen zutrifft:  
   
--   Die Enumeration ist eine Flags-Enumeration, und Sie haben mehr als 32-Flags oder erwarten, dass zukünftig mehr.  
+- Die Enumeration ist eine Flags-Enumeration, und Sie haben mehr als 32-Flags oder erwarten, dass zukünftig mehr.  
   
--   Der zugrunde liegende Typ muss anders als <xref:System.Int32> für Interoperabilität mit nicht verwaltetem Code erwartet andere Größe Enumerationen erleichtern.  
+- Der zugrunde liegende Typ muss anders als <xref:System.Int32> für Interoperabilität mit nicht verwaltetem Code erwartet andere Größe Enumerationen erleichtern.  
   
--   Ein kleinerer zugrunde liegender Typ führt zu beträchtlichen einsparungen beim Speicherplatz. Wenn Sie erwarten, die Enumeration dass, die hauptsächlich als Argument für die ablaufsteuerung verwendet werden, ist die Größe kaum einen Unterschied. Die einsparungen können erheblich sein wenn:  
+- Ein kleinerer zugrunde liegender Typ führt zu beträchtlichen einsparungen beim Speicherplatz. Wenn Sie erwarten, die Enumeration dass, die hauptsächlich als Argument für die ablaufsteuerung verwendet werden, ist die Größe kaum einen Unterschied. Die einsparungen können erheblich sein wenn:  
   
-    -   Sie erwarten, dass die Enumeration als ein Feld in einer sehr häufig instanziierten Struktur oder Klasse verwendet werden soll.  
+    - Sie erwarten, dass die Enumeration als ein Feld in einer sehr häufig instanziierten Struktur oder Klasse verwendet werden soll.  
   
-    -   Sie erwarten, dass Benutzer große Arrays oder Auflistungen der Enum-Instanzen erstellen.  
+    - Sie erwarten, dass Benutzer große Arrays oder Auflistungen der Enum-Instanzen erstellen.  
   
-    -   Sie erwarten, dass eine große Anzahl von Instanzen der Enumeration serialisiert werden soll.  
+    - Sie erwarten, dass eine große Anzahl von Instanzen der Enumeration serialisiert werden soll.  
   
  Für die speicherauslastung, denken Sie daran, dass verwaltete Objekte immer `DWORD`-ausgerichtet, weshalb Sie effektiv mehrere Enumerationen oder andere kleineren Strukturen in einer Instanz mit eine kleineren Enumeration zu platzieren, um einen Unterschied machen, da die Größe der gesamten Instanz immer jetzt bis zu rundende eine `DWORD`.  
   

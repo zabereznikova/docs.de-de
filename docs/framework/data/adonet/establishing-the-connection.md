@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
 ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667105"
 ---
 # <a name="establishing-the-connection"></a>Herstellen der Verbindung
 Zum Herstellen einer Verbindung mit Microsoft SQL Server verwenden Sie das <xref:System.Data.SqlClient.SqlConnection>-Objekt des .NET Framework-Datenanbieters für SQL Server. Wenn Sie eine Verbindung mit einer OLE DB-Datenquelle herstellen möchten, verwenden Sie das <xref:System.Data.OleDb.OleDbConnection>-Objekt des .NET Framework-Datenanbieters für OLE DB. Wenn Sie eine Verbindung mit einer ODBC-Datenquelle herstellen möchten, verwenden Sie das <xref:System.Data.Odbc.OdbcConnection>-Objekt des .NET Framework-Datenanbieters für ODBC. Zum Herstellen einer Verbindung mit einer Oracle-Datenquelle verwenden Sie das <xref:System.Data.OracleClient.OracleConnection>-Objekt des .NET Framework-Datenanbieters für Oracle. Sicher speichern und Abrufen von Verbindungszeichenfolgen finden Sie [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -58,9 +58,9 @@ using (SqlConnection connection = new SqlConnection(connectionString))
   
  Bei dem .NET Framework-Datenanbieter für OLE DB ist das Verbindungszeichenfolgenformat mit dem in ADO verwendeten Verbindungszeichenfolgenformat bis auf folgende Ausnahmen identisch:  
   
--   Die **Anbieter** -Schlüsselwort ist erforderlich.  
+- Die **Anbieter** -Schlüsselwort ist erforderlich.  
   
--   Die **URL**, **Remoteanbieter**, und **Remoteserver** Schlüsselwörter werden nicht unterstützt.  
+- Die **URL**, **Remoteanbieter**, und **Remoteserver** Schlüsselwörter werden nicht unterstützt.  
   
  Weitere Informationen zu OLE DB-Verbindungszeichenfolgen finden Sie unter dem Thema <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>. Sie können auch den <xref:System.Data.OleDb.OleDbConnectionStringBuilder> verwenden, um zur Laufzeit Verbindungszeichenfolgen zu erstellen.  
   

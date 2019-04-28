@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
 ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607335"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Erstellen einer DataTable aus einer Abfrage (LINQ to DataSet)
 Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode kopiert die Ergebnisse einer Abfrage in eine <xref:System.Data.DataTable>, die dann für die Datenbindung verwendet werden kann. Wenn die Datenoperationen ausgeführt wurden, wird die neue <xref:System.Data.DataTable> wieder mit der ursprünglichen <xref:System.Data.DataTable> zusammengeführt.  

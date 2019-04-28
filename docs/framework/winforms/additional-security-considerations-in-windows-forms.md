@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669315"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Weitere Überlegungen zur Sicherheit in Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Sicherheitseinstellungen können möglicherweise dazu führen, dass Ihre Anwendung anders als in einer teilweise vertrauenswürdigen Umgebung als auf dem lokalen Computer ausgeführt wird. Der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] beschränkt den Zugriff auf wichtige lokale Ressourcen, beispielsweise unter anderem das Dateisystem, Netzwerk und nicht verwaltete APIs. Die Sicherheitseinstellungen haben Auswirkung auf die Möglichkeit zum Aufrufen der Microsoft Windows-API oder andere APIs, die nicht vom Sicherheitssystem überprüft werden kann. Sicherheit wirkt sich auch auf andere Aspekte der Anwendung aus, einschließlich des Datei-und Datenzugriffs und des Druckens. Weitere Informationen zum Zugriff auf Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Weitere Informationen zum Drucken in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md).  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
 ms.openlocfilehash: 318521cc1377be89ef54706d80c8b2990a6ba1b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650465"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.ListView> Steuerelement kann zusätzliche Text oder Unterelemente, für jedes Element in der Ansicht anzeigen. Die erste Spalte zeigt den Elementtext, z. B. eine Mitarbeiternummer. Der zweite, dritte und die nachfolgenden Spalten anzeigen die erste, zweite und nachfolgende zugeordneten Unterelemente.  

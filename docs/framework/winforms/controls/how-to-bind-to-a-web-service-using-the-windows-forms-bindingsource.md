@@ -13,11 +13,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
 ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666416"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Vorgehensweise: Binden an einen Webdienst mithilfe der BindingSource in Windows Forms
 Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML-Webdiensts binden möchten, können Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente verwenden. Dieses Verfahren ähnelt der Bindung einer <xref:System.Windows.Forms.BindingSource>-Komponente an einen Typ. Sie müssen einen clientseitigen Proxy erstellen, der die Methoden und Typen enthält, die vom Webdienst bereitgestellt werden. Sie generieren einen clientseitigen Proxy über den Webdienst (.asmx) selbst oder über seine WSDL-Datei (Web Services Description Language). Darüber hinaus muss der clientseitige Proxy die Felder von komplexen Typen verfügbar machen, die vom Webdienst als öffentliche Eigenschaften verwendet werden. Anschließend binden Sie <xref:System.Windows.Forms.BindingSource> an einen der im Webdienstproxy bereitgestellten Typen.  
@@ -50,7 +50,7 @@ Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML
   
 ### <a name="to-bind-controls-to-the-bindingsource-that-is-bound-to-a-web-service"></a>So binden Sie Steuerelemente an die Bindungsquelle, die an einen Webdienst gebunden ist  
   
--   Binden Sie Steuerelemente an <xref:System.Windows.Forms.BindingSource>, wobei Sie die öffentliche Eigenschaft des Webdiensttyps übergeben, den Sie als Parameter verwenden möchten.  
+- Binden Sie Steuerelemente an <xref:System.Windows.Forms.BindingSource>, wobei Sie die öffentliche Eigenschaft des Webdiensttyps übergeben, den Sie als Parameter verwenden möchten.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#3)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#3)]
@@ -68,7 +68,7 @@ Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML
   
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Drawing", "System.Web.Services", "System.Windows.Forms" und "System.Xml".  
+- Verweise auf die Assemblys "System", "System.Drawing", "System.Web.Services", "System.Windows.Forms" und "System.Xml".  
   
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   

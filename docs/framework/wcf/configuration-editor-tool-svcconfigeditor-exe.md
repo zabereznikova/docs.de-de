@@ -11,8 +11,8 @@ ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608852"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor-Tool (SvcConfigEditor.exe)
 Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication Foundation (WCF) ermöglicht Administratoren und Entwicklern, Konfigurationseinstellungen für WCF-Dienste anhand einer grafischen Benutzeroberfläche zu erstellen und zu bearbeiten. Mit diesem Tool können Sie die Einstellungen für Bindungen, Verhalten, Dienste und Diagnosen von WCF verwalten, ohne XML-Dateien direkt bearbeiten zu müssen.  
@@ -50,11 +50,11 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
   
  Die Service Configuration Editor-Benutzeroberfläche ist in die folgenden Bereiche aufgeteilt:  
   
--   Strukturansichtsbereich, in dem die Konfigurationselemente links in einer Struktur angezeigt werden. Sie können in der Struktur Vorgänge durchführen, indem Sie mit der rechten Maustaste auf die Knoten klicken.  
+- Strukturansichtsbereich, in dem die Konfigurationselemente links in einer Struktur angezeigt werden. Sie können in der Struktur Vorgänge durchführen, indem Sie mit der rechten Maustaste auf die Knoten klicken.  
   
--   Aufgabenbereich, der häufige Aufgaben für aktuelle Elemente links unten im Fenster anzeigt.  
+- Aufgabenbereich, der häufige Aufgaben für aktuelle Elemente links unten im Fenster anzeigt.  
   
--   Detailbereich, in dem ausführliche Einstellungen des rechts in der Strukturansicht ausgewählten Konfigurationsknotens angezeigt werden.  
+- Detailbereich, in dem ausführliche Einstellungen des rechts in der Strukturansicht ausgewählten Konfigurationsknotens angezeigt werden.  
   
 ### <a name="opening-a-configuration-file"></a>Öffnen einer Konfigurationsdatei  
   
@@ -77,16 +77,16 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
 #### <a name="creating-a-new-service-configuration"></a>Erstellen einer neuen Dienstkonfiguration  
  Sie können eine neue Dienstkonfiguration auf folgende Weise erstellen:  
   
--   Mithilfe eines Assistenten: Klicken Sie auf den Link **einen neuen Dienst erstellen...** auf im Aufgabenbereich oder auf Seite "Zusammenfassung" auf den Assistenten zu starten. Sie können auch dazu die **Datei** -> **neues Element hinzufügen**.  
+- Mithilfe eines Assistenten: Klicken Sie auf den Link **einen neuen Dienst erstellen...** auf im Aufgabenbereich oder auf Seite "Zusammenfassung" auf den Assistenten zu starten. Sie können auch dazu die **Datei** -> **neues Element hinzufügen**.  
   
--   Manuelles Erstellen: Sie können mit der rechten Maustaste die **Services** Knoten, und wählen Sie **neuen Dienst**.  
+- Manuelles Erstellen: Sie können mit der rechten Maustaste die **Services** Knoten, und wählen Sie **neuen Dienst**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Erstellen einer neuen Dienstendpunkt-Konfiguration  
  Sie können eine neue Dienstendpunkt-Konfiguration auf folgende Weise erstellen:  
   
--   Erstellen mit dem Assistenten: Klicken Sie auf den Link **einen neuen Dienstendpunkt erstellen...** auf im Aufgabenbereich oder auf Seite "Zusammenfassung" auf den Assistenten zu starten. Sie können auch dazu die **Datei** -> **neues Element hinzufügen**.  
+- Erstellen mit dem Assistenten: Klicken Sie auf den Link **einen neuen Dienstendpunkt erstellen...** auf im Aufgabenbereich oder auf Seite "Zusammenfassung" auf den Assistenten zu starten. Sie können auch dazu die **Datei** -> **neues Element hinzufügen**.  
   
--   Manuelles Erstellen: Nachdem Sie einen Dienst erstellt, Sie können mit der rechten Maustaste die **Endpunkte** Knoten, und wählen Sie "**neuer Dienstendpunkt**".  
+- Manuelles Erstellen: Nachdem Sie einen Dienst erstellt, Sie können mit der rechten Maustaste die **Endpunkte** Knoten, und wählen Sie "**neuer Dienstendpunkt**".  
   
 #### <a name="editing-a-service-configuration"></a>Bearbeiten einer Dienstkonfiguration  
   
@@ -121,9 +121,9 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Erstellen einer neuen Clientendpunkt-Konfiguration  
  Sie können eine neue Clientendpunkt-Konfiguration auf folgende Weise erstellen:  
   
--   Erstellen Sie vom Assistenten: Klicken Sie auf den Link **einen neuen Client erstellen...** auf der **Aufgabenbereich** auf der unteren linken Ecke des Fensters oder **Seite "Zusammenfassung"** um den Assistenten zu starten. Sie können auch dazu die **Datei** -> **neues Element hinzufügen**. Der Assistent fordert Sie auf, auf den Speicherort der Dienstkonfiguration zu zeigen, über den die Clientkonfiguration generiert wird. Sie können dann den Dienstendpunkt auswählen, mit dem eine Verbindung hergestellt werden soll.  
+- Erstellen Sie vom Assistenten: Klicken Sie auf den Link **einen neuen Client erstellen...** auf der **Aufgabenbereich** auf der unteren linken Ecke des Fensters oder **Seite "Zusammenfassung"** um den Assistenten zu starten. Sie können auch dazu die **Datei** -> **neues Element hinzufügen**. Der Assistent fordert Sie auf, auf den Speicherort der Dienstkonfiguration zu zeigen, über den die Clientkonfiguration generiert wird. Sie können dann den Dienstendpunkt auswählen, mit dem eine Verbindung hergestellt werden soll.  
   
--   Manuelles Erstellen: Mit der rechten Maustaste die **Endpunkte** Knoten unter **Client**, und wählen Sie **neuer Clientendpunkt**.  
+- Manuelles Erstellen: Mit der rechten Maustaste die **Endpunkte** Knoten unter **Client**, und wählen Sie **neuer Clientendpunkt**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>Bearbeiten einer Clientendpunkt-Konfiguration  
   
@@ -141,27 +141,27 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Erstellen einer neuen Standardendpunktkonfiguration  
  Sie können eine neue Standardendpunktkonfiguration auf folgende Weise erstellen:  
   
--   Mit der rechten Maustaste die **Standardendpunkt** Knoten, und wählen **neue Konfiguration des Standardendpunkts...** Wählen Sie den Bindungstyp im Dialogfeld, und klicken Sie auf **OK**.  
+- Mit der rechten Maustaste die **Standardendpunkt** Knoten, und wählen **neue Konfiguration des Standardendpunkts...** Wählen Sie den Bindungstyp im Dialogfeld, und klicken Sie auf **OK**.  
   
--   Wählen Sie die **Standardendpunkt** Knoten, und klicken Sie auf **neue Konfiguration des Standardendpunkts...** in der **Aufgabenbereich** auf der unteren linken Ecke des Fensters.  
+- Wählen Sie die **Standardendpunkt** Knoten, und klicken Sie auf **neue Konfiguration des Standardendpunkts...** in der **Aufgabenbereich** auf der unteren linken Ecke des Fensters.  
   
  Die **erstellen einen neuen Standardendpunkt** Dialogfeld zeigt an, und alle registrierten standardendpunkttypen aufgeführt.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Anzeigen und Bearbeiten einer Standardendpunktkonfiguration  
  Sie können eine Standardendpunktkonfiguration auf die folgende Weise zum Anzeigen und Bearbeiten öffnen:  
   
--   Klicken Sie zum Erweitern der **Standardendpunkt** Knoten, und klicken Sie auf den jeweiligen untergeordneten Endpunktknoten.  
+- Klicken Sie zum Erweitern der **Standardendpunkt** Knoten, und klicken Sie auf den jeweiligen untergeordneten Endpunktknoten.  
   
--   Klicken Sie auf die **Standardendpunkt** Knoten, und klicken Sie auf den jeweiligen Endpunkt im Detailbereich.  
+- Klicken Sie auf die **Standardendpunkt** Knoten, und klicken Sie auf den jeweiligen Endpunkt im Detailbereich.  
   
  Attribute für den Endpunkt werden zur Bearbeitung im rechten Bereich angezeigt.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Löschen einer Standardendpunktkonfiguration  
  Sie können eine Standardendpunktkonfiguration auf folgende Weise löschen:  
   
--   Klicken Sie zum Erweitern der **Standardendpunkt** Knoten und mit der rechten Maustaste den jeweiligen untergeordneten Endpunktknoten. Verwenden Sie den Kontextbefehl **Konfiguration des Standardendpunkts löschen** auf den Endpunkt löschen.  
+- Klicken Sie zum Erweitern der **Standardendpunkt** Knoten und mit der rechten Maustaste den jeweiligen untergeordneten Endpunktknoten. Verwenden Sie den Kontextbefehl **Konfiguration des Standardendpunkts löschen** auf den Endpunkt löschen.  
   
--   Klicken Sie auf die **Standardendpunkt** Knoten. In der **Aufgabe** Bereich, klicken Sie auf **Konfiguration des Standardendpunkts löschen**.  
+- Klicken Sie auf die **Standardendpunkt** Knoten. In der **Aufgabe** Bereich, klicken Sie auf **Konfiguration des Standardendpunkts löschen**.  
   
  Wenn der Standardendpunkt verwendet ist, wird eine Warnmeldung angezeigt, wenn Sie versuchen, ihn zu löschen: **Der Standardendpunkt wird verwendet. Wenn er jetzt gelöscht wird, müssen Sie sicherstellen, dass alle dazugehörigen Verweise an anderen Stellen der Konfiguration (z. B. im Dienstendpunkt oder Clientendpunkt) ebenfalls gelöscht werden. Andernfalls ist die Konfiguration ungültig und kann nächstes Mal nicht geöffnet werden. Sind Sie sicher, dass Sie den Standardendpunkt löschen möchten? "**  
   
@@ -175,11 +175,11 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
 #### <a name="creating-a-new-binding-configuration"></a>Erstellen einer neuen Bindungskonfiguration  
  Sie können eine neue Bindungskonfiguration auf folgende Weise erstellen:  
   
--   Mit der rechten Maustaste die **Bindungen** Knoten, und wählen **neue Bindungskonfiguration**... Wählen Sie den Bindungstyp im Dialogfeld, und klicken Sie auf **OK**.  
+- Mit der rechten Maustaste die **Bindungen** Knoten, und wählen **neue Bindungskonfiguration**... Wählen Sie den Bindungstyp im Dialogfeld, und klicken Sie auf **OK**.  
   
--   Wählen Sie die **Bindungen** Knoten, und klicken Sie auf **neue Bindungskonfiguration**... in der **Aufgabenbereich** auf der unteren linken Ecke des Fensters.  
+- Wählen Sie die **Bindungen** Knoten, und klicken Sie auf **neue Bindungskonfiguration**... in der **Aufgabenbereich** auf der unteren linken Ecke des Fensters.  
   
--   Klicken Sie in der Dienst- oder Clientanwendung Seite Zusammenfassung auf **klicken Sie auf Erstellen** in die **Bindungskonfiguration** Feld, um eine Bindungskonfiguration für den entsprechenden Endpunkt zu erstellen.  
+- Klicken Sie in der Dienst- oder Clientanwendung Seite Zusammenfassung auf **klicken Sie auf Erstellen** in die **Bindungskonfiguration** Feld, um eine Bindungskonfiguration für den entsprechenden Endpunkt zu erstellen.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Hinzufügen von Bindungselementerweiterungen zu einer benutzerdefinierten Bindung  
   
@@ -278,9 +278,9 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
 ##### <a name="creating-a-new-behavior-configuration"></a>Erstellen einer neuen Verhaltenskonfiguration  
  Sie können eine neue Verhaltenskonfiguration auf eine der folgenden Weisen erstellen:  
   
--   Mit der rechten Maustaste einen der verhaltensknoten, und wählen Sie "**neue Verhaltenskonfiguration**  
+- Mit der rechten Maustaste einen der verhaltensknoten, und wählen Sie "**neue Verhaltenskonfiguration**  
   
--   Wählen Sie einen der verhaltensknoten, und klicken Sie auf die **neue Verhaltenskonfiguration**... in der **Aufgabenbereich** auf der unteren linken Ecke des Fensters.  
+- Wählen Sie einen der verhaltensknoten, und klicken Sie auf die **neue Verhaltenskonfiguration**... in der **Aufgabenbereich** auf der unteren linken Ecke des Fensters.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Hinzufügen von Verhaltenselementerweiterungen zu einem Verhalten  
   
@@ -319,13 +319,13 @@ Der Service Configuration Editor (SvcConfigEditor.exe) der Windows Communication
 #### <a name="extensions"></a>Erweiterungen  
  Neue bindungserweiterungen, bindungselementerweiterungen, standardendpunkterweiterungen und verhaltenserweiterungen können für die Verwendung in WCF-Konfiguration registriert werden. Erweiterungen sind Name-/Typpaare. Der Name definiert den Namen der Erweiterung in der Konfiguration, wohingegen der Typ die Erweiterung implementiert. Es gibt vier Erweiterungstypen:  
   
--   Bindungserweiterungen definieren einen gesamten Bindungstyp. Beispiel: `basicHttpBinding`  
+- Bindungserweiterungen definieren einen gesamten Bindungstyp. Beispiel: `basicHttpBinding`  
   
--   Bindungselementerweiterungen definieren ein Element einer Bindung. Beispiel: `textMessageEncoding`  
+- Bindungselementerweiterungen definieren ein Element einer Bindung. Beispiel: `textMessageEncoding`  
   
--   Standardendpunkterweiterungen definieren einen gesamten Standardendpunkt. Beispiel: `discoveryEndpoint`  
+- Standardendpunkterweiterungen definieren einen gesamten Standardendpunkt. Beispiel: `discoveryEndpoint`  
   
--   Verhaltenselementerweiterungen definieren ein Element eines Verhaltens. Beispiel: `clientVia`  
+- Verhaltenselementerweiterungen definieren ein Element eines Verhaltens. Beispiel: `clientVia`  
   
  Erweiterungen, die in einer Konfiguration registriert wurden, können wie jede andere WCF-Komponente des gleichen Typs verwendet werden.  
   

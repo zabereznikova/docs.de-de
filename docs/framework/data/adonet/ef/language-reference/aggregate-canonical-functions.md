@@ -3,11 +3,11 @@ title: Aggregieren kanonischer Funktionen
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
 ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607452"
 ---
 # <a name="aggregate-canonical-functions"></a>Aggregieren kanonischer Funktionen
 
@@ -74,12 +74,7 @@ Gibt den Höchstwert der von null verschiedenen Werte zurück.
 
 **Argumente**
 
-
-  
-  `Int16`
-  `Byte`
-  
-  `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
+`Int16``Byte`    `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
 
 **Rückgabewert**
 
@@ -96,12 +91,7 @@ Gibt den geringsten Wert der von NULL verschiedenen Werte zurück.
 
 **Argumente**
 
-
-  
-  `Int16`
-  `Byte`
-  
-  `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
+`Int16``Byte`    `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
 
 **Rückgabewert**
 
@@ -118,8 +108,7 @@ Gibt die Standardabweichung der von NULL verschiedenen Werte zurück.
 
 **Argumente**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -136,8 +125,7 @@ Gibt die Standardabweichung zum Ausfüllen aller Werte zurück.
 
 **Argumente**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -154,8 +142,7 @@ Gibt die Summe der von null verschiedenen Werte zurück.
 
 **Argumente**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -172,8 +159,7 @@ Gibt die Varianz aller Werte zurück, die keine Null-Werte sind.
 
 **Argumente**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -190,8 +176,7 @@ Gibt die Varianz für die Auffüllung aller Werte zurück, die keine Null-Werte 
 
 **Argumente**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`.
+`Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 

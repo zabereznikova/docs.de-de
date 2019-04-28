@@ -11,11 +11,11 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638907"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Vorgehensweise: Starten einer Schleife eines wiedergegebenen Sounds in Windows Forms
 Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code im `stopPlayingButton_Click`-Ereignishandler ausgeführt wird, werden alle aktuell wiedergegebenen Sounds beendet. Wenn kein Sound wiedergegeben wird, passiert nichts.  
@@ -27,9 +27,9 @@ Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code i
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System" und "System.Windows.Forms".  
+- Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
--   Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
+- Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
   
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
@@ -38,17 +38,17 @@ Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code i
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse).  
+- Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse).  
   
--   Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
+- Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
   
--   Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>-Klasse).  
+- Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>-Klasse).  
   
--   Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
+- Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
   
--   Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
+- Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
   
--   Der Pfad besteht nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException>-Klasse).  
+- Der Pfad besteht nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException>-Klasse).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei "Form1.vb" handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic-Quelldatei. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  

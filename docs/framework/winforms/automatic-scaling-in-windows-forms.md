@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640507"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 
 Die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer mit einer bestimmten Bildschirmauflösung oder Systemschriftart entworfen wurden, ordnungsgemäß auf einem anderen Computer angezeigt werden, der eine andere Bildschirmauflösung oder Systemschriftart hat. Durch sie wird sichergestellt, dass die Größen des Formulars und seiner Steuerelemente intelligent geändert werden, sodass diese sowohl auf den Computern von Benutzern als auch auf denen von anderen Entwicklern konsistent zu systemeigenen Fenstern sowie anderen Anwendungen sind. Dadurch, dass [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] die automatische Skalierung und visuelle Stile unterstützt, kann für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen im Vergleich zu systemeigenen Windows-Anwendungen ein konsistentes Aussehen und Verhalten auf dem Computer jedes Benutzers beibehalten werden.
 
-In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], Version 2.0 oder höher, funktioniert die automatische Skalierung größtenteils wie erwartet. Änderungen des Schriftartenschemas können jedoch problematisch sein. Ein Beispiel dafür, wie zum Beheben dieses Problems finden Sie unter [wie: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], Version 2.0 oder höher, funktioniert die automatische Skalierung größtenteils wie erwartet. Änderungen des Schriftartenschemas können jedoch problematisch sein. Ein Beispiel dafür, wie zum Beheben dieses Problems finden Sie unter [Vorgehensweise: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Erforderlich für die automatische Skalierung
 
@@ -44,7 +44,7 @@ Während dieser Mechanismus für die meisten Zwecke ausreichend war, brachte er 
 
 - Automatische Skalierung war nur in der <xref:System.Windows.Forms.Form>-Klasse, nicht in der <xref:System.Windows.Forms.ContainerControl>-Klasse implementiert. Daher wurden Benutzersteuerelemente nur ordnungsgemäß skaliert, wenn das Benutzersteuerelement mit derselben Auflösung wie das Formular entworfen und zur Entwurfszeit im Formular positioniert wurde.
 
-- Formulare und deren untergeordneten Steuerelemente konnten nur dann gleichzeitig von mehreren Entwicklern gestaltet werden, wenn die Bildschirmauflösungen ihrer Computer identisch waren. Dies bedingte außerdem, dass das Erben durch ein Formular von der Auflösung abhängig war, die dem übergeordneten Formulars zugeordnet war.
+- Formulare und deren untergeordneten Steuerelemente konnten nur dann gleichzeitig von mehreren Entwicklern gestaltet werden, wenn die Bildschirmauflösungen ihrer Computer identisch waren. Dies bedingte außerdem, dass das Erben durch ein Formular von der Auflösung abhängig war, die dem übergeordneten Formular zugeordnet war.
 
 - Diese Skalierung ist nicht mit neueren Layout-Managern kompatibel, die mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 eingeführt wurden, z. B. <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.
 
@@ -105,4 +105,4 @@ Windows Forms verwendet jetzt die folgende Logik, um Formulare und deren Inhalte
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Rendering von Steuerelementen mit visuellen Stilen](./controls/rendering-controls-with-visual-styles.md)
-- [Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Vorgehensweise: Verbessern der Leistung durch Vermeiden der automatischen Skalierung](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

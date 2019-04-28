@@ -3,11 +3,11 @@ title: <localServiceSettings>-Element
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614569"
 ---
 # <a name="localservicesettings-element"></a>\<LocalServiceSettings >-Element
 Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung fest.  
@@ -76,13 +76,13 @@ Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung f
   
  Die folgenden Attribute des `localServiceSecuritySettings`-Elements können helfen, einen Denial-of-Service-Sicherheitsangriff (DoS) zu verhindern:  
   
--   `maxCachedCookies`: Steuert die maximale Anzahl zeitlich begrenzter SecurityContextTokens, die der Server nach einer SPNEGO-Aushandlung oder SSL-Aushandlung zwischenspeichert.  
+- `maxCachedCookies`: Steuert die maximale Anzahl zeitlich begrenzter SecurityContextTokens, die der Server nach einer SPNEGO-Aushandlung oder SSL-Aushandlung zwischenspeichert.  
   
--   `issuedCookieLifetime`: Steuert die Lebensdauer der SecurityContextTokens, die der Server nach der SPNEGO-Aushandlung oder SSL-Aushandlung ausstellt. Der Server speichert die SecurityContextTokens für diesen Zeitraum zwischen.  
+- `issuedCookieLifetime`: Steuert die Lebensdauer der SecurityContextTokens, die der Server nach der SPNEGO-Aushandlung oder SSL-Aushandlung ausstellt. Der Server speichert die SecurityContextTokens für diesen Zeitraum zwischen.  
   
--   `maxPendingSessions`: Steuert die maximale Anzahl sicherer Konversationen, die auf dem Server erstellt werden, für die jedoch keine Anwendungsnachrichten verarbeitet wurden. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand für jeden Client beibehält, sie jedoch nicht verwendet.  
+- `maxPendingSessions`: Steuert die maximale Anzahl sicherer Konversationen, die auf dem Server erstellt werden, für die jedoch keine Anwendungsnachrichten verarbeitet wurden. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand für jeden Client beibehält, sie jedoch nicht verwendet.  
   
--   `inactivityTimeout`: Steuert die maximale Zeit, die der Dienst eine sichere Konversation aufrechterhält, ohne eine Anwendungsnachricht zu erhalten. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand für jeden Client beibehält, sie jedoch nicht verwendet.  
+- `inactivityTimeout`: Steuert die maximale Zeit, die der Dienst eine sichere Konversation aufrechterhält, ohne eine Anwendungsnachricht zu erhalten. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand für jeden Client beibehält, sie jedoch nicht verwendet.  
   
  In einer sicheren Konversationssitzung haben sowohl das `inactivityTimeout`-Attribut als auch das `receiveTimeout`-Attribut der Bindung Auswirkungen auf das Sitzungstimeout. Der kürzere der beiden Werte bestimmt, wann das Timeout eintritt.  
   

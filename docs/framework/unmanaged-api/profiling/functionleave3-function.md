@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b31c3045b021bd3b00d2b2e42bf7a118110305b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598830"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3-Funktion
 Benachrichtigt den Profiler, dass das Steuerelement aus einer Funktion zurückgegeben werden.  
@@ -43,9 +43,9 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
  Die ausführungs-Engine werden keine Register gespeichert, vor dem Aufrufen dieser Funktion.  
   
--   Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
+- Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
   
--   Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
+- Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
   
  Die Implementierung der `FunctionLeave3` sollten nicht blockiert werden, da die Garbagecollection verzögert wird. Die Implementierung sollten eine Garbagecollection nicht versuchen, da der Stapel möglicherweise nicht in eine Garbage Collection geeigneten Zustand. Wenn eine Garbagecollection versucht wird, wird die Laufzeit blockiert, bis `FunctionLeave3` zurückgibt.  
   

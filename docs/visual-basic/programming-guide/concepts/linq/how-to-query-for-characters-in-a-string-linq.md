@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visua
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
 ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644384"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Vorgehensweise: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (Visual Basic)
 Da die <xref:System.String>-Klasse die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, kann jede Zeichenfolge als Folge von Zeichen abgefragt werden. Dies ist allerdings kein üblicher Einsatz von LINQ. Verwenden Sie für komplex Musterabgleichvorgänge die <xref:System.Text.RegularExpressions.Regex>-Klasse.  

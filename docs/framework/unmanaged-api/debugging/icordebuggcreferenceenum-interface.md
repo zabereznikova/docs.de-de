@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651622"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum-Schnittstelle
 Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeben werden.  
@@ -39,11 +39,11 @@ Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeb
   
  Die [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) -Objekte in der Auflistung, die von dieser Methode aufgefüllt stellen drei Arten von Objekten dar:  
   
--   Objekte aus allen verwalteten Stapel. Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
+- Objekte aus allen verwalteten Stapel. Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
   
--   Objekte aus der Handletabelle. Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
+- Objekte aus der Handletabelle. Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
   
--   Objekte aus der Finalizer-Warteschlange. Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
+- Objekte aus der Finalizer-Warteschlange. Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

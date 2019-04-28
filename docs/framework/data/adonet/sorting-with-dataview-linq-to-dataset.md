@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664128"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortieren mit DataView (LINQ to DataSet)
 Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu sortieren und nach bestimmten Sortierkriterien geordnete Datenzeilen zurückzugeben. Neben den zeichenfolgenbasierten Sortierfunktionen bietet <xref:System.Data.DataView> auch können Sie mit [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Ausdrücke für die Kriterien sortieren. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Sortieroperationen als die zeichenfolgenbasierte Sortierung. In diesem Thema werden beide Ansätze für die Sortierung mit <xref:System.Data.DataView> beschrieben.  
@@ -65,9 +65,9 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
 ## <a name="clearing-the-sort"></a>Löschen der Sortierinformationen  
  Die Sortierinformationen für eine <xref:System.Data.DataView> können mit der <xref:System.Data.DataView.Sort%2A>-Eigenschaft gelöscht werden. Es gibt zwei Möglichkeiten, die Sortierinformationen in <xref:System.Data.DataView> zu löschen:  
   
--   Legen Sie die <xref:System.Data.DataView.Sort%2A> -Eigenschaft auf `null`fest.  
+- Legen Sie die <xref:System.Data.DataView.Sort%2A> -Eigenschaft auf `null`fest.  
   
--   indem für die <xref:System.Data.DataView.Sort%2A>-Eigenschaft eine leere Zeichenfolge festgelegt wird  
+- indem für die <xref:System.Data.DataView.Sort%2A>-Eigenschaft eine leere Zeichenfolge festgelegt wird  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt, und die Sortierinformationen werden gelöscht, indem für die <xref:System.Data.DataView.Sort%2A>-Eigenschaft eine leere Zeichenfolge festgelegt wird:  

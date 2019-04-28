@@ -3,24 +3,24 @@ title: Einschränkung der referenziellen Integrität
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
 ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665295"
 ---
 # <a name="referential-integrity-constraint"></a>Einschränkung der referenziellen Integrität
 Ein *Einschränkung der referenziellen Integrität* im Entity Data Model (EDM) ähnelt einer Einschränkung der referenziellen Integrität in einer relationalen Datenbank. Auf die gleiche Weise, dass eine Spalte oder Spalten aus einer Datenbanktabelle auf den Primärschlüssel einer anderen Tabelle verweisen können eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) (oder Eigenschaften) von einer [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) verweisen können die [Entitätsschlüssel ](../../../../docs/framework/data/adonet/entity-key.md) eines anderen Entitätstyps. Wird aufgerufen, der Entitätstyp, auf die verwiesen wird, wird die *prinzipalende* der Einschränkung. Der Entitätstyp, der auf das prinzipalende verweist heißt die *abhängigen Endes* der Einschränkung.  
   
  Eine Einschränkung der referenziellen Integrität wird definiert als Teil einer [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) zwischen zwei Entitätstypen. Die Definition für eine Einschränkung der referenziellen Integrität gibt die folgenden Informationen an:  
   
--   Das Prinzipalende der Einschränkung. (Ein Entitätstyp, auf dessen Entitätsschlüssel durch das abhängige Ende verwiesen wird.)  
+- Das Prinzipalende der Einschränkung. (Ein Entitätstyp, auf dessen Entitätsschlüssel durch das abhängige Ende verwiesen wird.)  
   
--   Den Entitätsschlüssel des Prinzipalendes.  
+- Den Entitätsschlüssel des Prinzipalendes.  
   
--   Das abhängige Ende der Einschränkung. (Ein Entitätstyp, der über eine Eigenschaft oder Eigenschaften verfügt, die auf den Entitätsschlüssel des Prinzipalendes verweisen.)  
+- Das abhängige Ende der Einschränkung. (Ein Entitätstyp, der über eine Eigenschaft oder Eigenschaften verfügt, die auf den Entitätsschlüssel des Prinzipalendes verweisen.)  
   
--   Die verweisende Eigenschaft oder Eigenschaften des abhängigen Endes.  
+- Die verweisende Eigenschaft oder Eigenschaften des abhängigen Endes.  
   
  Mit Einschränkungen der referenziellen Integrität im EDM soll sichergestellt werden, dass gültige Zuordnungen immer vorhanden sind. Weitere Informationen finden Sie unter [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   

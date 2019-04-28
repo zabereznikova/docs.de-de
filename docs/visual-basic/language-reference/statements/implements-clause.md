@@ -18,11 +18,11 @@ helpviewer_keywords:
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
 ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637764"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
 Gibt an, dass ein Klasse oder Struktur-Member die Implementierung für einen in einer Schnittstelle definierten Member bereitstellt.  

@@ -6,34 +6,34 @@ helpviewer_keywords:
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
 ms.openlocfilehash: bf0d3a64ce8860d67f0dcfd37c780f03fbd7471a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650517"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Verwenden von Bildencodern und -decodern in Managed GDI+
 Die <xref:System.Drawing> -Namespace stellt die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. Mithilfe von Bildencodern in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], Sie können Images aus dem Arbeitsspeicher auf den Datenträger schreiben. Mithilfe von Bilddecoder in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], können Sie Bilder vom Datenträger in den Arbeitsspeicher laden. Ein Encoder übersetzt, die Daten in eine <xref:System.Drawing.Image> oder <xref:System.Drawing.Bitmap> Objekt in ein festgelegter Datenträger-Dateiformat. Ein Decoder übersetzt, die Daten in eine Datenträgerdatei in das erforderliche Format der <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Objekte.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verfügt über integrierte Encoder und Decoder, die die folgenden Dateitypen unterstützt:  
   
--   BMP  
+- BMP  
   
--   GIF  
+- GIF  
   
--   JPEG  
+- JPEG  
   
--   PNG  
+- PNG  
   
--   TIFF  
+- TIFF  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Außerdem verfügt über integrierte Decoder, die die folgenden Dateitypen unterstützt:  
   
--   WMF  
+- WMF  
   
--   EMF  
+- EMF  
   
--   ICON  
+- ICON  
   
  Die folgenden Themen wird erläutert, Encoder und Decoder im Detail:  
   

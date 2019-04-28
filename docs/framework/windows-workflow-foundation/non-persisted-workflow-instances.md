@@ -3,27 +3,27 @@ title: Nicht beibehaltene Workflowinstanzen
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644264"
 ---
 # <a name="non-persisted-workflow-instances"></a>Nicht beibehaltene Workflowinstanzen
 Wenn eine neue Workflowinstanz erstellt wird, deren Zustandsinformationen persistent in <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> gespeichert werden, erstellt der Diensthost einen Eintrag für diesen Dienst im Instanzspeicher. Wenn die Workflowinstanz zum ersten Mal persistent gespeichert wird, wird anschließend der derzeitige Zustand der Instanz in <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> gespeichert. Wenn der Workflow im Windows-Prozessaktivierungsdienst gehostet wird, werden die Bereitstellungsdaten für den Dienst auch dann in den Instanzspeicher geschrieben, wenn die Instanz zum ersten Mal persistent gespeichert wird.  
   
- Solange die Workflowinstanz nicht beibehalten wurde, ist es einem **nicht persistenter** Zustand. In diesem Zustand kann die Workflowinstanz bei Wiederherstellung einer Anwendungsdomäne oder einem Ausfall des Hosts oder Computers nicht wiederhergestellt werden.  
+ Solange die Workflow-Instanz nicht beibehalten wurde, ist es ein **nicht persistenter** Zustand. In diesem Zustand kann die Workflowinstanz bei Wiederherstellung einer Anwendungsdomäne oder einem Ausfall des Hosts oder Computers nicht wiederhergestellt werden.  
   
 ## <a name="the-non-persisted-state"></a>Nicht persistenter Zustand  
  Permanente Workflowinstanzen, die noch nicht persistent gespeichert wurden, behalten in den folgenden Fällen den Zustand nicht persistent bei:  
   
--   Der Diensthost stürzt ab, bevor die Workflowinstanz zum ersten Mal persistent gespeichert wurde. Die Workflowinstanz verbleibt im Instanzspeicher und wird nicht wiederhergestellt. Bei Empfang einer korrelierten Meldung wird die Workflowinstanz erneut aktiviert.  
+- Der Diensthost stürzt ab, bevor die Workflowinstanz zum ersten Mal persistent gespeichert wurde. Die Workflowinstanz verbleibt im Instanzspeicher und wird nicht wiederhergestellt. Bei Empfang einer korrelierten Meldung wird die Workflowinstanz erneut aktiviert.  
   
--   Es tritt eine nicht behandelte Ausnahme auf, bevor die Workflowinstanz zum ersten Mal persistent gespeichert wurde. Abhängig von der zurückgegebenen <xref:System.Activities.UnhandledExceptionAction> ergeben sich folgende Szenarien:  
+- Es tritt eine nicht behandelte Ausnahme auf, bevor die Workflowinstanz zum ersten Mal persistent gespeichert wurde. Abhängig von der zurückgegebenen <xref:System.Activities.UnhandledExceptionAction> ergeben sich folgende Szenarien:  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> ist auf <xref:System.Activities.UnhandledExceptionAction.Abort> festgelegt: Bei einer Ausnahme werden die Bereitstellungsinformationen in den Instanzspeicher geschrieben, und die Workflowinstanz wird aus dem Speicher entladen. Die Workflowinstanz verbleibt im nicht persistenten Zustand und kann nicht erneut geladen werden.  
+    - <xref:System.Activities.UnhandledExceptionAction> nastaven NA hodnotu <xref:System.Activities.UnhandledExceptionAction.Abort>: Wenn eine Ausnahme auftritt, dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und die Workflowinstanz wird aus dem Arbeitsspeicher entladen. Die Workflowinstanz verbleibt im nicht persistenten Zustand und kann nicht erneut geladen werden.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction> ist auf <xref:System.Activities.UnhandledExceptionAction.Cancel> oder <xref:System.Activities.UnhandledExceptionAction.Terminate> festgelegt: Bei einer Ausnahme werden die Bereitstellungsinformationen in den Instanzspeicher geschrieben, und der Zustand der Aktivitätsinstanz wird auf <xref:System.Activities.ActivityInstanceState.Closed> festgelegt.  
+    - <xref:System.Activities.UnhandledExceptionAction> nastaven NA hodnotu <xref:System.Activities.UnhandledExceptionAction.Cancel> oder <xref:System.Activities.UnhandledExceptionAction.Terminate>: Wenn eine Ausnahme auftritt, dienstbereitstellungsinformationen in den Instanzspeicher geschrieben, und der Zustand der Aktivitätsinstanz NA hodnotu nastaven <xref:System.Activities.ActivityInstanceState.Closed>.  
   
  Um das Risiko bezüglich des Entladens nicht persistenter Workflowinstanzen zu minimieren, wird empfohlen, den Workflow zu einem frühen Zeitpunkt des Lebenszyklus persistent zu speichern.  
   
@@ -34,7 +34,7 @@ Wenn eine neue Workflowinstanz erstellt wird, deren Zustandsinformationen persis
   
  Mit folgenden SQL-Abfragen können Sie nach nicht persistent gespeicherten Instanzen im SQL-Workflowinstanzspeicher suchen:  
   
--   Mit dieser Abfrage wird nach allen Instanzen gesucht, die nicht persistent gespeichert wurden, und die zugehörige ID sowie der Zeitpunkt der Erstellung (in UTC-Zeit) werden zurückgegeben.  
+- Mit dieser Abfrage wird nach allen Instanzen gesucht, die nicht persistent gespeichert wurden, und die zugehörige ID sowie der Zeitpunkt der Erstellung (in UTC-Zeit) werden zurückgegeben.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ Wenn eine neue Workflowinstanz erstellt wird, deren Zustandsinformationen persis
         where IsInitialized = 0  
     ```  
   
--   Mit dieser Abfrage wird nach allen Instanzen gesucht, die nicht persistent gespeichert wurden und nicht geladen sind, und die zugehörige ID sowie der Zeitpunkt der Erstellung (in UTC-Zeit) werden zurückgegeben.  
+- Mit dieser Abfrage wird nach allen Instanzen gesucht, die nicht persistent gespeichert wurden und nicht geladen sind, und die zugehörige ID sowie der Zeitpunkt der Erstellung (in UTC-Zeit) werden zurückgegeben.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ Wenn eine neue Workflowinstanz erstellt wird, deren Zustandsinformationen persis
             and CurrentMachine is NULL  
     ```  
   
--   Mit dieser Abfrage wird nach allen angehaltenen Instanzen gesucht, die nicht persistent gespeichert wurden, und die zugehörige ID, der Zeitpunkt der Erstellung (in UTC-Zeit), der Grund für die Unterbrechung und der Name der Ausnahme werden zurückgegeben.  
+- Mit dieser Abfrage wird nach allen angehaltenen Instanzen gesucht, die nicht persistent gespeichert wurden, und die zugehörige ID, der Zeitpunkt der Erstellung (in UTC-Zeit), der Grund für die Unterbrechung und der Name der Ausnahme werden zurückgegeben.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

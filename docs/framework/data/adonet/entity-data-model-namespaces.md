@@ -3,11 +3,11 @@ title: 'Entity Data Model: Namespaces'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
 ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667157"
 ---
 # <a name="entity-data-model-namespaces"></a>Entity Data Model: Namespaces
 Ein Namespace im Entity Data Model (EDM) ist ein abstrakter Container für [Entitätstypen](../../../../docs/framework/data/adonet/entity-type.md), [komplexe Typen](../../../../docs/framework/data/adonet/complex-type.md), und [Zuordnungen](../../../../docs/framework/data/adonet/association-type.md). Namespaces im EDM ähneln Namespaces in einer Programmiersprache: sie stellen den Kontext für die Objekte bereit, die sie enthalten, und sie bieten eine Möglichkeit, Objekte mit dem gleichen Namen (die aber in verschiedenen Namespaces enthalten sind) eindeutig zu bestimmen.  

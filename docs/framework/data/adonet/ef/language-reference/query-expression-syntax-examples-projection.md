@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614413"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Beispiele für die Abfrageausdruckssyntax: Projection
 In die Beispielen in diesem Thema wird gezeigt, wie mit der `Select` Methode und die `From … From …` Schlüsselwörter zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe der Abfrageausdruckssyntax Abfragen. `From … From …` ist die abfragebasierte Entsprechung der `SelectMany`-Methode. Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
 ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663374"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Numerische Datentypen (Visual Basic)
 Visual Basic bietet mehrere *numerische Datentypen* für die Behandlung von Zahlen in verschiedenen Darstellungen bereit. *Ganzzahlige* Typen darstellen, nur ganze Zahlen (Positive und negative und 0 (null)), und *Nonintegral* Typen stellen die Zahlen mit Nachkommastellen und ganze Zahl dar.  

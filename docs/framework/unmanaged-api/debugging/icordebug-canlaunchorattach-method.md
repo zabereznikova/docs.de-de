@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697776"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach-Methode
 Gibt ein HRESULT, der angibt, ob ein neuer Prozess gestartet oder an den angegebenen vorhandenen Prozess anfügen innerhalb des Kontexts der aktuellen Computer und -Runtime-Konfiguration möglich ist.  
@@ -46,13 +46,13 @@ HRESULT CanLaunchOrAttach (
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Debuggen von Diensten, die ein neuer Prozess gestartet oder das Anfügen an den Prozess ermitteln kann, erhält die Informationen über die aktuelle Konfiguration für Computer und der Common Language Runtime. HRESULT Werte sind möglich:  
   
--   S_OK  
+- S_OK  
   
--   CORDBG_E_DEBUGGING_NOT_POSSIBLE  
+- CORDBG_E_DEBUGGING_NOT_POSSIBLE  
   
--   CORDBG_E_KERNEL_DEBUGGER_PRESENT  
+- CORDBG_E_KERNEL_DEBUGGER_PRESENT  
   
--   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
+- CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode dient ausschließlich zu Informationszwecken. Die Schnittstelle beenden Sie nicht starten oder Anfügen an einen Prozess, unabhängig vom Wert von zurückgegebenen `CanLaunchOrAttach`.  

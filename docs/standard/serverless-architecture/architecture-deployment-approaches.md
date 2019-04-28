@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640251"
 ---
-# <a name="architecture-deployment-approaches"></a>Architekturansätze-Bereitstellung
+# <a name="architecture-deployment-approaches"></a>Ansätze der Architekturbereitstellung
 
 Unabhängig von der Architektur abweichen Ansatz zum Entwerfen einer Geschäftsanwendung, die Implementierung und Bereitstellung von Anwendungen verwendet. Unternehmen Hosten von Anwendungen für alles, von der physischen Hardware, serverlosen Funktionen.
 
@@ -138,9 +138,9 @@ Es gibt ein breites Spektrum an verfügbaren Optionen für die Architektur, eins
 
 |         |IaaS     |PaaS     |Container|Serverlose|
 |---------|---------|---------|---------|----------|
-|**Scale** (Skalieren)|VIRTUELLE COMPUTER       |Instanz |App      |Funktion  |
+|**Scale** (Skalieren)|VM       |Instanz |App      |Funktion  |
 |**Auszüge aus**|Hardware|Plattform|OS-Server|Laufzeit   |
-|**Komponententests** |VIRTUELLE COMPUTER       |Projekt  |Bild    |Code      |
+|**Unit** |VM       |Projekt  |Bild    |Code      |
 |**Lebensdauer**|Monate|Tage bis Monate|Minuten bis Tage|Millisekunden, die Minuten|
 |**Verantwortung**|Anwendungen, Abhängigkeiten, Laufzeit und Betriebssystem|Anwendungen und Abhängigkeiten|Anwendungen, Abhängigkeiten und Laufzeit|Funktion
 

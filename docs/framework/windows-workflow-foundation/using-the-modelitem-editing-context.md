@@ -3,11 +3,11 @@ title: Verwenden des ModelItem-Bearbeitungskontexts
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
 ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669497"
 ---
 # <a name="using-the-modelitem-editing-context"></a>Verwenden des ModelItem-Bearbeitungskontexts
 Der <xref:System.Activities.Presentation.Model.ModelItem>-Bearbeitungskontext ist das Objekt, mit dem die Hostanwendung mit dem Designer kommuniziert. <xref:System.Activities.Presentation.EditingContext> macht die beiden Methoden <xref:System.Activities.Presentation.EditingContext.Items%2A> und <xref:System.Activities.Presentation.EditingContext.Services%2A> verfügbar, die verwendet werden können.  
@@ -99,48 +99,48 @@ protected override void OnModelItemChanged(object newItem)
   
  Elemente:  
   
--   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: Verwaltet die Liste der lokalen Assemblys verwiesen wird, die innerhalb des Workflows für Steuerelemente (z. B. den Ausdrucks-Editor) verwendet werden.  
+- <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: Verwaltet die Liste der lokalen Assemblys verwiesen wird, die innerhalb des Workflows für Steuerelemente (z. B. den Ausdrucks-Editor) verwendet werden.  
   
--   <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Gibt an, ob der Designer einen schreibgeschützten Zustand aufweist.  
+- <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Gibt an, ob der Designer einen schreibgeschützten Zustand aufweist.  
   
--   <xref:System.Activities.Presentation.View.Selection>: Definiert die Auflistung von Objekten, die derzeit ausgewählt sind.  
+- <xref:System.Activities.Presentation.View.Selection>: Definiert die Auflistung von Objekten, die derzeit ausgewählt sind.  
   
--   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
+- <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
   
--   <xref:System.Activities.Presentation.WorkflowFileItem>: Enthält Informationen über die Datei, die die aktuelle bearbeitungssitzung basiert.  
+- <xref:System.Activities.Presentation.WorkflowFileItem>: Enthält Informationen über die Datei, die die aktuelle bearbeitungssitzung basiert.  
   
  Dienste:  
   
--   <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Eigenschaften der aktuellen Instanz hinzugefügt werden können mithilfe von <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
+- <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Eigenschaften der aktuellen Instanz hinzugefügt werden können mithilfe von <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
   
--   <xref:System.Activities.Presentation.View.DesignerView>: Ermöglicht den Zugriff auf die Eigenschaften des designercanvases.  
+- <xref:System.Activities.Presentation.View.DesignerView>: Ermöglicht den Zugriff auf die Eigenschaften des designercanvases.  
   
--   <xref:System.Activities.Presentation.IActivityToolboxService>: Können den Inhalt der Toolbox auf die aktualisiert werden.  
+- <xref:System.Activities.Presentation.IActivityToolboxService>: Können den Inhalt der Toolbox auf die aktualisiert werden.  
   
--   <xref:System.Activities.Presentation.Hosting.ICommandService>: Verwendet, um Designerbefehle (z. B. Kontextmenü) in benutzerdefinierte dienstimplementierungen zu integrieren.  
+- <xref:System.Activities.Presentation.Hosting.ICommandService>: Verwendet, um Designerbefehle (z. B. Kontextmenü) in benutzerdefinierte dienstimplementierungen zu integrieren.  
   
--   <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Stellt Funktionen für den Debugger des Designers.  
+- <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Stellt Funktionen für den Debugger des Designers.  
   
--   <xref:System.Activities.Presentation.View.IExpressionEditorService>: Bietet Zugriff auf das Dialogfeld "Ausdrucks-Editor".  
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>: Bietet Zugriff auf das Dialogfeld "Ausdrucks-Editor".  
   
--   <xref:System.Activities.Presentation.IIntegratedHelpService>: Den Designer bietet integrierte Hilfefunktionen.  
+- <xref:System.Activities.Presentation.IIntegratedHelpService>: Den Designer bietet integrierte Hilfefunktionen.  
   
--   <xref:System.Activities.Presentation.Validation.IValidationErrorService>: Ermöglicht den Zugriff auf Validierungsfehler mithilfe <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
+- <xref:System.Activities.Presentation.Validation.IValidationErrorService>: Ermöglicht den Zugriff auf Validierungsfehler mithilfe <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
   
--   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Stellt einen internen Dienst zum Speichern und Abrufen von Daten bereit. Dieser Dienst wird von .NET Framework intern verwendet und ist nicht für die externe Verwendung vorgesehen.  
+- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Stellt einen internen Dienst zum Speichern und Abrufen von Daten bereit. Dieser Dienst wird von .NET Framework intern verwendet und ist nicht für die externe Verwendung vorgesehen.  
   
--   <xref:System.Activities.Presentation.IXamlLoadErrorService>: Ermöglicht den Zugriff auf die XAML Load Fehler Auflistung mit <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
+- <xref:System.Activities.Presentation.IXamlLoadErrorService>: Ermöglicht den Zugriff auf die XAML Load Fehler Auflistung mit <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
   
--   <xref:System.Activities.Presentation.Services.ModelService>: Vom Designer verwendet, um das Modell des bearbeiteten Workflows zu interagieren.  
+- <xref:System.Activities.Presentation.Services.ModelService>: Vom Designer verwendet, um das Modell des bearbeiteten Workflows zu interagieren.  
   
--   <xref:System.Activities.Presentation.Model.ModelTreeManager>: Bietet Zugriff auf den Stamm des Modells Element Struktur mit <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
+- <xref:System.Activities.Presentation.Model.ModelTreeManager>: Bietet Zugriff auf den Stamm des Modells Element Struktur mit <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
   
--   <xref:System.Activities.Presentation.UndoEngine>: Bietet rückgängig und wiederholen Sie die Funktionalität.  
+- <xref:System.Activities.Presentation.UndoEngine>: Bietet rückgängig und wiederholen Sie die Funktionalität.  
   
--   <xref:System.Activities.Presentation.Services.ViewService>: Ordnet zugrunde liegenden Modellelementen visuelle Elemente.  
+- <xref:System.Activities.Presentation.Services.ViewService>: Ordnet zugrunde liegenden Modellelementen visuelle Elemente.  
   
--   <xref:System.Activities.Presentation.View.ViewStateService>: Speichert Ansichtszustände für Modellelemente.  
+- <xref:System.Activities.Presentation.View.ViewStateService>: Speichert Ansichtszustände für Modellelemente.  
   
--   <xref:System.Activities.Presentation.View.VirtualizedContainerService>: Verwendet, um das Verhalten der virtueller Container-Benutzeroberfläche anpassen.  
+- <xref:System.Activities.Presentation.View.VirtualizedContainerService>: Verwendet, um das Verhalten der virtueller Container-Benutzeroberfläche anpassen.  
   
--   <xref:System.Activities.Presentation.Hosting.WindowHelperService>: Verwendet, um die an- und Abmelden von Delegaten für ereignisbenachrichtigungen. Ermöglicht auch das Festlegen eines Fensterbesitzers.
+- <xref:System.Activities.Presentation.Hosting.WindowHelperService>: Verwendet, um die an- und Abmelden von Delegaten für ereignisbenachrichtigungen. Ermöglicht auch das Festlegen eines Fensterbesitzers.

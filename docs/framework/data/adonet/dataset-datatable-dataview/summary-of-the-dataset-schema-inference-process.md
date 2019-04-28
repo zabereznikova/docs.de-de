@@ -3,32 +3,32 @@ title: Zusammenfassung des Rückschlussprozesses von DataSet-Schemas
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 ms.openlocfilehash: 272e5762b7afd9f3ab24cbdec5f31bb120364815
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607296"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Zusammenfassung des Rückschlussprozesses von DataSet-Schemas
 Während des Rückschlussprozesses wird zunächst anhand des XML-Dokuments bestimmt, welche Elemente als Tabellen hergeleitet werden. Anschließend werden aus der übrigen XML die Spalten für diese Tabellen ermittelt. Bei geschachtelten Tabellen werden beim Rückschlussprozess geschachtelte <xref:System.Data.DataRelation>-Objekte und geschachtelte <xref:System.Data.ForeignKeyConstraint>-Objekte erstellt.  
   
  Im Folgenden finden Sie eine kurze Zusammenfassung der Rückschlussregeln:  
   
--   Elemente mit Attributen werden als Tabellen hergeleitet.  
+- Elemente mit Attributen werden als Tabellen hergeleitet.  
   
--   Elemente mit untergeordneten Elementen werden als Tabellen hergeleitet.  
+- Elemente mit untergeordneten Elementen werden als Tabellen hergeleitet.  
   
--   Sich wiederholende Elemente werden als einzelne Tabelle hergeleitet.  
+- Sich wiederholende Elemente werden als einzelne Tabelle hergeleitet.  
   
--   Ein Dokument- oder Stammelement, das keine Attribute und keine untergeordneten Elemente aufweist, die als Spalten hergeleitet würden, wird als <xref:System.Data.DataSet> hergeleitet. Andernfalls wird das Dokumentelement als Tabelle hergeleitet.  
+- Ein Dokument- oder Stammelement, das keine Attribute und keine untergeordneten Elemente aufweist, die als Spalten hergeleitet würden, wird als <xref:System.Data.DataSet> hergeleitet. Andernfalls wird das Dokumentelement als Tabelle hergeleitet.  
   
--   Attribute werden als Spalten hergeleitet.  
+- Attribute werden als Spalten hergeleitet.  
   
--   Elemente, die keine Attribute oder untergeordnete Elemente aufweisen und sich nicht wiederholen, werden als Spalten hergeleitet.  
+- Elemente, die keine Attribute oder untergeordnete Elemente aufweisen und sich nicht wiederholen, werden als Spalten hergeleitet.  
   
--   Für Elemente, die als geschachtelte Tabellen innerhalb von anderen Elementen abgeleitet werden, die ebenfalls abgeleitet werden als Tabellen, eine geschachtelte **DataRelation** wird zwischen den beiden Tabellen erstellt. Eine neue, primäre Schlüsselspalte, die mit dem Namen **TableName_Id** wird für beide Tabellen hinzugefügt, und verwendet die **DataRelation**. Ein **ForeignKeyConstraint** erstellt wird, zwischen den beiden Tabellen mithilfe der **TableName_Id** Spalte.  
+- Für Elemente, die als geschachtelte Tabellen innerhalb von anderen Elementen abgeleitet werden, die ebenfalls abgeleitet werden als Tabellen, eine geschachtelte **DataRelation** wird zwischen den beiden Tabellen erstellt. Eine neue, primäre Schlüsselspalte, die mit dem Namen **TableName_Id** wird für beide Tabellen hinzugefügt, und verwendet die **DataRelation**. Ein **ForeignKeyConstraint** erstellt wird, zwischen den beiden Tabellen mithilfe der **TableName_Id** Spalte.  
   
--   Für Elemente, die als Tabellen hergeleitet werden und, die Text enthalten, aber keine untergeordneten Elemente haben, eine neue Spalte mit dem Namen **TableName_Text** für den Text der einzelnen Elemente der erstellt wird. Bei einem als Tabelle hergeleiteten Element, das sowohl Text als auch untergeordnete Elemente aufweist, wird der Text ignoriert.  
+- Für Elemente, die als Tabellen hergeleitet werden und, die Text enthalten, aber keine untergeordneten Elemente haben, eine neue Spalte mit dem Namen **TableName_Text** für den Text der einzelnen Elemente der erstellt wird. Bei einem als Tabelle hergeleiteten Element, das sowohl Text als auch untergeordnete Elemente aufweist, wird der Text ignoriert.  
   
 ## <a name="see-also"></a>Siehe auch
 

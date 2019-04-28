@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2556196b7c8f81709e6880962e8ff36e126dd8b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599038"
 ---
 # <a name="corprftransitionreason-enumeration"></a>COR_PRF_TRANSITION_REASON-Enumeration
 Zeigt den Grund für einen Übergang von verwaltetem zu nicht verwaltetem Code an oder umgekehrt.  
@@ -39,14 +39,14 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|Der Übergang ist aufgrund eines Aufrufs an eine Funktion.|  
-|`COR_PRF_TRANSITION_RETURN`|Der Übergang ist aufgrund einer Rückgabe von einer Funktion.|  
+|`COR_PRF_TRANSITION_CALL`|Der Übergang erfolgt aufgrund eines Aufrufs an eine Funktion.|  
+|`COR_PRF_TRANSITION_RETURN`|Der Übergang erfolgt aufgrund einer Rückgabe von einer Funktion.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Übergang erfolgt, empfängt der Profiler eine [ICorProfilerCallback:: ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) oder [ICorProfilerCallback:: UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) Rückruf, der die Stellt einen Wert von der `COR_PRF_TRANSITION_REASON` Enumeration, um den Grund für den Übergang anzugeben.  
+ Wenn ein Übergang erfolgt, empfängt der Profiler eine [ICorProfilerCallback:: ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) oder [ICorProfilerCallback:: UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) Rückruf, der die Stellt den Wert der `COR_PRF_TRANSITION_REASON` Enumeration, um den Grund für den Übergang anzugeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   

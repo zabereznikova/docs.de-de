@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696170"
 ---
 # <a name="custom-bindings"></a>Benutzerdefinierte Bindungen
 Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus systemeigenen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Arbeitsbeispiele finden Sie unter [Beispiele für die benutzerdefinierte Bindung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Weitere Informationen finden Sie unter [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -18,47 +18,47 @@ Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn
 ## <a name="construction-of-a-custom-binding"></a>Aufbau einer benutzerdefinierten Bindung  
  Eine benutzerdefinierte Bindung wird unter Verwendung des <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A>-Konstruktors aus einer Sammlung von Bindungselementen erstellt, die in einer spezifischen Reihenfolge „gestapelt“ sind:  
   
--   Am Anfang steht eine optionale <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>-Klasse, die den Transaktionsfluss ermöglicht.  
+- Am Anfang steht eine optionale <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>-Klasse, die den Transaktionsfluss ermöglicht.  
   
--   Darauf folgt eine optionale <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>-Klasse, die eine Sitzung und Sortiermechanismen wie in der WS-ReliableMessaging-Spezifikation definiert bereitstellt. Eine Sitzung kann SOAP- und Transportvermittler überqueren.  
+- Darauf folgt eine optionale <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>-Klasse, die eine Sitzung und Sortiermechanismen wie in der WS-ReliableMessaging-Spezifikation definiert bereitstellt. Eine Sitzung kann SOAP- und Transportvermittler überqueren.  
   
--   Anschließend folgt eine <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse, die Sicherheitsfunktionen wie Autorisierung, Authentifizierung, Schutz und Vertraulichkeit bereitstellt.  
+- Anschließend folgt eine <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse, die Sicherheitsfunktionen wie Autorisierung, Authentifizierung, Schutz und Vertraulichkeit bereitstellt.  
   
--   Hierauf folgt eine optionale <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>-Klasse, die eine Duplexkommunikation mit einem Transportprotokoll ermöglicht, das selbst keine Duplexkommunikation unterstützt, z. B. HTTP.  
+- Hierauf folgt eine optionale <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>-Klasse, die eine Duplexkommunikation mit einem Transportprotokoll ermöglicht, das selbst keine Duplexkommunikation unterstützt, z. B. HTTP.  
   
--   Danach folgt eine optionale <xref:System.ServiceModel.Channels.OneWayBindingElement>-Klasse, die eine unidirektionale Kommunikation bereitstellt.  
+- Danach folgt eine optionale <xref:System.ServiceModel.Channels.OneWayBindingElement>-Klasse, die eine unidirektionale Kommunikation bereitstellt.  
   
--   Dann folgt ein optionales Streamsicherheitsbindungselement, das einem der folgenden Elemente entsprechen kann.  
+- Dann folgt ein optionales Streamsicherheitsbindungselement, das einem der folgenden Elemente entsprechen kann.  
   
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   Darauf wiederum folgt ein erforderliches, Nachrichten codierendes Bindungselement. Sie können Ihren eigenen Nachrichtenencoder oder eine von drei Nachrichten codierenden Bindungen verwenden:  
+- Darauf wiederum folgt ein erforderliches, Nachrichten codierendes Bindungselement. Sie können Ihren eigenen Nachrichtenencoder oder eine von drei Nachrichten codierenden Bindungen verwenden:  
   
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
  Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eigenen Transport oder eines der folgenden transportbindungselemente, die Windows Communication Foundation (WCF) bietet:  
   
--   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
   
--   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
  In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.  
   

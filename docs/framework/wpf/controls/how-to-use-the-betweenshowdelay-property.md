@@ -6,11 +6,11 @@ helpviewer_keywords:
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
 ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696053"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Vorgehensweise: Verwenden der BetweenShowDelay-Eigenschaft
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> endzeiteigenschaft, sodass die QuickInfos schnell angezeigt werden – mit nur wenig oder keine Verzögerung, wenn ein Benutzer den Mauszeiger von einer QuickInfo bewegt direkt in einen anderen.  
@@ -20,9 +20,9 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.ToolTipServ
   
  In der folgenden beiden Szenarien die <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> angewendet wird, wodurch die QuickInfo für den zweiten Ellipse mit einer Sekunde, bevor sie angezeigt wird:  
   
--   Wenn die Zeit, um zu verschieben, ist die zweite Schaltfläche mehr als zwei Sekunden.  
+- Wenn die Zeit, um zu verschieben, ist die zweite Schaltfläche mehr als zwei Sekunden.  
   
--   Wenn die QuickInfo am Anfang des Zeitintervalls für die erste Ellipse nicht sichtbar ist.  
+- Wenn die QuickInfo am Anfang des Zeitintervalls für die erste Ellipse nicht sichtbar ist.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  

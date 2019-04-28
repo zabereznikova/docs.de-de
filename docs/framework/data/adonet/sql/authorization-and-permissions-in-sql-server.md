@@ -3,11 +3,11 @@ title: Autorisierung und Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663959"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisierung und Berechtigungen in SQL Server
 Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähren, damit die Benutzer auch auf die Datenbankobjekte zugreifen können. Jedes sicherungsfähige Objekt verfügt über Berechtigungen, die einem Prinzipal mithilfe von Berechtigungsanweisungen gewährt werden können.  
@@ -37,7 +37,7 @@ Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähr
 |REVOKE|Widerruft eine Berechtigung. Dies ist der Standardzustand für ein neues Objekt. Eine für einen Benutzer oder eine Rolle widerrufene Berechtigung kann von anderen Gruppen oder Rollen, denen der Prinzipal zugewiesen ist, weiter geerbt werden.|  
 |DENY|Widerruft eine Berechtigung, sodass sie nicht geerbt werden kann. DENY hat gegenüber allen Berechtigungen absolute Priorität. DENY gilt jedoch nicht für Objektbesitzer oder `sysadmin`-Member. Wenn Sie der Rolle `public` mit DENY Berechtigungen für ein Objekt verweigern, gilt dies, mit Ausnahme der Objektbesitzer und der `sysadmin`-Member, für alle Benutzer und Rollen.|  
   
--   Die GRANT-Anweisung kann Berechtigungen für eine Gruppe oder Rolle zuweisen, die von Datenbankbenutzern geerbt werden können. Die DENY-Anweisung hat aber gegenüber allen anderen Berechtigungsanweisungen Vorrang. Ein Benutzer, dem eine Berechtigung verweigert wurde, kann daher diese Berechtigung nicht von einer anderen Rolle erben.  
+- Die GRANT-Anweisung kann Berechtigungen für eine Gruppe oder Rolle zuweisen, die von Datenbankbenutzern geerbt werden können. Die DENY-Anweisung hat aber gegenüber allen anderen Berechtigungsanweisungen Vorrang. Ein Benutzer, dem eine Berechtigung verweigert wurde, kann daher diese Berechtigung nicht von einer anderen Rolle erben.  
   
 > [!NOTE]
 >  Membern der festen Serverrolle `sysadmin` und Objektbesitzern können Berechtigungen nicht verweigert werden.  

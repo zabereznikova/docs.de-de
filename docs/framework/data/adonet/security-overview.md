@@ -3,11 +3,11 @@ title: Im Überblick2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664154"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozess. Es wird niemals die Situation eintreten, dass ein Entwickler dafür garantieren kann, dass eine Anwendung vor allen Angriffen sicher ist, weil unmöglich vorhergesagt werden kann, welche Arten von Angriffen durch neue Technologien hervorgebracht werden. Umgekehrt kann nicht behauptet werden, dass Sicherheitsmängel nicht vorhanden sind oder nicht vorhanden sein können, nur weil diese noch nicht in einem System entdeckt (oder veröffentlicht) wurden. Sie müssen die Sicherheit bereits in der Entwurfsphase des Projekts planen, und Sie müssen planen, wie die Sicherheit über die gesamte Lebensdauer der Anwendung hinweg gewährleistet werden soll.  
@@ -46,19 +46,19 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
 ## <a name="code-access-security-cas"></a>Codezugriffssicherheit (Code Access Security, CAS)  
  Die Codezugriffssicherheit (Code Access Security, CAS) ist ein Mechanismus, mit dem der Zugriff von Code auf geschützte Ressourcen und Operationen beschränkt werden kann. In .NET Framework erfüllt CAS die folgenden Funktionen:  
   
--   Definieren von Berechtigungen und Berechtigungssätzen, die den Zugriff auf die verschiedenen Systemressourcen regeln  
+- Definieren von Berechtigungen und Berechtigungssätzen, die den Zugriff auf die verschiedenen Systemressourcen regeln  
   
--   Bereitstellen von Möglichkeiten für Administratoren, durch Verknüpfen von Berechtigungssätzen mit Codegruppen eine Sicherheitsrichtlinie zu konfigurieren  
+- Bereitstellen von Möglichkeiten für Administratoren, durch Verknüpfen von Berechtigungssätzen mit Codegruppen eine Sicherheitsrichtlinie zu konfigurieren  
   
--   Bereitstellen von Möglichkeiten für Code, die für die Ausführung erforderlichen sowie die erwünschten Berechtigungen anzufordern, und Festlegen, welche Berechtigungen der Code niemals haben darf  
+- Bereitstellen von Möglichkeiten für Code, die für die Ausführung erforderlichen sowie die erwünschten Berechtigungen anzufordern, und Festlegen, welche Berechtigungen der Code niemals haben darf  
   
--   Erteilen von Berechtigungen für jede geladene Assembly auf der Grundlage der vom Code angeforderten Berechtigungen und der laut Sicherheitsrichtlinie zulässigen Operationen  
+- Erteilen von Berechtigungen für jede geladene Assembly auf der Grundlage der vom Code angeforderten Berechtigungen und der laut Sicherheitsrichtlinie zulässigen Operationen  
   
--   Bereitstellen der Möglichkeit für Code festzulegen, dass seine Aufrufer bestimmte Berechtigungen haben müssen  
+- Bereitstellen der Möglichkeit für Code festzulegen, dass seine Aufrufer bestimmte Berechtigungen haben müssen  
   
--   Bereitstellen der Möglichkeit für Code festzulegen, dass seine Aufrufer eine digitale Signatur besitzen müssen, sodass der geschützte Code nur von Aufrufern eines bestimmten Unternehmens oder eines bestimmten Standorts aufgerufen werden kann  
+- Bereitstellen der Möglichkeit für Code festzulegen, dass seine Aufrufer eine digitale Signatur besitzen müssen, sodass der geschützte Code nur von Aufrufern eines bestimmten Unternehmens oder eines bestimmten Standorts aufgerufen werden kann  
   
--   Durchsetzen von Einschränkungen für Code zur Laufzeit, indem die erteilten Berechtigungen der einzelnen Aufrufer in der Aufrufliste mit den Berechtigungen verglichen werden, die sie besitzen müssen  
+- Durchsetzen von Einschränkungen für Code zur Laufzeit, indem die erteilten Berechtigungen der einzelnen Aufrufer in der Aufrufliste mit den Berechtigungen verglichen werden, die sie besitzen müssen  
   
  Um im Falle eines erfolgreichen Angriffs den Schaden so gering wie möglich zu halten, sollten Sie für Ihren Code einen Sicherheitskontext wählen, der nur den Zugriff auf die Ressourcen gewährt, die zum Arbeiten wirklich benötigt werden.  
   
@@ -72,17 +72,17 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
 ## <a name="database-security"></a>Datenbanksicherheit  
  Das Prinzip der minimalen Rechtegewährung gilt auch für Ihre Datenquelle. Bei der Datenbanksicherheit gilt es folgende allgemeine Richtlinien zu beachten:  
   
--   Gewähren Sie neu erstellten Konten nur die geringstmöglichen Zugriffsrechte.  
+- Gewähren Sie neu erstellten Konten nur die geringstmöglichen Zugriffsrechte.  
   
--   Erlauben Sie den Benutzern nicht, auf administrative Konten zuzugreifen, um den Code funktionsfähig zu bekommen.  
+- Erlauben Sie den Benutzern nicht, auf administrative Konten zuzugreifen, um den Code funktionsfähig zu bekommen.  
   
--   Geben Sie keine serverseitigen Fehlermeldungen an Clientanwendungen zurück.  
+- Geben Sie keine serverseitigen Fehlermeldungen an Clientanwendungen zurück.  
   
--   Validieren Sie sowohl auf dem Client als auch auf dem Server alle Eingaben.  
+- Validieren Sie sowohl auf dem Client als auch auf dem Server alle Eingaben.  
   
--   Verwenden Sie parametrisierte Befehle, und vermeiden Sie dynamische SQL-Anweisungen.  
+- Verwenden Sie parametrisierte Befehle, und vermeiden Sie dynamische SQL-Anweisungen.  
   
--   Aktivieren Sie die Sicherheitsüberwachung und -protokollierung für die von Ihnen verwendete Datenbank, sodass Sie bei Sicherheitsverletzungen entsprechend benachrichtigt werden.  
+- Aktivieren Sie die Sicherheitsüberwachung und -protokollierung für die von Ihnen verwendete Datenbank, sodass Sie bei Sicherheitsverletzungen entsprechend benachrichtigt werden.  
   
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   

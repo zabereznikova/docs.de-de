@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f4d86667-3392-470d-a076-5ca6cbb660f6
 ms.openlocfilehash: c0bc66bfe78a52fe092890c070c339df1a89199d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637673"
 ---
 # <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>Beispiele für die Abfrageausdruckssyntax: Joinoperatoren Sie (LINQ to DataSet)
 Das Verknüpfen (JOIN) ist eine wichtige Operation bei Abfragen von Daten aus Datenquellen, bei denen es untereinander keine navigierbaren Beziehungen, wie Tabellen in relationalen Datenbanken, gibt. Bei einer JOIN-Operation für zwei Datenquellen werden Objekte in einer Datenquelle mit Objekten in der anderen Datenquelle, die über ein gemeinsames Attribut verfügen, miteinander verknüpft. Weitere Informationen finden Sie unter [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

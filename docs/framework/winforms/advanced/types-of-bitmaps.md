@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
 ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663915"
 ---
 # <a name="types-of-bitmaps"></a>Bitmaptypen
 Eine Bitmap ist ein Array von Bits, die die Farbe jedes Pixels in einem rechteckigen Array von Pixeln an. Die Anzahl der Bits, die für ein einzelnes Pixel bestimmt die Anzahl der Farben, die dieses Pixel zugewiesen werden kann. Z. B., wenn jedes Pixel von 4 Bits dargestellt wird, klicken Sie dann ein angegebenes Pixel kann zugewiesen werden eines 16 unterschiedlichen Farben (2 ^ 4 = 16). Die folgende Tabelle zeigt einige Beispiele für die Anzahl der Farben, die einem Pixel, dargestellt durch eine angegebene Anzahl von Bits zugewiesen werden kann.  

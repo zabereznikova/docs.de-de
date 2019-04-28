@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638514"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum-Schnittstelle
 Bietet Methoden, mit die den Host den Satz von Assemblys, auf eine Datei oder den Stream unter Verwendung von Assemblyidentitätsdaten, die intern für die common Language Runtime (CLR), ohne zu erstellen oder zu verstehen, die Identitäten verweist bearbeiten können.  

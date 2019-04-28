@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640428"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms-DataGridViewComboBoxCell-Dropdownliste
 Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Windows.Forms.DataGridViewComboBoxColumn> und <xref:System.Windows.Forms.DataGridViewComboBoxCell> Typen ermöglichen es Ihnen, beliebige Objekte in die Dropdown-Liste hinzufügen. Mit diesem Feature können Sie komplexer Zustände in einer Dropdown-Liste darstellen, ohne entsprechenden Objekte in einer separaten Sammlung speichern zu müssen.  
@@ -44,7 +44,7 @@ Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Wi
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>Das aktuell ausgewählte Geschäftsobjekt abrufen  
   
--   Abrufen der Zelle <xref:System.Windows.Forms.DataGridViewCell.Value%2A> Eigenschaft und wandeln sie in der Business-Objekttyp.  
+- Abrufen der Zelle <xref:System.Windows.Forms.DataGridViewCell.Value%2A> Eigenschaft und wandeln sie in der Business-Objekttyp.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
@@ -66,7 +66,7 @@ Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Wi
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System" und "System.Windows.Forms".  
+- Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 

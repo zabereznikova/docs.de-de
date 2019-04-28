@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
 ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614283"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>Beispiele für die Abfrageausdruckssyntax: Navigieren in Beziehungen
 Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind Verknüpfungseigenschaften für die Suche nach Entitäten an den Enden einer Zuordnung. Navigationseigenschaften ermöglichen einem Benutzer das Navigieren zwischen Entitäten bzw. zwischen einer Entität und verknüpften Entitäten mithilfe eines Zuordnungssatzes. Dieses Thema enthält Beispiele für die Abfrageausdruckssyntax zum Navigieren von Beziehungen mithilfe von Navigationseigenschaften in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen.  

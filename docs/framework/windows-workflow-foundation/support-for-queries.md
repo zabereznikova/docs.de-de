@@ -3,28 +3,28 @@ title: Unterstützung für Abfragen
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641514"
 ---
 # <a name="support-for-queries"></a>Unterstützung für Abfragen
 Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf. Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen. Die folgende Liste enthält einige dieser bekannten Eigenschaften:  
   
--   **Websitename.** Der Name der Website, die den Dienst enthält.  
+- **Websitename.** Der Name der Website, die den Dienst enthält.  
   
--   **Relative Anwendungspfad.** Der Pfad der Anwendung relativ zur Website.  
+- **Relative Anwendungspfad.** Der Pfad der Anwendung relativ zur Website.  
   
--   **Relativer Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
+- **Relativer Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
   
--   **Dienstname.** Name des Diensts.  
+- **Dienstname.** Name des Diensts.  
   
--   **Dienst-Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
+- **Dienst-Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
   
--   **Aktuellen Computer.**  
+- **Aktuellen Computer.**  
   
--   **Letzte Computer**. Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.  
+- **Letzte Computer**. Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.  
   
 > [!NOTE]
 >  Für selbst gehostete Szenarios mit dem Workflowdiensthost werden nur die letzten vier Eigenschaften aufgefüllt. Für Workflowanwendungsszenarios wird nur die letzte Eigenschaft aufgefüllt.  
