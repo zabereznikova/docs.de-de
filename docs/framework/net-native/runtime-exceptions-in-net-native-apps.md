@@ -5,11 +5,11 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866781"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Laufzeitausnahmen in .NET Native-Apps
 Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattform auf den Zielplattformen zu testen, da die Debug- und Releasekonfigurationen völlig unterschiedlich sind. Die Debugkonfiguration verwendet standardmäßig die .NET Core-Laufzeit zum Kompilieren der App, während die Releasekonfiguration .NET Native verwendet, um die App in systemeigenen Code zu kompilieren.  
@@ -24,11 +24,11 @@ Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattfo
   
  Beim Debuggen von Releasebuilds, die mithilfe von .NET Native kompiliert wurden, geschieht Folgendes:  
   
--   Sie verwenden die .NET Native-Debug-Engine, die sich von den normalen .NET-Debugtools unterscheidet.  
+- Sie verwenden die .NET Native-Debug-Engine, die sich von den normalen .NET-Debugtools unterscheidet.  
   
--   Die Größe Ihrer ausführbaren Datei wird so weit wie möglich reduziert. Eine der Methoden, durch die .NET Native die Größe einer ausführbaren Datei verringert, besteht darin, dass Laufzeitausnahmemeldungen erheblich gekürzt werden. Dieses Thema wird ausführlicher im Abschnitt [Runtime exception messages](#Messages) erörtert.  
+- Die Größe Ihrer ausführbaren Datei wird so weit wie möglich reduziert. Eine der Methoden, durch die .NET Native die Größe einer ausführbaren Datei verringert, besteht darin, dass Laufzeitausnahmemeldungen erheblich gekürzt werden. Dieses Thema wird ausführlicher im Abschnitt [Runtime exception messages](#Messages) erörtert.  
   
--   Der Code wird stark optimiert. Dies bedeutet, dass nach Möglichkeit Inlining verwendet wird. (Beim Inlining wird Code aus externen Routinen in die aufrufende Routine verschoben.)   Die Tatsache, dass .NET Native eine spezielle Laufzeit bietet und aggressives Inlining implementiert, wirkt sich auf die beim Debuggen angezeigte Aufrufliste aus.  Weitere Informationen finden Sie im Abschnitt [Runtime call stack](#CallStack) .  
+- Der Code wird stark optimiert. Dies bedeutet, dass nach Möglichkeit Inlining verwendet wird. (Beim Inlining wird Code aus externen Routinen in die aufrufende Routine verschoben.)   Die Tatsache, dass .NET Native eine spezielle Laufzeit bietet und aggressives Inlining implementiert, wirkt sich auf die beim Debuggen angezeigte Aufrufliste aus.  Weitere Informationen finden Sie im Abschnitt [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
 >  Sie können steuern, ob die Debug- und Releasebuilds mit der .NET Native-Toolkette kompiliert werden, indem Sie das Kontrollkästchen **Mit .NET Native-Toolkette kompilieren** aktivieren oder deaktivieren.   Beachten Sie jedoch, dass die Produktionsversion Ihrer App vom Windows Store immer mit der .NET Native-Toolkette kompiliert wird.  

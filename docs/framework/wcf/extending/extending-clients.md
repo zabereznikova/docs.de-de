@@ -5,11 +5,11 @@ helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
 ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857934"
 ---
 # <a name="extending-clients"></a>Erweitern von Clients
 Die Dienstmodellebene ist dafür verantwortlich, Methodenaufrufe per Anwendungscode in ausgehende Nachrichten zu übersetzen, sie in den zugrunde liegenden Kanälen abzulegen, die Ergebnisse zurück in Rückgabewerte und out-Parameter in Anwendungscode zu übersetzen sowie die Ergebnisse an den Aufrufer zurückzugeben. Dienstmodellerweiterungen ändern bzw. implementieren Ausführungs- oder Kommunikationsverhalten und Funktionen wie Verteileroptionen, benutzerdefiniertes Verhalten, Nachrichten- oder Parameterinterceptoren und andere Erweiterbarkeitsfunktionen.  
@@ -28,46 +28,46 @@ Die Dienstmodellebene ist dafür verantwortlich, Methodenaufrufe per Anwendungsc
 ## <a name="scenarios"></a>Szenarien  
  Es gibt viele Gründe, das Clientsystem zu erweitern:  
   
--   Benutzerdefinierte Nachrichtenvalidierung. Ein Benutzer möchte durchsetzen, dass eine Nachricht für ein bestimmtes Schema gültig ist. Dies kann durch Implementieren der <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>-Schnittstelle und Zuweisen der Implementierung an die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>-Eigenschaft erfolgen. Beispiele hierzu finden Sie unter [Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) und [Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+- Benutzerdefinierte Nachrichtenvalidierung. Ein Benutzer möchte durchsetzen, dass eine Nachricht für ein bestimmtes Schema gültig ist. Dies kann durch Implementieren der <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>-Schnittstelle und Zuweisen der Implementierung an die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>-Eigenschaft erfolgen. Beispiele hierzu finden Sie unter [Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) und [Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
--   Benutzerdefinierte Nachrichtenprotokollierung. Ein Benutzer möchte eventuell einige Anwendungsnachrichten prüfen und protokollieren, die durch einen Endpunkt fließen. Dies kann ebenfalls mit den Nachrichteninterceptorschnittstellen erreicht werden.  
+- Benutzerdefinierte Nachrichtenprotokollierung. Ein Benutzer möchte eventuell einige Anwendungsnachrichten prüfen und protokollieren, die durch einen Endpunkt fließen. Dies kann ebenfalls mit den Nachrichteninterceptorschnittstellen erreicht werden.  
   
--   Benutzerdefinierte Nachrichtentransformationen. Anstatt den Anwendungscode zu ändern, möchte der Benutzer vielleicht bestimmte Transformationen (wie Versionsverwaltung) auf die Nachricht in der Laufzeit anwenden. Auch dies kann mit den Nachrichteninterceptorschnittstellen erreicht werden.  
+- Benutzerdefinierte Nachrichtentransformationen. Anstatt den Anwendungscode zu ändern, möchte der Benutzer vielleicht bestimmte Transformationen (wie Versionsverwaltung) auf die Nachricht in der Laufzeit anwenden. Auch dies kann mit den Nachrichteninterceptorschnittstellen erreicht werden.  
   
--   Benutzerdefiniertes Datenmodell. Ein Benutzer möchte eventuell ein Daten- oder Serialisierungsmodell Modell als diejenigen, die standardmäßig in WCF unterstützt (d. h., <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, und <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> Objekte). Dies kann über die Implementierung der Nachrichtenformatierungsschnittstellen erreicht werden. Weitere Informationen finden Sie in der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType>-Eigenschaft und in der <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>-Eigenschaft.  
+- Benutzerdefiniertes Datenmodell. Ein Benutzer möchte eventuell ein Daten- oder Serialisierungsmodell Modell als diejenigen, die standardmäßig in WCF unterstützt (d. h., <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, und <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> Objekte). Dies kann über die Implementierung der Nachrichtenformatierungsschnittstellen erreicht werden. Weitere Informationen finden Sie in der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType>-Eigenschaft und in der <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType>-Eigenschaft.  
   
--   Benutzerdefinierte Parametervalidierung. Ein Benutzer möchte durchsetzen, dass typisierte Parameter gültig sind (im Gegensatz zu XML). Dies kann mit den Parameterinspektorschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Gewusst wie: Überprüfen oder Ändern von Parametern](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) oder [Clientvalidierung](../../../../docs/framework/wcf/samples/client-validation.md).  
+- Benutzerdefinierte Parametervalidierung. Ein Benutzer möchte durchsetzen, dass typisierte Parameter gültig sind (im Gegensatz zu XML). Dies kann mit den Parameterinspektorschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Gewusst wie: Überprüfen oder Ändern von Parametern](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) oder [Clientvalidierung](../../../../docs/framework/wcf/samples/client-validation.md).  
   
 ### <a name="using-the-clientruntime-class"></a>Verwenden der ClientRuntime-Klasse  
  Die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse ist ein Erweiterungspunkt, an den Sie Erweiterungsobjekte anhängen können, die Nachrichten abfangen und das Clientverhalten ausdehnen. Abfangobjekte können alle Nachrichten in einem bestimmten Vertrag verarbeiten, nur Nachrichten für bestimmte Vorgänge verarbeiten, eine benutzerdefinierte Kanalinitialisierung durchführen und sonstiges benutzerdefiniertes Verhalten von Clientanwendungen implementieren.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>-Eigenschaft gibt das DispatchRuntime-Objekt für durch Dienste initiierte Rückrufvorgangsclients zurück.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>-Eigenschaft gibt das DispatchRuntime-Objekt für durch Dienste initiierte Rückrufvorgangsclients zurück.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A>-Eigenschaft akzeptiert ein benutzerdefiniertes Vorgangsauswahlobjekt.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A>-Eigenschaft akzeptiert ein benutzerdefiniertes Vorgangsauswahlobjekt.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A>-Eigenschaft ermöglicht das Hinzufügen eines Kanalinitialisierers, der den Clientkanal prüfen oder abändern kann.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A>-Eigenschaft ermöglicht das Hinzufügen eines Kanalinitialisierers, der den Clientkanal prüfen oder abändern kann.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Eigenschaft ruft eine Auflistung von <xref:System.ServiceModel.Dispatcher.ClientOperation>-Objekten ab, denen Sie benutzerdefinierte Nachrichteninterceptoren hinzufügen können, die spezielle Funktionen für die Nachrichten dieses Vorgangs bereitstellen.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Eigenschaft ruft eine Auflistung von <xref:System.ServiceModel.Dispatcher.ClientOperation>-Objekten ab, denen Sie benutzerdefinierte Nachrichteninterceptoren hinzufügen können, die spezielle Funktionen für die Nachrichten dieses Vorgangs bereitstellen.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A>-Eigenschaft ermöglicht einer Anwendung, bestimmte automatische Adressierungsheader zu deaktivieren, um die Adressierung direkt zu steuern.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A>-Eigenschaft ermöglicht einer Anwendung, bestimmte automatische Adressierungsheader zu deaktivieren, um die Adressierung direkt zu steuern.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A>-Eigenschaft legt den Wert des Ziels der Nachricht auf der Transportebene fest, um Vermittler und andere Szenarien zu unterstützen.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A>-Eigenschaft legt den Wert des Ziels der Nachricht auf der Transportebene fest, um Vermittler und andere Szenarien zu unterstützen.  
   
--   Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> Eigenschaft ruft eine Auflistung von <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> Objekte, die Sie benutzerdefinierte nachrichteninterceptoren für alle Nachrichten über einen WCF-Client hinzufügen können.  
+- Die <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> Eigenschaft ruft eine Auflistung von <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> Objekte, die Sie benutzerdefinierte nachrichteninterceptoren für alle Nachrichten über einen WCF-Client hinzufügen können.  
   
  Außerdem gibt es eine Reihe weiterer Eigenschaften, die die Clientvertragsinformationen abrufen:  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
  Wenn der WCF-Client einen WCF-duplexclient handelt, rufen die folgenden Eigenschaften auch des Rückrufs WCF-Client-Informationen:  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
  Um WCF-clientausführung über eine gesamte WCF-Client zu erweitern, überprüfen Sie die Eigenschaften, die auf die <xref:System.ServiceModel.Dispatcher.ClientRuntime> Klasse, um festzustellen, ob durch Ändern einer Eigenschaft oder das Implementieren einer Schnittstelle und Hinzufügen zu einer Eigenschaft die Funktionalität Sie gewährleistet. Sobald Sie eine bestimmte Erweiterung ausgewählt haben, müssen Sie Ihre Erweiterung in die geeignete <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Eigenschaft einfügen, indem Sie ein Clientverhalten implementieren, das Zugriff auf die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse bietet, sobald diese aufgerufen wird.  
   
@@ -80,31 +80,31 @@ Die Dienstmodellebene ist dafür verantwortlich, Methodenaufrufe per Anwendungsc
   
  Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A>-Eigenschaft, um das <xref:System.ServiceModel.Dispatcher.ClientOperation>-Objekt zu suchen, das einen bestimmten Dienstvorgang darstellt. Die folgenden Eigenschaften ermöglichen Ihnen, benutzerdefinierte Objekte in der WCF-Clientsystem einzufügen:  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A>-Eigenschaft, um eine benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Implementierung für einen Vorgang einzufügen oder das aktuelle Formatierungsprogramm zu ändern.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A>-Eigenschaft, um eine benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Implementierung für einen Vorgang einzufügen oder das aktuelle Formatierungsprogramm zu ändern.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A>-Eigenschaft, um eine benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung einzufügen oder die aktuelle Implementierung zu ändern.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A>-Eigenschaft, um eine benutzerdefinierte <xref:System.ServiceModel.Dispatcher.IParameterInspector>-Implementierung einzufügen oder die aktuelle Implementierung zu ändern.  
   
  Mit den folgenden Eigenschaften können Sie das System in Interaktion mit dem Formatierungsprogramm und benutzerdefinierten Parameterinspektoren ändern:  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A>-Eigenschaft, um die Serialisierung einer ausgehenden Nachricht zu steuern.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A>-Eigenschaft, um die Serialisierung einer ausgehenden Nachricht zu steuern.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A>-Eigenschaft, um die Deserialisierung einer eingehenden Nachricht zu steuern.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A>-Eigenschaft, um die Deserialisierung einer eingehenden Nachricht zu steuern.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A>-Eigenschaft, um die WS-Adressierungsaktion der Anforderungsnachricht zu steuern.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A>-Eigenschaft, um die WS-Adressierungsaktion der Anforderungsnachricht zu steuern.  
   
--   Verwenden der <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> und <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> angeben, welche Methoden der WCF-Client mit einem asynchronen Vorgang zugeordnet sind.  
+- Verwenden der <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> und <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> angeben, welche Methoden der WCF-Client mit einem asynchronen Vorgang zugeordnet sind.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A>-Eigenschaft, um eine Auflistung der angegebenen Typen abzurufen, die als Detailtyp in SOAP-Fehlern erscheinen können.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A>-Eigenschaft, um eine Auflistung der angegebenen Typen abzurufen, die als Detailtyp in SOAP-Fehlern erscheinen können.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A>-Eigenschaft und die <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A>-Eigenschaft, um zu steuern, ob eine Sitzung initiiert bzw. abgebrochen wird, wenn der Vorgang aufgerufen wird.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A>-Eigenschaft und die <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A>-Eigenschaft, um zu steuern, ob eine Sitzung initiiert bzw. abgebrochen wird, wenn der Vorgang aufgerufen wird.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A>-Eigenschaft, um zu steuern, ob es sich bei dem Vorgang um einen unidirektionalen Vorgang handelt.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A>-Eigenschaft, um zu steuern, ob es sich bei dem Vorgang um einen unidirektionalen Vorgang handelt.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A>-Eigenschaft, um das darin enthaltene <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Objekt zu ermitteln.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A>-Eigenschaft, um das darin enthaltene <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Objekt zu ermitteln.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A>-Eigenschaft, um den Namen des Vorgangs abzurufen.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A>-Eigenschaft, um den Namen des Vorgangs abzurufen.  
   
--   Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A>-Eigenschaft, um zu steuern, welche Methode dem Vorgang zugeordnet wird.  
+- Verwenden Sie die <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A>-Eigenschaft, um zu steuern, welche Methode dem Vorgang zugeordnet wird.  
   
  Um WCF-clientausführung über nur einen Dienstvorgang zu erweitern, überprüfen Sie die Eigenschaften, die auf die <xref:System.ServiceModel.Dispatcher.ClientOperation> Klasse, um festzustellen, ob durch Ändern einer Eigenschaft oder das Implementieren einer Schnittstelle und Hinzufügen zu einer Eigenschaft die Funktionalität Sie gewährleistet. Sobald Sie eine bestimmte Erweiterung ausgewählt haben, müssen Sie Ihre Erweiterung in die geeignete <xref:System.ServiceModel.Dispatcher.ClientOperation>-Eigenschaft einfügen, indem Sie ein Clientverhalten implementieren, das Zugriff auf die <xref:System.ServiceModel.Dispatcher.ClientOperation>-Klasse bietet, sobald diese aufgerufen wird. In diesem Verhalten können Sie dann die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Eigenschaft ändern, um sie Ihren Anforderungen anzupassen.  
   

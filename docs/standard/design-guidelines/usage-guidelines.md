@@ -1,5 +1,5 @@
 ---
-title: Nutzungsrichtlinien
+title: Verwendungsrichtlinien
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: KrzysztofCwalina
 ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778806"
 ---
-# <a name="usage-guidelines"></a>Nutzungsrichtlinien
+# <a name="usage-guidelines"></a>Verwendungsrichtlinien
 
 Dieser Abschnitt enthält Richtlinien für die Verwendung von häufig verwendeten Typen in öffentlich zugängliche-APIs. Er behandelt die direkte Verwendung von integrierten Framework-Typen (z. B. Serialisierungsattribute) und allgemeine Operatoren überladen.
   

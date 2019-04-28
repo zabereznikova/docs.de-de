@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
 ms.openlocfilehash: bbf306b31dd2bc9cfcfb877351205970fc63706f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788777"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Vorgehensweise: Festlegen von Headern in der Clientanforderung (WCF Data Services)
 Wenn Sie mithilfe der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek auf einen Datendienst zugreifen, der das [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] unterstützt, legt die Clientbibliothek die erforderlichen HTTP-Header in Anforderungsnachrichten an den Datendienst automatisch fest. Die Clientbibliothek ist jedoch nicht in der Lage, Nachrichtenheader festzulegen, die in bestimmten Fällen erforderlich sind, z. B. wenn der Datendienst die anspruchsbasierte Authentifizierung oder Cookies erfordert. Weitere Informationen finden Sie unter [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). In diesen Fällen müssen Sie Nachrichtenheader in der Anforderungsnachricht vor dem Senden manuell festlegen. Das Beispiel in diesem Thema zeigt, wie das <xref:System.Data.Services.Client.DataServiceContext.SendingRequest>-Ereignis behandelt wird, um der Anforderungsnachricht einen neuen Header hinzuzufügen, bevor sie an den Datendienst gesendet wird.  

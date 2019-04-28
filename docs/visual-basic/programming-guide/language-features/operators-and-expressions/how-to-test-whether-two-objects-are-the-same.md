@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
 ms.openlocfilehash: dbb268175d197e7b931af45a98f3a273c593e5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864376"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Vorgehensweise: Überprüfen Sie, ob zwei Objekte der gleichen (Visual Basic)
 Wenn Sie zwei Variablen, die auf Objekte verweisen verfügen, verwenden Sie entweder die `Is` oder `IsNot` Operator oder beides, um zu bestimmen, ob sie an dieselbe Instanz verweisen.  
   
 ### <a name="to-test-whether-two-objects-are-the-same"></a>Zum Überprüfen, ob zwei Objekte gleich sind.  
   
--   Verwenden der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) oder [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) mit den beiden Variablen als Operanden.  
+- Verwenden der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) oder [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) mit den beiden Variablen als Operanden.  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   

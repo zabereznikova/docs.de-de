@@ -3,11 +3,11 @@ title: SQL Server-Datentypen und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876797"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Datenverlust führen. Um die Datenintegrität beizubehalten, stellt der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) typisierte Zugriffsmethoden zum Arbeiten mit SQL Server-Daten bereit. Sie können mit den Enumerationen in den <xref:System.Data.SqlDbType>-Klassen <xref:System.Data.SqlClient.SqlParameter>-Datentypen angeben.  

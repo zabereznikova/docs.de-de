@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875731"
 ---
 # <a name="securing-wcf-data-services"></a>Sichern von WCF Data Services
 Dieses Thema beschreibt sicherheitsüberlegungen speziell für das Entwickeln, bereitstellen und Ausführen von WCF Data Services und Anwendungen, von Access Services, die das Open Data Protocol (OData) zu unterstützen. Sie sollten auch Empfehlungen für das Erstellen sicherer Anwendungen für .NET Framework ausführen.  
@@ -82,15 +82,15 @@ OData basiert auf dem HTTP-Protokoll. Abhängig von der vom Datendienst implemen
 ### <a name="custom-hosting-requirements"></a>Benutzerdefinierte Hostanforderungen  
  Standardmäßig wird die WCF Data Services als eine in IIS gehostete ASP.NET-Anwendung erstellt. Dies ermöglicht es dem Datendienst, die sicheren Verhalten dieser Plattform zu nutzen. Sie können WCF Data Services definieren, die von einem benutzerdefinierten Host gehostet werden. Weitere Informationen finden Sie unter [Hosting des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md). Die Komponenten und die Plattform, von denen ein Datendienst gehostet wird, müssen Angriffe auf den Datendienst durch die folgenden Sicherheitsverhalten verhindern:  
   
--   Begrenzen Sie die Länge des in einer Datendienstanforderung akzeptierten URI für alle möglichen Vorgänge.  
+- Begrenzen Sie die Länge des in einer Datendienstanforderung akzeptierten URI für alle möglichen Vorgänge.  
   
--   Begrenzen Sie die Größe ein- und ausgehender HTTP-Nachrichten.  
+- Begrenzen Sie die Größe ein- und ausgehender HTTP-Nachrichten.  
   
--   Begrenzen Sie die Gesamtanzahl von Anforderungen, die gleichzeitig ausstehen können.  
+- Begrenzen Sie die Gesamtanzahl von Anforderungen, die gleichzeitig ausstehen können.  
   
--   Begrenzen Sie die Größe der HTTP-Headern und deren Werte aus, und geben Sie die WCF Data Services-Zugriff auf Headerdaten.  
+- Begrenzen Sie die Größe der HTTP-Headern und deren Werte aus, und geben Sie die WCF Data Services-Zugriff auf Headerdaten.  
   
--   Richten Sie eine Erkennung und Verteidigungsmaßnahmen für bekannte Angriffe wie TCP-SYN und Nachrichtenreplay ein.  
+- Richten Sie eine Erkennung und Verteidigungsmaßnahmen für bekannte Angriffe wie TCP-SYN und Nachrichtenreplay ein.  
   
 ### <a name="values-are-not-further-encoded"></a>Keine weitere Codierung von Werten  
  An den Datendienst gesendete Eigenschaftenwerte werden von der WCF Data Services-Runtime nicht weiter codiert. Wenn z. B. eine string-Eigenschaft einer Entität formatierten HTML-Inhalt enthält, werden die Tags vom Datendienst nicht HTML-codiert. Eigenschaftenwerte in der Antwort werden vom Datendienst ebenfalls nicht weiter codiert. Von der Clientbibliothek wird auch keine zusätzliche Codierung ausgeführt.  
@@ -98,17 +98,17 @@ OData basiert auf dem HTTP-Protokoll. Abhängig von der vom Datendienst implemen
 ### <a name="considerations-for-client-applications"></a>Überlegungen für Clientanwendungen  
  Die folgenden Sicherheitsaspekte gelten für Anwendungen, die die WCF Data Services-Client verwenden, um den Zugriff auf OData-Dienste:  
   
--   Die Clientbibliothek geht davon aus, dass die für den Zugriff auf den Datendienst verwendeten Protokolle eine geeignete Sicherheitsebene bereitstellen.  
+- Die Clientbibliothek geht davon aus, dass die für den Zugriff auf den Datendienst verwendeten Protokolle eine geeignete Sicherheitsebene bereitstellen.  
   
--   Die Clientbibliothek verwendet alle Standardwerte für Timeouts und Analyseoptionen der Transportstapel der zugrunde liegenden Plattform.  
+- Die Clientbibliothek verwendet alle Standardwerte für Timeouts und Analyseoptionen der Transportstapel der zugrunde liegenden Plattform.  
   
--   Die Clientbibliothek liest keine Einstellungen aus Anwendungskonfigurationsdateien.  
+- Die Clientbibliothek liest keine Einstellungen aus Anwendungskonfigurationsdateien.  
   
--   Die Clientbibliothek implementiert keine domänenübergreifenden Zugriffsmechanismen. Sie verwendet stattdessen die vom zugrunde liegenden HTTP-Stapel bereitgestellten Mechanismen.  
+- Die Clientbibliothek implementiert keine domänenübergreifenden Zugriffsmechanismen. Sie verwendet stattdessen die vom zugrunde liegenden HTTP-Stapel bereitgestellten Mechanismen.  
   
--   Die Clientbibliothek verfügt nicht über Benutzeroberflächenelemente und versucht nie, die empfangenen oder gesendeten Daten anzuzeigen oder zu rendern.  
+- Die Clientbibliothek verfügt nicht über Benutzeroberflächenelemente und versucht nie, die empfangenen oder gesendeten Daten anzuzeigen oder zu rendern.  
   
--   Benutzereingaben und akzeptierte Daten von nicht vertrauenswürdigen Diensten sollten immer von Clientanwendungen überprüft werden.  
+- Benutzereingaben und akzeptierte Daten von nicht vertrauenswürdigen Diensten sollten immer von Clientanwendungen überprüft werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

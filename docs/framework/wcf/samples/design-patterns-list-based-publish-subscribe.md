@@ -3,11 +3,11 @@ title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773060"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren
 Dieses Beispiel veranschaulicht das listenbasierte Veröffentlichen-Abonnieren-Muster, die als ein Windows Communication Foundation (WCF)-Programm implementiert.  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Einrichten des Dienstrechners:  
   
-    1.  Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot.bat" aus der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) kann zum Erstellen des festplattenverzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
+    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot.bat" aus der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) kann zum Erstellen des festplattenverzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
   
-    2.  Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis "ServiceModelSamples" auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen.  
+    2. Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis "ServiceModelSamples" auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen.  
   
-    3.  Testen Sie, ob Sie mit einem Browser vom Clientcomputer auf den Dienst zugreifen können.  
+    3. Testen Sie, ob Sie mit einem Browser vom Clientcomputer auf den Dienst zugreifen können.  
   
 2. Einrichten der Clientcomputer:  
   
-    1.  Kopieren Sie die Clientprogrammdateien aus dem Ordner "\client\bin\" (unterhalb des sprachspezifischen Ordners) auf die Clientcomputer.  
+    1. Kopieren Sie die Clientprogrammdateien aus dem Ordner "\client\bin\" (unterhalb des sprachspezifischen Ordners) auf die Clientcomputer.  
   
-    2.  Ändern Sie in jeder Clientkonfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
+    2. Ändern Sie in jeder Clientkonfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
   
 3. Einrichten des Datenquellencomputers:  
   
-    1.  Kopieren Sie die Datenquellen-Programmdateien aus dem Ordner "\datasource\bin\" (unterhalb des sprachspezifischen Ordners) auf den Datenquellencomputer.  
+    1. Kopieren Sie die Datenquellen-Programmdateien aus dem Ordner "\datasource\bin\" (unterhalb des sprachspezifischen Ordners) auf den Datenquellencomputer.  
   
-    2.  Ändern Sie in der Datenquellen-Konfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
+    2. Ändern Sie in der Datenquellen-Konfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
   
 4. Starten Sie auf den Clientcomputern in einer Eingabeaufforderung die Datei "Client.exe".  
   

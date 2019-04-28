@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788817"
 ---
 # <a name="structured-navigation-overview"></a>Übersicht über die strukturierte Navigation
 Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, oder ein <xref:System.Windows.Navigation.NavigationWindow> besteht aus Seiten, die vom Pack identifiziert werden können [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] und über Links aufgerufen. Die Struktur der Seiten und die durch Links definierte Navigation in ihnen werden als Navigationstopologie bezeichnet. Eine solche Topologie kann für unterschiedliche Anwendungstypen eingesetzt werden, insbesondere für die Navigation in Dokumenten. In diesen Anwendungen kann der Benutzer von einer Seite zu einer anderen Seite navigieren, ohne dass die Seite Informationen zu der anderen Seite enthält.  
@@ -25,15 +25,15 @@ Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../in
 ## <a name="structured-navigation"></a>Strukturierte Navigation  
  Wenn eine Seite in einer strukturierten Navigation eine andere Seite aufruft, sind die folgenden Verhaltensweisen ganz oder teilweise erforderlich:  
   
--   Die aufrufende Seite navigiert zu der aufgerufenen Seite und übergibt ggf. für die aufgerufene Seite erforderliche Parameter.  
+- Die aufrufende Seite navigiert zu der aufgerufenen Seite und übergibt ggf. für die aufgerufene Seite erforderliche Parameter.  
   
--   Die aufgerufene Seite kehrt zu der aufrufenden Seite zurück, wenn der Benutzer die Bearbeitung in der aufrufenden Seite abgeschlossen hat. Optional:  
+- Die aufgerufene Seite kehrt zu der aufrufenden Seite zurück, wenn der Benutzer die Bearbeitung in der aufrufenden Seite abgeschlossen hat. Optional:  
   
-    -   Es werden Zustandsinformationen zurückgegeben, die angeben, wie die aufrufende Seite beendet wurde (z. B. ob der Benutzer auf die Schaltfläche „OK“ oder „Abbrechen“ geklickt hat).  
+    - Es werden Zustandsinformationen zurückgegeben, die angeben, wie die aufrufende Seite beendet wurde (z. B. ob der Benutzer auf die Schaltfläche „OK“ oder „Abbrechen“ geklickt hat).  
   
-    -   Die von dem Benutzer erfassten Daten werden zurückgegeben (z. B. die Daten eines neuen Mitarbeiters).  
+    - Die von dem Benutzer erfassten Daten werden zurückgegeben (z. B. die Daten eines neuen Mitarbeiters).  
   
--   Wenn die aufrufende Seite die aufgerufene Seite erneut anzeigt, wird die aufgerufene Seite aus dem Navigationsverlauf entfernt, um eine Instanz einer aufgerufenen Seite von einer anderen Instanz zu trennen.  
+- Wenn die aufrufende Seite die aufgerufene Seite erneut anzeigt, wird die aufgerufene Seite aus dem Navigationsverlauf entfernt, um eine Instanz einer aufgerufenen Seite von einer anderen Instanz zu trennen.  
   
  Diese Verhaltensweisen werden in der folgenden Abbildung dargestellt:  
   
@@ -115,17 +115,17 @@ Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../in
   
  Es ist nicht erforderlich, Parameter an die aufgerufene Seite zu übergeben. Sie können stattdessen auch die folgenden Schritte durchführen.  
   
--   Auf der aufrufenden Seite:  
+- Auf der aufrufenden Seite:  
   
-    1.  Instanziieren Sie die aufgerufene <xref:System.Windows.Navigation.PageFunction%601> mit dem Standardkonstruktor.  
+    1. Instanziieren Sie die aufgerufene <xref:System.Windows.Navigation.PageFunction%601> mit dem Standardkonstruktor.  
   
-    2.  Die Parameter in Store <xref:System.Windows.Application.Properties%2A>.  
+    2. Die Parameter in Store <xref:System.Windows.Application.Properties%2A>.  
   
-    3.  Navigieren Sie zu der aufgerufenen <xref:System.Windows.Navigation.PageFunction%601>.  
+    3. Navigieren Sie zu der aufgerufenen <xref:System.Windows.Navigation.PageFunction%601>.  
   
--   In der aufgerufenen <xref:System.Windows.Navigation.PageFunction%601>:  
+- In der aufgerufenen <xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   Abrufen und verwenden Sie die Parameter in gespeicherten <xref:System.Windows.Application.Properties%2A>.  
+    - Abrufen und verwenden Sie die Parameter in gespeicherten <xref:System.Windows.Application.Properties%2A>.  
   
  Sie müssen jedoch weiterhin Code verwenden, um die aufgerufene Seite zu instanzieren und zu dieser zu navigieren, sodass die von der aufgerufenen Seite zurückgegebenen Daten erfasst werden können (siehe Beschreibung weiter unten). Aus diesem Grund die <xref:System.Windows.Navigation.PageFunction%601> müssen gespeichert werden sollen, andernfalls und beim nächsten navigieren Sie zu der <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instanziiert die <xref:System.Windows.Navigation.PageFunction%601> mit dem Standardkonstruktor.  
   

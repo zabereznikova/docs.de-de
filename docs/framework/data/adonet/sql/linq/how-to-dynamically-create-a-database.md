@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877265"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Vorgehensweise: Dynamisches Erstellen einer neuen Datenbank
 In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Das Mapping wird durch attributbasiertes Mapping oder eine externe Mappingdatei zur Beschreibung der Struktur der relationalen Datenbank ermöglicht. In beiden Szenarien sind genügend Informationen über die relationale Datenbank vorhanden, dass mithilfe der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode eine neue Instanz der Datenbank erstellt werden kann.  
@@ -19,9 +19,9 @@ In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Da
   
  Die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode kann in einer Vielzahl von Szenarien verwendet werden, insbesondere dann, wenn ein bekannter Datenanbieter wie Microsoft SQL Server 2008 verfügbar ist. Zu den typischen Szenarien zählen:  
   
--   Sie erstellen eine Anwendung, die sich automatisch auf einem Kundensystem installiert.  
+- Sie erstellen eine Anwendung, die sich automatisch auf einem Kundensystem installiert.  
   
--   Sie erstellen eine Clientanwendung, die eine lokale Datenbank benötigt, um den Offlinezustand zu speichern.  
+- Sie erstellen eine Clientanwendung, die eine lokale Datenbank benötigt, um den Offlinezustand zu speichern.  
   
  Sie können die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode auch in Verbindung mit SQL Server nutzen, indem Sie (je nach Verbindungszeichenfolge) eine MDF-Datei oder einen Katalognamen verwenden. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiert mithilfe der Verbindungszeichenfolge die zu erstellende Datenbank und den zu verwendenden Server.  
   

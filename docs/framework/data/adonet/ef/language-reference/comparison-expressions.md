@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
 ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785397"
 ---
 # <a name="comparison-expressions"></a>Vergleichsausdrücke
 Ein Vergleichsausdruck überprüft, ob ein konstanter Wert, ein Eigenschaftswert oder das Ergebnis einer Methode gleich oder ungleich einem anderen Wert bzw. größer oder kleiner als ein anderer Wert ist. Wenn ein bestimmter Vergleich für [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] nicht gültig ist, wird eine Ausnahme ausgelöst. Für alle Vergleiche, sowohl implizite als auch explizite, ist es erforderlich, dass alle Komponenten in der Datenquelle vergleichbar sind. Vergleichsausdrücke werden oft in `Where`-Klauseln zur Einschränkung der Abfrageergebnisse verwendet.  

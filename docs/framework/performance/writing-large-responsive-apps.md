@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861230"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler. 
@@ -19,7 +19,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Warum die neue Compilerleistung für Ihre App angewendet werden kann  
  Das .NET Compiler Platform-Team („Roslyn“) hat die C#- und Visual Basic-Compiler in verwalteten Code umgeschrieben, um neue APIs für das Modellieren und Analysieren von Code, das Erstellen von Tools und das Unterstützen einer wesentlich umfassenderen codeabhängigen Erfahrung in Visual Studio bereitzustellen. Das Umschreiben der Compiler und das Erstellen von Visual Studio-Erfahrungen in den neuen Compilern hat nützliche Leistungseinblicke ergeben, die für jede große .NET Framework-App oder jede App anwendbar sind, die viele Daten verarbeitet. Sie müssen sich nicht mit Compilern auskennen, um die Einblicke und Beispiele aus dem C#-Compiler nutzen zu können. 
   
- Visual Studio verwendet die Compiler-APIs, um all die IntelliSense-Features zu erstellen, die bei Benutzern beliebt sind, zum Beispiel die farbliche Kennzeichnung von Bezeichnern und Schlüsselwörtern, Syntaxvervollständigungslisten, Wellenlinien für Fehler, Parametertipps, Codeprobleme und Codeaktionen. Visual Studio stellt diese Hilfe bereit, während Entwickler ihren Code eingeben und ändern, und Visual Studio muss reaktionsfähig bleiben, während der Compiler den von Entwicklern bearbeiteten Code kontinuierlich modelliert. 
+ Visual Studio verwendet die Compiler-APIs, um all die IntelliSense-Funktionen zu erstellen, die bei Benutzern beliebt sind, zum Beispiel die farbliche Kennzeichnung von Bezeichnern und Schlüsselwörtern, Syntaxvervollständigungslisten, Wellenlinien für Fehler, Parametertipps, Codeprobleme und Codeaktionen. Visual Studio stellt diese Hilfe bereit, während Entwickler ihren Code eingeben und ändern, und Visual Studio muss reaktionsfähig bleiben, während der Compiler den von Entwicklern bearbeiteten Code kontinuierlich modelliert. 
   
  Wenn Ihre Endbenutzer mit der App interagieren, erwarten sie, dass die App reaktionsfähig ist. Eingaben oder Befehlsverarbeitung sollten nie blockiert sein. Die Hilfe sollte schnell angezeigt oder geschlossen werden, wenn der Benutzer die Eingabe fortsetzt. Ihre App sollte vermeiden, den UI-Thread mit langen Berechnungen zu blockieren, die Ihre App langsam machen. 
   
@@ -408,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Sie sehen, dass der neue Code mit Zwischenspeichern ein `SyntaxTree`-Feld mit dem Namen `cachedResult` hat. Wenn dieses Feld Null ist, übernimmt `GetSyntaxTreeAsync()` die Arbeit und speichert das Ergebnis im Cache. `GetSyntaxTreeAsync()` gibt das `SyntaxTree`-Objekt zurück. Wenn Sie eine `async`-Funktion des Typs `Task<SyntaxTree>` haben und einen Wert des Typs `SyntaxTree` zurückgeben, besteht das Problem darin, dass der Compiler Code ausgibt, um eine Aufgabe zuzuordnen, die das Ergebnis speichert (durch Verwendung von `Task<SyntaxTree>.FromResult()`). Die Aufgabe wird als abgeschlossen gekennzeichnet, und das Ergebnis ist sofort verfügbar. Im Code für die neuen Compiler kamen bereits abgeschlossene <xref:System.Threading.Tasks.Task>-Objekte so oft vor, dass eine Korrektur dieser Zuordnungen die Reaktionsfähigkeit merklich verbessert hat. 
+ Sie sehen, dass der neue Code mit Zwischenspeichern ein `SyntaxTree`-Feld mit dem Namen `cachedResult` hat. Wenn dieses Feld Null ist, übernimmt `GetSyntaxTreeAsync()` die Arbeit und speichert das Ergebnis im Cache. `GetSyntaxTreeAsync()` Gibt die `SyntaxTree` Objekt. Wenn Sie eine `async`-Funktion des Typs `Task<SyntaxTree>` haben und einen Wert des Typs `SyntaxTree` zurückgeben, besteht das Problem darin, dass der Compiler Code ausgibt, um eine Aufgabe zuzuordnen, die das Ergebnis speichert (durch Verwendung von `Task<SyntaxTree>.FromResult()`). Die Aufgabe wird als abgeschlossen gekennzeichnet, und das Ergebnis ist sofort verfügbar. Im Code für die neuen Compiler kamen bereits abgeschlossene <xref:System.Threading.Tasks.Task>-Objekte so oft vor, dass eine Korrektur dieser Zuordnungen die Reaktionsfähigkeit merklich verbessert hat. 
   
  **Korrektur für Beispiel 6**  
   
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  In diesem Artikel haben wir dargestellt, dass Ihnen Leistungsengpasssymptome bewusst sein sollten, die sich auf die Reaktionsfähigkeit Ihrer App auswirken können, insbesondere bei großen Systemen oder Systemen, die große Datenmengen verarbeiten. Zu den typischen Übeltätern gehören Boxing, Zeichenfolgenmanipulationen, LINQ und Lambda, das Zwischenspeichern in Async-Methoden, das Zwischenspeichern ohne Größenbeschränkung oder Entsorgungsrichtlinie, die nicht ordnungsgemäße Verwendung von Wörterbüchern und das Übergeben von Strukturen. Behalten Sie die vier Fakten für die Optimierung von Apps im Hinterkopf:  
   
--   Keine vorzeitige Optimierung: Seien Sie produktiv, und optimieren Sie Ihre App, wenn Sie Probleme entdecken. 
+- Keine vorzeitige Optimierung: Seien Sie produktiv, und optimieren Sie Ihre App, wenn Sie Probleme entdecken. 
   
--   Profile lügen nicht: Sie raten, wenn Sie nicht messen. 
+- Profile lügen nicht: Sie raten, wenn Sie nicht messen. 
   
--   Gute Tools machen einen großen Unterschied: Laden Sie PerfView herunter, und probieren Sie es aus. 
+- Gute Tools machen einen großen Unterschied: Laden Sie PerfView herunter, und probieren Sie es aus. 
   
--   Es dreht sich alles um Zuordnungen: Hier hat das Compilerplattformteam die meiste Zeit mit der Optimierung der Leistung der neuen Compiler verbracht. 
+- Es dreht sich alles um Zuordnungen: Hier hat das Compilerplattformteam die meiste Zeit mit der Optimierung der Leistung der neuen Compiler verbracht. 
   
 ## <a name="see-also"></a>Siehe auch
 

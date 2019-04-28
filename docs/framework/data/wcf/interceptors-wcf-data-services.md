@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
 ms.openlocfilehash: 17926e144fae206d702c2bcb4f88dd2093442ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876225"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptors (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht einer Anwendung Abfangen von Anforderungsnachrichten, damit Sie einem Vorgang benutzerdefinierten Logik hinzufügen können. Sie können diese benutzerdefinierten Logik verwenden, um Daten in eingehenden Nachrichten zu überprüfen. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  

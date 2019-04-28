@@ -3,11 +3,11 @@ title: Oracle-REF CURSORs
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771854"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle-REF CURSORs
 Die .NET Framework-Datenanbieter für Oracle unterstützt Oracle **REF CURSOR** -Datentyp. Wenn Sie beim Arbeiten mit Oracle-REF CUSORS diesen Datenanbieter verwenden, müssen Sie das jeweilige Verhalten berücksichtigen.  
@@ -15,19 +15,19 @@ Die .NET Framework-Datenanbieter für Oracle unterstützt Oracle **REF CURSOR** 
 > [!NOTE]
 >  Das jeweilige Verhalten weicht von dem des Microsoft OLE DB-Anbieters für Oracle (MSDAORA) ab.  
   
--   Aus Gründen der Leistung der Datenanbieter für Oracle Bindung erfolgt nicht automatisch **REF CURSOR** -Datentypen, wie MSDAORA, es sei denn, Sie explizit angeben.  
+- Aus Gründen der Leistung der Datenanbieter für Oracle Bindung erfolgt nicht automatisch **REF CURSOR** -Datentypen, wie MSDAORA, es sei denn, Sie explizit angeben.  
   
--   Der Datenanbieter unterstützt keine ODBC-Escapesequenzen, auch nicht das {resultset}-Escapezeichen für die Angabe von REF CURSOR-Parametern.  
+- Der Datenanbieter unterstützt keine ODBC-Escapesequenzen, auch nicht das {resultset}-Escapezeichen für die Angabe von REF CURSOR-Parametern.  
   
--   Um eine gespeicherte Prozedur auszuführen, die REF CURSORs zurückgibt, müssen Sie definieren die Parameter in der <xref:System.Data.OracleClient.OracleParameterCollection> mit einer <xref:System.Data.OracleClient.OracleType> von **Cursor** und ein <xref:System.Data.OracleClient.OracleParameter.Direction%2A> von **Ausgabe**. Mit diesem Datenanbieter können REF CURSORs nur als Ausgabeparameter gebunden werden. Das Binden von REF CURSORs als Eingabeparameter wird von diesem Datenanbieter nicht unterstützt.  
+- Um eine gespeicherte Prozedur auszuführen, die REF CURSORs zurückgibt, müssen Sie definieren die Parameter in der <xref:System.Data.OracleClient.OracleParameterCollection> mit einer <xref:System.Data.OracleClient.OracleType> von **Cursor** und ein <xref:System.Data.OracleClient.OracleParameter.Direction%2A> von **Ausgabe**. Mit diesem Datenanbieter können REF CURSORs nur als Ausgabeparameter gebunden werden. Das Binden von REF CURSORs als Eingabeparameter wird von diesem Datenanbieter nicht unterstützt.  
   
--   Das Abrufen eines <xref:System.Data.OracleClient.OracleDataReader> aus dem Parameterwert wird nicht unterstützt. Nach dem Ausführen des Befehls weisen die Werte den Typ <xref:System.DBNull> auf.  
+- Das Abrufen eines <xref:System.Data.OracleClient.OracleDataReader> aus dem Parameterwert wird nicht unterstützt. Nach dem Ausführen des Befehls weisen die Werte den Typ <xref:System.DBNull> auf.  
   
--   Die einzige **CommandBehavior** Enumerationswert, der mit REF CURSORs verwendet (z. B. beim Aufrufen von <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) ist **CloseConnection**; alle anderen werden ignoriert.  
+- Die einzige **CommandBehavior** Enumerationswert, der mit REF CURSORs verwendet (z. B. beim Aufrufen von <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) ist **CloseConnection**; alle anderen werden ignoriert.  
   
--   Die Reihenfolge der REF CURSORs in der **OracleDataReader** hängt von der Reihenfolge der Parameter in der **OracleParameterCollection**. Die <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A>-Eigenschaft wird ignoriert.  
+- Die Reihenfolge der REF CURSORs in der **OracleDataReader** hängt von der Reihenfolge der Parameter in der **OracleParameterCollection**. Die <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A>-Eigenschaft wird ignoriert.  
   
--   Der PL/SQL **Tabelle** -Datentyp wird nicht unterstützt. REF CURSORs sind im Vergleich effizienter. Falls Sie benötigen eine **Tabelle** -Datentyp, verwenden Sie den OLE DB .NET Data Provider mit MSDAORA.  
+- Der PL/SQL **Tabelle** -Datentyp wird nicht unterstützt. REF CURSORs sind im Vergleich effizienter. Falls Sie benötigen eine **Tabelle** -Datentyp, verwenden Sie den OLE DB .NET Data Provider mit MSDAORA.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [REF CURSOR-Beispiele](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  

@@ -3,11 +3,11 @@ title: Schützen von Verbindungsinformationen
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
 ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878929"
 ---
 # <a name="protecting-connection-information"></a>Schützen von Verbindungsinformationen
 Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet Ihr gesamtes System. In Ihrem Quellcode eingebettete Verbindungszeichenfolgen können gelesen werden, mithilfe der [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) um Microsoft intermediate Language (MSIL) in einer kompilierten Assembly anzuzeigen.  

@@ -1,17 +1,17 @@
 ---
-title: Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
+title: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811762"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 
 Wie Sie nach dem Lesen in den vorherigen Abschnitten bemerkt haben, ist Azure eine offene Cloud, die mehrere Auswahlmöglichkeiten bietet. Können Sie für Ihre Anforderungen am besten geeignet, jedoch gibt es auch Fragen zu welchem Produkt/Technologie Sie für Ihre containeranwendungen verwenden sollten.
 

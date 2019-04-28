@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773425"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit
 Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufzeit Möglichkeit speichern und Entladen von Workflows in einer Datenbank im Leerlauf. Die Schritte im [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md) wurden die Grundlagen der workflowhosting mithilfe einer Konsolenanwendung. Anhand von Beispielen wurde gezeigt, wie Workflows und Workflowlebenszyklus-Handler gestartet und Lesezeichen wiederaufgenommen werden. Um die Workflowpersistenz effektiv zu veranschaulichen, ist ein komplexerer Workflowhost erforderlich, der das Starten und Fortsetzen mehrerer Workflowinstanzen unterstützt. In diesem Schritt des Lernprogramms wird veranschaulicht, wie eine Windows-Formularhostanwendung erstellt wird, die das Starten und Fortsetzen mehrerer Workflowinstanzen und die Workflowpersistenz unterstützt sowie die Grundlage für erweiterte Funktionen wie Nachverfolgung und Versionsverwaltung bildet, die in den folgenden Schritten des Lernprogramms veranschaulicht werden.  
@@ -23,25 +23,25 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
   
 ## <a name="in-this-topic"></a>In diesem Thema  
   
--   [Um die Persistenzdatenbank zu erstellen.](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [Um die Persistenzdatenbank zu erstellen.](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Der Verweis auf den DurableInstancing-Assemblys hinzufügen](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [Der Verweis auf den DurableInstancing-Assemblys hinzufügen](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Zum Erstellen der Workflowhost-Formular](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [Zum Erstellen der Workflowhost-Formular](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Die Eigenschaften und Hilfsmethoden des Formulars hinzufügen](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [Die Eigenschaften und Hilfsmethoden des Formulars hinzufügen](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [So konfigurieren Sie den Instanzspeicher, Workflowlebenszyklus-Handler und Erweiterungen](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [So konfigurieren Sie den Instanzspeicher, Workflowlebenszyklus-Handler und Erweiterungen](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [So aktivieren Sie starten und fortsetzen mehrerer Workflowtypen](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [So aktivieren Sie starten und fortsetzen mehrerer Workflowtypen](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Um einen neuen Workflow zu starten.](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [Um einen neuen Workflow zu starten.](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Zum Fortsetzen eines Workflows](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [Zum Fortsetzen eines Workflows](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Zum Beenden eines Workflows](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [Zum Beenden eines Workflows](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Zum Erstellen und Ausführen der Anwendungs](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [Zum Erstellen und Ausführen der Anwendungs](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Um die Persistenzdatenbank zu erstellen.  
   
@@ -54,9 +54,9 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
   
      Wählen Sie die folgenden beiden Dateien aus, und klicken Sie auf **öffnen**.  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. Wählen Sie **SqlWorkflowInstanceStoreSchema.sql** aus der **Fenster** Menü. Sicher, dass **WF45GettingStartedTutorial** ausgewählt ist, der **verfügbare Datenbanken** Dropdownliste aus, und wählen Sie **ausführen** aus der **Abfrage**Menü.  
   

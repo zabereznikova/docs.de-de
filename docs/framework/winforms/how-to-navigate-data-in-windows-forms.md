@@ -12,11 +12,11 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801711"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Vorgehensweise: Navigieren durch Daten in Windows Forms
 In einer Windows-Anwendung ist die einfachste Möglichkeit zum Navigieren durch Datensätze in einer Datenquelle zum Binden einer <xref:System.Windows.Forms.BindingSource> -Komponente an die Datenquelle und dann Binden von Steuerelementen an die <xref:System.Windows.Forms.BindingSource>. Anschließend können Sie die integrierte Navigationsmethode auf die <xref:System.Windows.Forms.BindingSource> solche eine <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> und <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Mit diesen Methoden wird angepasst, die <xref:System.Windows.Forms.BindingSource.Position%2A> und <xref:System.Windows.Forms.BindingSource.Current%2A> Eigenschaften der <xref:System.Windows.Forms.BindingSource> entsprechend. Können Sie auch auf ein Element stoßen und es als aktuelles Element festlegen, durch Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
 ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857232"
 ---
 # <a name="data-contract-equivalence"></a>Datenvertragsäquivalenz
 Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet oder ein Dienst erfolgreich Daten an einen Client sendet, muss der gesendete Typ nicht unbedingt an der Empfängerseite vorhanden sein. Die einzige Anforderung ist, dass die Datenverträge beider Typen äquivalent sind. (In einigen Fällen strenge Äquivalenz ist nicht erforderlich, siehe [Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  

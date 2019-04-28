@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867137"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Objektlebensdauer: Wie die Objekte werden erstellt und zerstört (Visual Basic)
 Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Initialisierungsaufgaben müssen häufig für neue Objekte ausgeführt werden, bevor sie verwendet werden. Gebräuchliche Initialisierungsaufgaben umfassen das Öffnen von Dateien, Verbinden mit Datenbanken und das Lesen von Werten von Registrierungsschlüsseln. Visual Basic steuert die Initialisierung neuer Objekte mit Prozeduren mit Namen *Konstruktoren* (spezielle Methoden, die Kontrolle über die Initialisierung zu ermöglichen).  
@@ -84,13 +84,13 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
 ### <a name="implementing-idisposable"></a>Implementieren von IDisposable  
  Eine Klasse, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte diese Codeabschnitte enthalten:  
   
--   Ein Feld, um den Überblick zu behalten, ob das Objekt entsorgt wurde:  
+- Ein Feld, um den Überblick zu behalten, ob das Objekt entsorgt wurde:  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Eine Überladung von der <xref:System.IDisposable.Dispose%2A>, die die Ressourcen der Klasse freigibt. Diese Methode sollte durch die <xref:System.IDisposable.Dispose%2A> und `Finalize`-Methoden der Basisklasse aufgerufen werden:  
+- Eine Überladung von der <xref:System.IDisposable.Dispose%2A>, die die Ressourcen der Klasse freigibt. Diese Methode sollte durch die <xref:System.IDisposable.Dispose%2A> und `Finalize`-Methoden der Basisklasse aufgerufen werden:  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
     End Sub  
     ```  
   
--   Eine Implementierung von <xref:System.IDisposable.Dispose%2A>, die nur den folgenden Code enthält:  
+- Eine Implementierung von <xref:System.IDisposable.Dispose%2A>, die nur den folgenden Code enthält:  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
     End Sub  
     ```  
   
--   Eine Überschreibung der `Finalize`-Methode, die nur folgenden Code enthält:  
+- Eine Überschreibung der `Finalize`-Methode, die nur folgenden Code enthält:  
   
     ```  
     Protected Overrides Sub Finalize()  

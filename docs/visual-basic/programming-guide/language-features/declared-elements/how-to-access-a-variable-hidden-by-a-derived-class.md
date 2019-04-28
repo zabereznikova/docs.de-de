@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829659"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Vorgehensweise: Zugreifen auf eine Variable ausgeblendet, die durch eine abgeleitete Klasse (Visual Basic)
 Wenn Code in einer abgeleiteten Klasse eine Variable zugreift, löst der Compiler normalerweise dem Verweis auf den nächstgelegenen zugegriffen werden kann Version, d. h. die zugegriffen werden kann die wenigsten Ableitungsschritte von der Klasse zugreifen. Wenn die Variable in der abgeleiteten Klasse definiert ist, greift der Code normalerweise dieser Definition.  
@@ -23,7 +23,7 @@ Wenn Code in einer abgeleiteten Klasse eine Variable zugreift, löst der Compile
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Auf eine Basisklasse-Variable, die von einer abgeleiteten Klasse ausgeblendet wird.  
   
--   In einem Ausdruck oder eine zuweisungsanweisung, vorausgehen den Variablennamen den `MyBase` -Schlüsselwort und einem Punkt (`.`).  
+- In einem Ausdruck oder eine zuweisungsanweisung, vorausgehen den Variablennamen den `MyBase` -Schlüsselwort und einem Punkt (`.`).  
   
      Der Compiler löst den Verweis auf die Basisklassenversion der Variablen.  
   

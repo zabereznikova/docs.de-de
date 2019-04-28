@@ -3,20 +3,20 @@ title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual 
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
 ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855711"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
   
--   Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
+- Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
   
--   Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
+- Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
   
--   Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
+- Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
   
     > [!NOTE]
     >  Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  

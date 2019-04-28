@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
 ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857141"
 ---
 # <a name="data-member-order"></a>Datenmember-Reihenfolge
 Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die Daten aus verschiedenen Datenmembern gesendet oder erwartet werden (wie z.&amp;#160;B. die Reihenfolge, in der die Daten im serialisierten XML angezeigt werden). Manchmal kann es auch notwendig sein, diese Reihenfolge zu ändern. In diesem Thema werden die Sortierungsregeln beschrieben.  
@@ -20,11 +20,11 @@ Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die 
 ## <a name="basic-rules"></a>Grundregeln  
  Zu den grundlegenden Regeln für die Sortierung von Daten gehören u.&amp;#160;a.:  
   
--   Wenn ein Datenvertragstyp Teil einer Vererbungshierarchie ist, stehen die Datenmember der Basistypen immer am Anfang der Reihenfolge.  
+- Wenn ein Datenvertragstyp Teil einer Vererbungshierarchie ist, stehen die Datenmember der Basistypen immer am Anfang der Reihenfolge.  
   
--   Danach folgen die Datenmember des aktuellen Typs, für die die <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft des Attributs <xref:System.Runtime.Serialization.DataMemberAttribute> nicht festgelegt ist, in alphabetischer Reihenfolge.  
+- Danach folgen die Datenmember des aktuellen Typs, für die die <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft des Attributs <xref:System.Runtime.Serialization.DataMemberAttribute> nicht festgelegt ist, in alphabetischer Reihenfolge.  
   
--   Dann folgen die Datenmember mit der <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft der <xref:System.Runtime.Serialization.DataMemberAttribute>Attributgruppe. Diese sind zunächst nach dem Wert der `Order`-Eigenschaft geordnet und dann alphabetisch, falls mehr als ein Member eines bestimmten `Order`-Werts vorhanden ist. Die Reihenfolgenwerte können übersprungen werden.  
+- Dann folgen die Datenmember mit der <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft der <xref:System.Runtime.Serialization.DataMemberAttribute>Attributgruppe. Diese sind zunächst nach dem Wert der `Order`-Eigenschaft geordnet und dann alphabetisch, falls mehr als ein Member eines bestimmten `Order`-Werts vorhanden ist. Die Reihenfolgenwerte können übersprungen werden.  
   
  Die alphabetische Reihenfolge wird erstellt, indem die <xref:System.String.CompareOrdinal%2A>-Methode aufgerufen wird.  
   

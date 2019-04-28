@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
 ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801646"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>Das Extension-Attribut darf nur in Module-, Sub- oder Function-Deklarationen verwendet werden
 Die einzige Möglichkeit zum Erweitern von eines Datentyps in Visual Basic ist eine Erweiterungsmethode in einem Standardmodul definieren. Die Erweiterungsmethode möglich ein `Sub` Prozedur oder ein `Function` Verfahren. Alle Erweiterungsmethoden müssen mit dem Extension-Attribut markiert werden `<Extension()>`, aus der <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> Namespace. Optional kann ein Modul, eine Erweiterungsmethode enthält, auf die gleiche Weise gekennzeichnet werden. Keine andere Verwendung der das Extension-Attribut ist ungültig.  
@@ -21,9 +21,9 @@ Die einzige Möglichkeit zum Erweitern von eines Datentyps in Visual Basic ist e
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Entfernen Sie das Extension-Attribut.  
+- Entfernen Sie das Extension-Attribut.  
   
--   Entwerfen Sie die Erweiterung als eine Methode, in ein einschließendes Modul definiert.  
+- Entwerfen Sie die Erweiterung als eine Methode, in ein einschließendes Modul definiert.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel definiert eine `Print` -Methode für die `String` -Datentyp.  

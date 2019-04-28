@@ -3,11 +3,11 @@ title: Boolean-Datentypen
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 ms.openlocfilehash: 2535d72a89691466b977e1d4c460ff73e3b93dc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877395"
 ---
 # <a name="boolean-data-types"></a>Boolean-Datentypen
 Boolesche Operatoren funktionieren in der Common Language Runtime (CLR) wie erwartet. Ausgenommen hiervon ist das Kurzschlussverhalten, das nicht übersetzt wird. Zum Beispiel verhält sich der `AndAlso`-Operator in Visual Basic wie der `And`-Operator. Der C#-`&&`-Operator verhält sich wie der `&`-Operator.  

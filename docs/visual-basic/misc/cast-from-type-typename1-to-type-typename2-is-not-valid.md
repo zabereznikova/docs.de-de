@@ -5,11 +5,11 @@ f1_keywords:
 - vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
 ms.openlocfilehash: 2b4cf3a3b7f693a8ba2b9542847ab1bfc776b9ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769953"
 ---
 # <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>Umwandlung von Typ '\<Typname1 >' Typ '\<Typname2 >' ist ungültig
 Ein Versuch, eine Variable aus einem in einen anderen Typ zu konvertieren, ist ungültig.  

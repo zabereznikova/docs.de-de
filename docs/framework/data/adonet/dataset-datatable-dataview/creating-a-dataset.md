@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
 ms.openlocfilehash: d2d17056e6dcd29ef9b5c5e8c3024a32fce32bd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879878"
 ---
 # <a name="creating-a-dataset"></a>Erstellen eines "DataSets"
 Durch Aufrufen des <xref:System.Data.DataSet>-Konstruktors wird eine Instanz eines <xref:System.Data.DataSet> erstellt. Optional kann ein Argument für den Namen angegeben werden. Wenn für das <xref:System.Data.DataSet> kein Name angegeben wird, wird der Name auf "NewDataSet" festgelegt.  

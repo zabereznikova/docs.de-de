@@ -22,11 +22,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
 ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801893"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Abgeleitete mathematische Funktionen (Visual Basic)
 Die folgende Tabelle zeigt den nicht systeminternen mathematische Funktionen, die von systeminternen mathematischen Funktionen abgeleitet werden, können die <xref:System.Math?displayProperty=nameWithType> Objekt. Sie können die systeminternen mathematischen Funktionen zugreifen, indem hinzufügen `Imports System.Math` Ihrer Datei oder das Projekt.  

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857414"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurieren der vom System bereitgestellten Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Bindungen bestehen aus Elementen, die definieren, wie die Windows Communication Foundation (WCF)-Kanäle Sie Ebenen auf, die erforderlichen Kommunikationsfunktionen bereitzustellen. Eine Bindung enthält drei Arten von Elementen:  
   
--   Bindungselemente für den Protokollkanal, die die Einstellungen bezüglich Sicherheit, Zuverlässigkeit und Kontextablauf oder benutzerdefinierte Protokolle festlegen, die beim Senden von Nachrichten zum Endpunkt verwendet werden sollen.  
+- Bindungselemente für den Protokollkanal, die die Einstellungen bezüglich Sicherheit, Zuverlässigkeit und Kontextablauf oder benutzerdefinierte Protokolle festlegen, die beim Senden von Nachrichten zum Endpunkt verwendet werden sollen.  
   
--   Bindungselemente für den Transportkanal, die das zugrunde liegende Transportprotokoll festlegen, das zum Senden von Nachrichten zum Endpunkt verwendet werden soll, beispielsweise TCP oder HTTP.  
+- Bindungselemente für den Transportkanal, die das zugrunde liegende Transportprotokoll festlegen, das zum Senden von Nachrichten zum Endpunkt verwendet werden soll, beispielsweise TCP oder HTTP.  
   
--   Bindungselemente für die Nachrichtencodierung, die die Codierung festlegen, z.&amp;#160;B. Text/XML, binär oder MTOM (Message Transmission Optimization Mechanism), die für Nachrichten, die an den Endpunkt gesendet werden, verwendet werden soll.  
+- Bindungselemente für die Nachrichtencodierung, die die Codierung festlegen, z.&amp;#160;B. Text/XML, binär oder MTOM (Message Transmission Optimization Mechanism), die für Nachrichten, die an den Endpunkt gesendet werden, verwendet werden soll.  
   
  Dieses Thema enthält alle vom System bereitgestellten Bindungen für eine Windows Communication Foundation (WCF). Wenn keine dieser Bindungen die Anforderungen der Anwendung erfüllt, können Sie mithilfe der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse eine Bindung erstellen. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784006"
 ---
 # <a name="parameter-list-visual-basic"></a>Parameterliste (Visual Basic)
 Gibt die Parameter, die eine Prozedur erwartet wird, wenn sie aufgerufen wird. Mehrere Parameter werden durch Kommas getrennt. Folgendes ist die Syntax für einen Parameter.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>Regeln  
   
--   **Klammern.** Wenn Sie eine Parameterliste angeben, müssen Sie ihn in Klammern setzen. Wenn keine Parameter vorhanden sind, können Sie weiterhin umschließendes Klammerpaar eine leere Liste. Dies verbessert die Lesbarkeit des Codes befassen, dass das Element eine Prozedur ist.  
+- **Klammern.** Wenn Sie eine Parameterliste angeben, müssen Sie ihn in Klammern setzen. Wenn keine Parameter vorhanden sind, können Sie weiterhin umschließendes Klammerpaar eine leere Liste. Dies verbessert die Lesbarkeit des Codes befassen, dass das Element eine Prozedur ist.  
   
--   **Optionale Parameter.** Bei Verwendung der `Optional` Modifizierer für Parameter, alle nachfolgenden Parameter in der Liste muss ebenfalls optional und werden deklariert, indem die `Optional` Modifizierer.  
+- **Optionale Parameter.** Bei Verwendung der `Optional` Modifizierer für Parameter, alle nachfolgenden Parameter in der Liste muss ebenfalls optional und werden deklariert, indem die `Optional` Modifizierer.  
   
      Jeder Deklaration optionale Parameter muss angeben, die `defaultvalue` Klausel.  
   
      Weitere Informationen finden Sie unter [optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Parameterarrays.** Sie müssen angeben, `ByVal` für eine `ParamArray` Parameter.  
+- **Parameterarrays.** Sie müssen angeben, `ByVal` für eine `ParamArray` Parameter.  
   
      Sie können nicht beide verwenden `Optional` und `ParamArray` in derselben Parameterliste.  
   
      Weitere Informationen finden Sie unter [Parameterarrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Übergabemechanismus.** Ist der Standardmechanismus für jedes Argument `ByVal`, was bedeutet, dass die Prozedur kann nicht geändert werden die zugrunde liegende Variable-Element. Allerdings ist das Element einen Verweistyp handelt, kann die Prozedur den Inhalt oder die Member des zugrunde liegenden Objekts ändern, obwohl sie nicht ersetzen oder das Objekt selbst zuweisen.  
+- **Übergabemechanismus.** Ist der Standardmechanismus für jedes Argument `ByVal`, was bedeutet, dass die Prozedur kann nicht geändert werden die zugrunde liegende Variable-Element. Allerdings ist das Element einen Verweistyp handelt, kann die Prozedur den Inhalt oder die Member des zugrunde liegenden Objekts ändern, obwohl sie nicht ersetzen oder das Objekt selbst zuweisen.  
   
--   **Parameternamen.** Wenn der Datentyp des Parameters ein Array ist, führen Sie die `parametername` sofort mit Klammern. Weitere Informationen zu Parameternamen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Parameternamen.** Wenn der Datentyp des Parameters ein Array ist, führen Sie die `parametername` sofort mit Klammern. Weitere Informationen zu Parameternamen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine `Function` Prozedur, die zwei Parameter definiert.  

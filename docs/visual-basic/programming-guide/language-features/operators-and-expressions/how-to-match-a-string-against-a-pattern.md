@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864701"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Vorgehensweise: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)
 Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, dann können Sie mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Um ein Zeichen in den Ausdruck für ein bestimmtes Zeichen  
   
--   Fügen Sie das Zeichen direkt in der Musterzeichenfolge. Bestimmte Sonderzeichen müssen in Klammern eingeschlossen werden (`[ ]`). Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Fügen Sie das Zeichen direkt in der Musterzeichenfolge. Bestimmte Sonderzeichen müssen in Klammern eingeschlossen werden (`[ ]`). Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      Im folgenden Beispiel wird getestet, ob `myString` besteht genau aus das einzelne Zeichen `H`.  
   
@@ -37,7 +37,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Um ein Zeichen in den Ausdruck mit einem Platzhalterzeichen  
   
--   Fügen ein Fragezeichen (`?`) in der Musterzeichenfolge. Jedes gültige Zeichen an dieser Position ergibt eine Übereinstimmung.  
+- Fügen ein Fragezeichen (`?`) in der Musterzeichenfolge. Jedes gültige Zeichen an dieser Position ergibt eine Übereinstimmung.  
   
      Im folgenden Beispiel wird getestet, ob `myString` besteht aus den einzelnen Zeichens `W` gefolgt von genau zwei beliebigen Zeichen.  
   
@@ -45,7 +45,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Um ein Zeichen in den Zeichenfolgenausdruck mit einer Liste von Zeichen  
   
--   Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge, und klicken Sie in den Klammern fügen Sie die Liste von Zeichen. Trennen Sie die Zeichen nicht mit Kommas oder aller anderen Trennzeichen. Beliebiges einzelnes Zeichen in der Liste wird eine Übereinstimmung.  
+- Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge, und klicken Sie in den Klammern fügen Sie die Liste von Zeichen. Trennen Sie die Zeichen nicht mit Kommas oder aller anderen Trennzeichen. Beliebiges einzelnes Zeichen in der Liste wird eine Übereinstimmung.  
   
      Im folgenden Beispiel wird getestet, ob `myString` irgendeinem gültigen Zeichen, gefolgt von genau einem Zeichen bestehen `A`, `C`, oder `E`.  
   
@@ -55,7 +55,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Um ein Zeichen in den Ausdruck für einen Bereich von Zeichen  
   
--   Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern, die die niedrigsten und höchsten Zeichen im Bereich einfügen, getrennt durch einen Bindestrich (`–`). Beliebiges einzelnes Zeichen innerhalb des Bereichs ergibt eine Übereinstimmung.  
+- Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern, die die niedrigsten und höchsten Zeichen im Bereich einfügen, getrennt durch einen Bindestrich (`–`). Beliebiges einzelnes Zeichen innerhalb des Bereichs ergibt eine Übereinstimmung.  
   
      Im folgenden Beispiel wird getestet, ob `myString` besteht aus den Zeichen `num` gefolgt von genau einem Zeichen `i`, `j`, `k`, `l`, `m`, oder `n`.  
   

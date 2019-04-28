@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785869"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320131"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Erstellen einer neuen XAML-Browseranwendung (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
+- [Erstellen einer neuen XAML-Browseranwendung (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Bereitstellen einer XBAP](#deploying_a_xbap)  
+- [Bereitstellen einer XBAP](#deploying_a_xbap)  
   
--   [Kommunizieren mit der Hostwebseite](#communicating_with_the_host_web_page)  
+- [Kommunizieren mit der Hostwebseite](#communicating_with_the_host_web_page)  
   
--   [XBAP-Sicherheitsüberlegungen](#xbap_security_considerations)  
+- [XBAP-Sicherheitsüberlegungen](#xbap_security_considerations)  
   
--   [Überlegungen zur XBAP-Startzeitleistung](#xbap_start_time_performance_considerations)  
+- [Überlegungen zur XBAP-Startzeitleistung](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Erstellen einer neuen XAML-Browseranwendung (XBAP)  
@@ -131,17 +131,17 @@ ms.locfileid: "59320131"
   
  Bei Verwendung einer <xref:System.Windows.Controls.WebBrowser> Steuerelement in der WPF-Anwendung instanziiert intern das native WebBrowser ActiveX-Steuerelement. Wenn die Anwendung eine teilweise vertrauenswürdige XBAP ist, die in Internet Explorer ausgeführt wird, wird das ActiveX-Steuerelement in einem dedizierten Thread des Internet Explorer-Prozesses ausgeführt. Daher gelten die folgenden Einschränkungen:  
   
--   Die <xref:System.Windows.Controls.WebBrowser> Steuerelement sollte an den Hostbrowser, einschließlich sicherheitseinschränkungen ein ähnliches Verhalten bereitstellen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).  
+- Die <xref:System.Windows.Controls.WebBrowser> Steuerelement sollte an den Hostbrowser, einschließlich sicherheitseinschränkungen ein ähnliches Verhalten bereitstellen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).  
   
--   Eine Ausnahme wird ausgelöst, wenn eine XBAP domänenübergreifend in eine HTML-Seite geladen wird.  
+- Eine Ausnahme wird ausgelöst, wenn eine XBAP domänenübergreifend in eine HTML-Seite geladen wird.  
   
--   Die Eingabe erfolgt in einem separaten Thread aus dem WPF- <xref:System.Windows.Controls.WebBrowser>, sodass Tastatureingaben nicht abgefangen werden können, und der IME-Zustand nicht freigegeben.  
+- Die Eingabe erfolgt in einem separaten Thread aus dem WPF- <xref:System.Windows.Controls.WebBrowser>, sodass Tastatureingaben nicht abgefangen werden können, und der IME-Zustand nicht freigegeben.  
   
--   Die zeitliche Steuerung oder die Reihenfolge der Navigation weicht möglicherweise ab, da das ActiveX-Steuerelement in einem anderen Thread ausgeführt wird. Zum Beispiel wird die Navigation zu einer Seite nicht immer abgebrochen, indem eine andere Navigationsanforderung gestartet wird.  
+- Die zeitliche Steuerung oder die Reihenfolge der Navigation weicht möglicherweise ab, da das ActiveX-Steuerelement in einem anderen Thread ausgeführt wird. Zum Beispiel wird die Navigation zu einer Seite nicht immer abgebrochen, indem eine andere Navigationsanforderung gestartet wird.  
   
--   Ein benutzerdefiniertes ActiveX-Steuerelement hat möglicherweise Probleme mit Kommunikation, da die WPF-Anwendung in einem separaten Thread ausgeführt wird.  
+- Ein benutzerdefiniertes ActiveX-Steuerelement hat möglicherweise Probleme mit Kommunikation, da die WPF-Anwendung in einem separaten Thread ausgeführt wird.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> wird nicht ausgelöst, da <xref:System.Windows.Interop.HwndHost> kann nicht als Unterklasse eines Fensters in einem anderen Thread oder Prozess ausgeführt wird.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> wird nicht ausgelöst, da <xref:System.Windows.Interop.HwndHost> kann nicht als Unterklasse eines Fensters in einem anderen Thread oder Prozess ausgeführt wird.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Erstellen einer XBAP mit voller Vertrauenswürdigkeit  
  Wenn die XBAP volle Vertrauenswürdigkeit erfordert, können Sie das Projekt ändern, um diese Berechtigung zu aktivieren. Die folgenden Schritte beschreiben, wie volle Vertrauenswürdigkeit aktiviert wird:  
@@ -152,9 +152,9 @@ ms.locfileid: "59320131"
   
  Diese Einstellung nimmt die folgenden Änderungen vor:  
   
--   In der Projektdatei wird der `<TargetZone>`-Elementwert in `Custom` geändert.  
+- In der Projektdatei wird der `<TargetZone>`-Elementwert in `Custom` geändert.  
   
--   Im Anwendungsmanifest (app.manifest) wird eine `Unrestricted="true"` -Attribut hinzugefügt, die "<xref:System.Security.PermissionSet> Element.  
+- Im Anwendungsmanifest (app.manifest) wird eine `Unrestricted="true"` -Attribut hinzugefügt, die "<xref:System.Security.PermissionSet> Element.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

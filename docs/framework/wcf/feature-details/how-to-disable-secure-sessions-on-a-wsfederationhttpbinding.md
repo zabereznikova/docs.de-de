@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 ms.openlocfilehash: 38863cbfe457afd923c3c8238d8c12b4d451c67f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773086"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding
 Für einige Dienste sind möglicherweise verbundene Anmeldeinformationen notwendig, sichere Sitzungen werden jedoch nicht unterstützt. In diesem Fall müssen Sie die Funktion für sichere Sitzungen deaktivieren. Im Gegensatz zu <xref:System.ServiceModel.WSHttpBinding> bietet die <xref:System.ServiceModel.WSFederationHttpBinding>-Klasse keinen Weg, um sichere Sitzungen bei der Kommunikation mit einem Dienst zu deaktivieren. Sie müssen vielmehr eine benutzerdefinierte Bindung erstellen, die die Einstellungen der sicheren Sitzung durch einen Bootstrap ersetzen.  
@@ -40,7 +40,7 @@ Für einige Dienste sind möglicherweise verbundene Anmeldeinformationen notwend
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Um das Codebeispiel zu kompilieren, erstellen Sie ein Projekt, das auf die System.ServiceModel.dll-Assembly verweist.  
+- Um das Codebeispiel zu kompilieren, erstellen Sie ein Projekt, das auf die System.ServiceModel.dll-Assembly verweist.  
   
 ## <a name="see-also"></a>Siehe auch
 

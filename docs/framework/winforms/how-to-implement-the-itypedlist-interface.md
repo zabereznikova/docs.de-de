@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800855"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Vorgehensweise: Implementieren der ITypedList-Schnittstelle
 Implementieren der <xref:System.ComponentModel.ITypedList> Schnittstelle, um die Ermittlung des Schemas für eine bindbare Liste aktivieren.  
@@ -35,7 +35,7 @@ Implementieren der <xref:System.ComponentModel.ITypedList> Schnittstelle, um die
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
+- Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 

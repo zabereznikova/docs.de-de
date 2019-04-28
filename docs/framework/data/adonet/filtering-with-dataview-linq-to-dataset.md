@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878825"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtern mit DataView (LINQ to DataSet)
 Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Neben den zeichenfolgenbasierten Filterfunktionen <xref:System.Data.DataView> bietet außerdem die Möglichkeit, [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Ausdrücke für den Filterkriterien. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filteroperationen als die zeichenfolgenbasierte Filterung.  
   
  Es gibt zwei Möglichkeiten, Daten mit einer <xref:System.Data.DataView> zu filtern:  
   
--   durch Erstellen einer <xref:System.Data.DataView> mittels einer WHERE-Klausel aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage  
+- durch Erstellen einer <xref:System.Data.DataView> mittels einer WHERE-Klausel aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage  
   
--   mittels der vorhandenen Funktionen für das zeichenfolgenbasierte Filtern von <xref:System.Data.DataView>  
+- mittels der vorhandenen Funktionen für das zeichenfolgenbasierte Filtern von <xref:System.Data.DataView>  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Erstellen einer "DataView" auf der Grundlage einer Abfrage mit Filterinformationen  
  Ein <xref:System.Data.DataView>-Objekt kann auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt werden. Wenn die Abfrage eine `Where`-Klausel enthält, wird die <xref:System.Data.DataView> mit den Filterinformationen aus der Abfrage erstellt. Der Ausdruck in der `Where`-Klausel wird verwendet, um zu bestimmen, welche Datenzeilen in die <xref:System.Data.DataView> aufgenommen werden. Er bildet gleichzeitig die Basis für den Filter.  
@@ -76,9 +76,9 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
 ## <a name="clearing-the-filter"></a>Löschen des Filters  
  Der Filter für eine <xref:System.Data.DataView> kann gelöscht werden, nachdem die Filterung mit der <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft eingerichtet wurde. Das Löschen des Filters für eine <xref:System.Data.DataView> kann auf zweierlei Art und Weise erfolgen:  
   
--   Legen Sie die <xref:System.Data.DataView.RowFilter%2A> -Eigenschaft auf `null`fest.  
+- Legen Sie die <xref:System.Data.DataView.RowFilter%2A> -Eigenschaft auf `null`fest.  
   
--   indem für die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft eine leere Zeichenfolge festgelegt wird  
+- indem für die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft eine leere Zeichenfolge festgelegt wird  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt und dann der Filter gelöscht, indem die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft auf `null` gesetzt wird:  

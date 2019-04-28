@@ -3,11 +3,11 @@ title: Auswählen eines Filters
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784461"
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.  
