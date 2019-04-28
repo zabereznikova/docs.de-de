@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763580"
 ---
-# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="cebc0-102">ICLRSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="cebc0-102">ICLRSyncManager Interface</span></span>
-<span data-ttu-id="cebc0-103">Definiert Methoden, die den Host zum Abrufen von Informationen zu den angeforderten Aufgaben und zum Erkennen von Deadlocks in die Synchronisierung-Implementierung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="cebc0-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
+# <a name="iclrsyncmanager-interface"></a><span data-ttu-id="46b18-102">ICLRSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="46b18-102">ICLRSyncManager Interface</span></span>
+<span data-ttu-id="46b18-103">Definiert Methoden, die den Host zum Abrufen von Informationen zu den angeforderten Aufgaben und zum Erkennen von Deadlocks in die Synchronisierung-Implementierung zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="46b18-103">Defines methods that allow the host to get information about requested tasks and to detect deadlocks in its synchronization implementation.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cebc0-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="cebc0-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="46b18-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="46b18-104">Methods</span></span>  
   
-|<span data-ttu-id="cebc0-105">Methode</span><span class="sxs-lookup"><span data-stu-id="cebc0-105">Method</span></span>|<span data-ttu-id="cebc0-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="cebc0-106">Description</span></span>|  
+|<span data-ttu-id="46b18-105">Methode</span><span class="sxs-lookup"><span data-stu-id="46b18-105">Method</span></span>|<span data-ttu-id="46b18-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="46b18-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cebc0-107">CreateRWLockOwnerIterator-Methode</span><span class="sxs-lookup"><span data-stu-id="cebc0-107">CreateRWLockOwnerIterator Method</span></span>](iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="cebc0-108">Fordert, dass die common Language Runtime (CLR) erstellt einen Iterator für den Host zu verwenden, um zu bestimmen, den Satz von Aufgaben, die auf eine Reader / Writer-Sperre warten.</span><span class="sxs-lookup"><span data-stu-id="cebc0-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
-|[<span data-ttu-id="cebc0-109">DeleteRWLockOwnerIterator-Methode</span><span class="sxs-lookup"><span data-stu-id="cebc0-109">DeleteRWLockOwnerIterator Method</span></span>](iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="cebc0-110">Fordert an, dass die CLR zerstört einen Iterator, der durch einen Aufruf von erstellten `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="cebc0-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
-|[<span data-ttu-id="cebc0-111">GetMonitorOwner-Methode</span><span class="sxs-lookup"><span data-stu-id="cebc0-111">GetMonitorOwner Method</span></span>](iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="cebc0-112">Ruft die Aufgabe ab, die den angegebenen Monitor besitzt.</span><span class="sxs-lookup"><span data-stu-id="cebc0-112">Gets the task that owns the specified monitor.</span></span>|  
-|[<span data-ttu-id="cebc0-113">GetRWLockOwnerNext-Methode</span><span class="sxs-lookup"><span data-stu-id="cebc0-113">GetRWLockOwnerNext Method</span></span>](iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="cebc0-114">Ruft die nächste Aufgabe, die auf die aktuelle Reader / Writer-Sperre wartet.</span><span class="sxs-lookup"><span data-stu-id="cebc0-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
+|[<span data-ttu-id="46b18-107">CreateRWLockOwnerIterator-Methode</span><span class="sxs-lookup"><span data-stu-id="46b18-107">CreateRWLockOwnerIterator Method</span></span>](iclrsyncmanager-createrwlockowneriterator-method.md)|<span data-ttu-id="46b18-108">Fordert, dass die common Language Runtime (CLR) erstellt einen Iterator für den Host zu verwenden, um zu bestimmen, den Satz von Aufgaben, die auf eine Reader / Writer-Sperre warten.</span><span class="sxs-lookup"><span data-stu-id="46b18-108">Requests that the common language runtime (CLR) create an iterator for the host to use to determine the set of tasks waiting on a reader-writer lock.</span></span>|  
+|[<span data-ttu-id="46b18-109">DeleteRWLockOwnerIterator-Methode</span><span class="sxs-lookup"><span data-stu-id="46b18-109">DeleteRWLockOwnerIterator Method</span></span>](iclrsyncmanager-deleterwlockowneriterator-method.md)|<span data-ttu-id="46b18-110">Fordert an, dass die CLR zerstört einen Iterator, der durch einen Aufruf von erstellten `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="46b18-110">Requests that the CLR destroy an iterator that was created by a call to `CreateRWLockOwnerIterator`.</span></span>|  
+|[<span data-ttu-id="46b18-111">GetMonitorOwner-Methode</span><span class="sxs-lookup"><span data-stu-id="46b18-111">GetMonitorOwner Method</span></span>](iclrsyncmanager-getmonitorowner-method.md)|<span data-ttu-id="46b18-112">Ruft die Aufgabe ab, die den angegebenen Monitor besitzt.</span><span class="sxs-lookup"><span data-stu-id="46b18-112">Gets the task that owns the specified monitor.</span></span>|  
+|[<span data-ttu-id="46b18-113">GetRWLockOwnerNext-Methode</span><span class="sxs-lookup"><span data-stu-id="46b18-113">GetRWLockOwnerNext Method</span></span>](iclrsyncmanager-getrwlockownernext-method.md)|<span data-ttu-id="46b18-114">Ruft die nächste Aufgabe, die auf die aktuelle Reader / Writer-Sperre wartet.</span><span class="sxs-lookup"><span data-stu-id="46b18-114">Gets the next task that is waiting on the current reader-writer lock.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cebc0-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cebc0-115">Requirements</span></span>  
- <span data-ttu-id="cebc0-116">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cebc0-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46b18-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="46b18-115">Requirements</span></span>  
+ <span data-ttu-id="46b18-116">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46b18-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cebc0-117">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cebc0-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="46b18-117">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="46b18-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cebc0-118">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="cebc0-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="46b18-118">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="46b18-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cebc0-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cebc0-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="46b18-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46b18-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cebc0-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cebc0-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46b18-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="46b18-120">See also</span></span>
 
 - <xref:System.Threading.Thread>
-- [<span data-ttu-id="cebc0-121">IHostSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="cebc0-121">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
-- <span data-ttu-id="cebc0-122">[Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="cebc0-122">[Managed and Unmanaged Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span></span>
-- [<span data-ttu-id="cebc0-123">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="cebc0-123">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="46b18-121">IHostSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="46b18-121">IHostSyncManager Interface</span></span>](ihostsyncmanager-interface.md)
+- <span data-ttu-id="46b18-122">[Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="46b18-122">[Managed and Unmanaged Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))</span></span>
+- [<span data-ttu-id="46b18-123">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="46b18-123">Hosting Interfaces</span></span>](hosting-interfaces.md)

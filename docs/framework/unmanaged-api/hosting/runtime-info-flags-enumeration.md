@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9483cf8671b7d3ad5430081d93925af30b3d8368
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765153"
 ---
-# <a name="runtimeinfoflags-enumeration"></a><span data-ttu-id="28027-102">RUNTIME_INFO_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="28027-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
-<span data-ttu-id="28027-103">Enthält Werte, die angeben, welche Informationen über die common Language Runtime (CLR) zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="28027-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
+# <a name="runtimeinfoflags-enumeration"></a><span data-ttu-id="d4ba0-102">RUNTIME_INFO_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="d4ba0-102">RUNTIME_INFO_FLAGS Enumeration</span></span>
+<span data-ttu-id="d4ba0-103">Enthält Werte, die angeben, welche Informationen über die common Language Runtime (CLR) zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-103">Contains values that indicate what information about the common language runtime (CLR) should be returned.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28027-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="28027-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4ba0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d4ba0-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -43,37 +43,37 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="28027-105">Member</span><span class="sxs-lookup"><span data-stu-id="28027-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d4ba0-105">Member</span><span class="sxs-lookup"><span data-stu-id="d4ba0-105">Members</span></span>  
   
-|<span data-ttu-id="28027-106">Member</span><span class="sxs-lookup"><span data-stu-id="28027-106">Member</span></span>|<span data-ttu-id="28027-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="28027-107">Description</span></span>|  
+|<span data-ttu-id="d4ba0-106">Member</span><span class="sxs-lookup"><span data-stu-id="d4ba0-106">Member</span></span>|<span data-ttu-id="d4ba0-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d4ba0-107">Description</span></span>|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="28027-108">Gibt an, dass Verzeichnisinformationen nicht enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="28027-108">Indicates that directory information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="28027-109">Gibt an, dass keine Informationen zur Version enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="28027-109">Indicates that version information should not be included.</span></span>|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="28027-110">Gibt an, dass ein Fehlerdialogfeld bei einem Fehler nicht angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="28027-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="28027-111">Gibt an, dass die Auswirkungen des Aufrufs der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion mit dem SEM_FAILCRITICALERRORS-Flag überschrieben werden soll.</span><span class="sxs-lookup"><span data-stu-id="28027-111">Indicates that the effects of calling the [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="28027-112">D. h. soll ein Dialogfeld für die Installation bei einem Fehler unterdrückt wird angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="28027-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
-|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="28027-113">Gibt eine Anforderung für Informationen zu einer AMD-64-kompatible Version der Laufzeit an.</span><span class="sxs-lookup"><span data-stu-id="28027-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="28027-114">Gibt eine Anforderung für Informationen zu einer IA-64-kompatible Version der Laufzeit an.</span><span class="sxs-lookup"><span data-stu-id="28027-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="28027-115">Gibt eine Anforderung für Informationen zu einer X86 kompatible Version der Laufzeit an.</span><span class="sxs-lookup"><span data-stu-id="28027-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="28027-116">Gibt an, dass das Upgrade Versionsinformationen eingeschlossen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="28027-116">Indicates that version upgrade information should be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|<span data-ttu-id="d4ba0-108">Gibt an, dass Verzeichnisinformationen nicht enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-108">Indicates that directory information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|<span data-ttu-id="d4ba0-109">Gibt an, dass keine Informationen zur Version enthalten sein sollen.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-109">Indicates that version information should not be included.</span></span>|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|<span data-ttu-id="d4ba0-110">Gibt an, dass ein Fehlerdialogfeld bei einem Fehler nicht angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-110">Indicates that an error dialog box should not be shown upon failure.</span></span>|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|<span data-ttu-id="d4ba0-111">Gibt an, dass die Auswirkungen des Aufrufs der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion mit dem SEM_FAILCRITICALERRORS-Flag überschrieben werden soll.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-111">Indicates that the effects of calling the [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) function with the SEM_FAILCRITICALERRORS flag should be overridden.</span></span> <span data-ttu-id="d4ba0-112">D. h. soll ein Dialogfeld für die Installation bei einem Fehler unterdrückt wird angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-112">That is, an installation dialog box should be shown upon failure, instead of being suppressed.</span></span>|  
+|`RUNTIME_INFO_REQUEST_AMD64`|<span data-ttu-id="d4ba0-113">Gibt eine Anforderung für Informationen zu einer AMD-64-kompatible Version der Laufzeit an.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-113">Indicates a request for information about an AMD-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_IA64`|<span data-ttu-id="d4ba0-114">Gibt eine Anforderung für Informationen zu einer IA-64-kompatible Version der Laufzeit an.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-114">Indicates a request for information about an IA-64-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_REQUEST_X86`|<span data-ttu-id="d4ba0-115">Gibt eine Anforderung für Informationen zu einer X86 kompatible Version der Laufzeit an.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-115">Indicates a request for information about an x86-compatible version of the runtime.</span></span>|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|<span data-ttu-id="d4ba0-116">Gibt an, dass das Upgrade Versionsinformationen eingeschlossen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d4ba0-116">Indicates that version upgrade information should be included.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="28027-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="28027-117">Remarks</span></span>  
- <span data-ttu-id="28027-118">Die folgenden Flags der Plattform-Architektur können angegebenen nur jeweils nur ein und können nicht kombiniert werden:</span><span class="sxs-lookup"><span data-stu-id="28027-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4ba0-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d4ba0-117">Remarks</span></span>  
+ <span data-ttu-id="d4ba0-118">Die folgenden Flags der Plattform-Architektur können angegebenen nur jeweils nur ein und können nicht kombiniert werden:</span><span class="sxs-lookup"><span data-stu-id="d4ba0-118">The following platform architecture flags can be specified only one at a time and cannot be combined:</span></span>  
   
--   <span data-ttu-id="28027-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="28027-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
+- <span data-ttu-id="d4ba0-119">RUNTIME_INFO_REQUEST_IA64</span><span class="sxs-lookup"><span data-stu-id="d4ba0-119">RUNTIME_INFO_REQUEST_IA64</span></span>  
   
--   <span data-ttu-id="28027-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="28027-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
+- <span data-ttu-id="d4ba0-120">RUNTIME_INFO_REQUEST_AMD64</span><span class="sxs-lookup"><span data-stu-id="d4ba0-120">RUNTIME_INFO_REQUEST_AMD64</span></span>  
   
--   <span data-ttu-id="28027-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="28027-121">RUNTIME_INFO_REQUEST_X86</span></span>  
+- <span data-ttu-id="d4ba0-121">RUNTIME_INFO_REQUEST_X86</span><span class="sxs-lookup"><span data-stu-id="d4ba0-121">RUNTIME_INFO_REQUEST_X86</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="28027-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="28027-122">Requirements</span></span>  
- <span data-ttu-id="28027-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28027-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4ba0-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d4ba0-122">Requirements</span></span>  
+ <span data-ttu-id="d4ba0-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4ba0-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="28027-124">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="28027-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d4ba0-124">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d4ba0-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="28027-125">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="28027-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="d4ba0-125">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d4ba0-125">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="28027-126">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28027-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d4ba0-126">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4ba0-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28027-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="28027-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4ba0-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d4ba0-127">See also</span></span>
 
-- [<span data-ttu-id="28027-128">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="28027-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="d4ba0-128">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="d4ba0-128">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

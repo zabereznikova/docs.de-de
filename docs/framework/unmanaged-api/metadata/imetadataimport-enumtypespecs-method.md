@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01151dc2fe6aa995285a34076527609816b2f3e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753620"
 ---
-# <a name="imetadataimportenumtypespecs-method"></a><span data-ttu-id="32151-102">IMetaDataImport::EnumTypeSpecs-Methode</span><span class="sxs-lookup"><span data-stu-id="32151-102">IMetaDataImport::EnumTypeSpecs Method</span></span>
-<span data-ttu-id="32151-103">Zählt TypeSpec-Token auf, die im aktuellen Metadatenbereich definiert sind.</span><span class="sxs-lookup"><span data-stu-id="32151-103">Enumerates TypeSpec tokens defined in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumtypespecs-method"></a><span data-ttu-id="ddf51-102">IMetaDataImport::EnumTypeSpecs-Methode</span><span class="sxs-lookup"><span data-stu-id="ddf51-102">IMetaDataImport::EnumTypeSpecs Method</span></span>
+<span data-ttu-id="ddf51-103">Zählt TypeSpec-Token auf, die im aktuellen Metadatenbereich definiert sind.</span><span class="sxs-lookup"><span data-stu-id="ddf51-103">Enumerates TypeSpec tokens defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32151-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="32151-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ddf51-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ddf51-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumTypeSpecs (  
@@ -38,39 +38,39 @@ HRESULT EnumTypeSpecs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32151-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="32151-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ddf51-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ddf51-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="32151-106">[in, out] Ein Zeiger auf den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="32151-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="32151-107">Dieser Wert muss NULL für den ersten Aufruf dieser Methode sein.</span><span class="sxs-lookup"><span data-stu-id="32151-107">This value must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="ddf51-106">[in, out] Ein Zeiger auf den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="ddf51-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="ddf51-107">Dieser Wert muss NULL für den ersten Aufruf dieser Methode sein.</span><span class="sxs-lookup"><span data-stu-id="ddf51-107">This value must be NULL for the first call of this method.</span></span>  
   
  `rTypeSpecs`  
- <span data-ttu-id="32151-108">[out] Das Array zum Speichern der TypeSpec-Token verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="32151-108">[out] The array used to store the TypeSpec tokens.</span></span>  
+ <span data-ttu-id="ddf51-108">[out] Das Array zum Speichern der TypeSpec-Token verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ddf51-108">[out] The array used to store the TypeSpec tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="32151-109">[in] Die maximale Größe des `rTypeSpecs`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="32151-109">[in] The maximum size of the `rTypeSpecs` array.</span></span>  
+ <span data-ttu-id="ddf51-109">[in] Die maximale Größe des `rTypeSpecs`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="ddf51-109">[in] The maximum size of the `rTypeSpecs` array.</span></span>  
   
  `pcTypeSpecs`  
- <span data-ttu-id="32151-110">[out] Die Anzahl der zurückgegebenen TypeSpec-Token `rTypeSpecs`.</span><span class="sxs-lookup"><span data-stu-id="32151-110">[out] The number of TypeSpec tokens returned in `rTypeSpecs`.</span></span>  
+ <span data-ttu-id="ddf51-110">[out] Die Anzahl der zurückgegebenen TypeSpec-Token `rTypeSpecs`.</span><span class="sxs-lookup"><span data-stu-id="ddf51-110">[out] The number of TypeSpec tokens returned in `rTypeSpecs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32151-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="32151-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ddf51-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ddf51-111">Return Value</span></span>  
   
-|<span data-ttu-id="32151-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="32151-112">HRESULT</span></span>|<span data-ttu-id="32151-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="32151-113">Description</span></span>|  
+|<span data-ttu-id="ddf51-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ddf51-112">HRESULT</span></span>|<span data-ttu-id="ddf51-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ddf51-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="32151-114">`EnumTypeSpecs` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="32151-114">`EnumTypeSpecs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="32151-115">Es gibt keine Token aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="32151-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="32151-116">In diesem Fall `pcTypeSpecs` ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="32151-116">In that case, `pcTypeSpecs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="ddf51-114">`EnumTypeSpecs` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="ddf51-114">`EnumTypeSpecs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="ddf51-115">Es gibt keine Token aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="ddf51-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="ddf51-116">In diesem Fall `pcTypeSpecs` ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="ddf51-116">In that case, `pcTypeSpecs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="32151-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="32151-117">Remarks</span></span>  
- <span data-ttu-id="32151-118">Die TypeSpec-Token werden erstellt, indem die [IMetaDataEmit:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="32151-118">The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ddf51-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ddf51-117">Remarks</span></span>  
+ <span data-ttu-id="ddf51-118">Die TypeSpec-Token werden erstellt, indem die [IMetaDataEmit:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="ddf51-118">The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32151-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="32151-119">Requirements</span></span>  
- <span data-ttu-id="32151-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32151-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ddf51-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ddf51-119">Requirements</span></span>  
+ <span data-ttu-id="ddf51-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ddf51-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32151-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="32151-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ddf51-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ddf51-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="32151-122">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="32151-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ddf51-122">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="ddf51-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="32151-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32151-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ddf51-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddf51-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32151-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32151-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddf51-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ddf51-124">See also</span></span>
 
-- [<span data-ttu-id="32151-125">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="32151-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="32151-126">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="32151-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ddf51-125">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ddf51-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ddf51-126">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ddf51-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

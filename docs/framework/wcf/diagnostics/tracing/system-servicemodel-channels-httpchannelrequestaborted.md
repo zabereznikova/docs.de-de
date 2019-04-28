@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.HttpChannelRequestAborted
 ms.date: 03/30/2017
 ms.assetid: d47a2e78-f0ce-4125-893a-5f438016216c
 ms.openlocfilehash: b298b5416700ced4160ebc5795959b4ea288a48b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666676"
 ---
-# <a name="systemservicemodelchannelshttpchannelrequestaborted"></a><span data-ttu-id="ccfdd-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="ccfdd-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span></span>
-<span data-ttu-id="ccfdd-103">Es konnte keine Anforderungsnachricht über HTTP gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="ccfdd-103">Failed to send a request message over HTTP.</span></span>  
+# <a name="systemservicemodelchannelshttpchannelrequestaborted"></a><span data-ttu-id="da2c8-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="da2c8-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span></span>
+<span data-ttu-id="da2c8-103">Es konnte keine Anforderungsnachricht über HTTP gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="da2c8-103">Failed to send a request message over HTTP.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ccfdd-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ccfdd-104">Description</span></span>  
- <span data-ttu-id="ccfdd-105">Diese Ablaufverfolgung auf Warnungsebene gibt an, dass eine HTTP-Kanalanforderung abgebrochen wurde.</span><span class="sxs-lookup"><span data-stu-id="ccfdd-105">This warning level trace indicates that an HTTP channel request was aborted.</span></span> <span data-ttu-id="ccfdd-106">Weitere Informationen in dieser Ablaufverfolgung geben Aufschluss über den Grund oder die Nachricht, die der Abort-Methode übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="ccfdd-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
+## <a name="description"></a><span data-ttu-id="da2c8-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="da2c8-104">Description</span></span>  
+ <span data-ttu-id="da2c8-105">Diese Ablaufverfolgung auf Warnungsebene gibt an, dass eine HTTP-Kanalanforderung abgebrochen wurde.</span><span class="sxs-lookup"><span data-stu-id="da2c8-105">This warning level trace indicates that an HTTP channel request was aborted.</span></span> <span data-ttu-id="da2c8-106">Weitere Informationen in dieser Ablaufverfolgung geben Aufschluss über den Grund oder die Nachricht, die der Abort-Methode übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="da2c8-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ccfdd-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ccfdd-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da2c8-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da2c8-107">See also</span></span>
 
-- [<span data-ttu-id="ccfdd-108">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="ccfdd-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="ccfdd-109">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="ccfdd-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="ccfdd-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="ccfdd-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="da2c8-108">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="da2c8-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="da2c8-109">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="da2c8-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="da2c8-110">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="da2c8-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

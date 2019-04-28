@@ -1,14 +1,6 @@
 ---
 title: Windows Presentation Foundation
-ms.custom: ''
 ms.date: 01/25/2018
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 applies_to:
 - Windows 10
 - Windows 7
@@ -22,23 +14,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-caps.latest.revision: 97
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764542"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="d2b19-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d2b19-102">Windows Presentation Foundation</span></span>
-<span data-ttu-id="d2b19-103">Windows Presentation Foundation (WPF) in Visual Studio bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von desktop Line-of-Business-Anwendungen unter Windows.</span><span class="sxs-lookup"><span data-stu-id="d2b19-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="8131b-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="8131b-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="8131b-103">Windows Presentation Foundation (WPF) in Visual Studio bietet Entwicklern ein einheitliches Programmiermodell zum Erstellen von Line-of-Business-desktopanwendungen unter Windows.</span><span class="sxs-lookup"><span data-stu-id="8131b-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="d2b19-104">Erstellen von Desktopanwendungen mit Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d2b19-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="8131b-104">Erstellen von Desktopanwendungen mit Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="8131b-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="d2b19-105">Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="d2b19-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="8131b-105">Designing XAML in Visual Studio and Blend for Visual Studio (Entwerfen von XAML-Code in Visual Studio und Blend für Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="8131b-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="d2b19-106">Erwerben von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d2b19-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="8131b-106">Erwerben von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8131b-106">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

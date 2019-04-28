@@ -3,23 +3,23 @@ title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
 ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670624"
 ---
-# <a name="scopes"></a><span data-ttu-id="afe04-101">\<scopes></span><span class="sxs-lookup"><span data-stu-id="afe04-101">\<scopes></span></span>
-<span data-ttu-id="afe04-102">Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Bereichs-URIs angeben, die verwendet werden können, um Dienstendpunkte während der Abfrage zu filtern.</span><span class="sxs-lookup"><span data-stu-id="afe04-102">Contains a collection of configuration elements that specify custom scope Uris that can be used to filter service endpoints during query.</span></span>  
+# <a name="scopes"></a><span data-ttu-id="29fa2-101">\<scopes></span><span class="sxs-lookup"><span data-stu-id="29fa2-101">\<scopes></span></span>
+<span data-ttu-id="29fa2-102">Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Bereichs-URIs angeben, die verwendet werden können, um Dienstendpunkte während der Abfrage zu filtern.</span><span class="sxs-lookup"><span data-stu-id="29fa2-102">Contains a collection of configuration elements that specify custom scope Uris that can be used to filter service endpoints during query.</span></span>  
   
-<span data-ttu-id="afe04-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="afe04-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="afe04-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="afe04-104">\<behaviors></span></span>  
-<span data-ttu-id="afe04-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="afe04-105">\<endpointBehaviors></span></span>  
-<span data-ttu-id="afe04-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="afe04-106">\<behavior></span></span>  
-<span data-ttu-id="afe04-107">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="afe04-107">\<endpointDiscovery></span></span>  
-<span data-ttu-id="afe04-108">\<scopes></span><span class="sxs-lookup"><span data-stu-id="afe04-108">\<scopes></span></span>  
+<span data-ttu-id="29fa2-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="29fa2-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="29fa2-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="29fa2-104">\<behaviors></span></span>  
+<span data-ttu-id="29fa2-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="29fa2-105">\<endpointBehaviors></span></span>  
+<span data-ttu-id="29fa2-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="29fa2-106">\<behavior></span></span>  
+<span data-ttu-id="29fa2-107">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="29fa2-107">\<endpointDiscovery></span></span>  
+<span data-ttu-id="29fa2-108">\<scopes></span><span class="sxs-lookup"><span data-stu-id="29fa2-108">\<scopes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afe04-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="afe04-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29fa2-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="29fa2-109">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -35,24 +35,24 @@ ms.locfileid: "59213076"
 </behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="afe04-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="afe04-110">Attributes and Elements</span></span>  
- <span data-ttu-id="afe04-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="afe04-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="29fa2-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="29fa2-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="29fa2-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="29fa2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="afe04-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="afe04-112">Attributes</span></span>  
- <span data-ttu-id="afe04-113">Keine</span><span class="sxs-lookup"><span data-stu-id="afe04-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="29fa2-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="29fa2-112">Attributes</span></span>  
+ <span data-ttu-id="29fa2-113">Keine</span><span class="sxs-lookup"><span data-stu-id="29fa2-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="afe04-114">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="afe04-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="29fa2-114">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="29fa2-114">Child Elements</span></span>  
   
-|<span data-ttu-id="afe04-115">Attribut</span><span class="sxs-lookup"><span data-stu-id="afe04-115">Attribute</span></span>|<span data-ttu-id="afe04-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="afe04-116">Description</span></span>|  
+|<span data-ttu-id="29fa2-115">Attribut</span><span class="sxs-lookup"><span data-stu-id="29fa2-115">Attribute</span></span>|<span data-ttu-id="29fa2-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="29fa2-116">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="afe04-117">\<add></span><span class="sxs-lookup"><span data-stu-id="afe04-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|<span data-ttu-id="afe04-118">Fügt die Bereichsinformationen für den Endpunkt hinzu, die zum Vergleichen von Kriterien bei der Dienstsuche verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="afe04-118">Adds the scope information for the endpoint that can be used in matching criteria for finding services.</span></span>|  
+|[<span data-ttu-id="29fa2-117">\<add></span><span class="sxs-lookup"><span data-stu-id="29fa2-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|<span data-ttu-id="29fa2-118">Fügt die Bereichsinformationen für den Endpunkt hinzu, die zum Vergleichen von Kriterien bei der Dienstsuche verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="29fa2-118">Adds the scope information for the endpoint that can be used in matching criteria for finding services.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="afe04-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="afe04-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="29fa2-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="29fa2-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="afe04-120">Element</span><span class="sxs-lookup"><span data-stu-id="afe04-120">Element</span></span>|<span data-ttu-id="afe04-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="afe04-121">Description</span></span>|  
+|<span data-ttu-id="29fa2-120">Element</span><span class="sxs-lookup"><span data-stu-id="29fa2-120">Element</span></span>|<span data-ttu-id="29fa2-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="29fa2-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="afe04-122">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="afe04-122">\<endpointDiscovery></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|<span data-ttu-id="afe04-123">Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.</span><span class="sxs-lookup"><span data-stu-id="afe04-123">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>|  
+|[<span data-ttu-id="29fa2-122">\<endpointDiscovery></span><span class="sxs-lookup"><span data-stu-id="29fa2-122">\<endpointDiscovery></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|<span data-ttu-id="29fa2-123">Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.</span><span class="sxs-lookup"><span data-stu-id="29fa2-123">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="afe04-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="afe04-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29fa2-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="29fa2-124">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

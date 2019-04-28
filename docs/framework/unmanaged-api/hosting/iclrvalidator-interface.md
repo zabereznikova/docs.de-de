@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763300"
 ---
-# <a name="iclrvalidator-interface"></a><span data-ttu-id="b0f7c-102">ICLRValidator-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0f7c-102">ICLRValidator Interface</span></span>
-<span data-ttu-id="b0f7c-103">Stellt Methoden zum Überprüfen der übertragbaren ausführbaren Datei (PE)-Abbildern, und Melden von Validierungsfehlern.</span><span class="sxs-lookup"><span data-stu-id="b0f7c-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
+# <a name="iclrvalidator-interface"></a><span data-ttu-id="8e7fb-102">ICLRValidator-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8e7fb-102">ICLRValidator Interface</span></span>
+<span data-ttu-id="8e7fb-103">Stellt Methoden zum Überprüfen der übertragbaren ausführbaren Datei (PE)-Abbildern, und Melden von Validierungsfehlern.</span><span class="sxs-lookup"><span data-stu-id="8e7fb-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b0f7c-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="b0f7c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8e7fb-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="8e7fb-104">Methods</span></span>  
   
-|<span data-ttu-id="b0f7c-105">Methode</span><span class="sxs-lookup"><span data-stu-id="b0f7c-105">Method</span></span>|<span data-ttu-id="b0f7c-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b0f7c-106">Description</span></span>|  
+|<span data-ttu-id="8e7fb-105">Methode</span><span class="sxs-lookup"><span data-stu-id="8e7fb-105">Method</span></span>|<span data-ttu-id="8e7fb-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8e7fb-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b0f7c-107">FormatEventInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="b0f7c-107">FormatEventInfo Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|<span data-ttu-id="b0f7c-108">Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.</span><span class="sxs-lookup"><span data-stu-id="b0f7c-108">Gets a detailed message about the specified validation error.</span></span>|  
-|[<span data-ttu-id="b0f7c-109">Validate-Methode</span><span class="sxs-lookup"><span data-stu-id="b0f7c-109">Validate Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|<span data-ttu-id="b0f7c-110">Überprüft die übertragbare ausführbare Datei oder der Microsoft intermediate Language (MSIL) in der angegebenen Datei.</span><span class="sxs-lookup"><span data-stu-id="b0f7c-110">Validates the portable executable or Microsoft intermediate language (MSIL) in the specified file.</span></span>|  
+|[<span data-ttu-id="8e7fb-107">FormatEventInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="8e7fb-107">FormatEventInfo Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|<span data-ttu-id="8e7fb-108">Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.</span><span class="sxs-lookup"><span data-stu-id="8e7fb-108">Gets a detailed message about the specified validation error.</span></span>|  
+|[<span data-ttu-id="8e7fb-109">Validate-Methode</span><span class="sxs-lookup"><span data-stu-id="8e7fb-109">Validate Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|<span data-ttu-id="8e7fb-110">Überprüft die übertragbare ausführbare Datei oder der Microsoft intermediate Language (MSIL) in der angegebenen Datei.</span><span class="sxs-lookup"><span data-stu-id="8e7fb-110">Validates the portable executable or Microsoft intermediate language (MSIL) in the specified file.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b0f7c-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b0f7c-111">Requirements</span></span>  
- <span data-ttu-id="b0f7c-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0f7c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e7fb-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8e7fb-111">Requirements</span></span>  
+ <span data-ttu-id="8e7fb-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e7fb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0f7c-113">**Header:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="b0f7c-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="8e7fb-113">**Header:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="8e7fb-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="b0f7c-114">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="b0f7c-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8e7fb-114">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="8e7fb-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b0f7c-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0f7c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e7fb-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e7fb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0f7c-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0f7c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e7fb-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8e7fb-116">See also</span></span>
 
-- [<span data-ttu-id="b0f7c-117">ICLRErrorReportingManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0f7c-117">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="b0f7c-118">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="b0f7c-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="b0f7c-119">CLRRuntimeHost-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="b0f7c-119">CLRRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [<span data-ttu-id="8e7fb-117">ICLRErrorReportingManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8e7fb-117">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="8e7fb-118">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="8e7fb-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="8e7fb-119">CLRRuntimeHost-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="8e7fb-119">CLRRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

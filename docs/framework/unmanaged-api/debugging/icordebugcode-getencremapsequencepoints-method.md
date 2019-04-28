@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750175"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="5696b-102">ICorDebugCode::GetEnCRemapSequencePoints-Methode</span><span class="sxs-lookup"><span data-stu-id="5696b-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="5696b-103">Diese Methode ist nicht in der aktuellen Version von .NET Framework implementiert.</span><span class="sxs-lookup"><span data-stu-id="5696b-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="5694b-102">ICorDebugCode::GetEnCRemapSequencePoints-Methode</span><span class="sxs-lookup"><span data-stu-id="5694b-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="5694b-103">Diese Methode ist nicht in der aktuellen Version von .NET Framework implementiert.</span><span class="sxs-lookup"><span data-stu-id="5694b-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5696b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5696b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5694b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5694b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5696b-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5696b-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5694b-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5694b-105">See also</span></span>

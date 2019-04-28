@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701020"
 ---
-# <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="69fe2-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock-Methode</span><span class="sxs-lookup"><span data-stu-id="69fe2-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
-<span data-ttu-id="69fe2-103">Gibt zurück, den verwalteten Thread, der die Monitorsperre für dieses Objekt besitzt.</span><span class="sxs-lookup"><span data-stu-id="69fe2-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  
+# <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="c3096-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock-Methode</span><span class="sxs-lookup"><span data-stu-id="c3096-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
+<span data-ttu-id="c3096-103">Gibt zurück, den verwalteten Thread, der die Monitorsperre für dieses Objekt besitzt.</span><span class="sxs-lookup"><span data-stu-id="c3096-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69fe2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="69fe2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3096-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c3096-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadOwningMonitorLock (  
@@ -36,46 +36,46 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69fe2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="69fe2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3096-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c3096-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="69fe2-106">[out] Der verwaltete Thread, der die Monitorsperre für dieses Objekt besitzt.</span><span class="sxs-lookup"><span data-stu-id="69fe2-106">[out] The managed thread that owns the monitor lock on this object.</span></span>  
+ <span data-ttu-id="c3096-106">[out] Der verwaltete Thread, der die Monitorsperre für dieses Objekt besitzt.</span><span class="sxs-lookup"><span data-stu-id="c3096-106">[out] The managed thread that owns the monitor lock on this object.</span></span>  
   
  `pAcquisitionCount`  
- <span data-ttu-id="69fe2-107">[out] Die Anzahl wie oft dieser Thread die Sperre freizugeben, bevor sie zurückkehrt, ohne Besitzer werden müssten.</span><span class="sxs-lookup"><span data-stu-id="69fe2-107">[out] The number of times this thread would have to release the lock before it returns to being unowned.</span></span>  
+ <span data-ttu-id="c3096-107">[out] Die Anzahl wie oft dieser Thread die Sperre freizugeben, bevor sie zurückkehrt, ohne Besitzer werden müssten.</span><span class="sxs-lookup"><span data-stu-id="c3096-107">[out] The number of times this thread would have to release the lock before it returns to being unowned.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="69fe2-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="69fe2-108">Return Value</span></span>  
- <span data-ttu-id="69fe2-109">Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.</span><span class="sxs-lookup"><span data-stu-id="69fe2-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c3096-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c3096-108">Return Value</span></span>  
+ <span data-ttu-id="c3096-109">Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.</span><span class="sxs-lookup"><span data-stu-id="c3096-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="69fe2-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="69fe2-110">HRESULT</span></span>|<span data-ttu-id="69fe2-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="69fe2-111">Description</span></span>|  
+|<span data-ttu-id="c3096-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c3096-110">HRESULT</span></span>|<span data-ttu-id="c3096-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c3096-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="69fe2-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="69fe2-112">S_OK</span></span>|<span data-ttu-id="69fe2-113">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="69fe2-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="69fe2-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="69fe2-114">S_FALSE</span></span>|<span data-ttu-id="69fe2-115">Kein verwalteter Thread besitzt die Monitorsperre für dieses Objekt.</span><span class="sxs-lookup"><span data-stu-id="69fe2-115">No managed thread owns the monitor lock on this object.</span></span>|  
+|<span data-ttu-id="c3096-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="c3096-112">S_OK</span></span>|<span data-ttu-id="c3096-113">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="c3096-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="c3096-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="c3096-114">S_FALSE</span></span>|<span data-ttu-id="c3096-115">Kein verwalteter Thread besitzt die Monitorsperre für dieses Objekt.</span><span class="sxs-lookup"><span data-stu-id="c3096-115">No managed thread owns the monitor lock on this object.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="69fe2-116">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="69fe2-116">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="c3096-116">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="c3096-116">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="69fe2-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="69fe2-117">Remarks</span></span>  
- <span data-ttu-id="69fe2-118">Wenn ein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt:</span><span class="sxs-lookup"><span data-stu-id="69fe2-118">If a managed thread owns the monitor lock on this object:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3096-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c3096-117">Remarks</span></span>  
+ <span data-ttu-id="c3096-118">Wenn ein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt:</span><span class="sxs-lookup"><span data-stu-id="c3096-118">If a managed thread owns the monitor lock on this object:</span></span>  
   
--   <span data-ttu-id="69fe2-119">Die Methode gibt S_OK zurück.</span><span class="sxs-lookup"><span data-stu-id="69fe2-119">The method returns S_OK.</span></span>  
+- <span data-ttu-id="c3096-119">Die Methode gibt S_OK zurück.</span><span class="sxs-lookup"><span data-stu-id="c3096-119">The method returns S_OK.</span></span>  
   
--   <span data-ttu-id="69fe2-120">Das Threadobjekt ist gültig, bis der Thread beendet wird.</span><span class="sxs-lookup"><span data-stu-id="69fe2-120">The thread object is valid until the thread exits.</span></span>  
+- <span data-ttu-id="c3096-120">Das Threadobjekt ist gültig, bis der Thread beendet wird.</span><span class="sxs-lookup"><span data-stu-id="c3096-120">The thread object is valid until the thread exits.</span></span>  
   
- <span data-ttu-id="69fe2-121">Wenn kein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt `ppThread` und `pAcquisitionCount` bleiben unverändert, und die Methode gibt S_FALSE zurück.</span><span class="sxs-lookup"><span data-stu-id="69fe2-121">If no managed thread owns the monitor lock on this object, `ppThread` and `pAcquisitionCount` are unchanged, and the method returns S_FALSE.</span></span>  
+ <span data-ttu-id="c3096-121">Wenn kein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt `ppThread` und `pAcquisitionCount` bleiben unverändert, und die Methode gibt S_FALSE zurück.</span><span class="sxs-lookup"><span data-stu-id="c3096-121">If no managed thread owns the monitor lock on this object, `ppThread` and `pAcquisitionCount` are unchanged, and the method returns S_FALSE.</span></span>  
   
- <span data-ttu-id="69fe2-122">Wenn `ppThread` oder `pAcquisitionCount` ist kein gültiger Zeiger ist, das Ergebnis nicht definiert ist.</span><span class="sxs-lookup"><span data-stu-id="69fe2-122">If `ppThread` or `pAcquisitionCount` is not a valid pointer, the result is undefined.</span></span>  
+ <span data-ttu-id="c3096-122">Wenn `ppThread` oder `pAcquisitionCount` ist kein gültiger Zeiger ist, das Ergebnis nicht definiert ist.</span><span class="sxs-lookup"><span data-stu-id="c3096-122">If `ppThread` or `pAcquisitionCount` is not a valid pointer, the result is undefined.</span></span>  
   
- <span data-ttu-id="69fe2-123">Wenn ein Fehler auftritt, nicht ermittelt werden kann, die ggf. Thread die Sperre der Überwachung für dieses Objekt besitzt, gibt die Methode ein HRESULT, das Fehler weist darauf hin zurück.</span><span class="sxs-lookup"><span data-stu-id="69fe2-123">If an error occurs such that it cannot be determined which, if any, thread owns the monitor lock on this object, the method returns an HRESULT that indicates failure.</span></span>  
+ <span data-ttu-id="c3096-123">Wenn ein Fehler auftritt, nicht ermittelt werden kann, die ggf. Thread die Sperre der Überwachung für dieses Objekt besitzt, gibt die Methode ein HRESULT, das Fehler weist darauf hin zurück.</span><span class="sxs-lookup"><span data-stu-id="c3096-123">If an error occurs such that it cannot be determined which, if any, thread owns the monitor lock on this object, the method returns an HRESULT that indicates failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69fe2-124">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="69fe2-124">Requirements</span></span>  
- <span data-ttu-id="69fe2-125">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69fe2-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3096-124">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c3096-124">Requirements</span></span>  
+ <span data-ttu-id="c3096-125">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3096-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69fe2-126">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="69fe2-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c3096-126">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c3096-126">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="69fe2-127">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="69fe2-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c3096-127">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3096-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="69fe2-128">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69fe2-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c3096-128">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3096-128">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69fe2-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69fe2-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3096-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3096-129">See also</span></span>
 
-- [<span data-ttu-id="69fe2-130">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="69fe2-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="69fe2-131">Debuggen</span><span class="sxs-lookup"><span data-stu-id="69fe2-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="c3096-130">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="c3096-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c3096-131">Debuggen</span><span class="sxs-lookup"><span data-stu-id="c3096-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

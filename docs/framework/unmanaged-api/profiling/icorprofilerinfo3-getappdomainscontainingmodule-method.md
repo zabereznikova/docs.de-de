@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b5658ac87c7a938381639442216df03853f02998
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763164"
 ---
-# <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a><span data-ttu-id="7659f-102">ICorProfilerInfo3::GetAppDomainsContainingModule-Methode</span><span class="sxs-lookup"><span data-stu-id="7659f-102">ICorProfilerInfo3::GetAppDomainsContainingModule Method</span></span>
-<span data-ttu-id="7659f-103">Ruft die Bezeichner der Anwendungsdomänen ab, in denen das angegebene Modul geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="7659f-103">Gets the identifiers of the application domains in which the given module has been loaded.</span></span>  
+# <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a><span data-ttu-id="3d116-102">ICorProfilerInfo3::GetAppDomainsContainingModule-Methode</span><span class="sxs-lookup"><span data-stu-id="3d116-102">ICorProfilerInfo3::GetAppDomainsContainingModule Method</span></span>
+<span data-ttu-id="3d116-103">Ruft die Bezeichner der Anwendungsdomänen ab, in denen das angegebene Modul geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="3d116-103">Gets the identifiers of the application domains in which the given module has been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7659f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7659f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d116-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3d116-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAppDomainsContainingModule(  
@@ -38,34 +38,34 @@ HRESULT GetAppDomainsContainingModule(
                     AppDomainID appDomainIds[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7659f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7659f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d116-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3d116-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="7659f-106">[in] Die ID des geladenen Moduls.</span><span class="sxs-lookup"><span data-stu-id="7659f-106">[in] The ID of the loaded module.</span></span>  
+ <span data-ttu-id="3d116-106">[in] Die ID des geladenen Moduls.</span><span class="sxs-lookup"><span data-stu-id="3d116-106">[in] The ID of the loaded module.</span></span>  
   
  `cAppDomainIds`  
- <span data-ttu-id="7659f-107">[in] Die Größe des `appDomainIds`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="7659f-107">[in] The size of the `appDomainIds` array.</span></span>  
+ <span data-ttu-id="3d116-107">[in] Die Größe des `appDomainIds`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="3d116-107">[in] The size of the `appDomainIds` array.</span></span>  
   
  `pcAppDomainIds`  
- <span data-ttu-id="7659f-108">[out] Ein Zeiger auf die Gesamtzahl von zurückgegebenen Elementen.</span><span class="sxs-lookup"><span data-stu-id="7659f-108">[out] A pointer to the total number of returned elements.</span></span>  
+ <span data-ttu-id="3d116-108">[out] Ein Zeiger auf die Gesamtzahl von zurückgegebenen Elementen.</span><span class="sxs-lookup"><span data-stu-id="3d116-108">[out] A pointer to the total number of returned elements.</span></span>  
   
  `appDomainIds`  
- <span data-ttu-id="7659f-109">[out] Ein Array von ID-Werten der Anwendungsdomänen.</span><span class="sxs-lookup"><span data-stu-id="7659f-109">[out] An array of application domain ID values.</span></span>  
+ <span data-ttu-id="3d116-109">[out] Ein Array von ID-Werten der Anwendungsdomänen.</span><span class="sxs-lookup"><span data-stu-id="3d116-109">[out] An array of application domain ID values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7659f-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7659f-110">Remarks</span></span>  
- <span data-ttu-id="7659f-111">Die Methode verwendet vom Aufrufer reservierte Puffer.</span><span class="sxs-lookup"><span data-stu-id="7659f-111">The method uses caller allocated buffers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d116-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3d116-110">Remarks</span></span>  
+ <span data-ttu-id="3d116-111">Die Methode verwendet vom Aufrufer reservierte Puffer.</span><span class="sxs-lookup"><span data-stu-id="3d116-111">The method uses caller allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7659f-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7659f-112">Requirements</span></span>  
- <span data-ttu-id="7659f-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7659f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d116-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3d116-112">Requirements</span></span>  
+ <span data-ttu-id="3d116-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d116-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7659f-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7659f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3d116-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3d116-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7659f-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7659f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d116-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d116-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7659f-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7659f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3d116-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d116-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7659f-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7659f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d116-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3d116-117">See also</span></span>
 
-- [<span data-ttu-id="7659f-118">ICorProfilerFunctionEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7659f-118">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="7659f-119">ICorProfilerInfo3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7659f-119">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="7659f-120">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="7659f-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="7659f-121">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="7659f-121">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="3d116-118">ICorProfilerFunctionEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3d116-118">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="3d116-119">ICorProfilerInfo3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3d116-119">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="3d116-120">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="3d116-120">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="3d116-121">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="3d116-121">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
