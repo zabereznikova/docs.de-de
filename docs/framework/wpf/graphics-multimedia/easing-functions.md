@@ -16,38 +16,38 @@ helpviewer_keywords:
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
 ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763103"
 ---
 # <a name="easing-functions"></a>Beschleunigungsfunktionen
 Mit Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Formeln auf Animationen anwenden. Beispielsweise sollte Ihr Objekt realistisch springen oder sich so verhalten, als ob es sich auf einer Feder befinden würde. Sie können Keyframe- oder sogar From/To/By-Animationen verwenden, um sich diesen Effekten anzunähern, aber es würde eine erhebliche Menge an Arbeit bedeuten, und die Animation wäre weniger genau als die Verwendung einer mathematischen Formel.  
   
  Neben der Erstellung Ihrer eigenen benutzerdefinierten Beschleunigungsfunktion durch Erben von <xref:System.Windows.Media.Animation.EasingFunctionBase>, können Sie eine von mehreren Beschleunigungsfunktionen, die von der Runtime bereitgestellten um allgemeine Effekte zu erstellen.  
   
--   <xref:System.Windows.Media.Animation.BackEase>: Zieht die Bewegung einer Animation geringfügig zurück, vor dem Beginn im angegebenen Pfad animiert.  
+- <xref:System.Windows.Media.Animation.BackEase>: Zieht die Bewegung einer Animation geringfügig zurück, vor dem Beginn im angegebenen Pfad animiert.  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: Erstellt einen Sprungeffekt.  
+- <xref:System.Windows.Media.Animation.BounceEase>: Erstellt einen Sprungeffekt.  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: Erstellt eine Animation, die mit einer zirkulären Funktion beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Erstellt eine Animation, die mit einer zirkulären Funktion beschleunigt und/oder verlangsamt.  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>3</sup>.  
+- <xref:System.Windows.Media.Animation.CubicEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>3</sup>.  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: Erstellt eine Animation, die einer hin-und herschwingenden bis es zum Stillstand kommt Feder ähnelt.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Erstellt eine Animation, die einer hin-und herschwingenden bis es zum Stillstand kommt Feder ähnelt.  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: Erstellt eine Animation, die mit einer exponentiellen Formel beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Erstellt eine Animation, die mit einer exponentiellen Formel beschleunigt und/oder verlangsamt.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>p</sup> wobei p ist gleich der <xref:System.Windows.Media.Animation.PowerEase.Power%2A>Eigenschaft.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>p</sup> wobei p ist gleich der <xref:System.Windows.Media.Animation.PowerEase.Power%2A>Eigenschaft.  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>2</sup>.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>2</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>4</sup>.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: Erstellt eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>4</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: Erstellen Sie eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>5</sup>.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Erstellen Sie eine Animation, die mit der Formel beschleunigt und/oder verlangsamt *f*(*t*) = *t*<sup>5</sup>.  
   
--   <xref:System.Windows.Media.Animation.SineEase>: Erstellt eine Animation, die mit einer Sinusformel beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.SineEase>: Erstellt eine Animation, die mit einer Sinusformel beschleunigt und/oder verlangsamt.  
   
  Verwenden Sie zum Anwenden einer Beschleunigungsfunktion auf eine Animation die `EasingFunction` -Eigenschaft der Animation die Beschleunigungsfunktion anzugeben, auf die Animation anzuwenden. Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.BounceEase> -Beschleunigungsfunktion auf eine <xref:System.Windows.Media.Animation.DoubleAnimation> einen Sprungeffekt zu erstellen.  
   
@@ -59,11 +59,11 @@ Mit Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Forme
   
  Sie können die <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> Eigenschaft zum Ändern die Beschleunigungsfunktion, d. h. das Verhalten zu ändern, wie die Animation interpoliert. Es gibt drei mögliche Werte, die Sie für erhalten <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Die Interpolation folgt die mathematische Formel, die der Beschleunigungsfunktion zugeordnet wird.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Die Interpolation folgt die mathematische Formel, die der Beschleunigungsfunktion zugeordnet wird.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Die Interpolation folgt, 100 %-Interpolation abzüglich der Ausgabe der Formel, die der Beschleunigungsfunktion zugeordnet wird.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Die Interpolation folgt, 100 %-Interpolation abzüglich der Ausgabe der Formel, die der Beschleunigungsfunktion zugeordnet wird.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Interpolation verwendet <xref:System.Windows.Media.Animation.EasingMode.EaseIn> für die erste Hälfte der Animation und <xref:System.Windows.Media.Animation.EasingMode.EaseOut> für die zweite Hälfte.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Interpolation verwendet <xref:System.Windows.Media.Animation.EasingMode.EaseIn> für die erste Hälfte der Animation und <xref:System.Windows.Media.Animation.EasingMode.EaseOut> für die zweite Hälfte.  
   
  Die folgenden Diagramme veranschaulichen die unterschiedlichen Werte von <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> , in denen *f*(*x*) stellt den Animationsfortschritt und *t* Zeit darstellt.  
   

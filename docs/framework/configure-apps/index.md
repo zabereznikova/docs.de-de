@@ -25,11 +25,11 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775868"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
@@ -66,7 +66,7 @@ ms.locfileid: "59147107"
   
  Name und Speicherort der Anwendungskonfigurationsdatei sind vom Host der App abhängig; folgende Hosts sind möglich:  
   
--   Von einer ausführbaren Datei gehostete App.  
+- Von einer ausführbaren Datei gehostete App.  
   
      Diese Apps haben zwei Konfigurationsdateien: eine Quellkonfigurationsdatei, die von Entwicklern während der Entwicklung geändert wird, und eine Ausgabedatei, die mit der Anwendung verteilt wird.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59147107"
   
      Visual Studio kopiert die Quellkonfigurationsdatei automatisch in das Verzeichnis, in dem die kompilierte Assembly platziert wird, um die Ausgabekonfigurationsdatei zu erstellen, die mit der App bereitgestellt wird. In einigen Fällen wird die Ausgabekonfigurationsdatei von Visual Studio möglicherweise geändert. Weitere Informationen dazu finden Sie im Abschnitt [Umleiten von Assemblyversionen auf App-Ebene](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) des Artikels [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  
   
--   Von ASP.NET gehostete App.  
+- Von ASP.NET gehostete App.  
   
      Weitere Informationen zu ASP.NET-Konfigurationsdateien finden Sie unter [ASP.NET-Konfigurationseinstellungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
--   Von Internet Explorer gehostete App.  
+- Von Internet Explorer gehostete App.  
   
      Verfügt eine von Internet Explorer gehostete App über eine Konfigurationsdatei, wird der Speicherort dieser Datei in einem `<link>`-Tag mit folgender Syntax angegeben:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59147107"
   
  Die Sicherheitskonfigurationsdateien sind an folgenden Speicherorten abgelegt:  
   
--   Konfigurationsdatei für Unternehmensrichtlinien: %*Laufzeit-Installationspfad*%\Config\Enterprisesec.config  
+- Konfigurationsdatei für Unternehmensrichtlinien: %*Laufzeit-Installationspfad*%\Config\Enterprisesec.config  
   
--   Konfigurationsdatei für Computerrichtlinien: %*Laufzeit-Installationspfad*%\Config\Security.config  
+- Konfigurationsdatei für Computerrichtlinien: %*Laufzeit-Installationspfad*%\Config\Security.config  
   
--   Konfigurationsdatei für Benutzerrichtlinien: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- Konfigurationsdatei für Benutzerrichtlinien: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Suchen von Assemblys mit DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  

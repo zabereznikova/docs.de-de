@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778338"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten
 Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem Client und einen Windows Communication Foundation (WCF)-Dienst auftreten kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Verfahren zeigen, wie Sie sicherstellen, stabile Kommunikation zwischen einem Client und einem Dienst mit den standardmäßigen Bindung in der Warteschlange beim Implementieren des WCF-Diensts.  

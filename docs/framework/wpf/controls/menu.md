@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
 ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770734"
 ---
 # <a name="menu"></a>Menü
 Ein <xref:System.Windows.Controls.Menu> ist ein Steuerelement, das hierarchische Organisation der Elemente, die mithilfe von Befehlen oder Ereignishandlern ermöglicht. Jede <xref:System.Windows.Controls.Menu> können enthält mehrere <xref:System.Windows.Controls.MenuItem> Steuerelemente. Jede <xref:System.Windows.Controls.MenuItem> können einen Befehl aufrufen, oder rufen einen `Click` -Ereignishandler. Ein <xref:System.Windows.Controls.MenuItem> kann auch über mehrere verfügen <xref:System.Windows.Controls.MenuItem> -Elemente als untergeordnete Elemente, die ein Untermenü bilden.  

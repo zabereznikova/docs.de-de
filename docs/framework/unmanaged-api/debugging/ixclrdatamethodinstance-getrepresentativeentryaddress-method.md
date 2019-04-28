@@ -16,11 +16,11 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 6f204e2ed9cb1409d53432355467bb11946f8809
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775530"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress-Methode
 
@@ -48,8 +48,8 @@ Die angegebene Methode ist Teil der [ `IXCLRDataMethodInstance` Schnittstelle](i
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch

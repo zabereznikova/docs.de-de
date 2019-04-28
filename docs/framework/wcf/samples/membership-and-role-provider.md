@@ -3,11 +3,11 @@ title: Mitgliedschafts- und Rollenanbieter
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756116"
 ---
 # <a name="membership-and-role-provider"></a>Mitgliedschafts- und Rollenanbieter
 Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ein Dienst mithilfe der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschafts- und Rollenanbieter Clients authentifizieren und autorisieren kann.  
@@ -19,15 +19,15 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
   
  In diesem Beispiel werden folgende Vorgänge veranschaulicht:  
   
--   Ein Client kann die Authentifizierung mithilfe einer Kombination aus Benutzername und Kennwort durchführen.  
+- Ein Client kann die Authentifizierung mithilfe einer Kombination aus Benutzername und Kennwort durchführen.  
   
--   Der Server kann die Clientanmeldeinformationen anhand des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieters überprüfen.  
+- Der Server kann die Clientanmeldeinformationen anhand des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieters überprüfen.  
   
--   Der Server kann über das X.509-Zertifikat des Servers authentifiziert werden.  
+- Der Server kann über das X.509-Zertifikat des Servers authentifiziert werden.  
   
--   Der Server kann den authentifizierten Client mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter einer Rolle zuordnen.  
+- Der Server kann den authentifizierten Client mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter einer Rolle zuordnen.  
   
--   Der Server kann mit `PrincipalPermissionAttribute` den Zugriff auf bestimmte Methoden steuern, die vom Dienst verfügbar gemacht werden.  
+- Der Server kann mit `PrincipalPermissionAttribute` den Zugriff auf bestimmte Methoden steuern, die vom Dienst verfügbar gemacht werden.  
   
  Die Mitgliedschafts- und Rollenanbieter werden für die Verwendung eines Speichers konfiguriert, der von SQL Server unterstützt wird. Eine Verbindungszeichenfolge und verschiedene Optionen werden in der Dienstkonfigurationsdatei angegeben. Dem Mitgliedschaftsanbieter wird der Name `SqlMembershipProvider` zugewiesen, und dem Rollenanbieter wird der Name `SqlRoleProvider` zugewiesen.  
   
@@ -164,7 +164,7 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
--   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
+- Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
   
 > [!NOTE]
 >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
   
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.  
   
--   Erstellen des Serverzertifikats.  
+- Erstellen des Serverzertifikats.  
   
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable %SERVER_NAME% gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Standardmäßig lautet sie in dieser Batchdatei localhost.  
   
@@ -190,7 +190,7 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.  
+- Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.  
   
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
   

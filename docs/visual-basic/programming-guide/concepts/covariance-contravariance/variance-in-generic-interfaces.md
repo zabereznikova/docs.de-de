@@ -3,28 +3,28 @@ title: Varianz in generischen Schnittstellen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787217"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Varianz in generischen Schnittstellen (Visual Basic)
 In .NET Framework 4 wurde die Varianzunterstützung für mehrere vorhandene generische Schnittstellen eingeführt. Die Varianzunterstützung lässt eine implizite Konvertierung von Klassen zu, die diese Schnittstellen implementieren. Die folgenden Schnittstellen sind jetzt variant:  
   
--   <xref:System.Collections.Generic.IEnumerable%601> (T ist kovariant)  
+- <xref:System.Collections.Generic.IEnumerable%601> (T ist kovariant)  
   
--   <xref:System.Collections.Generic.IEnumerator%601> (T ist kovariant)  
+- <xref:System.Collections.Generic.IEnumerator%601> (T ist kovariant)  
   
--   <xref:System.Linq.IQueryable%601> (T ist kovariant)  
+- <xref:System.Linq.IQueryable%601> (T ist kovariant)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` und `TElement` sind kovariant)  
+- <xref:System.Linq.IGrouping%602> (`TKey` und `TElement` sind kovariant)  
   
--   <xref:System.Collections.Generic.IComparer%601> (T ist kontravariant)  
+- <xref:System.Collections.Generic.IComparer%601> (T ist kontravariant)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601> (T ist kontravariant)  
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T ist kontravariant)  
   
--   <xref:System.IComparable%601> (T ist kontravariant)  
+- <xref:System.IComparable%601> (T ist kontravariant)  
   
  Kovarianz ermöglicht einer Methode, stärker abgeleitete Rückgabetypen zu verwenden, als durch die generischen Typparameter der Schnittstelle definiert sind. Betrachten Sie diese generischen Schnittstellen zur Veranschaulichung der Kovarianzfunktionen: `IEnumerable(Of Object)` und `IEnumerable(Of String)`. Die Schnittstelle `IEnumerable(Of Object)` wird nicht von der Schnittstelle `IEnumerable(Of String)` geerbt. Allerdings erbt der Typ `String` den Typ `Object`. In einigen Fällen können Sie vielleicht auch die Objekte dieser Schnittstellen einander zuweisen. Dies wird im folgenden Codebeispiel gezeigt.  
   

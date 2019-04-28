@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764360"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<Typname >' kann nicht von erben \<Typ > '\<Basistypname >' erweitert den Zugriff der Basis \<Typ > außerhalb der Assembly
 Eine Klasse oder Schnittstelle erbt von einer Basisklasse oder Schnittstelle weist jedoch eine weniger restriktive Zugriffsebene.  
@@ -23,11 +23,11 @@ Eine Klasse oder Schnittstelle erbt von einer Basisklasse oder Schnittstelle wei
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ändern Sie die Zugriffsebene der abgeleiteten Klasse oder Schnittstelle, die mindestens so restriktiv wie der Basisklasse oder Schnittstelle sein.  
+- Ändern Sie die Zugriffsebene der abgeleiteten Klasse oder Schnittstelle, die mindestens so restriktiv wie der Basisklasse oder Schnittstelle sein.  
   
      - oder -   
   
--   Wenn Sie die weniger restriktive Zugriffsebene benötigen, entfernen Sie die `Inherits` Anweisung. Sie können nicht von einem eingeschränkteren Basisklasse oder Schnittstelle erben.  
+- Wenn Sie die weniger restriktive Zugriffsebene benötigen, entfernen Sie die `Inherits` Anweisung. Sie können nicht von einem eingeschränkteren Basisklasse oder Schnittstelle erben.  
   
 ## <a name="see-also"></a>Siehe auch
 

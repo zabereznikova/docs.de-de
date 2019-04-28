@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
 ms.openlocfilehash: 35bddac0ed65499e2eb400639ab5028c6cc6ddcb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787425"
 ---
 # <a name="unable-to-find-required-file-filename"></a>Erforderliche Datei kann nicht gefunden "\<Dateiname >"
 Eine Datei, die für Visual Studio erforderlich ist, fehlt oder ist beschädigt.  
@@ -21,7 +21,7 @@ Eine Datei, die für Visual Studio erforderlich ist, fehlt oder ist beschädigt.
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Installieren Sie Visual Studio erneut.  
+- Installieren Sie Visual Studio erneut.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: PasswordBox-Stile und-Vorlagen
+title: PasswordBox-Stile und -Vorlagen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - styles [WPF], PasswordBox
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
 ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770642"
 ---
-# <a name="passwordbox-styles-and-templates"></a>PasswordBox-Stile und-Vorlagen
+# <a name="passwordbox-styles-and-templates"></a>PasswordBox-Stile und -Vorlagen
 
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.PasswordBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 

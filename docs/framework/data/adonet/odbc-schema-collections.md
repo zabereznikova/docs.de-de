@@ -3,11 +3,11 @@ title: ODBC-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772046"
 ---
 # <a name="odbc-schema-collections"></a>ODBC-Schemaauflistungen
 
@@ -19,9 +19,9 @@ Der Microsoft SQL Server-ODBC-Treiber unterstützt neben den allgemeinen schemaa
 
 - Tabellen
 
-- Indexes
+- Indizes
 
-- Columns
+- Spalten
 
 - Verfahren
 
@@ -41,7 +41,7 @@ Der Microsoft SQL Server-ODBC-Treiber unterstützt neben den allgemeinen schemaa
 |TABLE_TYPE|Zeichenfolge|
 |REMARKS|Zeichenfolge|
 
-### <a name="indexes"></a>Indexes
+### <a name="indexes"></a>Indizes
 
 |Spaltenname|DataType|
 |----------------|--------------|
@@ -61,7 +61,7 @@ Der Microsoft SQL Server-ODBC-Treiber unterstützt neben den allgemeinen schemaa
 |SS_TYPE_SCHEMA|Zeichenfolge|
 |SS_DATA_TYPE|Byte|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>Spalten
 
 |Spaltenname|DataType|
 |----------------|--------------|
@@ -160,7 +160,7 @@ Der Microsoft SQL Server Oracle ODBC-Treiber unterstützt neben den allgemeinen 
 
 - Tabellen
 
-- Columns
+- Spalten
 
 - Verfahren
 
@@ -170,7 +170,7 @@ Der Microsoft SQL Server Oracle ODBC-Treiber unterstützt neben den allgemeinen 
 
 - Ansichten
 
-- Indexes
+- Indizes
 
 ### <a name="tables-and-views"></a>Tables und Views
 
@@ -182,7 +182,7 @@ Der Microsoft SQL Server Oracle ODBC-Treiber unterstützt neben den allgemeinen 
 |TABLE_TYPE|Zeichenfolge|
 |REMARKS|Zeichenfolge|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>Spalten
 
 |Spaltenname|DataType|
 |----------------|--------------|
@@ -239,9 +239,9 @@ Der Microsoft Jet ODBC-Treiber unterstützt neben den allgemeinen Schemaauflis
 
 - Tabellen
 
-- Indexes
+- Indizes
 
-- Columns
+- Spalten
 
 - Verfahren
 
@@ -261,7 +261,7 @@ Der Microsoft Jet ODBC-Treiber unterstützt neben den allgemeinen Schemaauflis
 |TABLE_TYPE|Zeichenfolge|
 |REMARKS|Zeichenfolge|
 
-### <a name="columns"></a>Columns
+### <a name="columns"></a>Spalten
 
 |Spaltenname|DataType|
 |----------------|--------------|

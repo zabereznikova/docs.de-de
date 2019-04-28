@@ -3,30 +3,30 @@ title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779170"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein tokenauthentifizierers in Windows Communication Foundation (WCF) wird zum Überprüfen des Tokens verwendet wird, mit der Meldung, überprüfen, dass es in sich selbst konsistent, und Authentifizieren der Identität mit dem Token zugeordnet.
 
  Benutzerdefinierte Tokenauthentifizierer sind in einer Vielzahl von Fällen nützlich, z. B.:
 
--   Wenn Sie den einem Token zugeordneten Standardauthentifizierungsmechanismus überschreiben möchten.
+- Wenn Sie den einem Token zugeordneten Standardauthentifizierungsmechanismus überschreiben möchten.
 
--   Wenn Sie ein benutzerdefiniertes Token erstellen.
+- Wenn Sie ein benutzerdefiniertes Token erstellen.
 
  Dieses Beispiel zeigt Folgendes:
 
--   Wie sich ein Client mithilfe eines Benutzername/Kennwort-Paars authentifizieren kann.
+- Wie sich ein Client mithilfe eines Benutzername/Kennwort-Paars authentifizieren kann.
 
--   Wie der Server die Clientanmeldeinformationen mit einem benutzerdefinierten Tokenauthentifizierer überprüfen kann.
+- Wie der Server die Clientanmeldeinformationen mit einem benutzerdefinierten Tokenauthentifizierer überprüfen kann.
 
--   Wie der WCF-Dienstcode mit dem benutzerdefinierten Tokenauthentifizierer verknüpft.
+- Wie der WCF-Dienstcode mit dem benutzerdefinierten Tokenauthentifizierer verknüpft.
 
--   Wie der Server mit dem X.509-Zertifikat des Servers authentifiziert werden kann.
+- Wie der Server mit dem X.509-Zertifikat des Servers authentifiziert werden kann.
 
  Dieses Beispiel zeigt außerdem an, wie die Identität des Aufrufers nach dem benutzerdefinierten tokenauthentifizierungsprozess zugegriffen werden kann, von WCF ist.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.
 
--   Erstellen des Serverzertifikats.
+- Erstellen des Serverzertifikats.
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Standardmäßig lautet die Variable in dieser Batchdatei localhost.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate.
+- Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate.
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 

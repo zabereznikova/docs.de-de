@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754556"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen
 Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufverfolgungsausgabe als auch die Debugausgabe im Ausgabefenster von Visual Studio angezeigt. Allerdings müssen Sie Ihre instrumentierten Anwendungen mit aktivierter **TRACE**-Compilerdirektive kompilieren, um Ablaufverfolgungsfunktionen in eine bereitgestellte Anwendung aufzunehmen. Dadurch kann der Ablaufverfolgungscode in die Releaseversion der Anwendung kompiliert werden. Wenn Sie die **TRACE**-Anweisung nicht aktivieren, wird der gesamte Ablaufverfolgungscode bei der Kompilierung ignoriert und nicht in den ausführbaren Code aufgenommen, den Sie bereitstellen.  
@@ -28,11 +28,11 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
  Sie können die Compilereinstellungen für die Anwendung auf verschiedene Arten angeben:  
   
--   Eigenschaftenseiten  
+- Eigenschaftenseiten  
   
--   Die Befehlszeile  
+- Die Befehlszeile  
   
--   **#CONST** (für Visual Basic) und **#define** (für C#)  
+- **#CONST** (für Visual Basic) und **#define** (für C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>So ändern Sie die Kompilierungseinstellungen im Dialogfeld "Eigenschaftenseiten"  
   
@@ -40,9 +40,9 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
 2. Wählen Sie im Kontextmenü den Befehl **Eigenschaften** aus.  
   
-    -   Klicken Sie in Visual Basic im linken Bereich der Eigenschaftenseite auf die Registerkarte **Kompilieren**, und klicken Sie dann auf die Schaltfläche **Erweiterte Kompilierungsoptionen**, um das Dialogfeld **Erweiterte Kompilierungsoptionen** anzuzeigen. Aktivieren Sie die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
+    - Klicken Sie in Visual Basic im linken Bereich der Eigenschaftenseite auf die Registerkarte **Kompilieren**, und klicken Sie dann auf die Schaltfläche **Erweiterte Kompilierungsoptionen**, um das Dialogfeld **Erweiterte Kompilierungsoptionen** anzuzeigen. Aktivieren Sie die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
   
-    -   Klicken Sie in C# auf die Registerkarte **Erstellen** im linken Bereich der Eigenschaftenseite, und aktivieren Sie dann die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
+    - Klicken Sie in C# auf die Registerkarte **Erstellen** im linken Bereich der Eigenschaftenseite, und aktivieren Sie dann die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>So kompilieren Sie instrumentierten Code über die Befehlszeile  
   

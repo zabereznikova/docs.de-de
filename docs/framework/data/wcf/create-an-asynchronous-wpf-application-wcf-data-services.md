@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
 ms.openlocfilehash: c5dc4e34711cdb128eb012633bad104d0060be71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765861"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Vorgehensweise: Erstellen einer asynchronen Windows Presentation Framework-Anwendung (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie aus einem Datendienst abgerufene Daten an Benutzeroberflächenelemente einer WPF (Windows Presentation Framework)-Anwendung binden. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md). Sie können auch Vorgänge für den Datendienst asynchron, ausführen, die die Anwendung weiterhin beim Warten auf einer Antwort auf eine datendienstanforderung reagieren zu können. Anwendungen für Silverlight sind erforderlich, um asynchron auf den Datendienst zuzugreifen. Weitere Informationen finden Sie unter [asynchrone Vorgänge](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  

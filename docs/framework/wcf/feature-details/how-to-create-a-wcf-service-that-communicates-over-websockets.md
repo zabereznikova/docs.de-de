@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommun
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787529"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert
 WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-Bindung verwenden, um über WebSockets zu kommunizieren.  WebSockets werden verwendet, wenn die <xref:System.ServiceModel.NetHttpBinding> bestimmt, dass der Dienstvertrag einen Rückrufvertrag definiert. In diesem Thema wird das Implementieren eines WCF-Diensts und -Clients beschrieben, die mithilfe der <xref:System.ServiceModel.NetHttpBinding> über WebSockets kommunizieren.  
@@ -108,7 +108,7 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
   
      Der Rückrufvertragsvorgang wird als asynchrone Methode implementiert.  
   
-    1.  Implementieren Sie den Clientcode.  
+    1. Implementieren Sie den Clientcode.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
   
          Der CallbackHandler wird hier aus Gründen der Übersichtlichkeit wiederholt. Die Clientanwendung erstellt einen neuen InstanceContext und gibt die Implementierung der Rückrufschnittstelle an. Danach erstellt sie eine Instanz der Proxyklasse, die einen Verweis an den neu erstellten InstanceContext sendet. Wenn der Client den Dienst aufruft, ruft der Dienst den Client mithilfe des angegebenen Rückrufvertrags auf.  
   
-    2.  Konfigurieren Sie den Client.  
+    2. Konfigurieren Sie den Client.  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

@@ -12,11 +12,11 @@ ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: defd7f90fcac8d1e98104796682058638c9bd799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753685"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError-MDA
 Der `overlappedFreeError`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType>-Methode aufgerufen wird, bevor der überlappende Vorgang abgeschlossen ist.  

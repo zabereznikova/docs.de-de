@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784384"
 ---
-# <a name="serverless-design-examples"></a>Serverloses Design-Beispiele
+# <a name="serverless-design-examples"></a>Beispiele für serverloses Design
 
 Es gibt viele Entwurfsmuster, die für vorhanden, serverlose. In diesem Abschnitt werden einige häufige Szenarien, die serverlose verwenden erfasst. Was haben alle Beispiele gemeinsam ist die grundlegende Kombination von einem Ereignis Trigger und Geschäftslogik.
 
@@ -78,7 +78,7 @@ Ein API-Gateway bietet nur einen Eintrag für Clients, und klicken Sie dann auf 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
 * [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub-Instanz](https://docs.microsoft.com/azure/iot-hub)
+* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 * [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für verteilte Datenverwaltung)](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)
 * [Entwerfen von Microservices: Identifizieren von Microservice-Grenzen](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
 * [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)

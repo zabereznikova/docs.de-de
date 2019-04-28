@@ -3,11 +3,11 @@ title: Projektieren von XML in eine andere Form (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766584"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projektieren von XML in eine andere Form (Visual Basic)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel werden Sie eine Abfrage erstellen, die sämtlichen Text in einem Word-Dokument ermittelt:  
   
--   [Suchen von Text in Word-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Suchen von Text in Word-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

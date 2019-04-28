@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
 ms.openlocfilehash: ec275a5923d332d23205c79442fa23bc6e402e3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804558"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>Übersicht über die OpenFileDialog-Komponente (Windows Forms)
 Bei der Windows Forms-Komponente <xref:System.Windows.Forms.OpenFileDialog> handelt es sich um ein vorkonfiguriertes Dialogfeld. Dies entspricht dem **geöffnete Datei** (Dialogfeld), die von der Windows-Betriebssystem verfügbar gemacht werden. Sie erbt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  

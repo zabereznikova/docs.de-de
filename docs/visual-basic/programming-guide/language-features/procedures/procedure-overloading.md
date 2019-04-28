@@ -18,11 +18,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
 ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791871"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Prozedurüberladung (Visual Basic)
 *Überladen von* eine Prozedur bedeutet, dass es in mehreren Versionen, die mit dem gleichen Namen, aber unterschiedlichen Parameterlisten definiert. Der Zweck des Überladens werden mehrere eng verwandte Versionen einer Prozedur zu definieren, ohne dass sie anhand des Namens zu unterscheiden. Dazu müssen Sie die Parameterliste variieren.  
@@ -30,39 +30,39 @@ ms.locfileid: "58828237"
 ## <a name="overloading-rules"></a>Überladen von Regeln  
  Wenn Sie eine Prozedur zu überladen, gelten die folgenden Regeln:  
   
--   **Gleichnamigen**. Jede überladene Version, muss die Namen der gleichen Prozedur verwenden.  
+- **Gleichnamigen**. Jede überladene Version, muss die Namen der gleichen Prozedur verwenden.  
   
--   **Andere Signatur**. Jede überladene Version muss alle anderen überladenen Versionen in mindestens einem der folgenden Aspekte unterscheiden:  
+- **Andere Signatur**. Jede überladene Version muss alle anderen überladenen Versionen in mindestens einem der folgenden Aspekte unterscheiden:  
   
-    -   Anzahl von Parametern  
+    - Anzahl von Parametern  
   
-    -   Reihenfolge der Parameter  
+    - Reihenfolge der Parameter  
   
-    -   Die Datentypen der Parameter  
+    - Die Datentypen der Parameter  
   
-    -   Anzahl der Typparameter (für eine generische Prozedur)  
+    - Anzahl der Typparameter (für eine generische Prozedur)  
   
-    -   Der Rückgabetyp (nur für eines Konvertierungsoperators)  
+    - Der Rückgabetyp (nur für eines Konvertierungsoperators)  
   
      Zusammen mit den Namen der Prozedur, die vorherigen Elemente werden als bezeichnet die *Signatur* der Prozedur. Wenn Sie eine überladene Prozedur aufrufen, verwendet der Compiler die Signatur zu um überprüfen, ob der Aufruf mit der Definition übereinstimmt.  
   
--   **Elemente, die nicht Teil der Signatur**. Sie können sich keine Prozedur überladen, ohne die Signatur variieren. Sie können insbesondere Prozedur durch die Änderung nur eine oder mehrere der folgenden Elemente nicht überladen:  
+- **Elemente, die nicht Teil der Signatur**. Sie können sich keine Prozedur überladen, ohne die Signatur variieren. Sie können insbesondere Prozedur durch die Änderung nur eine oder mehrere der folgenden Elemente nicht überladen:  
   
-    -   Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und `Static`  
+    - Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und `Static`  
   
-    -   Parameternamen für Parameter oder Typ  
+    - Parameternamen für Parameter oder Typ  
   
-    -   Einschränkungen für Typparameter (für eine generische Prozedur)  
+    - Einschränkungen für Typparameter (für eine generische Prozedur)  
   
-    -   Parametermodifiziererschlüsselwörter, z. B. `ByRef` und `Optional`  
+    - Parametermodifiziererschlüsselwörter, z. B. `ByRef` und `Optional`  
   
-    -   Gibt an, ob es sich um einen Wert zurückgibt  
+    - Gibt an, ob es sich um einen Wert zurückgibt  
   
-    -   Der Datentyp des Rückgabewerts (mit Ausnahme eines Konvertierungsoperators)  
+    - Der Datentyp des Rückgabewerts (mit Ausnahme eines Konvertierungsoperators)  
   
      Die Elemente in der vorherigen Liste sind nicht Teil der Signatur. Obwohl Sie sie verwenden können, um zwischen überladenen Versionen zu unterscheiden, können Sie sie zwischen überladenen Versionen variieren, die ordnungsgemäß durch ihre Signaturen unterscheiden.  
   
--   **Spät gebundene Argumente**. Wenn Sie eine spät gebundenen Objektvariable an eine überladene Version übergeben möchten, müssen Sie die entsprechende Parameter als deklarieren <xref:System.Object>.  
+- **Spät gebundene Argumente**. Wenn Sie eine spät gebundenen Objektvariable an eine überladene Version übergeben möchten, müssen Sie die entsprechende Parameter als deklarieren <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Mehrere Versionen einer Prozedur  
  Angenommen, Sie schreiben eine `Sub` Verfahren zum Veröffentlichen einer Transaktions anhand eines Kunden, und Sie möchten, entweder nach Name oder Nummer eines Kontos für den Kunden zu verweisen. Um dies zu berücksichtigen, können Sie definieren zwei verschiedene `Sub` Prozeduren, wie im folgenden Beispiel gezeigt:  

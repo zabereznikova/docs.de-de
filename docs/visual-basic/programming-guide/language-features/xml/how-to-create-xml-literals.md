@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775907"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Vorgehensweise: Erstellen von XML-Literalen (Visual Basic)
 Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, mit einem XML-literal. In die Beispielen in diesem Thema wird veranschaulicht, wie ein XML-Element zu erstellen, die über drei untergeordnete Elemente verfügt wie ein XML-Dokument erstellt.  
@@ -18,7 +18,7 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
 ### <a name="to-create-an-xml-element"></a>Erstellen Sie ein XML-element  
   
--   Erstellen Sie die XML-Inline, indem Sie mit der XML-Literalen Syntax, die die tatsächlichen XML-Syntax identisch ist.  
+- Erstellen Sie die XML-Inline, indem Sie mit der XML-Literalen Syntax, die die tatsächlichen XML-Syntax identisch ist.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
@@ -36,7 +36,7 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
 ### <a name="to-create-an-xml-document"></a>Zum Erstellen eines XML-Dokuments  
   
--   Die XML-Dokument Inline zu erstellen. Der folgende Code erstellt eine XML-Dokument mit Literalen Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
+- Die XML-Dokument Inline zu erstellen. Der folgende Code erstellt eine XML-Dokument mit Literalen Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

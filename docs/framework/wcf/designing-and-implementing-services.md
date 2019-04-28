@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785020"
 ---
 # <a name="designing-and-implementing-services"></a>Entwerfen und Implementieren von Diensten
 In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-Verträge. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
@@ -19,22 +19,22 @@ In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-
 ## <a name="overview"></a>Übersicht  
  Dieses Thema enthält eine allgemeine Orientierung über das Entwerfen und Implementieren von WCF-Dienste. Untergeordnete Themen bieten ausführlichere Informationen zu den Besonderheiten des Entwerfens und Implementierens. Vor dem Entwerfen und implementieren die WCF-Anwendung, es wird empfohlen, die Sie:  
   
--   Kenntnisse darüber, was ein Dienstvertrag ist, wie er funktioniert und erstellt wird.  
+- Kenntnisse darüber, was ein Dienstvertrag ist, wie er funktioniert und erstellt wird.  
   
--   Kenntnisse darüber, dass Verträge Mindestanforderungen angeben, die die Laufzeitkonfiguration oder die Hostumgebung möglicherweise nicht unterstützen.  
+- Kenntnisse darüber, dass Verträge Mindestanforderungen angeben, die die Laufzeitkonfiguration oder die Hostumgebung möglicherweise nicht unterstützen.  
   
 ## <a name="service-contracts"></a>Dienstverträge  
  Ein Dienstvertrag gibt Folgendes an:  
   
--   Die Vorgänge, die ein Vertrag verfügbar macht.  
+- Die Vorgänge, die ein Vertrag verfügbar macht.  
   
--   Die Signatur der Vorgänge in Bezug auf ausgetauschte Nachrichten.  
+- Die Signatur der Vorgänge in Bezug auf ausgetauschte Nachrichten.  
   
--   Die Datentypen dieser Nachrichten.  
+- Die Datentypen dieser Nachrichten.  
   
--   Der Speicherort der Vorgänge.  
+- Der Speicherort der Vorgänge.  
   
--   Die spezifischen Protokolle und Serialisierungsformate, die verwendet werden, um die erfolgreiche Kommunikation mit dem Dienst zu unterstützen.  
+- Die spezifischen Protokolle und Serialisierungsformate, die verwendet werden, um die erfolgreiche Kommunikation mit dem Dienst zu unterstützen.  
   
  Beispielsweise kann ein Vertrag für eine Bestellung einen `CreateOrder`-Vorgang aufweisen, der eine Eingabe von Bestellinformationstypen annimmt und Erfolgs- oder Fehlerinformationen einschließlich einer Bestellnummer zurückgibt. Er kann auch einen `GetOrderStatus`-Vorgang aufweisen, der eine Bestellnummer annimmt und Bestellstatusinformationen zurückgibt. Ein Dienstvertrag dieser Art würde Folgendes angeben:  
   

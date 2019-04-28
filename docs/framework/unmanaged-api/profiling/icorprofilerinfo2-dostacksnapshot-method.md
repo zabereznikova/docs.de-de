@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779820"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
 Durchläuft die verwalteten Frames im Stapel für den angegebenen Thread und sendet die Informationen an den Profiler in einem Rückruf.  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  Asynchroner Stapeldurchläufe können leicht dazu führen, dass Deadlocks oder zugriffsverletzungen, es sei denn, Sie die folgenden Richtlinien beachten:  
   
--   Wenn Sie direkt über Threads anhalten, denken Sie daran, dass nur ein Thread, der nie verwalteten Code ausgeführt hat einen anderen Thread anhalten kann.  
+- Wenn Sie direkt über Threads anhalten, denken Sie daran, dass nur ein Thread, der nie verwalteten Code ausgeführt hat einen anderen Thread anhalten kann.  
   
--   Immer-block in Ihre [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) Rückruf bis zum Abschluss der Stapeldurchlauf dieses Threads.  
+- Immer-block in Ihre [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) Rückruf bis zum Abschluss der Stapeldurchlauf dieses Threads.  
   
--   Führen Sie keine Sperre, während Ihr Profiler an eine CLR-Funktion aufruft, die eine Garbagecollection auslösen können. D. h. keine Sperre, wenn der belegende Thread einen Aufruf durchführen kann, der eine Garbagecollection auslöst.  
+- Führen Sie keine Sperre, während Ihr Profiler an eine CLR-Funktion aufruft, die eine Garbagecollection auslösen können. D. h. keine Sperre, wenn der belegende Thread einen Aufruf durchführen kann, der eine Garbagecollection auslöst.  
   
  Es gibt auch Risiko eines Deadlocks Aufrufen `DoStackSnapshot` von einem Thread, der Ihr Profiler erstellt wurde, damit Sie den Stapel des einen separaten Zielthread zu durchlaufen können. Beim ersten erstellten Thread gibt bestimmte `ICorProfilerInfo*` Methoden (einschließlich `DoStackSnapshot`), die CLR wird pro Thread, CLR-spezifische-Initialisierung auf diesem Thread ausgeführt. Wenn Ihr Profiler den Zielthread angehalten hat, dessen Stapel, die Sie durchlaufen möchten, und Zielthread aufgetreten ist, eine Sperre für diese Initialisierung pro Thread durchführen besitzen, wird ein Deadlock auftreten. Um diese Deadlocks zu vermeiden, stellen Sie einen anfänglichen Aufruf in `DoStackSnapshot` aus Ihrem Profiler erstellte Thread durchlaufen ein separaten Thread, als Zielplattform halten den Zielthread nicht zuerst. Diese ersten Aufruf wird sichergestellt, dass die Initialisierung pro Thread ohne Deadlock durchführen kann. Wenn `DoStackSnapshot` erfolgreich ist, und meldet Sie mindestens einen Frame nach diesem Punkt, sie werden alle Zielthread und der Aufruf angehalten, Profiler erstellte Thread sicher `DoStackSnapshot` auf den Stapel Zielthread zu durchlaufen.  
   

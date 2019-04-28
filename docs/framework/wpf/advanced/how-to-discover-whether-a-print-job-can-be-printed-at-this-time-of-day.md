@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776219"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Vorgehensweise: Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann
 Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie haben die Start- und einer Uhrzeit-Eigenschaften, die festgelegt werden können, um sie zu bestimmten Zeiten des Tages nicht verfügbar zu machen. Dieses Feature kann z. B. verwendet werden, um einen Drucker, für die exklusive Verwendung von einer bestimmten Abteilung nach 17: 00 Uhr zu reservieren. Diese Abteilung müsste eine andere Warteschlange Wartung des Druckers als andere Abteilungen verwenden. Die Warteschlange für die anderen Abteilungen würden nach 17 Uhr nicht verfügbar ist, festgelegt werden, während die Warteschlange für die bevorzugte-Abteilung festgelegt werden konnte, werden jederzeit zur Verfügung stehen.  
@@ -41,9 +41,9 @@ Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie hab
   
  Die **ReportQueueAndJobAvailability** Methode beginnt mit der überprüft wird, wenn entweder die Warteschlange oder der Druckauftrag zurzeit nicht verfügbar ist. Wenn eine der Eigenschaften nicht verfügbar ist, überprüft Sie, wenn finden Sie unter der Warteschlange nicht verfügbar. Wenn sie nicht verfügbar ist, meldet die Methode diese Fakten- und die Uhrzeit, wann die Warteschlange wieder verfügbar wird. Er überprüft dann den Auftrag und wenn es nicht mehr verfügbar ist, meldet das nächste Mal umfassen, wenn es gedruckt werden kann. Schließlich meldet die Methode die früheste Uhrzeit, wann der Auftrag gedruckt werden kann. Dies ist das spätere der folgenden zwei Mal.  
   
--   Der nächste Zeitpunkt, die Warteschlange verfügbar ist.  
+- Der nächste Zeitpunkt, die Warteschlange verfügbar ist.  
   
--   Der Zeitpunkt, wenn der Druckauftrag neben verfügbar ist.  
+- Der Zeitpunkt, wenn der Druckauftrag neben verfügbar ist.  
   
  Beim Melden von der Tageszeit, die <xref:System.DateTime.ToShortTimeString%2A> Methode wird auch aufgerufen werden, da diese Methode der Jahre, Monate und Tage in der Ausgabe unterdrückt. Sie können nicht die Verfügbarkeit eines Druckauftrags oder eine Druckwarteschlange auf bestimmte Jahre, Monate oder Tage einschränken.  
   

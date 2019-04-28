@@ -17,11 +17,11 @@ ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 890216fa8cc9915ffa640b6330994c5f1ee2e611
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795095"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten
 Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu XML-Verschlüsselungsstandard, finden Sie die Spezifikation des World Wide Web Consortium (W3C) XML-Verschlüsselung im Pfad <https://www.w3.org/TR/xmldsig-core/>.  
@@ -109,9 +109,9 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.  
+- Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.  
   
--   Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
+- Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Das in diesem Beispiel verwendete X.509-Zertifikat ist nur für Testzwecke vorgesehen.  Anwendungen sollten ein X.059-Zertifikat verwenden, das entweder von einer vertrauenswürdigen Zertifizierungsstelle oder vom Microsoft Windows-Zertifikatsserver generiert wurde.  

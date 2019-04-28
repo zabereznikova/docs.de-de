@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
 ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792079"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>Konnte nicht eingebettet Ressourcendatei "\<Dateiname >': \<Fehlermeldung >
 Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren. Der Linker meldet einen Fehler beim direkten Einbetten einer nativen COM+-Ressourcedatei in die Assembly.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778845"
 ---
 # <a name="how-to-validate-application-settings"></a>Vorgehensweise: Überprüfen von Anwendungseinstellungen
 In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft werden, bevor sie persistent gespeichert werden.  
@@ -34,11 +34,11 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
   
  Ein Ereignishandler führt in der Regel eine der folgenden Aktionen aus, wenn ein ungültiger Wert erkannt wurde:  
   
--   Er gibt automatisch einen Wert an, der bekanntermaßen richtig ist, z.B. der Standardwert.  
+- Er gibt automatisch einen Wert an, der bekanntermaßen richtig ist, z.B. der Standardwert.  
   
--   Er fragt den Benutzer des Servercodes erneut nach Informationen.  
+- Er fragt den Benutzer des Servercodes erneut nach Informationen.  
   
--   Für Ereignisse, die ausgelöst wird, bevor der zugehörigen Aktionen, z. B. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> und <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, verwendet der <xref:System.ComponentModel.CancelEventArgs> Argument, um den Vorgang abzubrechen.  
+- Für Ereignisse, die ausgelöst wird, bevor der zugehörigen Aktionen, z. B. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> und <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, verwendet der <xref:System.ComponentModel.CancelEventArgs> Argument, um den Vorgang abzubrechen.  
   
  Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Übersicht über Ereignishandler](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
   
 ### <a name="to-obtain-the-application-settings-object"></a>So rufen Sie das Anwendungseinstellungsobjekt ab  
   
--   Rufen Sie einen Verweis auf das Anwendungseinstellungsobjekt (die Wrapperinstanz) ab, indem Sie eines der folgenden gegliederten Elemente abschließen:  
+- Rufen Sie einen Verweis auf das Anwendungseinstellungsobjekt (die Wrapperinstanz) ab, indem Sie eines der folgenden gegliederten Elemente abschließen:  
   
-    -   Wenn Sie die Einstellungen über das Dialogfeld „Anwendungseinstellungen von Visual Studio“ im **-Eigenschaften-Editor** erstellt haben, können Sie das Standardeinstellungsobjekt abrufen, das über den folgenden Ausdruck für Ihre Sprache generiert wurde.  
+    - Wenn Sie die Einstellungen über das Dialogfeld „Anwendungseinstellungen von Visual Studio“ im **-Eigenschaften-Editor** erstellt haben, können Sie das Standardeinstellungsobjekt abrufen, das über den folgenden Ausdruck für Ihre Sprache generiert wurde.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
   
          - oder -   
   
-    -   Wenn Sie Entwickler von Visual Basic sind und Sie Ihre Anwendungseinstellungen mit dem Projekt-Designer erstellt haben, können Sie Ihre Einstellungen über das [My.Settings-Objekt](~/docs/visual-basic/language-reference/objects/my-settings-object.md) abrufen.  
+    - Wenn Sie Entwickler von Visual Basic sind und Sie Ihre Anwendungseinstellungen mit dem Projekt-Designer erstellt haben, können Sie Ihre Einstellungen über das [My.Settings-Objekt](~/docs/visual-basic/language-reference/objects/my-settings-object.md) abrufen.  
   
          - oder -   
   
-    -   Wenn Sie Ihre Einstellungen erstellt, durch Ableiten von <xref:System.Configuration.ApplicationSettingsBase> direkt, Sie müssen Ihre Klasse manuell instanziieren.  
+    - Wenn Sie Ihre Einstellungen erstellt, durch Ableiten von <xref:System.Configuration.ApplicationSettingsBase> direkt, Sie müssen Ihre Klasse manuell instanziieren.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

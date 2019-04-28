@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763736"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper-Schnittstelle
 Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
@@ -42,11 +42,11 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
 ## <a name="remarks"></a>Hinweise  
  Die `ICorDebugStepper` -Schnittstelle dient folgenden Zwecken:  
   
--   Er fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
+- Er fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
   
--   Es bietet eine zentrale Schnittstelle zum kapseln alle das schrittweise durchlaufen, die ausgeführt werden können.  
+- Es bietet eine zentrale Schnittstelle zum kapseln alle das schrittweise durchlaufen, die ausgeführt werden können.  
   
--   Es bietet eine Möglichkeit, einer schrittweisen Ausführung vorzeitig abbrechen.  
+- Es bietet eine Möglichkeit, einer schrittweisen Ausführung vorzeitig abbrechen.  
   
  Es können mehrere zugeordnetem pro Thread vorhanden sein. Z. B. ein Haltepunkt erreicht werden kann, während bei einem Prozedurschritt für eine Funktion, und der Benutzer eine neue schrittweisen Ausführung innerhalb dieser Funktion beginnen möchten. Es ist Aufgabe des Debuggers zu bestimmen, wie für diese Situation. Der Debugger sollten die ursprünglichen schrittweisen Ausführung abbrechen oder Schachteln von beiden Vorgänge. Die `ICorDebugStepper` Schnittstelle unterstützt beides.  
   

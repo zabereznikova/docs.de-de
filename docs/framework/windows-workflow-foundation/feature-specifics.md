@@ -3,11 +3,11 @@ title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773679"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -43,9 +43,9 @@ Die <xref:System.ServiceModel.WorkflowServiceHost> ist die Out-of-Box-Workflowho
 
 - Beispiele für <xref:System.ServiceModel.WorkflowServiceHost> finden Sie in den folgenden Abschnitten:
 
-    - [Ausführung](./samples/execution.md)
+  - [Ausführung](./samples/execution.md)
 
-    - Anwendung: [Angehaltene Instanzverwaltung](./samples/suspended-instance-management.md)
+  - Anwendung: [Angehaltene Instanzverwaltung](./samples/suspended-instance-management.md)
 
 - [Übersicht über Workflowdienste gehostet](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ Eine Korrelation kann wie folgt definiert werden:
 
 - Ein Beispiel für die Verwendung einer Korrelation zum Gruppieren von Nachrichten ist eine Anforderung/Antwort-Korrelation, die Nachrichten zusammen gruppiert.
 
-    - Auf einem <xref:System.ServiceModel.Activities.Receive> -Aktivität, klicken Sie auf die <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> Eigenschaft und fügen eine <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> mithilfe der CorrelationHandle im ersten Schritt oben erstellt.
+  - Auf einem <xref:System.ServiceModel.Activities.Receive> -Aktivität, klicken Sie auf die <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> Eigenschaft und fügen eine <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> mithilfe der CorrelationHandle im ersten Schritt oben erstellt.
 
-    - Erstellen einer <xref:System.ServiceModel.Activities.SendReply> -Aktivität mit der rechten Maustaste auf die <xref:System.ServiceModel.Activities.Receive> und klicken Sie auf "SendReply erstellen". Fügen Sie die Aktivität hinter der <xref:System.ServiceModel.Activities.Receive>-Aktivität in den Workflow ein.
+  - Erstellen einer <xref:System.ServiceModel.Activities.SendReply> -Aktivität mit der rechten Maustaste auf die <xref:System.ServiceModel.Activities.Receive> und klicken Sie auf "SendReply erstellen". Fügen Sie die Aktivität hinter der <xref:System.ServiceModel.Activities.Receive>-Aktivität in den Workflow ein.
 
 - Ein Beispiel für die Zuordnung eines Datenelements zu einer Dienstinstanz ist die inhaltsbasierte Korrelation, bei der ein Datenelement (z. B. eine Auftrags-ID) einer bestimmten Workflowinstanz zugeordnet wird.
 
-    - Klicken Sie auf die `CorrelationInitializers`-Eigenschaft einer Messagingaktivität, und fügen Sie mit der oben erstellten <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>-Variable einen <xref:System.ServiceModel.Activities.CorrelationHandle> hinzu. Doppelklicken Sie im Dropdownmenü auf die gewünschte Eigenschaft der Nachricht (z. B. "OrderID"). Legen Sie die `CorrelatesWith`-Eigenschaft auf die oben verwendete <xref:System.ServiceModel.Activities.CorrelationHandle>-Variable fest.
+  - Klicken Sie auf die `CorrelationInitializers`-Eigenschaft einer Messagingaktivität, und fügen Sie mit der oben erstellten <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>-Variable einen <xref:System.ServiceModel.Activities.CorrelationHandle> hinzu. Doppelklicken Sie im Dropdownmenü auf die gewünschte Eigenschaft der Nachricht (z. B. "OrderID"). Legen Sie die `CorrelatesWith`-Eigenschaft auf die oben verwendete <xref:System.ServiceModel.Activities.CorrelationHandle>-Variable fest.
 
 - [Korrelationsdokumentation](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ Die [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese P
 
 - Beispiele:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Datenvertragsresolver-Szenarien
 
@@ -151,25 +151,25 @@ Ein Flussdiagramm ist ein bekanntes Paradigma, um Domänenprobleme visuell darzu
 
 - Die Flussdiagrammfunktion verwendet die folgenden Klassen:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Beispiele:
 
-    - [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Einstellungsprozess](./samples/hiring-process.md)
+  - [Einstellungsprozess](./samples/hiring-process.md)
 
 - Designerdokumentation:
 
-    - [Flussdiagramm-Aktivitätsdesigner](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Flussdiagramm-Aktivitätsdesigner](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Flussdiagrammszenarien
 
@@ -197,15 +197,15 @@ Verfahrensaktivitäten stellen einen Mechanismus bereit, um sequenzielle Ablaufs
 
 - Beispiele:
 
-    - [Einstellungsprozess](./samples/hiring-process.md)
+  - [Einstellungsprozess](./samples/hiring-process.md)
 
-    - [Unternehmenseinkaufsprozess](./samples/corporate-purchase-process.md)
+  - [Unternehmenseinkaufsprozess](./samples/corporate-purchase-process.md)
 
 - Designerdokumentation:
 
-    - [Parallel-Aktivitätsdesigner](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Parallel-Aktivitätsdesigner](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T >-Aktivitätsdesigner](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T >-Aktivitätsdesigner](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Verfahrensaktivitätsszenarien
 
@@ -247,7 +247,7 @@ Wenn ein Fehler auftritt, müssen ein Satz von Aktivitäten und eine bestimmte L
 
 ## <a name="pick-activity"></a>Auswählen der Aktivität
 
-Die <xref:System.Activities.Statements.Pick>-Aktivität stellt eine ereignisbasierte Flusssteuerungsmodellierung in WF bereit. <xref:System.Activities.Statements.Pick> enthält zahlreiche Verzweigungen, wobei jede Verzweigung vor ihrer Ausführung auf ein bestimmtes Ereignis wartet. In diesem Setup verhält sich ein <xref:System.Activities.Statements.Pick> ähnlich wie ein <xref:System.Activities.Statements.Switch%601>, für den die Aktivität nur einen der überwachten Ereignissätze ausführt. Jede Verzweigung ist ereignisgesteuert, und das Ereignis, das zuerst auftritt, führt zuerst die entsprechende Verzweigung aus. Alle anderen Verzweigungen werden abgebrochen, und die Überwachung der Ereignisse wird beendet.
+Die <xref:System.Activities.Statements.Pick>-Aktivität stellt eine ereignisbasierte Flusssteuerungsmodellierung in WF bereit. <xref:System.Activities.Statements.Pick> enthält zahlreiche Verzweigungen, wobei jede Verzweigung vor ihrer Ausführung auf ein bestimmtes Ereignis wartet. In diesem Setup verhält sich ein <xref:System.Activities.Statements.Pick> ähnlich wie ein <xref:System.Activities.Statements.Switch%601>, für den die Aktivität nur einen der überwachten Ereignissätze ausführt. Jeder Branch ist ereignisgesteuert, und das Ereignis, das zuerst auftritt, führt zuerst den entsprechende Branch aus. Alle anderen Verzweigungen werden abgebrochen, und die Überwachung der Ereignisse wird beendet.
 
 ### <a name="getting-started"></a>Erste Schritte
 
@@ -297,7 +297,7 @@ Der Routingdienst ist in den folgenden Szenarien nützlich:
 
 - Clients können zusätzliche Logik für eine Clientanforderung ausführen, um das Routingziel zu bestimmen
 
-- Die von einem Client durchgeführten Vorgänge können in mehrere Dienstimplementierungen zerlegt werden, ohne dass eine Umgestaltung des Clients erforderlich ist.
+- Die von einem Client durchgeführten Vorgänge können in mehrere Dienstimplementierungen zerlegt werden, ohne dass ein Refactoring des Clients erforderlich ist.
 
 - Clients und Dienste können unterschiedliche Bindungen mit verschiedenen Sicherheitseinstellungen verwenden.
 

@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766838"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
 Sie können überprüfen, oder ändern Sie die eingehenden oder ausgehenden Nachrichten für einen WCF-Client, durch die Implementierung einer <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> und in die Clientlaufzeit einfügen. Weitere Informationen finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Ein vollständiges Codebeispiel finden Sie unter den [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md) Beispiel.  
@@ -23,13 +23,13 @@ Sie können überprüfen, oder ändern Sie die eingehenden oder ausgehenden Nach
 ## <a name="example"></a>Beispiel  
  Die unten aufgeführten Codebeispiele zeigen der Reihe nach Folgendes:  
   
--   Eine Clientinspektorimplementierung.  
+- Eine Clientinspektorimplementierung.  
   
--   Ein Endpunktverhalten, das den Inspektor einfügt.  
+- Ein Endpunktverhalten, das den Inspektor einfügt.  
   
--   Eine von <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> abgeleitete Klasse, mit der Sie das Verhalten einer Konfigurationsdatei hinzufügen können.  
+- Eine von <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> abgeleitete Klasse, mit der Sie das Verhalten einer Konfigurationsdatei hinzufügen können.  
   
--   Eine Konfigurationsdatei, die das Endpunktverhalten hinzufügt, das den Clientnachrichteninspektor in die Clientlaufzeit einfügt.  
+- Eine Konfigurationsdatei, die das Endpunktverhalten hinzufügt, das den Clientnachrichteninspektor in die Clientlaufzeit einfügt.  
   
 ```csharp  
 // Client message inspector  

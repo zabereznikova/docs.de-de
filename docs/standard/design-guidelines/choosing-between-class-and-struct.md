@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778780"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
 Eine der grundlegenden entwurfsentscheidungen, die alle Framework-Designer zeigt ist, ob einen Typ als eine Klasse (Referenztyp) oder als eine Struktur (Werttyp) entwerfen. Die Kenntnis der Unterschiede im Verhalten von Verweistypen und Werttypen ist in dieser Auswahl entscheidend.  
@@ -39,13 +39,13 @@ Eine der grundlegenden entwurfsentscheidungen, die alle Framework-Designer zeigt
   
  **X AVOID** eine Struktur definieren, es sei denn, der Typ aller folgende Merkmale aufweist:  
   
--   Es logisch einen einzelnen Wert, der ähnlich wie primitive Typen darstellt (`int`, `double`usw..).  
+- Es logisch einen einzelnen Wert, der ähnlich wie primitive Typen darstellt (`int`, `double`usw..).  
   
--   Es hat eine Größe der Instanz unter 16 Bytes.  
+- Es hat eine Größe der Instanz unter 16 Bytes.  
   
--   Er ist unveränderlich.  
+- Er ist unveränderlich.  
   
--   Es wird keine häufig geschachtelt werden.  
+- Es wird keine häufig geschachtelt werden.  
   
  In allen anderen Fällen sollten Sie die Typen als Klassen definieren.  
   

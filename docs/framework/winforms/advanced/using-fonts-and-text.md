@@ -9,11 +9,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
 ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769421"
 ---
 # <a name="using-fonts-and-text"></a>Verwenden von Schriftarten und Text
 Es gibt mehrere Klassen von angebotenen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zum Zeichnen von Text in Windows Forms. Die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> -Klasse verfügt über mehrere <xref:System.Drawing.Graphics.DrawString%2A> Methoden, die Ihnen ermöglichen, verschiedene Funktionen des Texts an, wie Standort, umschließendes Rechteck, Schriftart und Format anzugeben. Darüber hinaus können Sie zeichnen und messen Sie Text mit [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] mit der statischen <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden bereitgestellt werden, indem die `TextRenderer` Klasse. Die [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Methoden auch ermöglichen es Ihnen an der Position, Schriftart und Format. Wählen Sie entweder [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] oder [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zum Rendern von Text; allerdings [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bietet im Allgemeinen besser, Leistung und genauere Text messen. Andere Klassen, die zum Rendern von Text beitragen sind `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, und `TextFormatFlags`.  

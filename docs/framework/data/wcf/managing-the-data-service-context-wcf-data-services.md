@@ -3,11 +3,11 @@ title: Verwalten des Datendienstkontextes (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875796"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Verwalten des Datendienstkontextes (WCF Data Services)
 Die <xref:System.Data.Services.Client.DataServiceContext>-Klasse kapselt Vorgänge, die für einen angegebenen Datendienst unterstützt werden. Im Gegensatz zu [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Diensten ist der Kontext nicht zustandslos. Aus diesem Grund können Sie die <xref:System.Data.Services.Client.DataServiceContext> Klasse zur Statusverwaltung auf dem Client zwischen Interaktionen mit dem Datendienst, um die Unterstützung von Funktionen wie das change Management. Von dieser Klasse werden auch Identitäten verwaltet und Änderungen nachverfolgt.  

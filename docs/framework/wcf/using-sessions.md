@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791455"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten in einer Konversation. WCF--Sitzungen sind anders als das Session-Objekt, das in verfügbar [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen, unterstützen andere Verhaltensweisen und auf andere Weise gesteuert werden. Dieses Thema beschreibt die Funktionen, mit denen Sitzungen in WCF-Anwendungen und deren Verwendung.  
@@ -22,31 +22,31 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  WCF-Sitzungen haben die folgenden Hauptkonzepte:  
   
--   Sie werden explizit von der aufrufenden Anwendung (dem WCF-Client) initiiert und beendet.  
+- Sie werden explizit von der aufrufenden Anwendung (dem WCF-Client) initiiert und beendet.  
   
--   Die während einer Sitzung gesendeten Nachrichten werden in der Reihenfolge verarbeitet, in der sie empfangen wurden.  
+- Die während einer Sitzung gesendeten Nachrichten werden in der Reihenfolge verarbeitet, in der sie empfangen wurden.  
   
--   Durch Sitzungen wird eine Gruppe von Nachrichten zu einer Konversation zusammengefasst. Es sind verschiedene Korrelationstypen möglich. So werden zum Beispiel bei einem sitzungsbasierten Kanal Nachrichten auf Grundlage einer gemeinsamen Netzwerkverbindung zueinander in Beziehung gesetzt, bei einem anderen Kanal geschieht dies wiederum auf Grundlage eines gemeinsamen Tags im Nachrichtentext. Die Funktionen, die von der Sitzung abgeleitet werden können, sind abhängig von der Art der Korrelation.  
+- Durch Sitzungen wird eine Gruppe von Nachrichten zu einer Konversation zusammengefasst. Es sind verschiedene Korrelationstypen möglich. So werden zum Beispiel bei einem sitzungsbasierten Kanal Nachrichten auf Grundlage einer gemeinsamen Netzwerkverbindung zueinander in Beziehung gesetzt, bei einem anderen Kanal geschieht dies wiederum auf Grundlage eines gemeinsamen Tags im Nachrichtentext. Die Funktionen, die von der Sitzung abgeleitet werden können, sind abhängig von der Art der Korrelation.  
   
--   Es ist kein allgemeiner Datenspeicher einer WCF-Sitzung zugeordnet.  
+- Es ist kein allgemeiner Datenspeicher einer WCF-Sitzung zugeordnet.  
   
  Wenn Sie kennen die <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse im [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen und die Funktionalität bietet, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen:  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen stellen einen allgemeinen Datenspeicher für Anforderungen bereit.  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen stellen einen allgemeinen Datenspeicher für Anforderungen bereit.  
   
  Dieses Thema beschreibt Folgendes:  
   
--   Das Standardausführungsverhalten bei Verwendung sitzungsbasierter Bindungen auf Dienstmodellebene  
+- Das Standardausführungsverhalten bei Verwendung sitzungsbasierter Bindungen auf Dienstmodellebene  
   
--   Die Typen der Features, die die sitzungsbasierten, vom System bereitgestellten WCF-Bindungen bereitstellen.  
+- Die Typen der Features, die die sitzungsbasierten, vom System bereitgestellten WCF-Bindungen bereitstellen.  
   
--   Erstellen eines Vertrags, der eine Sitzungsanforderung deklariert  
+- Erstellen eines Vertrags, der eine Sitzungsanforderung deklariert  
   
--   Verstehen und Steuern der Erstellung und Beendigung einer Sitzung sowie der Beziehung zwischen der Sitzung und der Dienstinstanz  
+- Verstehen und Steuern der Erstellung und Beendigung einer Sitzung sowie der Beziehung zwischen der Sitzung und der Dienstinstanz  
   
 ## <a name="default-execution-behavior-using-sessions"></a>Standardausführungsverhalten mit Sitzungen  
  Eine Bindung, die eine Sitzung zu initiieren versucht, wird als *sitzungsbasierte* Bindung bezeichnet. Dienstverträge geben an, dass sie sitzungsbasierte Bindungen erfordern, zulassen oder verweigern, indem sie die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> -Eigenschaft in der Dienstvertragschnittstelle (oder -klasse) auf einen der <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> -Enumerationswerte festlegen. Standardmäßig ist der Wert dieser Eigenschaft <xref:System.ServiceModel.SessionMode.Allowed>, das bedeutet, dass bei eines Clients eine sitzungsbasierte Bindung mit einer Implementierung des WCF-Dienst verwendet, der Dienst erstellt und verwendet die angegebene Sitzung.  
@@ -62,24 +62,24 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  WCF stellt die folgenden Typen von sitzungsbasierten Verhaltens bereit:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt sicherheitsbasierte Sitzungen, bei denen sich beide Kommunikationspartner auf eine bestimmte sichere Konversation verständigen. Weitere Informationen finden Sie unter [Securing Services](../../../docs/framework/wcf/securing-services.md). Die <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> -Bindung, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt sicherheitsbasierte Sitzungen, bei denen sich beide Kommunikationspartner auf eine bestimmte sichere Konversation verständigen. Weitere Informationen finden Sie unter [Securing Services](../../../docs/framework/wcf/securing-services.md). Die <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> -Bindung, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
   
--   Die <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> -Bindung unterstützt TCP/IP-basierte Sitzungen, um sicherzustellen, dass alle Nachrichten von der Verbindung auf Socketebene miteinander in Beziehung gesetzt werden.  
+- Die <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> -Bindung unterstützt TCP/IP-basierte Sitzungen, um sicherzustellen, dass alle Nachrichten von der Verbindung auf Socketebene miteinander in Beziehung gesetzt werden.  
   
--   Das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> -Element, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten so konfiguriert werden können, dass sie der Reihenfolge nach und genau einmal zugestellt werden, sodass der Empfang von Nachrichten sichergestellt wird, auch wenn sich diese während der Konversation durch mehrere Knoten bewegen. Weitere Informationen finden Sie unter [zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- Das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> -Element, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten so konfiguriert werden können, dass sie der Reihenfolge nach und genau einmal zugestellt werden, sodass der Empfang von Nachrichten sichergestellt wird, auch wenn sich diese während der Konversation durch mehrere Knoten bewegen. Weitere Informationen finden Sie unter [zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
--   Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> -Bindung stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> -Bindung stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
  Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> -Eigenschaft wird nicht der vom Vertrag angeforderte Typ der Sitzung angegeben, sondern nur, dass eine Sitzung erforderlich ist.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>Erstellen eines Vertrags, der eine Sitzung erfordert  
  Beim Erstellen eines Vertrags, der eine Sitzung erfordert, wird angegeben, dass die gesamte Gruppe von Vorgängen, die der Dienstvertrag deklariert, innerhalb derselben Sitzung ausgeführt werden muss und dass Nachrichten der Reihenfolge nach zugestellt werden müssen. Zum Bestätigen der Ebene der Sitzungsunterstützung, die ein Dienstvertrag erfordert, legen Sie die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> -Eigenschaft der Dienstvertragschnittstelle oder -klasse auf den Wert der <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> -Enumeration fest. Damit geben Sie an, ob der Vertrag:  
   
--   Eine Sitzung erfordert.  
+- Eine Sitzung erfordert.  
   
--   Es einem Client ermöglicht, eine Sitzung aufzubauen.  
+- Es einem Client ermöglicht, eine Sitzung aufzubauen.  
   
--   Eine Sitzung verhindert.  
+- Eine Sitzung verhindert.  
   
  Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> -Eigenschaft wird allerdings nicht der vom Vertrag angeforderte Typ des sitzungsbasierten Verhaltens angegeben. Sie weist WCF an, die zur Laufzeit zu bestätigen, die die Bindung (die den Kommunikationskanal erstellt) konfiguriert, für den Dienst ist, ist dies nicht, oder eine Sitzung aufbauen kann beim Implementieren eines Diensts. Die Bindung kann diese Anforderung wiederum mit einem beliebigen, von ihr gewählten Typ eines sitzungsbasierten Verhaltens erfüllen &#8211; Sicherheit, Transport, Zuverlässigkeit oder eine Kombination daraus. Das genaue Verhalten hängt vom ausgewählten <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> -Wert ab. Wenn die konfigurierte Bindung des Diensts nicht dem Wert von <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>entspricht, wird eine Ausnahme ausgelöst. Bindungen und die von ihnen erstellten Kanäle, die Sitzungen unterstützen, werden als sitzungsbasiert bezeichnet.  
   
@@ -93,11 +93,11 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
 ## <a name="sessions-and-service-instances"></a>Sitzungen und Dienstinstanzen  
  Wenn Sie das standardinstanziierungsverhalten in WCF verwenden, werden alle Aufrufe zwischen einem WCF-Objekt von der gleichen Dienstinstanz behandelt. Daher können Sie sich eine Sitzung auf Anwendungsebene so vorstellen, dass sie ein Anwendungsverhalten ermöglicht, das dem lokalen Aufrufverhalten ähnlich ist. Wenn Sie zum Beispiel ein lokales Objekt erstellen:  
   
--   Wird ein Konstruktor aufgerufen.  
+- Wird ein Konstruktor aufgerufen.  
   
--   Alle nachfolgenden Aufrufe an den Objektverweis für WCF-Client werden von der gleichen Objektinstanz verarbeitet.  
+- Alle nachfolgenden Aufrufe an den Objektverweis für WCF-Client werden von der gleichen Objektinstanz verarbeitet.  
   
--   Wird ein Destruktor aufgerufen, wenn der Objektverweis gelöscht wird.  
+- Wird ein Destruktor aufgerufen, wenn der Objektverweis gelöscht wird.  
   
  Sitzungen ermöglichen ein ähnliches Verhalten zwischen Clients und Diensten, solange das Standardverhalten der Dienstinstanz verwendet wird. Wenn ein Dienstvertrag Sitzungen erfordert oder unterstützt, kann mindestens ein Vorgang durch Festlegen der <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> -Eigenschaft und der <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> -Eigenschaft zum Initiieren oder Beenden einer Sitzung angegeben werden.  
   
@@ -115,19 +115,19 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  Dienste starten keine Sitzungen mit Clients. In WCF-Clientanwendungen ist Sie eine direkte Beziehung zwischen der Lebensdauer des sitzungsbasierten Kanals und die Lebensdauer der Sitzung vorhanden. Aus diesem Grund erstellen Clients neue Sitzungen, indem sie neue sitzungsbasierte Kanäle erstellen, und beenden bestehende Sitzungen, indem sie sitzungsbasierte Kanäle ordnungsgemäß schließen. Ein Client startet eine Sitzung mit einem Dienstendpunkt, indem er einen der folgenden Vorgänge aufruft:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> für das vom WCF-Clientobjekt den [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> für das vom WCF-Clientobjekt den [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
--   Einen initiierungsvorgang an einem Typ eines WCF-Clientobjekts (standardmäßig alle Vorgänge initiierungsvorgänge). Wenn der erste Vorgang aufgerufen wird, wird der Kanal des WCF-Clientobjekts automatisch und initiiert eine Sitzung.  
+- Einen initiierungsvorgang an einem Typ eines WCF-Clientobjekts (standardmäßig alle Vorgänge initiierungsvorgänge). Wenn der erste Vorgang aufgerufen wird, wird der Kanal des WCF-Clientobjekts automatisch und initiiert eine Sitzung.  
   
  Ein Client beendet eine Sitzung in der Regel mit einem Dienstendpunkt, indem er einen der folgenden Vorgänge aufruft:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
   
--   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> für das WCF-Clientobjekt von Svcutil.exe generiert wurde.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> für das WCF-Clientobjekt von Svcutil.exe generiert wurde.  
   
--   Einen Beendigungsvorgang für einen Typ eines WCF-Clientobjekts (Standardmäßig sind Vorgänge nie Beendigungsvorgänge, der Vertrag muss einen Beendigungsvorgang explizit angeben). Wenn der erste Vorgang aufgerufen wird, wird der Kanal des WCF-Clientobjekts automatisch und initiiert eine Sitzung.  
+- Einen Beendigungsvorgang für einen Typ eines WCF-Clientobjekts (Standardmäßig sind Vorgänge nie Beendigungsvorgänge, der Vertrag muss einen Beendigungsvorgang explizit angeben). Wenn der erste Vorgang aufgerufen wird, wird der Kanal des WCF-Clientobjekts automatisch und initiiert eine Sitzung.  
   
  Beispiele hierzu finden Sie unter [Vorgehensweise: Erstellen Sie eine Service, die Requires-Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) als auch die [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) und [Instancing](../../../docs/framework/wcf/samples/instancing.md) Beispiele.  
   

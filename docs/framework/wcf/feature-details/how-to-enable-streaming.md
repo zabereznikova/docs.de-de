@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773021"
 ---
 # <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
 Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten oder der Streamingübertragung Übertragung senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten
   
 1. Damit Daten im Streamingmodus übermittelt werden können, muss der `OperationContract` für den Dienst zwei Anforderungen erfüllen:  
   
-    1.  Der Parameter, der die zu übermittelten Daten enthält, muss der einzige Parameter der Methode sein. Wenn beispielsweise die Eingabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang genau einen Eingabeparameter haben. Ebenso gilt, wenn die Ausgabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang entweder genau einen Ausgabeparameter oder einen Rückgabewert haben.  
+    1. Der Parameter, der die zu übermittelten Daten enthält, muss der einzige Parameter der Methode sein. Wenn beispielsweise die Eingabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang genau einen Eingabeparameter haben. Ebenso gilt, wenn die Ausgabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang entweder genau einen Ausgabeparameter oder einen Rückgabewert haben.  
   
-    2.  Mindestens einer der Parameter bzw. der Rückgabewert muss vom Typ <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> oder <xref:System.Xml.Serialization.IXmlSerializable> sein  
+    2. Mindestens einer der Parameter bzw. der Rückgabewert muss vom Typ <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> oder <xref:System.Xml.Serialization.IXmlSerializable> sein  
   
      Das folgende Beispiel enthält einen Vertrag für im Streamingmodus zu übertragende Daten.  
   
@@ -34,28 +34,28 @@ Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten
   
 2. Der Streamingmodus muss für die Bindung aktiviert werden. Sie legen eine `TransferMode`-Eigenschaft fest, für die die folgenden Werte zulässig sind:  
   
-    1.  `Buffered`,  
+    1. `Buffered`,  
   
-    2.  `Streamed`, womit ein Kommunikationsstream in beide Richtungen ermöglicht wird.  
+    2. `Streamed`, womit ein Kommunikationsstream in beide Richtungen ermöglicht wird.  
   
-    3.  `StreamedRequest`, womit der Streamingmodus lediglich für die Übertragung der Anforderung aktiviert wird.  
+    3. `StreamedRequest`, womit der Streamingmodus lediglich für die Übertragung der Anforderung aktiviert wird.  
   
-    4.  `StreamedResponse`, womit der Streamingmodus lediglich für die Übertragung der Antwort aktiviert wird.  
+    4. `StreamedResponse`, womit der Streamingmodus lediglich für die Übertragung der Antwort aktiviert wird.  
   
      Die `BasicHttpBinding`-Bindung macht die `TransferMode`-Eigenschaft für die Bindung verfügbar. Dies gilt ebenso für `NetTcpBinding` und `NetNamedPipeBinding`. Die `TransferMode`-Eigenschaft kann auch für das Transportbindungselement festgelegt und in einer benutzerdefinierten Bindung verwendet werden.  
   
      In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&amp;#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&amp;#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
   
-    1.  Der folgende Ausschnitt aus der Konfiguration des Beispiel zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
+    1. Der folgende Ausschnitt aus der Konfiguration des Beispiel zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   
          [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
-    2.  Der folgende Codeausschnitt zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
+    2. Der folgende Codeausschnitt zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#2)]
          [!code-vb[c_HowTo_EnableStreaming_code#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#2)]  
   
-    3.  Der folgende Codeausschnitt zeigt, wie die `TransferMode`-Eigenschaft für eine benutzerdefinierte TCP-Bindung auf den Streamingmodus festgelegt wird.  
+    3. Der folgende Codeausschnitt zeigt, wie die `TransferMode`-Eigenschaft für eine benutzerdefinierte TCP-Bindung auf den Streamingmodus festgelegt wird.  
   
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  

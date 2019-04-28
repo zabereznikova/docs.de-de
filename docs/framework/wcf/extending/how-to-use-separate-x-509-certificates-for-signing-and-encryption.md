@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766942"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten X.509-Zertifikaten zum Signieren und Verschlüsseln
 In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und dem Dienst verwendet wird.  
@@ -23,15 +23,15 @@ In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation
   
  Das folgende Diagramm enthält die wichtigsten verwendeten Klassen, die Klassen, von denen geerbt wird (gekennzeichnet durch einen Aufwärtspfeil), sowie die Rückgabetypen bestimmter Methoden und Eigenschaften.  
   
--   `MyClientCredentials` ist eine benutzerdefinierte Implementierung von <xref:System.ServiceModel.Description.ClientCredentials>.  
+- `MyClientCredentials` ist eine benutzerdefinierte Implementierung von <xref:System.ServiceModel.Description.ClientCredentials>.  
   
-    -   Alle im Diagramm enthaltenen Eigenschaften geben Instanzen von <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> zurück.  
+    - Alle im Diagramm enthaltenen Eigenschaften geben Instanzen von <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> zurück.  
   
-    -   Von der <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>-Methode wird eine Instanz von `MyClientCredentialsSecurityTokenManager` zurückgegeben.  
+    - Von der <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>-Methode wird eine Instanz von `MyClientCredentialsSecurityTokenManager` zurückgegeben.  
   
--   `MyClientCredentialsSecurityTokenManager` ist eine benutzerdefinierte Implementierung von <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+- `MyClientCredentialsSecurityTokenManager` ist eine benutzerdefinierte Implementierung von <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-    -   Von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode wird eine Instanz von <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> zurückgegeben.  
+    - Von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode wird eine Instanz von <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> zurückgegeben.  
   
  ![Diagramm mit der Verwendung von Clientanmeldeinformationen](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   

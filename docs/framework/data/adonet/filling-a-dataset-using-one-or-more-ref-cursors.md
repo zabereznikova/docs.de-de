@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
 ms.openlocfilehash: 30e50ae171ec9733e222c55e98d1cfcfa535d4e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879371"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Auffüllen eines "DataSets" mit einem oder mehreren REF CURSORs
 In diesem Microsoft Visual Basic-Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt und ein <xref:System.Data.DataSet> mit den zurückgegebenen Zeilen füllt.  

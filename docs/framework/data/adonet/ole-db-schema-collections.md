@@ -3,11 +3,11 @@ title: OLE DB-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771994"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB-Schemaauflistungen
 In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC-Anbieter für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.  
@@ -15,17 +15,17 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server-OLE DB-Anbieter  
  Der Microsoft SQL Server OLE DB-Treiber unterstützt neben den allgemeinen schemaauflistungen die folgenden spezifischen schemaauflistungen:  
   
--   Tabellen  
+- Tabellen  
   
--   Spalten  
+- Spalten  
   
--   Verfahren  
+- Verfahren  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catalog  
+- Catalog  
   
--   Indizes  
+- Indizes  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -154,19 +154,19 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle-OLE DB-Anbieter  
  Der Microsoft Oracle OLE DB-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
--   Tabellen  
+- Tabellen  
   
--   Spalten  
+- Spalten  
   
--   Verfahren  
+- Verfahren  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Ansichten  
+- Ansichten  
   
--   Indizes  
+- Indizes  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -297,15 +297,15 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB-Anbieter  
  Der Microsoft Jet OLE DB-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
--   Tabellen  
+- Tabellen  
   
--   Spalten  
+- Spalten  
   
--   Verfahren  
+- Verfahren  
   
--   Ansichten  
+- Ansichten  
   
--   Indizes  
+- Indizes  
   
 ### <a name="tables"></a>Tabellen  
   

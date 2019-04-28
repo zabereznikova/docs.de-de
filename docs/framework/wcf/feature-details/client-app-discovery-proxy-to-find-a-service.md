@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy 
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784266"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet
 Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), Sie implementiert einen WCF-Dienst, der sich beim suchproxy registriert. In diesem Thema erstellen Sie einen WCF-Client, der den suchproxy verwendet, um den WCF-Dienst zu finden.  
@@ -18,9 +18,9 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
   
 2. Fügen Sie Verweise auf die folgenden Assemblys hinzu:  
   
-    1.  System.ServiceModel  
+    1. System.ServiceModel  
   
-    2.  System.ServiceModel.Discovery  
+    2. System.ServiceModel.Discovery  
   
 3. Fügen Sie dem Projekt die Datei GeneratedClient.cs hinzu, die Sie am Ende dieses Themas finden.  
   

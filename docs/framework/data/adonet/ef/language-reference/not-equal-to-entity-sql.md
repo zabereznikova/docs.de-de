@@ -3,11 +3,11 @@ title: '!= (Ungleich) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
 ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760336"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (Ungleich) (Entity SQL)
 Vergleicht zwei Ausdrücke, um zu ermitteln, ob sich der linke Ausdruck vom rechten Ausdruck unterscheidet. Die Funktionsweise des Operators "!=" (Ungleich) ist dieselbe wie die des Operators <>.  

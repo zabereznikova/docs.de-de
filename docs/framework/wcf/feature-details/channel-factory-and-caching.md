@@ -3,22 +3,22 @@ title: Kanalfactory und Zwischenspeichern
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784305"
 ---
 # <a name="channel-factory-and-caching"></a>Kanalfactory und Zwischenspeichern
 WCF-Clientanwendungen verwenden die <xref:System.ServiceModel.ChannelFactory%601>-Klasse, um einen Kommunikationskanal mit einem WCF-Dienst zu erstellen.  Die Erstellung von <xref:System.ServiceModel.ChannelFactory%601>-Instanzen verursacht einigen Mehraufwand, da sie die folgenden Vorgänge umfasst:  
   
--   Erstellen der <xref:System.ServiceModel.Description.ContractDescription>-Struktur  
+- Erstellen der <xref:System.ServiceModel.Description.ContractDescription>-Struktur  
   
--   Reflektieren aller erforderlichen CLR-Typen  
+- Reflektieren aller erforderlichen CLR-Typen  
   
--   Erstellen des Kanalstapels  
+- Erstellen des Kanalstapels  
   
--   Freigeben von Ressourcen  
+- Freigeben von Ressourcen  
   
  Um den Mehraufwand zu minimieren, kann WCF Kanalfactorys zwischenspeichern, wenn Sie einen WCF-Clientproxy verwenden.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778819"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht es Anwendungen, die auf berührungen reagieren. Angenommen, Sie können mit einer Anwendung interagieren, indem Sie eine oder mehrere Finger auf einem Gerät mit Berührungseingabe, z.B. ein Touchscreen, den in dieser exemplarischen Vorgehensweise eine Anwendung, die dem Benutzer ermöglicht erstellt, zu verschieben, Ändern der Größe oder drehen Sie ein einzelnes Objekt mithilfe von Touch.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326982"
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Ein Gerät, das Fingereingabe, z. B. ein Touchscreen, der Windows Touch unterstützt akzeptiert.  
+- Ein Gerät, das Fingereingabe, z. B. ein Touchscreen, der Windows Touch unterstützt akzeptiert.  
   
  Darüber hinaus müssen Sie ein grundlegendes Verständnis der Vorgehensweise: erstellen eine Anwendung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], insbesondere zum Abonnieren und Behandeln eines Ereignisses. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326982"
 ## <a name="testing-the-application"></a>Testen der Anwendung
  Um die Anwendung zu testen, testen Sie die folgenden Manipulationen aus. Beachten Sie, dass Sie mehr als eine der folgenden zur gleichen Zeit ausführen können.
 
--   Verschieben der <xref:System.Windows.Shapes.Rectangle>, legen Sie einen Finger auf die <xref:System.Windows.Shapes.Rectangle> und verschieben Sie den Finger über den Bildschirm.
+- Verschieben der <xref:System.Windows.Shapes.Rectangle>, legen Sie einen Finger auf die <xref:System.Windows.Shapes.Rectangle> und verschieben Sie den Finger über den Bildschirm.
 
--   Zum Ändern der Größe der <xref:System.Windows.Shapes.Rectangle>, legen Sie zwei Finger auf die <xref:System.Windows.Shapes.Rectangle> und bewegen Sie die Finger näher zusammen oder weiter auseinander.
+- Zum Ändern der Größe der <xref:System.Windows.Shapes.Rectangle>, legen Sie zwei Finger auf die <xref:System.Windows.Shapes.Rectangle> und bewegen Sie die Finger näher zusammen oder weiter auseinander.
 
--   Rotieren der <xref:System.Windows.Shapes.Rectangle>, legen Sie zwei Finger auf die <xref:System.Windows.Shapes.Rectangle> und drehen Sie einen Finger um den jeweils anderen.
+- Rotieren der <xref:System.Windows.Shapes.Rectangle>, legen Sie zwei Finger auf die <xref:System.Windows.Shapes.Rectangle> und drehen Sie einen Finger um den jeweils anderen.
 
  Um Trägheit zu verursachen, lösen Sie schnell die Finger vom Bildschirm, wie Sie die vorherigen Manipulationen ausführen. Die <xref:System.Windows.Shapes.Rectangle> weiterhin verschieben, ändern Sie die Größe oder drehen ein paar Sekunden, bevor er beendet wird.
 

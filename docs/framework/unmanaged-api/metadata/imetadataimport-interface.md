@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777454"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport-Schnittstelle
 Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer portablen ausführbaren Datei (PE-Datei) oder einer anderen Quelle wie einer Typbibliothek oder einer eigenständigen Laufzeit-Metadatenbinärdatei bereit  
@@ -96,13 +96,13 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
 ## <a name="remarks"></a>Hinweise  
  Das Design der `IMetaDataImport`-Schnittstelle soll primär von Tools und Diensten verwendet werden, die Typinformationen importieren (z. B. Entwicklungstools) oder Bereitstellungskomponenten (z. B. Auflösungs-/Aktivierungsdienste) verwalten. Die Methoden in `IMetaDataImport` können in die folgenden Aufgabenkategorien eingeteilt werden:  
   
--   Auzählen von Elementauflistungen im Metadatenbereich.  
+- Auzählen von Elementauflistungen im Metadatenbereich.  
   
--   Suchen nach einem Element, das über eine bestimmte Sammlung von Merkmalen verfügt.  
+- Suchen nach einem Element, das über eine bestimmte Sammlung von Merkmalen verfügt.  
   
--   Abrufen von Eigenschaften eines angegebenen Elements.  
+- Abrufen von Eigenschaften eines angegebenen Elements.  
   
--   Die Get-Methoden wurden speziell dafür entwickelt, um einwertige Eigenschaften eines Metadatenelements zurückzugeben. Wenn die Eigenschaft ein Verweis auf ein anderes Element ist, wird ein Token für dieses Element zurückgegeben. Jeder Zeigereingabetyp kann NULL sein, um anzugeben, dass der betreffende Wert nicht angefordert wird. Verwenden Sie zum Abrufen von Eigenschaften, die im Wesentlichen Auflistungsobjekte sind (z. B. die Auflistung der Schnittstellen, die eine Klasse implementiert) die Enumerationsmethoden.  
+- Die Get-Methoden wurden speziell dafür entwickelt, um einwertige Eigenschaften eines Metadatenelements zurückzugeben. Wenn die Eigenschaft ein Verweis auf ein anderes Element ist, wird ein Token für dieses Element zurückgegeben. Jeder Zeigereingabetyp kann NULL sein, um anzugeben, dass der betreffende Wert nicht angefordert wird. Verwenden Sie zum Abrufen von Eigenschaften, die im Wesentlichen Auflistungsobjekte sind (z. B. die Auflistung der Schnittstellen, die eine Klasse implementiert) die Enumerationsmethoden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

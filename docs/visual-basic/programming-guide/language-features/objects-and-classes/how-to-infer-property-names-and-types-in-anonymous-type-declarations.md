@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
 ms.openlocfilehash: be3c74e8f8c69eb9f0a1d0dda4d6c90dfd7e567a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760739"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)
 Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von Eigenschaften bereit. Die Typen aller Eigenschaften werden abgeleitet. Im folgenden Beispiel werden die Typen von `Name` und `Price` direkt aus den Werten abgeleitet, mit denen sie initialisiert werden.  
@@ -24,11 +24,11 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Anonyme Typen können Eigenschaftennamen und -typen aus folgenden Quellen ableiten:  
   
--   Aus Variablennamen. Der anonyme Typ `anonProduct` hat die beiden Eigenschaften `productName` und `productPrice`. Ihre Datentypen sind gleich denen der ursprünglichen Variablen, also `String` bzw. `Double`.  
+- Aus Variablennamen. Der anonyme Typ `anonProduct` hat die beiden Eigenschaften `productName` und `productPrice`. Ihre Datentypen sind gleich denen der ursprünglichen Variablen, also `String` bzw. `Double`.  
   
      [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
--   Aus Eigenschaften- oder Feldnamen anderer Objekte. Betrachten Sie z. B. ein `car` -Objekt eines `CarClass` -Typs, der die `Name` -Eigenschaft und die `ID` -Eigenschaft enthält. Um die neue Instanz `car1`des anonymen Typs mit der `Name` -Eigenschaft und der `ID` -Eigenschaft zu erstellen, die mit den Werten aus dem `car` -Objekt initialisiert werden, können Sie folgenden Code schreiben:  
+- Aus Eigenschaften- oder Feldnamen anderer Objekte. Betrachten Sie z. B. ein `car` -Objekt eines `CarClass` -Typs, der die `Name` -Eigenschaft und die `ID` -Eigenschaft enthält. Um die neue Instanz `car1`des anonymen Typs mit der `Name` -Eigenschaft und der `ID` -Eigenschaft zu erstellen, die mit den Werten aus dem `car` -Objekt initialisiert werden, können Sie folgenden Code schreiben:  
   
      [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
@@ -36,13 +36,13 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
      [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
--   Aus XML-Membernamen.  
+- Aus XML-Membernamen.  
   
      [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      Der resultierende Typ für `anon` hätte eine Eigenschaft, `Book`, des Typs <xref:System.Collections.IEnumerable>(Of XElement).  
   
--   Aus einer Funktion, die keine Parameter hat, z. B. `SomeFunction` im folgenden Beispiel.  
+- Aus einer Funktion, die keine Parameter hat, z. B. `SomeFunction` im folgenden Beispiel.  
   
      `Dim sc As New SomeClass`  
   
@@ -56,7 +56,7 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Die Ableitung von Namen schlägt in vielen Fällen fehl, etwa in den folgenden:  
   
--   Die Ableitung erfolgt über den Aufruf einer Methode, eines Konstruktors oder einer parametrisierten Eigenschaft, die Argumente erfordert. Die vorherige Deklaration von `anon1` schlägt fehl, wenn `someFunction` ein oder mehrere Argumente hat.  
+- Die Ableitung erfolgt über den Aufruf einer Methode, eines Konstruktors oder einer parametrisierten Eigenschaft, die Argumente erfordert. Die vorherige Deklaration von `anon1` schlägt fehl, wenn `someFunction` ein oder mehrere Argumente hat.  
   
      `' Not valid.`  
   
@@ -68,7 +68,7 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
      `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
   
--   Die Ableitung erfolgt aus einem komplexen Ausdruck.  
+- Die Ableitung erfolgt aus einem komplexen Ausdruck.  
   
     ```  
     Dim aString As String = "Act "  
@@ -80,7 +80,7 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
--   Die Ableitung für mehrere Eigenschaften führt zu zwei oder mehr Eigenschaften mit demselben Namen. Ein Rückblick auf die Deklarationen in früheren Beispielen zeigt, dass es nicht möglich ist, sowohl `product.Name` als auch `car1.Name` als Eigenschaften desselben anonymen Typs aufzulisten. Dies liegt daran, dass der abgeleitete Bezeichner für beide Eigenschaften gleich `Name`wäre.  
+- Die Ableitung für mehrere Eigenschaften führt zu zwei oder mehr Eigenschaften mit demselben Namen. Ein Rückblick auf die Deklarationen in früheren Beispielen zeigt, dass es nicht möglich ist, sowohl `product.Name` als auch `car1.Name` als Eigenschaften desselben anonymen Typs aufzulisten. Dies liegt daran, dass der abgeleitete Bezeichner für beide Eigenschaften gleich `Name`wäre.  
   
      `' Not valid.`  
   
@@ -98,7 +98,7 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
      `' Dim anon7 = New With {Key product.Price, Key price}`  
   
--   Der ursprüngliche Typ und Wert einer Eigenschaft sind von einer anderen Eigenschaft abhängig, die noch nicht festgelegt wurde. Zum Beispiel ist `.IDName = .LastName` in der Deklaration eines anonymen Typs nicht zulässig, wenn `.LastName` noch nicht initialisiert wurde.  
+- Der ursprüngliche Typ und Wert einer Eigenschaft sind von einer anderen Eigenschaft abhängig, die noch nicht festgelegt wurde. Zum Beispiel ist `.IDName = .LastName` in der Deklaration eines anonymen Typs nicht zulässig, wenn `.LastName` noch nicht initialisiert wurde.  
   
      `' Not valid.`  
   
@@ -108,7 +108,7 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
--   Ein Eigenschaftennamen eines anonymen Typs ist mit dem Namen eines Members von <xref:System.Object>identisch. Zum Beispiel schlägt die folgende Deklaration fehl, weil `Equals` eine Methode von <xref:System.Object>ist.  
+- Ein Eigenschaftennamen eines anonymen Typs ist mit dem Namen eines Members von <xref:System.Object>identisch. Zum Beispiel schlägt die folgende Deklaration fehl, weil `Equals` eine Methode von <xref:System.Object>ist.  
   
      `' Not valid.`  
   

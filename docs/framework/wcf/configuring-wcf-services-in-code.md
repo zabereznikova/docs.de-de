@@ -3,11 +3,11 @@ title: Konfigurieren von WCF-Diensten in Code
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779755"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
 Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht es auch die Konfiguration von Diensten in Code. In früheren Versionen von WCF (4.0 und früher) Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach war die <xref:System.ServiceModel.ServiceHost> Klasse zulässig. Sie konfigurieren Endpunkte und Verhaltensweisen vor dem ServiceHost.Open aufgerufen wird. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5, bietet WCF eine einfachere Möglichkeit zum Konfigurieren Sie beide selbstgehostete und das Web gehostete Dienste im Code.  

@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Schreiben einer Erweiterung für die ServiceContractGene
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
 ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766999"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Vorgehensweise: Schreiben einer Erweiterung für die ServiceContractGenerator-Klasse
 In diesem Thema wird beschrieben, wie Sie eine Erweiterung für den <xref:System.ServiceModel.Description.ServiceContractGenerator> schreiben können. Dies kann durch Implementieren der <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>-Schnittstelle für ein Vorgangsverhalten oder Implementieren der <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>-Schnittstelle für ein Vertragsverhalten geschehen. In diesem Thema wird gezeigt, wie die <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>-Schnittstelle in einem Vertragsverhalten implementiert wird.  

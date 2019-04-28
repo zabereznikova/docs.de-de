@@ -3,11 +3,11 @@ title: Beispiel für Suche mit Bereichen
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789375"
 ---
 # <a name="discovery-with-scopes-sample"></a>Beispiel für Suche mit Bereichen
 In diesem Beispiel wird veranschaulicht, wie Bereiche verwendet werden, um erkennbare Endpunkte zu kategorisieren, und wie <xref:System.ServiceModel.Discovery.DiscoveryClient> verwendet wird, um eine asynchrone Suche nach Endpunkten durchzuführen. In Bezug auf den Dienst wird in diesem Beispiel veranschaulicht, wie die Suche für jeden Endpunkt angepasst wird, indem ein Endpunktsuchverhalten hinzugefügt und damit ein Bereich zum Endpunkt hinzugefügt sowie die Ermittelbarkeit des Endpunkts gesteuert wird. In Bezug auf den Client wird in diesem Beispiel beschrieben, wie Clients einen <xref:System.ServiceModel.Discovery.DiscoveryClient> erstellen und die Suchparameter optimieren können, um Bereiche einzuschließen, indem Bereiche zu <xref:System.ServiceModel.Discovery.FindCriteria> hinzugefügt werden. In diesem Beispiel wird auch gezeigt, wie Clients Antworten durch Hinzufügen eines Beendigungskriteriums einschränken können.  

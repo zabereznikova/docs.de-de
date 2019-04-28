@@ -8,26 +8,26 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788062"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung (Application Domain Resource Monitoring, ARM)
 <a name="top"></a> Diese Ereignisse bieten detaillierte Diagnoseinformationen zum Status einer Anwendungsdomäne. Sie können diese Ereignisse oder die Funktion zur Überwachung von Anwendungsdomänenressourcen (ARM) verwenden, um dieselben Informationen zu erhalten.  
   
  Diese Kategorie umfasst die folgenden Ereignisse:  
   
--   [ThreadCreated-Ereignis](#threadcreated_event)  
+- [ThreadCreated-Ereignis](#threadcreated_event)  
   
--   [AppDomainMemAllocated-Ereignis](#appdomainmemallocated_event)  
+- [AppDomainMemAllocated-Ereignis](#appdomainmemallocated_event)  
   
--   [AppDomainMemSurvived-Ereignis](#appdomainmemsurvived_event)  
+- [AppDomainMemSurvived-Ereignis](#appdomainmemsurvived_event)  
   
--   [ThreadAppDomainEnter-Ereignis](#threadappdomainenter_event)  
+- [ThreadAppDomainEnter-Ereignis](#threadappdomainenter_event)  
   
--   [ThreadTerminated-Ereignis](#threadterminated_event)  
+- [ThreadTerminated-Ereignis](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
 ## <a name="threadcreated-event"></a>ThreadCreated-Ereignis  
