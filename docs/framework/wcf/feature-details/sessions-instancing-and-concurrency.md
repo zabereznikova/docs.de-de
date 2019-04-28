@@ -3,11 +3,11 @@ title: Sitzungen, Instanziierung und Parallelität
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748017"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -19,21 +19,21 @@ Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwe
   
  WCF-Sitzungen haben die folgenden Hauptkonzepte:  
   
--   Sie werden explizit von der aufrufenden Anwendung initiiert und beendet.  
+- Sie werden explizit von der aufrufenden Anwendung initiiert und beendet.  
   
--   Die während einer Sitzung gesendeten Nachrichten werden in der Reihenfolge verarbeitet, in der sie empfangen wurden.  
+- Die während einer Sitzung gesendeten Nachrichten werden in der Reihenfolge verarbeitet, in der sie empfangen wurden.  
   
--   Durch Sitzungen wird eine Gruppe von Nachrichten zu einer Konversation zusammengefasst. Diese Korrelation ist jedoch abstrakt. So werden zum Beispiel bei einem sitzungsbasierten Kanal Nachrichten auf Grundlage einer gemeinsamen Netzwerkverbindung zueinander in Beziehung gesetzt, bei einem anderen Kanal geschieht dies wiederum auf Grundlage eines gemeinsamen Tags im Nachrichtentext. Die Funktionen, die von der Sitzung abgeleitet werden können, sind abhängig von der Art der Korrelation.  
+- Durch Sitzungen wird eine Gruppe von Nachrichten zu einer Konversation zusammengefasst. Diese Korrelation ist jedoch abstrakt. So werden zum Beispiel bei einem sitzungsbasierten Kanal Nachrichten auf Grundlage einer gemeinsamen Netzwerkverbindung zueinander in Beziehung gesetzt, bei einem anderen Kanal geschieht dies wiederum auf Grundlage eines gemeinsamen Tags im Nachrichtentext. Die Funktionen, die von der Sitzung abgeleitet werden können, sind abhängig von der Art der Korrelation.  
   
--   Es ist kein allgemeiner Datenspeicher einer WCF-Sitzung zugeordnet.  
+- Es ist kein allgemeiner Datenspeicher einer WCF-Sitzung zugeordnet.  
   
  Wenn Sie kennen die <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse im [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendungen und die Funktionalität bietet, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen stellen einen allgemeinen Datenspeicher für Anforderungen bereit.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen stellen einen allgemeinen Datenspeicher für Anforderungen bereit.  
   
  Client- und Dienstanwendungen interagieren auf unterschiedliche Weise mit Sitzungen. Clientanwendungen initiieren Sitzungen und empfangen und verarbeiten dann die innerhalb der Sitzung gesendeten Nachrichten. Dienstanwendungen können Sitzungen als Erweiterungspunkt verwenden, um zusätzliches Verhalten hinzuzufügen. Dies geschieht durch direkte Nutzung von <xref:System.ServiceModel.InstanceContext> oder durch Implementierung eines benutzerspezifischen Instanzenkontextanbieters.  
   
@@ -42,11 +42,11 @@ Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwe
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Ein neues <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) für jede Clientanforderung wird erstellt.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Ein neues <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) für jede Clientanforderung wird erstellt.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Ein neues <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) wird für jede neue Clientsitzung für erstellt und verwaltet die Lebensdauer der Sitzung (Dies erfordert eine Bindung, die Sitzungen unterstützt).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Ein neues <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) wird für jede neue Clientsitzung für erstellt und verwaltet die Lebensdauer der Sitzung (Dies erfordert eine Bindung, die Sitzungen unterstützt).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Ein einzelnes <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) verarbeitet alle Clientanforderungen für die Lebensdauer der Anwendung.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Ein einzelnes <xref:System.ServiceModel.InstanceContext> (und damit einem Dienstobjekt) verarbeitet alle Clientanforderungen für die Lebensdauer der Anwendung.  
   
  Das folgende Codebeispiel zeigt den Standard- <xref:System.ServiceModel.InstanceContextMode> -Wert ( <xref:System.ServiceModel.InstanceContextMode.PerSession> ), der explizit für eine Dienstklasse festgelegt wird.  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  Es stehen die folgenden drei Parallelitätsmodi zur Verfügung:  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>: Jeder instanzkontext darf maximal ein Thread, die Verarbeiten von Nachrichten in den Kontext zu einem Zeitpunkt aufweisen. Falls weitere Threads diesen Instanzkontext verwenden möchten, werden sie so lange blockiert, bis der ursprüngliche Thread den Instanzkontext verlässt.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: Jeder instanzkontext darf maximal ein Thread, die Verarbeiten von Nachrichten in den Kontext zu einem Zeitpunkt aufweisen. Falls weitere Threads diesen Instanzkontext verwenden möchten, werden sie so lange blockiert, bis der ursprüngliche Thread den Instanzkontext verlässt.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Jede Dienstinstanz kann mehrere Threads gleichzeitig Nachrichten verarbeitet haben. Für diesen Parallelitätsmodus muss die Dienstimplementierung threadsicher sein.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Jede Dienstinstanz kann mehrere Threads gleichzeitig Nachrichten verarbeitet haben. Für diesen Parallelitätsmodus muss die Dienstimplementierung threadsicher sein.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Jede Dienstinstanz verarbeitet eine Nachricht zu einem Zeitpunkt, akzeptiert jedoch eintrittsinvariante Aufrufe. Der Dienst akzeptiert diese Aufrufe nur, wenn sie über einen WCF-Clientobjekt aufruft.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Jede Dienstinstanz verarbeitet eine Nachricht zu einem Zeitpunkt, akzeptiert jedoch eintrittsinvariante Aufrufe. Der Dienst akzeptiert diese Aufrufe nur, wenn sie über einen WCF-Clientobjekt aufruft.  
   
 > [!NOTE]
 >  Das Schreiben von Code, bei dem problemlos mehr als ein Thread verwendet wird, kann sich als sehr schwierig erweisen. Stellen Sie sicher, dass Ihr Dienst ordnungsgemäß mit den Modi <xref:System.ServiceModel.ConcurrencyMode.Multiple> bzw. <xref:System.ServiceModel.ConcurrencyMode.Reentrant> arbeiten kann, bevor Sie diese Werte verwenden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

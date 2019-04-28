@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780821"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter: [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter: [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Dienst und Client funktionieren hervorragend, nicht jedoch, wenn sich der Client auf einem anderen Computer befindet. Woran liegt das?  
  Je nach Ausnahme können verschiedene Probleme vorliegen:  
   
--   Möglicherweise müssen Sie die Clientendpunktadressen von localhost auf den Hostnamen ändern.  
+- Möglicherweise müssen Sie die Clientendpunktadressen von localhost auf den Hostnamen ändern.  
   
--   Sie müssen gegebenenfalls den Anschluss zur Anwendung öffnen. Weitere Informationen finden Sie unter [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) in den SDK-Beispielen.  
+- Sie müssen gegebenenfalls den Anschluss zur Anwendung öffnen. Weitere Informationen finden Sie unter [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) in den SDK-Beispielen.  
   
--   Weiteren möglichen Problemen finden Sie im Thema Beispiele [Ausführen der Windows Communication Foundation-Beispiele](./samples/running-the-samples.md).  
+- Weiteren möglichen Problemen finden Sie im Thema Beispiele [Ausführen der Windows Communication Foundation-Beispiele](./samples/running-the-samples.md).  
   
--   Wenn der Client Windows-Anmeldeinformationen verwendet und es sich bei der Ausnahme um <xref:System.ServiceModel.Security.SecurityNegotiationException>handelt, konfigurieren Sie Kerberos wie folgt.  
+- Wenn der Client Windows-Anmeldeinformationen verwendet und es sich bei der Ausnahme um <xref:System.ServiceModel.Security.SecurityNegotiationException>handelt, konfigurieren Sie Kerberos wie folgt.  
   
-    1.  Fügen Sie die Anmeldeinformationen für die Identität dem Endpunktelement in der Datei App.config des Clients hinzu:  
+    1. Fügen Sie die Anmeldeinformationen für die Identität dem Endpunktelement in der Datei App.config des Clients hinzu:  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Führen Sie den selbst gehosteten Dienst unter dem System- oder dem Netzwerkdienstkonto aus. Sie können diesen Befehl ausführen, um unter dem Systemkonto ein Befehlsfenster zu erstellen:  
+    2. Führen Sie den selbst gehosteten Dienst unter dem System- oder dem Netzwerkdienstkonto aus. Sie können diesen Befehl ausführen, um unter dem Systemkonto ein Befehlsfenster zu erstellen:  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  Hosten Sie den Dienst unter Internetinformationsdienste (IIS). Standardmäßig wird hier das Dienstprinzipalnamenkonto verwendet.  
+    3. Hosten Sie den Dienst unter Internetinformationsdienste (IIS). Standardmäßig wird hier das Dienstprinzipalnamenkonto verwendet.  
   
-    4.  Registrieren Sie mit SetSPN einen neuen Dienstprinzipalnamen bei der Domäne. Sie müssen dazu ein Domänenadministrator sein.  
+    4. Registrieren Sie mit SetSPN einen neuen Dienstprinzipalnamen bei der Domäne. Sie müssen dazu ein Domänenadministrator sein.  
   
  Weitere Informationen zum Kerberos-Protokoll finden Sie unter [in WCF verwendete Sicherheitsbegriffe](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) und:  
   
--   [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Informationen zu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Informationen zu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Wenn ich auslösen eine FaultException\<Ausnahme >, wenn der Typ eine Ausnahme ist, erhalten ich immer einen allgemeinen FaultException-Typ, auf dem Client und nicht den generischen Typ. Woran liegt das?  
  Erstellen Sie unbedingt einen eigenen benutzerdefinierten Fehlerdatentyp und deklarieren Sie ihn als Detailtyp in ihrem Fehlervertrag. Das Problem entsteht, weil Folgendes geschieht, wenn vom System bereitgestellter Ausnahmetypen verwendet werden:  
   
--   Eine Typabhängigkeit wird erstellt, die eine der größten Stärken dienstorientierter Anwendungen entfernt.  
+- Eine Typabhängigkeit wird erstellt, die eine der größten Stärken dienstorientierter Anwendungen entfernt.  
   
--   Ausnahmen werden nicht notwendigerweise standardmäßig serialisiert. Einige – wie <xref:System.Security.SecurityException>– sind vielleicht überhaupt nicht serialisierbar.  
+- Ausnahmen werden nicht notwendigerweise standardmäßig serialisiert. Einige – wie <xref:System.Security.SecurityException>– sind vielleicht überhaupt nicht serialisierbar.  
   
--   Interne Implementierungsdetails werden für Clients verfügbar gemacht. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- Interne Implementierungsdetails werden für Clients verfügbar gemacht. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Wenn Sie eine Anwendung debuggen, können Sie jedoch mit der <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Klasse Ausnahmeinformationen serialisieren und an den Client zurückgeben.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
 ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756961"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Zugreifen auf XML in Visual Basic
 Visual Basic bietet XML-Achseneigenschaften für den Zugriff auf und die berichtsnavigation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Strukturen. Diese Eigenschaften verwenden eine spezielle Syntax, um Elemente und Attribute zugreifen, indem Sie die XML-Namen angeben können.  
@@ -28,19 +28,19 @@ Visual Basic bietet XML-Achseneigenschaften für den Zugriff auf und die bericht
 |*Attribute-Achse*|`phone.@type`|Ruft alle `type` Attribute der `phone` Element.|  
 |*descendant-Achse*|`contacts...<name>`|Ruft alle `name` Bestandteile der `contacts` Element, unabhängig davon, wie viele Ebenen in der Hierarchie, die sie auftreten.|  
 |*erweiterungsindizierer*|`contacts...<name>(0)`|Ruft das erste `name` Element aus der Sequenz.|  
-|*Wert*|`contacts...<name>.Value`|Ruft eine Zeichenfolgendarstellung des ersten Objekts in der Sequenz oder `Nothing` , wenn die Sequenz leer ist.|  
+|*value*|`contacts...<name>.Value`|Ruft eine Zeichenfolgendarstellung des ersten Objekts in der Sequenz oder `Nothing` , wenn die Sequenz leer ist.|  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Zugreifen auf XML-Nachfolgerelemente](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
+ [Vorgehensweise: Access-XML-Nachfolgerelemente](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  Zeigt, wie für eine descendant-Achse-Eigenschaft den Zugriff auf alle XML-Elemente, die einen angegebenen Namen aufweisen und unter einem angegebenen XML-Element enthalten sind.  
   
- [Gewusst wie: Zugreifen auf untergeordnete XML-Elemente](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
+ [Vorgehensweise: Zugriff auf XML-untergeordnete Elemente](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
  Veranschaulicht, wie einer untergeordneten Achseneigenschaft auf alle untergeordneten XML-Elemente, die einen angegebenen Namen in ein XML-Element aufweisen.  
   
- [Gewusst wie: Zugreifen auf XML-Attribute](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
+ [Vorgehensweise: Die XML-Attribute zuzugreifen](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
  Veranschaulicht, wie ein Attributachseneigenschaft zu verwenden, um alle XML-Attribute zuzugreifen, die einen angegebenen Namen in ein XML-Element aufweisen.  
   
- [Gewusst wie: Deklarieren und Verwenden von XML-Namespacepräfixen](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
+ [Vorgehensweise: Deklarieren und Verwenden von XML-Namespace-Präfixe](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
  Zeigt, wie ein XML-Namespacepräfix zu deklarieren und zu erstellen und Zugreifen auf XML-Elemente verwenden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

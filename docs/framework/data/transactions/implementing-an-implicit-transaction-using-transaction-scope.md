@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793678"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementieren einer impliziten Transaktion mit Transaktionsbereich
 Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöcke einfach als an einer Transaktion beteiligte Codeblöcke markieren, ohne die Transaktion selbst bearbeiten zu müssen. Ein Transaktionsbereich kann die Ambient-Transaktion automatisch auswählen und verwalten. Wegen ihrer einfachen Verwendung und Effizienz wird empfohlen, die <xref:System.Transactions.TransactionScope>-Klasse zur Entwicklung von Transaktionsanwendungen zu verwenden.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Ein <xref:System.Transactions.TransactionScope>-Objekt verfügt über drei Optionen:  
   
--   Verknüpfen der Ambient-Transaktion oder Erstellen einer neuen Transaktion, wenn keine vorhanden ist.  
+- Verknüpfen der Ambient-Transaktion oder Erstellen einer neuen Transaktion, wenn keine vorhanden ist.  
   
--   Definieren eines neuen Stammbereichs, d. h. Starten einer neuen Transaktion und Festlegen dieser Transaktion als neue Ambient-Transaktion in ihrem eigenem Bereich.  
+- Definieren eines neuen Stammbereichs, d. h. Starten einer neuen Transaktion und Festlegen dieser Transaktion als neue Ambient-Transaktion in ihrem eigenem Bereich.  
   
--   Nicht teilnehmen an einer Transaktion. Daraus resultiert keine Ambient-Transaktion.  
+- Nicht teilnehmen an einer Transaktion. Daraus resultiert keine Ambient-Transaktion.  
   
  Wenn der Bereich mit <xref:System.Transactions.TransactionScopeOption.Required> instanziiert wird und eine Ambient-Transaktion vorhanden ist, erstellt der Bereich eine Verknüpfung mit dieser Transaktion. Ist keine Ambient-Transaktion vorhanden, erstellt der Bereich eine neue Transaktion und wird zum Stammbereich. Dies ist der Standardwert. Wenn <xref:System.Transactions.TransactionScopeOption.Required> verwendet wird, muss der Code innerhalb des Bereichs kein anderes Verhalten zeigen, gleichgültig, ob es sich um den Stammbereich oder nur um eine Verknüpfung mit der Ambient-Transaktion handelt. Er sollte in beiden Fällen das Gleiche ausführen.  
   

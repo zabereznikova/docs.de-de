@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
 ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756870"
 ---
 # <a name="nested-types"></a>Geschachtelte Typen
 Ein geschachtelter Typ ist ein Typ, der innerhalb des Bereichs eines anderen Typs, der den einschließenden Typ aufgerufen wird, definiert. Ein geschachtelter Typ hat Zugriff auf alle Member des einschließenden Typs. Beispielsweise hat er Zugriff auf private Felder definiert, in den einschließenden Typ und geschützte Felder, die in alle vorausgehenden Elemente des einschließenden Typs definiert.  

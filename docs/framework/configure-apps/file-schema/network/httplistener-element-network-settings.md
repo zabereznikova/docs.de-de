@@ -3,11 +3,11 @@ title: <httpListener>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705076"
 ---
 # <a name="httplistener-element-network-settings"></a>\<HttpListener >-Element (Netzwerkeinstellungen)
 Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.  
@@ -52,9 +52,9 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
   
  Die `http.sys` Dienst verfügbar macht, zwei Anfrage-URI-Zeichenfolgen:  
   
--   RAW-URI  
+- RAW-URI  
   
--   Konvertierten URI  
+- Konvertierten URI  
   
  Der raw-URI ist die <xref:System.Uri?displayProperty=nameWithType> bereitgestellt, in der Anforderungszeile einer HTTP-Anforderung:  
   
@@ -72,11 +72,11 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
   
  Die `http.sys` service kombiniert die <xref:System.Uri.Host%2A?displayProperty=nameWithType> Eigenschaftswert und die Zeichenfolge in der Anforderungszeile auf einen konvertierten URI zu erstellen. Darüber hinaus `http.sys` und <xref:System.Uri?displayProperty=nameWithType> Klasse wird außerdem Folgendes:  
   
--   Un-Escapezeichen alle als Prozentwert codierte Werte.  
+- Un-Escapezeichen alle als Prozentwert codierte Werte.  
   
--   Prozentwert codiert konvertiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
+- Prozentwert codiert konvertiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
   
--   Führt andere Normalisierungsschritte, ebenso wie die pfadkomprimierung an.  
+- Führt andere Normalisierungsschritte, ebenso wie die pfadkomprimierung an.  
   
  Da die Anforderung keine Informationen über die Codierung für prozentcodiert Werte verwendet wird, es möglich, zu bestimmen, die richtige Codierung nur durch Analysieren der prozentcodiert Werte möglicherweise nicht.  
   

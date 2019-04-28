@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791715"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Konfiguriert die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) bei Verwendung von Verbundauthentifizierung über das WS-Verbund-Protokoll. Konfiguriert die <xref:System.Security.Claims.ClaimsAuthorizationManager> bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung bereitzustellen.  
@@ -52,9 +52,9 @@ Konfiguriert die <xref:System.IdentityModel.Services.WSFederationAuthenticationM
 ## <a name="remarks"></a>Hinweise  
  Die \<FederationConfiguration >-Element stellt die Einstellungen in zwei verschiedene Szenarien bereit:  
   
--   Bei Verwendung von WS-Verbund in einer passiven Webanwendung wird das Element enthält Einstellungen, die die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Es enthält außerdem die identitätskonfiguration verwendet werden, um Sicherheitstokenhandler und Zertifikate und Komponenten wie den anspruchsautorisierungs-Manager und den anspruchsauthentifizierungs-Manager zu konfigurieren.  
+- Bei Verwendung von WS-Verbund in einer passiven Webanwendung wird das Element enthält Einstellungen, die die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Es enthält außerdem die identitätskonfiguration verwendet werden, um Sicherheitstokenhandler und Zertifikate und Komponenten wie den anspruchsautorisierungs-Manager und den anspruchsauthentifizierungs-Manager zu konfigurieren.  
   
--   Bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung in Ihrem Code bereitzustellen, das Element verweist auf die identitätskonfiguration, die konfiguriert werden, die anspruchsautorisierungs-Manager und die Richtlinie, mit der Autorisierung, Entscheidungen. Dies gilt, auch in Szenarien, die nicht passiven Szenarien mit Web sind; z. B. Anwendungen für Windows Communication Foundation (WCF) oder eine Anwendung, die nicht webbasierte ist. Wenn die Anwendung nicht mit einer passiven Webanwendung ist die [ \<"claimsauthorizationmanager" >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) -Element (und seine untergeordneten Richtlinienelemente, sofern vorhanden) der identitätskonfiguration verwiesen die `<federationConfiguration>` Element Die einzigen Einstellungen werden angewendet werden. Alle anderen werden ignoriert.  
+- Bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung in Ihrem Code bereitzustellen, das Element verweist auf die identitätskonfiguration, die konfiguriert werden, die anspruchsautorisierungs-Manager und die Richtlinie, mit der Autorisierung, Entscheidungen. Dies gilt, auch in Szenarien, die nicht passiven Szenarien mit Web sind; z. B. Anwendungen für Windows Communication Foundation (WCF) oder eine Anwendung, die nicht webbasierte ist. Wenn die Anwendung nicht mit einer passiven Webanwendung ist die [ \<"claimsauthorizationmanager" >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) -Element (und seine untergeordneten Richtlinienelemente, sofern vorhanden) der identitätskonfiguration verwiesen die `<federationConfiguration>` Element Die einzigen Einstellungen werden angewendet werden. Alle anderen werden ignoriert.  
   
  Unabhängig vom Szenario gilt lädt die Runtime die Standardkonfiguration für den Verbund. Das Verhalten wird wie folgt definiert:  
   

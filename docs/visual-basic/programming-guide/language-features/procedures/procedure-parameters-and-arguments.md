@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791911"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parameter und Argumente von Prozeduren (Visual Basic)
 In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umständen zusammen, die in denen sie aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Aufgaben ausführt, verwendet verschiedene Informationen für jeden Aufruf an. Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücke, die Sie beim Aufruf an die Prozedur übergeben.  
@@ -49,11 +49,11 @@ In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umst�
   
  Wenn der aufrufende Code erwartet ein Argument mit einem Datentyp, der sich von der entsprechenden Parameter bereitstellen, wie `Byte` auf eine `String` -Parameter müssen einen der folgenden:  
   
--   Geben Sie nur Argumente mit den Datentypen, die auf der Parameterdatentyp erweitert werden;  
+- Geben Sie nur Argumente mit den Datentypen, die auf der Parameterdatentyp erweitert werden;  
   
--   Legen Sie `Option Strict Off` können implizite einschränkende Konvertierungen; oder  
+- Legen Sie `Option Strict Off` können implizite einschränkende Konvertierungen; oder  
   
--   Verwenden Sie eine Konvertierungsschlüsselwort, um den Datentyp explizit konvertieren.  
+- Verwenden Sie eine Konvertierungsschlüsselwort, um den Datentyp explizit konvertieren.  
   
 ### <a name="type-parameters"></a>Typparameter  
  Ein *generische Prozedur* definiert auch eine oder mehrere *Typparameter* zusätzlich zu den normalen Parametern. Eine generische Prozedur kann der aufrufenden Code unterschiedliche Datentypen jedes Mal übergeben sie der Prozedur wird, damit sie die Datentypen, die Anforderungen eines einzelnen Aufrufs anpassen kann. Siehe [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  

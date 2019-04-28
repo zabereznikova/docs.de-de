@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784058"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Deklariert das Operatorsymbol, Operanden und Code, der eine Operatorprozedur für eine Klasse oder Struktur definieren.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>Passende Paare  
  Sie müssen bestimmte Operatoren als zueinander passende Paare definieren. Wenn Sie einen Operator eines solch ein paar definieren, müssen Sie die andere ebenfalls definieren. Die übereinstimmende Paare lauten wie folgt:  
   
--   `=` und `<>`  
+- `=` und `<>`  
   
--   `>` und `<`  
+- `>` und `<`  
   
--   `>=` und `<=`  
+- `>=` und `<=`  
   
--   `IsTrue` und `IsFalse`  
+- `IsTrue` und `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>Datentypeinschränkungen  
  Die Klasse oder Struktur, auf dem Sie sie definieren, muss jeder Operator, die Sie definieren umfassen. Dies bedeutet, dass die Klasse oder Struktur mit dem Datentyp der folgenden angezeigt werden muss:  
   
--   Der Operand eines unären Operators.  
+- Der Operand eines unären Operators.  
   
--   Mindestens einer der Operanden des binären Operators.  
+- Mindestens einer der Operanden des binären Operators.  
   
--   Der Operand oder der Rückgabetyp eines Konvertierungsoperators.  
+- Der Operand oder der Rückgabetyp eines Konvertierungsoperators.  
   
  Bestimmte Operatoren haben zusätzliche Daten, die Einschränkungen, geben Sie wie folgt:  
   
--   Wenn Sie definieren die `IsTrue` und `IsFalse` Operatoren müssen beide Zurückgeben der `Boolean` Typ.  
+- Wenn Sie definieren die `IsTrue` und `IsFalse` Operatoren müssen beide Zurückgeben der `Boolean` Typ.  
   
--   Wenn Sie definieren die `<<` und `>>` Operatoren müssen beide angeben der `Integer` Geben Sie für die `operandtype` von `operand2`.  
+- Wenn Sie definieren die `<<` und `>>` Operatoren müssen beide angeben der `Integer` Geben Sie für die `operandtype` von `operand2`.  
   
  Der Rückgabetyp muss nicht in den Typ der Operanden entsprechen. Angenommen, ein Vergleichsoperator z. B. `=` oder `<>` können zurückgeben `Boolean` auch, wenn keiner der Operanden ist `Boolean`.  
   
@@ -144,11 +144,11 @@ End Operator
   
  Keine definieren die `AndAlso` Operator direkt mit einem `Operator` Anweisung. Sie können jedoch `AndAlso` , wenn Sie die folgenden Bedingungen erfüllt haben:  
   
--   Sie definiert haben `And` auf den gleichen Operandentypen, die Sie für die verwenden möchten `AndAlso`.  
+- Sie definiert haben `And` auf den gleichen Operandentypen, die Sie für die verwenden möchten `AndAlso`.  
   
--   Die Definition der `And` gibt denselben Typ wie die Klasse oder Struktur, auf dem Sie es definiert haben.  
+- Die Definition der `And` gibt denselben Typ wie die Klasse oder Struktur, auf dem Sie es definiert haben.  
   
--   Sie definiert haben die `IsFalse` Operator für die Klasse oder Struktur, auf dem Sie definiert haben `And`.  
+- Sie definiert haben die `IsFalse` Operator für die Klasse oder Struktur, auf dem Sie definiert haben `And`.  
   
  Auf ähnliche Weise können Sie `OrElse` , wenn Sie definiert haben `Or` auf die gleichen Operanden, mit dem Rückgabetyp von der Klasse oder Struktur, und Sie haben definiert `IsTrue` für die Klasse oder Struktur.  
   
@@ -157,11 +157,11 @@ End Operator
   
  Wenn Sie eine Konvertierungsprozedur deklarieren `Widening`, Ihren Prozedurcode muss keine Fehler generieren. Dies bedeutet Folgendes:  
   
--   Sie muss immer einen gültigen Wert des Typs zurückgeben `type`.  
+- Sie muss immer einen gültigen Wert des Typs zurückgeben `type`.  
   
--   Sie müssen alle möglichen Ausnahmen und andere Fehler behandeln.  
+- Sie müssen alle möglichen Ausnahmen und andere Fehler behandeln.  
   
--   Sie müssen jeden zurückgegebenen Fehler aus allen Prozeduren behandeln, die er aufruft.  
+- Sie müssen jeden zurückgegebenen Fehler aus allen Prozeduren behandeln, die er aufruft.  
   
  Wenn eine Möglichkeit besteht, die eine Konvertierungsprozedur nicht erfolgreich ausgeführt werden kann, oder die It dazu führen, eine nicht behandelte Ausnahme dass kann, müssen Sie es deklarieren `Narrowing`.  
   

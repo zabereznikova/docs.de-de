@@ -3,11 +3,11 @@ title: WCF-Testclient (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791195"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
 Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GUI-Tool, das kann Benutzer Testparameter eingeben, die Eingabe an den Dienst senden, und zeigen die Antwort, die der Dienst zurücksendet. Es bietet eine nahtlose diensttest mit WCF-Diensthost kombiniert.  
@@ -136,34 +136,34 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
 ## <a name="features-supported-by-wcf-test-client"></a>Vom WCF-Testclient unterstützte Funktionen  
  Im folgenden finden eine Liste von WCF-Testclient unterstützten Funktionen:  
   
--   Aufrufen von Diensten: Anforderung/Antwort und unidirektionale Nachricht.  
+- Aufrufen von Diensten: Anforderung/Antwort und unidirektionale Nachricht.  
   
--   Bindungen: alle von Svcutil.exe unterstützten Bindungen.  
+- Bindungen: alle von Svcutil.exe unterstützten Bindungen.  
   
--   Sitzungssteuerung  
+- Sitzungssteuerung  
   
--   Nachrichtenvertrag  
+- Nachrichtenvertrag  
   
--   XML-Serialisierung  
+- XML-Serialisierung  
   
  Im folgenden finden eine Liste der Funktionen von WCF-Testclient nicht unterstützt:  
   
--   Typen: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, Typen, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren, einschließlich des zugehörigen <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>-Attributs, sowie die Typen <xref:System.Xml.Linq.XDocument> und <xref:System.Xml.Linq.XElement> und der ADO.NET-Typ <xref:System.Data.DataTable>.  
+- Typen: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, Typen, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren, einschließlich des zugehörigen <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>-Attributs, sowie die Typen <xref:System.Xml.Linq.XDocument> und <xref:System.Xml.Linq.XElement> und der ADO.NET-Typ <xref:System.Data.DataTable>.  
   
--   Duplexvertrag  
+- Duplexvertrag  
   
--   Transaktion  
+- Transaktion  
   
--   Sicherheit: [!INCLUDE[infocard](../../../includes/infocard-md.md)], Zertifikat und Benutzername/Kennwort.  
+- Sicherheit: [!INCLUDE[infocard](../../../includes/infocard-md.md)], Zertifikat und Benutzername/Kennwort.  
   
--   Bindungen: WSFederationbinding, beliebige kontextbindungen und Https-Bindung, WebHttpbinding (Unterstützung für Json-Antwort-Nachrichten).  
+- Bindungen: WSFederationbinding, beliebige kontextbindungen und Https-Bindung, WebHttpbinding (Unterstützung für Json-Antwort-Nachrichten).  
   
 ## <a name="closing-wcf-test-client"></a>Schließen des WCF-Testclients  
  Sie können WCF-Testclient schließen, es gibt folgende Möglichkeiten:  
   
--   Auf der **Datei** Menü klicken Sie auf **beenden**. Klicken Sie alternativ im Hauptfenster von WCF-Testclient auf **schließen**. Sowohl der folgenden Aktionen auch WCF-Dienst-Auto-Host heruntergefahren und der Visual Studio-Debug-Vorgang zu beenden, wenn WCF-Testclient von Visual Studio gestartet wurde.  
+- Auf der **Datei** Menü klicken Sie auf **beenden**. Klicken Sie alternativ im Hauptfenster von WCF-Testclient auf **schließen**. Sowohl der folgenden Aktionen auch WCF-Dienst-Auto-Host heruntergefahren und der Visual Studio-Debug-Vorgang zu beenden, wenn WCF-Testclient von Visual Studio gestartet wurde.  
   
--   Mit der rechten Maustaste die **WCF-Diensthost** Symbol im Infobereich der Taskleiste, und klicken Sie dann auf **beenden.** Dies sowohl die WCF-Dienst-Auto-Host als auch die WCF-Testclient heruntergefahren und der Visual Studio-debuggenvorgang beendet.  
+- Mit der rechten Maustaste die **WCF-Diensthost** Symbol im Infobereich der Taskleiste, und klicken Sie dann auf **beenden.** Dies sowohl die WCF-Dienst-Auto-Host als auch die WCF-Testclient heruntergefahren und der Visual Studio-debuggenvorgang beendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762396"
 ---
 # <a name="fromtoby-animations-overview"></a>Übersicht über From/To/By-Animationen
 Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigkeitseigenschaften zu animieren. Eine From/To/By-Animation erstellt einen Übergang zwischen zwei Werten.  
@@ -65,15 +65,15 @@ Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigk
 ## <a name="target-values"></a>Zielwerte  
  Eine From/To/By-Animation erstellt einen Übergang zwischen zwei Zielwerten. Es ist üblich, einen Startwert anzugeben (zum Festlegen der <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> Eigenschaft) und einen Endwert (zum Festlegen der <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> Eigenschaft). Sie können jedoch auch nur einen Startwert, einen Zielwert oder einen Offsetwert angeben. In diesen Fällen ruft die Animation den fehlenden Zielwert aus der Eigenschaft ab, die animiert wird. Die folgende Liste beschreibt die verschiedenen Methoden, um die Zielwerte einer Animation anzugeben.  
   
--   **Startwert**  
+- **Startwert**  
   
      Verwenden der <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> Eigenschaft, wenn Sie den Startwert einer Animation explizit angeben möchten. Sie können der <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> -Eigenschaft allein oder zusammen mit der <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> oder <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Eigenschaft. Wenn Sie nur angeben, die <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> -Eigenschaft, die Animation ein Übergang von diesem Wert zu dem Basiswert der animierten Eigenschaft.  
   
--   **Endwert**  
+- **Endwert**  
   
      Um einen Endwert einer Animation anzugeben, verwenden die <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> Eigenschaft. Bei Verwendung der <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> Eigenschaft selbst, ruft die Animation ihren Startwert aus der Eigenschaft, die animiert wird, oder aus der Ausgabe einer anderen Animation, die auf dieselbe Eigenschaft angewendet wird. Sie können die <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> Eigenschaft zusammen mit der <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> Eigenschaft, um explizit anzugeben, Start- und Endwerte der Animation.  
   
--   **Offsetwert**  
+- **Offsetwert**  
   
      Die <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Eigenschaft können Sie einen Offset anstatt expliziter Start- oder Endwerte für die Animation angeben. Die <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> -Eigenschaft einer Animation gibt an, um wie viel ein Wert für die Dauer des ändert. Sie können die <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> -Eigenschaft allein oder zusammen mit der <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> Eigenschaft. Wenn Sie nur angeben, die <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> -Eigenschaft, die Animation fügt den Offsetwert zum Basiswert der Eigenschaft oder zur Ausgabe einer anderen Animation.  
   
@@ -134,9 +134,9 @@ Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigk
 ## <a name="other-animation-types"></a>Andere Animationstypen  
  From/To/By-Animationen sind nicht die einzige Art von Animationen, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet: Es bietet auch Keyframe-Animationen und Path-Animationen.  
   
--   Eine Keyframe-Animation animiert entlang einer beliebigen Anzahl von Zielwerten, die mithilfe von Keyframes beschrieben. Weitere Informationen finden Sie unter den [Übersicht über Keyframe Animationen](key-frame-animations-overview.md).  
+- Eine Keyframe-Animation animiert entlang einer beliebigen Anzahl von Zielwerten, die mithilfe von Keyframes beschrieben. Weitere Informationen finden Sie unter den [Übersicht über Keyframe Animationen](key-frame-animations-overview.md).  
   
--   Eine Pfadanimation generiert Ausgabewerte aus einem <xref:System.Windows.Media.PathGeometry>. Weitere Informationen finden Sie unter den [Übersicht über Pfadanimationen](path-animations-overview.md).  
+- Eine Pfadanimation generiert Ausgabewerte aus einem <xref:System.Windows.Media.PathGeometry>. Weitere Informationen finden Sie unter den [Übersicht über Pfadanimationen](path-animations-overview.md).  
   
  Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie außerdem Ihre eigenen benutzerdefinierten Animationstypen erstellen. Weitere Informationen finden Sie unter den [Übersicht über benutzerdefinierte Animationen](custom-animations-overview.md).  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785683"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximieren der 3D-Leistung von WPF
 Wie Sie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D-Steuerelemente erstellen und 3D-Szenen in Ihren Anwendungen einschließen möchten, es ist wichtig, die zur Optimierung der Leistung sollten. Dieses Thema enthält eine Liste von 3D Klassen und Eigenschaften, die Auswirkungen auf die Leistung für Ihre Anwendung zusammen mit Empfehlungen zur Optimierung von Leistung, wenn Sie diese verwenden.  

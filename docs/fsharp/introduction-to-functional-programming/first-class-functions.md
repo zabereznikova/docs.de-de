@@ -3,11 +3,11 @@ title: Funktionen
 description: Erfahren Sie mehr über Funktionen, sowie die wichtig für die funktionale Programmierung in F#.
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772761"
 ---
 # <a name="first-class-functions"></a>Funktionen
 
@@ -194,4 +194,4 @@ Der folgende Code enthält alle Beispiele aus diesem Thema.
 - [Tupel](../language-reference/tuples.md)
 - [Funktionen](../language-reference/functions/index.md)
 - [`let` Bindungen](../language-reference/functions/let-bindings.md)
-- [Lambda-Ausdrücke: Die `fun` Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda-Ausdrücke: Das `fun`-Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

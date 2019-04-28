@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783824"
 ---
 # <a name="synclock-statement"></a>SyncLock-Anweisung
 Ruft eine exklusive Sperre für einen Anweisungsblock vor der Ausführung des Blocks ab.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>Regeln  
   
--   Branch. Sie können keine branch in einen `SyncLock` Blockieren von außerhalb des Blocks.  
+- Branch. Sie können keine branch in einen `SyncLock` Blockieren von außerhalb des Blocks.  
   
--   Der Wert der Sperre-Objekts. Der Wert des `lockobject` nicht `Nothing`. Sie müssen das Sperrobjekt erstellen, bevor Sie ihn im Verwenden einer `SyncLock` Anweisung.  
+- Der Wert der Sperre-Objekts. Der Wert des `lockobject` nicht `Nothing`. Sie müssen das Sperrobjekt erstellen, bevor Sie ihn im Verwenden einer `SyncLock` Anweisung.  
   
      Sie können den Wert nicht ändern `lockobject` während der Ausführung einer `SyncLock` Block. Der Mechanismus ist erforderlich, dass das Sperrobjekt unverändert bleiben.  
   
--   Können keine der ["await"](../../../visual-basic/language-reference/operators/await-operator.md) -Operator in einem `SyncLock` Block.  
+- Können keine der ["await"](../../../visual-basic/language-reference/operators/await-operator.md) -Operator in einem `SyncLock` Block.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   Mechanismus. Wenn ein Thread erreicht die `SyncLock` -Anweisung, es ergibt die `lockobject` Ausdruck und angehalten, bis er eine exklusive Sperre für das Objekt, das vom Ausdruck zurückgegebene erhält. Wenn ein anderer Thread erreicht die `SyncLock` -Anweisung, es ist nicht Ruft eine Sperre, bis der erste Thread führt die `End SyncLock` Anweisung.  
+- Mechanismus. Wenn ein Thread erreicht die `SyncLock` -Anweisung, es ergibt die `lockobject` Ausdruck und angehalten, bis er eine exklusive Sperre für das Objekt, das vom Ausdruck zurückgegebene erhält. Wenn ein anderer Thread erreicht die `SyncLock` -Anweisung, es ist nicht Ruft eine Sperre, bis der erste Thread führt die `End SyncLock` Anweisung.  
   
--   Stellen Sie geschützte Daten. Wenn `lockobject` ist eine `Shared` Variablen, die exklusive Sperre verhindert, dass einen Thread in jeder Instanz der Klasse Ausführen der `SyncLock` zu blockieren, während alle anderen Thread ausgeführt wird. Dies schützt die Daten, die von allen Instanzen gemeinsam verwendet werden.  
+- Stellen Sie geschützte Daten. Wenn `lockobject` ist eine `Shared` Variablen, die exklusive Sperre verhindert, dass einen Thread in jeder Instanz der Klasse Ausführen der `SyncLock` zu blockieren, während alle anderen Thread ausgeführt wird. Dies schützt die Daten, die von allen Instanzen gemeinsam verwendet werden.  
   
      Wenn `lockobject` ist eine Instanzvariable (nicht `Shared`), die Sperre verhindert einen Thread, in der aktuellen Instanz der Ausführung der `SyncLock` Block zur gleichen Zeit wie ein anderer Thread in der gleichen Instanz. Dies schützt die Daten, die von den einzelnen Instanzen verwaltet wird.  
   
--   Abruf und die Freigabe. Ein `SyncLock` Block verhält sich wie ein `Try...Finally` Konstruktion, in dem die `Try` Block erhält eine exklusive Sperre auf `lockobject` und `Finally` Block freigegeben wird. Aus diesem Grund die `SyncLock` Block gewährleistet die Aufhebung der Sperre, unabhängig davon, wie Sie den Block zu beenden. Dies gilt auch im Falle einer nicht behandelten Ausnahme.  
+- Abruf und die Freigabe. Ein `SyncLock` Block verhält sich wie ein `Try...Finally` Konstruktion, in dem die `Try` Block erhält eine exklusive Sperre auf `lockobject` und `Finally` Block freigegeben wird. Aus diesem Grund die `SyncLock` Block gewährleistet die Aufhebung der Sperre, unabhängig davon, wie Sie den Block zu beenden. Dies gilt auch im Falle einer nicht behandelten Ausnahme.  
   
--   Framework-Aufrufe. Die `SyncLock` Block erhält und hebt die exklusive Sperre durch Aufrufen der `Enter` und `Exit` Methoden der `Monitor` -Klasse in der <xref:System.Threading> Namespace.  
+- Framework-Aufrufe. Die `SyncLock` Block erhält und hebt die exklusive Sperre durch Aufrufen der `Enter` und `Exit` Methoden der `Monitor` -Klasse in der <xref:System.Threading> Namespace.  
   
 ## <a name="programming-practices"></a>Methoden für die Programmierung  
  Die `lockobject` Ausdruck ergeben sollten immer ein Objekt, das ausschließlich auf die Klasse gehört. Deklarieren Sie eine `Private` Objektvariable zum Schutz von Daten, die auf die aktuelle Instanz gehören oder `Private Shared` Objektvariable, um Daten in allen Instanzen häufig zu schützen.  

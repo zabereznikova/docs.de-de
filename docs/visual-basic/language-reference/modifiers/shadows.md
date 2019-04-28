@@ -12,11 +12,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778728"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 Gibt an, dass ein deklariertes Programmierelement ein Element Blendet eine mit dem gleichen Namen oder einen Satz überladener Elemente in einer Basisklasse erneut deklariert.  
@@ -28,19 +28,19 @@ Gibt an, dass ein deklariertes Programmierelement ein Element Blendet eine mit d
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `Shadows` nur auf Klassenebene. Dies bedeutet, dass der Deklarationskontext für eine `Shadows` Element muss eine Klasse sein, und eine Quelldatei, Namespace, Schnittstelle, Modul, Struktur oder Prozedur nicht möglich.  
+- **Deklarationskontext.** Sie können `Shadows` nur auf Klassenebene. Dies bedeutet, dass der Deklarationskontext für eine `Shadows` Element muss eine Klasse sein, und eine Quelldatei, Namespace, Schnittstelle, Modul, Struktur oder Prozedur nicht möglich.  
   
      Sie können nur ein shadowing-Element in einer einzigen deklarationsanweisung deklarieren.  
   
--   **Kombinierte Modifizierer.** Sie können keine angeben `Shadows` zusammen mit `Overloads`, `Overrides`, oder `Static` in der gleichen Deklaration.  
+- **Kombinierte Modifizierer.** Sie können keine angeben `Shadows` zusammen mit `Overloads`, `Overrides`, oder `Static` in der gleichen Deklaration.  
   
--   **Elementtypen.** Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen. Wenn Sie Shadowing für eine Eigenschaft oder Prozedur mit einer anderen Eigenschaft oder Prozedur, müssen die Parameter sowie des Rückgabetyps nicht mit denen in der Basisklasse-Eigenschaft oder Prozedur übereinstimmen.  
+- **Elementtypen.** Sie können ein Shadowing von jedem deklarierten Element mit einer anderen Art vornehmen. Wenn Sie Shadowing für eine Eigenschaft oder Prozedur mit einer anderen Eigenschaft oder Prozedur, müssen die Parameter sowie des Rückgabetyps nicht mit denen in der Basisklasse-Eigenschaft oder Prozedur übereinstimmen.  
   
--   **Zugriff auf.** Das Shadowing-Element in der Basisklasse ist normalerweise nicht verfügbar, in der abgeleiteten Klasse, die es Shadowing durchführt. Allerdings gelten die folgenden Überlegungen.  
+- **Zugriff auf.** Das Shadowing-Element in der Basisklasse ist normalerweise nicht verfügbar, in der abgeleiteten Klasse, die es Shadowing durchführt. Allerdings gelten die folgenden Überlegungen.  
   
-    -   Ist das shadowing-Element nicht zugegriffen werden kann, aus dem Code, der darauf verweist, wird der Verweis auf das Shadowing-Element aufgelöst. Z. B. wenn ein `Private` Element führt Shadowing für eine Basisklasse-Element, Code, der keine Berechtigung zum Zugriff auf die `Private` Element greift stattdessen auf das Basisklasse-Element.  
+    - Ist das shadowing-Element nicht zugegriffen werden kann, aus dem Code, der darauf verweist, wird der Verweis auf das Shadowing-Element aufgelöst. Z. B. wenn ein `Private` Element führt Shadowing für eine Basisklasse-Element, Code, der keine Berechtigung zum Zugriff auf die `Private` Element greift stattdessen auf das Basisklasse-Element.  
   
-    -   Wenn Sie ein Element spiegeln, können Sie weiterhin das Shadowing-Element durch ein Objekt mit dem Typ der Basisklasse deklariert zugreifen. Sie können auch über zugreifen `MyBase`.  
+    - Wenn Sie ein Element spiegeln, können Sie weiterhin das Shadowing-Element durch ein Objekt mit dem Typ der Basisklasse deklariert zugreifen. Sie können auch über zugreifen `MyBase`.  
   
  Der `Shadows`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   

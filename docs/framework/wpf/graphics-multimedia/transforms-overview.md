@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762320"
 ---
 # <a name="transforms-overview"></a>Übersicht über Transformationen
 In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen zu drehen, skalieren, verschieben (übersetzen) und Neigen <xref:System.Windows.FrameworkElement> Objekte.  
@@ -101,9 +101,9 @@ Ein in 45-Grad-Schritten um den Punkt (25, 25) gedrehtes Rechteck-Element
 ## <a name="transforming-a-frameworkelement"></a>Transformieren eines FrameworkElement  
  Anwenden von Transformationen auf ein <xref:System.Windows.FrameworkElement>, erstellen eine <xref:System.Windows.Media.Transform> und wenden Sie es auf eine der beiden Eigenschaften, die die <xref:System.Windows.FrameworkElement> Klasse bietet:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – Eine Transformation, die vor dem Layoutdurchlauf angewendet wird. Nachdem die Transformation angewendet wurde, verarbeitet das Layoutsystem die transformierte Größe und Position des Elements.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – Eine Transformation, die vor dem Layoutdurchlauf angewendet wird. Nachdem die Transformation angewendet wurde, verarbeitet das Layoutsystem die transformierte Größe und Position des Elements.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> – Eine Transformation, die die Darstellung des Elements ändert, aber nach Abschluss des Layoutdurchlaufs angewendet wird. Mithilfe der <xref:System.Windows.UIElement.RenderTransform%2A> -Eigenschaft anstelle der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> -Eigenschaft, können Sie Leistungsvorteile abrufen.  
+- <xref:System.Windows.UIElement.RenderTransform%2A> – Eine Transformation, die die Darstellung des Elements ändert, aber nach Abschluss des Layoutdurchlaufs angewendet wird. Mithilfe der <xref:System.Windows.UIElement.RenderTransform%2A> -Eigenschaft anstelle der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> -Eigenschaft, können Sie Leistungsvorteile abrufen.  
   
  Welche Eigenschaft sollte verwendet werden? Verwenden Sie aufgrund der Leistungsvorteile, die er bereitstellt, die <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft, wann immer möglich, insbesondere bei Verwendung von animiert <xref:System.Windows.Media.Transform> Objekte. Verwenden der <xref:System.Windows.FrameworkElement.LayoutTransform%2A> -Eigenschaft beim Skalieren, drehen oder neigen, und Sie benötigen das übergeordnete Element des Elements anpassen, um dessen transformierte Größe des Elements. Beachten Sie, dass bei Verwendung mit werden die <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Eigenschaft <xref:System.Windows.Media.TranslateTransform> Objekte haben keine Auswirkungen auf die Elemente angezeigt werden. Das liegt daran, dass das Layoutsystem das übersetzte Element an seiner ursprünglichen Position als Teil der Verarbeitung zurückgibt.  
   

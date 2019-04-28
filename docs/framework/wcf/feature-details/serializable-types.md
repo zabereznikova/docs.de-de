@@ -3,11 +3,11 @@ title: Serialisierbare Typen
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748212"
 ---
 # <a name="serializable-types"></a>Serialisierbare Typen
 Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> alle öffentlich sichtbaren Typen. Alle öffentlichen Lese-/Schreibeigenschaften und Felder des Typs werden serialisiert.  
@@ -17,23 +17,23 @@ Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContract
 ## <a name="serialization-defaults"></a>Standardwerte für die Serialisierung  
  Sie können das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut anwenden, um die Serialisierung von Typen und Membern explizit zu steuern oder anzupassen. Darüber hinaus können Sie diese Attribute auf private Felder anwenden. Doch auch Typen, die nicht mit diesen Attributen markiert sind, werden serialisiert und deserialisiert. Folgende Regeln und Ausnahmen gelten:  
   
--   Der <xref:System.Runtime.Serialization.DataContractSerializer> leitet einen Datenvertrag von Typen ohne Attribute unter Verwendung der Eigenschaften der neu erstellten Typen ab.  
+- Der <xref:System.Runtime.Serialization.DataContractSerializer> leitet einen Datenvertrag von Typen ohne Attribute unter Verwendung der Eigenschaften der neu erstellten Typen ab.  
   
--   Alle öffentlichen Felder sowie Eigenschaften mit öffentlicher `get`- oder `set`-Methode werden serialisiert, es sei denn, Sie wenden auf diesen Member das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut an.  
+- Alle öffentlichen Felder sowie Eigenschaften mit öffentlicher `get`- oder `set`-Methode werden serialisiert, es sei denn, Sie wenden auf diesen Member das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut an.  
   
--   Die Serialisierungssemantik gleicht der des <xref:System.Xml.Serialization.XmlSerializer>.  
+- Die Serialisierungssemantik gleicht der des <xref:System.Xml.Serialization.XmlSerializer>.  
   
--   In nicht markierten Typen werden nur öffentliche Typen mit Konstruktoren serialisiert, die nicht über Parameter verfügen. Die Ausnahme dieser Regel bildet das <xref:System.Runtime.Serialization.ExtensionDataObject> unter Verwendung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle.  
+- In nicht markierten Typen werden nur öffentliche Typen mit Konstruktoren serialisiert, die nicht über Parameter verfügen. Die Ausnahme dieser Regel bildet das <xref:System.Runtime.Serialization.ExtensionDataObject> unter Verwendung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle.  
   
--   Schreibgeschützte Felder, Eigenschaften ohne `get`- oder `set`-Methode sowie Eigenschaften mit interner oder privater `set`- oder `get`-Methode werden nicht serialisiert. Diese Eigenschaften werden ignoriert, und es wird keine Ausnahme ausgelöst. Ausgenommen hiervon sind get-exklusive Auflistungen.  
+- Schreibgeschützte Felder, Eigenschaften ohne `get`- oder `set`-Methode sowie Eigenschaften mit interner oder privater `set`- oder `get`-Methode werden nicht serialisiert. Diese Eigenschaften werden ignoriert, und es wird keine Ausnahme ausgelöst. Ausgenommen hiervon sind get-exklusive Auflistungen.  
   
--   <xref:System.Xml.Serialization.XmlSerializer>Attribute (beispielsweise `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` usw.) werden ignoriert.  
+- <xref:System.Xml.Serialization.XmlSerializer>Attribute (beispielsweise `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` usw.) werden ignoriert.  
   
--   Wird das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut nicht auf einen angegebenen Typ angewendet, ignoriert der Serialisierer jeden Member des Typs, auf den das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut angewendet wurde.  
+- Wird das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut nicht auf einen angegebenen Typ angewendet, ignoriert der Serialisierer jeden Member des Typs, auf den das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut angewendet wurde.  
   
--   Die <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>-Eigenschaft wird in Typen unterstützt, die nicht mit dem <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut markiert sind. Hierzu zählt die Unterstützung des <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attributs für nicht markierte Typen.  
+- Die <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>-Eigenschaft wird in Typen unterstützt, die nicht mit dem <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut markiert sind. Hierzu zählt die Unterstützung des <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attributs für nicht markierte Typen.  
   
--   Sollen öffentliche Member, Eigenschaften oder Felder von der Serialisierung ausgenommen werden, wenden Sie das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut auf den entsprechenden Member an.  
+- Sollen öffentliche Member, Eigenschaften oder Felder von der Serialisierung ausgenommen werden, wenden Sie das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut auf den entsprechenden Member an.  
   
 ## <a name="inheritance"></a>Vererbung  
  Nicht markierte Typen (Typen ohne <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut) können von Typen erben, die dieses Attribut besitzen. Der umgekehrte Vorgang ist jedoch nicht möglich: Typen mit diesem Attribut können nicht von nicht markierten Typen erben. Diese Regel wird in erster Linie deshalb erzwungen, um die Abwärtskompatibilität mit in früheren Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] geschriebenem Code sicherzustellen.  

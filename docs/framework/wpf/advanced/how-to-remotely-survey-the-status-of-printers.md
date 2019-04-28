@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768500"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Vorgehensweise: Remoteüberwachung des Druckerstatus
 In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere Drucker wegen eines Papierstaus oder fehlenden Papiers oder anderer problematischer Situationen ausfallen. Die umfangreichen verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework ermöglichen eine schnelle Überwachung der Druckerzustände.  
@@ -39,9 +39,9 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
   
  Anschließend wird <xref:System.Printing.PrintServer.GetPrintQueues%2A> ist zum Erstellen einer Sammlung aller von dem Server, Warteschlangen und beginnt mit der durchlaufen werden. Diese innere Schleife enthält eine Verzweigungsstruktur, die den beiden Möglichkeiten entspricht, den Status eines Druckers zu überprüfen:  
   
--   Sie können die Flags der Lesen der <xref:System.Printing.PrintQueue.QueueStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintQueueStatus>.  
+- Sie können die Flags der Lesen der <xref:System.Printing.PrintQueue.QueueStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintQueueStatus>.  
   
--   Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, und <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+- Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, und <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
   
  In diesem Beispiel werden beide Methoden veranschaulicht, damit der Benutzer zuvor hinsichtlich der zu verwendenden Methode aufgefordert und hat "y", wenn er die Flags der verwenden die <xref:System.Printing.PrintQueue.QueueStatus%2A> Eigenschaft. Weitere Informationen zu den beiden Methoden finden Sie unten.  
   

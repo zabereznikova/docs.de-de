@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792690"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete-Methode
 Benachrichtigt Sie die common Language Runtime (CLR) über den Status einer e/a-Anforderung, die erstellt wurde, mithilfe eines Aufrufs an die [IHostIoCompletionManager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) Methode.  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] Ein HRESULT-Wert, der den Status des Bindevorgangs angibt.  
   
--   S_OK gibt an, dass der Vorgang erfolgreich abgeschlossen.  
+- S_OK gibt an, dass der Vorgang erfolgreich abgeschlossen.  
   
--   HOST_E_INTERRUPTED gibt an, dass der Aufruf vor dem Abschluss beendet.  
+- HOST_E_INTERRUPTED gibt an, dass der Aufruf vor dem Abschluss beendet.  
   
--   E_FAIL gibt an, dass ein Unbekannter, nicht mehr wiederherstellbar, schwerwiegender Fehler ist aufgetreten.  
+- E_FAIL gibt an, dass ein Unbekannter, nicht mehr wiederherstellbar, schwerwiegender Fehler ist aufgetreten.  
   
  `NumberOfBytesTransferred`  
  [in] Die Anzahl der Bytes während der Verarbeitung der e/a-Anforderung übertragen.  

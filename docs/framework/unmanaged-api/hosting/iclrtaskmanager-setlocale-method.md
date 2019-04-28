@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae097320ad7cd6e7c840122bf3f315812e9b2acd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763346"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale-Methode
 Benachrichtigt, dass der Host den Wert des Gebietsschemabezeichners (die von der geografischen Kultur und Sprache zugeordnet wird) für die derzeit ausgeführte Aufgabe geändert hat der common Language Runtime (CLR).  

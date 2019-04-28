@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759907"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten
 Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe definiert sind, werden sie automatisch in angezeigt der **Toolbox**, keine Aktion erforderlich. Sie können auch manuell Auffüllen der **Toolbox** mit den benutzerdefinierten Komponenten mithilfe der [Choose Toolbox Items Dialog Box (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), aber die **Toolbox** berücksichtigt der Elemente in der Projektmappe Buildausgaben Sie mit folgenden Merkmalen:  
   
--   Implementiert <xref:System.ComponentModel.IComponent>;  
+- Implementiert <xref:System.ComponentModel.IComponent>;  
   
--   Keine <xref:System.ComponentModel.ToolboxItemAttribute> festgelegt `false`;  
+- Keine <xref:System.ComponentModel.ToolboxItemAttribute> festgelegt `false`;  
   
--   Keine <xref:System.ComponentModel.DesignTimeVisibleAttribute> festgelegt `false`.  
+- Keine <xref:System.ComponentModel.DesignTimeVisibleAttribute> festgelegt `false`.  
   
 > [!NOTE]
 >  Die **Toolbox** Verweisketten, werden nicht befolgt werden, damit es keine Elemente angezeigt werden, die von einem Projekt in der Projektmappe nicht erstellt werden.  
   
  In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine benutzerdefinierte Komponente automatisch in angezeigt wird der **Toolbox** , nachdem die Komponente erstellt wird. In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen ein Windows Forms-Projekt.  
+- Erstellen ein Windows Forms-Projekt.  
   
--   Erstellen eine benutzerdefinierte Komponente an.  
+- Erstellen eine benutzerdefinierte Komponente an.  
   
--   Erstellen einer Instanz einer benutzerdefinierten Komponente.  
+- Erstellen einer Instanz einer benutzerdefinierten Komponente.  
   
--   Entladen und das erneute Laden einer benutzerdefinierten Komponente.  
+- Entladen und das erneute Laden einer benutzerdefinierten Komponente.  
   
  Wenn Sie fertig sind, sehen Sie, den **Toolbox** wird aufgefüllt, mit einer Komponente, die Sie erstellt haben.  
   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794705"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable (Visual Basic)
 Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit einer Variablen mit dem gleichen Namen neu zu definieren. Sie können die Variable Schattenkopien, die Sie auf zwei Arten ausblenden möchten:  
   
--   **Shadowings über den Gültigkeitsbereich.** Sie können ein Shadowing über den Gültigkeitsbereich durch eine erneute Deklaration innerhalb eines Unterbereichs des Bereichs, enthält die Variable, die Sie ausblenden möchten.  
+- **Shadowings über den Gültigkeitsbereich.** Sie können ein Shadowing über den Gültigkeitsbereich durch eine erneute Deklaration innerhalb eines Unterbereichs des Bereichs, enthält die Variable, die Sie ausblenden möchten.  
   
--   **Shadowings durch Vererbung.** Wenn die Variable, die Sie ausblenden möchten, die auf Klassenebene definiert ist, können Sie ein Shadowing über Vererbung durch eine erneute Deklaration mit der [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) -Schlüsselwort in einer abgeleiteten Klasse.  
+- **Shadowings durch Vererbung.** Wenn die Variable, die Sie ausblenden möchten, die auf Klassenebene definiert ist, können Sie ein Shadowing über Vererbung durch eine erneute Deklaration mit der [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) -Schlüsselwort in einer abgeleiteten Klasse.  
   
 ## <a name="two-ways-to-hide-a-variable"></a>Zwei Möglichkeiten zum Ausblenden einer Variablenverweis  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765504"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Vorgehensweise: Binden von Daten mit einer Projektdatenquelle (WCF Data Services)
 
@@ -31,19 +31,19 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
      Die folgenden Objektelemente in der XAML-Datei für das Fenster werden erstellt:
 
-    -   Ein <xref:System.Windows.Data.CollectionViewSource>-Element mit dem Namen `customersViewSource`. Die <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft des <xref:System.Windows.Controls.Grid>-Objektelements der obersten Ebene wird auf diese neue <xref:System.Windows.Data.CollectionViewSource> festgelegt.
+    - Ein <xref:System.Windows.Data.CollectionViewSource>-Element mit dem Namen `customersViewSource`. Die <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft des <xref:System.Windows.Controls.Grid>-Objektelements der obersten Ebene wird auf diese neue <xref:System.Windows.Data.CollectionViewSource> festgelegt.
 
-    -   Ein datengebundenes <xref:System.Windows.Controls.ComboBox>-Element mit dem Namen `CustomerID`.
+    - Ein datengebundenes <xref:System.Windows.Controls.ComboBox>-Element mit dem Namen `CustomerID`.
 
-    -   Ein <xref:System.Windows.Controls.Label>.
+    - Ein <xref:System.Windows.Controls.Label>.
 
 4. Ziehen Sie die **Bestellungen** Navigationseigenschaft in den Designer.
 
      Die folgenden zusätzlichen Objektelemente in der XAML-Datei für das Fenster werden erstellt:
 
-    -   Ein zweites <xref:System.Windows.Data.CollectionViewSource>-Element mit dem Namen `customersOrdersViewSource` und der `customerViewSource`.
+    - Ein zweites <xref:System.Windows.Data.CollectionViewSource>-Element mit dem Namen `customersOrdersViewSource` und der `customerViewSource`.
 
-    -   Ein datengebundenes <xref:System.Windows.Controls.DataGrid>-Steuerelement mit dem Namen `ordersDataGrid`.
+    - Ein datengebundenes <xref:System.Windows.Controls.DataGrid>-Steuerelement mit dem Namen `ordersDataGrid`.
 
 5. (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
 
@@ -82,13 +82,13 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
      Dadurch werden die folgenden Steuerelemente im Formular erstellt:
 
-    -   Eine Instanz von <xref:System.Windows.Forms.BindingSource> mit dem Namen `customersBindingSource`.
+    - Eine Instanz von <xref:System.Windows.Forms.BindingSource> mit dem Namen `customersBindingSource`.
 
-    -   Eine Instanz von <xref:System.Windows.Forms.BindingNavigator> mit dem Namen `customersBindingNavigator`. Sie können dieses Steuerelement löschen, da es nicht benötigt wird.
+    - Eine Instanz von <xref:System.Windows.Forms.BindingNavigator> mit dem Namen `customersBindingNavigator`. Sie können dieses Steuerelement löschen, da es nicht benötigt wird.
 
-    -   Ein datengebundenes <xref:System.Windows.Forms.ComboBox>-Element mit dem Namen `CustomerID`.
+    - Ein datengebundenes <xref:System.Windows.Forms.ComboBox>-Element mit dem Namen `CustomerID`.
 
-    -   Ein <xref:System.Windows.Forms.Label>.
+    - Ein <xref:System.Windows.Forms.Label>.
 
 3. Ziehen Sie die **Bestellungen** -Navigationseigenschaft auf das Formular.
 

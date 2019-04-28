@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795199"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Vorgehensweise: Zugreifen auf Hardwaregeräte zur Verschlüsselung
 Mit der <xref:System.Security.Cryptography.CspParameters>-Klasse können Sie auf Verschlüsselungsgeräte zuzugreifen. Beispielsweise können Sie diese Klasse dazu verwenden, Ihre Anwendung auf eine Smartcard, einen hardwaremäßigen Zufallszahlengenerator oder eine Hardwareimplementierung eines bestimmten kryptografischen Algorithmus abzustimmen.  
@@ -54,8 +54,8 @@ Mit der <xref:System.Security.Cryptography.CspParameters>-Klasse können Sie auf
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Fügen Sie die Namespaces <xref:System> und <xref:System.Security.Cryptography> ein.  
+- Fügen Sie die Namespaces <xref:System> und <xref:System.Security.Cryptography> ein.  
   
--   Sie müssen einen Smartcardleser sowie auf dem Computer installierte Treiber haben.  
+- Sie müssen einen Smartcardleser sowie auf dem Computer installierte Treiber haben.  
   
--   Sie müssen das <xref:System.Security.Cryptography.CspParameters>-Objekt mit den entsprechenden Informationen über den Kartenleser initialisieren.  Weitere Informationen finden Sie in der Dokumentation zu Ihrem Kartenleser.
+- Sie müssen das <xref:System.Security.Cryptography.CspParameters>-Objekt mit den entsprechenden Informationen über den Kartenleser initialisieren.  Weitere Informationen finden Sie in der Dokumentation zu Ihrem Kartenleser.

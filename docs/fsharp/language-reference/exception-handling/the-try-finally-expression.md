@@ -3,11 +3,11 @@ title: 'Ausnahmen: Der try...finally-Ausdruck'
 description: Erfahren Sie, wie die F# "try-finally' Ausdruck können Sie Bereinigungscode auszuführen, auch wenn Sie ein Codeblock eine Ausnahme auslöst.
 ms.date: 05/16/2016
 ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772696"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Ausnahmen: Der try...finally-Ausdruck
 

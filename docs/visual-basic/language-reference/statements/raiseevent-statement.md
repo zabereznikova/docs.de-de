@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783961"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent-Anweisung
 Trigger deklariert ein Ereignis auf Modulebene in einer Klasse, Formular oder Dokument.  

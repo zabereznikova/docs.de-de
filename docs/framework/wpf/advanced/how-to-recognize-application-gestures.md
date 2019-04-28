@@ -9,11 +9,11 @@ helpviewer_keywords:
 - gestures [WPF], recognizing
 ms.assetid: d58b740f-5192-4a3e-af59-7aa162e6ca15
 ms.openlocfilehash: 647e7c9c1d785cebfdc362dc48511d865f3945dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768432"
 ---
 # <a name="how-to-recognize-application-gestures"></a>Vorgehensweise: Erkennen von Bewegungen in Anwendungen
 Das folgende Beispiel zeigt, wie Sie Freihandeingaben zu löschen, wenn ein Benutzer stellt eine <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> Gesten auf einem <xref:System.Windows.Controls.InkCanvas>. In diesem Beispiel geht davon aus einem <xref:System.Windows.Controls.InkCanvas>namens `inkCanvas1`, in der XAML-Datei deklariert wird.  

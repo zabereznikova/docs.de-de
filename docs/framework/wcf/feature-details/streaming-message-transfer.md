@@ -3,20 +3,20 @@ title: Nachrichtenübertragung per Stream
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747575"
 ---
 # <a name="streaming-message-transfer"></a>Nachrichtenübertragung per Stream
 Windows Communication Foundation (WCF)--Transporte unterstützen zwei Modi zum Übertragen von Nachrichten:  
   
--   Bei gepufferten Übertragungen wird die gesamte Nachricht in einem Puffer zwischengespeichert, bis die Übertragung abgeschlossen ist. Gepufferte Nachrichten müssen vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können.  
+- Bei gepufferten Übertragungen wird die gesamte Nachricht in einem Puffer zwischengespeichert, bis die Übertragung abgeschlossen ist. Gepufferte Nachrichten müssen vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können.  
   
--   Bei Streamingübertragungen wird die Nachricht als Stream verfügbar gemacht. Die Nachricht kann vom Empfänger verarbeitet werden, bevor sie vollständig empfangen wurde.  
+- Bei Streamingübertragungen wird die Nachricht als Stream verfügbar gemacht. Die Nachricht kann vom Empfänger verarbeitet werden, bevor sie vollständig empfangen wurde.  
   
--   Streamübertragungen können die Skalierbarkeit eines Diensts verbessern, indem sie große Speicherpuffer überflüssig machen. Der Einfluss einer Änderung des Übertragungsmodus auf die Skalierbarkeit ist abhängig von der Größe der übertragenen Nachricht. Je größer eine Nachricht ist, desto eher ist eine Streamübertragung zu bevorzugen.  
+- Streamübertragungen können die Skalierbarkeit eines Diensts verbessern, indem sie große Speicherpuffer überflüssig machen. Der Einfluss einer Änderung des Übertragungsmodus auf die Skalierbarkeit ist abhängig von der Größe der übertragenen Nachricht. Je größer eine Nachricht ist, desto eher ist eine Streamübertragung zu bevorzugen.  
   
  HTTP, TCP/IP sowie Named Pipe-Transporte verwenden gepufferte Übertragungen. In diesem Dokument wird beschrieben, wie Streamingübertragungen anstelle von gepufferten Übertragungen für diese Transporte verwendet werden, und welche Konsequenzen sich daraus ergeben.  
   

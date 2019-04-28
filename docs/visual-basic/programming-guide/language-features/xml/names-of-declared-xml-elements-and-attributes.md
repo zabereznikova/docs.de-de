@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761701"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Namen von deklarierten XML-Elementen und Attributen (Visual Basic)
 Dieses Thema enthält die Visual Basic-Richtlinien für die Benennung von XML-Elemente und Attribute im XML-Literale.  In einem XML-literal können Sie einen lokalen Namen oder ein qualifizierter Name angeben. Ein qualifizierter Name besteht aus einer XML-Namespacepräfix, einen Doppelpunkt und einem lokalen Namen. Weitere Informationen zu XML-Namespacepräfixe, finden Sie unter [XML-Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -21,17 +21,17 @@ Dieses Thema enthält die Visual Basic-Richtlinien für die Benennung von XML-El
 ## <a name="rules"></a>Regeln  
  Ein lokaler Namen eines Elements oder Attributs in Visual Basic muss die folgenden Regeln entsprechen.  
   
--   Sie können mit einem Namespace beginnen. Es muss mit einem Buchstaben oder einem Unterstrich beginnen (`_`).  
+- Sie können mit einem Namespace beginnen. Es muss mit einem Buchstaben oder einem Unterstrich beginnen (`_`).  
   
--   Es darf nur Buchstaben, Dezimalziffern, Unterstriche, Punkte (.) und Bindestriche (-).  
+- Es darf nur Buchstaben, Dezimalziffern, Unterstriche, Punkte (.) und Bindestriche (-).  
   
--   Es darf nicht mehr als 1.024 Zeichen lang sein.  
+- Es darf nicht mehr als 1.024 Zeichen lang sein.  
   
--   Doppelpunkte, die im Namen angezeigt werden. Geben Sie Namespace demarkation an. Aus diesem Grund können Sie Doppelpunkte, nur für einen XML-Namespace für einen bestimmten Namen zu geben.  
+- Doppelpunkte, die im Namen angezeigt werden. Geben Sie Namespace demarkation an. Aus diesem Grund können Sie Doppelpunkte, nur für einen XML-Namespace für einen bestimmten Namen zu geben.  
   
  Darüber hinaus sollte die folgenden Richtlinien eingehalten werden.  
   
--   Die XML 1.0-Spezifikation reserviert alle Namen, die mit der Zeichenfolge "Xml", der eine Variante der Schreibweise ab. Verwenden Sie daher nicht die Namen für das Element und dem Attributnamen.  
+- Die XML 1.0-Spezifikation reserviert alle Namen, die mit der Zeichenfolge "Xml", der eine Variante der Schreibweise ab. Verwenden Sie daher nicht die Namen für das Element und dem Attributnamen.  
   
 ### <a name="name-length-guidelines"></a>Richtlinien zur Länge von Namen  
  Ein praktischer Tipp sollte ein Name und die Art des Elements immer noch eindeutig kennzeichnen so kurz wie möglich sein. Dies verbessert die Lesbarkeit des Codes und die Länge und die Quelldatei Größe reduziert.  

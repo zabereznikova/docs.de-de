@@ -3,11 +3,11 @@ title: Bezeichner (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774659"
 ---
 # <a name="identifiers-entity-sql"></a>Bezeichner (Entity SQL)
 Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet zwei Arten von Bezeichner: einfache Bezeichner und Bezeichner in Anführungszeichen.  
@@ -20,15 +20,15 @@ Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ver
   
  Folgende Zeichen dürfen in einem Bezeichner in Anführungszeichen nicht enthalten sein:  
   
--   Zeilenumbruch  
+- Zeilenumbruch  
   
--   Wagenrücklauf  
+- Wagenrücklauf  
   
--   Tabulator  
+- Tabulator  
   
--   Rücktaste  
+- Rücktaste  
   
--   Zusätzliche eckige Klammern (d. h. eckige Klammern innerhalb der eckigen Klammern, die den Bezeichner umschließen)  
+- Zusätzliche eckige Klammern (d. h. eckige Klammern innerhalb der eckigen Klammern, die den Bezeichner umschließen)  
   
  Ein Bezeichner in Anführungszeichen kann Unicode-Zeichen enthalten.  
   
@@ -53,13 +53,13 @@ Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ver
 ## <a name="aliasing-rules"></a>Regeln für das Aliasing  
  Es wird empfohlen, Angeben der Aliase in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfragen bei Bedarf, einschließlich der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] erstellt:  
   
--   Felder eines Zeilenkonstruktors.  
+- Felder eines Zeilenkonstruktors.  
   
--   Elemente in der FROM-Klausel eines Abfrageausdrucks.  
+- Elemente in der FROM-Klausel eines Abfrageausdrucks.  
   
--   Elemente in der SELECT-Klausel eines Abfrageausdrucks.  
+- Elemente in der SELECT-Klausel eines Abfrageausdrucks.  
   
--   Elemente in der GROUP BY-Klausel eines Abfrageausdrucks.  
+- Elemente in der GROUP BY-Klausel eines Abfrageausdrucks.  
   
 ### <a name="valid-aliases"></a>Gültige Aliase  
  Gültige Aliase in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sind alle einfachen Bezeichner oder Bezeichner in Anführungszeichen.  
@@ -67,9 +67,9 @@ Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ver
 ### <a name="alias-generation"></a>Generierung von Aliasen  
  Wenn kein Alias, in angegeben wird eine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrageausdruck, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] versucht, einen Alias anhand der folgenden einfachen Regeln generieren:  
   
--   Wenn es sich bei dem Abfrageausdruck (für den der Alias nicht angegeben wurde) um einen einfachen Bezeichner oder Bezeichner in Anführungszeichen handelt, wird dieser Bezeichner als Alias verwendet. Beispiel: `ROW(a, [b])` wird zu `ROW(a AS a, [b] AS [b])`.  
+- Wenn es sich bei dem Abfrageausdruck (für den der Alias nicht angegeben wurde) um einen einfachen Bezeichner oder Bezeichner in Anführungszeichen handelt, wird dieser Bezeichner als Alias verwendet. Beispiel: `ROW(a, [b])` wird zu `ROW(a AS a, [b] AS [b])`.  
   
--   Wenn es sich bei dem Abfrageausdruck um einen komplexeren Ausdruck handelt, die letzte Komponente dieses Abfrageausdrucks jedoch ein einfacher Bezeichner ist, wird dieser Bezeichner als Alias verwendet. Beispiel: `ROW(a.a1, b.[b1])` wird zu `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+- Wenn es sich bei dem Abfrageausdruck um einen komplexeren Ausdruck handelt, die letzte Komponente dieses Abfrageausdrucks jedoch ein einfacher Bezeichner ist, wird dieser Bezeichner als Alias verwendet. Beispiel: `ROW(a.a1, b.[b1])` wird zu `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
  Sie sollten implizites Aliasing vermeiden, wenn Sie den Aliasnamen später verwenden möchten. Wenn Aliase (implizit oder explizit) miteinander in Konflikt stehen oder im selben Gültigkeitsbereich wiederholt auftreten, kommt es zu einem Kompilierungsfehler. Eine impliziter Alias durchläuft die Kompilierung auch dann, wenn ein expliziter oder impliziter Alias desselben Namens vorhanden ist.  
   
@@ -107,11 +107,11 @@ SELECT 1 AS X, 2 AS X …
   
  Folgende weitere Hinweise gelten für Gültigkeitsbereiche:  
   
--   Die SELECT-Liste kann der Reihe nach neue Namen im Gültigkeitsbereich einführen. Projektionsausdrücke auf der rechten Seite können auf Namen verweisen, die auf der linken Seite projiziert sind.  
+- Die SELECT-Liste kann der Reihe nach neue Namen im Gültigkeitsbereich einführen. Projektionsausdrücke auf der rechten Seite können auf Namen verweisen, die auf der linken Seite projiziert sind.  
   
--   Die ORDER BY-Klausel kann auf Namen (Aliase) verweisen, die in der SELECT-Liste angegeben sind.  
+- Die ORDER BY-Klausel kann auf Namen (Aliase) verweisen, die in der SELECT-Liste angegeben sind.  
   
--   Die Reihenfolge der Auswertung von Klauseln innerhalb des SELECT-Ausdrucks bestimmt die Reihenfolge, in der Namen im Gültigkeitsbereich eingeführt werden. Die FROM-Klausel wird zuerst ausgewertet, gefolgt von der WHERE-Klausel, GROUP BY-Klausel, HAVING-Klausel, SELECT-Klausel und schließlich der ORDER BY-Klausel.  
+- Die Reihenfolge der Auswertung von Klauseln innerhalb des SELECT-Ausdrucks bestimmt die Reihenfolge, in der Namen im Gültigkeitsbereich eingeführt werden. Die FROM-Klausel wird zuerst ausgewertet, gefolgt von der WHERE-Klausel, GROUP BY-Klausel, HAVING-Klausel, SELECT-Klausel und schließlich der ORDER BY-Klausel.  
   
 ### <a name="aggregate-handling"></a>Aggregatbehandlung  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Formen von Aggregaten: Auflistungsbasierte Aggregate und Gruppenbasierte Aggregate. Auflistungsbasierte Aggregate sind das bevorzugte Konstrukt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], und gruppenbasierte Aggregate werden für die SQL-Kompatibilität unterstützt.  

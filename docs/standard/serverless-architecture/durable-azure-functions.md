@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776011"
 ---
-# <a name="durable-azure-functions"></a>Permanenten Azure-Funktionen
+# <a name="durable-azure-functions"></a>Durable Functions (Azure)
 
 Wenn Sie mit Azure Functions serverlose Anwendungen zu erstellen, werden Ihre Vorgänge in der Regel entworfen werden, in eine statusfreie Weise ausgeführt. Der Grund für diese entwurfsentscheidung liegt als die Skalierung der Plattform, wird es schwierig, Sie wissen, welche Server der Code ausgeführt wird. Es wird auch nur schwer erkennbar, wie viele Instanzen zu einem bestimmten Zeitpunkt aktiv sind. Es gibt jedoch Klassen von Anwendungen, die den aktuellen Status eines Prozesses nicht bekannt sein müssen. Betrachten Sie den Prozess zur Übermittlung einer Bestellung zu einem Onlineshop. Der Auscheckvorgang möglicherweise einen Workflow, der mehrere Vorgänge besteht, die den Zustand des Prozesses kennen müssen. Solche Informationen gehören möglicherweise die Produktbestands, wenn der Kunde Form von Credits auf ihr Konto und die Ergebnisse der Verarbeitung der Kreditkarte verfügt. Diese Vorgänge ist möglicherweise einfach eigene interne Workflows oder sogar Dienste von Drittanbietern.
 

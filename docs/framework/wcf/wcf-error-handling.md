@@ -3,11 +3,11 @@ title: WCF-Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791221"
 ---
 # <a name="wcf-error-handling"></a>WCF-Fehlerbehandlung
 Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Gruppen:  
@@ -26,13 +26,13 @@ Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Grup
   
  Die Fehlerbehandlung in WCF wird durch einen oder mehrere der folgenden Schritte ausgeführt:  
   
--   Direkte Behandlung der ausgelösten Ausnahme. Dies erfolgt nur für Kommunikations- und Proxy-/Channelfehler.  
+- Direkte Behandlung der ausgelösten Ausnahme. Dies erfolgt nur für Kommunikations- und Proxy-/Channelfehler.  
   
--   Verwenden von Fehlerverträgen  
+- Verwenden von Fehlerverträgen  
   
--   Implementieren der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle  
+- Implementieren der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle  
   
--   Behandlung von <xref:System.ServiceModel.ServiceHost>-Ereignissen  
+- Behandlung von <xref:System.ServiceModel.ServiceHost>-Ereignissen  
   
 ## <a name="fault-contracts"></a>Fehlerverträge  
  Mithilfe von Fehlerverträgen können Sie die Fehler, die während eines Dienstvorgangs auftreten können, auf plattformunabhängige Weise definieren. Standardmäßig werden alle innerhalb eines Dienstvorgangs ausgelösten Ausnahmen an den Client als <xref:System.ServiceModel.FaultException>-Objekt zurückgegeben. Das <xref:System.ServiceModel.FaultException>-Objekt enthält sehr wenig Informationen. Sie können die an den Client gesendeten Informationen durch Definieren eines Fehlervertrags und Zurückgeben des Fehlers als <xref:System.ServiceModel.FaultException%601> steuern. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

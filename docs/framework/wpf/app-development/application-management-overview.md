@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757349"
 ---
 # <a name="application-management-overview"></a>Übersicht über die Anwendungsverwaltung
 Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der für die Implementierung und Verwaltung der Anwendung gilt. Dieses Thema enthält eine Übersicht über die Funktionen in der <xref:System.Windows.Application> Klasse zum Erstellen und Verwalten von Anwendungen.  
@@ -20,17 +20,17 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 ## <a name="the-application-class"></a>Die Application-Klasse  
  In WPF im Gültigkeitsbereich der Anwendung die Grundfunktionen gekapselt ist, der <xref:System.Windows.Application> Klasse. Die <xref:System.Windows.Application> Klasse enthält die folgenden Funktionen:  
   
--   Lebensdauer der Anwendung nachverfolgen und mit ihr interagieren  
+- Lebensdauer der Anwendung nachverfolgen und mit ihr interagieren  
   
--   Befehlszeilenparameter abrufen und verarbeiten  
+- Befehlszeilenparameter abrufen und verarbeiten  
   
--   Nicht behandelte Ausnahmen erkennen und darauf reagieren  
+- Nicht behandelte Ausnahmen erkennen und darauf reagieren  
   
--   Anwendungsspezifische Eigenschaften und Ressourcen teilen  
+- Anwendungsspezifische Eigenschaften und Ressourcen teilen  
   
--   Fenster in eigenständigen Anwendungen verwalten  
+- Fenster in eigenständigen Anwendungen verwalten  
   
--   Navigation nachverfolgen und verwalten  
+- Navigation nachverfolgen und verwalten  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Ausführen allgemeiner Aufgaben mithilfe der Application-Klasse  
@@ -71,7 +71,7 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 - Im Markup der `Application` -Element muss enthalten der `x:Class` Attribut. Wenn die Anwendung erstellt wird, wird das Vorhandensein des `x:Class` im Markup-Datei wird MSBuild zum Erstellen einer `partial` abgeleitete Klasse <xref:System.Windows.Application> und hat den Namen, die angegeben wird die `x:Class` Attribut. Dies erfordert das Hinzufügen einer XML-Namespacedeklaration für das XAML-Schema (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   Im Code-Behind muss die Klasse muss eine `partial` Klasse mit dem gleichen Namen, die angegeben wird die `x:Class` -Attribut im Markup und eine Ableitung muss <xref:System.Windows.Application>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wird (finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
+- Im Code-Behind muss die Klasse muss eine `partial` Klasse mit dem gleichen Namen, die angegeben wird die `x:Class` -Attribut im Markup und eine Ableitung muss <xref:System.Windows.Application>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wird (finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Wenn Sie ein neues WPF-Anwendungsprojekt oder WPF-Browseranwendungsprojekt mit Visual Studio erstellen, wird eine Anwendungsdefinition ist standardmäßig enthalten und wird mithilfe von Markup und CodeBehind definiert.  
@@ -195,17 +195,17 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 ### <a name="application-activation-and-deactivation"></a>Aktivieren und Deaktivieren von Anwendungen  
  Windows kann Benutzer zwischen Anwendungen zu wechseln. Meistens wird dazu die Tastenkombination ALT+TAB verwendet. Eine Anwendung kann nur gewechselt werden, wenn sie ein sichtbares hat <xref:System.Windows.Window> , die ein Benutzer auswählen kann. Das derzeit ausgewählte <xref:System.Windows.Window> ist die *des aktiven Fensters* (auch bekannt als die *Vordergrundfenster*) und die <xref:System.Windows.Window> , das Benutzereingaben empfängt. Die Anwendung mit dem aktiven Fenster ist die *aktive Anwendung* (oder *vordergrundanwendung*). Eine Anwendung wird unter folgenden Umständen zur aktiven Anwendung:  
   
--   Es wird gestartet und zeigt eine <xref:System.Windows.Window>.  
+- Es wird gestartet und zeigt eine <xref:System.Windows.Window>.  
   
--   Ein Benutzer wechselt von einer anderen Anwendung durch Auswahl einer <xref:System.Windows.Window> in der Anwendung.  
+- Ein Benutzer wechselt von einer anderen Anwendung durch Auswahl einer <xref:System.Windows.Window> in der Anwendung.  
   
  Sie können erkennen, wenn eine Anwendung aktiv, durch behandeln wird der <xref:System.Windows.Application.Activated?displayProperty=nameWithType> Ereignis.  
   
  Auf ähnliche Weise kann eine Anwendung unter folgenden Umständen inaktiv werden:  
   
--   Ein Benutzer wechselt von der aktuellen zu einer anderen Anwendung.  
+- Ein Benutzer wechselt von der aktuellen zu einer anderen Anwendung.  
   
--   Wenn die Anwendung heruntergefahren wird.  
+- Wenn die Anwendung heruntergefahren wird.  
   
  Sie können erkennen, wenn eine Anwendung inaktiv, durch behandeln wird der <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> Ereignis.  
   
@@ -225,13 +225,13 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 ### <a name="application-shutdown"></a>Herunterfahren einer Anwendung  
  Die Lebensdauer einer Anwendung endet mit dem Herunterfahren, das aus folgenden Gründen erfolgen kann:  
   
--   Ein Benutzer schließt alle <xref:System.Windows.Window>.  
+- Ein Benutzer schließt alle <xref:System.Windows.Window>.  
   
--   Ein Benutzer schließt das Haupt- <xref:System.Windows.Window>.  
+- Ein Benutzer schließt das Haupt- <xref:System.Windows.Window>.  
   
--   Der Benutzer beendet die Windows-Sitzung durch abmelden oder Herunterfahren.  
+- Der Benutzer beendet die Windows-Sitzung durch abmelden oder Herunterfahren.  
   
--   Eine anwendungsspezifische Bedingung wurde erfüllt.  
+- Eine anwendungsspezifische Bedingung wurde erfüllt.  
   
  Können Sie zum Beenden der Anwendung verwalten <xref:System.Windows.Application> bietet die <xref:System.Windows.Application.Shutdown%2A> -Methode, die <xref:System.Windows.Application.ShutdownMode%2A> -Eigenschaft, und die <xref:System.Windows.Application.SessionEnding> und <xref:System.Windows.Application.Exit> Ereignisse.  
   
@@ -241,11 +241,11 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 #### <a name="shutdown-mode"></a>Modus für das Herunterfahren  
  Anwendungen werden in der Regel entweder heruntergefahren, wenn alle Fenster geschlossen werden, oder wenn das Hauptfenster geschlossen wird. Manchmal kann jedoch auch durch andere anwendungsspezifische Bedingungen bestimmt werden, wann eine Anwendung heruntergefahren wird. Sie können angeben, die Bedingungen, unter dem Ihre Anwendung heruntergefahren durch Festlegen von wird <xref:System.Windows.Application.ShutdownMode%2A> mit einem der folgenden <xref:System.Windows.ShutdownMode> -Enumerationswerte fest:  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  Der Standardwert von <xref:System.Windows.Application.ShutdownMode%2A> ist <xref:System.Windows.ShutdownMode.OnLastWindowClose>, d. h., die eine Anwendung automatisch heruntergefahren wird, wenn das letzte Fenster in der Anwendung vom Benutzer geschlossen wird. Aber wenn Ihre Anwendung heruntergefahren werden soll, wenn das Hauptfenster geschlossen wird, WPF automatisch ausgeführt, wenn Sie festlegen, <xref:System.Windows.Application.ShutdownMode%2A> zu <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Dies wird im folgenden Beispiel gezeigt.  
   
@@ -259,13 +259,13 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 #### <a name="session-ending"></a>Beenden einer Sitzung  
  Die Bedingungen zum Herunterfahren, die beschrieben werden die <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft für eine Anwendung spezifisch sind. In einigen Fällen kann eine Anwendung aber auch als Ergebnis einer externen Bedingung heruntergefahren werden. Die gängigste externe Bedingung tritt auf, wenn ein Benutzer die Windows-Sitzung durch die folgenden Aktionen beendet:  
   
--   Abmelden  
+- Abmelden  
   
--   Herunterfahren  
+- Herunterfahren  
   
--   Neustarten  
+- Neustarten  
   
--   Wechseln in den Ruhezustand  
+- Wechseln in den Ruhezustand  
   
  Um zu erkennen, wenn eine Windows-Sitzung beendet wird, können Sie behandeln die <xref:System.Windows.Application.SessionEnding> Ereignis, wie im folgenden Beispiel dargestellt.  
   
@@ -291,11 +291,11 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
  <xref:System.Windows.Application.Exit> kann von sowohl eigenständigen Anwendungen als auch XBAPs behandelt werden. Für XBAPs <xref:System.Windows.Application.Exit> wird ausgelöst, wenn Sie in den folgenden Situationen:  
   
--   Eine XBAP ist weg navigiert.  
+- Eine XBAP ist weg navigiert.  
   
--   In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], wenn die Registerkarte, die die XBAP gehostet wird geschlossen ist.  
+- In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], wenn die Registerkarte, die die XBAP gehostet wird geschlossen ist.  
   
--   Wenn der Browser geschlossen wird.  
+- Wenn der Browser geschlossen wird.  
   
 #### <a name="exit-code"></a>Exitcode  
  Anwendungen werden meistens durch das Betriebssystem als Reaktion auf eine Benutzeranforderung gestartet. Eine Anwendung kann aber auch von einer anderen Anwendung gestartet werden, um eine bestimmte Aufgabe zu übernehmen. Wenn die gestartete Anwendung heruntergefahren wird, muss die startende Anwendung möglicherweise über die Bedingung informiert werden, unter der die gestartete Anwendung heruntergefahren wurde. In diesen Fällen kann Windows Anwendungen einen Anwendungsexitcode zurückzugeben. Standardmäßig geben die WPF-Anwendungen Exitcodewert 0 zurück.  
@@ -325,11 +325,11 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
  Für die Benutzererfahrung ist es vorteilhafter, wenn eine Anwendung dieses Standardverhalten vermeidet. Dazu dienen mehrere oder alle der folgenden Aktionen:  
   
--   Anzeigen von benutzerfreundlichen Informationen  
+- Anzeigen von benutzerfreundlichen Informationen  
   
--   Versuchen, eine Anwendung weiterhin auszuführen  
+- Versuchen, eine Anwendung weiterhin auszuführen  
   
--   Aufzeichnen von detaillierten, entwicklerfreundlichen-Ausnahmeinformationen in die Windows-Ereignisprotokoll.  
+- Aufzeichnen von detaillierten, entwicklerfreundlichen-Ausnahmeinformationen in die Windows-Ereignisprotokoll.  
   
  Implementierung dieser Unterstützung hängt von der nicht behandelte Ausnahmen zu erkennen, d. h. die <xref:System.Windows.Application.DispatcherUnhandledException> -Ereignis wird für ausgelöst.  
   

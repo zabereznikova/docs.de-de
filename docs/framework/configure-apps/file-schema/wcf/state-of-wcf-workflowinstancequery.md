@@ -3,11 +3,11 @@ title: <state> of WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757962"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<state> of WCF, \<workflowInstanceQuery>
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
@@ -80,7 +80,7 @@ In der folgenden Tabelle werden die möglichen Statuswerte beschrieben:
 |Resumed|Die Workflowinstanz wurde wiederaufgenommen.|  
 |Started|Die Workflowinstanz wurde gestartet.|  
 |UnhandledException|In der Workflowinstanz ist eine nicht behandelte Ausnahme aufgetreten.|  
-|Unloaded|Die Workflowinstanz wurde entladen.|  
+|Nicht Geladen|Die Workflowinstanz wurde entladen.|  
 |Canceled|Die Workflowinstanz wurde abgebrochen.|  
 |Angehalten|Die Workflowinstanz wurde unterbrochen.|  
 |Terminated|Die Workflowinstanz wurde beendet.|  

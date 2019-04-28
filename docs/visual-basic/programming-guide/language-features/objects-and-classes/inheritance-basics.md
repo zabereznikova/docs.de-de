@@ -21,40 +21,40 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
 ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758469"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Grundlagen der Vererbung (Visual Basic)
 Die `Inherits` -Anweisung verwendet, um eine neue Klasse namens deklariert eine *abgeleitete Klasse*basierend auf einer vorhandenen Klasse, die als bezeichnet ein *Basisklasse*. Abgeleitete Klassen erben, und erweitern können, die Eigenschaften, Methoden, Ereignissen, Felder und Konstanten, die in der Basisklasse definiert. Der folgende Abschnitt beschreibt einige der Regeln für die Vererbung, und die Modifizierer, die Sie verwenden können, so ändern Sie die Möglichkeit Klassen erben oder geerbt werden:  
   
--   Standardmäßig sind alle Klassen geerbt, es sei denn, mit der `NotInheritable` Schlüsselwort. Klassen können erben, von anderen Klassen in Ihrem Projekt oder von Klassen in anderen Assemblys, die auf Ihr Projekt verweist.  
+- Standardmäßig sind alle Klassen geerbt, es sei denn, mit der `NotInheritable` Schlüsselwort. Klassen können erben, von anderen Klassen in Ihrem Projekt oder von Klassen in anderen Assemblys, die auf Ihr Projekt verweist.  
   
--   Im Gegensatz zu Sprachen, die mehrere Vererbungen zu ermöglichen, ermöglicht Visual Basic nur die einfache Vererbung in Klassen; abgeleitete Klassen können, also nur eine Basisklasse haben. Obwohl mehrfache Vererbung in Klassen nicht zulässig ist, können Klassen mehrere Schnittstellen implementieren, die effektiv die gleichen enden erreichen können.  
+- Im Gegensatz zu Sprachen, die mehrere Vererbungen zu ermöglichen, ermöglicht Visual Basic nur die einfache Vererbung in Klassen; abgeleitete Klassen können, also nur eine Basisklasse haben. Obwohl mehrfache Vererbung in Klassen nicht zulässig ist, können Klassen mehrere Schnittstellen implementieren, die effektiv die gleichen enden erreichen können.  
   
--   Um zu verhindern, eingeschränkte Elemente in einer Basisklasse verfügbar zu machen, muss der Zugriffstyp in einer abgeleiteten Klasse restriktiver ist als die Basisklasse oder gleich sein. Z. B. eine `Public` Klasse kann nicht geerbt werden eine `Friend` oder `Private` -Klasse, und ein `Friend` Klasse kann nicht geerbt werden eine `Private` Klasse.  
+- Um zu verhindern, eingeschränkte Elemente in einer Basisklasse verfügbar zu machen, muss der Zugriffstyp in einer abgeleiteten Klasse restriktiver ist als die Basisklasse oder gleich sein. Z. B. eine `Public` Klasse kann nicht geerbt werden eine `Friend` oder `Private` -Klasse, und ein `Friend` Klasse kann nicht geerbt werden eine `Private` Klasse.  
   
 ## <a name="inheritance-modifiers"></a>Von Vererbungsmodifizierern  
  Visual Basic führt die folgenden Anweisungen aus auf Klassenebene und -Modifizierern zur Unterstützung von Vererbung:  
   
--   `Inherits` Anweisung – gibt die Basisklasse an.  
+- `Inherits` Anweisung – gibt die Basisklasse an.  
   
--   `NotInheritable` Modifizierer, verhindert, dass Programmierer die Klasse als Basisklasse verwenden.  
+- `NotInheritable` Modifizierer, verhindert, dass Programmierer die Klasse als Basisklasse verwenden.  
   
--   `MustInherit` Modifizierer – gibt an, dass die Klasse für die Verwendung nur als Basisklasse verwendet werden soll. Instanzen von `MustInherit` Klassen können nicht direkt erstellt werden; sie können nur erstellt werden als base-Klasseninstanzen einer abgeleiteten Klasse. (Andere Programmiersprachen wie C++ und C#, verwenden den Begriff *abstrakte Klasse* eine solche Klasse beschrieben.)  
+- `MustInherit` Modifizierer – gibt an, dass die Klasse für die Verwendung nur als Basisklasse verwendet werden soll. Instanzen von `MustInherit` Klassen können nicht direkt erstellt werden; sie können nur erstellt werden als base-Klasseninstanzen einer abgeleiteten Klasse. (Andere Programmiersprachen wie C++ und C#, verwenden den Begriff *abstrakte Klasse* eine solche Klasse beschrieben.)  
   
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>Überschreiben von Eigenschaften und Methoden in abgeleiteten Klassen  
  Standardmäßig erbt eine abgeleitete Klasse Eigenschaften und Methoden der Basisklasse an. Wenn eine geerbte Eigenschaft oder Methode verfügt, in der abgeleiteten Klasse anders als gewohnt Verhalten möglich *überschreiben*. Das heißt, können Sie eine neue Implementierung der Methode in der abgeleiteten Klasse definieren. Mit folgenden Modifizierern steuern Sie das Überschreiben von Eigenschaften und Methoden:  
   
--   `Overridable` – Eine Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben werden können.  
+- `Overridable` – Eine Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben werden können.  
   
--   `Overrides` – Überschreibt eine `Overridable` Eigenschaft oder Methode, die in der Basisklasse definiert.  
+- `Overrides` – Überschreibt eine `Overridable` Eigenschaft oder Methode, die in der Basisklasse definiert.  
   
--   `NotOverridable` – Verhindert, dass eine Eigenschaft oder Methode in einer erbenden Klasse überschrieben wird. In der Standardeinstellung `Public` Methoden sind `NotOverridable`.  
+- `NotOverridable` – Verhindert, dass eine Eigenschaft oder Methode in einer erbenden Klasse überschrieben wird. In der Standardeinstellung `Public` Methoden sind `NotOverridable`.  
   
--   `MustOverride` – Erfordert, dass es sich bei eine abgeleitete Klasse außer Kraft setzen der Eigenschaft oder Methode. Wenn die `MustOverride` -Schlüsselwort wird verwendet, die Definition der Methode besteht aus nur die `Sub`, `Function`, oder `Property` Anweisung. Keine weiteren Anweisungen zulässig ist, und insbesondere besteht keine `End Sub` oder `End Function` Anweisung. `MustOverride` Methoden müssen deklariert werden, `MustInherit` Klassen.  
+- `MustOverride` – Erfordert, dass es sich bei eine abgeleitete Klasse außer Kraft setzen der Eigenschaft oder Methode. Wenn die `MustOverride` -Schlüsselwort wird verwendet, die Definition der Methode besteht aus nur die `Sub`, `Function`, oder `Property` Anweisung. Keine weiteren Anweisungen zulässig ist, und insbesondere besteht keine `End Sub` oder `End Function` Anweisung. `MustOverride` Methoden müssen deklariert werden, `MustInherit` Klassen.  
   
  Nehmen wir an, dass Sie Klassen zum Behandeln von Gehaltsabrechnungen definieren möchten. Sie können einen generischen definieren `Payroll` Klasse enthält eine `RunPayroll` -Methode, die Gehaltsabrechnungen für eine typische Woche berechnet. Sie können dann `Payroll` als Basisklasse für ein spezialisierter `BonusPayroll` -Klasse, die bei der Verteilung von Mitarbeiterboni verwendet werden kann.  
   
@@ -73,38 +73,38 @@ Die `Inherits` -Anweisung verwendet, um eine neue Klasse namens deklariert eine 
   
  Die folgende Liste beschreibt die Einschränkungen zur Verwendung von `MyBase`:  
   
--   `MyBase` bezieht sich auf den direkten Basisklassen und dessen geerbte Member. Es kann nicht verwendet werden für den Zugriff auf `Private` Member in der Klasse.  
+- `MyBase` bezieht sich auf den direkten Basisklassen und dessen geerbte Member. Es kann nicht verwendet werden für den Zugriff auf `Private` Member in der Klasse.  
   
--   `MyBase` ist ein Schlüsselwort, kein wirkliches Objekt. `MyBase` einer Variablen zugewiesen, in der Prozedur zu übergeben oder im verwendet werden kann keinem `Is` Vergleich.  
+- `MyBase` ist ein Schlüsselwort, kein wirkliches Objekt. `MyBase` einer Variablen zugewiesen, in der Prozedur zu übergeben oder im verwendet werden kann keinem `Is` Vergleich.  
   
--   Die Methode, die `MyBase` ist qualifiziert, muss nicht in direkten Basisklasse; definiert werden sie möglicherweise stattdessen in einer indirekt geerbte Basisklasse definiert. In der Reihenfolge für einen Verweis von qualifizierten `MyBase` um ordnungsgemäß zu kompilieren, muss die Basisklasse enthalten einer Methode, die mit dem Namen und Typen der Parameter, die im Aufruf angezeigt werden.  
+- Die Methode, die `MyBase` ist qualifiziert, muss nicht in direkten Basisklasse; definiert werden sie möglicherweise stattdessen in einer indirekt geerbte Basisklasse definiert. In der Reihenfolge für einen Verweis von qualifizierten `MyBase` um ordnungsgemäß zu kompilieren, muss die Basisklasse enthalten einer Methode, die mit dem Namen und Typen der Parameter, die im Aufruf angezeigt werden.  
   
--   Sie können keine `MyBase` Aufrufen `MustOverride` -Klasse, Methoden basieren.  
+- Sie können keine `MyBase` Aufrufen `MustOverride` -Klasse, Methoden basieren.  
   
--   `MyBase` kann nicht verwendet werden, um sich zu qualifizieren. Aus diesem Grund ist der folgende Code ungültig:  
+- `MyBase` kann nicht verwendet werden, um sich zu qualifizieren. Aus diesem Grund ist der folgende Code ungültig:  
   
      `MyBase.MyBase.BtnOK_Click()`  
   
--   `MyBase` kann nicht in Modulen verwendet werden.  
+- `MyBase` kann nicht in Modulen verwendet werden.  
   
--   `MyBase` kann nicht verwendet werden, um der Member der Basisklasse zuzugreifen, die als markiert sind `Friend` ist die Basisklasse in einer anderen Assembly.  
+- `MyBase` kann nicht verwendet werden, um der Member der Basisklasse zuzugreifen, die als markiert sind `Friend` ist die Basisklasse in einer anderen Assembly.  
   
  Weitere Informationen und ein weiteres Beispiel finden Sie [Vorgehensweise: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
 ## <a name="the-myclass-keyword"></a>MyClass-Schlüsselwort  
  Die `MyClass` -Schlüsselwort verhält sich wie eine Objektvariable, die auf die aktuelle Instanz einer Klasse, wie Sie ursprünglich implementiert verweist. `MyClass` ähnelt `Me`, aber alle Methoden und Eigenschaften, die in Aufrufen `MyClass` wird behandelt, als wäre die Methode oder Eigenschaft [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). Aus diesem Grund wird die Methode oder Eigenschaft nicht betroffen von in einer abgeleiteten Klasse überschreiben.  
   
--   `MyClass` ist ein Schlüsselwort, kein wirkliches Objekt. `MyClass` einer Variablen zugewiesen, in der Prozedur zu übergeben oder im verwendet werden kann keinem `Is` Vergleich.  
+- `MyClass` ist ein Schlüsselwort, kein wirkliches Objekt. `MyClass` einer Variablen zugewiesen, in der Prozedur zu übergeben oder im verwendet werden kann keinem `Is` Vergleich.  
   
--   `MyClass` bezieht sich auf die enthaltende Klasse und deren geerbte Member.  
+- `MyClass` bezieht sich auf die enthaltende Klasse und deren geerbte Member.  
   
--   `MyClass` kann verwendet werden, als Qualifizierer für `Shared` Member.  
+- `MyClass` kann verwendet werden, als Qualifizierer für `Shared` Member.  
   
--   `MyClass` kann nicht verwendet werden, in einem `Shared` -Methode, aber innerhalb einer Instanzmethode verwendet werden können, um Zugriff auf einen freigegebenen Member einer Klasse.  
+- `MyClass` kann nicht verwendet werden, in einem `Shared` -Methode, aber innerhalb einer Instanzmethode verwendet werden können, um Zugriff auf einen freigegebenen Member einer Klasse.  
   
--   `MyClass` kann nicht in den Standardmodulen verwendet werden.  
+- `MyClass` kann nicht in den Standardmodulen verwendet werden.  
   
--   `MyClass` kann verwendet werden, um eine Methode, die in einer Basisklasse definiert ist, und ohne Implementierung der Methode, die in dieser Klasse bereitgestellten, qualifiziert. Ein solchen Verweis verfügt über die gleiche Bedeutung wie `MyBase.` *Methode*.  
+- `MyClass` kann verwendet werden, um eine Methode, die in einer Basisklasse definiert ist, und ohne Implementierung der Methode, die in dieser Klasse bereitgestellten, qualifiziert. Ein solchen Verweis verfügt über die gleiche Bedeutung wie `MyBase.` *Methode*.  
   
  Im folgenden Beispiel wird `Me` und `MyClass`.  
   

@@ -3,11 +3,11 @@ title: Unterschiede zwischen Entity SQL und Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774750"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Unterschiede zwischen Entity SQL und Transact-SQL
 Dieses Thema beschreibt die Unterschiede zwischen [!INCLUDE[esql](../../../../../../includes/esql-md.md)] und [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ Dieses Thema beschreibt die Unterschiede zwischen [!INCLUDE[esql](../../../../..
 ## <a name="support-for-collections"></a>Unterstützung von Auflistungen  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] behandelt Auflistungen als Entitäten erster Klasse. Zum Beispiel:  
   
--   In einer `from`-Klausel sind Auflistungsausdrücke gültig.  
+- In einer `from`-Klausel sind Auflistungsausdrücke gültig.  
   
--   `in` und `exists`-Unterabfragen wurden so verallgemeinert, dass sämtliche Auflistungen zulässig sind.  
+- `in` und `exists`-Unterabfragen wurden so verallgemeinert, dass sämtliche Auflistungen zulässig sind.  
   
      Eine Unterabfrage ist eine Art von Auflistung. `e1 in e2` und `exists(e)` sind die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Konstrukte zum Ausführen dieser Operationen.  
   
--   Mengenoperationen, z. B. `union`, `intersect` und `except`, verarbeiten nun Auflistungen.  
+- Mengenoperationen, z. B. `union`, `intersect` und `except`, verarbeiten nun Auflistungen.  
   
--   Joins verarbeiten Auflistungen.  
+- Joins verarbeiten Auflistungen.  
   
 ## <a name="support-for-expressions"></a>Unterstützung von Ausdrücken  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] verfügt über Unterabfragen (Tabellen) und Ausdrücke (Zeilen und Spalten).  

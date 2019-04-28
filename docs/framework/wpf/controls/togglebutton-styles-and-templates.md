@@ -1,5 +1,5 @@
 ---
-title: ToggleButton-Stile und-Vorlagen
+title: ToggleButton-Stile und -Vorlagen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], ToggleButton
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
 ms.openlocfilehash: 46fd7d07c3904ee752ae3f467f65af4b0c031c84
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790753"
 ---
-# <a name="togglebutton-styles-and-templates"></a>ToggleButton-Stile und-Vorlagen
+# <a name="togglebutton-styles-and-templates"></a>ToggleButton-Stile und -Vorlagen
 
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.Primitives.ToggleButton> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 

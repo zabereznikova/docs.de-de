@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757000"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Variablendeklaration in Visual Basic
 Sie deklarieren eine Variable, die den Namen und Eigenschaften angeben. Die deklarationsanweisung für Variablen ist der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md). Bestimmen sein Speicherort und den Inhalt der Merkmale der Variablen.  
@@ -42,15 +42,15 @@ Sie deklarieren eine Variable, die den Namen und Eigenschaften angeben. Die dekl
 ## <a name="declaring-data-type"></a>Deklarieren von-Datentyp  
  Die [als](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel in der deklarationsanweisung können Sie den Datentyp oder der Objekttyp der deklarieren Sie Variablen zu definieren. Sie können einen der folgenden Typen für eine Variable angeben:  
   
--   Geben Sie ein elementarer Datentyp, z. B. `Boolean`, `Long`, oder `Decimal`  
+- Geben Sie ein elementarer Datentyp, z. B. `Boolean`, `Long`, oder `Decimal`  
   
--   Einen zusammengesetzten Datentyp, z. B. ein Array oder eine Struktur  
+- Einen zusammengesetzten Datentyp, z. B. ein Array oder eine Struktur  
   
--   Ein Objekttyp oder die Klasse, die in Ihrer Anwendung oder in einer anderen Anwendung definiert wird  
+- Ein Objekttyp oder die Klasse, die in Ihrer Anwendung oder in einer anderen Anwendung definiert wird  
   
--   Ein [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Klasse, z. B. <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.TextBox>  
+- Ein [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Klasse, z. B. <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.TextBox>  
   
--   Geben Sie eine Schnittstelle, z. B. <xref:System.IComparable> oder <xref:System.IDisposable>  
+- Geben Sie eine Schnittstelle, z. B. <xref:System.IComparable> oder <xref:System.IDisposable>  
   
  Sie können mehrere Variablen in einer Anweisung deklarieren, ohne den Datentyp wiederholen zu müssen. In den folgenden Anweisungen, die Variablen `i`, `j`, und `k` als Typ deklariert sind `Integer`, `l` und `m` als `Long`, und `x` und `y` als `Single`:  
   

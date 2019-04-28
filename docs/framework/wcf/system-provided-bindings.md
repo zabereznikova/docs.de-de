@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
 ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791507"
 ---
 # <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen
 
@@ -27,7 +27,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
  Eine sichere und vollständig kompatible Bindung, die das WS-Federationprotokoll unterstützt, ermöglicht es einem Verbund angehörenden Organisationen, Benutzer effizient zu authentifizieren und zu autorisieren.
 
 > [!IMPORTANT]
-> Wählen Sie immer eine Bindung aus, die Sicherheitsfunktionen einschließt. Standardmäßig weisen alle Bindungen mit Ausnahme des [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)-Elements aktivierte Sicherheitsfunktionen auf. Wenn Sie keine sichere Bindung auswählen oder Sicherheitsfunktionen deaktivieren, müssen Sie die Daten auf eine andere Weise schützen, z.&#160;B. durch ein geschütztes Rechenzentrum oder ein isoliertes Netzwerk.
+> Wählen Sie immer eine Bindung aus, die Sicherheitsfunktionen einschließt. Standardmäßig weisen alle Bindungen mit Ausnahme des [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)-Elements aktivierte Sicherheitsfunktionen auf. Wenn Sie keine sichere Bindung auswählen oder Sicherheitsfunktionen deaktivieren, müssen Sie die Daten auf eine andere Weise schützen, z.&amp;#160;B. durch ein geschütztes Rechenzentrum oder ein isoliertes Netzwerk.
 
 > [!IMPORTANT]
 > Verwenden Sie nur dann Duplexverträge mit Bindungen, die keine Sicherheitsfunktionen unterstützen oder bei denen die Sicherheitsfunktionen deaktiviert sind, wenn Sie die Daten auf andere Weise schützen.
@@ -61,8 +61,8 @@ Die folgenden Bindungen sind im Lieferumfang von WCF enthalten.
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|n/v|(Text), MTOM|Nein|
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Nachricht), Keine|(Zuverlässige Sitzung), Sicherheitssitzung|(Keine), Ja|Ja|(Text), MTOM|Nein|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Nachricht), Gemischt, Keine|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Nein|(Text), MTOM|Nein|
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Keine), Transport, Nachricht, TransportWithMessageCredential, TransportCredentialOnly|Siehe den Hinweis unten.|Keine|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Siehe den Hinweis unten.|Keine|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja<br />(gepuffert)|
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Keine), Transport, Nachricht, TransportWithMessageCredential, TransportCredentialOnly|Siehe den Hinweis unten.|Keiner|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Siehe den Hinweis unten.|Keiner|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), Nachricht, Keine, Gemischt|(Transport), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Ja|Binär|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), Keine|Keine, (Transport)|(Keine), Ja|Ja|Binär|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Nachricht, (Transport), Keine|Keine, (Transport)|Keine, (Ja)|Nein|Binär|Nein|

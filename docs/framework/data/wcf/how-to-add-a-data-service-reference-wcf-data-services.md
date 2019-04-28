@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Hinzufügen eines Datendienstverweises (WCF Data Services)'
+title: 'Vorgehensweise: Hinzufügen eines Datendienstverweises (WCF Data Services)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765530"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Gewusst wie: Hinzufügen ein Datendienstverweises (WCF Data Services)
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Vorgehensweise: Hinzufügen eines Datendienstverweises (WCF Data Services)
 
 Sie können die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio zum Hinzufügen eines Verweises auf WCF Data Services. Dies erleichtert Ihnen den Zugriff auf einen Datendienst in einer Clientanwendung, den Sie in Visual Studio entwickeln. Wenn Sie diese Prozedur ausführen, werden Datenklassen auf Grundlage von aus dem Datendienst abgerufenen Metadaten generiert. Weitere Informationen finden Sie unter [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).
 

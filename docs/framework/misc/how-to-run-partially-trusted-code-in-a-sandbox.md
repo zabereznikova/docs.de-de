@@ -11,11 +11,11 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752970"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Zusätzliche Informationen:  
   
-    -   Dies ist die einzige Überladung der <xref:System.AppDomain.CreateDomain%2A>-Methode, die einen <xref:System.Security.PermissionSet> als Parameter akzeptiert und daher die einzige Überladung, mit der Sie eine Anwendung in einer teilweise vertrauenswürdigen Umgebung laden können.  
+    - Dies ist die einzige Überladung der <xref:System.AppDomain.CreateDomain%2A>-Methode, die einen <xref:System.Security.PermissionSet> als Parameter akzeptiert und daher die einzige Überladung, mit der Sie eine Anwendung in einer teilweise vertrauenswürdigen Umgebung laden können.  
   
-    -   Der `evidence`-Parameter wird nicht verwendet, um einen Berechtigungssatz zu berechnen; er wird für die Identifikation durch andere Features von .NET Framework verwendet.  
+    - Der `evidence`-Parameter wird nicht verwendet, um einen Berechtigungssatz zu berechnen; er wird für die Identifikation durch andere Features von .NET Framework verwendet.  
   
-    -   Die Festlegung der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft des `info`-Parameters ist für diese Überladung obligatorisch.  
+    - Die Festlegung der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft des `info`-Parameters ist für diese Überladung obligatorisch.  
   
-    -   Der `fullTrustAssemblies`-Parameter weist das Schlüsselwort `params` auf, was bedeutet, dass es nicht notwendig ist, ein <xref:System.Security.Policy.StrongName>-Array zu erstellen. Die Übergabe von keinem, einem oder mehr starken Namen als Parameter ist zulässig.  
+    - Der `fullTrustAssemblies`-Parameter weist das Schlüsselwort `params` auf, was bedeutet, dass es nicht notwendig ist, ein <xref:System.Security.Policy.StrongName>-Array zu erstellen. Die Übergabe von keinem, einem oder mehr starken Namen als Parameter ist zulässig.  
   
-    -   Der Code zum Erstellen der Anwendungdomäne ist folgender:  
+    - Der Code zum Erstellen der Anwendungdomäne ist folgender:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Laden Sie den Code in die <xref:System.AppDomain> der von Ihnen erstellten Sandkastenumgebung. Dazu gibt es zwei Möglichkeiten:  
   
-    -   Rufen Sie die <xref:System.AppDomain.ExecuteAssembly%2A>-Methode für die Assembly auf.  
+    - Rufen Sie die <xref:System.AppDomain.ExecuteAssembly%2A>-Methode für die Assembly auf.  
   
-    -   Verwenden Sie die <xref:System.Activator.CreateInstanceFrom%2A>-Methode, um in der neuen <xref:System.AppDomain> eine Instanz einer von <xref:System.MarshalByRefObject> abgeleiteten Klasse zu erstellen.  
+    - Verwenden Sie die <xref:System.Activator.CreateInstanceFrom%2A>-Methode, um in der neuen <xref:System.AppDomain> eine Instanz einer von <xref:System.MarshalByRefObject> abgeleiteten Klasse zu erstellen.  
   
      Die zweite Methode ist zu bevorzugen, da es hiermit einfacher ist, Parameter an die neue <xref:System.AppDomain>-Instanz zu übergeben. Die <xref:System.Activator.CreateInstanceFrom%2A>-Methode bieten zwei wichtige Funktionen:  
   
-    -   Sie können eine Codebasis verwenden, die auf einen Speicherort verweist, der nicht Ihre Assembly enthält.  
+    - Sie können eine Codebasis verwenden, die auf einen Speicherort verweist, der nicht Ihre Assembly enthält.  
   
-    -   Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht immer, wenn Ihre Assembly nicht über Transparenzattribute verfügt und als vollständig vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, mit dieser Funktion nur vertrauenswürdigen Code zu erstellen, und wir empfehlen, in der neuen Anwendungsdomäne nur Instanzen von vollständig vertrauenswürdigen Klassen zu erstellen.  
+    - Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht immer, wenn Ihre Assembly nicht über Transparenzattribute verfügt und als vollständig vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, mit dieser Funktion nur vertrauenswürdigen Code zu erstellen, und wir empfehlen, in der neuen Anwendungsdomäne nur Instanzen von vollständig vertrauenswürdigen Klassen zu erstellen.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

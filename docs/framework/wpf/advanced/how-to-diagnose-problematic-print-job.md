@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776258"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Vorgehensweise: Diagnose von Problemen mit Druckaufträgen
 Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckaufträge, die gar nicht oder nur langsam gedruckt werden. Den umfassenden Satz an Eigenschaften eines Druckauftrags verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework ermöglichen eine schnelle remote-Diagnose von Druckaufträgen ausführen.  
@@ -25,13 +25,13 @@ Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckauftr�
   
 1. Identifizieren Sie den Druckauftrag, über den sich der Benutzer beschwert. Benutzern ist dies häufig nicht genau möglich. Sie wissen möglicherweise den Namen des Druckerserver oder Druckers nicht. Sie können den Speicherort des Druckers in anderer Terminologie verwendet als bei der Einstellung beschreiben die <xref:System.Printing.PrintQueue.Location%2A> Eigenschaft. Daher ist es eine gute Idee, eine Liste der zuletzt übermittelten Druckaufträge des Benutzers zu erstellen. Wenn es mehr als einen Druckauftrag gibt, kann die Kommunikation zwischen dem Benutzer und dem Administrator des Drucksystems verwendet werden, um den Auftrag zu ermitteln, bei dem Probleme vorliegen. Die Teilschritte werden im Folgenden beschrieben.  
   
-    1.  Rufen Sie eine Liste aller Druckerserver ab.  
+    1. Rufen Sie eine Liste aller Druckerserver ab.  
   
-    2.  Durchlaufen Sie die Server, um ihre Druckwarteschlangen abzufragen.  
+    2. Durchlaufen Sie die Server, um ihre Druckwarteschlangen abzufragen.  
   
-    3.  Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, um die Aufträge abzufragen.  
+    3. Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, um die Aufträge abzufragen.  
   
-    4.  Durchlaufen Sie in jeder Phase der Serverschleife alle Aufträge und sammeln Sie bezeichnende Informationen über die Aufträge, die vom Benutzer übermittelt wurden, der die Beschwerde gestellt hat.  
+    4. Durchlaufen Sie in jeder Phase der Serverschleife alle Aufträge und sammeln Sie bezeichnende Informationen über die Aufträge, die vom Benutzer übermittelt wurden, der die Beschwerde gestellt hat.  
   
 2. Untersuchen Sie relevante Eigenschaften, wenn der Druckauftrag mit Problemen identifiziert wurde, um herauszufinden, wo das Problem liegen könnte. Befindet sich der Auftrag z.B. im Fehlerstatus oder ist der Drucker, der die Warteschleife wartet in den Offlinemodus gewechselt, bevor der Auftrag gedruckt werden konnte?  
   
@@ -49,9 +49,9 @@ Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckauftr�
   
  Zu diesem Zeitpunkt enthält die Anwendung eine Verzweigungsstruktur, die den beiden Möglichkeiten entspricht, den Status eines Druckauftrags zu überprüfen:  
   
--   Sie können die Flags der Lesen der <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintJobStatus>.  
+- Sie können die Flags der Lesen der <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintJobStatus>.  
   
--   Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> und <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> und <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  In diesem Beispiel werden beide Methoden veranschaulicht, damit der Benutzer zuvor hinsichtlich der zu verwendenden Methode aufgefordert und hat "Y", wenn er die Flags der verwenden die <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> Eigenschaft. Weitere Informationen zu den beiden Methoden finden Sie unten. Schließlich verwendet die Anwendung eine Methode namens **ReportQueueAndJobAvailability**, die meldet, ob der Auftrag zu dieser Tageszeit gedruckt werden kann. Diese Methode wird in [Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md) diskutiert.  
   

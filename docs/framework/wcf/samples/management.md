@@ -3,21 +3,21 @@ title: Verwaltung
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
 ms.openlocfilehash: b5bb0b72f5290548bb844ac4f00b6fbbd9891cb7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787542"
 ---
 # <a name="management"></a>Verwaltung
-Dieser Abschnitt enthält Beispiele für die Verwaltung von Windows Communication Foundation (WCF).  
+Dieser Abschnitt enthält Beispiele, die Verwaltung von Windows Communication Foundation (WCF) zu veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [WCF-Dienste und Ereignisablaufverfolgung für Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Veranschaulicht, wie die analytische Ablaufverfolgung in WCF verwenden, um Ereignisse in Event Tracing for Windows (ETW) auszugeben.  
+ Veranschaulicht, wie die analytische Ablaufverfolgung in WCF zu verwenden, um Ereignisse im Event Tracing for Windows (ETW) auszugeben.  
   
  [Analytische Ablaufverfolgung von WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
- Veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die WCF in in ETW schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die WCF in ETW in schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  [Zirkuläre Ablaufverfolgung](../../../../docs/framework/wcf/samples/circular-tracing.md)  
  Veranschaulicht die Implementierung eines zirkulären Puffer-Ablaufverfolgungslisteners.  
@@ -41,4 +41,4 @@ Dieser Abschnitt enthält Beispiele für die Verwaltung von Windows Communicatio
  Veranschaulicht die Verwendung eines benutzerdefinierten Verhaltens zum Überprüfen von Diensten auf einem Computer, um sicherzustellen, dass bestimmte Kriterien erfüllt werden.  
   
  [WMI-Anbieter](../../../../docs/framework/wcf/samples/wmi-provider.md)  
- Veranschaulicht das Sammeln von Daten von WCF-Dienste zur Laufzeit mithilfe des Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Anbieters, der in WCF integriert ist.
+ Veranschaulicht das Sammeln von Daten aus der WCF-Dienste zur Laufzeit mithilfe des Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Anbieters, die in WCF integriert ist.

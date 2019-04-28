@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758456"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Bedingte Kompilierung in Visual Basic
 In *für die bedingte Kompilierung*, selektiv bestimmte Codeblöcke in einem Programm kompiliert werden, während andere ignoriert werden.  
@@ -29,11 +29,11 @@ In *für die bedingte Kompilierung*, selektiv bestimmte Codeblöcke in einem Pro
 ## <a name="declaring-conditional-compilation-constants"></a>Deklarieren von Konstanten für bedingte Kompilierung  
  Sie können die Konstanten für bedingte Kompilierung in eine von drei Arten festlegen:  
   
--   In der **Projekt-Designer**  
+- In der **Projekt-Designer**  
   
--   In der Befehlszeile, wenn Sie den Befehlszeilencompiler verwenden  
+- In der Befehlszeile, wenn Sie den Befehlszeilencompiler verwenden  
   
--   In Ihrem code  
+- In Ihrem code  
   
  Bedingte Kompilierungskonstanten haben einen speziellen Bereich und können nicht aus dem Standardcode zugegriffen werden. Der Bereich einer Konstante für bedingte Kompilierung ist abhängig von der sie eingerichtet wurde. Die folgende Tabelle enthält den Bereich der Konstanten, die mit jeder der drei oben genannten Methoden deklariert werden.  
   

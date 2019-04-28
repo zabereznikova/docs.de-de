@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748264"
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description Language (WSDL)-Dienst generiert. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Diese fungiert als ein Schutz gegen *Phishing* durch die verhindert, dass eines Clients an einem von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  
@@ -26,9 +26,9 @@ Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description
   
  Der Vorgang der Identitätsverarbeitung umfasst die folgenden Phasen:  
   
--   Zur Entwurfszeit bestimmt der Cliententwickler die Identität des Diensts aus den (durch WSDL verfügbar gemachten) Metadaten der Endpunkte.  
+- Zur Entwurfszeit bestimmt der Cliententwickler die Identität des Diensts aus den (durch WSDL verfügbar gemachten) Metadaten der Endpunkte.  
   
--   Zur Laufzeit überprüft die Clientanwendung die Ansprüche der Sicherheitsanmeldeinformationen des Diensts, bevor irgendwelche Meldungen an den Dienst gesendet werden.  
+- Zur Laufzeit überprüft die Clientanwendung die Ansprüche der Sicherheitsanmeldeinformationen des Diensts, bevor irgendwelche Meldungen an den Dienst gesendet werden.  
   
  Die Identitätsverarbeitung auf dem Client entspricht der Clientauthentifizierung des Diensts. Ein sicherer Dienst führt so lange keinen Code aus, bis die Anmeldeinformationen des Clients authentifiziert wurden. Entsprechend sendet der Client so lange keine Nachrichten an den Dienst, bis die Anmeldeinformationen des Diensts auf der Grundlage dessen, was aus den Metadaten des Diensts im Voraus bekannt ist, authentifiziert wurden.  
   
@@ -78,21 +78,21 @@ Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description
   
  Ist der Kanal für die Authentifizierung mithilfe von Secure Sockets Layer (SSL) auf Nachrichten- oder auf Transportebene mit X.509-Zertifikaten für die Authentifizierung konfiguriert, sind die folgenden Identitätswerte gültig:  
   
--   DNS WCF wird sichergestellt, dass das während des SSL-Handshakes bereitgestellte Zertifikat ein DNS-Server enthält oder `CommonName` (CN)-Attribut gleich dem Wert in der DNS-Identität auf dem Client angegeben. Beachten Sie, dass diese Prüfungen zusätzlich zur Bestimmung der Gültigkeit des Serverzertifikats ausgeführt werden. Standardmäßig überprüft WCF an, dass das Serverzertifikat von einer vertrauenswürdigen Stammzertifizierungsstelle ausgestellt ist.  
+- DNS WCF wird sichergestellt, dass das während des SSL-Handshakes bereitgestellte Zertifikat ein DNS-Server enthält oder `CommonName` (CN)-Attribut gleich dem Wert in der DNS-Identität auf dem Client angegeben. Beachten Sie, dass diese Prüfungen zusätzlich zur Bestimmung der Gültigkeit des Serverzertifikats ausgeführt werden. Standardmäßig überprüft WCF an, dass das Serverzertifikat von einer vertrauenswürdigen Stammzertifizierungsstelle ausgestellt ist.  
   
--   Zertifikat. Während des SSL-Handshakes wird Sie WCF sichergestellt, dass der Remoteendpunkt den Zertifikat-Wert, der in der Identität angegebenen bereitstellt.  
+- Zertifikat. Während des SSL-Handshakes wird Sie WCF sichergestellt, dass der Remoteendpunkt den Zertifikat-Wert, der in der Identität angegebenen bereitstellt.  
   
--   Zertifikatsverweis. Ebenso wie Zertifikat.  
+- Zertifikatsverweis. Ebenso wie Zertifikat.  
   
--   RSA. Während der SSL-Handshake wird Sie WCF sichergestellt, dass der Remoteendpunkt, den genauen in der Identität angegebenen RSA-Schlüssel bereitstellt.  
+- RSA. Während der SSL-Handshake wird Sie WCF sichergestellt, dass der Remoteendpunkt, den genauen in der Identität angegebenen RSA-Schlüssel bereitstellt.  
   
  Authentifiziert der Dienst mithilfe von SSL auf Nachrichten- oder auf Transportebene mit Windows-Anmeldeinformationen und handelt er die Anmeldeinformationen aus, sind die folgenden Identitätswerte gültig:  
   
--   DNS Die Aushandlung übergibt den SPN des Diensts, damit der DNS-Name überprüft werden kann. Der SPN hat die Form `host/<dns name>`.  
+- DNS Die Aushandlung übergibt den SPN des Diensts, damit der DNS-Name überprüft werden kann. Der SPN hat die Form `host/<dns name>`.  
   
--   SPN. Ein expliziter Dienst-SPN wird zurückgegeben, z.&amp;#160;B. `host/myservice`.  
+- SPN. Ein expliziter Dienst-SPN wird zurückgegeben, z.&amp;#160;B. `host/myservice`.  
   
--   UPN. Der UPN des Dienstkontos. Der UPN wird in der Form `username` @ `domain`. Wenn der Dienst z.&amp;#160;B. mit einem Benutzerkonto ausgeführt wird, kann dies `username@contoso.com` sein.  
+- UPN. Der UPN des Dienstkontos. Der UPN wird in der Form `username` @ `domain`. Wenn der Dienst z.&amp;#160;B. mit einem Benutzerkonto ausgeführt wird, kann dies `username@contoso.com` sein.  
   
  Die programmgesteuerte Angabe der Identität (mithilfe der <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft) ist optional. Wird keine Identität angegeben, und der Clientanmeldeinformationstyp ist Windows, wird als Standard ein SPN verwendet, dessen Wert auf den Hostnamen der Dienstendpunktadresse festgelegt ist, wobei dem Hostnamen das Zeichenfolgenliteral "host/" vorangestellt wird. Wenn keine Identität angegeben wird, und der Clientanmeldeinformationstyp ist ein Zertifikat, ist `Certificate` der Standard. Dies bezieht sich auf die Sicherheit sowohl auf der Nachrichtenebene als auch auf der Transportebene.  
   

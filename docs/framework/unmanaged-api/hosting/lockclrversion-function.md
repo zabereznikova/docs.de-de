@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765270"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion-Funktion
 Ermöglicht dem Host, um zu bestimmen, welche Version der common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. Die Funktion anhand des `hostCallback` macht anschließend die folgende Sequenz von aufrufen:  
   
-    -   Die Funktion, die anhand der `pBeginHostSetup` Parameter.  
+    - Die Funktion, die anhand der `pBeginHostSetup` Parameter.  
   
-    -   `CorBindToRuntimeEx` (oder eine andere Funktion der Common Language Runtime-Initialisierung).  
+    - `CorBindToRuntimeEx` (oder eine andere Funktion der Common Language Runtime-Initialisierung).  
   
-    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   Die Funktion, die anhand der `pEndHostSetup` Parameter.  
+    - Die Funktion, die anhand der `pEndHostSetup` Parameter.  
   
  Alle Aufrufe von `pBeginHostSetup` zu `pEndHostSetup` muss auf einem einzelnen Thread oder eine Fiber mit demselben logischen Stapel auftreten. Dieser Thread kann aus dem Thread, von denen unterscheiden `hostCallback` aufgerufen wird.  
   

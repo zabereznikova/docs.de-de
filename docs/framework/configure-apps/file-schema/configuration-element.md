@@ -9,11 +9,11 @@ helpviewer_keywords:
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 ms.openlocfilehash: 9a7b25c74763c020c0e19c3f6099db9001acf773
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705414"
 ---
 # <a name="configuration-element"></a>\<Configuration >-Element
 
@@ -31,11 +31,11 @@ Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-An
 
 ## <a name="attributes"></a>Attribute
 
-Keine
+Keiner
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-Keine
+Keiner
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 

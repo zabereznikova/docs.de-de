@@ -3,27 +3,27 @@ title: Modelldefinierte Funktion
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772249"
 ---
 # <a name="model-defined-function"></a>Modelldefinierte Funktion
 Ein *modelldefinierte Funktion* ist eine Funktion, die in einem konzeptionellen Modell definiert ist. Der Text einer modelldefinierten Funktion, ausgedrückt in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), wodurch für die Funktion unabhängig von ausgedrückt werden Regeln oder Sprachen, die in der Datenquelle unterstützt.  
   
  Eine Definition für eine modelldefinierte Funktion enthält die folgenden Informationen:  
   
--   Einen Funktionsnamen. (erforderlich)  
+- Einen Funktionsnamen. (erforderlich)  
   
--   Den Typ des Rückgabewerts. (Optional)  
+- Den Typ des Rückgabewerts. (Optional)  
   
     > [!NOTE]
     >  Wenn kein Rückgabetyp angegeben wird, ist der Rückgabewert leer.  
   
--   Parameterinformationen. (Optional)  
+- Parameterinformationen. (Optional)  
   
--   Ein [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) Ausdruck, der den Textkörper der Funktion definiert.  
+- Ein [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) Ausdruck, der den Textkörper der Funktion definiert.  
   
  Beachten Sie, dass modelldefinierte Funktionen keine Ausgabeparameter unterstützen. Diese Einschränkung ist vorhanden, damit modelldefinierte Funktionen verfasst werden können.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785801"
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
 Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Animationen können Sie bei Animationen mehr als zwei Zielwerte animieren und die Interpolationsmethode einer Animation steuern.  
@@ -28,11 +28,11 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
   
  Um Animationen mit einer Keyframe-Animation auszuführen, gehen Sie folgendermaßen vor.  
   
--   Deklarieren Sie die Animation und geben Sie die <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, genauso wie bei der ein von/to/by-Animation aus.  
+- Deklarieren Sie die Animation und geben Sie die <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, genauso wie bei der ein von/to/by-Animation aus.  
   
--   Für jeden Zielwert einen Keyframe des entsprechenden Typs zu erstellen, legen Sie seinen Wert und <xref:System.Windows.Media.Animation.KeyTime>, und das Hinzufügen zur der Animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> Auflistung.  
+- Für jeden Zielwert einen Keyframe des entsprechenden Typs zu erstellen, legen Sie seinen Wert und <xref:System.Windows.Media.Animation.KeyTime>, und das Hinzufügen zur der Animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> Auflistung.  
   
--   Ordnen Sie der Animation eine Eigenschaft zu, genau so wie bei einer From/To/By-Animation. Weitere Informationen zum Anwenden einer Animation auf eine Eigenschaft mit einem Storyboard finden Sie unter [Übersicht über Storyboards](storyboards-overview.md).  
+- Ordnen Sie der Animation eine Eigenschaft zu, genau so wie bei einer From/To/By-Animation. Weitere Informationen zum Anwenden einer Animation auf eine Eigenschaft mit einem Storyboard finden Sie unter [Übersicht über Storyboards](storyboards-overview.md).  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> zum Animieren einer <xref:System.Windows.Shapes.Rectangle> Element für vier verschiedene Speicherorte erzeugen.  
   
@@ -85,33 +85,33 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
   
  Die Hauptaufgabe eines Keyframes wird an eine <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> und <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Jeder Keyframe-Typ stellt diese zwei Eigenschaften bereit.  
   
--   Die <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Eigenschaft gibt den Zielwert für diesen Keyframe an.  
+- Die <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Eigenschaft gibt den Zielwert für diesen Keyframe an.  
   
--   Die <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Eigenschaft gibt an, wann (innerhalb der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) eines Keyframes <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> erreicht ist.  
+- Die <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Eigenschaft gibt an, wann (innerhalb der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) eines Keyframes <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> erreicht ist.  
   
  Wenn eine Keyframe-Animation beginnt, durchläuft die Keyframes in der Reihenfolge definiert, die von ihren <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Eigenschaften.  
   
--   Wenn zur Zeit 0 kein Keyframe vorhanden ist, erstellt die Animation einen Übergang zwischen dem aktuellen Wert der Zieleigenschaft und dem <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> des ersten Keyframes; andernfalls die Animation die Ausgabe Wert wird der Wert des ersten Keyframes.  
+- Wenn zur Zeit 0 kein Keyframe vorhanden ist, erstellt die Animation einen Übergang zwischen dem aktuellen Wert der Zieleigenschaft und dem <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> des ersten Keyframes; andernfalls die Animation die Ausgabe Wert wird der Wert des ersten Keyframes.  
   
--   Die Animation erstellt einen Übergang zwischen den <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> von der ersten und zweiten Keyframe, die mithilfe der vom zweiten Keyframe angegebenen Interpolationsmethode. Der Übergang beginnt an der erste Keyframe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> und endet, wenn der zweite Keyframe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> erreicht ist.  
+- Die Animation erstellt einen Übergang zwischen den <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> von der ersten und zweiten Keyframe, die mithilfe der vom zweiten Keyframe angegebenen Interpolationsmethode. Der Übergang beginnt an der erste Keyframe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> und endet, wenn der zweite Keyframe <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> erreicht ist.  
   
--   Die Animation wird fortgesetzt und erstellt Übergänge zwischen jedem nachfolgenden Keyframe und dem vorangehenden Keyframe.  
+- Die Animation wird fortgesetzt und erstellt Übergänge zwischen jedem nachfolgenden Keyframe und dem vorangehenden Keyframe.  
   
--   Schließlich wechselt die Animation zum Wert des Keyframes mit der größten Schlüsselzeit ist gleich oder kleiner als der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+- Schließlich wechselt die Animation zum Wert des Keyframes mit der größten Schlüsselzeit ist gleich oder kleiner als der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
  Wenn der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> ist <xref:System.Windows.Duration.Automatic%2A> oder den zugehörigen <xref:System.Windows.Media.Animation.Timeline.Duration%2A> entspricht bis zum Zeitpunkt des letzten Keyframes, endet die Animation. Andernfalls gilt: Wenn der Animation <xref:System.Windows.Duration> ist größer als die Schlüsselzeit des letzten Keyframes, behält die Animation, die die Keyframe-Wert, bis das Ende erreicht die <xref:System.Windows.Duration>. Wie alle Animationen bestimmt eine Keyframe Animation die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft, um zu bestimmen, ob es Endwert, wenn das Ende des aktiven Zeitraums erreicht. Weitere Informationen finden Sie unter [Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md).  
   
  Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> Objekt definiert, die im vorherigen Beispiel veranschaulicht die <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> und <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Eigenschaften arbeiten.  
   
--   Der erste Keyframe legt sofort den Ausgabewert der Animation auf 0 fest.  
+- Der erste Keyframe legt sofort den Ausgabewert der Animation auf 0 fest.  
   
--   Der zweite Keyframe führt eine Animation von 0 bis 350 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 0 Sekunden), wird 2 Sekunden lang abgespielt und endet zur Zeit = 0:0:2.  
+- Der zweite Keyframe führt eine Animation von 0 bis 350 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 0 Sekunden), wird 2 Sekunden lang abgespielt und endet zur Zeit = 0:0:2.  
   
--   Der dritte Keyframe führt eine Animation von 350 bis 50 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 2 Sekunden), wird 5 Sekunden lang abgespielt und endet zur Zeit = 0:0:7.  
+- Der dritte Keyframe führt eine Animation von 350 bis 50 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 2 Sekunden), wird 5 Sekunden lang abgespielt und endet zur Zeit = 0:0:7.  
   
--   Der vierte Keyframe führt eine Animation von 50 bis 200 aus. Sie beginnt nach dem Ende des dritten Keyframes (zur Zeit = 7 Sekunden), wird 1 Sekunde lang abgespielt und endet zur Zeit = 0:0:8.  
+- Der vierte Keyframe führt eine Animation von 50 bis 200 aus. Sie beginnt nach dem Ende des dritten Keyframes (zur Zeit = 7 Sekunden), wird 1 Sekunde lang abgespielt und endet zur Zeit = 0:0:8.  
   
--   Da die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> -Eigenschaft der Animation auf 10 Sekunden festgelegt wurde, behält die Animation den Endwert zwei Sekunden vor Ende zur Zeit = 0:0:10.  
+- Da die <xref:System.Windows.Media.Animation.Timeline.Duration%2A> -Eigenschaft der Animation auf 10 Sekunden festgelegt wurde, behält die Animation den Endwert zwei Sekunden vor Ende zur Zeit = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
 ### <a name="timespan-values"></a>TimeSpan-Werte  
  Sie können <xref:System.TimeSpan> Werte fest, um eine <xref:System.Windows.Media.Animation.KeyTime>. Der Wert muss größer als oder gleich 0 und kleiner als oder gleich der Dauer der Animation sein. Das folgende Beispiel zeigt eine Animation mit einer Dauer von 10 Sekunden und vier Keyframes, deren Schlüsselzeiten als Zeitwerte angegeben sind.  
   
--   Der erste Keyframe führt die Animation vom Basiswert bis 100 in den ersten 3 Sekunden aus und endet zur Zeit = 0:0:03.  
+- Der erste Keyframe führt die Animation vom Basiswert bis 100 in den ersten 3 Sekunden aus und endet zur Zeit = 0:0:03.  
   
--   Der zweite Keyframe führt eine Animation von 100 bis 200 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 3 Sekunden), wird 5 Sekunden lang abgespielt und endet zur Zeit = 0:0:8.  
+- Der zweite Keyframe führt eine Animation von 100 bis 200 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 3 Sekunden), wird 5 Sekunden lang abgespielt und endet zur Zeit = 0:0:8.  
   
--   Der dritte Keyframe führt eine Animation von 200 bis 500 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 8 Sekunden), wird 1 Sekunden lang abgespielt und endet zur Zeit = 0:0:9.  
+- Der dritte Keyframe führt eine Animation von 200 bis 500 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 8 Sekunden), wird 1 Sekunden lang abgespielt und endet zur Zeit = 0:0:9.  
   
--   Der vierte Keyframe führt eine Animation von 500 bis 600 aus. Sie beginnt nach dem Ende des dritten Keyframes (zur Zeit = 9 Sekunden), wird 1 Sekunde lang abgespielt und endet zur Zeit = 0:0:10.  
+- Der vierte Keyframe führt eine Animation von 500 bis 600 aus. Sie beginnt nach dem Ende des dritten Keyframes (zur Zeit = 9 Sekunden), wird 1 Sekunde lang abgespielt und endet zur Zeit = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Prozentwerte  
  Ein Prozentwert gibt an, dass das Ende des Keyframes bei einem bestimmten Prozentsatz von der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird der Prozentsatz als Zahl angegeben, gefolgt vom `%`-Symbol. Im Code verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> Methode und übergeben sie einen <xref:System.Double> , der angibt, des Prozentsatzes. Der Wert muss größer als oder gleich 0 und kleiner als oder gleich 100 Prozent sein. Das folgende Beispiel zeigt eine Animation mit einer Dauer von 10 Sekunden und vier Keyframes, deren Schlüsselzeiten als Prozentsätze angegeben sind.  
   
--   Der erste Keyframe führt die Animation vom Basiswert bis 100 in den ersten 3 Sekunden aus und endet zur Zeit = 0:0:3.  
+- Der erste Keyframe führt die Animation vom Basiswert bis 100 in den ersten 3 Sekunden aus und endet zur Zeit = 0:0:3.  
   
--   Der zweite Keyframe führt eine Animation von 100 bis 200 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 3 Sekunden), wird 5 Sekunden lang abgespielt und endet zur Zeit = 0:0:8 (0.8 * 10 = 8).  
+- Der zweite Keyframe führt eine Animation von 100 bis 200 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 3 Sekunden), wird 5 Sekunden lang abgespielt und endet zur Zeit = 0:0:8 (0.8 * 10 = 8).  
   
--   Der dritte Keyframe führt eine Animation von 200 bis 500 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 8 Sekunden), wird 1 Sekunden lang abgespielt und endet zur Zeit = 0:0:9 (0.9 * 10 = 9).  
+- Der dritte Keyframe führt eine Animation von 200 bis 500 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 8 Sekunden), wird 1 Sekunden lang abgespielt und endet zur Zeit = 0:0:9 (0.9 * 10 = 9).  
   
--   Der vierte Keyframe führt eine Animation von 500 bis 600 aus. Sie beginnt nach dem Ende des dritten Keyframes (zur Zeit = 9 Sekunden), wird 1 Sekunde lang abgespielt und endet zur Zeit = 0:0:10 (1 * 10 = 10).  
+- Der vierte Keyframe führt eine Animation von 500 bis 600 aus. Sie beginnt nach dem Ende des dritten Keyframes (zur Zeit = 9 Sekunden), wird 1 Sekunde lang abgespielt und endet zur Zeit = 0:0:10 (1 * 10 = 10).  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
  Ein <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> -Schlüsselzeit teilt die verfügbare Zeit gleichmäßig durch die Anzahl der Keyframes, um die Endzeit jedes Keyframes zu bestimmen. Das folgende Beispiel zeigt eine Animation mit einer Dauer von 10 Sekunden und vier Keyframes, deren Schlüsselzeiten, als <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
   
--   Der erste Keyframe führt die Animation vom Basiswert bis 100 in den ersten 2,5 Sekunden aus und endet zur Zeit = 0:0:2.5.  
+- Der erste Keyframe führt die Animation vom Basiswert bis 100 in den ersten 2,5 Sekunden aus und endet zur Zeit = 0:0:2.5.  
   
--   Der zweite Keyframe führt eine Animation von 100 bis 200 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 2,5 Sekunden), wird ungefähr 2,5 Sekunden lang abgespielt und endet zur Zeit = 0:0:5.  
+- Der zweite Keyframe führt eine Animation von 100 bis 200 aus. Sie beginnt nach dem Ende des ersten Keyframes (zur Zeit = 2,5 Sekunden), wird ungefähr 2,5 Sekunden lang abgespielt und endet zur Zeit = 0:0:5.  
   
--   Der dritte Keyframe führt eine Animation von 200 bis 500 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 5 Sekunden), wird 2,5 Sekunden lang abgespielt und endet zur Zeit = 0:0:7.5.  
+- Der dritte Keyframe führt eine Animation von 200 bis 500 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 5 Sekunden), wird 2,5 Sekunden lang abgespielt und endet zur Zeit = 0:0:7.5.  
   
--   Der vierte Keyframe führt eine Animation von 500 bis 600 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 7,5 Sekunden), wird 2,5 Sekunden lang abgespielt und endet zur Zeit = 0:0:1.  
+- Der vierte Keyframe führt eine Animation von 500 bis 600 aus. Sie beginnt nach dem Ende des zweiten Keyframes (zur Zeit = 7,5 Sekunden), wird 2,5 Sekunden lang abgespielt und endet zur Zeit = 0:0:1.  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
 2. Bestimmen Sie die *gesamte Interpolationszeit* der Animation, die Gesamtzeit, die die Keyframe-Animation für eine vollständige Vorwärtsiteration benötigt.  
   
-    1.  Wenn der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> nicht <xref:System.Windows.Duration.Automatic%2A> oder <xref:System.Windows.Duration.Forever%2A>, die gesamte Interpolationszeit Zeit ist der Wert der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft.  
+    1. Wenn der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> nicht <xref:System.Windows.Duration.Automatic%2A> oder <xref:System.Windows.Duration.Forever%2A>, die gesamte Interpolationszeit Zeit ist der Wert der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft.  
   
-    2.  Andernfalls ist die gesamte Interpolationszeit der größte <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> Wert zwischen den Keyframes, angegeben werden, sofern vorhanden.  
+    2. Andernfalls ist die gesamte Interpolationszeit der größte <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> Wert zwischen den Keyframes, angegeben werden, sofern vorhanden.  
   
-    3.  Andernfalls beträgt die gesamte Interpolationszeit Zeit 1 Sekunde.  
+    3. Andernfalls beträgt die gesamte Interpolationszeit Zeit 1 Sekunde.  
   
 3. Verwenden Sie den Zeitwert für die gesamte Interpolationszeit aufgelöst <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   

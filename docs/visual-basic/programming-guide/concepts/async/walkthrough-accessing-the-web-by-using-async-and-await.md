@@ -3,11 +3,11 @@ title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await 
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765920"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)
 Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher und intuitiver schreiben. Sie können asynchronen Code schreiben, der wie synchroner Code aussieht und veranlassen, dass der Compiler die komplizierten Rückruffunktionen und Fortsetzungen verarbeitet, die durch den asynchronen Code für gewöhnlich verursacht werden.  
@@ -20,29 +20,29 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
   
--   [So erstellen Sie eine WPF-Anwendung](#CreateWPFApp)  
+- [So erstellen Sie eine WPF-Anwendung](#CreateWPFApp)  
   
--   [So entwerfen Sie ein einfaches WPF-MainWindow](#MainWindow)  
+- [So entwerfen Sie ein einfaches WPF-MainWindow](#MainWindow)  
   
--   [So fügen Sie einen Verweis hinzu](#AddRef)  
+- [So fügen Sie einen Verweis hinzu](#AddRef)  
   
--   [Erforderliche Imports-Anweisungen hinzufügen](#ImportsState)  
+- [Erforderliche Imports-Anweisungen hinzufügen](#ImportsState)  
   
--   [So erstellen Sie eine synchrone Anwendung](#synchronous)  
+- [So erstellen Sie eine synchrone Anwendung](#synchronous)  
   
--   [So testen Sie die synchrone Lösung](#testSynch)  
+- [So testen Sie die synchrone Lösung](#testSynch)  
   
--   [So konvertieren Sie „GetURLContents“ in eine asynchrone Methode](#GetURLContents)  
+- [So konvertieren Sie „GetURLContents“ in eine asynchrone Methode](#GetURLContents)  
   
--   [So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode](#SumPageSizes)  
+- [So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode](#SumPageSizes)  
   
--   [So konvertieren Sie „startButton_Click“ in eine asynchrone Methode](#startButton)  
+- [So konvertieren Sie „startButton_Click“ in eine asynchrone Methode](#startButton)  
   
--   [So testen Sie die asynchrone Lösung](#testAsynch)  
+- [So testen Sie die asynchrone Lösung](#testAsynch)  
   
--   [So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode](#GetURLContentsAsync)  
+- [So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode](#GetURLContentsAsync)  
   
--   [Beispiel](#BKMK_CompleteCodeExamples)  
+- [Beispiel](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Visual Studio 2012 oder höher muss auf dem Computer installiert sein. Weitere Informationen finden Sie auf der [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkId=235233).  
@@ -72,19 +72,19 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 4. Markieren Sie das **TextBox**-Steuerelement, und legen Sie im Fenster **Eigenschaften** die folgenden Werte fest:  
   
-    -   Legen Sie die Eigenschaft **Name** auf `resultsTextBox` fest.  
+    - Legen Sie die Eigenschaft **Name** auf `resultsTextBox` fest.  
   
-    -   Legen Sie die Eigenschaft **Height** auf „250“ fest.  
+    - Legen Sie die Eigenschaft **Height** auf „250“ fest.  
   
-    -   Legen Sie die Eigenschaft **Width** auf „500“ fest.  
+    - Legen Sie die Eigenschaft **Width** auf „500“ fest.  
   
-    -   Geben Sie auf der Registerkarte **Text** eine Festbreitenschriftart wie Lucida Console oder Global Monospace an.  
+    - Geben Sie auf der Registerkarte **Text** eine Festbreitenschriftart wie Lucida Console oder Global Monospace an.  
   
 5. Markieren Sie das **Button**-Steuerelement, und legen Sie im Fenster **Eigenschaften** die folgenden Werte fest:  
   
-    -   Legen Sie die Eigenschaft **Name** auf `startButton` fest.  
+    - Legen Sie die Eigenschaft **Name** auf `startButton` fest.  
   
-    -   Ändern Sie den Wert der Eigenschaft **Content** von **Button** zu **Start**.  
+    - Ändern Sie den Wert der Eigenschaft **Content** von **Button** zu **Start**.  
   
 6. Positionieren Sie das Textfeld und die Schaltfläche so, dass beide im Fenster **MainWindow** angezeigt werden.  
   
@@ -137,13 +137,13 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 3. Der Code für die synchrone Lösung enthält die folgenden vier Methoden:  
   
-    -   `SumPageSizes`. Enthält eine Liste von Webseiten-URLs aus `SetUpURLList` und ruft dann `GetURLContents` und `DisplayResults` auf, um jede URL zu verarbeiten.  
+    - `SumPageSizes`. Enthält eine Liste von Webseiten-URLs aus `SetUpURLList` und ruft dann `GetURLContents` und `DisplayResults` auf, um jede URL zu verarbeiten.  
   
-    -   `SetUpURLList`. Erstellt und gibt eine Liste der Webadressen zurück.  
+    - `SetUpURLList`. Erstellt und gibt eine Liste der Webadressen zurück.  
   
-    -   `GetURLContents`. Lädt Inhalte jeder Website herunter und gibt die Inhalte als ein Bytearray zurück.  
+    - `GetURLContents`. Lädt Inhalte jeder Website herunter und gibt die Inhalte als ein Bytearray zurück.  
   
-    -   `DisplayResults`. Zeigt die Anzahl der Bytes im Bytearray für jede URL an.  
+    - `DisplayResults`. Zeigt die Anzahl der Bytes im Bytearray für jede URL an.  
   
      Kopieren Sie die folgenden vier Methoden, und fügen Sie sie in der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb":  
   
@@ -286,9 +286,9 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 3. Da Sie den Operator `Await` im vorherigen Schritt hinzugefügt haben, tritt ein Compilerfehler auf. Der Operator kann verwendet werden, nur in Methoden, die mit markiert sind die [Async](../../../../visual-basic/language-reference/modifiers/async.md) Modifizierer. Ignorieren Sie den Fehler, während Sie die Konvertierungsschritte zum Ersetzen des Aufrufs von `CopyTo` mit einem Aufruf von `CopyToAsync` wiederholen.  
   
-    -   Ändern Sie den Namen der Methode, die für <xref:System.IO.Stream.CopyToAsync%2A> aufgerufen wird.  
+    - Ändern Sie den Namen der Methode, die für <xref:System.IO.Stream.CopyToAsync%2A> aufgerufen wird.  
   
-    -   Die Methode `CopyTo` oder `CopyToAsync` kopiert Bytes zu ihrem Argument `content` und gibt keinen sinnvollen Wert zurück. In der synchronen Version ist der Aufruf von `CopyTo` eine einfache Anweisung, die keinen Wert zurückgibt. Die asynchrone Version `CopyToAsync` gibt ein <xref:System.Threading.Tasks.Task> zurück. Die Aufgabe funktioniert wie „Task(void)“ und ermöglicht, dass auf die Methode gewartet wird. Wenden Sie `Await` oder `await` auf den Aufruf von `CopyToAsync` an, wie dies im folgenden Code gezeigt wird.  
+    - Die Methode `CopyTo` oder `CopyToAsync` kopiert Bytes zu ihrem Argument `content` und gibt keinen sinnvollen Wert zurück. In der synchronen Version ist der Aufruf von `CopyTo` eine einfache Anweisung, die keinen Wert zurückgibt. Die asynchrone Version `CopyToAsync` gibt ein <xref:System.Threading.Tasks.Task> zurück. Die Aufgabe funktioniert wie „Task(void)“ und ermöglicht, dass auf die Methode gewartet wird. Wenden Sie `Await` oder `await` auf den Aufruf von `CopyToAsync` an, wie dies im folgenden Code gezeigt wird.  
   
         ```vb  
         Await responseStream.CopyToAsync(content)  
@@ -317,9 +317,9 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Die Methode `GetURLContents` verfügt über eine return-Anweisung, und die Anweisung gibt ein Bytearray zurück. Daher ist der Rückgabetyp der der asynchronen Version „Task(T)“, wobei „T“ ein Bytearray ist. Nehmen Sie folgende Änderungen in der Methodensignatur vor:  
   
-    -   Ändern Sie den Rückgabetyp zu `Task(Of Byte())`.  
+    - Ändern Sie den Rückgabetyp zu `Task(Of Byte())`.  
   
-    -   Asynchrone Methoden verfügen gemäß der Konvention über Namen, die auf „Async“ enden. Benennen Sie also die Methode `GetURLContentsAsync` um.  
+    - Asynchrone Methoden verfügen gemäß der Konvention über Namen, die auf „Async“ enden. Benennen Sie also die Methode `GetURLContentsAsync` um.  
   
      Im folgenden Code sind diese Änderungen dargestellt.  
   
@@ -334,9 +334,9 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 1. Wiederholen Sie die Schritte des vorherigen Verfahrens für `SumPageSizes`. Ändern Sie zunächst den Aufruf von `GetURLContents` zu einem asynchronen Aufruf.  
   
-    -   Ändern Sie den Namen der Methode, die aufgerufen wird, von `GetURLContents` zu `GetURLContentsAsync`, sofern Sie dies nicht bereits getan haben.  
+    - Ändern Sie den Namen der Methode, die aufgerufen wird, von `GetURLContents` zu `GetURLContentsAsync`, sofern Sie dies nicht bereits getan haben.  
   
-    -   Wenden Sie `Await` auf die Aufgabe an, die durch `GetURLContentsAsync` zurückgegeben wird, um den Bytearraywert abzurufen.  
+    - Wenden Sie `Await` auf die Aufgabe an, die durch `GetURLContentsAsync` zurückgegeben wird, um den Bytearraywert abzurufen.  
   
      Im folgenden Code sind diese Änderungen dargestellt.  
   
@@ -355,11 +355,11 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 2. Nehmen Sie folgende Änderungen in der Methodensignatur vor:  
   
-    -   Markieren Sie die Methode mit dem Modifizierer `Async`.  
+    - Markieren Sie die Methode mit dem Modifizierer `Async`.  
   
-    -   Fügen Sie dem Methodennamen „Async“ hinzu.  
+    - Fügen Sie dem Methodennamen „Async“ hinzu.  
   
-    -   Es ist dieses Mal keine Aufgabenrückgabevariable „T“ vorhanden, da `SumPageSizesAsync` keinen Wert für „T“ zurückgibt. (Die Methode weist keine `Return`-Anweisung auf.) Die Methode muss jedoch eine `Task` zurückgeben, die awaitable ist. Daher ändern Sie den Methodentyp von `Sub` zu `Function`. Der Rückgabetyp der Funktion lautet `Task`.  
+    - Es ist dieses Mal keine Aufgabenrückgabevariable „T“ vorhanden, da `SumPageSizesAsync` keinen Wert für „T“ zurückgibt. (Die Methode weist keine `Return`-Anweisung auf.) Die Methode muss jedoch eine `Task` zurückgeben, die awaitable ist. Daher ändern Sie den Methodentyp von `Sub` zu `Function`. Der Rückgabetyp der Funktion lautet `Task`.  
   
      Im folgenden Code sind diese Änderungen dargestellt.  
   
@@ -422,9 +422,9 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 2. Es sollte eine Ausgabe angezeigt werden, die der Ausgabe der synchronen Lösung gleicht. Folgende Unterschiede sind jedoch zu berücksichtigen.  
   
-    -   Die Ergebnisse treten nicht alle gleichzeitig auf, nachdem die Verarbeitung abgeschlossen wurde. Beispielsweise enthalten beide Programme eine Zeile in `startButton_Click`, die das Textfeld löscht. Es ist vorgesehen, das Textfeld zwischen zwei Ausführungen zu löschen, wenn Sie die Schaltfläche **Start** ein zweites Mal auswählen, nachdem ein Ergebnissatz angezeigt wurde. In der synchronen Version wird das Textfeld unmittelbar vor der zweiten Anzeige des Zählers gelöscht, wenn die Downloads abgeschlossen sind und der UI-Thread für die Verarbeitung anderer Aktionen frei ist. In der asynchronen Version wird das Textfeld unmittelbar gelöscht, nachdem Sie die Schaltfläche **Start** ausgewählt haben.  
+    - Die Ergebnisse treten nicht alle gleichzeitig auf, nachdem die Verarbeitung abgeschlossen wurde. Beispielsweise enthalten beide Programme eine Zeile in `startButton_Click`, die das Textfeld löscht. Es ist vorgesehen, das Textfeld zwischen zwei Ausführungen zu löschen, wenn Sie die Schaltfläche **Start** ein zweites Mal auswählen, nachdem ein Ergebnissatz angezeigt wurde. In der synchronen Version wird das Textfeld unmittelbar vor der zweiten Anzeige des Zählers gelöscht, wenn die Downloads abgeschlossen sind und der UI-Thread für die Verarbeitung anderer Aktionen frei ist. In der asynchronen Version wird das Textfeld unmittelbar gelöscht, nachdem Sie die Schaltfläche **Start** ausgewählt haben.  
   
-    -   Das Wichtigste ist jedoch, dass der UI-Thread nicht blockiert wird, während Downloads vorgenommen werden. Sie können das Fenster verschieben oder dessen Größe anpassen, während die Webressourcen heruntergeladen, gezählt und angezeigt werden. Wenn eine der Websites langsam ist oder nicht antwortet, können Sie den Vorgang abbrechen, indem Sie die Schaltfläche **Schließen** (das x im roten Feld in der oberen rechten Ecke) auswählen.  
+    - Das Wichtigste ist jedoch, dass der UI-Thread nicht blockiert wird, während Downloads vorgenommen werden. Sie können das Fenster verschieben oder dessen Größe anpassen, während die Webressourcen heruntergeladen, gezählt und angezeigt werden. Wenn eine der Websites langsam ist oder nicht antwortet, können Sie den Vorgang abbrechen, indem Sie die Schaltfläche **Schließen** (das x im roten Feld in der oberen rechten Ecke) auswählen.  
   
 ## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ### <a name="GetURLContentsAsync"></a> So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode  
@@ -675,7 +675,7 @@ End Class
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Async Sample: Accessing the Web Walkthrough (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

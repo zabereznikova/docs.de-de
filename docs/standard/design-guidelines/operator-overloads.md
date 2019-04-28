@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 author: KrzysztofCwalina
 ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756857"
 ---
 # <a name="operator-overloads"></a>Operatorüberladungen
 Operatorüberladungen können angezeigt werden, als wären sie integrierte Sprachprimitive Framework-Typen.  
@@ -45,7 +45,7 @@ Operatorüberladungen können angezeigt werden, als wären sie integrierte Sprac
   
  Die folgende Tabelle enthält eine Liste der Operatoren und die entsprechenden Anzeigenamen Methodennamen.  
   
-|C#-Symbol "Operator"|Metadatennamen|Anzeigename|  
+|C#-Symbol "Operator"|Metadatennamen|Angezeigter Name|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  

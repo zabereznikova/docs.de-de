@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752749"
 ---
 # <a name="bitmap-effects-overview"></a>Übersicht über Bitmapeffekte
 Mit Bitmapeffekten können Designer und Entwickler visuelle Effekte anwenden, an Windows Presentation Foundation (WPF) Inhalt gerendert. Z. B. Bitmapeffekten können Sie ganz einfach Anwenden einer <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Auswirkung oder einen Weichzeichnereffekt auf ein Bild oder eine Schaltfläche.  
@@ -23,15 +23,15 @@ Mit Bitmapeffekten können Designer und Entwickler visuelle Effekte anwenden, an
   
  Als Sonderfall in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], Effekte für festgelegt werden können als Eigenschaften live <xref:System.Windows.Media.Visual> Objekte, z. B. eine <xref:System.Windows.Controls.Button> oder <xref:System.Windows.Controls.TextBox>. Die Pixelverarbeitung wird angewendet und zur Laufzeit gerendert. In diesem Fall zum Zeitpunkt des Rendering eine <xref:System.Windows.Media.Visual> automatisch in konvertiert die <xref:System.Windows.Media.Imaging.BitmapSource> entspricht und dient als Eingabe für die <xref:System.Windows.Media.Effects.BitmapEffect>. Die Ausgabe ersetzt die <xref:System.Windows.Media.Visual> Standardrenderingverhalten des Objekts. Dies ist deshalb <xref:System.Windows.Media.Effects.BitmapEffect> Objekte erzwingen, dass visuelle Objekte in der Software gerendert werden nur also keine Hardwarebeschleunigung auf visuellen Objekten Wenn Effekte angewendet werden.  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> simuliert ein Objekt, das Out-of-Focus angezeigt wird.  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> simuliert ein Objekt, das Out-of-Focus angezeigt wird.  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> erstellt einen Ring aus Farbe um den Umriss eines Objekts an.  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> erstellt einen Ring aus Farbe um den Umriss eines Objekts an.  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> erstellt einen Schatten hinter einem Objekt.  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> erstellt einen Schatten hinter einem Objekt.  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> erstellt eine Abschrägung, die die Oberfläche eines Bilds gemäß einer definierten Wölbung erhöht.  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> erstellt eine Abschrägung, die die Oberfläche eines Bilds gemäß einer definierten Wölbung erhöht.  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> erstellt einen Bumpmappingeffekt einer <xref:System.Windows.Media.Visual> , die den Eindruck von Tiefe und Textur aus einer künstlichen Lichtquelle zu vermitteln.  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> erstellt einen Bumpmappingeffekt einer <xref:System.Windows.Media.Visual> , die den Eindruck von Tiefe und Textur aus einer künstlichen Lichtquelle zu vermitteln.  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Bitmapeffekte werden im Softwaremodus gerendert. Jedes Objekt, das einen Effekt anwendet, wird auch in der Software gerendert werden. Leistungseinbußen entstehen vor allem, wenn Bitmapeffekte bei großen visuellen Objekten oder beim Animieren von Eigenschaften eines Bitmapeffekts verwendet werden. Das heißt nicht, dass Sie keine Bitmapeffekte auf diese Weise verwenden dürfen, jedoch sollten Sie Vorsicht walten lassen und gründliche Tests durchführen, um sicherzustellen, dass Ihre Benutzer die Erfahrung erhalten, die Sie erwarten.  

@@ -13,11 +13,11 @@ ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775855"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Leistungsindikatoren und prozessinterne parallele Anwendungen
 Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro Laufzeit unterschieden werden. Dieses Thema beschreibt die erforderlichen Registrierungsänderungen zur Aktivierung dieser Funktion.  
@@ -25,9 +25,9 @@ Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro L
 ## <a name="the-default-behavior"></a>Das Standardverhalten  
  Standardmäßig zeigt der Systemmonitor Leistungsindikatoren für eine einzelne Anwendung an. Es gibt jedoch zwei Szenarios, in denen dies problematisch ist:  
   
--   Wenn Sie zwei Anwendungen überwachen, die den gleichen Namen haben. Wenn beispielsweise beide Anwendungen myapp.exe heißen, wird eine als **MyApp** und die andere als **MyApp#1** in der **Instanz**-Spalte angezeigt. In diesem Fall ist es schwierig, einen Leistungsindikator einer bestimmten Anwendung zuzuordnen. Es ist nicht klar, ob sich die Datensammlung für **MyApp#1** auf die erste oder zweite myapp.exe bezieht.  
+- Wenn Sie zwei Anwendungen überwachen, die den gleichen Namen haben. Wenn beispielsweise beide Anwendungen myapp.exe heißen, wird eine als **MyApp** und die andere als **MyApp#1** in der **Instanz**-Spalte angezeigt. In diesem Fall ist es schwierig, einen Leistungsindikator einer bestimmten Anwendung zuzuordnen. Es ist nicht klar, ob sich die Datensammlung für **MyApp#1** auf die erste oder zweite myapp.exe bezieht.  
   
--   Wenn eine Anwendung mehrere Instanzen der Common Language Runtime verwendet. Die [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] unterstützt prozessinterne parallele Hostingszenarios; d.h. ein einzelner Prozess oder eine Anwendung kann mehrere Instanzen der Common Language Runtime laden. Wenn eine einzelne Anwendung namens myapp.exe standardmäßig zwei Laufzeitinstanzen lädt, werden sie in der **Instanz**-Spalte als **MyApp** und **MyApp#1** festgelegt werden. In diesem Fall ist es nicht klar, ob **MyApp** und **MyApp#1** auf zwei Anwendungen mit dem gleichen Namen oder auf dieselbe Anwendung mit zwei Laufzeiten verweisen. Wenn mehrere Anwendungen mit dem gleichen Namen mehrere Laufzeiten laden, wird die Mehrdeutigkeit noch größer.  
+- Wenn eine Anwendung mehrere Instanzen der Common Language Runtime verwendet. Die [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] unterstützt prozessinterne parallele Hostingszenarios; d.h. ein einzelner Prozess oder eine Anwendung kann mehrere Instanzen der Common Language Runtime laden. Wenn eine einzelne Anwendung namens myapp.exe standardmäßig zwei Laufzeitinstanzen lädt, werden sie in der **Instanz**-Spalte als **MyApp** und **MyApp#1** festgelegt werden. In diesem Fall ist es nicht klar, ob **MyApp** und **MyApp#1** auf zwei Anwendungen mit dem gleichen Namen oder auf dieselbe Anwendung mit zwei Laufzeiten verweisen. Wenn mehrere Anwendungen mit dem gleichen Namen mehrere Laufzeiten laden, wird die Mehrdeutigkeit noch größer.  
   
  Sie können einen Registrierungsschlüssel festlegen, um diese Mehrdeutigkeit zu vermeiden. Für Anwendungen, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] entwickelt werden, fügt diese Registrierungsänderung einen Prozessbezeichner, gefolgt von einem Instanzbezeichner der Laufzeit, zum Anwendungsnamen in der **Instanz**-Spalte hinzu. Anstelle von *Anwendung* oder *Anwendung*#1 kann die Anwendung jetzt als *Anwendung*_`p`*ProcessID*\_`r`*RuntimeID* in der **Instanz**-Spalte identifiziert werden. Wenn eine Anwendung mit einer früheren Version der Common Language Runtime entwickelt wurde, wird diese Instanz als *Anwendung\_*`p`*ProcessID* dargestellt, vorausgesetzt, dass die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] installiert ist.  
   

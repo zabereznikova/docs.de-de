@@ -3,11 +3,11 @@ title: 220 - MessageSentToTransport
 ms.date: 03/30/2017
 ms.assetid: aef4e781-240b-45bc-bff8-400053037e71
 ms.openlocfilehash: 92ec664aead15470fbed576bf157d64d984ddebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781744"
 ---
 # <a name="220---messagesenttotransport"></a>220 - MessageSentToTransport
 ## <a name="properties"></a>Eigenschaften  
@@ -15,7 +15,7 @@ ms.locfileid: "33460433"
 |||  
 |-|-|  
 |Id|220|  
-|Stichwörter|EndToEndMonitoring, Troubleshooting, ServiceModel|  
+|Schlüsselwörter|EndToEndMonitoring, Troubleshooting, ServiceModel|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   

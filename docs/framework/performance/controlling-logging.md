@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723666"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Language Runtime (CLR)-Ereignisse aufzeichnen. Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
   
--   Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.  
+- Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.  
   
--   Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Wenn Sie CLR-Ereignisinformationen erfassen möchten, muss der CLR-Anbieter auf dem Computer installiert werden. Geben Sie an der Eingabeaufforderung `logman query providers` ein, um festzustellen, ob der Anbieter installiert ist. Eine Anbieterliste wird angezeigt. Diese Liste sollte wie folgt einen Eintrag für den CLR-Anbieter enthalten.  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  Zum Aktivieren der Protokollierung müssen Benutzer drei Informationen angeben:  
   
--   Anbieter, mit dem kommuniziert werden soll.  
+- Anbieter, mit dem kommuniziert werden soll.  
   
--   Eine 64-Bit-Zahl, die einen Satz von Schlüsselwörtern darstellt. Jedes Schlüsselwort stellt einen Satz von Ereignissen dar, den der Anbieter aktivieren kann. Die Zahl stellt einen kombinierten Satz von Schlüsselwörtern dar, die aktiviert werden sollen.  
+- Eine 64-Bit-Zahl, die einen Satz von Schlüsselwörtern darstellt. Jedes Schlüsselwort stellt einen Satz von Ereignissen dar, den der Anbieter aktivieren kann. Die Zahl stellt einen kombinierten Satz von Schlüsselwörtern dar, die aktiviert werden sollen.  
   
--   Eine kleine Zahl, die die Ebene (den Ausführlichkeitsgrad) der Protokollierung darstellt. Ebene 1 ist die am wenigsten ausführliche, Ebene 5 die ausführlichste. Ebene 0 ist ein Standard mit anbieterspezifischer Bedeutung.  
+- Eine kleine Zahl, die die Ebene (den Ausführlichkeitsgrad) der Protokollierung darstellt. Ebene 1 ist die am wenigsten ausführliche, Ebene 5 die ausführlichste. Ebene 0 ist ein Standard mit anbieterspezifischer Bedeutung.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>So erfassen Sie CLR-ETW-Ereignisse mit Logman  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      Dabei gilt:  
   
-    -   Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.  
+    - Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.  
   
-    -   `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.  
+    - `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.  
   
-    -   `0x5` legt die Ebene der Protokollierung fest (in diesem Fall "Ausführlich" (5)).  
+    - `0x5` legt die Ebene der Protokollierung fest (in diesem Fall "Ausführlich" (5)).  
   
-    -   Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.  
+    - Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.  
   
-    -   Der `-ct perf`-Parameter gibt an, dass mit der `QueryPerformanceCounter`-Funktion der Zeitstempel für jedes Ereignis protokolliert wird.  
+    - Der `-ct perf`-Parameter gibt an, dass mit der `QueryPerformanceCounter`-Funktion der Zeitstempel für jedes Ereignis protokolliert wird.  
   
 2. Geben Sie Folgendes ein, um die Protokollierung der Ereignisse zu beenden:  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>So zeigen Sie CLR-ETW-Ereignisse mit Tracerpt an  
   
--   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+- Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>So zeigen Sie CLR-ETW-Ereignisse mit Xperf an  
   
--   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+- Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>So konvertieren Sie die ETL-Datei in eine CSV-Datei  
   
--   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+- Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

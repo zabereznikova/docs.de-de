@@ -3,19 +3,19 @@ title: 212 - ParameterInspectorBeforeCallInvoked
 ms.date: 03/30/2017
 ms.assetid: 063fc8d2-ceac-4c18-8368-de84f2c78035
 ms.openlocfilehash: 02d4a4ed1e96983e132a1943dd39f9f885e5596a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781848"
 ---
 # <a name="212---parameterinspectorbeforecallinvoked"></a>212 - ParameterInspectorBeforeCallInvoked
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|Id|212|  
-|Stichwörter|Troubleshooting, ServiceModel|  
+|ID|212|  
+|Schlüsselwörter|Troubleshooting, ServiceModel|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827943"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)
 Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten Sie manchmal eine oder mehrere Elemente der Basisklasse in der abgeleiteten Klasse neu zu definieren. Shadowing und überschreiben sind verfügbar für diesen Zweck.  
@@ -41,15 +41,15 @@ Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten Sie ma
 ## <a name="guidelines"></a>Richtlinien  
  Normalerweise verwenden Sie in den folgenden Fällen überschreiben:  
   
--   Definieren Sie polymorphe abgeleitete Klassen.  
+- Definieren Sie polymorphe abgeleitete Klassen.  
   
--   Sie möchten die Sicherheit, dass des Compilers den gleichen Elementtyp und Aufrufsequenz zu erzwingen.  
+- Sie möchten die Sicherheit, dass des Compilers den gleichen Elementtyp und Aufrufsequenz zu erzwingen.  
   
  Normalerweise verwenden Sie shadowing in den folgenden Fällen:  
   
--   Sie erwarten, dass Ihre Basisklasse geändert werden kann, und definieren ein Element mit dem gleichen Namen wie Ihre.  
+- Sie erwarten, dass Ihre Basisklasse geändert werden kann, und definieren ein Element mit dem gleichen Namen wie Ihre.  
   
--   Sie möchten die Freiheit der Typ des Elements zu ändern oder das Aufrufen der Sequenz.  
+- Sie möchten die Freiheit der Typ des Elements zu ändern oder das Aufrufen der Sequenz.  
   
 ## <a name="see-also"></a>Siehe auch
 
