@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698576"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<ApplicationPool >-Element (Webeinstellungen)
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.  
@@ -66,11 +66,11 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozes
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie ASP.NET prozessübergreifende Verhalten in der Datei "aspnet.config" in den folgenden Situationen konfigurieren:  
   
--   Die Anwendung gehostet wird, eine [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] -Anwendungspool.  
+- Die Anwendung gehostet wird, eine [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] -Anwendungspool.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im integrierten Modus ausgeführt wird.  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im integrierten Modus ausgeführt wird.  
   
--   Die Anwendung verwendet die [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.  
+- Die Anwendung verwendet die [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.  
   
  Die Werte im Beispiel werden die Standardwerte.  
   

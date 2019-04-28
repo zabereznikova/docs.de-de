@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669364"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt sind, nicht in Koordination mit dem Listenerobjekt zerstört werden, die die Quelle der Handler zugeordnet. Diese Situation kann zu Arbeitsspeicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, indem Sie eine dedizierte Manager-Klasse für bestimmte Ereignisse bereitstellen und Implementieren einer Schnittstelle zum Listener für das betreffende Ereignis. Dieses Entwurfsmuster wird als bezeichnet die *Muster für schwache Ereignisse*.  
@@ -40,13 +40,13 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
 
  In den folgenden Abschnitten wird beschrieben, wie das Muster für schwache Ereignisse zu implementieren.  Für den Rahmen dieser Erläuterung weist folgende Merkmale auf das Ereignis abonnieren.  
   
--   Der Ereignisname wird `SomeEvent`.  
+- Der Ereignisname wird `SomeEvent`.  
   
--   Das Ereignis wird ausgelöst, durch die `EventSource` Klasse.  
+- Das Ereignis wird ausgelöst, durch die `EventSource` Klasse.  
   
--   Der Ereignishandler verfügt über Typ: `SomeEventEventHandler` (oder `EventHandler<SomeEventEventArgs>`).  
+- Der Ereignishandler verfügt über Typ: `SomeEventEventHandler` (oder `EventHandler<SomeEventEventArgs>`).  
   
--   Das Ereignis übergibt einen Parameter vom Typ `SomeEventEventArgs` an die Ereignishandler.  
+- Das Ereignis übergibt einen Parameter vom Typ `SomeEventEventArgs` an die Ereignishandler.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Verwenden einer vorhandenen schwache Ereignis-Manager-Klasse  
   

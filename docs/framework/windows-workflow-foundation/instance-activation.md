@@ -3,11 +3,11 @@ title: Instanzaktivierung
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641667"
 ---
 # <a name="instance-activation"></a>Instanzaktivierung
 Der SQL-Workflowinstanzspeicher führt eine interne Aufgabe aus, die in regelmäßigen Abständen aktiviert wird und ausführbare oder aktivierbare Workflowinstanzen in der Persistenzdatenbank ermittelt. Wenn eine ausführbare Workflowinstanz gefunden wird, erfolgt die Benachrichtigung des Workflowhosts, der die Instanz aktivieren kann. Wenn der Instanzspeicher eine aktivierbare Workflowinstanz findet, wird ein generischer Host benachrichtigt, der einen Workflowhost aktiviert, der wiederum die Workflowinstanz ausführt. In den folgenden Abschnitten dieses Themas wird der Instanzaktivierungsprozess detailliert erläutert.  
@@ -15,11 +15,11 @@ Der SQL-Workflowinstanzspeicher führt eine interne Aufgabe aus, die in regelmä
 ## <a name="RunnableSection"></a> Erkennen und Aktivieren von ausführbaren Workflowinstanzen  
  Die SQL-Workflow-Instanz Store erkennt eine Workflowinstanz als *ausführbare* Wenn die Instanz befindet sich nicht im Zustand "angehalten" oder den Status "abgeschlossen", und die folgenden Bedingungen erfüllt:  
   
--   Die Instanz ist nicht gesperrt und weist einen ausstehenden Timer auf, der abgelaufen ist.  
+- Die Instanz ist nicht gesperrt und weist einen ausstehenden Timer auf, der abgelaufen ist.  
   
--   Die Instanz weist eine abgelaufene Sperre auf.  
+- Die Instanz weist eine abgelaufene Sperre auf.  
   
--   Die Instanz entsperrt ist und der Status ist **ausführen**.  
+- Die Instanz entsperrt ist und der Status ist **ausführen**.  
   
  Der SQL-Workflowinstanzspeicher löst das <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> aus, wenn eine ausführbare Instanz gefunden wird. Anschließend wird die Überwachung gestoppt, bis <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> einmal für den Speicher aufgerufen wird.  
   

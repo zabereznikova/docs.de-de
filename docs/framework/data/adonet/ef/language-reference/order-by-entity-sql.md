@@ -3,11 +3,11 @@ title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760297"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zurückgegeben werden.  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>Eingeschränkte Schlüsselwörter  
  Die folgenden Schlüsselwörter müssen bei der Verwendung in einer `ORDER BY` -Klausel in Anführungszeichen gesetzt werden:  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   NACH-LINKS  
+- NACH-LINKS  
   
--   ORDER  
+- ORDER  
   
--   OUTER  
+- OUTER  
   
--   NACH-RECHTS  
+- NACH-RECHTS  
   
--   ROW  
+- ROW  
   
--   VALUE  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>Reihenfolge geschachtelter Abfragen  
  In Entity Framework kann ein geschachtelter Ausdruck an jeder Stelle in der Abfrage verwendet werden. Die Reihenfolge einer geschachtelten Abfrage wird nicht beibehalten.  

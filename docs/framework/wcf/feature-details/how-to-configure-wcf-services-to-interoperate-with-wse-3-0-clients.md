@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit m
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
 ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699785"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients
 Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web Services Enhancements 3.0 für Microsoft .NET (WSE)-Clients kompatibel, wenn WCF-Dienste konfiguriert sind, mit der Version vom August 2004 von WS-Addressing-Spezifikation.  
@@ -18,11 +18,11 @@ Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web 
   
      Es muss eine benutzerdefinierte Bindung erstellt werden, um anzugeben, dass die Version der WS-Adressierungsspezifikation vom August 2004 für die Nachrichtencodierung verwendet wird.  
   
-    1.  Fügen Sie ein untergeordnetes Element [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) auf die [ \<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) der Konfigurationsdatei des Diensts.  
+    1. Fügen Sie ein untergeordnetes Element [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) auf die [ \<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) der Konfigurationsdatei des Diensts.  
   
-    2.  Geben Sie einen Namen für die Bindung, die durch das Hinzufügen einer [ \<Bindung >](../../../../docs/framework/misc/binding.md) auf die [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) und Einstellung der `name` Attribut.  
+    2. Geben Sie einen Namen für die Bindung, die durch das Hinzufügen einer [ \<Bindung >](../../../../docs/framework/misc/binding.md) auf die [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) und Einstellung der `name` Attribut.  
   
-    3.  Geben Sie einen Authentifizierungsmodus und die Version der WS-Security-Spezifikationen, die verwendet werden, um Nachrichten zu sichern, die mit WSE 3.0 kompatibel sind, indem Sie ein untergeordnetes Element hinzufügen [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) auf die [ \<binding >](../../../../docs/framework/misc/binding.md).  
+    3. Geben Sie einen Authentifizierungsmodus und die Version der WS-Security-Spezifikationen, die verwendet werden, um Nachrichten zu sichern, die mit WSE 3.0 kompatibel sind, indem Sie ein untergeordnetes Element hinzufügen [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) auf die [ \<binding >](../../../../docs/framework/misc/binding.md).  
   
          Legen Sie zum Festlegen des Authentifizierungsmodus der `authenicationMode` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Ein Authentifizierungsmodus ist mit einer sofort verwendbaren WSE 3.0-Sicherheitsassertion vergleichbar. In der folgende Tabelle werden Authentifizierungsmodi in WCF Sicherheitsassertionen in WSE 3.0 zugeordnet.  
   
@@ -39,16 +39,16 @@ Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web 
   
          Um die Version der WS-Security-Spezifikation festzulegen, die zum Sichern von SOAP-Nachrichten verwendet wird, legen die `messageSecurityVersion` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Für die Zusammenarbeit mit WSE 3.0 legen Sie den Wert des `messageSecurityVersion`-Attributs auf <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A> fest.  
   
-    4.  Gibt an, dass die Version vom August 2004 von WS-Addressing-Spezifikation von WCF, durch das Hinzufügen verwendet wird einer [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) und legen Sie die `messageVersion` auf den Wert für <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
+    4. Gibt an, dass die Version vom August 2004 von WS-Addressing-Spezifikation von WCF, durch das Hinzufügen verwendet wird einer [ \<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) und legen Sie die `messageVersion` auf den Wert für <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
   
         > [!NOTE]
         >  Wenn Sie SOAP 1.2 verwenden, legen Sie das `messageVersion`-Attribut auf <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A> fest.  
   
 2. Geben Sie an, dass der Dienst die benutzerdefinierte Bindung verwendet.  
   
-    1.  Legen Sie die `binding` Attribut der [ \<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Element `customBinding`.  
+    1. Legen Sie die `binding` Attribut der [ \<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Element `customBinding`.  
   
-    2.  Festlegen der `bindingConfiguration` Attribut der [ \<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Elements mit dem Wert im angegebenen die `name` Attribut des der [ \<Bindung >](../../../../docs/framework/misc/binding.md) für das benutzerdefinierte Bindung.  
+    2. Festlegen der `bindingConfiguration` Attribut der [ \<Endpunkt >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) Elements mit dem Wert im angegebenen die `name` Attribut des der [ \<Bindung >](../../../../docs/framework/misc/binding.md) für das benutzerdefinierte Bindung.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel gibt an, dass `Service.HelloWorldService` eine benutzerdefinierte Bindung zur Zusammenarbeit mit WSE 3.0-Clients verwendet. Die benutzerdefinierte Bindung gibt an, dass die Version der WS-Adressierungsspezifikation vom August 2004 und die Spezifikationen von WS-Security 1.1 zum Codieren der ausgetauschten Nachrichten verwendet werden. Die Nachrichten werden mit dem <xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate>-Authentifizierungsmodus geschützt.  

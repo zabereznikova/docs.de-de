@@ -3,11 +3,11 @@ title: Beibehalten eines Objekts in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783473"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (Visual Basic)
 Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird. Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
@@ -127,7 +127,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-mark-a-class-as-serializable"></a>So markieren Sie eine Klasse als serialisierbar  
   
--   Ändern Sie die Klassendeklaration für die Loan-Klasse wie folgt:  
+- Ändern Sie die Klassendeklaration für die Loan-Klasse wie folgt:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>So verhindern Sie, dass ein Member serialisiert wird  
   
--   Ändern Sie die Deklaration für das Ereignis `PropertyChanged` wie folgt:  
+- Ändern Sie die Deklaration für das Ereignis `PropertyChanged` wie folgt:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-add-references-to-namespaces"></a>So fügen Sie Verweise zu Namespaces hinzu  
   
--   Fügen Sie am Anfang der `Form1`-Klasse die folgenden Anweisungen ein:  
+- Fügen Sie am Anfang der `Form1`-Klasse die folgenden Anweisungen ein:  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>So speichern Sie die Daten und serialisieren die Klasse  
   
--   Fügen Sie den folgenden Code zur `Form1_FormClosing`-Ereignisprozedur hinzu:  
+- Fügen Sie den folgenden Code zur `Form1_FormClosing`-Ereignisprozedur hinzu:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
 ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669535"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Neues in Windows Workflow Foundation
 Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] ändert sich zahlreiche Entwicklungsmuster von früheren Versionen. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. Weitere Informationen zum Migrieren von .NET 3.0 und .NET 3.5-workflowanwendungen, die neueste Version verwenden, finden Sie unter [Migrationsanleitung](migration-guidance.md).  
@@ -24,13 +24,13 @@ Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/ne
 ## <a name="expanded-built-in-activity-library"></a>Erweiterte integrierte Aktivitätsbibliothek  
  Die Aktivitätsbibliothek bietet u. a. die folgenden neuen Funktionen:  
   
--   Neue Flusssteuerungsaktivitäten, z. B. <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601> und <xref:System.Activities.Statements.ParallelForEach%601>.  
+- Neue Flusssteuerungsaktivitäten, z. B. <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601> und <xref:System.Activities.Statements.ParallelForEach%601>.  
   
--   Aktivitäten zum Bearbeiten von Memberdaten, z. B. <xref:System.Activities.Statements.Assign>, sowie Auflistungsaktivitäten, z. B. <xref:System.Activities.Statements.AddToCollection%601>.  
+- Aktivitäten zum Bearbeiten von Memberdaten, z. B. <xref:System.Activities.Statements.Assign>, sowie Auflistungsaktivitäten, z. B. <xref:System.Activities.Statements.AddToCollection%601>.  
   
--   Aktivitäten zum Steuern von Transaktionen, z. B. <xref:System.Activities.Statements.TransactionScope> und <xref:System.Activities.Statements.Compensate>.  
+- Aktivitäten zum Steuern von Transaktionen, z. B. <xref:System.Activities.Statements.TransactionScope> und <xref:System.Activities.Statements.Compensate>.  
   
--   Neue Messagingaktivitäten, z. B. <xref:System.ServiceModel.Activities.SendContent> und <xref:System.ServiceModel.Activities.ReceiveReply>.  
+- Neue Messagingaktivitäten, z. B. <xref:System.ServiceModel.Activities.SendContent> und <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Explizites Aktivitätsdatenmodell  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] umfasst neue Optionen zum Speichern und Verschieben von Daten. Daten können mit <xref:System.Activities.Variable> in einer Aktivität gespeichert werden. Beim Verschieben von Daten in und aus einer Aktivität wird mittels spezialisierter Argumenttypen die Verschieberichtung bestimmt. Dies sind die Typen <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> und <xref:System.Activities.OutArgument>. Weitere Informationen finden Sie unter [Windows Workflow Foundation-Datenmodell](data-model.md).  
@@ -38,21 +38,21 @@ Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/ne
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Verbesserte Hosting-, Persistenz- und Nachverfolgungsoptionen  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bietet Erweiterungen der Persistenz, wie beispielsweise:  
   
--   Mehr Optionen zum Ausführen von Workflows, darunter <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> und <xref:System.Activities.WorkflowInvoker>.  
+- Mehr Optionen zum Ausführen von Workflows, darunter <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> und <xref:System.Activities.WorkflowInvoker>.  
   
--   Workflowzustandsdaten können mit der <xref:System.Activities.Statements.Persist>-Aktivität explizit in den Persistenzspeicher verschoben werden.  
+- Workflowzustandsdaten können mit der <xref:System.Activities.Statements.Persist>-Aktivität explizit in den Persistenzspeicher verschoben werden.  
   
--   Ein Host kann ein <xref:System.Activities.ActivityInstance>-Objekt ohne Entladen in den Persistenzspeicher verschieben.  
+- Ein Host kann ein <xref:System.Activities.ActivityInstance>-Objekt ohne Entladen in den Persistenzspeicher verschieben.  
   
--   Beim Arbeiten mit Daten, die nicht in den Persistenzspeicher verschoben werden können, kann ein Workflow Zonen ohne Persistenz angeben, um den Vorgang zu verschieben, bis die Zone ohne Persistenz beendet wird.  
+- Beim Arbeiten mit Daten, die nicht in den Persistenzspeicher verschoben werden können, kann ein Workflow Zonen ohne Persistenz angeben, um den Vorgang zu verschieben, bis die Zone ohne Persistenz beendet wird.  
   
--   Das <xref:System.Activities.Statements.TransactionScope>-Objekt ermöglicht den Transaktionsfluss in einen Workflow.  
+- Das <xref:System.Activities.Statements.TransactionScope>-Objekt ermöglicht den Transaktionsfluss in einen Workflow.  
   
--   Die Nachverfolgung wird mit dem <xref:System.Activities.Tracking.TrackingParticipant>-Objekt vereinfacht.  
+- Die Nachverfolgung wird mit dem <xref:System.Activities.Tracking.TrackingParticipant>-Objekt vereinfacht.  
   
--   Die Nachverfolgung im Systemereignisprotokoll wird mit dem <xref:System.Activities.Tracking.EtwTrackingParticipant>-Objekt bereitgestellt.  
+- Die Nachverfolgung im Systemereignisprotokoll wird mit dem <xref:System.Activities.Tracking.EtwTrackingParticipant>-Objekt bereitgestellt.  
   
--   Das Fortsetzen ausstehender Workflows kann jetzt mit dem <xref:System.Activities.Bookmark>-Objekt verwaltet werden.  
+- Das Fortsetzen ausstehender Workflows kann jetzt mit dem <xref:System.Activities.Bookmark>-Objekt verwaltet werden.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Vereinfachte Erweiterung der WF-Designer-Umgebung  
  Der neue WF-Designer basiert auf Windows Presentation Foundation (WPF) und stellt ein einfacheres Modell zum zu verwendende rehosting außerhalb von Visual Studio WF-Designer und bietet außerdem einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer. Weitere Informationen finden Sie unter [Anpassen des Workflowentwurfsvorgangs](customizing-the-workflow-design-experience.md).

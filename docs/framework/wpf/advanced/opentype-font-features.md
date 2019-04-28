@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773877"
 ---
 # <a name="opentype-font-features"></a>Features für OpenType-Schriftarten
 
@@ -26,15 +26,15 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
   
  Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat behebt die folgenden Probleme für Entwickler:  
   
--   Breitere Multiplattform-Unterstützung.  
+- Breitere Multiplattform-Unterstützung.  
   
--   Bessere Unterstützung für internationale Zeichensätze.  
+- Bessere Unterstützung für internationale Zeichensätze.  
   
--   Besserer Schutz der Schriftartdaten.  
+- Besserer Schutz der Schriftartdaten.  
   
--   Kleinere Dateigrößen die eine effizientere Schriftartenverteilung ermöglichen.  
+- Kleinere Dateigrößen die eine effizientere Schriftartenverteilung ermöglichen.  
   
--   Breitere Unterstützung für erweiterte typografische Steuerelement.  
+- Breitere Unterstützung für erweiterte typografische Steuerelement.  
   
 > [!NOTE]
 >  Das Windows SDK enthält eine Reihe von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten, die mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwendet werden können. Diese Schriftarten bieten die meisten der Funktionen, wie im folgenden Thema dargestellt. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
@@ -44,11 +44,11 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
 ### <a name="advanced-typographic-extensions"></a>Erweiterte typografische Funktionen  
  Bei den erweiterten typografischen Tabellen ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen) werden die Funktionen der Schriftarten mit [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]- oder CFF-Outlines ergänzt. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layoutschriftarten enthalten zusätzliche Informationen, die die Leistungsfähigkeit der Schriftarten so erweitern, dass hochwertige internationale Typografie unterstützt wird. Die meisten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten machen nur eine Teilmenge aller [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Funktionen verfügbar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten stellen die folgenden Features bereit.  
   
--   Umfangreiche Zuordnung zwischen Zeichen und Symbolen, die Ligaturen, positionelle Formen, alternative Stile und andere Schriftartersetzungen unterstützen.  
+- Umfangreiche Zuordnung zwischen Zeichen und Symbolen, die Ligaturen, positionelle Formen, alternative Stile und andere Schriftartersetzungen unterstützen.  
   
--   Unterstützung von zweidimensionaler Positionierung und Symbolanfügung.  
+- Unterstützung von zweidimensionaler Positionierung und Symbolanfügung.  
   
--   Explizite Skript- und Sprachinformationen, die in der Schriftart enthalten sind, damit Textverarbeitungsanwendungen ihr Verhalten entsprechend anpassen können.  
+- Explizite Skript- und Sprachinformationen, die in der Schriftart enthalten sind, damit Textverarbeitungsanwendungen ihr Verhalten entsprechend anpassen können.  
   
  Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen werden ausführlich im Abschnitt [„Font File Tables“](https://www.microsoft.com/typography/otspec/otff.htm) der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Spezifikation beschrieben.  
   
@@ -120,13 +120,13 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
 ## <a name="ligatures"></a>Ligaturen  
  Ligaturen sind zwei oder mehr Symbole, die zu einem einzigen Symbol zusammengefügt werden, um einen besser lesbaren oder attraktiveren Text zu erstellen. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen vier Typen von Ligaturen:  
   
--   **Standardligaturen**. Zur Verbesserung der Lesbarkeit. Zu den Standardligaturen gehören „fi“, „fl“ und „ff“.  
+- **Standardligaturen**. Zur Verbesserung der Lesbarkeit. Zu den Standardligaturen gehören „fi“, „fl“ und „ff“.  
   
--   **Kontextbedingte Ligaturen**. Mit Kontextligaturen soll die Lesbarkeit verbessert werden, indem die Buchstaben einer Ligatur optimal verbunden werden.  
+- **Kontextbedingte Ligaturen**. Mit Kontextligaturen soll die Lesbarkeit verbessert werden, indem die Buchstaben einer Ligatur optimal verbunden werden.  
   
--   **Bedingte Ligaturen**. Bedingte Ligaturen sollen verzierend wirken, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
+- **Bedingte Ligaturen**. Bedingte Ligaturen sollen verzierend wirken, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
   
--   **Historische Ligaturen**. Historische Ligaturen sollen eine historische Wirkung erzielen, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
+- **Historische Ligaturen**. Historische Ligaturen sollen eine historische Wirkung erzielen, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
   
  Im folgenden Text werden Symbole für Standardligaturen in der Schriftart Pericles gezeigt.  
   

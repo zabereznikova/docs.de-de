@@ -3,11 +3,11 @@ title: Bookmarks1
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
 ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774119"
 ---
 # <a name="bookmarks"></a>Lesezeichen
 Lesezeichen stellen für eine Aktivität eine Möglichkeit dar, passiv auf eine Eingabe zu warten, ohne einen Workflowthread weiter auszuführen. Wenn eine Aktivität signalisiert, dass sie auf eine Reaktion wartet, kann sie ein Lesezeichen erstellen. Damit wird der Laufzeit angezeigt, dass die Ausführung der Aktivität nicht als abgeschlossen betrachtet werden kann, auch wenn die momentan ausgeführte Methode (die das <xref:System.Activities.Bookmark> erstellt hat) zurückkehrt.  

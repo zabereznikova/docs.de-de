@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764978"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Übersicht über das WPF-Grafikrendering
 Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Schicht. Es konzentriert sich auf die Rolle der <xref:System.Windows.Media.Visual> Klasse zum Rendern der Unterstützung in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Modell.  
@@ -24,27 +24,27 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
   
  Die <xref:System.Windows.Media.Visual> Objekt ist ein zentrales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekt, dessen primäre Rolle Unterstützung des Rendering ist. Steuerelemente der Benutzeroberfläche, z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.TextBox>, leiten Sie von der <xref:System.Windows.Media.Visual> Klasse, und verwenden sie zum Speichern ihrer Rendering-Daten. Die <xref:System.Windows.Media.Visual> -Objekt bietet Unterstützung für:  
   
--   Ausgabeanzeige: Rendering der persistenten, serialisierten Zeichnungsinhalts eines visuellen Objekts.  
+- Ausgabeanzeige: Rendering der persistenten, serialisierten Zeichnungsinhalts eines visuellen Objekts.  
   
--   Transformationen: Ausführen von Transformationen auf ein visuelles Element.  
+- Transformationen: Ausführen von Transformationen auf ein visuelles Element.  
   
--   Clipping: Bereitstellen der clippingbereichsunterstützung für ein Visual.  
+- Clipping: Bereitstellen der clippingbereichsunterstützung für ein Visual.  
   
--   Treffertests: Bestimmen, ob eine Koordinate oder eine Geometrie innerhalb der Grenzen eines visuellen Objekts enthalten ist.  
+- Treffertests: Bestimmen, ob eine Koordinate oder eine Geometrie innerhalb der Grenzen eines visuellen Objekts enthalten ist.  
   
--   Berechnungen für umgebende Felder: Bestimmen das umschließende Rechteck eines visuellen Objekts.  
+- Berechnungen für umgebende Felder: Bestimmen das umschließende Rechteck eines visuellen Objekts.  
   
  Allerdings die <xref:System.Windows.Media.Visual> Objekt bietet keine Unterstützung für Features außerhalb des Renderings, z.B.:  
   
--   Ereignisbehandlung  
+- Ereignisbehandlung  
   
--   Layout  
+- Layout  
   
--   Stile  
+- Stile  
   
--   Datenbindung  
+- Datenbindung  
   
--   Globalisierung  
+- Globalisierung  
   
  <xref:System.Windows.Media.Visual> wird als öffentliche abstrakte Klasse verfügbar gemacht werden von der untergeordnete Klassen abgeleitet werden müssen. Die folgende Abbildung zeigt die Hierarchie der visuellen Objekte, die in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügbar gemacht werden.  
   
@@ -127,13 +127,13 @@ Reihenfolge der DrawingGroup-Vorgänge
   
  Es gibt mehrere Dinge im Zusammenhang mit der Hierarchie von visuellen Objekten und Anweisungslisten für Vektorgrafiken zu beachten:  
   
--   Die Reihenfolge in der Hierarchie stellt die Renderingreihenfolge der Zeichnungsinformationen dar. Aus dem visuellen Stammelement werden untergeordnete Elemente von links nach rechts und von oben nach unten durchlaufen. Wenn ein Element über visuelle untergeordnete Elemente verfügt, werden diese vor den gleichgeordneten Elementen des Elements durchlaufen.  
+- Die Reihenfolge in der Hierarchie stellt die Renderingreihenfolge der Zeichnungsinformationen dar. Aus dem visuellen Stammelement werden untergeordnete Elemente von links nach rechts und von oben nach unten durchlaufen. Wenn ein Element über visuelle untergeordnete Elemente verfügt, werden diese vor den gleichgeordneten Elementen des Elements durchlaufen.  
   
--   Blattknoten Elemente in der Hierarchie, z. B. <xref:System.Windows.Controls.ContentPresenter>, werden verwendet, um untergeordnete Elemente enthalten — sie enthalten keine Anweisungslisten.  
+- Blattknoten Elemente in der Hierarchie, z. B. <xref:System.Windows.Controls.ContentPresenter>, werden verwendet, um untergeordnete Elemente enthalten — sie enthalten keine Anweisungslisten.  
   
--   Wenn ein visuelles Element eine Anweisungsliste für Vektorgrafiken und visuelle untergeordnete Elemente enthält, wird die Anweisungsliste im übergeordneten visuellen Element vor Zeichnungen in einem der untergeordneten visuellen Objekte gerendert.  
+- Wenn ein visuelles Element eine Anweisungsliste für Vektorgrafiken und visuelle untergeordnete Elemente enthält, wird die Anweisungsliste im übergeordneten visuellen Element vor Zeichnungen in einem der untergeordneten visuellen Objekte gerendert.  
   
--   Die Elemente in der Anweisungsliste für Vektorgrafiken werden von links nach rechts gerendert.  
+- Die Elemente in der Anweisungsliste für Vektorgrafiken werden von links nach rechts gerendert.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Visuelle Struktur  

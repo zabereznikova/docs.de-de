@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775752"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173094"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Suchen eines bestimmten Elements in der Benutzeroberflächenautomatisierungs-Struktur anhand einer eindeutigen und erkennbaren AutomationID  
   
--   Verwenden Sie ein Tool wie [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] , um die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elements zu ermitteln, an dem Sie interessiert sind. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
+- Verwenden Sie ein Tool wie [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] , um die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elements zu ermitteln, an dem Sie interessiert sind. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
   
 > [!CAUTION]
 >  Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173094"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Verwenden eines persistenten Pfads zum Zurückkehren zu einem vorher identifizierten AutomationElement  
   
--   Möglicherweise müssen Clientanwendungen (von einfachen Testskripts bis zu robusten Aufzeichnungs- und Wiedergabeprogrammen) auf Elemente (z. B. ein Dialogfeld zum Öffnen von Dateien oder ein Menüelement) zugreifen, die zurzeit nicht instanziiert und deshalb in der Benutzeroberflächenautomatisierungs-Struktur nicht vorhanden sind. Diese Elemente können nur instanziiert werden, indem reproduziert (oder "wiedergegeben") eine bestimmte Sequenz von UI-Aktionen mithilfe der Benutzeroberflächenautomatisierungs-Eigenschaften wie z. B. AutomationID, Steuerelementmuster und Ereignislistener.
+- Möglicherweise müssen Clientanwendungen (von einfachen Testskripts bis zu robusten Aufzeichnungs- und Wiedergabeprogrammen) auf Elemente (z. B. ein Dialogfeld zum Öffnen von Dateien oder ein Menüelement) zugreifen, die zurzeit nicht instanziiert und deshalb in der Benutzeroberflächenautomatisierungs-Struktur nicht vorhanden sind. Diese Elemente können nur instanziiert werden, indem reproduziert (oder "wiedergegeben") eine bestimmte Sequenz von UI-Aktionen mithilfe der Benutzeroberflächenautomatisierungs-Eigenschaften wie z. B. AutomationID, Steuerelementmuster und Ereignislistener.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173094"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Verwenden eines relativen Pfads zum Zurückkehren zu einem vorher identifizierten AutomationElement  
   
--   Da AutomationID nur bei nebengeordneten Elementen garantiert eindeutig ist, haben unter bestimmten Umständen möglicherweise mehrere Elemente in der Benutzeroberflächenautomatisierungs-Struktur identische AutomationID-Eigenschaftswerte. In diesen Fällen können die Elemente anhand ihres übergeordneten Elements und ggf. ihres über-übergeordneten Elements eindeutig identifiziert werden. Beispielsweise könnte ein Entwickler eine Menüleiste mit mehreren Menüelementen bereitstellen, die jeweils mehrere untergeordnete Menüelemente haben, wobei die untergeordneten Elemente mit sequenziellen AutomationIDs wie „Element1“, „Element2“ usw. bezeichnet sind. Jedes Menüelement kann dann anhand seiner eigenen AutomationID sowie der seines übergeordneten Elements und ggf. seines über-übergeordneten Elements eindeutig identifiziert werden.  
+- Da AutomationID nur bei nebengeordneten Elementen garantiert eindeutig ist, haben unter bestimmten Umständen möglicherweise mehrere Elemente in der Benutzeroberflächenautomatisierungs-Struktur identische AutomationID-Eigenschaftswerte. In diesen Fällen können die Elemente anhand ihres übergeordneten Elements und ggf. ihres über-übergeordneten Elements eindeutig identifiziert werden. Beispielsweise könnte ein Entwickler eine Menüleiste mit mehreren Menüelementen bereitstellen, die jeweils mehrere untergeordnete Menüelemente haben, wobei die untergeordneten Elemente mit sequenziellen AutomationIDs wie „Element1“, „Element2“ usw. bezeichnet sind. Jedes Menüelement kann dann anhand seiner eigenen AutomationID sowie der seines übergeordneten Elements und ggf. seines über-übergeordneten Elements eindeutig identifiziert werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

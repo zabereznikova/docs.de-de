@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
 ms.openlocfilehash: 243f51b3e6c798c82fdbe7b28557c4f96c728bf2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764373"
 ---
 # <a name="type-typename-is-not-cls-compliant"></a>Typ \<Typname > ist nicht CLS-kompatibel.
 Eine Variable, Eigenschaft oder Funktionsrückgabe wird mit einem Datentyp deklariert, die nicht CLS-kompatibel ist.  
@@ -21,18 +21,18 @@ Eine Variable, Eigenschaft oder Funktionsrückgabe wird mit einem Datentyp dekla
   
  Die folgenden Visual Basic-Datentypen sind nicht CLS-kompatibel:  
   
--   [SByte-Datentyp](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte-Datentyp](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong-Datentyp](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong-Datentyp](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort-Datentyp](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort-Datentyp](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  **Fehler-ID:** BC40041  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn Ihre Anwendung CLS-kompatibel sein muss, ändern Sie den Datentyp der dieses Element in den ähnlichsten CLS-kompatiblen Typ. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
+- Wenn Ihre Anwendung CLS-kompatibel sein muss, ändern Sie den Datentyp der dieses Element in den ähnlichsten CLS-kompatiblen Typ. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
   
--   Wenn Ihre Anwendung nicht CLS-kompatibel sein muss, müssen Sie keine Änderungen vornehmen. Sie sollten jedoch beachten die Nichtkompatibilität, sein.
+- Wenn Ihre Anwendung nicht CLS-kompatibel sein muss, müssen Sie keine Änderungen vornehmen. Sie sollten jedoch beachten die Nichtkompatibilität, sein.

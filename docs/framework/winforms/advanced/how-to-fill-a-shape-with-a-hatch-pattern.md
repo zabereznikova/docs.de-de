@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781349"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Vorgehensweise: Ausfüllen einer Form mit einer Schraffur
 Eine Schraffur besteht aus zwei Farben: eine für den Hintergrund und eine für die Zeilen, die über dem Hintergrund der Muster bilden. Um eine geschlossene Form mit einer Schraffur zu füllen, verwenden eine <xref:System.Drawing.Drawing2D.HatchBrush> Objekt. Im folgenden Beispiel wird veranschaulicht, wie eine Ellipse mit einer Schraffur füllen:  
@@ -22,17 +22,17 @@ Eine Schraffur besteht aus zwei Farben: eine für den Hintergrund und eine für 
 ## <a name="example"></a>Beispiel  
  Die <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Konstruktor akzeptiert drei Argumente: die Schraffurart, die Farbe der Schraffurlinie und die Farbe des Hintergrunds. Das Schraffurstilargument möglich einen beliebigen Wert aus der <xref:System.Drawing.Drawing2D.HatchStyle> Enumeration. Es gibt mehr als 50 Elemente in der <xref:System.Drawing.Drawing2D.HatchStyle> Enumeration; einige davon Elemente sind in der folgenden Liste dargestellt:  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
  Die folgende Abbildung zeigt die ausgefüllte Ellipse.  
   

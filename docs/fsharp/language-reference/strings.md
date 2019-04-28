@@ -3,11 +3,11 @@ title: Zeichenfolgen
 description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755349"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
@@ -28,7 +28,7 @@ Trennzeichen für Zeichenfolgenliterale dient das Anführungszeichen ("). Der um
 |Registerkarte|`\t`|
 |Umgekehrter Schrägstrich|`\\`|
 |Anführungszeichen|`\"`|
-|Apostroph|`\'`|
+|Apostrophe|`\'`|
 |Unicodezeichen|`\uXXXX` oder `\UXXXX` (wobei `X` eine hexadezimale Ziffer angibt)|
 
 Wenn Sie mit der @-Zeichen, das Literal ist eine ausführliche Zeichenfolge. Dies bedeutet, dass alle Escapesequenzen ignoriert werden, mit dem Unterschied, dass zwei Anführungszeichen als ein Anführungszeichen interpretiert werden.

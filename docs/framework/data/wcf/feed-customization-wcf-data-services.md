@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765686"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , Daten als Feed verfügbar zu machen. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Bei Verwendung ein Atom-Feeds [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bietet eine Standardmethode zum Serialisieren von Daten, z. B. Entitäten und Beziehungen in einem XML-Format, das im Text der HTTP-Nachricht aufgenommen werden kann. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definiert eine standardmäßige entitätseigenschaftszuordnung zwischen den Daten, die in Entitäten enthalten ist und Atom-Elementen. Weitere Informationen finden Sie unter [OData: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -83,12 +83,12 @@ ms.locfileid: "59517316"
 ## <a name="feed-customization-considerations"></a>Überlegungen zur Feedanpassung  
  Beim Definieren von benutzerdefinierten Feedzuordnungen sollten Sie Folgendes betrachten.  
   
--   Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client behandelt zugeordnete Elemente in einem Feed als leer, wenn diese nur Leerraum enthalten. Aus diesem Grund werden zugeordnete Elemente, die nur Leerraum enthalten nicht auf dem Client mit den gleichen Leerstellen materialisiert. Um diese Leerzeichen auf dem Client beizubehalten, müssen Sie festlegen, den Wert der `KeepInContext` zu `true` im feedzuordnungsattribut.  
+- Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client behandelt zugeordnete Elemente in einem Feed als leer, wenn diese nur Leerraum enthalten. Aus diesem Grund werden zugeordnete Elemente, die nur Leerraum enthalten nicht auf dem Client mit den gleichen Leerstellen materialisiert. Um diese Leerzeichen auf dem Client beizubehalten, müssen Sie festlegen, den Wert der `KeepInContext` zu `true` im feedzuordnungsattribut.  
   
 ## <a name="versioning-requirements"></a>Versionsanforderungen  
  Die Feedanpassung hat die folgenden Anforderungen an die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokollversion:  
   
--   Die Feedanpassung erfordert, dass der Client und der Datendienst Version 2.0 des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls und höhere Versionen unterstützt.  
+- Die Feedanpassung erfordert, dass der Client und der Datendienst Version 2.0 des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls und höhere Versionen unterstützt.  
   
  Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

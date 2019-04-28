@@ -5,18 +5,18 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753035"
 ---
 # <a name="analytic-trace-event-reference"></a>Ereignisverweis der analytischen Ablaufverfolgung
-In der folgenden Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten, WCF analytische Ablaufverfolgung.  
+In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten, die mit den WCF-analytische Ablaufverfolgung.  
   
 ## <a name="event-reference"></a>Ereignisverweis  
   
-|Ereignis-ID|Ereignisgrad|Ereignismeldung|Stichwörter|  
+|Ereignis-ID|Ereignisgrad|Ereignismeldung|Schlüsselwörter|  
 |--------------|-----------------|-------------------|--------------|  
 |[131 - BufferPoolAllocation](../../../../../docs/framework/wcf/diagnostics/etw/131-bufferpoolallocation.md)|Ausführlich|Poolreservierung %1 Bytes.|Infrastruktur|  
 |[132 - BufferPoolChangeQuota](../../../../../docs/framework/wcf/diagnostics/etw/132-bufferpoolchangequota.md)|Ausführlich|BufferPool der Größe %1, Kontingent wird um %2 geändert.|Infrastruktur|  

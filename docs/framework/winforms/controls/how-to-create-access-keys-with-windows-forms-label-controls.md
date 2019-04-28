@@ -18,11 +18,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747107"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen
 Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente können verwendet werden, um die Zugriffstasten für andere Steuerelemente definieren. Wenn Sie einen Zugriffsschlüssel in ein Label-Steuerelement definieren, kann Benutzer drücken, die ALT-Taste plus das Zeichen, das Sie festlegen, um den Fokus auf das Steuerelement zu verschieben, die sie in der Aktivierreihenfolge folgt. Da Bezeichnungen keinen Fokus erhalten können, verschiebt den Fokus automatisch auf das nächste Steuerelement in der Aktivierreihenfolge. Verwenden Sie dieses Verfahren, um Textfelder, Kombinationsfelder, Listenfelder und Datenraster Zugriffsschlüssel zuweisen.  

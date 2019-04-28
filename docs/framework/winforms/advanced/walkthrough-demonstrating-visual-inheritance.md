@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747524"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
   
--   Erstellen eines Klassenbibliotheksprojekts, das ein Basisformular enthält.  
+- Erstellen eines Klassenbibliotheksprojekts, das ein Basisformular enthält.  
   
--   Hinzufügen einer Schaltfläche mit Eigenschaften, die abgeleitete Klassen des Basisformulars ändern können.  
+- Hinzufügen einer Schaltfläche mit Eigenschaften, die abgeleitete Klassen des Basisformulars ändern können.  
   
--   Hinzufügen einer Schaltfläche, die von Erben des Basisformulars nicht geändert werden kann.  
+- Hinzufügen einer Schaltfläche, die von Erben des Basisformulars nicht geändert werden kann.  
   
--   Erstellen eines Projekts, das ein Formular enthält, das von `BaseForm` erbt.  
+- Erstellen eines Projekts, das ein Formular enthält, das von `BaseForm` erbt.  
   
  Schließlich wird in dieser exemplarischen Vorgehensweise der Unterschied zwischen privaten und geschützten Steuerelementen in einem geerbten Formular gezeigt.  
   
@@ -76,11 +76,11 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 3. Legen Sie im "Eigenschaftenfenster" die folgenden Eigenschaften der Schaltfläche fest:  
   
-    -   Legen Sie die **Text** Eigenschaft **Say Hello**.  
+    - Legen Sie die **Text** Eigenschaft **Say Hello**.  
   
-    -   Legen Sie die **(Name)** Eigenschaft **BtnProtected**.  
+    - Legen Sie die **(Name)** Eigenschaft **BtnProtected**.  
   
-    -   Legen Sie die **Modifizierer** Eigenschaft **geschützte**. Dadurch wird es möglich, dass Formulare, die von erben **Form1** beim Ändern der Eigenschaften von **BtnProtected**.  
+    - Legen Sie die **Modifizierer** Eigenschaft **geschützte**. Dadurch wird es möglich, dass Formulare, die von erben **Form1** beim Ändern der Eigenschaften von **BtnProtected**.  
   
 4. Doppelklicken Sie auf die **Say Hello** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis.  
   
@@ -100,11 +100,11 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 2. Fügen Sie eine zweite Schaltfläche hinzu, und legen Sie deren Eigenschaften wie folgt fest:  
   
-    -   Legen Sie die **Text** Eigenschaft **Say Goodbye**.  
+    - Legen Sie die **Text** Eigenschaft **Say Goodbye**.  
   
-    -   Legen Sie die **(Name)** Eigenschaft **BtnPrivate**.  
+    - Legen Sie die **(Name)** Eigenschaft **BtnPrivate**.  
   
-    -   Legen Sie die **Modifizierer** Eigenschaft **Private**. Dies macht es unmöglich, Formularen, die von erben **Form1** beim Ändern der Eigenschaften von **BtnPrivate**.  
+    - Legen Sie die **Modifizierer** Eigenschaft **Private**. Dies macht es unmöglich, Formularen, die von erben **Form1** beim Ändern der Eigenschaften von **BtnPrivate**.  
   
 3. Doppelklicken Sie auf die **Say Goodbye** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis. Platzieren Sie die folgende Codezeile in der Ereignisprozedur:  
   
@@ -148,9 +148,9 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 8. Wenn Sie Visual C# -Code verwenden:  
   
-    1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1** in die **InheritanceTest** Projekt, und wählen Sie dann **löschen**. Klicken Sie im Meldungsfeld, das angezeigt wird, klicken Sie auf **OK** zu bestätigen.  
+    1. In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1** in die **InheritanceTest** Projekt, und wählen Sie dann **löschen**. Klicken Sie im Meldungsfeld, das angezeigt wird, klicken Sie auf **OK** zu bestätigen.  
   
-    2.  Öffnen Sie die Datei "Program.cs", und ändern Sie die Zeile `Application.Run(new Form1());` in `Application.Run(new Form2());`.  
+    2. Öffnen Sie die Datei "Program.cs", und ändern Sie die Zeile `Application.Run(new Form1());` in `Application.Run(new Form2());`.  
   
 9. In **Projektmappen-Explorer**, mit der rechten Maustaste die **InheritanceTest** Projekt, und wählen **als Startprojekt festlegen**.  
   

@@ -3,11 +3,11 @@ title: Ändern der Cachefreigabeebenen für Send-Aktivitäten
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784292"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Ändern der Cachefreigabeebenen für Send-Aktivitäten
 Mit der Erweiterung <xref:System.ServiceModel.Activities.SendMessageChannelCache> können Sie die Cachefreigabeebenen, die Einstellungen des Kanalfactorycaches und die Einstellungen des Kanalcaches für Workflows anpassen, die Nachrichten mit <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten an Dienstendpunkte senden. Diese Workflows sind in der Regel Clientworkflows, könnten jedoch auch Workflowdienste sein, die in einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet werden. Der Kanalfactorycache enthält zwischengespeicherte <xref:System.ServiceModel.ChannelFactory%601>-Objekte. Der Kanalcache enthält zwischengespeicherte Kanäle.  
@@ -20,11 +20,11 @@ Mit der Erweiterung <xref:System.ServiceModel.Activities.SendMessageChannelCache
   
  Im Folgenden sind die unterschiedlichen Cachefreigabeebenen für <xref:System.ServiceModel.Activities.Send>-Aktivitäten in einem Workflow mit Empfehlungen zur Verwendung aufgelistet:  
   
--   **Hostebene**: Auf dem Host, Freigabestufe ist der Cache nur für die in dem Workflowdiensthost gehosteten Workflowinstanzen verfügbar. Ein Cache kann auch prozessweit für mehrere Workflowdiensthosts freigegeben werden.  
+- **Hostebene**: Auf dem Host, Freigabestufe ist der Cache nur für die in dem Workflowdiensthost gehosteten Workflowinstanzen verfügbar. Ein Cache kann auch prozessweit für mehrere Workflowdiensthosts freigegeben werden.  
   
--   **Auf Instanzebene**: In der Instanz, Freigabestufe, der Cache ist während des Lebenszyklus einer bestimmten Workflowinstanz zur Verfügung, aber der Cache wird nicht für andere Workflowinstanzen verfügbar.  
+- **Auf Instanzebene**: In der Instanz, Freigabestufe, der Cache ist während des Lebenszyklus einer bestimmten Workflowinstanz zur Verfügung, aber der Cache wird nicht für andere Workflowinstanzen verfügbar.  
   
--   **Kein Cache**: Der Cache ist standardmäßig deaktiviert, wenn Sie einen Workflow verfügen, der in der Konfiguration definierte Endpunkte verwendet. Es wird empfohlen, den Cache in diesem Fall nicht zu aktivieren, da dies unsicher sein kann. Beispiel: Wenn eine andere Identität (andere Anmeldeinformationen oder Identitätswechsel) für jeden Sendevorgang benötigt wird.  
+- **Kein Cache**: Der Cache ist standardmäßig deaktiviert, wenn Sie einen Workflow verfügen, der in der Konfiguration definierte Endpunkte verwendet. Es wird empfohlen, den Cache in diesem Fall nicht zu aktivieren, da dies unsicher sein kann. Beispiel: Wenn eine andere Identität (andere Anmeldeinformationen oder Identitätswechsel) für jeden Sendevorgang benötigt wird.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Ändern der Cachefreigabeebene für einen Clientworkflow  
  Um die Cachefreigabe für einen Clientworkflow festzulegen, fügen Sie dem gewünschten Satz von Workflowinstanzen eine Instanz der <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse als Erweiterung hinzu. So wird der Cache für alle Workflowinstanzen freigegeben. In den folgenden Codebeispielen wird die Ausführung dieser Schritte veranschaulicht.  
@@ -71,7 +71,7 @@ host1.WorkflowExtensions.Add(sharedChannelCacheExtension);
 host2.WorkflowExtensions.Add(sharedChannelCacheExtension);  
 ```  
   
- Um die Cachefreigabe für einen gehosteten Workflowdienst auf Instanzebene festzulegen, fügen Sie dem Workflowdiensthost einen `Func<SendMessageChannelCache>`-Delegaten als Erweiterung hinzu, und weisen Sie diesen Delegaten dem Code hinzu, der eine neue Instanz der <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse instanziiert. Auf diese Weise wird für jede einzelne Workflowinstanz ein anderer Cache verwendet. Im folgenden Codebeispiel wird gezeigt, wie Sie dieses Ergebnis mit einem Lambda-Ausdruck erzielen, um die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Erweiterung, auf die der Delegat zeigt, direkt zu definieren.  
+ Um die Cachefreigabe für einen gehosteten Workflowdienst auf Instanzebene festzulegen, fügen Sie dem Workflowdiensthost einen `Func<SendMessageChannelCache>`-Delegaten als Erweiterung hinzu, und weisen Sie diesen Delegaten dem Code hinzu, der eine neue Instanz der <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse instanziiert. Auf diese Weise wird für jede einzelne Workflowinstanz ein anderer Cache verwendet. Im folgenden Codebeispiel wird gezeigt, wie Sie dieses Ergebnis mit einem Lambdaausdruck erzielen, um die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Erweiterung, auf die der Delegat zeigt, direkt zu definieren.  
   
 ```csharp 
 serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache  

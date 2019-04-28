@@ -10,11 +10,11 @@ ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705362"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Deaktivieren Sie >-Element für NameValueSectionHandler und DictionarySectionHandler
 
@@ -32,7 +32,7 @@ Löscht alle zuvor definierte Einstellungen in einem Abschnitt.
 
 ## <a name="attributes"></a>Attribute
 
-Keine
+Keiner
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -42,7 +42,7 @@ Keine
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 

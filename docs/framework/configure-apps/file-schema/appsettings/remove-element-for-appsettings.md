@@ -10,11 +10,11 @@ ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: cf9a34e47b70aaff12b29b9c5cf944d5bb15fee9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705388"
 ---
 # <a name="remove-element-for-appsettings"></a>\<Entfernen Sie >-Element für \<AppSettings >
 
@@ -46,7 +46,7 @@ Entfernt die benutzerdefinierte Anwendungseinstellungen.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+Keiner
 
 ## <a name="example"></a>Beispiel
 

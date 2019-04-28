@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise 
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756506"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)
 Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) mithilfe der <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> Methode. Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.  
@@ -25,9 +25,9 @@ Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehen
   
 1. Fügen Sie die `ProcessURLAsync`-Methode der ersten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Wenn Sie den Code aus heruntergeladen [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), öffnen Sie das "asyncwalkthrough"-Projekt, und fügen Sie dann `ProcessURLAsync` in die Datei "MainWindow.Xaml.vb".  
+    - Wenn Sie den Code aus heruntergeladen [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), öffnen Sie das "asyncwalkthrough"-Projekt, und fügen Sie dann `ProcessURLAsync` in die Datei "MainWindow.Xaml.vb".  
   
-    -   Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `GetURLContentsAsync`-Methode enthält. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das erste Beispiel im Abschnitt "Vollständige Codebeispiele aus der exemplarischen Vorgehensweise".  
+    - Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `GetURLContentsAsync`-Methode enthält. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das erste Beispiel im Abschnitt "Vollständige Codebeispiele aus der exemplarischen Vorgehensweise".  
   
      Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `For Each`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise. Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.  
   
@@ -98,9 +98,9 @@ Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehen
   
 1. Fügen Sie die folgende Version von `ProcessURLAsync` der zweiten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Wenn Sie den Code aus heruntergeladen [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), öffnen Sie das AsyncWalkthrough_HttpClient-Projekt, und fügen Sie dann `ProcessURLAsync` in die Datei "MainWindow.Xaml.vb".  
+    - Wenn Sie den Code aus heruntergeladen [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), öffnen Sie das AsyncWalkthrough_HttpClient-Projekt, und fügen Sie dann `ProcessURLAsync` in die Datei "MainWindow.Xaml.vb".  
   
-    -   Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `HttpClient.GetByteArrayAsync`-Methode verwendet. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das zweite Beispiel im Abschnitt "Vollständige Codebeispiele aus der exemplarischen Vorgehensweise".  
+    - Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `HttpClient.GetByteArrayAsync`-Methode verwendet. Die Datei "MainWindow.Xaml.vb" für diese Anwendung ist das zweite Beispiel im Abschnitt "Vollständige Codebeispiele aus der exemplarischen Vorgehensweise".  
   
      Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `For Each`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise. Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.  
   
@@ -169,7 +169,7 @@ Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehen
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>So testen Sie die Task.WhenAll-Lösungen  
   
--   Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**. Die Ausgabe sollte der Ausgabe der asynchronen Projektmappen in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.  
+- Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**. Die Ausgabe sollte der Ausgabe der asynchronen Projektmappen in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt die Erweiterungen des Projekts, das die `GetURLContentsAsync`-Methode verwendet, um Inhalt aus dem Web herunterladen.  

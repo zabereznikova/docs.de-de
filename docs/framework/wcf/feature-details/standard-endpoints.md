@@ -3,11 +3,11 @@ title: Standardendpunkte
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747770"
 ---
 # <a name="standard-endpoints"></a>Standardendpunkte
 Endpunkte werden definiert, indem eine Adresse, eine Bindung und ein Vertrag angegeben wird. Andere Parameter, die für einen Endpunkt festgelegt werden können, sind beispielsweise Verhaltenskonfigurationen, Header und Abhör-URIs.  Für bestimmte Typen von Endpunkten ändern sich diese Werte nicht. Beispielsweise verwenden Metadatenaustausch-Endpunkte immer den <xref:System.ServiceModel.Description.IMetadataExchange>-Vertrag. Andere Endpunkte, z. B. <xref:System.ServiceModel.Description.WebHttpEndpoint>, erfordern immer ein angegebenes Endpunktverhalten. Die Verwendbarkeit eines Endpunkts kann verbessert werden, indem für häufig verwendete Endpunkteigenschaften Endpunkte mit Standardwerten verwendet werden. Mithilfe von Standardendpunkten können Entwickler einen Endpunkt definieren, der über Standardwerte verfügt oder für den sich eine oder mehrere Endpunkteigenschaften nicht ändern.  Mit diesen Endpunkten können Sie einen solchen Endpunkt verwenden, ohne Informationen statischer Natur angeben zu müssen. Standardendpunkte können für Infrastruktur- und Anwendungsendpunkte verwendet werden.  
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- Die <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> bietet der Unterstützungstyp für die Sammlung, die unter der <`standardEndpoints`> Abschnitt in der Konfiguration für den Standardendpunkt.  Im folgenden Beispiel wird die Implementierung dieser Klasse veranschaulicht.  
+ Die <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> stellt den Unterstützungstyp für die Sammlung, die im angezeigt die <`standardEndpoints`>-Abschnitt in der Konfiguration für den Standardendpunkt.  Im folgenden Beispiel wird die Implementierung dieser Klasse veranschaulicht.  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -130,7 +130,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie einen Standardendpunkt im Abschnitt 
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Um einen Standardendpunkt in der Konfiguration hinzuzufügen, fügen Sie ein <`endpoint`>-Elements auf der <`service`> Element und alle erforderlichen Konfigurationseinstellungen in der <`standardEndpoints`> Element. Im folgenden Beispiel wird gezeigt, wie Sie ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Objekt hinzufügen. Dabei handelt es sich um einen der Standardendpunkte, die im Lieferumfang von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] enthalten sind.  
+ Um einen Standardendpunkt in der Konfiguration hinzuzufügen, fügen ein <`endpoint`>-Element der <`service`>-Element sowie alle erforderlichen Konfigurationseinstellungen in der <`standardEndpoints`> Element. Im folgenden Beispiel wird gezeigt, wie Sie ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Objekt hinzufügen. Dabei handelt es sich um einen der Standardendpunkte, die im Lieferumfang von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] enthalten sind.  
   
 ```xml  
 <services>  
@@ -145,7 +145,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- Der Typ des Standardendpunkts wird angegeben, mit dem Kind-Attribut in der <`endpoint`> Element. Der Endpunkt ist konfiguriert, in der <`standardEndpoints`> Element. Im obigen Beispiel wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Endpunkt hinzugefügt und konfiguriert. Der <`udpDiscoveryEndpoint`> Element enthält ein <`standardEndpoint`> festlegt, die die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> Eigenschaft von der <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ Der Typ des Standardendpunkts wird angegeben, mit dem Kind-Attribut in der <`endpoint`> Element. Der Endpunkt konfiguriert ist, in der <`standardEndpoints`> Element. Im obigen Beispiel wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Endpunkt hinzugefügt und konfiguriert. Die <`udpDiscoveryEndpoint`>-Element enthält ein <`standardEndpoint`> festlegt, die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> Eigenschaft der <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Im Lieferumfang von .NET Framework enthaltene Standardendpunkte  
  In der folgenden Tabelle sind die im Lieferumfang von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] enthaltenen Standardendpunkte aufgeführt.  

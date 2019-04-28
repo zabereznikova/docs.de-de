@@ -16,11 +16,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698641"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With-Anweisung (Visual Basic)
 Führt eine Reihe von Anweisungen aus, die wiederholt auf ein einzelnes Objekt oder eine einzelne Struktur verweisen, sodass die Anweisungen mittels vereinfachter Syntax auf Member des Objekts oder der Struktur zugreifen können.  Wenn Sie eine Struktur verwenden, können Sie nur die Werte von Membern lesen oder Methoden aufrufen; Sie erhalten eine Fehlermeldung, wenn Sie versuchen, Werte zu Membern einer Struktur zuzuweisen, die in einer `With...End With`-Anweisung verwendet wird.  
@@ -48,9 +48,9 @@ End With
   
  Wenn der Code auf dasselbe Objekt in mehreren Anweisungen zugreift, bietet die `With`-Anweisung folgende Vorteile:  
   
--   Sie müssen einen komplexen Ausdruck nicht mehrmals auswerten oder das Ergebnis einer temporären Variablen zuweisen, auch wenn Sie mehrmals auf die Member des Ausdrucks verweisen möchten.  
+- Sie müssen einen komplexen Ausdruck nicht mehrmals auswerten oder das Ergebnis einer temporären Variablen zuweisen, auch wenn Sie mehrmals auf die Member des Ausdrucks verweisen möchten.  
   
--   Der Code wird lesbarer, da wiederkehrende qualifizierende Ausdrücke vermieden werden.  
+- Der Code wird lesbarer, da wiederkehrende qualifizierende Ausdrücke vermieden werden.  
   
  Der Datentyp `objectExpression` kann ein beliebiger Klassen- oder Strukturtyp und sogar ein elementarer Visual Basic-Typ sein, z. B. `Integer`.  Wenn `objectExpression` kein Objekt liefert, können Sie nur die Werte der Member lesen oder Methoden aufrufen; Sie erhalten eine Fehlermeldung, wenn Sie versuchen, Werte zu Membern einer Struktur zuzuweisen, die in einer `With...End With`-Anweisung verwendet wird.  Denselben Fehler würden Sie erhalten, wenn Sie eine Methode aufrufen, die eine Struktur zurückgegeben hat und unmittelbar auf einen Wert zugreifen und diesen einem Member des Funktionsergebnisses zuweisen, z. B. `GetAPoint().x = 1`.  Das Problem in beiden Fällen besteht darin, dass die Struktur nur in der Aufrufliste vorhanden ist und es in solchen Fällen keine Möglichkeit für einen Member einer geänderten Struktur gibt, Daten so an eine Position zu schreiben, dass die Änderung durch anderen Code im Programm berücksichtigt werden kann.  
   

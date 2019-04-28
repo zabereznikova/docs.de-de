@@ -3,47 +3,47 @@ title: Entwickeln von Vertrag zuerst-Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
 ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774204"
 ---
 # <a name="contract-first-workflow-service-development"></a>Entwickeln von Vertrag zuerst-Workflowdiensten
 Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF)-Funktionen zur verbesserten Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox. Dieses Thema enthält eine Übersicht darüber, wie die Aktivitäten und Eigenschaften in einer Workflowdienstzuordnung den Attributen eines Dienstvertrags zugeordnet werden. Ein ausführliches Beispiel zum Erstellen eines Vertrag zuerst-Workflowdiensts, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, das Verarbeiten eines vorhandenen Dienstvertrags](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>In diesem Thema  
   
--   [Zuordnen von dienstvertragsattributen zu workflowattributen](contract-first-workflow-service-development.md#MappingAttributes)  
+- [Zuordnen von dienstvertragsattributen zu workflowattributen](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Dienstvertragsattribute](contract-first-workflow-service-development.md#ServiceContract)  
+    - [Dienstvertragsattribute](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Vorgangsvertragsattribute](contract-first-workflow-service-development.md#OperationContract)  
+    - [Vorgangsvertragsattribute](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Nachrichtenvertragsattribute](contract-first-workflow-service-development.md#MessageContract)  
+    - [Nachrichtenvertragsattribute](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Datenvertragsattribute](contract-first-workflow-service-development.md#DataContract)  
+    - [Datenvertragsattribute](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Fehlervertragsattribute](contract-first-workflow-service-development.md#FaultContract)  
+    - [Fehlervertragsattribute](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Zusätzliche Support- und Implementierungsinformationen](contract-first-workflow-service-development.md#AdditionalSupport)  
+- [Zusätzliche Support- und Implementierungsinformationen](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Nicht unterstützte dienstvertragsfunktionen](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    - [Nicht unterstützte dienstvertragsfunktionen](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Generierung konfigurierter messagingaktivitäten](contract-first-workflow-service-development.md#ActivityGeneration)  
+    - [Generierung konfigurierter messagingaktivitäten](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Zuordnen von dienstvertragsattributen zu workflowattributen  
  Die Tabellen in den folgenden Abschnitten enthalten die verschiedenen WCF-Attribute und -Eigenschaften und veranschaulichen die Zuordnung zu Messagingaktivitäten und Eigenschaften in einem Vertrag zuerst-Workflow.  
   
--   [Dienstvertragsattribute](contract-first-workflow-service-development.md#ServiceContract)  
+- [Dienstvertragsattribute](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Vorgangsvertragsattribute](contract-first-workflow-service-development.md#OperationContract)  
+- [Vorgangsvertragsattribute](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Nachrichtenvertragsattribute](contract-first-workflow-service-development.md#MessageContract)  
+- [Nachrichtenvertragsattribute](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Datenvertragsattribute](contract-first-workflow-service-development.md#DataContract)  
+- [Datenvertragsattribute](contract-first-workflow-service-development.md#DataContract)  
   
--   [Fehlervertragsattribute](contract-first-workflow-service-development.md#FaultContract)  
+- [Fehlervertragsattribute](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Dienstvertragsattribute  
   
@@ -109,25 +109,24 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
   
 ## <a name="AdditionalSupport"></a> Zusätzliche Support- und Implementierungsinformationen  
   
--   [Nicht unterstützte dienstvertragsfunktionen](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+- [Nicht unterstützte dienstvertragsfunktionen](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Generierung konfigurierter messagingaktivitäten](contract-first-workflow-service-development.md#ActivityGeneration)  
+- [Generierung konfigurierter messagingaktivitäten](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Nicht unterstützte dienstvertragsfunktionen  
   
--   Die Verwendung von TPL (Task Parallel Library)-Tasks in den Verträgen wird nicht unterstützt.  
+- Die Verwendung von TPL (Task Parallel Library)-Tasks in den Verträgen wird nicht unterstützt.  
   
--   Die Vererbung in Dienstverträgen wird nicht unterstützt.  
+- Die Vererbung in Dienstverträgen wird nicht unterstützt.  
   
 ### <a name="ActivityGeneration"></a> Generierung konfigurierter messagingaktivitäten  
  Zwei öffentliche statische Methoden werden der <xref:System.ServiceModel.Activities.Receive>-Aktivität und der <xref:System.ServiceModel.Activities.SendReply>-Aktivität hinzugefügt, um bei Verwendung von Vertrag zuerst-Workflowdiensten die Generierung von vorkonfigurierten Nachrichtenaktivitäten zu unterstützen.  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- Die Aktivität, die durch diese Methoden generiert wird, sollte die Vertragsüberprüfung erfolgreich abschließen. Daher werden diese Methoden intern als Teil der Validierungslogik für <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> verwendet. 
-  <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> und <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> werden alle vorkonfiguriert, um dem importierten Vertrag zu entsprechen. Auf der Seite "Content-Eigenschaften" für die Aktivitäten im Workflow-Designer die **Nachricht** oder **Parameter** Abschnitte sind auch so vorkonfiguriert, dass dem Vertrag entsprechen.  
+ Die Aktivität, die durch diese Methoden generiert wird, sollte die Vertragsvalidierung erfolgreich abschließen. Daher werden diese Methoden intern als Teil der Validierungslogik für <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> verwendet. <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> und <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> werden alle vorkonfiguriert, um dem importierten Vertrag zu entsprechen. Auf der Seite "Content-Eigenschaften" für die Aktivitäten im Workflow-Designer die **Nachricht** oder **Parameter** Abschnitte sind auch so vorkonfiguriert, dass dem Vertrag entsprechen.  
   
  WCF-fehlerverträge auch behandelt werden, indem Sie einen separaten Satz von zurückgeben konfiguriert <xref:System.ServiceModel.Activities.SendReply> Aktivitäten für jeden Fehler, die in angezeigt wird, werden die <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
   

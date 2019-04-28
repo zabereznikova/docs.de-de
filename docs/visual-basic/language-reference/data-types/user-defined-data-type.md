@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746727"
 ---
 # <a name="user-defined-data-type"></a>Benutzerdefinierter Datentyp
 Enthält Daten in einem Format, die Sie definieren. Die `Structure` -Anweisung definiert das Format.  
@@ -50,15 +50,15 @@ Enthält Daten in einem Format, die Sie definieren. Die `Structure` -Anweisung d
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Die Arbeitsspeichernutzung.** Wie bei allen zusammengesetzten Datentypen können Sie den gesamten Speicherverbrauch auch bei Strukturen nicht dadurch zuverlässig berechnen, indem Sie die nominalen Speicherbelegungen ihrer Member addieren. Darüber hinaus können Sie nicht davon ausgehen, dass die Member im Speicher in derselben Reihenfolge wie in der Deklaration angeordnet sind. Wenn Sie das Speicherlayout einer Struktur steuern müssen, können Sie das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut auf die `Structure`-Anweisung anwenden.  
+- **Die Arbeitsspeichernutzung.** Wie bei allen zusammengesetzten Datentypen können Sie den gesamten Speicherverbrauch auch bei Strukturen nicht dadurch zuverlässig berechnen, indem Sie die nominalen Speicherbelegungen ihrer Member addieren. Darüber hinaus können Sie nicht davon ausgehen, dass die Member im Speicher in derselben Reihenfolge wie in der Deklaration angeordnet sind. Wenn Sie das Speicherlayout einer Struktur steuern müssen, können Sie das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut auf die `Structure`-Anweisung anwenden.  
   
--   **Interop-Überlegungen.** Wenn die Komponenten, die nicht für .NET Framework geschrieben wurden verbunden sind, strukturieren z. B. Automatisierungs- oder COM-Objekte, denken Sie daran, dass benutzerdefinierte Typen in anderen Umgebungen nicht kompatibel mit Visual Basic sind Typen.  
+- **Interop-Überlegungen.** Wenn die Komponenten, die nicht für .NET Framework geschrieben wurden verbunden sind, strukturieren z. B. Automatisierungs- oder COM-Objekte, denken Sie daran, dass benutzerdefinierte Typen in anderen Umgebungen nicht kompatibel mit Visual Basic sind Typen.  
   
--   **Erweiternde.** Es ist keine automatische Konvertierung zu oder von beliebigen Datentyps der Struktur. Sie können die Konvertierungsoperatoren definieren, bei der Struktur mit der [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md), und Sie können jeden Konvertierungsoperator sein deklarieren `Widening` oder `Narrowing`.  
+- **Erweiternde.** Es ist keine automatische Konvertierung zu oder von beliebigen Datentyps der Struktur. Sie können die Konvertierungsoperatoren definieren, bei der Struktur mit der [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md), und Sie können jeden Konvertierungsoperator sein deklarieren `Widening` oder `Narrowing`.  
   
--   **Typzeichen.** Struktur-Datentypen haben keine literal-Typzeichen oder Bezeichner-Typzeichen.  
+- **Typzeichen.** Struktur-Datentypen haben keine literal-Typzeichen oder Bezeichner-Typzeichen.  
   
--   **Framework-Typ.** Es gibt keinen entsprechenden Typ in .NET Framework. Alle Strukturen erben von der .NET Framework-Klasse <xref:System.ValueType?displayProperty=nameWithType>, aber keine einzelne Struktur entspricht <xref:System.ValueType?displayProperty=nameWithType>.  
+- **Framework-Typ.** Es gibt keinen entsprechenden Typ in .NET Framework. Alle Strukturen erben von der .NET Framework-Klasse <xref:System.ValueType?displayProperty=nameWithType>, aber keine einzelne Struktur entspricht <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Gliederung der Deklaration einer Struktur.  

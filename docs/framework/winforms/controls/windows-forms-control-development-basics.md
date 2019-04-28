@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759868"
 ---
 # <a name="windows-forms-control-development-basics"></a>Grundlagen für das Entwickeln von Windows Forms-Steuerelementen
 Ein Windows Forms-Steuerelement ist eine Klasse, die direkt oder indirekt von abgeleitet <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Die folgende Liste beschreibt allgemeine Szenarien für die Entwicklung von Windows Forms-Steuerelemente:  
   
--   Kombinieren von vorhandenen steuert, um ein zusammengesetztes Steuerelement zu erstellen.  
+- Kombinieren von vorhandenen steuert, um ein zusammengesetztes Steuerelement zu erstellen.  
   
      Zusammengesetzte Steuerelemente kapseln eine Benutzeroberfläche, die als Steuerelement wiederverwendet werden kann. Ein Beispiel für ein zusammengesetztes Steuerelement ist ein Steuerelement, das aus einem Textfeld und eine Schaltfläche "Zurücksetzen" besteht. Visuelle Designer bieten umfassende Unterstützung für das Erstellen von zusammengesetzter Steuerelementen. Um ein zusammengesetztes Steuerelement zu erstellen, leiten Sie von <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. Die Basisklasse <xref:System.Windows.Forms.UserControl> stellt Tastaturrouting für die untergeordneten Steuerelemente und untergeordnete Steuerelemente als Gruppe arbeiten kann. Weitere Informationen finden Sie unter [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md).  
   
--   Erweitern Sie ein vorhandenes Steuerelement anpassen oder ihre Funktionalität hinzufügen.  
+- Erweitern Sie ein vorhandenes Steuerelement anpassen oder ihre Funktionalität hinzufügen.  
   
      Eine Schaltfläche, deren Farbe nicht geändert werden kann, und eine Schaltfläche, die eine zusätzliche Eigenschaft, die Häufigkeit verfolgt sie bereits geklickt wurde, verfügt über sind Beispiele der erweiterten Steuerelemente. Sie können jedes Windows Forms-Steuerelement anpassen, indem abgeleitet wird, und überschreiben oder Hinzufügen von Eigenschaften, Methoden und Ereignisse.  
   
--   Erstellen ein Steuerelement, das nicht der Fall ist, erweitern Sie vorhandene Steuerelemente oder kombinieren.  
+- Erstellen ein Steuerelement, das nicht der Fall ist, erweitern Sie vorhandene Steuerelemente oder kombinieren.  
   
      In diesem Szenario leiten Sie das Steuerelement von der Basisklasse <xref:System.Windows.Forms.Control>. Sie können hinzufügen sowie Eigenschaften, Methoden und Ereignisse der Basisklasse zu überschreiben. Informationen zum Einstieg finden Sie unter [Vorgehensweise: Entwickeln ein einfachen Windows Forms-Steuerelements](how-to-develop-a-simple-windows-forms-control.md).  
   

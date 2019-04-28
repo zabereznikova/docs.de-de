@@ -3,11 +3,11 @@ title: Beispiele für die methodenbasierte Abfrage (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772296"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Beispiele für die methodenbasierte Abfrage (LINQ to DataSet)
 Dieser Abschnitt enthält LINQ to DataSet--Programmierbeispiele in methodenbasierter Abfragesyntax, bei denen die Standardabfrageoperatoren zu verwenden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendete werden ausgefüllt, indem Sie mit der `FillDataSet` -Methode, die im angegebenen [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Weitere Informationen finden Sie unter [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696222"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client- oder kanalobjekt-Objekte mit Diensten kommunizieren. Die [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet eine Übersicht über die Objekte und Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
@@ -20,13 +20,13 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
 ## <a name="overview"></a>Übersicht  
  In diesem Thema werden das Verhalten und die Probleme zu Folgendem beschrieben:  
   
--   Kanal- und Sitzungslebensdauer.  
+- Kanal- und Sitzungslebensdauer.  
   
--   Behandeln von Ausnahmen.  
+- Behandeln von Ausnahmen.  
   
--   Grundlagen von Blockierungsproblemen.  
+- Grundlagen von Blockierungsproblemen.  
   
--   Interaktives Initialisieren von Kanälen.  
+- Interaktives Initialisieren von Kanälen.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanal- und Sitzungslebensdauer  
  Windows Communication Foundation (WCF)-Anwendungen umfasst zwei Kategorien von Kanälen, Datagramm und sitzungsbasiert.  

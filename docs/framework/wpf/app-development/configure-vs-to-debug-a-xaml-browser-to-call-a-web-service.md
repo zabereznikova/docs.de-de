@@ -9,11 +9,11 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
 ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757050"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Vorgehensweise: Konfigurieren von Visual Studio zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Führen Sie in einer teilweise vertrauenswürdigen Sicherheits-Sandbox, die auf das Internet Zone Berechtigungssatz beschränkt ist. Dieser Berechtigungssatz beschränkt Webdienstaufrufe nur Webdienste, die sich auf befinden die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Ursprungssite der Anwendung. Wenn ein [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debuggt wird von Visual Studio 2005, allerdings gilt dies nicht als Standort für die gleichen Ursprungs wie der Webdienst, das sie verweisen. Dieser bewirkt, dass Ausnahmen zur Codezugriffssicherheit ausgelöst werden, wenn die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] versucht, den Webdienst aufzurufen. Allerdings eine Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] Projekt kann konfiguriert werden, um zu simulieren, müssen die gleiche Ursprungssite wie der Webdienst während des Debuggens ruft. Dadurch wird die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] zu sicher Aufrufen des Webdiensts ohne Sicherheitsausnahmen.

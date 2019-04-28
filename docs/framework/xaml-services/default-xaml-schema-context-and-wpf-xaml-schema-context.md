@@ -3,11 +3,11 @@ title: Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689397"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie eine XAML-Produktion, die ein bestimmtes XAML-Vokabular verwendet interagiert mit dem Schreiben von Verhalten führen, einschließlich wie Zuordnung eines Typs aufgelöst wird, wie Assemblys geladen werden, wie bestimmte Reader- und Writer-Objekt Einstellungen werden interpretiert. Dieses Thema beschreibt die Funktionen von .NET Framework-XAML-Dienste und der zugeordnetes standardmäßiges XAML-Schemakontext, basierend auf der CLR-Typsystems. Dieses Thema beschreibt auch die XAML-Schemakontext, der für WPF verwendet wird.  
@@ -50,11 +50,11 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie ein
   
 2. Andernfalls, eine der folgenden Methoden auf der Grundlage CLR <xref:System.Reflection.Assembly> -API zum Laden einer Assembly verwendet werden:  
   
-    -   Wenn der Name in der Zuordnung gekennzeichnet ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
+    - Wenn der Name in der Zuordnung gekennzeichnet ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
-    -   Wenn der vorherige Schritt fehlschlägt, verwenden Sie den kurzen Namen (und das öffentliche Schlüsseltoken, falls vorhanden) aufrufen, <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Wenn der vorherige Schritt fehlschlägt, verwenden Sie den kurzen Namen (und das öffentliche Schlüsseltoken, falls vorhanden) aufrufen, <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-    -   Wenn der Name in der Zuordnung nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+    - Wenn der Name in der Zuordnung nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` wird für Windows Communication Foundation (WCF) und Windows Workflow Foundation verwendet.  
@@ -82,11 +82,11 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie ein
   
 2. Andernfalls wird eine der folgenden Methoden zum Laden einer Assembly verwendet:  
   
-    -   Rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
+    - Rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
-    -   Wenn ein Kurzname und das öffentliche token Kombination aus der Assembly übereinstimmen, der aus der BAML geladen wurde, verwenden Sie diese Assembly.  
+    - Wenn ein Kurzname und das öffentliche token Kombination aus der Assembly übereinstimmen, der aus der BAML geladen wurde, verwenden Sie diese Assembly.  
   
-    -   Verwenden Sie zum Aufrufen Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Verwenden Sie zum Aufrufen Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
 ms.openlocfilehash: b1d04280ef993297102d446ba5a7db54e8404dd8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750786"
 ---
 # <a name="caches"></a>\<caches>
 Registriert die Caches für Sitzungstoken und Erkennung von tokenwiederholungen verwendet.  
@@ -32,7 +32,7 @@ Registriert die Caches für Sitzungstoken und Erkennung von tokenwiederholungen 
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

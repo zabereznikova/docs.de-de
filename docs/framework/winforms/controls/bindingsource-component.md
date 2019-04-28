@@ -7,16 +7,16 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
 ms.openlocfilehash: 54639edb512a8bc6c5909282d5e4c210439e2a6e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683417"
 ---
 # <a name="bindingsource-component"></a>BindingSource-Komponente
 Kapselt eine Datenquelle zum Binden an Steuerelemente.  
   
- Die <xref:System.Windows.Forms.BindingSource>-Komponente dient zwei Zwecken. Erstens stellt sie eine Dereferenzierungsschicht bereit, wenn die Steuerelemente in einem Formular an Daten gebunden werden. Bei diesem Vorgang wird die <xref:System.Windows.Forms.BindingSource>-Komponente an die Datenquelle gebunden, und anschließend werden die Steuerelemente im Formular an die <xref:System.Windows.Forms.BindingSource>-Komponente gebunden. Alle weiteren Interaktionen mit den Daten, einschließlich Navigieren, Sortieren, Filtern und Aktualisieren, werden durch Aufrufe an die <xref:System.Windows.Forms.BindingSource>-Komponente ausgeführt.  
+ Die <xref:System.Windows.Forms.BindingSource>-Komponente dient zwei Zwecken. Als erstes stellt sie eine Dereferenzierungsschicht bereit, wenn die Steuerelemente in einem Formular an Daten gebunden werden. Bei diesem Vorgang wird die <xref:System.Windows.Forms.BindingSource>-Komponente an die Datenquelle gebunden, und anschließend werden die Steuerelemente im Formular an die <xref:System.Windows.Forms.BindingSource>-Komponente gebunden. Alle weiteren Interaktionen mit den Daten, einschließlich Navigieren, Sortieren, Filtern und Aktualisieren, werden durch Aufrufe an die <xref:System.Windows.Forms.BindingSource>-Komponente ausgeführt.  
   
  Zweitens kann die <xref:System.Windows.Forms.BindingSource>-Komponente als Datenquelle mit starker Typisierung fungieren. Wenn Sie der <xref:System.Windows.Forms.BindingSource>-Komponente einen Typ mit der <xref:System.Windows.Forms.BindingSource.Add%2A>-Methode hinzuzufügen, wird eine Liste dieses Typs erstellt.  
   

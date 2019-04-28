@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779028"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Vorgehensweise: Verwenden des Mischmodus zum Steuern des Alphablendings
 Möglicherweise gibt es Situationen, eine Offscreen-Bitmap zu erstellen, die die folgenden Eigenschaften besitzt:  
   
--   Farben haben alpha-Werte, die kleiner als 255 sind.  
+- Farben haben alpha-Werte, die kleiner als 255 sind.  
   
--   Farben sind nicht alpha miteinander kombiniert werden, wie Sie die Bitmap zu erstellen.  
+- Farben sind nicht alpha miteinander kombiniert werden, wie Sie die Bitmap zu erstellen.  
   
--   Wenn Sie die fertige Bitmap angezeigt wird, sind die Farben in der Bitmap Alphablending mit den Hintergrundfarben, auf dem Anzeigegerät.  
+- Wenn Sie die fertige Bitmap angezeigt wird, sind die Farben in der Bitmap Alphablending mit den Hintergrundfarben, auf dem Anzeigegerät.  
   
  Um eine solche Bitmap zu erstellen, erstellen Sie ein leeres <xref:System.Drawing.Bitmap> Objekt an, und erstellen dann eine <xref:System.Drawing.Graphics> -Objekt auf Grundlage dieser Bitmap. Legen Sie den Modus zusammensetzt, von der <xref:System.Drawing.Graphics> -Objekt <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762110"
 ---
 # <a name="using-drawingvisual-objects"></a>Verwenden von DrawingVisual-Objekten
 Dieses Thema enthält eine Übersicht über die Verwendung von <xref:System.Windows.Media.DrawingVisual> Objekte in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visuellen Ebene.  
@@ -51,9 +51,9 @@ Dieses Thema enthält eine Übersicht über die Verwendung von <xref:System.Wind
   
  Die folgende Liste beschreibt die zwei Elemente, die Sie überschreiben müssen:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Gibt ein untergeordnetes Element am angegebenen Index aus der Auflistung der untergeordneten Elemente zurück.  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Gibt ein untergeordnetes Element am angegebenen Index aus der Auflistung der untergeordneten Elemente zurück.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ruft die Anzahl der sichtbaren untergeordneten Elemente innerhalb dieses Elements ab.  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ruft die Anzahl der sichtbaren untergeordneten Elemente innerhalb dieses Elements ab.  
   
  Im folgenden Beispiel überschreibt, für die beiden <xref:System.Windows.FrameworkElement> Member werden implementiert.  
   

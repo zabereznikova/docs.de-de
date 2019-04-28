@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748251"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Forms-Layoutfunktionen, z. B. Verankern und Ausrichtungslinien, verwendet werden können, um WPF-Steuerelemente (Windows Presentation Foundation) anzuordnen.
 
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:
 
--   Erstellen eines Projekts
+- Erstellen eines Projekts
 
--   Erstellen des WPF-Steuerelements
+- Erstellen des WPF-Steuerelements
 
--   Hosten von WPF-Steuerelementen in einem Layoutbereich
+- Hosten von WPF-Steuerelementen in einem Layoutbereich
 
--   Verwenden von Ausrichtungslinien zum Ausrichten von WPF-Steuerelementen
+- Verwenden von Ausrichtungslinien zum Ausrichten von WPF-Steuerelementen
 
--   Verankern und Andocken von WPF-Steuerelementen
+- Verankern und Andocken von WPF-Steuerelementen
 
 > [!NOTE]
 >  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Zunächst muss das Windows Forms-Projekt erstellt werden.  
@@ -47,7 +47,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
--   Erstellen Sie ein neues Windows Forms-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen `ArrangeElementHost`.  
+- Erstellen Sie ein neues Windows Forms-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Erstellen des WPF-Steuerelements  
  Nachdem Sie dem Projekt ein WPF-Steuerelement hinzugefügt haben, können Sie dieses auf dem Formular anordnen.  

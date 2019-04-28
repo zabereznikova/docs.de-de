@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761366"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Übersicht über das MenuStrip-Steuerelement (Windows Forms)
 Menüs stellen die Funktionalität für Ihre Benutzer von Befehlen, die von einem gemeinsamen Thema zusammengefasst sind.  
@@ -26,11 +26,11 @@ Menüs stellen die Funktionalität für Ihre Benutzer von Befehlen, die von eine
 ## <a name="ways-to-use-the-menustrip-control"></a>Möglichkeiten, das MenuStrip-Steuerelement zu verwenden.  
  Verwenden der <xref:System.Windows.Forms.MenuStrip> zu steuern:  
   
--   Erstellen Sie ganz einfach benutzerdefinierte, häufig verwendete Menüs, die unterstützen erweiterte Benutzer Schnittstelle und das Layout-Funktionen, z. B. Text und Bild Sortierung und Ausrichtung, Drag & Drop-Vorgänge, MDI, Überlauf und alternative Modi für den Zugriff auf Befehle im Menü.  
+- Erstellen Sie ganz einfach benutzerdefinierte, häufig verwendete Menüs, die unterstützen erweiterte Benutzer Schnittstelle und das Layout-Funktionen, z. B. Text und Bild Sortierung und Ausrichtung, Drag & Drop-Vorgänge, MDI, Überlauf und alternative Modi für den Zugriff auf Befehle im Menü.  
   
--   Unterstützt das typische Aussehen und Verhalten des Betriebssystems.  
+- Unterstützt das typische Aussehen und Verhalten des Betriebssystems.  
   
--   Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
+- Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
   
  Die folgende Tabelle zeigt einige besonders wichtigen Eigenschaften der <xref:System.Windows.Forms.MenuStrip> und die zugehörigen Klassen.  
   

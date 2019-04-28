@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771422"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen
 In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und benutzerdefinierte Anmeldeinformationen aus Anwendungscode genutzt werden.  
@@ -18,9 +18,9 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
 ## <a name="credentials-extensibility-classes"></a>Erweiterbarkeitsklassen für Anmeldeinformationen  
  Die <xref:System.ServiceModel.Description.ClientCredentials> und <xref:System.ServiceModel.Description.ServiceCredentials> Klassen sind haupteinstiegspunkte für die sicherheitserweiterbarkeit der Windows Communication Foundation (WCF)-. Diese Anmeldeinformationsklassen stellen die APIs bereit, die es dem Anmeldecode ermöglichen, Anmeldeinformationen einzurichten und Anmeldeinformationstypen in Sicherheitstoken zu konvertieren. (*Sicherheitstoken* werden verwendet, um innerhalb von SOAP-Nachrichten Anmeldeinformationen zu übertragen.) Die Verantwortungsbereiche dieser Klassen von Anmeldeinformationen können in zwei Bereiche geteilt werden:  
   
--   Bereitstellung der APIs für Anwendungen zur Einrichtung von Anmeldeinformationen.  
+- Bereitstellung der APIs für Anwendungen zur Einrichtung von Anmeldeinformationen.  
   
--   Funktion als Factory für <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Implementierungen.  
+- Funktion als Factory für <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Implementierungen.  
   
  Sowohl die <xref:System.ServiceModel.Description.ClientCredentials>- als auch die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse erben von der abstrakten <xref:System.ServiceModel.Security.SecurityCredentialsManager>-Klasse, die den Vertrag für die Rückgabe des <xref:System.IdentityModel.Selectors.SecurityTokenManager> definieren.  
   
@@ -29,22 +29,22 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
 ## <a name="reasons-to-customize"></a>Gründe für eine Anpassung  
  Es gibt mehrere Gründe für die Anpassung von Client- oder Dienstanmeldeinformationsklassen. Vor allem ist die Anforderung zum Ändern des Standardverhaltens für die Sicherheit von WCF im Hinblick auf die Handhabung von vom System bereitgestellten Anmeldeinformationstypen, insbesondere aus folgenden Gründen:  
   
--   Änderungen, die mit anderen Erweiterbarkeitspunkten nicht möglich sind.  
+- Änderungen, die mit anderen Erweiterbarkeitspunkten nicht möglich sind.  
   
--   Hinzufügen neuer Anmeldeinformationstypen.  
+- Hinzufügen neuer Anmeldeinformationstypen.  
   
--   Hinzufügen neuer benutzerdefinierter Typen von Sicherheitstoken.  
+- Hinzufügen neuer benutzerdefinierter Typen von Sicherheitstoken.  
   
  Dieses Thema beschreibt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und aus Anwendungscode genutzt werden.  
   
 ## <a name="first-in-a-series"></a>Zuerst  
  Erstellen einer benutzerdefinierten anmeldeinformationsklasse ist nur der erste Schritt, da die Ursache für die Anpassung von Anmeldeinformationen, WCF-Verhalten in Bezug auf die Bereitstellung von Anmeldeinformationen, die Serialisierung von Sicherheitstoken oder Authentifizierung zu ändern ist. Andere Themen in diesem Abschnitt beschreiben, wie benutzerdefinierte Serialisierungsprogramme und Authentifizierer erstellt werden. In diesem Zusammenhang ist die Erstellung benutzerdefinierter Anmeldeinformationsklassen das erste Thema in der Reihe. Nachfolgende Aktionen (Erstellung von benutzerdefinierten Serialisierungsprogrammen und Authentifizierern) können nur durchgeführt werden, nachdem benutzerdefinierte Anmeldeinformationen erstellt wurden. Weitere Themen, die auf diesem Thema aufbauen:  
   
--   [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
 ## <a name="procedures"></a>Verfahren  
   

@@ -3,11 +3,11 @@ title: Compileranweisungen
 description: Erfahren Sie mehr über F# Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
 ms.date: 12/10/2018
 ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766102"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
@@ -21,10 +21,10 @@ In der folgenden Tabelle werden die Präprozessordirektiven aufgelistet, die in 
 
 |Direktive|Beschreibung|
 |---------|-----------|
-|`#if` *Symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` enthalten ist, wenn die *Symbol* definiert ist. Das Symbol kann auch mit negiert `!`.|
+|`#if` *symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` enthalten ist, wenn die *Symbol* definiert ist. Das Symbol kann auch mit negiert `!`.|
 |`#else`|Unterstützt die bedingte Kompilierung. Markiert einen einzubeziehenden Codeabschnitt, wenn das mit dem vorherigen verwendeten `#if` nicht definiert ist.|
 |`#endif`|Unterstützt die bedingte Kompilierung. Markiert das Ende eines bedingten Codeabschnitts.|
-|`#`[Zeile] *Int*,<br/>`#`[Zeile] *Int* *Zeichenfolge*,<br/>`#`[Zeile] *Int* *wörtliche Zeichenfolge*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
+|`#`[line] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
 |`#nowarn` *warningcode*|Deaktiviert eine Compilerwarnung oder Warnungen. Suchen Sie zum Deaktivieren einer Warnung nach ihrer Nummer in der Compilerausgabe, und setzen Sie sie in Anführungszeichen. Lassen Sie das Präfix „FS“ weg. Zum Deaktivieren von mehreren Warnnummern in derselben Zeile müssen Sie jede Nummer in Anführungszeichen setzen und jede Zeichenfolge durch ein Leerzeichen abtrennen. Zum Beispiel:
 
 `#nowarn "9" "40"`

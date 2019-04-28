@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774607"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden
 In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode für ein <xref:System.Data.Objects.ObjectContext>-Objekt oder als statische Methode für eine benutzerdefinierte Klasse aufgerufen wird. Ein *modelldefinierte Funktion* ist eine Funktion, die im konzeptionellen Modell definiert ist. Die folgenden Prozeduren beschreiben, wie diese Funktionen direkt aufgerufen werden, anstatt sie von LINQ to Entities-Abfragen aufzurufen. Weitere Informationen zu aufrufen modelldefinierter Funktionen in LINQ to Entities-Abfragen, finden Sie unter [Vorgehensweise: Aufrufen Modelldefinierter Funktionen in Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -25,9 +25,9 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
   
 2. Fügen Sie der <xref:System.Data.Objects.ObjectContext>-Klasse, die wie folgt vorgeht, eine Common Language Runtime (CLR)-Methode hinzu:  
   
-    -   Sie ordnet der im konzeptionellen Modell definierten Funktion Objekte zu. Zum Zuordnen der Methode müssen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode übernehmen. Beachten Sie, dass der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs im konzeptionellen Modell den Namespacenamen und den Funktionsnamen darstellen. Bei der Funktionsnamenauflösung für LINQ wird die Groß-/Kleinschreibung berücksichtigt.  
+    - Sie ordnet der im konzeptionellen Modell definierten Funktion Objekte zu. Zum Zuordnen der Methode müssen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode übernehmen. Beachten Sie, dass der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs im konzeptionellen Modell den Namespacenamen und den Funktionsnamen darstellen. Bei der Funktionsnamenauflösung für LINQ wird die Groß-/Kleinschreibung berücksichtigt.  
   
-    -   Gibt die Ergebnisse der <xref:System.Linq.IQueryProvider.Execute%2A>-Methode zurück, die von der <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>-Eigenschaft zurückgegeben werden.  
+    - Gibt die Ergebnisse der <xref:System.Linq.IQueryProvider.Execute%2A>-Methode zurück, die von der <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>-Eigenschaft zurückgegeben werden.  
   
 3. Rufen Sie die statische Methode als ein Member für eine Instanz der <xref:System.Data.Objects.ObjectContext>-Klasse auf.  
   
@@ -35,11 +35,11 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
   
 1. Fügen Sie der Anwendung eine Klasse mit einer statischen Methode hinzu, die wie folgt vorgeht:  
   
-    -   Sie ordnet der im konzeptionellen Modell definierten Funktion Objekte zu. Zum Zuordnen der Methode müssen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode übernehmen. Beachten Sie, dass der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs im konzeptionellen Modell den Namespacenamen und den Funktionsnamen darstellen.  
+    - Sie ordnet der im konzeptionellen Modell definierten Funktion Objekte zu. Zum Zuordnen der Methode müssen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode übernehmen. Beachten Sie, dass der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs im konzeptionellen Modell den Namespacenamen und den Funktionsnamen darstellen.  
   
-    -   Akzeptiert ein <xref:System.Linq.IQueryable>-Argument.  
+    - Akzeptiert ein <xref:System.Linq.IQueryable>-Argument.  
   
-    -   Gibt die Ergebnisse der <xref:System.Linq.IQueryProvider.Execute%2A>-Methode zurück, die von der <xref:System.Linq.IQueryable.Provider%2A>-Eigenschaft zurückgegeben werden.  
+    - Gibt die Ergebnisse der <xref:System.Linq.IQueryProvider.Execute%2A>-Methode zurück, die von der <xref:System.Linq.IQueryable.Provider%2A>-Eigenschaft zurückgegeben werden.  
   
 2. Aufrufen der Methode als Member einer statischen Methode für die benutzerdefinierte Klasse  
   

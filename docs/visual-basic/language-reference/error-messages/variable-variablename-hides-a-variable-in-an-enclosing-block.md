@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
 ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766885"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variable "\<Variablenname >' verbirgt eine Variable in einem einschließenden Block
 Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine andere lokale Variable.  
@@ -21,7 +21,7 @@ Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine ande
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Benennen Sie die Variable im-Block eingeschlossen, sodass sie nicht identisch mit anderen lokalen Variablen ist. Zum Beispiel:  
+- Benennen Sie die Variable im-Block eingeschlossen, sodass sie nicht identisch mit anderen lokalen Variablen ist. Zum Beispiel:  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,9 +30,9 @@ Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine ande
     End If  
     ```  
   
--   Eine häufige Ursache für diesen Fehler ist die Verwendung von `Catch e As Exception` innerhalb eines ereignishandlers. Wenn dies der Fall ist, den Namen der `Catch` Blockvariable `ex` statt `e`.  
+- Eine häufige Ursache für diesen Fehler ist die Verwendung von `Catch e As Exception` innerhalb eines ereignishandlers. Wenn dies der Fall ist, den Namen der `Catch` Blockvariable `ex` statt `e`.  
   
--   Eine andere übliche Quelle für diesen Fehler ist ein Zugriffsversuch auf eine lokale Variable deklariert, die innerhalb einer `Try` -block in einem separaten `Catch` Block. Um dies zu korrigieren, deklarieren Sie die Variable außerhalb der `Try...Catch...Finally` Struktur.  
+- Eine andere übliche Quelle für diesen Fehler ist ein Zugriffsversuch auf eine lokale Variable deklariert, die innerhalb einer `Try` -block in einem separaten `Catch` Block. Um dies zu korrigieren, deklarieren Sie die Variable außerhalb der `Try...Catch...Finally` Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
 

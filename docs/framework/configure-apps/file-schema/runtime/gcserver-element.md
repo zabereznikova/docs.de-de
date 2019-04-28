@@ -11,11 +11,11 @@ ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674154"
 ---
 # <a name="gcserver-element"></a>\<GcServer >-Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773232"
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit Ihrem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung.  
@@ -158,17 +158,17 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit I
 ## <a name="limitations-on-font-usage"></a>Einschränkungen der Verwendung von Schriftarten  
  Die folgende Liste beschreibt einige Einschränkungen für das Verpacken und die Verwendung von Schriftarten in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen:  
   
--   **Berechtigungsbits für die Schriftarteneinbettung:** Von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen werden keine Berechtigungsbits für die Schriftarteneinbettung überprüft oder durchgesetzt. Finden Sie unter den [Einführung in das Verpacken von Schriftarten](#introduction_to_packaging_fonts) Abschnitt, um weitere Informationen.  
+- **Berechtigungsbits für die Schriftarteneinbettung:** Von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen werden keine Berechtigungsbits für die Schriftarteneinbettung überprüft oder durchgesetzt. Finden Sie unter den [Einführung in das Verpacken von Schriftarten](#introduction_to_packaging_fonts) Abschnitt, um weitere Informationen.  
   
--   **Site der Ursprungsschriftarten:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen lassen sich nicht auf einen Schriftartverweis auf einen HTTP- oder FTP- [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Site der Ursprungsschriftarten:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen lassen sich nicht auf einen Schriftartverweis auf einen HTTP- oder FTP- [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **Absoluter URI mit Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen nicht erlauben Ihnen die Erstellung einer <xref:System.Windows.Media.FontFamily> -Objekt programmgesteuert mit "Pack:" als Bestandteil des absoluten [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Verweis auf eine Schriftart. Z. B. `"pack://application:,,,/resources/#Pericles Light"` ist ein ungültiger schriftartenverweis.  
+- **Absoluter URI mit Pack: Notation:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen nicht erlauben Ihnen die Erstellung einer <xref:System.Windows.Media.FontFamily> -Objekt programmgesteuert mit "Pack:" als Bestandteil des absoluten [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Verweis auf eine Schriftart. Z. B. `"pack://application:,,,/resources/#Pericles Light"` ist ein ungültiger schriftartenverweis.  
   
--   **Automatische schriftarteneinbettung:** Während der Entwurfszeit besteht keine Unterstützung für die Suche nach einer Anwendung die Verwendung von Schriftarten und automatische Einbetten der Schriftarten in die Ressourcen der Anwendung zur Verfügung.  
+- **Automatische schriftarteneinbettung:** Während der Entwurfszeit besteht keine Unterstützung für die Suche nach einer Anwendung die Verwendung von Schriftarten und automatische Einbetten der Schriftarten in die Ressourcen der Anwendung zur Verfügung.  
   
--   **Schriftartteilmengen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen unterstützen keine Erstellung von Schriftartteilmengen für Dokumente ohne festes Format.  
+- **Schriftartteilmengen:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen unterstützen keine Erstellung von Schriftartteilmengen für Dokumente ohne festes Format.  
   
--   Bei einem falschen Verweis greift die Anwendung auf eine verfügbare Schriftart zurück.  
+- Bei einem falschen Verweis greift die Anwendung auf eine verfügbare Schriftart zurück.  
   
 ## <a name="see-also"></a>Siehe auch
 

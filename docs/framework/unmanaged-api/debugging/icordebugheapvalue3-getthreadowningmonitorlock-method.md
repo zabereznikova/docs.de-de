@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701020"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock-Methode
 Gibt zurück, den verwalteten Thread, der die Monitorsperre für dieses Objekt besitzt.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Hinweise  
  Wenn ein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt:  
   
--   Die Methode gibt S_OK zurück.  
+- Die Methode gibt S_OK zurück.  
   
--   Das Threadobjekt ist gültig, bis der Thread beendet wird.  
+- Das Threadobjekt ist gültig, bis der Thread beendet wird.  
   
  Wenn kein verwalteter Thread die Sperre der Überwachung für dieses Objekt besitzt `ppThread` und `pAcquisitionCount` bleiben unverändert, und die Methode gibt S_FALSE zurück.  
   

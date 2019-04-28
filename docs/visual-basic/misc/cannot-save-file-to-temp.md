@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
 ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769992"
 ---
 # <a name="cannot-save-file-to-temp"></a>Die Datei kann nicht in TEMP gespeichert werden.
 Eine Komponente kann das Verzeichnis "TEMP" nicht finden, oder auf dem Laufwerk oder der Partition, das bzw. die das Verzeichnis "TEMP" enthält, steht nicht genügend Speicherplatz zum Speichern von Informationen zur Verfügung.  

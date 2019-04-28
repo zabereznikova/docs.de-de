@@ -3,11 +3,11 @@ title: Strukturierte Typen, die NULL-Werte zulassen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760323"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Strukturierte Typen, die NULL-Werte zulassen (Entity SQL)
 Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhanden ist. Dies unterscheidet sich von einer vorhandenen Instanz, in der alle Eigenschaften den Wert `null` haben.  
@@ -17,28 +17,28 @@ Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhan
 ## <a name="kinds-of-nullable-structured-types"></a>Arten strukturierter Typen, die NULL-Werte zulassen  
  Es gibt drei Arten von Strukturtypen, die NULL-Werte zulassen:  
   
--   Zeilentypen  
+- Zeilentypen  
   
--   Komplexe Typen  
+- Komplexe Typen  
   
--   Entitätstypen  
+- Entitätstypen  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Codemuster, die NULL-Instanzen strukturierter Typen erstellen  
  In den folgenden Szenarios werden `null`-Instanzen erstellt:  
   
--   `null` als strukturierten Typ formen:  
+- `null` als strukturierten Typ formen:  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   Umwandeln eines Basistyps in einen abgeleiteten Typ:  
+- Umwandeln eines Basistyps in einen abgeleiteten Typ:  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   "Outer join on false"-Bedingung:  
+- "Outer join on false"-Bedingung:  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhan
     ON FalseCondition  
     ```  
   
--   Dereferenzierung eines `null`-Verweises:  
+- Dereferenzierung eines `null`-Verweises:  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   Abrufen von ANYELEMENT aus einer leeren Auflistung:  
+- Abrufen von ANYELEMENT aus einer leeren Auflistung:  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   Überprüfen von Instanzen strukturierter Typen auf `null`:  
+- Überprüfen von Instanzen strukturierter Typen auf `null`:  
   
     ```csharp  
     ...  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
 ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703734"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Vorgehensweise: Zeichnen von kardinalen Splines
 Eine cardinal-Splinekurve ist eine Kurve, die einen bestimmten Satz von Punkten reibungslos zu durchlaufen. Um eine cardinal-Splinekurve zu zeichnen, erstellen eine <xref:System.Drawing.Graphics> Objekt, und übergeben Sie die Adresse eines Arrays von Punkten um die <xref:System.Drawing.Graphics.DrawCurve%2A> Methode.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Zeichnen eines glockenförmigen kardinalen Splines  
   
--   Im folgende Beispiel zeichnet eine glockenförmigen cardinal-Splinekurve, die fünf angegebenen Punkte durchlaufen. Die folgende Abbildung zeigt die Kurve und fünf Punkte.  
+- Im folgende Beispiel zeichnet eine glockenförmigen cardinal-Splinekurve, die fünf angegebenen Punkte durchlaufen. Die folgende Abbildung zeigt die Kurve und fünf Punkte.  
   
      ![Das Diagramm, das eine glockenförmigen cardinal-Splinekurve anzeigt.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
@@ -30,7 +30,7 @@ Eine cardinal-Splinekurve ist eine Kurve, die einen bestimmten Satz von Punkten 
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Zeichnen einer geschlossenen kardinalen Splines  
   
--   Verwenden der <xref:System.Drawing.Graphics.DrawClosedCurve%2A> Methode der <xref:System.Drawing.Graphics> Klasse, um eine geschlossene cardinal-Splinekurve zu zeichnen. In einer geschlossenen cardinal-Splinekurve die Kurve wird fortgesetzt, bis der letzte Punkt im Array und eine Verbindung mit den ersten Punkt im Array. Im folgende Beispiel zeichnet eine geschlossene cardinal-Splinekurve, die sechs angegebenen Punkte durchlaufen. Die folgende Abbildung zeigt die geschlossene Splinekurve, die zusammen mit den sechs Punkten:  
+- Verwenden der <xref:System.Drawing.Graphics.DrawClosedCurve%2A> Methode der <xref:System.Drawing.Graphics> Klasse, um eine geschlossene cardinal-Splinekurve zu zeichnen. In einer geschlossenen cardinal-Splinekurve die Kurve wird fortgesetzt, bis der letzte Punkt im Array und eine Verbindung mit den ersten Punkt im Array. Im folgende Beispiel zeichnet eine geschlossene cardinal-Splinekurve, die sechs angegebenen Punkte durchlaufen. Die folgende Abbildung zeigt die geschlossene Splinekurve, die zusammen mit den sechs Punkten:  
   
  ![Das Diagramm, die eine geschlossene cardinal-Splinekurve anzeigt.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
@@ -39,7 +39,7 @@ Eine cardinal-Splinekurve ist eine Kurve, die einen bestimmten Satz von Punkten 
   
 ### <a name="changing-the-bend-of-a-cardinal-spline"></a>Ändern der Krümmung eines kardinalen Splines  
   
--   Ändern Sie die Möglichkeit, eine cardinal-Splinekurve durch Übergeben eines Arguments Spannung zu sanftesten, der <xref:System.Drawing.Graphics.DrawCurve%2A> Methode. Im folgende Beispiel zeichnet drei kardinale Splinekurven, die über den gleichen Satz von Punkten übergeben. Die folgende Abbildung zeigt die drei Splines zusammen mit ihren Spannungswerten. Beachten Sie, wenn die Spannung 0 ist, die Punkte durch gerade Linien verbunden sind.  
+- Ändern Sie die Möglichkeit, eine cardinal-Splinekurve durch Übergeben eines Arguments Spannung zu sanftesten, der <xref:System.Drawing.Graphics.DrawCurve%2A> Methode. Im folgende Beispiel zeichnet drei kardinale Splinekurven, die über den gleichen Satz von Punkten übergeben. Die folgende Abbildung zeigt die drei Splines zusammen mit ihren Spannungswerten. Beachten Sie, wenn die Spannung 0 ist, die Punkte durch gerade Linien verbunden sind.  
   
  ![Das Diagramm, das drei kardinale Splinekurven anzeigt.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   

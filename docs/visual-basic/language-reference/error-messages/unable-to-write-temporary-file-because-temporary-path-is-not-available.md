@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 ms.openlocfilehash: e6e7590c10c2234e2bbe2f39a00428494105caae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766921"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>Die temporäre Datei konnte nicht geschrieben werden, da kein temporärer Pfad verfügbar ist.
 Visual Basic konnte der Pfad nicht bestimmen, wo temporäre Dateien gespeichert werden.  

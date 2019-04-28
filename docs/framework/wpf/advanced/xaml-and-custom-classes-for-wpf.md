@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759933"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML- und benutzerdefinierte Klassen für WPF
 Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Frameworks unterstützt die Möglichkeit zum Definieren einer benutzerdefinierten Klasse oder Struktur in einer beliebigen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Sprache und den anschließenden Zugriff auf diese Klasse unter Verwendung von XAML-Markup. Sie können eine Mischung aus [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Typen und ihren benutzerdefinierten Typen innerhalb derselben Markupdatei verwenden. Die übliche Vorgehensweise hierbei ist, Ihren benutzerdefinierten Typen ein XAML-Namespace-Präfix zuzuordnen. Dieses Thema beschreibt die Anforderungen, die eine benutzerdefinierte Klasse erfüllen muss, um als XAML-Element verwendet werden zu können.  
@@ -20,19 +20,19 @@ Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Benutzerdefinierte Klassen in Anwendungen oder Assemblys  
  Benutzerdefinierte Klassen, die in XAML verwendet werden, können auf zwei verschiedene Arten definiert werden: im CodeBehind oder in anderem Code, der die primäre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendung erzeugt, oder als Klasse in einer separaten Assembly, z.B. einer ausführbare Datei oder einer als Klassenbibliothek verwendeten DLL. Jeder dieser Ansätze hat bestimmte Vor- und Nachteile.  
   
--   Der Vorteil der Erstellung einer Klassenbibliothek ist, dass alle diese benutzerdefinierten Klassen über viele verschiedene mögliche Anwendungen gemeinsam genutzt werden können. Eine separate Bibliothek gibt Ihnen auch mehr Kontrolle über die Versionierung von Anwendungen und vereinfacht das Erstellen einer Klasse, in denen die gewünschten Klasse als Stammelement auf einer XAML-Seite verwendet wird.  
+- Der Vorteil der Erstellung einer Klassenbibliothek ist, dass alle diese benutzerdefinierten Klassen über viele verschiedene mögliche Anwendungen gemeinsam genutzt werden können. Eine separate Bibliothek gibt Ihnen auch mehr Kontrolle über die Versionierung von Anwendungen und vereinfacht das Erstellen einer Klasse, in denen die gewünschten Klasse als Stammelement auf einer XAML-Seite verwendet wird.  
   
--   Der Vorteil bei der Definition der benutzerdefinierten Klassen in der Anwendung ist, dass diese Technik relativ schlank ist und Probleme bei Bereitstellung und Tests minimiert, die auftreten, wenn Sie separate Assemblys zusätzlich zur ausführbaren Hauptdatei der Anwendung einführen.  
+- Der Vorteil bei der Definition der benutzerdefinierten Klassen in der Anwendung ist, dass diese Technik relativ schlank ist und Probleme bei Bereitstellung und Tests minimiert, die auftreten, wenn Sie separate Assemblys zusätzlich zur ausführbaren Hauptdatei der Anwendung einführen.  
   
--   Egal, ob sie in derselben oder einer anderen Assembly definiert sind: benutzerdefinierte Klassen benötigen eine Zuordnung zwischen dem CLR-Namespace und dem XML-Namespace, um in XAML als Elemente verwendet werden zu können. Siehe [XAML-Namespaces und Namespacezuordnung für WPF-XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+- Egal, ob sie in derselben oder einer anderen Assembly definiert sind: benutzerdefinierte Klassen benötigen eine Zuordnung zwischen dem CLR-Namespace und dem XML-Namespace, um in XAML als Elemente verwendet werden zu können. Siehe [XAML-Namespaces und Namespacezuordnung für WPF-XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>Anforderungen an benutzerdefinierten Klassen als XAML-Elemente  
  Um als Objektelement instanziiert werden zu können, muss die Klasse die folgenden Anforderungen erfüllen:  
   
--   Ihre benutzerdefinierte Klasse muss öffentlich sein und über einen parameterlosen öffentlichen Standardkonstruktor verfügen. (Hinweise zu Strukturen finden Sie im folgenden Abschnitt.)  
+- Ihre benutzerdefinierte Klasse muss öffentlich sein und über einen parameterlosen öffentlichen Standardkonstruktor verfügen. (Hinweise zu Strukturen finden Sie im folgenden Abschnitt.)  
   
--   Die benutzerdefinierte Klasse darf keine geschachtelte Klasse sein. Geschachtelte Klassen und der "Punkt" in ihrer allgemeinen CLR-Notation verursachen Konflikte mit anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- und/oder XAML-Funktionen wie z.B. angefügten Eigenschaften.  
+- Die benutzerdefinierte Klasse darf keine geschachtelte Klasse sein. Geschachtelte Klassen und der "Punkt" in ihrer allgemeinen CLR-Notation verursachen Konflikte mit anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- und/oder XAML-Funktionen wie z.B. angefügten Eigenschaften.  
   
  Ihre Objektdefinition ermöglicht nicht nur die Verwendung von Objektelement-Syntax, sondern auch von Eigenschaftenelement-Syntax für alle öffentlichen Eigenschaften, die dieses Objekt als Werttyp haben. Dies liegt darin begründet, dass das Objekt jetzt als Objektelement instanziiert werden kann und somit den Eigenschaftenelementwert einer solchen Eigenschaft befüllen kann.  
   
@@ -75,19 +75,19 @@ Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
 ## <a name="writing-collection-properties"></a>Schreiben von Auflistungseigenschaften  
  Eigenschaften, die einen Auflistungstyp annehmen, haben eine XAML-Syntax, die Ihnen ermöglicht, Objekte anzugeben, die der Auflistung hinzugefügt werden. Diese Syntax hat zwei interessante Features.  
   
--   Das Objekt, das das Auflistungsobjekt darstellt, muss nicht in Objektelementsyntax angegeben werden. Dieses Auflistungstyps ist implizit dann vorhanden, wenn Sie eine Eigenschaft in XAML angeben, die einen Auflistungstyp annimmt.  
+- Das Objekt, das das Auflistungsobjekt darstellt, muss nicht in Objektelementsyntax angegeben werden. Dieses Auflistungstyps ist implizit dann vorhanden, wenn Sie eine Eigenschaft in XAML angeben, die einen Auflistungstyp annimmt.  
   
--   Untergeordnete Elemente der Auflistungseigenschaft im Markup werden so verarbeitet, dass sie Mitglieder der Auflistung werden. Normalerweise erfolgt der Codezugriff auf die Mitglieder einer Auflistung über Listen- bzw. Wörterbuch-Methoden wie z.B. `Add`, oder über einen Indexer. XAML-Syntax unterstützt jedoch keine Methoden noch Indexer (Ausnahme: XAML 2009 kann Methoden unterstützen, jedoch mit XAML 2009 schränkt die möglichen Verwendungen von WPF. finden Sie unter [XAML 2009-Sprachfunktionen](../../xaml-services/xaml-2009-language-features.md)). Auflistungen sind offensichtlich eine durchaus übliche Anforderung beim Erstellen einer Struktur von Elementen, und Sie benötigen eine Methode zum Befüllen dieser Auflistungen im deklarativen XAML-Code. Aus diesem Grund werden untergeordnete Elemente einer Auflistungseigenschaft verarbeitet, indem sie der Auflistung hinzugefügt werden, die dem Typwert der Auflistungseigenschaft entspricht.  
+- Untergeordnete Elemente der Auflistungseigenschaft im Markup werden so verarbeitet, dass sie Mitglieder der Auflistung werden. Normalerweise erfolgt der Codezugriff auf die Mitglieder einer Auflistung über Listen- bzw. Wörterbuch-Methoden wie z.B. `Add`, oder über einen Indexer. XAML-Syntax unterstützt jedoch keine Methoden noch Indexer (Ausnahme: XAML 2009 kann Methoden unterstützen, jedoch mit XAML 2009 schränkt die möglichen Verwendungen von WPF. finden Sie unter [XAML 2009-Sprachfunktionen](../../xaml-services/xaml-2009-language-features.md)). Auflistungen sind offensichtlich eine durchaus übliche Anforderung beim Erstellen einer Struktur von Elementen, und Sie benötigen eine Methode zum Befüllen dieser Auflistungen im deklarativen XAML-Code. Aus diesem Grund werden untergeordnete Elemente einer Auflistungseigenschaft verarbeitet, indem sie der Auflistung hinzugefügt werden, die dem Typwert der Auflistungseigenschaft entspricht.  
   
  Die Implementierung von .NET Framework-XAML-Diensten und somit der WPF XAML-Prozessor verwenden die folgende Definition für eine Auflistungseigenschaft. Die Eigenschaftentyp der Eigenschaft muss einen der folgenden implementieren:  
   
--   Implementiert <xref:System.Collections.IList>.  
+- Implementiert <xref:System.Collections.IList>.  
   
--   Implementiert <xref:System.Collections.IDictionary> oder das generische Äquivalent (<xref:System.Collections.Generic.IDictionary%602>).  
+- Implementiert <xref:System.Collections.IDictionary> oder das generische Äquivalent (<xref:System.Collections.Generic.IDictionary%602>).  
   
--   Leitet sich von <xref:System.Array> (Weitere Informationen zu Arrays in XAML finden Sie unter [X: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
+- Leitet sich von <xref:System.Array> (Weitere Informationen zu Arrays in XAML finden Sie unter [X: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
   
--   Implementiert <xref:System.Windows.Markup.IAddChild> (eine Schnittstelle definiert, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
+- Implementiert <xref:System.Windows.Markup.IAddChild> (eine Schnittstelle definiert, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
   
  Jeder dieser Typen in CLR verfügt über eine `Add`-Methode, die vom XAML-Prozessor verwendet wird, um der zugrunde liegenden Auflistung bei der Erstellung des Objektdiagramms Elemente hinzuzufügen.  
   

@@ -3,11 +3,11 @@ title: Oracle-BFILEs
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771968"
 ---
 # <a name="oracle-bfiles"></a>Oracle-BFILEs
 Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleBFile>-Klasse, die für das Arbeiten mit dem Oracle-<xref:System.Data.OracleClient.OracleType.BFile>-Datentyp verwendet wird.  
@@ -16,11 +16,11 @@ Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.Ora
   
  Andere Eigenschaften des eine **BFILE** -Datentyp, der Unterscheidung von einer **LOB** -Datentyp sind, dass die It:  
   
--   Er enthält unstrukturierte Daten.  
+- Er enthält unstrukturierte Daten.  
   
--   Er unterstützt das serverseitige Aufteilen in kleine Blöcke.  
+- Er unterstützt das serverseitige Aufteilen in kleine Blöcke.  
   
--   Er verwendet die Semantik zum Kopieren von Verweisen. Angenommen, Sie für einen Kopiervorgang Ausführen einer **BFILE**, wird nur die **BFILE** Locator (Dies ist ein Verweis auf die Datei ist) wird kopiert. Die Daten in der Datei werden nicht kopiert.  
+- Er verwendet die Semantik zum Kopieren von Verweisen. Angenommen, Sie für einen Kopiervorgang Ausführen einer **BFILE**, wird nur die **BFILE** Locator (Dies ist ein Verweis auf die Datei ist) wird kopiert. Die Daten in der Datei werden nicht kopiert.  
   
  Die **BFILE** Datentyp sollte verwendet werden, zum Verweisen auf LOBs, die in der Größe groß sind und daher nicht praktikabel ist, in der Datenbank gespeichert. Mehr Aufwand für Clients, Servern und Kommunikation beteiligt ist, bei Verwendung einer **BFILE** Datentyp im Vergleich mit der **LOB** -Datentyp. Es ist jedoch effizienter, den Zugriff auf eine **BFILE** Wenn Sie nur eine kleine Menge Daten zu erhalten müssen. Es ist effektiver, auf datenbankresidente LOBs zuzugreifen, wenn das ganze Objekt abgerufen werden soll.  
   

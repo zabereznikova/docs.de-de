@@ -10,11 +10,11 @@ ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674310"
 ---
 # <a name="remove-element-for-configsections"></a>\<Entfernen Sie >-Element für \<ConfigSections >
 
@@ -44,7 +44,7 @@ Entfernt einen vordefinierten Abschnitt oder Abschnittsgruppe.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 

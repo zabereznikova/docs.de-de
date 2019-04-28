@@ -9,11 +9,11 @@ ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757572"
 ---
 # <a name="profiling-enumerations"></a>Profilerstellungsenumerationen
 Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profilerstellungs-API verwendet.  
@@ -38,10 +38,10 @@ Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profile
  Zeigt die Eigenschaften eines Garbage Collector-Stamms.  
   
  [COR_PRF_GC_ROOT_KIND-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Gibt die Art der Garbage Collector-Stamms an, die von verfügbar gemacht wird die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) Rückruf.  
+ Gibt die Art der Garbage Collector-Stamms an, die verfügbar gemacht werden an die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) Rückruf.  
   
  [COR_PRF_HIGH_MONITOR-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Stellt Kennzeichen neben solche, die der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration, die der Profiler angeben kann, zu der [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) Methode, wenn es geladen wird.  
+ Stellt Kennzeichen neben denen in der [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) -Enumeration, die der Profiler, um angeben kann die [icorprofilerinfo5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) Methode, wenn es geladen wird.  
   
  [COR_PRF_JIT_CACHE-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
  Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  
@@ -53,7 +53,7 @@ Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profile
  Gibt die Eigenschaften eines Moduls an.  
   
  [COR_PRF_MONITOR-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)  
- Enthält Werte, die zur Angabe von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren möchte.  
+ Enthält Werte, die zum Angeben von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren muss.  
   
  [COR_PRF_RUNTIME_TYPE-Enumeration](../../../../docs/framework/unmanaged-api/profiling/cor-prf-runtime-type-enumeration.md)  
  Enthält Werte, die die Version der Common Language Runtime angeben.  

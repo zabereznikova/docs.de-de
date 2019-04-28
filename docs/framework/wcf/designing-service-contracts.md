@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785033"
 ---
 # <a name="designing-service-contracts"></a>Entwerfen von Dienstverträgen
 In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert werden, welche Vorgänge verfügbar sind (und die Implikationen des zugrunde liegenden Meldungsaustauschs), welche Datentypen verwendet werden sowie andere Aspekte, die Sie beim Entwerfen von Vorgängen unterstützen, die den Anforderungen Ihres Szenarios gerecht werden.  
@@ -24,28 +24,28 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
   
  In diesem Thema werden die folgenden Entscheidungspunkte beschrieben, wenn ein Dienstvertrag entworfen wird:  
   
--   Ob Klassen oder Schnittstellen verwendet werden sollen  
+- Ob Klassen oder Schnittstellen verwendet werden sollen  
   
--   Wie die Datentypen angegeben werden, die Sie austauschen möchten  
+- Wie die Datentypen angegeben werden, die Sie austauschen möchten  
   
--   Die Typen von Austauschmustern, die Sie verwenden können  
+- Die Typen von Austauschmustern, die Sie verwenden können  
   
--   Ob Sie einen expliziten Sicherheitsanforderungen-Teil des Vertrags erstellen können  
+- Ob Sie einen expliziten Sicherheitsanforderungen-Teil des Vertrags erstellen können  
   
--   Die Einschränkungen für Vorgangseingaben und -ausgaben  
+- Die Einschränkungen für Vorgangseingaben und -ausgaben  
   
 ## <a name="classes-or-interfaces"></a>Klassen oder Schnittstellen  
  Klassen und Schnittstellen stellen funktionsgruppierungen dar. und aus diesem Grund können beide zum Definieren eines WCF-Dienstvertrags verwendet werden. Es wird allerdings empfohlen, Schnittstellen zu verwenden, da sie Dienstverträge direkt modellieren. Ohne Implementierung definieren Schnittstellen lediglich eine Gruppierung von Methoden mit bestimmten Signaturen. Implementieren eine dienstvertragsschnittstelle, und Sie haben einen WCF-Dienst implementiert.  
   
  Dienstvertragsschnittstellen bieten dieselben Vorteile wie verwaltete Schnittstellen:  
   
--   Dienstvertragsschnittstellen können jede Anzahl anderer Dienstvertragsschnittstellen erweitern.  
+- Dienstvertragsschnittstellen können jede Anzahl anderer Dienstvertragsschnittstellen erweitern.  
   
--   Eine einzelne Klasse kann jede Anzahl von Dienstverträgen implementieren, indem sie diese Dienstvertragsschnittstelle implementiert.  
+- Eine einzelne Klasse kann jede Anzahl von Dienstverträgen implementieren, indem sie diese Dienstvertragsschnittstelle implementiert.  
   
--   Sie können die Implementierung eines Dienstvertrags bearbeiten, indem Sie die Schnittstellenimplementierung ändern, während der Dienstvertrag unverändert bleibt.  
+- Sie können die Implementierung eines Dienstvertrags bearbeiten, indem Sie die Schnittstellenimplementierung ändern, während der Dienstvertrag unverändert bleibt.  
   
--   Sie können verschiedene Versionen eines Diensts erstellen, indem Sie die alte und die neue Schnittstelle implementieren. Alte Clients stellen eine Verbindung mit der ursprünglichen Version her, während neuere Clients eine Verbindung mit der neuen Version herstellen können.  
+- Sie können verschiedene Versionen eines Diensts erstellen, indem Sie die alte und die neue Schnittstelle implementieren. Alte Clients stellen eine Verbindung mit der ursprünglichen Version her, während neuere Clients eine Verbindung mit der neuen Version herstellen können.  
   
 > [!NOTE]
 >  Bei der Vererbung von anderen Dienstvertragsschnittstellen können Sie Vorgangseigenschaften, wie z. B. den Name und den Namespace, nicht außer Kraft setzen. Wenn Sie dies dennoch versuchen, erstellen Sie im aktuellen Dienstvertrag einen neuen Vorgang.  
@@ -251,11 +251,11 @@ End Interface
   
  Ein Dienst, der diesen `IExplicitProtectionLevelSampleService`-Vertrag implementiert und über einen Endpunkt verfügt, der die standardmäßige <xref:System.ServiceModel.WSHttpBinding> (der standardmäßige <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> ist <xref:System.ServiceModel.SecurityMode.Message>) verwendet, hat das folgende Verhalten:  
   
--   Die `GetString`-Vorgangsmeldungen werden verschlüsselt und signiert.  
+- Die `GetString`-Vorgangsmeldungen werden verschlüsselt und signiert.  
   
--   Die `GetInt`-Vorgangsmeldungen werden als unverschlüsselter und unsignierter Text gesendet.  
+- Die `GetInt`-Vorgangsmeldungen werden als unverschlüsselter und unsignierter Text gesendet.  
   
--   Der `GetGuid`-Vorgang <xref:System.Guid?displayProperty=nameWithType> wird in einer Nachricht zurückgegeben, die verschlüsselt und signiert wird.  
+- Der `GetGuid`-Vorgang <xref:System.Guid?displayProperty=nameWithType> wird in einer Nachricht zurückgegeben, die verschlüsselt und signiert wird.  
   
  Weitere Informationen zu Schutzebenen und deren Verwendung finden Sie unter [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md). Weitere Informationen zur Sicherheit finden Sie unter [Securing Services](../../../docs/framework/wcf/securing-services.md).  
   

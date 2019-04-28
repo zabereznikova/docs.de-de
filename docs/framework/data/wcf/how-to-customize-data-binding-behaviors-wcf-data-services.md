@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765517"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Vorgehensweise: Anpassen des Datenbindungsverhaltens (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie benutzerdefinierte Logik angeben, die von der <xref:System.Data.Services.Client.DataServiceCollection%601> aufgerufen wird, wenn ein Objekt hinzugefügt oder aus der Bindungsauflistung entfernt wird oder wenn eine Eigenschaftenänderung erkannt wird. Diese benutzerdefinierte Logik wird als Methoden bereitgestellt, als <xref:System.Func%602> Delegaten, der einen Wert zurückgeben `false` Wenn das Standardverhalten immer noch ausgeführt werden soll, wenn die benutzerdefinierte Methode abgeschlossen wird und `true` bei der Verarbeitung der nachfolgenden der Ereignis sollte beendet werden.  

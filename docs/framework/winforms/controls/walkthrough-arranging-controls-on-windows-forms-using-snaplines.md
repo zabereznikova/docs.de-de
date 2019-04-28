@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759920"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Der Windows Forms-Designer bietet Ihnen viele Layouttools, um dies zu erreichen. Einer der wichtigsten Faktoren ist die <xref:System.Windows.Forms.Design.Behavior.SnapLine> Feature.  
@@ -23,27 +23,27 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms-Projekts  
+- Erstellen eines Windows Forms-Projekts  
   
--   Abstand und Ausrichtung von Steuerelementen, die mithilfe von Ausrichtungslinien  
+- Abstand und Ausrichtung von Steuerelementen, die mithilfe von Ausrichtungslinien  
   
--   Ausrichten von Form und die Ränder des Containers  
+- Ausrichten von Form und die Ränder des Containers  
   
--   Gruppierte Steuerelemente ausrichten  
+- Gruppierte Steuerelemente ausrichten  
   
--   Verwenden von Ausrichtungslinien zum Platzieren eines Steuerelements durch seine Größe Gliedern  
+- Verwenden von Ausrichtungslinien zum Platzieren eines Steuerelements durch seine Größe Gliedern  
   
--   Mithilfe von Ausrichtungslinien beim Ziehen eines Steuerelements aus der Toolbox  
+- Mithilfe von Ausrichtungslinien beim Ziehen eines Steuerelements aus der Toolbox  
   
--   Ändern der Größe von Steuerelementen mithilfe von Ausrichtungslinien  
+- Ändern der Größe von Steuerelementen mithilfe von Ausrichtungslinien  
   
--   Ausrichten von einer Bezeichnung auf den Text eines Steuerelements  
+- Ausrichten von einer Bezeichnung auf den Text eines Steuerelements  
   
--   Mithilfe von Ausrichtungslinien Tastaturnavigation  
+- Mithilfe von Ausrichtungslinien Tastaturnavigation  
   
--   Ausrichtungslinien und LayoutPanel-Elemente  
+- Ausrichtungslinien und LayoutPanel-Elemente  
   
--   Deaktivieren von Ausrichtungslinien  
+- Deaktivieren von Ausrichtungslinien  
   
  Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle Layout durch die Ausrichtungslinien-Funktion.  
   
@@ -216,7 +216,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
 #### <a name="to-selectively-disable-snaplines"></a>Um Ausrichtungslinien selektiv zu deaktivieren.  
   
--   Drücken Sie die ALT-Taste, und zwar ein Steuerelement am Rand des Formulars verschieben.  
+- Drücken Sie die ALT-Taste, und zwar ein Steuerelement am Rand des Formulars verschieben.  
   
      Beachten Sie, dass keine Ausrichtungslinien angezeigt werden, und das Steuerelement wird an alle potenziellen Ausrichtungspositionen nicht ausgerichtet.  
   
@@ -233,9 +233,9 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="next-steps"></a>Nächste Schritte  
  Ausrichtungslinien bietet eine intuitive Möglichkeit Ausrichten von Steuerelementen im Formular. Hier sind paar Vorschläge für weitere Experimente:  
   
--   Testen der Schachtelungsebene einer <xref:System.Windows.Forms.GroupBox> Steuerelement innerhalb einer anderen <xref:System.Windows.Forms.GroupBox> Steuerelement. Stelle eine <xref:System.Windows.Forms.Button> Steuerelement innerhalb der untergeordneten <xref:System.Windows.Forms.GroupBox> -Steuerelement und ein anderes innerhalb des übergeordneten Elements <xref:System.Windows.Forms.GroupBox> Steuerelement. Verschieben der <xref:System.Windows.Forms.Button> Steuerelemente, um zu sehen, wie die Ausrichtungslinien Containergrenzen schneiden.  
+- Testen der Schachtelungsebene einer <xref:System.Windows.Forms.GroupBox> Steuerelement innerhalb einer anderen <xref:System.Windows.Forms.GroupBox> Steuerelement. Stelle eine <xref:System.Windows.Forms.Button> Steuerelement innerhalb der untergeordneten <xref:System.Windows.Forms.GroupBox> -Steuerelement und ein anderes innerhalb des übergeordneten Elements <xref:System.Windows.Forms.GroupBox> Steuerelement. Verschieben der <xref:System.Windows.Forms.Button> Steuerelemente, um zu sehen, wie die Ausrichtungslinien Containergrenzen schneiden.  
   
--   Erstellen Sie eine Spalte des <xref:System.Windows.Forms.TextBox> Steuerelemente und eine entsprechende Spalte der <xref:System.Windows.Forms.Label> Steuerelemente. Legen Sie den Wert, der die <xref:System.Windows.Forms.Label> Steuerelemente <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft `true`. Verwenden Sie Ausrichtungslinien zum Verschieben der <xref:System.Windows.Forms.Label> steuert, sodass der Text in der angezeigten Text ausgerichtet ist die <xref:System.Windows.Forms.TextBox> Steuerelemente.  
+- Erstellen Sie eine Spalte des <xref:System.Windows.Forms.TextBox> Steuerelemente und eine entsprechende Spalte der <xref:System.Windows.Forms.Label> Steuerelemente. Legen Sie den Wert, der die <xref:System.Windows.Forms.Label> Steuerelemente <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft `true`. Verwenden Sie Ausrichtungslinien zum Verschieben der <xref:System.Windows.Forms.Label> steuert, sodass der Text in der angezeigten Text ausgerichtet ist die <xref:System.Windows.Forms.TextBox> Steuerelemente.  
   
  Informationen zum Entwurf der Benutzeroberfläche Windows finden Sie in das Buch *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA, USA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   

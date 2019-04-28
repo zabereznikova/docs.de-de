@@ -3,11 +3,11 @@ title: Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdi
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
 ms.openlocfilehash: 8d0b80930424f0d8529f2b035a8e1167f361f99a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752490"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)
 Zum Ausführen der Beispiele, die über eine sichere Kommunikation mit Internetinformationsdiensten (IIS) verbunden sind, müssen Sie ein Serverzertifikat erstellen und installieren.  
@@ -72,9 +72,9 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 ## <a name="removing-certificates"></a>Entfernen von Zertifikaten  
   
--   Führen Sie im Internetinformationsdienste-Manager die zuvor beschriebenen Schritte aus. Entfernen Sie jedoch das Zertifikat bzw. die Bindung, anstatt sie hinzuzufügen.  
+- Führen Sie im Internetinformationsdienste-Manager die zuvor beschriebenen Schritte aus. Entfernen Sie jedoch das Zertifikat bzw. die Bindung, anstatt sie hinzuzufügen.  
   
--   Entfernen Sie das Computerzertifikat mit dem folgenden Befehl.  
+- Entfernen Sie das Computerzertifikat mit dem folgenden Befehl.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:443  

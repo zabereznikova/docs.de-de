@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
 ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747691"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Erste Schritte mit der Grafikprogrammierung
 In diesem Abschnitt wird gezeigt, wie die ersten Schritte mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in Windows Forms-Anwendungen. Die folgenden Themen zeigen, wie Sie verschiedene [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aufgaben wie zeichnen und Ausfüllen von Formen und Text.  

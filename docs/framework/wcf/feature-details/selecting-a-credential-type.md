@@ -3,11 +3,11 @@ title: Wählen eines Typs von Anmeldeinformationen
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748803"
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten, die Windows Communication Foundation (WCF) verwendet wird, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In WCF können Anmeldeinformationen viele Formate haben, wie z. B. Benutzernamentoken und x. 509-Zertifikate nutzen. In diesem Thema wird erläutert, Anmeldeinformationen, wie sie in WCF verwendet werden und wie Sie die richtige Anmeldeinformationen für Ihre Anwendung auswählen.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167842"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Verwenden von Clientanmeldeinformationen zum Authentifizieren eines Clients für einen Dienst  
  Sie stellen Clientanmeldeinformationen, die für die Kommunikation mit einem Dienst erforderlich sind, bereit, indem Sie entweder die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft oder die <xref:System.ServiceModel.ChannelFactory.Credentials%2A>-Eigenschaft verwenden. Der Sicherheitskanal verwendet diese Informationen, um den Client für den Dienst zu authentifizieren. Die Authentifizierung erfolgt in einem von zwei Modi:  
   
--   Die Clientanmeldeinformationen werden einmal verwendet werden, bevor die erste Nachricht gesendet wird, mithilfe der WCF-Client-Instanz zu, um einen Sicherheitskontext herzustellen. Alle Anwendungsnachrichten werden dann über den Sicherheitskontext geschützt.  
+- Die Clientanmeldeinformationen werden einmal verwendet werden, bevor die erste Nachricht gesendet wird, mithilfe der WCF-Client-Instanz zu, um einen Sicherheitskontext herzustellen. Alle Anwendungsnachrichten werden dann über den Sicherheitskontext geschützt.  
   
--   Die Clientanmeldeinformationen werden verwendet, um alle Anwendungsnachrichten zu authentifizieren, die an den Dienst gesendet werden. In diesem Fall wird zwischen dem Client und dem Dienst kein Kontext eingerichtet.  
+- Die Clientanmeldeinformationen werden verwendet, um alle Anwendungsnachrichten zu authentifizieren, die an den Dienst gesendet werden. In diesem Fall wird zwischen dem Client und dem Dienst kein Kontext eingerichtet.  
   
 ### <a name="established-identities-cannot-be-changed"></a>Eingerichtete Identitäten können nicht geändert werden  
  Wenn die erste Methode verwendet wird, wird der eingerichtete Kontext dauerhaft der Clientidentität zugeordnet. Dies bedeutet, dass die dem Client zugeordnete Identität nicht geändert werden kann, nachdem der Sicherheitskontext eingerichtet wurde.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167842"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)

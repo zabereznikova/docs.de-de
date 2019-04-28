@@ -5,11 +5,11 @@ helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 ms.openlocfilehash: 0bb33b102358fd2d0290fd413b09448255522856
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778650"
 ---
 # <a name="modules-visual-basic"></a>Module (Visual Basic)
 Visual Basic bietet mehrere Module, die ermöglichen es Ihnen, vereinfachen Sie häufige Aufgaben in Ihrem Code, darunter Bearbeiten von Zeichenfolgen, die mathematische Berechnungen, Abrufen von Systeminformationen, das Ausführen von Datei- und Verzeichnisvorgängen, ausführen und so weiter. Die folgende Tabelle enthält die Module, die von Visual Basic bereitgestellt.  

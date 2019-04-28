@@ -3,11 +3,11 @@ title: Analytische Ablaufverfolgung von WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723354"
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in ETW in schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. Dieses Beispiel zeigt, wie Sie mit der <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, um Ereignisse zu schreiben, die in WCF-Dienste integrieren.  
@@ -22,11 +22,11 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
 ## <a name="self-hosting-vs-web-hosting"></a>Selbsthosting gegenüber Webhosting  
  Für im Web gehostete Dienste bieten die analytischen ablaufverfolgungen von WCF ein Feld mit dem Namen "hostreference" bereit, die verwendet wird, um den Dienst zu identifizieren, der die ablaufverfolgungen ausgibt. Die erweiterbaren Benutzerablaufverfolgungen können in diesem Modell verwendet werden, und dieses Beispiel zeigt die entsprechenden empfohlenen Vorgehensweisen. Das Format von einem Webhost zu verweisen, wenn der Pipe "&#124;' Zeichen tatsächlich angezeigt wird, in die resultierende Zeichenfolge kann eine der folgenden sein:  
   
--   Wenn sich die Anwendung nicht im Stammverzeichnis befindet.  
+- Wenn sich die Anwendung nicht im Stammverzeichnis befindet.  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   Wenn sich die Anwendung im Stammverzeichnis befindet.  
+- Wenn sich die Anwendung im Stammverzeichnis befindet.  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
   
 10. Testen Sie den Dienst mit dem WCF-Testclient.  
   
-    1.  Doppelklicken Sie in der WCF-Testclient auf **Add()** unter dem Knoten ICalculator-Dienst.  
+    1. Doppelklicken Sie in der WCF-Testclient auf **Add()** unter dem Knoten ICalculator-Dienst.  
   
          Die **Add()** -Methode wird im rechten Bereich mit zwei Parametern angezeigt.  
   
-    2.  Geben Sie für den ersten Parameter 2 und für den zweiten Parameter 3 ein.  
+    2. Geben Sie für den ersten Parameter 2 und für den zweiten Parameter 3 ein.  
   
-    3.  Klicken Sie auf **Invoke** zum Aufrufen der Methode.  
+    3. Klicken Sie auf **Invoke** zum Aufrufen der Methode.  
   
 11. Wechseln Sie zu der **Ereignisanzeige** Fenster, das bereits geöffnet ist. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**.  
   

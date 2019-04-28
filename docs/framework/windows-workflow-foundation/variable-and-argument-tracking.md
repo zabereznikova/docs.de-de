@@ -3,11 +3,11 @@ title: Nachverfolgung von Variablen und Argumenten
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755518"
 ---
 # <a name="variable-and-argument-tracking"></a>Nachverfolgung von Variablen und Argumenten
 Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Daten oft als nützlich erweisen. Sie stellt zusätzlichen Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] können Sie alle sichtbaren Variablen oder Argumente innerhalb des Bereichs einer Aktivität in einem Workflow mithilfe der Nachverfolgung extrahieren. Überwachungsprofile vereinfachen das Extrahieren von Daten.  
@@ -15,9 +15,9 @@ Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Dat
 ## <a name="variables-and-arguments"></a>Variablen und Argumente  
  Variablen und Argumente werden extrahiert, wenn eine Aktivität einen ActivityStateRecord ausgibt.  Eine Variable kann nur extrahiert werden, wenn sie innerhalb des Bereichs der Aktivität liegt. Eine Variable, die in einer Aktivität extrahiert werden soll, wird wie folgt angegeben:  
   
--   Wenn eine Variable über den Variablennamen angegeben wird, sucht die Nachverfolgung in der aktuellen Aktivität, die nachverfolgt wird, und in den übergeordneten Aktivitäten nach der Variable. Es wird im aktuellen Aktivitätsbereich und im übergeordneten Bereich nach der Variablen gesucht.  
+- Wenn eine Variable über den Variablennamen angegeben wird, sucht die Nachverfolgung in der aktuellen Aktivität, die nachverfolgt wird, und in den übergeordneten Aktivitäten nach der Variable. Es wird im aktuellen Aktivitätsbereich und im übergeordneten Bereich nach der Variablen gesucht.  
   
--   Wenn zu extrahierenden Variablen angegeben werden, mit Name = "*", und klicken Sie dann alle Variablen innerhalb der aktuellen Aktivität, die verfolgt werden extrahiert. In diesem Fall werden keine Variablen extrahiert, die innerhalb des Bereichs liegen, jedoch in übergeordneten Aktivitäten definiert sind.  
+- Wenn zu extrahierenden Variablen angegeben werden, mit Name = "*", und klicken Sie dann alle Variablen innerhalb der aktuellen Aktivität, die verfolgt werden extrahiert. In diesem Fall werden keine Variablen extrahiert, die innerhalb des Bereichs liegen, jedoch in übergeordneten Aktivitäten definiert sind.  
   
  Beim Extrahieren von Argumenten sind die extrahierten Argumente vom Zustand der Aktivität abhängig. Wenn der Zustand einer Aktivität Executing ist, können nur `InArguments` extrahiert werden. Bei jedem anderen Aktivitätszustand (Closed, Faulted, Canceled) können alle Argumente, InArguments und OutArguments, extrahiert werden.  
   

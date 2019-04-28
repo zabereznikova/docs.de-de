@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
 ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766295"
 ---
 # <a name="using-nested-graphics-containers"></a>Verwenden geschachtelter Grafikcontainer
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält der Container, die Sie verwenden können, um vorübergehend zu ersetzen oder erweitern Teil des Zustands in einer <xref:System.Drawing.Graphics> Objekt. Sie erstellen einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode eine <xref:System.Drawing.Graphics> Objekt. Rufen Sie <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu erstellen. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von kombiniert werden <xref:System.Drawing.Graphics.EndContainer%2A>.  

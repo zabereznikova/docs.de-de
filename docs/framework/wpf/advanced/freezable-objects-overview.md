@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703318"
 ---
 # <a name="freezable-objects-overview"></a>Übersicht über Freezable-Objekte
 In diesem Thema wird beschrieben, wie effektiv verwenden und erstellen Sie <xref:System.Windows.Freezable> -Objekte, die spezielle Funktionen bereitstellen, die Leistung der Anwendung verbessern können. Beispiele für freezable-Objekte sind Pinsel, Stifte, Transformationen, Geometrien und Animationen.  
@@ -63,11 +63,11 @@ In diesem Thema wird beschrieben, wie effektiv verwenden und erstellen Sie <xref
   
  Eine Freezable **kann nicht** fixiert werden, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Es verfügt über animierte oder datengebundene Eigenschaften.  
+- Es verfügt über animierte oder datengebundene Eigenschaften.  
   
--   Er verfügt über Eigenschaften, die von einer dynamischen Ressource festgelegt. (Finden Sie unter den [XAML-Ressourcen](xaml-resources.md) für Weitere Informationen zu dynamischen Ressourcen.)  
+- Er verfügt über Eigenschaften, die von einer dynamischen Ressource festgelegt. (Finden Sie unter den [XAML-Ressourcen](xaml-resources.md) für Weitere Informationen zu dynamischen Ressourcen.)  
   
--   Es enthält <xref:System.Windows.Freezable> untergeordnete Objekte, die nicht fixiert werden können.  
+- Es enthält <xref:System.Windows.Freezable> untergeordnete Objekte, die nicht fixiert werden können.  
   
  Wenn diese Bedingungen "false sind", und Sie nicht beabsichtigen, ändern Sie die <xref:System.Windows.Freezable>, und Sie darauf, um die Leistungsvorteile, die zuvor beschriebenen erhalten fixieren sollten.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Erstellen einer eigenen Freezable-Klasse  
  Eine abgeleitete Klasse <xref:System.Windows.Freezable> erhält die folgenden Features.  
   
--   Besondere Zustände: eine schreibgeschützt (fixiert) und einen beschreibbaren Status.  
+- Besondere Zustände: eine schreibgeschützt (fixiert) und einen beschreibbaren Status.  
   
--   Threadsicherheit: ein fixiertes <xref:System.Windows.Freezable> über Threads freigegeben werden können.  
+- Threadsicherheit: ein fixiertes <xref:System.Windows.Freezable> über Threads freigegeben werden können.  
   
--   Detaillierte änderungsbenachrichtigung: Im Gegensatz zu anderen <xref:System.Windows.DependencyObject>s, angeben Freezable-Objekte von änderungsbenachrichtigungen an, wenn untergeordnete Eigenschaftswerte ändern.  
+- Detaillierte änderungsbenachrichtigung: Im Gegensatz zu anderen <xref:System.Windows.DependencyObject>s, angeben Freezable-Objekte von änderungsbenachrichtigungen an, wenn untergeordnete Eigenschaftswerte ändern.  
   
--   Klonen einfach: die Freezable-Klasse verfügt über mehrere Methoden, die tiefe Klone erstellen bereits implementiert.  
+- Klonen einfach: die Freezable-Klasse verfügt über mehrere Methoden, die tiefe Klone erstellen bereits implementiert.  
   
  Ein <xref:System.Windows.Freezable> ist eine Art von <xref:System.Windows.DependencyObject>, und daher verwendet das Abhängigkeitseigenschaftensystem. Ihre Klasseneigenschaften müssen Abhängigkeitseigenschaften sein, aber die Verwendung von Abhängigkeitseigenschaften reduziert die Menge des Codes, die Sie schreiben da, müssen die <xref:System.Windows.Freezable> Klasse wurde entwickelt, mit Abhängigkeitseigenschaften Bedenken. Weitere Informationen zu das Abhängigkeitseigenschaftensystem, finden Sie unter den [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  Wenn Ihre Klasse ohne Abhängigkeitseigenschaft-Datenmember enthält, müssen Sie auch die folgenden Methoden überschreiben:  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  Sie müssen auch beachten, dass für den Zugriff auf und Schreiben von Datenmembern, die keine Abhängigkeitseigenschaften sind die folgenden Regeln:  
   
--   Am Anfang jeder [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , ohne Abhängigkeitseigenschaft die Datenmember liest, rufen Sie die <xref:System.Windows.Freezable.ReadPreamble%2A> Methode.  
+- Am Anfang jeder [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , ohne Abhängigkeitseigenschaft die Datenmember liest, rufen Sie die <xref:System.Windows.Freezable.ReadPreamble%2A> Methode.  
   
--   Rufen Sie am Anfang jeder API, die nicht als Abhängigkeitseigenschaft Datenmember schreibt, die <xref:System.Windows.Freezable.WritePreamble%2A> Methode. (Nachdem Sie aufgerufen haben <xref:System.Windows.Freezable.WritePreamble%2A> in einer [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], nicht müssen Sie einen zusätzlichen Aufruf <xref:System.Windows.Freezable.ReadPreamble%2A> , wenn Sie auch ohne Abhängigkeiten eigenschaftsdatenmember lesen.)  
+- Rufen Sie am Anfang jeder API, die nicht als Abhängigkeitseigenschaft Datenmember schreibt, die <xref:System.Windows.Freezable.WritePreamble%2A> Methode. (Nachdem Sie aufgerufen haben <xref:System.Windows.Freezable.WritePreamble%2A> in einer [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], nicht müssen Sie einen zusätzlichen Aufruf <xref:System.Windows.Freezable.ReadPreamble%2A> , wenn Sie auch ohne Abhängigkeiten eigenschaftsdatenmember lesen.)  
   
--   Rufen Sie die <xref:System.Windows.Freezable.WritePostscript%2A> Methode vor dem Beenden der Methoden, die auf nicht-Abhängigkeitseigenschaft Datenmember zu schreiben.  
+- Rufen Sie die <xref:System.Windows.Freezable.WritePostscript%2A> Methode vor dem Beenden der Methoden, die auf nicht-Abhängigkeitseigenschaft Datenmember zu schreiben.  
   
  Wenn Ihre Klasse nicht Abhängigkeitseigenschaften Datenelemente enthält, sind <xref:System.Windows.DependencyObject> Objekte, Sie müssen auch aufrufen, die <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> Methode jedes Mal, die Sie die Werte, ändern auch wenn Sie das Element festlegen können, auf `null`.  
   

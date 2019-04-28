@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771890"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost-Schnittstelle
 Stellt die Funktionalität ähnelt der von der [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) Schnittstelle, die in .NET Framework, Version 1, mit den folgenden Änderungen:  
   
--   Das Hinzufügen der [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) Methode zum Festlegen der Schnittstelle des Steuerelements.  
+- Das Hinzufügen der [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) Methode zum Festlegen der Schnittstelle des Steuerelements.  
   
--   Die Auslassung einiger Methoden, die von bereitgestellte `ICorRuntimeHost`.  
+- Die Auslassung einiger Methoden, die von bereitgestellte `ICorRuntimeHost`.  
   
 ## <a name="methods"></a>Methoden  
   

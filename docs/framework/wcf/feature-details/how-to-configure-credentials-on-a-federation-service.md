@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699831"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst
 In Windows Communication Foundation (WCF), besteht beim Erstellen eines Verbunddiensts folgenden Hauptschritten:  
@@ -63,11 +63,11 @@ In Windows Communication Foundation (WCF), besteht beim Erstellen eines Verbundd
   
  Damit ein Verbunddienst einen Client authentifizieren kann, muss Folgendes für das ausgestellte Token zutreffen:  
   
--   Wenn die digitale Signatur des ausgestellten Tokens einen RSA-Sicherheitsschlüsselbezeichner verwendet, muss die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>-Eigenschaft `true` lauten.  
+- Wenn die digitale Signatur des ausgestellten Tokens einen RSA-Sicherheitsschlüsselbezeichner verwendet, muss die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>-Eigenschaft `true` lauten.  
   
--   Wenn die Signatur des ausgestellten Tokens eine Seriennummer eines X.509-Ausstellers, einen Subjektschlüsselbezeichner des X.509-Zertifikats oder einen Fingerabdruck-Sicherheitsbezeichner des X.509-Zertifikats verwendet, muss das ausgestellte Token von einem Zertifikat in der Sammlung signiert sein, die von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse zurückgegeben wurde.  
+- Wenn die Signatur des ausgestellten Tokens eine Seriennummer eines X.509-Ausstellers, einen Subjektschlüsselbezeichner des X.509-Zertifikats oder einen Fingerabdruck-Sicherheitsbezeichner des X.509-Zertifikats verwendet, muss das ausgestellte Token von einem Zertifikat in der Sammlung signiert sein, die von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse zurückgegeben wurde.  
   
--   Wenn das ausgestellte Token mit einem X.509-Zertifikat signiert ist, muss das Zertifikat anhand der semantischen Informationen validiert werden, die vom Wert der <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>-Eigenschaft angegeben werden, unabhängig davon, ob das Zertifikat als <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> an die vertrauende Seite gesendet wurde oder von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft stammt. Weitere Informationen zur Überprüfung von x. 509-Zertifikats finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+- Wenn das ausgestellte Token mit einem X.509-Zertifikat signiert ist, muss das Zertifikat anhand der semantischen Informationen validiert werden, die vom Wert der <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>-Eigenschaft angegeben werden, unabhängig davon, ob das Zertifikat als <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> an die vertrauende Seite gesendet wurde oder von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft stammt. Weitere Informationen zur Überprüfung von x. 509-Zertifikats finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Durch Festlegen von <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> würde beispielsweise jedes ausgestellte Token, dessen Signaturzertifikat im `TrustedPeople`-Zertifikatspeicher abgelegt ist, authentifiziert werden. Legen Sie in diesem Fall die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A>-Eigenschaft entweder auf <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> oder auf <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> fest. Sie können andere Modi auswählen, einschließlich <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Bei Auswahl von `Custom` müssen Sie eine Instanz der <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse zur <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>-Eigenschaft zuweisen. Das benutzerdefinierte Validierungssteuerelement kann Zertifikate mit allen beliebigen Kriterien überprüfen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Dienst, der ein benutzerdefiniertes Zertifikats-Validierungssteuerelement verwendet](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

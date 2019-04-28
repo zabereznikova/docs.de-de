@@ -10,11 +10,11 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705557"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<AppSettings >-Element für \<Configuration >
 
