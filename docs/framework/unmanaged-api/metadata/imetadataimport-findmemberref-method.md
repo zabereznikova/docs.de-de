@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: abbd35fe390cc09951b762a5fd671d2d34a57c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777883"
 ---
-# <a name="imetadataimportfindmemberref-method"></a><span data-ttu-id="07914-102">IMetaDataImport::FindMemberRef-Methode</span><span class="sxs-lookup"><span data-stu-id="07914-102">IMetaDataImport::FindMemberRef Method</span></span>
-<span data-ttu-id="07914-103">Ruft ein Zeiger auf das MemberRef-Token für das Element verweisen, eingeschlossen durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.</span><span class="sxs-lookup"><span data-stu-id="07914-103">Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
+# <a name="imetadataimportfindmemberref-method"></a><span data-ttu-id="20b0e-102">IMetaDataImport::FindMemberRef-Methode</span><span class="sxs-lookup"><span data-stu-id="20b0e-102">IMetaDataImport::FindMemberRef Method</span></span>
+<span data-ttu-id="20b0e-103">Ruft ein Zeiger auf das MemberRef-Token für das Element verweisen, eingeschlossen durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.</span><span class="sxs-lookup"><span data-stu-id="20b0e-103">Gets a pointer to the MemberRef token for the member reference that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07914-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="07914-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20b0e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="20b0e-104">Syntax</span></span>  
   
 ```  
 HRESULT FindMemberRef (  
@@ -39,39 +39,39 @@ HRESULT FindMemberRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="07914-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="07914-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="20b0e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="20b0e-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="07914-106">[in] Die TypeRef-Token für die Klasse oder Schnittstelle, die den Parameterverweis zu suchende eingeschlossen werden soll.</span><span class="sxs-lookup"><span data-stu-id="07914-106">[in] The TypeRef token for the class or interface that encloses the member reference to search for.</span></span> <span data-ttu-id="07914-107">Wenn dieser Wert ist `mdTokenNil`, die Suche für eine globale Variable oder einen Verweis für die globale Funktion durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="07914-107">If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.</span></span>  
+ <span data-ttu-id="20b0e-106">[in] Die TypeRef-Token für die Klasse oder Schnittstelle, die den Parameterverweis zu suchende eingeschlossen werden soll.</span><span class="sxs-lookup"><span data-stu-id="20b0e-106">[in] The TypeRef token for the class or interface that encloses the member reference to search for.</span></span> <span data-ttu-id="20b0e-107">Wenn dieser Wert ist `mdTokenNil`, die Suche für eine globale Variable oder einen Verweis für die globale Funktion durchgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="20b0e-107">If this value is `mdTokenNil`, the lookup is done for a global variable or a global-function reference.</span></span>  
   
  `szName`  
- <span data-ttu-id="07914-108">[in] Der Name des Verweises zu suchende Element.</span><span class="sxs-lookup"><span data-stu-id="07914-108">[in] The name of the member reference to search for.</span></span>  
+ <span data-ttu-id="20b0e-108">[in] Der Name des Verweises zu suchende Element.</span><span class="sxs-lookup"><span data-stu-id="20b0e-108">[in] The name of the member reference to search for.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="07914-109">[in] Ein Zeiger auf die binäre Metadatensignatur der den Parameterverweis.</span><span class="sxs-lookup"><span data-stu-id="07914-109">[in] A pointer to the binary metadata signature of the member reference.</span></span>  
+ <span data-ttu-id="20b0e-109">[in] Ein Zeiger auf die binäre Metadatensignatur der den Parameterverweis.</span><span class="sxs-lookup"><span data-stu-id="20b0e-109">[in] A pointer to the binary metadata signature of the member reference.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="07914-110">[in] Die Größe in Bytes der `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="07914-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="20b0e-110">[in] Die Größe in Bytes der `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="20b0e-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="07914-111">[out] Ein Zeiger auf das entsprechende MemberRef-Token.</span><span class="sxs-lookup"><span data-stu-id="07914-111">[out] A pointer to the matching MemberRef token.</span></span>  
+ <span data-ttu-id="20b0e-111">[out] Ein Zeiger auf das entsprechende MemberRef-Token.</span><span class="sxs-lookup"><span data-stu-id="20b0e-111">[out] A pointer to the matching MemberRef token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="07914-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="07914-112">Remarks</span></span>  
- <span data-ttu-id="07914-113">Geben Sie den Member, die mit der einschließenden Klasse oder Schnittstelle (`td`), seinen Namen (`szName`), und optional die Signatur (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="07914-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20b0e-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="20b0e-112">Remarks</span></span>  
+ <span data-ttu-id="20b0e-113">Geben Sie den Member, die mit der einschließenden Klasse oder Schnittstelle (`td`), seinen Namen (`szName`), und optional die Signatur (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="20b0e-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span>  
   
- <span data-ttu-id="07914-114">Die Signatur, die an `FindMemberRef` müssen wurden generiert im aktuellen Bereich, da die Signaturen für einen bestimmten Bereich gebunden sind.</span><span class="sxs-lookup"><span data-stu-id="07914-114">The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="07914-115">Eine Signatur kann es sich um ein Token einbetten, die die einschließende Klasse oder eines Werttyps identifiziert.</span><span class="sxs-lookup"><span data-stu-id="07914-115">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="07914-116">Das Token ist ein Index in die lokale TypeDef-Tabelle.</span><span class="sxs-lookup"><span data-stu-id="07914-116">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="07914-117">Sie können keine Signatur zur Laufzeit im Kontext des aktuellen Bereichs und diese Signatur als Eingabe für `FindMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="07914-117">You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.</span></span>  
+ <span data-ttu-id="20b0e-114">Die Signatur, die an `FindMemberRef` müssen wurden generiert im aktuellen Bereich, da die Signaturen für einen bestimmten Bereich gebunden sind.</span><span class="sxs-lookup"><span data-stu-id="20b0e-114">The signature passed to `FindMemberRef` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="20b0e-115">Eine Signatur kann es sich um ein Token einbetten, die die einschließende Klasse oder eines Werttyps identifiziert.</span><span class="sxs-lookup"><span data-stu-id="20b0e-115">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="20b0e-116">Das Token ist ein Index in die lokale TypeDef-Tabelle.</span><span class="sxs-lookup"><span data-stu-id="20b0e-116">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="20b0e-117">Sie können keine Signatur zur Laufzeit im Kontext des aktuellen Bereichs und diese Signatur als Eingabe für `FindMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="20b0e-117">You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindMemberRef`.</span></span>  
   
- <span data-ttu-id="07914-118">`FindMemberRef` Sucht nur Memberverweise, die direkt in der Klasse oder Schnittstelle definiert wurden. Es findet keine geerbte memberverweisen.</span><span class="sxs-lookup"><span data-stu-id="07914-118">`FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.</span></span>  
+ <span data-ttu-id="20b0e-118">`FindMemberRef` Sucht nur Memberverweise, die direkt in der Klasse oder Schnittstelle definiert wurden. Es findet keine geerbte memberverweisen.</span><span class="sxs-lookup"><span data-stu-id="20b0e-118">`FindMemberRef` finds only member references that were defined directly in the class or interface; it does not find inherited member references.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="07914-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="07914-119">Requirements</span></span>  
- <span data-ttu-id="07914-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07914-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20b0e-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="20b0e-119">Requirements</span></span>  
+ <span data-ttu-id="20b0e-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20b0e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="07914-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="07914-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="20b0e-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="20b0e-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="07914-122">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="07914-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="20b0e-122">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="20b0e-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="07914-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07914-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="20b0e-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20b0e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07914-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07914-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20b0e-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="20b0e-124">See also</span></span>
 
-- [<span data-ttu-id="07914-125">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="07914-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="07914-126">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="07914-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="20b0e-125">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="20b0e-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="20b0e-126">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="20b0e-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
