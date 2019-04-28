@@ -18,26 +18,26 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1875badfb27b005d63c5b5104c17b87ec7fd51d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609151"
 ---
-# <a name="icordebugthreadclearcurrentexception-method"></a><span data-ttu-id="f932b-102">ICorDebugThread::ClearCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="f932b-102">ICorDebugThread::ClearCurrentException Method</span></span>
-<span data-ttu-id="f932b-103">Diese Methode ist nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="f932b-103">This method is not implemented.</span></span> <span data-ttu-id="f932b-104">Verwenden Sie sie nicht.</span><span class="sxs-lookup"><span data-stu-id="f932b-104">Do not use it.</span></span>  
+# <a name="icordebugthreadclearcurrentexception-method"></a><span data-ttu-id="8338a-102">ICorDebugThread::ClearCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="8338a-102">ICorDebugThread::ClearCurrentException Method</span></span>
+<span data-ttu-id="8338a-103">Diese Methode ist nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="8338a-103">This method is not implemented.</span></span> <span data-ttu-id="8338a-104">Verwenden Sie sie nicht.</span><span class="sxs-lookup"><span data-stu-id="8338a-104">Do not use it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f932b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f932b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8338a-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="8338a-105">Syntax</span></span>  
   
 ```  
 HRESULT ClearCurrentException();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f932b-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f932b-106">Requirements</span></span>  
- <span data-ttu-id="f932b-107">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f932b-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8338a-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8338a-106">Requirements</span></span>  
+ <span data-ttu-id="8338a-107">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8338a-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f932b-108">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f932b-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8338a-108">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8338a-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f932b-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f932b-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8338a-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8338a-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f932b-110">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f932b-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8338a-110">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8338a-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

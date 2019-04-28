@@ -13,16 +13,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609135"
 ---
-# <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="af171-102">CorDebugCodeInvokePurpose-Aufzählung</span><span class="sxs-lookup"><span data-stu-id="af171-102">CorDebugCodeInvokePurpose Enumeration</span></span>
-<span data-ttu-id="af171-103">Beschreibt, warum durch eine exportierte Funktion verwalteter Code aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="af171-103">Describes why an exported function calls managed code.</span></span>  
+# <a name="cordebugcodeinvokepurpose-enumeration"></a><span data-ttu-id="6c8d4-102">CorDebugCodeInvokePurpose-Aufzählung</span><span class="sxs-lookup"><span data-stu-id="6c8d4-102">CorDebugCodeInvokePurpose Enumeration</span></span>
+<span data-ttu-id="6c8d4-103">Beschreibt, warum durch eine exportierte Funktion verwalteter Code aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-103">Describes why an exported function calls managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af171-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="af171-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c8d4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6c8d4-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugCodeInvokePurpose  
@@ -34,31 +34,31 @@ typedef enum CorDebugCodeInvokePurpose
 } CorDebugCodeInvokePurpose;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="af171-105">Member</span><span class="sxs-lookup"><span data-stu-id="af171-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6c8d4-105">Member</span><span class="sxs-lookup"><span data-stu-id="6c8d4-105">Members</span></span>  
   
-|<span data-ttu-id="af171-106">Member</span><span class="sxs-lookup"><span data-stu-id="af171-106">Member</span></span>|<span data-ttu-id="af171-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="af171-107">Description</span></span>|  
+|<span data-ttu-id="6c8d4-106">Member</span><span class="sxs-lookup"><span data-stu-id="6c8d4-106">Member</span></span>|<span data-ttu-id="6c8d4-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6c8d4-107">Description</span></span>|  
 |------------|-----------------|  
-|`CODE_INVOKE_PURPOSE_NONE`|<span data-ttu-id="af171-108">Keine oder unbekannt.</span><span class="sxs-lookup"><span data-stu-id="af171-108">None or unknown.</span></span>|  
-|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|<span data-ttu-id="af171-109">Der verwaltete Code führt alle verwalteten Einstiegspunkte (z. B. umgekehrte p-invoke-Punkte) auf.</span><span class="sxs-lookup"><span data-stu-id="af171-109">The managed code will run any managed entry point, such as a reverse p-invoke.</span></span> <span data-ttu-id="af171-110">Sämtliche detailliertere Zwecke sind in der Laufzeit unbekannt.</span><span class="sxs-lookup"><span data-stu-id="af171-110">Any more detailed purpose is unknown by the runtime.</span></span>|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|<span data-ttu-id="af171-111">Der verwaltete Code führt einen statischen Konstruktor aus.</span><span class="sxs-lookup"><span data-stu-id="af171-111">The managed code will run a static constructor.</span></span>|  
-|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|<span data-ttu-id="af171-112">Der verwaltete Code führt die Implementierung für eine bestimmte Schnittstellenmethode aus, die aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="af171-112">The managed code will run the implementation for some interface method that was called.</span></span>|  
+|`CODE_INVOKE_PURPOSE_NONE`|<span data-ttu-id="6c8d4-108">Keine oder unbekannt.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-108">None or unknown.</span></span>|  
+|`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|<span data-ttu-id="6c8d4-109">Der verwaltete Code führt alle verwalteten Einstiegspunkte (z. B. umgekehrte p-invoke-Punkte) auf.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-109">The managed code will run any managed entry point, such as a reverse p-invoke.</span></span> <span data-ttu-id="6c8d4-110">Sämtliche detailliertere Zwecke sind in der Laufzeit unbekannt.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-110">Any more detailed purpose is unknown by the runtime.</span></span>|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|<span data-ttu-id="6c8d4-111">Der verwaltete Code führt einen statischen Konstruktor aus.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-111">The managed code will run a static constructor.</span></span>|  
+|`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|<span data-ttu-id="6c8d4-112">Der verwaltete Code führt die Implementierung für eine bestimmte Schnittstellenmethode aus, die aufgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-112">The managed code will run the implementation for some interface method that was called.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="af171-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="af171-113">Remarks</span></span>  
- <span data-ttu-id="af171-114">Diese Enumeration wird verwendet, durch die [icordebugprocess6:: Getexportstepinfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) Methode zum Bereitstellen von Informationen zum schrittweisen Durchlaufen von verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="af171-114">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c8d4-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6c8d4-113">Remarks</span></span>  
+ <span data-ttu-id="6c8d4-114">Diese Enumeration wird verwendet, durch die [icordebugprocess6:: Getexportstepinfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) Methode zum Bereitstellen von Informationen zum schrittweisen Durchlaufen von verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-114">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="af171-115">Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarien vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="af171-115">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="6c8d4-115">Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarien vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="6c8d4-115">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af171-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="af171-116">Requirements</span></span>  
- <span data-ttu-id="af171-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af171-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c8d4-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6c8d4-116">Requirements</span></span>  
+ <span data-ttu-id="6c8d4-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c8d4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af171-118">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="af171-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6c8d4-118">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6c8d4-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="af171-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af171-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6c8d4-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c8d4-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="af171-120">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af171-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="6c8d4-120">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c8d4-120">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af171-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af171-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c8d4-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6c8d4-121">See also</span></span>
 
-- [<span data-ttu-id="af171-122">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="af171-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="af171-123">Debuggen</span><span class="sxs-lookup"><span data-stu-id="af171-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="6c8d4-122">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="6c8d4-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="6c8d4-123">Debuggen</span><span class="sxs-lookup"><span data-stu-id="6c8d4-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
