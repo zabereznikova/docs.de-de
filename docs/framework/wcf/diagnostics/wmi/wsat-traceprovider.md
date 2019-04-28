@@ -3,16 +3,16 @@ title: WSAT_TraceProvider
 ms.date: 03/30/2017
 ms.assetid: 8eb89b45-78b8-407d-8858-f8a9d43d55cb
 ms.openlocfilehash: b1b1f8e8d2b4af20db9f11ec0477d1a85264a0f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858441"
 ---
-# <a name="wsattraceprovider"></a><span data-ttu-id="2d574-102">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="2d574-102">WSAT_TraceProvider</span></span>
-<span data-ttu-id="2d574-103">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="2d574-103">WSAT_TraceProvider</span></span>  
+# <a name="wsattraceprovider"></a><span data-ttu-id="a5333-102">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="a5333-102">WSAT_TraceProvider</span></span>
+<span data-ttu-id="a5333-103">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="a5333-103">WSAT_TraceProvider</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d574-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2d574-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5333-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a5333-104">Syntax</span></span>  
   
 ```csharp
 class WSAT_TraceProvider : EventTrace  
@@ -20,11 +20,11 @@ class WSAT_TraceProvider : EventTrace
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="2d574-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="2d574-105">Methods</span></span>  
- <span data-ttu-id="2d574-106">Die WSAT_TraceProvider-Klasse erbt von EventTrace, aber definiert keine zusätzlichen Methoden oder Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="2d574-106">The WSAT_TraceProvider class inherits from EventTrace but does not define additional methods or properties.</span></span>  
+## <a name="methods"></a><span data-ttu-id="a5333-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="a5333-105">Methods</span></span>  
+ <span data-ttu-id="a5333-106">Die WSAT_TraceProvider-Klasse erbt von EventTrace, aber definiert keine zusätzlichen Methoden oder Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="a5333-106">The WSAT_TraceProvider class inherits from EventTrace but does not define additional methods or properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d574-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2d574-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5333-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a5333-107">Requirements</span></span>  
   
-|<span data-ttu-id="2d574-108">MOF</span><span class="sxs-lookup"><span data-stu-id="2d574-108">MOF</span></span>|<span data-ttu-id="2d574-109">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="2d574-109">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="a5333-108">MOF</span><span class="sxs-lookup"><span data-stu-id="a5333-108">MOF</span></span>|<span data-ttu-id="a5333-109">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="a5333-109">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="2d574-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="2d574-110">Namespace</span></span>|<span data-ttu-id="2d574-111">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="2d574-111">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="a5333-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="a5333-110">Namespace</span></span>|<span data-ttu-id="a5333-111">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a5333-111">Defined in root\ServiceModel</span></span>|

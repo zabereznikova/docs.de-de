@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: 2aa88347-c4cb-48d3-951d-a7072643283b
 ms.openlocfilehash: eb2450d13b7a247e9eb0cc0b802b2d758482c466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790690"
 ---
-# <a name="tooltip-how-to-topics"></a><span data-ttu-id="beb21-102">QuickInfo-Hilfethemen</span><span class="sxs-lookup"><span data-stu-id="beb21-102">ToolTip How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="beb21-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="beb21-103">In This Section</span></span>  
- [<span data-ttu-id="beb21-104">Positionieren einer QuickInfo</span><span class="sxs-lookup"><span data-stu-id="beb21-104">Position a ToolTip</span></span>](how-to-position-a-tooltip.md)  
-  [<span data-ttu-id="beb21-105">Verwenden der BetweenShowDelay-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="beb21-105">Use the BetweenShowDelay Property</span></span>](how-to-use-the-betweenshowdelay-property.md)  
+# <a name="tooltip-how-to-topics"></a><span data-ttu-id="a2171-102">QuickInfo-Hilfethemen</span><span class="sxs-lookup"><span data-stu-id="a2171-102">ToolTip How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="a2171-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a2171-103">In This Section</span></span>  
+ [<span data-ttu-id="a2171-104">Positionieren einer QuickInfo</span><span class="sxs-lookup"><span data-stu-id="a2171-104">Position a ToolTip</span></span>](how-to-position-a-tooltip.md)  
+  [<span data-ttu-id="a2171-105">Verwenden der BetweenShowDelay-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="a2171-105">Use the BetweenShowDelay Property</span></span>](how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="beb21-106">Referenz</span><span class="sxs-lookup"><span data-stu-id="beb21-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a2171-106">Referenz</span><span class="sxs-lookup"><span data-stu-id="a2171-106">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
   
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="beb21-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="beb21-107">Related Sections</span></span>  
- [<span data-ttu-id="beb21-108">Übersicht über Popups</span><span class="sxs-lookup"><span data-stu-id="beb21-108">Popup Overview</span></span>](popup-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="a2171-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a2171-107">Related Sections</span></span>  
+ [<span data-ttu-id="a2171-108">Übersicht über Popups</span><span class="sxs-lookup"><span data-stu-id="a2171-108">Popup Overview</span></span>](popup-overview.md)  
   
- [<span data-ttu-id="beb21-109">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="beb21-109">How-to Topics</span></span>](popup-how-to-topics.md)
+ [<span data-ttu-id="a2171-109">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="a2171-109">How-to Topics</span></span>](popup-how-to-topics.md)

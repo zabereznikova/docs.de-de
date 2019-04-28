@@ -5,33 +5,33 @@ f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
 ms.openlocfilehash: c3f88a5a3c37c89d23055aa413957b2add38ed67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803466"
 ---
-# <a name="error-in-loading-dll-visual-basic"></a><span data-ttu-id="c9064-102">Fehler beim Laden der DLL (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9064-102">Error in loading DLL (Visual Basic)</span></span>
-<span data-ttu-id="c9064-103">Eine Dynamic Link Library (DLL) ist eine Bibliothek, die im angegebenen die `Lib` -Klausel einer `Declare` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="c9064-103">A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement.</span></span> <span data-ttu-id="c9064-104">Möglichen Ursachen für diesen Fehler gehören:</span><span class="sxs-lookup"><span data-stu-id="c9064-104">Possible causes for this error include:</span></span>  
+# <a name="error-in-loading-dll-visual-basic"></a><span data-ttu-id="188bb-102">Fehler beim Laden der DLL (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="188bb-102">Error in loading DLL (Visual Basic)</span></span>
+<span data-ttu-id="188bb-103">Eine Dynamic Link Library (DLL) ist eine Bibliothek, die im angegebenen die `Lib` -Klausel einer `Declare` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="188bb-103">A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement.</span></span> <span data-ttu-id="188bb-104">Möglichen Ursachen für diesen Fehler gehören:</span><span class="sxs-lookup"><span data-stu-id="188bb-104">Possible causes for this error include:</span></span>  
   
--   <span data-ttu-id="c9064-105">Die Datei ist keine ausführbare DLL-Datei.</span><span class="sxs-lookup"><span data-stu-id="c9064-105">The file is not DLL executable.</span></span>  
+- <span data-ttu-id="188bb-105">Die Datei ist keine ausführbare DLL-Datei.</span><span class="sxs-lookup"><span data-stu-id="188bb-105">The file is not DLL executable.</span></span>  
   
--   <span data-ttu-id="c9064-106">Die Datei ist nicht Microsoft Windows DLL.</span><span class="sxs-lookup"><span data-stu-id="c9064-106">The file is not a Microsoft Windows DLL.</span></span>  
+- <span data-ttu-id="188bb-106">Die Datei ist nicht Microsoft Windows DLL.</span><span class="sxs-lookup"><span data-stu-id="188bb-106">The file is not a Microsoft Windows DLL.</span></span>  
   
--   <span data-ttu-id="c9064-107">Die DLL verweist auf eine andere DLL, die nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="c9064-107">The DLL references another DLL that is not present.</span></span>  
+- <span data-ttu-id="188bb-107">Die DLL verweist auf eine andere DLL, die nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="188bb-107">The DLL references another DLL that is not present.</span></span>  
   
--   <span data-ttu-id="c9064-108">Die DLL oder dem referenzierten DLL ist nicht in einem Verzeichnis im Pfad angegeben.</span><span class="sxs-lookup"><span data-stu-id="c9064-108">The DLL or referenced DLL is not in a directory specified in the path.</span></span>  
+- <span data-ttu-id="188bb-108">Die DLL oder dem referenzierten DLL ist nicht in einem Verzeichnis im Pfad angegeben.</span><span class="sxs-lookup"><span data-stu-id="188bb-108">The DLL or referenced DLL is not in a directory specified in the path.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c9064-109">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="c9064-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="188bb-109">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="188bb-109">To correct this error</span></span>  
   
--   <span data-ttu-id="c9064-110">Wenn die Datei eine Source-Text-Datei und daher nicht die ausführbare DLL ist, muss Sie kompiliert und mit einem ausführbaren DLL-Formular verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="c9064-110">If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.</span></span>  
+- <span data-ttu-id="188bb-110">Wenn die Datei eine Source-Text-Datei und daher nicht die ausführbare DLL ist, muss Sie kompiliert und mit einem ausführbaren DLL-Formular verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="188bb-110">If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.</span></span>  
   
--   <span data-ttu-id="c9064-111">Wenn die Datei nicht um eine Microsoft Windows-DLL ist, rufen Sie die entsprechende Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="c9064-111">If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.</span></span>  
+- <span data-ttu-id="188bb-111">Wenn die Datei nicht um eine Microsoft Windows-DLL ist, rufen Sie die entsprechende Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="188bb-111">If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.</span></span>  
   
--   <span data-ttu-id="c9064-112">Wenn die DLL eine andere DLL, die nicht vorhanden ist verweist, erhalten Sie die referenzierte DLL und macht sie verfügbar.</span><span class="sxs-lookup"><span data-stu-id="c9064-112">If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.</span></span>  
+- <span data-ttu-id="188bb-112">Wenn die DLL eine andere DLL, die nicht vorhanden ist verweist, erhalten Sie die referenzierte DLL und macht sie verfügbar.</span><span class="sxs-lookup"><span data-stu-id="188bb-112">If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.</span></span>  
   
--   <span data-ttu-id="c9064-113">Wenn die DLL oder dem referenzierten DLL nicht in einem Verzeichnis, das durch den Pfad angegeben ist, verschieben Sie die DLL, auf das verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="c9064-113">If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.</span></span>  
+- <span data-ttu-id="188bb-113">Wenn die DLL oder dem referenzierten DLL nicht in einem Verzeichnis, das durch den Pfad angegeben ist, verschieben Sie die DLL, auf das verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="188bb-113">If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9064-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9064-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="188bb-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="188bb-114">See also</span></span>
 
-- [<span data-ttu-id="c9064-115">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="c9064-115">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="188bb-115">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="188bb-115">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
