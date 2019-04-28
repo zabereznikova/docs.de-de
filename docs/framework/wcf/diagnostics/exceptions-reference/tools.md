@@ -3,25 +3,25 @@ title: Tools
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780743"
 ---
 # <a name="tools"></a>Tools
-In diesem Thema sind alle von Windows Communication Foundation (WCF)-Tools generierten Ausnahmen aufgeführt.  
+Dieses Thema enthält alle Ausnahmen, die von Windows Communication Foundation (WCF)-Tools generiert.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
   
 |Ressourcencode|Ressourcenzeichenfolge|  
 |-------------------|---------------------|  
-|ParametersTarget|\<Enum >|  
+|ParametersTarget|\<enum>|  
 |ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Der angegebene Pfad ist ungültig. Überprüfen Sie das angegebene Argument.|  
-|ParametersReference|\<Dateipfad >|  
+|ParametersReference|\<Pfad >|  
 |WrnCannotLoadConfigFileForValidation|Ein Fehler ist während der Verarbeitung der vom angegebenen Speicherort geladenen Konfigurationsdatei aufgetreten. Dienste, die in dieser Konfigurationsdatei definiert werden, können nicht überprüft werden.|  
-|MoreHelp|Geben Sie für weitere Hilfe "svcutil" mit den angegebenen Argumenten ein.|  
+|MoreHelp|Geben Sie für weitere Hilfe „svcutil“ mit den angegebenen Argumenten ein.|  
 |HelpMergeConfig|Bewirkt, dass die generierte Konfiguration mit einer vorhandenen Datei zusammengeführt wird, statt die vorhandene Datei zu überschreiben.|  
 |ErrCannotWriteFile|Schreiben in eine Ausgabedatei nicht möglich.|  
 |ErrInvalidNamespaceArgument|Der angegebene ungültige Wert wurde an die angegebene Option übergeben. Geben Sie ein durch Trennzeichen getrenntes Paar aus Zielnamespace und CLR-Namespace an.|  
@@ -68,14 +68,14 @@ In diesem Thema sind alle von Windows Communication Foundation (WCF)-Tools gener
 |HelpCodeGenerationCategory|-= CODE-GENERIERUNG =-|  
 |RetreivingMetadataWithMexAndDisco|Es wird versucht, Metadaten vom angegebenen Speicherort mithilfe von WS-Metadata Exchange oder DISCO herunterzuladen.|  
 |ErrGeneralSchemaValidation|Bei der Überprüfung von XML-Schemas, die während des Exports generiert wurden, ist ein Fehler aufgetreten.|  
-|ParametersDirectory|\<Verzeichnis >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Es kann kein Typ für den angegebenen Wert geladen werden, der an die angegebene Option übergeben wurde. Stellen Sie sicher, dass die Assembly, zu der dieser Typ gehört, mit der angegebenen Option angegeben wird.|  
 |ErrOptionModeConflict|Die angegebene Option kann nicht mit der angegebenen Option verwendet werden, da sie unterschiedliche Ausgabetypen voraussetzen.|  
 |ErrIsNotAnAssembly|Die angegebene Datei kann nicht als Assembly geladen werden. Überprüfen Sie, ob diese Datei eine .NET-Assembly ist.|  
 |ErrInputConflictsWithMode|Die aus der angegebenen Datei gelesene Eingabe ist mit anderen Optionen nicht konsistent.|  
 |ErrDuplicateValuePassedToTypeArg|Der angegebene Wert wurde mehrmals an die angegebene Option übergeben. Jeder Typ kann nur einmal festgelegt werden.|  
 |ErrInputEPRFileParseError|Der Endpunktverweis kann nicht aus der angegebenen Datei gelesen werden. Prüfen Sie, ob die XML wohlgeformt und gültig ist.|  
-|ErrCouldNotCreateCodeProvider|Kein Codeanbieter kann nicht erstellt werden, für den angegebenen Wert, der zum übergeben wurde die /{1} Argument. Überprüfen Sie, dass der Codeanbieter ordnungsgemäß installiert und konfiguriert ist.|  
+|ErrCouldNotCreateCodeProvider|Ein Codeanbieter kann nicht erstellt werden, für den angegebenen Wert, der übergeben wurde die /{1} Argument. Überprüfen Sie, dass der Codeanbieter ordnungsgemäß installiert und konfiguriert ist.|  
 |ErrPathTooLongDirOnly|Der resultierende angegebene Pfad ist zu lang. Überprüfen Sie das angegebene Argument.|  
 |HelpDataContractSerializer|Generieren Sie Datentypen, die das DataContract-Serialisierungsprogramm für die Serialisierung und die Deserialisierung verwenden.|  
 |ErrUnableToExportEndpoint|Beim Export des angegebenen Endpunktnamens im angegebenen Namespace im angegebenen Diensttyp, der in der für die Assembly geladenen Konfigurationsdatei gefunden wurde, ist ein Fehler aufgetreten.|  
@@ -107,14 +107,14 @@ In diesem Thema sind alle von Windows Communication Foundation (WCF)-Tools gener
 |ErrUnableToUniquifyFilename|Es kann kein Ausgabedateiname erstellt werden. Es werden zu viele Dateien mit dem angegebenen Präfix erstellt.|  
 |ErrCannotCreateFile|Die angegebene Ausgabedatei kann nicht erstellt werden.|  
 |ErrExpectedValue|Die angegebene Option erfordert die Angabe eines Werts.|  
-|ErrCannotDisambiguateSpecifiedTypes|In dem Satz referenzierter Assemblys sind mehrere Typen mit identischem Namen vorhanden. Verwenden Sie qualifizierte Assemblynamen, um zwischen den angegebenen Typen für die angegebene Option zu unterscheiden.|  
-|RetreivingMetadataWithMexOnly|Es wird versucht, Metadaten unter Verwendung von WS-Metadatenaustausch vom angegebenen Speicherort herunterzuladen. Diese URL unterstützt kein DISCO.|  
+|ErrCannotDisambiguateSpecifiedTypes|In dem Satz referenzierter Assemblys sind mehrere Typen mit identischem Namen vorhanden.  Verwenden Sie qualifizierte Assemblynamen, um zwischen den angegebenen Typen für die angegebene Option zu unterscheiden.|  
+|RetreivingMetadataWithMexOnly| Es wird versucht, Metadaten unter Verwendung von WS-Metadatenaustausch vom angegebenen Speicherort herunterzuladen. Diese URL unterstützt kein DISCO.|  
 |ErrInvalidTarget|Das angegebene Ziel ist ungültig, wenn es mit der angegebenen Option angegeben wird. Die unterstützten Ziele werden angegeben.|  
 |ErrPathTooLong|Der resultierende Pfad ist zu lang. Überprüfen Sie die angegebenen Argumente.|  
 |HelpCommonOptionsCategory|-= ALLGEMEINE OPTIONEN =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Es wurden keine gültigen Eingabedateien angegeben. Geben Sie entweder Metadatendokumente oder Assemblydateien an.|  
-|ParametersLanguage|\<Language >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|Beim Lesen der Metadaten aus einem der geladenen Dokumente ist ein Fehler aufgetreten. Der Dokumentbezeichner wird angegeben.|  
 |ErrConflictingInputs|Das angegebene Eingabeargument verursacht Konflikte mit der angegebenen Eingabe, da sie unterschiedliche Verwendungsarten des Tools voraussetzen.|  
 |WrnUnableToLoadContractForValidation|Beim Laden eines Vertragstyps ist ein Fehler aufgetreten. Der Typ und die Details werden angegeben.|  
@@ -135,14 +135,14 @@ In diesem Thema sind alle von Windows Communication Foundation (WCF)-Tools gener
 |ErrNotCodeDomType|Der angegebene Typ, der an das angegebene Argument übergeben wurde, gehört nicht zu der angegebenen abgeleiteten Klasse.|  
 |WrnNoTypeForServices|Keine der Assemblys, die übergeben wurden, enthielt Diensttypen mit dem angegebenen Konfigurationsnamen.|  
 |ErrAssemblyLoadFailed|Die angegebene Datei kann nicht als Assembly geladen werden. Überprüfen Sie die FusionLogs auf weitere Informationen.|  
-|NoMetadataWasGenerated|Es wurden keine Metadatendateien generiert. Es wurden keine Dienstverträge exportiert.<br /><br /> Verwenden Sie zum Exportieren eines Diensts die angegebene Option. Geben Sie zum Exportieren von Datenverträgen die Option an.|  
+|NoMetadataWasGenerated|Es wurden keine Metadatendateien generiert. Es wurden keine Dienstverträge exportiert.<br /><br />  Verwenden Sie zum Exportieren eines Diensts die angegebene Option. Geben Sie zum Exportieren von Datenverträgen die Option an.|  
 |WrnCannotResolveServiceForExport|Es kann kein Dienst mit dem angegebenen configName geladen werden. Stellen Sie zum Exportieren eines Diensts die Assembly, die den Diensttyp enthält, und eine ausführbare Datei mit der Konfiguration für diesen Dienst bereit.|  
 |ParametersCollectionType|\<type>|  
 |ErrOptionConflictsWithTarget|Die Verwendung der angegebenen Option wird nicht unterstützt, wenn die angegebene Option auf den angegebenen Wert festgelegt ist.|  
 |ErrCodegenError|Beim Generieren von Code in der angegebenen Sprache ist ein Fehler aufgetreten.<br /><br /> Die Sprache unterstützt nicht alle Codeelemente, die generiert werden. Es sollte eine andere Sprache verwendet werden.|  
 |ErrInputWsdlParseError|Beim Lesen des angegebenen Eingabeschemas ist ein WSDL-Analysefehler aufgetreten. Prüfen Sie, ob die XML wohlgeformt und gültig ist.|  
 |ErrCouldNotCreateInstance|Es kann keine Instanz des angegebenen Typs erstellt werden, der an das angegebene Argument übergeben wurde.|  
-|ParametersNamespace|\<Zeichenfolge, Zeichenfolge >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|Verweisen Sie nicht auf Standardbibliotheken (standardmäßig wird auf mscorlib.dll und system.servicemodel.dll verwiesen.)|  
 |WrnCannotLoadConfigFileForExport|Bei der Verarbeitung der vom angegebenen Speicherort geladenen Konfigurationsdatei ist ein Fehler aufgetreten. Dienste, die in dieser Konfigurationsdatei definiert werden, können nicht geladen werden.|  
 |WrnUnableToLoadContractForExport|Beim Laden eines Vertragstyps ist ein Fehler aufgetreten. Dieser angegebene Typ kann nicht exportiert werden.|

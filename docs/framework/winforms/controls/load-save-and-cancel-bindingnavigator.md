@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757378"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgebundene <xref:System.Windows.Forms.ToolStrip> -Steuerelement, das zum Navigieren und Bearbeiten von Steuerelementen im Formular, das an Daten gebunden werden soll.  
@@ -40,15 +40,15 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
   
 7. In der **-Elementauflistungs-Editor**, führen Sie die folgenden:  
   
-    1.  Hinzufügen einer <xref:System.Windows.Forms.ToolStripSeparator> und drei <xref:System.Windows.Forms.ToolStripButton> Elemente nach Auswahl des entsprechenden Typs <xref:System.Windows.Forms.ToolStripItem> und klicken Sie auf die **hinzufügen** Schaltfläche.  
+    1. Hinzufügen einer <xref:System.Windows.Forms.ToolStripSeparator> und drei <xref:System.Windows.Forms.ToolStripButton> Elemente nach Auswahl des entsprechenden Typs <xref:System.Windows.Forms.ToolStripItem> und klicken Sie auf die **hinzufügen** Schaltfläche.  
   
-    2.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft die Schaltflächen für die **LoadButton**, **SaveButton**, und **CancelButton**bzw.  
+    2. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Name%2A> Eigenschaft die Schaltflächen für die **LoadButton**, **SaveButton**, und **CancelButton**bzw.  
   
-    3.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft die Schaltflächen für die **Load**, **speichern**, und **Abbrechen**.  
+    3. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaft die Schaltflächen für die **Load**, **speichern**, und **Abbrechen**.  
   
-    4.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> -Eigenschaft für die Schaltflächen um **Text**. Alternativ können Sie diese Eigenschaft festlegen, um **Image** oder **ImageAndText**, festlegen und das Bild anzuzeigenden der <xref:System.Windows.Forms.ToolStripItem.Image%2A> Eigenschaft.  
+    4. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> -Eigenschaft für die Schaltflächen um **Text**. Alternativ können Sie diese Eigenschaft festlegen, um **Image** oder **ImageAndText**, festlegen und das Bild anzuzeigenden der <xref:System.Windows.Forms.ToolStripItem.Image%2A> Eigenschaft.  
   
-    5.  Klicken Sie auf **OK** um das Dialogfeld zu schließen. Die Schaltflächen werden hinzugefügt, um die <xref:System.Windows.Forms.ToolStrip>.  
+    5. Klicken Sie auf **OK** um das Dialogfeld zu schließen. Die Schaltflächen werden hinzugefügt, um die <xref:System.Windows.Forms.ToolStrip>.  
   
 8. Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**.  
   

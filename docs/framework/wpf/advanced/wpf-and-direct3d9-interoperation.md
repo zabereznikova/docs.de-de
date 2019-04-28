@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669208"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interaktion zwischen WPF und Direct3D9
 Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung einschließen. In diesem Thema wird beschrieben, wie zum Erstellen von Direct3D9-Inhalt, damit sie effizient mit WPF interagiert wird.  
@@ -32,9 +32,9 @@ Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwe
   
  Erstellen Sie ein Gerät, indem Sie eine der folgenden Methoden aufrufen.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  Auf Windows Vista oder höher verwendet wird, verwenden Sie die `Direct3DCreate9Ex` -Methode mit einer Anzeige ab, die Verwendung der Windows anzeigen Driver Model (WDDM) konfiguriert ist. Verwenden der `Direct3DCreate9` Methode für eine andere Plattform.  
   
@@ -97,11 +97,11 @@ Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwe
   
  Es gibt drei mögliche Vorgehensweisen für das Ändern der Größe zu behandeln.  
   
--   Das Layoutsystem teilnehmen Sie, und erstellen Sie eine neue Oberfläche, wenn die Größe ändert. Zu viele Oberflächen, kann nicht erstellt werden, weil Sie möglicherweise erschöpft oder Videospeicher fragment.  
+- Das Layoutsystem teilnehmen Sie, und erstellen Sie eine neue Oberfläche, wenn die Größe ändert. Zu viele Oberflächen, kann nicht erstellt werden, weil Sie möglicherweise erschöpft oder Videospeicher fragment.  
   
--   Warten Sie, bis ein Resize-Ereignis nicht für einen festen Zeitraum zum Erstellen der neuen Oberfläche aufgetreten ist.  
+- Warten Sie, bis ein Resize-Ereignis nicht für einen festen Zeitraum zum Erstellen der neuen Oberfläche aufgetreten ist.  
   
--   Erstellen Sie eine <xref:System.Windows.Threading.DispatcherTimer> die überprüft, ob die Abmessungen der Container mehrere Male pro Sekunde.  
+- Erstellen Sie eine <xref:System.Windows.Threading.DispatcherTimer> die überprüft, ob die Abmessungen der Container mehrere Male pro Sekunde.  
   
 ## <a name="multi-monitor-optimization"></a>Optimierung mit mehreren Bildschirmen  
  Kann zu erheblichen Leistungseinbußen führen, wenn bewegt, der Renderingsystem wird eine <xref:System.Windows.Interop.D3DImage> auf einen anderen Bildschirm.  
@@ -132,11 +132,11 @@ Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwe
 ## <a name="wpf-software-rendering"></a>Rendern von WPF-Software  
  WPF wird synchron im UI-Thread in der Software in den folgenden Situationen gerendert.  
   
--   Drucken  
+- Drucken  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  Tritt eine der folgenden Situationen auf, der Renderingsystem Ruft die <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> Methode, um den Puffer für die Hardware auf Software zu kopieren. Die Standardimplementierung Ruft die `GetRenderTargetData` -Methode mit Ihrer Oberfläche. Da dieser Aufruf außerhalb des Musters Sperren/Entsperren auftritt, kann es fehlschlagen. In diesem Fall die `CopyBackBuffer` Methodenrückgabe `null` und kein Bild angezeigt wird.  
   

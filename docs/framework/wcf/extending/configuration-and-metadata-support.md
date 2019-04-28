@@ -3,11 +3,11 @@ title: Konfiguration und Metadatenunterstützung
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
 ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858363"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguration und Metadatenunterstützung
 In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützung für Bindungen und Bindungselemente aktiviert wird.  
@@ -15,13 +15,13 @@ In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützun
 ## <a name="overview-of-configuration-and-metadata"></a>Überblick über Konfiguration und Metadaten  
  In diesem Thema wird erläutert, die folgenden Aufgaben, die optionalen Elemente 1, 2 und 4 sind in der [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md) Aufgabenliste.  
   
--   Aktivierung von Unterstützung der Konfigurationsdatei für ein Bindungselement.  
+- Aktivierung von Unterstützung der Konfigurationsdatei für ein Bindungselement.  
   
--   Aktivierung von Unterstützung der Konfigurationsdatei für eine Bindung.  
+- Aktivierung von Unterstützung der Konfigurationsdatei für eine Bindung.  
   
--   Export von WSDL und Richtlinienassertionen für ein Bindungselement.  
+- Export von WSDL und Richtlinienassertionen für ein Bindungselement.  
   
--   Identifizierung von WSDL und Richtlinienassertionen für das Einsetzen und Konfigurieren der Bindung oder des Bindungselements.  
+- Identifizierung von WSDL und Richtlinienassertionen für das Einsetzen und Konfigurieren der Bindung oder des Bindungselements.  
   
  Informationen zum Erstellen von benutzerdefinierten Bindungen und Bindungselementen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) und [Erstellen eines BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)bzw.  
   

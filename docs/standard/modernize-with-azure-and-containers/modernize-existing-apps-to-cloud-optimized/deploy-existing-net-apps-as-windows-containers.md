@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812057"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -39,13 +39,13 @@ In Windows-Containern wird der Prozess der Verpacken von Anwendungen vollständi
 
 Viele Organisationen werden bestehende monolithische Anwendungen aus den folgenden Gründen containerisieren von:
 
--   **Freigeben von Agilität durch verbesserte Bereitstellung**. Container bieten einen konsistenter bereitstellungvertrag zwischen Entwicklung und Betrieb. Wenn Sie Container verwenden, hören Sie keinen Entwickler sagen, "Es auf meinem Computer funktioniert, warum also nicht in der Produktion?" Sie können z. B. "Es als Container ausgeführt wird, damit sie in der Produktion ausgeführt werden soll." Die gepackte Anwendung mit allen Abhängigkeiten, kann in jeder Container basierende Umgebung ausgeführt werden. Es wird die Methode ausgeführt, die sie in alle Bereitstellungsziele verwenden (Entwicklung, Qualitätssicherung eigentlich, staging und Produktion) ausgeführt. Die meisten Reibungsverluste Container entfernt werden, wenn sie von einer Phase zur nächsten, verschieben Sie die Bereitstellung erheblich verbessert, und Sie schneller liefern können.
+- **Freigeben von Agilität durch verbesserte Bereitstellung**. Container bieten einen konsistenter bereitstellungvertrag zwischen Entwicklung und Betrieb. Wenn Sie Container verwenden, hören Sie keinen Entwickler sagen, "Es auf meinem Computer funktioniert, warum also nicht in der Produktion?" Sie können z. B. "Es als Container ausgeführt wird, damit sie in der Produktion ausgeführt werden soll." Die gepackte Anwendung mit allen Abhängigkeiten, kann in jeder Container basierende Umgebung ausgeführt werden. Es wird die Methode ausgeführt, die sie in alle Bereitstellungsziele verwenden (Entwicklung, Qualitätssicherung eigentlich, staging und Produktion) ausgeführt. Die meisten Reibungsverluste Container entfernt werden, wenn sie von einer Phase zur nächsten, verschieben Sie die Bereitstellung erheblich verbessert, und Sie schneller liefern können.
 
--   **Reduzierung der Kosten**. Container führen, geringere Kosten, entweder durch die Konsolidierung und Entfernung der vorhandenen Hardware oder das Ausführen von Anwendungen auf eine höhere Dichte pro Einheit der Hardware.
+- **Reduzierung der Kosten**. Container führen, geringere Kosten, entweder durch die Konsolidierung und Entfernung der vorhandenen Hardware oder das Ausführen von Anwendungen auf eine höhere Dichte pro Einheit der Hardware.
 
--   **Portabilität**. Container sind modular und portable. Docker-Container werden auf alle Server-Betriebssystem (Linux und Windows) in jeder wichtigen öffentlichen Cloud (Microsoft Azure, Amazon AWS, Google, IBM) und in lokalen und privaten oder hybridcloudumgebungen unterstützt.
+- **Portabilität**. Container sind modular und portable. Docker-Container werden auf alle Server-Betriebssystem (Linux und Windows) in jeder wichtigen öffentlichen Cloud (Microsoft Azure, Amazon AWS, Google, IBM) und in lokalen und privaten oder hybridcloudumgebungen unterstützt.
 
--   **Steuerelement**. Container bieten eine flexible und sichere Umgebung, die auf Container-Ebene gesteuert wird. Ein Container kann gesichert, isoliert und sogar beschränkt, indem Sie Ausführung Einschränkung-Richtlinien für den Container festlegen. Ausführliche Informationen finden Sie im Abschnitt zu Windows-Containern bieten Windows Server 2016 und Hyper-V-Container zusätzliche Enterprise Support-Optionen.
+- **Steuerelement**. Container bieten eine flexible und sichere Umgebung, die auf Container-Ebene gesteuert wird. Ein Container kann gesichert, isoliert und sogar beschränkt, indem Sie Ausführung Einschränkung-Richtlinien für den Container festlegen. Ausführliche Informationen finden Sie im Abschnitt zu Windows-Containern bieten Windows Server 2016 und Hyper-V-Container zusätzliche Enterprise Support-Optionen.
 
 Bedeutende Verbesserungen in Agilität, Portabilität und Kontrolle werden letztlich zu erheblichen kosteneinsparungen führen, bei Verwendung von Containern entwickeln und Verwalten von Anwendungen.
 
@@ -123,15 +123,15 @@ Ausführen eines Containers auf Windows, mit oder ohne Hyper-V-Isolierung ist ei
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Dokumentation zu Windows-Containern**
+- **Dokumentation zu Windows-Containern**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Grundlagen der Windows-Containern**
+- **Grundlagen der Windows-Containern**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **INFOGRAFIK: Microsoft und Container**
+- **INFOGRAFIK: Microsoft und Container**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ Allerdings bietet Microsoft Azure bei zur produktionsumgebung oder sogar QA- und
 > **Abbildung 4: 7.5.** Das Container-Ökosystem in Azure
 
 Aus dem Container-Ökosystem in Azure die folgenden Produkte, die Unterstützung von Containern, die Infrastruktur berücksichtigt werden:
--   **Azure Container Instances (ACI)**
--   **Virtuelle Azure-Computer** (mit Unterstützung des Containers)
--   **Azure Virtual Machine Scale Sets** (mit Unterstützung des Containers)
+- **Azure Container Instances (ACI)**
+- **Virtuelle Azure-Computer** (mit Unterstützung des Containers)
+- **Azure Virtual Machine Scale Sets** (mit Unterstützung des Containers)
 
 Aus diesen drei bietet ACI einen großer Vorteil, der ist die Tatsache, die Sie nicht das zugrunde liegende Betriebssystem, müssen Sie keine, upgraden/Patchen usw. verwalten müssen, aber ACI weiterhin befindet sich in der Infrastrukturebene, wie in den nächsten Abschnitten dieses Buchs besser erläutert.
 
 Die Produkte in Azure unterstützen Container, die zur gleichen Zeit mehr in der PaaS (Platform-as-Dienst) positioniert Ebene sind:
 
--   **Azure App Service**
--   **Azure Kubernetes Service (AKS und ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Azure App Service**
+- **Azure Kubernetes Service (AKS und ACS)**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 Dann ist Azure Container Registry-Instanz eine hoch skalierbare containerregistrierung gehostet in Azure, die Sie über alle vorherigen Produkte bei Registrierung und Bereitstellen Ihrer benutzerdefinierten containerimages verwenden können.
 

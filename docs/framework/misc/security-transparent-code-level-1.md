@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868757"
 ---
 # <a name="security-transparent-code-level-1"></a>Sicherheitstransparenter Code, Ebene 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161069"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Das Transparenzmodell der Ebene 1](#the_level_1_transparency_model)  
+- [Das Transparenzmodell der Ebene 1](#the_level_1_transparency_model)  
   
--   [Transparenzattribute](#transparency_attributes)  
+- [Transparenzattribute](#transparency_attributes)  
   
--   [Beispiele für Sicherheitstransparenz](#security_transparency_examples)  
+- [Beispiele für Sicherheitstransparenz](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Das Transparenzmodell der Ebene 1  
@@ -40,11 +40,11 @@ ms.locfileid: "59161069"
   
  Sie können eine gesamte Assembly, einige Klassen in einer Assembly oder einige Methoden in einer Klasse als sicherheitstransparent kennzeichnen. Sicherheitstransparenter Code kann keine Berechtigungen heraufstufen. Diese Einschränkung hat drei Konsequenzen:  
   
--   Sicherheitstransparenter Code kann keine <xref:System.Security.Permissions.SecurityAction.Assert>-Aktionen durchführen.  
+- Sicherheitstransparenter Code kann keine <xref:System.Security.Permissions.SecurityAction.Assert>-Aktionen durchführen.  
   
--   Jeder Linkaufruf, der von sicherheitstransparentem Code umgesetzt wird, wird zu einem vollständigen Aufruf.  
+- Jeder Linkaufruf, der von sicherheitstransparentem Code umgesetzt wird, wird zu einem vollständigen Aufruf.  
   
--   Jeder unsichere (nicht überprüfbare) Code, der in sicherheitstransparentem Code ausgeführt werden muss, verursacht einen vollständigen Aufruf der Sicherheitsberechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
+- Jeder unsichere (nicht überprüfbare) Code, der in sicherheitstransparentem Code ausgeführt werden muss, verursacht einen vollständigen Aufruf der Sicherheitsberechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
  Diese Regeln werden während der Ausführung durch die Common Language Runtime (CLR) erzwungen. Sicherheitstransparenter Code übergibt alle Sicherheitsanforderungen des Codes zurück an seine Aufrufer. Anforderungen, die durch sicherheitstransparenten Code fließen, können keine Berechtigungen heraufstufen. Wenn eine wenig vertrauenswürdige Anwendung sicherheitstransparenten Code aufruft und eine Anforderung für eine höhere Berechtigung verursacht, fließt die Anforderung zurück zum wenig vertrauenswürdigem Code und kann nicht ausgeführt werden. Der sicherheitstransparente Code kann die Anforderung nicht aufhalten, da er keine Assert-Aktionen ausführen kann. Wenn derselbe sicherheitstransparente Code von voll vertrauenswürdigem Code aufgerufen wird, kann die Anforderung erfolgreich ausgeführt werden.  
   

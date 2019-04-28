@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778351"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Vorgehensweise: Erstellen einer WSFederationHttpBinding
 
@@ -79,7 +79,7 @@ In Windows Communication Foundation (WCF), die <xref:System.ServiceModel.WSFeder
 
 6. Dies ist optional. Legen Sie das `algorithmSuite`-Attribut des `<message>`-Elements auf einen geeigneten Wert fest. Die Standardeinstellung ist `Basic256`.
 
-7. Dies ist optional. Ist ein asymmetrischer Prüfschlüssel erforderlich, legen Sie das `issuedKeyType`-Attribut des `<message>`-Elements auf `AsymmetricKey` fest. Die Standardeinstellung ist `SymmetricKey`.
+7. Dies ist optional. Ist ein asymmetrischer Prüfschlüssel erforderlich, legen Sie das `issuedKeyType`-Attribut des `<message>`AsymmetricKey-Elements auf`AsymmetricKey` fest. Die Standardeinstellung ist `SymmetricKey`.
 
 8. Dies ist optional. Legen Sie das `issuedTokenType`-Attribut des `<message>`-Elements fest.
 
@@ -91,11 +91,11 @@ In Windows Communication Foundation (WCF), die <xref:System.ServiceModel.WSFeder
 
 12. Weitere Informationen finden Sie unter [Dienstidentität und Authentifizierung](service-identity-and-authentication.md).
 
-13. Erforderlich für den Client, wenn kein lokaler Aussteller angegeben ist. Wird nicht für den Dienst verwendet. Erstellen Sie eine [ \<Bindung >](../../../../docs/framework/misc/binding.md) Element im Bindungsabschnitt, die für die Kommunikation mit dem Sicherheitstokendienst verwendet werden kann. Weitere Informationen zum Erstellen einer Bindung finden Sie unter [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
+13. Erforderlich für den Client, wenn kein lokaler Aussteller angegeben ist. Wird nicht für den Dienst verwendet. Erstellen Sie eine [ \<Bindung >](../../../../docs/framework/misc/binding.md) Element im Bindungsabschnitt, die für die Kommunikation mit dem Sicherheitstokendienst verwendet werden kann. Weitere Informationen zum Erstellen einer Bindung finden Sie unter [Vorgehensweise: Angeben eine Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).
 
 14. Geben Sie die im vorangegangenen Schritt erstellte Bindung an, indem Sie das `binding`-Attribut und das `bindingConfiguration`-Attribut des `<issuer>`-Elements festlegen.
 
-15. Wird nicht für den Client verwendet. Optional für den Dienst. Erstellen Sie ein `<issuerMetadata>`-Element als untergeordnetes Element des <`message`>-Elements. Geben Sie anschließend in einem `address`-Attribut des `<issuerMetadata>`-Elements die Adresse an, unter der die Metadaten des Sicherheitstokendiensts veröffentlicht werden. Optional können Sie ein untergeordnetes `<identity>`-Element hinzufügen und die Identität des Sicherheitstokendiensts angeben.
+15. Wird nicht für den Client verwendet. Optional für den Dienst. Erstellen Sie eine `<issuerMetadata>` Element als untergeordnetes Element der <`message`> Element. Geben Sie anschließend in einem `address`-Attribut des `<issuerMetadata>`-Elements die Adresse an, unter der die Metadaten des Sicherheitstokendiensts veröffentlicht werden. Optional können Sie ein untergeordnetes `<identity>`-Element hinzufügen und die Identität des Sicherheitstokendiensts angeben.
 
 16. Optional für Client und Dienst. Fügen Sie ein `<claimTypeRequirements>`-Element als untergeordnetes Element des `<message>`-Elements hinzu. Geben Sie die erforderlichen und optionalen Ansprüche, die der Dienst beruht, durch das Hinzufügen [ \<hinzufügen >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) Elementen, die die `<claimTypeRequirements>` Element- und Angeben des Anspruchs eingeben, mit der `claimType` Attribut. Geben Sie an, ob ein bestimmter Anspruch erforderlich oder optional ist, indem Sie das `isOptional`-Attribut festlegen.
 
@@ -110,4 +110,4 @@ Das folgende Codebeispiel zeigt einen Code zum imperativen Einrichten einer `WSF
 
 - [Verbund](federation.md)
 - [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Vorgehensweise: Deaktivieren von Sicherheitssitzungen auf einer WSFederationHttpBinding](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

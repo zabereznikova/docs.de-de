@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703926"
 ---
 # <a name="flow-document-overview"></a>Übersicht über Flussdokumente
 Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein vordefiniertes Layout festgelegt zu werden, passen Flussdokumente ihren Inhalt basierend auf Laufzeitvariablen dynamisch an Variablen wie Fenstergröße, Geräteauflösung und optionale Benutzereinstellungen an und brechen den Inhalt dynamisch um. Zudem bieten Flussdokumente erweiterte Dokumentfunktionen, z.B. Paginierung und Spalten. Dieses Thema enthält eine Übersicht über Flussdokumente und deren Erstellung.  
@@ -42,13 +42,13 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Wie in der obigen Abbildung verdeutlicht es gibt mehrere Funktionen in Flussdokumenten integriert:
   
--   Suchen: Ermöglicht dem Benutzer um eine Volltextsuche ein ganzes Dokument auszuführen.  
+- Suchen: Ermöglicht dem Benutzer um eine Volltextsuche ein ganzes Dokument auszuführen.  
   
--   Anzeigemodus: Der Benutzer kann seinen bevorzugten Anzeigemodus, einschließlich einen Single-Page (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buch lesen Format) anzeigen, Modus und einen fortlaufenden Bildlaufmodus anzeigen (buchleseformat) von auswählen.  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+- Anzeigemodus: Der Benutzer kann seinen bevorzugten Anzeigemodus, einschließlich einen Single-Page (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buch lesen Format) anzeigen, Modus und einen fortlaufenden Bildlaufmodus anzeigen (buchleseformat) von auswählen.  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Steuerelemente für die Seitennavigation: Wenn der Anzeigemodus des Dokuments Seiten verwendet werden, enthalten die Steuerelemente für die Seitennavigation eine Schaltfläche zum Wechseln der nächsten Seite (Pfeil nach unten) oder vorherige Seite (Pfeil), als auch Indikatoren für die aktuelle Seitenzahl und die Gesamtzahl der Seiten. Das Blättern durch Seiten funktioniert auch mithilfe der Pfeiltasten auf der Tastatur.  
+- Steuerelemente für die Seitennavigation: Wenn der Anzeigemodus des Dokuments Seiten verwendet werden, enthalten die Steuerelemente für die Seitennavigation eine Schaltfläche zum Wechseln der nächsten Seite (Pfeil nach unten) oder vorherige Seite (Pfeil), als auch Indikatoren für die aktuelle Seitenzahl und die Gesamtzahl der Seiten. Das Blättern durch Seiten funktioniert auch mithilfe der Pfeiltasten auf der Tastatur.  
   
--   Zoom: Die Zoomsteuerelemente ermöglichen erhöhen oder verringern die Zoomstufe, indem Sie auf das Pluszeichen oder minusschaltfächen klickt den Benutzer bzw. aus. Die Zoomsteuerelemente umfassen zudem einen Schieberegler zum Anpassen der Zoomstufe. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+- Zoom: Die Zoomsteuerelemente ermöglichen erhöhen oder verringern die Zoomstufe, indem Sie auf das Pluszeichen oder minusschaltfächen klickt den Benutzer bzw. aus. Die Zoomsteuerelemente umfassen zudem einen Schieberegler zum Anpassen der Zoomstufe. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
  Diese Funktionen können basierend auf dem zum Hosten des fortlaufenden Inhalts verwendeten Steuerelement bearbeitet werden. Im nächsten Abschnitt werden die verschiedenen Steuerelemente beschrieben.  
   
@@ -75,9 +75,9 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 ## <a name="creating-flow-content"></a>Erstellen von fortlaufendem Inhalt  
  Fortlaufendem Inhalt kann komplex sein, bestehend aus verschiedenen Elementen einschließlich Text, Bilder, Tabellen, und sogar <xref:System.Windows.UIElement> abgeleiteten Klassen wie Steuerelemente. Um zu verstehen, wie komplexer fortlaufender Inhalt erstellt wird, sind die folgenden Punkte wichtig:  
   
--   **Flussbezogene Klassen**: Jede in fortlaufendem Inhalt verwendete Klasse verfügt über einen bestimmten Zweck. Darüber hinaus hilft Ihnen die hierarchische Beziehung zwischen Flussklassen dabei, zu verstehen, wie sie verwendet werden. Z. B. von abgeleiteten Klassen der <xref:System.Windows.Documents.Block> -Klasse verwendet, um andere Objekte enthalten, während die abgeleitete Klassen <xref:System.Windows.Documents.Inline> enthält Objekte, die angezeigt werden.  
+- **Flussbezogene Klassen**: Jede in fortlaufendem Inhalt verwendete Klasse verfügt über einen bestimmten Zweck. Darüber hinaus hilft Ihnen die hierarchische Beziehung zwischen Flussklassen dabei, zu verstehen, wie sie verwendet werden. Z. B. von abgeleiteten Klassen der <xref:System.Windows.Documents.Block> -Klasse verwendet, um andere Objekte enthalten, während die abgeleitete Klassen <xref:System.Windows.Documents.Inline> enthält Objekte, die angezeigt werden.  
   
--   **Inhaltsschema**: Ein Flussdokument kann eine große Anzahl von geschachtelten Elementen erfordern. Das Inhaltsschema gibt mögliche Übergeordnet/Untergeordnet-Beziehungen zwischen Elementen an.  
+- **Inhaltsschema**: Ein Flussdokument kann eine große Anzahl von geschachtelten Elementen erfordern. Das Inhaltsschema gibt mögliche Übergeordnet/Untergeordnet-Beziehungen zwischen Elementen an.  
   
  In den folgenden Abschnitten wird jeder dieser Bereiche ausführlicher erklärt.  
   
@@ -196,19 +196,19 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  **Figure:**  
   
--   Kann positioniert werden: Sie können die horizontalen und vertikalen Textmarken auf es Bezug auf die Seite, die Inhalte, die Spalte oder die Absatz andocken festlegen. Sie können auch die <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> und <xref:System.Windows.Documents.Figure.VerticalOffset%2A> Eigenschaft, um beliebige Offsets anzugeben.  
+- Kann positioniert werden: Sie können die horizontalen und vertikalen Textmarken auf es Bezug auf die Seite, die Inhalte, die Spalte oder die Absatz andocken festlegen. Sie können auch die <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> und <xref:System.Windows.Documents.Figure.VerticalOffset%2A> Eigenschaft, um beliebige Offsets anzugeben.  
   
--   Ist mehr als einer Spalte beträchtliche: Sie können festlegen, <xref:System.Windows.Documents.Figure> Höhe und Breite auf ein Vielfaches von Seite, Inhalt oder Spalte Höhe oder Breite. Beachten Sie, dass im Fall von Seiten und Inhalt keine Vielfachen über 1 zulässig sind. Sie können z. B. die Breite des Festlegen einer <xref:System.Windows.Documents.Figure> "0.5 Page" oder "0.25 Content" oder "2 Column" sein. Sie können die Höhe und Breite auch auf absolute Pixelwerte festlegen.  
+- Ist mehr als einer Spalte beträchtliche: Sie können festlegen, <xref:System.Windows.Documents.Figure> Höhe und Breite auf ein Vielfaches von Seite, Inhalt oder Spalte Höhe oder Breite. Beachten Sie, dass im Fall von Seiten und Inhalt keine Vielfachen über 1 zulässig sind. Sie können z. B. die Breite des Festlegen einer <xref:System.Windows.Documents.Figure> "0.5 Page" oder "0.25 Content" oder "2 Column" sein. Sie können die Höhe und Breite auch auf absolute Pixelwerte festlegen.  
   
--   Paginiert nicht: Wenn der Inhalt in einem <xref:System.Windows.Documents.Figure> passt nicht in der <xref:System.Windows.Documents.Figure>, passt der Inhalt wird ausgegeben, und der restliche Inhalt geht verloren  
+- Paginiert nicht: Wenn der Inhalt in einem <xref:System.Windows.Documents.Figure> passt nicht in der <xref:System.Windows.Documents.Figure>, passt der Inhalt wird ausgegeben, und der restliche Inhalt geht verloren  
   
  **Floater:**  
   
--   Kann nicht positioniert werden und wird gerendert, wo Speicherplatz dafür verfügbar gemacht werden kann. Sie können nicht festgelegt, den Offset oder die Verankerung einer <xref:System.Windows.Documents.Floater>.  
+- Kann nicht positioniert werden und wird gerendert, wo Speicherplatz dafür verfügbar gemacht werden kann. Sie können nicht festgelegt, den Offset oder die Verankerung einer <xref:System.Windows.Documents.Floater>.  
   
--   Mehr als eine Spalte kann nicht festgelegt werden: In der Standardeinstellung <xref:System.Windows.Documents.Floater> Größe an eine Spalte. Es wurde eine <xref:System.Windows.Documents.Floater.Width%2A> -Eigenschaft, die festgelegt werden kann, um einen absoluten Pixelwert, aber wenn ist dieser Wert größer als eine Spaltenbreite wird ignoriert und die Floater-Klasse ist Größe einer Spalte. Sie können die Größe auf weniger als einer Spalte durch die richtige Pixelbreite festlegen, größenanpassung ist jedoch nicht spaltenabhängig, sodass "0.5Column" kein gültiger Ausdruck für ist <xref:System.Windows.Documents.Floater> Breite. <xref:System.Windows.Documents.Floater> hat keine Höheneigenschaft, und es ist Höhe kann nicht festgelegt werden, die die Höhe hängt vom Inhalt  
+- Mehr als eine Spalte kann nicht festgelegt werden: In der Standardeinstellung <xref:System.Windows.Documents.Floater> Größe an eine Spalte. Es wurde eine <xref:System.Windows.Documents.Floater.Width%2A> -Eigenschaft, die festgelegt werden kann, um einen absoluten Pixelwert, aber wenn ist dieser Wert größer als eine Spaltenbreite wird ignoriert und die Floater-Klasse ist Größe einer Spalte. Sie können die Größe auf weniger als einer Spalte durch die richtige Pixelbreite festlegen, größenanpassung ist jedoch nicht spaltenabhängig, sodass "0.5Column" kein gültiger Ausdruck für ist <xref:System.Windows.Documents.Floater> Breite. <xref:System.Windows.Documents.Floater> hat keine Höheneigenschaft, und es ist Höhe kann nicht festgelegt werden, die die Höhe hängt vom Inhalt  
   
--   <xref:System.Windows.Documents.Floater> paginiert: Wenn der Inhalt bei angegebener Breite auf mehr als 1 Spaltenhöhe erweitert wird, bricht Floater um und paginiert zur nächsten Spalte, nächsten Seite usw.  
+- <xref:System.Windows.Documents.Floater> paginiert: Wenn der Inhalt bei angegebener Breite auf mehr als 1 Spaltenhöhe erweitert wird, bricht Floater um und paginiert zur nächsten Spalte, nächsten Seite usw.  
   
  <xref:System.Windows.Documents.Figure> ist ein guter Ausgangspunkt zum eigenständigen Inhalt zu platzieren, in denen Sie zum Steuern der Größe möchten, und Positionierung und sind davon überzeugt, dass der Inhalt in die angegebene Größe passt. <xref:System.Windows.Documents.Floater> ist ein guter Ausgangspunkt, um weitere kostenlose Inhalt zu platzieren, die ähnlich wie der Inhalt der Hauptseite fließen, aber von diesem getrennt ist.  
   
