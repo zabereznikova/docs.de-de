@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638024"
 ---
 # <a name="get-statement"></a>Get-Anweisung
 Deklariert eine `Get` Eigenschaftenprozedur, um den Wert einer Eigenschaft abzurufen.  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>Regeln  
   
--   **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder die `Get` oder `Set` Prozedur, aber nicht beides. Wenn Sie dies tun, muss die Zugriffsebene der Prozedur restriktiver ist als die Zugriffsebene der Eigenschaft. Z. B., wenn die Eigenschaft deklariert ist `Friend`, Sie können deklarieren, die `Get` Prozedur `Private`, aber nicht `Public`.  
+- **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder die `Get` oder `Set` Prozedur, aber nicht beides. Wenn Sie dies tun, muss die Zugriffsebene der Prozedur restriktiver ist als die Zugriffsebene der Eigenschaft. Z. B., wenn die Eigenschaft deklariert ist `Friend`, Sie können deklarieren, die `Get` Prozedur `Private`, aber nicht `Public`.  
   
      Wenn Sie definieren eine `ReadOnly` -Eigenschaft, die `Get` Prozedur darstellt, die gesamte Eigenschaft. Sie können nicht deklarieren eine andere Zugriffsebene für `Get`, da hierdurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
   
--   **Der Rückgabetyp.** Die [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) können deklarieren, den den Datentyp des zurückgegebenen Werts. Die `Get` Prozedur gibt, dass der Datentyp automatisch zurück. Sie können einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle angeben.  
+- **Der Rückgabetyp.** Die [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) können deklarieren, den den Datentyp des zurückgegebenen Werts. Die `Get` Prozedur gibt, dass der Datentyp automatisch zurück. Sie können einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration, Struktur, Klasse oder Schnittstelle angeben.  
   
      Wenn die `Property` Anweisung gibt keinen `returntype`, gibt die Prozedur `Object`.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zurückgeben aus einer Prozedur.** Wenn die `Get` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, in der Anweisung, die den Wert der Eigenschaft angefordert.  
+- **Zurückgeben aus einer Prozedur.** Wenn die `Get` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, in der Anweisung, die den Wert der Eigenschaft angefordert.  
   
      `Get` Property-Prozeduren können einen Wert, der mit Zurückgeben der [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) oder den Eigenschaftennamen den zurückgegeben Wert zuweisen. Weitere Informationen finden Sie unter "Rückgabewert" in [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      Die `Exit Property` und `Return` Anweisungen bewirken, dass eine sofortige Beendigung einer Eigenschaftenprozedur. Eine beliebige Anzahl von `Exit Property` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie können kombinieren `Exit Property` und `Return` Anweisungen.  
   
--   **Der Rückgabewert.** Zum Zurückgeben eines Werts aus einer `Get` Verfahren, Sie können entweder weisen Sie den Wert an den Eigenschaftennamen oder nehmen Sie diese in einem [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md). Die `Return` gleichzeitig delegatenvariablen die `Get` Prozedur zurückgeben, Wert und Beenden der Prozedur.  
+- **Der Rückgabewert.** Zum Zurückgeben eines Werts aus einer `Get` Verfahren, Sie können entweder weisen Sie den Wert an den Eigenschaftennamen oder nehmen Sie diese in einem [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md). Die `Return` gleichzeitig delegatenvariablen die `Get` Prozedur zurückgeben, Wert und Beenden der Prozedur.  
   
      Bei Verwendung von `Exit Property` ohne einen zugewiesenen Wert an den Eigenschaftennamen der `Get` Prozedur gibt den Standardwert für den Datentyp der Eigenschaft zurück. Weitere Informationen finden Sie unter "Rückgabewert" in [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md).  
   

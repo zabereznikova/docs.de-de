@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607825"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Erstellen eines DataView-Objekts (LINQ to DataSet)
 Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zu erstellen. Sie können das <xref:System.Data.DataView>-Objekt auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage einer <xref:System.Data.DataTable> erstellen, oder Sie können es auf der Grundlage einer typisierten oder nicht typisierten <xref:System.Data.DataTable> erstellen. In beiden Fällen erstellen Sie die <xref:System.Data.DataView> mithilfe eines der <xref:System.Data.DataTableExtensions.AsDataView%2A> Erweiterungsmethoden. <xref:System.Data.DataView> konstruierbar ist; nicht direkt in die [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Kontext.  
@@ -31,19 +31,19 @@ Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLU
   
  In einer Abfrage, die die Grundlage für eine <xref:System.Data.DataView> bilden soll, werden nur die folgenden Abfrageoperatoren unterstützt:  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
  Wenn eine <xref:System.Data.DataView> aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt wird, muss die <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>-Methode die in der Abfrage zuletzt aufgerufene Methode sein. Dies wird gezeigt, im folgenden Beispiel erstellt eine <xref:System.Data.DataView> von onlinebestellungen, die nach Gesamtbetrag sortiert:  
   

@@ -3,20 +3,20 @@ title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606849"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
   
  Die Knoten der Struktur werden von unten nach oben verarbeitet. Zunächst wird eine Zwischenstruktur erzeugt: SqlSelectStatement oder SqlBuilder, die beide ISqlFragment. Danach wird die SQL-Zeichenfolgenanweisung aus dieser Struktur erzeugt. Es gibt zwei Gründe für die Zwischenstruktur:  
   
--   Logisch wird eine SQL SELECT-Anweisung der Reihenfolge nach gefüllt. Auf die Knoten, die in der FROM-Klausel verwendet werden, wird vor den Knoten zugegriffen, die in den WHERE-, GROUP BY- und ORDER BY-Klauseln verwendet werden.  
+- Logisch wird eine SQL SELECT-Anweisung der Reihenfolge nach gefüllt. Auf die Knoten, die in der FROM-Klausel verwendet werden, wird vor den Knoten zugegriffen, die in den WHERE-, GROUP BY- und ORDER BY-Klauseln verwendet werden.  
   
--   Um Aliase umzubenennen, müssen Sie alle verwendeten Aliase identifizieren, sodass Konflikte während der Umbenennung vermieden werden. Wenn Sie die Umbenennungsoptionen in SqlBuilder verzögern möchten, können Sie Symbolobjekte verwenden, um die Spalten darzustellen, die für die Umbenennung infrage kommen.  
+- Um Aliase umzubenennen, müssen Sie alle verwendeten Aliase identifizieren, sodass Konflikte während der Umbenennung vermieden werden. Wenn Sie die Umbenennungsoptionen in SqlBuilder verzögern möchten, können Sie Symbolobjekte verwenden, um die Spalten darzustellen, die für die Umbenennung infrage kommen.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.
 ### <a name="isqlfragment"></a>ISqlFragment  
  In diesem Abschnitt werden die Klassen behandelt, die die ISqlFragment-Schnittstelle implementieren. Diese dient zwei Zwecken:  
   
--   Als allgemeiner Rückgabetyp für alle Besuchermethoden  
+- Als allgemeiner Rückgabetyp für alle Besuchermethoden  
   
--   Zur Bereitstellung einer Methode, um die endgültige SQL-Zeichenfolge zu schreiben  
+- Zur Bereitstellung einer Methode, um die endgültige SQL-Zeichenfolge zu schreiben  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  Wenn SQL-Anweisungsklauseln nach Klauseln ausgewertet werden, bei denen die Knoten, die zum Zusammenführen vorgesehen sind, nicht leer sind, können die Knoten der aktuellen Anweisung normalerweise nicht hinzugefügt werden. Wenn der nächste Knoten z. B. ein Filter ist, kann dieser Knoten nur in das aktuelle SqlSelectStatement integriert werden, wenn Folgendes zutrifft:  
   
--   Die SELECT-Liste ist leer. Wenn die SELECT-Liste nicht leer ist, wurde die Auswahlliste von einem Knoten erzeugt, der dem Filter vorausgeht, und das Prädikat verweist möglicherweise auf von dieser SELECT-Liste erzeugte Spalten.  
+- Die SELECT-Liste ist leer. Wenn die SELECT-Liste nicht leer ist, wurde die Auswahlliste von einem Knoten erzeugt, der dem Filter vorausgeht, und das Prädikat verweist möglicherweise auf von dieser SELECT-Liste erzeugte Spalten.  
   
--   Die GROUP BY-Klausel ist leer. Wenn die GROUP BY-Klausel nicht leer ist, würde das Hinzufügen des Filters bedeuten, dass vor dem Gruppieren gefiltert würde. Das ist nicht zulässig.  
+- Die GROUP BY-Klausel ist leer. Wenn die GROUP BY-Klausel nicht leer ist, würde das Hinzufügen des Filters bedeuten, dass vor dem Gruppieren gefiltert würde. Das ist nicht zulässig.  
   
--   Die TOP-Klausel ist leer. Wenn die TOP-Klausel nicht leer ist, würde das Hinzufügen des Filters bedeuten, dass vor dem Ausführen der TOP-Klausel gefiltert würde. Das ist nicht zulässig.  
+- Die TOP-Klausel ist leer. Wenn die TOP-Klausel nicht leer ist, würde das Hinzufügen des Filters bedeuten, dass vor dem Ausführen der TOP-Klausel gefiltert würde. Das ist nicht zulässig.  
   
  Dies gilt nicht für nicht relationale Knoten wie DbConstantExpression oder arithmetische Ausdrücke, da diese immer als Teil eines vorhandenen SqlSelectStatements eingeschlossen sind.  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>Relationale Knoten, die nicht zu einem Join gehören  
  Die folgenden Ausdruckstypen unterstützen Knoten, die nicht zu einem Join gehören:  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpression  
+- DbLimitExpression  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  Der Zugriff auf diese Knoten erfolgt nach dem folgenden Muster:  
   
 1. Zugreifen auf die relationale Eingabe und Abrufen des resultierenden SqlSelectStatements. Folgende Eingaben sind bei einem relationalen Knoten möglich:  
   
-    -   Ein relationaler Knoten, einschließlich eines Blocks (z. B. ein DbScanExpression). Der Zugriff auf einen solchen Knoten gibt ein SqlSelectStatement zurück.  
+    - Ein relationaler Knoten, einschließlich eines Blocks (z. B. ein DbScanExpression). Der Zugriff auf einen solchen Knoten gibt ein SqlSelectStatement zurück.  
   
-    -   Ein Festlegungsausdruck (z. B. UNION ALL). Das Ergebnis muss in Klammern eingeschlossen und in die FROM-Klausel eines neuen SqlSelectStatements eingefügt werden.  
+    - Ein Festlegungsausdruck (z. B. UNION ALL). Das Ergebnis muss in Klammern eingeschlossen und in die FROM-Klausel eines neuen SqlSelectStatements eingefügt werden.  
   
 2. Überprüfen Sie, ob der aktuelle Knoten dem SqlSelectStatement hinzugefügt werden kann, das von der Eingabe erzeugt wurde. Im Abschnitt mit dem Titel "Gruppieren von Ausdrücken in SQL-Anweisungen" wird dies beschrieben. Wenn das nicht der Fall ist, gehen Sie folgendermaßen vor:  
   
-    -   Lesen Sie das aktuelle SqlSelectStatement-Objekt aus.  
+    - Lesen Sie das aktuelle SqlSelectStatement-Objekt aus.  
   
-    -   Erstellen Sie ein neues SqlSelectStatement-Objekt, und fügen Sie das ausgelesene SqlSelectStatement als FROM-Klausel des neuen SqlSelectStatement-Objekts hinzu.  
+    - Erstellen Sie ein neues SqlSelectStatement-Objekt, und fügen Sie das ausgelesene SqlSelectStatement als FROM-Klausel des neuen SqlSelectStatement-Objekts hinzu.  
   
-    -   Legen Sie das neue Objekt oben auf dem Stapel ab.  
+    - Legen Sie das neue Objekt oben auf dem Stapel ab.  
   
 3. Leiten Sie die Eingabeausdruckbindung auf das passende Symbol aus der Eingabe um. Diese Informationen werden im SqlSelectStatement-Objekt verwaltet.  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>Joinausdrücke  
  Folgende Ausdrücke gelten als Joinausdrücke und werden einheitlich durch die VisitJoinExpression-Methode verarbeitet:  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  Der Zugriff erfolgt in folgenden Schritten:  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. Verarbeiten Sie das Ergebnis nach dem Zugriff auf die Eingabe durch den Aufruf von ProcessJoinInputResult. Diese Methode ist für die Verwaltung der Symboltabelle nach dem Zugriff auf ein untergeordnetes Element eines Joinausdrucks und gegebenenfalls den Abschluss des vom untergeordneten Element erzeugten SqlSelectStatements zuständig. Das untergeordnete Element kann eines der folgenden Ergebnisse haben:  
   
-    -   Ein anderes SqlSelectStatement als das, dem das übergeordnete Element hinzugefügt wird. In dem Fall muss es möglicherweise durch das Hinzufügen von Standardspalten vervollständigt werden. Wenn die Eingabe ein Join war, müssen Sie ein neues Joinsymbol erstellen. Erstellen Sie andernfalls ein normales Symbol.  
+    - Ein anderes SqlSelectStatement als das, dem das übergeordnete Element hinzugefügt wird. In dem Fall muss es möglicherweise durch das Hinzufügen von Standardspalten vervollständigt werden. Wenn die Eingabe ein Join war, müssen Sie ein neues Joinsymbol erstellen. Erstellen Sie andernfalls ein normales Symbol.  
   
-    -   Ein Block (z. B. ein DbScanExpression). In diesem Fall wird es einfach der Liste der Eingaben des SqlSelectStatements des übergeordneten Elements hinzugefügt.  
+    - Ein Block (z. B. ein DbScanExpression). In diesem Fall wird es einfach der Liste der Eingaben des SqlSelectStatements des übergeordneten Elements hinzugefügt.  
   
-    -   Kein SqlSelectStatement. In diesem Fall wird es in Klammern eingeschlossen.  
+    - Kein SqlSelectStatement. In diesem Fall wird es in Klammern eingeschlossen.  
   
-    -   Das gleiche SqlSelectStatement, dem das übergeordnete Element hinzugefügt wird. In diesem Fall müssen die Symbole in der FromExtents-Liste durch ein einzelnes neues JoinSymbol ersetzt werden, das alle Symbole darstellt.  
+    - Das gleiche SqlSelectStatement, dem das übergeordnete Element hinzugefügt wird. In diesem Fall müssen die Symbole in der FromExtents-Liste durch ein einzelnes neues JoinSymbol ersetzt werden, das alle Symbole darstellt.  
   
-    -   Für die ersten drei Fälle wird AddFromSymbol aufgerufen, um die AS-Klausel hinzuzufügen und die Symboltabelle zu aktualisieren.  
+    - Für die ersten drei Fälle wird AddFromSymbol aufgerufen, um die AS-Klausel hinzuzufügen und die Symboltabelle zu aktualisieren.  
   
  Im dritten Schritt wird auf die Joinbedingung (sofern vorhanden) zugegriffen.  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  Zuerst wird auf die Instance-Eigenschaft zugegriffen. Das Ergebnis ist ein Symbol, ein JoinSymbol oder ein SymbolPair. Diese drei Fälle werden folgendermaßen behandelt:  
   
--   Wenn ein JoinSymbol zurückgegeben wird, enthält seine NameToExtent-Eigenschaft ein Symbol für die benötigte Eigenschaft. Wenn das Joinsymbol einen geschachtelten Join darstellt, wird ein neues Symbolpaar mit dem Joinsymbol zur Nachverfolgung des Symbols, das als Instanzalias verwendet würde, und dem Symbol, das die tatsächliche Eigenschaft für die weitere Auflösung darstellt, zurückgegeben.  
+- Wenn ein JoinSymbol zurückgegeben wird, enthält seine NameToExtent-Eigenschaft ein Symbol für die benötigte Eigenschaft. Wenn das Joinsymbol einen geschachtelten Join darstellt, wird ein neues Symbolpaar mit dem Joinsymbol zur Nachverfolgung des Symbols, das als Instanzalias verwendet würde, und dem Symbol, das die tatsächliche Eigenschaft für die weitere Auflösung darstellt, zurückgegeben.  
   
--   Wenn ein SymbolPair zurückgegeben wird und der Spaltenteil ein Joinsymbol ist, wird wieder ein Joinsymbol zurückgegeben. Dieses Mal wird die Spalteneigenschaft jedoch aktualisiert, damit sie auf die durch den aktuellen Eigenschaftsausdruck dargestellte Eigenschaft verweist. Andernfalls wird ein SqlBuilder mit der SymbolPair-Quelle als Alias und dem Symbol für die aktuelle Eigenschaft als Spalte zurückgegeben.  
+- Wenn ein SymbolPair zurückgegeben wird und der Spaltenteil ein Joinsymbol ist, wird wieder ein Joinsymbol zurückgegeben. Dieses Mal wird die Spalteneigenschaft jedoch aktualisiert, damit sie auf die durch den aktuellen Eigenschaftsausdruck dargestellte Eigenschaft verweist. Andernfalls wird ein SqlBuilder mit der SymbolPair-Quelle als Alias und dem Symbol für die aktuelle Eigenschaft als Spalte zurückgegeben.  
   
--   Wenn ein Symbol zurückgegeben wird, gibt die Visit-Methode eine SqlBuilder-Methode mit dieser Instanz als Alias und dem Eigenschaftennamen als Spaltenname zurück.  
+- Wenn ein Symbol zurückgegeben wird, gibt die Visit-Methode eine SqlBuilder-Methode mit dieser Instanz als Alias und dem Eigenschaftennamen als Spaltenname zurück.  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Wenn DbNewInstanceExpression als Projection-Eigenschaft von DbProjectExpression verwendet wird, erzeugt DbNewInstanceExpression eine durch Trennzeichen getrennte Liste der Argumente, um die projizierten Spalten darzustellen.  
   
  Wenn die Rückgabe von DbNewInstanceExpression vom Typ Auflistung ist und eine neue Auflistung der Ausdrücke definiert, die als Argumente bereitgestellt wurden, werden die folgenden drei Fälle getrennt behandelt:  
   
--   Wenn DbElementExpression das einzige Argument von DbNewInstanceExpression ist, wird er wie folgt übersetzt:  
+- Wenn DbElementExpression das einzige Argument von DbNewInstanceExpression ist, wird er wie folgt übersetzt:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

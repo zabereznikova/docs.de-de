@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609449"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE-Struktur
 Enthält Informationen zu einem Objekt, das speicherbereinigt werden soll.  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>Hinweise  
  Die `type` Feld ist ein [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) -Enumerationswert, der angibt, in dem der Verweis stammt. Eine bestimmte `COR_GC_REFERENCE` Wert kann eine der folgenden Arten von verwalteten Objekten widerspiegeln:  
   
--   Objekte aus allen verwalteten Stapel (`CorGCReferenceType.CorReferenceStack`). Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
+- Objekte aus allen verwalteten Stapel (`CorGCReferenceType.CorReferenceStack`). Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
   
--   Objekte aus der Handletabelle (`CorGCReferenceType.CorHandle*`). Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
+- Objekte aus der Handletabelle (`CorGCReferenceType.CorHandle*`). Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
   
--   Objekte aus der Finalizerwarteschlange (`CorGCReferenceType.CorReferenceFinalizer`). Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
+- Objekte aus der Finalizerwarteschlange (`CorGCReferenceType.CorReferenceFinalizer`). Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
   
  Die `extraData` Feld enthält die zusätzliche Daten abhängig von der Quelle (oder Typ) des Verweises. Dabei sind folgende Werte möglich:  
   
--   `DependentSource`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongDependent`, dieses Feld ist das Objekt, das, wenn aktiv ist, wird das Objekt, um die Garbage Collection auf Stammelemente `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongDependent`, dieses Feld ist das Objekt, das, wenn aktiv ist, wird das Objekt, um die Garbage Collection auf Stammelemente `COR_GC_REFERENCE.Location`.  
   
--   `RefCount`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongRefCount`, dieses Feld wird der Verweiszähler des Handles.  
+- `RefCount`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongRefCount`, dieses Feld wird der Verweiszähler des Handles.  
   
--   `Size`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongSizedByref`, dieses Feld ist die letzte Größe der Objektstruktur, die für den Garbage Collector die Stämme Objekt berechnet. Beachten Sie, dass diese Berechnung nicht unbedingt auf dem neuesten Stand ist.  
+- `Size`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongSizedByref`, dieses Feld ist die letzte Größe der Objektstruktur, die für den Garbage Collector die Stämme Objekt berechnet. Beachten Sie, dass diese Berechnung nicht unbedingt auf dem neuesten Stand ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

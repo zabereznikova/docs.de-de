@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649997"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt
 Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Methode vor Abschluss des Aufrufs fortgesetzt. Ziehen Sie ein Anwenden des „Await“-Operators auf das Ergebnis des Aufrufs in Betracht.  
@@ -29,7 +29,7 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
   
 ### <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung  
   
--   Ziehen Sie eine Unterdrückung der Warnung nur dann in Betracht, wenn Sie sicher sind, dass Sie nicht auf den Abschluss des asynchronen Aufrufs warten möchten und dass die aufgerufene Methode keine Ausnahmen auslösen wird. In diesem Fall können Sie die Warnung unterdrücken, indem Sie das Aufgabenergebnis des Aufrufs einer Variablen zuweisen.  
+- Ziehen Sie eine Unterdrückung der Warnung nur dann in Betracht, wenn Sie sicher sind, dass Sie nicht auf den Abschluss des asynchronen Aufrufs warten möchten und dass die aufgerufene Methode keine Ausnahmen auslösen wird. In diesem Fall können Sie die Warnung unterdrücken, indem Sie das Aufgabenergebnis des Aufrufs einer Variablen zuweisen.  
   
      Das folgende Beispiel zeigt, wie Sie die Warnung auslösen und unterdrücken können und wie Sie auf den Aufruf warten können.  
   

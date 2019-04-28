@@ -3,11 +3,11 @@ title: Beispiele für Abfrageausdrücke (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
 ms.openlocfilehash: f15e397c711bd01d5770e59c4f2c8227ee2ac7ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637653"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Beispiele für Abfrageausdrücke (LINQ to DataSet)
 Dieser Abschnitt enthält LINQ to DataSet Programmierbeispiele in der Syntax, die die Standardabfrageoperatoren zu verwenden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendete werden ausgefüllt, indem Sie mit der `FillDataSet` -Methode, die im angegebenen [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Weitere Informationen finden Sie unter [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

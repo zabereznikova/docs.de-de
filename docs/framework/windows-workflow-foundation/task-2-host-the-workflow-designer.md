@@ -3,11 +3,11 @@ title: 'Aufgabe 2: Hosten des Workflow-Designers'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641558"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Aufgabe 2: Hosten des Workflow-Designers
 Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in einer Windows Presentation Foundation (WPF)-Anwendung.  
@@ -42,7 +42,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
   
 8. In **Projektmappen-Explorer**mit der rechten Maustaste auf "MainWindow.xaml", und wählen Sie **Ansichtscode**. Ändern Sie den Code, indem Sie folgende Schritte ausführen:  
   
-    1.  Fügen Sie die folgenden Namespaces hinzu:  
+    1. Fügen Sie die folgenden Namespaces hinzu:  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
         using System.ComponentModel;  
         ```  
   
-    2.  Um ein privates Memberfeld zu deklarieren, das eine Instanz von <xref:System.Activities.Presentation.WorkflowDesigner> enthalten soll, fügen Sie der `MainWindow`-Klasse den folgenden Code hinzu.  
+    2. Um ein privates Memberfeld zu deklarieren, das eine Instanz von <xref:System.Activities.Presentation.WorkflowDesigner> enthalten soll, fügen Sie der `MainWindow`-Klasse den folgenden Code hinzu.  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
         }  
         ```  
   
-    3.  Fügen Sie die folgende `AddDesigner`-Methode zu der `MainWindow`-Klasse hinzu. Die Implementierung erstellt eine Instanz der <xref:System.Activities.Presentation.WorkflowDesigner>, fügt ein <xref:System.Activities.Statements.Sequence> -Aktivität hinzu und platziert sie in der mittleren Spalte grid1 **Raster**.  
+    3. Fügen Sie die folgende `AddDesigner`-Methode zu der `MainWindow`-Klasse hinzu. Die Implementierung erstellt eine Instanz der <xref:System.Activities.Presentation.WorkflowDesigner>, fügt ein <xref:System.Activities.Statements.Sequence> -Aktivität hinzu und platziert sie in der mittleren Spalte grid1 **Raster**.  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
         }  
         ```  
   
-    4.  Registrieren Sie die Designer-Metadaten, um Designerunterstützung für alle integrierten Aktivitäten hinzuzufügen. Dies ermöglicht Ihnen, Aktivitäten aus der Toolbox auf der ursprünglichen <xref:System.Activities.Statements.Sequence>-Aktivität im [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] abzulegen. Fügen Sie hierzu der `RegisterMetadata`-Klasse die `MainWindow`-Methode hinzu.  
+    4. Registrieren Sie die Designer-Metadaten, um Designerunterstützung für alle integrierten Aktivitäten hinzuzufügen. Dies ermöglicht Ihnen, Aktivitäten aus der Toolbox auf der ursprünglichen <xref:System.Activities.Statements.Sequence>-Aktivität im [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] abzulegen. Fügen Sie hierzu der `RegisterMetadata`-Klasse die `MainWindow`-Methode hinzu.  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
   
          Weitere Informationen zum Registrieren von Aktivitätsdesignern finden Sie unter [Vorgehensweise: Erstellen ein benutzerdefinierten Aktivitätsdesigners](how-to-create-a-custom-activity-designer.md).  
   
-    5.  Fügen Sie im `MainWindow`-Klassenkonstruktor den zuvor deklarierten Methoden Aufrufe hinzu, um die Metadaten für die Designerunterstützung zu registrieren und das <xref:System.Activities.Presentation.WorkflowDesigner>-Objekt zu erstellen.  
+    5. Fügen Sie im `MainWindow`-Klassenkonstruktor den zuvor deklarierten Methoden Aufrufe hinzu, um die Metadaten für die Designerunterstützung zu registrieren und das <xref:System.Activities.Presentation.WorkflowDesigner>-Objekt zu erstellen.  
   
         ```csharp  
         public MainWindow()  

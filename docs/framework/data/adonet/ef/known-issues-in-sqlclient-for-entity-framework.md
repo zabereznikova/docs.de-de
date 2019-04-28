@@ -3,11 +3,11 @@ title: Bekannte Probleme in SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607733"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
@@ -25,15 +25,15 @@ In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framew
   
  Dies sind einige typische Szenarios, die möglicherweise zum Auftreten von CROSS APPLY- und/oder OUTER APPLY-Operatoren in der Ausgabeabfrage führen:  
   
--   Eine korrelierte Unterabfrage mit Paging.  
+- Eine korrelierte Unterabfrage mit Paging.  
   
--   Ein `AnyElement` über einer korrelierten Unterabfrage oder über einer von der Navigation erzeugten Auflistung.  
+- Ein `AnyElement` über einer korrelierten Unterabfrage oder über einer von der Navigation erzeugten Auflistung.  
   
--   LINQ-Abfragen, in denen Gruppierungsmethoden verwendet werden, die einen Elementselektor akzeptieren.  
+- LINQ-Abfragen, in denen Gruppierungsmethoden verwendet werden, die einen Elementselektor akzeptieren.  
   
--   Eine Abfrage, in der ein CROSS APPLY oder ein OUTER APPLY explizit angegeben wird  
+- Eine Abfrage, in der ein CROSS APPLY oder ein OUTER APPLY explizit angegeben wird  
   
--   Eine Abfrage, die über ein DEREF-Konstrukt über einem REF-Konstrukt verfügt.  
+- Eine Abfrage, die über ein DEREF-Konstrukt über einem REF-Konstrukt verfügt.  
   
 ## <a name="skip-operator"></a>SKIP-Operator  
  Bei Verwendung von [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], Verwendung von SKIP mit ORDER BY auf Nichtschlüsselspalten möglicherweise falsche Ergebnisse zurück. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Der Grund dafür ist die Übersetzung von SKIP für [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Z. B. in der folgenden Abfrage ist mehr als fünf Zeilen übersprungen werden Wenn `E.NonKeyColumn` Werte doppelt enthält:  

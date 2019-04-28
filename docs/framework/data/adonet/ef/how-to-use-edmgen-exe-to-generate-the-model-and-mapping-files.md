@@ -3,24 +3,24 @@ title: 'Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmG
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605986"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“
 In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) verwendet wird, um die folgenden Dateien auf der Grundlage der Datenbank "School" zu generieren:  
   
--   Ein konzeptionelles Modell (eine CSDL-Datei).  
+- Ein konzeptionelles Modell (eine CSDL-Datei).  
   
--   Ein Speichermodell (eine SSDL-Datei).  
+- Ein Speichermodell (eine SSDL-Datei).  
   
--   Die Zuordnung zwischen dem konzeptionellen Modell und dem Speichermodell (eine MSL-Datei).  
+- Die Zuordnung zwischen dem konzeptionellen Modell und dem Speichermodell (eine MSL-Datei).  
   
--   Code auf Objektebene für Visual Basic oder C#.  
+- Code auf Objektebene für Visual Basic oder C#.  
   
--   Ansichtsdateien.  
+- Ansichtsdateien.  
   
  Wenn das Tool EdmGen.exe mit dem Befehl /mode:FullGeneration aufgerufen wird, werden die oben aufgeführten Dateien generiert. Weitere Informationen zu den Befehlen in EdmGen.exe finden Sie unter [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   

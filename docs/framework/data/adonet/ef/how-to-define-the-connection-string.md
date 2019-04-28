@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Definieren der Verbindungszeichenfolge'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
 ms.openlocfilehash: 7fb722acbb13b3502d004978581701cc70118ff8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606103"
 ---
 # <a name="how-to-define-the-connection-string"></a>Vorgehensweise: Definieren der Verbindungszeichenfolge
 
@@ -35,5 +35,5 @@ Wenn Ihr Projekt keine Konfigurationsdatei einer Anwendung vorhanden ist, könne
 ## <a name="see-also"></a>Siehe auch
 
 - [Schnellstart](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
-- [So wird es gemacht: Erstellen einer neuen EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [Vorgehensweise: Erstellen einer neuen EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
 - [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

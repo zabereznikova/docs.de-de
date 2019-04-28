@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638076"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next-Anweisung (Visual Basic)
 Wird eine Gruppe von Anweisungen für jedes Element in einer Auflistung wiederholt.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` wird häufig verwendet werden, nachdem eine Auswertung einer Bedingung, z. B. in einer `If`... `Then`... `Else` Struktur. Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
   
--   So durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich ist. Dies könnte durch einen fehlerhaften Wert oder eine Anforderung zum Beenden verursacht werden.  
+- So durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich ist. Dies könnte durch einen fehlerhaften Wert oder eine Anforderung zum Beenden verursacht werden.  
   
--   Wird eine Ausnahme einem `Try`... `Catch`... `Finally`. Sie können `Exit For` am Ende der `Finally` Block.  
+- Wird eine Ausnahme einem `Try`... `Catch`... `Finally`. Sie können `Exit For` am Ende der `Finally` Block.  
   
--   Es gibt eine Endlosschleife, wird eine Schleife, die eine lange oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie eine solche Bedingung erkennen, können Sie `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Es gibt eine Endlosschleife, wird eine Schleife, die eine lange oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie eine solche Bedingung erkennen, können Sie `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iterators  
  Sie verwenden eine *Iterator* um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Funktion sein oder ein `Get` Accessor. Er verwendet eine `Yield` Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben.  
