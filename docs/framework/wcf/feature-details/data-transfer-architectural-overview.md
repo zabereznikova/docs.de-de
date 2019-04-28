@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856595"
 ---
 # <a name="data-transfer-architectural-overview"></a>Datenübertragungsarchitektur - Übersicht
 Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachtet werden. Damit können Nachrichten empfangen, verarbeitet und für weitere Aktionen an Benutzercode verteilt werden, oder es können Nachrichten anhand von Daten des Benutzercodes erstellt und an ein Ziel übergeben werden. In diesem Thema, das sich an fortgeschrittene Entwickler richtet, wird die Architektur zur Verarbeitung von Nachrichten und der darin enthaltenen Daten beschrieben. Eine einfachere, funktionsbezogene Betrachtung zum Senden und Empfangen von Daten finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachte
 ### <a name="getting-data-from-a-message-body"></a>Abrufen von Daten aus einem Nachrichtentext  
  Sie können die in einem Nachrichtentext gespeicherten Daten auf zwei Arten extrahieren:  
   
--   Sie können den gesamten Nachrichtentext einmalig abrufen, indem Sie die <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> -Methode aufrufen und einen XML-Writer übergeben. Der vollständige Nachrichtentext wird an diesen Writer ausgeschrieben. Das einmalige Abrufen des gesamten Nachrichtentexts wird auch als *Schreiben einer Nachricht*bezeichnet. Das Schreiben wird hauptsächlich beim Senden der Nachrichten vom Kanalstapel übernommen. Ein Teil des Kanalstapels erhält in der Regel Zugriff auf den gesamten Nachrichtentext, codiert diesen und sendet ihn.  
+- Sie können den gesamten Nachrichtentext einmalig abrufen, indem Sie die <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> -Methode aufrufen und einen XML-Writer übergeben. Der vollständige Nachrichtentext wird an diesen Writer ausgeschrieben. Das einmalige Abrufen des gesamten Nachrichtentexts wird auch als *Schreiben einer Nachricht*bezeichnet. Das Schreiben wird hauptsächlich beim Senden der Nachrichten vom Kanalstapel übernommen. Ein Teil des Kanalstapels erhält in der Regel Zugriff auf den gesamten Nachrichtentext, codiert diesen und sendet ihn.  
   
--   Eine weitere Methode zum Abrufen von Informationen aus dem Nachrichtentext besteht im Aufrufen von <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> und Abrufen eines XML-Lesers. Auf den Nachrichtentext kann dann nacheinander nach Bedarf zugegriffen werden, indem Methoden im Reader aufgerufen werden. Das Abrufen des Nachrichtentexts Stück für Stück wird auch als *Lesen einer Nachricht*bezeichnet. Das Lesen der Nachricht wird hauptsächlich beim Empfangen von Nachrichten vom Dienstframework verwendet. Wenn z.&#160;B. <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird, lässt das Dienstframework einen XML-Leser über den Nachrichtentext laufen und übergibt ihn dann an die Deserialisierungs-Engine, die dann mit dem Lesen der Nachricht Element für Element und mit dem Erstellen des entsprechenden Objektdiagramms beginnt.  
+- Eine weitere Methode zum Abrufen von Informationen aus dem Nachrichtentext besteht im Aufrufen von <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> und Abrufen eines XML-Lesers. Auf den Nachrichtentext kann dann nacheinander nach Bedarf zugegriffen werden, indem Methoden im Reader aufgerufen werden. Das Abrufen des Nachrichtentexts Stück für Stück wird auch als *Lesen einer Nachricht*bezeichnet. Das Lesen der Nachricht wird hauptsächlich beim Empfangen von Nachrichten vom Dienstframework verwendet. Wenn z.&#160;B. <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird, lässt das Dienstframework einen XML-Leser über den Nachrichtentext laufen und übergibt ihn dann an die Deserialisierungs-Engine, die dann mit dem Lesen der Nachricht Element für Element und mit dem Erstellen des entsprechenden Objektdiagramms beginnt.  
   
  Ein Nachrichtentext kann nur einmalig abgerufen werden. Dies macht es möglich, mit Vorwärtsstreams zu arbeiten. So können Sie z.&#160;B. eine <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> -Überschreibung schreiben, die aus <xref:System.IO.FileStream> liest und die Ergebnisse als XML-Infoset zurückgibt. Sie müssen nie an den Anfang der das "Zurückspulen".  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachte
 ### <a name="the-istreamprovider-interface"></a>Die IStreamProvider-Schnittstelle  
  Wenn eine ausgehende Nachricht, die einen in einem Stream befindlichen Hauptteil enthält, in einen XML-Writer geschrieben wird, verwendet <xref:System.ServiceModel.Channels.Message> eine Aufrufsequenz, die der folgenden Sequenz in ihrer <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> -Implementierung ähnlich ist:  
   
--   Schreiben Sie alle notwendigen Informationen, die dem Stream vorausgehen (z.&#160;B. das öffnende XML-Tag).  
+- Schreiben Sie alle notwendigen Informationen, die dem Stream vorausgehen (z.&#160;B. das öffnende XML-Tag).  
   
--   Schreiben Sie den Stream.  
+- Schreiben Sie den Stream.  
   
--   Schreiben Sie alle Informationen, die nach dem Stream folgen (z.&#160;B. das schließende XML-Tag).  
+- Schreiben Sie alle Informationen, die nach dem Stream folgen (z.&#160;B. das schließende XML-Tag).  
   
  Dies funktioniert gut bei Codierungen, die der Text-XML-Codierung ähnlich sind. Es gibt jedoch einige Codierungen, bei denen XML-Infosetinformationen (z.&#160;B. Tags für beginnende und endende XML-Elemente) nicht zusammen mit den in den Elementen enthaltenen Daten platziert werden. Zum Beispiel wird bei der MTOM-Codierung die Nachricht in mehrere Teile aufgeteilt. Ein Teil enthält den XML-Infoset, der in Bezug auf tatsächlichen Elementinhalt Verweise auf andere Teile enthalten kann. Da der XML-Infoset für gewöhnlich kleiner ist als der im Stream befindliche Inhalt, bietet es sich an, den Infoset zu puffern, ihn auszuschreiben und dann den Inhalt gestreamt zu schreiben. Dies bedeutet, dass zu dem Zeitpunkt, zu dem das Tag für das schließende Element geschrieben wird, der Stream noch nicht ausgeschrieben sein sollte.  
   

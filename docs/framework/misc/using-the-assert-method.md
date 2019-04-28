@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869010"
 ---
 # <a name="using-the-assert-method"></a>Verwenden der Assert-Methode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073727"
   
  Die folgende Abbildung zeigt, was geschieht, wenn Sie **Assert**. Angenommen, die folgenden Aussagen gelten für die Assemblys A, B, C, E und F sowie für die beiden Berechtigungen P1 und P1A:  
   
--   P1A entspricht dem Recht zum Lesen von TXT-Dateien auf Laufwerk C.  
+- P1A entspricht dem Recht zum Lesen von TXT-Dateien auf Laufwerk C.  
   
--   P1 entspricht dem Recht zum Lesen aller Dateien auf Laufwerk C.  
+- P1 entspricht dem Recht zum Lesen aller Dateien auf Laufwerk C.  
   
--   Sowohl P1A auch P1 sind **FileIOPermission** Typen und P1A ist eine Teilmenge von P1.  
+- Sowohl P1A auch P1 sind **FileIOPermission** Typen und P1A ist eine Teilmenge von P1.  
   
--   Den Assemblys E und F wurde die Berechtigung P1A erteilt.  
+- Den Assemblys E und F wurde die Berechtigung P1A erteilt.  
   
--   Der Assembly C wurde die Berechtigung P1 erteilt.  
+- Der Assembly C wurde die Berechtigung P1 erteilt.  
   
--   Den Assemblys A und B wurde weder die Berechtigung P1 noch die Berechtigung P1A erteilt.  
+- Den Assemblys A und B wurde weder die Berechtigung P1 noch die Berechtigung P1A erteilt.  
   
--   Die Methode A ist in Assembly A enthalten, die Methode B ist in Assembly B enthalten usw.  
+- Die Methode A ist in Assembly A enthalten, die Methode B ist in Assembly B enthalten usw.  
   
  ![Diagramm, das die Assemblys der Assert-Methode veranschaulicht.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

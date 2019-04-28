@@ -10,11 +10,11 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868935"
 ---
 # <a name="securing-wrapper-code"></a>Sichern von Wrappercode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -29,20 +29,20 @@ ms.locfileid: "59132781"
 ### <a name="in-version-10-and-11-of-the-net-framework"></a>In Version 1.0 und 1.1 von .NET Framework  
  Die Versionen 1.0 und 1.1 von .NET Framework führen die folgenden Sicherheitsaktionen für einen Delegatersteller und einen Delegataufrufer aus.  
   
--   Wenn ein Delegat erstellt wird, werden Sicherheitsverknüpfungsaufrufe für die Zielmethode des Delegaten anhand der Berechtigungen des Delegaterstellers ausgeführt.  Wenn die Sicherheitsaktion nicht erfüllt werden kann, führt dies zu einer <xref:System.Security.SecurityException>.  
+- Wenn ein Delegat erstellt wird, werden Sicherheitsverknüpfungsaufrufe für die Zielmethode des Delegaten anhand der Berechtigungen des Delegaterstellers ausgeführt.  Wenn die Sicherheitsaktion nicht erfüllt werden kann, führt dies zu einer <xref:System.Security.SecurityException>.  
   
--   Wenn der Delegat aufgerufen wird, werden alle vorhandenen Sicherheitsforderungen für den Delegataufrufer ausgeführt.  
+- Wenn der Delegat aufgerufen wird, werden alle vorhandenen Sicherheitsforderungen für den Delegataufrufer ausgeführt.  
   
  Jedes Mal, wenn der Code einen <xref:System.Delegate> von weniger vertrauenswürdigem Code annimmt, der ihn aufrufen kann, müssen Sie sicherstellen, dass Sie den weniger vertrauenswürdigen Code nicht ermöglichen, seine Berechtigungen auszuweiten. Wenn Sie einen Delegaten annehmen und später verwenden, befindet sich der Code, der den Delegaten erstellt hat, nicht in der Aufrufliste, und seine Berechtigungen werden nicht getestet, wenn Code in oder unter dem Delegaten versucht, einen geschützten Vorgang auszuführen. Wenn Ihr Code und und der Aufrufercode über höhere Berechtigungen als der Ersteller verfügen, kann der Ersteller den Aufrufpfad orchestrieren, ohne Teil der Aufrufliste zu sein.  
   
 ### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>In Version 2.0 und höheren Versionen von .NET Framework  
  Version 2.0 und höheren Versionen von .NET Framework, führt Sicherheitsaktion für den Delegatersteller im Gegensatz zu früheren Versionen Wenn der Delegat erstellt und aufgerufen wird.  
   
--   Wenn ein Delegat erstellt wird, werden Sicherheitsverknüpfungsaufrufe für die Zielmethode des Delegaten anhand der Berechtigungen des Delegaterstellers ausgeführt.  Wenn die Sicherheitsaktion nicht erfüllt werden kann, führt dies zu einer <xref:System.Security.SecurityException>.  
+- Wenn ein Delegat erstellt wird, werden Sicherheitsverknüpfungsaufrufe für die Zielmethode des Delegaten anhand der Berechtigungen des Delegaterstellers ausgeführt.  Wenn die Sicherheitsaktion nicht erfüllt werden kann, führt dies zu einer <xref:System.Security.SecurityException>.  
   
--   Der Berechtigungssatz des Delegaterstellers wird auch während der Delegaterstellung erfasst und zusammen mit dem Delegaten gespeichert.  
+- Der Berechtigungssatz des Delegaterstellers wird auch während der Delegaterstellung erfasst und zusammen mit dem Delegaten gespeichert.  
   
--   Wenn der Delegat aufgerufen wird, wird der erfasste Berechtigungssatz des Delegaterstellers zuerst anhand aller Forderungen im aktuellen Kontext ausgewertet, wenn der Delegatersteller und der Aufrufer zu unterschiedlichen Assemblys gehören.  Im nächsten Schritt werden alle vorhandenen Sicherheitsforderungen für den Delegataufrufer ausgeführt.  
+- Wenn der Delegat aufgerufen wird, wird der erfasste Berechtigungssatz des Delegaterstellers zuerst anhand aller Forderungen im aktuellen Kontext ausgewertet, wenn der Delegatersteller und der Aufrufer zu unterschiedlichen Assemblys gehören.  Im nächsten Schritt werden alle vorhandenen Sicherheitsforderungen für den Delegataufrufer ausgeführt.  
   
 ## <a name="link-demands-and-wrappers"></a>Verknüpfungsaufrufe und Wrapper  
  In der Sicherheitsinfrastruktur wurde ein besonderer Schutzmechanismus mit Verknüpfungsaufrufen verstärkt. Dies stellt jedoch noch immer eine Quelle für potenzielle Schwachstellen in Ihrem Code dar.  
@@ -58,48 +58,48 @@ ms.locfileid: "59132781"
   
  Dieses Problem betrifft die folgenden API-Elemente:  
   
--   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>"Demand" im Vergleich zu "LinkDemand"  
  Die deklarative Sicherheit stellt zwei Arten von Sicherheitsüberprüfungen bereit, die zwar ähnlich sind, jedoch sehr unterschiedliche Überprüfungen ausführen. Sie sollten beide Formen kennen, weil die falsche Auswahl zu schwacher Sicherheit oder Leistungverlusten führen kann.  
   
  Die deklarative Sicherheit bietet die folgenden Sicherheitsüberprüfungen:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. **Bei Bedarf** tritt bei jedem Aufruf, da der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. **Bei Bedarf** ist ein guter Schutz vor Lockangriffen dar; nicht autorisierter Code, von dem zu durchbrechen erkannt.  
+- <xref:System.Security.Permissions.SecurityAction.Demand> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. **Bei Bedarf** tritt bei jedem Aufruf, da der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. **Bei Bedarf** ist ein guter Schutz vor Lockangriffen dar; nicht autorisierter Code, von dem zu durchbrechen erkannt.  
   
--   [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zur Kompilierungszeit für just-in-Time (JIT) und nur den unmittelbaren Aufrufer überprüft. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**, jeglicher Code, der den Test besteht und kann auf Ihren Code verweisen kann zu schwerwiegenden Fehlern führen Sicherheit von bösartigem Code rufen Sie mithilfe des autorisierten Codes ermöglicht. Aus diesem Grund verwenden Sie keine **LinkDemand** es sei denn, alle potenziellen Risiken ausdrücklich vermieden werden können.  
+- [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zur Kompilierungszeit für just-in-Time (JIT) und nur den unmittelbaren Aufrufer überprüft. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**, jeglicher Code, der den Test besteht und kann auf Ihren Code verweisen kann zu schwerwiegenden Fehlern führen Sicherheit von bösartigem Code rufen Sie mithilfe des autorisierten Codes ermöglicht. Aus diesem Grund verwenden Sie keine **LinkDemand** es sei denn, alle potenziellen Risiken ausdrücklich vermieden werden können.  
   
     > [!NOTE]
     >  In der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wurden Verknüpfungsaufrufe durch ersetzt die <xref:System.Security.SecurityCriticalAttribute> -Attribut im <xref:System.Security.SecurityRuleSet.Level2> Assemblys. Die <xref:System.Security.SecurityCriticalAttribute> entspricht einem Verknüpfungsaufruf für volle Vertrauenswürdigkeit; allerdings auch auf die Vererbungsregeln angewendet. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Bei Verwendung der zusätzlichen Vorsichtsmaßnahmen **LinkDemand** müssen einzeln programmiert werden; das sicherheitssytem kann bei der Erzwingung helfen. Jeder Fehler stellt ein Sicherheitsrisiko dar. Der gesamte autorisierte Code, der Ihren Code verwendet, muss für die Implementierung zusätzlicher Sicherheit verantwortlich sein, indem die folgenden Maßnahmen ergriffen werden:  
   
--   Einschränken des Zugriffs des aufrufenden Codes auf die Klasse oder Assembly.  
+- Einschränken des Zugriffs des aufrufenden Codes auf die Klasse oder Assembly.  
   
--   Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Z. B. Wenn Sie Code schreiben, die eine Methode aufruft, ist geschützt, mit einem **LinkDemand** für die <xref:System.Security.Permissions.SecurityPermission> mit der <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Flag angegeben ist, stellen Sie die Methode sollte außerdem eine **LinkDemand** (oder **Bedarf**, der stärker ist) für diese Berechtigung. Die Ausnahme ist, wenn der Code verwendet die **LinkDemand**-geschützte Methode auf eingeschränkte Weise, die Sie möchten sicher ist, erhält der andere transportsicherheitsschutzmechanismen (z. B. Forderungen) in Ihrem Code. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
+- Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Z. B. Wenn Sie Code schreiben, die eine Methode aufruft, ist geschützt, mit einem **LinkDemand** für die <xref:System.Security.Permissions.SecurityPermission> mit der <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Flag angegeben ist, stellen Sie die Methode sollte außerdem eine **LinkDemand** (oder **Bedarf**, der stärker ist) für diese Berechtigung. Die Ausnahme ist, wenn der Code verwendet die **LinkDemand**-geschützte Methode auf eingeschränkte Weise, die Sie möchten sicher ist, erhält der andere transportsicherheitsschutzmechanismen (z. B. Forderungen) in Ihrem Code. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
   
--   Sicherstellen, dass die Aufrufer Ihres Codes den Code nicht veranlassen können, den geschützten Code in ihrem Auftrag aufzurufen. Dies bedeutet, dass Aufrufer den autorisierten Code nicht zwingen können, bestimmte Parameter an den geschützten Code zu übergeben oder Ergebnisse aus ihm abzurufen.  
+- Sicherstellen, dass die Aufrufer Ihres Codes den Code nicht veranlassen können, den geschützten Code in ihrem Auftrag aufzurufen. Dies bedeutet, dass Aufrufer den autorisierten Code nicht zwingen können, bestimmte Parameter an den geschützten Code zu übergeben oder Ergebnisse aus ihm abzurufen.  
   
 ### <a name="interfaces-and-link-demands"></a>Schnittstellen und Verknüpfungsaufrufe  
  Wenn eine virtuelle Methode, Eigenschaft oder das Ereignis mit **LinkDemand** eine Basisklassenmethode überschreibt die Basisklassenmethode müssen auch die gleichen **LinkDemand** für die überschriebene Methode, um effektiv zu sein. Es ist möglich, dass bösartiger Code eine erneute Umwandlung in den Basistyp ausführt und die Methode der Basisklasse aufruft. Beachten Sie außerdem, dass Verknüpfungsaufrufe Assemblys implizit hinzugefügt werden können, für die das Attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nicht auf Assemblyebene festgelegt ist.  
   
  Eine bewährte Methode besteht darin, Methodenimplementierungen durch Verknüpfungsaufrufen zu schützen, wenn Schnittstellenmethoden ebenfalls Verknüpfungsaufrufe aufweisen. Beachten Sie hinsichtlich der Verwendung von Verknüpfungsaufrufen mit Schnittstellen Folgendes:  
   
--   Setzen Sie ein **LinkDemand** für eine öffentliche Methode einer Klasse, die eine Schnittstellenmethode implementiert die **LinkDemand** wird nicht erzwungen werden, wenn Sie anschließend in der Schnittstelle umgewandelt, und rufen Sie die Methode. In diesem Fall, da Sie mit der Schnittstelle nur verknüpft die **LinkDemand** für die Schnittstelle berücksichtigt wird.  
+- Setzen Sie ein **LinkDemand** für eine öffentliche Methode einer Klasse, die eine Schnittstellenmethode implementiert die **LinkDemand** wird nicht erzwungen werden, wenn Sie anschließend in der Schnittstelle umgewandelt, und rufen Sie die Methode. In diesem Fall, da Sie mit der Schnittstelle nur verknüpft die **LinkDemand** für die Schnittstelle berücksichtigt wird.  
   
  Überprüfen Sie die folgenden Elemente auf Sicherheitsprobleme:  
   
--   Explizite Verknüpfungsaufrufe für Schnittstellenmethoden. Stellen Sie sicher, dass diese Verknüpfungsaufrufe den erwarteten Schutz bieten. Ermitteln Sie, ob bösartiger Code mithilfe einer Umwandlung die Verknüpfungsaufrufe wie oben beschrieben umgehen kann.  
+- Explizite Verknüpfungsaufrufe für Schnittstellenmethoden. Stellen Sie sicher, dass diese Verknüpfungsaufrufe den erwarteten Schutz bieten. Ermitteln Sie, ob bösartiger Code mithilfe einer Umwandlung die Verknüpfungsaufrufe wie oben beschrieben umgehen kann.  
   
--   Virtuelle Methoden mit angewendeten Verknüpfungsaufrufen.  
+- Virtuelle Methoden mit angewendeten Verknüpfungsaufrufen.  
   
--   Typen und Schnittstellen, die sie implementieren. Diese sollten Verknüpfungsaufrufe einheitlich verwenden.  
+- Typen und Schnittstellen, die sie implementieren. Diese sollten Verknüpfungsaufrufe einheitlich verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902316"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Übersicht über das DataGridView-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "59112878"
   
  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit die Bindung an Instanzen von Klassen, die in der folgenden Liste beschrieben:  
   
--   Jede Klasse, implementiert die <xref:System.Collections.IList> -Schnittstelle, einschließlich eindimensionale Arrays.  
+- Jede Klasse, implementiert die <xref:System.Collections.IList> -Schnittstelle, einschließlich eindimensionale Arrays.  
   
--   Jede Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle, z. B. die <xref:System.Data.DataTable> und <xref:System.Data.DataSet> Klassen.  
+- Jede Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle, z. B. die <xref:System.Data.DataTable> und <xref:System.Data.DataSet> Klassen.  
   
--   Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, z. B. die <xref:System.ComponentModel.BindingList%601> Klasse.  
+- Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, z. B. die <xref:System.ComponentModel.BindingList%601> Klasse.  
   
--   Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle, z. B. die <xref:System.Windows.Forms.BindingSource> Klasse.  
+- Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle, z. B. die <xref:System.Windows.Forms.BindingSource> Klasse.  
   
  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die Datenbindung an die öffentlichen Eigenschaften der Objekte, die von diesen Schnittstellen zurückgegeben und die Properties-Auflistung, die zurückgegeben werden, indem ein <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle, wenn auf die zurückgegebenen Objekte implementiert.  
   

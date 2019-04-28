@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856630"
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
 Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Adresse des Endpunkts wird dargestellt, in der Windows Communication Foundation (WCF)-Programmiermodell von der <xref:System.ServiceModel.EndpointAddress> -Klasse, die ein optionales enthält <xref:System.ServiceModel.EndpointAddress.Identity%2A> -Eigenschaft, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, austauschen, mit denen er Meldungen und einen Satz Optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die alle anderen zum Erreichen des Diensts erforderlichen SOAP-Header festlegen. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
@@ -19,13 +19,13 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 ## <a name="uri-structure-of-an-address"></a>URI-Struktur einer Adresse  
  Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Z. B. die vier Teile des URIS `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` können wie folgt aufgeführt werden:  
   
--   Schema: `http:`
+- Schema: `http:`
   
--   Computer: `www.fabrikam.com`  
+- Computer: `www.fabrikam.com`  
   
--   (optional) Port: 322  
+- (optional) Port: 322  
   
--   Pfad: /mathservice.svc/secureEndpoint  
+- Pfad: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definieren einer Adresse für einen Dienst  
  Die Endpunktadresse für einen Dienst kann entweder imperativ über Code oder deklarativ über die Konfiguration angegeben werden. Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden. Im Allgemeinen ist es praktischer, Dienstendpunkte nicht mit Code, sondern mit Konfiguration zu definieren. Werden die Bindung und die Adressinformationen nicht in den Code integriert, ist eine Änderung ohne Neukompilierung oder eine erneute Bereitstellung der Anwendung möglich.  
@@ -46,9 +46,9 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  Das folgende Beispiel zeigt die Komponenten, die in einer IIS-Bindung enthalten sein können:  
   
--   Das Bindungsprotokoll: HTTP  
+- Das Bindungsprotokoll: HTTP  
   
--   Bindungsinformationen: IP-Adresse, Anschluss, Hostheader  
+- Bindungsinformationen: IP-Adresse, Anschluss, Hostheader  
   
  IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt. Vor dem [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF mehrere Adressen für ein Schema wurde nicht unterstützt und wenn sie angegeben wurden, hat eine <xref:System.ArgumentException> während der Aktivierung.  
   
@@ -100,15 +100,15 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 ## <a name="extending-addressing-in-wcf-services"></a>Erweitern der Adressierung in WCF-Diensten  
  Das Adressierungsmodell der WCF-Dienste verwendet des endpunktadress-URI für folgende Zwecke:  
   
--   Um die Abhöradresse des Diensts anzugeben, d.&amp;#160;h. den Speicherort, den der Endpunkt auf Nachrichten abhört  
+- Um die Abhöradresse des Diensts anzugeben, d.&amp;#160;h. den Speicherort, den der Endpunkt auf Nachrichten abhört  
   
--   Um den SOAP-Adressfilter anzugeben, d.&amp;#160;h. die Adresse, die ein Endpunkt als SOAP-Header erwartet  
+- Um den SOAP-Adressfilter anzugeben, d.&amp;#160;h. die Adresse, die ein Endpunkt als SOAP-Header erwartet  
   
  Die Werte für beide Situationen können separat angegeben werden. Dadurch werden mehrere Adressierungserweiterungen für nützliche Szenarien möglich:  
   
--   SOAP-Vermittler: Eine von einem Client gesendete Nachricht durchläuft einen oder mehrere zusätzliche Dienste, die die Nachricht verarbeiten, bevor sie ihr endgültiges Ziel erreicht. SOAP-Vermittler können verschiedene Aufgaben ausführen, z.&amp;#160;B. Caching, Routing, Lastenausgleich oder Schemavalidierung für Nachrichten. Dieses Szenario wird durch das Senden von Nachrichten an eine separate physische Adresse erreicht (`via`), die auf den Vermittler verweist, anstatt nur an eine logische Adresse (`wsa:To`), die auf das endgültige Ziel verweist.  
+- SOAP-Vermittler: Eine von einem Client gesendete Nachricht durchläuft einen oder mehrere zusätzliche Dienste, die die Nachricht verarbeiten, bevor sie ihr endgültiges Ziel erreicht. SOAP-Vermittler können verschiedene Aufgaben ausführen, z.&amp;#160;B. Caching, Routing, Lastenausgleich oder Schemavalidierung für Nachrichten. Dieses Szenario wird durch das Senden von Nachrichten an eine separate physische Adresse erreicht (`via`), die auf den Vermittler verweist, anstatt nur an eine logische Adresse (`wsa:To`), die auf das endgültige Ziel verweist.  
   
--   Die Abhöradresse des Endpunkts ist ein privater URI und wird auf einen anderen Wert als seine `listenURI`-Eigenschaft festgelegt.  
+- Die Abhöradresse des Endpunkts ist ein privater URI und wird auf einen anderen Wert als seine `listenURI`-Eigenschaft festgelegt.  
   
  Nachrichten sollten zunächst an die Transportadresse gesendet werden, die von `via` angegeben wird, bevor sie an eine andere Remoteadresse gesendet werden, die vom `to`-Parameter angegeben wird und an der sich der Dienst befindet. In den meisten Internetszenarien sind der `via`-URI der <xref:System.ServiceModel.EndpointAddress.Uri%2A>-Eigenschaft und die endgültige `to`-Adresse des Diensts identisch. Eine Unterscheidung zwischen den beiden Adressen ist nur beim manuellen Routing erforderlich.  
   
@@ -117,9 +117,9 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  Sie können benutzerdefinierte Adressheader auf zweierlei Weise definieren &amp;#8211; entweder mit Code oder einer Konfiguration:  
   
--   Im Code werden benutzerdefinierte Adressheader mithilfe der <xref:System.ServiceModel.Channels.AddressHeader>-Klasse erstellt und dann bei der Erstellung einer <xref:System.ServiceModel.EndpointAddress> verwendet.  
+- Im Code werden benutzerdefinierte Adressheader mithilfe der <xref:System.ServiceModel.Channels.AddressHeader>-Klasse erstellt und dann bei der Erstellung einer <xref:System.ServiceModel.EndpointAddress> verwendet.  
   
--   In der benutzerdefinierten Konfiguration [ \<Header >](../../configure-apps/file-schema/wcf/headers.md) werden als untergeordnete Elemente des angegebenen die [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Element.  
+- In der benutzerdefinierten Konfiguration [ \<Header >](../../configure-apps/file-schema/wcf/headers.md) werden als untergeordnete Elemente des angegebenen die [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Element.  
   
  Die Konfiguration ist im Allgemeinen dem Code vorzuziehen, da sie es Ihnen ermöglicht, die Header nach der Bereitstellung zu ändern.  
   
@@ -128,9 +128,9 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  Sie können eine benutzerdefinierte Abhöradresse angeben, indem Sie entweder Code oder eine Konfiguration verwenden:  
   
--   Im Code geben Sie eine benutzerdefinierte Abhöradresse durch Hinzufügen einer <xref:System.ServiceModel.Description.ClientViaBehavior>-Klasse zur Verhaltensauflistung des Endpunkts an.  
+- Im Code geben Sie eine benutzerdefinierte Abhöradresse durch Hinzufügen einer <xref:System.ServiceModel.Description.ClientViaBehavior>-Klasse zur Verhaltensauflistung des Endpunkts an.  
   
--   In einer Konfiguration geben Sie eine benutzerdefinierte lauschadresse mit dem `ListenUri` Attribut des Diensts [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-element.md) Element.  
+- In einer Konfiguration geben Sie eine benutzerdefinierte lauschadresse mit dem `ListenUri` Attribut des Diensts [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-element.md) Element.  
   
 ### <a name="custom-soap-address-filter"></a>Benutzerdefinierter SOAP-Adressenfilter  
  Der <xref:System.ServiceModel.EndpointAddress.Uri%2A> wird in Verbindung mit einer beliebigen <xref:System.ServiceModel.EndpointAddress.Headers%2A>-Eigenschaft zur Definition des SOAP-Adressfilters eines Endpunkts verwendet (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Standardmäßig prüft dieser Filter, ob eine eingehende Nachricht über einen `To`-Nachrichtenheader verfügt, der mit dem URI des Endpunkts übereinstimmt, und ob alle erforderlichen Endpunktheader in der Nachricht vorhanden sind.  

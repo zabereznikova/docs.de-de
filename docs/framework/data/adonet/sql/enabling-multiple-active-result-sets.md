@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877681"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Aktivieren von Multiple Active Result Sets
 MARS (Multiple Active Result Sets) ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Die Batchausführungsumgebung enthält die folgenden Komponenten:  
   
--   Gruppenoptionen (z. B. ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- Gruppenoptionen (z. B. ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   Sicherheitskontext (Benutzerrolle/Anwendungsrolle)  
+- Sicherheitskontext (Benutzerrolle/Anwendungsrolle)  
   
--   Datenbankkontext (aktuelle Datenbank)  
+- Datenbankkontext (aktuelle Datenbank)  
   
--   Ausführungszustandsvariablen (z. B. @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Ausführungszustandsvariablen (z. B. @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Temporäre Tabellen auf oberster Ebene  
+- Temporäre Tabellen auf oberster Ebene  
   
  Mit MARS wird einer Verbindung eine Standardausführungsumgebung zugeordnet. Jeder neue Batch, der mit einer angegebenen Verbindung ausgeführt wird, erhält eine Kopie der Standardumgebung. Bei jeder Ausführung von Code unter einem angegebenen Batch beschränken sich alle an der Umgebung vorgenommenen Änderungen auf den bestimmten Batch. Nachdem die Ausführung beendet ist, werden die Ausführungseinstellungen in die Standardumgebung kopiert. Bei einem einzelnen Batch, der verschiedene nacheinander mit derselben Transaktion auszuführende Befehle ausgibt, entspricht die Semantik genau derjenigen, die von Verbindungen unter Einbeziehung früherer Clients oder Server verfügbar gemacht wird.  
   
