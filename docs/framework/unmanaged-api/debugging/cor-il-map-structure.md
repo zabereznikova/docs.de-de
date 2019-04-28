@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609421"
 ---
-# <a name="corilmap-structure"></a><span data-ttu-id="a183e-102">COR_IL_MAP-Struktur</span><span class="sxs-lookup"><span data-stu-id="a183e-102">COR_IL_MAP Structure</span></span>
-<span data-ttu-id="a183e-103">Gibt Änderungen im relativen Offset einer Funktion an.</span><span class="sxs-lookup"><span data-stu-id="a183e-103">Specifies changes in the relative offset of a function.</span></span>  
+# <a name="corilmap-structure"></a><span data-ttu-id="6f560-102">COR_IL_MAP-Struktur</span><span class="sxs-lookup"><span data-stu-id="6f560-102">COR_IL_MAP Structure</span></span>
+<span data-ttu-id="6f560-103">Gibt Änderungen im relativen Offset einer Funktion an.</span><span class="sxs-lookup"><span data-stu-id="6f560-103">Specifies changes in the relative offset of a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a183e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a183e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f560-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6f560-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_IL_MAP {  
@@ -36,61 +36,61 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a183e-105">Member</span><span class="sxs-lookup"><span data-stu-id="a183e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6f560-105">Member</span><span class="sxs-lookup"><span data-stu-id="6f560-105">Members</span></span>  
   
-|<span data-ttu-id="a183e-106">Member</span><span class="sxs-lookup"><span data-stu-id="a183e-106">Member</span></span>|<span data-ttu-id="a183e-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a183e-107">Description</span></span>|  
+|<span data-ttu-id="6f560-106">Member</span><span class="sxs-lookup"><span data-stu-id="6f560-106">Member</span></span>|<span data-ttu-id="6f560-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6f560-107">Description</span></span>|  
 |------------|-----------------|  
-|`oldOffset`|<span data-ttu-id="a183e-108">Die alten Microsoft intermediate Language (MSIL) offset relativ zum Anfang der Funktion.</span><span class="sxs-lookup"><span data-stu-id="a183e-108">The old Microsoft intermediate language (MSIL) offset relative to the beginning of the function.</span></span>|  
-|`newOffset`|<span data-ttu-id="a183e-109">Der neue MSIL-Offset relativ zum Anfang der Funktion.</span><span class="sxs-lookup"><span data-stu-id="a183e-109">The new MSIL offset relative to the beginning of the function.</span></span>|  
-|`fAccurate`|<span data-ttu-id="a183e-110">`true` Wenn die Zuordnung als genau bekannt wird; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="a183e-110">`true` if the mapping is known to be accurate; otherwise, `false`.</span></span>|  
+|`oldOffset`|<span data-ttu-id="6f560-108">Die alten Microsoft intermediate Language (MSIL) offset relativ zum Anfang der Funktion.</span><span class="sxs-lookup"><span data-stu-id="6f560-108">The old Microsoft intermediate language (MSIL) offset relative to the beginning of the function.</span></span>|  
+|`newOffset`|<span data-ttu-id="6f560-109">Der neue MSIL-Offset relativ zum Anfang der Funktion.</span><span class="sxs-lookup"><span data-stu-id="6f560-109">The new MSIL offset relative to the beginning of the function.</span></span>|  
+|`fAccurate`|<span data-ttu-id="6f560-110">`true` Wenn die Zuordnung als genau bekannt wird; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="6f560-110">`true` if the mapping is known to be accurate; otherwise, `false`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a183e-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a183e-111">Remarks</span></span>  
- <span data-ttu-id="a183e-112">Das Format der Karte sieht folgendermaßen aus: Der Debugger geht davon aus, die `oldOffset` verweist auf einen MSIL-Offset innerhalb der ursprünglichen, unveränderten MSIL-Code.</span><span class="sxs-lookup"><span data-stu-id="a183e-112">The format of the map is as follows: The debugger will assume that `oldOffset` refers to an MSIL offset within the original, unmodified MSIL code.</span></span> <span data-ttu-id="a183e-113">Die `newOffset` Parameter verweist auf die entsprechenden MSIL-Offset innerhalb der neuen, instrumentierten Code.</span><span class="sxs-lookup"><span data-stu-id="a183e-113">The `newOffset` parameter refers to the corresponding MSIL offset within the new, instrumented code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f560-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6f560-111">Remarks</span></span>  
+ <span data-ttu-id="6f560-112">Das Format der Karte sieht folgendermaßen aus: Der Debugger geht davon aus, die `oldOffset` verweist auf einen MSIL-Offset innerhalb der ursprünglichen, unveränderten MSIL-Code.</span><span class="sxs-lookup"><span data-stu-id="6f560-112">The format of the map is as follows: The debugger will assume that `oldOffset` refers to an MSIL offset within the original, unmodified MSIL code.</span></span> <span data-ttu-id="6f560-113">Die `newOffset` Parameter verweist auf die entsprechenden MSIL-Offset innerhalb der neuen, instrumentierten Code.</span><span class="sxs-lookup"><span data-stu-id="6f560-113">The `newOffset` parameter refers to the corresponding MSIL offset within the new, instrumented code.</span></span>  
   
- <span data-ttu-id="a183e-114">Für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten, sollten die folgenden Anforderungen erfüllt sein:</span><span class="sxs-lookup"><span data-stu-id="a183e-114">For stepping to work properly, the following requirements should be met:</span></span>  
+ <span data-ttu-id="6f560-114">Für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten, sollten die folgenden Anforderungen erfüllt sein:</span><span class="sxs-lookup"><span data-stu-id="6f560-114">For stepping to work properly, the following requirements should be met:</span></span>  
   
--   <span data-ttu-id="a183e-115">Die Karte sollten in aufsteigender Reihenfolge sortiert werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-115">The map should be sorted in ascending order.</span></span>  
+- <span data-ttu-id="6f560-115">Die Karte sollten in aufsteigender Reihenfolge sortiert werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-115">The map should be sorted in ascending order.</span></span>  
   
--   <span data-ttu-id="a183e-116">Instrumentierter MSIL-Code muss nicht neu angeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-116">Instrumented MSIL code should not be reordered.</span></span>  
+- <span data-ttu-id="6f560-116">Instrumentierter MSIL-Code muss nicht neu angeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-116">Instrumented MSIL code should not be reordered.</span></span>  
   
--   <span data-ttu-id="a183e-117">Ursprüngliche MSIL-Code sollte nicht entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-117">Original MSIL code should not be removed.</span></span>  
+- <span data-ttu-id="6f560-117">Ursprüngliche MSIL-Code sollte nicht entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-117">Original MSIL code should not be removed.</span></span>  
   
--   <span data-ttu-id="a183e-118">Die Zuordnung sollte Einträge zum Zuordnen der Sequenzpunkte über die Programmdatenbankdatei (PDB) enthalten.</span><span class="sxs-lookup"><span data-stu-id="a183e-118">The map should include entries to map all the sequence points from the program database (PDB) file.</span></span>  
+- <span data-ttu-id="6f560-118">Die Zuordnung sollte Einträge zum Zuordnen der Sequenzpunkte über die Programmdatenbankdatei (PDB) enthalten.</span><span class="sxs-lookup"><span data-stu-id="6f560-118">The map should include entries to map all the sequence points from the program database (PDB) file.</span></span>  
   
- <span data-ttu-id="a183e-119">Die Zuordnung wird nicht fehlenden Einträge interpoliert.</span><span class="sxs-lookup"><span data-stu-id="a183e-119">The map does not interpolate missing entries.</span></span> <span data-ttu-id="a183e-120">Das folgende Beispiel zeigt eine Zuordnung und ihre Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="a183e-120">The following example shows a map and its results.</span></span>  
+ <span data-ttu-id="6f560-119">Die Zuordnung wird nicht fehlenden Einträge interpoliert.</span><span class="sxs-lookup"><span data-stu-id="6f560-119">The map does not interpolate missing entries.</span></span> <span data-ttu-id="6f560-120">Das folgende Beispiel zeigt eine Zuordnung und ihre Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="6f560-120">The following example shows a map and its results.</span></span>  
   
- <span data-ttu-id="a183e-121">Ordnen Sie:</span><span class="sxs-lookup"><span data-stu-id="a183e-121">Map:</span></span>  
+ <span data-ttu-id="6f560-121">Ordnen Sie:</span><span class="sxs-lookup"><span data-stu-id="6f560-121">Map:</span></span>  
   
--   <span data-ttu-id="a183e-122">0 alte Offset, 0 neue offset</span><span class="sxs-lookup"><span data-stu-id="a183e-122">0 old offset, 0 new offset</span></span>  
+- <span data-ttu-id="6f560-122">0 alte Offset, 0 neue offset</span><span class="sxs-lookup"><span data-stu-id="6f560-122">0 old offset, 0 new offset</span></span>  
   
--   <span data-ttu-id="a183e-123">5 alte Offset, 10 neuen offset</span><span class="sxs-lookup"><span data-stu-id="a183e-123">5 old offset, 10 new offset</span></span>  
+- <span data-ttu-id="6f560-123">5 alte Offset, 10 neuen offset</span><span class="sxs-lookup"><span data-stu-id="6f560-123">5 old offset, 10 new offset</span></span>  
   
--   <span data-ttu-id="a183e-124">9 alte Offset, 20 neue offset</span><span class="sxs-lookup"><span data-stu-id="a183e-124">9 old offset, 20 new offset</span></span>  
+- <span data-ttu-id="6f560-124">9 alte Offset, 20 neue offset</span><span class="sxs-lookup"><span data-stu-id="6f560-124">9 old offset, 20 new offset</span></span>  
   
- <span data-ttu-id="a183e-125">Ergebnisse:</span><span class="sxs-lookup"><span data-stu-id="a183e-125">Results:</span></span>  
+ <span data-ttu-id="6f560-125">Ergebnisse:</span><span class="sxs-lookup"><span data-stu-id="6f560-125">Results:</span></span>  
   
--   <span data-ttu-id="a183e-126">Ein Alter Offset von 0, 1, 2, 3 oder 4 wird ein neuer Offset 0 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-126">An old offset of 0, 1, 2, 3, or 4 will be mapped to a new offset of 0.</span></span>  
+- <span data-ttu-id="6f560-126">Ein Alter Offset von 0, 1, 2, 3 oder 4 wird ein neuer Offset 0 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-126">An old offset of 0, 1, 2, 3, or 4 will be mapped to a new offset of 0.</span></span>  
   
--   <span data-ttu-id="a183e-127">Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-127">An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.</span></span>  
+- <span data-ttu-id="6f560-127">Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-127">An old offset of 5, 6, 7, or 8 will be mapped to new offset 10.</span></span>  
   
--   <span data-ttu-id="a183e-128">Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-128">An old offset of 9 or higher will be mapped to new offset 20.</span></span>  
+- <span data-ttu-id="6f560-128">Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-128">An old offset of 9 or higher will be mapped to new offset 20.</span></span>  
   
--   <span data-ttu-id="a183e-129">Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-129">A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.</span></span>  
+- <span data-ttu-id="6f560-129">Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-129">A new offset of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9 will be mapped to old offset 0.</span></span>  
   
--   <span data-ttu-id="a183e-130">Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-130">A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.</span></span>  
+- <span data-ttu-id="6f560-130">Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-130">A new offset of 10, 11, 12, 13, 14, 15, 16, 17, 18, or 19 will be mapped to old offset 5.</span></span>  
   
--   <span data-ttu-id="a183e-131">Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="a183e-131">A new offset of 20 or higher will be mapped to old offset 9.</span></span>  
+- <span data-ttu-id="6f560-131">Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="6f560-131">A new offset of 20 or higher will be mapped to old offset 9.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a183e-132">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a183e-132">Requirements</span></span>  
- <span data-ttu-id="a183e-133">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a183e-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f560-132">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6f560-132">Requirements</span></span>  
+ <span data-ttu-id="6f560-133">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f560-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a183e-134">**Header:** CorDebug.idl, CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="a183e-134">**Header:** CorDebug.idl, CorProf.idl</span></span>  
+ <span data-ttu-id="6f560-134">**Header:** CorDebug.idl, CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="6f560-134">**Header:** CorDebug.idl, CorProf.idl</span></span>  
   
- <span data-ttu-id="a183e-135">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a183e-135">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6f560-135">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f560-135">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a183e-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a183e-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6f560-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f560-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a183e-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a183e-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f560-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6f560-137">See also</span></span>
 
-- [<span data-ttu-id="a183e-138">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="a183e-138">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="a183e-139">Debuggen</span><span class="sxs-lookup"><span data-stu-id="a183e-139">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="6f560-138">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="6f560-138">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="6f560-139">Debuggen</span><span class="sxs-lookup"><span data-stu-id="6f560-139">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
