@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791962"
 ---
 # <a name="optional-parameters-visual-basic"></a>Optionale Parameter (Visual Basic)
 Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* sind gekennzeichnet durch die `Optional` Schlüsselwort in der Prozedurdefinition. Dabei gelten folgende Regeln:  
   
--   Für jeden optionalen Parameter in der Prozedurdefinition muss ein Standardwert angegeben werden.  
+- Für jeden optionalen Parameter in der Prozedurdefinition muss ein Standardwert angegeben werden.  
   
--   Der Standardwert für einen optionalen Parameter muss ein konstanter Ausdruck sein.  
+- Der Standardwert für einen optionalen Parameter muss ein konstanter Ausdruck sein.  
   
--   Jeder Parameter, der in der Prozedurdefinition auf einen optionalen Parameter folgt, muss ebenfalls optional sein.  
+- Jeder Parameter, der in der Prozedurdefinition auf einen optionalen Parameter folgt, muss ebenfalls optional sein.  
   
  Die folgende Syntax zeigt eine Prozedurdeklaration mit einem optionalen Parameter:  
   

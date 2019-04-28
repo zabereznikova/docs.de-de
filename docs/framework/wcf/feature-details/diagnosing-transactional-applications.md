@@ -3,11 +3,11 @@ title: Erkennen einer Transaktionsanwendung
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856738"
 ---
 # <a name="diagnosing-transactional-applications"></a>Erkennen einer Transaktionsanwendung
 Dieses Thema beschreibt, wie Sie die Windows Communication Foundation (WCF)-Verwaltung und die Diagnosefunktion zu verwenden, um einer transaktionsanwendung zu beheben.  
@@ -87,15 +87,15 @@ Dieses Thema beschreibt, wie Sie die Windows Communication Foundation (WCF)-Verw
 ## <a name="tracing"></a>Ablaufverfolgung  
  Ablaufverfolgungen ermöglichen es, Fehler in den Transaktionsanwendungen zu überwachen und zu analysieren. Die Ablaufverfolgung kann auf verschiedene Weise aktiviert werden:  
   
--   Standard-WCF-Ablaufverfolgung  
+- Standard-WCF-Ablaufverfolgung  
   
      Dieser Typ der Ablaufverfolgung ist identisch mit der Ablaufverfolgung für alle WCF-Anwendung. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   WS-AtomicTransaction-Ablaufverfolgung  
+- WS-AtomicTransaction-Ablaufverfolgung  
   
      WS-AtomicTransaction-Ablaufverfolgung kann aktiviert werden, mithilfe der [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Eine derartige Ablaufverfolgung bietet einen Einblick in den Zustand der Transaktionen und Teilnehmer innerhalb eines Systems. Zum Aktivieren der Service Model-Ablaufverfolgung muss der `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing`-Registrierungsschlüssel auf einen gültigen Wert der Enumeration <xref:System.Diagnostics.SourceLevels> festgelegt sein. Sie können die nachrichtenprotokollierung auf die gleiche Weise wie andere WCF-Anwendungen aktivieren.  
   
--   `System.Transactions`-Ablaufverfolgung  
+- `System.Transactions`-Ablaufverfolgung  
   
      Bei Verwendung des OleTransactions-Protokolls können Protokollnachrichten nicht aufgezeichnet werden. Die Ablaufverfolgung, die von der <xref:System.Transactions>-Infrastruktur geboten wird (die OleTransactions nutzt), ermöglicht es den Benutzern, Ereignisse, die bei den Transaktionen geschehen sind, anzusehen. Um die Ablaufverfolgung für eine <xref:System.Transactions>-Anwendung zu aktivieren, integrieren Sie den folgenden Code in die Konfigurationsdatei `App.config`.  
   

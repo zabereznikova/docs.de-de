@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788400"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen bestimmten Transport instanziiert wird. Falls dieses Element leer ist, wird der Standardtyp verwendet. Dieses Element kann nur über die Anwendungskonfigurationsdatei bzw. die Computerkonfigurationsdatei verwendet werden.  
@@ -63,25 +63,25 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
 ## <a name="remarks"></a>Hinweise  
  WCF-Dienste werden in gehosteten Anwendungsdomänen (AppDomain) standardmäßig zusammen mit ASP.NET ausgeführt. Selbst wenn WCF und ASP.NET in derselben AppDomain gleichzeitig ausgeführt werden können, werden die WCF-Anforderungen nicht standardmäßig von der ASP.NET-HTTP-Pipeline verarbeitet. Folglich stehen einige Elemente der ASP.NET-Anwendungsplattform nicht für WCF-Dienste zur Verfügung. Dazu gehören  
   
--   ASP.NET-Datei-/URL-Autorisierung  
+- ASP.NET-Datei-/URL-Autorisierung  
   
--   ASP.NET-Identitätswechsel  
+- ASP.NET-Identitätswechsel  
   
--   Cookiebasierter Sitzungszustand  
+- Cookiebasierter Sitzungszustand  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   Pipeline-Erweiterbarkeit über benutzerdefiniertes HttpModule  
+- Pipeline-Erweiterbarkeit über benutzerdefiniertes HttpModule  
   
  Falls Ihre WCF-Dienste im ASP.NET-Kontext funktionieren müssen und nur über HTTP kommunizieren, können Sie den ASP.NET-Kompatibilitätsmodus von WCF verwenden. Dieser Modus wird aktiviert, wenn das `aspNetCompatibilityEnabled`-Attribut auf Anwendungsebene auf `true` festgelegt ist. Die Dienstimplementierungen müssen die Möglichkeit, im Kompatibilitätsmodus ausgeführt zu werden, mit der <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>-Klasse deklarieren. Wenn der Kompatibilitätsmodus aktiviert ist,  
   
--   wird vor der WCF-Autorisierung die ASP.NET-Datei-/URL-Autorisierung erzwungen. Eine Autorisierungsentscheidung basiert auf der Anforderungsidentität auf der Transportebene. Identitäten auf der Nachrichtenebene werden ignoriert.  
+- wird vor der WCF-Autorisierung die ASP.NET-Datei-/URL-Autorisierung erzwungen. Eine Autorisierungsentscheidung basiert auf der Anforderungsidentität auf der Transportebene. Identitäten auf der Nachrichtenebene werden ignoriert.  
   
--   beginnen die WCF-Dienstvorgänge mit der Ausführung im ASP.NET-Identitätswechselkontext. Falls sowohl der ASP.NET-Identitätswechsel als auch der WCF-Identitätswechsel für einen bestimmten Dienst aktiviert sind, gilt der WCF-Identitätswechselkontext.  
+- beginnen die WCF-Dienstvorgänge mit der Ausführung im ASP.NET-Identitätswechselkontext. Falls sowohl der ASP.NET-Identitätswechsel als auch der WCF-Identitätswechsel für einen bestimmten Dienst aktiviert sind, gilt der WCF-Identitätswechselkontext.  
   
--   kann HttpContext.Current im WCF-Dienstcode verwendet werden. Die Dienste werden daran gehindert, Nicht-HTTP-Endpunkte verfügbar zu machen.  
+- kann HttpContext.Current im WCF-Dienstcode verwendet werden. Die Dienste werden daran gehindert, Nicht-HTTP-Endpunkte verfügbar zu machen.  
   
--   werden die WCF-Anforderungen von der ASP.NET-Pipeline verarbeitet. HttpModules, die für eingehende Anforderungen konfiguriert wurden, können ebenfalls WCF-Anforderungen verarbeiten. Dazu gehören ASP.NET-Plattformkomponenten (z.&amp;#160;B. <xref:System.Web.SessionState.SessionStateModule>) sowie benutzerdefinierte Drittanbietermodule.  
+- werden die WCF-Anforderungen von der ASP.NET-Pipeline verarbeitet. HttpModules, die für eingehende Anforderungen konfiguriert wurden, können ebenfalls WCF-Anforderungen verarbeiten. Dazu gehören ASP.NET-Plattformkomponenten (z.&amp;#160;B. <xref:System.Web.SessionState.SessionStateModule>) sowie benutzerdefinierte Drittanbietermodule.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel zeigt, wie der ASP-Kompatibilitätsmodus aktiviert wird.  

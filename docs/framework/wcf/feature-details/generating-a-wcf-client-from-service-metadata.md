@@ -3,22 +3,22 @@ title: Generieren eines WCF-Clients aus Dienstmetadaten
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855997"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
   
  Die Metadatendokumente können sich in einem permanenten Speicher befinden oder online abgerufen werden. Der Onlineabruf erfolgt gemäß dem WS-MetadataExchange-Protokoll oder Microsoft Discovery (DISCO)-Protokoll. Svcutil.exe gibt zum Abruf von Metadaten die folgenden Metadatenanforderungen gleichzeitig aus.  
   
--   WS-MetadataExchange (MEX)-Anforderung an die angegebene Adresse  
+- WS-MetadataExchange (MEX)-Anforderung an die angegebene Adresse  
   
--   MEX-Anforderung an die angegebene Adresse mit angefügtem `/mex`  
+- MEX-Anforderung an die angegebene Adresse mit angefügtem `/mex`  
   
--   DISCO-Anforderung (mit der [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET-Webdiensten) an die angegebene Adresse.  
+- DISCO-Anforderung (mit der [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET-Webdiensten) an die angegebene Adresse.  
   
  Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Verkettung von des mit dem namens "\@" und das anschließende hinzufügen einen vollständig qualifizierten Domänennamen (FQDN). Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig, und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung die folgende Fehlermeldung angezeigt: **Der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
   

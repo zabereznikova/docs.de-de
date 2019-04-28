@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792638"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap-Methode
 Legt eine Code Map für die angegebene Funktion, die mit der angegebenen Microsoft intermediate Language (MSIL)-Zuordnungseinträge fest.  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  Der Debugger geht davon aus, dass jeder Alter Offset auf einen MSIL-offset innerhalb der ursprünglichen, unveränderten MSIL-Code verweist, und jeder neuer Offset auf den MSIL-Offset innerhalb der neuen, instrumentierten Code verweist. Die Zuordnung muss in aufsteigender Reihenfolge sortiert werden. Führen Sie für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten die folgenden Richtlinien:  
   
--   Keine neu instrumentierten MSIL-Code an.  
+- Keine neu instrumentierten MSIL-Code an.  
   
--   Entfernen Sie den ursprünglichen MSIL-Code nicht.  
+- Entfernen Sie den ursprünglichen MSIL-Code nicht.  
   
--   Enthalten Sie Einträge für die Sequenzpunkte über die Programmdatenbankdatei (PDB) werden in der Zuordnung. Die Zuordnung wird nicht fehlenden Einträge interpoliert. Betrachten Sie daher in der folgenden Schritte aus:  
+- Enthalten Sie Einträge für die Sequenzpunkte über die Programmdatenbankdatei (PDB) werden in der Zuordnung. Die Zuordnung wird nicht fehlenden Einträge interpoliert. Betrachten Sie daher in der folgenden Schritte aus:  
   
      (0 alt ist, 0 neue)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 ALT ist, 20 neue)  
   
-    -   Ein Alter Offset von 0, 1, 2, 3 oder 4 wird zum neuen Offset 0 zugeordnet werden.  
+    - Ein Alter Offset von 0, 1, 2, 3 oder 4 wird zum neuen Offset 0 zugeordnet werden.  
   
-    -   Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.  
+    - Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.  
   
-    -   Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.  
+    - Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.  
   
-    -   Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.  
+    - Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.  
   
-    -   Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.  
+    - Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.  
   
-    -   Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.  
+    - Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

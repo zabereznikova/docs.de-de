@@ -5,11 +5,11 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868603"
 ---
 # <a name="application-element-net-native"></a>\<Anwendung > (Element (.NET Native)
 Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind, und wendet Laufzeitreflektionsrichtlinien auf alle Programmelemente in einer App an.  
@@ -81,9 +81,9 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
   
  Ein `<Application>`-Element kann auf zwei Arten verwendet werden:  
   
--   Als Container für die Definition der Programmelemente, deren Metadaten zur Laufzeit benötigt werden. In diesem Fall muss das `<Application>`-Element keine Attribute haben. Zum Zeitpunkt der Kompilierung durchsuchen Compilertools alle Bibliotheken, einschließlich der .NET Framework-Kernbibliotheken, nach Programmelementen, die durch untergeordnete Elemente des `<Application>`-Elements identifiziert werden. Im Gegensatz dazu durchsuchen Compilertools nur die vom [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element benannte Bibliothek nach Programmelementen, die durch die untergeordneten Elemente von [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) identifiziert werden.  
+- Als Container für die Definition der Programmelemente, deren Metadaten zur Laufzeit benötigt werden. In diesem Fall muss das `<Application>`-Element keine Attribute haben. Zum Zeitpunkt der Kompilierung durchsuchen Compilertools alle Bibliotheken, einschließlich der .NET Framework-Kernbibliotheken, nach Programmelementen, die durch untergeordnete Elemente des `<Application>`-Elements identifiziert werden. Im Gegensatz dazu durchsuchen Compilertools nur die vom [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element benannte Bibliothek nach Programmelementen, die durch die untergeordneten Elemente von [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) identifiziert werden.  
   
--   Als ein Element, das anwendungsweite Richtlinien für Reflektion, Serialisierung und Interop festlegt. Die Attribute des `<Application>`-Elements definieren eine anwendungsweite Richtlinie, die von den durch das `<Application>`- oder [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element definierten untergeordneten Elementen überschrieben werden kann.  
+- Als ein Element, das anwendungsweite Richtlinien für Reflektion, Serialisierung und Interop festlegt. Die Attribute des `<Application>`-Elements definieren eine anwendungsweite Richtlinie, die von den durch das `<Application>`- oder [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element definierten untergeordneten Elementen überschrieben werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
 

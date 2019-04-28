@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879813"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet- und XmlDataDocument-Synchronisierung
 Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen hierarchischen Datenzugriff können Sie die in .NET Framework verfügbaren XML-Klassen verwenden. Diese beiden Datendarstellungen wurden bisher immer separat verwendet. Allerdings ermöglicht .NET Framework einen synchronen Echtzeitzugriff auf die relationale und hierarchische Darstellung von Daten mithilfe der **DataSet** Objekt und die <xref:System.Xml.XmlDataDocument> Zielabhängigkeitsobjekt.  
@@ -19,7 +19,7 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
   
  Es gibt mehrere Möglichkeiten, die Sie synchronisieren können eine **DataSet** mit einer **XmlDataDocument**. Sie haben folgende Möglichkeiten:  
   
--   Auffüllen einer **DataSet** mit Schema (d. h. einer relationalen Struktur) und die Daten und synchronisieren sie mit einem neuen **XmlDataDocument**. Dadurch entsteht eine hierarchische Ansicht der vorhandenen relationalen Daten. Zum Beispiel:  
+- Auffüllen einer **DataSet** mit Schema (d. h. einer relationalen Struktur) und die Daten und synchronisieren sie mit einem neuen **XmlDataDocument**. Dadurch entsteht eine hierarchische Ansicht der vorhandenen relationalen Daten. Zum Beispiel:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Auffüllen einer **DataSet** Typ schema only (wie z. B. eine stark typisierte **DataSet**), synchronisieren sie mit eine **XmlDataDocument**, und Laden Sie die  **XmlDataDocument** aus einem XML-Dokument. Dadurch entsteht eine relationale Ansicht der vorhandenen hierarchischen Daten. Die Tabellen- und Spaltennamen müssen in Ihre **DataSet** Schema übereinstimmen die Namen der XML-Elemente, die Sie mit synchronisiert werden sollen. Bei diesem Prozess wird die Groß- und Kleinschreibung berücksichtigt.  
+- Auffüllen einer **DataSet** Typ schema only (wie z. B. eine stark typisierte **DataSet**), synchronisieren sie mit eine **XmlDataDocument**, und Laden Sie die  **XmlDataDocument** aus einem XML-Dokument. Dadurch entsteht eine relationale Ansicht der vorhandenen hierarchischen Daten. Die Tabellen- und Spaltennamen müssen in Ihre **DataSet** Schema übereinstimmen die Namen der XML-Elemente, die Sie mit synchronisiert werden sollen. Bei diesem Prozess wird die Groß- und Kleinschreibung berücksichtigt.  
   
      Beachten Sie, dass das Schema der **DataSet** muss nur die XML-Elemente übereinstimmen, die Sie in der relationalen Ansicht verfügbar machen möchten. Folglich können Sie ein sehr großes XML-Dokument und ein sehr kleines relationales "Fenster" für dieses Dokument haben. Die **XmlDataDocument** behält Sie das gesamte XML-Dokument, obwohl die **DataSet** stellt nur einen kleinen Teil davon. (Ein ausführliches Beispiel dieses finden Sie unter [Synchronisieren eines Datasets mit einem XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
   
      Sie können nicht geladen werden ein **XmlDataDocument** , wenn er mit synchronisiert wird eine **DataSet** , das Daten enthält. In diesem Fall wird eine Ausnahme ausgelöst.  
   
--   Erstellen Sie ein neues **XmlDataDocument** aus einem XML-Dokument laden, und klicken Sie dann Zugriff auf die relationale Ansicht der Daten mithilfe der **DataSet** Eigenschaft der **XmlDataDocument**. Müssen Sie das Schema der Festlegen der **DataSet** , bevor Sie die Daten in anzeigen können die **XmlDataDocument** mithilfe der **DataSet**. In diesem Fall die Tabellen- und Spaltennamen im Namen Ihrer **DataSet** Schema übereinstimmen die Namen der XML-Elemente, die Sie mit synchronisiert werden sollen. Bei diesem Prozess wird die Groß- und Kleinschreibung berücksichtigt.  
+- Erstellen Sie ein neues **XmlDataDocument** aus einem XML-Dokument laden, und klicken Sie dann Zugriff auf die relationale Ansicht der Daten mithilfe der **DataSet** Eigenschaft der **XmlDataDocument**. Müssen Sie das Schema der Festlegen der **DataSet** , bevor Sie die Daten in anzeigen können die **XmlDataDocument** mithilfe der **DataSet**. In diesem Fall die Tabellen- und Spaltennamen im Namen Ihrer **DataSet** Schema übereinstimmen die Namen der XML-Elemente, die Sie mit synchronisiert werden sollen. Bei diesem Prozess wird die Groß- und Kleinschreibung berücksichtigt.  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie die relationale Ansicht der Daten in den Zugriff auf eine **XmlDataDocument**.  
   

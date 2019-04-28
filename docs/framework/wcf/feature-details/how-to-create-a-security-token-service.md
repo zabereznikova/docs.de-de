@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787672"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Vorgehensweise: Erstellen eines Sicherheitstokendiensts
 Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation definierte Protokoll. Dieses Protokoll definiert Meldungsformate und Meldungsaustauschmuster zum Herausgeben, Erneuern, Abbrechen und Überprüfen von Sicherheitstoken. Ein angegebener Sicherheitstokendienst stellt eine oder mehrere dieser Fähigkeiten zur Verfügung. Dieses Thema behandelt das am häufigsten verwendete Szenario: das Implementieren der Tokenausstellung.  
@@ -24,61 +24,61 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
 ### <a name="request-message-structure"></a>Anforderungsmeldungsstruktur  
  Die Anforderungsmeldungsstruktur für Probleme besteht normalerweise aus den folgenden Elementen:  
   
--   Geben Sie eine Anforderung URI mit einem Wert von `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
+- Geben Sie eine Anforderung URI mit einem Wert von `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Ein Tokentyp-URI Für Security Assertions Markup Language (SAML) 1.1-Token ist der Wert dieses URIs `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
+- Ein Tokentyp-URI Für Security Assertions Markup Language (SAML) 1.1-Token ist der Wert dieses URIs `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
--   Ein Schlüsselgrößenwert, der die Anzahl der Bits im Schlüssel angibt, der dem ausgestellten Token zugeordnet werden soll.  
+- Ein Schlüsselgrößenwert, der die Anzahl der Bits im Schlüssel angibt, der dem ausgestellten Token zugeordnet werden soll.  
   
--   Ein Schlüsseltyp-URI Für symmetrische Schlüssel ist der Wert dieses URIs `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
+- Ein Schlüsseltyp-URI Für symmetrische Schlüssel ist der Wert dieses URIs `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Außerdem könnten ein paar andere Elemente vorhanden sein:  
   
--   Schlüsselmaterial, das vom Client bereitgestellt wird  
+- Schlüsselmaterial, das vom Client bereitgestellt wird  
   
--   Umfangsinformationen, die den Zieldienst angeben, mit dem das ausgestellte Token verwendet wird  
+- Umfangsinformationen, die den Zieldienst angeben, mit dem das ausgestellte Token verwendet wird  
   
  Der Sicherheitstokendienst verwendet die Informationen in der Problemanforderungsmeldung für die Erstellung der Problemantwortmeldung.  
   
 ## <a name="response-message-structure"></a>Antwortmeldungsstruktur  
  Die Antwortmeldungsstruktur für Probleme besteht normalerweise aus den folgenden Elementen:  
   
--   dem ausgestellten Sicherheitstoken, z. B. eine SAML 1.1-Assertion  
+- dem ausgestellten Sicherheitstoken, z. B. eine SAML 1.1-Assertion  
   
--   einem dem Sicherheitstoken zugeordnete Prüftoken. Für symmetrische Schlüssel ist dies oft eine verschlüsselte Form des Schlüsselmaterials.  
+- einem dem Sicherheitstoken zugeordnete Prüftoken. Für symmetrische Schlüssel ist dies oft eine verschlüsselte Form des Schlüsselmaterials.  
   
--   Verweise auf das ausgestellte Sicherheitstoken Der Sicherheitstokendienst gibt normalerweise einen Verweis zurück, der verwendet werden kann, wenn das ausgestellte Token in einer vom Client gesendeten nachfolgenden Meldung angezeigt wird, und einen Verweis, der verwendet werden kann, wenn das Token in nachfolgenden Meldungen nicht vorhanden ist.  
+- Verweise auf das ausgestellte Sicherheitstoken Der Sicherheitstokendienst gibt normalerweise einen Verweis zurück, der verwendet werden kann, wenn das ausgestellte Token in einer vom Client gesendeten nachfolgenden Meldung angezeigt wird, und einen Verweis, der verwendet werden kann, wenn das Token in nachfolgenden Meldungen nicht vorhanden ist.  
   
  Außerdem könnten ein paar andere Elemente vorhanden sein:  
   
--   Vom Sicherheitstokendienst bereitgestelltes Schlüsselmaterial  
+- Vom Sicherheitstokendienst bereitgestelltes Schlüsselmaterial  
   
--   Der zum Berechnen des freigegebenen Schlüssels benötigte Algorithmus  
+- Der zum Berechnen des freigegebenen Schlüssels benötigte Algorithmus  
   
--   Lebensdauerinformationen für das ausgestellte Token.  
+- Lebensdauerinformationen für das ausgestellte Token.  
   
 ## <a name="processing-request-messages"></a>Verarbeiten von Anforderungsmeldungen  
  Der Sicherheitstokendienst verarbeitet die Problemanforderung durch Untersuchen der verschiedenen Teile der Anforderungsmeldung und durch Sicherstellen der Ausstellung eines Tokens, das der Anforderung entspricht. Der Sicherheitstokendienst muss Folgendes bestimmen, bevor er das auszustellende Token erstellt:  
   
--   Die Anforderung ist tatsächlich eine Anforderung für ein auszustellendes Token.  
+- Die Anforderung ist tatsächlich eine Anforderung für ein auszustellendes Token.  
   
--   Der Sicherheitstokendienst unterstützt den angeforderten Tokentyp.  
+- Der Sicherheitstokendienst unterstützt den angeforderten Tokentyp.  
   
--   Der Anforderungsdienst wird zum Erstellen der Anforderungen autorisiert.  
+- Der Anforderungsdienst wird zum Erstellen der Anforderungen autorisiert.  
   
--   Der Sicherheitstokendienst kann den Erwartungen des Anforderungsdiensts in Bezug auf das Schlüsselmaterial entsprechen.  
+- Der Sicherheitstokendienst kann den Erwartungen des Anforderungsdiensts in Bezug auf das Schlüsselmaterial entsprechen.  
   
  Zwei wichtige Teile beim Erstellen eines Tokens bestehen im Bestimmen des Schlüssels, mit dem das Token signiert werden soll, und des Schlüssels, mit dem der freigegebene Schlüssel verschlüsselt werden soll. Das Token muss signiert werden, damit der Dienst ermitteln kann, ob das Token von einem Sicherheitstokendienst ausgestellt wurde, dem er vertraut, wenn der Client dem Zieldienst das Token bereitstellt. Das Schlüsselmaterial muss in einer Art und Weise verschlüsselt werden, dass der Zieldienst das Schlüsselmaterial entschlüsseln kann.  
   
  Das Signieren einer SAML-Assertion schließt das Erstellen einer <xref:System.IdentityModel.Tokens.SigningCredentials>-Instanz ein. Der Konstruktor für diese Klasse kann Folgendes sein:  
   
--   Ein <xref:System.IdentityModel.Tokens.SecurityKey> für den Schlüssel zum Signieren der SAML-Assertion  
+- Ein <xref:System.IdentityModel.Tokens.SecurityKey> für den Schlüssel zum Signieren der SAML-Assertion  
   
--   Eine Zeichenfolge, die den zu verwendenden Signaturalgorithmus identifiziert  
+- Eine Zeichenfolge, die den zu verwendenden Signaturalgorithmus identifiziert  
   
--   Eine Zeichenfolge, die den zu verwendenden Hashwertalgorithmus identifiziert  
+- Eine Zeichenfolge, die den zu verwendenden Hashwertalgorithmus identifiziert  
   
--   Optional ein <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>, der den Schlüssel identifiziert, der zum Signieren der Assertion verwendet werden soll.  
+- Optional ein <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>, der den Schlüssel identifiziert, der zum Signieren der Assertion verwendet werden soll.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  

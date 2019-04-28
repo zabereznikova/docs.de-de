@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
 ms.openlocfilehash: 91ee4bf9242df822890b0a171061f375a3b24cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803869"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden
 Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden. Sie können diesen Fehler möglicherweise beheben, indem Sie die Datentypen explizit angeben.  
@@ -55,7 +55,7 @@ End Interface
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Anstelle des Typrückschlusses können Sie einen Datentyp für den oder die Typparameter angeben.  
+- Anstelle des Typrückschlusses können Sie einen Datentyp für den oder die Typparameter angeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,11 +3,11 @@ title: Hosten in einer verwalteten Anwendung
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855828"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung
 Windows Communication Foundation (WCF)-Dienste können in einem gehostet werden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Anwendung. Die Selbsthosting-Option ist die flexibelste Option, da sie für die Bereitstellung die geringsten Anforderungen an die Infrastruktur stellt. Es ist jedoch auch die am wenigsten robuste Hostingoption, da verwaltete Anwendungen keine erweiterten hosten und Verwaltungsfunktionen von anderen Hostingoptionen in WCF, z. B. Internet Information Services (IIS) und Windows-Dienste bereitstellen.  

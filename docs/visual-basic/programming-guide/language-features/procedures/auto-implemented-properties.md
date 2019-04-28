@@ -10,11 +10,11 @@ helpviewer_keywords:
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
 ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864311"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Automatisch implementierte Eigenschaften (Visual Basic)
 *Automatisch implementierte Eigenschaften* ermöglichen es Ihnen, schnell eine Eigenschaft einer Klasse festlegen, ohne Code schreiben, um `Get` und `Set` die-Eigenschaft. Wenn Sie Code für eine automatisch implementierte Eigenschaft schreiben, erstellt der Visual Basic-Compiler automatisch ein privates Feld zum Speichern der Eigenschaftsvariablen zusätzlich zum Erstellen der zugeordneten `Get` und `Set` Prozeduren.  
@@ -52,13 +52,13 @@ End Class
   
  Das dahinter liegende Feld verfügt ebenfalls über die folgenden Eigenschaften:  
   
--   Der Zugriffsmodifizierer für das dahinter liegende Feld ist immer `Private`, selbst wenn die Eigenschaft selbst über eine andere Zugriffsebene verfügt, z. B `Public`.  
+- Der Zugriffsmodifizierer für das dahinter liegende Feld ist immer `Private`, selbst wenn die Eigenschaft selbst über eine andere Zugriffsebene verfügt, z. B `Public`.  
   
--   Wenn die Eigenschaft als `Shared` markiert ist, wird das dahinter liegende Feld auch freigegeben.  
+- Wenn die Eigenschaft als `Shared` markiert ist, wird das dahinter liegende Feld auch freigegeben.  
   
--   Für die Eigenschaft angegebene Attribute gelten nicht für das dahinter liegende Feld.  
+- Für die Eigenschaft angegebene Attribute gelten nicht für das dahinter liegende Feld.  
   
--   Auf das dahinter liegende Feld kann durch Code innerhalb der Klasse und von Debugtools, wie dem Überwachungsfenster, zugegriffen werden. Das dahinter liegende Feld wird jedoch nicht in einer IntelliSense-Vervollständigungsliste für Word angezeigt.  
+- Auf das dahinter liegende Feld kann durch Code innerhalb der Klasse und von Debugtools, wie dem Überwachungsfenster, zugegriffen werden. Das dahinter liegende Feld wird jedoch nicht in einer IntelliSense-Vervollständigungsliste für Word angezeigt.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>So definieren Sie eine automatisch implementierte Eigenschaft  
  Jeder Ausdruck, der verwendet werden kann, um ein Feld zu initialisieren, ist gültig für die Initialisierung einer automatisch implementierte Eigenschaft. Wenn Sie eine automatisch implementierte Eigenschaft initialisieren, wird der Ausdruck ausgewertet und der `Set` Prozedur für die Eigenschaft übergeben. Die folgenden Codebeispiele zeigen einige automatisch implementierte Eigenschaften, die Anfangswerte enthalten.  
@@ -78,17 +78,17 @@ End Class
   
  In diesem Fall müssen Sie eine erweiterte Eigenschaftsdefinition-Syntax verwenden, wenn Sie eine der folgenden durchführen möchten:  
   
--   Hinzufügen von Code für die Prozedur `Get` oder `Set` einer Eigenschaft, z. B. Code zum Überprüfen eingehender Werte in der Prozedur `Set`. Sie möchten z. B. überprüfen, ob eine Zeichenfolge, die eine Telefonnummer darstellt, die erforderliche Anzahl von Ziffern enthält, bevor der Eigenschaftswert festgelegt wird.  
+- Hinzufügen von Code für die Prozedur `Get` oder `Set` einer Eigenschaft, z. B. Code zum Überprüfen eingehender Werte in der Prozedur `Set`. Sie möchten z. B. überprüfen, ob eine Zeichenfolge, die eine Telefonnummer darstellt, die erforderliche Anzahl von Ziffern enthält, bevor der Eigenschaftswert festgelegt wird.  
   
--   Angeben unterschiedlicher Zugriffsmöglichkeiten für die Prozeduren `Get` und `Set`. Sie möchten z. B. die `Set` Prozedur `Private` und die `Get` Prozedur `Public` erstellen.  
+- Angeben unterschiedlicher Zugriffsmöglichkeiten für die Prozeduren `Get` und `Set`. Sie möchten z. B. die `Set` Prozedur `Private` und die `Get` Prozedur `Public` erstellen.  
   
--   Erstellen von Eigenschaften mit `WriteOnly`.  
+- Erstellen von Eigenschaften mit `WriteOnly`.  
   
--   Verwenden von parametrisierten Eigenschaften (einschließlich `Default` Eigenschaften). Sie müssen eine erweiterte Eigenschaft deklarieren, um einen Parameter für die Eigenschaft oder zusätzliche Parameter für die `Set` Prozedur zu spezifizieren.  
+- Verwenden von parametrisierten Eigenschaften (einschließlich `Default` Eigenschaften). Sie müssen eine erweiterte Eigenschaft deklarieren, um einen Parameter für die Eigenschaft oder zusätzliche Parameter für die `Set` Prozedur zu spezifizieren.  
   
--   Platzieren Sie ein Attribut für das dahinter liegende Feld oder ändern Sie die Zugriffsebene des dahinter liegenden Felds.  
+- Platzieren Sie ein Attribut für das dahinter liegende Feld oder ändern Sie die Zugriffsebene des dahinter liegenden Felds.  
   
--   Geben Sie XML-Kommentaren für das dahinter liegende Feld an.  
+- Geben Sie XML-Kommentaren für das dahinter liegende Feld an.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>So erweitern Sie eine automatisch implementierte Eigenschaft  
  Wenn Sie eine automatisch implementierte Eigenschaft zu einer erweiterten Eigenschaft konvertieren müssen, die eine `Get` oder `Set` Prozedur enthält, dann kann der Visual Basic-Code-Editor automatisch die `Get` und `Set` Prozeduren und `End Property` -Anweisung für die Eigenschaft generieren. Der Code wird generiert, wenn Sie den Cursor auf einer leeren Zeile nach der `Property` -Anweisung, geben Sie einen `G` (für `Get`) oder ein `S` (für `Set`), und drücken Sie die EINGABETASTE. Der Visual Basic-Code-Editor generiert automatisch `Get` oder `Set` für schreibgeschützte und lesegeschützte Eigenschaften beim Drücken der EINGABETASTE am Ende der Prozedur eine `Property` Anweisung.  

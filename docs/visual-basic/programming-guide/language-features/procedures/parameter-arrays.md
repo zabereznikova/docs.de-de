@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791949"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameterarrays (Visual Basic)
 Sie können nicht in der Regel durch Aufrufen eine Prozedur mit mehr Argumente als gibt an, der Deklaration der Prozedur. Wenn Sie eine unbestimmten Anzahl von Argumenten benötigen, können Sie deklarieren eine *Parameterarray*, sodass es sich um eine Prozedur, ein Array von Werten für einen Parameter zu akzeptieren. Sie müssen nicht die Anzahl der Elemente im Parameterarray kennen, wenn Sie die Prozedur definieren. Die Größe des Arrays wird durch jeden Aufruf der Prozedur einzeln bestimmt.  
@@ -23,22 +23,22 @@ Sie können nicht in der Regel durch Aufrufen eine Prozedur mit mehr Argumente a
 ## <a name="declaring-a-paramarray"></a>Deklarieren eines ParamArray  
  Sie verwenden die [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Schlüsselwort, um ein Parameterarray in der Parameterliste zu kennzeichnen. Dabei gelten folgende Regeln:  
   
--   Eine Prozedur kann nur ein Parameterarray definiert wird, und es muss der letzte Parameter in der Prozedurdefinition.  
+- Eine Prozedur kann nur ein Parameterarray definiert wird, und es muss der letzte Parameter in der Prozedurdefinition.  
   
--   Das Parameterarray muss als Wert übergeben wird. Ist es guter Programmierstil, explizit die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Schlüsselwort in der Prozedurdefinition.  
+- Das Parameterarray muss als Wert übergeben wird. Ist es guter Programmierstil, explizit die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Schlüsselwort in der Prozedurdefinition.  
   
--   Das Parameterarray ist automatisch optional. Der Standardwert ist ein leeres eindimensionales Array des Elementtyps des Parameterarrays.  
+- Das Parameterarray ist automatisch optional. Der Standardwert ist ein leeres eindimensionales Array des Elementtyps des Parameterarrays.  
   
--   Alle Parameter, die vor das Parameterarray müssen erforderlich sein. Das Parameterarray muss nur den optionalen Parameter sein.  
+- Alle Parameter, die vor das Parameterarray müssen erforderlich sein. Das Parameterarray muss nur den optionalen Parameter sein.  
   
 ## <a name="calling-a-paramarray"></a>Aufrufen eines ParamArray  
  Wenn Sie eine Prozedur, die ein Parameterarray definiert aufrufen, können Sie das Argument in einem der folgenden Arten angeben:  
   
--   "Nothing" –, also können Sie weglassen der [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Argument. In diesem Fall wird ein leeres Array, an die Prozedur übergeben. Sie können auch übergeben die [nichts](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, mit dem gleichen Effekt.  
+- "Nothing" –, also können Sie weglassen der [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Argument. In diesem Fall wird ein leeres Array, an die Prozedur übergeben. Sie können auch übergeben die [nichts](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, mit dem gleichen Effekt.  
   
--   Eine Liste von eine beliebige Anzahl von Argumenten, die durch Kommas getrennt. Der Datentyp der einzelnen Argumente muss implizit in den `ParamArray` Elementtyp.  
+- Eine Liste von eine beliebige Anzahl von Argumenten, die durch Kommas getrennt. Der Datentyp der einzelnen Argumente muss implizit in den `ParamArray` Elementtyp.  
   
--   Ein Array mit den gleichen Elementtyp wie das Parameterarray-Elementtyp.  
+- Ein Array mit den gleichen Elementtyp wie das Parameterarray-Elementtyp.  
   
  In allen Fällen behandelt der Code innerhalb der Prozedur das Parameterarray wie ein eindimensionales Array mit Elementen des gleichen Datentyp wie die `ParamArray` -Datentyp.  
   

@@ -3,11 +3,11 @@ title: Interoperabilität mit Enterprise Services und COM+-Transaktionen
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793652"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilität mit Enterprise Services und COM+-Transaktionen
 Der <xref:System.Transactions>-Namespace unterstützt die Interoperabilität zwischen Transaktionsobjekten, die in diesem Namespace erstellt wurden, und mit COM+ erstellten Transaktionen.  
@@ -29,9 +29,9 @@ Der <xref:System.Transactions>-Namespace unterstützt die Interoperabilität zwi
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Gibt an, die folgenden Anforderungen:  
   
--   Wenn <xref:System.Transactions.Transaction.Current%2A> überprüft wird, sollte <xref:System.Transactions> Transaktionen im COM+-Kontext unterstützen, wenn das Transaktionssystem erkennt, dass es in einem anderen Kontext als dem Standardkontext ausgeführt wird. Beachten Sie, dass der Standardkontext keine Transaktion enthalten kann. Im Standardkontext wird daher auch bei der Einstellung <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> die Transaktion, die im lokalen von <xref:System.Transactions> verwendeten Threadspeicher gespeichert wird, für <xref:System.Transactions.Transaction.Current%2A> zurückgegeben.  
+- Wenn <xref:System.Transactions.Transaction.Current%2A> überprüft wird, sollte <xref:System.Transactions> Transaktionen im COM+-Kontext unterstützen, wenn das Transaktionssystem erkennt, dass es in einem anderen Kontext als dem Standardkontext ausgeführt wird. Beachten Sie, dass der Standardkontext keine Transaktion enthalten kann. Im Standardkontext wird daher auch bei der Einstellung <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> die Transaktion, die im lokalen von <xref:System.Transactions> verwendeten Threadspeicher gespeichert wird, für <xref:System.Transactions.Transaction.Current%2A> zurückgegeben.  
   
--   Wenn ein neues <xref:System.Transactions.TransactionScope>-Objekt erstellt wird, und die Erstellung in einem anderen Kontext als dem Standardkontext erfolgt, dann sollte die Transaktion, die für das <xref:System.Transactions.TransactionScope>-Objekt aktuell ist, in COM+ widergespiegelt werden. In diesem Fall verhält sich <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> insofern wie <xref:System.Transactions.EnterpriseServicesInteropOption.Full>, als dass ein neuer COM+-Kontext erstellt wird.  
+- Wenn ein neues <xref:System.Transactions.TransactionScope>-Objekt erstellt wird, und die Erstellung in einem anderen Kontext als dem Standardkontext erfolgt, dann sollte die Transaktion, die für das <xref:System.Transactions.TransactionScope>-Objekt aktuell ist, in COM+ widergespiegelt werden. In diesem Fall verhält sich <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> insofern wie <xref:System.Transactions.EnterpriseServicesInteropOption.Full>, als dass ein neuer COM+-Kontext erstellt wird.  
   
  Wenn <xref:System.Transactions.Transaction.Current%2A> sowohl in <xref:System.Transactions.EnterpriseServicesInteropOption.Full> als auch in <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> festgelegt wurde, bewirken diesen beiden Modi, dass <xref:System.Transactions.Transaction.Current%2A> nicht direkt festgelegt werden kann.  Jeder Versuch, <xref:System.Transactions.Transaction.Current%2A> direkt und nicht durch die Erstellung eines <xref:System.Transactions.TransactionScope>-Objekts festzulegen, resultiert in einer Ausnahme des Typs <xref:System.InvalidOperationException>. Der <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumerationswert wird an neue Transaktionsbereiche vererbt, für die nicht explizit festgelegt wird, welcher Wert verwendet erden soll. Wenn Sie beispielsweise ein <xref:System.Transactions.TransactionScope>-Objekt unter Angabe von <xref:System.Transactions.EnterpriseServicesInteropOption.Full> erstellen, und dann ein zweites <xref:System.Transactions.TransactionScope>-Objekt erstellen, aber keinen <xref:System.Transactions.EnterpriseServicesInteropOption>-Wert angeben, verfügt das zweite <xref:System.Transactions.TransactionScope>-Objekt ebenso über die Einstellung <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.  
   
@@ -39,11 +39,11 @@ Der <xref:System.Transactions>-Namespace unterstützt die Interoperabilität zwi
   
 1. <xref:System.Transactions.Transaction.Current%2A> wird überprüft, um festzustellen, ob eine Transaktion vorhanden ist. Diese Prüfung resultiert in:  
   
-    -   Eine Prüfung, um festzustellen, ob ein Bereich vorhanden ist.  
+    - Eine Prüfung, um festzustellen, ob ein Bereich vorhanden ist.  
   
-    -   Wenn ein Bereich vorhanden ist, wird überprüft, welcher Wert der <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration bei der ursprünglichen Erstellung des Bereichs übergeben wurde.  
+    - Wenn ein Bereich vorhanden ist, wird überprüft, welcher Wert der <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration bei der ursprünglichen Erstellung des Bereichs übergeben wurde.  
   
-    -   Wenn die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration auf <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> festgelegt wurde, dann hat die COM+-Transaktion (<xref:System.EnterpriseServices>-Transaktion) Vorrang vor der <xref:System.Transactions>-Transaktion im verwalteten lokalen Threadspeicher.  
+    - Wenn die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration auf <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> festgelegt wurde, dann hat die COM+-Transaktion (<xref:System.EnterpriseServices>-Transaktion) Vorrang vor der <xref:System.Transactions>-Transaktion im verwalteten lokalen Threadspeicher.  
   
          Wenn der Wert auf <xref:System.Transactions.EnterpriseServicesInteropOption.None> festgelegt wurde, dann hat die <xref:System.Transactions>-Transaktion im verwalteten lokalen Threadspeicher Vorrang.  
   
@@ -53,11 +53,11 @@ Der <xref:System.Transactions>-Namespace unterstützt die Interoperabilität zwi
   
 3. Wenn eine neue Transaktion erstellt werden muss, bewirken die folgenden Werte von <xref:System.Transactions.EnterpriseServicesInteropOption> Folgendes:  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: Es wird eine dem COM+-Kontext zugeordnete Transaktion erstellt.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: Es wird eine dem COM+-Kontext zugeordnete Transaktion erstellt.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: eine <xref:System.Transactions> Transaktion erstellt.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>: eine <xref:System.Transactions> Transaktion erstellt.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: bei ein COM+-Kontext wird eine Transaktion erstellt und an den Kontext angefügt ist.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: bei ein COM+-Kontext wird eine Transaktion erstellt und an den Kontext angefügt ist.  
   
  Die folgende Tabelle veranschaulicht den Enterprise Services (ES)-Kontext und einen Transaktionsbereich, der erfordert, dass Transaktionen die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration verwenden.  
   
@@ -75,6 +75,6 @@ Der <xref:System.Transactions>-Namespace unterstützt die Interoperabilität zwi
   
  Erläuterungen zur vorstehenden Tabelle:  
   
--   ST bedeutet, dass die Ambient-Transaktion des Bereichs von <xref:System.Transactions> getrennt von allen anderen gegebenenfalls vorhandenen Transaktionen des <xref:System.EnterpriseServices>-Kontexts verwaltet wird.  
+- ST bedeutet, dass die Ambient-Transaktion des Bereichs von <xref:System.Transactions> getrennt von allen anderen gegebenenfalls vorhandenen Transaktionen des <xref:System.EnterpriseServices>-Kontexts verwaltet wird.  
   
--   ES bedeutet, dass die Ambient-Transaktion des Bereichs mit der Transaktion des <xref:System.EnterpriseServices>-Kontexts identisch ist.
+- ES bedeutet, dass die Ambient-Transaktion des Bereichs mit der Transaktion des <xref:System.EnterpriseServices>-Kontexts identisch ist.

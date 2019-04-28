@@ -3,11 +3,11 @@ title: Erstellen von Anwendungsrollen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878019"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Erstellen von Anwendungsrollen in SQL Server
 Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbankrollen oder Benutzern Berechtigungen zuzuweisen. Benutzer können eine Verbindung mit der Datenbank herstellen, die Anwendungsrolle aktivieren und die der Anwendung erteilten Berechtigungen annehmen. Die der Anwendungsrolle gewährten Berechtigungen sind so lange in Kraft, wie die Verbindung besteht.  
@@ -18,23 +18,23 @@ Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbank
 ## <a name="application-role-features"></a>Funktionen der Anwendungsrollen  
  Anwendungsrollen weisen die folgenden Funktionen auf:  
   
--   Im Unterschied zu Datenbankrollen enthalten Anwendungsrollen keine Member.  
+- Im Unterschied zu Datenbankrollen enthalten Anwendungsrollen keine Member.  
   
--   Anwendungsrollen werden aktiviert, wenn eine Anwendung der gespeicherten Systemprozedur `sp_setapprole` einen Anwendungsrollennamen und ein Kennwort bereitstellt.  
+- Anwendungsrollen werden aktiviert, wenn eine Anwendung der gespeicherten Systemprozedur `sp_setapprole` einen Anwendungsrollennamen und ein Kennwort bereitstellt.  
   
--   Das Kennwort muss auf dem Clientcomputer gespeichert und zur Laufzeit bereitgestellt werden. Die Aktivierung der Anwendungsrolle von SQL Server aus ist nicht möglich.  
+- Das Kennwort muss auf dem Clientcomputer gespeichert und zur Laufzeit bereitgestellt werden. Die Aktivierung der Anwendungsrolle von SQL Server aus ist nicht möglich.  
   
--   Das Kennwort wird nicht verschlüsselt. Das Parameterkennwort wird als unidirektionaler Hash gespeichert.  
+- Das Kennwort wird nicht verschlüsselt. Das Parameterkennwort wird als unidirektionaler Hash gespeichert.  
   
--   Einmal aktiviert, bleiben durch die Anwendungsrolle abgerufene Berechtigungen für die gesamte Dauer der Verbindung wirksam.  
+- Einmal aktiviert, bleiben durch die Anwendungsrolle abgerufene Berechtigungen für die gesamte Dauer der Verbindung wirksam.  
   
--   Die Anwendungsrolle erbt die der Rolle `public` gewährten Berechtigungen.  
+- Die Anwendungsrolle erbt die der Rolle `public` gewährten Berechtigungen.  
   
--   Wenn ein Member der festen Serverrolle `sysadmin` eine Anwendungsrolle aktiviert, wechselt der Sicherheitskontext für die Dauer der Verbindung zum Sicherheitskontext der Anwendungsrolle.  
+- Wenn ein Member der festen Serverrolle `sysadmin` eine Anwendungsrolle aktiviert, wechselt der Sicherheitskontext für die Dauer der Verbindung zum Sicherheitskontext der Anwendungsrolle.  
   
--   Wenn Sie in einer Datenbank ein `guest`-Konto erstellen, das eine Anwendungsrolle besitzt, müssen Sie kein Datenbankbenutzerkonto für die Anwendungsrolle oder für eine der Anmeldungen erstellen, die die Rolle aufrufen. Anwendungsrollen können auf eine andere Datenbank nur direkt zugreifen, wenn in dieser anderen Datenbank ein `guest`-Konto vorhanden ist.  
+- Wenn Sie in einer Datenbank ein `guest`-Konto erstellen, das eine Anwendungsrolle besitzt, müssen Sie kein Datenbankbenutzerkonto für die Anwendungsrolle oder für eine der Anmeldungen erstellen, die die Rolle aufrufen. Anwendungsrollen können auf eine andere Datenbank nur direkt zugreifen, wenn in dieser anderen Datenbank ein `guest`-Konto vorhanden ist.  
   
--   Integrierte Funktionen, die Anmeldenamen, z. B. SYSTEM_USER, zurückgeben, geben den Namen der Anmeldung zurück, die die Anwendungsrolle aufgerufen hat. Integrierte Funktionen, die Datenbankbenutzernamen zurückgeben, geben den Namen der Anwendungsrolle zurück.  
+- Integrierte Funktionen, die Anmeldenamen, z. B. SYSTEM_USER, zurückgeben, geben den Namen der Anmeldung zurück, die die Anwendungsrolle aufgerufen hat. Integrierte Funktionen, die Datenbankbenutzernamen zurückgeben, geben den Namen der Anwendungsrolle zurück.  
   
 ### <a name="the-principle-of-least-privilege"></a>Das Prinzip der minimalen Rechtegewährung  
  Anwendungsrollen sollten immer nur die unbedingt notwendigen Berechtigungen gewährt werden, um so für den Fall vorzusorgen, dass das Kennwort in die falschen Hände gerät. Berechtigungen für die Rolle `public` sollten in allen Datenbanken, die eine Anwendungsrolle verwenden, widerrufen werden. Deaktivieren Sie das `guest`-Konto in allen Datenbanken, auf die Inhaber der Anwendungsrolle keinen Zugriff haben sollen.  
@@ -47,9 +47,9 @@ Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbank
   
  Sie sollten die folgenden Alternativen in Erwägung ziehen.  
   
--   Verwenden Sie Kontextwechsel mit der EXECUTE AS-Anweisung und deren Klauseln NO REVERT und WITH COOKIE. Sie können ein Benutzerkonto in einer Datenbank erstellen, das keiner Anmeldung zugeordnet ist. Anschließend weisen Sie diesem Konto Berechtigungen zu. Die Verwendung von EXECUTE AS mit einem login-less-Benutzer ist sicherer, da sie auf Berechtigungen und nicht auf dem Kennwort basiert. Weitere Informationen finden Sie unter [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Verwenden Sie Kontextwechsel mit der EXECUTE AS-Anweisung und deren Klauseln NO REVERT und WITH COOKIE. Sie können ein Benutzerkonto in einer Datenbank erstellen, das keiner Anmeldung zugeordnet ist. Anschließend weisen Sie diesem Konto Berechtigungen zu. Die Verwendung von EXECUTE AS mit einem login-less-Benutzer ist sicherer, da sie auf Berechtigungen und nicht auf dem Kennwort basiert. Weitere Informationen finden Sie unter [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Signieren Sie gespeicherte Prozeduren mit Zertifikaten, die nur die Berechtigung gewähren, die zum Ausführen der Prozeduren notwendig ist. Weitere Informationen finden Sie unter [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Signieren Sie gespeicherte Prozeduren mit Zertifikaten, die nur die Berechtigung gewähren, die zum Ausführen der Prozeduren notwendig ist. Weitere Informationen finden Sie unter [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  

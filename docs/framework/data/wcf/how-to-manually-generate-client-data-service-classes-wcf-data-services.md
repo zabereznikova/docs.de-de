@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
 ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788712"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen (WCF Data Services)
 WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstklassen automatisch zu generieren, bei der Verwendung der **Hinzufügen eines Dienstverweises** einen Verweis auf einen Datendienst in einem Visual Studio-Projekt hinzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Sie können auch die gleichen Clientdatendienstklassen mit dem Tool zur Codeerstellung `DataSvcUtil.exe` manuell generieren. Dieses Tool, das in WCF Data Services enthalten ist, generiert .NET Framework-Klassen aus der Datendienstdefinition. Es kann auch verwendet werden, um Datendienstklassen aus der Konzeptmodelldatei (CSDL) und der EDMX-Datei zu generieren, die ein Entity Framework-Modell in einem Visual Studio-Projekt darstellt.
@@ -19,7 +19,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>So erstellen Sie C#-Klassen, die die Datenbindung unterstützen
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -30,7 +30,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>So erstellen Sie Visual Basic-Klassen, die die Datenbindung unterstützen
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -41,7 +41,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-c-classes-based-on-the-service-uri"></a>So erstellen Sie C#-Klassen basierend auf dem Dienst-URI
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -52,7 +52,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>So erstellen Sie Visual Basic-Klassen basierend auf dem Dienst-URI
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -63,7 +63,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>So erstellen Sie C#-Klassen basierend auf der Konzeptmodelldatei (CSDL)
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
@@ -71,7 +71,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a>So erstellen Sie Visual Basic-Klassen basierend auf der Konzeptmodelldatei (CSDL)
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
@@ -79,7 +79,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>So erstellen Sie C#-Klassen basierend auf der EDMX-Datei
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
@@ -87,7 +87,7 @@ WCF Data Services-Integration mit Visual Studio können Sie Client-Datendienstkl
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a>So erstellen Sie Visual Basic-Klassen basierend auf der EDMX-Datei
 
--   Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
+- Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb

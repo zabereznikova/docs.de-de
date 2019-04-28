@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791923"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
 Sie können ein Argument an eine Prozedur übergeben, in Visual Basic *nach Wert* oder *Verweisübergabe*. Dies bezeichnet man als den *Übergabemechanismus*, und es wird bestimmt, ob die Prozedur das Programmierelement zugrunde liegenden Arguments im aufrufenden Code ändern kann. Der Prozedurdeklaration des Übergabemechanismus für die einzelnen Parameter durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort.  
@@ -22,22 +22,22 @@ Sie können ein Argument an eine Prozedur übergeben, in Visual Basic *nach Wert
 ## <a name="distinctions"></a>Unterschiede  
  Wenn ein Argument an eine Prozedur übergeben werden, achten Sie darauf, dass Sie von mehreren verschiedenen Unterschiede, die miteinander interagieren:  
   
--   Gibt an, ob das zugrunde liegende Programmierelement geändert werden kann oder nicht veränderbar ist  
+- Gibt an, ob das zugrunde liegende Programmierelement geändert werden kann oder nicht veränderbar ist  
   
--   Gibt an, ob das Argument selbst geändert werden kann oder nicht veränderbar ist  
+- Gibt an, ob das Argument selbst geändert werden kann oder nicht veränderbar ist  
   
--   Gibt an, ob das Argument als Wert oder als Verweis übergebenen  
+- Gibt an, ob das Argument als Wert oder als Verweis übergebenen  
   
--   Gibt an, ob der Datentyp des Arguments ein Werttyp oder ein Referenztyp ist  
+- Gibt an, ob der Datentyp des Arguments ein Werttyp oder ein Referenztyp ist  
   
  Weitere Informationen finden Sie unter [Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](./differences-between-modifiable-and-nonmodifiable-arguments.md) und [Unterschiede zwischen Argumentübergabe nach Wert "und" By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
 ## <a name="choice-of-passing-mechanism"></a>Auswahl des Übergabemechanismus  
  Sie sollten den Übergabemechanismus für jedes Argument sorgfältig auswählen.  
   
--   **Schutz**. Bei der Auswahl zwischen den zwei übergeben Mechanismen, ist das wichtigste Kriterium für die Offenlegung von Aufrufen der Variablen ändern. Der Vorteil der Übergabe eines Arguments `ByRef` besteht darin, dass die Prozedur einen Wert an den aufrufenden Code durch dieses Argument zurückgeben kann. Der Vorteil der Übergabe eines Arguments `ByVal` besteht darin, dass es sich um eine Variable schützt, von der Prozedur geändert werden.  
+- **Schutz**. Bei der Auswahl zwischen den zwei übergeben Mechanismen, ist das wichtigste Kriterium für die Offenlegung von Aufrufen der Variablen ändern. Der Vorteil der Übergabe eines Arguments `ByRef` besteht darin, dass die Prozedur einen Wert an den aufrufenden Code durch dieses Argument zurückgeben kann. Der Vorteil der Übergabe eines Arguments `ByVal` besteht darin, dass es sich um eine Variable schützt, von der Prozedur geändert werden.  
   
--   **Leistung**. Obwohl es sich bei der Übergabemechanismus die Leistung Ihres Codes auswirken kann, ist in der Regel unbedeutend. Einzige Ausnahme hierbei ist ein Werttyp übergeben `ByVal`. In diesem Fall kopiert Visual Basic den gesamten Inhalt des Arguments. Aus diesem Grund für einen großen Werttyp z. B. eine Struktur, es kann effizienter sein übergeben `ByRef`.  
+- **Leistung**. Obwohl es sich bei der Übergabemechanismus die Leistung Ihres Codes auswirken kann, ist in der Regel unbedeutend. Einzige Ausnahme hierbei ist ein Werttyp übergeben `ByVal`. In diesem Fall kopiert Visual Basic den gesamten Inhalt des Arguments. Aus diesem Grund für einen großen Werttyp z. B. eine Struktur, es kann effizienter sein übergeben `ByRef`.  
   
      Für Verweistypen ist nur der Zeiger auf die Daten kopiert (vier Bytes auf 32-Bit-Plattformen, 8 Bytes auf 64-Bit-Plattformen). Aus diesem Grund können Sie Argumente des Typs übergeben `String` oder `Object` als Wert ohne Leistungseinbußen.  
   
@@ -50,15 +50,15 @@ Sie können ein Argument an eine Prozedur übergeben, in Visual Basic *nach Wert
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Wenn ein Argument als Wert übergeben.  
   
--   Wenn der aufrufende Code-Element, das dem Argument zugrunde liegt ein nicht veränderbares Element ist, deklarieren Sie den entsprechenden Parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Kein Code kann es sich um den Wert eines Elements als nicht änderbar ändern.  
+- Wenn der aufrufende Code-Element, das dem Argument zugrunde liegt ein nicht veränderbares Element ist, deklarieren Sie den entsprechenden Parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Kein Code kann es sich um den Wert eines Elements als nicht änderbar ändern.  
   
--   Wenn das zugrunde liegende Element geändert werden kann, aber nicht, dass das Verfahren, um den Wert ändern zu können möchten, deklarieren Sie den Parameter `ByVal`. Nur der aufrufende Code kann es sich um den Wert eines änderbaren Elements als Wert übergeben, ändern.  
+- Wenn das zugrunde liegende Element geändert werden kann, aber nicht, dass das Verfahren, um den Wert ändern zu können möchten, deklarieren Sie den Parameter `ByVal`. Nur der aufrufende Code kann es sich um den Wert eines änderbaren Elements als Wert übergeben, ändern.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>Wenn ein Argument als Verweis zu übergeben.  
   
--   Verfügt die Prozedur eine Notwendigkeit so ändern Sie das zugrunde liegende Element im aufrufenden Code, deklarieren Sie den entsprechenden Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Verfügt die Prozedur eine Notwendigkeit so ändern Sie das zugrunde liegende Element im aufrufenden Code, deklarieren Sie den entsprechenden Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
--   Wenn die richtige Ausführung des Codes für die Prozedur ändern das zugrunde liegende Element im aufrufenden Code abhängig ist, deklarieren Sie den Parameter `ByRef`. Wenn Sie ihn als Wert übergeben oder wenn der aufrufende Code überschreibt die `ByRef` Übergabemechanismus, indem das Argument in Klammern ein, den Aufruf der Prozedur kann zu unerwarteten Ergebnissen führen.  
+- Wenn die richtige Ausführung des Codes für die Prozedur ändern das zugrunde liegende Element im aufrufenden Code abhängig ist, deklarieren Sie den Parameter `ByRef`. Wenn Sie ihn als Wert übergeben oder wenn der aufrufende Code überschreibt die `ByRef` Übergabemechanismus, indem das Argument in Klammern ein, den Aufruf der Prozedur kann zu unerwarteten Ergebnissen führen.  
   
 ## <a name="example"></a>Beispiel  
   

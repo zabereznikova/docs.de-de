@@ -3,11 +3,11 @@ title: WCF-Dienstpublishing
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791208"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 
@@ -17,19 +17,19 @@ Windows Communication Foundation (WCF)-Dienst veröffentlichen hilft Ihnen beim 
 
 Veröffentlichen von WCF-Dienst unterstützt die WCF-Dienste erstellt, aus dem Satz von WCF-Dienst-Bibliotheksvorlagen und der entsprechenden Elementvorlagen, die zählen unter anderem folgende:
 
--   WCF-dienstbibliotheksvorlage mit Elementvorlage.
+- WCF-dienstbibliotheksvorlage mit Elementvorlage.
 
--   Syndication-Dienstbibliothek
+- Syndication-Dienstbibliothek
 
 Sie können diese Dienstvorlagen auswählen **Datei** > **neues Projekt** > [**Visual Basic** oder **Visual C#** ] > **WCF**. Für die anderen WCF-Vorlagen an diesem Speicherort (einschließlich WCF Workflow Service Application "und" WCF-Dienstanwendung), können Sie veröffentlichen, mit [One-Click-Veröffentlichung für Webanwendungen](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
 
 Der Dienst kann an den folgenden Zielorten veröffentlicht werden:
 
--   Lokale IIS
+- Lokale IIS
 
--   Dateisystem
+- Dateisystem
 
--   FTP-Site
+- FTP-Site
 
 ## <a name="using-wcf-service-publishing"></a>Verwenden des WCF-Dienstpublishings
 
@@ -63,9 +63,9 @@ Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherwei
 
  Die generierte Datei "Web.config" enthält, die nützlich für das Webhosting sowie den Inhalt der Datei "App.config" für den WCF-Dienstbibliothek mit den folgenden Änderungen sind:
 
--   Die Basisadresse wird ausgeschlossen.
+- Die Basisadresse wird ausgeschlossen.
 
--   Einstellungen im `<diagnostics>`-Element werden übersprungen, um die Ablaufverfolgungseinstellungen der Zielplattform beizubehalten.
+- Einstellungen im `<diagnostics>`-Element werden übersprungen, um die Ablaufverfolgungseinstellungen der Zielplattform beizubehalten.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Veröffentlichen von WCF-Diensten mit Nicht-HTTP-Bindungen in IIS
  Wenn Sie IIS 7.0 oder höher können Sie WCF-Dienste mit nicht-HTTP-Bindungen in IIS veröffentlichen. Hierfür müssen einige vorbereitende Konfigurationsschritte ausgeführt werden. Weitere Informationen finden Sie unter den Themen unter [Hosten in Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).

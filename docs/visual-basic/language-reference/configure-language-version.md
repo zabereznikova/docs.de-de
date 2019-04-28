@@ -3,11 +3,11 @@ title: Wählen Sie die Version der Visual Basic-Sprache
 description: Der Compiler auf, um die Validierung Syntax mit einer bestimmten Compilerversion zu konfigurieren.
 ms.date: 05/24/2018
 ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797032"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Wählen Sie die Version der Visual Basic-Sprache
 

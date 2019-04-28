@@ -12,11 +12,11 @@ ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61819703"
 ---
 # <a name="dates-times-and-time-zones"></a>Datumsangaben, Uhrzeiten und Zeitzonen
 
@@ -44,35 +44,35 @@ In diesem Abschnitt der Dokumentation erhalten Sie die Informationen, die Sie be
 
 [Finding the time zones defined on a local system (Suchen der in einem lokalen System definierten Zeitzonen)](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md): Beschreibt die Aufzählung der in einem lokalen System gefundenen Zeitzonen.
 
-[How to: Enumerate time zones present on a computer (Vorgehensweise: Aufzählen der auf einem Computer vorhandenen Zeitzonen)](../../../docs/standard/datetime/enumerate-time-zones.md): Stellt Beispiele für die Aufzählung der Zeitzonen bereit, die in der Registrierung eines Computers definiert sind und dem Benutzer die Auswahl einer vordefinierten Zeitzone aus einer Liste ermöglichen.
+[Vorgehensweise: Aufzählen der auf einem Computer vorhandenen Zeitzonen](../../../docs/standard/datetime/enumerate-time-zones.md) enthält Beispiele für die Aufzählung der Zeitzonen, in der Registrierung eines Computers definiert und dem Benutzer die Auswahl einer vordefinierten Zeitzone aus einer Liste ermöglichen.
 
-[How to: Access the predefined UTC and local time zone objects (Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte)](../../../docs/standard/datetime/access-utc-and-local.md): Beschreibt den Zugriff auf die koordinierte Weltzeit (Coordinated Universal Time, UTC) und die lokale Zeitzone.
+[Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte](../../../docs/standard/datetime/access-utc-and-local.md) wird beschrieben, wie auf koordinierte Weltzeit und die lokale Zeitzone zugreifen.
 
-[How to: Instantiate a TimeZoneInfo object (Vorgehensweise: Instanziieren eines TimeZoneInfo-Objekts)](../../../docs/standard/datetime/instantiate-time-zone-info.md): Beschreibt die Instanziierung eines <xref:System.TimeZoneInfo>-Objekts über die Registrierung des lokalen Systems.
+[Vorgehensweise: Instanziieren ein TimeZoneInfo-Objekts](../../../docs/standard/datetime/instantiate-time-zone-info.md) beschreibt, wie Sie instanziieren ein <xref:System.TimeZoneInfo> Objekt aus der Registrierung des lokalen Systems.
 
 [Instantiating a DateTimeOffset object (Instanziieren eines DateTimeOffset-Objekts)](../../../docs/standard/datetime/instantiating-a-datetimeoffset-object.md): Beschreibt die Möglichkeiten zur Instanziierung eines <xref:System.DateTimeOffset>-Objekts und die Möglichkeiten zur Konvertierung eines <xref:System.DateTime>-Werts in einen <xref:System.DateTimeOffset>-Wert.
 
-[How to: Create time zones without adjustment rules (Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln)](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md): Beschreibt, wie eine benutzerdefinierte Zeitzone erstellt wird, die die Umstellung von Sommerzeit auf Normalzeit und umgekehrt nicht unterstützt.
+[Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) wird beschrieben, wie eine benutzerdefinierte Zeitzone erstellt wird, die die Umstellung von Sommerzeit und nicht unterstützt.
 
-[How to: Create time zones with adjustment rules (Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln)](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md): Beschreibt, wie eine benutzerdefinierte Zeitzone erstellt wird, die eine oder mehrere Umstellungen von Sommerzeit auf Normalzeit und umgekehrt unterstützt.
+[Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) wird beschrieben, wie eine benutzerdefinierte Zeitzone erstellt wird, die eine oder mehrere umstellungen und von Sommerzeit unterstützt.
 
 [Saving and restoring time zones (Speichern und Wiederherstellen von Zeitzonen)](../../../docs/standard/datetime/saving-and-restoring-time-zones.md): Beschreibt die Unterstützung von <xref:System.TimeZoneInfo> für die Serialisierung und Deserialisierung von Zeitzonendaten und veranschaulicht einige der Szenarios, in denen diese Features verwendet werden können.
 
-[How to: Save time zones to an embedded resource (Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource)](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md): Beschreibt, wie eine benutzerdefinierte Zeitzone erstellt und die zugehörigen Informationen in einer Ressourcendatei gespeichert werden.
+[Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) wird beschrieben, wie eine benutzerdefinierte Zeitzone erstellt, und speichern Sie die Informationen in einer Ressourcendatei gespeichert.
 
-[How to: Restore time zones from an embedded resource (Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource)](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md): Beschreibt, wie in einer eingebetteten Ressourcendatei gespeicherte benutzerdefinierte Zeitzonen instanziiert werden.
+[Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) beschreibt, wie Sie benutzerdefinierte Zeitzonen instanziiert werden, die in einer eingebetteten Ressourcendatei gespeichert wurden.
 
 [Performing arithmetic operations with dates and times (Durchführen arithmetischer Datums- und Uhrzeitoperationen)](../../../docs/standard/datetime/performing-arithmetic-operations.md): Beschreibt die Probleme im Zusammenhang mit dem Addieren, Subtrahieren und Vergleichen von <xref:System.DateTime>- und <xref:System.DateTimeOffset>-Werten.
 
-[How to: Use time zones in date and time arithmetic (Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen)](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md): Beschreibt die Durchführung von arithmetischen Vorgängen für Datum und Uhrzeit, die die Anpassungsregeln einer Zeitzone widerspiegeln.
+[Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md) beschreibt die Durchführung von Datums- und uhrzeitberechnungen, die Anpassungsregeln einer Zeitzone widerspiegeln.
 
 [Converting between DateTime and DateTimeOffset (Konvertieren zwischen DateTime und DateTimeOffset)](../../../docs/standard/datetime/converting-between-datetime-and-offset.md): Beschreibt die Konvertierung zwischen <xref:System.DateTime>- und <xref:System.DateTimeOffset>-Werten.
 
 [Converting times between time zones (Konvertieren von Uhrzeiten zwischen Zeitzonen)](../../../docs/standard/datetime/converting-between-time-zones.md): Beschreibt die Konvertierung von Uhrzeiten von einer Zeitzone in eine andere.
 
-[How to: Resolve ambiguous times (Vorgehensweise: Auflösen von mehrdeutigen Zeiten)](../../../docs/standard/datetime/resolve-ambiguous-times.md): Beschreibt die Auflösung einer nicht eindeutigen Uhrzeit durch Zuordnen der Uhrzeit zur Standarduhrzeit der Zeitzone.
+[Vorgehensweise: Auflösen von mehrdeutigen Zeiten](../../../docs/standard/datetime/resolve-ambiguous-times.md) wird beschrieben, wie eine mehrdeutige Zeit aufgelöst wird, durch Zuordnen zur Normalzeit der Zeitzone.
 
-[How to: Let users resolve ambiguous times (Vorgehensweise: Auflösen mehrdeutiger Zeiten durch den Benutzer)](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md): Beschreibt, wie Sie den Benutzern die Zuordnung zwischen einer nicht eindeutigen lokalen Uhrzeit und der koordinierten Weltzeit überlassen.
+[Vorgehensweise: Können Benutzer auflösen mehrdeutiger Zeiten](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) beschreibt, wie Sie den Benutzern die Zuordnung zwischen einem nicht eindeutigen lokalen Uhrzeit und der koordinierten Weltzeit überlassen.
 
 ## <a name="reference"></a>Referenz
 

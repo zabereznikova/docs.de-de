@@ -3,18 +3,18 @@ title: Authentifizierung in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879012"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
   
--   Die Windows-Authentifizierung ist der Standard. Sie wird häufig auch als "integrierte Sicherheit" bezeichnet, weil dieses SQL Server-Sicherheitsmodell eng in Windows integriert ist. Dabei gelten bestimmte Windows-Benutzer- und -Gruppenkonten als so vertrauenswürdig, dass sie sich bei SQL Server anmelden dürfen. Windows-Benutzer, die bereits authentifiziert wurden, müssen keine zusätzlichen Anmeldeinformationen zur Verfügung stellen.  
+- Die Windows-Authentifizierung ist der Standard. Sie wird häufig auch als "integrierte Sicherheit" bezeichnet, weil dieses SQL Server-Sicherheitsmodell eng in Windows integriert ist. Dabei gelten bestimmte Windows-Benutzer- und -Gruppenkonten als so vertrauenswürdig, dass sie sich bei SQL Server anmelden dürfen. Windows-Benutzer, die bereits authentifiziert wurden, müssen keine zusätzlichen Anmeldeinformationen zur Verfügung stellen.  
   
--   Der gemischte Modus unterstützt die Authentifizierung durch Windows und durch SQL Server. Die Paare aus Benutzername und Kennwort werden innerhalb von SQL Server beibehalten.  
+- Der gemischte Modus unterstützt die Authentifizierung durch Windows und durch SQL Server. Die Paare aus Benutzername und Kennwort werden innerhalb von SQL Server beibehalten.  
   
 > [!IMPORTANT]
 >  Es wird empfohlen, möglichst immer die Windows-Authentifizierung zu verwenden. Die Windows-Authentifizierung verwendet zum Authentifizieren der Benutzer in SQL Server eine Reihe verschlüsselter Meldungen. Wenn SQL Server-Anmeldungen verwendet werden, werden SQL Server-Anmeldenamen und verschlüsselte Kennwörter über das Netzwerk übergeben, die sie dadurch unsichererer wird.  
@@ -31,19 +31,19 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
 ## <a name="authentication-scenarios"></a>Authentifizierungsszenarien  
  In den folgenden Situationen ist die Windows-Authentifizierung in der Regel die beste Wahl:  
   
--   Es gibt einen Domänencontroller.  
+- Es gibt einen Domänencontroller.  
   
--   Die Anwendung und die Datenbank befinden sich auf demselben Computer.  
+- Die Anwendung und die Datenbank befinden sich auf demselben Computer.  
   
--   Sie verwenden eine Instanz von SQL Server Express oder LocalDB.  
+- Sie verwenden eine Instanz von SQL Server Express oder LocalDB.  
   
  SQL Server-Anmeldungen werden im Allgemeinen in den folgenden Situationen verwendet:  
   
--   Wenn Sie über eine Arbeitsgruppe verfügen.  
+- Wenn Sie über eine Arbeitsgruppe verfügen.  
   
--   Die Benutzer stellen die Verbindung von unterschiedlichen, nicht vertrauenswürdigen Domänen aus her.  
+- Die Benutzer stellen die Verbindung von unterschiedlichen, nicht vertrauenswürdigen Domänen aus her.  
   
--   Internetanwendungen, z. B. [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Internetanwendungen, z. B. [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  Das Angeben der Windows-Authentifizierung führt nicht zu einer Deaktivierung von SQL Server-Anmeldungen. Verwenden Sie die ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Anweisung, um SQL Server-Anmeldungen für hoch privilegierten zu deaktivieren.  
@@ -51,11 +51,11 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
 ## <a name="login-types"></a>Anmeldungstypen  
  SQL Server unterstützt drei Arten von Anmeldenamen:  
   
--   Lokales Windows-Benutzerkonto oder vertrauenswürdiges Domänenkonto: SQL Server verlässt sich bei der Authentifizierung der Windows-Benutzerkonten auf Windows.  
+- Lokales Windows-Benutzerkonto oder vertrauenswürdiges Domänenkonto: SQL Server verlässt sich bei der Authentifizierung der Windows-Benutzerkonten auf Windows.  
   
--   Windows-Gruppe: Wenn einer Windows-Gruppe Zugriff gewährt wird, gelten diese Zugriffsrechte für alle Windows-Benutzeranmeldungen, die dieser Gruppe angehören.  
+- Windows-Gruppe: Wenn einer Windows-Gruppe Zugriff gewährt wird, gelten diese Zugriffsrechte für alle Windows-Benutzeranmeldungen, die dieser Gruppe angehören.  
   
--   SQL Server-Anmeldung: SQL Server speichert in der Masterdatenbank den Benutzernamen und einen Hash des Kennworts. Für die Überprüfung der Anmeldungsversuche werden interne Authentifizierungsmethoden verwendet.  
+- SQL Server-Anmeldung: SQL Server speichert in der Masterdatenbank den Benutzernamen und einen Hash des Kennworts. Für die Überprüfung der Anmeldungsversuche werden interne Authentifizierungsmethoden verwendet.  
   
 > [!NOTE]
 >  SQL Server bietet Anmeldungen aus Zertifikaten oder asymmetrischen Schlüsseln, die nur für die codesignierung verwendet werden. Zum Herstellen einer Verbindung mit SQL Server können sie nicht verwendet werden.  

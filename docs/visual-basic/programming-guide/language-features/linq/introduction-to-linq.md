@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781003"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Einführung in LINQ in Visual Basic
 Language Integrated Query (LINQ) bietet Abfragefunktionen in Visual Basic sowie einfache und leistungsstarke Funktionen bei der Arbeit mit allen Arten von Daten. Anstatt senden eine Abfrage an eine Datenbank verarbeitet werden, oder Arbeiten mit unterschiedlichen Abfragesyntaxarten für jeden Typ von Daten, die Sie suchen, werden von LINQ Abfragen als Teil der Visual Basic-Sprache eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
@@ -182,11 +182,11 @@ Sie können weitere LINQ-Abfragefeatures verwenden, indem Sie die von LINQ berei
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic-Funktionen, die LINQ unterstützen  
  Visual Basic umfasst weitere wichtige Features, die die Verwendung von LINQ erleichtern und reduziert die Menge an Code, den Sie zum Ausführen von LINQ-Abfragen schreiben müssen. Hierzu gehört Folgendes:  
   
--   **Anonyme Typen**, die Ihnen das Erstellen eines neuen Typs basierend auf einem Abfrageergebnis ermöglichen.  
+- **Anonyme Typen**, die Ihnen das Erstellen eines neuen Typs basierend auf einem Abfrageergebnis ermöglichen.  
   
--   **Implizit typisierte Variablen**, die ermöglichen Ihnen das verzögerte angeben eines Typs und können den Compiler den Typ, die abhängig vom Abfrageergebnis ableiten.  
+- **Implizit typisierte Variablen**, die ermöglichen Ihnen das verzögerte angeben eines Typs und können den Compiler den Typ, die abhängig vom Abfrageergebnis ableiten.  
   
--   **Erweiterungsmethoden**, das können Sie einen vorhandenen Typ mit eigenen Methoden zu erweitern, ohne den Typ selbst zu ändern.  
+- **Erweiterungsmethoden**, das können Sie einen vorhandenen Typ mit eigenen Methoden zu erweitern, ohne den Typ selbst zu ändern.  
   
  Weitere Informationen finden Sie unter [Visual Basic Features, die Support LINQ](../../concepts/linq/features-that-support-linq.md).  
   

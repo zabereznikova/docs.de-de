@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800125"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
 Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzustellen, dass die Daten gültig sind, bevor Sie Ihre Anwendung verwendet. Sie erfordern, dass bestimmte Textfelder nicht mit der Länge Null, ein Feld als eine Telefonnummer oder andere Art von wohlgeformte Daten formatiert werden, oder, dass eine Zeichenfolge keine unsicheren Zeichen enthalten, die zur Beeinträchtigung der Sicherheit einer Datenbank verwendet werden können. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen der Eingabe in Ihrer Anwendung.  
@@ -27,11 +27,11 @@ Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzuste
 ## <a name="event-driven-validation"></a>Ereignisgesteuerte Überprüfung  
  Wenn Sie vollständige programmgesteuerte Kontrolle über die Validierung möchten oder komplexe validierungsüberprüfungen durchführen müssen, sollten Sie die Überprüfung-Ereignisse, die in den meisten Windows Forms-Steuerelemente integriert verwenden. Jedes Steuerelement, das freier Form Benutzereingaben akzeptiert hat eine <xref:System.Windows.Forms.Control.Validating> -Ereignis, das erfolgt, wenn das Steuerelement die datenvalidierung erfordert. In der <xref:System.Windows.Forms.Control.Validating> Ereignisbehandlungsmethode, Sie können überprüfen, eine Benutzereingabe auf verschiedene Weise. Wenn Sie ein Textfeld, die eine Postleitzahl enthalten muss verfügen, können Sie z. B. die Überprüfung auf folgende Weise ausführen:  
   
--   Wenn die Postleitzahl für eine bestimmte Gruppe von Postleitzahlen gehören muss, können Sie einen Zeichenfolgenvergleich für die Eingabe zum Überprüfen der vom Benutzer eingegebenen Daten ausführen. Z. B. wenn die Postleitzahl in den Satz {10001, 10002 10003} sein muss, können klicken Sie dann einen Zeichenfolgenvergleich Sie um die Daten zu überprüfen.  
+- Wenn die Postleitzahl für eine bestimmte Gruppe von Postleitzahlen gehören muss, können Sie einen Zeichenfolgenvergleich für die Eingabe zum Überprüfen der vom Benutzer eingegebenen Daten ausführen. Z. B. wenn die Postleitzahl in den Satz {10001, 10002 10003} sein muss, können klicken Sie dann einen Zeichenfolgenvergleich Sie um die Daten zu überprüfen.  
   
--   Wenn die Postleitzahl in einem bestimmten Formular sein muss können Sie reguläre Ausdrücke verwenden, zum Überprüfen der Daten, die vom Benutzer eingegeben werden. So überprüfen das Formular beispielsweise `#####` oder `#####-####`, können Sie den regulären Ausdruck `^(\d{5})(-\d{4})?$`. So überprüfen das Formular `A#A #A#`, können Sie den regulären Ausdruck `[A-Z]\d[A-Z] \d[A-Z]\d`. Weitere Informationen zu regulären Ausdrücken finden Sie unter [reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md) und [Beispiele für reguläre Ausdrücke](../../standard/base-types/regular-expression-examples.md).  
+- Wenn die Postleitzahl in einem bestimmten Formular sein muss können Sie reguläre Ausdrücke verwenden, zum Überprüfen der Daten, die vom Benutzer eingegeben werden. So überprüfen das Formular beispielsweise `#####` oder `#####-####`, können Sie den regulären Ausdruck `^(\d{5})(-\d{4})?$`. So überprüfen das Formular `A#A #A#`, können Sie den regulären Ausdruck `[A-Z]\d[A-Z] \d[A-Z]\d`. Weitere Informationen zu regulären Ausdrücken finden Sie unter [reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md) und [Beispiele für reguläre Ausdrücke](../../standard/base-types/regular-expression-examples.md).  
   
--   Wenn die Postleitzahl in eine gültige Postleitzahl der Vereinigten Staaten sein muss, können Sie zum Überprüfen der Daten vom Benutzer eingegebene Postleitzahl Webdienst aufrufen.  
+- Wenn die Postleitzahl in eine gültige Postleitzahl der Vereinigten Staaten sein muss, können Sie zum Überprüfen der Daten vom Benutzer eingegebene Postleitzahl Webdienst aufrufen.  
   
  Die <xref:System.Windows.Forms.Control.Validating> Ereignis angegeben wird ein Objekt des Typs <xref:System.ComponentModel.CancelEventArgs>. Wenn Sie feststellen, dass die Daten des Steuerelements nicht gültig ist, können Sie Abbrechen der <xref:System.Windows.Forms.Control.Validating> -Ereignisses durch Festlegen dieses Objekts <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `true`. Wenn Sie nicht Festlegen der <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, Windows Forms werden angenommen, die Validierung erfolgreich war, für das Steuerelement, und erhöhen die <xref:System.Windows.Forms.Control.Validated> Ereignis.  
   
@@ -58,11 +58,11 @@ Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzuste
 #### <a name="explicit-validation"></a>Explizite Validierung  
  Der expliziten Validierung überprüft Daten gleichzeitig an. Sie können die Daten als Antwort auf eine Benutzeraktion wie das Klicken auf eine Schaltfläche "Speichern" oder ein weiter-Link überprüfen. Wenn die Benutzeraktion auftritt, können Sie explizite Validierung in einem der folgenden Arten auslösen:  
   
--   Rufen Sie <xref:System.Windows.Forms.ContainerControl.Validate%2A> überprüft das letzte Steuerelement aus, um den Fokus verloren haben.  
+- Rufen Sie <xref:System.Windows.Forms.ContainerControl.Validate%2A> überprüft das letzte Steuerelement aus, um den Fokus verloren haben.  
   
--   Rufen Sie <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> alle untergeordneten Steuerelemente in einem Formular oder Container-Steuerelement zu überprüfen.  
+- Rufen Sie <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> alle untergeordneten Steuerelemente in einem Formular oder Container-Steuerelement zu überprüfen.  
   
--   Rufen Sie eine benutzerdefinierte Methode zum Überprüfen der Daten in den Steuerelementen manuell.  
+- Rufen Sie eine benutzerdefinierte Methode zum Überprüfen der Daten in den Steuerelementen manuell.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Implizite Validierung-Standardverhalten für Windows Forms-Steuerelementen  
  Andere Windows Forms-Steuerelemente haben unterschiedliche Standardwerte für ihre <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> Eigenschaft. Die folgende Tabelle zeigt die am häufigsten verwendeten Steuerelemente und ihre Standardwerte.  
@@ -79,11 +79,11 @@ Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzuste
 ## <a name="closing-the-form-and-overriding-validation"></a>Schließen des Formulars und Überschreiben der Validierung  
  Wenn ein Steuerelement den Fokus verwaltet, da die darin enthaltenen Daten ungültig sind, ist es unmöglich, schließen Sie das übergeordnete Formular in einer der üblichen Methoden:  
   
--   Durch Klicken auf die **schließen** Schaltfläche.  
+- Durch Klicken auf die **schließen** Schaltfläche.  
   
--   Durch Auswahl **schließen** in die **System** Menü.  
+- Durch Auswahl **schließen** in die **System** Menü.  
   
--   Durch Aufrufen der <xref:System.Windows.Forms.Form.Close%2A> Methode programmgesteuert.  
+- Durch Aufrufen der <xref:System.Windows.Forms.Form.Close%2A> Methode programmgesteuert.  
   
  In einigen Fällen möchten jedoch möglicherweise kann der Benutzer, schließen Sie das Formular, unabhängig davon, ob die Werte in den Steuerelementen gültig sind. Kann außer Kraft setzen Überprüfung und ein Formular, das weiterhin ungültige Daten enthält, erstellen Sie einen Handler für des Formulars geschlossen <xref:System.Windows.Forms.Form.Closing> Ereignis. Legen Sie das Ereignis die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Eigenschaft `false`. Dies erzwingt, dass das Formular zu schließen. Weitere Informationen und ein Beispiel finden Sie unter <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
   

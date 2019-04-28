@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818715"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Vorgehensweise: Call Windows APIs (Visual Basic)
 In diesem Beispiel definiert und ruft die `MessageBox` -Funktion in "User32.dll" und klicken Sie dann eine Zeichenfolge an diese übergibt.  
@@ -23,16 +23,16 @@ In diesem Beispiel definiert und ruft die `MessageBox` -Funktion in "User32.dll"
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Einen Verweis auf den <xref:System>-Namespace  
+- Einen Verweis auf den <xref:System>-Namespace  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die Methode ist nicht statisch, abstrakt oder wurde bereits definiert. Der übergeordnete Typ ist eine Schnittstelle oder die Länge des *Namen* oder *DllName* ist 0 (null). (<xref:System.ArgumentException>)  
+- Die Methode ist nicht statisch, abstrakt oder wurde bereits definiert. Der übergeordnete Typ ist eine Schnittstelle oder die Länge des *Namen* oder *DllName* ist 0 (null). (<xref:System.ArgumentException>)  
   
--   Die *Namen* oder *DllName* ist `Nothing`. (<xref:System.ArgumentNullException>)  
+- Die *Namen* oder *DllName* ist `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Der enthaltende Typ wurde zuvor mit `CreateType` erstellt. (<xref:System.InvalidOperationException>)  
+- Der enthaltende Typ wurde zuvor mit `CreateType` erstellt. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Siehe auch
 

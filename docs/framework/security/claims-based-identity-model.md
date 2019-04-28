@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792821"
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers, eine andere e-Mail-Adresse sein. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
   
  Bei diesem Modell ist das einmalige Anmelden viel einfacher zu erreichen, und die Anwendung ist nicht mehr für Folgendes zuständig:  
   
--   Authentifizieren von Benutzern.  
+- Authentifizieren von Benutzern.  
   
--   Speichern von Benutzerkonten und Kennwörtern.  
+- Speichern von Benutzerkonten und Kennwörtern.  
   
--   Aufrufen der Unternehmensverzeichnisse, um Benutzeridentitätsdetails zu suchen.  
+- Aufrufen der Unternehmensverzeichnisse, um Benutzeridentitätsdetails zu suchen.  
   
--   Integration in Identitätssysteme anderer Plattformen oder Unternehmen.  
+- Integration in Identitätssysteme anderer Plattformen oder Unternehmen.  
   
  Bei diesem Modell trifft die Anwendung identitätsbezogene Entscheidungen auf der Grundlage von Ansprüchen, die von dem System bereitgestellt werden, das den Benutzer authentifizierte. Dabei kann es sich um die einfache Anwendungspersonalisierung mit dem Vornamen des Benutzers oder um das Autorisieren des Benutzers für den Zugriff auf höherwertige Funktionen und Ressourcen in der Anwendung handeln.  
   
  Dieses Thema enthält folgende Informationen:  
   
--   [Einführung in die anspruchsbasierte Identität](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Einführung in die anspruchsbasierte Identität](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Grundlegendes Szenario für ein anspruchsbasiertes Identitätsmodell](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Grundlegendes Szenario für ein anspruchsbasiertes Identitätsmodell](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Einführung in die anspruchsbasierte Identität  

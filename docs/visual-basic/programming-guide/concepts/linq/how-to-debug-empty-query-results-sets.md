@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855685"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)
 Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  

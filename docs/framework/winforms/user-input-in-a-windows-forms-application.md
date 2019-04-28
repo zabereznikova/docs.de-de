@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800138"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Benutzereingabe in einer Windows Forms-Anwendung
 In Windows Forms wird eine Benutzereingabe an Anwendungen in Form von Windows-Nachrichten gesendet. Eine Reihe von überschreibbaren Methoden verarbeitet diese Nachrichten in der Anwendung, die Form, und steuern. Wenn diese Methoden Maus-und tastaturmeldungen erhalten, auslösen diese Ereignisse, die zum Abrufen von Informationen über die Maus oder Tastatur Eingabe behandelt werden können. In vielen Fällen werden Windows Forms-Anwendungen können alle Benutzereingaben zu verarbeiten, indem Sie einfach die Bearbeitung dieser Ereignisse. In anderen Fällen kann eine Anwendung muss, um eine der Methoden überschreiben, die Verarbeitung von Nachrichten aus, um eine bestimmte Nachricht abzufangen, bevor sie von der Anwendung, Formular oder Steuerelement empfangen wird.  

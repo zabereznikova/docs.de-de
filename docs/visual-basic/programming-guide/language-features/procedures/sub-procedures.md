@@ -12,11 +12,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791819"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
 Ein `Sub` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die steuerelementrückgabe an den aufrufenden Code, aber es gibt einen Wert nicht an den aufrufenden Code zurück.  

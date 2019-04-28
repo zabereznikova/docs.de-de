@@ -3,11 +3,11 @@ title: Versionskontrolle für die Suche
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
 ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856647"
 ---
 # <a name="discovery-versioning"></a>Versionskontrolle für die Suche
 Dieses Thema enthält eine kurze Übersicht über die Implementierung einiger neuer Suchfunktionen. Es enthält außerdem eine Übersicht über die Auswahl der zu verwendenden Suchversion.  
@@ -17,19 +17,19 @@ Dieses Thema enthält eine kurze Übersicht über die Implementierung einiger ne
   
  Die folgenden Discovery-Klassen verfügen jetzt über eine <xref:System.ServiceModel.Discovery.DiscoveryVersion>-Eigenschaft und verwenden in ihren Konstruktoren ein <xref:System.ServiceModel.Discovery.DiscoveryVersion>-Argument:  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
- Bereitstellen von <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> als Konstruktor Parameter stellt die Implementierung die Version "April2005" des WS-Discovery-Protokolls zu verwenden. Diese Version entspricht der veröffentlichten Version der WS-Discovery-Protokollspezifikation. Sie sollten diese Version bei Interaktionen mit älteren Anwendungen verwenden, die die Version "April2005" der WS-Suche nutzen.  
+ Bereitstellen von <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> als Konstruktor Parameter die Implementierung die Version "april2005" des WS-Discovery-Protokolls verwendet wird. Diese Version entspricht der veröffentlichten Version der WS-Discovery-Protokollspezifikation. Sie sollten diese Version bei Interaktionen mit älteren Anwendungen verwenden, die die Version "April2005" der WS-Suche nutzen.  
   
 ### <a name="discoveryversionwsdiscovery11"></a>DiscoveryVersion.WSDiscovery11  
- Die von den APIs verwendete standardsuchversion ist <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>. Dies ist die momentane Standardversion des WS-Discovery-Protokolls.  
+ Die von den APIs verwendeten standardermittlungsversion ist <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>. Dies ist die momentane Standardversion des WS-Discovery-Protokolls.  
   
 ## <a name="discoveryversionwsdiscoverycd1"></a>DiscoveryVersion.WSDiscoveryCD1  
  Das Bereitstellen von <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryCD1> als Konstruktorparameter führt dazu, dass die Implementierung die Version "Committee Draft 1" des WS-Discovery-Protokolls verwendet. Sie sollten diese Version des Protokolls bei Interaktionen mit Implementierungen verwenden, die die CD1-Version des WS-Discovery-Protokolls nutzen.  

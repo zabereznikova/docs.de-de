@@ -3,20 +3,20 @@ title: Übersicht über den Nachrichtenfluss
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797480"
 ---
 # <a name="message-flow-overview"></a>Übersicht über den Nachrichtenfluss
 In einem verteilten System mit untereinander verbundenen Diensten müssen kausale Beziehungen zwischen den Diensten bestimmt werden. Es ist unerlässlich, die verschiedenen Komponenten eines Anforderungsflusses zu verstehen, wenn kritische Szenarien wie Systemüberwachung, Fehlerbehebung und Fehlerursachenanalyse unterstützt werden sollen. Um eine Korrelation der Ablaufverfolgungen verschiedener Dienste zu ermöglichen, wurde in .NET Framework 4 eine entsprechende Unterstützung über folgende Funktionen hinzugefügt:
 
--   Analytische Ablaufverfolgung: Eine hohe Leistung und geringer Ausführlichkeit aktivitätsablaufverfolgungs-Funktion mit Event Tracing for Windows (ETW).
+- Analytische Ablaufverfolgung: Eine hohe Leistung und geringer Ausführlichkeit aktivitätsablaufverfolgungs-Funktion mit Event Tracing for Windows (ETW).
 
--   End-to-End-Aktivitätsmodell für WCF/WF-Dienste: Dieses Feature unterstützt die Korrelation von ablaufverfolgungen, die generiert werden, indem die <xref:System.ServiceModel> und <xref:System.Workflow.ComponentModel> Namespaces.
+- End-to-End-Aktivitätsmodell für WCF/WF-Dienste: Dieses Feature unterstützt die Korrelation von ablaufverfolgungen, die generiert werden, indem die <xref:System.ServiceModel> und <xref:System.Workflow.ComponentModel> Namespaces.
 
--   ETW-nachverfolgung für WF: Diese Funktion verwendet Überwachungsdatensätze, die vom WF-Dienste, um Einblick in den aktuellen Status und Fortschritt des Workflows bereitzustellen.
+- ETW-nachverfolgung für WF: Diese Funktion verwendet Überwachungsdatensätze, die vom WF-Dienste, um Einblick in den aktuellen Status und Fortschritt des Workflows bereitzustellen.
 
  Anhand der in einem Überwachungs- oder Ablaufverfolgungsdatensatz protokollierten Fehler können Codefehler oder fehlerhaft formatierte Nachrichten aufgefunden werden. Mit der ActivityId-Eigenschaft des Knotens Korrelation im Nachrichtenheader des Ereignisses kann die Aktivität ermittelt werden, die den Fehler verursacht hat. Zum Aktivieren der Ablaufverfolgung des Nachrichtenflusses nach Aktivitäts-ID finden Sie unter [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). In diesem Thema wird veranschaulicht, wie die Ablaufverfolgung des Nachrichtenflusses im Projekt aktiviert wird, das im Lernprogramm "Erste Schritte" erstellt wurde.
 

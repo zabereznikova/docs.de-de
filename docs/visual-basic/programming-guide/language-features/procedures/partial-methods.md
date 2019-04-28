@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791936"
 ---
 # <a name="partial-methods-visual-basic"></a>Partielle Methoden (Visual Basic)
 Partielle Methoden können Entwickler benutzerdefinierte Logik in Code einfügen. In der Regel ist der Code Teil einer vom Designer generierten Klasse. Partielle Methoden werden in einer partiellen Klasse, die von einem Codegenerator erstellt wird definiert, und sie werden häufig verwendet, um die Benachrichtigung angeben, dass etwas geändert wurde. Sie können Entwickler benutzerdefiniertes Verhalten als Reaktion auf die Änderung angeben.  
@@ -33,11 +33,11 @@ End Sub
   
  Die Definition muss die folgenden Bedingungen erfüllen:  
   
--   Die Methode muss eine `Sub`, sondern eine `Function`.  
+- Die Methode muss eine `Sub`, sondern eine `Function`.  
   
--   Der Text der Methode muss leer sein.  
+- Der Text der Methode muss leer sein.  
   
--   Der Zugriffsmodifizierer muss `Private`.  
+- Der Zugriffsmodifizierer muss `Private`.  
   
 ## <a name="implementation"></a>Implementierung  
  Die Implementierung besteht in erster Linie im Text der partiellen Methode zu füllen. Die Implementierung ist in der Regel in einer separaten partiellen Klasse aus der Definition und wird von einem Entwickler, der den generierten Code erweitern möchte geschrieben.  

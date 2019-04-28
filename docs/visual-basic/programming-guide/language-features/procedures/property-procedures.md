@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791858"
 ---
 # <a name="property-procedures-visual-basic"></a>Eigenschaftenprozeduren (Visual Basic)
 Eine Eigenschaftenprozedur ist eine Reihe von Visual Basic-Anweisungen, die eine benutzerdefinierte Eigenschaft in einem Modul, Klasse oder Struktur zu ändern. -Eigenschaftenprozeduren werden, auch bekannt als *Eigenschaftenaccessoren*.  
   
  Visual Basic bietet für die folgenden Verfahren für die Eigenschaft:  
   
--   Ein `Get` Prozedur gibt den Wert einer Eigenschaft zurück. Wird aufgerufen, wenn Sie die Eigenschaft in einem Ausdruck zugreifen.  
+- Ein `Get` Prozedur gibt den Wert einer Eigenschaft zurück. Wird aufgerufen, wenn Sie die Eigenschaft in einem Ausdruck zugreifen.  
   
--   Ein `Set` Prozedur setzt eine Eigenschaft auf einen Wert fest. Wird aufgerufen, wenn Sie die Eigenschaft einen Wert zuweisen.  
+- Ein `Set` Prozedur setzt eine Eigenschaft auf einen Wert fest. Wird aufgerufen, wenn Sie die Eigenschaft einen Wert zuweisen.  
   
  Sie Eigenschaftenprozeduren in der Regel paarweise mit definieren die `Get` und `Set` -Anweisungen, aber Sie können auch einzeln definiert, wenn die Eigenschaft schreibgeschützt ist ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) oder nur Schreibzugriff ([festlegen Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788075"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
 <a name="top"></a> ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereignisse können nach Kategorie und Ebene gefiltert werden. Ereignis- [CLR-ETW-Schlüsselwörter](#keywords) ermöglichen das Filtern von Ereignissen nach Kategorie. Sie werden in Kombination für die Runtime- und die Rundownanbieter verwendet. Die [Ereignisebenen](#levels) werden durch Flags gekennzeichnet.  
@@ -25,13 +25,13 @@ ms.locfileid: "59105741"
   
  Schlüsselwörter werden in den folgenden Tabellen beschrieben:  
   
--   [CLR-ETW-Laufzeitschlüsselwörter](#runtime)  
+- [CLR-ETW-Laufzeitschlüsselwörter](#runtime)  
   
--   [CLR-ETW-Rundownschlüsselwörter](#rundown)  
+- [CLR-ETW-Rundownschlüsselwörter](#rundown)  
   
--   [Schlüsselwortkombinationen zur Symbolauflösung für den Laufzeitanbieter](#runtime_combo)  
+- [Schlüsselwortkombinationen zur Symbolauflösung für den Laufzeitanbieter](#runtime_combo)  
   
--   [Schlüsselwortkombinationen zur Symbolauflösung für den Rundownanbieter](#rundown_combo)  
+- [Schlüsselwortkombinationen zur Symbolauflösung für den Rundownanbieter](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>CLR-ETW-Laufzeitschlüsselwörter  

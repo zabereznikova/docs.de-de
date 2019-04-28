@@ -3,11 +3,11 @@ title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785943"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet, das die Funktionen des <xref:System.Net.Mail.SmtpClient> asynchron senden von e-Mails und zum Senden von e-Mails mit der Authentifizierung. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
@@ -107,13 +107,13 @@ new SendMail
   
  Weitere Informationen zum Einrichten eines SMTP-Servers finden Sie unter den folgenden Links.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Konfigurieren des SMTP-Diensts (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Konfigurieren des SMTP-Diensts (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Konfigurieren des SMTP-e-Mail](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Konfigurieren des SMTP-e-Mail](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Vorgehensweise: Installieren Sie den SMTP-Dienst](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Vorgehensweise: Installieren Sie den SMTP-Dienst](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  SMTP-Emulatoren können von Drittanbietern heruntergeladen werden.  
   

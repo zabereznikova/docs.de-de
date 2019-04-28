@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793717"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementieren einer expliziten Transaktion mit CommittableTransaction
 Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwendungen, Transaktionen explizit zu verwenden, anstatt die <xref:System.Transactions.TransactionScope>-Klasse implizit zu verwenden. Sie ist für Anwendungen nützlich, die dieselben Transaktionen über mehrere Funktionsaufrufe oder mehrere Threadaufrufe hinweg verwenden wollen. Im Unterschied zur <xref:System.Transactions.TransactionScope>-Klasse muss der Autor der Anwendung die <xref:System.Transactions.CommittableTransaction.Commit%2A>-Methode bzw. die <xref:System.Transactions.Transaction.Rollback%2A>-Methode aufrufen, um einen Commit der Transaktion auszuführen oder um sie abzubrechen.  
@@ -22,9 +22,9 @@ Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwe
   
  Berücksichtigen Sie die folgenden Aspekte, wenn Sie die <xref:System.Transactions.CommittableTransaction>-Klasse verwenden.  
   
--   Durch das Erstellen einer <xref:System.Transactions.CommittableTransaction>-Transaktion wird die Ambient-Transaktion nicht festgelegt. Sie müssen die Ambient-Transaktion explizit festlegen und zurücksetzen, um sicherzustellen, dass Ressourcen-Manager im richtigen Transaktionskontext arbeiten. Die aktuelle Ambient-Transaktion wird durch Einstellen der statischen <xref:System.Transactions.Transaction.Current%2A>-Eigenschaft für das globale <xref:System.Transactions.Transaction>-Objekt festgelegt.  
+- Durch das Erstellen einer <xref:System.Transactions.CommittableTransaction>-Transaktion wird die Ambient-Transaktion nicht festgelegt. Sie müssen die Ambient-Transaktion explizit festlegen und zurücksetzen, um sicherzustellen, dass Ressourcen-Manager im richtigen Transaktionskontext arbeiten. Die aktuelle Ambient-Transaktion wird durch Einstellen der statischen <xref:System.Transactions.Transaction.Current%2A>-Eigenschaft für das globale <xref:System.Transactions.Transaction>-Objekt festgelegt.  
   
--   Ein <xref:System.Transactions.CommittableTransaction>-Objekt kann nicht wiederverwendet werden. Nachdem ein Commit oder ein Rollback für ein <xref:System.Transactions.CommittableTransaction>-Objekt ausgeführt wurde, kann es nicht in einer Transaktion wiederverwendet werden. Das heißt, es kann nicht als aktueller Ambient-Transaktionskontext festgelegt werden.  
+- Ein <xref:System.Transactions.CommittableTransaction>-Objekt kann nicht wiederverwendet werden. Nachdem ein Commit oder ein Rollback für ein <xref:System.Transactions.CommittableTransaction>-Objekt ausgeführt wurde, kann es nicht in einer Transaktion wiederverwendet werden. Das heißt, es kann nicht als aktueller Ambient-Transaktionskontext festgelegt werden.  
   
 ## <a name="creating-a-committabletransaction"></a>Erstellen einer CommittableTransaction  
  Im folgenden Beispiel wird eine neue Instanz von <xref:System.Transactions.CommittableTransaction> erstellt und ein Commit dafür ausgeführt.  

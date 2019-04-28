@@ -3,11 +3,11 @@ title: Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichti
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793626"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
 

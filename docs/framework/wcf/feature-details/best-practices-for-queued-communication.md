@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858077"
 ---
 # <a name="best-practices-for-queued-communication"></a>Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen
 Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Communication Foundation (WCF), in der Warteschlange. In den folgenden Abschnitten werden bewährte Methoden aus der Perspektive eines Szenarios vorgestellt.  
@@ -48,11 +48,11 @@ Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Commu
 ## <a name="achieving-high-throughput"></a>Hoher Durchsatz  
  Verwenden Sie Folgendes, um bei einem einzelnen Endpunkt einen hohen Durchsatz zu erreichen:  
   
--   Transaktive Batchverarbeitung: Bei der transaktiven Batchverarbeitung ist sichergestellt, dass viele Nachrichten in einer einzelnen Transaktion gelesen werden können. Hierdurch werden die Commits für Transaktionen optimiert und die Gesamtleistung verbessert. Nachteil der Batchverarbeitung: Tritt bei einer Nachricht im Batch ein Fehler auf, wird der gesamte Batch zurückgesetzt, und die Nachrichten müssen so lange einzeln verarbeitet werden, bis die Batchverarbeitung wieder sicher aufgenommen werden kann. Da beschädigte Nachrichten in der Regel nur selten auftreten, ist die Batchverarbeitung die bevorzugte Methode, die Systemleistung zu verbessern, insbesondere dann, wenn noch andere Ressourcen-Manager an der Transaktion beteiligt sind. Weitere Informationen finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Transaktive Batchverarbeitung: Bei der transaktiven Batchverarbeitung ist sichergestellt, dass viele Nachrichten in einer einzelnen Transaktion gelesen werden können. Hierdurch werden die Commits für Transaktionen optimiert und die Gesamtleistung verbessert. Nachteil der Batchverarbeitung: Tritt bei einer Nachricht im Batch ein Fehler auf, wird der gesamte Batch zurückgesetzt, und die Nachrichten müssen so lange einzeln verarbeitet werden, bis die Batchverarbeitung wieder sicher aufgenommen werden kann. Da beschädigte Nachrichten in der Regel nur selten auftreten, ist die Batchverarbeitung die bevorzugte Methode, die Systemleistung zu verbessern, insbesondere dann, wenn noch andere Ressourcen-Manager an der Transaktion beteiligt sind. Weitere Informationen finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Parallelität: Parallelität erhöht den Durchsatz, verschärft jedoch auch den Wettstreit um freigegebene Ressourcen. Weitere Informationen finden Sie unter [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Parallelität: Parallelität erhöht den Durchsatz, verschärft jedoch auch den Wettstreit um freigegebene Ressourcen. Weitere Informationen finden Sie unter [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Einschränkung: Schränken Sie die Anzahl der Nachrichten in der Verteilerpipeline ein, um eine optimale Leistung zu erzielen. Ein Beispiel dazu, finden Sie unter [Drosselung](../../../../docs/framework/wcf/samples/throttling.md).  
+- Einschränkung: Schränken Sie die Anzahl der Nachrichten in der Verteilerpipeline ein, um eine optimale Leistung zu erzielen. Ein Beispiel dazu, finden Sie unter [Drosselung](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Beachten Sie bei der Batchverarbeitung, dass Parallelität und Einschränkung zu simultanen Batches führen.  
   
@@ -75,11 +75,11 @@ Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Commu
   
  Beachten Sie bei der Verwendung von `MsmqIntegrationBinding` folgende Punkte:  
   
--   Ein WCF-Nachrichtentext ist nicht identisch mit einem MSMQ-Nachrichtentext. Wenn Sie eine WCF-Nachricht mit einer Bindung in der Warteschlange zu senden, wird der WCF-Nachrichtentext in eine MSMQ-Nachricht platziert. In der MSMQ-Infrastruktur wird diese Zusatzinformation jedoch nicht wahrgenommen, MSMQ sieht lediglich die MSMQ-Nachricht.  
+- Ein WCF-Nachrichtentext ist nicht identisch mit einem MSMQ-Nachrichtentext. Wenn Sie eine WCF-Nachricht mit einer Bindung in der Warteschlange zu senden, wird der WCF-Nachrichtentext in eine MSMQ-Nachricht platziert. In der MSMQ-Infrastruktur wird diese Zusatzinformation jedoch nicht wahrgenommen, MSMQ sieht lediglich die MSMQ-Nachricht.  
   
--   `MsmqIntegrationBinding` unterstützt die gängigen Serialisierungstypen. Je nach Serialisierungstyp nimmt der Texttyp der generischen Nachricht - <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> - unterschiedliche Typparameter an. So ist bei <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> zum Beispiel `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> und bei `MsmqMessage<Stream>` der Parameter erforderlich.  
+- `MsmqIntegrationBinding` unterstützt die gängigen Serialisierungstypen. Je nach Serialisierungstyp nimmt der Texttyp der generischen Nachricht - <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> - unterschiedliche Typparameter an. So ist bei <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> zum Beispiel `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> und bei `MsmqMessage<Stream>` der Parameter erforderlich.  
   
--   Mit XML-Serialisierung, können Sie angeben, den bekannten Typ mithilfe der `KnownTypes` -Attribut für die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element, klicken Sie dann zu bestimmen, wie Deserialisieren die XML-Nachricht verwendet wird.  
+- Mit XML-Serialisierung, können Sie angeben, den bekannten Typ mithilfe der `KnownTypes` -Attribut für die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element, klicken Sie dann zu bestimmen, wie Deserialisieren die XML-Nachricht verwendet wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

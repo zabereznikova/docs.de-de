@@ -3,11 +3,11 @@ title: Benutzerdefinierte Nachrichtenformatierung
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857973"
 ---
 # <a name="custom-message-formatters"></a>Benutzerdefinierte Nachrichtenformatierung
 Der Inhalt einer Nachricht weist häufig das XML-Format auf, also kein gängiges Format für eine Anwendung. Anwendungen bearbeiten Objekte, indem sie ihre Eigenschaften abrufen und festlegen. Windows Communication Foundation (WCF) verwendet die *Datenvertrag* konvertieren eine <xref:System.ServiceModel.Channels.Message> Objekt in ein Objekt, das von einer Anwendung auf einfache Weise verarbeitet. Diese Prozesse werden als Serialisierung und Deserialisierung bezeichnet. Beachten Sie, dass diese Begriffe auch verwendet werden, um die Serialisierung und Deserialisierung einer Transportebene in das bzw. aus dem Nachrichtensendeformat zu beschreiben. Dabei handelt es sich um einen nicht verwandten Prozess.  

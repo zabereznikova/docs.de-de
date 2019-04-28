@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858025"
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
 Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
@@ -37,13 +37,13 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   Bei der Serialisierung wird die durch diese Methode zurückgegebene Zuordnung verwendet, um die ursprüngliche Instanz in eine ersetzte Instanz zu transformieren, indem die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode aufgerufen wird.  
+- Bei der Serialisierung wird die durch diese Methode zurückgegebene Zuordnung verwendet, um die ursprüngliche Instanz in eine ersetzte Instanz zu transformieren, indem die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode aufgerufen wird.  
   
--   Bei der Deserialisierung wird die durch diese Methode zurückgegebene Zuordnung durch das Serialisierungsprogramm verwendet, um die Deserialisierung in eine Instanz des Ersatzzeichentyps durchzuführen. Es ruft anschließend <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> auf, um die ersetzte Instanz in eine Instanz des ursprünglichen Typs zu transformieren.  
+- Bei der Deserialisierung wird die durch diese Methode zurückgegebene Zuordnung durch das Serialisierungsprogramm verwendet, um die Deserialisierung in eine Instanz des Ersatzzeichentyps durchzuführen. Es ruft anschließend <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> auf, um die ersetzte Instanz in eine Instanz des ursprünglichen Typs zu transformieren.  
   
--   Beim Export wird der durch diese Methode zurückgegebene Ersatzzeichentyp reflektiert, um den Datenvertrag zu erhalten, der zur Generierung von Metadaten verwendet werden soll.  
+- Beim Export wird der durch diese Methode zurückgegebene Ersatzzeichentyp reflektiert, um den Datenvertrag zu erhalten, der zur Generierung von Metadaten verwendet werden soll.  
   
--   Beim Import wird der Ausgangstyp in einen Ersatzzeichentyp geändert und reflektiert, um den Datenvertrag, der für Zwecke wie den Support-Verweis verwendet werden soll, zu erhalten.  
+- Beim Import wird der Ausgangstyp in einen Ersatzzeichentyp geändert und reflektiert, um den Datenvertrag, der für Zwecke wie den Support-Verweis verwendet werden soll, zu erhalten.  
   
  Der <xref:System.Type>-Parameter ist der Typ des Objekts, das serialisiert, deserialisiert, importiert oder exportiert wird. Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>-Methode muss den Eingabetyp zurückgeben, wenn das Ersatzzeichen den Typ nicht behandelt. Ansonsten wird der entsprechende Ersatzzeichentyp zurückgegeben. Wenn mehrere Ersatzzeichentypen vorhanden sind, können zahlreiche Zuordnungen in dieser Methode definiert werden.  
   

@@ -3,11 +3,11 @@ title: Filtern
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856699"
 ---
 # <a name="filtering"></a>Filtern
 Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen zu können. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
@@ -36,9 +36,9 @@ Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filt
 ### <a name="endpoint-address-filters"></a>Endpunktadressenfilter  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtert Nachrichten und Nachrichtenpuffer auf Grundlage einer Endpunktadresse entsprechend der Headerauflistung. Damit eine Nachricht einen solchen Filter passieren kann, müssen die folgenden Voraussetzungen erfüllt sein:  
   
--   Der Adress-URI (Uniform Resource Identifier) des Filters muss dem Adress-URI im To-Header der Nachricht entsprechen.  
+- Der Adress-URI (Uniform Resource Identifier) des Filters muss dem Adress-URI im To-Header der Nachricht entsprechen.  
   
--   Jedem Endpunktparameter in der Adresse des Filters (`address.Headers`-Auflistung) muss ein Header in der Nachricht zugeordnet werden können. Auch bei zusätzlichen Headern in der Nachricht oder im Nachrichtenpuffer bleibt die Übereinstimmung `true`.  
+- Jedem Endpunktparameter in der Adresse des Filters (`address.Headers`-Auflistung) muss ein Header in der Nachricht zugeordnet werden können. Auch bei zusätzlichen Headern in der Nachricht oder im Nachrichtenpuffer bleibt die Übereinstimmung `true`.  
   
 ### <a name="prefix-endpoint-address-filters"></a>Präfixfilter für Endpunktadressen  
   
@@ -79,9 +79,9 @@ Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filt
 ### <a name="de-multiplexing"></a>Demultiplexing  
  Falls ein `ServiceListener` auf mehrere Endpunkte verzweigt, gibt es nur eine Möglichkeit, ein Demultiplexing für die Nachrichten durchzuführen und herauszufinden, ob sie zu einer bestimmten Endpunktadresse gehören: Sie müssen mehrere <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> verwenden, die Nachrichten über eine Suche in den im Header gespeicherten Informationen für die registrierten Endpunkte auswählen. In diesen Filtern weisen nur die Nachrichten, die passieren dürfen, die notwendigen Header auf, die den folgenden beiden Punkten entsprechen:  
   
--   dem URI in der `EndpointAddress`  
+- dem URI in der `EndpointAddress`  
   
--   den übrigen Endpunktparametern in der `EndpointAddress`, wie in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> angegeben  
+- den übrigen Endpunktparametern in der `EndpointAddress`, wie in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> angegeben  
   
 ## <a name="see-also"></a>Siehe auch
 

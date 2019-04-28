@@ -3,11 +3,11 @@ title: Übersicht über den erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856725"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
@@ -24,11 +24,11 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
  Der Server kann folgende Sicherheitsstufen aufweisen:  
   
--   Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
+- Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
   
--   Partiell Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
+- Partiell Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
   
--   Vollständig Alle Clients müssen Kanalbindungsinformationen bereitstellen. Authentifizierungsanfragen von Clients, bei denen dies nicht der Fall ist, werden abgewiesen.  
+- Vollständig Alle Clients müssen Kanalbindungsinformationen bereitstellen. Authentifizierungsanfragen von Clients, bei denen dies nicht der Fall ist, werden abgewiesen.  
   
  Weitere Informationen finden Sie im Beispiel zu Win7 CBT/Erweiterter Schutz.  
   

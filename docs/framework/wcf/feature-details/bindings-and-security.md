@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857791"
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
 Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (WCF) bieten eine schnelle Möglichkeit zum Programmieren von WCF-Anwendungen. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
@@ -35,21 +35,21 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Diese Bindung ist für die Verwendung mit vielen verschiedenen vorhandenen Technologien vorgesehen, u. a. mit:  
   
--   ASP.NET-Webdienste (ASMX), Version 1.  
+- ASP.NET-Webdienste (ASMX), Version 1.  
   
--   Webdienststeigerungen (WSE)-Anwendungen.  
+- Webdienststeigerungen (WSE)-Anwendungen.  
   
--   Grundlegendes Profil gemäß der Webdienst-Interoperabilitätsspezifikation (WS-I) Spezifikation (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
+- Grundlegendes Profil gemäß der Webdienst-Interoperabilitätsspezifikation (WS-I) Spezifikation (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
--   Standardsicherheitsprofil gemäß der Definition in WS-I.  
+- Standardsicherheitsprofil gemäß der Definition in WS-I.  
   
  Standardmäßig ist diese Bindung nicht sicher. Sie ist darauf ausgelegt, mit ASMX-Diensten zusammenzuarbeiten. Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services (IIS)-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Hashwert und integrierte Windows-Sicherheit. Weitere Informationen finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Diese Bindung unterstützt Folgendes:  
   
--   HTTPS-Transportsicherheit.  
+- HTTPS-Transportsicherheit.  
   
--   HTTP-Standardauthentifizierung  
+- HTTP-Standardauthentifizierung  
   
--   WS-Sicherheit.  
+- WS-Sicherheit.  
   
  Weitere Informationen finden Sie unter<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>und <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Standardmäßig implementiert diese Bindung die WS-Sicherheitsspezifikation und bietet Interoperabilität mit Diensten, die die WS-*-Spezifikationen implementieren. Sie unterstützt Folgendes:  
   
--   HTTPS-Transportsicherheit.  
+- HTTPS-Transportsicherheit.  
   
--   WS-Sicherheit.  
+- WS-Sicherheit.  
   
--   HTTPS-Transportschutz mit SOAP-Nachrichten-Anmeldeinformationen-Sicherheit zur Authentifizierung des Anrufers.  
+- HTTPS-Transportschutz mit SOAP-Nachrichten-Anmeldeinformationen-Sicherheit zur Authentifizierung des Anrufers.  
   
  Weitere Informationen finden Sie unter <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, und <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
@@ -71,23 +71,23 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Diese Bindung wird entworfen, um Duplexdienstanwendungen zu aktivieren. Diese Bindung implementiert die WS-Sicherheitsspezifikation für nachrichtenbasierte Übertragungssicherheit. Transportsicherheit ist nicht verfügbar. Standardmäßig gibt es die folgenden Funktionen:  
   
--   Implementiert WS-Reliable Messaging für Zuverlässigkeit.  
+- Implementiert WS-Reliable Messaging für Zuverlässigkeit.  
   
--   Implementiert WS-Sicherheit für die Übertragungssicherheit und zur Authentifizierung.  
+- Implementiert WS-Sicherheit für die Übertragungssicherheit und zur Authentifizierung.  
   
--   Verwendet HTTP zur Nachrichtenübermittlung.  
+- Verwendet HTTP zur Nachrichtenübermittlung.  
   
--   Verwendet Text/XML-Nachrichtencodierung.  
+- Verwendet Text/XML-Nachrichtencodierung.  
   
  Beim Verwenden von WS-Sicherheit (Nachrichtenebenen-Sicherheit) ermöglicht die Bindung die Konfiguration der folgenden Parameter:  
   
--   der Sicherheitsalgorithmus-Suite, um den Kryptografiesatz zu bestimmen.  
+- der Sicherheitsalgorithmus-Suite, um den Kryptografiesatz zu bestimmen.  
   
--   Bindungsoptionen für Folgendes:  
+- Bindungsoptionen für Folgendes:  
   
-    -   die Bereitstellung von Dienstanmeldeinformationen, die beim Client Out-of-Band verfügbar sind.  
+    - die Bereitstellung von Dienstanmeldeinformationen, die beim Client Out-of-Band verfügbar sind.  
   
-    -   die Bereitstellung von vom Dienst als Teil des Kanal-Setups ausgehandelten Dienstanmeldeinformationen.  
+    - die Bereitstellung von vom Dienst als Teil des Kanal-Setups ausgehandelten Dienstanmeldeinformationen.  
   
  Weitere Informationen finden Sie unter <xref:System.ServiceModel.WSDualHttpSecurity> und <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
@@ -96,21 +96,21 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Diese Bindung ist für die computerübergreifende Kommunikation optimiert. Standardmäßig besitzt sie folgende Eigenschaften:  
   
--   Implementiert Transport Layer Security.  
+- Implementiert Transport Layer Security.  
   
--   Setzt Windows-Sicherheit für die Übertragungssicherheit und zur Authentifizierung ein.  
+- Setzt Windows-Sicherheit für die Übertragungssicherheit und zur Authentifizierung ein.  
   
--   Verwendet TCP für Transport.  
+- Verwendet TCP für Transport.  
   
--   Implementiert binäre Nachrichtencodierung.  
+- Implementiert binäre Nachrichtencodierung.  
   
--   Implementiert WS-Reliable Messaging.  
+- Implementiert WS-Reliable Messaging.  
   
  Es gibt folgende Optionen:  
   
--   Nachrichtenebenen-Sicherheit (über WS-Sicherheit).  
+- Nachrichtenebenen-Sicherheit (über WS-Sicherheit).  
   
--   Transportsicherheit mit Nachrichtenanmeldeinformationen: Vertraulichkeit und Integrität werden über Transport Layer Security (TLS) über TCP geboten und die Anmeldeinformationen für die Authentifizierung über WS-Sicherheit.  
+- Transportsicherheit mit Nachrichtenanmeldeinformationen: Vertraulichkeit und Integrität werden über Transport Layer Security (TLS) über TCP geboten und die Anmeldeinformationen für die Authentifizierung über WS-Sicherheit.  
   
  Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, und <xref:System.ServiceModel.MessageCredentialType>.  
   
@@ -119,17 +119,17 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Diese Bindung ist für prozessübergreifende Kommunikation (normalerweise auf dem gleichen Computer) optimiert. Standardmäßig besitzt diese Bindung folgende Eigenschaften:  
   
--   Verwendet Transportsicherheit für die Nachrichtenübertragung und zur Authentifizierung.  
+- Verwendet Transportsicherheit für die Nachrichtenübertragung und zur Authentifizierung.  
   
--   Verwendet Named Pipes zur Nachrichtenübermittlung.  
+- Verwendet Named Pipes zur Nachrichtenübermittlung.  
   
--   Implementiert binäre Nachrichtencodierung.  
+- Implementiert binäre Nachrichtencodierung.  
   
--   Verschlüsselung und Nachrichtensignierung.  
+- Verschlüsselung und Nachrichtensignierung.  
   
  Es gibt folgende Optionen:  
   
--   Authentifizierung über Windows-Sicherheit.  
+- Authentifizierung über Windows-Sicherheit.  
   
  Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> und <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
@@ -140,9 +140,9 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:  
   
--   Sicherheit kann deaktiviert werden (Keine).  
+- Sicherheit kann deaktiviert werden (Keine).  
   
--   MSMQ-Transportsicherheit (Transport).  
+- MSMQ-Transportsicherheit (Transport).  
   
  Weitere Informationen finden Sie unter <xref:System.ServiceModel.NetMsmqSecurity> und <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
@@ -153,15 +153,15 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
  Standardmäßig verwendet diese Bindung Transportsicherheit und stellt die folgenden Sicherheitseigenschaften bereit:  
   
--   Sicherheit kann deaktiviert werden (Keine).  
+- Sicherheit kann deaktiviert werden (Keine).  
   
--   MSMQ-Transportsicherheit (Transport).  
+- MSMQ-Transportsicherheit (Transport).  
   
--   SOAP-basierte Nachrichtensicherheit (Nachricht).  
+- SOAP-basierte Nachrichtensicherheit (Nachricht).  
   
--   Gleichzeitige Transport- und Nachrichtensicherheit (Beides).  
+- Gleichzeitige Transport- und Nachrichtensicherheit (Beides).  
   
--   Unterstützte Typen von Clientanmeldeinformationen: Keine, Windows, UserName, Zertifikat, IssuedToken.  
+- Unterstützte Typen von Clientanmeldeinformationen: Keine, Windows, UserName, Zertifikat, IssuedToken.  
   
  Die <xref:System.ServiceModel.MessageCredentialType.Certificate>-Anmeldeinformationen werden nur unterstützt, wenn der Sicherheitsmodus entweder auf <xref:System.ServiceModel.NetMsmqSecurityMode.Both> oder auf <xref:System.ServiceModel.NetMsmqSecurityMode.Message> festgelegt ist.  
   
