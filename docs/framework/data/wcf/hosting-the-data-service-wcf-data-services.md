@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765572"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
 Sie können mithilfe von WCF Data Services, einen Dienst, der macht Daten als Erstellen einer [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität erforderlich, um Anforderungsnachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwortnachrichten zu generieren, als OData erforderlich. Allerdings kann kein Datendienst zu binden und netzwerksockets für eingehende HTTP-Anforderungen lauschen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
 
  Der Datendiensthost führt die folgenden Aufgaben im Namen des Datendiensts aus:
 
--   Lauscht auf Anforderungen und leitet diese an den Datendienst weiter.
+- Lauscht auf Anforderungen und leitet diese an den Datendienst weiter.
 
--   Erstellt für jede Anforderung eine Instanz des Datendiensts.
+- Erstellt für jede Anforderung eine Instanz des Datendiensts.
 
--   Fordert an, dass der Datendienst die eingehende Anforderung verarbeitet.
+- Fordert an, dass der Datendienst die eingehende Anforderung verarbeitet.
 
--   Sendet die Antwort im Namen des Datendiensts.
+- Sendet die Antwort im Namen des Datendiensts.
 
  WCF Data Services dient zum Hosten eines Datendiensts zu vereinfachen, mit der Windows Communication Foundation (WCF) integriert. Der Datendienst stellt eine WCF-Standardimplementierung, die als Datendiensthost in dient eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendung. Daher können Sie einen Datendienst in einer der folgenden Methoden hosten:
 
--   In einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendung.
+- In einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendung.
 
--   In einer verwalteten Anwendung, die selbst gehostete WCF-Dienste unterstützt.
+- In einer verwalteten Anwendung, die selbst gehostete WCF-Dienste unterstützt.
 
--   In einem anderen benutzerdefinierten Datendiensthost.
+- In einem anderen benutzerdefinierten Datendiensthost.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosten eines Datendiensts in einer ASP.NET-Anwendung
 
@@ -65,13 +65,13 @@ Bei Verwendung der **neues Element hinzufügen** Dialogfeld in Visual Studio 201
 ## <a name="defining-a-custom-data-service-host"></a>Definieren eines benutzerdefinierten Datendiensthosts
  Wenn die WCF-Hostimplementierung zu restriktiv ist, können Sie für einen Datendienst auch einen benutzerdefinierten Host definieren. Alle Klassen, die eine <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren, können für einen Datendienst als Netzwerkhost verwendet werden. Ein benutzerdefinierter Host muss die <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren und in der Lage sein, die folgenden grundlegenden Aufgaben des Datendiensthosts zu übernehmen:
 
--   Bereitstellen des Dienststammpfads für den Datendienst
+- Bereitstellen des Dienststammpfads für den Datendienst
 
--   Verarbeiten der Anforderungs- und Antwortheaderinformationen für die entsprechende <xref:System.Data.Services.IDataServiceHost>-Memberimplementierung
+- Verarbeiten der Anforderungs- und Antwortheaderinformationen für die entsprechende <xref:System.Data.Services.IDataServiceHost>-Memberimplementierung
 
--   Behandeln der vom Datendienst ausgelösten Ausnahmen
+- Behandeln der vom Datendienst ausgelösten Ausnahmen
 
--   Überprüfen der Parameter in der Abfragezeichenfolge
+- Überprüfen der Parameter in der Abfragezeichenfolge
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
 ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857102"
 ---
 # <a name="data-contract-serializer"></a>Data Contract Serializer
 Die Windows Communication Foundation (WCF)-Infrastruktur verwendet die <xref:System.Runtime.Serialization.DataContractSerializer> -Klasse als Standardserialisierungsprogramm. Die Themen in diesem Abschnitt enthalten weitere Informationen über deren Verwendung als eigenständiges Serialisierungsprogramm.  

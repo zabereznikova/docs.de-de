@@ -3,32 +3,32 @@ title: SAML-Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787503"
 ---
 # <a name="saml-token-provider"></a>SAML-Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) Dient zum Angeben von Anmeldeinformationen, um der Sicherheitsinfrastruktur. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Außerdem Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
 
--   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.
+- Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.
 
--   Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.
+- Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.
 
--   Wenn Sie ein benutzerdefiniertes Token erstellen.
+- Wenn Sie ein benutzerdefiniertes Token erstellen.
 
  Dieses Beispiel zeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen, der einem SAML-Token von außerhalb des WCF-Client-Frameworks verwendet werden können.
 
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:
 
--   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.
+- Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.
 
--   Wie ein SAML-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.
+- Wie ein SAML-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.
 
--   Wie wird das SAML-Token für die WCF-Clientframework bereitgestellt.
+- Wie wird das SAML-Token für die WCF-Clientframework bereitgestellt.
 
--   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
+- Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
 
  Der Dienst macht zwei Endpunkte zur Kommunikation mit dem Dienst verfügbar, die mit der Konfigurationsdatei "App.conf" definiert werden. Jeder Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsFederationHttpBinding` konfiguriert, die Nachrichtensicherheit verwendet. Ein Endpunkt erwartet, dass der Client sich mit einem SAML-Token authentifiziert, das einen symmetrischen Prüfschlüssel verwendet, während der andere erwartet, dass sich der Client mit einem SAML-Token authentifiziert, das einen asymmetrischen Prüfschlüssel verwendet. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `serviceCredentials`-Verhalten können Sie ein Dienstzertifikat erstellen. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird (in den Setupanweisungen am Ende dieses Themas beschrieben). Das `serviceCredentials`-Verhalten ermöglicht es Ihnen außerdem, Zertifikate zu konfigurieren, die die Befugnis zum signieren von SAML-Token haben. Die folgende Konfiguration verweist auf das im Beispiel installierte Zertifikat "Alice".
 
@@ -303,7 +303,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.
 
--   Erstellen des Serverzertifikats
+- Erstellen des Serverzertifikats
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert in dieser Batchdatei lautet localhost.
 
@@ -319,7 +319,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:
+- Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
@@ -327,7 +327,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Erstellen des Herausgeberzertifikats.
+- Erstellen des Herausgeberzertifikats.
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Herausgeberzertifikat erstellt. Die Variable `%USER_NAME%` gibt den Herausgebernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Herausgebernamen an. Der Standardwert in dieser Batchdatei lautet "Alice".
 
@@ -343,7 +343,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Herausgeberzertifikats im Speicher für vertrauenswürdige Zertifikate des Servers.
+- Installieren des Herausgeberzertifikats im Speicher für vertrauenswürdige Zertifikate des Servers.
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Serverzertifikatspeichers mit dem Herausgeberzertifikat nicht erforderlich.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
 ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801802"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Mehr Sicherheit beim Drucken in Windows Forms
 Windows Forms-Anwendungen umfassen häufig drucken Fähigkeiten. Die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] verwendet die <xref:System.Drawing.Printing.PrintingPermission> Klasse zum Steuern des Zugriffs auf Funktionen zum Drucken und den zugehörigen <xref:System.Drawing.Printing.PrintingPermissionLevel> Enumerationswert, der die Ebene des Zugriffs angibt. Drucken ist standardmäßig in der lokalen Intranetzone und Zonen standardmäßig aktiviert; die Zugriffsebene ist jedoch in beiden Zonen beschränkt. Ob Ihre Anwendung gedruckt werden kann, muss der Benutzer eingreifen, oder kann nicht drucken hängt von der Berechtigungswert, der für die Anwendung gewährt. Standardmäßig erhält die lokale Intranetzone <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> Zugriff und der Intranetzone empfängt <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> Zugriff.  

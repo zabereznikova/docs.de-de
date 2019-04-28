@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
 ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803326"
 ---
 # <a name="error-creating-win32-resources-error-message"></a>Fehler beim Erstellen von Win32-Ressourcen: \<Fehlermeldung >
 Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren. Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet. Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.  

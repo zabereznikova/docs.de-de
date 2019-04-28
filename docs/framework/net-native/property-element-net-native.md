@@ -5,11 +5,11 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866768"
 ---
 # <a name="property-element-net-native"></a>\<Eigenschaft > (Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.  
@@ -81,9 +81,9 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
  Das Kompilieren und Ausführen dieses Beispiels löst jedoch eine [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)-Ausnahme aus. Obwohl wir Metadaten für den `Book`-Typ verfügbar gemacht haben, haben wir keine Implementierungen der Eigenschaftengetter dynamisch zur Verfügung gestellt. Wir können diesen Fehler auf eine von zwei Arten beheben:  
   
--   Durch Definieren der `Dynamic`-Richtlinie für den `Book`-Typ in dessen [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Element.  
+- Durch Definieren der `Dynamic`-Richtlinie für den `Book`-Typ in dessen [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Element.  
   
--   Durch Hinzufügen eines verschachtelten [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)-Elements für jede Eigenschaft, deren Getter wir wie in der folgenden Datei „default.rd.xml“ aufrufen möchten.  
+- Durch Hinzufügen eines verschachtelten [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)-Elements für jede Eigenschaft, deren Getter wir wie in der folgenden Datei „default.rd.xml“ aufrufen möchten.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

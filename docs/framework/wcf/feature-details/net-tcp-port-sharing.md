@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762751"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkprotokoll (net.tcp://) für hochleistungskommunikation. WCF stellt auch eine neue Systemkomponente, die Net.TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkpro
 ## <a name="port-sharing-architecture"></a>Architektur der Anschlussfreigabe  
  Die anschlussfreigabearchitektur in WCF umfasst drei Hauptkomponenten:  
   
--   Ein Arbeitsprozess: Jeder Prozess über freigegebener Anschlüsse über net.tcp:// kommuniziert.  
+- Ein Arbeitsprozess: Jeder Prozess über freigegebener Anschlüsse über net.tcp:// kommuniziert.  
   
--   Der WCF-TCP-Transport: Implementiert das net.tcp://-Protokoll.  
+- Der WCF-TCP-Transport: Implementiert das net.tcp://-Protokoll.  
   
--   Der Net.TCP-Portfreigabedienst: Ermöglicht mehreren Arbeitsprozessen, die den gleichen TCP-Port verwenden.  
+- Der Net.TCP-Portfreigabedienst: Ermöglicht mehreren Arbeitsprozessen, die den gleichen TCP-Port verwenden.  
   
  Der Net.TCP-Portfreigabedienst ist ein Windows-Dienst im Benutzermodus, der net.tcp://-Verbindungen im Namen von Arbeitsprozessen akzeptiert, die sich über ihn verbinden. Wenn eine Socketverbindung ankommt, untersucht der Portfreigabedienst den eingehenden Nachrichtenstrom, um dessen Zieladresse zu erhalten. Basierend auf dieser Adresse kann der Portfreigabedienst den Datenstrom zu der Anwendung weiterleiten, die ihn letztendlich verarbeitet.  
   

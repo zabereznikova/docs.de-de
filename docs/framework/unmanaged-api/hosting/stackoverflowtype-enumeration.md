@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8541ea7b614ff4a6ca666f0e2549a7f50e190192
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777961"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType-Enumeration
 Enthält Werte, die angeben, die zugrunde liegende Ursache für ein Stack Overflow-Ereignis.  

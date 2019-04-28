@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792833"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
 In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche Ressourcen eine authentifizierte Identität zugreifen und welche Vorgänge sie mit diesen Ressourcen ausführen darf. Eine falsche oder schwache Autorisierung führt zu Offenlegung von Informationen und Datenmanipulation. In diesem Thema werden die verfügbaren Methoden zum Implementieren der Autorisierung für Ansprüche unterstützende ASP.NET-Webanwendungen und -Dienste mit Windows Identity Foundation (WIF) und einem Sicherheitstokendienst (STS) wie Microsoft Azure-Zugriffssteuerungsdienst (ACS) beschrieben.  
@@ -25,13 +25,13 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole-Methode  
  Um den RBAC-Ansatz in Ansprüche unterstützende Anwendungen zu implementieren, verwenden Sie die **IsInRole()**-Methode in der **IPrinicpal**-Schnittstelle auf die gleiche Weise wie für Anwendungen, die keine Ansprüche unterstützen. Es gibt mehrere Möglichkeiten für den Einsatz der **IsInRole()**-Methode:  
   
--   Explizites Aufrufen von **IPrincipal.IsInRole("Administrator")**. Das Ergebnis dieser Methode ist ein boolescher Wert. Verwenden Sie diese Methode in Bedingungsanweisungen. Sie kann an einer beliebigen Stelle im Code verwendet werden.  
+- Explizites Aufrufen von **IPrincipal.IsInRole("Administrator")**. Das Ergebnis dieser Methode ist ein boolescher Wert. Verwenden Sie diese Methode in Bedingungsanweisungen. Sie kann an einer beliebigen Stelle im Code verwendet werden.  
   
--   Verwenden der Sicherheitsforderung **PrincipalPermission.Demand()**. In diesem Ansatz ist das Ergebnis eine Ausnahme, falls die Anforderung nicht erfüllt wird. Der Ansatz sollte zu Ihrer Ausnahmebehandlungsstrategie passen. Das Auslösen von Ausnahmen ist bezogen auf die Leistung im Vergleich zur Deaktivierung des booleschen Werts wesentlich nachteiliger. Dieser Ansatz kann an jeder beliebigen Stelle im Code verwendet werden.  
+- Verwenden der Sicherheitsforderung **PrincipalPermission.Demand()**. In diesem Ansatz ist das Ergebnis eine Ausnahme, falls die Anforderung nicht erfüllt wird. Der Ansatz sollte zu Ihrer Ausnahmebehandlungsstrategie passen. Das Auslösen von Ausnahmen ist bezogen auf die Leistung im Vergleich zur Deaktivierung des booleschen Werts wesentlich nachteiliger. Dieser Ansatz kann an jeder beliebigen Stelle im Code verwendet werden.  
   
--   Verwenden deklarativer Attribute **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Dieser Ansatz wird als deklarativ bezeichnet, da er verwendet wird, um Methoden zu ergänzen. Er kann nicht in den Codeblöcken innerhalb der Implementierungen der Methode verwendet werden. Das Ergebnis ist eine Ausnahme, falls die Anforderung nicht erfüllt wird. Sie sollten überprüfen, ob dieser Ansatz Ihrer Ausnahmebehandlungsstrategie entspricht.  
+- Verwenden deklarativer Attribute **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Dieser Ansatz wird als deklarativ bezeichnet, da er verwendet wird, um Methoden zu ergänzen. Er kann nicht in den Codeblöcken innerhalb der Implementierungen der Methode verwendet werden. Das Ergebnis ist eine Ausnahme, falls die Anforderung nicht erfüllt wird. Sie sollten überprüfen, ob dieser Ansatz Ihrer Ausnahmebehandlungsstrategie entspricht.  
   
--   Verwenden der URL-Autorisierung mithilfe des **\<Autorisierung>**-Abschnitts in **web.config**. Dieser Ansatz ist geeignet, wenn Sie die Autorisierung auf URL-Ebene verwalten. Dies ist von allen bisher erwähnten Ebenen die gröbste Ebene. Der Vorteil dieser Methode ist, dass Änderungen in der Konfigurationsdatei vorgenommen werden, d. h., dass der Code nicht kompiliert werden sollte, um von der Änderung zu profitieren.  
+- Verwenden der URL-Autorisierung mithilfe des **\<Autorisierung>**-Abschnitts in **web.config**. Dieser Ansatz ist geeignet, wenn Sie die Autorisierung auf URL-Ebene verwalten. Dies ist von allen bisher erwähnten Ebenen die gröbste Ebene. Der Vorteil dieser Methode ist, dass Änderungen in der Konfigurationsdatei vorgenommen werden, d. h., dass der Code nicht kompiliert werden sollte, um von der Änderung zu profitieren.  
   
 ### <a name="expressing-roles-as-claims"></a>Ausdrücken von Rollen als Ansprüche  
  Wenn die **IsInRole()**-Methode aufgerufen wird, wird eine Prüfung durchgeführt, um festzustellen, ob der aktuelle Benutzer diese Rolle besitzt. In den Ansprüche unterstützenden Anwendungen wird die Rolle durch einen Rollenanspruchstyp ausgedrückt, der im Token verfügbar sein soll. Der Rollenanspruchstyp wird mithilfe des folgenden URI ausgedrückt:  
@@ -40,11 +40,11 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
   
  Es gibt mehrere Möglichkeiten, ein Token mit einem Rollenanspruchstyp zu erweitern:  
   
--   **Während der Tokenausstellung**. Wenn ein Benutzer authentifiziert wird, kann der Rollenanspruch vom Identitätsanbieter-STS oder von einem Verbundanbieter wie dem Microsoft Azure-Zugriffssteuerungsdienst (ACS) ausgegeben werden.  
+- **Während der Tokenausstellung**. Wenn ein Benutzer authentifiziert wird, kann der Rollenanspruch vom Identitätsanbieter-STS oder von einem Verbundanbieter wie dem Microsoft Azure-Zugriffssteuerungsdienst (ACS) ausgegeben werden.  
   
--   **Transformieren beliebiger Ansprüche mit ClaimsAuthenticationManager in einen Anspruchsrollentyp**. ClaimsAuthenticationManager ist eine Komponente, die im Lieferumfang von WIF enthalten ist. Sie ermöglicht ein Abfangen von Anforderungen, wenn diese eine Anwendung starten. Dabei werden Token überprüft und transformiert, indem Ansprüche hinzugefügt, geändert oder entfernt werden. Weitere Informationen zur Verwendung von ClaimsAuthenticationManager zum Transformieren von Ansprüchen finden Sie unter [so wird's gemacht: Implementieren rollenbasierte Zugriffssteuerung (RBAC) in einer Claims Aware ASP.NET-Anwendung mithilfe von WIF und ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+- **Transformieren beliebiger Ansprüche mit ClaimsAuthenticationManager in einen Anspruchsrollentyp**. ClaimsAuthenticationManager ist eine Komponente, die im Lieferumfang von WIF enthalten ist. Sie ermöglicht ein Abfangen von Anforderungen, wenn diese eine Anwendung starten. Dabei werden Token überprüft und transformiert, indem Ansprüche hinzugefügt, geändert oder entfernt werden. Weitere Informationen zur Verwendung von ClaimsAuthenticationManager zum Transformieren von Ansprüchen finden Sie unter [so wird's gemacht: Implementieren rollenbasierte Zugriffssteuerung (RBAC) in einer Claims Aware ASP.NET-Anwendung mithilfe von WIF und ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
--   **Zuordnen von beliebigen Ansprüchen zu einem Rollentyp mithilfe des samlSecurityTokenRequirement-Konfigurationsabschnitts**. Dies ist ein deklarativer Ansatz, bei dem die Anspruchstransformation nur mithilfe der Konfiguration durchgeführt wird. Eine Codierung ist nicht erforderlich.  
+- **Zuordnen von beliebigen Ansprüchen zu einem Rollentyp mithilfe des samlSecurityTokenRequirement-Konfigurationsabschnitts**. Dies ist ein deklarativer Ansatz, bei dem die Anspruchstransformation nur mithilfe der Konfiguration durchgeführt wird. Eine Codierung ist nicht erforderlich.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>Anspruchsbasierte Autorisierung  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791429"
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
 Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. In diesem Thema wird erläutert, die Windows Communication Foundation (WCF)-Funktion und wie es funktioniert.  
@@ -26,33 +26,33 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
 ## <a name="basics"></a>Grundlagen  
  Um die Schutzebenenfunktion zu verstehen, sind die folgenden grundlegenden Anweisungen wichtig:  
   
--   Drei grundlegende Ebenen des Schutzes sind für jeden Teil einer Nachricht vorhanden. Die Eigenschaft wird (bei jedem Auftreten) auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt. In aufsteigender Reihenfolge des Schutzes umfassen sie:  
+- Drei grundlegende Ebenen des Schutzes sind für jeden Teil einer Nachricht vorhanden. Die Eigenschaft wird (bei jedem Auftreten) auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt. In aufsteigender Reihenfolge des Schutzes umfassen sie:  
   
-    -   `None`.  
+    - `None`.  
   
-    -   `Sign`. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
+    - `Sign`. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
   
-    -   `EncryptAndSign`. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
+    - `EncryptAndSign`. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
   
--   Sie können schutzanforderungen nur für festlegen *Anwendungsdaten* mit diesem Feature. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.  
+- Sie können schutzanforderungen nur für festlegen *Anwendungsdaten* mit diesem Feature. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.  
   
--   Wenn der Sicherheitsmodus auf `Transport` festgelegt wird, wird die ganze Nachricht vom Transportmechanismus geschützt. Deshalb hat das Festlegen einer separaten Schutzebene für andere Teile einer Nachricht keine Auswirkungen.  
+- Wenn der Sicherheitsmodus auf `Transport` festgelegt wird, wird die ganze Nachricht vom Transportmechanismus geschützt. Deshalb hat das Festlegen einer separaten Schutzebene für andere Teile einer Nachricht keine Auswirkungen.  
   
--   Die `ProtectionLevel` ist eine Möglichkeit für Entwickler zum Festlegen der *Mindestebene* , die eine Bindung mit erfüllen muss. Beim Bereitstellen eines Diensts kann die tatsächliche in der Konfiguration angegebene Bindung die Mindestebene unterstützen oder nicht. Standardmäßig stellt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse keine Sicherheit bereit (diese kann allerdings aktiviert werden). Die Verwendung dieser Klasse in Verbindung mit einem Vertrag, der eine andere Einstellung als `None` hat, löst eine Ausnahme aus.  
+- Die `ProtectionLevel` ist eine Möglichkeit für Entwickler zum Festlegen der *Mindestebene* , die eine Bindung mit erfüllen muss. Beim Bereitstellen eines Diensts kann die tatsächliche in der Konfiguration angegebene Bindung die Mindestebene unterstützen oder nicht. Standardmäßig stellt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse keine Sicherheit bereit (diese kann allerdings aktiviert werden). Die Verwendung dieser Klasse in Verbindung mit einem Vertrag, der eine andere Einstellung als `None` hat, löst eine Ausnahme aus.  
   
--   Wenn der Dienst erfordert, dass die minimale `ProtectionLevel` ist für alle Nachrichten `Sign`, ein Client (z. B. durch eine nicht-WCF-Technologie erstellt) kann verschlüsseln und signieren Sie alle Nachrichten (Dies ist mehr als das Minimum erforderlich). WCF in diesem Fall wird eine Ausnahme nicht ausgelöst, da der Client mehr als das Minimum durchgeführt hat. Beachten Sie jedoch, dass WCF-Anwendungen (Dienste oder Clients) nicht übermäßig, einen Teil der Nachricht, wenn möglich schützen, sondern die Mindestebene einhalten. Außerdem ist zu beachten, dass der Transport den Nachrichtenstrom bei Verwendung von `Transport` als Sicherheitsmodus übermäßig schützt, da in diesem Fall ein Schutz auf niedrigerer Ebene nicht möglich ist.  
+- Wenn der Dienst erfordert, dass die minimale `ProtectionLevel` ist für alle Nachrichten `Sign`, ein Client (z. B. durch eine nicht-WCF-Technologie erstellt) kann verschlüsseln und signieren Sie alle Nachrichten (Dies ist mehr als das Minimum erforderlich). WCF in diesem Fall wird eine Ausnahme nicht ausgelöst, da der Client mehr als das Minimum durchgeführt hat. Beachten Sie jedoch, dass WCF-Anwendungen (Dienste oder Clients) nicht übermäßig, einen Teil der Nachricht, wenn möglich schützen, sondern die Mindestebene einhalten. Außerdem ist zu beachten, dass der Transport den Nachrichtenstrom bei Verwendung von `Transport` als Sicherheitsmodus übermäßig schützt, da in diesem Fall ein Schutz auf niedrigerer Ebene nicht möglich ist.  
   
--   Wenn Sie `ProtectionLevel` ausdrücklich entweder auf `Sign` oder `EncryptAndSign` festlegen, müssen Sie eine Bindung mit aktivierter Sicherheit verwenden. Andernfalls wird eine Ausnahme ausgelöst.  
+- Wenn Sie `ProtectionLevel` ausdrücklich entweder auf `Sign` oder `EncryptAndSign` festlegen, müssen Sie eine Bindung mit aktivierter Sicherheit verwenden. Andernfalls wird eine Ausnahme ausgelöst.  
   
--   Wählen Sie eine Bindung aus, die Sicherheit aktiviert, und legen Sie im Vertrag keine `ProtectionLevel`-Eigenschaft fest, werden alle Daten verschlüsselt und signiert.  
+- Wählen Sie eine Bindung aus, die Sicherheit aktiviert, und legen Sie im Vertrag keine `ProtectionLevel`-Eigenschaft fest, werden alle Daten verschlüsselt und signiert.  
   
--   Wählen Sie eine Bindung aus, für die keine Sicherheit aktiviert wurde (für die `BasicHttpBinding`-Klasse ist die Sicherheit beispielsweise standardmäßig deaktiviert) und für die `ProtectionLevel` nicht ausdrücklich festgelegt ist, werden keine Anwendungsdaten geschützt.  
+- Wählen Sie eine Bindung aus, für die keine Sicherheit aktiviert wurde (für die `BasicHttpBinding`-Klasse ist die Sicherheit beispielsweise standardmäßig deaktiviert) und für die `ProtectionLevel` nicht ausdrücklich festgelegt ist, werden keine Anwendungsdaten geschützt.  
   
--   Bei Verwendung einer Bindung, die Sicherheit auf der Transportebene anwendet, werden alle Anwendungsdaten den Transportfunktionen entsprechend geschützt.  
+- Bei Verwendung einer Bindung, die Sicherheit auf der Transportebene anwendet, werden alle Anwendungsdaten den Transportfunktionen entsprechend geschützt.  
   
--   Wenn Sie eine Bindung verwenden, die die Sicherheit auf der Nachrichtenebene anwendet, werden alle Anwendungsdaten den im Vertrag festgelegten Schutzebenen entsprechend geschützt. Wenn Sie keine Schutzebene festlegen, werden alle Anwendungsdaten in den Nachrichten verschlüsselt und signiert.  
+- Wenn Sie eine Bindung verwenden, die die Sicherheit auf der Nachrichtenebene anwendet, werden alle Anwendungsdaten den im Vertrag festgelegten Schutzebenen entsprechend geschützt. Wenn Sie keine Schutzebene festlegen, werden alle Anwendungsdaten in den Nachrichten verschlüsselt und signiert.  
   
--   `ProtectionLevel` kann auf anderen bewertenden Ebenen festgelegt werden. Dem Bewerten ist eine Hierarchie zugeordnet. Diese wird im nächsten Abschnitt erklärt.  
+- `ProtectionLevel` kann auf anderen bewertenden Ebenen festgelegt werden. Dem Bewerten ist eine Hierarchie zugeordnet. Diese wird im nächsten Abschnitt erklärt.  
   
 ## <a name="scoping"></a>Bewerten  
  Durch Festlegen von `ProtectionLevel` auf der obersten API wird die Ebene für alle untergeordneten Ebenen festgelegt. Wenn `ProtectionLevel` auf einer untergeordneten Ebene auf einen anderen Wert festgelegt ist, werden alle APIs unterhalb dieser Ebene in der Hierarchie auf die neue Ebene geändert (APIs oberhalb dieser Ebene richten sich nach wie vor nach der obersten Ebene). Die Hierarchie lautet wie folgt. Attribute auf der gleichen Ebene sind Peers.  

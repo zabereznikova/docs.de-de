@@ -5,42 +5,42 @@ helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
 ms.openlocfilehash: bd9a8b7faf3cd7a648ff6b2a50ac68f21561497c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766908"
 ---
 # <a name="claim-creation-and-resource-values"></a>Erstellen von Ansprüchen und Ressourcenwerte
 Die <xref:System.IdentityModel.Claims.Claim>-Klasse bietet mehrere Methoden zum Erstellen von Instanzen von integrierten Anspruchstypen. Von diesen Methoden führen die folgenden keine semantische Prüfung oder Formatüberprüfung für die angegebene Ressource aus:  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)  
+- <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)  
+- <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (überprüft die Länge oder den Inhalt des Bytearrays nicht)  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
  Gehen Sie beim Aufrufen der oben beschriebenen Methoden äußerst sorgfältig vor, um sicherzustellen, dass die übergebenen Ressourcenwerte das richtige Format aufweisen oder die richtigen Informationen enthalten (oder beides).  
   
  Die folgenden Methoden werden mit bestimmten Typen verwendet:  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateMailAddressClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateMailAddressClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateRsaClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateRsaClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateUriClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateUriClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateWindowsSidClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateWindowsSidClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
+- <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
 ## <a name="see-also"></a>Siehe auch
 

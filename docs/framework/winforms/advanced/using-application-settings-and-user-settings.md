@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777181"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Verwenden von Anwendungseinstellungen und Benutzereinstellungen
 Ab .NET Framework 2.0, können Sie erstellen und Zugriff auf Werte, die zwischen anwendungsausführungssitzungen beibehalten werden. Diese Werte werden als bezeichnet *Einstellungen*. Einstellungen können benutzereinstellungen darstellen, oder wertvolle Informationen, die Anwendung verwenden muss. Sie können z. B. eine Reihe von Einstellungen erstellen, die benutzereinstellungen für das Farbschema einer Anwendung zu speichern. Oder Sie können die Verbindungszeichenfolge, die eine Datenbank angibt, die Ihre Anwendung verwendet möglicherweise speichern. Einstellungen können, dass Sie sowohl Informationen beibehalten, die wichtig für die Anwendung außerhalb des Codes, und klicken Sie zum Erstellen von Profilen, in denen die Einstellungen einzelner Benutzer gespeichert ist.  

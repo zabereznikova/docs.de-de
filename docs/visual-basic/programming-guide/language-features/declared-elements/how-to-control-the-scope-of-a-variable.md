@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794731"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen (Visual Basic)
 In der Regel wird eine Variable *Bereich*, oder als Referenz in der Region, in dem Sie wurde deklariert, sichtbar. In einigen Fällen die Variable des *Zugriffsebene* können ihren Bereich beeinflussen.  
@@ -28,13 +28,13 @@ In der Regel wird eine Variable *Bereich*, oder als Referenz in der Region, in d
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Um eine Variable nur innerhalb eines Blocks sichtbar zu machen  
   
--   Ort der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) für die Variable zwischen der initiiert und beendet die deklarationsanweisungen dieses Blocks, z. B. zwischen den `For` und `Next` Anweisungen eine `For` Schleife.  
+- Ort der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) für die Variable zwischen der initiiert und beendet die deklarationsanweisungen dieses Blocks, z. B. zwischen den `For` und `Next` Anweisungen eine `For` Schleife.  
   
      Sie können auf die Variable nur von innerhalb des Blocks verweisen.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Um eine Variable nur innerhalb einer Prozedur sichtbar zu machen  
   
--   Ort der `Dim` -Anweisung für die Variable in der Prozedur, aber außerhalb aller Blöcke (z. B. eine `With`... `End With` Block).  
+- Ort der `Dim` -Anweisung für die Variable in der Prozedur, aber außerhalb aller Blöcke (z. B. eine `With`... `End With` Block).  
   
      Sie können auf die Variable nur von innerhalb der Prozedur, einschließlich innerhalb eines beliebigen Blocks enthalten sind, in der Prozedur verweisen.  
   

@@ -3,11 +3,11 @@ title: Musterabgleich
 description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795459"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -35,14 +35,14 @@ In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit w
 |Bezeichnermuster|Der Wert eines Falls einer Unterscheidungs-Union, eine Ausnahmebezeichnung oder ein Fall eines aktiven Musters.|`Some(x)`<br /><br />`Failure(msg)`|
 |Variablenmuster|*identifier*|`a`|
 |`as`-Muster|*Muster* als *Bezeichner*|`(a, b) as tuple1`|
-|OR-Muster|*muster1* &#124; *muster2*|<code>([h] &#124; [h; _])</code>|
+|OR-Muster|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |AND-Muster|*muster1* &amp; *muster2*|`(a, b) & (_, "test")`|
-|Cons-Muster|*Bezeichner* :: *Liste-ID*|`h :: t`|
+|Cons-Muster|*identifier* :: *list-identifier*|`h :: t`|
 |Listenmuster|[ *Muster_1*;...; *Pattern_n* ]|`[ a; b; c ]`|
-|Arraymuster|[&#124; *Muster_1*;..; *Pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Arraymuster|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Muster in Klammern|( *Muster* )|`( a )`|
 |Tupelmuster|( *Muster_1*,..., *Pattern_n* )|`( a, b )`|
-|Datensatzmuster|{ *Bezeichner1* = *Muster_1*;...; *Identifier_n* = *Pattern_n* }|`{ Name = name; }`|
+|Datensatzmuster|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |Platzhaltermuster|_|`_`|
 |Muster zusammen mit Typanmerkung|*Muster* : *Typ*|`a : int`|
 |Typtestmuster|:? *Typ* [als *Bezeichner* ]|`:? System.DateTime as dt`|

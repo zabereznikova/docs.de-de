@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792196"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Exemplarische Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet
 Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihre Benutzeroberfläche (UI) nicht mehr reagiert möchten oder "hängen", Sie können die <xref:System.ComponentModel.BackgroundWorker> Klasse, um den Vorgang in einem anderen Thread auszuführen.  
@@ -29,13 +29,13 @@ Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihr
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen einer Windows-basierten Anwendung  
+- Erstellen einer Windows-basierten Anwendung  
   
--   Erstellen einer <xref:System.ComponentModel.BackgroundWorker> in Ihrem Formular  
+- Erstellen einer <xref:System.ComponentModel.BackgroundWorker> in Ihrem Formular  
   
--   Hinzufügen Asynchroner Ereignishandler  
+- Hinzufügen Asynchroner Ereignishandler  
   
--   Hinzufügen von Statusberichterstellung und Abbruchunterstützung  
+- Hinzufügen von Statusberichterstellung und Abbruchunterstützung  
   
  Eine vollständige Liste des Codes in diesem Beispiel verwendet, finden Sie unter [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihr
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>So erstellen Sie „BackgroundWorker“ mithilfe des Designers  
   
--   Von der **Komponenten** Registerkarte die **Toolbox**, ziehen Sie eine <xref:System.ComponentModel.BackgroundWorker> auf das Formular.  
+- Von der **Komponenten** Registerkarte die **Toolbox**, ziehen Sie eine <xref:System.ComponentModel.BackgroundWorker> auf das Formular.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Hinzufügen Asynchroner Ereignishandler  
  Sie sind jetzt bereit zum Hinzufügen der Ereignishandler für die <xref:System.ComponentModel.BackgroundWorker> asynchrone Ereignisse der Komponente. Der zeitaufwändige Vorgang im Hintergrund, der die Fibonacci-Zahlen berechnet, wird von einem dieser Ereignishandler aufgerufen.  
@@ -145,7 +145,7 @@ Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihr
   
 #### <a name="to-test-your-project"></a>So testen Sie Ihr Projekt  
   
--   Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
+- Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
   
      Während die Berechnung im Hintergrund ausgeführt wird, wird Ihnen die <xref:System.Windows.Forms.ProgressBar> nun der Status angezeigt, der Berechnung bis zum Abschluss. Sie können auch ausstehenden Vorgang auch abbrechen.  
   
@@ -154,11 +154,11 @@ Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihr
 ## <a name="next-steps"></a>Nächste Schritte  
  Nun, da Sie ein Formular implementiert haben, die verwendet eine <xref:System.ComponentModel.BackgroundWorker> Komponente, um eine Berechnung im Hintergrund ausführen können Sie andere Möglichkeiten für asynchrone Vorgänge untersuchen:  
   
--   Verwenden Sie mehrere <xref:System.ComponentModel.BackgroundWorker> Objekte für mehrere gleichzeitige Vorgänge.  
+- Verwenden Sie mehrere <xref:System.ComponentModel.BackgroundWorker> Objekte für mehrere gleichzeitige Vorgänge.  
   
--   Zum Debuggen Ihrer Multithreadanwendung finden Sie unter [Vorgehensweise: Verwenden des Fensters Threads](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Zum Debuggen Ihrer Multithreadanwendung finden Sie unter [Vorgehensweise: Verwenden des Fensters Threads](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Implementieren Sie eine eigene Komponente, die das asynchrone Programmiermodell unterstützt. Weitere Informationen finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+- Implementieren Sie eine eigene Komponente, die das asynchrone Programmiermodell unterstützt. Weitere Informationen finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
     >  Wenn Sie Multithreading verwenden, setzen Sie sich möglicherweise sehr ernsten und komplexen Problemen aus. Beachten Sie die Informationen unter [Empfohlene Vorgehensweise für das verwaltete Threading](../../../standard/threading/managed-threading-best-practices.md), bevor Sie eine Projektmappe implementieren, die Multithreading verwendet.  

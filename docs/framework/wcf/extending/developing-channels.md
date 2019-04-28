@@ -3,11 +3,11 @@ title: Entwickeln von Kanälen
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 ms.openlocfilehash: 44fb0da52c60b900c41b7b497861c12ed72d8ffc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858064"
 ---
 # <a name="developing-channels"></a>Entwickeln von Kanälen
 Um einen Kanal Protokoll- bzw. transportstandards zu entwickeln, der mit der Windows Communication Foundation (WCF) verwendet werden können, sind Anwendungsschicht Schritte erforderlich. In diesem Thema werden diese Schritte beschrieben, und Sie werden auf bestimmte Themen verwiesen, in denen Sie weitere Informationen erhalten. Um zu verstehen, das kanalmodell und die verschiedenen Typen, die in diesem Thema erwähnt werden, finden Sie unter [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md). Ein vollständiges Beispiel eines transportkanals, finden Sie unter [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

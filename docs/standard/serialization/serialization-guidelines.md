@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794305"
 ---
 # <a name="serialization-guidelines"></a>Serialisierungsrichtlinien
 In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer API zu berücksichtigen sind, welche für die Serialisierung vorgesehen ist.  
@@ -32,22 +32,22 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
   
 ## <a name="guidelines"></a>Richtlinien  
   
--   Denken Sie beim Entwurf neuer Typen auch an eine mögliche Serialisierung.  
+- Denken Sie beim Entwurf neuer Typen auch an eine mögliche Serialisierung.  
   
      Die Serialisierung spielt eine wichtige Rolle beim Entwurf von Typen, da Programme ggf. Instanzen eines Typs beibehalten oder übertragen müssen.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Auswählen einer geeigneten Serialisierungstechnologie, die unterstützt werden soll  
  Jeder Typ kann keine, eine oder mehrere Serialisierungstechnologien unterstützen.  
   
--   ERWÄGEN Sie eine Unterstützung der *Datenvertragsserialisierung*, falls Instanzen des Typs in Webdiensten verwendet oder beibehalten werden.  
+- ERWÄGEN Sie eine Unterstützung der *Datenvertragsserialisierung*, falls Instanzen des Typs in Webdiensten verwendet oder beibehalten werden.  
   
--   ERWÄGEN Sie eine Unterstützung der *XML-Serialisierung* anstelle oder zusätzlich zur Datenvertragsserialisierung, wenn Sie eine größere Kontrolle über das bei der Serialisierung des Typs erstellte XML-Format benötigen.  
+- ERWÄGEN Sie eine Unterstützung der *XML-Serialisierung* anstelle oder zusätzlich zur Datenvertragsserialisierung, wenn Sie eine größere Kontrolle über das bei der Serialisierung des Typs erstellte XML-Format benötigen.  
   
      Dies kann in einigen Interoperabilitätsszenarien von Bedeutung sein, wenn ein XML-Konstrukt verwendet werden muss, das von der Datenvertragsserialisierung nicht unterstützt wird, beispielsweise um XML-Attribute zu erzeugen.  
   
--   ERWÄGEN Sie eine Unterstützung der *Laufzeitserialisierung*, wenn Instanzen des Typs über .NET-Remotegrenzen übertragen werden müssen.  
+- ERWÄGEN Sie eine Unterstützung der *Laufzeitserialisierung*, wenn Instanzen des Typs über .NET-Remotegrenzen übertragen werden müssen.  
   
--   Vermeiden Sie eine Unterstützung der Laufzeitserialisierung oder der XML-Serialisierung, wenn diese Unterstützung lediglich aus allgemeinen Persistenzgründen implementiert wird. In solchen Fällen sollten Sie die Datenvertragsserialisierung bevorzugen.  
+- Vermeiden Sie eine Unterstützung der Laufzeitserialisierung oder der XML-Serialisierung, wenn diese Unterstützung lediglich aus allgemeinen Persistenzgründen implementiert wird. In solchen Fällen sollten Sie die Datenvertragsserialisierung bevorzugen.  
   
 #### <a name="supporting-data-contract-serialization"></a>Unterstützen der Datenvertragsserialisierung  
  Um die Datenvertragsserialisierung für einen Typ zu unterstützen, wenden Sie <xref:System.Runtime.Serialization.DataContractAttribute> auf den Typ und <xref:System.Runtime.Serialization.DataMemberAttribute> auf die Member (Felder und Eigenschaften) des Typs an.  

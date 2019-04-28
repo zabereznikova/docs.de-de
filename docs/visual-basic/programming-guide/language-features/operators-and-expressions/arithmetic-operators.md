@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830361"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Arithmetische Operatoren in Visual Basic
 Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen ausführen, bei denen die Berechnung von numerischen Werten, die durch Literale, Variablen, andere Ausdrücke, Funktion und eigenschaftsaufrufen und Konstanten dargestellt verwendet. Sind Sie auch mit arithmetischen Operatoren klassifiziert Bitschiebeoperatoren, die auf der Ebene der einzelbits der Operanden werden und ihre Bitmuster nach links oder rechts.  
@@ -70,13 +70,13 @@ Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen 
   
  Arithmetische Verschiebungen sind nicht zirkuläre, was bedeutet die Bits verschoben aus einem Ende des Resultsets nicht am anderen Ende wieder eingeführt werden. Die Bitpositionen, die von einer Schicht werden wie folgt festgelegt:  
   
--   0 für die eine arithmetische Verschiebung nach links  
+- 0 für die eine arithmetische Verschiebung nach links  
   
--   0 für die eine arithmetische rechtsverschiebung einer positiven Zahl  
+- 0 für die eine arithmetische rechtsverschiebung einer positiven Zahl  
   
--   0 für die eine arithmetische Verschiebung nach rechts ein Datentyp ohne Vorzeichen (`Byte`, `UShort`, `UInteger`, `ULong`)  
+- 0 für die eine arithmetische Verschiebung nach rechts ein Datentyp ohne Vorzeichen (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   1 für die eine arithmetische rechtsverschiebung einer negativen Zahl (`SByte`, `Short`, `Integer`, oder `Long`)  
+- 1 für die eine arithmetische rechtsverschiebung einer negativen Zahl (`SByte`, `Short`, `Integer`, oder `Long`)  
   
  Im folgende Beispiel wechselt ein `Integer` Wert nach rechts und Links.  
   

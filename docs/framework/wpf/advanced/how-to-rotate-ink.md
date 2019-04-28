@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Freihand drehen'
+title: 'Vorgehensweise: Drehen von Freihandeingaben'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - rotating ink [WPF]
 ms.assetid: fac36cc9-dd01-41ca-9bde-9d33e3790bbe
 ms.openlocfilehash: 31f5d0ffb6f0fdcdaef13bc44653f8c7938ac7f3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768458"
 ---
-# <a name="how-to-rotate-ink"></a>Vorgehensweise: Freihand drehen
+# <a name="how-to-rotate-ink"></a>Vorgehensweise: Drehen von Freihandeingaben
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird kopiert, der Freihand auf einer <xref:System.Windows.Controls.InkCanvas> auf eine <xref:System.Windows.Controls.Canvas> , enthält ein <xref:System.Windows.Controls.InkPresenter>.  Wenn die Anwendung die Freihandeingaben kopiert, dreht es auch die Freihandeingaben 90 Grad im Uhrzeigersinn.  
   

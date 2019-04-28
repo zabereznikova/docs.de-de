@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863700"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Vorgehensweise: Definieren eines Parameters für eine Prozedur (Visual Basic)
 Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben werden, wenn er aufgerufen. Jeder Parameter für eine Prozedur deklariert die gleiche Weise, wie Sie eine Variable deklarieren, die die Namen und den Datentyp angibt. Sie geben auch den Übergabemechanismus und gibt an, ob der Parameter optional ist.  
@@ -46,11 +46,11 @@ Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben 
   
      Angabe von Datentypen für alle von Programmierelementen heißt als *starke Typisierung*. Wenn Sie festlegen, `Option Strict On`, Visual Basic erzwingt eine starke Typisierung. Dies wird dringend empfohlen, den folgenden Gründen empfohlen:  
   
-    -   Sie können IntelliSense-Unterstützung für Ihre Variablen und Parameter. Dadurch können Sie die Eigenschaften und andere Member zu sehen, wie Sie in Ihren Code eingeben.  
+    - Sie können IntelliSense-Unterstützung für Ihre Variablen und Parameter. Dadurch können Sie die Eigenschaften und andere Member zu sehen, wie Sie in Ihren Code eingeben.  
   
-    -   Sie können den Compiler an, führen Sie die Überprüfung des Typs. Dadurch wird die catch-Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf ausfallen können. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
+    - Sie können den Compiler an, führen Sie die Überprüfung des Typs. Dadurch wird die catch-Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf ausfallen können. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
   
-    -   Es führt zu einer schnelleren Ausführung Ihres Codes. Ein Grund hierfür ist, wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Der kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und andere Datentypen, die Leistung verringert.  
+    - Es führt zu einer schnelleren Ausführung Ihres Codes. Ein Grund hierfür ist, wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Der kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und andere Datentypen, die Leistung verringert.  
   
 ## <a name="see-also"></a>Siehe auch
 

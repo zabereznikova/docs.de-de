@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787854"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
 Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellten Bindungen, die konfiguriert werden können, jedoch bieten keine vollständige Flexibilität, wenn die Sicherheitsoptionen zu konfigurieren, die von WCF unterstützt. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestell
   
  Zusätzliche Klassen werden verwendet, wenn Sicherheit auf Transportebene bereitgestellt wird:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Erforderliche Bindungselemente  
  Es gibt eine große Anzahl von möglichen Bindungselementen, die zu einer Bindung kombiniert werden können. Nicht alle Kombinationen sind zulässig. In diesem Abschnitt werden die für eine Sicherheitsbindung erforderlichen Elemente beschrieben.  
   
  Gültige Sicherheitsbindungen hängen von vielen Faktoren ab, unter anderem von folgenden:  
   
--   Sicherheitsmodus  
+- Sicherheitsmodus  
   
--   Transportprotokoll  
+- Transportprotokoll  
   
--   Das im Vertrag angegebene Nachrichtenaustauschmuster (MEP)  
+- Das im Vertrag angegebene Nachrichtenaustauschmuster (MEP)  
   
  Die folgende Tabelle enthält die gültigen Konfigurationen von Bindungselementstapeln für jede Kombination der oben genannten Faktoren. Beachten Sie, dass es sich herbei um Mindestanforderungen handelt. Sie können der Bindung weitere Bindungselemente hinzufügen (beispielsweise Elemente zur Nachrichtencodierung, Transaktionsbindungselemente usw.).  
   

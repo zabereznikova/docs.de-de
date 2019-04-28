@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874471"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
 Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Ausnahmeleistungsindikatoren](#exception)  
+- [Ausnahmeleistungsindikatoren](#exception)  
   
--   [Interop-Leistungsindikatoren](#interop)  
+- [Interop-Leistungsindikatoren](#interop)  
   
--   [JIT-Leistungsindikatoren](#jit)  
+- [JIT-Leistungsindikatoren](#jit)  
   
--   [Ladeleistungsindikatoren](#loading)  
+- [Ladeleistungsindikatoren](#loading)  
   
--   [Sperren- und Threadleistungsindikatoren](#lockthread)  
+- [Sperren- und Threadleistungsindikatoren](#lockthread)  
   
--   [Speicherleistungsindikatoren](#memory)  
+- [Speicherleistungsindikatoren](#memory)  
   
--   [Netzwerkleistungsindikatoren](#networking)  
+- [Netzwerkleistungsindikatoren](#networking)  
   
--   [Sicherheitsleistungsindikatoren](#security)  
+- [Sicherheitsleistungsindikatoren](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Ausnahmeleistungsindikatoren  
@@ -161,21 +161,21 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
  Es gibt mehrere Klassen von unterstützten Netzwerkleistungsindikatoren:  
   
--   Ereignisindikatoren, die die Anzahl messen, wie oft ein Ereignis aufgetreten ist.  
+- Ereignisindikatoren, die die Anzahl messen, wie oft ein Ereignis aufgetreten ist.  
   
--   Datenindikatoren, die die Menge gesendeter oder empfangener Daten messen.  
+- Datenindikatoren, die die Menge gesendeter oder empfangener Daten messen.  
   
--   Dauerindikatoren, die messen, wie lange verschiedene Prozesse dauern. Die Zeiten für die Objekte werden in jedem Intervall (normalerweise in Sekunden) gemessen, nachdem sie verschiedene Zustände verlassen haben.  
+- Dauerindikatoren, die messen, wie lange verschiedene Prozesse dauern. Die Zeiten für die Objekte werden in jedem Intervall (normalerweise in Sekunden) gemessen, nachdem sie verschiedene Zustände verlassen haben.  
   
--   Pro-Intervall-Indikatoren, die die Anzahl von Objekten messen, die einen bestimmten Übergang pro Intervall (normalerweise pro Sekunde) absolvieren.  
+- Pro-Intervall-Indikatoren, die die Anzahl von Objekten messen, die einen bestimmten Übergang pro Intervall (normalerweise pro Sekunde) absolvieren.  
   
  Die Netzwerkleistungsindikatoren für Ereignisse umfassen folgende:  
   
--   **Hergestellte Verbindungen**  
+- **Hergestellte Verbindungen**  
   
--   **Empfangene Datagramme**  
+- **Empfangene Datagramme**  
   
--   **Gesendete Datagramme**  
+- **Gesendete Datagramme**  
   
  Diese Leistungsindikatoren stellen Zählwerte seit Prozessstart bereit. Die Anzahl der hergestellten <xref:System.Net.Sockets.Socket>-Verbindungen umfasst ebenso explizite <xref:System.Net.Sockets.Socket>-Methodenaufrufe von einer Anwendung für eine Streamsocketverbindung, die hergestellt wurde, wie auch interne Aufrufe von anderen Klassen (z. B. <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> und <xref:System.Net.Sockets.TcpClient>), an die <xref:System.Net.Sockets.Socket>-Klasse.  
   
@@ -183,33 +183,33 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
  Die Netzwerkleistungsindikatoren für Daten umfassen folgende:  
   
--   **Empfangene Bytes**  
+- **Empfangene Bytes**  
   
--   **Gesendete Bytes**  
+- **Gesendete Bytes**  
   
  Die zuvor aufgeführten Leistungsindikatoren stellen Zählwerte für Bytes seit Prozessstart bereit.  
   
  Es gibt zwei Dauerindikatoren, die messen, wie lange <xref:System.Net.HttpWebRequest>-Objekte gebraucht haben, um entweder ihre gesamte Lebensdauer oder nur einen Teil davon zu durchlaufen:  
   
--   **Durchschnittliche HttpWebRequest-Lebensdauer**  
+- **Durchschnittliche HttpWebRequest-Lebensdauer**  
   
--   **Durchschnittliche HttpWebRequest-Warteschlangenzeit**  
+- **Durchschnittliche HttpWebRequest-Warteschlangenzeit**  
   
  Für den Indikator **Durchschnittliche HttpWebRequest-Lebensdauer** beginnt die Lebensdauer der meisten <xref:System.Net.HttpWebRequest>-Objekte immer mit der Erstellungszeit des Objekts und dauert bis zu dem Zeitpunkt, an dem der Antwortstream von der Anwendung geschlossen wird. Es gibt zwei ungewöhnliche Fälle:  
   
--   Wenn die Anwendung die <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>-Methode nie aufruft, wird die Lebensdauer des <xref:System.Net.HttpWebRequest>-Objekts ignoriert.  
+- Wenn die Anwendung die <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>-Methode nie aufruft, wird die Lebensdauer des <xref:System.Net.HttpWebRequest>-Objekts ignoriert.  
   
--   Wenn das <xref:System.Net.HttpWebRequest>-Objekt beim Aufrufen der <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A>-Methode eine <xref:System.Net.WebException> auslöst, endet die Lebensdauer mit dem Auslösen der Ausnahme. Aus technischer Sicht wird der zugrunde liegende Antwortstream auch an diesem Punkt geschlossen (der an den Benutzer zurückgegebene Antwortstream ist in Wirklichkeit ein Speicherstream, der eine Kopie des Antwortstreams enthält).  
+- Wenn das <xref:System.Net.HttpWebRequest>-Objekt beim Aufrufen der <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A>-Methode eine <xref:System.Net.WebException> auslöst, endet die Lebensdauer mit dem Auslösen der Ausnahme. Aus technischer Sicht wird der zugrunde liegende Antwortstream auch an diesem Punkt geschlossen (der an den Benutzer zurückgegebene Antwortstream ist in Wirklichkeit ein Speicherstream, der eine Kopie des Antwortstreams enthält).  
   
  Es gibt vier Indikatoren, die bestimmte <xref:System.Net.HttpWebRequest> -Objektprobleme pro Intervall erfassen. Diese Leistungsindikatoren können Anwendungsentwicklern, Administratoren und Supportmitarbeiter dabei helfen, besser zu verstehen, was die <xref:System.Net.HttpWebRequest>-Objekte machen. Die Indikatoren sind unter anderem folgende:  
   
--   **Erstellte HttpWebRequests/sec**  
+- **Erstellte HttpWebRequests/sec**  
   
--   **In Warteschlange gestellte HttpWebRequests/s**  
+- **In Warteschlange gestellte HttpWebRequests/s**  
   
--   **Abgebrochene HttpWebRequests/s**  
+- **Abgebrochene HttpWebRequests/s**  
   
--   **Fehlgeschlagene HttpWebRequests/s**  
+- **Fehlgeschlagene HttpWebRequests/s**  
   
  Für den Indikator **Abgebrochene HttpWebRequests/s** werden auch interne Aufrufe von <xref:System.Net.HttpWebRequest.Abort%2A> gezählt. Diese internen Aufrufe werden normalerweise von Timeouts verursacht, die eine Anwendung eventuell messen möchte.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Die Netzwerkleistungsindikatoren werden in zwei Kategorien aufgeführt:  
   
--   ".NET CLR-Netzwerk" – Die ursprünglichen Leistungsindikatoren, die in .NET Framework Version 2 eingeführt wurden und von .NET Framework Version 2 und höher unterstützt werden.  
+- ".NET CLR-Netzwerk" – Die ursprünglichen Leistungsindikatoren, die in .NET Framework Version 2 eingeführt wurden und von .NET Framework Version 2 und höher unterstützt werden.  
   
--   ".NET CLR-Netzwerk 4.0.0.0" – Alle der oben aufgeführten Socketindikatoren, zuzüglich der neuen Leistungsindikatoren, die von .NET Framework Version 4 und höher unterstützt werden. Diese neuen Indikatoren liefern Leistungsinformationen zu <xref:System.Net.HttpWebRequest>-Objekten.  
+- ".NET CLR-Netzwerk 4.0.0.0" – Alle der oben aufgeführten Socketindikatoren, zuzüglich der neuen Leistungsindikatoren, die von .NET Framework Version 4 und höher unterstützt werden. Diese neuen Indikatoren liefern Leistungsinformationen zu <xref:System.Net.HttpWebRequest>-Objekten.  
   
  Weitere Informationen zum Zugriff auf und der Verwaltung von Leistungsindikatoren in einer Anwendung finden Sie unter [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

@@ -10,11 +10,11 @@ ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868770"
 ---
 # <a name="code-access-security-basics"></a>Grundlagen der Codezugriffssicherheit
 
@@ -152,7 +152,7 @@ public class MyClass {
 
 ## <a name="using-managed-wrapper-classes"></a>Verwenden von verwalteten Wrapperklassen
 
-Die meisten Anwendungen und Komponenten (mit Ausnahme von sicheren Bibliotheken) sollten nicht verwalteten Code nicht direkt aufrufen. Hierfür gibt es mehrere Gründe: Wenn Code nicht verwalteten Code direkt aufruft, wird seine Ausführung häufig nicht zugelassen, weil Code ein hohes Maß an Vertrauenswürdigkeit gewährt werden muss, damit er systemeigenem Code aufrufen kann. Wird die Richtlinie so geändert, dass sie das Ausführen einer solchen Anwendung zulässt, kann die Sicherheit des Systems deutlich geschwächt werden, weil die Anwendung Gelegenheit erhält, nahezu jede Operation auszuführen.
+Die meisten Anwendungen und Komponenten (mit Ausnahme von sicheren Bibliotheken) sollten nicht verwalteten Code nicht direkt aufrufen. Hierfür gibt es mehrere Gründe: Wenn Code nicht verwalteten Code direkt aufruft, wird seine Ausführung häufig nicht zugelassen, weil Code ein hohes Maß an Vertrauenswürdigkeit gewährt werden muss, damit er nativen Code aufrufen kann. Wird die Richtlinie so geändert, dass sie das Ausführen einer solchen Anwendung zulässt, kann die Sicherheit des Systems deutlich geschwächt werden, weil die Anwendung Gelegenheit erhält, nahezu jede Operation auszuführen.
 
 Darüber hinaus kann Code, der die Berechtigung zum Zugriff auf nicht verwalteten Code hat, wahrscheinlich fast jeden Vorgang ausführen, indem er Code in einer nicht verwalteten API aufruft. Code mit der Berechtigung zum Aufrufen von nicht verwalteten Codes muss z. B. nicht <xref:System.Security.Permissions.FileIOPermission> Zugriff auf eine Datei; es kann nur aufrufen, eine nicht verwaltete (Win32) Datei-API direkt umgehen die verwaltete Datei-API, die erfordert **FileIOPermission**. Wenn verwalteter Code die Berechtigung zum Aufrufen von nicht verwaltetem Code hat, kann das Sicherheitssystem Sicherheitsbeschränkungen nicht zuverlässig erzwingen, da die Runtime solche Beschränkungen für nicht verwalteten Code nicht erzwingen kann.
 

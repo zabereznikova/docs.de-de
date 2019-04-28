@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760713"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
@@ -57,13 +57,13 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
   
  Abfrageergebnisse werden üblicherweise auf eine der folgenden Arten zurückgegeben:  
   
--   Eine Auflistung von 0 (null) oder mehr typisierten Entitätsobjekten oder eine Projektion komplexer Typen, die im konzeptionellen Modell definiert werden.  
+- Eine Auflistung von 0 (null) oder mehr typisierten Entitätsobjekten oder eine Projektion komplexer Typen, die im konzeptionellen Modell definiert werden.  
   
--   CLR-Typen, die vom [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt werden.  
+- CLR-Typen, die vom [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt werden.  
   
--   Inlineauflistungen  
+- Inlineauflistungen  
   
--   Anonyme Typen  
+- Anonyme Typen  
   
  Weitere Informationen finden Sie unter [Abfrageergebnisse](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

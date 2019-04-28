@@ -3,11 +3,11 @@ title: Überlegungen zur Leistung (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879397"
 ---
 # <a name="performance-considerations-entity-framework"></a>Überlegungen zur Leistung (Entity Framework)
 In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschrieben. Außerdem sind einige Vorschläge enthalten, die Sie zur Verbesserung der Leistung von Entity Framework-Anwendungen verwenden können.  
@@ -55,12 +55,12 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
 #### <a name="query-complexity"></a>Abfragekomplexität  
  Abfragen, die eine große Anzahl von Joins für Befehle erfordern, die für die Datenquelle ausgeführt werden oder eine große Datenmenge zurückgeben, beeinträchtigen möglicherweise die Leistung auf die folgende Weise:  
   
--   Scheinbar einfache Abfragen für ein konzeptionelles Modell führen möglicherweise zur Ausführung komplexerer Abfragen für die Datenquelle. Dies kann auftreten, da Entity Framework eine Abfrage für ein konzeptionelles Modell in eine entsprechende Abfrage für die Datenquelle übersetzt. Wenn ein einzelner Entitätssatz im konzeptionellen Modell mehr als einer Tabelle in der Datenquelle zugeordnet wird oder einer Jointabelle eine Beziehung zwischen Entitäten zugeordnet wird, sind für den Abfragebefehl für die Datenquellenabfrage möglicherweise Joins erforderlich.  
+- Scheinbar einfache Abfragen für ein konzeptionelles Modell führen möglicherweise zur Ausführung komplexerer Abfragen für die Datenquelle. Dies kann auftreten, da Entity Framework eine Abfrage für ein konzeptionelles Modell in eine entsprechende Abfrage für die Datenquelle übersetzt. Wenn ein einzelner Entitätssatz im konzeptionellen Modell mehr als einer Tabelle in der Datenquelle zugeordnet wird oder einer Jointabelle eine Beziehung zwischen Entitäten zugeordnet wird, sind für den Abfragebefehl für die Datenquellenabfrage möglicherweise Joins erforderlich.  
   
     > [!NOTE]
     >  Verwenden Sie die <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A>-Methode der <xref:System.Data.Objects.ObjectQuery%601>- oder <xref:System.Data.EntityClient.EntityCommand>-Klasse, um die Befehle anzuzeigen, die für die Datenquelle für eine angegebene Abfrage ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Zeigen Sie die Store-Befehle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100)).  
   
--   Geschachtelte Entity SQL-Abfragen erstellen möglicherweise Joins auf dem Server und geben eine große Anzahl von Zeilen zurück.  
+- Geschachtelte Entity SQL-Abfragen erstellen möglicherweise Joins auf dem Server und geben eine große Anzahl von Zeilen zurück.  
   
      Im Folgenden sehen Sie ein Beispiel für eine geschachtelte Abfrage in einer Projektionsklausel:  
   
@@ -72,7 +72,7 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
   
      Außerdem bewirken solche Abfragen, dass die Abfragepipeline eine einzelne Abfrage durch die Verdoppelung von Objekten in geschachtelten Abfragen generiert. Deswegen wird eine einzelne Spalte möglicherweise mehrmals dupliziert. In einigen Datenbanken, einschließlich SQL Server, kann hierdurch die TempDB-Tabelle stark vergrößert werden, wodurch die Serverleistung abnehmen kann. Bei der Ausführung geschachtelter Abfragen sollte also vorsichtig vorgegangen werden.  
   
--   Alle Abfragen, die eine große Datenmenge zurückgeben, können einen Leistungsabfall verursachen, wenn vom Client Operationen ausgeführt werden, von denen Ressourcen in der Größenordnung des Resultsets verbraucht werden. In solchen Fällen sollten Sie erwägen, die von der Abfrage zurückgegebene Datenmenge zu beschränken. Weitere Informationen finden Sie unter [Vorgehensweise: Seitenweise durch Abfrageresultate navigieren](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
+- Alle Abfragen, die eine große Datenmenge zurückgeben, können einen Leistungsabfall verursachen, wenn vom Client Operationen ausgeführt werden, von denen Ressourcen in der Größenordnung des Resultsets verbraucht werden. In solchen Fällen sollten Sie erwägen, die von der Abfrage zurückgegebene Datenmenge zu beschränken. Weitere Informationen finden Sie unter [Vorgehensweise: Seitenweise durch Abfrageresultate navigieren](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
  Alle automatisch vom Entity Framework generierten Befehle sind möglicherweise komplexer als ähnliche explizit von einem Datenbankentwickler geschriebenen Befehle. Wenn Sie explizite Kontrolle über die für die Datenquelle ausgeführten Befehle benötigen, erwägen Sie die Definition einer Zuordnung für eine Tabellenwertfunktion oder eine gespeicherte Prozedur.  
   
@@ -114,9 +114,9 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
 ### <a name="distributed-transactions"></a>Verteilte Transaktionen  
  Operationen in einer expliziten Transaktion, die Ressourcen erfordern, die vom verteilten Transaktionskoordinator (DTC) verwaltet werden, sind viel teurer als eine ähnliche Operation, die DTC nicht erfordert. In den folgenden Situationen findet eine Höherstufung zum DTC statt:  
   
--   Eine explizite Transaktion mit einem Vorgang für eine SQL Server 2000-Datenbank oder andere Datenquellen, die ständig explizite Transaktionen auf den DTC hochstufen.  
+- Eine explizite Transaktion mit einem Vorgang für eine SQL Server 2000-Datenbank oder andere Datenquellen, die ständig explizite Transaktionen auf den DTC hochstufen.  
   
--   Eine explizite Transaktion mit einer Operation für SQL Server 2005, wenn die Verbindung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwaltet wird. Dies tritt auf, da SQL Server 2005 immer dann auf einen DTC hochstuft, wenn eine Verbindung geschlossen und innerhalb einer einzelnen Transaktion erneut geöffnet wird. Dies ist das Standardverhalten von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Beim SQL Server 2008 wird diese DTC-Höherstufung nicht durchgeführt. Öffnen und schließen Sie explizit die Verbindung innerhalb der Transaktion, um diese Höherstufung zu vermeiden, wenn Sie SQL Server 2005 verwenden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Eine explizite Transaktion mit einer Operation für SQL Server 2005, wenn die Verbindung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwaltet wird. Dies tritt auf, da SQL Server 2005 immer dann auf einen DTC hochstuft, wenn eine Verbindung geschlossen und innerhalb einer einzelnen Transaktion erneut geöffnet wird. Dies ist das Standardverhalten von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Beim SQL Server 2008 wird diese DTC-Höherstufung nicht durchgeführt. Öffnen und schließen Sie explizit die Verbindung innerhalb der Transaktion, um diese Höherstufung zu vermeiden, wenn Sie SQL Server 2005 verwenden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Eine explizite Transaktion wird verwendet, wenn eine oder mehrere Operationen in einer <xref:System.Transactions>-Transaktion ausgeführt werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -147,11 +147,11 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
 ## <a name="performance-data"></a>Leistungsdaten  
  Einige Leistungsdaten für Entity Framework werden in den folgenden Beiträgen veröffentlicht, auf die [ADO.NET-Teamblog](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Untersuchen die Leistung der ADO.NET Entity Framework - Teil 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [Untersuchen die Leistung der ADO.NET Entity Framework - Teil 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Untersuchen die Leistung der ADO.NET Entity Framework – Teil 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [Untersuchen die Leistung der ADO.NET Entity Framework – Teil 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework-Leistungsvergleich](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework-Leistungsvergleich](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Siehe auch
 

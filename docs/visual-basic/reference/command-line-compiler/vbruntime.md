@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796129"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Library oder mit einem Verweis auf eine bestimmte Laufzeitbibliothek kompilieren soll.  
@@ -50,35 +50,35 @@ Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Libra
   
  Es werden die folgenden Elemente für die Common Language Runtime eingebettet:  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions>-Klasse  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions>-Klasse  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>-Methode  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>-Methode  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>-Methode  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>-Methode  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>-Methode  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>-Methode  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> Konstante  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Konstante  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> Konstante  
   
--   Einige Objekte von der `My` Typ  
+- Einige Objekte von der `My` Typ  
   
  Wenn Sie mit der Kompilierung der `-vbruntime*` Option und den Code verweist auf ein Element aus der Visual Basic-Laufzeitbibliothek, die nicht mit den wichtigsten Funktionen eingebettet ist, gibt der Compiler einen Fehler, der angibt, dass das Element nicht verfügbar ist.  
   

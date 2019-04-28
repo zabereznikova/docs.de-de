@@ -3,11 +3,11 @@ title: System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 ms.date: 03/30/2017
 ms.assetid: e167bad3-861f-43e4-9e78-9c275cf64a29
 ms.openlocfilehash: 5edde9eebf2f11ebdb55e12c2a225e55afdeb11d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779508"
 ---
 # <a name="systemservicemodeltxreleaseserviceinstanceoncompletion"></a>System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 Die Dienstinstanz wurde beim Abschließen der Transaktion „{0}“ freigegeben, da das ServiceBehaviorAttribute von ReleaseServiceInstanceOnTransactionComplete auf „TRUE“ festgelegt war.  

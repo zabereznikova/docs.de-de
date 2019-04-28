@@ -3,11 +3,11 @@ title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellu
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876087"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] eingeführte) SqlClient-Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung erörtert, die in Form von AlwaysOn-Verfügbarkeitsgruppen bereitgestellt wird.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
@@ -21,9 +21,9 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
  Die folgenden Verbindungseigenschaften wurden SqlClient in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] hinzugefügt:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Sie können diese Schlüsselwörter für Verbindungszeichenfolgen programmgesteuert ändern:  
   
@@ -45,17 +45,17 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
  Verwenden Sie die folgenden Richtlinien für die Verbindung mit einem Server in einer verfügbarkeitsgruppe oder Failoverclusterinstanz von SQL Server 2012:  
   
--   Verwenden Sie die `MultiSubnetFailover`-Verbindungseigenschaft beim Herstellen der Verbindung mit einem einzelnen oder mehreren Subnetzen. Die Leistung wird in beiden Fällen gesteigert.  
+- Verwenden Sie die `MultiSubnetFailover`-Verbindungseigenschaft beim Herstellen der Verbindung mit einem einzelnen oder mehreren Subnetzen. Die Leistung wird in beiden Fällen gesteigert.  
   
--   Um eine Verbindung mit einer Verfügbarkeitsgruppe herzustellen, geben Sie den Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe als Server in der Verbindungszeichenfolge an.  
+- Um eine Verbindung mit einer Verfügbarkeitsgruppe herzustellen, geben Sie den Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe als Server in der Verbindungszeichenfolge an.  
   
--   Herstellen einer Verbindung mit einer SQL Server werden-Instanz, mit mehr als 64 IP-Adressen konfiguriert einen Verbindungsfehler verursachen.  
+- Herstellen einer Verbindung mit einer SQL Server werden-Instanz, mit mehr als 64 IP-Adressen konfiguriert einen Verbindungsfehler verursachen.  
   
--   Das Verhalten einer Anwendung, die verwendet die `MultiSubnetFailover` -Verbindungseigenschaft wird nicht beeinflusst basierend auf den Typ der Authentifizierung: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+- Das Verhalten einer Anwendung, die verwendet die `MultiSubnetFailover` -Verbindungseigenschaft wird nicht beeinflusst basierend auf den Typ der Authentifizierung: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
--   Erhöhen Sie den Wert von `Connect Timeout`, um die Failoverzeit anzupassen und die Wiederholungsversuche für die Verbindung mit der Anwendung zu verringern.  
+- Erhöhen Sie den Wert von `Connect Timeout`, um die Failoverzeit anzupassen und die Wiederholungsversuche für die Verbindung mit der Anwendung zu verringern.  
   
--   Verteilte Transaktionen werden nicht unterstützt.  
+- Verteilte Transaktionen werden nicht unterstützt.  
   
  Wenn das schreibgeschützte Routing nicht aktiviert ist, schlägt die Verbindung mit dem Speicherort eines sekundären Replikats in folgenden Situationen fehl:  
   

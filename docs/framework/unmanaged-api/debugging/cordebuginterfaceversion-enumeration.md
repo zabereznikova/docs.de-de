@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792911"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion-Enumeration
 Legt eine Schnittstelle fest, eine Version des .NET Frameworks oder eine Version des .NET Frameworks, in dem eine Schnittstelle eingeführt wurde.  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>Schnittstellennamen  
  Der Name, der am Ende der Schnittstellennamen in der Debugging-API enthalten ist (z. B. die "3" in `ICorDebugThread3`) legt die Version der Schnittstelle fest, nicht die des .NET Frameworks. Alle Schnittstellennamen in der Debugging-API enthalten Versionsnummern; ausgenommen sind Schnittstellen, die im .NET Framework Version 1 eingeführt wurden. Sämtliche Übereinstimmungen zwischen den Schnittstellenversionsnummern und .NET Framework-Versionsnummern sind zufällig.  
   
--   Schnittstellen, die mit der .NET Framework Version 1.0 eingeführt wurden, enthalten keine Zahlen, da es sich dabei implizit immer um die Version 1 handelt.  
+- Schnittstellen, die mit der .NET Framework Version 1.0 eingeführt wurden, enthalten keine Zahlen, da es sich dabei implizit immer um die Version 1 handelt.  
   
--   Die .NET Framework Version 1.1 verwendet Schnittstellen der Version 1.0 und führt keine neuen Debugging-Schnittstellen ein.  
+- Die .NET Framework Version 1.1 verwendet Schnittstellen der Version 1.0 und führt keine neuen Debugging-Schnittstellen ein.  
   
--   Die 14 mit der .NET-Framework Version 2.0 eingeführten Debugging-Schnittstellen sind eine logische Erweiterung ihrer Gegenstücke aus der Version 1 und enthalten die Versionsnummer "2" im Namen.  
+- Die 14 mit der .NET-Framework Version 2.0 eingeführten Debugging-Schnittstellen sind eine logische Erweiterung ihrer Gegenstücke aus der Version 1 und enthalten die Versionsnummer "2" im Namen.  
   
--   Die .NET Framework-Versionen 3.0 und 3.5 verwenden die vorhandenen Schnittstellen des .NET Framework 2.0 und führen keine neuen Schnittstellen ein.  
+- Die .NET Framework-Versionen 3.0 und 3.5 verwenden die vorhandenen Schnittstellen des .NET Framework 2.0 und führen keine neuen Schnittstellen ein.  
   
--   Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] führt eine Mischung von Schnittstellenversionen. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt außerdem die erste Version von der `ICorDebugStackWalk` Schnittstelle und die zweite Version der `ICorDebugNativeFrame` Schnittstelle (`ICorDebugNativeFrame2`).  
+- Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] führt eine Mischung von Schnittstellenversionen. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt außerdem die erste Version von der `ICorDebugStackWalk` Schnittstelle und die zweite Version der `ICorDebugNativeFrame` Schnittstelle (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

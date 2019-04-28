@@ -16,24 +16,24 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876147"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
 Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentierung versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.   
   
  Der Begriff *Instrumentierung* bezeichnet die Fähigkeit, die Leistung eines Produkts zu überwachen oder zu messen und Fehler zu diagnostizieren. In der Programmierung versteht man darunter die Fähigkeit eines Programms, folgende Funktionen zu bieten:  
   
--   **Codeablaufverfolgung**: Erhalten informativer Meldungen über die Ausführung einer Anwendung zur Laufzeit.  
+- **Codeablaufverfolgung**: Erhalten informativer Meldungen über die Ausführung einer Anwendung zur Laufzeit.  
   
--   **Debuggen**: Ermitteln und Beheben von Programmierfehlern in einer Anwendung während der Entwicklungsphase. Weitere Informationen finden Sie unter [Debuggen](/visualstudio/debugger/debugging-in-visual-studio).  
+- **Debuggen**: Ermitteln und Beheben von Programmierfehlern in einer Anwendung während der Entwicklungsphase. Weitere Informationen finden Sie unter [Debuggen](/visualstudio/debugger/debugging-in-visual-studio).  
   
--   **Leistungsindikatoren**: Komponenten zur Ermittlung der Anwendungsleistung. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+- **Leistungsindikatoren**: Komponenten zur Ermittlung der Anwendungsleistung. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
--   **Ereignisprotokolle**: Komponenten, mit denen wichtige Ereignisse während der Anwendungsausführung erhalten und nachverfolgt werden können. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Diagnostics.EventLog>-Klasse.  
+- **Ereignisprotokolle**: Komponenten, mit denen wichtige Ereignisse während der Anwendungsausführung erhalten und nachverfolgt werden können. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Diagnostics.EventLog>-Klasse.  
   
  Das Instrumentieren einer Anwendung durch Platzieren von Ablaufverfolgungsanweisungen an strategischen Codestellen ist vor allem bei verteilten Anwendungen nützlich. Mithilfe von Ablaufverfolgungsanweisungen können Sie eine Anwendung so instrumentieren, dass nicht nur Informationen zu Fehlern angezeigt werden, sondern auch die Leistung der Anwendung überwacht wird.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. Kompilieren Sie die Anwendung mit einem der folgenden Verfahren in ausführbaren Code:  
   
-    -   Verwenden Sie das Menü **Erstellen** zusammen mit der Seite **Debuggen** im Dialogfeld **Eigenschaftenseite** im **Projektmappen-Explorer**. Dies gilt für die Kompilierung in Visual Studio.  
+    - Verwenden Sie das Menü **Erstellen** zusammen mit der Seite **Debuggen** im Dialogfeld **Eigenschaftenseite** im **Projektmappen-Explorer**. Dies gilt für die Kompilierung in Visual Studio.  
   
          \- oder –  
   
-    -   Verwenden Sie für die Kompilierung der Befehlszeile die Compileranweisungen **Ablaufverfolgung** und **Debuggen**. Weitere Informationen finden Sie unter [Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Dies gilt für die Kompilierung von der Befehlszeile aus.  
+    - Verwenden Sie für die Kompilierung der Befehlszeile die Compileranweisungen **Ablaufverfolgung** und **Debuggen**. Weitere Informationen finden Sie unter [Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Dies gilt für die Kompilierung von der Befehlszeile aus.  
   
 7. Aktivieren Sie den entsprechenden Ablaufverfolgungsschalter, wenn zur Laufzeit ein Problem auftritt. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   

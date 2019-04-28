@@ -27,11 +27,11 @@ helpviewer_keywords:
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
 ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783955"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim-Anweisung (Visual Basic)
 Reserviert Speicherplatz für eine Arrayvariable neu.  
@@ -59,31 +59,31 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="rules"></a>Regeln  
   
--   **Mehrere Variablen.** Sie können die Größe mehrerer Arrayvariablen in derselben Deklarationsanweisung ändern und die Teile `name` und `boundlist` für jede Variable angeben. Mehrere Variablen werden durch Kommas voneinander getrennt.  
+- **Mehrere Variablen.** Sie können die Größe mehrerer Arrayvariablen in derselben Deklarationsanweisung ändern und die Teile `name` und `boundlist` für jede Variable angeben. Mehrere Variablen werden durch Kommas voneinander getrennt.  
   
--   **Arraygrenzen.** Für jeden Eintrag in `boundlist` können die unteren und oberen Grenzen der Dimension angegeben werden. Die untere Grenze ist immer 0 (null). Die Obergrenze ist der größtmögliche Indexwert für diese Dimension, nicht die Länge der Dimension (dies ist die obere Grenze plus 1). Der Index für jede Dimension kann zwischen 0 und dem Wert der oberen Grenze variieren.  
+- **Arraygrenzen.** Für jeden Eintrag in `boundlist` können die unteren und oberen Grenzen der Dimension angegeben werden. Die untere Grenze ist immer 0 (null). Die Obergrenze ist der größtmögliche Indexwert für diese Dimension, nicht die Länge der Dimension (dies ist die obere Grenze plus 1). Der Index für jede Dimension kann zwischen 0 und dem Wert der oberen Grenze variieren.  
   
      Die Anzahl der Dimensionen in `boundlist` muss mit der ursprünglichen Anzahl von Dimensionen (Rang) des Arrays übereinstimmen.  
   
--   **Datentypen.** Mit der `ReDim`-Anweisung kann der Datentyp einer Arrayvariablen oder ihrer Elemente nicht geändert werden.  
+- **Datentypen.** Mit der `ReDim`-Anweisung kann der Datentyp einer Arrayvariablen oder ihrer Elemente nicht geändert werden.  
   
--   **Die Initialisierung.** Mit der `ReDim`-Anweisung können keine neuen Initialisierungswerte für die Arrayelemente bereitgestellt werden.  
+- **Die Initialisierung.** Mit der `ReDim`-Anweisung können keine neuen Initialisierungswerte für die Arrayelemente bereitgestellt werden.  
   
--   **Rang.** Mit der `ReDim`-Anweisung kann der Rang (Anzahl von Dimensionen) des Arrays nicht geändert werden.  
+- **Rang.** Mit der `ReDim`-Anweisung kann der Rang (Anzahl von Dimensionen) des Arrays nicht geändert werden.  
   
--   **Ändern der Größe mit beibehalten.** Bei Verwendung von `Preserve` können Sie nur die Größe der letzten Dimension des Arrays ändern. Für alle anderen Dimensionen müssen Sie die Grenze des vorhandenen Arrays angeben.  
+- **Ändern der Größe mit beibehalten.** Bei Verwendung von `Preserve` können Sie nur die Größe der letzten Dimension des Arrays ändern. Für alle anderen Dimensionen müssen Sie die Grenze des vorhandenen Arrays angeben.  
   
      Wenn das Array nur eine Dimension hat, können Sie beispielsweise die Größe dieser Dimension ändern und trotzdem den gesamten Inhalt des Arrays beibehalten. Dies liegt daran, dass Sie die letzte und einzige Dimension ändern. Wenn das Array aber über zwei oder mehr Dimensionen verfügt, können Sie bei Verwendung von `Preserve` nur die Größe der letzten Dimension ändern.  
   
--   **Eigenschaften.** Sie können `ReDim` für eine Eigenschaft verwenden, die ein Array von Werten enthält.  
+- **Eigenschaften.** Sie können `ReDim` für eine Eigenschaft verwenden, die ein Array von Werten enthält.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Array-Ersatz.** `ReDim` Gibt das vorhandene Array frei und erstellt ein neues Array mit den gleichen Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
+- **Array-Ersatz.** `ReDim` Gibt das vorhandene Array frei und erstellt ein neues Array mit den gleichen Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
   
--   **Initialisierung ohne beibehalten.** Wenn Sie kein `Preserve`-Element angeben, werden die Elemente des neuen Arrays von `ReDim` mit dem Standardwert für ihren Datentyp initialisiert.  
+- **Initialisierung ohne beibehalten.** Wenn Sie kein `Preserve`-Element angeben, werden die Elemente des neuen Arrays von `ReDim` mit dem Standardwert für ihren Datentyp initialisiert.  
   
--   **Die Initialisierung mit beibehalten.** Wenn Sie `Preserve` angeben, kopiert Visual Basic die Elemente aus dem vorhandenen Array in das neue Array.  
+- **Die Initialisierung mit beibehalten.** Wenn Sie `Preserve` angeben, kopiert Visual Basic die Elemente aus dem vorhandenen Array in das neue Array.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Größe der letzten Dimension eines dynamischen Arrays erhöht, ohne dass vorhandene Daten im Array verloren gehen. Anschließend wird die Größe mit einem Teilverlust der Daten reduziert. Zuletzt wird die Größe zurück auf den Originalwert reduziert, und alle Arrayelemente werden neu initialisiert.  

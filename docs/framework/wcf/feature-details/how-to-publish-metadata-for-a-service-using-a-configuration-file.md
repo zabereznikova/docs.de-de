@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilf
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761454"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
 Dies ist eines der beiden Gewusst-wie-Themen, die Veröffentlichung von Metadaten für einen Windows Communication Foundation (WCF)-Dienst zu veranschaulichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. Legen Sie für die im vorherigen Schritt hinzugefügten Metadatenendpunkte das `binding`-Attribut auf einen der folgenden Werte fest:  
   
-    -   `mexHttpBinding` für HTTP-Veröffentlichung.  
+    - `mexHttpBinding` für HTTP-Veröffentlichung.  
   
-    -   `mexHttpsBinding` für HTTPS-Veröffentlichung.  
+    - `mexHttpsBinding` für HTTPS-Veröffentlichung.  
   
-    -   `mexNamedPipeBinding` für benannte Pipeveröffentlichung.  
+    - `mexNamedPipeBinding` für benannte Pipeveröffentlichung.  
   
-    -   `mexTcpBinding` für TCP-Veröffentlichung.  
+    - `mexTcpBinding` für TCP-Veröffentlichung.  
   
 8. Legen Sie die Adressen für die in einem vorherigen Schritt hinzugefügten Metadatenendpunkte auf Folgendes fest:  
   
-    -   Eine leere Zeichenfolge, um die Basisadresse der Hostanwendung als Veröffentlichungspunkt zu verwenden, wenn die Basisadresse gleich der Metadatenbindung ist.  
+    - Eine leere Zeichenfolge, um die Basisadresse der Hostanwendung als Veröffentlichungspunkt zu verwenden, wenn die Basisadresse gleich der Metadatenbindung ist.  
   
-    -   Eine relative Adresse, wenn die Hostanwendung über eine Basisadresse verfügt.  
+    - Eine relative Adresse, wenn die Hostanwendung über eine Basisadresse verfügt.  
   
-    -   Eine absolute Adresse.  
+    - Eine absolute Adresse.  
   
 9. Erstellen Sie die Konsolenanwendung und führen Sie sie aus.  
   

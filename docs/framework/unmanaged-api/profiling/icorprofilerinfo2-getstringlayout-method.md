@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791655"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout-Methode
 Ruft Informationen zum Layout eines Zeichenfolgenobjekts ab. Diese Methode ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], und wird durch die [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) Methode.  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>Hinweise  
  Die `GetStringLayout` Methode ruft die Offsets, relativ zu den `ObjectID` -Zeiger ist, der Standorte in der folgenden gespeichert werden:  
   
--   Die Länge des Puffers der Zeichenfolge.  
+- Die Länge des Puffers der Zeichenfolge.  
   
--   Die Länge der Zeichenfolge selbst.  
+- Die Länge der Zeichenfolge selbst.  
   
--   Der Puffer, der die tatsächliche Zeichenfolge mit breiten Zeichen enthält.  
+- Der Puffer, der die tatsächliche Zeichenfolge mit breiten Zeichen enthält.  
   
  Zeichenfolgen können Null-terminiert sein.  
   
