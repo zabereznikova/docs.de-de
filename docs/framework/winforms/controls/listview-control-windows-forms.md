@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757872"
 ---
 # <a name="listview-control-windows-forms"></a>ListView-Steuerelement (Windows Forms)
 Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt.  
@@ -58,15 +58,15 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
  [Vorgehensweise: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement](how-to-add-search-capabilities-to-a-listview-control.md)  
  Beschreibt, wie ein Element mithilfe der Textsuche oder anhand der Bildschirmkoordinaten programmgesteuert gesucht wird.  
   
--   [Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms mithilfe des Designers](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms mithilfe des Designers](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Vorgehensweise: Hinzufügen von Spalten zu der ListView-Steuerelement in Windows Forms mithilfe des Designers](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [Vorgehensweise: Hinzufügen von Spalten zu der ListView-Steuerelement in Windows Forms mithilfe des Designers](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Vorgehensweise: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [Vorgehensweise: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView und TreeView-Steuerelemente, die mithilfe des Designers](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView und TreeView-Steuerelemente, die mithilfe des Designers](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ListView>-Klasse  

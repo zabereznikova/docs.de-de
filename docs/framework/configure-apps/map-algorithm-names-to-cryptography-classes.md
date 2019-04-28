@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700809"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Zuordnen von Algorithmennamen zu kryptografischen Klassen
 Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie mithilfe erstellen kann der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   Erstellen Sie ein Objekt mithilfe der **neue** Operator.  
+- Erstellen Sie ein Objekt mithilfe der **neue** Operator.  
   
--   Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der **erstellen** Methode für die abstrakte Klasse für diesen Algorithmus.  
+- Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der **erstellen** Methode für die abstrakte Klasse für diesen Algorithmus.  
   
--   Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode.  
+- Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode.  
   
--   Erstellen Sie ein Objekt, das implementiert, eine Klasse von kryptografischen Algorithmen (z. B. eine Verschlüsselung symmetrischer Blöcke) durch Aufrufen der **erstellen** Methode für die abstrakte Klasse für diesen Typ des-Algorithmus (z. B. <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Erstellen Sie ein Objekt, das implementiert, eine Klasse von kryptografischen Algorithmen (z. B. eine Verschlüsselung symmetrischer Blöcke) durch Aufrufen der **erstellen** Methode für die abstrakte Klasse für diesen Typ des-Algorithmus (z. B. <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  Nehmen wir beispielsweise an, dass ein Entwickler möchte, um den SHA1-Hash einer Reihe von Bytes zu berechnen. Die <xref:System.Security.Cryptography> -Namespace enthält zwei Implementierungen von SHA1-Algorithmus, eine rein verwaltete Implementierungen und diejenige, die CryptoAPI umschließt. Entwickler kann auch eine bestimmte Implementierung des SHA1 instanziieren (z. B. die <xref:System.Security.Cryptography.SHA1Managed>) durch Aufrufen der **neue** Operator. Jedoch wenn es keine, welche Klasse die common Language Runtime lädt Rolle, solange die Klasse des SHA1-Hash-Algorithmus implementiert, der Entwickler kann erstellen ein Objekt durch Aufrufen der <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> Methode. Diese Methode ruft **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1") auf**, womit muss eine Implementierung des SHA1-Hashalgorithmus zurückgegeben.  
   

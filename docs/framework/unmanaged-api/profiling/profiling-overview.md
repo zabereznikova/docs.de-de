@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757560"
 ---
 # <a name="profiling-overview"></a>Übersicht über die Profilerstellung
 <a name="top"></a> Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht. Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden. Die Profiler-DLL wird zur Laufzeit von der CLR geladen.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654093"
   
  Diese Übersicht enthält folgende Abschnitte:  
   
--   [Die Profilerstellungs-API](#profiling_api)  
+- [Die Profilerstellungs-API](#profiling_api)  
   
--   [Unterstützte Funktionen](#support)  
+- [Unterstützte Funktionen](#support)  
   
--   [Benachrichtigungsthreads](#notification_threads)  
+- [Benachrichtigungsthreads](#notification_threads)  
   
--   [Sicherheit](#security)  
+- [Sicherheit](#security)  
   
--   [Kombination von verwaltetem und nicht verwaltetem Code in einem Code-Profiler](#combining_managed_unmanaged)  
+- [Kombination von verwaltetem und nicht verwaltetem Code in einem Code-Profiler](#combining_managed_unmanaged)  
   
--   [Profilerstellung für nicht verwalteten Code](#unmanaged)  
+- [Profilerstellung für nicht verwalteten Code](#unmanaged)  
   
--   [Verwenden von COM](#com)  
+- [Verwenden von COM](#com)  
   
--   [Aufruflisten](#call_stacks)  
+- [Aufruflisten](#call_stacks)  
   
--   [Rückrufe und Stapeltiefe](#callbacks)  
+- [Rückrufe und Stapeltiefe](#callbacks)  
   
--   [Verwandte Themen](#related_topics)  
+- [Verwandte Themen](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>Die Profilerstellungs-API  
@@ -96,33 +96,33 @@ ms.locfileid: "58654093"
   
  Die Profilerstellungs-API ruft Informationen über die folgenden Aktionen und die Ereignisse ab, die in der CLR auftreten:  
   
--   CLR-Ereignisse beim Starten und Herunterfahren.  
+- CLR-Ereignisse beim Starten und Herunterfahren.  
   
--   Ereignisse bei der Anwendungsdomänenerstellung und beim Herunterfahren.  
+- Ereignisse bei der Anwendungsdomänenerstellung und beim Herunterfahren.  
   
--   Ereignisse beim Laden und Entladen von Assemblys.  
+- Ereignisse beim Laden und Entladen von Assemblys.  
   
--   Ereignisse beim Laden und Entladen von Ereignissen.  
+- Ereignisse beim Laden und Entladen von Ereignissen.  
   
--   Ereignisse beim Erstellen und Löschen von COM-vtable.  
+- Ereignisse beim Erstellen und Löschen von COM-vtable.  
   
--   Ereignisse bei der JIT-Kompilierung (Just-In-Time) und beim Codepitching.  
+- Ereignisse bei der JIT-Kompilierung (Just-In-Time) und beim Codepitching.  
   
--   Ereignisse beim Laden und Entladen von Klassen.  
+- Ereignisse beim Laden und Entladen von Klassen.  
   
--   Ereignisse beim Erstellen und Löschen von Threads.  
+- Ereignisse beim Erstellen und Löschen von Threads.  
   
--   Ereignisse beim Funktionseinstieg und Funktionsende.  
+- Ereignisse beim Funktionseinstieg und Funktionsende.  
   
--   Ausnahmen.  
+- Ausnahmen.  
   
--   Übergänge zwischen verwalteter und nicht verwalteter Codeausführung.  
+- Übergänge zwischen verwalteter und nicht verwalteter Codeausführung.  
   
--   Übergänge zwischen verschiedenen Laufzeitkontexten.  
+- Übergänge zwischen verschiedenen Laufzeitkontexten.  
   
--   Informationen über Laufzeitunterbrechungen.  
+- Informationen über Laufzeitunterbrechungen.  
   
--   Informationen über den Laufzeitspeicherheap und die Garbage Collection-Aktivität.  
+- Informationen über den Laufzeitspeicherheap und die Garbage Collection-Aktivität.  
   
  Die Profilerstellungs-API kann von jeder (nicht verwalteten) COM-kompatiblen Sprache aufgerufen werden.  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654093"
 ### <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität  
  Die Profilerstellungs-API unterstützt die folgenden Funktionen nicht:  
   
--   Nicht verwalteter Code, der mit konventionellen Win32-Methoden profiliert werden muss. Der CLR-Profiler umfasst jedoch Übergangsereignisse, um die Grenzen zwischen verwaltetem und nicht verwaltetem Code zu ermitteln.  
+- Nicht verwalteter Code, der mit konventionellen Win32-Methoden profiliert werden muss. Der CLR-Profiler umfasst jedoch Übergangsereignisse, um die Grenzen zwischen verwaltetem und nicht verwaltetem Code zu ermitteln.  
   
--   Sich selbst ändernde Anwendungen, die ihren eigenen Code zu bestimmten Zwecken, beispielsweise bei der aspektorientierten Programmierung, selbsttätig ändern.  
+- Sich selbst ändernde Anwendungen, die ihren eigenen Code zu bestimmten Zwecken, beispielsweise bei der aspektorientierten Programmierung, selbsttätig ändern.  
   
--   Grenzüberprüfung, da die Profilerstellungs-API diese Informationen nicht bereitstellt. Die CLR bietet systeminterne Unterstützung für die Überprüfung von Grenzen des gesamten verwalteten Codes.  
+- Grenzüberprüfung, da die Profilerstellungs-API diese Informationen nicht bereitstellt. Die CLR bietet systeminterne Unterstützung für die Überprüfung von Grenzen des gesamten verwalteten Codes.  
   
--   Remoteprofilerstellung, die aus den folgenden Gründen nicht unterstützt wird:  
+- Remoteprofilerstellung, die aus den folgenden Gründen nicht unterstützt wird:  
   
-    -   Durch die Remoteprofilerstellung verlängert sich die Ausführungszeit. Bei der Verwendung der Profilerstellungsschnittstellen müssen Sie die Ausführungszeit minimieren, damit die Auswirkungen auf die Profilerstellungsergebnisse möglichst gering bleiben. Dies trifft insbesondere dann zu, wenn die Ausführungsleistung überwacht wird. Dabei stellt die Remoteprofilerstellung jedoch keine Einschränkung dar, wenn Profilerstellungsschnittstellen zum Überwachen der Speicherauslastung oder zum Abrufen von Laufzeitinformationen über Stapelrahmen, Objekte usw. verwendet werden.  
+    - Durch die Remoteprofilerstellung verlängert sich die Ausführungszeit. Bei der Verwendung der Profilerstellungsschnittstellen müssen Sie die Ausführungszeit minimieren, damit die Auswirkungen auf die Profilerstellungsergebnisse möglichst gering bleiben. Dies trifft insbesondere dann zu, wenn die Ausführungsleistung überwacht wird. Dabei stellt die Remoteprofilerstellung jedoch keine Einschränkung dar, wenn Profilerstellungsschnittstellen zum Überwachen der Speicherauslastung oder zum Abrufen von Laufzeitinformationen über Stapelrahmen, Objekte usw. verwendet werden.  
   
-    -   Der CLR-Codeprofiler muss mindestens eine Rückrufschnittstelle bei der Laufzeit des lokalen Computers registrieren, auf dem die Anwendung mit Profil ausgeführt wird. Hierdurch wird die Möglichkeit eingeschränkt, einen Remotecodeprofiler zu erstellen.  
+    - Der CLR-Codeprofiler muss mindestens eine Rückrufschnittstelle bei der Laufzeit des lokalen Computers registrieren, auf dem die Anwendung mit Profil ausgeführt wird. Hierdurch wird die Möglichkeit eingeschränkt, einen Remotecodeprofiler zu erstellen.  
   
--   Profilerstellung in Produktionsumgebungen, die eine hohe Verfügbarkeit erfordern. Die Profilerstellungs-API wurde erstellt, um die Diagnose bei der Entwicklung zu unterstützen. Sie wurde nicht den strengen Tests unterzogen, die für die Unterstützung einer Produktionsumgebung erforderlich sind.  
+- Profilerstellung in Produktionsumgebungen, die eine hohe Verfügbarkeit erfordern. Die Profilerstellungs-API wurde erstellt, um die Diagnose bei der Entwicklung zu unterstützen. Sie wurde nicht den strengen Tests unterzogen, die für die Unterstützung einer Produktionsumgebung erforderlich sind.  
   
  [Zurück nach oben](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654093"
 ## <a name="profiling-unmanaged-code"></a>Profilerstellung für nicht verwalteten Code  
  Die Profilerstellungs-API der Common Language Runtime (CLR) bietet minimale Unterstützung zur Profilerstellung für nicht verwalteten Code. Die folgende Funktionalität wird bereitgestellt:  
   
--   Enumeration von Stapelketten. Diese Funktion ermöglicht einem Codeprofiler, die Grenze zwischen verwaltetem und nicht verwaltetem Code zu bestimmen.  
+- Enumeration von Stapelketten. Diese Funktion ermöglicht einem Codeprofiler, die Grenze zwischen verwaltetem und nicht verwaltetem Code zu bestimmen.  
   
--   Feststellung, ob eine Stapelkette verwaltetem oder nativem Code entspricht.  
+- Feststellung, ob eine Stapelkette verwaltetem oder nativem Code entspricht.  
   
  In .NET Framework, Version 1.0 und 1.1, sind diese Methoden über den prozessinternen Teil der Debug-API der CLR verfügbar. Sie sind in der Datei "CorDebug.idl" definiert.  
   

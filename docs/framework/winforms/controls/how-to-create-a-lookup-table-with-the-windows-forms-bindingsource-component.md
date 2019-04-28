@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747056"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms
 Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datensätzen einer verknüpften Tabelle in einer Spalte dargestellt werden. In den folgenden Verfahren wird ein <xref:System.Windows.Forms.ComboBox>-Steuerelement für die Anzeige des Felds mit der Fremdschlüsselbeziehung von der übergeordneten zur untergeordneten Tabelle verwendet.  
@@ -37,13 +37,13 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
  Es sind vier wichtige Eigenschaften im [ComboBox-Steuerelement](combobox-control-windows-forms.md) für das Erstellen der Nachschlagetabelle festgelegt.  
   
--   Die Eigenschaft <xref:System.Windows.Forms.ComboBox.DataSource%2A> enthält den Namen der Tabelle.  
+- Die Eigenschaft <xref:System.Windows.Forms.ComboBox.DataSource%2A> enthält den Namen der Tabelle.  
   
--   Die Eigenschaft <xref:System.Windows.Forms.ListControl.DisplayMember%2A> enthält die Datenspalte dieser Tabelle, die für die Anzeige des Text-Steuerelements (der Name des Kunden) anzeigt werden soll.  
+- Die Eigenschaft <xref:System.Windows.Forms.ListControl.DisplayMember%2A> enthält die Datenspalte dieser Tabelle, die für die Anzeige des Text-Steuerelements (der Name des Kunden) anzeigt werden soll.  
   
--   Die Eigenschaft <xref:System.Windows.Forms.ListControl.ValueMember%2A> enthält die Datenspalte der Tabelle mit den gespeicherten Informationen (der ID-Nummer und der übergeordneten Tabelle).  
+- Die Eigenschaft <xref:System.Windows.Forms.ListControl.ValueMember%2A> enthält die Datenspalte der Tabelle mit den gespeicherten Informationen (der ID-Nummer und der übergeordneten Tabelle).  
   
--   Die Eigenschaft <xref:System.Windows.Forms.ListControl.SelectedValue%2A> liefert den Nachschlagewert für die untergeordnete Tabelle auf Grundlage von <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- Die Eigenschaft <xref:System.Windows.Forms.ListControl.SelectedValue%2A> liefert den Nachschlagewert für die untergeordnete Tabelle auf Grundlage von <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
   
  Die Verfahren unten zeigen, wie Sie das Formular als Nachschlagetabelle gestalten und Daten mit den Steuerelementen darauf binden. Um die Verfahren erfolgreich durchführen zu können, benötigen Sie eine Datenquelle mit über- und untergeordneten Tabellen, die – wie bereits erwähnt – eine Fremdschlüsselbeziehung haben.  
   
@@ -65,21 +65,21 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
 3. Klicken Sie auf den Pfeil neben dem Dropdownfeld **Datenquelle**. Wenn eine Datenquelle bereits für das Projekt oder Formular konfiguriert wurde, wird sie angezeigt; ansonsten führen Sie bitte die folgenden Schritte durch (In diesem Beispiel werden die Kunden- und Bestellungentabellen der Northwind-Beispieldatenbank verwendet, auf die in Klammern verwiesen wird).  
   
-    1.  Klicken Sie auf **Projektdatenquelle hinzufügen**, um die Daten zu verbinden und die Datenquelle zu erzeugen.  
+    1. Klicken Sie auf **Projektdatenquelle hinzufügen**, um die Daten zu verbinden und die Datenquelle zu erzeugen.  
   
-    2.  Klicken Sie auf der Startseite des **Assistenten zum Konfigurieren von Datenquellen** auf **Weiter**.  
+    2. Klicken Sie auf der Startseite des **Assistenten zum Konfigurieren von Datenquellen** auf **Weiter**.  
   
-    3.  Wählen Sie auf der Seite **Datenquellentyp auswählen** die Option **Datenbank** aus.  
+    3. Wählen Sie auf der Seite **Datenquellentyp auswählen** die Option **Datenbank** aus.  
   
-    4.  Wählen Sie auf der Seite **Wählen Sie Ihre Datenverbindung aus** eine Datenverbindung aus der Liste verfügbar Verbindungen aus. Wenn die gewünschte Datenverbindung nicht verfügbar ist, wählen Sie **Neue Verbindung** aus, und legen Sie eine neue Verbindung an.  
+    4. Wählen Sie auf der Seite **Wählen Sie Ihre Datenverbindung aus** eine Datenverbindung aus der Liste verfügbar Verbindungen aus. Wenn die gewünschte Datenverbindung nicht verfügbar ist, wählen Sie **Neue Verbindung** aus, und legen Sie eine neue Verbindung an.  
   
-    5.  Klicken Sie auf **Ja, Verbindung speichern unter**, um die Verbindungszeichenfolge in der Anwendungskonfigurationsdatei zu speichern.  
+    5. Klicken Sie auf **Ja, Verbindung speichern unter**, um die Verbindungszeichenfolge in der Anwendungskonfigurationsdatei zu speichern.  
   
-    6.  Wählen Sie die Datenbankobjekte, die in die Anwendung gebracht werden sollen. In diesem Fall wählen Sie eine übergeordnete und eine untergeordnete Tabelle (z. B. Kunden und Bestellungen) mit einer Fremdschlüsselbeziehung.  
+    6. Wählen Sie die Datenbankobjekte, die in die Anwendung gebracht werden sollen. In diesem Fall wählen Sie eine übergeordnete und eine untergeordnete Tabelle (z. B. Kunden und Bestellungen) mit einer Fremdschlüsselbeziehung.  
   
-    7.  Ersetzen Sie den Standardnamen des Datasets falls gewünscht.  
+    7. Ersetzen Sie den Standardnamen des Datasets falls gewünscht.  
   
-    8.  Klicken Sie auf **Fertig stellen**.  
+    8. Klicken Sie auf **Fertig stellen**.  
   
 4. Wählen Sie im Dropdownfeld **Member anzeigen** den Spaltennamen aus (z.B. ContactName), der im Kombinationsfeld angezeigt werden soll.  
   

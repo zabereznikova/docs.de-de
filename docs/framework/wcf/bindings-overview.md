@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703685"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
 Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem WCF-Dienst erfordert eine wohldefinierte Bindung. Dieses Thema beschreibt die Typen von Kommunikationsdetails, die die Bindungen definieren die Elemente einer Bindung, welche Bindungen in WCF enthalten sind und wie eine Bindung für einen Endpunkt angegeben werden kann.  
@@ -32,13 +32,13 @@ Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Ve
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
  Die Informationen in einer Bindung können komplex sein, und einige Einstellungen sind möglicherweise mit anderen nicht kompatibel. Aus diesem Grund enthält WCF eine Reihe von vom System bereitgestellten Bindungen. Diese Bindungen sind für die meisten Anwendungsanforderungen vorgesehen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Ein HTTP-Protokoll für Verbindungen zu Webdiensten geeignete Bindung, die konform, die der WS-I Basic Profile-Spezifikation (z. B. ASP.NET Web Services-basierte Dienste).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Ein HTTP-Protokoll für Verbindungen zu Webdiensten geeignete Bindung, die konform, die der WS-I Basic Profile-Spezifikation (z. B. ASP.NET Web Services-basierte Dienste).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Eine interoperable Bindung, die für Verbindungen mit Endpunkten, die die WS - entsprechen, geeignete * Protokolle.  
+- <xref:System.ServiceModel.WSHttpBinding>: Eine interoperable Bindung, die für Verbindungen mit Endpunkten, die die WS - entsprechen, geeignete * Protokolle.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verbindung mit anderen WCF-Endpunkten auf demselben Computer.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verbindung mit anderen WCF-Endpunkten auf demselben Computer.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Nachrichten in der Warteschlange Verbindungen mit anderen WCF-Endpunkten zu erstellen.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Nachrichten in der Warteschlange Verbindungen mit anderen WCF-Endpunkten zu erstellen.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Diese Bindung bietet eine höhere Leistung als HTTP-Bindungen und eignet sich ideal für die Verwendung in einem lokalen Netzwerk.
   

@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._AutoRedirects-Feld
+title: HttpWebRequest._AutoRedirects Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -13,13 +13,13 @@ ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 4e42cf5747362f2257a2d777de918721181a8280
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706246"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>"HttpWebRequest". \_AutoRedirects-Feld
+# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest.\_AutoRedirects Field
 
 `HttpWebRequest._AutoRedirects` ist ein <xref:System.Int32> , die die Anzahl von umleitungen, die für diese vorgenommen wiedergibt <xref:System.Net.HttpWebRequest>.
 

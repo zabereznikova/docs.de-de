@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8a979e86dbe52577d0b58089015338e4a87750d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700175"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile-Methode
 Ordnet die angegebene Datei in den Arbeitsspeicher an. Diese Methode ist veraltet.  

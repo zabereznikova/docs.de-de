@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674388"
 ---
 # <a name="socket-element-network-settings"></a>\<Socket >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.  
@@ -64,9 +64,9 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
   
  Dies `ipProtectionLevel` attributeinstellung wirkt sich auf nur die ersten eingehenden Datenverkehr:  
   
--   Ein TCP-Server lauscht für eingehende Verbindungen für einen Socket.  
+- Ein TCP-Server lauscht für eingehende Verbindungen für einen Socket.  
   
--   Eine UDP-Anwendung empfangen eines Pakets auf einem Socket.  
+- Eine UDP-Anwendung empfangen eines Pakets auf einem Socket.  
   
  Diese Einstellung wirkt sich nicht auf bereits eingerichtete TCP-Verbindungen (Datenverkehr ist in beide Richtungen unrestricted) und wirkt sich nicht auf eine Anwendung, die UDP-Pakete zu senden.  
   
