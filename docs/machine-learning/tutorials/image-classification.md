@@ -42,7 +42,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 * Microsoft.ML 0.10.0 NuGet-Paket
 * Microsoft.ML.ImageAnalytics 0.10.0 NuGet-Paket
-* Microsoft.MLT.ensorFlow 0.10.0 NuGet-Paket
+* Microsoft.ML.TensorFlow 0.10.0 NuGet-Paket
 
 * [Die ZIP-Datei mit dem Tutorialassetsverzeichnis ](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
