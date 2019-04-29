@@ -2,12 +2,12 @@
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706311"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773904"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
@@ -50,6 +50,7 @@ Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind 
 * [Verweistypen, die NULL-Werte zulassen](nullable-reference-types.md): demonstriert, wie Sie Verweistypen mit Unterstützung von NULL-Werten einsetzen können, um Ihre Entwurfsabsicht auszudrücken.
 * [Aktualisieren eines Projekts zum Verwenden Nullwerte zulassender Verweistypen](upgrade-to-nullable-references.md): veranschaulicht Techniken zum Aktualisieren eines vorhandenen Projekts zur Verwendung Nullwerte zulassender Verweistypen.
 * [Erweitern von Datenfunktionen mithilfe des Musterabgleichs](pattern-matching.md): veranschaulicht, wie mithilfe des Musterabgleichs Typen über ihre Kernfunktionen hinaus erweitert werden.
+* [Arbeiten mit Datensequenzen mithilfe von Indizes und Bereichen](ranges-indexes.md): Zeigt die neue komfortable Syntax für den Zugriff auf einzelne Elemente oder Bereiche eines sequenziellen Datencontainers.
 
 ## <a name="general-tutorials"></a>Allgemeine Tutorials
 
