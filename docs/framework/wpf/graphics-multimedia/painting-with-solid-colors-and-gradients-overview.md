@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009430"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen
 In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, und <xref:System.Windows.Media.RadialGradientBrush> Objekte zeichnen mit Volltonfarben, linearen Farbverläufen und radialen Farbverläufen.  
@@ -27,15 +27,15 @@ In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.SolidCo
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Verwenden eines SolidColorBrush in „XAML“  
  Zum Zeichnen eines Bereichs mit einer Volltonfarbe in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden Sie eine der folgenden Optionen.  
   
--   Wählen Sie einen vordefinierten Volltonfarbenpinsel über den Namen aus.  Sie können z. B. einer Schaltfläche festlegen <xref:System.Windows.Controls.Control.Background%2A> auf "Rot" oder "MediumBlue".  Eine Liste mit anderen Pinsel mit Volltonfarbe vordefinierte, finden Sie unter die statischen Eigenschaften der <xref:System.Windows.Media.Brushes> Klasse. Nachfolgend finden Sie ein Beispiel:  
+- Wählen Sie einen vordefinierten Volltonfarbenpinsel über den Namen aus.  Sie können z. B. einer Schaltfläche festlegen <xref:System.Windows.Controls.Control.Background%2A> auf "Rot" oder "MediumBlue".  Eine Liste mit anderen Pinsel mit Volltonfarbe vordefinierte, finden Sie unter die statischen Eigenschaften der <xref:System.Windows.Media.Brushes> Klasse. Nachfolgend finden Sie ein Beispiel:  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Wählen Sie eine Farbe aus der 32-Bit-Farbpalette aus, indem Sie die Anteile von Rot, Grün und Blau festlegen, aus denen sich eine Volltonfarbe zusammensetzt.  Das Format zum Festlegen einer Farbe aus der 32-Bit-Palette ist „*#rrggbb*“, wobei mit dem zweistelligen Hexadezimalwert *rr* der relative Anteil von Rot, mit *gg* der Anteil von Grün und *bb* der Anteil von Blau festgelegt wird.  Darüber hinaus kann die Farbe im Format „#*Aarrggbb*“ angegeben werden, wobei *aa* für den *Alpha*wert, also die Transparenz der Farbe, steht. Dieser Ansatz ermöglicht Ihnen die Erstellung von Farben, die teilweise transparent sind.  Im folgenden Beispiel die <xref:System.Windows.Controls.Control.Background%2A> von einem <xref:System.Windows.Controls.Button> auf vollständig deckendes Rot mithilfe der hexadezimalen Schreibweise festgelegt ist.  
+- Wählen Sie eine Farbe aus der 32-Bit-Farbpalette aus, indem Sie die Anteile von Rot, Grün und Blau festlegen, aus denen sich eine Volltonfarbe zusammensetzt.  Das Format zum Festlegen einer Farbe aus der 32-Bit-Palette ist „*#rrggbb*“, wobei mit dem zweistelligen Hexadezimalwert *rr* der relative Anteil von Rot, mit *gg* der Anteil von Grün und *bb* der Anteil von Blau festgelegt wird.  Darüber hinaus kann die Farbe im Format „#*Aarrggbb*“ angegeben werden, wobei *aa* für den *Alpha*wert, also die Transparenz der Farbe, steht. Dieser Ansatz ermöglicht Ihnen die Erstellung von Farben, die teilweise transparent sind.  Im folgenden Beispiel die <xref:System.Windows.Controls.Control.Background%2A> von einem <xref:System.Windows.Controls.Button> auf vollständig deckendes Rot mithilfe der hexadezimalen Schreibweise festgelegt ist.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Eigenschaftensyntax verwenden, um zu beschreiben eine <xref:System.Windows.Media.SolidColorBrush>. Diese Syntax ist ausführlicher, jedoch können Sie zusätzliche Einstellungen, z.B. die Deckkraft des Pinsels, angeben. Im folgenden Beispiel die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaften von zwei <xref:System.Windows.Controls.Button> Elemente sind auf vollständig deckendes Rot festgelegt. Die Farbe des ersten Pinsels wird mit einem vordefinierten Farbnamen beschrieben. Die Farbe des zweiten Pinsels wird mithilfe der Hexadezimalschreibweise beschrieben.  
+- Eigenschaftensyntax verwenden, um zu beschreiben eine <xref:System.Windows.Media.SolidColorBrush>. Diese Syntax ist ausführlicher, jedoch können Sie zusätzliche Einstellungen, z.B. die Deckkraft des Pinsels, angeben. Im folgenden Beispiel die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaften von zwei <xref:System.Windows.Controls.Button> Elemente sind auf vollständig deckendes Rot festgelegt. Die Farbe des ersten Pinsels wird mit einem vordefinierten Farbnamen beschrieben. Die Farbe des zweiten Pinsels wird mithilfe der Hexadezimalschreibweise beschrieben.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.SolidCo
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Zeichnen mit einem SolidColorBrush in Code  
  Zum Zeichnen eines Bereichs mit einer Volltonfarbe in Code, verwenden Sie eine der folgenden Optionen.  
   
--   Verwenden Sie eine der vordefinierten Pinsel, bereitgestellt von der <xref:System.Windows.Media.Brushes> Klasse. Im folgenden Beispiel die <xref:System.Windows.Controls.Control.Background%2A> von einem <xref:System.Windows.Controls.Button> nastaven NA hodnotu <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Verwenden Sie eine der vordefinierten Pinsel, bereitgestellt von der <xref:System.Windows.Media.Brushes> Klasse. Im folgenden Beispiel die <xref:System.Windows.Controls.Control.Background%2A> von einem <xref:System.Windows.Controls.Button> nastaven NA hodnotu <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Erstellen einer <xref:System.Windows.Media.SolidColorBrush> und legen Sie seine <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft mit einem <xref:System.Windows.Media.Color> Struktur. Können Sie eine vordefinierte Farbe aus der <xref:System.Windows.Media.Colors> erstellen Klasse oder eine <xref:System.Windows.Media.Color> mit der statischen <xref:System.Windows.Media.Color.FromArgb%2A> Methode.  
+- Erstellen einer <xref:System.Windows.Media.SolidColorBrush> und legen Sie seine <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft mit einem <xref:System.Windows.Media.Color> Struktur. Können Sie eine vordefinierte Farbe aus der <xref:System.Windows.Media.Colors> erstellen Klasse oder eine <xref:System.Windows.Media.Color> mit der statischen <xref:System.Windows.Media.Color.FromArgb%2A> Methode.  
   
      Im folgende Beispiel veranschaulicht die legen Sie die <xref:System.Windows.Media.SolidColorBrush.Color%2A> Eigenschaft eine <xref:System.Windows.Media.SolidColorBrush> mit einer vordefinierten Farbe.  
   
@@ -81,9 +81,9 @@ In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.SolidCo
   
  Die <xref:System.Windows.Media.GradientStop> ist der Grundbaustein eines Farbverlaufspinsels.  Ein Farbverlaufsstopp gibt eine <xref:System.Windows.Media.GradientStop.Color%2A> an eine <xref:System.Windows.Media.GradientStop.Offset%2A> auf der Farbverlaufsachse.  
   
--   Die Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Color%2A> Eigenschaft gibt die Farbe des Farbverlaufsstopps. Sie können die Farbe festlegen, indem Sie mit einer vordefinierten Farbe (gebotenen die <xref:System.Windows.Media.Colors> Klasse) oder indem Sie ScRGB- oder ARGB-Werte angeben. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] können Sie auch die Hexadezimalschreibweise verwenden, um eine Farbe zu beschreiben. Weitere Informationen finden Sie unter den <xref:System.Windows.Media.Color> Struktur.  
+- Die Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Color%2A> Eigenschaft gibt die Farbe des Farbverlaufsstopps. Sie können die Farbe festlegen, indem Sie mit einer vordefinierten Farbe (gebotenen die <xref:System.Windows.Media.Colors> Klasse) oder indem Sie ScRGB- oder ARGB-Werte angeben. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] können Sie auch die Hexadezimalschreibweise verwenden, um eine Farbe zu beschreiben. Weitere Informationen finden Sie unter den <xref:System.Windows.Media.Color> Struktur.  
   
--   Die Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Offset%2A> Eigenschaft gibt die Position des Farbverlaufsstopps Farbe auf der Farbverlaufsachse an. Der Offset ist ein <xref:System.Double> , die reicht von 0 bis 1. Je näher ist Offsetwert des Farbverlaufsstopps bei 0 liegt, desto näher befindet sich die Farbe am Beginn des Farbverlaufs. Je näher ist Offsetwert des Farbverlaufsstopps bei 1 liegt, desto näher befindet sich die Farbe am Ende des Farbverlaufs.  
+- Die Farbverlaufsstopps <xref:System.Windows.Media.GradientStop.Offset%2A> Eigenschaft gibt die Position des Farbverlaufsstopps Farbe auf der Farbverlaufsachse an. Der Offset ist ein <xref:System.Double> , die reicht von 0 bis 1. Je näher ist Offsetwert des Farbverlaufsstopps bei 0 liegt, desto näher befindet sich die Farbe am Beginn des Farbverlaufs. Je näher ist Offsetwert des Farbverlaufsstopps bei 1 liegt, desto näher befindet sich die Farbe am Ende des Farbverlaufs.  
   
  Die Farbe jedes Punkts zwischen Farbverlaufsstopps wird als eine Kombination der Farben, die durch die zwei umschließenden Farbverlaufsstopps angegeben werden, linear interpoliert. Die folgende Abbildung zeigt die im vorherigen Beispiel erstellten Farbverlaufsstopps. Die Kreise markieren die Position der Farbverlaufsstopps, und eine gestrichelte Linie zeigt die Farbverlaufsachse an.  
   

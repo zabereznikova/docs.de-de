@@ -3,11 +3,11 @@ title: Einstellungsprozess
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005055"
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
@@ -18,35 +18,35 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
  In diesem Beispiel werden die folgenden Funktionen von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] veranschaulicht:  
   
--   <xref:System.Activities.Statements.Flowchart>-Workflow und <xref:System.Activities.Statements.Sequence>-Workflow zur Modellierung von Geschäftsprozessen  
+- <xref:System.Activities.Statements.Flowchart>-Workflow und <xref:System.Activities.Statements.Sequence>-Workflow zur Modellierung von Geschäftsprozessen  
   
--   Workflowdienste  
+- Workflowdienste  
   
--   Messagingaktivitäten  
+- Messagingaktivitäten  
   
--   Inhaltsbasierte Korrelation  
+- Inhaltsbasierte Korrelation  
   
--   Benutzerdefinierte Aktivitäten (deklarativ und codebasiert)  
+- Benutzerdefinierte Aktivitäten (deklarativ und codebasiert)  
   
--   Vom System bereitgestellte SQL Server-Persistenz  
+- Vom System bereitgestellte SQL Server-Persistenz  
   
--   <xref:System.Activities.Persistence.PersistenceParticipant> (benutzerdefiniert)  
+- <xref:System.Activities.Persistence.PersistenceParticipant> (benutzerdefiniert)  
   
--   Benutzerdefinierte Nachverfolgung  
+- Benutzerdefinierte Nachverfolgung  
   
--   Ereignisablaufverfolgung (ETW) für Windows  
+- Ereignisablaufverfolgung (ETW) für Windows  
   
--   Komposition von Aktivitäten  
+- Komposition von Aktivitäten  
   
--   <xref:System.Activities.Statements.Parallel>-Aktivitäten  
+- <xref:System.Activities.Statements.Parallel>-Aktivitäten  
   
--   <xref:System.Activities.Statements.CancellationScope>-Aktivität  
+- <xref:System.Activities.Statements.CancellationScope>-Aktivität  
   
--   Permanente Zeitgeber (<xref:System.Activities.Statements.Delay>-Aktivität)  
+- Permanente Zeitgeber (<xref:System.Activities.Statements.Delay>-Aktivität)  
   
--   Transaktionen  
+- Transaktionen  
   
--   Mehrere Workflows in einer Projektmappe  
+- Mehrere Workflows in einer Projektmappe  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
@@ -64,25 +64,25 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 2. Diese muss vom verantwortlichen Manager genehmigt werden:  
   
-    1.  Der Antrag kann vom Manager abgelehnt werden.  
+    1. Der Antrag kann vom Manager abgelehnt werden.  
   
-    2.  Der Antrag kann mit der Bitte um weitere Informationen an den Antragsteller zurückgegeben werden:  
+    2. Der Antrag kann mit der Bitte um weitere Informationen an den Antragsteller zurückgegeben werden:  
   
-        1.  Der Antragsteller überprüft die Bitte und sendet den Antrag zurück an den Manager.  
+        1. Der Antragsteller überprüft die Bitte und sendet den Antrag zurück an den Manager.  
   
-    3.  Der Antrag kann vom Manager genehmigt werden.  
+    3. Der Antrag kann vom Manager genehmigt werden.  
   
 3. Nachdem der Antrag vom zuständigen Manager genehmigt wurde, muss er vom Abteilungsleiter abgesegnet werden:  
   
-    1.  Der Antrag kann vom Abteilungsleiter zurückgewiesen werden.  
+    1. Der Antrag kann vom Abteilungsleiter zurückgewiesen werden.  
   
-    2.  Der Antrag kann vom Abteilungsleiter genehmigt werden.  
+    2. Der Antrag kann vom Abteilungsleiter genehmigt werden.  
   
 4. Nach der Genehmigung durch den Abteilungsleiter muss der Vorgang noch von 2 Personalvorständen oder vom Firmenchef autorisiert werden:  
   
-    1.  Der Vorgang kann dann in den Zustand der Genehmigung oder Ablehnung übergehen.  
+    1. Der Vorgang kann dann in den Zustand der Genehmigung oder Ablehnung übergehen.  
   
-    2.  Wenn der Vorgang genehmigt wurde, wird eine neue Instanz des `ResumeRequest`-Workflows gestartet (`ResumeRequest` ist über einen Dienstverweis mit HiringRequest.csproj verknüpft.)  
+    2. Wenn der Vorgang genehmigt wurde, wird eine neue Instanz des `ResumeRequest`-Workflows gestartet (`ResumeRequest` ist über einen Dienstverweis mit HiringRequest.csproj verknüpft.)  
   
  Nachdem die Neueinstellung von den Managern gebilligt wurde, muss von der Personalabteilung eine geeignete Person gefunden werden. Dieser Vorgang wird vom zweiten Workflow (`ResumeRequest`, definiert in ResumeRequestService.csproj) durchgeführt. Mit diesem Workflow wird der Ablauf für die Veröffentlichung einer Stellenausschreibung auf der externen Website mit Stellenausschreibungen von Contoso definiert. Eingehende Lebensläufe werden erfasst, und der Status der Stellenausschreibung wird überwacht. Stellenausschreibungen sind abrufbar, bis ein diesbezüglich festgelegter Zeitraum abgelaufen ist oder sie von einem Mitarbeiter von Contoso entfernt werden. Der `ResumeRequest`-Workflow besteht aus den folgenden Schritten:  
   
@@ -215,19 +215,19 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 2. Überprüfen Sie Folgendes, falls die Projektmappe nicht erstellt werden kann:  
   
-    -   Der Verweis auf `ContosoHR` nicht fehlt die `InternalClient` oder `CareersWebSite` Projekte.  
+    - Der Verweis auf `ContosoHR` nicht fehlt die `InternalClient` oder `CareersWebSite` Projekte.  
   
 3. Überprüfen Sie Folgendes, falls die Projektmappe nicht ausgeführt werden kann:  
   
-    1.  Alle Dienste werden ausgeführt.  
+    1. Alle Dienste werden ausgeführt.  
   
-    2.  Die Dienstverweise werden aktualisiert.  
+    2. Die Dienstverweise werden aktualisiert.  
   
-        1.  Öffnen Sie den Ordner App_WebReferences.  
+        1. Öffnen Sie den Ordner App_WebReferences.  
   
-        2.  Mit der rechten Maustaste **Contoso** , und wählen Sie **Web-/Dienstverweise aktualisieren**.  
+        2. Mit der rechten Maustaste **Contoso** , und wählen Sie **Web-/Dienstverweise aktualisieren**.  
   
-        3.  Erstellen Sie die Projektmappe durch Drücken von STRG + UMSCHALT + B in Visual Studio neu.  
+        3. Erstellen Sie die Projektmappe durch Drücken von STRG + UMSCHALT + B in Visual Studio neu.  
   
 ## <a name="uninstalling"></a>Deinstallieren  
   

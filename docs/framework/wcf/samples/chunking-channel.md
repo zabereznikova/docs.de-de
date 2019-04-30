@@ -3,11 +3,11 @@ title: Segmentierungskanal
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002366"
 ---
 # <a name="chunking-channel"></a>Segmentierungskanal
 Beim Senden großer Nachrichten mit Windows Communication Foundation (WCF) ist es oft wünschenswert, um die Menge an Arbeitsspeicher verwendet, um die Pufferung dieser Nachrichten einzuschränken. Eine mögliche Lösung besteht im Streamen des Nachrichtentexts (vorausgesetzt, der größte Teil der Daten befindet sich dort). Einige Protokolle erfordern jedoch die Pufferung der Nachricht als Ganzes. Zuverlässiges Messaging und Sicherheit sind zwei solche Beispiele. Eine weitere mögliche Lösung besteht darin, die große Nachricht in kleinere Nachrichten zu teilen, so genannte Segmente, diese Segmente jeweils einzeln zu senden und dann auf der Empfängerseite die große Nachricht wiederherzustellen. Die Anwendung selbst könnte diese Segmentierung und Desegmentierung vornehmen, oder es könnte alternativ ein benutzerdefinierter Kanal dafür verwendet werden. Das Beispiel für den Segmentierungskanal zeigt, wie mit einem benutzerdefinierten Protokollkanal oder Mehrschicht-Kanal das Segmentieren und Desegmentieren beliebig großer Nachrichten vorgenommen werden kann.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Hier einige Details, die beachtet werden sollten:  
   
--   Send ruft zunächst `ThrowIfDisposedOrNotOpened` auf, um sicherzustellen, dass `CommunicationState` geöffnet ist.  
+- Send ruft zunächst `ThrowIfDisposedOrNotOpened` auf, um sicherzustellen, dass `CommunicationState` geöffnet ist.  
   
--   Das Senden wird synchronisiert, sodass für die einzelnen Sitzungen jeweils nicht mehrere Nachrichten gleichzeitig gesendet werden können. Es gibt einen `ManualResetEvent` namens `sendingDone`, der zurückgesetzt wird, wenn eine segmentierte Nachricht gesendet wird. Sobald die Endsegmentnachricht gesendet wurde, ist dieses Ereignis festgelegt. Die Send-Methode wartet, bis dieses Ereignis festgelegt ist, bevor sie versucht, die ausgehende Nachricht zu senden.  
+- Das Senden wird synchronisiert, sodass für die einzelnen Sitzungen jeweils nicht mehrere Nachrichten gleichzeitig gesendet werden können. Es gibt einen `ManualResetEvent` namens `sendingDone`, der zurückgesetzt wird, wenn eine segmentierte Nachricht gesendet wird. Sobald die Endsegmentnachricht gesendet wurde, ist dieses Ereignis festgelegt. Die Send-Methode wartet, bis dieses Ereignis festgelegt ist, bevor sie versucht, die ausgehende Nachricht zu senden.  
   
--   Send sperrt `CommunicationObject.ThisLock`, um Änderungen am synchronisierten Zustand während des Sendens zu vermeiden. Weitere Informationen zu <xref:System.ServiceModel.Channels.CommunicationObject>-Zuständen und den Zustandsautomaten finden Sie in der <xref:System.ServiceModel.Channels.CommunicationObject>-Dokumentation.  
+- Send sperrt `CommunicationObject.ThisLock`, um Änderungen am synchronisierten Zustand während des Sendens zu vermeiden. Weitere Informationen zu <xref:System.ServiceModel.Channels.CommunicationObject>-Zuständen und den Zustandsautomaten finden Sie in der <xref:System.ServiceModel.Channels.CommunicationObject>-Dokumentation.  
   
--   Der an Send übergebene Timeout dient als Timeout für den gesamten Sendevorgang, der das Senden aller Segmente umfasst.  
+- Der an Send übergebene Timeout dient als Timeout für den gesamten Sendevorgang, der das Senden aller Segmente umfasst.  
   
--   Der benutzerdefinierte <xref:System.Xml.XmlDictionaryWriter>-Entwurf wurde ausgewählt, um zu vermeiden, dass der gesamte Text der ursprünglichen Nachricht gepuffert wird. Wenn mithilfe von <xref:System.Xml.XmlDictionaryReader> ein `message.GetReaderAtBodyContents` für den Text verwendet würde, würde der gesamte Nachrichtentext gepuffert. Stattdessen haben wir einen benutzerdefinierten <xref:System.Xml.XmlDictionaryWriter> übergebene `message.WriteBodyContents`. Wenn die Nachricht WriteBase64 beim Writer aufruft, fasst der Writer Segmente zu Nachrichten zusammen und sendet sie über den inneren Kanal. WriteBase64 blockiert, bis das Segment gesendet wurde.  
+- Der benutzerdefinierte <xref:System.Xml.XmlDictionaryWriter>-Entwurf wurde ausgewählt, um zu vermeiden, dass der gesamte Text der ursprünglichen Nachricht gepuffert wird. Wenn mithilfe von <xref:System.Xml.XmlDictionaryReader> ein `message.GetReaderAtBodyContents` für den Text verwendet würde, würde der gesamte Nachrichtentext gepuffert. Stattdessen haben wir einen benutzerdefinierten <xref:System.Xml.XmlDictionaryWriter> übergebene `message.WriteBodyContents`. Wenn die Nachricht WriteBase64 beim Writer aufruft, fasst der Writer Segmente zu Nachrichten zusammen und sendet sie über den inneren Kanal. WriteBase64 blockiert, bis das Segment gesendet wurde.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementieren des Empfangsvorgangs (Receive)  
  Allgemein gesagt stellt der Empfangsvorgang (Receive) zunächst sicher, dass die eingehende Nachricht nicht `null` und dass ihre Aktion `ChunkingAction` lautet. Wenn sie nicht beide Kriterien erfüllt, wird die Nachricht unverändert von Receive zurückgegeben. Andernfalls erstellt Receive einen neuen `ChunkingReader` und eine neue `ChunkingMessage`, die ihn umgibt (durch Aufrufen von `GetNewChunkingMessage`). Vor der Rückgabe dieser neuen `ChunkingMessage` führt Receive mithilfe eines Threadpool-Threads `ReceiveChunkLoop` aus, wodurch wiederum `innerChannel.Receive` in einer Schleife aufgerufen wird und Segmente an `ChunkingReader` übergeben werden, bis die Endsegmentnachricht empfangen oder der Receive-Timeout erreicht wird.  
   
  Hier einige Details, die beachtet werden sollten:  
   
--   Wie Send ruft auch Receive zunächst `ThrowIfDisposedOrNotOepned` auf, um sicherzustellen, dass `CommunicationState` geöffnet ist.  
+- Wie Send ruft auch Receive zunächst `ThrowIfDisposedOrNotOepned` auf, um sicherzustellen, dass `CommunicationState` geöffnet ist.  
   
--   Auch Receive wird synchronisiert, sodass aus der Sitzung nicht mehrere Nachrichten gleichzeitig empfangen werden können. Dies ist besonders wichtig, da nach dem Empfang einer Startsegmentnachricht davon ausgegangen wird, dass alle anschließend empfangenen Nachrichten Segmente innerhalb dieser neuen Segmentsequenz sind, bis eine Endsegmentnachricht empfangen wird. Receive kann so lange keine Nachrichten mithilfe von Pull aus dem inneren Kanal übertragen, bis alle Segmente, die zu der Nachricht gehören, die momentan wieder aus ihren Segmenten zusammengesetzt wird, empfangen wurden. Um dies zu erreichen, verwendet Receive ein `ManualResetEvent` namens `currentMessageCompleted`, das beim Empfang der Endsegmentnachricht festgelegt und beim Empfang einer neuen Startsegmentnachricht zurückgesetzt wird.  
+- Auch Receive wird synchronisiert, sodass aus der Sitzung nicht mehrere Nachrichten gleichzeitig empfangen werden können. Dies ist besonders wichtig, da nach dem Empfang einer Startsegmentnachricht davon ausgegangen wird, dass alle anschließend empfangenen Nachrichten Segmente innerhalb dieser neuen Segmentsequenz sind, bis eine Endsegmentnachricht empfangen wird. Receive kann so lange keine Nachrichten mithilfe von Pull aus dem inneren Kanal übertragen, bis alle Segmente, die zu der Nachricht gehören, die momentan wieder aus ihren Segmenten zusammengesetzt wird, empfangen wurden. Um dies zu erreichen, verwendet Receive ein `ManualResetEvent` namens `currentMessageCompleted`, das beim Empfang der Endsegmentnachricht festgelegt und beim Empfang einer neuen Startsegmentnachricht zurückgesetzt wird.  
   
--   Im Gegensatz zu Send verhindert Receive während des Empfangs keine Zustandsübergänge bei synchronisierten Zuständen. So kann beispielsweise Close während des Empfangs aufgerufen werden. Der Vorgang wartet dann, bis der ausstehende Empfang der ursprünglichen Nachricht abgeschlossen bzw. der angegebene Timeoutwert erreicht ist.  
+- Im Gegensatz zu Send verhindert Receive während des Empfangs keine Zustandsübergänge bei synchronisierten Zuständen. So kann beispielsweise Close während des Empfangs aufgerufen werden. Der Vorgang wartet dann, bis der ausstehende Empfang der ursprünglichen Nachricht abgeschlossen bzw. der angegebene Timeoutwert erreicht ist.  
   
--   Der an Receive übergebene Timeout dient als Timeout für den gesamten Empfangsvorgang, der den Empfang aller Segmente umfasst.  
+- Der an Receive übergebene Timeout dient als Timeout für den gesamten Empfangsvorgang, der den Empfang aller Segmente umfasst.  
   
--   Wenn die Schicht, die die Nachricht verwendet, den Nachrichtentext langsamer verwendet als Segmentnachrichten eintreffen, puffert `ChunkingReader` die eingehenden Segmente bis zu der von `ChunkingBindingElement.MaxBufferedChunks` angegebenen Obergrenze. Nachdem dieser Grenzwert erreicht wurde, werden erst dann wieder Segmente mithilfe von Pull aus der unteren Schicht übertragen, wenn entweder ein gepuffertes Segment verwendet oder der Empfangs-Timeout erreicht wurde.  
+- Wenn die Schicht, die die Nachricht verwendet, den Nachrichtentext langsamer verwendet als Segmentnachrichten eintreffen, puffert `ChunkingReader` die eingehenden Segmente bis zu der von `ChunkingBindingElement.MaxBufferedChunks` angegebenen Obergrenze. Nachdem dieser Grenzwert erreicht wurde, werden erst dann wieder Segmente mithilfe von Pull aus der unteren Schicht übertragen, wenn entweder ein gepuffertes Segment verwendet oder der Empfangs-Timeout erreicht wurde.  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject-Überschreibungen  
   

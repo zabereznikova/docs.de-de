@@ -3,20 +3,20 @@ title: Sequenzoperatoren
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033435"
 ---
 # <a name="sequence-operators"></a>Sequenzoperatoren
 Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine Sequenzoperatoren, die über eine oder mehrere der folgenden Qualitäten verfügen:  
   
--   Annehmen eines Lambda mit einem Indexparameter.  
+- Annehmen eines Lambda mit einem Indexparameter.  
   
--   Verwenden der Eigenschaften sequenzieller Zeilen, wie <xref:System.Linq.Queryable.TakeWhile%2A>.  
+- Verwenden der Eigenschaften sequenzieller Zeilen, wie <xref:System.Linq.Queryable.TakeWhile%2A>.  
   
--   Verwenden einer beliebigen CLR-Implementierung, z. B. <xref:System.Collections.Generic.IComparer%601>.  
+- Verwenden einer beliebigen CLR-Implementierung, z. B. <xref:System.Collections.Generic.IComparer%601>.  
   
 |Beispiele für nicht unterstützte Elemente|  
 |-----------------------------|  

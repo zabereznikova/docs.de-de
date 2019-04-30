@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991051"
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -49,9 +49,9 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
 ### <a name="multicast"></a>Multicast  
  Beim Weiterleiten von Nachrichten werden Nachrichten normalerweise an einen bestimmten Zielendpunkt weitergeleitet.  Es kann jedoch sein, dass Sie gelegentlich eine Kopie der Nachricht an mehrere Zielendpunkte weiterleiten müssen. Um das Routing per Multicast durchzuführen, müssen die folgenden Bedingungen erfüllt sein:  
   
--   Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil dabei vorgegeben ist, dass die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
+- Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil dabei vorgegeben ist, dass die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
   
--   Mehrere Filter müssen zurückgeben **"true"** beim Auswerten der Nachricht.  
+- Mehrere Filter müssen zurückgeben **"true"** beim Auswerten der Nachricht.  
   
  Wenn diese Bedingungen erfüllt sind, empfängt jeder Zielendpunkt, der einem Filter mit der Rückgabe "true" zugeordnet ist, eine Kopie der Nachricht.  
   

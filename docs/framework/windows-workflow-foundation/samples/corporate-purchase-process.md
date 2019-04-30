@@ -3,11 +3,11 @@ title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005393"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.
@@ -16,27 +16,27 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 
 ## <a name="requirements"></a>Anforderungen
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Veranschaulicht
 
--   Benutzerdefinierte Aktivitäten
+- Benutzerdefinierte Aktivitäten
 
--   Komposition von Aktivitäten
+- Komposition von Aktivitäten
 
--   Lesezeichen
+- Lesezeichen
 
--   Dauerhaftigkeit
+- Dauerhaftigkeit
 
--   Schematisierte Dauerhaftigkeit
+- Schematisierte Dauerhaftigkeit
 
--   Ablaufverfolgung
+- Ablaufverfolgung
 
--   Nachverfolgung
+- Nachverfolgung
 
--   Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendungen und WinForms-Anwendungen)
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendungen und WinForms-Anwendungen)
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
@@ -52,21 +52,21 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 1. Ein Mitarbeiter des Unternehmens X erstellt eine Ausschreibung (Request for Proposal, RFP).  
   
-    1.  Der Mitarbeiter gibt den Titel und die Beschreibung für die Ausschreibung ein.  
+    1. Der Mitarbeiter gibt den Titel und die Beschreibung für die Ausschreibung ein.  
   
-    2.  Der Mitarbeiter wählt die Anbieter aus, die im Rahmen der Ausschreibung ihre Angebote abgeben sollen.  
+    2. Der Mitarbeiter wählt die Anbieter aus, die im Rahmen der Ausschreibung ihre Angebote abgeben sollen.  
   
 2. Der Mitarbeiter versendet die Ausschreibung.  
   
-    1.  Eine Instanz des Workflows wird erstellt.  
+    1. Eine Instanz des Workflows wird erstellt.  
   
-    2.  Der Workflow wartet darauf, dass alle Anbieter ihre Angebote einreichen.  
+    2. Der Workflow wartet darauf, dass alle Anbieter ihre Angebote einreichen.  
   
 3. Nachdem alle Angebote empfangen wurden, durchläuft der Workflow alle eingegangenen Angebote und wählt das beste aus.  
   
-    1.  Jeder Anbieter hat einen Ruf (in diesem Beispiel wird die Reputationliste in VendorRepository.cs gespeichert).  
+    1. Jeder Anbieter hat einen Ruf (in diesem Beispiel wird die Reputationliste in VendorRepository.cs gespeichert).  
   
-    2.  Der Gesamtwert des Angebots wird ermittelt, indem der vom Anbieter eingegebene Wert mit dem aufgezeichneten Ruf des Anbieters multipliziert und durch 100 dividiert wird: (vom Anbieter eingegebener Wert) * (gespeicherte Reputation des Anbieters)/100.  
+    2. Der Gesamtwert des Angebots wird ermittelt, indem der vom Anbieter eingegebene Wert mit dem aufgezeichneten Ruf des Anbieters multipliziert und durch 100 dividiert wird: (vom Anbieter eingegebener Wert) * (gespeicherte Reputation des Anbieters)/100.  
   
 4. Der ursprüngliche Anforderer kann alle eingesendeten Angebote anzeigen. Das beste Angebot wird in einem speziellen Abschnitt des Berichts präsentiert.  
   
@@ -155,20 +155,20 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 ### <a name="web-client-options"></a>Webclientoptionen  
   
--   **Erstellen Sie eine neue Ausschreibung**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
+- **Erstellen Sie eine neue Ausschreibung**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
   
--   **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
+- **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
   
--   **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+- **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   Zeigen Sie als an: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.  
+- Zeigen Sie als an: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.  
   
 ### <a name="winforms-client-options"></a>WinForms-Clientoptionen  
   
--   **Ausschreibung erstellen**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
+- **Ausschreibung erstellen**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
   
--   **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
+- **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
   
--   **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+- **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   **Herstellen einer Verbindung als**: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.
+- **Herstellen einer Verbindung als**: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.

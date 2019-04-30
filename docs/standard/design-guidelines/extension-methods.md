@@ -5,26 +5,26 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026418"
 ---
 # <a name="extension-methods"></a>Erweiterungsmethoden
 Erweiterungsmethoden sind eine Sprachfunktion, die statische Methoden, mit der Aufruf der Instanzmethodensyntax aufgerufen werden kann. Diese Methoden müssen mindestens einen Parameter ausführen, das die Instanz, die die Methode, die darstellt zu verarbeitende ist.  
   
  Klasse, die diese Erweiterungsmethoden definiert wird wie die Klasse "Sponsor" bezeichnet, und es muss als statisch deklariert werden. Um Erweiterungsmethoden verwenden zu können, muss eine den Namespace Definieren der Sponsor-Klasse zu importieren.  
   
- **X AVOID** frivolously Definieren von Erweiterungsmethoden [c#], insbesondere auf Typen, die Sie nicht besitzen.  
+ **X AVOID** frivolously Definieren von Erweiterungsmethoden [C#], insbesondere auf Typen, die Sie nicht besitzen.  
   
  Wenn Sie Quellcode eines Typs besitzen, sollten Sie Sie, verwenden Sie stattdessen die regulären Instanzmethoden zur Verfügung. Seien Sie vorsichtig, wenn Sie nicht besitzen, und eine Methode hinzugefügt werden soll. Der großzügigen Verwendung von Erweiterungsmethoden hat das Potenzial von datenbeschriftungen-APIs von Typen, die nicht dafür konzipiert wurden, diese Methoden.  
   
  **✓ CONSIDER** Erweiterungsmethoden in einem der folgenden Szenarien verwenden:  
   
--   Um Hilfe zu bieten kann Funktionen, die für jede Implementierung einer Schnittstelle, relevant, wenn Funktionen als in Bezug auf die Kernschnittstelle geschrieben werden. Dies ist da konkrete Implementierungen andernfalls Schnittstellen zugewiesen werden können. Z. B. die `LINQ to Objects` Operatoren werden als Erweiterungsmethoden implementiert, für alle <xref:System.Collections.Generic.IEnumerable%601> Typen. Daher alle `IEnumerable<>` Implementierung wird automatisch mit LINQ-fähigen.  
+- Um Hilfe zu bieten kann Funktionen, die für jede Implementierung einer Schnittstelle, relevant, wenn Funktionen als in Bezug auf die Kernschnittstelle geschrieben werden. Dies ist da konkrete Implementierungen andernfalls Schnittstellen zugewiesen werden können. Z. B. die `LINQ to Objects` Operatoren werden als Erweiterungsmethoden implementiert, für alle <xref:System.Collections.Generic.IEnumerable%601> Typen. Daher alle `IEnumerable<>` Implementierung wird automatisch mit LINQ-fähigen.  
   
--   Wenn eine Instanzmethode einer Abhängigkeit auf eine Art, aber diese Abhängigkeit führen würde, werden Management Abhängigkeitsregeln unterbrochen. Z. B. eine Abhängigkeit vom <xref:System.String> zu <xref:System.Uri?displayProperty=nameWithType> ist wahrscheinlich nicht wünschenswert, daher `String.ToUri()` Instanzmethode zurückgeben `System.Uri` wäre der falsche Entwurf vom Standpunkt der Abhängigkeit Management. Eine statische Erweiterungsmethode `Uri.ToUri(this string str)` zurückgeben `System.Uri` wäre ein viel besseres Konzept.  
+- Wenn eine Instanzmethode einer Abhängigkeit auf eine Art, aber diese Abhängigkeit führen würde, werden Management Abhängigkeitsregeln unterbrochen. Z. B. eine Abhängigkeit vom <xref:System.String> zu <xref:System.Uri?displayProperty=nameWithType> ist wahrscheinlich nicht wünschenswert, daher `String.ToUri()` Instanzmethode zurückgeben `System.Uri` wäre der falsche Entwurf vom Standpunkt der Abhängigkeit Management. Eine statische Erweiterungsmethode `Uri.ToUri(this string str)` zurückgeben `System.Uri` wäre ein viel besseres Konzept.  
   
  **X AVOID** definieren Erweiterungsmethoden für <xref:System.Object?displayProperty=nameWithType>.  
   

@@ -3,11 +3,11 @@ title: Benutzerdefiniertes Binden von zuverlässigen Sitzungen
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
 ms.openlocfilehash: 77922001db63fc6c33af385c784a574766f0b78e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003166"
 ---
 # <a name="custom-binding-reliable-session"></a>Benutzerdefiniertes Binden von zuverlässigen Sitzungen
 Eine benutzerdefinierte Bindung wird durch eine geordnete Liste einzelner Bindungselemente definiert. Dieses Beispiel veranschaulicht, wie eine benutzerdefinierte Bindung mit verschiedenen Transportarten und Nachrichtencodierungselementen insbesondere zur Aktivierung zuverlässiger Sitzungen konfiguriert wird.  

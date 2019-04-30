@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961359"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows Forms mithilfe des Designers
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332078"
   
 6. Konfigurieren der <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie die master-Raster, wie folgt festlegen möchten:  
   
-    1.  Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
+    1. Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
   
-    2.  Wählen Sie die master-Tabelle (z. B. "Customers") aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft.  
+    2. Wählen Sie die master-Tabelle (z. B. "Customers") aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft.  
   
 7. Konfigurieren der <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie im Detailraster wie folgt festlegen möchten:  
   
-    1.  Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
+    1. Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
   
-    2.  Wählen Sie die Beziehung (z. B. "Customers.CustOrd") zwischen den Master- und Tabellen aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft. Um die Beziehung anzuzeigen, erweitern Sie den Knoten durch Klicken auf das Pluszeichen (**+**) neben der master-Tabelle in der Dropdown-Liste.  
+    2. Wählen Sie die Beziehung (z. B. "Customers.CustOrd") zwischen den Master- und Tabellen aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft. Um die Beziehung anzuzeigen, erweitern Sie den Knoten durch Klicken auf das Pluszeichen (**+**) neben der master-Tabelle in der Dropdown-Liste.  
   
 ## <a name="see-also"></a>Siehe auch
 

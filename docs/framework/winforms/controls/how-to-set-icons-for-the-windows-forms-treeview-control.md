@@ -13,11 +13,11 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
 ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013256"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Vorgehensweise: Festlegen von Symbolen für das TreeView-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.TreeView> -Steuerelement Symbole neben den einzelnen Knoten können angezeigt werden. Die Symbole werden unmittelbar links neben den Knotentext positioniert. Um diese Symbole anzuzeigen, müssen Sie in der Strukturansicht mit Zuordnen einer <xref:System.Windows.Forms.ImageList> Steuerelement. Weitere Informationen zu Bildlisten, finden Sie unter [ImageList-Komponente](imagelist-component-windows-forms.md) und [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

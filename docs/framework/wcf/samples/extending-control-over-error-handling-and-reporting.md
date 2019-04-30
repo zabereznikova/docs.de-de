@@ -3,11 +3,11 @@ title: Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990157"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 In diesem Beispiel wird veranschaulicht, wie zum Erweitern der Kontrolle über Fehlerbehandlung und Fehlerberichterstattung in einen Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler> Schnittstelle. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) mit zusätzlichen Code zum Behandeln von Fehlern an den Dienst hinzugefügt. Der Client erzwingt verschiedene Fehlerbedingungen. Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  

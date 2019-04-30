@@ -3,11 +3,11 @@ title: Erweiterte Schutzrichtlinie
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990170"
 ---
 # <a name="extended-protection-policy"></a>Erweiterte Schutzrichtlinie
 Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-Middle-Angriffen (MITM-Angriff, Janusangriff). Ein MITM-Angriff ist eine Sicherheitsbedrohung, bei der ein MITM die Anmeldeinformationen eines Clients an einen Server weiterleitet.  
@@ -34,9 +34,9 @@ Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-M
   
 4. In diesem Beispiel muss der Client eine Verbindung über einen sicheren Kanal zum Server herstellen. Dazu muss ein Serverzertifikat vorliegen, das im IIS (Internet Information Services)-Manager installiert werden kann.  
   
-    1.  Öffnen Sie IIS-Manager. Open **Serverzertifikate**, die angezeigt wird, der **Ansicht "Feature"** Registerkarte, wenn der Stammknoten (Computername) ausgewählt ist.  
+    1. Öffnen Sie IIS-Manager. Open **Serverzertifikate**, die angezeigt wird, der **Ansicht "Feature"** Registerkarte, wenn der Stammknoten (Computername) ausgewählt ist.  
   
-    2.  Erstellen Sie zum Testen dieses Beispiels ein selbstsigniertes Zertifikat. Wenn Sie von Internet Explorer keine Meldung hinsichtlich der fehlenden Sicherheit des Zertifikats erhalten möchten, installieren Sie das Zertifikat im entsprechenden Autoritätsspeicher für vertrauenswürdige Zertifikate.  
+    2. Erstellen Sie zum Testen dieses Beispiels ein selbstsigniertes Zertifikat. Wenn Sie von Internet Explorer keine Meldung hinsichtlich der fehlenden Sicherheit des Zertifikats erhalten möchten, installieren Sie das Zertifikat im entsprechenden Autoritätsspeicher für vertrauenswürdige Zertifikate.  
   
 5. Öffnen der **Aktionen** Bereich für die Standardwebsite. Klicken Sie auf **Site bearbeiten**, **Bindungen**. Fügen Sie HTTPS als Typ hinzu, wenn nicht bereits vorhanden ist, und geben Sie die Portnummer 443 an. Weisen Sie das im vorangehenden Schritt erstellte SSL-Zertifikat zu.  
   

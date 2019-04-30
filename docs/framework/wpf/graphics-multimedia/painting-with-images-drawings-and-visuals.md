@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002290"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Zeichnen mit Bildern, Zeichnungen und visuellen Elementen
 In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Objekte zum Zeichnen eines Bereichs mit einem Bild, ein <xref:System.Windows.Media.Drawing>, oder ein <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ Von einem DrawingBrush gezeichnete Objekte
   
  Ein <xref:System.Windows.Media.DrawingBrush> zeichnet einen Bereich mit einem <xref:System.Windows.Media.Drawing> Objekt. Ein <xref:System.Windows.Media.Drawing> -Objekt beschreibt sichtbaren Inhalt, z. B. eine Form, Bitmap, Video oder eine Textzeile. Verschiedene Arten von Zeichnungen beschreiben verschiedene Arten von Inhalten. Im Folgenden finden Sie eine Liste der unterschiedlichen Typen von Zeichnungsobjekten.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
+- <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
+- <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Gibt eine Audio- oder Videodatei.  
+- <xref:System.Windows.Media.VideoDrawing> – Gibt eine Audio- oder Videodatei.  
   
--   <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
+- <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
   
  Weitere Informationen zu <xref:System.Windows.Media.Drawing> Objekten finden Sie die [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ Von einem DrawingBrush gezeichnete Objekte
   
  Es gibt zwei Möglichkeiten zum Angeben der <xref:System.Windows.Media.VisualBrush.Visual%2A> Inhalt von einem <xref:System.Windows.Media.VisualBrush>.  
   
--   Erstellen Sie ein neues <xref:System.Windows.Media.Visual> und verwenden sie zum Festlegen der <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft der <xref:System.Windows.Media.VisualBrush>. Ein Beispiel finden Sie unter den [Beispiel: Zeichnen eines Objekts mit einem visuellen Element](#examplevisualbrush1) im folgenden Abschnitt.  
+- Erstellen Sie ein neues <xref:System.Windows.Media.Visual> und verwenden sie zum Festlegen der <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft der <xref:System.Windows.Media.VisualBrush>. Ein Beispiel finden Sie unter den [Beispiel: Zeichnen eines Objekts mit einem visuellen Element](#examplevisualbrush1) im folgenden Abschnitt.  
   
--   Verwenden Sie ein vorhandenes <xref:System.Windows.Media.Visual>, wodurch ein Bildduplikat vom Ziel erstellt <xref:System.Windows.Media.Visual>. Anschließend können Sie die <xref:System.Windows.Media.VisualBrush> interessante Effekte, z.B. Reflektion und Vergrößerung zu erstellen. Ein Beispiel finden Sie unter den [Beispiel: Erstellen einer Reflektion](#examplevisualbrush2) Abschnitt.  
+- Verwenden Sie ein vorhandenes <xref:System.Windows.Media.Visual>, wodurch ein Bildduplikat vom Ziel erstellt <xref:System.Windows.Media.Visual>. Anschließend können Sie die <xref:System.Windows.Media.VisualBrush> interessante Effekte, z.B. Reflektion und Vergrößerung zu erstellen. Ein Beispiel finden Sie unter den [Beispiel: Erstellen einer Reflektion](#examplevisualbrush2) Abschnitt.  
   
  Beim Definieren einer neuen <xref:System.Windows.Media.VisualBrush.Visual%2A> für eine <xref:System.Windows.Media.VisualBrush> und <xref:System.Windows.Media.Visual> ist eine <xref:System.Windows.UIElement> (z. B. ein Bereich oder Steuerelement), der das Layoutsystem führt auf der <xref:System.Windows.UIElement> und seine untergeordneten Elemente bei der <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> -Eigenschaftensatz auf `true`. Jedoch den Stamm <xref:System.Windows.UIElement> ist im Grunde vom Rest des Systems isoliert: Stile und externes Layout können diese Abgrenzung nicht durchdringen. Daher sollten Sie explizit die Größe des Stamms angeben <xref:System.Windows.UIElement>, da nur das übergeordnete Element ist die <xref:System.Windows.Media.VisualBrush> und sich daher nicht automatisch auf den gezeichneten Bereich anpassen kann. Weitere Informationen zum Layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] finden Sie unter [Layout](../advanced/layout.md).  
   

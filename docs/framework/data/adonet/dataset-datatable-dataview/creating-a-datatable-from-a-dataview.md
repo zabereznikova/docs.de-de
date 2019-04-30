@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034397"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Erstellen einer "DataTable" aus einer "DataView"
 Nachdem Sie Daten aus einer Datenquelle abgerufen und eine <xref:System.Data.DataTable> mit Daten gefüllt haben, möchten Sie die zurückgegebenen Daten möglicherweise sortieren, filtern oder anderweitig einschränken, ohne sie erneut abrufen zu müssen. Dies wird durch die <xref:System.Data.DataView>-Klasse ermöglicht. Darüber hinaus, wenn Sie ein neues erstellen müssen <xref:System.Data.DataTable> aus der <xref:System.Data.DataView>, können Sie die <xref:System.Data.DataView.ToTable%2A> Methode, um alle Zeilen und Spalten oder eine Teilmenge der Daten in eine neue kopieren <xref:System.Data.DataTable>. Die <xref:System.Data.DataView.ToTable%2A>-Methode stellt Überladungen für folgende Vorgänge bereit:  
   
--   Erstellen einer <xref:System.Data.DataTable>, die Spalten enthält, bei denen es sich um eine Teilmenge der Spalten in der <xref:System.Data.DataView> handelt.  
+- Erstellen einer <xref:System.Data.DataTable>, die Spalten enthält, bei denen es sich um eine Teilmenge der Spalten in der <xref:System.Data.DataView> handelt.  
   
--   Erstellen Sie eine <xref:System.Data.DataTable> , enthält nur eindeutige Zeilen aus der <xref:System.Data.DataView>, analog zum Schlüsselwort DISTINCT in Transact-SQL.  
+- Erstellen Sie eine <xref:System.Data.DataTable> , enthält nur eindeutige Zeilen aus der <xref:System.Data.DataView>, analog zum Schlüsselwort DISTINCT in Transact-SQL.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Konsolenanwendungsbeispiel erstellt eine <xref:System.Data.DataTable> , enthält die Daten aus der **Person.Contact** -Tabelle in der **AdventureWorks** -Beispieldatenbank. Als Nächstes erstellt das Beispiel eine sortierte und gefilterte <xref:System.Data.DataView> basierend auf den <xref:System.Data.DataTable>. Nach dem Anzeigen des Inhalts von der <xref:System.Data.DataTable> und <xref:System.Data.DataView>, das Beispiel erstellt ein neues <xref:System.Data.DataTable> aus der <xref:System.Data.DataView> durch Aufrufen der <xref:System.Data.DataView.ToTable%2A> -Methode, nur eine Teilmenge der verfügbaren Spalten auswählt. Zum Schluss werden im Beispiel die Inhalte der neuen <xref:System.Data.DataTable> angezeigt.  

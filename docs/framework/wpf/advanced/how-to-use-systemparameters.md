@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
 ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001454"
 ---
 # <a name="how-to-use-systemparameters"></a>Vorgehensweise: Verwenden von SystemParameters
 Dieses Beispiel zeigt, wie Sie den Zugriff auf und verwenden Sie die Eigenschaften der <xref:System.Windows.SystemParameters> zum Formatieren oder Anpassen einer Schaltfläche.  

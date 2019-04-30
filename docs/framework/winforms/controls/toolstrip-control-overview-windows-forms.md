@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009525"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Übersicht über das ToolStrip-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten Sie ein gemeinsames Framework zum Zusammenfassen von Elementen der Benutzeroberfläche in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, enthält dies ist die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Speicherplatz freizugeben.  
@@ -24,19 +24,19 @@ Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und d
 ## <a name="features-of-the-toolstrip-controls"></a>Features von ToolStrip-Steuerelementen  
  Verwenden der <xref:System.Windows.Forms.ToolStrip> zu steuern:  
   
--   Stellen Sie eine gemeinsame Benutzeroberfläche in Containern.  
+- Stellen Sie eine gemeinsame Benutzeroberfläche in Containern.  
   
--   Erstellen Sie ganz einfach benutzerdefinierte, häufig angewandte Symbolleisten, die Unterstützung von erweiterten Features von Benutzer-Schnittstelle und das Layout, z. B. Schaltflächen, andocken, rafting mit Text und Bildern, Dropdown-Schaltflächen und Steuerelemente, überlaufen, Schaltflächen und Neuanordnen von der Laufzeit von <xref:System.Windows.Forms.ToolStrip> die Elemente.  
+- Erstellen Sie ganz einfach benutzerdefinierte, häufig angewandte Symbolleisten, die Unterstützung von erweiterten Features von Benutzer-Schnittstelle und das Layout, z. B. Schaltflächen, andocken, rafting mit Text und Bildern, Dropdown-Schaltflächen und Steuerelemente, überlaufen, Schaltflächen und Neuanordnen von der Laufzeit von <xref:System.Windows.Forms.ToolStrip> die Elemente.  
   
--   Überlauf und Neuanordnen von Elementen zur Laufzeit zu unterstützen. Die Überlauf-Funktion verschiebt Elemente in einem Dropdown-Menü, wenn nicht genügend Platz zum Anzeigen in einem <xref:System.Windows.Forms.ToolStrip>.  
+- Überlauf und Neuanordnen von Elementen zur Laufzeit zu unterstützen. Die Überlauf-Funktion verschiebt Elemente in einem Dropdown-Menü, wenn nicht genügend Platz zum Anzeigen in einem <xref:System.Windows.Forms.ToolStrip>.  
   
--   Das typische Aussehen und Verhalten des Betriebssystems über ein gemeinsames Renderingmodell zu unterstützen.  
+- Das typische Aussehen und Verhalten des Betriebssystems über ein gemeinsames Renderingmodell zu unterstützen.  
   
--   Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
+- Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
   
--   Ziehen Sie Elemente aus einer <xref:System.Windows.Forms.ToolStrip> in eine andere oder innerhalb einer <xref:System.Windows.Forms.ToolStrip>.  
+- Ziehen Sie Elemente aus einer <xref:System.Windows.Forms.ToolStrip> in eine andere oder innerhalb einer <xref:System.Windows.Forms.ToolStrip>.  
   
--   Erstellen Sie die Benutzeroberflächen-Typ-Editoren Dropdown-Steuerelemente und einen Benutzer mit erweiterten Layouts in einer <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Erstellen Sie die Benutzeroberflächen-Typ-Editoren Dropdown-Steuerelemente und einen Benutzer mit erweiterten Layouts in einer <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Verwenden Sie die <xref:System.Windows.Forms.ToolStripControlHost> -Klasse zur Verwendung von anderen Steuerelementen für eine <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStrip> Funktionen für sie.  
   

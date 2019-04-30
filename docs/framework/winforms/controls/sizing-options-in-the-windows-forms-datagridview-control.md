@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
 ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903161"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms
 <xref:System.Windows.Forms.DataGridView> Zeilen, Spalten und Header können aus vielen Gründen ihre Größe ändern. Die folgende Tabelle zeigt diese vorkommen.  
@@ -46,13 +46,13 @@ ms.locfileid: "59197840"
 ## <a name="resizing-with-the-mouse"></a>Ändern der Größe, mit der Maus  
  Standardmäßig können Größe der Zeilen, Spalten und Header, die eine automatische größenanpassungen basierend auf den Werten der Zelle nicht verwenden. Um zu verhindern, dass Benutzer andere Größenanpassungsmodi verwenden, z. B. Spaltenfüllmodus legen Sie eine oder mehrere der folgenden <xref:System.Windows.Forms.DataGridView> Eigenschaften:  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  Sie können auch verhindern, dass Benutzer ändern einzelner Zeilen oder Spalten durch Festlegen der Größe ihrer <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaften. In der Standardeinstellung die <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> Eigenschaftswert basiert auf der <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> Eigenschaftswert für die Spalten und die <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> Wert der Eigenschaft für Zeilen. Wenn Sie explizit festlegen <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> zu <xref:System.Windows.Forms.DataGridViewTriState.True> oder <xref:System.Windows.Forms.DataGridViewTriState.False>jedoch den angegebenen Wert überschrieben, die der Steuerelementwert für diese Zeile oder Spalte ist. Legen Sie <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> zu <xref:System.Windows.Forms.DataGridViewTriState.NotSet> um die Vererbung wiederherzustellen.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "59197840"
   
  Um den Größenänderungsmodus für Headers- und Rows und Spalten, die nicht den Wert im Steuerelement außer Kraft setzen zu konfigurieren, legen Sie eine oder mehrere der folgenden <xref:System.Windows.Forms.DataGridView> Eigenschaften:  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  Um das Steuerelement den Größenanpassungsmodus für eine einzelne Spalte zu überschreiben, legen dessen <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Eigenschaft, um einen anderen Wert als <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. Wird von der Größenänderungsmodus für eine Spalte bestimmt die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaft. Der Wert dieser Eigenschaft wird auf Grundlage der Spalte des <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Eigenschaftswert, es sei denn, dieser Wert ist <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>, in diesem Fall des Steuerelements <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> Wert geerbt wird.  
   
@@ -93,27 +93,27 @@ ms.locfileid: "59197840"
 ## <a name="programmatic-resizing"></a>Programmgesteuerten Größenanpassung  
  Wenn automatische größenanpassungen deaktiviert ist, können Sie programmgesteuert die genaue Breite oder Höhe der Zeilen, Spalten und Header über die folgenden Eigenschaften festlegen:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  Sie können auch programmgesteuert Zeilen, Spalten und Header an ihren Inhalt mithilfe der folgenden Methoden an die Größe ändern:  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  Diese Methoden werden Zeilen, Spalten oder Header einmal anstatt konfigurieren sie continuous Ändern der Größe die Größe ändern. Die neuen Größen werden automatisch alle Zelleninhalt ohne Clipping anzuzeigende berechnet. Wenn Sie programmgesteuerte Änderung der Spaltengröße, die <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> Eigenschaftswerte <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, jedoch werden der berechneten Breiten verwendet, um die Spalte proportional anzupassen <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> Eigenschaftswerte, und die Spalte tatsächlich breiten sind Klicken Sie dann berechnet basierend auf diesen neuen Proportionen, so, dass alle Spalten des Steuerelements verfügbaren Anzeigebereichs ausfüllen.  
   

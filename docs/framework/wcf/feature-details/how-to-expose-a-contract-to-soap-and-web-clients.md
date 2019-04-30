@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients'
+title: 'Vorgehensweise: Verfügbarmachen eines Vertrags für SOAP- und Webclients'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000921"
 ---
-# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Gewusst wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients
+# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Vorgehensweise: Verfügbarmachen eines Vertrags für SOAP- und Webclients
 
 Standardmäßig stellt Windows Communication Foundation (WCF) Endpunkte nur für SOAP-Clients zur Verfügung. In [Vorgehensweise: Erstellen eines grundlegenden WCF-HTTP-Webdiensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), ein Endpunkt für nicht-SOAP-Clients verfügbar gemacht wird. Manchmal möchten Sie jedoch einen Vertrag für beide Wege verfügbar machen, als Webendpunkt und als SOAP-Endpunkt. In diesem Thema wird ein Beispiel für diesen Vorgang gezeigt.
 

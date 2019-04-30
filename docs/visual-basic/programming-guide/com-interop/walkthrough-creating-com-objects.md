@@ -9,11 +9,11 @@ helpviewer_keywords:
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
 ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022310"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekte in Visual Basic
 Wenn Sie neue Anwendungen oder Komponenten erstellen möchten, empfiehlt es sich zum Erstellen von .NET Framework-Assemblys. Allerdings erleichtert Visual Basic auch .NET Framework-Komponenten für COM verfügbar gemacht. Dadurch können Sie frühere anwendungssuites neue Komponenten bereit, die COM-Komponenten erfordern. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Visual Basic verwenden, um verfügbar zu machen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Objekte als COM-Objekte mit und ohne COM-Klassenvorlage.  

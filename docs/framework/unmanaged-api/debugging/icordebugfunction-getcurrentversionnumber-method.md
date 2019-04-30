@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea615eacb30fd4e7a0fd7d730094c2ab4f9dc285
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988727"
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber-Methode
 Ruft die Versionsnummer der letzten Änderung der Funktion, die von diesem ICorDebugFunction-Objekt dargestellt.  

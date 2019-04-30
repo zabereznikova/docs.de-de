@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011713"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers
 Nachdem Sie dem Formular Steuerelemente hinzugefügt und die Benutzeroberfläche für Ihre Anwendung bestimmt, können Sie die Steuerelemente an eine Datenquelle binden, damit Benutzer können zur Laufzeit ändern und Speichern von Daten, die im Zusammenhang mit der Anwendung.  
@@ -31,9 +31,9 @@ Nachdem Sie dem Formular Steuerelemente hinzugefügt und die Benutzeroberfläche
   
 2. In der **Eigenschaften** Fenster:  
   
-    1.  Erweitern Sie die **(DataBindings)** Knoten.  
+    1. Erweitern Sie die **(DataBindings)** Knoten.  
   
-    2.  Klicken Sie auf den Pfeil neben der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft.  
+    2. Klicken Sie auf den Pfeil neben der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft.  
   
          Die **DataSource** UI-Typ-Editor wird geöffnet.  
   

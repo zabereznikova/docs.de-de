@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: KrzysztofCwalina
 ms.openlocfilehash: d0b16530863b009010383c8739c9512738dfdffd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026470"
 ---
 # <a name="common-design-patterns"></a>Allgemeine Entwurfsmuster
 Es gibt zahlreichen Büchern zu Softwaremuster Mustersprachen und Antimuster, die den sehr weit gefasste Betreff von Mustern zu behandeln. Daher bietet in diesem Kapitel, Richtlinien und Informationen im Zusammenhang mit der ein sehr eingeschränkter Satz von Mustern, die häufig in den Entwurf der .NET Framework-APIs verwendet werden.  

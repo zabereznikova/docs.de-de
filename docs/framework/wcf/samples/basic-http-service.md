@@ -3,11 +3,11 @@ title: Einfacher HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002650"
 ---
 # <a name="basic-http-service"></a>Einfacher HTTP-Dienst
 In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Service – auch bezeichnet als "POX" (Plain Old XML)-Dienst mithilfe des Windows Communication Foundation (WCF)-REST-Programmiermodells implementiert wird. In diesem Beispiel besteht aus zwei Komponenten: einem selbst gehosteten WCF-HTTP-Dienst (Service.cs) und eine Konsolenanwendung (Program.cs), die der Dienst erstellt und Aufrufe durchführt.  

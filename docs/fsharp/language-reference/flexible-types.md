@@ -3,11 +3,11 @@ title: Flexible Typen
 description: Erfahren Sie, wie Sie mit F# Anmerkung flexibler Typen, die angibt, dass ein Parameter, Variablen oder Wert ein Typs mit einem angegebenen Typ kompatibel ist.
 ms.date: 05/16/2016
 ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981382"
 ---
 # <a name="flexible-types"></a>Flexible Typen
 

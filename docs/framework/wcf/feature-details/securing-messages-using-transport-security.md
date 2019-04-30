@@ -3,11 +3,11 @@ title: Sichern von Nachrichten mit Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990963"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
 In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher erläutert, mit der Sie an eine Warteschlange gesendete Nachrichten sichern können.  
@@ -25,11 +25,11 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
   
  Durch den Einsatz der Transportsicherheit mit <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> wird bestimmt, wie MSMQ-Nachrichten bei der Übertragung von der Übertragungswarteschlange zur Zielwarteschlange gesichert werden. Sicherheit bedeutet hier:  
   
--   Signieren der Nachricht, um sicherzustellen, dass sie nicht verfälscht wurde.  
+- Signieren der Nachricht, um sicherzustellen, dass sie nicht verfälscht wurde.  
   
--   Verschlüsseln der Nachricht, um sicherzustellen, dass sie nicht angezeigt oder verfälscht werden kann. Dies wird empfohlen, ist jedoch optional.  
+- Verschlüsseln der Nachricht, um sicherzustellen, dass sie nicht angezeigt oder verfälscht werden kann. Dies wird empfohlen, ist jedoch optional.  
   
--   Der Zielwarteschlangenmanager, der überprüft, dass der Sender der Nachricht wirklich der Absender ist.  
+- Der Zielwarteschlangenmanager, der überprüft, dass der Sender der Nachricht wirklich der Absender ist.  
   
  In MSMQ hat die Zielwarteschlange, unabhängig von der Authentifizierung, eine Access Control List (ACL), anhand der überprüft wird, ob der Client die Berechtigung hat, die Nachricht an die Zielwarteschlange zu senden. Die Empfängeranwendung wird ebenfalls daraufhin überprüft, ob sie die Berechtigung hat, die Nachricht aus der Zielwarteschlange zu empfangen.  
   

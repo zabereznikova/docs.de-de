@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008201"
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](geometry-overview.md), jedoch in diesem Thema wird ausführlich die leistungsstarke und komplexe Minisprache Sie den Pfad angeben können Pfadgeometrien kompakter unter Verwendung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -25,11 +25,11 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shap
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry- und PathFigureCollection-Minisprachen  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zwei Klassen, die Minisprachen für die Beschreibung von geometrischen Pfaden bereitstellen: <xref:System.Windows.Media.StreamGeometry> und <xref:System.Windows.Media.PathFigureCollection>.  
   
--   Sie verwenden die <xref:System.Windows.Media.StreamGeometry> Minisprache beim Festlegen einer Eigenschaft vom Typ <xref:System.Windows.Media.Geometry>, wie z. B. die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft eine <xref:System.Windows.UIElement> oder <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft eine <xref:System.Windows.Shapes.Path> Element. Im folgenden Beispiel wird eine Attributsyntax zum Erstellen einer <xref:System.Windows.Media.StreamGeometry>.  
+- Sie verwenden die <xref:System.Windows.Media.StreamGeometry> Minisprache beim Festlegen einer Eigenschaft vom Typ <xref:System.Windows.Media.Geometry>, wie z. B. die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft eine <xref:System.Windows.UIElement> oder <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft eine <xref:System.Windows.Shapes.Path> Element. Im folgenden Beispiel wird eine Attributsyntax zum Erstellen einer <xref:System.Windows.Media.StreamGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Sie verwenden die <xref:System.Windows.Media.PathFigureCollection> Minisprache beim Festlegen der <xref:System.Windows.Media.PathGeometry.Figures%2A> Eigenschaft eine <xref:System.Windows.Media.PathGeometry>. Im folgende Beispiel wird eine Attributsyntax verwendet, zum Erstellen einer <xref:System.Windows.Media.PathFigureCollection> für eine <xref:System.Windows.Media.PathGeometry>.  
+- Sie verwenden die <xref:System.Windows.Media.PathFigureCollection> Minisprache beim Festlegen der <xref:System.Windows.Media.PathGeometry.Figures%2A> Eigenschaft eine <xref:System.Windows.Media.PathGeometry>. Im folgende Beispiel wird eine Attributsyntax verwendet, zum Erstellen einer <xref:System.Windows.Media.PathFigureCollection> für eine <xref:System.Windows.Media.PathGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   

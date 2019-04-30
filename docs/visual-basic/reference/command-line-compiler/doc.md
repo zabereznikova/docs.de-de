@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969207"
 ---
 # <a name="-doc"></a>-doc
 Verarbeitet Dokumentationskommentare zu einer XML-Datei.  
@@ -36,9 +36,9 @@ Verarbeitet Dokumentationskommentare zu einer XML-Datei.
   
  In Quellcodedateien können Dokumentationskommentare den folgenden Definitionen vorangestellt sein:  
   
--   Benutzerdefinierte Typen wie [Class](../../../visual-basic/language-reference/statements/class-statement.md) und [Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- Benutzerdefinierte Typen wie [Class](../../../visual-basic/language-reference/statements/class-statement.md) und [Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   Member, z. B. ein Feld, ein Ereignis ([Event](../../../visual-basic/language-reference/statements/event-statement.md)), eine Eigenschaft ([Property](../../../visual-basic/language-reference/statements/property-statement.md)), eine Funktion ([Function](../../../visual-basic/language-reference/statements/function-statement.md)) oder eine Unterroutine ([Sub](../../../visual-basic/language-reference/statements/sub-statement.md)).  
+- Member, z. B. ein Feld, ein Ereignis ([Event](../../../visual-basic/language-reference/statements/event-statement.md)), eine Eigenschaft ([Property](../../../visual-basic/language-reference/statements/property-statement.md)), eine Funktion ([Function](../../../visual-basic/language-reference/statements/function-statement.md)) oder eine Unterroutine ([Sub](../../../visual-basic/language-reference/statements/sub-statement.md)).  
   
  Wenn Sie die generierte XML-Datei mit der [IntelliSense](/visualstudio/ide/using-intellisense)-Funktionalität von Visual Studio verwenden möchten, geben Sie für die XML-Datei genau den Dateinamen an, den die Assembly hat, die Sie unterstützen möchten. Stellen Sie sicher, dass sich die XML-Datei im selben Verzeichnis wie die Assembly befindet, sodass auch die XML-Datei gefunden wird, wenn im Visual Studio-Projekt auf die Assembly verwiesen wird. XML-Dokumentationsdateien sind nicht erforderlich, damit IntelliSense für Code in einem Projekt oder in Projekten funktioniert, auf die in einem Projekt verwiesen wird.  
   

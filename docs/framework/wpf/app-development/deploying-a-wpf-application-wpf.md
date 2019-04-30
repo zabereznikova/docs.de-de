@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981535"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bereitstellen von WPF-Anwendungen (WPF)
 Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müssen sie bereitgestellt werden. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] und das .NET Framework bieten verschiedene bereitstellungstechnologien. Die für die Bereitstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung eingesetzte Technologie ist abhängig vom Anwendungstyp. Dieses Thema bietet eine kurze Übersicht über die einzelnen Bereitstellungstechnologien. Außerdem erfahren Sie, wie diese Bereitstellungstechnologien im Zusammenhang mit den Bereitstellungsvoraussetzungen für die verschiedenen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungstypen verwendet werden.  
@@ -19,21 +19,21 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
 ## <a name="deployment-technologies"></a>Bereitstellungstechnologien  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] und das .NET Framework bieten verschiedene bereitstellungstechnologien, einschließlich:  
   
--   Bereitstellung mit XCopy  
+- Bereitstellung mit XCopy  
   
--   Bereitstellung mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]  
+- Bereitstellung mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]  
   
--   Bereitstellung mit [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]  
+- Bereitstellung mit [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Bereitstellung mit XCopy  
  Bereitstellung mit XCopy bedeutet, dass mithilfe des XCopy-Befehlszeilenprogramms Dateien von einem Speicherort an einen anderen kopiert werden. Diese Art der Bereitstellung ist in den folgenden Fällen geeignet:  
   
--   Es handelt sich um eine unabhängige, in sich geschlossene Anwendung. Der Client muss für die Ausführung nicht aktualisiert werden.  
+- Es handelt sich um eine unabhängige, in sich geschlossene Anwendung. Der Client muss für die Ausführung nicht aktualisiert werden.  
   
--   Anwendungsdateien müssen zwischen Speicherorten verschoben werden, zum Beispiel vom Ort der Erstellung (lokaler Datenträger, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)]-Dateifreigabe usw.) an den Ort der Veröffentlichung (Website, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)]-Dateifreigabe usw.).  
+- Anwendungsdateien müssen zwischen Speicherorten verschoben werden, zum Beispiel vom Ort der Erstellung (lokaler Datenträger, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)]-Dateifreigabe usw.) an den Ort der Veröffentlichung (Website, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)]-Dateifreigabe usw.).  
   
--   Die Anwendung erfordert keine Shell-Integration (Verknüpfung im Startmenü, Symbol auf dem Desktop usw.).  
+- Die Anwendung erfordert keine Shell-Integration (Verknüpfung im Startmenü, Symbol auf dem Desktop usw.).  
   
  XCopy eignet sich zwar für einfache Bereitstellungsszenarien, bietet jedoch zu wenige Funktionen für komplexe Bereitstellungen. Insbesondere fällt bei der Verwendung von XCopy häufig ein Mehraufwand für die Erstellung, Ausführung und Pflege von Skripten für die solide Verwaltung der Bereitstellung an. Außerdem werden bei XCopy Versionsverwaltung, Deinstallation und Rollback nicht unterstützt.  
   
@@ -49,15 +49,15 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
 ### <a name="clickonce-deployment"></a>ClickOnce-Bereitstellung  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] ermöglicht die Bereitstellung von Nicht-Webanwendungen im Webformat. Anwendungen werden auf Web- oder Dateiservern veröffentlicht und von dort bereitgestellt. [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] unterstützt zwar nicht alle Clientfeatures, die von den mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] installierten Anwendungen bereitgestellt werden, es steht jedoch eine Teilmenge dieser Features zur Verfügung. Hierzu gehören die folgenden Funktionen:  
   
--   Einbindung in Startmenü und das Fenster für installierte Software in der Systemsteuerung  
+- Einbindung in Startmenü und das Fenster für installierte Software in der Systemsteuerung  
   
--   Versionsverwaltung, Rollback und Deinstallation  
+- Versionsverwaltung, Rollback und Deinstallation  
   
--   Online-Installationsmodus; dies bedeutet, dass die Anwendung immer vom Bereitstellungsort aus gestartet wird.  
+- Online-Installationsmodus; dies bedeutet, dass die Anwendung immer vom Bereitstellungsort aus gestartet wird.  
   
--   Automatische Aktualisierung, wenn neue Versionen freigegeben werden  
+- Automatische Aktualisierung, wenn neue Versionen freigegeben werden  
   
--   Registrierung von Dateierweiterungen  
+- Registrierung von Dateierweiterungen  
   
  Weitere Informationen zu [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment).  
   
@@ -65,11 +65,11 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
 ## <a name="deploying-wpf-applications"></a>Bereitstellen von WPF-Anwendungen  
  Die Bereitstellungsoptionen für eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung sind abhängig vom Typ der Anwendung. Im Rahmen der Bereitstellung gibt es bei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] drei Hauptanwendungstypen:  
   
--   Eigenständige Anwendungen  
+- Eigenständige Anwendungen  
   
--   Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Anwendungen  
+- Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Anwendungen  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Bereitstellen von eigenständigen Anwendungen  
@@ -89,11 +89,11 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
 ### <a name="deploying-xaml-browser-applications"></a>Bereitstellen von XAML-Browseranwendungen  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sind kompilierte Anwendungen, bei denen die folgenden drei Dateien für die Bereitstellung erforderlich sind:  
   
--   *ApplicationName*.exe: Die ausführbare Assembly-Anwendungsdatei.  
+- *ApplicationName*.exe: Die ausführbare Assembly-Anwendungsdatei.  
   
--   *ApplicationName*.xbap: Das Bereitstellungsmanifest.  
+- *ApplicationName*.xbap: Das Bereitstellungsmanifest.  
   
--   *ApplicationName*.exe.manifest: Das Anwendungsmanifest.  
+- *ApplicationName*.exe.manifest: Das Anwendungsmanifest.  
   
 > [!NOTE]
 >  Weitere Informationen zu Anwendungs- und Bereitstellungsmanifesten finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md).  

@@ -3,11 +3,11 @@ title: Für WCF erforderliche Betriebssystemressourcen
 ms.date: 03/30/2017
 ms.assetid: cdd9a331-53fe-4e0d-bdfe-782264aec5c9
 ms.openlocfilehash: 828d656370efd7638fa4cf367b84ee7b316b89bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955219"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>Für WCF erforderliche Betriebssystemressourcen
 Windows Communication Foundation (WCF) hängt von mehreren Ressourcen, die vom Betriebssystem-Funktion bereitgestellt werden. In der folgenden Tabelle sind diese Ressourcen aufgeführt.  

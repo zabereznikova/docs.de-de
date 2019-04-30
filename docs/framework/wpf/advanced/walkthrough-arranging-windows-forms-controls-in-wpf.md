@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007161"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
 In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutfunktionen anordnen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente in einer hybridanwendung.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen des Projekts.  
+- Erstellen des Projekts.  
   
--   Verwenden der Standardlayouteinstellungen.  
+- Verwenden der Standardlayouteinstellungen.  
   
--   Anpassen der Größe an Inhalt.  
+- Anpassen der Größe an Inhalt.  
   
--   Verwenden der absoluten Positionierung.  
+- Verwenden der absoluten Positionierung.  
   
--   Explizites Angeben der Größe.  
+- Explizites Angeben der Größe.  
   
--   Festlegen der Layouteigenschaften.  
+- Festlegen der Layouteigenschaften.  
   
--   Grundlegendes zu Einschränkungen der Z-Reihenfolge.  
+- Grundlegendes zu Einschränkungen der Z-Reihenfolge.  
   
--   Andocken.  
+- Andocken.  
   
--   Einstellen der Sichtbarkeit.  
+- Einstellen der Sichtbarkeit.  
   
--   Hosten eines Steuerelements, das nicht gestreckt wird.  
+- Hosten eines Steuerelements, das nicht gestreckt wird.  
   
--   Skalieren.  
+- Skalieren.  
   
--   Drehen.  
+- Drehen.  
   
--   Einstellen von Abständen und Rändern.  
+- Einstellen von Abständen und Rändern.  
   
--   Verwenden von dynamischen Layoutcontainern.  
+- Verwenden von dynamischen Layoutcontainern.  
   
  Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Anordnen von Windows Forms-Steuerelementen in WPF-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 2. Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. Doppelklicken Sie auf „MainWindow.xaml“, um die Datei in der XAML-Ansicht zu öffnen.  
   

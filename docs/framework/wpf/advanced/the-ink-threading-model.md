@@ -14,22 +14,22 @@ helpviewer_keywords:
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
 ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007387"
 ---
 # <a name="the-ink-threading-model"></a>Das Threadmodell für Freihandeingaben
 Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wie beim Schreiben mit einem regulären Stift und Papier fühlt sich.  Um dies zu erreichen, erfasst der Tablettstift Eingabedaten sehr viel schneller als eine Maus und Freihandeingaben während des Schreibvorgangs rendert.  Thread (Benutzeroberflächenthread) der Anwendung ist nicht für das Sammeln von Daten und zum Rendern von Freihandeingaben, ausreichend, da er blockiert werden kann.  Um dies zu lösen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung verwendet zwei zusätzliche Threads aus, wenn der Freihandeingabe.  
   
  Die folgende Liste beschreibt die Threads, die dadurch beim Sammeln und Rendern von Freihandeingaben schleifenspezifischen:  
   
--   Stiftthread - Threads, der Eingabe des Tablettstifts verwendet wird.  (Klicken Sie in der Praxis sieht ein Threadpool, aber dieses Thema bezieht sich darauf, wie einem Stiftthread.)  
+- Stiftthread - Threads, der Eingabe des Tablettstifts verwendet wird.  (Klicken Sie in der Praxis sieht ein Threadpool, aber dieses Thema bezieht sich darauf, wie einem Stiftthread.)  
   
--   Anwendungsbenutzeroberflächenthread - Threads, der die Benutzeroberfläche der Anwendung steuert.  
+- Anwendungsbenutzeroberflächenthread - Threads, der die Benutzeroberfläche der Anwendung steuert.  
   
--   Thread für dynamisches Rendering - zeichnet der Thread, der rendert Freihandeingaben während der Benutzer einen Strich. Der Thread für dynamisches Rendering unterscheidet sich der Thread, der andere Benutzeroberflächenelemente für die Anwendung, gerendert werden, wie in Windows Presentation Foundation [Threading-Modell](threading-model.md).  
+- Thread für dynamisches Rendering - zeichnet der Thread, der rendert Freihandeingaben während der Benutzer einen Strich. Der Thread für dynamisches Rendering unterscheidet sich der Thread, der andere Benutzeroberflächenelemente für die Anwendung, gerendert werden, wie in Windows Presentation Foundation [Threading-Modell](threading-model.md).  
   
  Das bereitgestelltem Modell ist identisch, ob die Anwendung verwendet die <xref:System.Windows.Controls.InkCanvas> oder ein benutzerdefiniertes Steuerelement im ähnelt [erstellen ein Steuerelement für Freihandeingaben](creating-an-ink-input-control.md).  Obwohl in diesem Thema wird das Threading behandeln, in Form von der <xref:System.Windows.Controls.InkCanvas>, die gleichen Konzepte gelten, wenn Sie ein benutzerdefiniertes Steuerelement erstellen.  
   
@@ -40,17 +40,17 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wi
   
 1. Aktionen, die auftreten, während des Zeichnens durch des Benutzers  
   
-    1.  Wenn der Benutzer einen Strich zeichnet, gibt die Tablettstiftpunkte im Stiftthread.  Stift-Plug-ins, einschließlich der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, akzeptieren Sie die Tablettstiftpunkte im Stiftthread und haben die Möglichkeit, die sie vor dem Ändern der <xref:System.Windows.Controls.InkCanvas> Empfangs.  
+    1. Wenn der Benutzer einen Strich zeichnet, gibt die Tablettstiftpunkte im Stiftthread.  Stift-Plug-ins, einschließlich der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, akzeptieren Sie die Tablettstiftpunkte im Stiftthread und haben die Möglichkeit, die sie vor dem Ändern der <xref:System.Windows.Controls.InkCanvas> Empfangs.  
   
-    2.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die Tablettstiftpunkte, die auf den Thread für dynamisches Rendering gerendert. Dies geschieht zur gleichen Zeit wie im vorherigen Schritt.  
+    2. Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die Tablettstiftpunkte, die auf den Thread für dynamisches Rendering gerendert. Dies geschieht zur gleichen Zeit wie im vorherigen Schritt.  
   
-    3.  Die <xref:System.Windows.Controls.InkCanvas> empfängt die Tablettstiftpunkte, die im UI-Thread.  
+    3. Die <xref:System.Windows.Controls.InkCanvas> empfängt die Tablettstiftpunkte, die im UI-Thread.  
   
 2. Aktionen, die auftreten, nachdem der Benutzer der Strich beendet.  
   
-    1.  Strich gezeichnet hat, nach Abschluss der Benutzer die <xref:System.Windows.Controls.InkCanvas> erstellt eine <xref:System.Windows.Ink.Stroke> -Objekt und fügt es der <xref:System.Windows.Controls.InkPresenter>, die statisch gerendert wird.  
+    1. Strich gezeichnet hat, nach Abschluss der Benutzer die <xref:System.Windows.Controls.InkCanvas> erstellt eine <xref:System.Windows.Ink.Stroke> -Objekt und fügt es der <xref:System.Windows.Controls.InkPresenter>, die statisch gerendert wird.  
   
-    2.  Die UI-Thread-Warnungen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , der der Strich gerendert wird statisch, sodass die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> entfernt dessen visuelle Darstellung des Strichs.  
+    2. Die UI-Thread-Warnungen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , der der Strich gerendert wird statisch, sodass die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> entfernt dessen visuelle Darstellung des Strichs.  
   
 ## <a name="ink-collection-and-stylus-plug-ins"></a>Erfassen von Freihandeingaben Sie und Stift-Plug-ins  
  Jede <xref:System.Windows.UIElement> verfügt über eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Objekte in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> erhalten, und die Tablettstiftpunkte im Stiftthread ändern können. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Objekte empfangen, die Tablettstiftpunkte entsprechend ihrer Reihenfolge in der <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
@@ -85,16 +85,16 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wi
   
 1. Der Benutzer mit den Strich beginnt.  
   
-    1.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.  
+    1. Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.  
   
 2. Der Benutzer ist den Strich gezeichnet werden.  
   
-    1.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.  
+    1. Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.  
   
 3. Der Benutzer beendet den Strich.  
   
-    1.  Die <xref:System.Windows.Controls.InkPresenter> der visuellen Struktur den Strich hinzugefügt.  
+    1. Die <xref:System.Windows.Controls.InkPresenter> der visuellen Struktur den Strich hinzugefügt.  
   
-    2.  Der Media-Integration-Ebene (MIL) rendert statisch die Striche.  
+    2. Der Media-Integration-Ebene (MIL) rendert statisch die Striche.  
   
-    3.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> bereinigt die visuellen Elemente.
+    3. Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> bereinigt die visuellen Elemente.

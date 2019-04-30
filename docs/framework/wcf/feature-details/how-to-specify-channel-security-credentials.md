@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038869"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
 Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendungen zum Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern den Client Anmeldeinformationen für Authentifizierung und Autorisierung angeben. Beim Aufrufen eines WCF-Diensts aus einem WCF-Client können Sie diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angeben. Beim Aufrufen eines WCF-Diensts aus einer COM-Anwendung können Sie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle, um die Anmeldeinformationen angeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  

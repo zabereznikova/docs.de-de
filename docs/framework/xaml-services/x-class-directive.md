@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025417"
 ---
 # <a name="xclass-directive"></a>x:Class-Direktive
 Konfiguriert die XAML-Markup-Kompilierung um partielle Klassen zwischen Markup und Code-Behind zu verknüpfen. Die partielle Klasse im Code wird in einer separaten Codedatei im definiert eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] Sprache, während die partielle Klasse im Markup durch Generierung von Code während der Kompilierung von XAML in der Regel erstellt wird.  

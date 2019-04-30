@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
 ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011215"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Vorgehensweise: Hinzufügen eines Steuerelements zu ToolStripContentPanel
 Sie können ein oder mehrere Steuerelemente programmgesteuert zu einem <xref:System.Windows.Forms.ToolStripContentPanel> hinzufügen.  
@@ -26,7 +26,7 @@ Sie können ein oder mehrere Steuerelemente programmgesteuert zu einem <xref:Sys
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Codebeispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Data" und "System.Windows.Forms".  
+- Verweise auf die Assemblys "System", "System.Data" und "System.Windows.Forms".  
   
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.
   

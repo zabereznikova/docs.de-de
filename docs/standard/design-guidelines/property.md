@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
 ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026308"
 ---
 # <a name="property-design"></a>Eigenschaftenentwurf
 Obwohl es sich bei Eigenschaften, Methoden technisch sehr ähnlich sind, sind sie in Bezug auf ihre Szenarien für die Verwendung sehr unterschiedlich. Sie sollten als intelligenter Felder angezeigt. Sie haben die Funktionsaufrufsyntax von Feldern, und die Flexibilität der Methoden.  

@@ -3,32 +3,32 @@ title: Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965658"
 ---
 # <a name="token-provider"></a>Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) Dient zum Angeben von Anmeldeinformationen, um der Sicherheitsinfrastruktur. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Außerdem Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
 
--   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.
+- Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.
 
--   Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.
+- Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.
 
--   Wenn Sie ein benutzerdefiniertes Token erstellen.
+- Wenn Sie ein benutzerdefiniertes Token erstellen.
 
  In diesem Beispiel wird gezeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen können, der die Eingabe des Benutzers in ein anderes Format umwandelt.
 
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:
 
--   Wie sich ein Client mithilfe eines Benutzername/Kennwort-Paars authentifizieren kann.
+- Wie sich ein Client mithilfe eines Benutzername/Kennwort-Paars authentifizieren kann.
 
--   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.
+- Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.
 
--   Wie der Server die Clientanmeldeinformationen anhand eines benutzerdefinierten <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> überprüfen kann, der die Übereinstimmung von Benutzername und Kennwort überprüft.
+- Wie der Server die Clientanmeldeinformationen anhand eines benutzerdefinierten <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> überprüfen kann, der die Übereinstimmung von Benutzername und Kennwort überprüft.
 
--   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
+- Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
 
  In diesem Beispiel wird auch gezeigt, wie auf die Identität des Aufrufers nach dem benutzerdefinierten Tokenauthentifizierungsprozess zugegriffen werden kann.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:
 
--   Erstellen des Serverzertifikats.
+- Erstellen des Serverzertifikats.
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert in dieser Batchdatei lautet localhost.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:
+- Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 

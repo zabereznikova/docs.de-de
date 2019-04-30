@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982435"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub oder Funktion ist nicht definiert (Visual Basic)
 Ein `Sub` oder `Function` muss definiert werden, damit Sie aufgerufen werden. Dieser Fehler kann folgende Ursachen haben:  
   
--   Der Prozedurname.  
+- Der Prozedurname.  
   
--   Versucht, eine Prozedur aus einem anderen Projekt aufzurufen, ohne Sie explizit einen Verweis auf das Projekt in der **Verweise** Dialogfeld.  
+- Versucht, eine Prozedur aus einem anderen Projekt aufzurufen, ohne Sie explizit einen Verweis auf das Projekt in der **Verweise** Dialogfeld.  
   
--   Angeben von einer Prozedur, die nicht an die aufrufende Prozedur angezeigt wird.  
+- Angeben von einer Prozedur, die nicht an die aufrufende Prozedur angezeigt wird.  
   
--   Deklarieren einer Routine für Windows-Dynamic Link Library (DLL) oder Macintosh Coderessourcen-Routine, die nicht in der angegebenen Bibliothek oder einem Code-Ressource ist.  
+- Deklarieren einer Routine für Windows-Dynamic Link Library (DLL) oder Macintosh Coderessourcen-Routine, die nicht in der angegebenen Bibliothek oder einem Code-Ressource ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   

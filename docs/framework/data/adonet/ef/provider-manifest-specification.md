@@ -3,11 +3,11 @@ title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034011"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -45,18 +45,18 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
--   Eine Liste der hinsichtlich des "EDM-Äquivalents" eines Speichertyps oder einer Funktion ausgedrückten Anbietertypen. Speichertypen verfügen über äquivalente EDM-Typen. Speicherfunktionen verfügen über entsprechende EDM-Funktionen. So ist "varchar" z. B. ein SQL Server-Typ, der entsprechende EDM-Typ ist jedoch "string".  
+- Eine Liste der hinsichtlich des "EDM-Äquivalents" eines Speichertyps oder einer Funktion ausgedrückten Anbietertypen. Speichertypen verfügen über äquivalente EDM-Typen. Speicherfunktionen verfügen über entsprechende EDM-Funktionen. So ist "varchar" z. B. ein SQL Server-Typ, der entsprechende EDM-Typ ist jedoch "string".  
   
--   Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
+- Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Schreiben eines Anbieters mit asymmetrischer Typzuordnung  
  Wenn Sie einen Datenspeicheranbieter für [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] schreiben, unterscheidet sich die EDM-Anbieter-Typzuordnung für einige Typen möglicherweise von der Anbieter-EDM-Typzuordnung. So wird beispielsweise "unbounded EDM PrimitiveTypeKind.String" möglicherweise "nvarchar (4000)" für den Anbieter zugeordnet, während "nvarchar (4000)" dem Typ "EDM PrimitiveTypeKind.String(MaxLength=4000)" zugeordnet wird.  
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
--   Eine Liste von Anbietertypen in EDM-Begriffen ausgedrückt, und definieren die Zuordnung für beide Richtungen: EDM-Anbieter und Anbieter-EDM.  
+- Eine Liste von Anbietertypen in EDM-Begriffen ausgedrückt, und definieren die Zuordnung für beide Richtungen: EDM-Anbieter und Anbieter-EDM.  
   
--   Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
+- Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
 ## <a name="provider-manifest-discoverability"></a>Ermittelbarkeit des Anbietermanifests  
  Das Manifest wird indirekt von mehreren Komponententypen der Entitätsdienste (z. B. Tools oder Abfrage) verwendet. Die direktere Nutzung erfolgt jedoch für die Metadaten mithilfe des Metadaten-Ladeprogramms des Datenspeichers.  

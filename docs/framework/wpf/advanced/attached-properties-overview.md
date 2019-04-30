@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032234"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -46,11 +46,11 @@ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md
 
 Obwohl angefügte Eigenschaften für jedes beliebige Objekt festgelegt werden können, bedeutet dies nicht automatisch, dass die Eigenschaft ein reales Ergebnis erzeugt, oder der Wert jemals von einem anderen Objekt verwendet wird. Im Allgemeinen werden angefügte Eigenschaften vorgesehen, damit Objekte, die aus einer Vielzahl von möglichen Klassenhierarchien oder logischen Beziehungen stammen, dem Typ, der die angefügte Eigenschaft definiert, allgemeine Informationen melden können. Der Typ, der die angefügte Eigenschaft definiert, folgt in der Regel einem dieser Modelle:
 
--   Der Typ, der die angefügte Eigenschaft definiert, ist so konzipiert, dass er das übergeordnete Element der Elemente sein kann, das Werte für die angefügte Eigenschaft festlegen wird. Der Typ durchläuft dann seine untergeordneten Objekte durch die interne Logik auf der Grundlage der Objektstruktur, ruft die Werte ab und fungiert auf irgendeine Weise für diese Werte.
+- Der Typ, der die angefügte Eigenschaft definiert, ist so konzipiert, dass er das übergeordnete Element der Elemente sein kann, das Werte für die angefügte Eigenschaft festlegen wird. Der Typ durchläuft dann seine untergeordneten Objekte durch die interne Logik auf der Grundlage der Objektstruktur, ruft die Werte ab und fungiert auf irgendeine Weise für diese Werte.
 
--   Der Typ, der die angefügte Eigenschaft definiert, wird als untergeordnetes Element für verschiedene mögliche übergeordnete Elemente und Inhaltsmodelle verwendet werden.
+- Der Typ, der die angefügte Eigenschaft definiert, wird als untergeordnetes Element für verschiedene mögliche übergeordnete Elemente und Inhaltsmodelle verwendet werden.
 
--   Der Typ, der die angefügte Eigenschaft definiert, stellt einen Dienst dar. Andere Typen legen Werte für die angefügte Eigenschaft fest. Wenn das Element, das die Eigenschaft festlegt, im Kontext des Dienstes ausgewertet wird, werden über die interne Logik der Dienstklasse die angefügten Eigenschaftswerte abgerufen.
+- Der Typ, der die angefügte Eigenschaft definiert, stellt einen Dienst dar. Andere Typen legen Werte für die angefügte Eigenschaft fest. Wenn das Element, das die Eigenschaft festlegt, im Kontext des Dienstes ausgewertet wird, werden über die interne Logik der Dienstklasse die angefügten Eigenschaftswerte abgerufen.
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Ein Beispiel für eine übergeordnete definierte angefügte Eigenschaft
 
@@ -102,9 +102,9 @@ Die Signatur für die **Get_PropertyName_** Accessor muss:
 
 `public static object GetPropertyName(object target)`
 
--   Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> -Methode verwendet den Parameter als <xref:System.Windows.UIElement>, da die angefügte Eigenschaft nur für festgelegt werden soll <xref:System.Windows.UIElement> Instanzen.
+- Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> -Methode verwendet den Parameter als <xref:System.Windows.UIElement>, da die angefügte Eigenschaft nur für festgelegt werden soll <xref:System.Windows.UIElement> Instanzen.
 
--   Der Rückgabewert kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.GetDock%2A> Methode Typen als <xref:System.Windows.Controls.Dock>, da der Wert nur für diese Enumeration festgelegt werden kann.
+- Der Rückgabewert kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.GetDock%2A> Methode Typen als <xref:System.Windows.Controls.Dock>, da der Wert nur für diese Enumeration festgelegt werden kann.
 
 #### <a name="the-set-accessor"></a>Der Set-Accessor
 
@@ -112,9 +112,9 @@ Die Signatur für die **Set_PropertyName_** Accessor muss:
 
 `public static void SetPropertyName(object target, object value)`
 
--   Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methode Typen als <xref:System.Windows.UIElement>, da die angefügte Eigenschaft nur für festgelegt werden soll <xref:System.Windows.UIElement> Instanzen.
+- Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methode Typen als <xref:System.Windows.UIElement>, da die angefügte Eigenschaft nur für festgelegt werden soll <xref:System.Windows.UIElement> Instanzen.
 
--   Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methode Typen als <xref:System.Windows.Controls.Dock>, da der Wert nur für diese Enumeration festgelegt werden kann. Denken Sie daran, dass der Wert für diese Methode die Eingabe des XAML-Loaders ist, wenn sie Ihre angefügte Eigenschaft in einer Verwendung der angefügten Eigenschaft im Markup erkennt. Diese Eingabe ist der Wert, der als XAML-Attributwert im Markup angegeben wird. Aus diesem Grund muss die Typkonvertierung, das Wertserialisierungsprogramm oder die Unterstützung von Markuperweiterungen für den verwendeten Typ vorhanden sein, damit der entsprechende Typ aus dem Attributwert (der letztendlich nur eine Zeichenfolge ist) erstellt werden kann.
+- Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methode Typen als <xref:System.Windows.Controls.Dock>, da der Wert nur für diese Enumeration festgelegt werden kann. Denken Sie daran, dass der Wert für diese Methode die Eingabe des XAML-Loaders ist, wenn sie Ihre angefügte Eigenschaft in einer Verwendung der angefügten Eigenschaft im Markup erkennt. Diese Eingabe ist der Wert, der als XAML-Attributwert im Markup angegeben wird. Aus diesem Grund muss die Typkonvertierung, das Wertserialisierungsprogramm oder die Unterstützung von Markuperweiterungen für den verwendeten Typ vorhanden sein, damit der entsprechende Typ aus dem Attributwert (der letztendlich nur eine Zeichenfolge ist) erstellt werden kann.
 
 Das folgende Beispiel zeigt die Registrierung der Abhängigkeitseigenschaft (mithilfe der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode), als auch die **Get_PropertyName_** und **Set_PropertyName_** Accessoren. Im Beispiel ist der Name der angefügten Eigenschaft `IsBubbleSource`. Deshalb müssen die Accessoren `GetIsBubbleSource` und `SetIsBubbleSource` genannt werden.
 
@@ -125,21 +125,21 @@ Das folgende Beispiel zeigt die Registrierung der Abhängigkeitseigenschaft (mit
 
 WPF definiert verschiedene [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] , vorgesehen sind, um Informationen über angefügte Eigenschaften für reflektionsprozesse und für typische Benutzer von Reflektions- und Eigenschaftsinformationen Informationen wie z. B. Designern bereitzustellen. Da angefügte Eigenschaften einen uneingeschränkten Bereich haben, benötigen Entwickler eine Möglichkeit, Benutzer nicht durch eine globale Liste aller angefügten Eigenschaften zu überwältigen, die in einer bestimmten Implementierung von Technologie definiert sind, die XAML verwendet. Die [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] definiert, die von WPF, angefügte Eigenschaften verwendet werden können, um Situationen zu festzulegen, in denen eine angefügte Eigenschaft in einem Eigenschaftenfenster angezeigt werden soll. Sie sollten diese Attribute auch auf Ihre eigenen benutzerdefinierten angefügten Eigenschaften anwenden. Der Zweck und die Syntax von [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] wird auf den entsprechenden Referenzseiten beschrieben:
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## Weitere Informationen über angefügte Eigenschaften <a name="more"></a>
 
--   Weitere Informationen zum Erstellen einer angefügten Eigenschaft finden Sie unter [Registrieren einer angefügten Eigenschaft](how-to-register-an-attached-property.md).
+- Weitere Informationen zum Erstellen einer angefügten Eigenschaft finden Sie unter [Registrieren einer angefügten Eigenschaft](how-to-register-an-attached-property.md).
 
--   Weitergehende Verwendungsszenarios für Abhängigkeitseigenschaften und angefügte Eigenschaften finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).
+- Weitergehende Verwendungsszenarios für Abhängigkeitseigenschaften und angefügte Eigenschaften finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).
 
--   Sie können auch eine Eigenschaft als angefügte Eigenschaft und als Abhängigkeitseigenschaft registrieren, dann jedoch trotzdem „Wrapper“-Implementierungen offenlegen. In diesem Fall kann die Eigenschaft entweder auf das Element festgelegt werden, oder auf ein beliebiges Element über die angefügte XAML-Eigenschaftssyntax. Ein Beispiel für eine Eigenschaft mit einem entsprechenden Szenario für standard und die angefügten Verwendungen ist <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
+- Sie können auch eine Eigenschaft als angefügte Eigenschaft und als Abhängigkeitseigenschaft registrieren, dann jedoch trotzdem „Wrapper“-Implementierungen offenlegen. In diesem Fall kann die Eigenschaft entweder auf das Element festgelegt werden, oder auf ein beliebiges Element über die angefügte XAML-Eigenschaftssyntax. Ein Beispiel für eine Eigenschaft mit einem entsprechenden Szenario für standard und die angefügten Verwendungen ist <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Siehe auch
 

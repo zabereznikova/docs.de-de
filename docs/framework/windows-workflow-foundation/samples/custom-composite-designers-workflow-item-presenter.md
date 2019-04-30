@@ -3,11 +3,11 @@ title: Benutzerdefinierte zusammengesetzte Designer - Workflowelementpräsentati
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005230"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Benutzerdefinierte zusammengesetzte Designer - Workflowelementpräsentation
 Die <xref:System.Activities.Presentation.WorkflowItemPresenter> ist ein Haupttyp im WF Designer-Programmiermodell, die es die Erstellung einer "Ablagezone ermöglicht", in denen eine beliebige Aktivität platziert werden kann. Dieses Beispiel zeigt, wie Sie einem Aktivitäts-Designer, auf solche "Ablagezone." erstellen
@@ -16,18 +16,18 @@ Die <xref:System.Activities.Presentation.WorkflowItemPresenter> ist ein Haupttyp
 
 ## <a name="demonstrates"></a>Veranschaulicht
 
--   Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
--   Registrieren des benutzerdefinierten Designers mithilfe des Metadatenspeichers.
+- Registrieren des benutzerdefinierten Designers mithilfe des Metadatenspeichers.
 
--   Deklaratives und imperatives Programmieren der neu gehosteten Toolbox.
+- Deklaratives und imperatives Programmieren der neu gehosteten Toolbox.
 
 ## <a name="sample-details"></a>Beispieldetails
  Der Code für dieses Beispiel zeigt Folgendes:
 
--   Der benutzerdefinierte Aktivitätsdesigner wird für die `SimpleNativeActivity`-Klasse erstellt.
+- Der benutzerdefinierte Aktivitätsdesigner wird für die `SimpleNativeActivity`-Klasse erstellt.
 
--   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemPresenter>.
+- Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

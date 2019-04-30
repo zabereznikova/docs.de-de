@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000427"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Einrichten einer Profilerstellungsumgebung
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098181"
   
  Wenn ein verwalteter Prozess (Anwendung oder Dienst) gestartet wird, wird die Common Language Runtime (CLR) geladen. Wenn die CLR initialisiert wird, werden die folgenden zwei Umgebungsvariablen ausgewertet, um zu entscheiden, ob der Prozess mit einem Profiler verbunden werden soll:  
   
--   COR_ENABLE_PROFILING: Die CLR stellt eine Verbindung mit einem Profiler her, nur, wenn diese Umgebungsvariable vorhanden ist und auf 1 festgelegt ist.  
+- COR_ENABLE_PROFILING: Die CLR stellt eine Verbindung mit einem Profiler her, nur, wenn diese Umgebungsvariable vorhanden ist und auf 1 festgelegt ist.  
   
--   COR_PROFILER: Wenn die COR_ENABLE_PROFILING übergibt überprüfen, verbindet sich die CLR an den Profiler, der dieser CLSID oder ProgID her, die zuvor in der Registrierung abgelegt worden sein muss. Die COR_PROFILER-Umgebungsvariable ist als Zeichenfolge definiert, wie in den beiden folgenden Beispielen gezeigt.  
+- COR_PROFILER: Wenn die COR_ENABLE_PROFILING übergibt überprüfen, verbindet sich die CLR an den Profiler, der dieser CLSID oder ProgID her, die zuvor in der Registrierung abgelegt worden sein muss. Die COR_PROFILER-Umgebungsvariable ist als Zeichenfolge definiert, wie in den beiden folgenden Beispielen gezeigt.  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098181"
 ## <a name="environment-variable-scope"></a>Umgebungsvariablenbereich  
  Die Werte, die Sie für die Umgebungsvariablen COR_ENABLE_PROFILING und COR_PROFILER festlegen, bestimmen den Einflussbereich dieser Variablen. Sie haben folgende Möglichkeiten, diese Variablen festzulegen:  
   
--   Wenn Sie die Variablen festgelegt haben, eine [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) aufrufen, sie gelten nur für die Anwendung, die Sie zu dem Zeitpunkt ausgeführt werden. (Sie gelten auch für andere Anwendungen, die von dieser Anwendung gestartet werden und die die Umgebung erben.)  
+- Wenn Sie die Variablen festgelegt haben, eine [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) aufrufen, sie gelten nur für die Anwendung, die Sie zu dem Zeitpunkt ausgeführt werden. (Sie gelten auch für andere Anwendungen, die von dieser Anwendung gestartet werden und die die Umgebung erben.)  
   
--   Wenn Sie die Variablen in einer Eingabeaufforderung festlegen, gelten sie für alle Anwendungen, die von diesem Fenster aus gestartet werden.  
+- Wenn Sie die Variablen in einer Eingabeaufforderung festlegen, gelten sie für alle Anwendungen, die von diesem Fenster aus gestartet werden.  
   
--   Wenn Sie die Variablen auf Benutzerebene festlegen, gelten sie für alle Anwendungen, die Sie mit Datei-Explorer starten. Eine Eingabeaufforderung, die Sie nach dem Festlegen dieser Variablen öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Zum Festlegen von Umgebungsvariablen auf Benutzerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, und fügen Sie die Variablen, die **Benutzervariablen** Liste.  
+- Wenn Sie die Variablen auf Benutzerebene festlegen, gelten sie für alle Anwendungen, die Sie mit Datei-Explorer starten. Eine Eingabeaufforderung, die Sie nach dem Festlegen dieser Variablen öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Zum Festlegen von Umgebungsvariablen auf Benutzerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, und fügen Sie die Variablen, die **Benutzervariablen** Liste.  
   
--   Wenn Sie die Variablen auf Computerebene festlegen, gelten sie für alle Anwendungen, die auf diesem Computer gestartet werden. Eine Eingabeaufforderung, die Sie auf diesem Computer öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Dies bedeutet, dass jeder verwaltete Prozess auf diesem Computer mit Ihrem Profiler startet. Zum Festlegen von Umgebungsvariablen auf Computerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, fügen Sie die Variablen, die **Systemvariablen** aus, und klicken Sie dann den Computer neu starten. Nach dem Neustart sind die Variablen systemweit verfügbar.  
+- Wenn Sie die Variablen auf Computerebene festlegen, gelten sie für alle Anwendungen, die auf diesem Computer gestartet werden. Eine Eingabeaufforderung, die Sie auf diesem Computer öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Dies bedeutet, dass jeder verwaltete Prozess auf diesem Computer mit Ihrem Profiler startet. Zum Festlegen von Umgebungsvariablen auf Computerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, fügen Sie die Variablen, die **Systemvariablen** aus, und klicken Sie dann den Computer neu starten. Nach dem Neustart sind die Variablen systemweit verfügbar.  
   
  Wenn Sie ein Profil für einen Windows-Dienst erstellen, müssen Sie nach dem Festlegen der Umgebungsvariablen und dem Registrieren der Profiler-DLL den Computer neu starten. Weitere Informationen zu diesen Überlegungen finden Sie im Abschnitt [Profilerstellung für einen Windows-Dienst](#windows_service).  
   
 ## <a name="additional-considerations"></a>Weitere Überlegungen  
   
--   Die Profilerklasse implementiert die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) und [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) Schnittstellen. In .NET Framework, Version 2.0, muss ein Profiler `ICorProfilerCallback2` implementieren. Wenn dies nicht geschieht, wird `ICorProfilerCallback2` nicht geladen.  
+- Die Profilerklasse implementiert die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) und [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) Schnittstellen. In .NET Framework, Version 2.0, muss ein Profiler `ICorProfilerCallback2` implementieren. Wenn dies nicht geschieht, wird `ICorProfilerCallback2` nicht geladen.  
   
--   Nur ein einzelner Profiler kann ein Profil für einen Prozess zu einem gegebenen Zeitpunkt in einer gegebenen Umgebung erstellen. Sie können zwei verschiedene Profiler in anderen Umgebungen registrieren, doch in jedem müssen Profile für gesonderte Prozesse erstellt werden. Der Profiler muss als prozessinterne COM-Server-DLL implementiert werden, die im gleichen Adressbereich wie der Prozess zugeordnet wird, für den ein Profil erstellt wird. Dies bedeutet, dass der Profiler prozessintern ausgeführt wird. .NET Framework unterstützt keinen anderen Typ von COM-Server. Wenn beispielsweise ein Profiler Anwendungen von einem Remotecomputer aus überwachen möchte, muss er Collector-Agents auf jedem Computer implementieren. Diese Agents fassen die Ergebnisse in Stapeln zusammen und melden diese dem zentralen Datenerfassungscomputer.  
+- Nur ein einzelner Profiler kann ein Profil für einen Prozess zu einem gegebenen Zeitpunkt in einer gegebenen Umgebung erstellen. Sie können zwei verschiedene Profiler in anderen Umgebungen registrieren, doch in jedem müssen Profile für gesonderte Prozesse erstellt werden. Der Profiler muss als prozessinterne COM-Server-DLL implementiert werden, die im gleichen Adressbereich wie der Prozess zugeordnet wird, für den ein Profil erstellt wird. Dies bedeutet, dass der Profiler prozessintern ausgeführt wird. .NET Framework unterstützt keinen anderen Typ von COM-Server. Wenn beispielsweise ein Profiler Anwendungen von einem Remotecomputer aus überwachen möchte, muss er Collector-Agents auf jedem Computer implementieren. Diese Agents fassen die Ergebnisse in Stapeln zusammen und melden diese dem zentralen Datenerfassungscomputer.  
   
--   Da der Profiler ein COM-Objekt ist, das prozessintern instanziiert wird, verfügt jede Anwendung mit Profil über eine eigene Kopie des Profilers. Daher muss eine einzelne Profilerinstanz nicht Daten von mehreren Anwendungen behandeln. Sie müssen jedoch eine Logik zum Protokollierungscode des Profilers hinzufügen, um zu verhindern, dass die Protokolldatei durch andere Anwendungen mit Profil überschrieben wird.  
+- Da der Profiler ein COM-Objekt ist, das prozessintern instanziiert wird, verfügt jede Anwendung mit Profil über eine eigene Kopie des Profilers. Daher muss eine einzelne Profilerinstanz nicht Daten von mehreren Anwendungen behandeln. Sie müssen jedoch eine Logik zum Protokollierungscode des Profilers hinzufügen, um zu verhindern, dass die Protokolldatei durch andere Anwendungen mit Profil überschrieben wird.  
   
 ## <a name="initializing-the-profiler"></a>Initialisieren des Profilers  
  Wenn die Prüfung auf beide Umgebungsvariablen erfolgreich ist, erstellt die CLR eine Instanz des Profilers in ähnlicher Weise wie für die COM-`CoCreateInstance`-Funktion. Der Profiler wird nicht durch einen direkten Aufruf von `CoCreateInstance` geladen. Deshalb wird ein Aufruf von `CoInitialize`, der das Festlegen des Threadingmodells erfordert, vermieden. Die CLR ruft dann die [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) -Methode in der Profiler. Die Signatur dieser Methode wird im Folgenden beschrieben.  

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039142"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows Process Activation Service (auch bekannt als "WAS") auf [!INCLUDE[wv](../../../../includes/wv-md.md)] zum Hosten von Windows Communication Foundation (WCF) Dienste, die nicht über HTTP kommunizieren die Netzwerkprotokolle. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
   
--   Installieren (oder bestätigen Sie die Installation von) die WCF-aktivierungskomponenten.  
+- Installieren (oder bestätigen Sie die Installation von) die WCF-aktivierungskomponenten.  
   
--   Konfigurieren Sie WAS, sodass Nicht-HTTP-Protokolle unterstützt werden. Mit den folgenden Schritten wird [!INCLUDE[wv](../../../../includes/wv-md.md)] für die TCP-Aktivierung konfiguriert.  
+- Konfigurieren Sie WAS, sodass Nicht-HTTP-Protokolle unterstützt werden. Mit den folgenden Schritten wird [!INCLUDE[wv](../../../../includes/wv-md.md)] für die TCP-Aktivierung konfiguriert.  
   
  Nach der Installation und Konfiguration von WAS finden Sie [Vorgehensweise: Hosten eines WCF-Diensts in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) für die Prozeduren zum Erstellen eines WCF-Diensts, die einen nicht-HTTP-Endpunkt verfügbar macht, der mit WAS arbeitet.  
   
@@ -57,7 +57,7 @@ Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows P
   
      Zur Vereinfachung sind die folgenden beiden Schritte in einer Batchdatei namens RemoveNetTcpSiteBinding.cmd implementiert, die sich im Beispielverzeichnis befindet.  
   
-    1.  Entfernen Sie net.tcp aus der Liste aktivierter Protokolle, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen.  
+    1. Entfernen Sie net.tcp aus der Liste aktivierter Protokolle, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows P
         > [!NOTE]
         >  Dieser Befehl ist eine einzelne Textzeile.  
   
-    2.  Entfernen Sie die net.tcp-Sitebindung, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen:  
+    2. Entfernen Sie die net.tcp-Sitebindung, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

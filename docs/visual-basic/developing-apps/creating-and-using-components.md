@@ -5,11 +5,11 @@ helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014322"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Erstellen und Verwenden von Komponenten in Visual Basic
 Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> implementiert oder die direkt oder indirekt von einer Klasse ableitet, die <xref:System.ComponentModel.IComponent> implementiert. Eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Komponente ist ein Objekt, das wiederverwendet werden, mit anderen Objekten interagieren, die Steuerung von externen Ressourcen ermöglichen und Unterstützung während der Entwurfszeit bieten kann.  
@@ -23,40 +23,40 @@ Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentM
   
  Die Klassen <xref:System.ComponentModel.Component> und <xref:System.ComponentModel.MarshalByValueComponent> sind Implementierungen der Schnittstelle <xref:System.ComponentModel.IComponent>. Der Hauptunterschied zwischen diesen Klassen besteht darin, das die <xref:System.ComponentModel.Component>-Klasse als Verweis gemarshallt wird, während <xref:System.ComponentModel.IComponent> als Wert gemarshallt wird. Die folgende Liste enthält allgemeine Richtlinien für die Implementierung.  
   
--   Wenn Ihre Komponente als Verweis gemarshallt werden muss, leiten Sie von <xref:System.ComponentModel.Component> ab.  
+- Wenn Ihre Komponente als Verweis gemarshallt werden muss, leiten Sie von <xref:System.ComponentModel.Component> ab.  
   
--   Wenn Ihre Komponente als Wert gemarshallt werden muss, leiten Sie von <xref:System.ComponentModel.MarshalByValueComponent> ab.  
+- Wenn Ihre Komponente als Wert gemarshallt werden muss, leiten Sie von <xref:System.ComponentModel.MarshalByValueComponent> ab.  
   
--   Wenn die Komponente aufgrund einfacher Vererbung nicht von einer der Basisimplementierungen abgeleitet werden kann, implementieren Sie <xref:System.ComponentModel.IComponent>.  
+- Wenn die Komponente aufgrund einfacher Vererbung nicht von einer der Basisimplementierungen abgeleitet werden kann, implementieren Sie <xref:System.ComponentModel.IComponent>.  
   
 ## <a name="component-classes"></a>Komponentenklassen  
  Der Namespace <xref:System.ComponentModel> stellt Klassen bereit, mit denen das Verhalten von Komponenten und Steuerelementen zur Laufzeit und zur Entwurfszeit implementiert wird. Dieser Namespace enthält die Basisklassen und Schnittstellen zum Implementieren von Attributen und Typkonvertern, die Datenquellen binden und Komponenten lizenzieren.  
   
  Die zentralen Komponentenklassen sind:  
   
--   <xref:System.ComponentModel.Component>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>. Diese Klasse ermöglicht das Freigeben von Objekten zwischen Anwendungen.  
+- <xref:System.ComponentModel.Component>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>. Diese Klasse ermöglicht das Freigeben von Objekten zwischen Anwendungen.  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>.  
+- <xref:System.ComponentModel.MarshalByValueComponent>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>.  
   
--   <xref:System.ComponentModel.Container>. Die Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IContainer>. Diese Klasse enthält 0 oder mehr Komponenten.  
+- <xref:System.ComponentModel.Container>. Die Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IContainer>. Diese Klasse enthält 0 oder mehr Komponenten.  
   
  Einige der Klassen, die für die Komponentenlizenzierung verwendet werden, sind:  
   
--   <xref:System.ComponentModel.License>. Abstrakte Basisklasse für alle Lizenzen. Eine Lizenz wird einer bestimmten Instanz einer Komponente erteilt.  
+- <xref:System.ComponentModel.License>. Abstrakte Basisklasse für alle Lizenzen. Eine Lizenz wird einer bestimmten Instanz einer Komponente erteilt.  
   
--   <xref:System.ComponentModel.LicenseManager>. Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <xref:System.ComponentModel.LicenseProvider> zu verwalten.  
+- <xref:System.ComponentModel.LicenseManager>. Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <xref:System.ComponentModel.LicenseProvider> zu verwalten.  
   
--   <xref:System.ComponentModel.LicenseProvider>. Die abstrakte Basisklasse für die Implementierung eines Lizenzgebers.  
+- <xref:System.ComponentModel.LicenseProvider>. Die abstrakte Basisklasse für die Implementierung eines Lizenzgebers.  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>. Gibt die Klasse <xref:System.ComponentModel.LicenseProvider> an, die mit einer Klasse verwendet werden sollen.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>. Gibt die Klasse <xref:System.ComponentModel.LicenseProvider> an, die mit einer Klasse verwendet werden sollen.  
   
  Klassen, die häufig zum Beschreiben und Beibehalten von Komponenten verwendet werden.  
   
--   <xref:System.ComponentModel.TypeDescriptor>. Stellt Informationen zu den Merkmalen für eine Komponente bereit, z.B. zu Attributen, Eigenschaften und Ereignissen.  
+- <xref:System.ComponentModel.TypeDescriptor>. Stellt Informationen zu den Merkmalen für eine Komponente bereit, z.B. zu Attributen, Eigenschaften und Ereignissen.  
   
--   <xref:System.ComponentModel.EventDescriptor>. Enthält Informationen über ein Ereignis.  
+- <xref:System.ComponentModel.EventDescriptor>. Enthält Informationen über ein Ereignis.  
   
--   <xref:System.ComponentModel.PropertyDescriptor>. Gibt Informationen über eine Eigenschaft an.  
+- <xref:System.ComponentModel.PropertyDescriptor>. Gibt Informationen über eine Eigenschaft an.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Problembehandlung beim Erstellen von Komponenten und Steuerelementen](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  

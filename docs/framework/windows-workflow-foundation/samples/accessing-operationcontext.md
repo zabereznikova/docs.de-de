@@ -3,11 +3,11 @@ title: Zugreifen auf OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005601"
 ---
 # <a name="accessing-operationcontext"></a>Zugreifen auf OperationContext
 In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.Send>) mit einer benutzerdefinierten bereichsaktivität verwendet werden können, um den Zugriff auf <xref:System.ServiceModel.OperationContext.Current%2A> und anzufügen oder einen benutzerdefinierten Nachrichtenheader in einer ausgehenden oder eingehenden Nachricht abzurufen.  
@@ -28,13 +28,13 @@ In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:Sy
   
 2. Sobald die URL-ACLs hinzugefügt wurden, führen Sie die folgenden Schritte aus.  
   
-    1.  Erstellen Sie die Projektmappe.  
+    1. Erstellen Sie die Projektmappe.  
   
-    2.  Legen Sie mehrere Startprojekte fest, von der rechten Maustaste auf die Projektmappe, und wählen **Startprojekte**.  
+    2. Legen Sie mehrere Startprojekte fest, von der rechten Maustaste auf die Projektmappe, und wählen **Startprojekte**.  
   
-    3.  Hinzufügen **Service** und **Client** (in dieser Reihenfolge) als mehrere Startprojekte.  
+    3. Hinzufügen **Service** und **Client** (in dieser Reihenfolge) als mehrere Startprojekte.  
   
-    4.  Führen Sie die Anwendung aus. Die Clientkonsole zeigt einen Workflow an, der zweimal ausgeführt wird, und das Dienstfenster zeigt die Instanz-ID dieser Workflows an.  
+    4. Führen Sie die Anwendung aus. Die Clientkonsole zeigt einen Workflow an, der zweimal ausgeführt wird, und das Dienstfenster zeigt die Instanz-ID dieser Workflows an.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

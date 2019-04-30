@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009109"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel
 Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst entsprechend neu anordnet, wenn sich die Größe des Formulars oder des Inhalts ändert. Wenn Sie ein dynamisches Layout benötigen und <xref:System.Windows.Forms.Control.Layout> -Ereignisse nicht explizit im Code verarbeiten möchten, ziehen Sie die Verwendung eines Layoutbereichs in Erwägung.  
@@ -28,21 +28,21 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms-Projekts  
+- Erstellen eines Windows Forms-Projekts  
   
--   Anordnen von Steuerelementen in Zeilen und Spalten  
+- Anordnen von Steuerelementen in Zeilen und Spalten  
   
--   Festlegen von Zeilen- und Spalteneigenschaften  
+- Festlegen von Zeilen- und Spalteneigenschaften  
   
--   Überspannen von Zeilen und Spalten mit einem Steuerelement  
+- Überspannen von Zeilen und Spalten mit einem Steuerelement  
   
--   Automatische Behandlung von Überläufen  
+- Automatische Behandlung von Überläufen  
   
--   Einfügen von Steuerelementen durch Doppelklicken in der Toolbox  
+- Einfügen von Steuerelementen durch Doppelklicken in der Toolbox  
   
--   Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
+- Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
   
--   Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element  
+- Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element  
   
  Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   
@@ -158,25 +158,25 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>Um zu veranschaulichen, dass mehrere Steuerelemente in Zellen nicht zulässig sind.  
   
--   Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und legen Sie es in eine Zelle belegt. Beachten Sie, dass die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement lässt nicht zum Löschen der <xref:System.Windows.Forms.Button> Steuerelement in die gefüllte Zelle.  
+- Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** in die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und legen Sie es in eine Zelle belegt. Beachten Sie, dass die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement lässt nicht zum Löschen der <xref:System.Windows.Forms.Button> Steuerelement in die gefüllte Zelle.  
   
 ## <a name="swapping-controls"></a>Austauschen von Steuerelementen  
  Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement können Sie Steuerelemente in zwei verschiedenen Zellen auszutauschen.  
   
 #### <a name="to-swap-controls"></a>Austauschen von Steuerelementen  
   
--   Ziehen Sie eines der der <xref:System.Windows.Forms.Button> Steuerelemente über eine gefüllte Zelle, und platzieren auf einem anderen gefüllte Zelle. Beachten Sie, dass die beiden Steuerelemente, die aus einer Zelle in die andere verschoben werden.  
+- Ziehen Sie eines der der <xref:System.Windows.Forms.Button> Steuerelemente über eine gefüllte Zelle, und platzieren auf einem anderen gefüllte Zelle. Beachten Sie, dass die beiden Steuerelemente, die aus einer Zelle in die andere verschoben werden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Hier sind paar Vorschläge für weitere Experimente:  
   
--   Versuchen Sie es ändern der Größe eines der <xref:System.Windows.Forms.Button> Steuerelementen zu einem größeren und beobachten Sie die Auswirkung auf das Layout.  
+- Versuchen Sie es ändern der Größe eines der <xref:System.Windows.Forms.Button> Steuerelementen zu einem größeren und beobachten Sie die Auswirkung auf das Layout.  
   
--   Fügen Sie eine Auswahl mehrerer Steuerelemente in der <xref:System.Windows.Forms.TableLayoutPanel> steuern, und beachten Sie, wie die Steuerelemente eingefügt werden.  
+- Fügen Sie eine Auswahl mehrerer Steuerelemente in der <xref:System.Windows.Forms.TableLayoutPanel> steuern, und beachten Sie, wie die Steuerelemente eingefügt werden.  
   
--   Layoutbereiche können andere Layoutbereiche enthalten. Experimentieren Sie mit dem Ablegen eines <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelements auf dem vorhandenen Steuerelement.  
+- Layoutbereiche können andere Layoutbereiche enthalten. Experimentieren Sie mit dem Ablegen eines <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelements auf dem vorhandenen Steuerelement.  
   
--   Docken Sie das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement am übergeordneten Formular an. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.  
+- Docken Sie das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement am übergeordneten Formular an. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.  
   
 ## <a name="see-also"></a>Siehe auch
 

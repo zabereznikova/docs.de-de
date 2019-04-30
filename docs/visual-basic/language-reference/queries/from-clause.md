@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945339"
 ---
 # <a name="from-clause-visual-basic"></a>From-Klausel (Visual Basic)
 Gibt einen oder mehrere Bereichsvariable und eine Abfragesammlung an.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  Jede `From` Klausel kann eine beliebige Kombination von zusätzliche Abfrageklauseln, um die Abfrage zu verfeinern folgen. Sie können die Abfrage optimieren, es gibt folgende Möglichkeiten:  
   
--   Kombinieren Sie mehrere Sammlungen implizit mithilfe der `From` und `Select` -Klauseln, oder explizit durch Verwenden der `Join` oder `Group Join` Klauseln.  
+- Kombinieren Sie mehrere Sammlungen implizit mithilfe der `From` und `Select` -Klauseln, oder explizit durch Verwenden der `Join` oder `Group Join` Klauseln.  
   
--   Verwenden der `Where` -Klausel, um das Abfrageergebnis zu filtern.  
+- Verwenden der `Where` -Klausel, um das Abfrageergebnis zu filtern.  
   
--   Sortieren des Ergebnisses mithilfe der `Order By` Klausel.  
+- Sortieren des Ergebnisses mithilfe der `Order By` Klausel.  
   
--   Gruppieren ähnliche Ergebnisse mithilfe der `Group By` Klausel.  
+- Gruppieren ähnliche Ergebnisse mithilfe der `Group By` Klausel.  
   
--   Verwenden der `Aggregate` -Klausel, um Aggregatfunktionen für das Ergebnis für die gesamte Abfrage ausgewertet werden sollen.  
+- Verwenden der `Aggregate` -Klausel, um Aggregatfunktionen für das Ergebnis für die gesamte Abfrage ausgewertet werden sollen.  
   
--   Verwenden der `Let` -Klausel, um eine Iterationsvariable eingeführt, deren Wert durch einen Ausdruck anstatt einer Sammlung festgelegt wird.  
+- Verwenden der `Let` -Klausel, um eine Iterationsvariable eingeführt, deren Wert durch einen Ausdruck anstatt einer Sammlung festgelegt wird.  
   
--   Verwenden der `Distinct` -Klausel, um doppelte Abfrageergebnisse ignoriert.  
+- Verwenden der `Distinct` -Klausel, um doppelte Abfrageergebnisse ignoriert.  
   
--   Identifizieren Sie Teile des Ergebnisses zurückgegeben mit der `Skip`, `Take`, `Skip While`, und `Take While` Klauseln.  
+- Identifizieren Sie Teile des Ergebnisses zurückgegeben mit der `Skip`, `Take`, `Skip While`, und `Take While` Klauseln.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für jede `Customer` -Objekt in der `customers` Auflistung. Die `Where` -Klausel verwendet die Bereichsvariable, um die Ausgabe auf Kunden aus den angegebenen Bereich zu beschränken. Die `For Each` -Schleife zeigt den Firmennamen für jeden Kunden in den Abfrageergebnissen.  

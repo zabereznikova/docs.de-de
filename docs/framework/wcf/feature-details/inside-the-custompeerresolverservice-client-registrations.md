@@ -3,11 +3,11 @@ title: 'Einblicke in den CustomPeerResolverService: Clientregistrierungen'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
 ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972548"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Einblicke in den CustomPeerResolverService: Clientregistrierungen
 Jeder Knoten im Netz veröffentlicht seine Endpunktinformationen für den Resolverdienst durch die `Register`-Funktion. Der Resolverdienst speichert diese Informationen als Registrierungsdatensatz. Dieser Datensatz enthält einen eindeutigen Bezeichner (RegistrationID) sowie Endpunktinformationen (PeerNodeAddress) für den Knoten.  
@@ -26,9 +26,9 @@ Jeder Knoten im Netz veröffentlicht seine Endpunktinformationen für den Resolv
   
  Wenn Sie einen eigenen Resolverdienst implementieren möchten, müssen Sie eine Wartungsfunktion zum Entfernen veralteter Registrierungsdatensätze schreiben. Dafür stehen verschiedene Möglichkeiten zur Verfügung:  
   
--   **Regelmäßige Wartung**: Legen Sie einen Zeitgeber, wechseln in regelmäßigen Abständen aus, und führen Ihre Datenspeicher, um alte Datensätze zu löschen. Dieser Ansatz wird vom <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> verwendet.  
+- **Regelmäßige Wartung**: Legen Sie einen Zeitgeber, wechseln in regelmäßigen Abständen aus, und führen Ihre Datenspeicher, um alte Datensätze zu löschen. Dieser Ansatz wird vom <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> verwendet.  
   
--   **Passives löschen**: Statt aktiv nach veralteten Datensätzen suchen, in regelmäßigen Abständen, können Sie identifizieren und veraltete Datensätze löschen, wenn Ihr Dienst bereits eine andere Funktion ausgeführt wird. Dadurch erhöht sich zwar möglicherweise die Antwortzeit für Anforderungen der Resolverclients, andererseits wird in diesem Fall kein Timer benötigt. Darüber hinaus ist diese Methode möglicherweise effizienter, wenn voraussichtlich nur wenige Knoten das Netz ohne Aufruf von `Unregister` verlassen.  
+- **Passives löschen**: Statt aktiv nach veralteten Datensätzen suchen, in regelmäßigen Abständen, können Sie identifizieren und veraltete Datensätze löschen, wenn Ihr Dienst bereits eine andere Funktion ausgeführt wird. Dadurch erhöht sich zwar möglicherweise die Antwortzeit für Anforderungen der Resolverclients, andererseits wird in diesem Fall kein Timer benötigt. Darüber hinaus ist diese Methode möglicherweise effizienter, wenn voraussichtlich nur wenige Knoten das Netz ohne Aufruf von `Unregister` verlassen.  
   
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime und Refresh  
  Wenn sich ein Knoten bei einem Resolverdienst registriert, erhält er vom Dienst ein <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo>-Objekt. Dieses Objekt besitzt eine `RegistrationLifetime`-Eigenschaft, mit der dem Knoten die verbleibende Zeit bis zum Ablauf der Registrierung und damit bis zur Entfernung durch den Resolverdienst angegeben wird. Beispiel: Beträgt die `RegistrationLifetime` zwei Minuten, muss durch den Knoten in weniger als zwei Minuten ein Aufruf von `Refresh` erfolgen, damit der Datensatz nicht als veraltet gilt und gelöscht wird. Erhält der Resolverdienst eine `Refresh`-Anforderung, sucht er den Datensatz und setzt die Ablaufzeit zurück. Durch die Refresh-Anforderung wird ein <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo>-Objekt mit einer `RegistrationLifetime`-Eigenschaft zurückgegeben.  

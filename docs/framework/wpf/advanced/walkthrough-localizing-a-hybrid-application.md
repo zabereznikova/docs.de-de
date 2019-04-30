@@ -6,11 +6,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007123"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Exemplarische Vorgehensweise: Lokalisieren einer Hybridanwendung
 
@@ -18,15 +18,15 @@ In dieser exemplarischen Vorgehensweise erfahren Sie, wie zum Lokalisieren von [
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
--   Erstellen der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Hostprojekt.
+- Erstellen der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Hostprojekt.
 
--   Lokalisierbaren Inhalt hinzufügen
+- Lokalisierbaren Inhalt hinzufügen
 
--   Lokalisierungsfunktionalität aktivieren
+- Lokalisierungsfunktionalität aktivieren
 
--   Ressourcenbezeichner zuweisen
+- Ressourcenbezeichner zuweisen
 
--   Verwenden des LocBaml-Tools zum Erzeugen einer Satellitenassembly.
+- Verwenden des LocBaml-Tools zum Erzeugen einer Satellitenassembly.
 
 Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Lokalisieren einer Anwendung Hybridbeispiel](https://go.microsoft.com/fwlink/?LinkID=160015).
 
@@ -36,7 +36,7 @@ Am Ende werden Sie eine lokalisierte Hybridanwendung haben.
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>Erstellen des Windows Forms-Hostprojekts
 

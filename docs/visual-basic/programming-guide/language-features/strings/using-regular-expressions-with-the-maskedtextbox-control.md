@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
 ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024507"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement in Visual Basic
 In diesem Beispiel wird veranschaulicht, wie einfache reguläre Ausdrücke für die Arbeit mit konvertieren die <xref:System.Windows.Forms.MaskedTextBox> Steuerelement.  

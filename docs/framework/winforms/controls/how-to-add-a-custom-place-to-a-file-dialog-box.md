@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
 ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011202"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dialogfeld „Datei“
 In [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] befindet sich in den Standarddialogfeldern zum Öffnen und Schließen auf der linken Seite ein Bereich mit der Bezeichnung **Linkfavoriten**. Dieser Bereich wird als „Benutzerdefinierte Speicherorte“ bezeichnet. Die <xref:System.Windows.Forms.OpenFileDialog> und <xref:System.Windows.Forms.SaveFileDialog> Klassen können Sie Ordner zum Hinzufügen der <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung.  
@@ -24,7 +24,7 @@ In [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] befindet sich in 
   
 ### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>So fügen Sie dem Dialogfeld „Datei“ einen benutzerdefinierten Speicherort hinzu  
   
--   Fügen Sie einen Pfad, eine GUID für bekannte Ordner oder ein <xref:System.Windows.Forms.FileDialogCustomPlace> -Objekt an die <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Sammlung im Dialogfeld.  
+- Fügen Sie einen Pfad, eine GUID für bekannte Ordner oder ein <xref:System.Windows.Forms.FileDialogCustomPlace> -Objekt an die <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Sammlung im Dialogfeld.  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen Pfad hinzufügen:  
   

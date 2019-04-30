@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981811"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen
 Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellung von Benutzern mit Zugriff auf die zugrunde liegenden Daten, unabhängig davon, ob Sie sind [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die Datenbindung in hybridanwendungen verwenden können, die beide enthalten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente.  
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen des Projekts.  
+- Erstellen des Projekts.  
   
--   Definieren der Datenvorlage.  
+- Definieren der Datenvorlage.  
   
--   Angeben des Formularlayouts.  
+- Angeben des Formularlayouts.  
   
--   Angeben von Datenbindungen.  
+- Angeben von Datenbindungen.  
   
--   Anzeigen von Daten mithilfe von Interoperation.  
+- Anzeigen von Daten mithilfe von Interoperation.  
   
--   Hinzufügen der Datenquelle zum Projekt.  
+- Hinzufügen der Datenquelle zum Projekt.  
   
--   Bindung an die Datenquelle.  
+- Bindung an die Datenquelle.  
   
  Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Datenbindung in Anwendungen Hybridbeispiel](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Zugriff auf die Northwind-Beispieldatenbank, die auf Microsoft SQL Server ausgeführt wird.  
+- Zugriff auf die Northwind-Beispieldatenbank, die auf Microsoft SQL Server ausgeführt wird.  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
   
@@ -53,9 +53,9 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 2. Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Öffnen Sie "MainWindow.xaml" in der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 #### <a name="to-define-the-data-template"></a>Definieren der Datenvorlage  
   
--   Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
+- Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 #### <a name="to-set-up-the-grid-layout"></a>Einrichten des Rasterlayouts  
   
--   Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
+- Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Label-Steuerelemente einrichten  
   
--   Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
+- Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 #### <a name="to-specify-data-bindings"></a>Datenbindungen angeben  
   
--   Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
+- Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
   
      Die <xref:System.Windows.Data.Binding> -Klasse bindet die <xref:System.Windows.Controls.TextBox> Steuerelemente an die entsprechenden Felder in der Datenbank.  
   
@@ -111,7 +111,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Anzeigen von Daten im DataGridView-Steuerelement  
   
--   Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
+- Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Deklaration des Elements.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

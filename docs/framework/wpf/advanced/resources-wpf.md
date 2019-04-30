@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981889"
 ---
 # <a name="resources-wpf"></a>Ressourcen (WPF)
 Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. WPF unterstützt verschiedene Arten von Ressourcen. Diese Ressourcen sind in erster Linie auf zwei Arten von Ressourcen: XAML-Ressourcen und Data-Ressourcendateien. Beispiele für XAML-Ressourcen sind Pinsel und Stile. Data-Ressourcendateien sind nicht ausführbaren Datendateien, die eine Anwendung benötigt.  

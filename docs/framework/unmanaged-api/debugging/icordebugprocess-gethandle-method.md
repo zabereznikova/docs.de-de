@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994492"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle-Methode
 Ruft ein Handle für den Prozess ab.  

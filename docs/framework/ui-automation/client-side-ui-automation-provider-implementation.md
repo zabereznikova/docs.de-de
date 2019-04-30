@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032377"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementierung eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224460"
   
  Anbieter, die im Code des Clients implementiert sind, werden durch die Verwendung von <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>registriert. Diese Methode verwendet als Argument ein Array von <xref:System.Windows.Automation.ClientSideProviderDescription> -Strukturen, von denen jede die folgenden Eigenschaften angibt:  
   
--   Eine Rückruffunktion, die das Anbieterobjekt erstellt  
+- Eine Rückruffunktion, die das Anbieterobjekt erstellt  
   
--   Einen Klassennamen der Steuerelemente, die Informationen vom Anbieter erhalten  
+- Einen Klassennamen der Steuerelemente, die Informationen vom Anbieter erhalten  
   
--   Einen Imagenamen der Anwendung (normalerweise der vollständige Name der ausführbaren Datei), der Informationen vom Anbieter erhält  
+- Einen Imagenamen der Anwendung (normalerweise der vollständige Name der ausführbaren Datei), der Informationen vom Anbieter erhält  
   
--   Flags, die bestimmen, wie der Klassenname mit in der Zielanwendung vorhandenen Fensterklassen verglichen wird  
+- Flags, die bestimmen, wie der Klassenname mit in der Zielanwendung vorhandenen Fensterklassen verglichen wird  
   
  Die beiden letzten Parameter sind optional. Der Client gibt den Imagenamen der Zielanwendung an, wenn verschiedene Anbieter für verschiedene Anwendungen verwendet werden sollen. Der Client verwendet z. B. in einer bekannten Anwendung, die das Muster für mehrere Ansichten unterstützt, einen Anbieter für ein [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Listenansicht-Steuerelement und einen zweiten Anbieter für ein ähnliches Steuerelement in einer anderen bekannten Anwendung, die dieses Muster nicht unterstützt.  
   

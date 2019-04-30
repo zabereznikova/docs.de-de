@@ -13,11 +13,11 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971313"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
@@ -30,33 +30,33 @@ ms.locfileid: "59304804"
 ## <a name="add-ins-overview"></a>Übersicht über Add-Ins  
  Um das mit dem Integrieren neuer Funktionen verbundene erneute Kompilieren und Bereitstellen von Anwendungen zu vermeiden, da diese Vorgänge sehr komplex sind, sind Anwendungen mit Erweiterbarkeitsmechanismen ausgestattet. Diese ermöglichen Entwicklern (sowohl Erst- als auch Drittanbieter) das Erstellen anderer Anwendungen, die integriert werden können. Diese Art von Erweiterbarkeit wird in der Regel durch die Verwendung von Add-Ins (auch als „Add-Ons“ oder „Plug-Ins“ bezeichnet) unterstützt. Es folgen Beispiele für reale Anwendungen, die eine Erweiterbarkeit mit Add-Ins verfügbar machen:  
   
--   Internet Explorer-Add-Ons  
+- Internet Explorer-Add-Ons  
   
--   Windows Media Player-Plug-Ins  
+- Windows Media Player-Plug-Ins  
   
--   Visual Studio-Add-Ins  
+- Visual Studio-Add-Ins  
   
  Beispielsweise können Drittanbieterentwickler mithilfe des Add-In-Modells von Windows Media Player „Plug-Ins“ implementieren, durch die der Windows Media Player auf vielfältige Weise erweitert wird. Dazu zählen das Erstellen von Decodern und Encodern für Medienformate, für die keine systemeigene Unterstützung durch Windows Media Player besteht (z. B. DVD, MP3), Audioeffekte und Skins. Jedes Add-In-Modell ist so aufgebaut, dass es die zu einer Anwendung gehörenden Funktionen verfügbar macht, obwohl verschiedene Entitäten und Verhaltensweisen für alle Add-In-Modelle gelten.  
   
  Die drei Hauptentitäten typischer Add-In-Erweiterbarkeitslösungen sind *Verträge*, *Add-Ins* und *Hostanwendungen*. Mit Verträgen wird auf zwei Arten definiert, wie Add-Ins mit Hostanwendungen integriert sind:  
   
--   Add-Ins sind in Funktionen integriert, die von Hostanwendungen implementiert werden.  
+- Add-Ins sind in Funktionen integriert, die von Hostanwendungen implementiert werden.  
   
--   Hostanwendungen machen Funktionen verfügbar, in die Add-Ins integriert werden.  
+- Hostanwendungen machen Funktionen verfügbar, in die Add-Ins integriert werden.  
   
  Damit Add-Ins verwendet werden können, müssen sie von Hostanwendungen gefunden und zur Laufzeit geladen werden. Daher sind Anwendungen, die Add-Ins unterstützen, zusätzlich für folgende Aufgaben verantwortlich:  
   
--   **Discovery**: Suchen von Add-Ins, die von hostanwendungen unterstützte Verträge einhalten.  
+- **Discovery**: Suchen von Add-Ins, die von hostanwendungen unterstützte Verträge einhalten.  
   
--   **Aktivierung**: Laden, ausführen und beim Herstellen der Kommunikation mit add-ins.  
+- **Aktivierung**: Laden, ausführen und beim Herstellen der Kommunikation mit add-ins.  
   
--   **Isolation**: Verwenden von Anwendungsdomänen oder Prozessen zum Einrichten von Isolationsgrenzen, die Anwendungen vor potenziellen Sicherheits- und berichtsausführungsproblemen mit add-ins zu schützen.  
+- **Isolation**: Verwenden von Anwendungsdomänen oder Prozessen zum Einrichten von Isolationsgrenzen, die Anwendungen vor potenziellen Sicherheits- und berichtsausführungsproblemen mit add-ins zu schützen.  
   
--   **Kommunikation**: Können Add-Ins und hostanwendungen über Isolationsgrenzen hinweg miteinander kommunizieren, durch Aufrufen von Methoden und übergeben von Daten.  
+- **Kommunikation**: Können Add-Ins und hostanwendungen über Isolationsgrenzen hinweg miteinander kommunizieren, durch Aufrufen von Methoden und übergeben von Daten.  
   
--   **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und Prozesse in eine klare, vorhersehbare Weise (finden Sie unter [Anwendungsdomänen](../../app-domains/application-domains.md)).  
+- **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und Prozesse in eine klare, vorhersehbare Weise (finden Sie unter [Anwendungsdomänen](../../app-domains/application-domains.md)).  
   
--   **Versioning**: Sicherstellen, dass hostanwendungen und Add-Ins trotzdem kommunizieren können, wenn neue Versionen erstellt werden.  
+- **Versioning**: Sicherstellen, dass hostanwendungen und Add-Ins trotzdem kommunizieren können, wenn neue Versionen erstellt werden.  
   
  Letztlich ist es eine wichtige Aufgabe, ein stabiles Add-In-Modell zu entwickeln. Aus diesem Grund stellt .NET Framework eine Infrastruktur zum Erstellen von Add-in-Modellen.  
   
@@ -75,27 +75,27 @@ ms.locfileid: "59304804"
   
 1. **Das Add-In gibt eine Benutzeroberfläche zurück**. Ein Add-in gibt eine Benutzeroberfläche zurück an die hostanwendung über einen Methodenaufruf wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
   
-    -   Die Darstellung einer Benutzeroberfläche, die von einem Add-In zurückgegeben wird, ist abhängig von entweder Daten oder Bedingungen, die nur zur Laufzeit, wie z.B. dynamisch generierte Berichte.  
+    - Die Darstellung einer Benutzeroberfläche, die von einem Add-In zurückgegeben wird, ist abhängig von entweder Daten oder Bedingungen, die nur zur Laufzeit, wie z.B. dynamisch generierte Berichte.  
   
-    -   Die Benutzeroberfläche für die von einem Add-in bereitgestellte Dienste unterscheidet sich von der Benutzeroberfläche der hostanwendungen, die das Add-in verwenden können.  
+    - Die Benutzeroberfläche für die von einem Add-in bereitgestellte Dienste unterscheidet sich von der Benutzeroberfläche der hostanwendungen, die das Add-in verwenden können.  
   
-    -   Das Add-in in erster Linie einen Dienst für die hostanwendung ausführt, und meldet den Status an die hostanwendung mit einer Benutzeroberfläche.  
+    - Das Add-in in erster Linie einen Dienst für die hostanwendung ausführt, und meldet den Status an die hostanwendung mit einer Benutzeroberfläche.  
   
 2. **Das Add-In ist eine Benutzeroberfläche**. Ein Add-in ist eine Benutzeroberfläche, wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
   
-    -   Ein Add-In stellt ausschließlich die angezeigten Dienste bereit, z. B. eine Werbung.  
+    - Ein Add-In stellt ausschließlich die angezeigten Dienste bereit, z. B. eine Werbung.  
   
-    -   Die Benutzeroberfläche für ein Add-in bereitgestellte Dienste ist häufig von allen hostanwendungen genutzt, die diese-Add-in, z. B. Rechner oder Farbauswahl verwenden können.  
+    - Die Benutzeroberfläche für ein Add-in bereitgestellte Dienste ist häufig von allen hostanwendungen genutzt, die diese-Add-in, z. B. Rechner oder Farbauswahl verwenden können.  
   
  Diese Szenarien erfordern, dass die UI-Objekte zwischen der hostanwendung und Add-in-Anwendungsdomänen übergeben werden können. Seit .NET Framework, die Kommunikation zwischen Anwendungsdomänen Remoting-add-in-Modell basiert, müssen die Objekte, die dazwischen, übergeben werden remotefähig sein.  
   
  Ein remotefähiges Objekt stellt die Instanz einer Klasse dar, für die eine oder mehrere der folgenden Aussagen gelten:  
   
--   Leitet sich von der <xref:System.MarshalByRefObject> Klasse.  
+- Leitet sich von der <xref:System.MarshalByRefObject> Klasse.  
   
--   Implementiert die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle.  
+- Implementiert die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle.  
   
--   Hat die <xref:System.SerializableAttribute> -Attribut.  
+- Hat die <xref:System.SerializableAttribute> -Attribut.  
   
 > [!NOTE]
 >  Weitere Informationen über das Erstellen von remotefähigen .NET Framework-Objekten finden Sie unter [erstellen Remotefähiger Objekte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
@@ -156,11 +156,11 @@ ms.locfileid: "59304804"
 ## <a name="add-ins-and-xaml-browser-applications"></a>Add-Ins und XAML-Browseranwendungen  
  In den bisherigen Beispielen wurde die Hostanwendung als eigenständige Anwendung installiert. [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]-Browseranwendungen können jedoch auch Add-Ins hosten, wobei allerdings die folgenden zusätzlichen Erstellungs- und Implementierungsanforderungen gelten:  
   
--   Das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Anwendungsmanifest muss so konfiguriert sein, dass Pipeline- (Ordner und Assemblys) und Add-In-Assembly in den [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]-Anwendungscache auf dem Clientcomputer heruntergeladen werden, und zwar in denselben Ordner wie [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
+- Das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Anwendungsmanifest muss so konfiguriert sein, dass Pipeline- (Ordner und Assemblys) und Add-In-Assembly in den [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]-Anwendungscache auf dem Clientcomputer heruntergeladen werden, und zwar in denselben Ordner wie [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
--   Der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code zum Ermitteln und Laden von Add-Ins muss den [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Anwendungscache für [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] als Speicherort für Pipeline und Add-In verwenden.  
+- Der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code zum Ermitteln und Laden von Add-Ins muss den [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Anwendungscache für [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] als Speicherort für Pipeline und Add-In verwenden.  
   
--   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] muss das Add-In in einen speziellen Sicherheitskontext laden, wenn das Add-In auf lose Dateien verweist, die sich auf der Ursprungssite befinden. Wenn sie von [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s gehostet werden, können Add-Ins nur auf lose Dateien verweisen, die auf der Ursprungssite der Hostanwendung gespeichert sind.  
+- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] muss das Add-In in einen speziellen Sicherheitskontext laden, wenn das Add-In auf lose Dateien verweist, die sich auf der Ursprungssite befinden. Wenn sie von [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s gehostet werden, können Add-Ins nur auf lose Dateien verweisen, die auf der Ursprungssite der Hostanwendung gespeichert sind.  
   
  In den folgenden Unterabschnitten werden diese Aufgaben ausführlich beschrieben.  
   
@@ -194,13 +194,13 @@ ms.locfileid: "59304804"
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Verwenden der Pipeline und des Add-Ins von der Anwendungsbasis  
  Sind Pipeline und Add-In für die [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Bereitstellung konfiguriert, werden sie in denselben [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Cacheordner heruntergeladen wie die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Damit Pipeline und Add-In aus der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] verwendet werden können, müssen sie vom [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code aus der Anwendungsbasis abgerufen werden. Die unterschiedlichen Typen und Member, der das .NET Framework-add-in-Modell für die Verwendung von Pipelines und Add-Ins, bieten besondere Unterstützung für dieses Szenario. Zuerst wird durch der Pfad identifiziert die <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> Enumerationswert. Diesen Wert verwenden Sie mit Überladungen der relevanten Add-In-Member, wenn Pipelines verwendet werden sollen, die Folgendes enthalten:  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
 ### <a name="accessing-the-hosts-site-of-origin"></a>Zugreifen auf die Ursprungssite des Hosts  
  Damit ein Add-In auf Dateien von der Ursprungssite verweisen kann, muss das Add-In mit einer Sicherheitsisolation geladen werden, die der Hostanwendung entspricht. Diese Sicherheitsebene wird durch identifiziert die <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> -Enumerationswert, und übergeben die <xref:System.AddIn.Hosting.AddInToken.Activate%2A> Methode, wenn ein Add-in aktiviert ist.  
@@ -213,9 +213,9 @@ ms.locfileid: "59304804"
   
  Im Grunde nicht WPF eine Benutzeroberfläche von einem Add-in an eine hostanwendung übergeben werden. Stattdessen übergibt WPF die Win32-Fensterhandle für die Benutzeroberfläche mithilfe von WPF-Interoperabilität. Tritt auf, wenn eine Benutzeroberfläche in einem Add-in an eine hostanwendung übergeben wird, Folgendes:  
   
--   Auf der Add-in-Seite ruft WPF ein Fensterhandle, für die Benutzeroberfläche, die von der hostanwendung angezeigt wird. Das Fensterhandle wird durch eine interne abgeleitete Klasse WPF gekapselt <xref:System.Windows.Interop.HwndSource> und implementiert <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> und, die das Add-in die Anwendungsdomäne zu Anwendungsdomäne der hostanwendung gemarshallt wird.  
+- Auf der Add-in-Seite ruft WPF ein Fensterhandle, für die Benutzeroberfläche, die von der hostanwendung angezeigt wird. Das Fensterhandle wird durch eine interne abgeleitete Klasse WPF gekapselt <xref:System.Windows.Interop.HwndSource> und implementiert <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> und, die das Add-in die Anwendungsdomäne zu Anwendungsdomäne der hostanwendung gemarshallt wird.  
   
--   Klicken Sie auf der Seite der hostanwendung, WPF neu gepackt der <xref:System.Windows.Interop.HwndSource> als eine interne abgeleitete Klasse WPF <xref:System.Windows.Interop.HwndHost> und nutzt <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> an die hostanwendung.  
+- Klicken Sie auf der Seite der hostanwendung, WPF neu gepackt der <xref:System.Windows.Interop.HwndSource> als eine interne abgeleitete Klasse WPF <xref:System.Windows.Interop.HwndHost> und nutzt <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> an die hostanwendung.  
   
  <xref:System.Windows.Interop.HwndHost> ist vorhanden, um Benutzeroberflächen, identifiziert durch Fensterhandles von WPF-Benutzeroberflächen anzuzeigen. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../advanced/wpf-and-win32-interoperation.md).  
   
@@ -230,51 +230,51 @@ ms.locfileid: "59304804"
 ## <a name="wpf-add-in-benefits"></a>Vorteile des WPF-Add-Ins  
  Da WPF-add-in-Benutzeroberflächen angezeigt werden, von hostanwendungen, die mithilfe einer internen Klasse, die von abgeleitet <xref:System.Windows.Interop.HwndHost>, diese Benutzeroberflächen sind eingeschränkt, durch die Funktionen der <xref:System.Windows.Interop.HwndHost> in Bezug auf WPF-UI-Dienste wie Layout, Rendering, Datenbindung, Stile, Vorlagen und Ressourcen. Allerdings WPF erweitert die internen <xref:System.Windows.Interop.HwndHost> -Unterklasse um zusätzliche Funktionen, die Folgendes umfassen:  
   
--   TAB-Taste zwischen einer hostanwendung-Benutzeroberfläche und ein Add-in-Benutzeroberfläche. Beachten Sie, dass das Programmiermodell "Add-in-ist eine Benutzeroberfläche" erforderlich, dass der Add-In-seitige Adapter überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> , ob das Add-in ist voll vertrauenswürdige als auch teilweise vertrauenswürdigen aktivieren TAB-Taste.  
+- TAB-Taste zwischen einer hostanwendung-Benutzeroberfläche und ein Add-in-Benutzeroberfläche. Beachten Sie, dass das Programmiermodell "Add-in-ist eine Benutzeroberfläche" erforderlich, dass der Add-In-seitige Adapter überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> , ob das Add-in ist voll vertrauenswürdige als auch teilweise vertrauenswürdigen aktivieren TAB-Taste.  
   
--   Anforderungen zur Barrierefreiheit für Add-in-Benutzeroberflächen, die über Benutzeroberflächen für Host-Anwendung angezeigt werden, werden berücksichtigt.  
+- Anforderungen zur Barrierefreiheit für Add-in-Benutzeroberflächen, die über Benutzeroberflächen für Host-Anwendung angezeigt werden, werden berücksichtigt.  
   
--   Aktivieren WPF-Anwendungen problemlos in Szenarien mit mehreren Anwendungsdomänen ausgeführt.  
+- Aktivieren WPF-Anwendungen problemlos in Szenarien mit mehreren Anwendungsdomänen ausgeführt.  
   
--   Verhindern von unberechtigten Zugriffen zum Hinzufügen-UI-Fensterhandles, wenn Add-Ins mit Sicherheitsisolation (d. h. in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt. Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> gewährleistet diese Sicherheit:  
+- Verhindern von unberechtigten Zugriffen zum Hinzufügen-UI-Fensterhandles, wenn Add-Ins mit Sicherheitsisolation (d. h. in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt. Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> gewährleistet diese Sicherheit:  
   
-    -   Beim Programmiermodell "Add-in gibt eine Benutzeroberfläche zurück", ist die einzige Möglichkeit, die das Fensterhandle für ein Add-in-Benutzeroberfläche über die Isolationsgrenze hinweg übergeben aufzurufende <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    - Beim Programmiermodell "Add-in gibt eine Benutzeroberfläche zurück", ist die einzige Möglichkeit, die das Fensterhandle für ein Add-in-Benutzeroberfläche über die Isolationsgrenze hinweg übergeben aufzurufende <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Für das Programmiermodell "Add-in ist eine Benutzeroberfläche" überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> auf dem Add-In-seitige Adapter und der Aufruf <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (wie in den vorherigen Beispielen gezeigt) ist es erforderlich, die Add-In-seitige Adapter aufgerufen `QueryContract` Implementierung von der hostseitiger Adapter.  
+    - Für das Programmiermodell "Add-in ist eine Benutzeroberfläche" überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> auf dem Add-In-seitige Adapter und der Aufruf <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (wie in den vorherigen Beispielen gezeigt) ist es erforderlich, die Add-In-seitige Adapter aufgerufen `QueryContract` Implementierung von der hostseitiger Adapter.  
   
--   Bereitstellen von Ausführungsschutz für mehrere Anwendungsdomänen. Aufgrund von Einschränkungen bei Anwendungsdomänen führen unbehandelte Ausnahmen, die in Add-In-Anwendungsdomänen ausgelöst werden, zum Absturz der gesamten Anwendung, auch wenn eine Isolationsgrenze eingerichtet ist. Allerdings bieten WPF und die Add-In-Modell von .NET Framework eine einfache Möglichkeit, dieses Problem zu umgehen und die Anwendungsstabilität zu verbessern. Erstellt ein WPF-add-in, das eine Benutzeroberfläche anzeigt eine <xref:System.Windows.Threading.Dispatcher> für den Thread, der die Anwendungsdomäne ausgeführt wird, wenn die hostanwendung eine WPF-Anwendung ist. Sie können erkennen, dass alle nicht behandelte Ausnahmen, die in der Anwendungsdomäne, durch Behandeln auftreten der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis von der WPF-add-in des <xref:System.Windows.Threading.Dispatcher>. Sie erhalten die <xref:System.Windows.Threading.Dispatcher> aus der <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> Eigenschaft.  
+- Bereitstellen von Ausführungsschutz für mehrere Anwendungsdomänen. Aufgrund von Einschränkungen bei Anwendungsdomänen führen unbehandelte Ausnahmen, die in Add-In-Anwendungsdomänen ausgelöst werden, zum Absturz der gesamten Anwendung, auch wenn eine Isolationsgrenze eingerichtet ist. Allerdings bieten WPF und die Add-In-Modell von .NET Framework eine einfache Möglichkeit, dieses Problem zu umgehen und die Anwendungsstabilität zu verbessern. Erstellt ein WPF-add-in, das eine Benutzeroberfläche anzeigt eine <xref:System.Windows.Threading.Dispatcher> für den Thread, der die Anwendungsdomäne ausgeführt wird, wenn die hostanwendung eine WPF-Anwendung ist. Sie können erkennen, dass alle nicht behandelte Ausnahmen, die in der Anwendungsdomäne, durch Behandeln auftreten der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis von der WPF-add-in des <xref:System.Windows.Threading.Dispatcher>. Sie erhalten die <xref:System.Windows.Threading.Dispatcher> aus der <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> Eigenschaft.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Einschränkungen des WPF-Add-Ins  
  Über die Vorteile, die das Standardverhalten, die vom WPF hinzufügt <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>, und Fensterhandles, es gibt auch Einschränkungen für Add-in-Benutzeroberflächen, die von hostanwendungen angezeigt werden:  
   
--   -Add-in Benutzeroberflächen angezeigt, die von einer hostanwendung berücksichtigt Ausschneideverhalten der hostanwendung nicht.  
+- -Add-in Benutzeroberflächen angezeigt, die von einer hostanwendung berücksichtigt Ausschneideverhalten der hostanwendung nicht.  
   
--   Der Begriff *Airspace* in Interoperabilitätsszenarien gilt auch für Add-Ins (siehe [Übersicht über die Technologieregionen](../advanced/technology-regions-overview.md)).  
+- Der Begriff *Airspace* in Interoperabilitätsszenarien gilt auch für Add-Ins (siehe [Übersicht über die Technologieregionen](../advanced/technology-regions-overview.md)).  
   
--   Eine hostanwendung UI-Dienste, wie Vererbung, Datenbindung und Befehle, nicht automatisch für die add-Ins verfügbar sind Benutzeroberflächen. Um diese Dienste für das Add-In bereitzustellen, müssen Sie die Pipeline aktualisieren.  
+- Eine hostanwendung UI-Dienste, wie Vererbung, Datenbindung und Befehle, nicht automatisch für die add-Ins verfügbar sind Benutzeroberflächen. Um diese Dienste für das Add-In bereitzustellen, müssen Sie die Pipeline aktualisieren.  
   
--   Ein Benutzeroberflächen-Add-in kann nicht werden gedreht, skaliert, verzerrt oder andernfalls durch eine Transformation geändert (finden Sie unter [Übersicht über Transformationen](../graphics-multimedia/transforms-overview.md)).  
+- Ein Benutzeroberflächen-Add-in kann nicht werden gedreht, skaliert, verzerrt oder andernfalls durch eine Transformation geändert (finden Sie unter [Übersicht über Transformationen](../graphics-multimedia/transforms-overview.md)).  
   
--   Inhalte innerhalb von Add-in-Benutzeroberflächen, die gerendert wird, durch Zeichenvorgänge aus dem <xref:System.Drawing> Namespace kann Alphablending umfassen. Allerdings müssen sowohl eine Add-in-Benutzeroberfläche und der hostanwendung Benutzeroberfläche, die es enthält 100 % deckend sein; Das heißt, die `Opacity` sowohl Eigenschaft muss auf 1 festgelegt werden.  
+- Inhalte innerhalb von Add-in-Benutzeroberflächen, die gerendert wird, durch Zeichenvorgänge aus dem <xref:System.Drawing> Namespace kann Alphablending umfassen. Allerdings müssen sowohl eine Add-in-Benutzeroberfläche und der hostanwendung Benutzeroberfläche, die es enthält 100 % deckend sein; Das heißt, die `Opacity` sowohl Eigenschaft muss auf 1 festgelegt werden.  
   
--   Wenn die <xref:System.Windows.Window.AllowsTransparency%2A> eines Fensters in der hostanwendung, die ein Benutzeroberflächen-Add-in enthält-Eigenschaftensatz auf `true`, das Add-in nicht sichtbar ist. Dies gilt auch, wenn der Benutzeroberflächen-Add-in über 100 % deckend ist (d. h. die `Opacity` Eigenschaft hat den Wert 1).  
+- Wenn die <xref:System.Windows.Window.AllowsTransparency%2A> eines Fensters in der hostanwendung, die ein Benutzeroberflächen-Add-in enthält-Eigenschaftensatz auf `true`, das Add-in nicht sichtbar ist. Dies gilt auch, wenn der Benutzeroberflächen-Add-in über 100 % deckend ist (d. h. die `Opacity` Eigenschaft hat den Wert 1).  
   
--   Ein Benutzeroberflächen-Add-in muss zusätzlich zu anderen WPF-Elemente im selben Fenster der obersten Ebene angezeigt werden.  
+- Ein Benutzeroberflächen-Add-in muss zusätzlich zu anderen WPF-Elemente im selben Fenster der obersten Ebene angezeigt werden.  
   
--   Kein Teil ein Add-in-Benutzeroberfläche kann gerendert werden, mithilfe einer <xref:System.Windows.Media.VisualBrush>. Stattdessen kann das Add-in eine Momentaufnahme der generierten Benutzeroberfläche um eine Bitmap zu erstellen, die an die hostanwendung, die mit vertraglich definierten Methoden übergeben werden kann.  
+- Kein Teil ein Add-in-Benutzeroberfläche kann gerendert werden, mithilfe einer <xref:System.Windows.Media.VisualBrush>. Stattdessen kann das Add-in eine Momentaufnahme der generierten Benutzeroberfläche um eine Bitmap zu erstellen, die an die hostanwendung, die mit vertraglich definierten Methoden übergeben werden kann.  
   
--   Mediendateien können nicht wiedergegeben werden, von einem <xref:System.Windows.Controls.MediaElement> in einer Benutzeroberfläche-Add-in.  
+- Mediendateien können nicht wiedergegeben werden, von einem <xref:System.Windows.Controls.MediaElement> in einer Benutzeroberfläche-Add-in.  
   
--   Mausereignisse, die für die Add-in-Benutzeroberfläche generiert weder empfangen noch ausgelöst von der hostanwendung und dem `IsMouseOver` hostanwendung UI-Eigenschaft weist einen Wert von `false`.  
+- Mausereignisse, die für die Add-in-Benutzeroberfläche generiert weder empfangen noch ausgelöst von der hostanwendung und dem `IsMouseOver` hostanwendung UI-Eigenschaft weist einen Wert von `false`.  
   
--   Wenn den Fokus zwischen Steuerelementen in einer Benutzeroberfläche-Add-in verlagert die `GotFocus` und `LostFocus` Ereignisse weder empfangen noch ausgelöst von der hostanwendung.  
+- Wenn den Fokus zwischen Steuerelementen in einer Benutzeroberfläche-Add-in verlagert die `GotFocus` und `LostFocus` Ereignisse weder empfangen noch ausgelöst von der hostanwendung.  
   
--   Der Teil einer hostanwendung, die ein Benutzeroberflächen-Add-in enthält, wird beim Drucken Weiß angezeigt.  
+- Der Teil einer hostanwendung, die ein Benutzeroberflächen-Add-in enthält, wird beim Drucken Weiß angezeigt.  
   
--   Alle Dispatcher (finden Sie unter <xref:System.Windows.Threading.Dispatcher>) durch das Add-in erstellt Benutzeroberfläche muss manuell beendet werden, bevor das Owner-Add-in entladen wird, wenn die hostanwendung die Ausführung wird fortgesetzt. Der Vertrag kann Methoden implementieren, mit denen die hostanwendung das Add-in zu signalisieren, bevor das Add-In entladen wurde, wodurch die Add-in-Benutzeroberfläche die Dispatcher beenden wird.  
+- Alle Dispatcher (finden Sie unter <xref:System.Windows.Threading.Dispatcher>) durch das Add-in erstellt Benutzeroberfläche muss manuell beendet werden, bevor das Owner-Add-in entladen wird, wenn die hostanwendung die Ausführung wird fortgesetzt. Der Vertrag kann Methoden implementieren, mit denen die hostanwendung das Add-in zu signalisieren, bevor das Add-In entladen wurde, wodurch die Add-in-Benutzeroberfläche die Dispatcher beenden wird.  
   
--   Ist ein Benutzeroberflächen-Add-in ein <xref:System.Windows.Controls.InkCanvas> oder enthält ein <xref:System.Windows.Controls.InkCanvas>, Sie können nicht das Add-In entladen.  
+- Ist ein Benutzeroberflächen-Add-in ein <xref:System.Windows.Controls.InkCanvas> oder enthält ein <xref:System.Windows.Controls.InkCanvas>, Sie können nicht das Add-In entladen.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Leistungsoptimierung  

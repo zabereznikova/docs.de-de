@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032460"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Verzögertes im Vergleich zu unmittelbarem Laden
 Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Objekt abgerufen. Die *verwandte* Objekte werden nicht automatisch zur gleichen Zeit abgerufen. (Weitere Informationen finden Sie unter [Beziehungsübergreifendes](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Für Sie ist nicht erkennbar, dass verwandte Objekte nicht bereits geladen sind, da der Versuch, auf diese Objekte zuzugreifen, eine Abfrage erzeugt, die diese Objekte abruft.  
@@ -29,9 +29,9 @@ Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Ob
   
  Sie benötigen stattdessen eine Möglichkeit, verwandte Objekte zur gleichen Zeit abzurufen. Dieser Satz ist ein isolierter Bereich eines Graphen, sodass Sie niemals mehr oder weniger Daten als benötigt abrufen. Zu diesem Zweck [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet <xref:System.Data.Linq.DataLoadOptions> für das sofortige Laden einer Region Ihres Objektmodells. Die Methoden umfassen:  
   
--   Die <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>-Methode zum sofortigen Laden von Daten zum Hauptziel.  
+- Die <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>-Methode zum sofortigen Laden von Daten zum Hauptziel.  
   
--   Die <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A>-Methode zum Filtern abgerufener Objekte nach einer bestimmten Beziehung.  
+- Die <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A>-Methode zum Filtern abgerufener Objekte nach einer bestimmten Beziehung.  
   
 ## <a name="see-also"></a>Siehe auch
 

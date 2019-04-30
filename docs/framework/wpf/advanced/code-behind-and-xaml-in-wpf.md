@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010669"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-Behind und XAML in WPF
 <a name="introduction"></a> CodeBehind ist ein Begriff zum Beschreiben des Codes, der mit Markup-definierten Objekten verknüpft ist, verwendet bei einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite ist Markupkompilierte. Dieses Thema beschreibt die Anforderungen für die Code-Behind sowie eine alternative Inline-Code-Mechanismus für den Code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Erforderliche Komponenten](#Prerequisites)  
+- [Erforderliche Komponenten](#Prerequisites)  
   
--   [Code-Behind und XAML-Sprache](#codebehind_and_the_xaml_language)  
+- [Code-Behind und XAML-Sprache](#codebehind_and_the_xaml_language)  
   
--   [Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse in WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse in WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [Einschränkungen von Inlinecode](#Inline_Code_Limitations)  
+- [Einschränkungen von Inlinecode](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
@@ -38,15 +38,15 @@ ms.locfileid: "59088571"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse in WPF  
   
--   Die partielle Klasse muss vom Typ abgeleitet werden, die das Stammelement sichert.  
+- Die partielle Klasse muss vom Typ abgeleitet werden, die das Stammelement sichert.  
   
--   Beachten Sie, dass es sich bei den Markup kompilieren Buildvorgängen Standardverhalten, Sie die Ableitung in der Definition der partiellen Klasse leer auf der Code-Behind-Seite lassen können. Das kompilierte Ergebnis wird die Seitenstamm Unterstützungstyp um als Grundlage für die partielle Klasse ist, werden wird davon ausgegangen, selbst wenn er nicht angegeben. Auf dieses Verhalten ist jedoch nicht empfohlen.  
+- Beachten Sie, dass es sich bei den Markup kompilieren Buildvorgängen Standardverhalten, Sie die Ableitung in der Definition der partiellen Klasse leer auf der Code-Behind-Seite lassen können. Das kompilierte Ergebnis wird die Seitenstamm Unterstützungstyp um als Grundlage für die partielle Klasse ist, werden wird davon ausgegangen, selbst wenn er nicht angegeben. Auf dieses Verhalten ist jedoch nicht empfohlen.  
   
--   Die Ereignishandler, die Sie im Code-Behind schreiben müssen Instanzmethoden sein und darf nicht statische Methoden sein. Diese Methoden müssen definiert werden, von der partiellen Klasse innerhalb der CLR-Namespace identifizierte `x:Class`. Sie können nicht qualifizieren Sie den Namen eines ereignishandlers um anzuweisen, ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor einen Ereignishandler für die ereignisverknüpfung in einer anderen Klassenbereich gesucht.  
+- Die Ereignishandler, die Sie im Code-Behind schreiben müssen Instanzmethoden sein und darf nicht statische Methoden sein. Diese Methoden müssen definiert werden, von der partiellen Klasse innerhalb der CLR-Namespace identifizierte `x:Class`. Sie können nicht qualifizieren Sie den Namen eines ereignishandlers um anzuweisen, ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor einen Ereignishandler für die ereignisverknüpfung in einer anderen Klassenbereich gesucht.  
   
--   Der Handler muss den Delegaten für das entsprechende Ereignis in das System von Unterstützungstypen übereinstimmen.  
+- Der Handler muss den Delegaten für das entsprechende Ereignis in das System von Unterstützungstypen übereinstimmen.  
   
--   Für die Microsoft Visual Basic-Sprache gesagt können Sie die sprachspezifischen `Handles` zuzuordnende Schlüsselwort Handler Instanzen und Ereignissen in der Handlerdeklaration anstatt durch Anfügen von Handlern, die mit Attributen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Diese Technik verfügt jedoch über einige Einschränkungen. da die `Handles` Schlüsselwort kann nicht unterstützt, die bestimmte Features von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignissystem, z. B. bestimmte Ereignisszenarien weitergeleitet oder angefügten Ereignisse. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
+- Für die Microsoft Visual Basic-Sprache gesagt können Sie die sprachspezifischen `Handles` zuzuordnende Schlüsselwort Handler Instanzen und Ereignissen in der Handlerdeklaration anstatt durch Anfügen von Handlern, die mit Attributen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Diese Technik verfügt jedoch über einige Einschränkungen. da die `Handles` Schlüsselwort kann nicht unterstützt, die bestimmte Features von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignissystem, z. B. bestimmte Ereignisszenarien weitergeleitet oder angefügten Ereignisse. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

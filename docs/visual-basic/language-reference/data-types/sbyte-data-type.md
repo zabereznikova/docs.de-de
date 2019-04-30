@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971781"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte-Datentyp (Visual Basic)
 
@@ -64,13 +64,13 @@ Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `SByte` befindet – s
 
 ## <a name="programming-tips"></a>Tipps für die Programmierung
   
--   **CLS-Kompatibilität.** Die `SByte` Datentyp ist nicht Teil der [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.
+- **CLS-Kompatibilität.** Die `SByte` Datentyp ist nicht Teil der [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.
 
--   **Erweiternde.** Die `SByte` -Datentyp wird zu `Short`, `Integer`, `Long`, `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `SByte` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.
+- **Erweiternde.** Die `SByte` -Datentyp wird zu `Short`, `Integer`, `Long`, `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `SByte` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.
   
--   **Typzeichen.** `SByte` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
+- **Typzeichen.** `SByte` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.SByte?displayProperty=nameWithType>-Struktur.
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.SByte?displayProperty=nameWithType>-Struktur.
   
 ## <a name="see-also"></a>Siehe auch
 

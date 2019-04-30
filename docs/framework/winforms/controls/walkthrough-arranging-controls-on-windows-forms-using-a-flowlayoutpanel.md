@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009122"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel
 Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst entsprechend neu anordnet, wenn sich die Größe des Formulars oder des Inhalts ändert. Wenn Sie ein dynamisches Layout benötigen und <xref:System.Windows.Forms.Control.Layout> -Ereignisse nicht explizit im Code verarbeiten möchten, ziehen Sie die Verwendung eines Layoutbereichs in Erwägung.  
@@ -23,23 +23,23 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
  Das <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seinen Inhalt in einer bestimmten Flussrichtung an: horizontal oder vertikal. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umbrochen werden. Alternativ kann dieser Inhalt abgeschnitten werden, statt dass er umbrochen wird. In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms-Projekts  
+- Erstellen eines Windows Forms-Projekts  
   
--   Anordnen von Steuerelementen in horizontaler und vertikaler Richtung  
+- Anordnen von Steuerelementen in horizontaler und vertikaler Richtung  
   
--   Ändern der Flussrichtung  
+- Ändern der Flussrichtung  
   
--   Einfügen von Flussumbrüchen  
+- Einfügen von Flussumbrüchen  
   
--   Anordnen von Steuerelementen mithilfe von Auffüllung und Rändern  
+- Anordnen von Steuerelementen mithilfe von Auffüllung und Rändern  
   
--   Einfügen von Steuerelementen durch Doppelklicken in der Toolbox  
+- Einfügen von Steuerelementen durch Doppelklicken in der Toolbox  
   
--   Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
+- Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
   
--   Einfügen von Steuerelementen mit der Einfügemarke  
+- Einfügen von Steuerelementen mit der Einfügemarke  
   
--   Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element  
+- Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element  
   
  Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   
@@ -179,13 +179,13 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
 ## <a name="next-steps"></a>Nächste Schritte  
  Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Hier sind paar Vorschläge für weitere Experimente:  
   
--   Erhöhen Sie die Größe eines der <xref:System.Windows.Forms.Button> -Steuerelemente, und beobachten Sie die Auswirkung auf das Layout.  
+- Erhöhen Sie die Größe eines der <xref:System.Windows.Forms.Button> -Steuerelemente, und beobachten Sie die Auswirkung auf das Layout.  
   
--   Layoutbereiche können andere Layoutbereiche enthalten. Experimentieren Sie mit dem Ablegen eines <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelements auf dem vorhandenen Steuerelement.  
+- Layoutbereiche können andere Layoutbereiche enthalten. Experimentieren Sie mit dem Ablegen eines <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelements auf dem vorhandenen Steuerelement.  
   
--   Docken Sie das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement am übergeordneten Formular an. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.  
+- Docken Sie das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement am übergeordneten Formular an. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.  
   
--   Legen Sie die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft eines der Steuerelemente auf `false` fest, und beobachten Sie, wie das <xref:System.Windows.Forms.FlowLayoutPanel> als Antwort darauf einen neuen Umbruch durchführt.  
+- Legen Sie die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft eines der Steuerelemente auf `false` fest, und beobachten Sie, wie das <xref:System.Windows.Forms.FlowLayoutPanel> als Antwort darauf einen neuen Umbruch durchführt.  
   
 ## <a name="see-also"></a>Siehe auch
 

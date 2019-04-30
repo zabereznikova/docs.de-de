@@ -3,11 +3,11 @@ title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998152"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -21,11 +21,11 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
   
  Mithilfe der folgenden Tipps können Sie verhindern, dass der Inhalt einer Protokolldatei unbeabsichtigt verfügbar gemacht wird:  
   
--   Stellen Sie sicher, dass die Protokolldateien durch Access Control Lists (ACL oder Zugriffssteuerungslisten) sowohl bei im Internet gehosteten als auch bei selbst gehosteten Szenarien geschützt werden.  
+- Stellen Sie sicher, dass die Protokolldateien durch Access Control Lists (ACL oder Zugriffssteuerungslisten) sowohl bei im Internet gehosteten als auch bei selbst gehosteten Szenarien geschützt werden.  
   
--   Wählen Sie eine Dateierweiterung aus, die nicht leicht mit einer Webanforderung ausgegeben werden kann. Die Dateierweiterung .xml ist z. B. nicht sicher. Sie finden im Administratorhandbuch von IIS (Internet Information Services) eine Liste aller Erweiterungen, die bereitgestellt werden können.  
+- Wählen Sie eine Dateierweiterung aus, die nicht leicht mit einer Webanforderung ausgegeben werden kann. Die Dateierweiterung .xml ist z. B. nicht sicher. Sie finden im Administratorhandbuch von IIS (Internet Information Services) eine Liste aller Erweiterungen, die bereitgestellt werden können.  
   
--   Geben Sie einen absoluten Pfad für den Protokolldateispeicherort an, der sich außerhalb des öffentlichen vroot-Verzeichnisses des Webhosts befinden sollte, um einen Zugriff von externer Seite mithilfe eines Webbrowsers zu verhindern.  
+- Geben Sie einen absoluten Pfad für den Protokolldateispeicherort an, der sich außerhalb des öffentlichen vroot-Verzeichnisses des Webhosts befinden sollte, um einen Zugriff von externer Seite mithilfe eines Webbrowsers zu verhindern.  
   
  Standardmäßig werden Schlüssel und personenbezogene Informationen (PII, personally identifiable information), wie z. B. Benutzername und Passwort, nicht in Ablaufverfolgungen und protokollierten Nachrichten protokolliert. Ein Computeradministrator kann jedoch das `enableLoggingKnownPII`-Attribut im `machineSettings`-Element der Datei Machine.config verwenden, um Anwendungen, die auf dem Computer ausgeführt werden, das Protokollieren personenbezogener Informationen (PII) zu ermöglichen. Die folgende Konfiguration veranschaulicht diesen Vorgang:  
   
@@ -99,13 +99,13 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 ## <a name="events-triggered-by-message-logging"></a>Von Nachrichtenprotokollierung ausgelöste Ereignisse  
  Im Folgenden werden alle Ereignisse aufgelistet, die von der Nachrichtenprotokollierung ausgelöst werden.  
   
--   Nachrichtenprotokollierung auf: Dieses Ereignis wird ausgegeben, wenn die nachrichtenprotokollierung, in der Konfiguration oder über WMI aktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert". Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren (beispielsweise Nachrichtentext).  
+- Nachrichtenprotokollierung auf: Dieses Ereignis wird ausgegeben, wenn die nachrichtenprotokollierung, in der Konfiguration oder über WMI aktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert". Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren (beispielsweise Nachrichtentext).  
   
--   Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn nachrichtenprotokollierung durch WMI deaktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
+- Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn nachrichtenprotokollierung durch WMI deaktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
   
--   Melden Sie sich bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei auf festgelegtist`true`.  
+- Melden Sie sich bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei auf festgelegtist`true`.  
   
--   Melden Sie sich bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen wird. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei wird festgelegt, um `true`, aber die `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei Machine.config auf festgelegtist`false`. Es werden keine Ausnahmen ausgelöst.  
+- Melden Sie sich bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen wird. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei wird festgelegt, um `true`, aber die `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei Machine.config auf festgelegtist`false`. Es werden keine Ausnahmen ausgelöst.  
   
  Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   

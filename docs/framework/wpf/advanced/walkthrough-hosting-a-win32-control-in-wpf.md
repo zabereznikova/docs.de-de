@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032339"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
 Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erstellen von Anwendungen. Jedoch wenn Sie eine erhebliche Investition in Win32-Code verfügen, es möglicherweise effektiver sein, mindestens einige wiederzuverwenden, Programmieren Sie in der WPF-Anwendung anstatt ihn vollständig neu zu schreiben. WPF bietet ein einfaches Verfahren zum Hosten eines Win32-Fensters, in einer WPF-Seite.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
   
 6. Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Hierfür gibt es zwei Möglichkeiten.  
   
-    -   Falls gewünscht, um Nachrichten in Ihrer Hostklasse zu behandeln, überschreiben die <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methode der <xref:System.Windows.Interop.HwndHost> Klasse.  
+    - Falls gewünscht, um Nachrichten in Ihrer Hostklasse zu behandeln, überschreiben die <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methode der <xref:System.Windows.Interop.HwndHost> Klasse.  
   
-    -   Wenn Sie möchten, dass die Nachrichten behandelt, behandeln Sie WPF die <xref:System.Windows.Interop.HwndHost> Klasse <xref:System.Windows.Interop.HwndHost.MessageHook> Ereignis im Code-Behind. Dieses Ereignis tritt für jede Nachricht auf, die vom gehosteten Fenster empfangen wird. Wenn Sie diese Option auswählen, müssen Sie immer noch überschreiben <xref:System.Windows.Interop.HwndHost.WndProc%2A>, aber Sie benötigen nur eine minimale Implementierung.  
+    - Wenn Sie möchten, dass die Nachrichten behandelt, behandeln Sie WPF die <xref:System.Windows.Interop.HwndHost> Klasse <xref:System.Windows.Interop.HwndHost.MessageHook> Ereignis im Code-Behind. Dieses Ereignis tritt für jede Nachricht auf, die vom gehosteten Fenster empfangen wird. Wenn Sie diese Option auswählen, müssen Sie immer noch überschreiben <xref:System.Windows.Interop.HwndHost.WndProc%2A>, aber Sie benötigen nur eine minimale Implementierung.  
   
 7. Überschreiben der <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> und <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methoden <xref:System.Windows.Interop.HwndHost>. Müssen Sie erfüllen diese Methoden überschreiben die <xref:System.Windows.Interop.HwndHost> Vertrag, aber Sie müssen möglicherweise nur eine minimale Implementierung.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementieren der Kommunikation zwischen dem Steuerelement und der Seite  
  Sie bearbeiten das Steuerelement von Windows-Nachrichten senden. Das Steuerelement benachrichtigt Sie, wenn der Benutzer durch Senden von Benachrichtigungen an das Hostfenster mit ihm interagiert. Die [Hosten eines Win32-ListBox-Steuerelements in WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) umfasst eine Benutzeroberfläche, die enthält einige Beispiele, wie dies funktioniert:  
   
--   Der Liste ein Element hinzufügen.  
+- Der Liste ein Element hinzufügen.  
   
--   Das markierte Element aus der Liste löschen  
+- Das markierte Element aus der Liste löschen  
   
--   Den Text des aktuell markierten Elements anzeigen.  
+- Den Text des aktuell markierten Elements anzeigen.  
   
--   Die Anzahl der Elemente in der Liste anzeigen.  
+- Die Anzahl der Elemente in der Liste anzeigen.  
   
  Der Benutzer kann auch ein Element im Listenfeld auswählen, indem er darauf klickt, genauso wie für eine herkömmliche Win32-Anwendung. Die angezeigten Daten werden bei jeder Zustandsänderung des Listenfelds durch den Benutzer aktualisiert, egal ob ein Element ausgewählt, hinzugefügt oder angefügt wurde.  
   

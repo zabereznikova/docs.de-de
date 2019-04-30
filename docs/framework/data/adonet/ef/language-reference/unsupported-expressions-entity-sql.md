@@ -5,11 +5,11 @@ ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
 ms.openlocfilehash: a47ff46ca99a84500bc5dfecc19bb31652e9b4b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034072"
 ---
 # <a name="unsupported-expressions"></a>Nicht unterstützte Ausdrücke
 
@@ -33,7 +33,7 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>*-Operator
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] unterstützt die Verwendung des "*"-Operators in der SELECT-Klausel, um anzugeben, dass alle Spalten herausprojiziert werden sollen. Dies wird in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nicht unterstützt.
+[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] unterstützt die Verwendung des "*"-Operators in der {2&gt;SELECT&lt;2}-Klausel, um anzugeben, dass alle Spalten herausprojiziert werden sollen. Dies wird in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nicht unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 

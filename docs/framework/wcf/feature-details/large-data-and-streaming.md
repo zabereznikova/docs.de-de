@@ -3,11 +3,11 @@ title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038604"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten häufig in dem definierten im standard-Text-Format codiert ist die [XML 1.0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94838), vernetzte Systementwickler und Architekten sind in der Regel, sorgen die über das Netzwerk Speicherbedarf (oder Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung binärer Daten dar.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
   
  Das häufigste Szenario, bei dem Inhalte mit umfangreichen Daten übertragen werden, sind Übertragungen von binären Datenobjekten, die folgende Merkmale aufweisen:  
   
--   Die Objekte können nur schwer in eine Nachrichtensequenz unterteilt werden.  
+- Die Objekte können nur schwer in eine Nachrichtensequenz unterteilt werden.  
   
--   Die Zustellung muss schnell erfolgen.  
+- Die Zustellung muss schnell erfolgen.  
   
--   Die Objekte sind noch nicht vollständig verfügbar, wenn die Übertragung beginnt.  
+- Die Objekte sind noch nicht vollständig verfügbar, wenn die Übertragung beginnt.  
   
  Bei Daten, die diesen Einschränkungen nicht unterliegen, ist es in der Regel besser, anstatt einer großen Nachricht Sequenzen der Nachrichten im Rahmen einer Sitzung zu senden. Weitere Informationen finden Sie im Abschnitt "Streaming von Daten" weiter unten in diesem Thema.  
   
@@ -112,9 +112,9 @@ class MyData
   
  Bei der Verwendung von MTOM wird der vorausgehende Datenvertrag nach den folgenden Regeln serialisiert:  
   
--   Wenn `binaryBuffer` nicht `null` ist und im Einzelfall genügend Daten enthält, um den MTOM-Externalisierungsmehraufwand (MIME-Header usw.) im Vergleich zur Base64-Codierung zu rechtfertigen, werden die Daten externalisiert und als binärer MIME-Teil mit der Nachricht gesendet. Wird der Schwellenwert nicht überschritten, werden die Daten als Base64 codiert.  
+- Wenn `binaryBuffer` nicht `null` ist und im Einzelfall genügend Daten enthält, um den MTOM-Externalisierungsmehraufwand (MIME-Header usw.) im Vergleich zur Base64-Codierung zu rechtfertigen, werden die Daten externalisiert und als binärer MIME-Teil mit der Nachricht gesendet. Wird der Schwellenwert nicht überschritten, werden die Daten als Base64 codiert.  
   
--   Die Zeichenfolge (und alle anderen nicht binären Typen) wird unabhängig von der Größe immer als Zeichenfolge innerhalb des Nachrichtentextes dargestellt.  
+- Die Zeichenfolge (und alle anderen nicht binären Typen) wird unabhängig von der Größe immer als Zeichenfolge innerhalb des Nachrichtentextes dargestellt.  
   
  Die Auswirkungen auf die MTOM-Codierung bleiben gleich, unabhängig davon, ob Sie einen expliziten Datenvertrag wie im vorherigen Beispiel, eine Parameterliste in einem Vorgang oder geschachtelte Datenverträge verwenden oder ob Sie Datenvertragsobjekte innerhalb einer Auflistung übertragen. Bytearrays eignen sich immer für eine Optimierung und werden optimiert, wenn die Optimierungsschwellenwerte erreicht sind.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Beschränkungen  
  Sie können keine erhebliche Anzahl von WCF-Funktionen verwenden, wenn streaming aktiviert ist:  
   
--   Digitale Signaturen für den Nachrichtentext sind nicht möglich, da sie Berechnungen oder einen Hash zum gesamten Nachrichteninhalt erfordern. Beim Streaming ist der Inhalt nicht vollständig verfügbar, wenn die Nachrichtenheader erstellt und gesendet werden, weshalb keine digitale Signatur berechnet werden kann.  
+- Digitale Signaturen für den Nachrichtentext sind nicht möglich, da sie Berechnungen oder einen Hash zum gesamten Nachrichteninhalt erfordern. Beim Streaming ist der Inhalt nicht vollständig verfügbar, wenn die Nachrichtenheader erstellt und gesendet werden, weshalb keine digitale Signatur berechnet werden kann.  
   
--   Die Verschlüsselung hängt von digitalen Signaturen ab, mit denen überprüft wird, ob die Daten ordnungsgemäß rekonstruiert wurden.  
+- Die Verschlüsselung hängt von digitalen Signaturen ab, mit denen überprüft wird, ob die Daten ordnungsgemäß rekonstruiert wurden.  
   
--   Zuverlässige Sitzungen müssen gesendete Nachrichten für den Client puffen, damit bei der Übertragung verlorgen gegangene Nachrichten neu gesendet werden können. Außerdem müssen sie Nachrichten vor einer Weitergabe an die Dienstimplementierung für den Dienst zurückhalten, um die richtige Nachrichtenfolge beizubehalten, falls Nachrichten nicht in der richtigen Folge eingehen.  
+- Zuverlässige Sitzungen müssen gesendete Nachrichten für den Client puffen, damit bei der Übertragung verlorgen gegangene Nachrichten neu gesendet werden können. Außerdem müssen sie Nachrichten vor einer Weitergabe an die Dienstimplementierung für den Dienst zurückhalten, um die richtige Nachrichtenfolge beizubehalten, falls Nachrichten nicht in der richtigen Folge eingehen.  
   
  Wegen dieser funktionalen Einschränkungen können Sie nur Sicherheitsoptionen auf Transportebene für das Streaming verwenden. Zuverlässige Sitzungen können nicht bereitgestellt werden. Das Streaming ist nur mit den folgenden vom System definierten Bindungen verfügbar:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Da die zugrunde liegenden Transporte von <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> im Unterschied zu HTTP naturgemäß eine zuverlässige Zustellung und verbindungsbasierte Sitzungsunterstützung aufweisen, sind diese Bindungen in der Praxis nur minimal von diesen Einschränkungen betroffen.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Aktivieren des Streaming  
  Das Streaming kann in folgender Weise aktiviert werden:  
   
--   Anforderungen werden im Streamingmodus gesendet und akzeptiert, und Antworten werden im Puffermodus akzeptiert und zurückgegeben (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Anforderungen werden im Streamingmodus gesendet und akzeptiert, und Antworten werden im Puffermodus akzeptiert und zurückgegeben (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Anforderungen werden im Puffermodus gesendet und akzeptiert, und Antworten werden im Streamingmodus akzeptiert und zurückgegeben (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Anforderungen werden im Puffermodus gesendet und akzeptiert, und Antworten werden im Streamingmodus akzeptiert und zurückgegeben (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Anforderungen und Antworten werden in beiden Richtungen im Streamingmodus gesendet und empfangen. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Anforderungen und Antworten werden in beiden Richtungen im Streamingmodus gesendet und empfangen. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  Sie können das Streaming deaktivieren, indem Sie den Übertragungsmodus auf <xref:System.ServiceModel.TransferMode.Buffered>, die Standardeinstellungen für alle Bindungen, festlegen. Im folgenden Codebeispiel wird veranschaulicht, wie der Übertragungsmodus in der Konfiguration festgelegt wird.  
   

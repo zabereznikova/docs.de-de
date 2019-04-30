@@ -3,11 +3,11 @@ title: N-Schicht-LINQ to SQL mit Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033534"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-Schicht-LINQ to SQL mit Webdiensten
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dient speziell zur Verwendung auf der mittleren Ebene in einer lose gekoppelten Datenzugriffsebene (DAL) wie z. B. einen Webdienst. Wenn es sich bei der Präsentationsebene um eine ASP.NET-Webseite handelt, können Sie die Datenübertragung zwischen der Benutzeroberfläche und <xref:System.Web.UI.WebControls.LinqDataSource> auf der mittleren Ebene mithilfe des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Webserversteuerelements verwalten. Wenn es sich bei der Präsentationsebene nicht um eine ASP.NET-Seite handelt, müssen sowohl die mittlere Ebene als auch die Präsentationsebene zusätzliche Arbeit leisten, um die Serialisierung und Deserialisierung von Daten zu verwalten.  

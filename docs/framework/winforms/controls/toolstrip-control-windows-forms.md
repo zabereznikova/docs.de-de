@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009499"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip-Steuerelement (Windows Forms)
 <xref:System.Windows.Forms.ToolStrip>-Steuerelemente sind Symbolleisten, die Menüs, Steuerelemente und Benutzersteuerelemente in Ihren Windows Forms-Anwendungen enthalten können.  
@@ -73,13 +73,13 @@ ms.locfileid: "57721462"
  [Vorgehensweise: Implementieren eines benutzerdefinierten ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
  Beschreibt das Anpassen der Darstellung des <xref:System.Windows.Forms.ToolStrip>-Steuerelements durch Implementieren einer von <xref:System.Windows.Forms.ToolStripRenderer> abgeleiteten Klasse.  
   
--   [Vorgehensweise: Erstellen Sie ein einfachen Windows Forms-ToolStrip mit Standardelementen mithilfe des Designers](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [Vorgehensweise: Erstellen Sie ein einfachen Windows Forms-ToolStrip mit Standardelementen mithilfe des Designers](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [Vorgehensweise: Verschieben eines ToolStrip aus einem ToolStripContainer auf ein Formular](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [Vorgehensweise: Verschieben eines ToolStrip aus einem ToolStripContainer auf ein Formular](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [Exemplarische Vorgehensweise: Erstellen eines MDI-Formulars mit Zusammenführen von Menüs und ToolStrip-Steuerelemente](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [Exemplarische Vorgehensweise: Erstellen eines MDI-Formulars mit Zusammenführen von Menüs und ToolStrip-Steuerelemente](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ToolStrip>-Klasse  

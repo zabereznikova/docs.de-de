@@ -3,11 +3,11 @@ title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990262"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 Dieses Beispiel veranschaulicht das Anpassen die Windows Communication Foundation (WCF)-Runtime, um permanente instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
@@ -233,11 +233,11 @@ else
   
  WCF ermöglicht, seine InstanceContext-Laufzeitkomponente durch Hinzufügen einer neuen Zustand und Verhalten mithilfe des erweiterbaren Objektmusters erweitern. Das erweiterbare Objektmuster wird in WCF verwendet, um entweder vorhandene Laufzeitklassen neue Funktionen zu erweitern oder zu einem Objekt neue Zustandsfunktionen hinzuzufügen. Es gibt drei Schnittstellen im erweiterbaren Objektmuster – IExtensibleObject\<T >, IExtension\<T >, und IExtensionCollection\<T >:  
   
--   Die IExtensibleObject\<T >-Schnittstelle wird implementiert von Objekten, die Erweiterungen zulassen, die ihre Funktionalität anpassen.  
+- Die IExtensibleObject\<T >-Schnittstelle wird implementiert von Objekten, die Erweiterungen zulassen, die ihre Funktionalität anpassen.  
   
--   Die IExtension\<T >-Schnittstelle wird implementiert von Objekten, die Erweiterungen der Klassen vom Typ "t".  
+- Die IExtension\<T >-Schnittstelle wird implementiert von Objekten, die Erweiterungen der Klassen vom Typ "t".  
   
--   Die IExtensionCollection\<T >-Schnittstelle ist eine Auflistung von iextensions, die ein Abrufen von ihrem Typ iextensions ermöglichen.  
+- Die IExtensionCollection\<T >-Schnittstelle ist eine Auflistung von iextensions, die ein Abrufen von ihrem Typ iextensions ermöglichen.  
   
  Es sollte deshalb eine InstanceContextExtension-Klasse erstellt werden, die die IExtension-Schnittstelle implementiert und den erforderlichen Zustand zum Speichern der Kontext-ID definiert. Diese Klasse bietet auch den Zustand, um den verwendeten Speicher-Manager aufzunehmen. Sobald der neue Zustand gespeichert ist, sollte es nicht mehr möglich sein, ihn zu ändern. Deshalb wird der Zustand zum Erstellungszeitpunkt bereitgestellt und in der Instanz gespeichert. Anschließend kann nur über schreibgeschützte Eigenschaften darauf zugegriffen werden.  
   

@@ -3,22 +3,22 @@ title: Beispiel zur UriTemplate-Tabelle
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006446"
 ---
 # <a name="uritemplate-table-sample"></a>Beispiel zur UriTemplate-Tabelle
 Die <xref:System.UriTemplateTable>-Klasse stellt eine wörterbuchähnliche assoziative Tabellenstruktur zum Arbeiten mit einem Satz von `UriTemplate`-Instanzen bereit. Bestimmte URIs (Uniform Resource Identifiers) können effizient mit allen Vorlagen in der Tabelle verglichen und die zur gefundenen Vorlage gehörenden Daten abgerufen werden.  
   
  Dieses Beispiel demonstriert die folgenden Grundbegriffe bezüglich der `UriTemplateTable`-Klasse:  
   
--   Die Syntax zum Instanziieren einer `UriTemplateTable`.  
+- Die Syntax zum Instanziieren einer `UriTemplateTable`.  
   
--   Das Auffüllen einer `UriTemplateTable` mit einem Satz von Schlüssel-Wert-Paaren.  
+- Das Auffüllen einer `UriTemplateTable` mit einem Satz von Schlüssel-Wert-Paaren.  
   
--   Das Vergleichen eines möglichen URI mit der Tabelle per <xref:System.UriTemplateTable.MatchSingle%2A>.  
+- Das Vergleichen eines möglichen URI mit der Tabelle per <xref:System.UriTemplateTable.MatchSingle%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

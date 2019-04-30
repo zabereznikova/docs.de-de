@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034553"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurieren von Parametern und Parameterdatentypen
 
@@ -50,33 +50,33 @@ Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbiet
 
 |.NET Framework-Typ|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bit|Boolesch|Bit|Byte|
+|<xref:System.Boolean>|Boolesch|Bit|Boolesch|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
 |byte[]|Binär|VarBinary. Diese implizite Konvertierung schlägt fehl, wenn das Bytearray größer als die maximale Größe eines varbinary ist, 8000 Byte. Legen Sie für Bytearrays mit mehr als 8000 Bytes explizit den <xref:System.Data.SqlDbType>.|VarBinary|Binär|Raw|
 |<xref:System.Char>| |Das Ableiten von <xref:System.Data.SqlDbType> aus char wird nicht unterstützt.|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|"DateTimeOffset" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus DateTimeOffset wird erst ab SQL Server 2008 unterstützt.|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numeric|Nummer|
+|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numeric|Anzahl|
 |<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
+|<xref:System.Guid>|GUID|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Nummer|
-|<xref:System.Object>|Objekt|Variante|Variante|Das Ableiten von OdbcType aus Object wird nicht unterstützt.|Blob|
+|<xref:System.Object>|Object|Variante|Variante|Das Ableiten von OdbcType aus Object wird nicht unterstützt.|Blob|
 |<xref:System.String>|Zeichenfolge|NVarChar. Diese implizite Konvertierung kann nicht ausgeführt werden, wenn die Zeichenfolge die maximale NVarChar-Länge (4000 Zeichen) überschreitet. Legen Sie für Zeichenfolgen mit mehr als 4000 Zeichen explizit <xref:System.Data.SqlDbType>fest.|VarWChar|NVarChar|NVarChar|
 |<xref:System.TimeSpan>|zeit|"Time" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus TimeSpan wird erst ab SQL Server 2008 unterstützt.|DBTime|zeit|DateTime|
 |<xref:System.UInt16>|UInt16|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt16 wird nicht unterstützt.|UnsignedSmallInt|Int|UInt16|
 |<xref:System.UInt32>|UInt32|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt32 wird nicht unterstützt.|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt64 wird nicht unterstützt.|UnsignedBigInt|Numeric|Nummer|
+|<xref:System.UInt64>|UInt64|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt64 wird nicht unterstützt.|UnsignedBigInt|Numeric|Anzahl|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Währung|Money|Währung|Das Ableiten von `OdbcType` aus `Currency` wird nicht unterstützt.|Nummer|
+||Währung|Money|Währung|Das Ableiten von `OdbcType` aus `Currency` wird nicht unterstützt.|Anzahl|
 ||Datum|"Date" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus Date wird erst ab SQL Server 2008 unterstützt.|DBDate|Datum|DateTime|
 ||SByte|Das Ableiten von <xref:System.Data.SqlDbType> aus SByte wird nicht unterstützt.|TinyInt|Das Ableiten von `OdbcType` aus SByte wird nicht unterstützt.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
 ||zeit|"Time" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus Time wird erst ab SQL Server 2008 unterstützt.|DBTime|zeit|DateTime|
-||VarNumeric|Das Ableiten von <xref:System.Data.SqlDbType> aus VarNumeric wird nicht unterstützt.|VarNumeric|Das Ableiten von `OdbcType` aus VarNumeric wird nicht unterstützt.|Nummer|
+||VarNumeric|Das Ableiten von <xref:System.Data.SqlDbType> aus VarNumeric wird nicht unterstützt.|VarNumeric|Das Ableiten von `OdbcType` aus VarNumeric wird nicht unterstützt.|Anzahl|
 |Benutzerdefinierter Typ (ein Objekt mit <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>)|Object oder String, je nach Anbieter (SqlClient gibt immer ein Objekt zurück, ODBC immer eine Zeichenfolge, und der verwaltete OLE DB-Datenanbieter ist in der Lage, beide zu erkennen).|SqlDbType.Udt, wenn <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> vorhanden ist; andernfalls Variant|OleDbType.VarWChar (wenn der Wert NULL ist); andernfalls OleDbType.Variant.|OdbcType.NVarChar|wird nicht unterstützt|
 
 > [!NOTE]
@@ -119,7 +119,7 @@ Dieses Beispiel zeigt, wie Sie eine gespeicherte SQL Server-Prozedur in der `Nor
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Verwenden von Parametern mit einem "OleDbCommand" oder OdbcCommand
 
-Wenn Sie Parameter mit einem <xref:System.Data.OleDb.OleDbCommand> oder einem <xref:System.Data.Odbc.OdbcCommand>verwenden, muss die Reihenfolge der der `Parameters` -Auflistung hinzugefügten Parameter mit der Reihenfolge der in der gespeicherten Prozedur definierten Parameter übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter für ODBC behandeln Parameter in einer gespeicherten Prozedur als Platzhalter und wenden Parameterwerte der Reihe nach an. Außerdem müssen der `Parameters` -Auflistung zuerst die Parameter für die Rückgabewerte hinzugefügt werden.
+Wenn Sie Parameter mit einem <xref:System.Data.OleDb.OleDbCommand> oder einem <xref:System.Data.Odbc.OdbcCommand>verwenden, muss die Reihenfolge der der `Parameters` -Auflistung hinzugefügten Parameter mit der Reihenfolge der in der gespeicherten Prozedur definierten Parameter übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC behandeln Parameter in einer gespeicherten Prozedur als Platzhalter und wenden Parameterwerte der Reihe nach an. Außerdem müssen der `Parameters` -Auflistung zuerst die Parameter für die Rückgabewerte hinzugefügt werden.
 
 Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC unterstützen keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. In diesem Fall muss der Fragezeichenplatzhalter (?) verwenden. Dies wird im folgenden Beispiel dargestellt.
 

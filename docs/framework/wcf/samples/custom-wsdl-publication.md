@@ -3,22 +3,22 @@ title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990586"
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
   
--   Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut zum Exportieren von Attributeigenschaften als WSDL-Anmerkungen implementieren.  
+- Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut zum Exportieren von Attributeigenschaften als WSDL-Anmerkungen implementieren.  
   
--   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> zum Importieren der benutzerdefinierten WSDL-Anmerkungen implementieren.  
+- <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> zum Importieren der benutzerdefinierten WSDL-Anmerkungen implementieren.  
   
--   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
+- <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
   
--   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Basic.  
+- Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Basic.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  

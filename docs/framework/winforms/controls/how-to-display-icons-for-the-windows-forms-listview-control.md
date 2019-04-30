@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013438"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.ListView> Steuerelement kann Symbole aus einer Bildliste drei anzeigen. Die Liste, Details und SmallIcon Ansichten anzeigen von Bildern aus der Liste der Bilder in angegebenen die <xref:System.Windows.Forms.ListView.SmallImageList%2A> Eigenschaft. Die LargeIcon zeigt Bilder aus der Liste der Bilder in angegebenen die <xref:System.Windows.Forms.ListView.LargeImageList%2A> Eigenschaft. Eine Listenansicht kann auch einen zusätzlichen Satz von Symbolen, legen Sie im Anzeigen der <xref:System.Windows.Forms.ListView.StateImageList%2A> neben den großen oder kleinen Symbolen-Eigenschaft. Weitere Informationen zu Bildlisten, finden Sie unter [ImageList-Komponente](imagelist-component-windows-forms.md) und [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

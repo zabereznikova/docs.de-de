@@ -1,17 +1,17 @@
 ---
-title: Container als Grundlage für die DevOps-Zusammenarbeit
+title: Container als Grundlage für die Zusammenarbeit mit DevOps
 description: Erfahren Sie, die wichtige Rolle der Container, DevOps zu optimieren.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012218"
 ---
-# <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die DevOps-Zusammenarbeit
+# <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die Zusammenarbeit mit DevOps
 
 Aufgrund der Natur von Containern und Docker-Technologie können Entwickler ihrer Software und Abhängigkeiten ganz einfach mit IT-Betrieb und produktionsumgebungen freigeben beim Entfernen der typischen "es funktioniert auf meinem Computer" Entschuldigung. Container lösen Konflikte zwischen Anwendungen zwischen unterschiedlichen Umgebungen. Indirekt zusammenbringen Container und Docker-Entwickler und IT-Betrieb näher, dafür eine effektive Zusammenarbeit zu vereinfachen. Übernehmen den Container-Workflow bietet viele Kunden die DevOps-Kontinuität, die Sie gesucht haben, aber bisher über eine komplexere Konfiguration für die Version zu implementieren und Pipelines zu erstellen. Container vereinfachen die Erstellung/Testdurchführung/Bereitstellung-Pipelines in DevOps.
 

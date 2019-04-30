@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020269"
 ---
 # <a name="animation-tips-and-tricks"></a>Tipps und Tricks zu Animationen
 Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], gibt es eine Reihe von Tipps und Tricks, die die Animationen vornehmen können, bieten eine bessere Leistung, und speichern Sie die Frustration.  
@@ -41,11 +41,11 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Für eine <xref:System.Windows.Media.Animation.Timeline> um Änderungen widerzuspiegeln, seine Uhr muss erneut generiert und verwendet werden, die zuvor erstellte Uhr zu ersetzen. Uhren werden nicht automatisch neu generiert. Im Folgenden werden verschiedene Methoden beschrieben, wie Änderungen der Zeitachse übernommen werden können:  
   
--   Wenn die Zeitachse oder gehört zu einer <xref:System.Windows.Media.Animation.Storyboard>, haben, damit es die Änderungen durch das erneute Anwenden der Storyboards mithilfe einer <xref:System.Windows.Media.Animation.BeginStoryboard> oder <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode. Dies hat den Nebeneffekt, dass auch die Animation neu gestartet wird. Im Code können Sie die <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> Methode, um das Storyboard fahren fort, um zur vorherigen Position zurück.  
+- Wenn die Zeitachse oder gehört zu einer <xref:System.Windows.Media.Animation.Storyboard>, haben, damit es die Änderungen durch das erneute Anwenden der Storyboards mithilfe einer <xref:System.Windows.Media.Animation.BeginStoryboard> oder <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode. Dies hat den Nebeneffekt, dass auch die Animation neu gestartet wird. Im Code können Sie die <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> Methode, um das Storyboard fahren fort, um zur vorherigen Position zurück.  
   
--   Wenn Sie eine Animation direkt an eine Eigenschaft mit dem <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode, rufen die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode erneut auf und übergeben sie die Animation, die geändert wurde.  
+- Wenn Sie eine Animation direkt an eine Eigenschaft mit dem <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode, rufen die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> -Methode erneut auf und übergeben sie die Animation, die geändert wurde.  
   
--   Wenn Sie direkt auf der Uhrebene arbeiten, erstellen Sie einen neuen Satz von Uhren, und verwenden sie diese, um den zuvor generierten Satz von Uhren zu ersetzen.  
+- Wenn Sie direkt auf der Uhrebene arbeiten, erstellen Sie einen neuen Satz von Uhren, und verwenden sie diese, um den zuvor generierten Satz von Uhren zu ersetzen.  
   
  Weitere Informationen zu Zeitachsen und Uhren finden Sie unter [Animation und zeitliche Steuerung Systemübersicht](animation-and-timing-system-overview.md).  
   
@@ -105,13 +105,13 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Es gibt verschiedene Möglichkeiten, eine Animation zu entfernen. Die folgenden Verfahren können verwendet werden, um Animationen zu entfernen, die zu gehören eine <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   So entfernen Sie eine <xref:System.Windows.Media.Animation.Storyboard> Sie mit einem Ereignistrigger gestartet haben, finden Sie unter [Vorgehensweise: Entfernen eines Storyboards](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+- So entfernen Sie eine <xref:System.Windows.Media.Animation.Storyboard> Sie mit einem Ereignistrigger gestartet haben, finden Sie unter [Vorgehensweise: Entfernen eines Storyboards](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
--   Zum Verwenden von Code zum Entfernen einer <xref:System.Windows.Media.Animation.Storyboard>, finden Sie unter den <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> Methode.  
+- Zum Verwenden von Code zum Entfernen einer <xref:System.Windows.Media.Animation.Storyboard>, finden Sie unter den <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> Methode.  
   
  Die nächste Technik kann verwendet werden, unabhängig davon, wie die Animation gestartet wurde.  
   
--   Um Animationen aus einer bestimmten Eigenschaft zu entfernen, verwenden die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> Methode. Geben Sie die zu animierende Eigenschaft als ersten Parameter und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
+- Um Animationen aus einer bestimmten Eigenschaft zu entfernen, verwenden die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> Methode. Geben Sie die zu animierende Eigenschaft als ersten Parameter und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
   
  Weitere Informationen zu den verschiedenen Methoden zum Animieren von Eigenschaften finden Sie unter [Eigenschaft Techniken-Übersicht über Animationen](property-animation-techniques-overview.md).  
   
@@ -120,9 +120,9 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Um Leistungsprobleme zu vermeiden, wenn Sie eine große Anzahl von Uhren mithilfe anwenden <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, sollten Sie zusammengesetzte Uhren aus der animierten Eigenschaft entfernen, nachdem sie ausgeführt. Es gibt mehrere Möglichkeiten, eine Uhr zu entfernen.  
   
--   Um alle Uhren aus einer Eigenschaft zu entfernen, verwenden die <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die zu animierende Eigenschaft als ersten Parameter und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
+- Um alle Uhren aus einer Eigenschaft zu entfernen, verwenden die <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> oder <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> -Methode des animierten Objekts. Geben Sie die zu animierende Eigenschaft als ersten Parameter und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
   
--   Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> aus einer Liste von Uhren, mithilfe der <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> zum Abrufen einer <xref:System.Windows.Media.Animation.ClockController>, rufen Sie dann die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> -Methode der der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können ein <xref:System.Windows.Media.Animation.ClockController>; die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt zurück, `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht aufgerufen werden, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall müssen die Benutzer zum Ermitteln des Zeitpunkts aufrufen, <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+- Zum Entfernen einer bestimmten <xref:System.Windows.Media.Animation.AnimationClock> aus einer Liste von Uhren, mithilfe der <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.Animation.AnimationClock> zum Abrufen einer <xref:System.Windows.Media.Animation.ClockController>, rufen Sie dann die <xref:System.Windows.Media.Animation.ClockController.Remove%2A> -Methode der der <xref:System.Windows.Media.Animation.ClockController>. Dies erfolgt in der Regel in der <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignishandler für eine Uhr. Beachten Sie, dass nur Stammuhren von gesteuert werden, können ein <xref:System.Windows.Media.Animation.ClockController>; die <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft einer untergeordneten Uhr gibt zurück, `null`. Beachten Sie auch, dass die <xref:System.Windows.Media.Animation.Clock.Completed> Ereignis wird nicht aufgerufen werden, wenn die effektive Dauer der Uhr endlos ist.  In diesem Fall müssen die Benutzer zum Ermitteln des Zeitpunkts aufrufen, <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
   
  Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt an den Garbage Collector übergeben wird, werden auch die Uhren getrennt und an den Garbage Collector übergeben.  
   

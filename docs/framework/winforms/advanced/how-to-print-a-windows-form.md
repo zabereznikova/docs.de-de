@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003976"
 ---
 # <a name="how-to-print-a-windows-form"></a>Vorgehensweise: Drucken in Windows Forms
 Im Rahmen des Entwicklungsprozesses sollten Sie in der Regel eine Kopie Ihres Windows-Formulars drucken. Im folgenden Codebeispiel wird veranschaulicht, wie so drucken Sie eine Kopie des aktuellen Formulars mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode.  
@@ -30,9 +30,9 @@ Im Rahmen des Entwicklungsprozesses sollten Sie in der Regel eine Kopie Ihres Wi
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Sie haben keine Berechtigung zum Zugriff auf den Drucker.  
+- Sie haben keine Berechtigung zum Zugriff auf den Drucker.  
   
--   Es ist kein Drucker installiert.  
+- Es ist kein Drucker installiert.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Um dieses Codebeispiel ausführen, benötigen Sie die Berechtigung zum Zugriff auf den Drucker, die, den Sie mit Ihrem Computer zu verwenden.  

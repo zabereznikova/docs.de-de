@@ -3,11 +3,11 @@ title: Sichern von Peerkanalanwendungen
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990950"
 ---
 # <a name="securing-peer-channel-applications"></a>Sichern von Peerkanalanwendungen
 Wie für andere Bindungen unter [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] wurde für `NetPeerTcpBinding` Sicherheit standardmäßig aktiviert, und es wird transport- und nachrichtenbasierte Sicherheit (oder beides) unterstützt. In diesem Thema werden diese beiden Typen von Sicherheit erläutert. Der Typ der Sicherheit wird vom Sicherheitsmodus-Tag in der Bindungsspezifikation (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) angegeben.  
@@ -15,16 +15,16 @@ Wie für andere Bindungen unter [!INCLUDE[vstecwinfx](../../../../includes/vstec
 ## <a name="transport-based-security"></a>Transportbasierte Sicherheit  
  Peerkanal unterstützt zwei Arten von Authentifizierungs-Anmeldeinformationen für die Transportsicherung, die beide das Festlegen der `ClientCredentialSettings.Peer`-Eigenschaft auf die zugeordnete `ChannelFactory` erfordern:  
   
--   Kennwort. Clients verwenden das Wissen eines geheimen Kennworts, um Verbindungen zu authentifizieren. Wenn dieser Anmeldeinformationstyp verwendet wird, muss `ClientCredentialSettings.Peer.MeshPassword` ein gültiges Kennwort enthalten und optional eine `X509Certificate2`-Instanz.  
+- Kennwort. Clients verwenden das Wissen eines geheimen Kennworts, um Verbindungen zu authentifizieren. Wenn dieser Anmeldeinformationstyp verwendet wird, muss `ClientCredentialSettings.Peer.MeshPassword` ein gültiges Kennwort enthalten und optional eine `X509Certificate2`-Instanz.  
   
--   Zertifikat. Eine bestimmte Anwendungsauthentifizierung wird verwendet. Wenn dieser Anmeldeinformationstyp verwendet wird, müssen Sie eine konkrete Implementierung von <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication` verwenden.  
+- Zertifikat. Eine bestimmte Anwendungsauthentifizierung wird verwendet. Wenn dieser Anmeldeinformationstyp verwendet wird, müssen Sie eine konkrete Implementierung von <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication` verwenden.  
   
 ## <a name="message-based-security"></a>Nachrichtenbasierte Sicherheit  
  Mit der Nachrichtensicherheit kann eine Anwendung ausgehende Nachrichten signieren, sodass alle Empfänger überprüfen können, dass die Nachricht von einer vertrauenswürdigen Partei gesendet und nicht manipuliert wurde. Derzeit unterstützt Peerkanal nur X.509-Anmeldeinformations-Nachrichtensignierung.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
   
--   In diesem Abschnitt wird die empfohlene Vorgehensweise zum Sichern von Peerkanalanwendungen erläutert.  
+- In diesem Abschnitt wird die empfohlene Vorgehensweise zum Sichern von Peerkanalanwendungen erläutert.  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>Aktivieren von Sicherheit mit Peerkanalanwendungen  
  Aufgrund der Verteilungseigenschaft der Peerkanalprotokolle ist es schwierig, Netzmitgliedschaft, Vertraulichkeit und Datenschutz in einem ungesicherten Netz zu erzwingen. Es ist auch wichtig, die Kommunikation zwischen Clients und dem Auflösungsdienst zu sichern. Verwenden Sie unter Peer Name Resolution-Protokoll (PNRP) sichere Namen, um Spoofing und andere häufige Angriffe zu vermeiden. Sichern Sie einen benutzerdefinierten Auflösungsdienst durch Aktivieren der Sicherheit auf den Verbindungsclients, die den Auflösungsdienst kontaktieren, einschließlich der nachrichten- und transportbasierten Sicherheit.  

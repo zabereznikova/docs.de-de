@@ -14,11 +14,11 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018618"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsprobleme bei mobilem Code zu beheben und Komponenten die Möglichkeit einzuräumen, die Berechtigungen von Benutzern zu überprüfen.  
@@ -28,18 +28,18 @@ Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsproblem
   
  Während der JIT-Kompilierung (Just-In-Time) werden die Metadaten und MSIL (Microsoft Intermediate Language) einer Methode, die in systemeigenen Code des Computers JIT-kompiliert werden soll, in einem optionalen Prüfungsvorgang auf ihre Typsicherheit überprüft. Dieser Vorgang wird übersprungen, wenn der Code über die Berechtigung zum Umgehen der Überprüfung verfügt. Weitere Informationen über Überprüfung finden Sie unter [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md).  
   
- Obwohl die Überprüfung der Typsicherheit für das Ausführen von verwaltetem Code nicht zwingend erforderlich ist, spielt die Typsicherheit eine wesentliche Rolle bei der Isolation von Assemblys und der Gewährleistung von Sicherheit. Wenn Code typsicher ist, kann die Common Language Runtime Assemblys vollständig voneinander isolieren. Diese Isolation trägt dazu bei, dass Assemblys einander nicht beeinträchtigen, und erhöht gleichzeitig die Zuverlässigkeit von Anwendungen. Typsichere Komponenten können ohne Sicherheitseinbußen in demselben Prozess ausgeführt werden, selbst wenn sie unterschiedliche Vertrauensebenen aufweisen. Wenn Code nicht typsicher ist, können unerwünschte Nebeneffekte auftreten. So kann die Common Language Runtime z. B. nicht verhindern, dass verwalteter Code systemeigenen (d. h. nicht verwalteten) Code aufruft und schädliche Vorgänge ausführt. Bei typsicherem Code gewährleistet die Durchsetzung von Sicherheit durch die Laufzeit, dass dieser nur mit der entsprechenden Berechtigung auf systemeigenen Code zugreifen kann. Zum Ausführen von nicht typsicherem Code muss die <xref:System.Security.Permissions.SecurityPermission> mit dem übergebenen Enumerationsmember <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> erteilt werden.  
+ Obwohl die Überprüfung der Typsicherheit für das Ausführen von verwaltetem Code nicht zwingend erforderlich ist, spielt die Typsicherheit eine wesentliche Rolle bei der Isolation von Assemblys und der Gewährleistung von Sicherheit. Wenn Code typsicher ist, kann die Common Language Runtime Assemblys vollständig voneinander isolieren. Diese Isolation trägt dazu bei, dass Assemblys einander nicht beeinträchtigen, und erhöht gleichzeitig die Zuverlässigkeit von Anwendungen. Typsichere Komponenten können ohne Sicherheitseinbußen in demselben Prozess ausgeführt werden, selbst wenn sie unterschiedliche Vertrauensebenen aufweisen. Wenn Code nicht typsicher ist, können unerwünschte Nebeneffekte auftreten. So kann die Common Language Runtime z. B. nicht verhindern, dass verwalteter Code systemeigenen (d. h. nicht verwalteten) Code aufruft und schädliche Vorgänge ausführt. Bei typsicherem Code gewährleistet die Durchsetzung von Sicherheit durch die Laufzeit, dass dieser nur mit der entsprechenden Berechtigung auf nativen Code zugreifen kann. Zum Ausführen von nicht typsicherem Code muss die <xref:System.Security.Permissions.SecurityPermission> mit dem übergebenen Enumerationsmember <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> erteilt werden.  
   
  Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md).  
   
 ## <a name="principal"></a>Principal  
  Ein Prinzipal stellt die Identität und die Rolle eines Benutzers dar und handelt stellvertretend für den Benutzer. Die rollenbasierte Sicherheit in .NET Framework unterstützt drei Arten von Prinzipals:  
   
--   Allgemeine Prinzipals stellen Benutzer und Rollen dar, die unabhängig von Benutzern und Rollen unter Windows vorhanden sind.  
+- Allgemeine Prinzipals stellen Benutzer und Rollen dar, die unabhängig von Benutzern und Rollen unter Windows vorhanden sind.  
   
--   Windows-Prinzipals stellen Windows-Benutzer und ihre Rollen bzw. ihre Windows-Gruppen dar. Ein Windows-Prinzipal kann einen anderen Benutzer imitieren, d. h., der Prinzipal kann im Namen eines Benutzers auf eine Ressource zugreifen, wenn er die Identität dieses Benutzers darstellt.  
+- Windows-Prinzipals stellen Windows-Benutzer und ihre Rollen bzw. ihre Windows-Gruppen dar. Ein Windows-Prinzipal kann einen anderen Benutzer imitieren, d. h., der Prinzipal kann im Namen eines Benutzers auf eine Ressource zugreifen, wenn er die Identität dieses Benutzers darstellt.  
   
--   Benutzerdefinierte Prinzipals können von einer Anwendung je nach Bedarf beliebig definiert werden. Sie können die grundlegenden Eigenschaften der Identität und der Rollen des Prinzipals erweitern.  
+- Benutzerdefinierte Prinzipals können von einer Anwendung je nach Bedarf beliebig definiert werden. Sie können die grundlegenden Eigenschaften der Identität und der Rollen des Prinzipals erweitern.  
   
  Weitere Informationen finden Sie unter [Prinzipal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md).  
   

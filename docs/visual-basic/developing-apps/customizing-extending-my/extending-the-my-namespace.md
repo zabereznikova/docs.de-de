@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014218"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Erweitern des My-Namespaces in Visual Basic
 Die `My` Namespaces in Visual Basic verfügbar macht, Eigenschaften und Methoden, mit denen Sie problemlos von der Leistungsfähigkeit von .NET Framework nutzen können. Die `My` Namespace vereinfacht häufige Programmierprobleme, häufig eine schwierige Aufgabe auf eine einzige Zeile Code zu reduzieren. Darüber hinaus die `My` Namespace ist vollständig erweiterbar, sodass Sie das Verhalten anpassen können `My` und seiner Hierarchie zur Anpassung an die spezifischen Anforderungen Ihrer Anwendung neue Dienste hinzugefügt. Beide in diesem Thema Anpassen von vorhandenen Mitglieder der `My` Namespace und wie Sie eigene benutzerdefinierten Klassen zum Hinzufügen der `My` Namespace.  
   
  **Inhalt des Themas**  
   
--   [Anpassen von vorhandenen meinen Namespace-Elemente](#customizing)  
+- [Anpassen von vorhandenen meinen Namespace-Elemente](#customizing)  
   
--   [Hinzufügen von Mitgliedern zu Meine Objekte](#addingtoobjects)  
+- [Hinzufügen von Mitgliedern zu Meine Objekte](#addingtoobjects)  
   
--   [Hinzufügen von benutzerdefinierten Objekten, die meinen Namespace](#addingcustom)  
+- [Hinzufügen von benutzerdefinierten Objekten, die meinen Namespace](#addingcustom)  
   
--   [Hinzufügen von Elementen, die meinen Namespace](#addingtonamespace)  
+- [Hinzufügen von Elementen, die meinen Namespace](#addingtonamespace)  
   
--   [Hinzufügen von Ereignissen zu benutzerdefinierten My-Objekten](#addingevents)  
+- [Hinzufügen von Ereignissen zu benutzerdefinierten My-Objekten](#addingevents)  
   
--   [Richtlinien für den Entwurf](#design)  
+- [Richtlinien für den Entwurf](#design)  
   
--   [Entwerfen von Klassenbibliotheken für meine](#designing)  
+- [Entwerfen von Klassenbibliotheken für meine](#designing)  
   
--   [Verpacken und Bereitstellen von Erweiterungen](#packaging)  
+- [Verpacken und Bereitstellen von Erweiterungen](#packaging)  
   
 ## <a name="customizing"></a> Anpassen von vorhandenen meinen Namespace-Elemente  
  Die `My` -Namespace in Visual Basic stellt häufig verwendete Informationen über Ihre Anwendung und Ihrem Computer. Eine vollständige Liste der Objekte in der `My` -Namespace finden Sie unter [My Reference](../../../visual-basic/language-reference/keywords/my-reference.md). Möglicherweise müssen Sie die vorhandenen Mitglieder der Anpassen der `My` Namespace, damit sie besser entsprechen die Anforderungen Ihrer Anwendung. Jede Eigenschaft eines Objekts in der `My` Namespace, der nicht schreibgeschützt ist, kann auf einen benutzerdefinierten Wert festgelegt werden.  
@@ -76,22 +76,22 @@ Die `My` Namespaces in Visual Basic verfügbar macht, Eigenschaften und Methoden
 ## <a name="design"></a> Richtlinien für den Entwurf  
  Bei der Entwicklung von Erweiterungen für die `My` -Namespace, verwenden Sie die folgenden Richtlinien, um die Wartungskosten Ihrer Erweiterung-Komponenten zu minimieren.  
   
--   **Nur die Erweiterungslogik enthalten sein.** Die Logik enthalten, die der `My` Namespaceerweiterung sollte nur den Code, der erforderlich ist, um die erforderlichen Funktionen im verfügbar zu machen enthalten die `My` Namespace. Da Ihre Erweiterung als Quellcode in Benutzerprojekten befinden soll, aktualisieren die Erweiterungskomponente verursacht eine hohe Wartungskosten und sollte möglichst vermieden werden.  
+- **Nur die Erweiterungslogik enthalten sein.** Die Logik enthalten, die der `My` Namespaceerweiterung sollte nur den Code, der erforderlich ist, um die erforderlichen Funktionen im verfügbar zu machen enthalten die `My` Namespace. Da Ihre Erweiterung als Quellcode in Benutzerprojekten befinden soll, aktualisieren die Erweiterungskomponente verursacht eine hohe Wartungskosten und sollte möglichst vermieden werden.  
   
--   **Minimieren Sie die Projektannahmen.** Bei der Erstellung Ihrer Erweiterungen von der `My` -Namespace, gehen Sie keine Reihe von verweisen, auf Projektebene importiert oder bestimmten Compiler-Einstellungen (z. B. `Option Strict` deaktiviert). Stattdessen Abhängigkeiten zu minimieren und vollqualifizierten Verweise auf alle Typen mit den `Global` Schlüsselwort. Stellen Sie außerdem sicher, dass die Erweiterung mit kompiliert `Option Strict` auf, um Fehler in der Erweiterung zu minimieren.  
+- **Minimieren Sie die Projektannahmen.** Bei der Erstellung Ihrer Erweiterungen von der `My` -Namespace, gehen Sie keine Reihe von verweisen, auf Projektebene importiert oder bestimmten Compiler-Einstellungen (z. B. `Option Strict` deaktiviert). Stattdessen Abhängigkeiten zu minimieren und vollqualifizierten Verweise auf alle Typen mit den `Global` Schlüsselwort. Stellen Sie außerdem sicher, dass die Erweiterung mit kompiliert `Option Strict` auf, um Fehler in der Erweiterung zu minimieren.  
   
--   **Isolieren Sie den Code der Erweiterung.** Platzieren den Code in einer einzelnen Datei ist die Erweiterung ganz einfach als eine Elementvorlage für Visual Studio bereitgestellt. Weitere Informationen finden Sie unter "Verpacken und Bereitstellen von Erweiterungen" weiter unten in diesem Thema. Platzieren alle der `My` Namespace Erweiterungscode in einer einzelnen Datei oder einen separaten Ordner in einem Projekt hilft auch Benutzer finden das `My` Namespace-Erweiterung.  
+- **Isolieren Sie den Code der Erweiterung.** Platzieren den Code in einer einzelnen Datei ist die Erweiterung ganz einfach als eine Elementvorlage für Visual Studio bereitgestellt. Weitere Informationen finden Sie unter "Verpacken und Bereitstellen von Erweiterungen" weiter unten in diesem Thema. Platzieren alle der `My` Namespace Erweiterungscode in einer einzelnen Datei oder einen separaten Ordner in einem Projekt hilft auch Benutzer finden das `My` Namespace-Erweiterung.  
   
 ## <a name="designing"></a> Entwerfen von Klassenbibliotheken für meine  
  Wie bei den meisten Objektmodelle der Fall ist, funktionieren einige Entwurfsmuster in der `My` -Namespace und andere nicht der Fall ist. Beim Entwerfen einer Erweiterung für die `My` -Namespace, sollten Sie die folgenden Prinzipien:  
   
--   **Zustandslose Methoden.** Methoden in der `My` Namespace sollten bereitstellen eine gesamtlösung für eine bestimmte Aufgabe. Stellen Sie sicher, dass die Werte der Parameter, die an die Methode übergeben werden alle Eingaben erforderlich, um die jeweilige Aufgabe angeben. Vermeiden Sie das Erstellen von Methoden, die auf früheren Status, beispielsweise Öffnen von Verbindungen mit Ressourcen basieren.  
+- **Zustandslose Methoden.** Methoden in der `My` Namespace sollten bereitstellen eine gesamtlösung für eine bestimmte Aufgabe. Stellen Sie sicher, dass die Werte der Parameter, die an die Methode übergeben werden alle Eingaben erforderlich, um die jeweilige Aufgabe angeben. Vermeiden Sie das Erstellen von Methoden, die auf früheren Status, beispielsweise Öffnen von Verbindungen mit Ressourcen basieren.  
   
--   **Globale Instanzen.** Der einzige Zustand beibehalten wird, die die `My` -Namespace ist global für das Projekt. Z. B. `My.Application.Info` kapselt Zustand, in der gesamten Anwendung verwendet wird.  
+- **Globale Instanzen.** Der einzige Zustand beibehalten wird, die die `My` -Namespace ist global für das Projekt. Z. B. `My.Application.Info` kapselt Zustand, in der gesamten Anwendung verwendet wird.  
   
--   **Einfache Parametertypen.** Ihre Umgebung einfach durch das Vermeiden der komplexer Parametertypen. Erstellen Sie stattdessen die Methoden, die entweder keine Parameter eingeben werden oder einfache Eingabetypen wie z. B. Zeichenfolgen, primitive Typen und So weiter.  
+- **Einfache Parametertypen.** Ihre Umgebung einfach durch das Vermeiden der komplexer Parametertypen. Erstellen Sie stattdessen die Methoden, die entweder keine Parameter eingeben werden oder einfache Eingabetypen wie z. B. Zeichenfolgen, primitive Typen und So weiter.  
   
--   **Factorymethoden.** Einige Typen sind unbedingt schwierig ist, zu instanziieren. Bereitstellung von Factorymethoden als Erweiterungen der `My` Namespace ermöglicht es Ihnen leichter ermitteln und nutzen Typen, die in diese Kategorie fallen. Ist ein Beispiel für eine Factorymethode, die gut funktioniert `My.Computer.FileSystem.OpenTextFileReader`. Verschiedene Streamtypen sind in .NET Framework verfügbar. Durch Angabe von Textdateien insbesondere die `OpenTextFileReader` können die Benutzer wissen, welcher Stream verwenden.  
+- **Factorymethoden.** Einige Typen sind unbedingt schwierig ist, zu instanziieren. Bereitstellung von Factorymethoden als Erweiterungen der `My` Namespace ermöglicht es Ihnen leichter ermitteln und nutzen Typen, die in diese Kategorie fallen. Ist ein Beispiel für eine Factorymethode, die gut funktioniert `My.Computer.FileSystem.OpenTextFileReader`. Verschiedene Streamtypen sind in .NET Framework verfügbar. Durch Angabe von Textdateien insbesondere die `OpenTextFileReader` können die Benutzer wissen, welcher Stream verwenden.  
   
  Diese Richtlinien sind Allgemeine Entwurfsprinzipien für Klassenbibliotheken nicht ausgeschlossen. Vielmehr handelt es sich Empfehlungen, die für Entwickler optimiert sind, die Visual Basic verwenden und die `My` Namespace. Allgemeine Entwurfsprinzipien für das Erstellen von Klassenbibliotheken, finden Sie unter [Framework-Entwurfsrichtlinien](../../../standard/design-guidelines/index.md).  
   
