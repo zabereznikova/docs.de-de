@@ -3,14 +3,14 @@ title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
 ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944117"
 ---
 # <a name="basic"></a>Standard
-Dieser Abschnitt enthält Teile von Beispielen, die mit grundlegenden Windows Communication Foundation (WCF)-Funktionen zu veranschaulichen.  
+Dieser Abschnitt enthält Teile von Beispielen, die die grundlegenden Windows Communication Foundation (WCF)-Funktionen zu veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
@@ -35,7 +35,7 @@ Dieser Abschnitt enthält Teile von Beispielen, die mit grundlegenden Windows Co
  Zeigt die WCF-Management.  
   
  [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)  
- Veranschaulicht die WCF-Routingdienste.  
+ Zeigt die WCF-Routingdienste.  
   
  [Sicherheit](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
  Zeigt die WCF-Sicherheit.  

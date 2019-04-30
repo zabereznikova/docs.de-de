@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907002"
 ---
 # <a name="decision-structures-visual-basic"></a>Entscheidungsstrukturen (Visual Basic)
 Visual Basic können Sie die Bedingungen zu testen, und führen Sie verschiedene Vorgänge abhängig von den Ergebnissen dieses Tests. Sie können testen, auf eine Bedingung wird "true" oder "false" für verschiedene Werte für einen Ausdruck oder für verschiedene Ausnahmen generiert, wenn Sie eine Reihe von Anweisungen ausführen.  
@@ -26,13 +26,13 @@ Visual Basic können Sie die Bedingungen zu testen, und führen Sie verschiedene
 ## <a name="ifthenelse-construction"></a>If... Klicken Sie dann... Else-Konstruktion  
  `If...Then...Else` Konstruktionen können Sie für eine oder mehrere Bedingungen zu testen, und führen Sie eine oder mehrere Anweisungen je nach jede Bedingung. Sie können testen Bedingungen und Aktionen auf folgende Weise:  
   
--   Führen Sie eine oder mehrere Anweisungen aus, wenn eine Bedingung `True`  
+- Führen Sie eine oder mehrere Anweisungen aus, wenn eine Bedingung `True`  
   
--   Führen Sie eine oder mehrere Anweisungen aus, wenn eine Bedingung `False`  
+- Führen Sie eine oder mehrere Anweisungen aus, wenn eine Bedingung `False`  
   
--   Führen Sie einige Anweisungen, wenn eine Bedingung `True` und anderen ist dies `False`  
+- Führen Sie einige Anweisungen, wenn eine Bedingung `True` und anderen ist dies `False`  
   
--   Eine weitere Bedingung zu testen, wenn eine vorherige Bedingung `False`  
+- Eine weitere Bedingung zu testen, wenn eine vorherige Bedingung `False`  
   
  Die Steuerelement-Struktur, die alle diese Möglichkeiten bietet, ist die [Wenn... Klicken Sie dann... Else-Anweisung](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sie können eine einzeilige-Version verwenden, wenn Sie nur einen Test und eine Anweisung ausgeführt haben. Wenn Sie einen komplexen Satz von Bedingungen und Aktionen verfügen, können Sie die Version der Zeile.  
   

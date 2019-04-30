@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933782"
 ---
 # <a name="security-and-user-input"></a>Sicherheit und Benutzereingaben
 Benutzerdaten, bei denen es sich um beliebige Eingaben handeln kann (Daten aus einer Webanforderung oder einer URL, Eingaben in Steuerelemente einer Microsoft Windows Forms-Anwendung usw.), können Code beeinträchtigen, da diese Daten häufig direkt als Parameter zum Aufrufen von anderem Code verwendet werden. Diese Situation ähnelt einem Angriff durch bösartigen Code, der Ihren Code mit ungewöhnlichen Parametern aufruft, weshalb dieselben Vorsichtsmaßnahmen ergriffen werden sollten. Die Sicherheit bei Benutzereingaben ist sogar schwieriger zu gewährleisten, da kein Stapelrahmen zum Verfolgen der möglicherweise nicht vertrauenswürdigen Daten vorhanden ist.  
@@ -24,39 +24,39 @@ Benutzerdaten, bei denen es sich um beliebige Eingaben handeln kann (Daten aus e
   
  Im Folgenden sind einige wichtige Überlegungen zu Benutzerdaten aufgeführt:  
   
--   Alle Benutzerdaten in einer Serverantwort werden auf dem Client im Kontext der Site des Servers. Wenn der Webserver Benutzerdaten empfängt und diese in die zurückgegebene Webseite einfügt, können die Daten beispielsweise ein **\<script>**-Tag enthalten und so ausgeführt werden, als stammten sie vom Server.  
+- Alle Benutzerdaten in einer Serverantwort werden auf dem Client im Kontext der Site des Servers. Wenn der Webserver Benutzerdaten empfängt und diese in die zurückgegebene Webseite einfügt, können die Daten beispielsweise ein **\<script>**-Tag enthalten und so ausgeführt werden, als stammten sie vom Server.  
   
--   Beachten Sie, dass der Client beliebige URLs anfordern kann.  
+- Beachten Sie, dass der Client beliebige URLs anfordern kann.  
   
--   Berücksichtigen Sie komplizierte oder ungültige Pfade:  
+- Berücksichtigen Sie komplizierte oder ungültige Pfade:  
   
-    -   .. \, äußerst lange Pfade  
+    - .. \, äußerst lange Pfade  
   
-    -   Verwendung von Platzhalterzeichen (*)  
+    - Verwendung von Platzhalterzeichen (*)  
   
-    -   Tokenerweiterung (%token%)  
+    - Tokenerweiterung (%token%)  
   
-    -   Ungewöhnliche Formen von Pfaden mit besonderer Bedeutung  
+    - Ungewöhnliche Formen von Pfaden mit besonderer Bedeutung  
   
-    -   Alternative Streamnamen des Dateisystems, z. B. `filename::$DATA`  
+    - Alternative Streamnamen des Dateisystems, z. B. `filename::$DATA`  
   
-    -   Kurze Versionen von Dateinamen, z. B. `longfi~1` für `longfilename`  
+    - Kurze Versionen von Dateinamen, z. B. `longfi~1` für `longfilename`  
   
--   Denken Sie daran, dass durch Eval(userdata) jede Aktion ausgeführt werden kann.  
+- Denken Sie daran, dass durch Eval(userdata) jede Aktion ausgeführt werden kann.  
   
--   Seien Sie vorsichtig bei später Bindung an einen Namen, der Benutzerdaten enthält.  
+- Seien Sie vorsichtig bei später Bindung an einen Namen, der Benutzerdaten enthält.  
   
--   Wenn Sie mit Webdaten arbeiten, müssen die unterschiedlichen Formen von Escapesequenzen berücksichtigen, die zulässig sind:  
+- Wenn Sie mit Webdaten arbeiten, müssen die unterschiedlichen Formen von Escapesequenzen berücksichtigen, die zulässig sind:  
   
-    -   Hexadezimale Escapesequenzen (%nn)  
+    - Hexadezimale Escapesequenzen (%nn)  
   
-    -   Unicode-Escapesequenzen (%nnn)  
+    - Unicode-Escapesequenzen (%nnn)  
   
-    -   UTF-8-Escapesequenzen mit Überlänge (%nn%nn)  
+    - UTF-8-Escapesequenzen mit Überlänge (%nn%nn)  
   
-    -   Doppelte Escapesequenzen (%nn wird zu %mmnn, wobei %mm die Escapesequenz für „%“ ist)  
+    - Doppelte Escapesequenzen (%nn wird zu %mmnn, wobei %mm die Escapesequenz für „%“ ist)  
   
--   Besondere Vorsicht ist bei Benutzernamen geboten, die mehrere kanonische Formen haben können. Beispielsweise können Sie häufig entweder die Form MYDOMAIN\\*Benutzername* oder die Form *Benutzername* @mydomain.example.com verwenden.  
+- Besondere Vorsicht ist bei Benutzernamen geboten, die mehrere kanonische Formen haben können. Beispielsweise können Sie häufig entweder die Form MYDOMAIN\\*Benutzername* oder die Form *Benutzername* @mydomain.example.com verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
 

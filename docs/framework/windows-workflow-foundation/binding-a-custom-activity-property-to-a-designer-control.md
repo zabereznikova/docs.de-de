@@ -3,11 +3,11 @@ title: Binden einer benutzerdefinierten Aktivitätseigenschaft an ein Designerst
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
 ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945898"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Binden einer benutzerdefinierten Aktivitätseigenschaft an ein Designersteuerelement
 
@@ -19,7 +19,7 @@ Das Binden eines Textfeld-Designersteuerelements an ein Aktivitätsargument ist 
 
 2. Erstellen Sie eine neue Klasse mit dem Namen "ComboBoxItemConverter". Fügen Sie einen Verweis auf System.Windows.Data hinzu, und sorgen Sie dafür, dass die Klasse aus <xref:System.Windows.Data.IValueConverter> abgeleitet wird. Implementieren Sie die Schnittstelle über Visual Studio, um Stubs für `Convert` und `ConvertBack` zu generieren.
 
-3. Fügen Sie der `Convert`-Methode folgenden Code hinzu. In diesem Code wird <xref:System.Activities.InArgument%601> der Aktivität vom Typ <xref:System.String> in den Wert konvertiert, der im Designer platziert werden soll.
+3. Fügen Sie der `Convert` -Methode folgenden Code hinzu. In diesem Code wird <xref:System.Activities.InArgument%601> der Aktivität vom Typ <xref:System.String> in den Wert konvertiert, der im Designer platziert werden soll.
 
     ```csharp
     ModelItem modelItem = value as ModelItem;
@@ -73,7 +73,7 @@ Das Binden eines Textfeld-Designersteuerelements an ein Aktivitätsargument ist 
     return null;
     ```
 
-4. Fügen Sie der `ConvertBack`-Methode folgenden Code hinzu. Dieser Code konvertiert das eingehende Kombinationsfeldelement wieder zurück in ein <xref:System.Activities.InArgument%601>-Element.
+4. Fügen Sie der `ConvertBack` -Methode folgenden Code hinzu. Dieser Code konvertiert das eingehende Kombinationsfeldelement wieder zurück in ein <xref:System.Activities.InArgument%601>-Element.
 
     ```csharp
     // Convert combo box value to InArgument<string>

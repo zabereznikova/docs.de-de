@@ -8,11 +8,11 @@ helpviewer_keywords:
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
 ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907594"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Vorgehensweise: Finden Sie in einen Enumerationsmember (Visual Basic)
 Enumerationen bieten eine bequeme Möglichkeit, um mit Sätzen verknüpfter Konstanten zu arbeiten und Konstante Werten Namen zuzuweisen. Sie können zum Beispiel eine Enumeration für einen Satz von Integerkonstanten deklarieren, denen die Tage der Woche zugewiesen sind, und dann in Ihrem Code die Namen der Wochentage statt deren Integerwerte verwenden.  
@@ -21,7 +21,7 @@ Enumerationen bieten eine bequeme Möglichkeit, um mit Sätzen verknüpfter Kons
   
 ### <a name="to-refer-to-an-enumeration-member"></a>Zum Verweisen auf einen Enumerationsmember  
   
--   Qualifizieren Sie den Namen des Members mit der Enumeration. Im folgende Beispiel weist z. B. die `Saturday` Mitglied der `FirstDayOfWeek` Enumeration, um die Variable `DayValue`.  
+- Qualifizieren Sie den Namen des Members mit der Enumeration. Im folgende Beispiel weist z. B. die `Saturday` Mitglied der `FirstDayOfWeek` Enumeration, um die Variable `DayValue`.  
   
      [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   

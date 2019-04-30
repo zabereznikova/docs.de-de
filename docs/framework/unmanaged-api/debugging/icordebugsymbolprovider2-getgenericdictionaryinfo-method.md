@@ -5,11 +5,11 @@ ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944648"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
 Ruft eine generische Wörterbuchzuordnung ab.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  Die Zuordnung besteht aus zwei Abschnitten auf oberster Ebene:  
   
--   Ein [Directory](#Directory) mit den relativen virtuellen Adressen (RVA) aller Wörterbücher, die in dieser Zuordnung enthalten.  
+- Ein [Directory](#Directory) mit den relativen virtuellen Adressen (RVA) aller Wörterbücher, die in dieser Zuordnung enthalten.  
   
--   Einem byteausgerichteten [Heap](#Heap) , die Informationen zur Objektinstanziierung enthält. Er beginnt unmittelbar nach dem letzten Verzeichniseintrag.  
+- Einem byteausgerichteten [Heap](#Heap) , die Informationen zur Objektinstanziierung enthält. Er beginnt unmittelbar nach dem letzten Verzeichniseintrag.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>Das Verzeichnis  
@@ -43,13 +43,13 @@ HRESULT GetGenericDictionaryInfo(
   
  Der Verzeichnisteil der generischen Wörterbuchzuordnung weist die folgende Struktur auf:  
   
--   Die ersten 4 Bytes enthalten die Anzahl der Wörterbucheinträge (d. h. die Anzahl der relativen virtuellen Adressen im Wörterbuch). Wir bezeichnen diesen Wert als *N*. Wenn das High-Bit festgelegt ist, werden die Einträge anhand der relativen virtuellen Adresse in aufsteigender Reihenfolge sortiert.  
+- Die ersten 4 Bytes enthalten die Anzahl der Wörterbucheinträge (d. h. die Anzahl der relativen virtuellen Adressen im Wörterbuch). Wir bezeichnen diesen Wert als *N*. Wenn das High-Bit festgelegt ist, werden die Einträge anhand der relativen virtuellen Adresse in aufsteigender Reihenfolge sortiert.  
   
--   Die *N* Verzeichniseinträge folgen. Jeder Eintrag besteht aus 8 Bytes in zwei 4-Byte-Segmenten:  
+- Die *N* Verzeichniseinträge folgen. Jeder Eintrag besteht aus 8 Bytes in zwei 4-Byte-Segmenten:  
   
-    -   Bytes 0-3: RVA; relative virtuelle Adresse des Wörterbuchs.  
+    - Bytes 0-3: RVA; relative virtuelle Adresse des Wörterbuchs.  
   
-    -   Bytes 4-7: Offset; ein Offset relativ zum Beginn des Heaps.  
+    - Bytes 4-7: Offset; ein Offset relativ zum Beginn des Heaps.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>Der Heap  
@@ -63,11 +63,11 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
  Das folgende Format wird für jedes Instanziierungsinformationselement auf dem Heap verwendet:  
   
--   Die Länge dieses Instanziierungsinformationselements in Bytes im komprimierten ECMA-Metadatenformat. Der Wert schließt diese Längeninformationen aus.  
+- Die Länge dieses Instanziierungsinformationselements in Bytes im komprimierten ECMA-Metadatenformat. Der Wert schließt diese Längeninformationen aus.  
   
--   Die Anzahl der generischen instanziierungstypen oder *T*, im komprimierten ECMA-Metadatenformat.  
+- Die Anzahl der generischen instanziierungstypen oder *T*, im komprimierten ECMA-Metadatenformat.  
   
--   *T* Typen, die jeweils im ECMA-typsignaturformat dargestellt.  
+- *T* Typen, die jeweils im ECMA-typsignaturformat dargestellt.  
   
  Die Berücksichtigung der Länge für jedes Heapelement ermöglicht eine einfache Sortierung des Verzeichnisabschnitts ohne Auswirkungen auf den Heap.  
   

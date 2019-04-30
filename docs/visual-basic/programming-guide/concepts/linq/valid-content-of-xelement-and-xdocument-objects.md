@@ -3,11 +3,11 @@ title: Gültiger Inhalt von XElement- und XDocument-Objekte2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907581"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
 In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.  
@@ -17,35 +17,35 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
  Beim Hinzufügen einfachen Inhalts können dieser Methode verschiedene Typen übergeben werden. Gültige Typen sind:  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Alle Typen, die `Object.ToString` implementieren.  
+- Alle Typen, die `Object.ToString` implementieren.  
   
--   Alle Typen, die <xref:System.Collections.Generic.IEnumerable%601> implementieren.  
+- Alle Typen, die <xref:System.Collections.Generic.IEnumerable%601> implementieren.  
   
  Beim Hinzufügen komplexen Inhalts können an diese Methode verschiedene Typen übergeben werden:  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   alle Typen, die eine <xref:System.Collections.Generic.IEnumerable%601> implementieren  
+- alle Typen, die eine <xref:System.Collections.Generic.IEnumerable%601> implementieren  
   
  Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XNode>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Wenn die Auflistung Text (oder Objekte, die in Text umgewandelt wurden) enthält, wird der Text in der Auflistung verkettet und als einzelner Textknoten hinzugefügt.  
   
@@ -62,15 +62,15 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
  Als gültiger Inhalt für Dokumente gilt z. B.:  
   
--   kein oder ein <xref:System.Xml.Linq.XDocumentType>-Objekt: Die Dokumenttypen müssen vor dem Element kommen.  
+- kein oder ein <xref:System.Xml.Linq.XDocumentType>-Objekt: Die Dokumenttypen müssen vor dem Element kommen.  
   
--   kein oder ein Element  
+- kein oder ein Element  
   
--   keine oder mehrere Kommentare  
+- keine oder mehrere Kommentare  
   
--   keine oder mehrere Verarbeitungsanweisungen  
+- keine oder mehrere Verarbeitungsanweisungen  
   
--   keine oder mehrere Textknoten, die nur Leerraum enthalten  
+- keine oder mehrere Textknoten, die nur Leerraum enthalten  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Konstruktoren und Funktionen, die das Hinzufügen von Inhalt erlauben  
  Die folgenden Methoden ermöglichen es Ihnen, einem <xref:System.Xml.Linq.XElement>-Objekt oder <xref:System.Xml.Linq.XDocument>-Objekt untergeordneten Inhalt hinzuzufügen:  

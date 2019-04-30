@@ -6,19 +6,19 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935251"
 ---
 # <a name="bad-record-length"></a>Ungültige Datensatzlänge.
 Zu den möglichen Ursachen für diesen Fehler gehören:  
   
--   Die Länge einer Datensatz-Variablen, die im angegebenen ein `FileGet`, `FileGetObject`, `FilePut` oder `FilePutObject` Anweisung unterscheidet sich von der entsprechenden angegebene Länge `FileOpen` Anweisung.  
+- Die Länge einer Datensatz-Variablen, die im angegebenen ein `FileGet`, `FileGetObject`, `FilePut` oder `FilePutObject` Anweisung unterscheidet sich von der entsprechenden angegebene Länge `FileOpen` Anweisung.  
   
--   Die Variable in einem `FilePut` oder `FilePutObject` Anweisung oder eine Zeichenfolge variabler Länge enthält.  
+- Die Variable in einem `FilePut` oder `FilePutObject` Anweisung oder eine Zeichenfolge variabler Länge enthält.  
   
--   Die Variable in einem `FilePut` oder `FilePutObject` ist oder enthält ein `Variant` Typ.  
+- Die Variable in einem `FilePut` oder `FilePutObject` ist oder enthält ein `Variant` Typ.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   

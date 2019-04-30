@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938202"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Vorgehensweise: Bestimmen des Typs (Visual Basic) eine Objektvariable verweist
 Eine Objektvariable enthält einen Zeiger auf Daten, die an anderer Stelle gespeichert werden. Der Typ der Daten kann während der Laufzeit ändern. Sie können jederzeit eingehen, verwenden die <xref:System.Type.GetTypeCode%2A> Methode, um den aktuellen Laufzeittyp zu bestimmen oder die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) um zu ermitteln, ob die aktuelle Laufzeit-Typinformationen mit einem angegebenen Typ kompatibel ist.  
@@ -37,7 +37,7 @@ Eine Objektvariable enthält einen Zeiger auf Daten, die an anderer Stelle gespe
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>Um zu bestimmen, ob ein Objekt ist Variablentyp kompatibel mit einem angegebenen Typ  
   
--   Verwenden der `TypeOf` Operator in Kombination mit der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) So testen Sie das Objekt mit einem `TypeOf`... `Is` Ausdruck.  
+- Verwenden der `TypeOf` Operator in Kombination mit der [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) So testen Sie das Objekt mit einem `TypeOf`... `Is` Ausdruck.  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  

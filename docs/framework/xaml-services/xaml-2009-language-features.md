@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
 ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938802"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009-Sprachfunktionen
 XAML 2009 ist der Kurzbegriff für neue XAML-Sprachfunktionen, die die vorhandene XAML-Sprachspezifikation erweitern. XAML 2009 führt mehrere neue Richtlinien und Konstrukte ein. Dazu gehören die [X: Arguments-Direktive](x-arguments-directive.md); die [X: FactoryMethod-Direktive](x-factorymethod-directive.md); die [X: Reference Markup Extension](x-reference-markup-extension.md); die [X: TypeArguments-Direktive ](x-typearguments-directive.md); und integrierte Typen für häufige Sprachprimitive (z. B. `x:Char`).  

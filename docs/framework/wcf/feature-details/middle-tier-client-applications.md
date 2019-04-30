@@ -3,11 +3,11 @@ title: Clientanwendungen mittlerer Ebene
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
 ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948147"
 ---
 # <a name="middle-tier-client-applications"></a>Clientanwendungen mittlerer Ebene
 Dieses Thema beschreibt verschiedene Probleme bezüglich Clientanwendungen mittlerer Ebene, die Windows Communication Foundation (WCF) verwenden.  
@@ -17,19 +17,19 @@ Dieses Thema beschreibt verschiedene Probleme bezüglich Clientanwendungen mittl
   
  Clientanwendungen mittlerer Ebene, jedoch können viele WCF-Clientobjekten schnell erstellen und folglich treten höhere initialisierungsanforderungen. Für die Leistungsoptimierung von Anwendungen mittlerer Ebene beim Aufrufen von Diensten haben Sie die Wahl zwischen zwei grundsätzlichen Vorgehensweisen:  
   
--   Zwischenspeichern des WCF-Clientobjekts und bei nachfolgenden Aufrufen wiederverwendet, wenn möglich.  
+- Zwischenspeichern des WCF-Clientobjekts und bei nachfolgenden Aufrufen wiederverwendet, wenn möglich.  
   
--   Erstellen Sie eine <xref:System.ServiceModel.ChannelFactory%601> Objekt, und klicken Sie dann das Objekt zum Erstellen von neuen WCF-Clients kanalobjekten, für jeden Aufruf verwenden.  
+- Erstellen Sie eine <xref:System.ServiceModel.ChannelFactory%601> Objekt, und klicken Sie dann das Objekt zum Erstellen von neuen WCF-Clients kanalobjekten, für jeden Aufruf verwenden.  
   
  Bei diesen Vorgehensweisen sollten Sie Folgendes beachten:  
   
--   Wenn der Dienst einen clientspezifischer Zustand mithilfe einer Sitzungs verwaltet, können nicht Sie den mittleren Ebene WCF-Client mit mehreren-Clientebene Anforderungen wiederverwenden, da der Zustand des Diensts an, die von den Clients mittlerer Ebene gebunden ist.  
+- Wenn der Dienst einen clientspezifischer Zustand mithilfe einer Sitzungs verwaltet, können nicht Sie den mittleren Ebene WCF-Client mit mehreren-Clientebene Anforderungen wiederverwenden, da der Zustand des Diensts an, die von den Clients mittlerer Ebene gebunden ist.  
   
--   Wenn der Dienst über Authentifizierung pro Client-durchführen muss, müssen Sie einen neuen Client für jede eingehende Anforderung erstellen, auf der mittleren Ebene keine der WCF-Clients mittlerer Ebene (oder clientkanalobjekt WCF) nutzen, da die Anmeldeinformationen des Clients der mittleren Ebene kann nicht geändert werden, nachdem der WCF-Client (oder <xref:System.ServiceModel.ChannelFactory%601>) erstellt wurde.  
+- Wenn der Dienst über Authentifizierung pro Client-durchführen muss, müssen Sie einen neuen Client für jede eingehende Anforderung erstellen, auf der mittleren Ebene keine der WCF-Clients mittlerer Ebene (oder clientkanalobjekt WCF) nutzen, da die Anmeldeinformationen des Clients der mittleren Ebene kann nicht geändert werden, nachdem der WCF-Client (oder <xref:System.ServiceModel.ChannelFactory%601>) erstellt wurde.  
   
--   Channels und von den Channels erstellte Clients sind zwar threadsicher, unterstützen jedoch möglicherweise keine gleichzeitigen Schreibvorgänge mehrerer Nachrichten zur Übertragung. Beim Senden umfangreicher Nachrichten (und besonders beim Streaming) wird der Sendevorgang möglicherweise blockiert, da auf den Abschluss eines anderen Sendevorgangs gewartet wird. Daraus ergeben sich zwei Probleme: fehlende Parallelität und die Gefahr eines Deadlocks, wenn die Ablaufsteuerung wieder zu dem Dienst zurückkehrt, von dem der Channel wiederverwendet wird (oder mit anderen Worten: Wenn vom freigegebenen Client ein Dienst aufgerufen wird, dessen Codepfad einen Rückruf an den freigegebenen Client auslöst). Dies gilt unabhängig vom Typ des WCF-Clients, die Sie wiederverwenden.  
+- Channels und von den Channels erstellte Clients sind zwar threadsicher, unterstützen jedoch möglicherweise keine gleichzeitigen Schreibvorgänge mehrerer Nachrichten zur Übertragung. Beim Senden umfangreicher Nachrichten (und besonders beim Streaming) wird der Sendevorgang möglicherweise blockiert, da auf den Abschluss eines anderen Sendevorgangs gewartet wird. Daraus ergeben sich zwei Probleme: fehlende Parallelität und die Gefahr eines Deadlocks, wenn die Ablaufsteuerung wieder zu dem Dienst zurückkehrt, von dem der Channel wiederverwendet wird (oder mit anderen Worten: Wenn vom freigegebenen Client ein Dienst aufgerufen wird, dessen Codepfad einen Rückruf an den freigegebenen Client auslöst). Dies gilt unabhängig vom Typ des WCF-Clients, die Sie wiederverwenden.  
   
--   Fehler in Channels müssen unabhängig davon behoben werden, ob der Channel freigegeben ist. Beim Wiederverwenden von Channels kann ein fehlerhafter Channel dazu führen, dass gleich mehrere ausstehende Anforderungen oder Sendevorgänge nicht ausgeführt werden.  
+- Fehler in Channels müssen unabhängig davon behoben werden, ob der Channel freigegeben ist. Beim Wiederverwenden von Channels kann ein fehlerhafter Channel dazu führen, dass gleich mehrere ausstehende Anforderungen oder Sendevorgänge nicht ausgeführt werden.  
   
  Ein Beispiel zur Veranschaulichung von bewährten Methoden zum Wiederverwenden eines Clients für mehrere Anforderungen finden Sie unter [Datenbindung in einem ASP.NET-Client](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md).  
   

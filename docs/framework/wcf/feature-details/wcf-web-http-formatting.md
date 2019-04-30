@@ -3,11 +3,11 @@ title: Formatieren von WCF-Web-HTTP
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935472"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatieren von WCF-Web-HTTP
 Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format für einen Dienstvorgang bestimmen, in dem dieser seine Antwort zurückgibt. Es werden zwei Methoden zum Bestimmen eines entsprechenden Formats unterstützt: automatisch und explizit.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  Falls Sie andere Formate als XML oder JSON unterstützen müssen, definieren Sie für den Vorgang den Rückgabetyp <xref:System.ServiceModel.Channels.Message>. Bestimmen Sie innerhalb des Vorgangscodes das passende Format, und erstellen SIe dann ein <xref:System.ServiceModel.Channels.Message>-Objekt, indem Sie eine der folgenden Methoden verwenden:  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  Jede dieser Methoden verwendet Inhalt und erstellt eine Nachricht im passenden Format. Sie können die `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements`-Methode verwenden, um eine Liste der vom Client bevorzugten Formate in der entsprechenden Reihenfolge abzurufen. Das folgende Beispiel zeigt, wie Sie `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` verwenden, um das Format zu bestimmen. Anschließend wird die entsprechende Methode zum Erstellen der Antwortnachricht verwendet.  
   

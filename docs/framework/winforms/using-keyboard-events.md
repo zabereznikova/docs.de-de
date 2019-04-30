@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966902"
 ---
 # <a name="using-keyboard-events"></a>Verwenden von Tastaturereignissen
 Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tastaturereignisse behandeln. Dieses Thema enthält eine Übersicht über die Tastaturereignisse, einschließlich Details dazu, wann jedes Ereignis verwendet wird sowie zu den Daten, die für jedes Ereignis übergeben werden.  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](event-handlers-overview-windows-forms.md) und [Events Overview (Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tast
 ## <a name="keyboard-events"></a>Tastaturereignisse  
  Windows Forms stellen zwei Ereignisse bereit, die auftreten, wenn ein Benutzer eine Taste auf der Tastatur drückt, und ein Ereignis, wenn der Benutzer die Taste loslässt:  
   
--   Das <xref:System.Windows.Forms.Control.KeyDown>-Ereignis tritt einmal auf.  
+- Das <xref:System.Windows.Forms.Control.KeyDown>-Ereignis tritt einmal auf.  
   
--   Das <xref:System.Windows.Forms.Control.KeyPress>-Ereignis, das mehrfach auftreten kann, wenn der Benutzer die gleiche Taste gedrückt hält.  
+- Das <xref:System.Windows.Forms.Control.KeyPress>-Ereignis, das mehrfach auftreten kann, wenn der Benutzer die gleiche Taste gedrückt hält.  
   
--   Das <xref:System.Windows.Forms.Control.KeyUp>-Ereignis tritt einmal auf, wenn der Benutzer eine Taste loslässt.  
+- Das <xref:System.Windows.Forms.Control.KeyUp>-Ereignis tritt einmal auf, wenn der Benutzer eine Taste loslässt.  
   
  Wenn der Benutzer eine Taste drückt, ermittelt Windows Forms , welches Ereignis ausgelöst werden soll, und zwar basierend darauf, ob die Tastatureingabe eine Zeichentaste oder eine Steuer- bzw. Funktionstaste ist. Weitere Informationen zu Zeichen und Steuer-bzw. Funktionstasten finden Sie unter [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md).  
   

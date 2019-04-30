@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907607"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen von Visual Basic verwenden können, schreiben [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Abfrageausdrücken. Die exemplarische Vorgehensweise veranschaulicht das Erstellen von Abfragen in der Liste der Student-Objekten, wie Sie die Abfragen ausführen und zum Ändern. Die Abfragen enthalten mehrere Funktionen, einschließlich lokaler Typrückschluss, Objektinitialisierer und anonyme Typen.  
@@ -40,14 +40,14 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 #### <a name="to-add-the-data-source"></a>So fügen Sie die Datenquelle hinzu  
   
--   Definieren einer `Student` Klasse, und erstellen Sie eine Liste von Instanzen der Klasse.  
+- Definieren einer `Student` Klasse, und erstellen Sie eine Liste von Instanzen der Klasse.  
   
     > [!IMPORTANT]
     >  Den Code zum Definieren der `Student` Klasse, und erstellen Sie die Liste in der exemplarischen Vorgehensweise Beispiele finden Sie im [Vorgehensweise: Erstellen Sie eine Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Sie können es von dort kopieren und fügen Sie ihn in das Projekt. Der neue Code ersetzt, den Code, der angezeigt wird, wenn Sie das Projekt erstellt wird.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Hinzufügen ein neues Studenten zur Liste Studenten  
   
--   Befolgen Sie die Muster in den `getStudents` Methode zum Hinzufügen einer anderen Instanz von der `Student` Klasse zur Liste. Hinzufügen der Student werden Objektinitialisierer vorgestellt. Weitere Informationen finden Sie unter [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+- Befolgen Sie die Muster in den `getStudents` Methode zum Hinzufügen einer anderen Instanz von der `Student` Klasse zur Liste. Hinzufügen der Student werden Objektinitialisierer vorgestellt. Weitere Informationen finden Sie unter [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Erstellen einer Abfrage  
  Bei der Ausführung erzeugt die Abfrage hinzugefügt, die in diesem Abschnitt eine Liste der Studenten akademischen Rang sie in der oberen zehn versetzt. Da die Abfrage die vollständige wählt `Student` Objekt jedes Mal, den Typ des Abfrageergebnisses ist `IEnumerable(Of Student)`. Der Typ der Abfrage ist jedoch in der Regel nicht in den Abfragedefinitionen angegeben. Stattdessen verwendet der Compiler lokaler Typrückschluss, um den Typ zu bestimmen. Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Im Abfrage Range-Variable, `currentStudent`, dient als Verweis auf die einzelnen `Student` Instanz in der Quelle `students`, Zugriff auf die Eigenschaften jedes Objekts im `students`.  

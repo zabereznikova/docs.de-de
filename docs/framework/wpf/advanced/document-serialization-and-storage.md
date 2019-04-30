@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962733"
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und anzeigen qualitativ hochwertiger Dokumente.  Erweiterte Funktionen, die Unterstützung von sowohl fixierten Dokumenten als auch Flussdokumenten sowie erweiterte Anzeigesteuerelemente, kombiniert mit leistungsstarken 2D- und 3D-Grafikfunktionen führen .NET Framework-Anwendungen, um eine neue Ebene der Qualität und benutzerfreundlichkeit.  Eine speicherinterne Darstellung eines Dokuments flexibel zu verwalten, ist ein wichtiges Feature von .NET Framework und effizient zu speichern und Laden von Dokumenten aus einem Datenspeicher ist nahezu jede Anwendung erforderlich.  Der Prozess der Konvertierung eines Dokuments aus einer speicherinternen Darstellung in einen externen Datenspeicher wird als Serialisierung bezeichnet.  Der umgekehrte Vorgang des Lesens eines Datenspeichers und Neuerstellens der ursprünglichen Instanz im Speicher wird Deserialisierung genannt.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>Funktionen der Dokumentserialisierungsprogramme von .NET Framework 3.0  
   
--   Durch direkten Zugriff auf Dokumentobjekte der höheren Ebene (logische Struktur und visuelle Elemente) wird eine effiziente Speicherung von aufgeteiltem Inhalt, 2D-/3D-Elementen, Bildern, Medien, Hyperlinks, Anmerkungen und anderen Supportinhalten aktiviert.  
+- Durch direkten Zugriff auf Dokumentobjekte der höheren Ebene (logische Struktur und visuelle Elemente) wird eine effiziente Speicherung von aufgeteiltem Inhalt, 2D-/3D-Elementen, Bildern, Medien, Hyperlinks, Anmerkungen und anderen Supportinhalten aktiviert.  
   
--   Synchrone und asynchrone Vorgänge  
+- Synchrone und asynchrone Vorgänge  
   
--   Unterstützung für Plug-In-Serialisierungsprogramme mit erweiterten Funktionen:  
+- Unterstützung für Plug-In-Serialisierungsprogramme mit erweiterten Funktionen:  
   
-    -   Systemweiter Zugriff für die Verwendung von allen .NET Framework-Anwendungen.  
+    - Systemweiter Zugriff für die Verwendung von allen .NET Framework-Anwendungen.  
   
-    -   Einfache Erkennbarkeit von Anwendungs-Plug-Ins  
+    - Einfache Erkennbarkeit von Anwendungs-Plug-Ins  
   
-    -   Einfache Bereitstellung, Installation und Update von benutzerdefinierten Drittanbieter-Plug-Ins  
+    - Einfache Bereitstellung, Installation und Update von benutzerdefinierten Drittanbieter-Plug-Ins  
   
-    -   Unterstützung von Benutzeroberflächen für benutzerdefinierte Laufzeiteinstellungen und -optionen  
+    - Unterstützung von Benutzeroberflächen für benutzerdefinierte Laufzeiteinstellungen und -optionen  
   
 ### <a name="xps-print-path"></a>XPS-Druckpfad  
  Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] -Druckpfad bietet auch einen erweiterbaren Mechanismus zum Schreiben von Dokumenten durch die Druckausgabe.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dient gleichzeitig als Dokumentdateiformat und natives Druckerspoolerformat für [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dokumente können ohne Konvertierung in ein Zwischenformat direkt an [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-kompatible Drucker geschickt werden.  Weitere Informationen zu Optionen und Funktionen der Druckpfadausgabe finden Sie unter [Übersicht über das Drucken](printing-overview.md).  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923278"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
 Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefinierte Erweiterungen, die zu überprüfen und Dienstkonfiguration zu überprüfen oder das Laufzeitverhalten in Windows Communication Foundation (WCF)-Client und Dienst-Anwendungen. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zu vom System bereitgestellten Verhalten verwenden, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Run-Time-Clientverhalten angeben](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
 ### <a name="behavior-methods"></a>Verhaltensmethoden  
  Alle Verhaltenstypen verfügen über eine `AddBindingParameters` -Methode, eine `ApplyDispatchBehavior` -Methode, eine `Validate` -Methode, und ein `ApplyClientBehavior` Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> kann nicht ausgeführt werden in einem Client wird nicht implementiert `ApplyClientBehavior`.  
   
--   Verwenden Sie die `AddBindingParameters`-Methode, um benutzerdefinierte Objekte zu ändern oder einer Sammlung hinzuzufügen, auf die benutzerdefinierte Bindungen beim Erstellen der Laufzeit für ihre Verwendung zugreifen können. Ein Beispiel hierfür ist, wie Schutzanforderungen festgelegt werden, die beeinflussen, wie der Kanal erstellt wird, jedoch dem Kanalentwickler nicht bekannt sind.  
+- Verwenden Sie die `AddBindingParameters`-Methode, um benutzerdefinierte Objekte zu ändern oder einer Sammlung hinzuzufügen, auf die benutzerdefinierte Bindungen beim Erstellen der Laufzeit für ihre Verwendung zugreifen können. Ein Beispiel hierfür ist, wie Schutzanforderungen festgelegt werden, die beeinflussen, wie der Kanal erstellt wird, jedoch dem Kanalentwickler nicht bekannt sind.  
   
--   Verwenden Sie die `Validate`-Methode, um die Beschreibungsstruktur und das entsprechende Laufzeitobjekt zu untersuchen und sicherzustellen, dass es einen bestimmten Satz von Kriterien erfüllt.  
+- Verwenden Sie die `Validate`-Methode, um die Beschreibungsstruktur und das entsprechende Laufzeitobjekt zu untersuchen und sicherzustellen, dass es einen bestimmten Satz von Kriterien erfüllt.  
   
--   Verwenden Sie die `ApplyDispatchBehavior`-Methode und die `ApplyClientBehavior`-Methode, um die Beschreibungsstruktur zu untersuchen und die Laufzeit für einen bestimmten Bereich entweder im Dienst oder auf dem Client zu ändern. Sie können auch Erweiterungsobjekte einfügen.  
+- Verwenden Sie die `ApplyDispatchBehavior`-Methode und die `ApplyClientBehavior`-Methode, um die Beschreibungsstruktur zu untersuchen und die Laufzeit für einen bestimmten Bereich entweder im Dienst oder auf dem Client zu ändern. Sie können auch Erweiterungsobjekte einfügen.  
   
     > [!NOTE]
     >  Obwohl eine Beschreibungsstruktur in diesen Methoden bereitgestellt wird, dient sie nur zur Überprüfung. Wenn eine Beschreibungsstruktur geändert wird, ist das Verhalten nicht definiert.  
@@ -38,13 +38,13 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
   
  Es gibt vier Arten von Verhalten in WCF:  
   
--   Dienstverhalten (<xref:System.ServiceModel.Description.IServiceBehavior>-Typen) ermöglicht die Anpassung der ganzen Dienstlaufzeit, einschließlich <xref:System.ServiceModel.ServiceHostBase>.  
+- Dienstverhalten (<xref:System.ServiceModel.Description.IServiceBehavior>-Typen) ermöglicht die Anpassung der ganzen Dienstlaufzeit, einschließlich <xref:System.ServiceModel.ServiceHostBase>.  
   
--   Endpunktverhalten (<xref:System.ServiceModel.Description.IEndpointBehavior>-Typen) ermöglicht die Anpassung von Dienstendpunkten und ihren zugeordneten <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekten.  
+- Endpunktverhalten (<xref:System.ServiceModel.Description.IEndpointBehavior>-Typen) ermöglicht die Anpassung von Dienstendpunkten und ihren zugeordneten <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Objekten.  
   
--   Vertragsverhalten (<xref:System.ServiceModel.Description.IContractBehavior>-Typen) ermöglicht die Anpassung sowohl der <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse als auch der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse in Client- bzw. Dienstanwendungen.  
+- Vertragsverhalten (<xref:System.ServiceModel.Description.IContractBehavior>-Typen) ermöglicht die Anpassung sowohl der <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse als auch der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse in Client- bzw. Dienstanwendungen.  
   
--   Vorgangsverhalten (<xref:System.ServiceModel.Description.IOperationBehavior>-Typen) ermöglicht ebenfalls die Anpassung der <xref:System.ServiceModel.Dispatcher.ClientOperation>-Klasse und der <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse in Client- bzw. Dienstanwendungen.  
+- Vorgangsverhalten (<xref:System.ServiceModel.Description.IOperationBehavior>-Typen) ermöglicht ebenfalls die Anpassung der <xref:System.ServiceModel.Dispatcher.ClientOperation>-Klasse und der <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse in Client- bzw. Dienstanwendungen.  
   
  Sie können diese Verhaltenstypen zu verschiedenen Beschreibungsobjekten hinzufügen, indem Sie benutzerdefinierte Attribute implementieren, Anwendungskonfigurationsdateien verwenden oder sie direkt zur Verhaltenssammlung des entsprechenden Beschreibungsobjekts hinzufügen. Sie müssen jedoch zu einer Dienstbeschreibung oder einem Dienstendpunkt-Beschreibungsobjekt hinzugefügt werden, bevor <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem <xref:System.ServiceModel.ServiceHost> oder einer <xref:System.ServiceModel.ChannelFactory%601> aufgerufen wird.  
   

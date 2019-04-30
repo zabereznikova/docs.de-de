@@ -3,14 +3,14 @@ title: Zuverlässiges Messaging-Protokoll, Version 1,1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933990"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Zuverlässiges Messaging-Protokoll, Version 1,1
-Dieses Thema enthält Details zur Implementierung von Windows Communication Foundation (WCF) für die WS-ReliableMessaging vom Februar 2007 (Version 1.1)-Protokoll für die Interoperation mithilfe des HTTP-Transports erforderlich sind. WCF folgt die WS-ReliableMessaging-Spezifikation mit den Einschränkungen und klarstellungen, die in diesem Thema erläutert. Beachten Sie, dass das zuverlässige WS-Messaging-Protokoll in der Version&#160;1.1 ab [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] implementiert ist.  
+Dieses Thema enthält Details zur Implementierung von Windows Communication Foundation (WCF) für die WS-ReliableMessaging vom Februar 2007 (Version 1.1)-Protokoll für die Interoperation mithilfe des HTTP-Transports erforderlich sind. WCF folgt die WS-ReliableMessaging-Spezifikation mit den Einschränkungen und klarstellungen, die in diesem Thema erläutert. Beachten Sie, dass das zuverlässige WS-Messaging-Protokoll in der Version&amp;#160;1.1 ab [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] implementiert ist.  
   
  Die WS-ReliableMessaging vom Februar 2007 Protokoll wird in WCF von implementiert die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   
@@ -31,7 +31,7 @@ Dieses Thema enthält Details zur Implementierung von Windows Communication Foun
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
 |wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|  
 |netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|  
-|wsp|(Entweder WS-Policy&#160;1.2 oder WS-Policy&#160;1.5)|  
+|wsp|(Entweder WS-Policy&amp;#160;1.2 oder WS-Policy&amp;#160;1.5)|  
   
 ## <a name="messaging"></a>Messaging  
   
@@ -318,7 +318,7 @@ Example TerminateSequenceResponse message:
 ### <a name="composition-with-ws-addressing"></a>Komposition mit WS-Adressierung  
  WCF unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung 2004/08 [WS-ADDR] und W3C WS-Adressierung 1.0 Empfehlungen [WS-ADDR-CORE] und [WS-ADDR-SOAP].  
   
- Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&#160;2004/08, schränkt jedoch die Verwendung der WS-Adressierung nicht auf diese Version ein. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
+ Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&amp;#160;2004/08, schränkt jedoch die Verwendung der WS-Adressierung nicht auf diese Version ein. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
   
 -   R2101: Sowohl WS-Adressierung 2004/08 als auch WS-Adressierung 1.0 können mit zuverlässigem WS-Messaging verwendet werden.  
   
@@ -328,7 +328,7 @@ Example TerminateSequenceResponse message:
  WCF unterstützt die Verwendung von SOAP 1.1 und SOAP 1.2 mit zuverlässigem WS-Messaging.  
   
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>Komposition mit WS-Sicherheit und WS-SecureConversation  
- WCF bietet Schutz für die WS-ReliableMessaging Sequenzen unter Verwendung von sicheren Transportmethode (HTTPS), Komposition mit WS-Security und Komposition mit WS-Secure Conversation. Das WS-ReliableMessaging&#160;1.1-Protokoll, das WS-Security&#160;1.1- und das WS-Secure Conversation&#160;1.3-Protokoll sollten zusammen verwendet werden. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
+ WCF bietet Schutz für die WS-ReliableMessaging Sequenzen unter Verwendung von sicheren Transportmethode (HTTPS), Komposition mit WS-Security und Komposition mit WS-Secure Conversation. Das WS-ReliableMessaging&amp;#160;1.1-Protokoll, das WS-Security&amp;#160;1.1- und das WS-Secure Conversation&amp;#160;1.3-Protokoll sollten zusammen verwendet werden. Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:  
   
 -   R2301: Um die Integrität einer Sequenz WS-ReliableMessaging sowie die Integrität und Vertraulichkeit einzelner Nachrichten zu schützen, muss WCF WS-Secure Conversation verwendet werden muss.  
   
@@ -445,7 +445,7 @@ Example TerminateSequenceResponse message:
 ### <a name="one-way-addressable-initiator"></a>Unidirektionaler, adressierbarer Initiator  
   
 #### <a name="binding"></a>Bindung  
- WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
+ WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen eingehenden und einen ausgehenden HTTP-Kanal. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&amp;#160;202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
  Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht ohne `Offer` -Element in einer HTTP-Anforderung. Der WCF-Beantworter erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht ohne `Accept` -Element in einer HTTP-Anforderung.  
@@ -453,7 +453,7 @@ Example TerminateSequenceResponse message:
 ### <a name="duplex-addressable-initiator"></a>Adressierbarer Duplex-Initiator  
   
 #### <a name="binding"></a>Bindung  
- WCF bietet ein vollständig asynchrones, bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Request/Reply`, `Addressable`-Initiator kombinieren. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
+ WCF bietet ein vollständig asynchrones, bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Request/Reply`, `Addressable`-Initiator kombinieren. WCF verwendet HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&amp;#160;202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
  Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht mit einer `Offer` -Element in einer HTTP-Anforderung. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` verfügt über eine `Offer` -Element, dann erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht mit einer `Accept` Element.  
@@ -505,7 +505,7 @@ Example TerminateSequenceResponse message:
 ### <a name="requestreply-addressable-initiator"></a>Adressierbarer Anforderung/Antwort-Initiator  
   
 #### <a name="binding"></a>Bindung  
- WCF bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Duplex, Addressable`-Initiator kombinieren. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.  
+ WCF bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal. Dieses Nachrichtenaustauschmuster lässt sich bis zu einem gewissen Grad mit dem Nachrichtenaustauschmuster für einen `Duplex, Addressable`-Initiator kombinieren. WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten. Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&amp;#160;202.  
   
 #### <a name="createsequence-exchange"></a>CreateSequence-Austausch  
  Der WCF--Initiator überträgt eine `CreateSequence` -Nachricht mit einer `Offer` -Element in einer HTTP-Anforderung. Der WCF-Beantworter stellt sicher, dass die `CreateSequence` verfügt über eine `Offer` Element dann erstellt eine Sequenz und überträgt die `CreateSequenceResponse` -Nachricht mit einer `Accept` Element.  

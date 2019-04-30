@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938735"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices-Klasse und grundlegende XAML-Lese- und -Schreibvorgänge
 <xref:System.Xaml.XamlServices> ist eine von .NET Framework-XAML-Diensten bereitgestellt Klasse, die verwendet werden kann, um XAML-Szenarien zu adressieren, die keinen bestimmten Zugriff auf die Informationen zum XAML-Knotenstream/XAML-Typsystem erfordern, oder die aus diesen Knoten abgerufen werden. Die<xref:System.Xaml.XamlServices> -API kann wie folgt zusammengefasst werden: `Load` oder `Parse` to suppodert a XAML load path, `Save` to suppodert a XAML save path, and `Transform` um eine Technik bereitzustellen, die einen Ladepfad und einen Speicherpfad verbindet. `Transform` kann verwendet werden, um von einem XAML-Schema zu einem anderen zu wechseln. In diesem Thema sind diese API-Klassifizierungen zusammengefasst, und die Unterschiede zwischen bestimmten Methodenüberladungen werden beschrieben.  
@@ -25,9 +25,9 @@ ms.locfileid: "59162266"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> und <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> sind Überladungen, die Reader für Formate aus früheren Versionen von .NET Framework erfordern. Zum Verwenden dieser Überladungen sollten Sie bereits eine Readerinstanz erstellt und deren `Create` -API verwendet haben, um die XAML in der relevanten Form (Text oder XML) zu laden. Wenn Sie bereits Datensatzzeiger in die anderen Reader verschoben oder andere Vorgänge damit ausgeführt haben, spielt dies keine Rolle. Die Ladepfadlogik aus <xref:System.Xaml.XamlServices.Load%2A> verarbeitet immer die gesamte XAML-Eingabe vom Stamm abwärts. Für diese Überladungen sind folgende Szenarien denkbar:  
   
--   Entwurfsoberflächen, auf denen einfache XAML-Bearbeitungsfunktionen eines vorhandenen XML-spezifischen Text-Editors bereitgestellt werden.  
+- Entwurfsoberflächen, auf denen einfache XAML-Bearbeitungsfunktionen eines vorhandenen XML-spezifischen Text-Editors bereitgestellt werden.  
   
--   Varianten der <xref:System.IO> -Kernszenarien, in denen zum Öffnen von Dateien oder Streams dedizierte Reader verwendet werden. Die Logik überprüft oder verarbeitet den Inhalt rudimentär, bevor er als XAML geladen wird.  
+- Varianten der <xref:System.IO> -Kernszenarien, in denen zum Öffnen von Dateien oder Streams dedizierte Reader verwendet werden. Die Logik überprüft oder verarbeitet den Inhalt rudimentär, bevor er als XAML geladen wird.  
   
  Sie können eine Datei, einen Stream, einen <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>oder <xref:System.Xaml.XamlReader> laden, von der bzw. dem die XAML-Eingabe durch das Laden mit den Reader-APIs umschlossen wird.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162266"
   
  Die `Load` -Signatur für erweiterte Szenarien ist <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>. Sie können diese Signatur für einen der folgenden Fälle verwenden:  
   
--   Sie haben eine eigene Implementierung von einem <xref:System.Xaml.XamlReader>definiert.  
+- Sie haben eine eigene Implementierung von einem <xref:System.Xaml.XamlReader>definiert.  
   
--   Sie müssen Einstellungen für <xref:System.Xaml.XamlReader> angeben, die von den Standardeinstellungen abweichen.  
+- Sie müssen Einstellungen für <xref:System.Xaml.XamlReader> angeben, die von den Standardeinstellungen abweichen.  
   
  Beispiele für nicht standardmäßige Einstellungen sind Folgende: <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>; <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>; <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>; <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>; <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>. Der Standardreader für <xref:System.Xaml.XamlServices> ist <xref:System.Xaml.XamlXmlReader>. Wenn Sie einen eigenen <xref:System.Xaml.XamlXmlReader>mit Einstellungen zur Verfügung stellen, werden mit folgenden Eigenschaften nicht standardmäßige <xref:System.Xaml.XamlXmlReaderSettings>festgelegt: <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A>; <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>.  
   

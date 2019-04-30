@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940529"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche Prozeduren zum Erstellen einer einfachen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung vorgestellt. Sie enthält auch Anweisungen dazu, wie eine einfache ASP.NET Web Forms-Anwendung auf die erfolgreiche Implementierung der Verbundauthentifizierung getestet werden kann. Diese Vorgehensweise enthält keine detaillierten Anweisungen zum Erstellen eines Sicherheitstokendiensts (Security Token Service, STS) und geht davon aus, dass Sie bereits einen STS konfiguriert haben.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
+- Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="objectives"></a>Ziele  
   
--   Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
+- Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
   
--   Testen einer erfolgreichen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung  
+- Testen einer erfolgreichen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die Verbundauthentifizierung  
+- Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die Verbundauthentifizierung  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  

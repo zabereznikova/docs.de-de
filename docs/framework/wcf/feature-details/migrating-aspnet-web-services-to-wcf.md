@@ -3,11 +3,11 @@ title: Migrieren von ASP.NET-Webdiensten zu WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948095"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrieren von ASP.NET-Webdiensten zu WCF
 ASP.NET stellt .NET Framework-Klassenbibliotheken und Tools zum Erstellen von Webdiensten sowie Funktionen für Hostingdienste innerhalb von Internetinformationsdienste (IIS) bereit. Windows Communication Foundation (WCF) bietet .NET Framework-Klassenbibliotheken, Tools und Hostingfunktionen zum Aktivieren von Softwareentitäten zur Kommunikation über alle Protokolle, einschließlich von Webdiensten verwendet werden.  Migrieren von ASP.NET-Webdiensten zu WCF ermöglicht Ihren Anwendungen nutzen Sie die Vorteile der neuen Features und Verbesserungen, die für WCF eindeutig sind.  
@@ -22,13 +22,13 @@ ASP.NET stellt .NET Framework-Klassenbibliotheken und Tools zum Erstellen von We
   
  Betrachten Sie diese potenziellen Vorteile von WCF, relativ zur ASP.NET Web Services, wenn Sie verwenden oder möglicher Verwendung von ASP.NET Web Services stehen Ihnen mehrere Optionen:  
   
--   Fahren Sie mit ASP.NET Web Services verwenden und die von WCF angebotenen Vorteile verzichten.  
+- Fahren Sie mit ASP.NET Web Services verwenden und die von WCF angebotenen Vorteile verzichten.  
   
--   Verwenden Sie weiterhin die ASP.NET-Webdienste mit dem Ziel Einführung von WCF zu einem Zeitpunkt in der Zukunft. Die Themen in diesem Abschnitt wird erläutert, wie die Perspektiven verwenden, neue ASP.NET-Webdienstanwendungen zusammen mit zukünftigen WCF-Anwendungen zu maximieren. Die Themen in diesem Abschnitt wird auch erläutert, wie erstellen Sie neue ASP.NET-Webdienste so zu WCF Migrieren zu vereinfachen. Jedoch wenn Schutz der Dienste wichtig ist oder Zuverlässigkeit oder transaktionszusicherungen erforderlich sind, oder wenn benutzerdefinierte Verwaltungsfunktionen erstellt werden müssen, und es ist eine bessere Option, um WCF zu übernehmen. WCF ist für genau diese Szenarien konzipiert.  
+- Verwenden Sie weiterhin die ASP.NET-Webdienste mit dem Ziel Einführung von WCF zu einem Zeitpunkt in der Zukunft. Die Themen in diesem Abschnitt wird erläutert, wie die Perspektiven verwenden, neue ASP.NET-Webdienstanwendungen zusammen mit zukünftigen WCF-Anwendungen zu maximieren. Die Themen in diesem Abschnitt wird auch erläutert, wie erstellen Sie neue ASP.NET-Webdienste so zu WCF Migrieren zu vereinfachen. Jedoch wenn Schutz der Dienste wichtig ist oder Zuverlässigkeit oder transaktionszusicherungen erforderlich sind, oder wenn benutzerdefinierte Verwaltungsfunktionen erstellt werden müssen, und es ist eine bessere Option, um WCF zu übernehmen. WCF ist für genau diese Szenarien konzipiert.  
   
--   Übernehmen Sie WCF für die neue Entwicklung, während Sie weiterhin Ihre vorhandenen ASP.NET-Webdienstanwendungen zu verwalten. Diese Vorgehensweise ist wahrscheinlich optimal. Den Vorteilen von WCF, während die Kosten für das Ändern der vorhandenen Anwendungen verwenden das ersetzen. In diesem Szenario können neue WCF-Anwendungen mit vorhandenen ASP.NET-Anwendungen gleichzeitig vorhanden sein. Neue WCF-Anwendungen werden in der Lage, vorhandene ASP.NET-Webdienste verwenden, und WCF kann verwendet werden, neue operative Funktionen in vorhandenen ASP.NET-ANWENDUNGEN laufen, da der ASP.NET-Kompatibilitätsmodus von WCF-Programmierung.  
+- Übernehmen Sie WCF für die neue Entwicklung, während Sie weiterhin Ihre vorhandenen ASP.NET-Webdienstanwendungen zu verwalten. Diese Vorgehensweise ist wahrscheinlich optimal. Den Vorteilen von WCF, während die Kosten für das Ändern der vorhandenen Anwendungen verwenden das ersetzen. In diesem Szenario können neue WCF-Anwendungen mit vorhandenen ASP.NET-Anwendungen gleichzeitig vorhanden sein. Neue WCF-Anwendungen werden in der Lage, vorhandene ASP.NET-Webdienste verwenden, und WCF kann verwendet werden, neue operative Funktionen in vorhandenen ASP.NET-ANWENDUNGEN laufen, da der ASP.NET-Kompatibilitätsmodus von WCF-Programmierung.  
   
--   Übernehmen Sie WCF, und migrieren Sie vorhandene ASP.NET-Webdienstanwendungen zu WCF. Sie können diese Option aus, um die vorhandenen Anwendungen mit Funktionen von WCF zu verbessern oder zu reproduzieren, die Funktionalität von vorhandenen ASP.NET-Webdiensten innerhalb neuer, die leistungsfähige WCF-Anwendungen.  
+- Übernehmen Sie WCF, und migrieren Sie vorhandene ASP.NET-Webdienstanwendungen zu WCF. Sie können diese Option aus, um die vorhandenen Anwendungen mit Funktionen von WCF zu verbessern oder zu reproduzieren, die Funktionalität von vorhandenen ASP.NET-Webdiensten innerhalb neuer, die leistungsfähige WCF-Anwendungen.  
   
 > [!NOTE]
 >  Vorsicht geboten, wenn ein WCF-Dienst gehostet wird von IIS 5.x und ASP.NET deinstalliert wird. Wenn ein WCF-Dienst gehostet wird, von IIS 5.x, den Code für den Dienst können angefordert werden, wenn ASP.NET deinstalliert wird. Beim Deinstallieren von ASP.NET auf einem Betriebssystem, auf denen IIS ausgeführt wird 5.x und WCF deinstalliert wird, eine mit der Erweiterung .svc-Datei wird als Textdatei betrachtet und der Inhalt, einschließlich Quellcode, an die anfordernde Person zurückgegeben.  

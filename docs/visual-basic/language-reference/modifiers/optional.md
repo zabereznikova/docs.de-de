@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920665"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Gibt an, dass ein Prozedurargument beim Aufrufen der Prozedur ausgelassen werden kann.  
@@ -25,13 +25,13 @@ Gibt an, dass ein Prozedurargument beim Aufrufen der Prozedur ausgelassen werden
   
  Der `Optional`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
--   [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Beim Aufrufen einer Prozedur mit oder ohne optionale Parameter können Sie die Argumente nach Position oder anhand des Namens übergeben. Weitere Informationen finden Sie unter [übergeben von Argumenten nach Position und Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

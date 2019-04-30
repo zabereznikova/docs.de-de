@@ -3,14 +3,14 @@ title: Transaktionsausnahmen
 ms.date: 03/30/2017
 ms.assetid: 1d27ed51-7eda-477f-9eca-94fa129f3e07
 ms.openlocfilehash: 85d8d043a5610743d6cbad4d950330ed4bedb502
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936977"
 ---
 # <a name="transaction-exceptions"></a>Transaktionsausnahmen
-Dieses Thema enthält alle Ausnahmen, die von Windows Communication Foundation (WCF) Transaktion generiert.  
+Dieses Thema enthält alle Ausnahmen, die von Windows Communication Foundation (WCF)-Transaktion generiert.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
 ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909985"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>Vorgehensweise: Erstellen einer zusammengesetzten Zeichnung
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.DrawingGroup> komplexe Zeichnungen erstellen, durch die Kombination mehrerer <xref:System.Windows.Media.Drawing> Objekte in einer zusammengesetzten Zeichnung.  

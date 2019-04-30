@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918163"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Die Indexanzahl ist größer als die Anzahl der Dimensionen des indizierten Arrays.
 Die Indexanzahl, die für den Zugriff auf ein Arrayelement verwendet wird, muss mit dem Rang des Arrays identisch sein, d. h. die Anzahl der für das Array deklarierten Dimensionen.  
@@ -21,7 +21,7 @@ Die Indexanzahl, die für den Zugriff auf ein Arrayelement verwendet wird, muss 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Entfernen Sie Indizes aus der Arrayverweis als, bis die gesamte Anzahl an Indizes den Rang des Arrays entspricht. Zum Beispiel:  
+- Entfernen Sie Indizes aus der Arrayverweis als, bis die gesamte Anzahl an Indizes den Rang des Arrays entspricht. Zum Beispiel:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

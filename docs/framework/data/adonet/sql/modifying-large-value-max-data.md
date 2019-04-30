@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922225"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server umfasst einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern Werten mit einer Größe bis zu 2^32 Bytes ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Bei großen `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -26,11 +26,11 @@ Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengr
 ## <a name="large-value-type-restrictions"></a>Einschränkungen für große Werttypen  
  Für die `max`-Datentypen gelten die folgenden Einschränkungen, die für kleinere Datentypen nicht vorhanden sind:  
   
--   Ein `sql_variant` kann keinen großen `varchar`-Datentyp enthalten.  
+- Ein `sql_variant` kann keinen großen `varchar`-Datentyp enthalten.  
   
--   Große `varchar`-Spalten können nicht als Schlüsselspalte in einem Index angegeben werden. In einer eingeschlossenen Spalte in einem nicht gruppierten Index sind sie jedoch zulässig.  
+- Große `varchar`-Spalten können nicht als Schlüsselspalte in einem Index angegeben werden. In einer eingeschlossenen Spalte in einem nicht gruppierten Index sind sie jedoch zulässig.  
   
--   Große `varchar`-Spalten können nicht zum Partitionieren von Schlüsselspalten verwendet werden.  
+- Große `varchar`-Spalten können nicht zum Partitionieren von Schlüsselspalten verwendet werden.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Arbeiten mit großen Werttypen in Transact-SQL  
  Die Transact-SQL-`OPENROWSET`-Funktion ist eine für den Einmalgebrauch bestimmte Methode zum Herstellen einer Verbindung mit Remotedaten und den Zugriff auf diese Daten. Sie enthält alle erforderlichen Verbindungsinformationen für den Zugriff auf Remotedaten von einer OLE DB-Datenquelle. Auf `OPENROWSET` kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Abhängig von den Funktionen des OLE DB-Anbieters kann OPENROWSET auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung dienen.  

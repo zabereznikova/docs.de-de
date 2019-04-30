@@ -3,11 +3,11 @@ title: Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917633"
 ---
 # <a name="troubleshooting"></a>Problembehandlung
 Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen auftreten können, und enthalten Vorschläge dazu, wie diese Probleme vermieden bzw. deren Auswirkungen auf andere Weise verringert werden können.  
@@ -31,9 +31,9 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
 ## <a name="cascade-delete"></a>Kaskadierendes Delete  
  Kaskadierte Löschvorgänge werden von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt bzw. erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, führen Sie eines der folgenden Verfahren aus:  
   
--   Legen Sie die `ON DELETE CASCADE`-Regel in der Fremdschlüsseleinschränkung in der Datenbank fest.  
+- Legen Sie die `ON DELETE CASCADE`-Regel in der Fremdschlüsseleinschränkung in der Datenbank fest.  
   
--   Verwenden Sie eigenen Code, um zunächst die untergeordneten Objekte zu löschen, die das Löschen des übergeordneten Objekts verhindern.  
+- Verwenden Sie eigenen Code, um zunächst die untergeordneten Objekte zu löschen, die das Löschen des übergeordneten Objekts verhindern.  
   
  Andernfalls wird eine <xref:System.Data.SqlClient.SqlException>-Ausnahme ausgelöst.  
   
@@ -42,11 +42,11 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
 ## <a name="expression-not-queryable"></a>Ausdruck kann nicht abgefragt werden  
  Falls der Fehler "Der Ausdruck [Ausdruck] kann nicht abgefragt werden. Möglicherweise fehlt ein Assemblyverweis" auftritt, stellen Sie Folgendes sicher:  
   
--   Die Anwendung muss auf [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] abzielen.  
+- Die Anwendung muss auf [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] abzielen.  
   
--   Sie müssen über einen Verweis auf `System.Core.dll` und `System.Data.Linq.dll` verfügen.  
+- Sie müssen über einen Verweis auf `System.Core.dll` und `System.Data.Linq.dll` verfügen.  
   
--   Sie haben eine `Imports` (Visual Basic) oder `using` -Direktive (c#) für <xref:System.Linq> und <xref:System.Data.Linq>.  
+- Sie haben eine `Imports` (Visual Basic) oder `using` -Direktive (c#) für <xref:System.Linq> und <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Beim Debuggen einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Projekt können Sie die Beziehungen einer Entität durchlaufen. Auf diese Weise werden alle diese Elemente in den Cache und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkennt ihre Anwesenheit. Wenn Sie dann versuchen, <xref:System.Data.Linq.Table%601.Attach%2A> oder <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> bzw. eine ähnliche Methode auszuführen, durch die mehrere Zeilen mit demselben Schlüssel generiert werden, wird eine <xref:System.Data.Linq.DuplicateKeyException> ausgelöst.  

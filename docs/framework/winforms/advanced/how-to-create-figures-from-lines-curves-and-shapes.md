@@ -9,11 +9,11 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937695"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Vorgehensweise: Erstellen von Figuren aus Linien, Kurven und Formen
 Erstellen Sie zum Erstellen einer Figur eine <xref:System.Drawing.Drawing2D.GraphicsPath>, und rufen Sie anschließend die Methoden, wie z. B. <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> und <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, um primitive Typen in den Pfad hinzuzufügen.  
@@ -21,9 +21,9 @@ Erstellen Sie zum Erstellen einer Figur eine <xref:System.Drawing.Drawing2D.Grap
 ## <a name="example"></a>Beispiel  
  Die folgenden Codebeispiele erstellen Pfade, die Zahlen haben:  
   
--   Im erste Beispiel erstellt einen Pfad, der eine einzelne Figur enthält. In der Abbildung besteht aus einem einzelnen Bogen. Der Bogen hat bei einem mittelpunktswinkel von –180 Grad gegen den Uhrzeigersinn in das Standardkoordinatensystem ist.  
+- Im erste Beispiel erstellt einen Pfad, der eine einzelne Figur enthält. In der Abbildung besteht aus einem einzelnen Bogen. Der Bogen hat bei einem mittelpunktswinkel von –180 Grad gegen den Uhrzeigersinn in das Standardkoordinatensystem ist.  
   
--   Im zweite Beispiel wird einen Pfad, der zwei Abbildungen wurde erstellt. Die erste Figur ist einen Bogen, gefolgt von einer Zeile. Die zweite Abbildung ist eine Zeile, gefolgt von einer Kurve, gefolgt von einer Zeile. Die erste Figur bleibt geöffnet, und die zweite Abbildung geschlossen ist.  
+- Im zweite Beispiel wird einen Pfad, der zwei Abbildungen wurde erstellt. Die erste Figur ist einen Bogen, gefolgt von einer Zeile. Die zweite Abbildung ist eine Zeile, gefolgt von einer Kurve, gefolgt von einer Zeile. Die erste Figur bleibt geöffnet, und die zweite Abbildung geschlossen ist.  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  

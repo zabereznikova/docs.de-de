@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933847"
 ---
 # <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden des Datenschutzes
 .NET Framework bietet Zugriff auf die Datenschutz-API, die es Ihnen ermöglicht, Daten mithilfe von Informationen vom aktuellen Benutzerkonto oder Computer zu verschlüsseln.  Wenn Sie die Datenschutz-API verwenden, umgehen Sie die schwierige Aufgabe, einen kryptografischen Schlüssel explizit zu generieren und zu speichern.  
@@ -62,9 +62,9 @@ ms.locfileid: "59771841"
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Fügen Sie einen Verweis auf `System.Security.dll` ein.  
+- Fügen Sie einen Verweis auf `System.Security.dll` ein.  
   
--   Fügen Sie die Namespaces <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> und <xref:System.Text> ein.  
+- Fügen Sie die Namespaces <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> und <xref:System.Text> ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

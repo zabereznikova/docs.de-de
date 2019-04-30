@@ -3,11 +3,11 @@ title: Member
 description: Erfahren Sie mehr über die Member des Objekts in der F# Programmiersprache.
 ms.date: 05/16/2016
 ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903850"
 ---
 # <a name="members"></a>Member
 

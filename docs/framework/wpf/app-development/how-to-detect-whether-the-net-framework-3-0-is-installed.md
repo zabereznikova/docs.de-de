@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erkennen einer .NET Framework 3.0-Installation'
+title: 'Vorgehensweise: Erkennen einer .NET Framework 3.0-Installation'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947822"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Gewusst wie: Erkennen einer .NET Framework 3.0-Installation
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Vorgehensweise: Erkennen einer .NET Framework 3.0-Installation
 Bevor Administratoren Microsoft .NET Framework-Anwendungen auf einem System bereitstellen können, müssen sie bestätigen, dass .NET Framework-Laufzeit vorhanden ist. Dieses Thema enthält ein Skript in HTML/JavaScript geschrieben wurde, dass Administratoren verwenden können, um zu bestimmen, ob .NET Framework auf einem System vorhanden ist.  
   
 > [!NOTE]

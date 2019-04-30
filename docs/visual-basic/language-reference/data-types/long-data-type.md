@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918449"
 ---
 # <a name="long-data-type-visual-basic"></a>Long-Datentyp (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>Tipps für die Programmierung
 
--   **Interop-Überlegungen.** Wenn die Komponenten, die nicht für die .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschrieben verbunden ist, beachten Sie, dass `Long` verfügt über eine andere Datenbreite (32 Bit) in anderen Umgebungen. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `Integer` anstelle von `Long` im neuen Visual Basic-Code.  
+- **Interop-Überlegungen.** Wenn die Komponenten, die nicht für die .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschrieben verbunden ist, beachten Sie, dass `Long` verfügt über eine andere Datenbreite (32 Bit) in anderen Umgebungen. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `Integer` anstelle von `Long` im neuen Visual Basic-Code.  
   
--   **Erweiternde.** Die `Long` -Datentyp wird zu `Decimal`, `Single`, oder `Double`. Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
+- **Erweiternde.** Die `Long` -Datentyp wird zu `Decimal`, `Single`, oder `Double`. Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`-Datentyp erzwungen.  
+- **Typzeichen.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`-Datentyp erzwungen.  
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=nameWithType>-Struktur.  
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=nameWithType>-Struktur.  
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907217"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Effiziente Verwendung von Datentypen (Visual Basic)
 Nicht deklarierte Variablen und Variablen, die ohne einen Datentyp zugewiesen sind die `Object` -Datentyp. Dies erleichtert es, Programme zu schreiben, schnell, aber es kann dazu führen, dass sie langsamer ausgeführt.  
@@ -26,11 +26,11 @@ Nicht deklarierte Variablen und Variablen, die ohne einen Datentyp zugewiesen si
 ## <a name="strong-typing"></a>Starke Typisierung  
  Die Angabe von Datentypen für alle Variablen wird bezeichnet als *starke Typisierung*. Mit starker Typisierung hat mehrere Vorteile:  
   
--   Sie können IntelliSense-Unterstützung für Variablen. Dadurch können Sie die Eigenschaften und andere Member anzeigen, während der Eingabe im Code.  
+- Sie können IntelliSense-Unterstützung für Variablen. Dadurch können Sie die Eigenschaften und andere Member anzeigen, während der Eingabe im Code.  
   
--   Es nutzt die Vorteile der typüberprüfung zur Compiler. Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf möglich abzufangen. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
+- Es nutzt die Vorteile der typüberprüfung zur Compiler. Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf möglich abzufangen. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
   
--   Es führt zu einer schnelleren Ausführung Ihres Codes.  
+- Es führt zu einer schnelleren Ausführung Ihres Codes.  
   
 ## <a name="most-efficient-data-types"></a>Die effizienteste-Datentypen  
  Für Variablen, die niemals Bruchzahlen enthalten, werden die ganzzahligen Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic `Integer` und `UInteger` die effizientesten numerischen Typen sind.  

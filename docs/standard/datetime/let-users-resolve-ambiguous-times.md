@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Können Sie Benutzer auflösen mehrdeutiger Zeiten'
+title: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten durch den Benutzer'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903785"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>Vorgehensweise: Können Sie Benutzer auflösen mehrdeutiger Zeiten
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Vorgehensweise: Auflösen mehrdeutiger Zeiten durch den Benutzer
 
 Eine mehrdeutige Zeit ist eine Zeit, die mehreren koordinierten Weltzeiten (UTC) zugeordnet werden kann. Dies ist der Fall, wenn die Uhrzeit umgestellt wird, beispielsweise während des Übergangs von der Sommerzeit einer Zeitzone auf die Standardzeit. Bei der Verarbeitung einer mehrdeutigen Zeit haben Sie eine der folgenden Möglichkeiten:
 

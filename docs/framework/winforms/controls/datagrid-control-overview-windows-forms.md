@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904427"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304732"
   
  Gültige Datenquellen für das <xref:System.Windows.Forms.DataGrid>-Steuerelement umfassen Folgendes:  
   
--   <xref:System.Data.DataTable>-Klasse  
+- <xref:System.Data.DataTable>-Klasse  
   
--   <xref:System.Data.DataView>-Klasse  
+- <xref:System.Data.DataView>-Klasse  
   
--   <xref:System.Data.DataSet>-Klasse  
+- <xref:System.Data.DataSet>-Klasse  
   
--   <xref:System.Data.DataViewManager>-Klasse  
+- <xref:System.Data.DataViewManager>-Klasse  
   
  Wenn es sich bei der Quelle um ein DataSet handelt, kann das DataSet ein Objekt im Formular oder ein Objekt sein, das von einem XML-Webdienst an das Formular übergeben wurde. Sie können das Steuerelement an typisierte oder nicht typisierte DataSets binden.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304732"
   
  Sie können an die folgenden Strukturen binden, wenn die zugehörigen Elemente öffentliche Eigenschaften anzeigen:  
   
--   Komponenten, die die <xref:System.Collections.IList>-Schnittstelle implementieren. Dazu gehören eindimensionale Arrays.  
+- Komponenten, die die <xref:System.Collections.IList>-Schnittstelle implementieren. Dazu gehören eindimensionale Arrays.  
   
--   Komponenten, die die <xref:System.ComponentModel.IListSource>-Schnittstelle implementieren.  
+- Komponenten, die die <xref:System.ComponentModel.IListSource>-Schnittstelle implementieren.  
   
--   Komponenten, die die <xref:System.ComponentModel.IBindingList>-Schnittstelle implementieren.  
+- Komponenten, die die <xref:System.ComponentModel.IBindingList>-Schnittstelle implementieren.  
   
  Weitere Informationen zu möglichen Datenquellen finden Sie unter [Von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
   

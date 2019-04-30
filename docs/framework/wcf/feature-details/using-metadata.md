@@ -3,11 +3,11 @@ title: Verwenden von Metadaten
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933619"
 ---
 # <a name="using-metadata"></a>Verwenden von Metadaten
 Dienstmetadaten enthalten eine maschinell lesbare Beschreibung des Diensts. Dienstmetadaten schließen Beschreibungen der Dienstendpunkte, Bindungen, Verträge, Vorgänge und Nachrichten ein. Sie können Dienstmetadaten für verschiedene Zwecke verwenden, z. B. automatisches Generieren eines Clients zur Verwendung des Diensts, Implementieren der Dienstbeschreibung und dynamische Aktualisierung der Bindung für einen Client.  

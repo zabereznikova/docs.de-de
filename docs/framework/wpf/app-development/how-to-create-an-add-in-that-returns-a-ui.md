@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947835"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) auf einem Host eigenständige WPF-Anwendung zurückgibt.  
@@ -25,9 +25,9 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
  In diesem Beispiel hebt die WPF-Erweiterungen für die Add-In-Modell von .NET Framework, die dieses Szenario zu aktivieren, und es wird Folgendes vorausgesetzt:  
   
--   Kenntnisse in Bezug auf die Add-In-Modell von .NET Framework, einschließlich der Pipeline, add-Ins und Hostentwicklung. Wenn Sie mit diesen Begriffen nicht vertraut sind, finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und einer hostanwendung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](../../add-ins/walkthrough-create-extensible-app.md).  
+- Kenntnisse in Bezug auf die Add-In-Modell von .NET Framework, einschließlich der Pipeline, add-Ins und Hostentwicklung. Wenn Sie mit diesen Begriffen nicht vertraut sind, finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und einer hostanwendung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](../../add-ins/walkthrough-create-extensible-app.md).  
   
--   Kenntnisse über die WPF-Erweiterungen für das .NET Framework-add-in verwendet, das finden Sie hier: [Übersicht über das WPF-Add-Ins](wpf-add-ins-overview.md).  
+- Kenntnisse über die WPF-Erweiterungen für das .NET Framework-add-in verwendet, das finden Sie hier: [Übersicht über das WPF-Add-Ins](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Beispiel  
  Um ein Add-in zu erstellen, die eine WPF-UI zurückgibt ist spezieller Code für die einzelnen Pipelinesegmente, das Add-in und die hostanwendung erforderlich.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917838"
 ---
 # <a name="scope-in-visual-basic"></a>Gültigkeitsbereich in Visual Basic
 Die *Bereich* eines deklarierten Elements ist ein Satz von sämtlicher Code, die darauf verweisen kann, ohne seinen Namen qualifizieren oder durch Verfügbarmachen, einer [Imports-Anweisung (.NET-Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ein Element kann eine der folgenden Ebenen Bereich sein:  
@@ -37,11 +37,11 @@ Die *Bereich* eines deklarierten Elements ist ein Satz von sämtlicher Code, die
 ## <a name="specifying-scope-and-defining-variables"></a>Festlegen des Gültigkeitsbereichs und Definieren von Variablen  
  Wenn Sie sie deklarieren, geben Sie den Bereich eines Elements. Der Bereich kann auf folgenden Faktoren abhängen:  
   
--   Die Region (Block, Prozedur, Modul, Klasse oder Struktur), in der Sie das Element deklarieren.  
+- Die Region (Block, Prozedur, Modul, Klasse oder Struktur), in der Sie das Element deklarieren.  
   
--   Der Namespace, enthält die Deklaration des Elements  
+- Der Namespace, enthält die Deklaration des Elements  
   
--   Die Zugriffsebene, die Sie für das Element deklarieren.  
+- Die Zugriffsebene, die Sie für das Element deklarieren.  
   
  Gehen Sie sorgfältig vor, wenn Sie Variablen mit dem gleichen Namen, aber anderen Bereich definieren, da dies kann zu unerwarteten Ergebnissen führen. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
@@ -51,21 +51,21 @@ Die *Bereich* eines deklarierten Elements ist ein Satz von sämtlicher Code, die
 ### <a name="block-scope"></a>Blockbereich  
  Ein Block ist ein Satz von eingefasst wird initiiert, und Beenden von deklarationsanweisungen, wie z. B. die folgenden Anweisungen:  
   
--   `Do` und `Loop`  
+- `Do` und `Loop`  
   
--   `For` [`Each`] und `Next`  
+- `For` [`Each`] und `Next`  
   
--   `If` und `End If`  
+- `If` und `End If`  
   
--   `Select` und `End Select`  
+- `Select` und `End Select`  
   
--   `SyncLock` und `End SyncLock`  
+- `SyncLock` und `End SyncLock`  
   
--   `Try` und `End Try`  
+- `Try` und `End Try`  
   
--   `While` und `End While`  
+- `While` und `End While`  
   
--   `With` und `End With`  
+- `With` und `End With`  
   
  Wenn Sie eine Variable in einem Block deklarieren, können Sie es nur innerhalb dieses Blocks. Im folgenden Beispiel ist der Bereich der ganzzahligen Variable `cube` der Block zwischen `If` und `End If`, und Sie können nicht mehr auf verweisen `cube` Wenn die Ausführung aus dem Block übergeben.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>Vorteile von lokalen Variablen  
  Lokale Variablen sind eine gute Wahl für alle Arten von temporären Berechnungen aus, die aus den folgenden Gründen:  
   
--   **Namenskonflikt vermeiden.** Namen lokaler Variable sind nicht anfällig gegenüber in Konflikt stehen. Sie können z. B. mehrere unterschiedliche Verfahren, die eine Variable namens erstellen `intTemp`. Solange alle `intTemp` wird deklariert als lokale Variable, jede Prozedur erkennt nur ihre eigene Version der `intTemp`. Jede Prozedur ändern, kann den Wert in der lokalen `intTemp` ohne `intTemp` Variablen in anderen Prozeduren.  
+- **Namenskonflikt vermeiden.** Namen lokaler Variable sind nicht anfällig gegenüber in Konflikt stehen. Sie können z. B. mehrere unterschiedliche Verfahren, die eine Variable namens erstellen `intTemp`. Solange alle `intTemp` wird deklariert als lokale Variable, jede Prozedur erkennt nur ihre eigene Version der `intTemp`. Jede Prozedur ändern, kann den Wert in der lokalen `intTemp` ohne `intTemp` Variablen in anderen Prozeduren.  
   
--   **Die Arbeitsspeichernutzung.** Lokale Variablen belegt Arbeitsspeicher nur, solange die Prozedur ausgeführt wird. Ihren Arbeitsspeicher wird freigegeben, wenn die Prozedur an den aufrufenden Code zurückgibt. Im Gegensatz dazu [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) und [statische](../../../../visual-basic/language-reference/modifiers/static.md) Variablen Speicherressourcen beanspruchen, bis die Anwendung beendet wird, werden Sie also nur bei Bedarf verwendet. *Instanzvariablen* belegt Arbeitsspeicher während ihrer Instanz vorhanden weiterhin, was weniger effizient als lokale Variablen, aber möglicherweise effizienter als die `Shared` oder `Static` Variablen.  
+- **Die Arbeitsspeichernutzung.** Lokale Variablen belegt Arbeitsspeicher nur, solange die Prozedur ausgeführt wird. Ihren Arbeitsspeicher wird freigegeben, wenn die Prozedur an den aufrufenden Code zurückgibt. Im Gegensatz dazu [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) und [statische](../../../../visual-basic/language-reference/modifiers/static.md) Variablen Speicherressourcen beanspruchen, bis die Anwendung beendet wird, werden Sie also nur bei Bedarf verwendet. *Instanzvariablen* belegt Arbeitsspeicher während ihrer Instanz vorhanden weiterhin, was weniger effizient als lokale Variablen, aber möglicherweise effizienter als die `Shared` oder `Static` Variablen.  
   
 ### <a name="minimizing-scope"></a>Bereich minimiert  
  Wenn Sie eine Variable oder Konstante zu deklarieren, wird es im Allgemeinen guter Programmierstil, um den Bereich so eng wie möglich zu machen (Blockbereich ist die geringstmögliche). Dadurch wird Speicherplatz gespart und minimiert die Wahrscheinlichkeit, dass Ihr Code, der fälschlicherweise die falsche Variable auf. Ebenso sollten Sie eine Variable deklarieren [statische](../../../../visual-basic/language-reference/modifiers/static.md) nur wenn den Wert zwischen den Prozeduraufrufen beibehalten werden muss.  
