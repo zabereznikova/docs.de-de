@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73a08e83d67c973294938a030b95b906aec6be6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962603"
 ---
-# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="79eec-102">ICorDebugAppDomain3::GetCachedWinRTTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="79eec-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
-<span data-ttu-id="79eec-103">Ruft einen Enumerator für alle zwischengespeicherten [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen.</span><span class="sxs-lookup"><span data-stu-id="79eec-103">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>  
+# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="10484-102">ICorDebugAppDomain3::GetCachedWinRTTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="10484-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
+<span data-ttu-id="10484-103">Ruft einen Enumerator für alle zwischengespeicherten [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen.</span><span class="sxs-lookup"><span data-stu-id="10484-103">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79eec-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="79eec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10484-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="10484-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedWinRTTypes (   
@@ -35,19 +35,19 @@ HRESULT GetCachedWinRTTypes (
 ;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79eec-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="79eec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10484-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="10484-105">Parameters</span></span>  
  `ppGuidToTypeEnum`  
- <span data-ttu-id="79eec-106">[out] Ein Zeiger auf ein [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) Schnittstellenobjekts, das die verwaltete Darstellung der aufzählen kann [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen, die derzeit in der Anwendungsdomäne geladen.</span><span class="sxs-lookup"><span data-stu-id="79eec-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.</span></span>  
+ <span data-ttu-id="10484-106">[out] Ein Zeiger auf ein [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) Schnittstellenobjekts, das die verwaltete Darstellung der aufzählen kann [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen, die derzeit in der Anwendungsdomäne geladen.</span><span class="sxs-lookup"><span data-stu-id="10484-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79eec-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="79eec-107">Requirements</span></span>  
- <span data-ttu-id="79eec-108">**Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79eec-108">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10484-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="10484-107">Requirements</span></span>  
+ <span data-ttu-id="10484-108">**Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10484-108">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
   
- <span data-ttu-id="79eec-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="79eec-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="10484-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="10484-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="79eec-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79eec-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10484-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10484-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="79eec-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79eec-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="10484-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10484-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79eec-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="79eec-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10484-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="10484-112">See also</span></span>
 
-- [<span data-ttu-id="79eec-113">ICorDebugAppDomain3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="79eec-113">ICorDebugAppDomain3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [<span data-ttu-id="10484-113">ICorDebugAppDomain3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="10484-113">ICorDebugAppDomain3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
