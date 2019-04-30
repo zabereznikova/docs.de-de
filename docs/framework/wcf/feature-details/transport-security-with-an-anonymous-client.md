@@ -6,50 +6,50 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932949"
 ---
-# <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="23eca-102">Transportsicherheit mit einem anonymen client</span><span class="sxs-lookup"><span data-stu-id="23eca-102">Transport security with an anonymous client</span></span>
+# <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="daab0-102">Transportsicherheit mit einem anonymen client</span><span class="sxs-lookup"><span data-stu-id="daab0-102">Transport security with an anonymous client</span></span>
 
-<span data-ttu-id="23eca-103">Das Windows Communication Foundation (WCF)-Szenario verwendet transportsicherheit (HTTPS), um Vertraulichkeit und Integrität sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="23eca-103">This Windows Communication Foundation (WCF) scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="23eca-104">Der Server muss mit einem SSL-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen.</span><span class="sxs-lookup"><span data-stu-id="23eca-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="23eca-105">Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.</span><span class="sxs-lookup"><span data-stu-id="23eca-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>
+<span data-ttu-id="daab0-103">Das Windows Communication Foundation (WCF)-Szenario verwendet transportsicherheit (HTTPS), um Vertraulichkeit und Integrität sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="daab0-103">This Windows Communication Foundation (WCF) scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="daab0-104">Der Server muss mit einem SSL-Zertifikat authentifiziert werden, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen.</span><span class="sxs-lookup"><span data-stu-id="daab0-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="daab0-105">Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.</span><span class="sxs-lookup"><span data-stu-id="daab0-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>
 
-<span data-ttu-id="23eca-106">Eine beispielanwendung finden Sie unter [WS-Transportsicherheit](../samples/ws-transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="23eca-106">For a sample application, see [WS Transport Security](../samples/ws-transport-security.md).</span></span> <span data-ttu-id="23eca-107">Weitere Informationen zur transportsicherheit finden Sie unter [Transport Sicherheitsübersicht](transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="23eca-107">For more information about transport security, see [Transport Security Overview](transport-security-overview.md).</span></span>
+<span data-ttu-id="daab0-106">Eine beispielanwendung finden Sie unter [WS-Transportsicherheit](../samples/ws-transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="daab0-106">For a sample application, see [WS Transport Security](../samples/ws-transport-security.md).</span></span> <span data-ttu-id="daab0-107">Weitere Informationen zur transportsicherheit finden Sie unter [Transport Sicherheitsübersicht](transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="daab0-107">For more information about transport security, see [Transport Security Overview](transport-security-overview.md).</span></span>
 
-<span data-ttu-id="23eca-108">Weitere Informationen zur Verwendung eines Zertifikats mit einem Dienst finden Sie unter [arbeiten mit Zertifikaten](working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="23eca-108">For more information about using a certificate with a service, see [Working with Certificates](working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>
+<span data-ttu-id="daab0-108">Weitere Informationen zur Verwendung eines Zertifikats mit einem Dienst finden Sie unter [arbeiten mit Zertifikaten](working-with-certificates.md) und [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="daab0-108">For more information about using a certificate with a service, see [Working with Certificates](working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>
 
 ![Verwenden von Transportsicherheit mit einem anonymen Client](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
-|<span data-ttu-id="23eca-110">Merkmal</span><span class="sxs-lookup"><span data-stu-id="23eca-110">Characteristic</span></span>|<span data-ttu-id="23eca-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="23eca-111">Description</span></span>|
+|<span data-ttu-id="daab0-110">Merkmal</span><span class="sxs-lookup"><span data-stu-id="daab0-110">Characteristic</span></span>|<span data-ttu-id="daab0-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="daab0-111">Description</span></span>|
 |--------------------|-----------------|
-|<span data-ttu-id="23eca-112">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="23eca-112">Security Mode</span></span>|<span data-ttu-id="23eca-113">Transport</span><span class="sxs-lookup"><span data-stu-id="23eca-113">Transport</span></span>|
-|<span data-ttu-id="23eca-114">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="23eca-114">Interoperability</span></span>|<span data-ttu-id="23eca-115">Mit vorhandenen Webdiensten und Webclients</span><span class="sxs-lookup"><span data-stu-id="23eca-115">With existing Web services and clients</span></span>|
-|<span data-ttu-id="23eca-116">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="23eca-116">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="23eca-117">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="23eca-117">Authentication (Client)</span></span>|<span data-ttu-id="23eca-118">Ja</span><span class="sxs-lookup"><span data-stu-id="23eca-118">Yes</span></span><br /><br /> <span data-ttu-id="23eca-119">Die Anwendungsebene (keine WCF-Unterstützung)</span><span class="sxs-lookup"><span data-stu-id="23eca-119">Application level (no WCF support)</span></span>|
-|<span data-ttu-id="23eca-120">Integrität</span><span class="sxs-lookup"><span data-stu-id="23eca-120">Integrity</span></span>|<span data-ttu-id="23eca-121">Ja</span><span class="sxs-lookup"><span data-stu-id="23eca-121">Yes</span></span>|
-|<span data-ttu-id="23eca-122">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="23eca-122">Confidentiality</span></span>|<span data-ttu-id="23eca-123">Ja</span><span class="sxs-lookup"><span data-stu-id="23eca-123">Yes</span></span>|
-|<span data-ttu-id="23eca-124">Transport</span><span class="sxs-lookup"><span data-stu-id="23eca-124">Transport</span></span>|<span data-ttu-id="23eca-125">HTTPS</span><span class="sxs-lookup"><span data-stu-id="23eca-125">HTTPS</span></span>|
-|<span data-ttu-id="23eca-126">Bindung</span><span class="sxs-lookup"><span data-stu-id="23eca-126">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|
+|<span data-ttu-id="daab0-112">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="daab0-112">Security Mode</span></span>|<span data-ttu-id="daab0-113">Transport</span><span class="sxs-lookup"><span data-stu-id="daab0-113">Transport</span></span>|
+|<span data-ttu-id="daab0-114">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="daab0-114">Interoperability</span></span>|<span data-ttu-id="daab0-115">Mit vorhandenen Webdiensten und Webclients</span><span class="sxs-lookup"><span data-stu-id="daab0-115">With existing Web services and clients</span></span>|
+|<span data-ttu-id="daab0-116">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="daab0-116">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="daab0-117">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="daab0-117">Authentication (Client)</span></span>|<span data-ttu-id="daab0-118">Ja</span><span class="sxs-lookup"><span data-stu-id="daab0-118">Yes</span></span><br /><br /> <span data-ttu-id="daab0-119">Die Anwendungsebene (keine WCF-Unterstützung)</span><span class="sxs-lookup"><span data-stu-id="daab0-119">Application level (no WCF support)</span></span>|
+|<span data-ttu-id="daab0-120">Integrität</span><span class="sxs-lookup"><span data-stu-id="daab0-120">Integrity</span></span>|<span data-ttu-id="daab0-121">Ja</span><span class="sxs-lookup"><span data-stu-id="daab0-121">Yes</span></span>|
+|<span data-ttu-id="daab0-122">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="daab0-122">Confidentiality</span></span>|<span data-ttu-id="daab0-123">Ja</span><span class="sxs-lookup"><span data-stu-id="daab0-123">Yes</span></span>|
+|<span data-ttu-id="daab0-124">Transport</span><span class="sxs-lookup"><span data-stu-id="daab0-124">Transport</span></span>|<span data-ttu-id="daab0-125">HTTPS</span><span class="sxs-lookup"><span data-stu-id="daab0-125">HTTPS</span></span>|
+|<span data-ttu-id="daab0-126">Bindung</span><span class="sxs-lookup"><span data-stu-id="daab0-126">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a><span data-ttu-id="23eca-127">Dienst</span><span class="sxs-lookup"><span data-stu-id="23eca-127">Service</span></span>
+## <a name="service"></a><span data-ttu-id="daab0-127">Dienst</span><span class="sxs-lookup"><span data-stu-id="daab0-127">Service</span></span>
 
-<span data-ttu-id="23eca-128">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="23eca-128">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="23eca-129">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="23eca-129">Do one of the following:</span></span>
+<span data-ttu-id="daab0-128">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="daab0-128">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="daab0-129">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="daab0-129">Do one of the following:</span></span>
 
-- <span data-ttu-id="23eca-130">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="23eca-130">Create a stand-alone service using the code with no configuration.</span></span>
+- <span data-ttu-id="daab0-130">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="daab0-130">Create a stand-alone service using the code with no configuration.</span></span>
 
-- <span data-ttu-id="23eca-131">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="23eca-131">Create a service using the supplied configuration, but do not define any endpoints.</span></span>
+- <span data-ttu-id="daab0-131">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="daab0-131">Create a service using the supplied configuration, but do not define any endpoints.</span></span>
 
-### <a name="code"></a><span data-ttu-id="23eca-132">Code</span><span class="sxs-lookup"><span data-stu-id="23eca-132">Code</span></span>
+### <a name="code"></a><span data-ttu-id="daab0-132">Code</span><span class="sxs-lookup"><span data-stu-id="daab0-132">Code</span></span>
 
-<span data-ttu-id="23eca-133">Im folgenden Code wird gezeigt, wie ein Endpunkt mit Transportsicherheit erstellt wird:</span><span class="sxs-lookup"><span data-stu-id="23eca-133">The following code shows how to create an endpoint using transport security:</span></span>
+<span data-ttu-id="daab0-133">Im folgenden Code wird gezeigt, wie ein Endpunkt mit Transportsicherheit erstellt wird:</span><span class="sxs-lookup"><span data-stu-id="daab0-133">The following code shows how to create an endpoint using transport security:</span></span>
 
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a><span data-ttu-id="23eca-134">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="23eca-134">Configuration</span></span>
+### <a name="configuration"></a><span data-ttu-id="daab0-134">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="daab0-134">Configuration</span></span>
 
-<span data-ttu-id="23eca-135">Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="23eca-135">The following code sets up the same endpoint using configuration.</span></span> <span data-ttu-id="23eca-136">Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.</span><span class="sxs-lookup"><span data-stu-id="23eca-136">The client is not authenticated by any mechanism, and is therefore anonymous.</span></span>
+<span data-ttu-id="daab0-135">Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="daab0-135">The following code sets up the same endpoint using configuration.</span></span> <span data-ttu-id="daab0-136">Der Client wird von keinem Mechanismus authentifiziert und ist deshalb anonym.</span><span class="sxs-lookup"><span data-stu-id="daab0-136">The client is not authenticated by any mechanism, and is therefore anonymous.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,25 +78,25 @@ ms.locfileid: "55260384"
 </configuration>
 ```
 
-## <a name="client"></a><span data-ttu-id="23eca-137">Client</span><span class="sxs-lookup"><span data-stu-id="23eca-137">Client</span></span>
+## <a name="client"></a><span data-ttu-id="daab0-137">Client</span><span class="sxs-lookup"><span data-stu-id="daab0-137">Client</span></span>
 
-<span data-ttu-id="23eca-138">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="23eca-138">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="23eca-139">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="23eca-139">Do one of the following:</span></span>
+<span data-ttu-id="daab0-138">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="daab0-138">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="daab0-139">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="daab0-139">Do one of the following:</span></span>
 
-- <span data-ttu-id="23eca-140">Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.</span><span class="sxs-lookup"><span data-stu-id="23eca-140">Create a stand-alone client using the code (and client code).</span></span>
+- <span data-ttu-id="daab0-140">Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.</span><span class="sxs-lookup"><span data-stu-id="daab0-140">Create a stand-alone client using the code (and client code).</span></span>
 
-- <span data-ttu-id="23eca-141">Erstellen Sie einen Client, der keine Endpunktadressen definiert.</span><span class="sxs-lookup"><span data-stu-id="23eca-141">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="23eca-142">Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.</span><span class="sxs-lookup"><span data-stu-id="23eca-142">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="23eca-143">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="23eca-143">For example:</span></span>
+- <span data-ttu-id="daab0-141">Erstellen Sie einen Client, der keine Endpunktadressen definiert.</span><span class="sxs-lookup"><span data-stu-id="daab0-141">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="daab0-142">Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.</span><span class="sxs-lookup"><span data-stu-id="daab0-142">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="daab0-143">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="daab0-143">For example:</span></span>
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
 
-### <a name="code"></a><span data-ttu-id="23eca-144">Code</span><span class="sxs-lookup"><span data-stu-id="23eca-144">Code</span></span>
+### <a name="code"></a><span data-ttu-id="daab0-144">Code</span><span class="sxs-lookup"><span data-stu-id="daab0-144">Code</span></span>
 
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a><span data-ttu-id="23eca-145">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="23eca-145">Configuration</span></span>
+### <a name="configuration"></a><span data-ttu-id="daab0-145">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="daab0-145">Configuration</span></span>
 
-<span data-ttu-id="23eca-146">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienst einzurichten.</span><span class="sxs-lookup"><span data-stu-id="23eca-146">The following configuration can be used instead of the code to set up the service.</span></span>
+<span data-ttu-id="daab0-146">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienst einzurichten.</span><span class="sxs-lookup"><span data-stu-id="daab0-146">The following configuration can be used instead of the code to set up the service.</span></span>
 
 ```xml
 <configuration>
@@ -121,9 +121,9 @@ ms.locfileid: "55260384"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="23eca-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="23eca-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daab0-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="daab0-147">See also</span></span>
 
-- [<span data-ttu-id="23eca-148">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="23eca-148">Security Overview</span></span>](security-overview.md)
-- [<span data-ttu-id="23eca-149">WS-Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="23eca-149">WS Transport Security</span></span>](../samples/ws-transport-security.md)
-- [<span data-ttu-id="23eca-150">Übersicht über die Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="23eca-150">Transport Security Overview</span></span>](transport-security-overview.md)
-- <span data-ttu-id="23eca-151">[Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="23eca-151">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>
+- [<span data-ttu-id="daab0-148">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="daab0-148">Security Overview</span></span>](security-overview.md)
+- [<span data-ttu-id="daab0-149">WS-Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="daab0-149">WS Transport Security</span></span>](../samples/ws-transport-security.md)
+- [<span data-ttu-id="daab0-150">Übersicht über die Transportsicherheit</span><span class="sxs-lookup"><span data-stu-id="daab0-150">Transport Security Overview</span></span>](transport-security-overview.md)
+- <span data-ttu-id="daab0-151">[Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="daab0-151">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>
