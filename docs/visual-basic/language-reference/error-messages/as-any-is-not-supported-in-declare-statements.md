@@ -8,30 +8,30 @@ helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 ms.openlocfilehash: 3593f238c72cbcce911c72e42552d6a75188b628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935329"
 ---
-# <a name="as-any-is-not-supported-in-declare-statements"></a><span data-ttu-id="53610-102">As Any wird in Declare-Anweisungen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="53610-102">'As Any' is not supported in 'Declare' statements</span></span>
-<span data-ttu-id="53610-103">Die `Any` Datentyp wurde verwendet, mit `Declare` Anweisungen in Visual Basic 6.0 und früheren Versionen, um die Verwendung von Argumenten zu ermöglichen, die beliebige Datentypen enthalten könnte.</span><span class="sxs-lookup"><span data-stu-id="53610-103">The `Any` data type was used with `Declare` statements in Visual Basic 6.0 and earlier versions to permit the use of arguments that could contain any type of data.</span></span> <span data-ttu-id="53610-104">Überladen zulässt, jedoch von Visual Basic unterstützt und löst so die `Any` -Datentyp ab.</span><span class="sxs-lookup"><span data-stu-id="53610-104">Visual Basic supports overloading, however, and so makes the `Any` data type obsolete.</span></span>  
+# <a name="as-any-is-not-supported-in-declare-statements"></a><span data-ttu-id="cd9dc-102">As Any wird in Declare-Anweisungen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="cd9dc-102">'As Any' is not supported in 'Declare' statements</span></span>
+<span data-ttu-id="cd9dc-103">Die `Any` Datentyp wurde verwendet, mit `Declare` Anweisungen in Visual Basic 6.0 und früheren Versionen, um die Verwendung von Argumenten zu ermöglichen, die beliebige Datentypen enthalten könnte.</span><span class="sxs-lookup"><span data-stu-id="cd9dc-103">The `Any` data type was used with `Declare` statements in Visual Basic 6.0 and earlier versions to permit the use of arguments that could contain any type of data.</span></span> <span data-ttu-id="cd9dc-104">Überladen zulässt, jedoch von Visual Basic unterstützt und löst so die `Any` -Datentyp ab.</span><span class="sxs-lookup"><span data-stu-id="cd9dc-104">Visual Basic supports overloading, however, and so makes the `Any` data type obsolete.</span></span>  
   
- <span data-ttu-id="53610-105">**Fehler-ID:** BC30828</span><span class="sxs-lookup"><span data-stu-id="53610-105">**Error ID:** BC30828</span></span>  
+ <span data-ttu-id="cd9dc-105">**Fehler-ID:** BC30828</span><span class="sxs-lookup"><span data-stu-id="cd9dc-105">**Error ID:** BC30828</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="53610-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="53610-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cd9dc-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="cd9dc-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="53610-107">Deklarieren Sie die Parameter des angegebenen Typs, die Sie verwenden möchten; Zum Beispiel.</span><span class="sxs-lookup"><span data-stu-id="53610-107">Declare parameters of the specific type you want to use; for example.</span></span>  
+1. <span data-ttu-id="cd9dc-107">Deklarieren Sie die Parameter des angegebenen Typs, die Sie verwenden möchten; Zum Beispiel.</span><span class="sxs-lookup"><span data-stu-id="cd9dc-107">Declare parameters of the specific type you want to use; for example.</span></span>  
   
      [!code-vb[VbVbalrStatements#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#95)]  
   
-2. <span data-ttu-id="53610-108">Verwenden der <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut an `As Any` beim `Void*` wird von der aufgerufenen Prozedur erwartet.</span><span class="sxs-lookup"><span data-stu-id="53610-108">Use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify `As Any` when `Void*` is expected by the procedure being called.</span></span>  
+2. <span data-ttu-id="cd9dc-108">Verwenden der <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut an `As Any` beim `Void*` wird von der aufgerufenen Prozedur erwartet.</span><span class="sxs-lookup"><span data-stu-id="cd9dc-108">Use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify `As Any` when `Void*` is expected by the procedure being called.</span></span>  
   
      [!code-vb[VbVbalrStatements#96](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#96)]  
   
-## <a name="see-also"></a><span data-ttu-id="53610-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="53610-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd9dc-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cd9dc-109">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="53610-110">Exemplarische Vorgehensweise: Aufrufen von Windows-APIs</span><span class="sxs-lookup"><span data-stu-id="53610-110">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
-- [<span data-ttu-id="53610-111">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="53610-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="53610-112">Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)</span><span class="sxs-lookup"><span data-stu-id="53610-112">Creating Prototypes in Managed Code</span></span>](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="cd9dc-110">Exemplarische Vorgehensweise: Aufrufen von Windows-APIs</span><span class="sxs-lookup"><span data-stu-id="cd9dc-110">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [<span data-ttu-id="cd9dc-111">Declare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="cd9dc-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="cd9dc-112">Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)</span><span class="sxs-lookup"><span data-stu-id="cd9dc-112">Creating Prototypes in Managed Code</span></span>](../../../framework/interop/creating-prototypes-in-managed-code.md)

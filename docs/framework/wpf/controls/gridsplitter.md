@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], GridSplitter control
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
 ms.openlocfilehash: 9fd1b50e4c3f79218de2d0d54f98d645ebb5fd61
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911429"
 ---
-# <a name="gridsplitter"></a><span data-ttu-id="86ae3-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="86ae3-102">GridSplitter</span></span>
-<span data-ttu-id="86ae3-103">Die <xref:System.Windows.Controls.GridSplitter> Leeraum zwischen Spalten oder Zeilen mit einem <xref:System.Windows.Controls.Grid> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="86ae3-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
+# <a name="gridsplitter"></a><span data-ttu-id="d10b2-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="d10b2-102">GridSplitter</span></span>
+<span data-ttu-id="d10b2-103">Die <xref:System.Windows.Controls.GridSplitter> Leeraum zwischen Spalten oder Zeilen mit einem <xref:System.Windows.Controls.Grid> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="d10b2-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="86ae3-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="86ae3-104">In This Section</span></span>  
- [<span data-ttu-id="86ae3-105">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="86ae3-105">How-to Topics</span></span>](gridsplitter-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d10b2-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d10b2-104">In This Section</span></span>  
+ [<span data-ttu-id="d10b2-105">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="d10b2-105">How-to Topics</span></span>](gridsplitter-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="86ae3-106">Referenz</span><span class="sxs-lookup"><span data-stu-id="86ae3-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d10b2-106">Referenz</span><span class="sxs-lookup"><span data-stu-id="d10b2-106">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
-## <a name="related-sections"></a><span data-ttu-id="86ae3-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="86ae3-107">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d10b2-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d10b2-107">Related Sections</span></span>

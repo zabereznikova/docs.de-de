@@ -8,24 +8,24 @@ helpviewer_keywords:
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
 ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962475"
 ---
-# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="12064-102">Gewusst-wie-Themen zu Elementstruktur und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="12064-102">Element Tree and Serialization How-to Topics</span></span>
-<span data-ttu-id="12064-103">Die Themen in diesem Abschnitt wird beschrieben, wie die WPF-Elementstruktur verwendet.</span><span class="sxs-lookup"><span data-stu-id="12064-103">The topics in this section describe how to use the WPF element tree.</span></span>  
+# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="23635-102">Gewusst-wie-Themen zu Elementstruktur und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="23635-102">Element Tree and Serialization How-to Topics</span></span>
+<span data-ttu-id="23635-103">Die Themen in diesem Abschnitt wird beschrieben, wie die WPF-Elementstruktur verwendet.</span><span class="sxs-lookup"><span data-stu-id="23635-103">The topics in this section describe how to use the WPF element tree.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="12064-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="12064-104">In This Section</span></span>  
- [<span data-ttu-id="12064-105">Suchen nach einem Element anhand des Namens</span><span class="sxs-lookup"><span data-stu-id="12064-105">Find an Element by Its Name</span></span>](how-to-find-an-element-by-its-name.md)  
- [<span data-ttu-id="12064-106">Überschreiben der logischen Struktur</span><span class="sxs-lookup"><span data-stu-id="12064-106">Override the Logical Tree</span></span>](how-to-override-the-logical-tree.md)  
+## <a name="in-this-section"></a><span data-ttu-id="23635-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="23635-104">In This Section</span></span>  
+ [<span data-ttu-id="23635-105">Suchen nach einem Element anhand des Namens</span><span class="sxs-lookup"><span data-stu-id="23635-105">Find an Element by Its Name</span></span>](how-to-find-an-element-by-its-name.md)  
+ [<span data-ttu-id="23635-106">Überschreiben der logischen Struktur</span><span class="sxs-lookup"><span data-stu-id="23635-106">Override the Logical Tree</span></span>](how-to-override-the-logical-tree.md)  
   
-## <a name="reference"></a><span data-ttu-id="12064-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="12064-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="23635-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="23635-107">Reference</span></span>  
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
  <xref:System.Windows.Markup>  
   
-## <a name="related-sections"></a><span data-ttu-id="12064-108">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="12064-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="23635-108">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="23635-108">Related Sections</span></span>

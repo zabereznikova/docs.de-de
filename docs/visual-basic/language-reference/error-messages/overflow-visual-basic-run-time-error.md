@@ -5,26 +5,26 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946548"
 ---
-# <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="88ab2-102">Überlauf (Visual Basic-Laufzeitfehler)</span><span class="sxs-lookup"><span data-stu-id="88ab2-102">Overflow (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="88ab2-103">Ein Überlauf tritt beim Versuch, einer Zuordnung, die die Grenzen des Ziels für die Zuweisung des überschreitet.</span><span class="sxs-lookup"><span data-stu-id="88ab2-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
+# <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="77dac-102">Überlauf (Visual Basic-Laufzeitfehler)</span><span class="sxs-lookup"><span data-stu-id="77dac-102">Overflow (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="77dac-103">Ein Überlauf tritt beim Versuch, einer Zuordnung, die die Grenzen des Ziels für die Zuweisung des überschreitet.</span><span class="sxs-lookup"><span data-stu-id="77dac-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="88ab2-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="88ab2-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="77dac-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="77dac-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="88ab2-105">Stellen Sie sicher, dass die Ergebnisse von Zuweisungen, Berechnungen und den Datentyp Konvertierungen sind nicht zu groß, um innerhalb des Bereichs von Variablen, die für diese Art von Wert zulässigen dargestellt werden, und weisen Sie den Wert einer Variablen eines Typs, die eine größere Anzahl von Werten enthalten kann , falls erforderlich.</span><span class="sxs-lookup"><span data-stu-id="88ab2-105">Make sure that results of assignments, calculations, and data type conversions are not too large to be represented within the range of variables allowed for that type of value, and assign the value to a variable of a type that can hold a larger range of values, if necessary.</span></span>  
+1. <span data-ttu-id="77dac-105">Stellen Sie sicher, dass die Ergebnisse von Zuweisungen, Berechnungen und den Datentyp Konvertierungen sind nicht zu groß, um innerhalb des Bereichs von Variablen, die für diese Art von Wert zulässigen dargestellt werden, und weisen Sie den Wert einer Variablen eines Typs, die eine größere Anzahl von Werten enthalten kann , falls erforderlich.</span><span class="sxs-lookup"><span data-stu-id="77dac-105">Make sure that results of assignments, calculations, and data type conversions are not too large to be represented within the range of variables allowed for that type of value, and assign the value to a variable of a type that can hold a larger range of values, if necessary.</span></span>  
   
-2. <span data-ttu-id="88ab2-106">Stellen Sie sicher, dass Zuweisungen zu Eigenschaften des Bereichs von der Eigenschaft entsprechen, die sie vorgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="88ab2-106">Make sure assignments to properties fit the range of the property to which they are made.</span></span>  
+2. <span data-ttu-id="77dac-106">Stellen Sie sicher, dass Zuweisungen zu Eigenschaften des Bereichs von der Eigenschaft entsprechen, die sie vorgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="77dac-106">Make sure assignments to properties fit the range of the property to which they are made.</span></span>  
   
-3. <span data-ttu-id="88ab2-107">Stellen Sie sicher, dass Zahlen, die in Berechnungen, die in Zahlen umgewandelt werden, verwendet keine Ergebnisse, die größer als ganze Zahlen.</span><span class="sxs-lookup"><span data-stu-id="88ab2-107">Make sure that numbers used in calculations that are coerced into integers do not have results larger than integers.</span></span>  
+3. <span data-ttu-id="77dac-107">Stellen Sie sicher, dass Zahlen, die in Berechnungen, die in Zahlen umgewandelt werden, verwendet keine Ergebnisse, die größer als ganze Zahlen.</span><span class="sxs-lookup"><span data-stu-id="77dac-107">Make sure that numbers used in calculations that are coerced into integers do not have results larger than integers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88ab2-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="88ab2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77dac-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="77dac-108">See also</span></span>
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
-- [<span data-ttu-id="88ab2-109">Datentypen</span><span class="sxs-lookup"><span data-stu-id="88ab2-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="88ab2-110">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="88ab2-110">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="77dac-109">Datentypen</span><span class="sxs-lookup"><span data-stu-id="77dac-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="77dac-110">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="77dac-110">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
