@@ -9,11 +9,11 @@ ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000440"
 ---
 # <a name="profiling-structures"></a>Profilerstellungsstrukturen
 In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die Profilerstellungs-API verwendet.  
@@ -23,7 +23,7 @@ In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die
  Liefert der Common Language Runtime Informationen über einen Assemblyverweis, der beachtet werden muss, wenn ein Assemblyverweis-Abschlussdurchlauf durchgeführt wird.  
   
  [COR_PRF_CODE_INFO-Struktur](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
- Stellt einen zusammenhängenden Block von im Speicher befindlichem nativen Code dar.  
+ Stellt einen zusammenhängenden Block von im Speicher befindlichem systemeigenem Code dar.  
   
  [COR_PRF_EX_CLAUSE_INFO-Struktur](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
  Speichert Informationen über eine bestimmte Instanz einer Ausnahmeklausel und deren zugeordneten Rahmen.  

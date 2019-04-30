@@ -3,24 +3,24 @@ title: Erneutes Hosten von Designern
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005228"
 ---
 # <a name="designer-rehosting"></a>Erneutes Hosten von Designern
 Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das Hosting des Entwurfszeichnungsbereichs des Workflows in einer benutzerdefinierten Anwendung bezieht. Die Hostinganwendung, mit der die meisten Personen vertraut sind, ist Visual Studio, es gibt jedoch eine Reihe von Szenarien, in denen das Anzeigen des Workflow-Designers in einer Anwendung hilfreich sein kann:  
   
--   Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).  
+- Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).  
   
--   Anwendungen, die es einem Benutzer ermöglichen, den Prozess mit einem beschränkten Satz von Aktivitäten anzupassen.  
+- Anwendungen, die es einem Benutzer ermöglichen, den Prozess mit einem beschränkten Satz von Aktivitäten anzupassen.  
   
  Zur Unterstützung dieser Anwendungstypen wird der Workflow-Designer als Bestandteil von .NET Framework ausgeliefert und kann in einer WPF-Anwendung oder in einer WinForms-Anwendung mit dem entsprechenden WPF-Hostingcode gehostet werden. Dieses Beispiel veranschaulicht Folgendes:  
   
--   Erneutes Hosten des Workflow-Designers  
+- Erneutes Hosten des Workflow-Designers  
   
--   Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.  
+- Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.  
   
 ## <a name="rehosting-the-designer"></a>Erneutes Hosten des Workflow-Designers  
  In diesem Beispiel wird veranschaulicht, wie das WPF-Layout so erstellt wird, dass es den Designer enthält, wie im folgenden Rasterlayout dargestellt (der Toolboxcode wurde aus Platzgründen weggelassen). Beachten Sie die Benennung der Rahmen, die den Designer und das Eigenschaftenraster enthalten.  

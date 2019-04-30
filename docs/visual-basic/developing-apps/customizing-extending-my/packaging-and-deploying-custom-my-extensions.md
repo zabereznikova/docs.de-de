@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014205"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen (Visual Basic)
 

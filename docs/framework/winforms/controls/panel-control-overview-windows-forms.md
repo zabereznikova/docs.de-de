@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012684"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Übersicht über das Panel-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> Steuerelemente werden verwendet, um eine erkennbare Gruppierung für andere Steuerelemente bereitzustellen. In der Regel verwenden Sie Bereiche unterteilen Sie eine Form von Funktion. Sie möglicherweise z. B. ein Bestellformular, der angibt, e-Mail-Optionen wie z. B. welche über Nacht Netzbetreiber verwenden. Gruppieren alle Optionen in einem Panel erhält der Benutzer, einen logische, visuellen Hinweis auf. Zur Entwurfszeit Zeit alle Steuerelemente problemlos verschoben werden können, beim Verschieben der <xref:System.Windows.Forms.Panel> alle darin enthaltenen Steuerelemente zu verschieben, zu steuern. Können Sie über die Steuerelemente in einem Panel gruppiert zugreifen seine <xref:System.Windows.Forms.Control.Controls%2A> Eigenschaft. Diese Eigenschaft gibt eine Auflistung von <xref:System.Windows.Forms.Control> Instanzen, weshalb Sie in der Regel werden ein Steuerelement umgewandelt abgerufen dadurch in den spezifischen Typ.  

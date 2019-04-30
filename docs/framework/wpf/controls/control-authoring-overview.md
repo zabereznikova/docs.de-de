@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017682"
 ---
 # <a name="control-authoring-overview"></a>Übersicht über das Erstellen von Steuerelementen
 Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Steuerelementmodells ist das Erstellen neuer Steuerelemente nur selten erforderlich. In bestimmten Fällen lässt sich das Erstellen benutzerdefinierter Steuerelemente dennoch nicht vermeiden. In diesem Thema werden die Funktionen, dank deren Sie auf das Erstellen neuer Steuerelementen in den meisten Fällen verzichten können, sowie verschiedene Modelle zum Erstellen von Steuerelementen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] behandelt. Außerdem wird in diesem Thema auch das Erstellen eines neuen Steuerelements veranschaulicht.  
@@ -22,18 +22,18 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternativen zum Erstellen eines neuen Steuerelements  
  In der Vergangenheit waren Sie bei der Anpassung eines vorhandenen Steuerelements auf die Bearbeitung seiner Standardeigenschaften beschränkt. Sie konnten z.B. die Hintergrundfarbe, die Rahmenbreite sowie die Schriftgröße ändern. Falls Sie die Darstellung oder das Verhalten eines Steuerelements über diese vordefinierten Parameter hinaus erweitern wollten, waren Sie auf das Erstellen eines neuen Steuerelements angewiesen. Die übliche Vorgehensweise war die Vererbung von einem vorhandenen Steuerelement samt der Überschreibung der für das Zeichnen des Steuerelements zuständigen Methode.  Diese Option steht Ihnen zwar weiterhin zur Verfügung, mit dem reichen Inhaltsmodel von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sowie seinen Stilen, Vorlagen und Triggern können Sie jedoch die vorhandenen Steuerelemente auf eine vielfältige Art und Weise anzupassen. In der folgenden Liste finden Sie Beispiele für die Verwendung dieser Funktionen zum Erstellen einer benutzerdefinierten und konsistenten Umgebung, ohne ein neues Steuerelement erstellen zu müssen.  
   
--   **Multimediainhalte.** Viele [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Standardsteuerelemente unterstützen Multimediainhalte. Z. B. die Content-Eigenschaft von einem <xref:System.Windows.Controls.Button> ist vom Typ <xref:System.Object>, theoretisch alles angezeigt werden kann, auf eine <xref:System.Windows.Controls.Button>.  Um eine Schaltfläche ein Bild und Text angezeigt haben, können Sie ein Bild hinzufügen und eine <xref:System.Windows.Controls.TextBlock> auf eine <xref:System.Windows.Controls.StackPanel> und weisen Sie die <xref:System.Windows.Controls.StackPanel> auf die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft. Da die Steuerelemente visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elemente sowie beliebige Daten anzeigen können, ist es zwecks der Unterstützung einer komplexen Visualisierung selten notwendig, neue Steuerelemente zu erstellen oder vorhandene Steuerelemente zu ändern. Weitere Informationen über das Inhaltsmodell für <xref:System.Windows.Controls.Button> und andere Inhalte Modelle im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter [WPF-Inhaltsmodell](wpf-content-model.md).  
+- **Multimediainhalte.** Viele [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Standardsteuerelemente unterstützen Multimediainhalte. Z. B. die Content-Eigenschaft von einem <xref:System.Windows.Controls.Button> ist vom Typ <xref:System.Object>, theoretisch alles angezeigt werden kann, auf eine <xref:System.Windows.Controls.Button>.  Um eine Schaltfläche ein Bild und Text angezeigt haben, können Sie ein Bild hinzufügen und eine <xref:System.Windows.Controls.TextBlock> auf eine <xref:System.Windows.Controls.StackPanel> und weisen Sie die <xref:System.Windows.Controls.StackPanel> auf die <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft. Da die Steuerelemente visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elemente sowie beliebige Daten anzeigen können, ist es zwecks der Unterstützung einer komplexen Visualisierung selten notwendig, neue Steuerelemente zu erstellen oder vorhandene Steuerelemente zu ändern. Weitere Informationen über das Inhaltsmodell für <xref:System.Windows.Controls.Button> und andere Inhalte Modelle im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter [WPF-Inhaltsmodell](wpf-content-model.md).  
   
--   **Stile.** Ein <xref:System.Windows.Style> ist eine Sammlung von Werten, die Eigenschaften für ein Steuerelement darstellen. Mit Stilen können Sie eine wiederverwendbare Darstellung der erwünschten Gestaltung und des erwünschten Verhaltens der Steuerelemente erstellen, ohne ein neues Steuerelement erstellen zu müssen. Nehmen wir beispielsweise an, dass Sie alle möchten Ihre <xref:System.Windows.Controls.TextBlock> Steuerelemente roten der Schriftart Arial mit Schriftgrad 14 aufweisen. Sie können einen Stil als eine Ressource anlegen und die jeweiligen Eigenschaften entsprechend festlegen. Und dann jede <xref:System.Windows.Controls.TextBlock> , dass Sie Ihre Anwendung hinzufügen, werden die gleiche Darstellung aufweisen.  
+- **Stile.** Ein <xref:System.Windows.Style> ist eine Sammlung von Werten, die Eigenschaften für ein Steuerelement darstellen. Mit Stilen können Sie eine wiederverwendbare Darstellung der erwünschten Gestaltung und des erwünschten Verhaltens der Steuerelemente erstellen, ohne ein neues Steuerelement erstellen zu müssen. Nehmen wir beispielsweise an, dass Sie alle möchten Ihre <xref:System.Windows.Controls.TextBlock> Steuerelemente roten der Schriftart Arial mit Schriftgrad 14 aufweisen. Sie können einen Stil als eine Ressource anlegen und die jeweiligen Eigenschaften entsprechend festlegen. Und dann jede <xref:System.Windows.Controls.TextBlock> , dass Sie Ihre Anwendung hinzufügen, werden die gleiche Darstellung aufweisen.  
   
--   **Datenvorlagen.** Ein <xref:System.Windows.DataTemplate> können Sie anpassen, wie Daten in einem Steuerelement angezeigt werden. Z. B. eine <xref:System.Windows.DataTemplate> kann verwendet werden, um anzugeben, wie Daten in angezeigt werden eine <xref:System.Windows.Controls.ListBox>.  Weitere Beispiele finden Sie unter [Übersicht über Datenvorlagen](../data/data-templating-overview.md).  Zusätzlich zur Anpassung der Darstellung von Daten, eine <xref:System.Windows.DataTemplate> können Elemente der Benutzeroberfläche umfassen die bietet Ihnen ein hohes Maß an Flexibilität in benutzerdefinierte Benutzeroberflächen.  Z. B. durch Verwendung einer <xref:System.Windows.DataTemplate>, können Sie erstellen eine <xref:System.Windows.Controls.ComboBox> in dem jedes Element ein Kontrollkästchen enthält.  
+- **Datenvorlagen.** Ein <xref:System.Windows.DataTemplate> können Sie anpassen, wie Daten in einem Steuerelement angezeigt werden. Z. B. eine <xref:System.Windows.DataTemplate> kann verwendet werden, um anzugeben, wie Daten in angezeigt werden eine <xref:System.Windows.Controls.ListBox>.  Weitere Beispiele finden Sie unter [Übersicht über Datenvorlagen](../data/data-templating-overview.md).  Zusätzlich zur Anpassung der Darstellung von Daten, eine <xref:System.Windows.DataTemplate> können Elemente der Benutzeroberfläche umfassen die bietet Ihnen ein hohes Maß an Flexibilität in benutzerdefinierte Benutzeroberflächen.  Z. B. durch Verwendung einer <xref:System.Windows.DataTemplate>, können Sie erstellen eine <xref:System.Windows.Controls.ComboBox> in dem jedes Element ein Kontrollkästchen enthält.  
   
--   **Steuerelementvorlagen.** Viele Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwenden eine <xref:System.Windows.Controls.ControlTemplate> definieren die Struktur des Steuerelements und die Darstellung der getrennt von der Darstellung eines Steuerelements über die Funktionalität des Steuerelements. Sie können die Darstellung eines Steuerelements erheblich ändern, durch Neudefinieren der <xref:System.Windows.Controls.ControlTemplate>.  Nehmen wir z.B. an, dass Sie ein Steuerelement wie eine Ampel aussehen lassen möchten. Dieses Steuerelement hat eine einfache Benutzeroberfläche und Funktionalität.  Das Steuerelement besteht aus drei Kreisen, von denen jeweils nur ein einziger leuchten kann. Nach einiger Überlegung stellen Sie fest, die eine <xref:System.Windows.Controls.RadioButton> bietet die Funktionalität der nur eine zeilenweise, aber die standarddarstellung der ausgewählten der <xref:System.Windows.Controls.RadioButton> nichts sieht die Lichter an eine Ampel.  Da die <xref:System.Windows.Controls.RadioButton> eine Steuerelementvorlage verwendet, um seine Darstellung zu definieren ist einfach neu definieren die <xref:System.Windows.Controls.ControlTemplate> auf die Anforderungen an das Steuerelement, und Optionsfelder Ampel darstellen lassen.  
+- **Steuerelementvorlagen.** Viele Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwenden eine <xref:System.Windows.Controls.ControlTemplate> definieren die Struktur des Steuerelements und die Darstellung der getrennt von der Darstellung eines Steuerelements über die Funktionalität des Steuerelements. Sie können die Darstellung eines Steuerelements erheblich ändern, durch Neudefinieren der <xref:System.Windows.Controls.ControlTemplate>.  Nehmen wir z.B. an, dass Sie ein Steuerelement wie eine Ampel aussehen lassen möchten. Dieses Steuerelement hat eine einfache Benutzeroberfläche und Funktionalität.  Das Steuerelement besteht aus drei Kreisen, von denen jeweils nur ein einziger leuchten kann. Nach einiger Überlegung stellen Sie fest, die eine <xref:System.Windows.Controls.RadioButton> bietet die Funktionalität der nur eine zeilenweise, aber die standarddarstellung der ausgewählten der <xref:System.Windows.Controls.RadioButton> nichts sieht die Lichter an eine Ampel.  Da die <xref:System.Windows.Controls.RadioButton> eine Steuerelementvorlage verwendet, um seine Darstellung zu definieren ist einfach neu definieren die <xref:System.Windows.Controls.ControlTemplate> auf die Anforderungen an das Steuerelement, und Optionsfelder Ampel darstellen lassen.  
   
     > [!NOTE]
     >  Obwohl eine <xref:System.Windows.Controls.RadioButton> können eine <xref:System.Windows.DataTemplate>, <xref:System.Windows.DataTemplate> reicht nicht aus, in diesem Beispiel.  Die <xref:System.Windows.DataTemplate> definiert die Darstellung des Inhalts eines Steuerelements. Im Fall von einem <xref:System.Windows.Controls.RadioButton>, den Inhalt handelt, was auf der rechten Seite des Kreises angezeigt wird, der angibt, ob die <xref:System.Windows.Controls.RadioButton> ausgewählt ist.  Im Beispiel mit der Ampel brauchen Sie lediglich das Optionsfeld als einen Kreis darzustellen, das „aufleuchten“ kann. Da die Notwendigkeit der Darstellung der Ampel sich die standarddarstellung ist das <xref:System.Windows.Controls.RadioButton>, es ist erforderlich, neu definieren die <xref:System.Windows.Controls.ControlTemplate>.  Im Allgemeinen eine <xref:System.Windows.DataTemplate> dient zum Definieren der Inhalte oder Daten, ein Steuerelement und einen <xref:System.Windows.Controls.ControlTemplate> dient zum Definieren der Struktur eines Steuerelements ist.  
   
--   **Trigger.** Ein <xref:System.Windows.Trigger> können Sie das Aussehen und Verhalten eines Steuerelements dynamisch ändern, ohne ein neues Steuerelement erstellen zu müssen. Nehmen wir beispielsweise an, Sie verfügen über mehrere <xref:System.Windows.Controls.ListBox> -Steuerelemente in Ihrer Anwendung und möchten Sie die Elemente in jedem <xref:System.Windows.Controls.ListBox> fett und Rot sein, wenn sie ausgewählt werden. Möglicherweise zuerst eine Klasse erstellen, die von erbt <xref:System.Windows.Controls.ListBox> und überschreiben die <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> Methode so ändern Sie die Darstellung des ausgewählten Elements ist jedoch ein besserer Ansatz besteht darin, einen Trigger hinzugefügt haben, einem Stil ein <xref:System.Windows.Controls.ListBoxItem> , die die Darstellung der Änderungen das ausgewählte Element. Mit Triggern können Sie Eigenschaftswerte bearbeiten oder basierend auf den Eigenschaftswerten Aktionen ausführen. Ein <xref:System.Windows.EventTrigger> ermöglicht es Ihnen, Aktionen, wenn ein Ereignis auftritt.  
+- **Trigger.** Ein <xref:System.Windows.Trigger> können Sie das Aussehen und Verhalten eines Steuerelements dynamisch ändern, ohne ein neues Steuerelement erstellen zu müssen. Nehmen wir beispielsweise an, Sie verfügen über mehrere <xref:System.Windows.Controls.ListBox> -Steuerelemente in Ihrer Anwendung und möchten Sie die Elemente in jedem <xref:System.Windows.Controls.ListBox> fett und Rot sein, wenn sie ausgewählt werden. Möglicherweise zuerst eine Klasse erstellen, die von erbt <xref:System.Windows.Controls.ListBox> und überschreiben die <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> Methode so ändern Sie die Darstellung des ausgewählten Elements ist jedoch ein besserer Ansatz besteht darin, einen Trigger hinzugefügt haben, einem Stil ein <xref:System.Windows.Controls.ListBoxItem> , die die Darstellung der Änderungen das ausgewählte Element. Mit Triggern können Sie Eigenschaftswerte bearbeiten oder basierend auf den Eigenschaftswerten Aktionen ausführen. Ein <xref:System.Windows.EventTrigger> ermöglicht es Ihnen, Aktionen, wenn ein Ereignis auftritt.  
   
  Weitere Informationen zu Stilen, Vorlagen und Triggern finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).  
   
@@ -51,11 +51,11 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 #### <a name="benefits-of-deriving-from-usercontrol"></a>Vorteile des Ableitens von UserControl  
  Erwägen Sie eine Ableitung von <xref:System.Windows.Controls.UserControl> wenn Folgendes zutrifft:  
   
--   Sie möchten das Steuerelement auf eine ähnliche Art und Weise erstellen, wie Sie Ihre Anwendung erstellt haben.  
+- Sie möchten das Steuerelement auf eine ähnliche Art und Weise erstellen, wie Sie Ihre Anwendung erstellt haben.  
   
--   Ihr Steuerelement besteht ausschließlich aus vorhandenen Komponenten.  
+- Ihr Steuerelement besteht ausschließlich aus vorhandenen Komponenten.  
   
--   Es muss keine komplexe Anpassung unterstützt werden.  
+- Es muss keine komplexe Anpassung unterstützt werden.  
   
 ### <a name="deriving-from-control"></a>Ableiten von Control  
  Ableiten von der <xref:System.Windows.Controls.Control> -Klasse ist das Modell, das meisten der vorhandenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente. Wenn Sie ein Steuerelement erstellen, erbt die <xref:System.Windows.Controls.Control> -Klasse, definieren Sie seine Darstellung mithilfe von Vorlagen. Dadurch trennen Sie die Funktionslogik von der visuellen Darstellung. Sie können auch sicherstellen, die Entkopplung von der Benutzeroberfläche und Logik mithilfe der Befehle und Bindungen anstelle von Ereignissen und vermeiden Verweise auf Elemente in der <xref:System.Windows.Controls.ControlTemplate> wann immer möglich.  Wenn die Benutzeroberfläche und die Logik Ihres Steuerelements korrekt entkoppelt ist, kann ein Benutzer des Steuerelements des Steuerelements redefine <xref:System.Windows.Controls.ControlTemplate> um ihre Darstellung anzupassen. Obwohl das Erstellen einer benutzerdefinierten <xref:System.Windows.Controls.Control> ist nicht so einfach wie das Erstellen von einer <xref:System.Windows.Controls.UserControl>, eine benutzerdefinierte <xref:System.Windows.Controls.Control> bietet die größte Flexibilität.  
@@ -63,9 +63,9 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 #### <a name="benefits-of-deriving-from-control"></a>Vorteile des Ableitens von Control  
  Erwägen Sie eine Ableitung von <xref:System.Windows.Controls.Control> anstelle der <xref:System.Windows.Controls.UserControl> Klasse, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Die Darstellung des Steuerelements über anpassbar sein sollen die <xref:System.Windows.Controls.ControlTemplate>.  
+- Die Darstellung des Steuerelements über anpassbar sein sollen die <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Das Steuerelement soll verschiedene Designs unterstützen.  
+- Das Steuerelement soll verschiedene Designs unterstützen.  
   
 ### <a name="deriving-from-frameworkelement"></a>Ableitung von FrameworkElement  
  Steuerelemente, die abgeleitet <xref:System.Windows.Controls.UserControl> oder <xref:System.Windows.Controls.Control> basieren auf dem Zusammensetzen vorhandener Elemente. In vielen Fällen ist es sich hierbei um eine akzeptable Lösung, da jedes Objekt, das von erbt <xref:System.Windows.FrameworkElement> kann eine <xref:System.Windows.Controls.ControlTemplate>. Es gibt jedoch Situationen, in denen die Darstellung eines Steuerelements mehr als die Funktionalität einer einfachen Elementzusammensetzung erfordert. Wenn Sie eine Komponente für diese Szenarien auf <xref:System.Windows.FrameworkElement> ist die richtige Wahl.  
@@ -75,11 +75,11 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Vorteile der Ableitung von FrameworkElement  
  Erwägen Sie eine Ableitung von <xref:System.Windows.FrameworkElement> Wenn einer der folgenden Bedingungen zutrifft:  
   
--   Sie brauchen eine genaue Steuerung der Darstellung Ihres Steuerelements, die darüber hinausgeht, was mit einer einfachen Elementzusammensetzung möglich ist.  
+- Sie brauchen eine genaue Steuerung der Darstellung Ihres Steuerelements, die darüber hinausgeht, was mit einer einfachen Elementzusammensetzung möglich ist.  
   
--   Sie möchten die Darstellung Ihres Steuerelements definieren, indem Sie Ihre eigene Renderinglogik definieren.  
+- Sie möchten die Darstellung Ihres Steuerelements definieren, indem Sie Ihre eigene Renderinglogik definieren.  
   
--   Sie möchten vorhandene Elemente in einer Weise neu zu erstellen, die Möglichkeiten hinausgehen <xref:System.Windows.Controls.UserControl> und <xref:System.Windows.Controls.Control>.  
+- Sie möchten vorhandene Elemente in einer Weise neu zu erstellen, die Möglichkeiten hinausgehen <xref:System.Windows.Controls.UserControl> und <xref:System.Windows.Controls.Control>.  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>Grundlagen des Erstellens von Steuerelementen  
@@ -88,33 +88,33 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 ### <a name="use-dependency-properties"></a>Verwenden von Abhängigkeitseigenschaften  
  Falls es sich bei einer Eigenschaft um eine Abhängigkeitseigenschaft handelt, können Sie folgendermaßen vorgehen:  
   
--   Die Eigenschaft in einem Stil festlegen.  
+- Die Eigenschaft in einem Stil festlegen.  
   
--   Die Eigenschaft an eine Datenquelle binden.  
+- Die Eigenschaft an eine Datenquelle binden.  
   
--   Eine dynamische Ressource als den Wert der Eigenschaft verwenden.  
+- Eine dynamische Ressource als den Wert der Eigenschaft verwenden.  
   
--   Die Eigenschaft animieren.  
+- Die Eigenschaft animieren.  
   
  Falls Sie möchten, dass eine Eigenschaft Ihres Steuerelements eine dieser Funktionen unterstützt, sollten Sie die Eigenschaft als eine Abhängigkeitseigenschaft implementieren. Im folgenden Beispiel wird eine Abhängigkeitseigenschaft mit dem Namen `Value` wie folgt definiert:  
   
--   Definieren einer <xref:System.Windows.DependencyProperty> Bezeichner, die mit dem Namen `ValueProperty` als eine `public` `static` `readonly` Feld.  
+- Definieren einer <xref:System.Windows.DependencyProperty> Bezeichner, die mit dem Namen `ValueProperty` als eine `public` `static` `readonly` Feld.  
   
--   Der Eigenschaftenname im Eigenschaftensystem registriert, durch den Aufruf <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, um Folgendes anzugeben:  
+- Der Eigenschaftenname im Eigenschaftensystem registriert, durch den Aufruf <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, um Folgendes anzugeben:  
   
-    -   Den Namen der Eigenschaft.  
+    - Den Namen der Eigenschaft.  
   
-    -   Den Typ der Eigenschaft.  
+    - Den Typ der Eigenschaft.  
   
-    -   Den Typ, der die Eigenschaft besitzt.  
+    - Den Typ, der die Eigenschaft besitzt.  
   
-    -   Die Metadaten für die Eigenschaft. Die Metadaten enthält den Wert der Eigenschaft standardmäßig, eine <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>.  
+    - Die Metadaten für die Eigenschaft. Die Metadaten enthält den Wert der Eigenschaft standardmäßig, eine <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>.  
   
--   Eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Wrappereigenschaft mit dem Namen `Value` wird definiert. Es ist der gleiche Name, mit dem die Abhängigkeitseigenschaft registriert wurde, indem die `get` und `set` Zugriffmethoden der Eigenschaft implementiert wurden. Beachten Sie, dass die `get` und `set` Accessoren nur rufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> bzw. Es wird empfohlen, dass die zugriffmethoden von Abhängigkeitseigenschaften keine zusätzlichen Logik enthalten, da Clients und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umgehen können, der Accessoren und rufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt. Falls eine Eigenschaft z.B. an eine Datenquelle gebunden ist, wird die `set`-Zugriffmethode der Eigenschaft nicht aufgerufen.  Anstatt zum Hinzufügen von zusätzlichen Logik zu Get und set-Accessor, verwenden Sie die <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, und <xref:System.Windows.PropertyChangedCallback> Delegaten zu reagieren bzw. Überprüfen Sie den Wert ein, wenn sich diese ändern.  Weitere Informationen zu diesen Rückrufen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../advanced/dependency-property-callbacks-and-validation.md).  
+- Eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Wrappereigenschaft mit dem Namen `Value` wird definiert. Es ist der gleiche Name, mit dem die Abhängigkeitseigenschaft registriert wurde, indem die `get` und `set` Zugriffmethoden der Eigenschaft implementiert wurden. Beachten Sie, dass die `get` und `set` Accessoren nur rufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> bzw. Es wird empfohlen, dass die zugriffmethoden von Abhängigkeitseigenschaften keine zusätzlichen Logik enthalten, da Clients und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umgehen können, der Accessoren und rufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt. Falls eine Eigenschaft z.B. an eine Datenquelle gebunden ist, wird die `set`-Zugriffmethode der Eigenschaft nicht aufgerufen.  Anstatt zum Hinzufügen von zusätzlichen Logik zu Get und set-Accessor, verwenden Sie die <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, und <xref:System.Windows.PropertyChangedCallback> Delegaten zu reagieren bzw. Überprüfen Sie den Wert ein, wenn sich diese ändern.  Weitere Informationen zu diesen Rückrufen finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../advanced/dependency-property-callbacks-and-validation.md).  
   
--   Definieren Sie eine Methode für die <xref:System.Windows.CoerceValueCallback> mit dem Namen `CoerceValue`. `CoerceValue` stellt sicher, dass `Value` größer oder gleich `MinValue` und kleiner oder gleich `MaxValue` ist.  
+- Definieren Sie eine Methode für die <xref:System.Windows.CoerceValueCallback> mit dem Namen `CoerceValue`. `CoerceValue` stellt sicher, dass `Value` größer oder gleich `MinValue` und kleiner oder gleich `MaxValue` ist.  
   
--   Definieren Sie eine Methode für die <xref:System.Windows.PropertyChangedCallback>mit dem Namen `OnValueChanged`. `OnValueChanged` erstellt eine <xref:System.Windows.RoutedPropertyChangedEventArgs%601> -Objekt und bereitet Sie zum Auslösen der `ValueChanged` Routingereignis. Routingereignisse werden im nächsten Abschnitt erläutert.  
+- Definieren Sie eine Methode für die <xref:System.Windows.PropertyChangedCallback>mit dem Namen `OnValueChanged`. `OnValueChanged` erstellt eine <xref:System.Windows.RoutedPropertyChangedEventArgs%601> -Objekt und bereitet Sie zum Auslösen der `ValueChanged` Routingereignis. Routingereignisse werden im nächsten Abschnitt erläutert.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 ### <a name="use-routed-events"></a>Verwenden von Routingereignissen  
  Ebenso wie Abhängigkeitseigenschaften, die das Konzept der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Eigenschaften um zusätzliche Funktionen erweitern, erweitern Routingereignisse das Konzept der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignisse. Beim Erstellen eines neuen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelements empfiehlt es sich, Ihr Ereignis als ein Routingereignis zu implementieren, da Routingereignisse folgendes Verhalten unterstützen:  
   
--   Ereignisse für mehrere Steuerelemente können über ein übergeordnetes Steuerelement behandelt werden. Falls es sich bei dem Ereignis um ein Bubbling-Ereignis handelt, kann ein einzelnes übergeordnetes Element in der Elementstruktur das Ereignis abonnieren. Anschließend können Anwendungsentwickler mit einem Handler auf das Ereignis mehrerer Steuerelemente reagieren. Z. B., wenn das Steuerelement wird von jedem Element in einer <xref:System.Windows.Controls.ListBox> (weil es in enthalten ist ein <xref:System.Windows.DataTemplate>), der Anwendungsentwickler kann den Ereignishandler für das-Ereignis des Steuerelements definieren, auf die <xref:System.Windows.Controls.ListBox>. Beim Auftreten des Ereignisses bei einem der Steuerelemente wird der Ereignishandler aufgerufen.  
+- Ereignisse für mehrere Steuerelemente können über ein übergeordnetes Steuerelement behandelt werden. Falls es sich bei dem Ereignis um ein Bubbling-Ereignis handelt, kann ein einzelnes übergeordnetes Element in der Elementstruktur das Ereignis abonnieren. Anschließend können Anwendungsentwickler mit einem Handler auf das Ereignis mehrerer Steuerelemente reagieren. Z. B., wenn das Steuerelement wird von jedem Element in einer <xref:System.Windows.Controls.ListBox> (weil es in enthalten ist ein <xref:System.Windows.DataTemplate>), der Anwendungsentwickler kann den Ereignishandler für das-Ereignis des Steuerelements definieren, auf die <xref:System.Windows.Controls.ListBox>. Beim Auftreten des Ereignisses bei einem der Steuerelemente wird der Ereignishandler aufgerufen.  
   
--   Routingereignisse können verwendet werden, eine <xref:System.Windows.EventSetter>, damit Anwendungsentwickler den Handler eines Ereignisses innerhalb eines Stils angeben.  
+- Routingereignisse können verwendet werden, eine <xref:System.Windows.EventSetter>, damit Anwendungsentwickler den Handler eines Ereignisses innerhalb eines Stils angeben.  
   
--   Routingereignisse können verwendet werden, eine <xref:System.Windows.EventTrigger>, dies ist hilfreich zum Animieren von Eigenschaften mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Übersicht über Animation](../graphics-multimedia/animation-overview.md).  
+- Routingereignisse können verwendet werden, eine <xref:System.Windows.EventTrigger>, dies ist hilfreich zum Animieren von Eigenschaften mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Übersicht über Animation](../graphics-multimedia/animation-overview.md).  
   
  Im folgenden Beispiel wird ein Routingereignis wie folgt definiert:  
   
--   Definieren einer <xref:System.Windows.RoutedEvent> Bezeichner, die mit dem Namen `ValueChangedEvent` als eine `public` `static` `readonly` Feld.  
+- Definieren einer <xref:System.Windows.RoutedEvent> Bezeichner, die mit dem Namen `ValueChangedEvent` als eine `public` `static` `readonly` Feld.  
   
--   Registrieren Sie das Routingereignis durch Aufrufen der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> Methode. Im Beispiel gibt die folgenden Informationen an, beim Aufrufen <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- Registrieren Sie das Routingereignis durch Aufrufen der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> Methode. Im Beispiel gibt die folgenden Informationen an, beim Aufrufen <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   Der Name des Ereignisses lautet `ValueChanged`.  
+    - Der Name des Ereignisses lautet `ValueChanged`.  
   
-    -   Die Routingstrategie ist <xref:System.Windows.RoutingStrategy.Bubble>, was bedeutet, dass ein Ereignishandler für die Quelle (das Objekt, das das Ereignis auslöst) zuerst aufgerufen wird, und klicken Sie dann Ereignishandler für den übergeordneten Elementen von der Quelle nacheinander aufgerufen, beginnend mit dem am nächsten Ereignishandler übergeordnetes Element.  
+    - Die Routingstrategie ist <xref:System.Windows.RoutingStrategy.Bubble>, was bedeutet, dass ein Ereignishandler für die Quelle (das Objekt, das das Ereignis auslöst) zuerst aufgerufen wird, und klicken Sie dann Ereignishandler für den übergeordneten Elementen von der Quelle nacheinander aufgerufen, beginnend mit dem am nächsten Ereignishandler übergeordnetes Element.  
   
-    -   Der Typ des ereignishandlers ist <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, erstellte mit einem <xref:System.Decimal> Typ.  
+    - Der Typ des ereignishandlers ist <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, erstellte mit einem <xref:System.Decimal> Typ.  
   
-    -   `NumericUpDown` ist der besitzende Typ des Ereignisses.  
+    - `NumericUpDown` ist der besitzende Typ des Ereignisses.  
   
--   Ein öffentliches Ereignis mit dem Namen `ValueChanged`, das die Zugriffsmethoden-Deklarationen umfasst, wird deklariert. Das Beispiel ruft <xref:System.Windows.UIElement.AddHandler%2A> in die `add` Zugriffsmethoden-Deklaration und <xref:System.Windows.UIElement.RemoveHandler%2A> in die `remove` Zugriffsmethoden-Deklaration mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Ereignisdienste.  
+- Ein öffentliches Ereignis mit dem Namen `ValueChanged`, das die Zugriffsmethoden-Deklarationen umfasst, wird deklariert. Das Beispiel ruft <xref:System.Windows.UIElement.AddHandler%2A> in die `add` Zugriffsmethoden-Deklaration und <xref:System.Windows.UIElement.RemoveHandler%2A> in die `remove` Zugriffsmethoden-Deklaration mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Ereignisdienste.  
   
--   Eine geschützte virtuelle Methode mit dem Namen `OnValueChanged`, die das`ValueChanged`-Ereignis auslöst, wird erstellt.  
+- Eine geschützte virtuelle Methode mit dem Namen `OnValueChanged`, die das`ValueChanged`-Ereignis auslöst, wird erstellt.  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 #### <a name="attached-properties"></a>Angefügte Eigenschaften  
  Angefügte Eigenschaften für benutzerdefinierte Steuerelemente sind unter Einhaltung der folgenden Richtlinien zu implementieren:  
   
--   Haben eine `public` `static` `readonly` <xref:System.Windows.DependencyProperty> des Formulars *PropertyName* `Property` , die erstellt wurde, mithilfe der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode. Der Eigenschaftenname, der an übergebene <xref:System.Windows.DependencyProperty.RegisterAttached%2A> übereinstimmen *PropertyName*.  
+- Haben eine `public` `static` `readonly` <xref:System.Windows.DependencyProperty> des Formulars *PropertyName* `Property` , die erstellt wurde, mithilfe der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode. Der Eigenschaftenname, der an übergebene <xref:System.Windows.DependencyProperty.RegisterAttached%2A> übereinstimmen *PropertyName*.  
   
--   Implementieren Sie die `public` `static` CLR-Methoden mit den Namen `Set` *PropertyName* und `Get` *PropertyName*. Beide Methoden sollten eine von abgeleitete Klasse akzeptieren <xref:System.Windows.DependencyProperty> als das erste Argument. Die `Set`*PropertyName*-Methode akzeptiert auch ein Argument, dessen Typ mit dem registrierten Datentyp der Eigenschaft übereinstimmt. Die `Get`*PropertyName*-Methode sollte einen Wert zurückgeben, der den gleichen Typ aufweist. Falls die `Set`*PropertyName*-Methode fehlt, wird die Eigenschaft als schreibgeschützt gekennzeichnet.  
+- Implementieren Sie die `public` `static` CLR-Methoden mit den Namen `Set` *PropertyName* und `Get` *PropertyName*. Beide Methoden sollten eine von abgeleitete Klasse akzeptieren <xref:System.Windows.DependencyProperty> als das erste Argument. Die `Set`*PropertyName*-Methode akzeptiert auch ein Argument, dessen Typ mit dem registrierten Datentyp der Eigenschaft übereinstimmt. Die `Get`*PropertyName*-Methode sollte einen Wert zurückgeben, der den gleichen Typ aufweist. Falls die `Set`*PropertyName*-Methode fehlt, wird die Eigenschaft als schreibgeschützt gekennzeichnet.  
   
--   `Set` *PropertyName* und `Get` *PropertyName* direkt weiterleiten muss die <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> Zielabhängigkeitsobjekt Methoden für die Ziel-Abhängigkeit. Designer können auf die angefügte Eigenschaft entweder über einen Aufruf des Wrappers für die Methode zugreifen, oder indem sie das Zielabhängigkeitsobjekt direkt aufrufen.  
+- `Set` *PropertyName* und `Get` *PropertyName* direkt weiterleiten muss die <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> Zielabhängigkeitsobjekt Methoden für die Ziel-Abhängigkeit. Designer können auf die angefügte Eigenschaft entweder über einen Aufruf des Wrappers für die Methode zugreifen, oder indem sie das Zielabhängigkeitsobjekt direkt aufrufen.  
   
  Weitere Informationen zu angefügten Eigenschaften finden Sie in der [Übersicht über angefügte Eigenschaften](../advanced/attached-properties-overview.md).  
   

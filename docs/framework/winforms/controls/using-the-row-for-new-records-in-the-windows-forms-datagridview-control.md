@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009169"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms
 Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitung von Daten in Ihrer Anwendung häufig möchten geben Sie Ihren Benutzern die Möglichkeit, neue Zeilen mit Daten im Datenspeicher hinzuzufügen. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt diese Funktion durch die Bereitstellung einer Zeile für neue Datensätze, die immer als letzte Zeile angezeigt wird. Er ist mit einem Sternchen (*) im Zeilenkopf gekennzeichnet. Den folgenden Abschnitten werden einige der Dinge, die Sie berücksichtigen sollten, wenn das Programm mit der Zeile für neue Datensätze aktiviert.  
@@ -29,9 +29,9 @@ Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitu
 ## <a name="the-rows-collection"></a>Die Auflistung von Zeilen  
  Die Zeile für neue Datensätze ist Bestandteil der <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung jedoch verhält sich anders in zweierlei Hinsicht:  
   
--   Die Zeile für neue Datensätze kann nicht entfernt werden, aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung programmgesteuert. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird. Der Benutzer kann nicht auch die Zeile für neue Datensätze gelöscht. Die <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Methode entfernt sich nicht auf diese Zeile aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung.  
+- Die Zeile für neue Datensätze kann nicht entfernt werden, aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung programmgesteuert. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird. Der Benutzer kann nicht auch die Zeile für neue Datensätze gelöscht. Die <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Methode entfernt sich nicht auf diese Zeile aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung.  
   
--   Nach der Zeile für neue Datensätze kann keine Zeile hinzugefügt werden. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird. Daher ist die Zeile für neue Datensätze immer die letzte Zeile in der <xref:System.Windows.Forms.DataGridView> Steuerelement. Die Methoden für <xref:System.Windows.Forms.DataGridViewRowCollection> zum Hinzufügen von Zeilen –<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, und <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>– alle rufen Einfügungsmethoden intern, wenn die Zeile für neue Datensätze vorhanden ist.  
+- Nach der Zeile für neue Datensätze kann keine Zeile hinzugefügt werden. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird. Daher ist die Zeile für neue Datensätze immer die letzte Zeile in der <xref:System.Windows.Forms.DataGridView> Steuerelement. Die Methoden für <xref:System.Windows.Forms.DataGridViewRowCollection> zum Hinzufügen von Zeilen –<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, und <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>– alle rufen Einfügungsmethoden intern, wenn die Zeile für neue Datensätze vorhanden ist.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Visuellen Anpassung der Zeile für neue Datensätze  
  Wenn die Zeile für neue Datensätze erstellt wird, müssen sie basiert auf der Zeile, die gemäß der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> Eigenschaft. Alle Zellstile, die für diese Zeile nicht angegeben werden, werden aus anderen Eigenschaften geerbt. Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  

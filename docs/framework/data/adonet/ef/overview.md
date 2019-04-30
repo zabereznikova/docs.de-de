@@ -3,15 +3,15 @@ title: Übersicht über Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
 ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034063"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist ein Satz von Technologien in ADO.NET, der die Entwicklung datenorientierter Softwareanwendungen unterstützt. Architekten und Entwickler datenorientierter Anwendungen mussten zwei sehr verschiedene Ziele erreichen. Sie mussten die Entitäten, die Beziehungen und die Logik der zu lösenden Geschäftsprobleme modellieren und mit den zum Speichern und Abrufen von Daten verwendeten Datenmodulen arbeiten. Die Daten können auf mehrere Speichersysteme verteilt sein, die jeweils über eigene Protokolle verfügen. Selbst Anwendungen, die mit nur einem Speichersystem arbeiten, müssen ein ausgewogenes Verhältnis zwischen den Anforderungen des Speichersystems und den Anforderungen beim Schreiben von effizientem und verwaltbarem Anwendungscode finden.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist ein Satz von Technologien in ADO.NET, der die Entwicklung datenorientierter Softwareanwendungen unterstützt. Architekten und Entwickler datenorientierter Anwendungen mussten zwei sehr verschiedene Ziele erreichen. Sie mussten die Entitäten, die Beziehungen und die Logik der zu lösenden Geschäftsprobleme modellieren und mit den zum Speichern und Abrufen von Daten verwendeten Daten-Engines arbeiten. Die Daten können auf mehrere Speichersysteme verteilt sein, die jeweils über eigene Protokolle verfügen. Selbst Anwendungen, die mit nur einem Speichersystem arbeiten, müssen ein ausgewogenes Verhältnis zwischen den Anforderungen des Speichersystems und den Anforderungen beim Schreiben von effizientem und verwaltbarem Anwendungscode finden.
 
 Mithilfe von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Entwickler mit Daten in der Form domänenspezifischer Objekte und Eigenschaften arbeiten, wie z. B. Kunden und Kundenadressen, ohne sich über die zugrunde liegenden Datenbanktabellen und -spalten Gedanken machen zu müssen, in denen diese Daten gespeichert sind. Mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Entwickler beim Umgang mit Daten auf einer höheren Abstraktionsebene arbeiten und mit weniger Code als in herkömmlichen Anwendungen datenorientierte Anwendungen erstellen und warten. Da das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eine Komponente des [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ist, können [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]Anwendungen auf jedem Computer ausgeführt werden, auf dem mindestens die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Version 3.5 SP1 installiert ist.
 
@@ -53,7 +53,7 @@ Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet die
 
 Das folgende Diagramm illustriert die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Architektur für den Datenzugriff:
 
-![Entity Framework-Architekturdiagramm](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "Wd_EFArchDiagram")
+![Entity Framework Architectural Diagram](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
 Die [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]-Tools können eine von `System.Data.Objects.ObjectContext` oder `System.Data.Entity.DbContext` abgeleitete Klasse generieren, die den Entitätencontainer im konzeptionellen Modell darstellt. Dieser Objektkontext stellt die Funktionen zum Nachverfolgen von Änderungen und zum Verwalten von Identitäten, Parallelität und Beziehungen bereit. Diese Klasse macht auch eine `SaveChanges`-Methode verfügbar, die Einfügungen, Aktualisierungen und Löschungen in die Datenquelle schreibt. Diese Änderungen werden wie bei Abfragen entweder durch automatisch vom System generierte Befehle oder durch vom Entwickler angegebene gespeicherte Prozeduren vorgenommen.
 

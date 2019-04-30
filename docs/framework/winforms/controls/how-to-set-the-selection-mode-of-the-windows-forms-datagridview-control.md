@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
 ms.openlocfilehash: 2e430dfb170943178f6db27c0bd2c1ef0f972882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013113"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen des Auswahlmodus des DataGridView-Steuerelements in Windows Forms
 Im folgenden Codebeispiel wird veranschaulicht, wie so konfigurieren Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement, damit an einer beliebigen Stelle innerhalb einer Zeile automatisch auf die gesamte Zeile ausgewählt, und so, dass nur eine Zeile zu einem Zeitpunkt ausgewählt werden kann.  
@@ -26,9 +26,9 @@ Im folgenden Codebeispiel wird veranschaulicht, wie so konfigurieren Sie eine <x
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
+- Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
--   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
 

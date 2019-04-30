@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007278"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
@@ -28,24 +28,24 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
  In dieser exemplarischen Vorgehensweise werden u. a. die folgenden Aufgaben beschrieben:
 
--   Erstellen ein WPF-Anwendungsprojekt.
+- Erstellen ein WPF-Anwendungsprojekt.
 
--   Hinzufügen eines Verweises auf die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Hinzufügen eines Verweises auf die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
 
--   Initialisieren einen Cache.
+- Initialisieren einen Cache.
 
--   Hinzufügen eines Eintrags mit dem Inhalt einer Textdatei.
+- Hinzufügen eines Eintrags mit dem Inhalt einer Textdatei.
 
--   Bereitstellen von eine Entfernungsrichtlinie für den Cacheeintrag.
+- Bereitstellen von eine Entfernungsrichtlinie für den Cacheeintrag.
 
--   Überwachen den Pfad, der die zwischengespeicherte Datei und die Cache-Instanz zu benachrichtigen, die in der Überwachungskapazität für Elemente geändert werden.
+- Überwachen den Pfad, der die zwischengespeicherte Datei und die Cache-Instanz zu benachrichtigen, die in der Überwachungskapazität für Elemente geändert werden.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
--   Microsoft Visual Studio 2010
+- Microsoft Visual Studio 2010
 
--   Eine Textdatei, die eine kleine Menge an Text enthält. (Sie werden der Inhalt der Textdatei in einem Meldungsfeld angezeigt.) Der Code in der exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie mit der folgenden Datei arbeiten:
+- Eine Textdatei, die eine kleine Menge an Text enthält. (Sie werden der Inhalt der Textdatei in einem Meldungsfeld angezeigt.) Der Code in der exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie mit der folgenden Datei arbeiten:
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 7. Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
 
-    1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des Projekts, und klicken Sie dann auf **Verweis hinzufügen**.
+    1. In **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des Projekts, und klicken Sie dann auf **Verweis hinzufügen**.
 
-    2.  Wählen Sie die **.NET** Registerkarte `System.Runtime.Caching`, und klicken Sie dann auf **OK**.
+    2. Wählen Sie die **.NET** Registerkarte `System.Runtime.Caching`, und klicken Sie dann auf **OK**.
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>So ändern Sie die .NET Framework-Zielversion in einem Visual C#-Projekt
 
@@ -125,9 +125,9 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 4. Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
 
-    1.  Mit der rechten Maustaste die **Verweise** Ordner, und klicken Sie dann auf **Verweis hinzufügen**.
+    1. Mit der rechten Maustaste die **Verweise** Ordner, und klicken Sie dann auf **Verweis hinzufügen**.
 
-    2.  Wählen Sie die **.NET** Registerkarte `System.Runtime.Caching`, und klicken Sie dann auf **OK**.
+    2. Wählen Sie die **.NET** Registerkarte `System.Runtime.Caching`, und klicken Sie dann auf **OK**.
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>Hinzufügen einer Schaltfläche in der WPF-Fenster
  Als Nächstes, Sie fügen ein Schaltflächensteuerelement hinzu und erstellen Sie einen Ereignishandler für der Schaltfläche " `Click` Ereignis. Später fügen Sie Code hinzu, sodass Wenn Sie die Schaltfläche klicken, den Inhalt der Textdatei zwischengespeichert und angezeigt werden.
@@ -143,13 +143,13 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Initialisieren des Caches und Zwischenspeichern eines Eintrags
  Anschließend fügen Sie den Code, um die folgenden Aufgaben ausführen:
 
--   Erstellen Sie eine Instanz der Cacheklasse – d. h., instanziieren Sie ein neues <xref:System.Runtime.Caching.MemoryCache> Objekt.
+- Erstellen Sie eine Instanz der Cacheklasse – d. h., instanziieren Sie ein neues <xref:System.Runtime.Caching.MemoryCache> Objekt.
 
--   Gibt an, dass der Cache verwendet einen <xref:System.Runtime.Caching.HostFileChangeMonitor> Objekt für die Überwachung von Änderungen in der Textdatei.
+- Gibt an, dass der Cache verwendet einen <xref:System.Runtime.Caching.HostFileChangeMonitor> Objekt für die Überwachung von Änderungen in der Textdatei.
 
--   Lesen Sie die Textdatei, und dessen Inhalt als einen Eintrag im Cache zwischengespeichert.
+- Lesen Sie die Textdatei, und dessen Inhalt als einen Eintrag im Cache zwischengespeichert.
 
--   Zeigt den Inhalt der Textdatei zwischengespeichert.
+- Zeigt den Inhalt der Textdatei zwischengespeichert.
 
 #### <a name="to-create-the-cache-object"></a>Um das Cache-Objekt zu erstellen.
 

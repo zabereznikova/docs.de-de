@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036230"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalisierungsattribute und -kommentare
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungskommentare sind Eigenschaften innerhalb des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcodes, die vom Entwickler verfügbar gemacht werden um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
@@ -27,11 +27,11 @@ ms.locfileid: "59301853"
   
 3. Folgende Werte können zugewiesen werden:  
   
-    -   **None** – Sowohl Kommentare als auch Attribute bleiben in der Assembly. Es wird keine separate Datei generiert.  
+    - **None** – Sowohl Kommentare als auch Attribute bleiben in der Assembly. Es wird keine separate Datei generiert.  
   
-    -   **CommentsOnly** – Es werden nur die Kommentare aus der Assembly entfernt und in der separaten LocFile abgelegt.  
+    - **CommentsOnly** – Es werden nur die Kommentare aus der Assembly entfernt und in der separaten LocFile abgelegt.  
   
-    -   **Alle** – Es werden sowohl Kommentare als auch Attribute aus der Assembly entfernt und in einer separaten LocFile abgelegt.  
+    - **Alle** – Es werden sowohl Kommentare als auch Attribute aus der Assembly entfernt und in einer separaten LocFile abgelegt.  
   
 4. Wenn lokalisierbare Ressourcen aus [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] extrahiert werden, werden die Lokalisierbarkeitsattribute von der [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)]-Lokalisierungs-API berücksichtigt.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301853"
   
  Es gibt drei Typen von Attributen:  
   
--   **Category**. Gibt an, ob ein Wert in einem Lokalisierungstool geändert werden kann. Siehe <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Category**. Gibt an, ob ein Wert in einem Lokalisierungstool geändert werden kann. Siehe <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Lesbarkeit**. Gibt an, ob ein Lokalisierungstool einen Wert lesen (und anzeigen) kann. Siehe <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Lesbarkeit**. Gibt an, ob ein Lokalisierungstool einen Wert lesen (und anzeigen) kann. Siehe <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Änderbarkeit**. Gibt an, ob ein Lokalisierungstool das Ändern eines Werts zulässt. Siehe <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Änderbarkeit**. Gibt an, ob ein Lokalisierungstool das Ändern eines Werts zulässt. Siehe <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Diese Attribute können in jeder Reihenfolge durch ein Leerzeichen getrennt angegeben werden. Falls doppelte Attribute angegeben werden, überschreibt das letzte Attribut die vorherigen Attribute. So legt Localization.Attributes = "Unmodifiable Modifiable" beispielsweise Modifiability auf Modifiable fest, da es sich hierbei um den letzten Wert handelt.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022349"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Einführung in COM-Interop (Visual Basic)
 Das Component Object Model (COM) können ein Objekt, das die Funktionen an andere Komponenten und hostanwendungen verfügbar zu machen. COM-Objekte für die Windows-Programmierung seit vielen Jahren von grundlegender Wichtigkeit waren bieten für die common Language Runtime (CLR) entwickelte Anwendungen zahlreiche Vorteile.  
@@ -28,15 +28,15 @@ Das Component Object Model (COM) können ein Objekt, das die Funktionen an ander
 ## <a name="type-libraries-and-assembly-manifests"></a>Typbibliotheken und Manifesten  
  Typbibliotheken werden die Merkmale von COM-Objekten, z. B. Membernamen und Datentypen beschrieben. Manifesten führen dieselbe Funktion für [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Anwendungen. Dazu gehören die folgenden Informationen:  
   
--   Assembly-ID, Version, Kultur und digitale Signatur.  
+- Assembly-ID, Version, Kultur und digitale Signatur.  
   
--   Dateien, aus denen die Implementierung der Assembly besteht.  
+- Dateien, aus denen die Implementierung der Assembly besteht.  
   
--   Typen und Ressourcen, die die Assembly bilden. Dies schließt die daraus exportiert werden.  
+- Typen und Ressourcen, die die Assembly bilden. Dies schließt die daraus exportiert werden.  
   
--   Während der Kompilierung Abhängigkeiten von anderen Assemblys.  
+- Während der Kompilierung Abhängigkeiten von anderen Assemblys.  
   
--   Berechtigungen für die Assembly für die ordnungsgemäße Ausführung erforderlich.  
+- Berechtigungen für die Assembly für die ordnungsgemäße Ausführung erforderlich.  
   
  Weitere Informationen zu Assemblys und Manifesten finden Sie unter [Assemblys in .NET](../../../standard/assembly/index.md).  
   

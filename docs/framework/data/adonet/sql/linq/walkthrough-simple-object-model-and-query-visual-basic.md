@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037010"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mit minimaler Komplexität bereit. Sie erstellen eine Entitätsklasse, die die Customers-Tabelle in der Beispieldatenbank Northwind modelliert. Sie erstellen dann eine einfache Abfrage, um Kunden aus London aufzulisten.  
@@ -22,24 +22,24 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 ## <a name="prerequisites"></a>Vorraussetzungen  
   
--   Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
+- Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
   
--   Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt. Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei in den Ordner c:\linqtest.  
+- Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt. Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei in den Ordner c:\linqtest.  
   
 ## <a name="overview"></a>Übersicht  
  Diese exemplarische Vorgehensweise umfasst sechs Hauptaufgaben:  
   
--   Erstellen einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projektmappe in Visual Studio.  
+- Erstellen einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projektmappe in Visual Studio.  
   
--   Zuordnen einer Datenbanktabelle zu einer Klasse.  
+- Zuordnen einer Datenbanktabelle zu einer Klasse.  
   
--   Festlegen von Eigenschaften für die Klasse, um Datenbankspalten darzustellen.  
+- Festlegen von Eigenschaften für die Klasse, um Datenbankspalten darzustellen.  
   
--   Herstellen einer Verbindung zur Beispieldatenbank Northwind.  
+- Herstellen einer Verbindung zur Beispieldatenbank Northwind.  
   
--   Erstellen einer einfachen Abfrage der Datenbank.  
+- Erstellen einer einfachen Abfrage der Datenbank.  
   
--   Ausführen der Abfrage und Prüfen der Ergebnisse  
+- Ausführen der Abfrage und Prüfen der Ergebnisse  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
  In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, die die erforderlichen Verweise zur Erstellung und Ausführung enthält eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
@@ -80,22 +80,22 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>So erstellen Sie eine Entitätsklasse und weisen diese einer Datenbanktabelle zu  
   
--   Geben Sie den folgenden Code in Module1.vb direkt oberhalb von `Sub Main` ein, oder fügen Sie ihn ein:  
+- Geben Sie den folgenden Code in Module1.vb direkt oberhalb von `Sub Main` ein, oder fügen Sie ihn ein:  
   
      [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>Festlegen von Eigenschaften für die Klasse, um Datenbankspalten darzustellen  
  In diesem Schritt erledigen Sie mehrere Aufgaben.  
   
--   Sie verwenden das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut, um die `CustomerID`-Eigenschaft und die `City`-Eigenschaft der Entitätsklasse für die Darstellung von Spalten in der Datenbanktabelle festzulegen.  
+- Sie verwenden das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut, um die `CustomerID`-Eigenschaft und die `City`-Eigenschaft der Entitätsklasse für die Darstellung von Spalten in der Datenbanktabelle festzulegen.  
   
--   Sie legen die `CustomerID`-Eigenschaft zur Darstellung einer Primärschlüsselspalte in der Datenbank fest.  
+- Sie legen die `CustomerID`-Eigenschaft zur Darstellung einer Primärschlüsselspalte in der Datenbank fest.  
   
--   Sie legen `_CustomerID`- und `_City`-Felder für den privaten Speicher fest. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann Werte dann direkt speichern und abrufen, statt öffentliche Accessoren zu verwenden, die möglicherweise Geschäftslogik umfassen.  
+- Sie legen `_CustomerID`- und `_City`-Felder für den privaten Speicher fest. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann Werte dann direkt speichern und abrufen, statt öffentliche Accessoren zu verwenden, die möglicherweise Geschäftslogik umfassen.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>So stellen Sie Eigenschaften von zwei Datenbankspalten dar  
   
--   Geben Sie den folgenden Code in Module1.vb direkt vor `End Class` ein, oder fügen Sie ihn ein:  
+- Geben Sie den folgenden Code in Module1.vb direkt vor `End Class` ein, oder fügen Sie ihn ein:  
   
      [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
   
@@ -106,7 +106,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-specify-the-database-connection"></a>So definieren Sie die Datenbankverbindung  
   
--   Geben Sie den folgenden Code in die `Sub Main`-Methode ein, oder fügen Sie ihn ein:  
+- Geben Sie den folgenden Code in die `Sub Main`-Methode ein, oder fügen Sie ihn ein:  
   
      Beachten Sie, dass die Datei `northwnd.mdf` im Ordner linqtest angenommen wird. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen weiter oben in dieser exemplarischen Vorgehensweise.  
   
@@ -119,7 +119,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-create-a-simple-query"></a>So erstellen Sie eine einfache Abfrage  
   
--   Geben Sie den folgenden Code in die `Sub Main`-Methode nach der `Table(Of Customer)`-Deklaration ein, oder fügen Sie ihn ein:  
+- Geben Sie den folgenden Code in die `Sub Main`-Methode nach der `Table(Of Customer)`-Deklaration ein, oder fügen Sie ihn ein:  
   
      [!code-vb[DLinqWalk1AVB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#5)]  
   

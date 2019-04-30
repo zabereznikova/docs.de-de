@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
 ms.openlocfilehash: 160395b84ef7ca447d162ceff34752113a1d59a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031199"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF
 Diese exemplarische Vorgehensweise veranschaulicht die Erstellung von Direct3D9-Inhalt, der für das Hosten in einer Windows Presentation Foundation (WPF)-Anwendung geeignet ist. Weitere Informationen zum Hosten von Direct3D9-Inhalt in WPF-Anwendungen, finden Sie unter [zwischen WPF und Direct3D9](wpf-and-direct3d9-interoperation.md).
 
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:
 
--   Erstellen Sie ein Direct3D9-Projekt.
+- Erstellen Sie ein Direct3D9-Projekt.
 
--   Konfigurieren des Direct3D9-Projekts für das Hosten in einer WPF-Anwendung.
+- Konfigurieren des Direct3D9-Projekts für das Hosten in einer WPF-Anwendung.
 
  Wenn Sie fertig sind, müssen Sie eine DLL, die Direct3D9-Inhalt für die Verwendung in einer WPF-Anwendung enthält.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   DirectX SDK 9 oder höher.
+- DirectX SDK 9 oder höher.
 
 ## <a name="creating-the-direct3d9-project"></a>Erstellen des Projekts Direct3D9
  Der erste Schritt ist zum Erstellen und konfigurieren Sie das Direct3D9-Projekt.
@@ -137,7 +137,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Erstellung von Direct3D9-
 
 ## <a name="next-steps"></a>Nächste Schritte
 
--   Hosten Sie den Direct3D9-Inhalt in einer WPF-Anwendung. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
+- Hosten Sie den Direct3D9-Inhalt in einer WPF-Anwendung. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8ebecce4078ba6c2b59e6bfba2d54300ba0c4ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000258"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen-Funktion
 Erstellt ein neues öffentliches/privates Schlüsselpaar für die Verwendung starker Namen.  
@@ -46,9 +46,9 @@ BOOLEAN StrongNameKeyGen (
  `dwFlags`  
  [in] Gibt an, ob den Schlüssel registriert bleiben soll. Die folgenden Werte werden unterstützt:  
   
--   0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
+- 0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
   
--   0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
+- 0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
   
  `ppbKeyBlob`  
  [out] Das zurückgegebene öffentliches/privates Schlüsselpaar.  

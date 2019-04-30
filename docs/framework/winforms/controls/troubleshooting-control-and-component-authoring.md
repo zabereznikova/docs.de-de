@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009213"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Problembehandlung beim Erstellen von Komponenten und Steuerelementen
 Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln von Komponenten und Steuerelementen auftreten. Weitere Informationen finden Sie unter [Programmieren mit Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Steuerelement kann nicht zur Toolbox hinzugefügt werden  
+- Steuerelement kann nicht zur Toolbox hinzugefügt werden  
   
--   Windows Forms-Benutzersteuerelement oder Komponente kann nicht debuggt werden  
+- Windows Forms-Benutzersteuerelement oder Komponente kann nicht debuggt werden  
   
--   Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst  
+- Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst  
   
--   Während der Entwurfszeit-Fehler: "Fehler beim Erstellen der Komponente"*Komponentenname*""  
+- Während der Entwurfszeit-Fehler: "Fehler beim Erstellen der Komponente"*Komponentenname*""  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   Symbol „Komponente“ wird nicht in der Toolbox angezeigt  
+- Symbol „Komponente“ wird nicht in der Toolbox angezeigt  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Steuerelement kann nicht zur Toolbox hinzugefügt werden  
  Wenn Sie ein benutzerdefiniertes Steuerelement, das Sie in einem anderen Projekt erstellt haben, oder ein Drittanbieter-Steuerelement zur **Toolbox** hinzufügen möchten, müssen Sie dies manuell vornehmen. Wenn das aktuelle Projekt ein Steuerelement oder eine Komponente enthält, sollte es automatisch in der **Toolbox** angezeigt werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln 
   
 2. Fügen Sie im Dialogfeld **Toolboxelemente auswählen** die Komponente hinzu:  
   
-    -   Wenn Sie eine .NET Framework-Komponente oder ein -Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **.NET Framework-Komponenten**.  
+    - Wenn Sie eine .NET Framework-Komponente oder ein -Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **.NET Framework-Komponenten**.  
   
          – oder –  
   
-    -   Wenn Sie eine COM-Komponente oder ein ActiveX-Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **COM-Steuerelemente**.  
+    - Wenn Sie eine COM-Komponente oder ein ActiveX-Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **COM-Steuerelemente**.  
   
 3. Wenn das Steuerelement im Dialogfeld aufgelistet ist, bestätigen Sie die Auswahl, und klicken Sie auf **OK**.  
   
@@ -54,15 +54,15 @@ Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln 
   
 4. Wenn Ihr Steuerelement nicht im Dialogfeld aufgelistet ist, führen Sie folgende Schritte aus:  
   
-    1.  Klicken Sie auf die Schaltfläche **Durchsuchen**.  
+    1. Klicken Sie auf die Schaltfläche **Durchsuchen**.  
   
-    2.  Navigieren Sie zum Ordner mit der DLL-Datei, die Ihr Steuerelement enthält.  
+    2. Navigieren Sie zum Ordner mit der DLL-Datei, die Ihr Steuerelement enthält.  
   
-    3.  Wählen Sie die DLL-Datei aus, und klicken Sie auf **Öffnen**.  
+    3. Wählen Sie die DLL-Datei aus, und klicken Sie auf **Öffnen**.  
   
          Das Steuerelement wird im Dialogfeld angezeigt.  
   
-    4.  Bestätigen Sie die Auswahl des Steuerelements, und klicken Sie dann auf **OK**.  
+    4. Bestätigen Sie die Auswahl des Steuerelements, und klicken Sie dann auf **OK**.  
   
          Ihr Steuerelement wird zur **Toolbox** hinzugefügt.  
   

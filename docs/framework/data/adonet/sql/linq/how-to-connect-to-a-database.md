@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
 ms.openlocfilehash: f04726bc12fdfbca530ee5533d5b8969addf962e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037842"
 ---
 # <a name="how-to-connect-to-a-database"></a>Vorgehensweise: Herstellen einer Verbindung mit einer Datenbank
 Der <xref:System.Data.Linq.DataContext> ist die "Hauptleitung" für die Verbindung zu einer Datenbank, für das Abrufen von Objekten und für das Übergeben von Änderungen. Sie verwenden die <xref:System.Data.Linq.DataContext> genauso verwenden würden, wie ein [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. Tatsächlich wird der <xref:System.Data.Linq.DataContext> mit einer von Ihnen angegebenen Verbindung oder Verbindungszeichenfolge initialisiert. Weitere Informationen finden Sie unter [DataContext-Methoden (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  

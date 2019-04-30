@@ -3,11 +3,11 @@ title: Datenbankzugriffsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005207"
 ---
 # <a name="database-access-activities"></a>Datenbankzugriffsaktivitäten
 Mit Datenbankzugriffsaktivitäten können Sie auf eine Datenbank innerhalb eines Workflows zugreifen. Diese Aktivitäten können Datenbanken abrufen und ändern Sie Informationen sowie über [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) Zugriff auf die Datenbank.  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Konfigurieren von Verbindungsinformationen
  Für alle Datenbankaktivitäten gelten die gleichen Konfigurationsparameter. Für die Konfiguration gibt es zwei Möglichkeiten:
 
--   `ConnectionString + InvariantName`: Legen Sie den ADO.NET-Anbieter invarianten Namen und die Verbindungszeichenfolge-Zeichenfolge.
+- `ConnectionString + InvariantName`: Legen Sie den ADO.NET-Anbieter invarianten Namen und die Verbindungszeichenfolge-Zeichenfolge.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: Legen Sie den Namen des Konfigurationsabschnitts, der die Verbindungsinformationen enthält.
+- `ConfigName`: Legen Sie den Namen des Konfigurationsabschnitts, der die Verbindungsinformationen enthält.
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   In der Aktivität:
+- In der Aktivität:
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Das Skript "Setup.cmd" ruft die Skriptdatei "CreateDb.sql" auf, die SQL-Befehle zur Ausführung der folgenden Vorgänge enthält:
 
--   Erstellen einer Datenbank mit dem Namen DbActivitiesSample
+- Erstellen einer Datenbank mit dem Namen DbActivitiesSample
 
--   Erstellen der Tabelle "Roles"
+- Erstellen der Tabelle "Roles"
 
--   Erstellen der Tabelle "Employees"
+- Erstellen der Tabelle "Employees"
 
--   Einfügen von drei Datensätzen in die Tabelle "Roles"
+- Einfügen von drei Datensätzen in die Tabelle "Roles"
 
--   Einfügen von zwölf Datensätzen in die Tabelle "Employees"
+- Einfügen von zwölf Datensätzen in die Tabelle "Employees"
 
 ##### <a name="to-run-setupcmd"></a>So führen Sie "Setup.cmd" aus
 

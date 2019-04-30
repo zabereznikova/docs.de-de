@@ -11,11 +11,11 @@ ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965811"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>CreateDebuggingInterfaceFromVersion-Funktion für Silverlight
 Akzeptiert eine common Language Runtime (CLR) Version-Zeichenfolge, die von zurückgegeben wird das [CreateVersionStringFromModule-Funktion](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md), und gibt eine entsprechende Debuggerschnittstelle zurück (in der Regel [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
@@ -44,8 +44,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  Entweder `szDebuggeeVersion` oder `ppCordb` ist null.  
   
  CORDBG_E_DEBUG_COMPONENT_MISSING  
- Eine für das CLR-Debuggen erforderliche Komponente kann nicht gefunden werden. Dies bedeutet, dass entweder mscordbi.dll oder mscordaccore.dll nicht im selben Verzeichnis wie die Ziel-CoreCLR.dll gefunden wurde.
-  
+ Eine für das CLR-Debuggen erforderliche Komponente kann nicht gefunden werden. Dies bedeutet, dass entweder mscordbi.dll oder mscordaccore.dll nicht im selben Verzeichnis wie die Ziel-CoreCLR.dll gefunden wurde.  
   
  CORDBG_E_INCOMPATIBLE_PROTOCOL  
  Entweder mscordbi.dll oder mscordaccore.dll haben nicht dieselbe Version wie die Ziel-CoreCLR.dll.  

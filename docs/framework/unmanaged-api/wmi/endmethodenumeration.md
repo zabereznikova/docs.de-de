@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040598"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration-Funktion
 Beendet eine Enumerationsfolge gestartet, die durch einen Aufruf der [BeginMethodEnumeration-Funktion](beginmethodenumeration.md).  

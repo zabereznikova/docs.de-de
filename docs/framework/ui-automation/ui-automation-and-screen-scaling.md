@@ -11,11 +11,11 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032320"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
@@ -44,15 +44,15 @@ ms.locfileid: "59332683"
 ## <a name="scaling-in-ui-automation-clients"></a>Skalierung in Benutzeroberflächenautomatisierungs-Clients  
  Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] does not use logical coordinates. Die folgenden Methoden und Eigenschaften geben entweder physische Koordinaten zurück oder verwenden sie als Parameter.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
+- <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
  Standardmäßig ist eine Benutzeroberflächenautomatisierungs-Clientanwendung, die in einer Nicht-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] -Umgebung ausgeführt wird, nicht in der Lage, von diesen Methoden und Eigenschaften die richtigen Ergebnisse zu erhalten. Da die Cursorposition z. B. in logischen Koordinaten angegeben wird, kann der Client diese Koordinaten nicht einfach an <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> übergeben, um das Element abzurufen, das sich unter dem Cursor befindet. Darüber hinaus ist die Anwendung nicht in der Lage, Fenster außerhalb seines Clientbereichs ordnungsgemäß zu platzieren.  
   

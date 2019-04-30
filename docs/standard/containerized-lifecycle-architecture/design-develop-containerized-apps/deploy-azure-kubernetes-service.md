@@ -5,13 +5,13 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006542"
 ---
-# <a name="deploy-to-azure-kubernetes-service-aks"></a>Bereitstellen von Azure Kubernetes Service (AKS)
+# <a name="deploy-to-azure-kubernetes-service-aks"></a>Bereitstellen für Azure Kubernetes Service (AKS)
 
 Sie können mithilfe des Betriebssystems der bevorzugten Client AKS interagieren, hier wir zeigen, wie Sie ihn mit Microsoft Windows und einer eingebetteten Version von Ubuntu Linux in Windows, mithilfe von Bash-Befehle.
 

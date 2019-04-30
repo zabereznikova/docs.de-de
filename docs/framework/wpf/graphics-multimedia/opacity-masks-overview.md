@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008424"
 ---
 # <a name="opacity-masks-overview"></a>Übersicht über Durchlässigkeitsmasken
 Mit Deckkraftmasken können Sie Teile eines Elements oder visuellen Objekts transparent bzw. teilweise transparent machen. Zum Erstellen einer Deckkraftmaske wenden Sie eine <xref:System.Windows.Media.Brush> auf die <xref:System.Windows.UIElement.OpacityMask%2A> Eigenschaft eines Elements oder <xref:System.Windows.Media.Visual>.  Der Pinsel wird dem Element oder visuellen Objekt zugeordnet, und der Durchlässigkeitswert jedes Pinselpixels bestimmt die resultierende Durchlässigkeit der entsprechenden Pixel des Elements oder visuellen Objekts.  
@@ -36,21 +36,21 @@ Beispiel für eine Deckkraftmaske
 ## <a name="creating-an-opacity-mask"></a>Erstellen einer Deckkraftmaske  
  Um eine Deckkraftmaske zu erstellen, erstellen Sie eine <xref:System.Windows.Media.Brush> und wenden ihn auf die <xref:System.Windows.UIElement.OpacityMask%2A> Eigenschaft des Elements oder visuellen Elements. Sie können jede Art von <xref:System.Windows.Media.Brush> als Deckkraftmaske.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Verwendet, um ein Element oder visuelles Element zu machen.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Verwendet, um ein Element oder visuelles Element zu machen.  
   
      Die folgende Abbildung zeigt eine <xref:System.Windows.Media.LinearGradientBrush> als Deckkraftmaske verwendet.  
   
      ![Ein Objekt mit einer LinearGradientBrush-Deckkraftmaske](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "Wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Beispiel für eine LinearGradientBrush-Deckkraftmaske  
   
--   <xref:System.Windows.Media.ImageBrush>: Verwendet, um Textur- und weiche oder ausgefranste Randeffekte zu erstellen.  
+- <xref:System.Windows.Media.ImageBrush>: Verwendet, um Textur- und weiche oder ausgefranste Randeffekte zu erstellen.  
   
      Die folgende Abbildung zeigt ein <xref:System.Windows.Media.ImageBrush> als Deckkraftmaske verwendet.  
   
      ![Objekt mit einer ImageBrush-Deckkraftmaske](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "Wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Beispiel für eine LinearGradientBrush-Deckkraftmaske  
   
--   <xref:System.Windows.Media.DrawingBrush>: Verwendet, um komplexe Deckkraftmasken aus Mustern von Formen, Bildern und Farbverläufen zu erstellen.  
+- <xref:System.Windows.Media.DrawingBrush>: Verwendet, um komplexe Deckkraftmasken aus Mustern von Formen, Bildern und Farbverläufen zu erstellen.  
   
      Die folgende Abbildung zeigt eine <xref:System.Windows.Media.DrawingBrush> als Deckkraftmaske verwendet.  
   

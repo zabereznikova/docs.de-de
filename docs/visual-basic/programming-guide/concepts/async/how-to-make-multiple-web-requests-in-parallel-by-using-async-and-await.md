@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021998"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)
 In einer asynchronen Methode werden Aufgaben gestartet, wenn sie erstellt werden. Die ["await"](../../../../visual-basic/language-reference/operators/await-operator.md) Operator angewendet wird, auf die Aufgabe an dem Punkt in der Methode, in dem die Verarbeitung nicht fortgesetzt, bis die Aufgabe abgeschlossen ist. Häufig wird eine Aufgabe erwartet, sobald sie erstellt wird, wie das folgende Beispiel zeigt.  
@@ -46,11 +46,11 @@ Dim result = Await myTask
   
 1. Führen Sie die folgenden Schritte aus, um eine WPF-Anwendung einzurichten. Ausführliche Anweisungen für diese Schritte finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Erstellen Sie eine WPF-Anwendung, die ein Textfeld und eine Schaltfläche enthält. Benennen Sie die Schaltfläche mit `startButton` und das Textfeld mit `resultsTextBox`.  
+    - Erstellen Sie eine WPF-Anwendung, die ein Textfeld und eine Schaltfläche enthält. Benennen Sie die Schaltfläche mit `startButton` und das Textfeld mit `resultsTextBox`.  
   
-    -   Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
+    - Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
   
-    -   Fügen Sie in der Datei "MainWindow.Xaml.vb" eine `Imports` -Anweisung für `System.Net.Http`.  
+    - Fügen Sie in der Datei "MainWindow.Xaml.vb" eine `Imports` -Anweisung für `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>So fügen Sie den Code hinzu  
   
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. Fügen Sie dem Projekt die folgenden Unterstützungsmethoden hinzu:  
   
-    -   `ProcessURLAsync` verwendet eine <xref:System.Net.Http.HttpClient>-Methode, um die Inhalte einer Website als Bytearray herunterzuladen. Die Unterstützungsmethode `ProcessURLAsync` wird daraufhin angezeigt und gibt die Länge des Arrays zurück.  
+    - `ProcessURLAsync` verwendet eine <xref:System.Net.Http.HttpClient>-Methode, um die Inhalte einer Website als Bytearray herunterzuladen. Die Unterstützungsmethode `ProcessURLAsync` wird daraufhin angezeigt und gibt die Länge des Arrays zurück.  
   
-    -   `DisplayResults` zeigt die Anzahl von Bytes im Bytearray für jede URL an. Diese Anzeige wird aufgerufen, wenn alle Aufgaben den Download abgeschlossen haben.  
+    - `DisplayResults` zeigt die Anzahl von Bytes im Bytearray für jede URL an. Diese Anzeige wird aufgerufen, wenn alle Aufgaben den Download abgeschlossen haben.  
   
      Kopieren Sie die folgenden Methoden aus, und fügen Sie sie nach der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb".  
   
@@ -96,13 +96,13 @@ Dim result = Await myTask
   
 4. Definieren Sie schließlich die `CreateMultipleTasksAsync`-Methode, die die folgenden Schritte ausführt.  
   
-    -   Die Methode deklariert ein `HttpClient`-Objekt, das Sie für den Zugriff auf die <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>-Methode in `ProcessURLAsync` benötigen.  
+    - Die Methode deklariert ein `HttpClient`-Objekt, das Sie für den Zugriff auf die <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>-Methode in `ProcessURLAsync` benötigen.  
   
-    -   Die Methode erstellt und startet drei Aufgaben vom Typ <xref:System.Threading.Tasks.Task%601>, wobei `TResult` eine ganze Zahl ist. Beim Abschließen jeder Aufgabe zeigt `DisplayResults` die URL der Aufgabe sowie die Länge der heruntergeladenen Inhalte an. Da die Aufgaben asynchron ausgeführt werden, kann sich die Reihenfolge, in der die Ergebnisse angezeigt werden, von der Reihenfolge, in der sie deklariert wurden, unterscheiden.  
+    - Die Methode erstellt und startet drei Aufgaben vom Typ <xref:System.Threading.Tasks.Task%601>, wobei `TResult` eine ganze Zahl ist. Beim Abschließen jeder Aufgabe zeigt `DisplayResults` die URL der Aufgabe sowie die Länge der heruntergeladenen Inhalte an. Da die Aufgaben asynchron ausgeführt werden, kann sich die Reihenfolge, in der die Ergebnisse angezeigt werden, von der Reihenfolge, in der sie deklariert wurden, unterscheiden.  
   
-    -   Die Methode erwartet den Abschluss jeder Aufgabe. Jeder `Await`-Operator hält die Ausführung von `CreateMultipleTasksAsync` an, bis die erwartete Aufgabe abgeschlossen ist. Der Operator ruft außerdem den Rückgabewert des Aufrufs von `ProcessURLAsync` von jeder abgeschlossenen Aufgabe ab.  
+    - Die Methode erwartet den Abschluss jeder Aufgabe. Jeder `Await`-Operator hält die Ausführung von `CreateMultipleTasksAsync` an, bis die erwartete Aufgabe abgeschlossen ist. Der Operator ruft außerdem den Rückgabewert des Aufrufs von `ProcessURLAsync` von jeder abgeschlossenen Aufgabe ab.  
   
-    -   Wenn die Aufgaben abgeschlossen und die ganzzahligen Werte abgerufen wurden, werden die Längen der Websites von der Methode summiert, und das Ergebnis wird angezeigt.  
+    - Wenn die Aufgaben abgeschlossen und die ganzzahligen Werte abgerufen wurden, werden die Längen der Websites von der Methode summiert, und das Ergebnis wird angezeigt.  
   
      Kopieren Sie die folgende Methode, und fügen Sie sie in Ihre Projektmappe ein.  
   

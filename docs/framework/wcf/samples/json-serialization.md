@@ -3,11 +3,11 @@ title: JSON-Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
 ms.openlocfilehash: bb38005c02e9b3e850282d2a81c2e17143657025
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989858"
 ---
 # <a name="json-serialization"></a>JSON-Serialisierung
 Dieses Beispiel zeigt, wie mit <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Daten im JSON-Format (JavaScript Object Notation) serialisiert und deserialisiert werden. Diese Serialisierungs-Engine konvertiert JSON-Daten in Instanzen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typen und wieder zurück in JSON-Daten. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> unterstützt dieselben Typen wie <xref:System.Runtime.Serialization.DataContractSerializer>. Das JSON-Datenformat ist besonders beim Schreiben von Webanwendungen im Ajax-Stil (Asynchronous JavaScript and XML) nützlich. AJAX-Unterstützung in Windows Communication Foundation (WCF) ist für die Verwendung mit ASP.NET AJAX über das ScriptManager-Steuerelement optimiert. Beispiele zur Verwendung von Windows Communication Foundation (WCF) mit ASP.NET AJAX finden Sie in der [AJAX-Beispielen](ajax.md).  

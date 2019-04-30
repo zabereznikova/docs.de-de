@@ -3,11 +3,11 @@ title: Konfigurieren von Internetinformationsdienste 7.0 für Windows Communicat
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039766"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation
 
@@ -22,11 +22,11 @@ Internetinformationsdienste (IIS) 7.0 weist einen modularen Aufbau auf, der es I
 
  Diese Funktion weist die folgenden untergeordneten Komponenten auf:
 
--   .NET-Umgebung
+- .NET-Umgebung
 
--   Konfigurations-APIs
+- Konfigurations-APIs
 
--   Prozessmodell
+- Prozessmodell
 
  Wenn Sie nur den Stammknoten von WAS Auswählen der **Prozessmodell** Unterknoten ist standardmäßig aktiviert. Beachten Sie, dass Sie mit dieser Installation lediglich WAS installieren, da kein Webserver unterstützt wird.
 

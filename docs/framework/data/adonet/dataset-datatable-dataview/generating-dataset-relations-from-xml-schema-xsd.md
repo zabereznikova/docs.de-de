@@ -3,20 +3,20 @@ title: Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034319"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen. Es gibt drei Möglichkeiten zur Darstellung einer **DataSet** Beziehung in ein Schema für XML Schema Definition Language (XSD):  
   
--   Geben Sie geschachtelte komplexe Typen an.  
+- Geben Sie geschachtelte komplexe Typen an.  
   
--   Verwenden der **msdata: Relationship** Anmerkung.  
+- Verwenden der **msdata: Relationship** Anmerkung.  
   
--   Geben Sie eine **xs: keyref** ohne die **msdata: ConstraintOnly** Anmerkung.  
+- Geben Sie eine **xs: keyref** ohne die **msdata: ConstraintOnly** Anmerkung.  
   
 ## <a name="nested-complex-types"></a>Geschachtelte komplexe Typen  
  Geschachtelte komplexe Typdefinitionen in einem Schema geben die Beziehungen zwischen übergeordneten und untergeordneten Elementen an. Das folgende XML-Schema-Fragment zeigt, dass **OrderDetail** ist ein untergeordnetes Element von der **Reihenfolge** Element.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
 ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024455"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Nullbasierter und 1-basierter Zeichenfolgenzugriff in Visual Basic
 Dieses Thema vergleicht, wie Visual Basic und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ermöglichen den Zugriff auf die Zeichen in einer Zeichenfolge. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] stellt immer nullbasierte Zugriff auf die Zeichen in einer Zeichenfolge bereit, während Visual Basic nullbasierter und 1-basierte Zugriff, abhängig von der Funktion zur Verfügung stellt.  

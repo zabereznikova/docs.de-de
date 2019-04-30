@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
 ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013451"
 ---
 # <a name="how-to-disable-tab-pages"></a>Vorgehensweise: Deaktivieren von Registerkartenseiten
 In einigen Fällen möchten Sie den Zugriff auf Daten zu beschränken, die in der Windows Forms-Anwendung verfügbar ist. Ein Beispiel hierfür kann sein, wenn Sie auf den Registerkartenseiten des ein Registerkarten-Steuerelement angezeigte Daten verfügen; Administratoren können Informationen zu einer Registerkarte haben, die Sie aus dem Gast oder Low-Level-Benutzer zu beschränken möchten.  

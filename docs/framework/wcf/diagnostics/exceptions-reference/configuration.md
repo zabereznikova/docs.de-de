@@ -3,14 +3,14 @@ title: Konfiguration
 ms.date: 03/30/2017
 ms.assetid: 86a6e12f-73b5-450e-8725-f4ca5fe0702c
 ms.openlocfilehash: 3ef91a1f851f87ebf35669748f8beb1c6a880ae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33470964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998815"
 ---
 # <a name="configuration"></a>Konfiguration
-Dieses Thema enthält alle Ausnahmen, die durch die Konfiguration der Windows Communication Foundation (WCF) generiert.  
+Dieses Thema enthält alle Ausnahmen, die von Windows Communication Foundation (WCF)-Konfiguration generiert.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
   

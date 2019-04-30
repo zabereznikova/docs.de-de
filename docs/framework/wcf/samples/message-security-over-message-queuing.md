@@ -3,11 +3,11 @@ title: Nachrichtensicherheit über Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989809"
 ---
 # <a name="message-security-over-message-queuing"></a>Nachrichtensicherheit über Message Queuing
 Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherheit mit X.509v3-Zertifikatauthentifizierung für den Client verwendet wird, und die eine Serverauthentifizierung mit dem X.509v3-Zertifikat des Servers über MSMQ erfordert. Nachrichtensicherheit wird manchmal vorgezogen, um sicherzustellen, dass die Nachrichten im MSMQ-Speicher verschlüsselt bleiben und die Anwendung ihre eigene Authentifizierung der Nachricht ausführt.
@@ -20,15 +20,15 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
 
 2. Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:
 
-    1.  Öffnen Sie Server-Manager in Visual Studio 2012.
+    1. Öffnen Sie Server-Manager in Visual Studio 2012.
 
-    2.  Erweitern Sie die **Features** Registerkarte.
+    2. Erweitern Sie die **Features** Registerkarte.
 
-    3.  Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.
+    3. Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.
 
-    4.  Überprüfen Sie die **transaktional** Feld.
+    4. Überprüfen Sie die **transaktional** Feld.
 
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.
+    5. Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.
 
 3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
@@ -77,7 +77,7 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
--   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
+- Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
     > [!NOTE]
     >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>Kommentare
 
--   Erstellen des Clientzertifikats.
+- Erstellen des Clientzertifikats.
 
      Die folgende Zeile in der Batchdatei erstellt das Clientzertifikat. Der angegebene Clientname wird im Antragstellernamen des erstellten Zertifikats verwendet. Das Zertifikat wird im `My`-Speicher am Speicherort `CurrentUser` gespeichert.
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Installieren des Clientzertifikats in den Serverspeicher für vertrauenswürdige Zertifikate.
+- Installieren des Clientzertifikats in den Serverspeicher für vertrauenswürdige Zertifikate.
 
      Die folgende Zeile in der Batchdatei kopiert das Clientzertifikat in den Speicher TrustedPeople des Servers, damit der Server selbst entscheiden kann, was vertrauenswürdig ist. Für ein Zertifikat im TrustedPeople-Speicher als vertrauenswürdig eingestuft werden, von einem Windows Communication Foundation (WCF)-Dienst installiert ist, muss der Clientzertifikat-Validierungsmodus auf festgelegt werden `PeerOrChainTrust` oder `PeerTrust` Wert. Wie dies mithilfe einer Konfigurationsdatei durchgeführt werden kann, wurde im vorherigen Dienstkonfigurationsbeispiel gezeigt.
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Erstellen des Serverzertifikats.
+- Erstellen des Serverzertifikats.
 
      Die folgenden Zeilen aus der Batchdatei "Setup.bat" erstellen das zu verwendende Serverzertifikat:
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      Die Variable %SERVER_NAME% gibt den Servernamen an. Das Zertifikat wird im LocalMachine-Speicher gespeichert. Wenn die setupbatchdatei mit einem dienstargument ausgeführt wird (z. B. `setup.bat service`) enthält die %server_name% den vollqualifizierten Domänennamen des Computers. Andernfalls wird standardmäßig "localhost"
 
--   Installieren des Serverzertifikats im Clientspeicher für vertrauenswürdige Zertifikate.
+- Installieren des Serverzertifikats im Clientspeicher für vertrauenswürdige Zertifikate.
 
      Die folgenden Zeilen kopieren das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 

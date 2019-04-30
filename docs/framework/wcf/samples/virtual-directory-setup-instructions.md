@@ -3,11 +3,11 @@ title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007551"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
 Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von eines gemeinsamen virtuellen Verzeichnis mit dem Namen Servicemodelsamples, die das das dem Ordner %SystemDrive%\inetpub\wwwroot\servicemodelsamples zugeordnet ist.  
@@ -59,9 +59,9 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 7. Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Ausführen von Skripts (z. B. ASP)**  
+    - **Ausführen von Skripts (z. B. ASP)**  
   
 8. Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
   
@@ -84,11 +84,11 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 2. Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
-    -   **Read**  
+    - **Read**  
   
-    -   **Besuche protokollieren**  
+    - **Besuche protokollieren**  
   
-    -   **Ressource indizieren**  
+    - **Ressource indizieren**  
   
 3. Wählen Sie die **Verzeichnissuche** Kontrollkästchen. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
@@ -130,21 +130,21 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
      Falls der Eintrag nicht vorhanden ist:  
   
-    1.  Klicken Sie auf **Start** und anschließend auf **Systemsteuerung**.  
+    1. Klicken Sie auf **Start** und anschließend auf **Systemsteuerung**.  
   
-    2.  Wenn Sie nicht sehen die **Benutzerkonten** Symbol, klicken Sie auf **zur Kategorieansicht wechseln**.  
+    2. Wenn Sie nicht sehen die **Benutzerkonten** Symbol, klicken Sie auf **zur Kategorieansicht wechseln**.  
   
-    3.  Klicken Sie auf die **Benutzerkonten** Symbol.  
+    3. Klicken Sie auf die **Benutzerkonten** Symbol.  
   
-    4.  Klicken Sie unter ", oder wählen Sie ein Systemsteuerungssymbol" klicken Sie auf **Benutzerkonten**.  
+    4. Klicken Sie unter ", oder wählen Sie ein Systemsteuerungssymbol" klicken Sie auf **Benutzerkonten**.  
   
-    5.  In der **Benutzerkonten** Dialogfeld klicken Sie auf die **erweitert** Registerkarte.  
+    5. In der **Benutzerkonten** Dialogfeld klicken Sie auf die **erweitert** Registerkarte.  
   
-    6.  Klicken Sie auf **Erweitert**.  
+    6. Klicken Sie auf **Erweitert**.  
   
-    7.  In der **lokale Benutzer und Gruppen** (Dialogfeld), klicken Sie zum Erweitern der **Benutzer** Ordner.  
+    7. In der **lokale Benutzer und Gruppen** (Dialogfeld), klicken Sie zum Erweitern der **Benutzer** Ordner.  
   
-    8.  Doppelklicken Sie im rechten Bereich auf **Internetgastkonto**.  
+    8. Doppelklicken Sie im rechten Bereich auf **Internetgastkonto**.  
   
     9. In der **Eigenschaften** Dialogfeld Kopieren der Namen ein, die mit dem Internet-Gastkonto. Standardmäßig beginnt der Name mit "USR_", gefolgt von dem Namen des Computers.  
   
@@ -166,17 +166,17 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
      Wenn NETZWERKDIENST nicht vorhanden ist:  
   
-    1.  Klicken Sie auf **Hinzufügen**.  
+    1. Klicken Sie auf **Hinzufügen**.  
   
-    2.  In der **Benutzer oder Gruppen auswählen** im Dialogfeld Typ den Namen des Computers gefolgt von einem umgekehrten Schrägstrich.  
+    2. In der **Benutzer oder Gruppen auswählen** im Dialogfeld Typ den Namen des Computers gefolgt von einem umgekehrten Schrägstrich.  
   
-    3.  Typ **Service** nach dem umgekehrten Schrägstrich (ohne Leerzeichen).  
+    3. Typ **Service** nach dem umgekehrten Schrägstrich (ohne Leerzeichen).  
   
-    4.  Klicken Sie auf **Namen überprüfen**.  
+    4. Klicken Sie auf **Namen überprüfen**.  
   
-    5.  Wenn mehrere Namen gefunden werden, wählen Sie **Netzwerkdienst** , und klicken Sie auf **OK**.  
+    5. Wenn mehrere Namen gefunden werden, wählen Sie **Netzwerkdienst** , und klicken Sie auf **OK**.  
   
-    6.  Klicken Sie auf **OK** schließen die **Benutzer oder Gruppen auswählen** Dialogfeld.  
+    6. Klicken Sie auf **OK** schließen die **Benutzer oder Gruppen auswählen** Dialogfeld.  
   
 6. Wenn Sie Windows XP SP2 mit IIS 5.1 verwenden, überprüfen Sie, dass sowohl Internetgastkonto und ASPNET vorhanden sind die **Gruppen-oder Benutzernamen** Feld.  
   
@@ -184,11 +184,11 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
      Zum Überprüfen, ob ASPNET Teil ist die **Benutzer** Sicherheitsgruppe:  
   
-    1.  Auf der **starten** Menü klicken Sie auf **Systemsteuerung**.  
+    1. Auf der **starten** Menü klicken Sie auf **Systemsteuerung**.  
   
-    2.  Klicken Sie auf die **Benutzerkonten** Symbol.  
+    2. Klicken Sie auf die **Benutzerkonten** Symbol.  
   
-    3.  In der **Gruppe** Spalte überprüfen, ob der Wert für **ASPNET** ist "Benutzer".  
+    3. In der **Gruppe** Spalte überprüfen, ob der Wert für **ASPNET** ist "Benutzer".  
   
 ## <a name="see-also"></a>Siehe auch
 

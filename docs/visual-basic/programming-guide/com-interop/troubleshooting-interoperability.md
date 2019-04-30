@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022297"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Problembehandlung bei Interoperabilität (Visual Basic)
 Wenn Sie die Interoperabilität zwischen COM und verwalteten Code die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], können Sie eine oder mehrere der folgenden Probleme auftreten.  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX-Steuerelement gibt.  
  Die meisten ActiveX-Steuerelemente, die mit Visual Basic 6.0 arbeiten, die ohne schwierigkeiten mit Visual Basic .NET arbeiten werden. Die wichtigsten Ausnahmen sind Listencontainer-Steuerelemente oder Steuerelemente, die visuell auf andere Steuerelemente enthalten. Einige Beispiele für ältere Steuerelemente, die mit Visual Studio nicht ordnungsgemäß funktionieren, sind wie folgt:  
   
--   Microsoft Forms 2.0-Frame-Steuerelement  
+- Microsoft Forms 2.0-Frame-Steuerelement  
   
--   Auf-ab-Steuerelement, auch bekannt als das Drehfeld-Steuerelement  
+- Auf-ab-Steuerelement, auch bekannt als das Drehfeld-Steuerelement  
   
--   Sheridan Registerkarten-Steuerelement  
+- Sheridan Registerkarten-Steuerelement  
   
  Es sind nur einige problemumgehungen für nicht unterstützte ActiveX-Steuerelement-Probleme. Sie können vorhandene Steuerelemente in Visual Studio migrieren, wenn Sie den ursprünglichen Quellcode besitzen. Andernfalls können Sie mit dem Softwareanbieter überprüfen, für aktualisiert. NET-kompatiblen Versionen von Steuerelementen ersetzt nicht die ActiveX-Steuerelemente unterstützt.  
   

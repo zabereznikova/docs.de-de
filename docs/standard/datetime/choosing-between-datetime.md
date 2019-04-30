@@ -16,11 +16,11 @@ ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026561"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
@@ -65,10 +65,10 @@ Die <xref:System.DateTime> -Struktur eignet sich für Anwendungen, die Folgendes
 
 * Arithmetische Operationen mit Datums- und Uhrzeitwerten durchführen, wobei aber allgemeine Ergebnisse von Belang sind. Beispielsweise ist es bei einer Additionsoperation, bei der einem bestimmten Datum und einer Uhrzeit sechs Monate hinzuaddiert werden, oft nicht wichtig, ob das Ergebnis hinsichtlich der Sommerzeit angepasst wird.
 
-Wenn nicht ein bestimmter <xref:System.DateTime> -Wert UTC darstellt, ist dieser Datums- und Uhrzeitwert häufig mehrdeutig oder in seiner Portierbarkeit eingeschränkt. Wenn z. B. ein <xref:System.DateTime> -Wert die lokale Uhrzeit darstellt, ist er innerhalb dieser lokalen Zeitzone portierbar (d. h., wenn der Wert auf einem anderen System in derselben Zeitzone deserialisiert wird, identifiziert dieser Wert immer noch eindeutig einen einzigen Zeitpunkt). Außerhalb der lokalen Zeitzone kann dieser <xref:System.DateTime> -Wert über mehrere Interpretationen verfügen. Wenn die <xref:System.DateTime.Kind%2A>-Eigenschaft des Werts <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist, ist er sogar noch weniger portierbar: Er ist jetzt innerhalb derselben Zeitzone mehrdeutig und möglicherweise sogar auf dem selben System, auf dem er erstmalig serialisiert wurde. Nur wenn ein <xref:System.DateTime> -Wert eine UTC-Zeit darstellt, identifiziert dieser Wert eindeutig einen einzigen Zeitpunkt, unabhängig vom System oder der Zeitzone, in der der Wert verwendet wird.
+Wenn nicht ein bestimmter <xref:System.DateTime> -Wert UTC darstellt, ist dieser Datums- und Uhrzeitwert häufig mehrdeutig oder in seiner Portierbarkeit eingeschränkt. Wenn z. B. ein <xref:System.DateTime> -Wert die lokale Uhrzeit darstellt, ist er innerhalb dieser lokalen Zeitzone portierbar (d. h., wenn der Wert auf einem anderen System in derselben Zeitzone deserialisiert wird, identifiziert dieser Wert immer noch eindeutig einen einzigen Zeitpunkt). Außerhalb der lokalen Zeitzone kann dieser <xref:System.DateTime> -Wert über mehrere Interpretationen verfügen. Wenn die <xref:System.DateTime.Kind%2A> -Eigenschaft des Werts <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>ist, ist er sogar noch weniger portierbar: Er ist jetzt innerhalb derselben Zeitzone mehrdeutig und möglicherweise sogar auf dem selben System, auf dem er erstmalig serialisiert wurde. Nur wenn ein <xref:System.DateTime> -Wert eine UTC-Zeit darstellt, identifiziert dieser Wert eindeutig einen einzigen Zeitpunkt, unabhängig vom System oder der Zeitzone, in der der Wert verwendet wird.
 
 > [!IMPORTANT]
-> Beim Speichern oder Freigeben von <xref:System.DateTime>-Daten sollte UTC verwendet werden, und die <xref:System.DateTime>-<xref:System.DateTime.Kind%2A>-Eigenschaft des Werts sollte auf <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>festgelegt werden.
+> Beim Speichern oder Freigeben von <xref:System.DateTime> -Daten sollte UTC verwendet werden, und die <xref:System.DateTime> - <xref:System.DateTime.Kind%2A> -Eigenschaft des Werts sollte auf <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>festgelegt werden.
 
 ## <a name="the-datetimeoffset-structure"></a>Die DateTimeOffset-Struktur
 

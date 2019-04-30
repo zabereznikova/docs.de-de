@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032694"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>"DataTable" und "DataColumn"-Zuordnungen mit "DataAdapter"
 Ein **DataAdapter** enthält eine Auflistung von NULL oder mehr <xref:System.Data.Common.DataTableMapping> Objekte in der **TableMappings** Eigenschaft. Ein **DataTableMapping** stellt eine masterzuordnung zwischen den Daten, die von einer Abfrage für eine Datenquelle zurückgegeben und ein <xref:System.Data.DataTable>. Die **DataTableMapping** Namen übergeben werden kann, anstelle von der **DataTable** -Namens an die **füllen** -Methode der der **DataAdapter**. Das folgende Beispiel erstellt eine **DataTableMapping** mit dem Namen **AuthorsMapping** für die **Autoren** Tabelle.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032356"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175824"
 ## <a name="retrieving-cached-properties"></a>Abrufen von zwischengespeicherten Eigenschaften  
  Sie können die zwischengespeicherten Eigenschaften eines Elements über die folgenden Methoden und Eigenschaften abrufen.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Wenn sich die angeforderte Eigenschaft nicht im Cache befindet, wird eine Ausnahme ausgelöst.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175824"
 ## <a name="retrieving-cached-control-patterns"></a>Abrufen von zwischengespeicherten Steuerelementmustern  
  Sie können die zwischengespeicherten Steuerelementmuster eines Elements über die folgenden Methoden abrufen.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Wenn sich das Muster nicht im Cache befindet, löst <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> eine Ausnahme aus, und <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> gibt `false`zurück.  
   

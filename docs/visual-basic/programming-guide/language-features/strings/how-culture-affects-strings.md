@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024689"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
 Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um zeichenfolgenkonvertierungen und vergleichen zu können.  
@@ -29,9 +29,9 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
   
  Die `Str` (konvertiert Zahlen in Zeichenfolgen) und `Val` (konvertiert Zeichenfolgen in Zahlen)-Funktionen verwenden Sie nicht Informationen zur Kultur der Anwendung beim Konvertieren zwischen Zeichenfolgen und Zahlen. Stattdessen erkennen sie nur den Punkt (.) als gültige Dezimaltrennzeichen an. Die unterschiedliche Kulturen berücksichtigt analoge dieser Funktionen sind:  
   
--   **Konvertierungen, die die aktuelle Kultur zu verwenden.** Die `CStr` und `Format` Funktionen konvertieren eine Zahl in eine Zeichenfolge, und die `CDbl` und `CInt` Funktionen konvertieren eine Zeichenfolge in eine Zahl.  
+- **Konvertierungen, die die aktuelle Kultur zu verwenden.** Die `CStr` und `Format` Funktionen konvertieren eine Zahl in eine Zeichenfolge, und die `CDbl` und `CInt` Funktionen konvertieren eine Zeichenfolge in eine Zahl.  
   
--   **Konvertierungen, die eine bestimmte Kultur zu verwenden.** Jede Number-Objekt hat eine `ToString(IFormatProvider)` Methode, die eine Zahl in eine Zeichenfolge konvertiert und ein `Parse(String, IFormatProvider)` Methode, die eine Zeichenfolge in eine Zahl konvertiert. Z. B. die `Double` bietet die <xref:System.Double.ToString%28System.IFormatProvider%29> und <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> Methoden.  
+- **Konvertierungen, die eine bestimmte Kultur zu verwenden.** Jede Number-Objekt hat eine `ToString(IFormatProvider)` Methode, die eine Zahl in eine Zeichenfolge konvertiert und ein `Parse(String, IFormatProvider)` Methode, die eine Zeichenfolge in eine Zahl konvertiert. Z. B. die `Double` bietet die <xref:System.Double.ToString%28System.IFormatProvider%29> und <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> Methoden.  
   
  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Conversion.Str%2A> und <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
 ## <a name="comparing-strings"></a>Vergleichen von Zeichenfolgen  
  Es gibt zwei wichtige Situationen, in denen Zeichenfolgenvergleiche erforderlich sind:  
   
--   **Sortieren von Daten für die Anzeige für den Benutzer.** Verwenden Sie Vorgänge, die auf der aktuellen Kultur basieren, die Zeichenfolgen ordnungsgemäß sortiert.  
+- **Sortieren von Daten für die Anzeige für den Benutzer.** Verwenden Sie Vorgänge, die auf der aktuellen Kultur basieren, die Zeichenfolgen ordnungsgemäß sortiert.  
   
--   **Bestimmen, ob zwei anwendungsinterne Zeichenfolgen (in der Regel aus Sicherheitsgründen) genau.** Verwenden Sie die Vorgänge, die die aktuelle Kultur zu ignorieren.  
+- **Bestimmen, ob zwei anwendungsinterne Zeichenfolgen (in der Regel aus Sicherheitsgründen) genau.** Verwenden Sie die Vorgänge, die die aktuelle Kultur zu ignorieren.  
   
  Sie können beide Arten von Vergleichen mit der Visual Basic ausführen <xref:Microsoft.VisualBasic.Strings.StrComp%2A> Funktion. Geben Sie den optionalen `Compare` Argument für den Typ des Vergleichs zu steuern: `Text` für die meisten ein- und Ausgabe `Binary` für genaue Übereinstimmungen zu ermitteln.  
   

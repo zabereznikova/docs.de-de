@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033721"
 ---
 # <a name="how-to-map-database-relationships"></a>Vorgehensweise: Zuordnen von Datenbankbeziehungen
 Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverweise codieren, die stets gleich bleiben. Da Kunden in der Beispieldatenbank Northwind typischerweise Bestellungen übermitteln, besteht im Modell stets eine Beziehung zwischen Kunden und deren Bestellungen.  
@@ -22,11 +22,11 @@ Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverw
   
  Die meisten Beziehungen sind 1:n, wie im Beispiel weiter unten in diesem Abschnitt. Sie können auch 1:1- und n:n-Beziehungen wie folgt darstellen:  
   
--   1: 1: Diese Art von Beziehung darstellen, indem Sie einschließlich <xref:System.Data.Linq.EntitySet%601> auf beiden Seiten.  
+- 1: 1: Diese Art von Beziehung darstellen, indem Sie einschließlich <xref:System.Data.Linq.EntitySet%601> auf beiden Seiten.  
   
      Betrachten Sie beispielsweise eine `Customer` - `SecurityCode` Beziehung erstellt, sodass in Sicherheitscode des Kunden nicht gefunden werden, wird die `Customer` -Tabelle und kann nur von autorisierten Personen zugegriffen werden.  
   
--   M: n: In den primären Schlüssel des der Verknüpfungstabelle m: n Beziehungen (auch mit dem Namen der *Junction* Tabelle) wird häufig durch eine Kombination der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
+- M: n: In den primären Schlüssel des der Verknüpfungstabelle m: n Beziehungen (auch mit dem Namen der *Junction* Tabelle) wird häufig durch eine Kombination der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
   
      Betrachten Sie beispielsweise eine `Employee` - `Project` m: n Beziehung aus, die mit der Verknüpfungstabelle `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfordert, dass eine solche Beziehung unter Verwendung von drei Klassen modelliert wird: `Employee`, `Project` und `EmployeeProject`. In diesem Fall kann beim Ändern der Beziehung zwischen einem `Employee` und einem `Project` das Update des Primärschlüssels `EmployeeProject` erfordern. Diese Situation lässt sich jedoch durch Löschen eines vorhandenen `EmployeeProject` und Erstellen eines neuen `EmployeeProject` am besten modellieren.  
   

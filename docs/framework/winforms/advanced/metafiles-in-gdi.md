@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010025"
 ---
 # <a name="metafiles-in-gdi"></a>Metadateien in GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Imaging.Metafile> Klasse, sodass Sie aufzeichnen und Anzeigen von Metadateien. Eine Metadatei, auch einen Vektor Image bezeichnet, handelt es sich um ein Bild, das als eine Sequenz von Zeichnen-Befehle und Einstellungen gespeichert werden. Die Befehle und Einstellungen aufgezeichnet werden, einem <xref:System.Drawing.Imaging.Metafile> Objekt im Arbeitsspeicher gespeichert oder in einer Datei oder einem Stream gespeichert werden kann.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119859"
 ## <a name="metafile-formats"></a>Metadatei-Formaten  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Metadateien, die in den folgenden Formaten gespeichert wurden, können angezeigt werden:  
   
--   Windows-Metadateien (WMF)  
+- Windows-Metadateien (WMF)  
   
--   Erweiterte Metadatei (Enhanced Metafile, EMF)  
+- Erweiterte Metadatei (Enhanced Metafile, EMF)  
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kann die Metadateien im EMF und EMF +-Format, aber nicht in der WMF-Formats aufzeichnen.  
   

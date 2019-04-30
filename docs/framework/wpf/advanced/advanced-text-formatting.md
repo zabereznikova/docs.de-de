@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032000"
 ---
 # <a name="advanced-text-formatting"></a>Erweiterte Textformatierung
 Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zum Einschließen von Text in Ihrer Anwendung. Layout und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Controls.TextBlock>, geben Sie die häufigsten und allgemeinsten Elemente für die Textdarstellung. Zeichnen von [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bieten eine Möglichkeit zum Einschließen von formatierten Texts in Zeichnungen bereit. Auf der höchsten Ebene [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine erweiterbare textformatierungs-Engine, um jeden Aspekt der Textdarstellung an, wie z. B. Speicherverwaltung für Text, die formatierungsverwaltung des Lauftexts und die Verwaltung eingebetteter Objekte steuern.  
@@ -55,11 +55,11 @@ Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INC
   
  Um die Virtualisierung von Textspeicher behandeln zu können, muss der Textspeicher von abgeleitet werden <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> definiert die Methode, die der textformatierer benutzt, um Lauftext aus dem Textspeicher abzurufen. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> ist, dass die Methode, die vom textformatierer verwendet wird, zum Abrufen von Text in der zeilenformatierung verwendeten ausgeführt wird. Der Aufruf von <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> erfolgt wiederholt vom Textformatierungsprogramm, bis eines der folgenden Bedingungen eintritt:  
   
--   Ein <xref:System.Windows.Media.TextFormatting.TextEndOfLine> oder eine Unterklasse wird zurückgegeben.  
+- Ein <xref:System.Windows.Media.TextFormatting.TextEndOfLine> oder eine Unterklasse wird zurückgegeben.  
   
--   Die kumulierte Breite des Lauftexts überschreitet die maximale Zeilenbreite, die entweder im Aufruf zum Erstellen des textformatierers oder der Aufruf an des textformatierers angegeben <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> Methode.  
+- Die kumulierte Breite des Lauftexts überschreitet die maximale Zeilenbreite, die entweder im Aufruf zum Erstellen des textformatierers oder der Aufruf an des textformatierers angegeben <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> Methode.  
   
--   Ein [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] zeilenvorschubsequenz, z.B. "CF", "LF" oder "CRLF" wird zurückgegeben.  
+- Ein [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] zeilenvorschubsequenz, z.B. "CF", "LF" oder "CRLF" wird zurückgegeben.  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>Bereitstellen von Lauftext  

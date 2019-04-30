@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Ve
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972899"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen
 Nach dem Entwickeln von einigen neuen WCF-Diensten, können Sie entscheiden, dass diese Dienste aus einem Skript oder eine Visual Basic 6.0-Anwendung aufrufen kann verwendet werden soll. Eine Methode wäre, eine WCF-Client-Assembly generieren, die Assembly bei COM registriert werden, die Assembly im GAC zu installieren und dann auf die COM-Typen von Visual Basic-Code verweisen. Wenn Sie die Anwendung verteilen, müssen Sie auch die WCF-Client-Assembly zu verteilen. Der Benutzer muss dann die WCF-Clientassembly bei COM registrieren und im GAC platzieren. WCF-COM-Interop können Sie auf die gleichen Dienstaufrufe ohne Rückgriff auf eine WCF-Clientassembly. Der WCF-Monikers können Sie jeden WCF-Dienst alle COM-kompatiblen Sprache (Visual Basic, VBScript, Visual Basic für Applikationen (VBA) usw.) rufen Sie dazu einen Metadatenaustausch (Mex)-Endpunkt URI, der der Dienstmoniker verwendet, um Typ zu extrahieren Informationen zum Dienst. Dieses Thema beschreibt, wie das erste-Schritte-WCF-Beispiel verwenden einen WCF-Monikers, der angibt, einen Mex-Endpunkt aufgerufen wird.  

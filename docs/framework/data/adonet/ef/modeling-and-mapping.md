@@ -3,11 +3,11 @@ title: Modellieren und Zuordnen
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
 ms.openlocfilehash: 847d518710b21df714343b541401ff7fc8443fb3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034020"
 ---
 # <a name="modeling-and-mapping"></a>Modellieren und Zuordnen
 In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Sie das konzeptionelle Modell, das Speichermodell und die Zuordnung zwischen beiden auf die Weise definieren, die der Anwendung am besten entspricht. Entity Data Model-Tools in Visual Studio können Sie erstellen ein. [Edmx-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) aus einer Datenbank oder einem grafischen Modell und aktualisieren Sie dann die Datei, wenn die Datenbank oder das Modell ändert.  

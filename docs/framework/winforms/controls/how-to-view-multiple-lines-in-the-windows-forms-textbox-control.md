@@ -12,18 +12,18 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012918"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms
 Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.TextBox> -Steuerelement zeigt eine einzelne Textzeile an und zeigt keine Bildlaufleisten. Wenn der Text länger als der verfügbare Speicherplatz ist, ist nur ein Teil des Texts angezeigt. Sie können dieses Standardverhalten ändern, durch Festlegen der <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, und <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaften auf die entsprechenden Werte.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Um einen Wagenrücklauf in der TextBox-Steuerelement anzuzeigen.  
   
--   Zum Anzeigen von eines Wagenrücklauf in ein mehrzeiliges <xref:System.Windows.Forms.TextBox>, verwenden Sie die <xref:System.Environment.NewLine%2A> Eigenschaft.  
+- Zum Anzeigen von eines Wagenrücklauf in ein mehrzeiliges <xref:System.Windows.Forms.TextBox>, verwenden Sie die <xref:System.Environment.NewLine%2A> Eigenschaft.  
   
      Beachten Sie, die die Interpretation von Escapezeichen (\\) ist sprachspezifisch. Visual Basic verwendet `Chr$(13) & Chr$(10)` für die Kombination aus Wagenrücklauf- und Zeilenvorschubzeichen.  
   

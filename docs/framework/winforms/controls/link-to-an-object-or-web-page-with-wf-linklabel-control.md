@@ -16,11 +16,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
 ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012859"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.LinkLabel> Steuerelement ermöglicht es Ihnen die Erstellung von Weblinks in Ihrem Formular. Wenn auf der Link geklickt wird, können Sie ändern die Farbe, um anzugeben, dass der Link bereits besucht wurde. Weitere Informationen zum Ändern der Farbe finden Sie unter [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement von Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037088"
 ---
 # <a name="commanding-overview"></a>Befehlsübersicht
 <a name="introduction"></a> Befehle sind ein Eingabemechanismus in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], der Eingabeverarbeitung auf einer höheren Ebene als die Geräteeingabe bereitstellt. Beispiele für Befehle sind die in vielen Programmen enthaltenen Vorgänge **Kopieren**, **Ausschneiden** und **Einfügen**.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139034"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Was sind Befehle?](#commands_at_10000_feet)  
+- [Was sind Befehle?](#commands_at_10000_feet)  
   
--   [Beispiel eines einfachen Befehls in WPF](#simple_command)  
+- [Beispiel eines einfachen Befehls in WPF](#simple_command)  
   
--   [Vier Hauptkonzepte für WPF-Befehle](#Four_main_Concepts)  
+- [Vier Hauptkonzepte für WPF-Befehle](#Four_main_Concepts)  
   
--   [Befehlsbibliothek](#Command_Library)  
+- [Befehlsbibliothek](#Command_Library)  
   
--   [Erstellen von benutzerdefinierten Befehlen](#creating_commands)  
+- [Erstellen von benutzerdefinierten Befehlen](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>Was sind Befehle?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139034"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Vier Hauptkonzepte für WPF-Befehle  
  Das Modell der weitergeleiteten Befehle in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kann auf vier Hauptkonzepte heruntergebrochen werden: der Befehl, die Befehlsquelle, das Ziel des Befehls und die Befehlsbindung:  
   
--   Die *Befehl* ist die Aktion, die ausgeführt werden soll.  
+- Die *Befehl* ist die Aktion, die ausgeführt werden soll.  
   
--   Die *Befehlsquelle* ist das Objekt, das den Befehl aufruft.  
+- Die *Befehlsquelle* ist das Objekt, das den Befehl aufruft.  
   
--   Das *Befehlsziel* ist das Objekt, auf das der Befehl ausgeführt wird.  
+- Das *Befehlsziel* ist das Objekt, auf das der Befehl ausgeführt wird.  
   
--   Die *Befehlsbindung* ist das Objekt, das den Befehl der Befehlslogik zuordnet.  
+- Die *Befehlsbindung* ist das Objekt, das den Befehl der Befehlslogik zuordnet.  
   
  Im vorherigen Beispiel ist <xref:System.Windows.Input.ApplicationCommands.Paste%2A> der Befehl, <xref:System.Windows.Controls.MenuItem> die Befehlsquelle, <xref:System.Windows.Controls.TextBox> das Befehlsziel und die Befehlsbindung wird vom Steuerelement <xref:System.Windows.Controls.TextBox> bereitgestellt.  Beachten Sie, dass <xref:System.Windows.Input.CommandBinding> nicht immer vom Steuerelement angegeben wird, das die Befehlszielklasse darstellt.  <xref:System.Windows.Input.CommandBinding> muss oft vom Anwendungsentwickler erstellt werden, sonst kann es vorkommen, dass <xref:System.Windows.Input.CommandBinding> mit einem Vorgänger des Befehlsziels verbunden ist.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139034"
   
  <xref:System.Windows.Input.ICommandSource> stellt drei Eigenschaften zur Verfügung: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> und <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der ausgeführt wird, wenn die Befehlsquelle aufgerufen wird.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der ausgeführt wird, wenn die Befehlsquelle aufgerufen wird.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, auf dem der Befehl ausgeführt wird.  Beachten Sie, dass die Eigenschaft <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nur auf <xref:System.Windows.Input.ICommandSource> anwendbar ist, wenn <xref:System.Windows.Input.ICommand> ein <xref:System.Windows.Input.RoutedCommand> ist.  Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> auf eine <xref:System.Windows.Input.ICommandSource> festgelegt und der entsprechende Befehl kein <xref:System.Windows.Input.RoutedCommand> ist, wird das Befehlsziel ignoriert. Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nicht festgelegt ist, wird das Element mit dem Tastaturfokus das Befehlsziel sein.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, auf dem der Befehl ausgeführt wird.  Beachten Sie, dass die Eigenschaft <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nur auf <xref:System.Windows.Input.ICommandSource> anwendbar ist, wenn <xref:System.Windows.Input.ICommand> ein <xref:System.Windows.Input.RoutedCommand> ist.  Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> auf eine <xref:System.Windows.Input.ICommandSource> festgelegt und der entsprechende Befehl kein <xref:System.Windows.Input.RoutedCommand> ist, wird das Befehlsziel ignoriert. Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nicht festgelegt ist, wird das Element mit dem Tastaturfokus das Befehlsziel sein.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ist ein benutzerdefinierter Datentyp zum Übergeben von Informationen an die Handler, die den Befehl implementieren.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ist ein benutzerdefinierter Datentyp zum Übergeben von Informationen an die Handler, die den Befehl implementieren.  
   
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassen, die <xref:System.Windows.Input.ICommandSource> implementieren, sind <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink> und <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem> und <xref:System.Windows.Documents.Hyperlink> rufen einen Befehl auf, wenn auf sie geklickt wird, und <xref:System.Windows.Input.InputBinding> ruft einen Befehl auf, wenn das zugeordnete <xref:System.Windows.Input.InputGesture> ausgeführt wird.  
   

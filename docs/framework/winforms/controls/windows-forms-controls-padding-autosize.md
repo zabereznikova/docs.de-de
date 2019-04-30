@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009083"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Die **Windows Forms-Designer** bietet Ihnen viele Layouttools, um dies zu erreichen. Drei der wichtigsten Faktoren sind die <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, und <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaften, die auf alle Windows Forms-Steuerelemente vorhanden sind.  
@@ -37,13 +37,13 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms-Projekts  
+- Erstellen eines Windows Forms-Projekts  
   
--   Festlegen von Rändern für Ihre Steuerelemente  
+- Festlegen von Rändern für Ihre Steuerelemente  
   
--   Abstand für Ihre Steuerelemente festlegen  
+- Abstand für Ihre Steuerelemente festlegen  
   
--   Automatisches Anpassen der Größe der Steuerelemente  
+- Automatisches Anpassen der Größe der Steuerelemente  
   
  Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   
@@ -53,7 +53,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
+- Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
@@ -178,11 +178,11 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="next-steps"></a>Nächste Schritte  
  Es gibt viele andere Layoutfeatures für das Anordnen von Steuerelementen in Ihrer Windows Forms-Anwendungen. Hier sind einige Kombinationen, die Sie ausprobieren können:  
   
--   Erstellen eines Formulars mit einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Versuchen Sie es ändern der Werte von der <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft, als auch die <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft der untergeordneten Steuerelemente.  
+- Erstellen eines Formulars mit einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Versuchen Sie es ändern der Werte von der <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft, als auch die <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft der untergeordneten Steuerelemente.  
   
--   Versuchen Sie es der gleichen Experiment mit einem <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+- Versuchen Sie es der gleichen Experiment mit einem <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Experimentieren Sie mit Andocken von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.Panel> Steuerelement. Die <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft ist eine allgemeinere Variante von der <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> -Eigenschaft, und Sie können zu erfüllen selbst, dass dies der Fall ist, indem Sie Sie in ein untergeordnetes Steuerelement einfügen einer <xref:System.Windows.Forms.Panel> Steuerelement und Festlegen des untergeordneten Steuerelements <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>. Legen Sie die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft verschiedene Werte und beobachten Sie die Auswirkung.  
+- Experimentieren Sie mit Andocken von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.Panel> Steuerelement. Die <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft ist eine allgemeinere Variante von der <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> -Eigenschaft, und Sie können zu erfüllen selbst, dass dies der Fall ist, indem Sie Sie in ein untergeordnetes Steuerelement einfügen einer <xref:System.Windows.Forms.Panel> Steuerelement und Festlegen des untergeordneten Steuerelements <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>. Legen Sie die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft verschiedene Werte und beobachten Sie die Auswirkung.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012476"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Wiedergeben eines Windows Forms-Steuerelements
 Rendering bezieht sich auf den Prozess der Erstellung einer visuellen Darstellung auf dem Bildschirm des Benutzers. Windows Forms verwendet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (die neue Windows-Grafikbibliothek) für das Rendering. Die verwalteten Klassen, die Zugriff auf ermöglichen [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] befinden sich in der <xref:System.Drawing?displayProperty=nameWithType> Namespace und dessen untergeordneten Namespaces.  
   
  Die folgenden Elemente sind beim Rendern von Steuerelementen beteiligt:  
   
--   Zeichnen von der Basisklasse bereitgestellte Funktionalität <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Zeichnen von der Basisklasse bereitgestellte Funktionalität <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Die Hauptkomponenten der [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Grafikbibliothek.  
+- Die Hauptkomponenten der [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Grafikbibliothek.  
   
--   Die Geometrie den Zeichnungsbereich.  
+- Die Geometrie den Zeichnungsbereich.  
   
--   Die Prozedur für das Freigeben von Grafikressourcen.  
+- Die Prozedur für das Freigeben von Grafikressourcen.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Zeichnen die Funktionalität, die vom Steuerelement  
  Die Basisklasse <xref:System.Windows.Forms.Control> über Zeichnungsfunktionalität bietet die <xref:System.Windows.Forms.Control.Paint> Ereignis. Ein Steuerelement löst die <xref:System.Windows.Forms.Control.Paint> Ereignis immer, wenn er benötigt, um dessen Anzeige zu aktualisieren. Weitere Informationen zu Ereignissen in .NET Framework finden Sie unter [behandeln und Auslösen von Ereignissen](../../../standard/events/index.md).  

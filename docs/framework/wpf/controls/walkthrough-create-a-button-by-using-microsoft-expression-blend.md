@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018261"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
 Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] benutzerdefinierte Schaltfläche mit Microsoft Expression Blend.  
@@ -117,17 +117,17 @@ Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung e
   
 10. **Stellen Sie GlassCube Glas aussehen:** Legen Sie die <xref:System.Windows.Shapes.Shape.Fill%2A> so einen Glaseffekt mit ein linearer Farbverlauf, die 75 % deckend und wechselt zwischen den Farbe Weiß und Transparent über 6 ungefähr gleichmäßig Intervallen Abstand. Hierfür gibt es die Farbverlaufsstopps festgelegt werden soll:  
   
-    -   Farbverlaufsstopp 1: Weiß mit einem Alphawert von 75 %  
+    - Farbverlaufsstopp 1: Weiß mit einem Alphawert von 75 %  
   
-    -   Farbverlaufsstopp 2: Transparent  
+    - Farbverlaufsstopp 2: Transparent  
   
-    -   Farbverlaufsstopp 3: Weiß mit einem Alphawert von 75 %  
+    - Farbverlaufsstopp 3: Weiß mit einem Alphawert von 75 %  
   
-    -   Farbverlaufsstopp 4: Transparent  
+    - Farbverlaufsstopp 4: Transparent  
   
-    -   Farbverlaufsstopp 5: Weiß mit einem Alphawert von 75 %  
+    - Farbverlaufsstopp 5: Weiß mit einem Alphawert von 75 %  
   
-    -   Farbverlaufsstopp 6: Transparent  
+    - Farbverlaufsstopp 6: Transparent  
   
      Dies erstellt einen Blick "wellenförmige" klicken.  
   
@@ -173,9 +173,9 @@ Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung e
   
 6. **Erstellen Sie Eigenschaftstrigger für IsFocused:** Mit dem gleichen Verfahren wie für <xref:System.Windows.UIElement.IsMouseOver%2A> (Siehe den ersten Schritt in diesem Abschnitt), erstellen Sie eine andere Eigenschaftentrigger für die <xref:System.Windows.UIElement.IsFocused%2A> Eigenschaft. Während **triggeraufzeichnung ist**, des Triggers die folgenden Aktionen hinzugefügt:  
   
-    -   **GlassCube** Ruft eine <xref:System.Windows.UIElement.Opacity%2A> von 100 %.  
+    - **GlassCube** Ruft eine <xref:System.Windows.UIElement.Opacity%2A> von 100 %.  
   
-    -   **OuterRectangle** Ruft eine <xref:System.Windows.Shapes.Shape.Stroke%2A> benutzerdefinierten Ausdrucks-Wert von "{DynamicResource {X: Static SystemColors.HighlightBrushKey}}".  
+    - **OuterRectangle** Ruft eine <xref:System.Windows.Shapes.Shape.Stroke%2A> benutzerdefinierten Ausdrucks-Wert von "{DynamicResource {X: Static SystemColors.HighlightBrushKey}}".  
   
  Als letzten Schritt in dieser exemplarischen Vorgehensweise fügen wir Animationen auf die Schaltfläche hinzu. Diese Animationen werden durch Ereignisse ausgelöst werden – insbesondere die <xref:System.Windows.UIElement.MouseEnter> und <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisse.  
   
@@ -208,19 +208,19 @@ Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung e
   
 5. **Erstellen Sie einen weiteren Ereignistrigger, und ordnen ihm eine andere Animation zu:** Fügen Sie eine weitere Animation an. Verwenden Sie ein ähnliches Verfahren, was Sie zum Erstellen von der vorherigen Ereignis Trigger Animation verwendet:  
   
-    1.  Erstellen Sie ein neues Ereignis Trigger mit dem <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+    1. Erstellen Sie ein neues Ereignis Trigger mit dem <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
-    2.  Ordnen Sie eine neue Zeitachse mit den <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+    2. Ordnen Sie eine neue Zeitachse mit den <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
      ![Vorgehensweise: Erstellen Sie eine neue Zeitachse](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  Erstellen Sie für diese Zeitachse zwei Keyframes, nacheinander 0,0 Sekunden und das zweite Argument bei 0,3 Sekunden.  
+    1. Erstellen Sie für diese Zeitachse zwei Keyframes, nacheinander 0,0 Sekunden und das zweite Argument bei 0,3 Sekunden.  
   
-    2.  Legen Sie den Keyframe bei 0,3 Sekunden hervor, die **transformieren Winkel drehen** und 360 Grad.  
+    2. Legen Sie den Keyframe bei 0,3 Sekunden hervor, die **transformieren Winkel drehen** und 360 Grad.  
   
      ![Vorgehensweise: Erstellen Sie eine Rotationstransformation](./media/custom-button-blend-rotatetransform.gif "Custom_button_blend_RotateTransform")  
   
-    1.  Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltfläche. Beachten Sie, dass die Glass-Ebene dreht.  
+    1. Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltfläche. Beachten Sie, dass die Glass-Ebene dreht.  
   
 ## <a name="conclusion"></a>Schlussbemerkung  
  Sie haben eine benutzerdefinierte Schaltfläche abgeschlossen. Sie haben dazu eine Schaltflächenvorlage, die auf alle Schaltflächen in der Anwendung angewendet wurde. Wenn Sie den Vorlagenbearbeitungsmodus lassen (siehe die folgende Abbildung) und weitere Schaltflächen erstellen, sehen Sie, dass ihr Aussehen und Verhalten sich wie Ihre benutzerdefinierte Schaltfläche und nicht wie die Schaltfläche "Standard".  
@@ -237,15 +237,15 @@ Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung e
   
  Das bedeutet, haben Sie gerade eine Schaltflächenvorlage anpassen Vorgehensweise gehen in Microsoft Expression Blend gelernt:  
   
--   Passen Sie das Aussehen eines Steuerelements an.  
+- Passen Sie das Aussehen eines Steuerelements an.  
   
--   Festlegen von Eigenschaftstriggern. Eigenschaftstrigger sind sehr nützlich, da sie für die meisten Objekte, nicht nur für Steuerelemente verwendet werden können.  
+- Festlegen von Eigenschaftstriggern. Eigenschaftstrigger sind sehr nützlich, da sie für die meisten Objekte, nicht nur für Steuerelemente verwendet werden können.  
   
--   Festlegen von Ereignistriggern. Ereignistrigger sind sehr nützlich, da sie für die meisten Objekte, nicht nur für Steuerelemente verwendet werden können.  
+- Festlegen von Ereignistriggern. Ereignistrigger sind sehr nützlich, da sie für die meisten Objekte, nicht nur für Steuerelemente verwendet werden können.  
   
--   Erstellen von Animationen.  
+- Erstellen von Animationen.  
   
--   Sonstiges: Erstellen von Farbverläufen, BitmapEffects hinzufügen, verwenden von Transformationen und legen Sie die grundlegende Eigenschaften von Objekten.  
+- Sonstiges: Erstellen von Farbverläufen, BitmapEffects hinzufügen, verwenden von Transformationen und legen Sie die grundlegende Eigenschaften von Objekten.  
   
 ## <a name="see-also"></a>Siehe auch
 

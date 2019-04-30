@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041833"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply-Methode
 Benachrichtigt den Profiler, dass der Prozess Verarbeitung eine Remotemethode aufrufen-Anforderung abgeschlossen hat und die Antwort über einen Kanal übertragen wird.  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in] Ein Zeiger auf eine GUID, die mit dem Wert im bereitgestellten entspricht [ICorProfilerCallback:: RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) unter diesen Bedingungen:  
   
--   Remoting-GUID-Cookies sind aktiv.  
+- Remoting-GUID-Cookies sind aktiv.  
   
--   Der Kanal ist erfolgreich, bei der Übermittlung der Nachricht.  
+- Der Kanal ist erfolgreich, bei der Übermittlung der Nachricht.  
   
--   GUID-Cookies sind bei der clientseitigen aktiv.  
+- GUID-Cookies sind bei der clientseitigen aktiv.  
   
  Dies ermöglicht die einfache Kopplung der Remotingaufrufe und die Erstellung einer logischen Aufrufliste.  
   

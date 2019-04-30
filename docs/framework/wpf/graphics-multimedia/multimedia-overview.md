@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030384"
 ---
 # <a name="multimedia-overview"></a>Übersicht über Multimedia
 Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ermöglichen Ihnen die Integration von Audio- und Videoinhalten in Ihre Anwendungen, um die Benutzerfreundlichkeit zu verbessern. In diesem Thema werden die Multimediafunktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt.  
@@ -37,11 +37,11 @@ Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
 ### <a name="independent-mode"></a>Unabhängiger Modus  
  Im unabhängigen Modus steuert der Medieninhalt die Medienwiedergabe. Im unabhängigen Modus sind die folgenden Optionen aktiviert:  
   
--   Medien <xref:System.Uri> kann direkt angegeben werden.  
+- Medien <xref:System.Uri> kann direkt angegeben werden.  
   
--   Die Medienwiedergabe kann direkt gesteuert werden.  
+- Die Medienwiedergabe kann direkt gesteuert werden.  
   
--   Medien <xref:System.Windows.Controls.MediaElement.Position%2A> und <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> Eigenschaften geändert werden können.  
+- Medien <xref:System.Windows.Controls.MediaElement.Position%2A> und <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> Eigenschaften geändert werden können.  
   
  Medien werden geladen, entweder durch Festlegen der <xref:System.Windows.Controls.MediaElement> des Objekts <xref:System.Windows.Controls.MediaElement.Source%2A> Eigenschaft oder durch Aufrufen der <xref:System.Windows.Media.MediaPlayer> des Objekts <xref:System.Windows.Media.MediaPlayer.Open%2A> Methode.  
   
@@ -52,11 +52,11 @@ Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
 ### <a name="clock-mode"></a>Uhrmodus  
  Im Uhrmodus befindet eine <xref:System.Windows.Media.MediaTimeline> Laufwerke die Medienwiedergabe. Der Uhrmodus weist folgende Merkmale auf:  
   
--   Medien <xref:System.Uri> wird indirekt durch Festlegen einer <xref:System.Windows.Media.MediaTimeline>.  
+- Medien <xref:System.Uri> wird indirekt durch Festlegen einer <xref:System.Windows.Media.MediaTimeline>.  
   
--   Die Medienwiedergabe kann von der Uhr gesteuert werden. Die Steuerelementmethoden des Medienobjekts können nicht verwendet werden.  
+- Die Medienwiedergabe kann von der Uhr gesteuert werden. Die Steuerelementmethoden des Medienobjekts können nicht verwendet werden.  
   
--   Medien werden geladen, durch Festlegen einer <xref:System.Windows.Media.MediaTimeline> des Objekts <xref:System.Windows.Media.MediaTimeline.Source%2A> Eigenschaft, die Uhr aus der Zeitachse erstellt, und die Uhr dem Medienobjekt. Medien werden auch auf diese Weise geladen, wenn eine <xref:System.Windows.Media.MediaTimeline> in eine <xref:System.Windows.Media.Animation.Storyboard> Ziele eine <xref:System.Windows.Controls.MediaElement>.  
+- Medien werden geladen, durch Festlegen einer <xref:System.Windows.Media.MediaTimeline> des Objekts <xref:System.Windows.Media.MediaTimeline.Source%2A> Eigenschaft, die Uhr aus der Zeitachse erstellt, und die Uhr dem Medienobjekt. Medien werden auch auf diese Weise geladen, wenn eine <xref:System.Windows.Media.MediaTimeline> in eine <xref:System.Windows.Media.Animation.Storyboard> Ziele eine <xref:System.Windows.Controls.MediaElement>.  
   
  Zum Steuern der Medienwiedergabe im Uhrmodus befindet die <xref:System.Windows.Media.Animation.ClockController> -Steuerelementmethoden verwendet werden müssen. Ein <xref:System.Windows.Media.Animation.ClockController> aus einer der <xref:System.Windows.Media.Animation.ClockController> Eigenschaft der <xref:System.Windows.Media.MediaClock>. Wenn Sie versuchen, die entweder zu verwenden eine <xref:System.Windows.Controls.MediaElement> oder <xref:System.Windows.Media.MediaPlayer> Objekt im Uhrmodus befindet, wird ein <xref:System.InvalidOperationException> ausgelöst.  
   

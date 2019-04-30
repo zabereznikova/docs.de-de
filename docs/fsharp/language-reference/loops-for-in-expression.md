@@ -3,11 +3,11 @@ title: 'Schleifen: for...in-Ausdruck'
 description: Finden Sie unter wie die F# for... in Ausdruck Schleifenkonstrukt zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird.
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024442"
 ---
 # <a name="loops-forin-expression"></a>Schleifen: for...in-Ausdruck
 
@@ -28,11 +28,11 @@ Der enumerable-Ausdruck kann angegeben werden, als aufzählbare Auflistung oder 
 
 Wenn Sie einen Bereich mithilfe von Ausdrücken die `..` -Operator, können Sie die folgende Syntax verwenden.
 
-*Starten Sie* ... *Fertig stellen*
+*Starten Sie* ... *finish*
 
 Können Sie auch eine Version, ein Inkrement wird aufgerufen, beinhaltet, die *überspringen*, wie im folgenden Code.
 
-*Starten Sie* ... *Überspringen Sie* ... *Fertig stellen*
+*Starten Sie* ... *Überspringen Sie* ... *finish*
 
 Wenn Sie ganzzahlige Bereiche und eine einfache Counter-Variable als Muster verwenden, in der Regel werden die Zählervariable um 1 bei jeder Iteration zu erhöhen, aber wenn der Bereich einen Skip-Wert enthält, wird erhöht, durch den Skip-Wert stattdessen.
 

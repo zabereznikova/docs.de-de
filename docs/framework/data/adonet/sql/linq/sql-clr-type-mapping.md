@@ -3,11 +3,11 @@ title: SQL-CLR-Typenzuordnung
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037699"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR-Typenzuordnung
 In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in einer beliebigen Programmiersprache erstellt wurde. Bei der Ausführung der Anwendung wandelt LINQ to SQL die sprachintegrierten Abfragen im Objektmodell in SQL um und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt LINQ to SQL diese zurück in Objekte, mit denen in einer Programmiersprache gearbeitet werden kann.  
@@ -16,23 +16,23 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
  In diesem Thema werden folgende Punkte erläutert:  
   
--   [Standardtypmapping](#DefaultTypeMapping)  
+- [Standardtypmapping](#DefaultTypeMapping)  
   
--   [Laufzeitverhaltens-Matrix des Typmappings](#BehaviorMatrix)  
+- [Laufzeitverhaltens-Matrix des Typmappings](#BehaviorMatrix)  
   
--   [Unterschiede im Verhalten zwischen CLR und SQL-Ausführung](#BehaviorDiffs)  
+- [Unterschiede im Verhalten zwischen CLR und SQL-Ausführung](#BehaviorDiffs)  
   
--   [Enumerationsmapping](#EnumMapping)  
+- [Enumerationsmapping](#EnumMapping)  
   
--   [Numerisches Mapping](#NumericMapping)  
+- [Numerisches Mapping](#NumericMapping)  
   
--   [Text- und XML-Zuordnung](#TextMapping)  
+- [Text- und XML-Zuordnung](#TextMapping)  
   
--   [Datums- und Uhrzeitmapping](#DateMapping)  
+- [Datums- und Uhrzeitmapping](#DateMapping)  
   
--   [Binäres Mapping](#BinaryMapping)  
+- [Binäres Mapping](#BinaryMapping)  
   
--   [Verschiedene Mappingtypen](#MiscMapping)  
+- [Verschiedene Mappingtypen](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Standardtypmapping  
@@ -58,21 +58,21 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
  Folgende Beispiele zeigen einige Unterschiede im Verhalten zwischen der CLR und SQL Server:  
   
--   In SQL Server und der CLR werden verschiedene vergleichbare Datentypen unterschiedlich sortiert. Zum Beispiel werden SQL Server-Daten des Typs `UNIQUEIDENTIFIER` anders sortiert als CLR-Daten des Typs <xref:System.Guid?displayProperty=nameWithType>.  
+- In SQL Server und der CLR werden verschiedene vergleichbare Datentypen unterschiedlich sortiert. Zum Beispiel werden SQL Server-Daten des Typs `UNIQUEIDENTIFIER` anders sortiert als CLR-Daten des Typs <xref:System.Guid?displayProperty=nameWithType>.  
   
--   SQL Server behandelt verschiedene Vorgänge für Zeichenfolgenvergleiche anders als die CLR. In SQL Server ist das Verhalten bei Zeichenfolgenvergleichen von den Sortierungseinstellungen auf dem Server abhängig. Weitere Informationen finden Sie unter [arbeiten mit Sortierungen](https://go.microsoft.com/fwlink/?LinkId=115330) in der Microsoft SQL Server-Onlinedokumentation.  
+- SQL Server behandelt verschiedene Vorgänge für Zeichenfolgenvergleiche anders als die CLR. In SQL Server ist das Verhalten bei Zeichenfolgenvergleichen von den Sortierungseinstellungen auf dem Server abhängig. Weitere Informationen finden Sie unter [arbeiten mit Sortierungen](https://go.microsoft.com/fwlink/?LinkId=115330) in der Microsoft SQL Server-Onlinedokumentation.  
   
--   Für einige zugeordnete Funktionen werden von SQL Server andere Werte zurückgegeben als von der CLR. Die Funktionen für die Überprüfung auf Gleichheit beispielsweise unterscheiden sich, da von SQL Server zwei Zeichenketten als gleich aufgefasst werden, wenn sie sich lediglich durch nachgestellte Leerzeichen unterscheiden, während solche Zeichenketten von der CLR als unterschiedlich aufgefasst werden.  
+- Für einige zugeordnete Funktionen werden von SQL Server andere Werte zurückgegeben als von der CLR. Die Funktionen für die Überprüfung auf Gleichheit beispielsweise unterscheiden sich, da von SQL Server zwei Zeichenketten als gleich aufgefasst werden, wenn sie sich lediglich durch nachgestellte Leerzeichen unterscheiden, während solche Zeichenketten von der CLR als unterschiedlich aufgefasst werden.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Enumerationsmapping  
  LINQ to SQL unterstützt für das Mapping des CLR-<xref:System.Enum?displayProperty=nameWithType>-Typs zu SQL Server-Typen zwei Arten:  
   
--   Zuordnung zu numerischen SQL-Typen (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- Zuordnung zu numerischen SQL-Typen (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
   
      Wenn ein CLR-<xref:System.Enum?displayProperty=nameWithType>-Typ einem numerischen SQL-Typ zugeordnet wird, wird der zugrunde liegende CLR-<xref:System.Enum?displayProperty=nameWithType>-Typ dem Wert der SQL Server-Datenbankspalte zugeordnet. Enthält z. B. ein <xref:System.Enum?displayProperty=nameWithType> mit dem Namen `DaysOfWeek` einen Member mit dem Namen `Tue` und dem zugrunde liegenden Ganzzahlwert 3, wird dieser dem Datenbankwert 3 zugeordnet.  
   
--   Zuordnung zu SQL-Texttypen (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- Zuordnung zu SQL-Texttypen (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
   
      Wenn ein CLR-<xref:System.Enum?displayProperty=nameWithType>-Typ einem SQL-Texttyp zugeordnet wird, wird der SQL-Datenbankwert den Namen der CLR-<xref:System.Enum?displayProperty=nameWithType>-Member zugeordnet. Enthält z. B. ein <xref:System.Enum?displayProperty=nameWithType> mit dem Namen `DaysOfWeek` einen Member mit dem Namen `Tue` und dem zugrunde liegenden Ganzzahlwert 3, wird dieser dem Datenbankwert `Tue` zugeordnet.  
   
@@ -154,13 +154,13 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 ### <a name="xml-types"></a>XML-Typen  
  Der `XML`-Datentyp von SQL Server ist seit Microsoft SQL Server 2005 verfügbar. Der `XML`-Datentyp von SQL Server kann <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> oder <xref:System.String> zugeordnet werden. Wenn die Spalte XML-Fragmente speichert, die nicht in <xref:System.Xml.Linq.XElement> eingelesen werden können, muss die Spalte <xref:System.String> zugeordnet werden, um Laufzeitfehler zu vermeiden. Zu den XML-Fragmenten, die <xref:System.String> zugeordnet werden müssen, zählen die folgenden:  
   
--   Eine Sequenz von XML-Elementen  
+- Eine Sequenz von XML-Elementen  
   
--   Attribute  
+- Attribute  
   
--   Öffentliche Bezeichner (Public Identifier, PI)  
+- Öffentliche Bezeichner (Public Identifier, PI)  
   
--   Kommentare  
+- Kommentare  
   
  Obwohl Sie zugeordnet werden können <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XDocument> mit SQL Server, siehe die [Typ Zuordnung Laufzeitverhaltens-Matrix](#BehaviorMatrix), wird die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Methode verfügt über keine Standard-SQL Server-Typzuordnung für diese Typen.  
   

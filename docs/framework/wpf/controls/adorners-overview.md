@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019090"
 ---
 # <a name="adorners-overview"></a>Übersicht über Adorner
 Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwendet, um visuelle Hinweise zu einem Benutzer angezeigt werden. Adorner können unter anderem verwendet werden, um Elementen funktionale Ziehpunkte hinzuzufügen oder Zustandsinformationen über Steuerelemente bereitzustellen.  
@@ -23,13 +23,13 @@ Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwen
   
  Adorner finden eine breite Anwendung in folgenden Fällen:  
   
--   Hinzufügen funktionaler Ziehpunkte zu einem <xref:System.Windows.UIElement> , mit denen einen Benutzer das Element auf irgendeine Weise (Größe ändern, drehen, neu positionieren, usw.) zu bearbeiten.  
+- Hinzufügen funktionaler Ziehpunkte zu einem <xref:System.Windows.UIElement> , mit denen einen Benutzer das Element auf irgendeine Weise (Größe ändern, drehen, neu positionieren, usw.) zu bearbeiten.  
   
--   Bereitstellen von visuellem Feedback, um verschiedene Zustände anzugeben oder auf verschiedene Ereignisse zu reagieren.  
+- Bereitstellen von visuellem Feedback, um verschiedene Zustände anzugeben oder auf verschiedene Ereignisse zu reagieren.  
   
--   Überlagerung von visuellen Dekorationen auf einem <xref:System.Windows.UIElement>.  
+- Überlagerung von visuellen Dekorationen auf einem <xref:System.Windows.UIElement>.  
   
--   Visuelles Maskieren oder überschreiben oder teilweise ein <xref:System.Windows.UIElement>.  
+- Visuelles Maskieren oder überschreiben oder teilweise ein <xref:System.Windows.UIElement>.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt ein grundlegendes Framework zum Verzieren von visuellen Elementen bereit. In der folgenden Tabelle sind die zum Verzieren von Objekten verwendeten primären Typen samt deren Zweck aufgelistet. Es folgen mehrere Verwendungsbeispiele.  
   

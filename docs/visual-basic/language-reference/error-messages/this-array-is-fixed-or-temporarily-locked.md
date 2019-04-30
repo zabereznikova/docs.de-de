@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982448"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Das Array ist fixiert oder vorübergehend gesperrt (Visual Basic).
 Dieser Fehler hat die folgenden möglichen Ursachen:  
   
--   Mithilfe von `ReDim` so ändern Sie die Anzahl der Elemente eines Arrays fester Größe.  
+- Mithilfe von `ReDim` so ändern Sie die Anzahl der Elemente eines Arrays fester Größe.  
   
--   Neudimensionierung ein auf Modulebene dynamisches Array, in dem ein Element an eine Prozedur als Argument übergeben wurde. Wenn ein Element übergeben wird, ist das Array gesperrt, um zu verhindern, dass Freigeben von Speicher für der Verweisparameter, in der Prozedur.  
+- Neudimensionierung ein auf Modulebene dynamisches Array, in dem ein Element an eine Prozedur als Argument übergeben wurde. Wenn ein Element übergeben wird, ist das Array gesperrt, um zu verhindern, dass Freigeben von Speicher für der Verweisparameter, in der Prozedur.  
   
--   Es wird versucht, einen Wert zuweisen einer `Variant` Variable, die ein Array ist, enthält aber die `Variant` ist zurzeit gesperrt.  
+- Es wird versucht, einen Wert zuweisen einer `Variant` Variable, die ein Array ist, enthält aber die `Variant` ist zurzeit gesperrt.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   

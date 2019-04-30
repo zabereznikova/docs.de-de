@@ -3,11 +3,11 @@ title: POCO-Unterstützung
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
 ms.openlocfilehash: 86ade3a6b045f6f7c57e4a95936b4f1574b51ff0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008019"
 ---
 # <a name="poco-support"></a>POCO-Unterstützung
 In diesem Beispiel wird die Serialisierungsunterstützung für makellose Typen demonstriert, d.&amp;#160;h. Typen, auf die Serialisierungsattribute nicht angewendet wurden (diese werden auch als POCO-Typen (Plain Old CLR Object) bezeichnet). Der <xref:System.Runtime.Serialization.DataContractSerializer> leitet einen Datenvertrag für alle öffentlichen makellosen Typen ab, die über einen Standardkonstruktor verfügen. Datenverträge ermöglichen es Ihnen, strukturierte Daten an Dienste zu übergeben und von ihnen zu empfangen. Weitere Informationen zu nicht markierten Typen, finden Sie unter [serialisierbare Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md).  

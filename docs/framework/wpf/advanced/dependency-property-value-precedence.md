@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010539"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315685"
   
 4. **TemplatedParent-Vorlageneigenschaften.** Ein Element verfügt über eine <xref:System.Windows.FrameworkElement.TemplatedParent%2A> , wenn es als Teil einer Vorlage erstellt wurde (eine <xref:System.Windows.Controls.ControlTemplate> oder <xref:System.Windows.DataTemplate>). Weitere Informationen dazu, wann dies zutrifft, finden Sie unter [TemplatedParent](#templatedparent) weiter unten in diesem Thema. Innerhalb der Vorlage gilt die folgende Rangfolge:  
   
-    1.  Wird ausgelöst, von der <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Vorlage.  
+    1. Wird ausgelöst, von der <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Vorlage.  
   
-    2.  Eigenschaftensätze (normalerweise über [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute) in der <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Vorlage.  
+    2. Eigenschaftensätze (normalerweise über [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute) in der <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Vorlage.  
   
 5. **Impliziter Stil.** Gilt nur für die `Style`-Eigenschaft. Die `Style`-Eigenschaft wird durch eine Stilressource mit einem Schlüssel gefüllt, der mit dem Typ dieses Elements übereinstimmt. Diese Stilressource muss entweder auf der Seite oder in der Anwendung vorhanden sein. Die Suche nach einer impliziten Stilressource wird nicht in den Designs fortgesetzt.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315685"
   
 9. **Standard(design)stil.** Ausführliche Informationen dazu, wann dies zutrifft und wie sich Designstile auf die Vorlagen innerhalb von Designstilen beziehen, finden Sie unter [Standard(design)stile](#themestyles) weiter unten in diesem Thema. Innerhalb eines Standardstils gilt die folgende Rangfolge:  
   
-    1.  Aktive Trigger im Designstil  
+    1. Aktive Trigger im Designstil  
   
-    2.  Setter im Designstil  
+    2. Setter im Designstil  
   
 10. **Vererbung.** Einige Abhängigkeitseigenschaften vererben ihre Werte von übergeordneten Elementen an untergeordnete Elemente, sodass sie nicht speziell für jedes Element in einer Anwendung festgelegt werden müssen. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315685"
 ## <a name="the-style-property"></a>Die Style-Eigenschaft  
  Die zuvor beschriebene gilt für alle möglichen Abhängigkeitseigenschaften, außer einer: die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft ist eindeutig, da es sich selbst gestaltet werden kann, damit die rangfolgenelemente 5 bis 8 nicht relevant sind. Darüber hinaus entweder Animation noch die Koersion <xref:System.Windows.FrameworkElement.Style%2A> wird nicht empfohlen (und Animieren von <xref:System.Windows.FrameworkElement.Style%2A> würde eine benutzerdefinierte Animationsklasse erfordern). Dies bewirkt, dass drei Möglichkeiten, die die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft kann festgelegt werden:  
   
--   **Expliziter Stil.** Die <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft direkt festgelegt. In den meisten Szenarios wird der Stil nicht inline definiert, aber stattdessen durch einen expliziten Schlüssel als eine Ressource verwiesen. In diesem Fall verhält sich die Style-Eigenschaft selbst so, als handele es sich um einen lokalen Wert, das Rangfolgenelement 3.  
+- **Expliziter Stil.** Die <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft direkt festgelegt. In den meisten Szenarios wird der Stil nicht inline definiert, aber stattdessen durch einen expliziten Schlüssel als eine Ressource verwiesen. In diesem Fall verhält sich die Style-Eigenschaft selbst so, als handele es sich um einen lokalen Wert, das Rangfolgenelement 3.  
   
--   **Impliziter Stil.** Die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft wird nicht direkt festgelegt werden. Allerdings die <xref:System.Windows.FrameworkElement.Style%2A> auf einer bestimmten Ebene in der Ressourcensuchsequenz (Seite, Anwendung) ist vorhanden und wird ein Schlüssel mithilfe von ein Ressourcenschlüssel, der dem Typ übereinstimmt, das Format ist auf angewendet werden. In diesem Fall die <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft selbst fungiert, in der Sequenz als Element 5 identifizierte Priorität. Diese Bedingung kann erkannt werden, mithilfe von <xref:System.Windows.DependencyPropertyHelper> für die <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft und nach <xref:System.Windows.BaseValueSource.ImplicitStyleReference> in den Ergebnissen.  
+- **Impliziter Stil.** Die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft wird nicht direkt festgelegt werden. Allerdings die <xref:System.Windows.FrameworkElement.Style%2A> auf einer bestimmten Ebene in der Ressourcensuchsequenz (Seite, Anwendung) ist vorhanden und wird ein Schlüssel mithilfe von ein Ressourcenschlüssel, der dem Typ übereinstimmt, das Format ist auf angewendet werden. In diesem Fall die <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft selbst fungiert, in der Sequenz als Element 5 identifizierte Priorität. Diese Bedingung kann erkannt werden, mithilfe von <xref:System.Windows.DependencyPropertyHelper> für die <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft und nach <xref:System.Windows.BaseValueSource.ImplicitStyleReference> in den Ergebnissen.  
   
--   **Standardstil**, auch bekannt als **Designstil.** Die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft wird nicht direkt festgelegt, und in der Tat wird als `null` bis zur Laufzeit. In diesem Fall stammt der Stil von der Auswertung des Laufzeitdesigns, die Teil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Präsentations-Engine ist.  
+- **Standardstil**, auch bekannt als **Designstil.** Die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft wird nicht direkt festgelegt, und in der Tat wird als `null` bis zur Laufzeit. In diesem Fall stammt der Stil von der Auswertung des Laufzeitdesigns, die Teil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Präsentations-Engine ist.  
   
  Bei impliziten Stilen außerhalb von Designs muss der Typ genau - übereinstimmen eine `MyButton` `Button`-abgeleiteten Klasse verwendet nicht implizit einen Stil für `Button`.  
   

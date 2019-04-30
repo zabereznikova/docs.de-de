@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011007"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Vorgehensweise: Anordnen von Steuerelementen mithilfe der Ausrichtungslinien und des Rasters in Windows Forms
 Verwenden die Layoutfeatures von Visual Studio, können Sie genau steuern, wo die Steuerelemente in einem Formular platziert werden. Steuerelemente zu einem Formular hinzugefügt oder verschoben werden, in einem Formular automatisch auf die Zeilen und Spalten von der Windows Forms-Designer-Raster ausgerichtet werden können, oder Ausrichten von Steuerelementen mithilfe der Ausrichtungslinien-Funktion.  
@@ -23,7 +23,7 @@ Verwenden die Layoutfeatures von Visual Studio, können Sie genau steuern, wo di
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>Um alle Steuerelemente am Raster ausrichten  
   
--   Wählen Sie die **SnapToGrid** Layoutmodus im Windows Forms-Designer **Optionen** Dialogfeld.  
+- Wählen Sie die **SnapToGrid** Layoutmodus im Windows Forms-Designer **Optionen** Dialogfeld.  
   
      Weitere Informationen finden Sie unter [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)). Alle Steuerelemente ausrichten jetzt selbst auf die Punkte im Raster.  
   
@@ -31,7 +31,7 @@ Verwenden die Layoutfeatures von Visual Studio, können Sie genau steuern, wo di
   
 ### <a name="to-align-controls-using-snaplines"></a>Zum Ausrichten von Steuerelementen, die mithilfe von Ausrichtungslinien  
   
--   Wählen Sie die **Ausrichtungslinien** Layoutmodus im Windows Forms-Designer **Optionen** Dialogfeld.  
+- Wählen Sie die **Ausrichtungslinien** Layoutmodus im Windows Forms-Designer **Optionen** Dialogfeld.  
   
      Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Sie können jetzt mithilfe von Ausrichtungslinien ausrichten und Steuerelemente im Formular anordnen.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009486"
 ---
 # <a name="toolstrip-technology-summary"></a>Zusammenfassung der ToolStrip-Technologie
 In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen zusammengefasst, die seine Verwendung unterstützen.  
@@ -25,23 +25,23 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
 ## <a name="background"></a>Hintergrund  
  Mit dem `ToolStrip`-Steuerelement und den zugehörigen Klassen können Sie erweiterte Symbolleistenfunktionen erstellen, die ein konsistentes und professionelles Aussehen und Verhalten aufweisen. Das `ToolStrip`-Steuerelement und die zugehörigen Klassen bieten gegenüber früheren Steuerelementen die folgenden Verbesserungen:  
   
--   Ein einheitlicheres Ereignismodell  
+- Ein einheitlicheres Ereignismodell  
   
--   Ein konsistenteres Entwurfszeitverhalten, das Aufgabenlisten und Elementauflistungs-Editoren enthält  
+- Ein konsistenteres Entwurfszeitverhalten, das Aufgabenlisten und Elementauflistungs-Editoren enthält  
   
--   Benutzerdefiniertes Rendern mit `ToolStripManager` und `ToolStripRenderer`  
+- Benutzerdefiniertes Rendern mit `ToolStripManager` und `ToolStripRenderer`  
   
--   Integriertes Rafting (die gemeinsame Nutzung eines horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs im angedockten Zustand) mit `ToolStripContainer` und `ToolStripPanel`  
+- Integriertes Rafting (die gemeinsame Nutzung eines horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs im angedockten Zustand) mit `ToolStripContainer` und `ToolStripPanel`  
   
--   Die Neuanordnung von Elementen mit der <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>-Eigenschaft zur Entwurfs- und Laufzeit  
+- Die Neuanordnung von Elementen mit der <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>-Eigenschaft zur Entwurfs- und Laufzeit  
   
--   Das Umsetzen von Elementen in ein Überlaufmenü mit der <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>-Eigenschaft  
+- Das Umsetzen von Elementen in ein Überlaufmenü mit der <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>-Eigenschaft  
   
--   Vollständig konfigurierbare Steuerelementposition mit `ToolStripContainer`, `ToolStripPanel` und `ToolStripContentPanel`  
+- Vollständig konfigurierbare Steuerelementposition mit `ToolStripContainer`, `ToolStripPanel` und `ToolStripContentPanel`  
   
--   Das Hosten von `ToolStrip`-, traditionellen oder benutzerdefinierten Steuerelementen mithilfe von `ToolStripControlHost`  
+- Das Hosten von `ToolStrip`-, traditionellen oder benutzerdefinierten Steuerelementen mithilfe von `ToolStripControlHost`  
   
--   Das Zusammenführen von `ToolStrip`Steuerelementen mithilfe von `ToolStripPanel`  
+- Das Zusammenführen von `ToolStrip`Steuerelementen mithilfe von `ToolStripPanel`  
   
  `ToolStrip` ist die erweiterbare Basisklasse für `MenuStrip`, `ContextMenuStrip` und `StatusStrip`. Diese Steuerelemente sind <xref:System.Windows.Forms.ToolStripItem>-Container, die eine gemeinsame Verhaltensweise und die Ereignisbehandlung erben, die erweitert werden, damit sich jede Implementierung mit dem für sie geeigneten Verhalten beschäftigt. Die von <xref:System.Windows.Forms.ToolStripItem> abgeleiteten Steuerelemente sind in der folgenden Tabelle aufgeführt. Die `ToolStrip`-Basisklasse befasst sich mit Zeichenoperationen, Benutzereingaben und Drag &amp; Drop-Ereignissen für diese Steuerelemente.  
   
@@ -63,26 +63,26 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
 ### <a name="task-dialog-boxes"></a>Aufgabendialogfelder  
  Wenn Sie in Visual Studio im Designer auf das Smarttag eines Steuerelements klicken, wird eine Aufgabenliste für den einfachen Zugriff auf viele häufig verwendete Befehle angezeigt.  
   
--   [MenuStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [ToolStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [ContextMenuStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [StatusStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [ToolStripContainer-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Elementauflistungs-Editoren  
  In Visual Studio, wenn Sie auf **Elemente bearbeiten** für den Task aus, oder mit der rechten Maustaste den-Steuerelement, und wählen **Elemente bearbeiten** im Kontextmenü die Option, wird der auflistungs-Editor für das Steuerelement angezeigt. Mithilfe von Auflistungs-Editoren können Sie Elemente zum Steuerelement hinzufügen, aus dem Steuerelement entfernen und die im Steuerelement enthaltenen Elemente neu anordnen. Zudem können Sie die Eigenschaften für das Steuerelement und für die Elemente des Steuerelements anzeigen und ändern.  
   
--   [MenuStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [StatusStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [ContextMenuStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [ToolStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hosten von Steuerelementen  
  Die <xref:System.Windows.Forms.ToolStripControlHost>-Klasse bietet integrierte Wrapper für die Steuerelemente <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> und <xref:System.Windows.Forms.ToolStripProgressBar>. Sie können auch beliebige andere vorhandene Steuerelemente oder COM-Steuerelemente in einem <xref:System.Windows.Forms.ToolStripControlHost> hosten.  

@@ -3,31 +3,31 @@ title: Externe Zuordnung
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037894"
 ---
 # <a name="external-mapping"></a>Externe Zuordnung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt *externe Zuordnung*, einen Prozess mit dem Sie eine separate XML-Datei verwenden, um die Zuordnung zwischen dem Datenmodell der Datenbank und dem Objektmodell an. Die Verwendung einer externen Zuordnungsdatei bietet u. a. folgende Vorteile:  
   
--   Sie können den Zuordnungscode vom Anwendungscode trennen. Hierdurch wird die Übersichtlichkeit des Anwendungscodes verbessert.  
+- Sie können den Zuordnungscode vom Anwendungscode trennen. Hierdurch wird die Übersichtlichkeit des Anwendungscodes verbessert.  
   
--   Eine externe Zuordnungsdatei kann in etwa wie eine Konfigurationsdatei behandelt werden. Beispielsweise können Sie das Anwendungsverhalten aktualisieren, nachdem die Binärdateien bereits ausgeliefert wurden, indem Sie einfach die externe Zuordnungsdatei austauschen.  
+- Eine externe Zuordnungsdatei kann in etwa wie eine Konfigurationsdatei behandelt werden. Beispielsweise können Sie das Anwendungsverhalten aktualisieren, nachdem die Binärdateien bereits ausgeliefert wurden, indem Sie einfach die externe Zuordnungsdatei austauschen.  
   
 ## <a name="requirements"></a>Anforderungen  
  Die Zuordnungsdatei muss eine XML-Datei, und überprüfen Sie die Datei muss anhand einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Schemadefinitionsdatei (.xsd).  
   
  Dabei gelten folgende Regeln:  
   
--   Die Zuordnungsdatei muss eine XML-Datei sein.  
+- Die Zuordnungsdatei muss eine XML-Datei sein.  
   
--   Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
--   Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
+- Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die kombinierte Verwendung beider Zuordnungsarten (attributbasiert und extern).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die kombinierte Verwendung beider Zuordnungsarten (attributbasiert und extern).  
   
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
  Die externe Zuordnung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muss gegenüber der folgenden XML-Schemadefinition gültig sein.  

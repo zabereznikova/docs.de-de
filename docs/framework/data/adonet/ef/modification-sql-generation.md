@@ -3,11 +3,11 @@ title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034141"
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 
@@ -72,7 +72,7 @@ Value legt den neuen Wert für die Aktualisierung der Eigenschaft fest. Er ist e
 
 #### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Predicate in DbUpdateCommandTree und DbDeleteCommandTree
 
-Predicate legt das Prädikat fest, mit dem die zu aktualisierenden oder zu löschenden Member der Zielauflistung festgelegt werden. Es handelt sich um eine aus der folgenden Teilmenge von DbExpressions erstellte Ausdrucksbaumstruktur:
+„Predicate“ legt das Prädikat fest, mit dem die zu aktualisierenden oder zu löschenden Member der Zielauflistung festgelegt werden. Es handelt sich um eine aus der folgenden Teilmenge von DbExpressions erstellte Ausdrucksbaumstruktur:
 
 - DbComparisonExpression der Art Equals, mit das rechte untergeordnete Element ein DbPropertyExpression wie unten eingeschränkt und das linke untergeordnete Element ein DbConstantExpression.
 

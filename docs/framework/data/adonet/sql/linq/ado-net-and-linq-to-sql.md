@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
 ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033825"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET und LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist Teil der [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] Technologiefamilie. Es basiert auf den vom [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]-Anbietermodell bereitgestellten Diensten. Sie können daher kombinieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Code mit vorhandenen [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] Anwendungen und migrieren Sie aktuelle [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] Lösungen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Die folgende Abbildung stellt eine allgemeine Ansicht der Beziehung dar.  

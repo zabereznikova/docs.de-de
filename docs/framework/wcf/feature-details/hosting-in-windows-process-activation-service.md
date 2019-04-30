@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039376"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
 Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird ein WCF-Diensten für die Verwendung von HTTP- und nicht-HTTP-Protokolle, z. B. Net.TCP, in einer hostumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem bestimmten Computer hosten.  
@@ -18,13 +18,13 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
   
  Das WAS-Prozessmodell bietet verschiedene Funktionen, die ermöglichen, Anwendungen auf robustere, besser verwaltbare und ressourcenschonendere Weise zu hosten:  
   
--   Nachrichtenbasierte Aktivierung von Anwendungen und Arbeitsprozessen. Anwendungen werden dynamisch gestartet und beendet, in Reaktion auf mithilfe von HTTP- und Nicht-HTTP-Netzwerkprotokollen eintreffende Arbeitselemente.  
+- Nachrichtenbasierte Aktivierung von Anwendungen und Arbeitsprozessen. Anwendungen werden dynamisch gestartet und beendet, in Reaktion auf mithilfe von HTTP- und Nicht-HTTP-Netzwerkprotokollen eintreffende Arbeitselemente.  
   
--   Robustes Wiederverwenden von Anwendungen und Arbeitsprozessen, um den Systemzustand laufender Anwendungen aufrechtzuerhalten.  
+- Robustes Wiederverwenden von Anwendungen und Arbeitsprozessen, um den Systemzustand laufender Anwendungen aufrechtzuerhalten.  
   
--   Zentralisierte Anwendungskonfiguration und -verwaltung.  
+- Zentralisierte Anwendungskonfiguration und -verwaltung.  
   
--   Ermöglicht Anwendungen, die Vorteile des IIS-Prozessmodells zu nutzen, ohne dass der Bereitstellungsaufwand einer vollständigen IIS-Installation erforderlich wäre.  
+- Ermöglicht Anwendungen, die Vorteile des IIS-Prozessmodells zu nutzen, ohne dass der Bereitstellungsaufwand einer vollständigen IIS-Installation erforderlich wäre.  
   
  Weitere Informationen zu WAS-Funktionen, finden Sie unter [IIS 7.0 Beta: IIS 7.0 Web Administration](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   

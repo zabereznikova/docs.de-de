@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013503"
 ---
 # <a name="sub-expression-visual-basic"></a>Teilausdruck (Visual Basic)
 Deklariert die Parameter und den Code, der einen Unterroutine Lambda-Ausdruck definieren.  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
  Die Syntax eines Lambda-Ausdrucks ähnelt eine standard-Unterroutine. Die Unterschiede sind wie folgt aus:  
   
--   Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  
+- Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  
   
--   Ein Lambda-Ausdruck kann nicht verfügen über einen Modifizierer, z. B. `Overloads` oder `Overrides`.  
+- Ein Lambda-Ausdruck kann nicht verfügen über einen Modifizierer, z. B. `Overloads` oder `Overrides`.  
   
--   Der Text eines einzeiligen Lambda-Ausdrucks muss es sich um eine Anweisung, die kein Ausdruck sein. Der Text kann einen Aufruf an eine Subprozedur, aber nicht aus einem Aufruf einer Funktion Prozedur bestehen.  
+- Der Text eines einzeiligen Lambda-Ausdrucks muss es sich um eine Anweisung, die kein Ausdruck sein. Der Text kann einen Aufruf an eine Subprozedur, aber nicht aus einem Aufruf einer Funktion Prozedur bestehen.  
   
--   Alle Parameter in einem Lambdaausdruck entweder müssen angegeben haben, dass die Datentypen oder für alle Parameter abgeleitet werden müssen.  
+- Alle Parameter in einem Lambdaausdruck entweder müssen angegeben haben, dass die Datentypen oder für alle Parameter abgeleitet werden müssen.  
   
--   Optionale und `ParamArray` Parameter sind in Lambda-Ausdrücken nicht zulässig.  
+- Optionale und `ParamArray` Parameter sind in Lambda-Ausdrücken nicht zulässig.  
   
--   Generische Parameter sind in Lambda-Ausdrücken nicht zulässig.  
+- Generische Parameter sind in Lambda-Ausdrücken nicht zulässig.  
   
 ## <a name="example"></a>Beispiel  
  Es folgt ein Beispiel für einen Lambda-Ausdruck, der einen Wert an die Konsole schreibt. Das Beispiel zeigt sowohl den einzeiligen und mehrzeiligen Lambda-Ausdruckssyntax für eine Unterroutine. Weitere Beispiele finden Sie unter [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  

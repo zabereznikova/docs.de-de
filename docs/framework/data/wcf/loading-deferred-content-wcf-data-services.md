@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037127"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Laden von verzögerten Inhalten (WCF Data Services)
 Standardmäßig schränkt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] die Datenmenge ein, die eine Abfrage zurückgibt. Sie können jedoch explizit weitere Daten aus dem Datendienst laden, einschließlich verknüpfter Entitäten, ausgelagerter Antwortdaten und binärer Datenströme, wenn sie benötigt werden. In diesem Thema wird beschrieben, wie dieser verzögerte Inhalt in die Anwendung geladen wird.  
@@ -22,14 +22,14 @@ Standardmäßig schränkt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md
 ## <a name="related-entities"></a>Verknüpfte Entitäten  
  Beim Ausführen einer Abfrage werden nur Entitäten in der behandelten Entitätenmenge zurückgegeben. Wenn beispielsweise eine Abfrage des Northwind-Datendiensts `Customers`-Entitäten zurückgibt, werden die verknüpften `Orders`-Entitäten standardmäßig nicht zurückgegeben, obwohl eine Beziehung zwischen `Customers` und `Orders` besteht. Außerdem müssen Sie, wenn Paging im Datendienst aktiviert ist, explizit nachfolgende Datenseiten aus dem Dienst laden. Es gibt zwei Möglichkeiten zum Laden verknüpfter Entitäten:  
   
--   **Eager Loading**: Sie können die `$expand` -Abfrageoption verwenden, um die anfordern, dass die Abfrage Entitäten zurückgibt, die durch eine Zuordnung für die Entität verknüpft sind, die die angeforderte Abfrage festlegen. Verwenden Sie die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceQuery%601>, um der Abfrage, die an den Datendienst gesendet werden soll, die `$expand`-Option hinzuzufügen. Sie können mehrere verknüpfte Entitätenmengen anfordern, indem Sie sie wie im folgenden Beispiel durch ein Komma trennen. Alle von der Abfrage angeforderten Entitäten werden in einer einzelnen Antwort zurückgegeben. Im folgenden Beispiel werden `Order_Details` und `Customers` zusammen mit der `Orders`-Entitätenmenge zurückgegeben:  
+- **Eager Loading**: Sie können die `$expand` -Abfrageoption verwenden, um die anfordern, dass die Abfrage Entitäten zurückgibt, die durch eine Zuordnung für die Entität verknüpft sind, die die angeforderte Abfrage festlegen. Verwenden Sie die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceQuery%601>, um der Abfrage, die an den Datendienst gesendet werden soll, die `$expand`-Option hinzuzufügen. Sie können mehrere verknüpfte Entitätenmengen anfordern, indem Sie sie wie im folgenden Beispiel durch ein Komma trennen. Alle von der Abfrage angeforderten Entitäten werden in einer einzelnen Antwort zurückgegeben. Im folgenden Beispiel werden `Order_Details` und `Customers` zusammen mit der `Orders`-Entitätenmenge zurückgegeben:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] beschränkt die Anzahl von Entitätenmengen, die mit der `$expand`-Abfrageoption in einer einzelnen Abfrage enthalten sein können, auf 12.  
   
--   **Explizites Laden**: Rufen Sie die <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> Methode für die <xref:System.Data.Services.Client.DataServiceContext> Instanz, um verknüpfte Entitäten explizit zu laden. Jeder Aufruf der <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>-Methode erstellt eine separate Anforderung an den Datendienst. Im folgenden Beispiel werden `Order_Details` für eine `Orders`-Entität explizit geladen:  
+- **Explizites Laden**: Rufen Sie die <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> Methode für die <xref:System.Data.Services.Client.DataServiceContext> Instanz, um verknüpfte Entitäten explizit zu laden. Jeder Aufruf der <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>-Methode erstellt eine separate Anforderung an den Datendienst. Im folgenden Beispiel werden `Order_Details` für eine `Orders`-Entität explizit geladen:  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

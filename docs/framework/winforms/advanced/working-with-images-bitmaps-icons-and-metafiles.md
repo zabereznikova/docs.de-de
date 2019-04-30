@@ -10,11 +10,11 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
 ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011917"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt die `Bitmap`-Klasse zum Arbeiten mit Rasterbilder und die `Metafile`-Klasse zum Arbeiten mit Vektorgrafiken bereit. Sowohl die `Bitmap`-Klasse als auch die `Metafile`-Klasse erben von der `Image`-Klasse.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010136"
 ---
 # <a name="drawings-how-to-topics"></a>Gewusst-wie-Themen zu Zeichnungen
 Die Themen in diesem Abschnitt wird beschrieben, wie <xref:System.Windows.Media.Drawing> Objekte zum Zeichnen von Formen, Bildern oder Text.  

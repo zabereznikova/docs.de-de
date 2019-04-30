@@ -3,11 +3,11 @@ title: SOAP- und HTTP-Endpunkte
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007812"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP- und HTTP-Endpunkte
 In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert, und machen Sie ihn in der SOAP-Format und das Verwenden der WCF-Webprogrammiermodell "Plain Old XML" (POX)-Format verfügbar. Finden Sie unter den [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Weitere Informationen zur HTTP-Bindung für den Dienst. Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
@@ -22,11 +22,11 @@ In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementi
   
  Die Datei "Web.config" wird den WCF-Dienst mit 3 Endpunkten konfiguriert:  
   
--   Der ~/service.svc/mex-Endpunkt, der die Dienstmetadaten für den Zugriff durch SOAP-basierte Clients verfügbar macht.  
+- Der ~/service.svc/mex-Endpunkt, der die Dienstmetadaten für den Zugriff durch SOAP-basierte Clients verfügbar macht.  
   
--   Der ~/service.svc/http-Endpunkt, der es Clients ermöglicht, über die HTTP-Bindung auf den Dienst zuzugreifen.  
+- Der ~/service.svc/http-Endpunkt, der es Clients ermöglicht, über die HTTP-Bindung auf den Dienst zuzugreifen.  
   
--   Der ~/service.svc/soap-Endpunkt, der es den Clients ermöglicht, über die SOAP über HTTP-Bindung auf den Dienst zuzugreifen.  
+- Der ~/service.svc/soap-Endpunkt, der es den Clients ermöglicht, über die SOAP über HTTP-Bindung auf den Dienst zuzugreifen.  
   
  Mit der HTTP-Endpunkt konfiguriert ist ein <`webHttp`>-Standardendpunkt mit `helpEnabled` festgelegt `true`. Als Ergebnis stellt der Dienst eine XHTML-basierte Hilfeseite unter ~/service.svc/http/help bereit, mit der HTTP-basierte Clients auf den Dienst zugreifen können.  
   

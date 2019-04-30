@@ -3,20 +3,20 @@ title: Ableiten von Tabellen
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034254"
 ---
 # <a name="inferring-tables"></a>Ableiten von Tabellen
 Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-Dokument wird in ADO.NET zunächst bestimmt, welche XML-Elemente Tabellen darstellen. Führen Sie die folgenden XML-Strukturen in einer Tabelle für die **DataSet** Schema:  
   
--   Elemente mit Attributen  
+- Elemente mit Attributen  
   
--   Elemente mit untergeordneten Elementen  
+- Elemente mit untergeordneten Elementen  
   
--   Sich wiederholende Elemente  
+- Sich wiederholende Elemente  
   
 ## <a name="elements-with-attributes"></a>Elemente mit Attributen  
  Elemente, in denen Attribute angegeben sind, ergeben hergeleitete Tabellen. Betrachten Sie beispielsweise den folgenden XML-Code:  

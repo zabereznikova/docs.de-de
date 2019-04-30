@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
 ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033513"
 ---
 # <a name="local-method-calls"></a>Lokale Methodenaufrufe
 Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. Ein Remotemethodenaufruf wird von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL übersetzt und zur Ausführung an die Datenbank-Engine übergeben. Lokale Methodenaufrufe sind erforderlich, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht den Aufruf in SQL übersetzt werden. Andernfalls wird eine <xref:System.InvalidOperationException> ausgelöst.  

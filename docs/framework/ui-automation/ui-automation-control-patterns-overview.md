@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033084"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126359"
 ## <a name="ui-automation-control-pattern-components"></a>Komponenten der Steuerelementmuster für Benutzeroberflächenautomatisierung  
  Steuerelementmuster unterstützen die Methoden, Eigenschaften, Ereignisse und Beziehungen, die dazu erforderlich sind, eine bestimmte Funktionalität zu definieren, die in einem Steuerelement verfügbar ist.  
   
--   Die Beziehungen zwischen einem Benutzeroberflächenautomatisierungs-Element und dessen übergeordnetem Element sowie dessen unter- und gleichgeordneten Elementen beschreibt die Struktur des Elements innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur.  
+- Die Beziehungen zwischen einem Benutzeroberflächenautomatisierungs-Element und dessen übergeordnetem Element sowie dessen unter- und gleichgeordneten Elementen beschreibt die Struktur des Elements innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur.  
   
--   Die Methoden ermöglichen es Benutzeroberflächenautomatisierungs-Clients, das Steuerelement zu bearbeiten.  
+- Die Methoden ermöglichen es Benutzeroberflächenautomatisierungs-Clients, das Steuerelement zu bearbeiten.  
   
--   Die Eigenschaften und Ereignisse stellen Informationen zur Funktionalität des Steuerelementmusters sowie zum Status des Steuerelements zur Verfügung.  
+- Die Eigenschaften und Ereignisse stellen Informationen zur Funktionalität des Steuerelementmusters sowie zum Status des Steuerelements zur Verfügung.  
   
  Steuerelementmuster beziehen sich so auf [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , wie sich Schnittstellen auf [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] -Objekte beziehen. In [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]können Sie ein Objekt daraufhin abfragen, welche Schnittstellen es unterstützt, und dann diese Schnittstellen verwenden, um auf die Funktionalität zuzugreifen. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kann ein Benutzeroberflächenautomatisierungs-Client ein Steuerelement daraufhin abfragen, welche Steuerelementmuster es unterstützt, und anschließend über die Eigenschaften, Methoden, Ereignisse und Strukturen, die von den unterstützten Steuerelementmustern verfügbar gemacht werden, auf das Steuerelement zugreifen. Beispielsweise implementiert ein Benutzeroberflächenautomatisierungs-Anbieter für ein mehrzeiliges Bearbeitungsfeld eine <xref:System.Windows.Automation.Provider.IScrollProvider>-Schnittstelle. Wenn ein Client weiß, dass ein <xref:System.Windows.Automation.AutomationElement> das <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster unterstützt, kann er die Eigenschaften, Methoden und Ereignisse, die von diesem Steuerelementmuster verfügbar gemacht werden, dazu verwenden, auf das Steuerelement oder auf Informationen über das Steuerelement zuzugreifen.  
   

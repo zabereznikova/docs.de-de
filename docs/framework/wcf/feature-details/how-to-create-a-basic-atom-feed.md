@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
 ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000856"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds
 Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Syndication-feed verfügbar macht. In diesem Thema wird erläutert, wie ein Syndication-Dienst erstellt wird, der einen Atom-Syndication-Feed verfügbar macht.  

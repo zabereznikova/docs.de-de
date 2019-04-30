@@ -9,11 +9,11 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011579"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Steuerelemente mit integrierter Ownerdrawing-Unterstützung
 Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeichnet, ist ein Verfahren zum Ändern der Darstellung bestimmter Steuerelemente.  
@@ -38,27 +38,27 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Die folgenden Windows Forms-Steuerelemente unterstützen Ownerdrawing in allen Versionen von .NET Framework:  
   
--   <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms.ListBox>  
   
--   <xref:System.Windows.Forms.ComboBox>  
+- <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (verwendet von <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem> (verwendet von <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu>)  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
  Die folgenden Steuerelemente unterstützen Ownerdrawing nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
   
--   <xref:System.Windows.Forms.ToolTip>  
+- <xref:System.Windows.Forms.ToolTip>  
   
--   <xref:System.Windows.Forms.ListView>  
+- <xref:System.Windows.Forms.ListView>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  Die folgenden Steuerelemente unterstützen Ownerdrawing und sind in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] neu:  
   
--   <xref:System.Windows.Forms.DataGridView>  
+- <xref:System.Windows.Forms.DataGridView>  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
  Die folgenden Abschnitte enthalten zusätzliche Details zu jedem dieser Steuerelemente.  
   
@@ -74,19 +74,19 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Themen:  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem-Komponente  
  Die <xref:System.Windows.Forms.MenuItem> -Komponente darstellt, ein einzelnes Menüelement in einem <xref:System.Windows.Forms.MainMenu> oder <xref:System.Windows.Forms.ContextMenu> Komponente.  
@@ -95,11 +95,11 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl-Steuerelement  
  Die <xref:System.Windows.Forms.TabControl> -Steuerelement ermöglicht Ihnen, einzelne Registerkarten im Steuerelement zu zeichnen. Ownerdrawing wirkt sich nur die Registerkarten an. die <xref:System.Windows.Forms.TabPage> Inhalt sind nicht betroffen.  
@@ -108,9 +108,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip-Komponente  
  Die <xref:System.Windows.Forms.ToolTip> -Komponente können Sie die gesamte QuickInfo zu zeichnen, wenn er angezeigt wird.  
@@ -119,11 +119,11 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView-Steuerelement  
  Die <xref:System.Windows.Forms.ListView> -Steuerelement ermöglicht Ihnen, einzelne Elemente, Unterelemente und Spaltenheader im Steuerelement zu zeichnen.  
@@ -136,13 +136,13 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView-Steuerelement  
  Die <xref:System.Windows.Forms.TreeView> -Steuerelement ermöglicht Ihnen, einzelne Knoten im Steuerelement zu zeichnen.  
@@ -153,9 +153,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView-Steuerelement  
  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement ermöglicht Ihnen, einzelne Zellen und Zeilen im Steuerelement zu zeichnen.  
@@ -166,15 +166,15 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Themen:  
   
--   <xref:System.Windows.Forms.DataGridView.CellPainting>  
+- <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip-Steuerelement  
  <xref:System.Windows.Forms.ToolStrip> und abgeleitete Steuerelemente ermöglichen Ihnen, alle Aspekte der steuerelementdarstellung anzupassen.  
@@ -183,11 +183,11 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Themen:  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>  
+- <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements](how-to-custom-draw-a-toolstrip-control.md)  
+- [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

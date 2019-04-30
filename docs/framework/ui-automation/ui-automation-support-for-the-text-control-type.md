@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996553"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Text-Steuerelementtyp
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103778"
   
  Ein Textsteuerelement kann eigenständig als Bezeichnung oder als statischer Text auf einem Formular verwendet werden. Es kann auch in der Struktur eines Elements folgende Typs enthalten sein:  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  Textsteuerelemente sind manchmal nicht in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] s-Struktur enthalten, da Text häufig über die `NameProperty` eines anderen Steuerelements angezeigt wird. So wird zum Beispiel der Text, mit dem ein Kombinationsfeld-Steuerelement beschriftet ist, über den `NameProperty` -Wert des Steuerelements verfügbar gemacht. Da sich das Kombinationsfeld-Steuerelement in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur befindet, muss das Textsteuerelement dort nicht vorhanden sein. Textsteuerelemente haben in der Inhaltsansicht immer 0 untergeordnete Elemente.  
   

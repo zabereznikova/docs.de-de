@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013529"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Operatorrangfolge in Visual Basic
 Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und in einer vorbestimmten Reihenfolge aufgelöst *Operatorrangfolge*.  
@@ -27,13 +27,13 @@ Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und in
 ## <a name="precedence-rules"></a>Regeln für die Berechnungsrangfolge  
  Ausdrücke, Operatoren, die von mehr als einer Kategorie enthalten, werden sie gemäß den folgenden Regeln ausgewertet:  
   
--   Die arithmetischen Operatoren und Verkettungsoperatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben, und alle haben der Rangfolge höher eingestuft als die Vergleichsoperatoren, logische und bitweise Operatoren.  
+- Die arithmetischen Operatoren und Verkettungsoperatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben, und alle haben der Rangfolge höher eingestuft als die Vergleichsoperatoren, logische und bitweise Operatoren.  
   
--   Alle Vergleichsoperatoren haben denselben Rang, und alles, was der Rangfolge höher eingestuft als die logischen und bitweisen Operatoren, jedoch geringere Rangfolge als der arithmetischen Operatoren und Verkettungsoperatoren.  
+- Alle Vergleichsoperatoren haben denselben Rang, und alles, was der Rangfolge höher eingestuft als die logischen und bitweisen Operatoren, jedoch geringere Rangfolge als der arithmetischen Operatoren und Verkettungsoperatoren.  
   
--   Die logischen und bitweisen Operatoren die Reihenfolge der Rangfolge, die im folgenden Abschnitt beschrieben, und alle niedrigeren Rangfolge als der arithmetische, Verkettung und Vergleichsoperatoren.  
+- Die logischen und bitweisen Operatoren die Reihenfolge der Rangfolge, die im folgenden Abschnitt beschrieben, und alle niedrigeren Rangfolge als der arithmetische, Verkettung und Vergleichsoperatoren.  
   
--   Operatoren mit gleichem Rang werden links nach rechts ausgewertet in der Reihenfolge, in der sie den Ausdruck angezeigt werden.  
+- Operatoren mit gleichem Rang werden links nach rechts ausgewertet in der Reihenfolge, in der sie den Ausdruck angezeigt werden.  
   
 ## <a name="precedence-order"></a>Rangfolge  
  Operatoren werden in der folgenden Rangfolge ausgewertet:  

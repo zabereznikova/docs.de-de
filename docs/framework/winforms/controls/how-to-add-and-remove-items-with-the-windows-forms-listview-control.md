@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
 ms.openlocfilehash: 8a97d73b9b2c46d02ae0794ad66b20a04db58af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011124"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms
 Beim Hinzufügen eines Elements zu einer Windows Forms <xref:System.Windows.Forms.ListView> -Steuerelement besteht aus in erster Linie das Element angeben, und Eigenschaften zuweisen. Hinzufügen oder Entfernen von Elementen kann jederzeit erfolgen.  

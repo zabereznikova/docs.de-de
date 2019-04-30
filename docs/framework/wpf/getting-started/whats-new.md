@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020308"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Neues in WPF Version 4.5
 <a name="introduction"></a> Dieses Thema enthält Informationen zu neuen und verbesserten Features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Version 4.5.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Menübandsteuerung](#ribbon_control)  
+- [Menübandsteuerung](#ribbon_control)  
   
--   [Verbesserte Leistung bei der Anzeige großer Mengen gruppierter Daten](#grouped_virtualization)  
+- [Verbesserte Leistung bei der Anzeige großer Mengen gruppierter Daten](#grouped_virtualization)  
   
--   [Neue Funktionen für das VirtualizingPanel](#VirtualizingPanel)  
+- [Neue Funktionen für das VirtualizingPanel](#VirtualizingPanel)  
   
--   [Bindung an statische Eigenschaften](#static_properties)  
+- [Bindung an statische Eigenschaften](#static_properties)  
   
--   [Zugriff auf Auflistungen in Nicht-UI-Threads](#xthread_access)  
+- [Zugriff auf Auflistungen in Nicht-UI-Threads](#xthread_access)  
   
--   [Synchrone und asynchrone Überprüfung von Daten](#INotifyDataErrorInfo)  
+- [Synchrone und asynchrone Überprüfung von Daten](#INotifyDataErrorInfo)  
   
--   [Automatische Aktualisierung der Quelle einer Datenbindung](#delay)  
+- [Automatische Aktualisierung der Quelle einer Datenbindung](#delay)  
   
--   [Bindung an Typen, die ICustomTypeProvider implementieren](#ICustomTypeProvider)  
+- [Bindung an Typen, die ICustomTypeProvider implementieren](#ICustomTypeProvider)  
   
--   [Abrufen von Datenbindungsinformationen aus einem Bindungsausdruck](#binding_state)  
+- [Abrufen von Datenbindungsinformationen aus einem Bindungsausdruck](#binding_state)  
   
--   [Prüfen auf ein gültiges DataContext-Objekt](#DisconnectedSource)  
+- [Prüfen auf ein gültiges DataContext-Objekt](#DisconnectedSource)  
   
--   [Neupositionierung von Daten bei Wertänderung (Live-Strukturierung)](#live_shaping)  
+- [Neupositionierung von Daten bei Wertänderung (Live-Strukturierung)](#live_shaping)  
   
--   [Verbesserte Unterstützung für die Einrichtung eines schwachen Verweises auf ein Ereignis](#weak_event_pattern)  
+- [Verbesserte Unterstützung für die Einrichtung eines schwachen Verweises auf ein Ereignis](#weak_event_pattern)  
   
--   [Neue Methoden für die Verteilerklasse](#async)  
+- [Neue Methoden für die Verteilerklasse](#async)  
   
--   [Markuperweiterungen für Ereignisse](#events_markup_extenions)  
+- [Markuperweiterungen für Ereignisse](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Menübandsteuerung  
@@ -64,9 +64,9 @@ ms.locfileid: "59325825"
 ## <a name="binding-to-static-properties"></a>Bindung an statische Eigenschaften  
  Sie können statische Eigenschaften als Quelle einer Datenbindung verwenden. Die Datenbindungs-Engine erkennt es, wenn sich der Eigenschaftswert ändert, falls ein statisches Ereignis ausgelöst wird.  Wenn beispielsweise die `SomeClass`-Klasse eine statische Eigenschaft namens `MyProperty` definiert, kann `SomeClass` ein statisches Ereignis definieren, das ausgelöst wird, wenn sich der Wert von `MyProperty` ändert.  Das statische Ereignis kann eine der folgenden Signaturen verwenden.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  Beachten Sie, dass im ersten Fall ist die Klasse ein statisches Ereignis namens stellt *PropertyName* `Changed` übergibt <xref:System.EventArgs> an den Ereignishandler.  Im zweiten Fall macht die Klasse ein statisches Ereignis namens `StaticPropertyChanged` verfügbar, das den <xref:System.ComponentModel.PropertyChangedEventArgs>-Ereignishandler übergibt. Eine Klasse, die die statische Eigenschaft implementiert, kann Benachrichtigungen über Eigenschaftsänderungen nach Wahl mit einer der beiden Methode auslösen.  
   

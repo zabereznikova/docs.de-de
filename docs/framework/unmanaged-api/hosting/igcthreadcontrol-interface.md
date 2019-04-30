@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c00f401bedc1a2810c4e9b3046a45e53a79f1ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992770"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl-Schnittstelle
 Stellt Methoden für die Teilnahme an der Planung von Threads, die für eine Garbagecollection andernfalls blockiert würden.  
