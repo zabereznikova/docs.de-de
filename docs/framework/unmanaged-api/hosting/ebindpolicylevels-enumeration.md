@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985672"
 ---
-# <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="3cb00-102">EBindPolicyLevels-Enumeration</span><span class="sxs-lookup"><span data-stu-id="3cb00-102">EBindPolicyLevels Enumeration</span></span>
-<span data-ttu-id="3cb00-103">Stellt Flags bereit, die Ebene angegeben, übernehmen oder Ändern von Assemblyrichtlinie an.</span><span class="sxs-lookup"><span data-stu-id="3cb00-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  
+# <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="1dd4e-102">EBindPolicyLevels-Enumeration</span><span class="sxs-lookup"><span data-stu-id="1dd4e-102">EBindPolicyLevels Enumeration</span></span>
+<span data-ttu-id="1dd4e-103">Stellt Flags bereit, die Ebene angegeben, übernehmen oder Ändern von Assemblyrichtlinie an.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3cb00-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3cb00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1dd4e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1dd4e-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -41,32 +41,32 @@ typedef enum {
 } EBindPolicyLevels;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3cb00-105">Member</span><span class="sxs-lookup"><span data-stu-id="3cb00-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1dd4e-105">Member</span><span class="sxs-lookup"><span data-stu-id="1dd4e-105">Members</span></span>  
   
-|<span data-ttu-id="3cb00-106">Member</span><span class="sxs-lookup"><span data-stu-id="3cb00-106">Member</span></span>|<span data-ttu-id="3cb00-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3cb00-107">Description</span></span>|  
+|<span data-ttu-id="1dd4e-106">Member</span><span class="sxs-lookup"><span data-stu-id="1dd4e-106">Member</span></span>|<span data-ttu-id="1dd4e-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1dd4e-107">Description</span></span>|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|<span data-ttu-id="3cb00-108">Gibt an, dass die Richtlinie auf Administratorebene angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cb00-108">Specifies that policy should be applied at the administrator level.</span></span>|  
-|`ePolicyLevelApp`|<span data-ttu-id="3cb00-109">Gibt an, dass die Richtlinie auf Anwendungsebene angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cb00-109">Specifies that policy should be applied at the application level.</span></span>|  
-|`ePolicyLevelHost`|<span data-ttu-id="3cb00-110">Gibt an, dass die Richtlinie auf der Hostebene angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cb00-110">Specifies that policy should be applied at the host level.</span></span>|  
-|`ePolicyLevelNone`|<span data-ttu-id="3cb00-111">Gibt keine Flags für die Richtlinie auf Serverebene an.</span><span class="sxs-lookup"><span data-stu-id="3cb00-111">Specifies no policy-level flags.</span></span>|  
-|`ePolicyLevelPublisher`|<span data-ttu-id="3cb00-112">Gibt an, dass die Richtlinie auf den Verleger angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cb00-112">Specifies that policy should be applied at the publisher level.</span></span>|  
-|`ePolicyLevelRetargetable`|<span data-ttu-id="3cb00-113">Gibt an, dass die Richtlinie auf Variablen Ebenen angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="3cb00-113">Specifies that policy should be applicable at variable levels.</span></span>|  
-|`ePolicyPortability`|<span data-ttu-id="3cb00-114">Gibt an, dass die Richtlinie für Portabilität zwischen Implementierungen von .NET Framework-Assembly unterstützen soll.</span><span class="sxs-lookup"><span data-stu-id="3cb00-114">Specifies that policy should support portability between implementations of a .NET Framework assembly.</span></span> <span data-ttu-id="3cb00-115">Finden Sie unter den [ \<SupportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) Configuration File-Element.</span><span class="sxs-lookup"><span data-stu-id="3cb00-115">See the [\<supportPortability>](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) configuration file element.</span></span>|  
-|`ePolicyUnifiedToCLR`|<span data-ttu-id="3cb00-116">Gibt an, dass die Richtlinie mit der common Language Runtime (CLR) vereinheitlicht werden sollte.</span><span class="sxs-lookup"><span data-stu-id="3cb00-116">Specifies that policy should be unified to that of the common language runtime (CLR).</span></span>|  
+|`ePolicyLevelAdmin`|<span data-ttu-id="1dd4e-108">Gibt an, dass die Richtlinie auf Administratorebene angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-108">Specifies that policy should be applied at the administrator level.</span></span>|  
+|`ePolicyLevelApp`|<span data-ttu-id="1dd4e-109">Gibt an, dass die Richtlinie auf Anwendungsebene angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-109">Specifies that policy should be applied at the application level.</span></span>|  
+|`ePolicyLevelHost`|<span data-ttu-id="1dd4e-110">Gibt an, dass die Richtlinie auf der Hostebene angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-110">Specifies that policy should be applied at the host level.</span></span>|  
+|`ePolicyLevelNone`|<span data-ttu-id="1dd4e-111">Gibt keine Flags für die Richtlinie auf Serverebene an.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-111">Specifies no policy-level flags.</span></span>|  
+|`ePolicyLevelPublisher`|<span data-ttu-id="1dd4e-112">Gibt an, dass die Richtlinie auf den Verleger angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-112">Specifies that policy should be applied at the publisher level.</span></span>|  
+|`ePolicyLevelRetargetable`|<span data-ttu-id="1dd4e-113">Gibt an, dass die Richtlinie auf Variablen Ebenen angewendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-113">Specifies that policy should be applicable at variable levels.</span></span>|  
+|`ePolicyPortability`|<span data-ttu-id="1dd4e-114">Gibt an, dass die Richtlinie für Portabilität zwischen Implementierungen von .NET Framework-Assembly unterstützen soll.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-114">Specifies that policy should support portability between implementations of a .NET Framework assembly.</span></span> <span data-ttu-id="1dd4e-115">Finden Sie unter den [ \<SupportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) Configuration File-Element.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-115">See the [\<supportPortability>](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) configuration file element.</span></span>|  
+|`ePolicyUnifiedToCLR`|<span data-ttu-id="1dd4e-116">Gibt an, dass die Richtlinie mit der common Language Runtime (CLR) vereinheitlicht werden sollte.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-116">Specifies that policy should be unified to that of the common language runtime (CLR).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3cb00-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3cb00-117">Remarks</span></span>  
- <span data-ttu-id="3cb00-118">Diese Enumeration wird zu Methoden zum Übergeben der [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) Schnittstelle, um die Änderungen in der Richtlinie für Anwendungen angeben.</span><span class="sxs-lookup"><span data-stu-id="3cb00-118">This enumeration is passed to methods of the [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface to specify changes in application policy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1dd4e-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1dd4e-117">Remarks</span></span>  
+ <span data-ttu-id="1dd4e-118">Diese Enumeration wird zu Methoden zum Übergeben der [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) Schnittstelle, um die Änderungen in der Richtlinie für Anwendungen angeben.</span><span class="sxs-lookup"><span data-stu-id="1dd4e-118">This enumeration is passed to methods of the [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface to specify changes in application policy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3cb00-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3cb00-119">Requirements</span></span>  
- <span data-ttu-id="3cb00-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3cb00-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1dd4e-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1dd4e-119">Requirements</span></span>  
+ <span data-ttu-id="1dd4e-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1dd4e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3cb00-121">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3cb00-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1dd4e-121">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1dd4e-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3cb00-122">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3cb00-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="1dd4e-122">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1dd4e-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3cb00-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3cb00-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1dd4e-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dd4e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3cb00-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3cb00-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dd4e-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1dd4e-124">See also</span></span>
 
-- [<span data-ttu-id="3cb00-125">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3cb00-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="3cb00-126">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="3cb00-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="1dd4e-125">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1dd4e-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="1dd4e-126">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="1dd4e-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

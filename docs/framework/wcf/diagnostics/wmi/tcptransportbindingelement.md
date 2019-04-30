@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
 ms.openlocfilehash: 6d2717bc2d1d14e369af2b9c5a8c0affb67501d9
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956545"
 ---
-# <a name="tcptransportbindingelement"></a><span data-ttu-id="f5de5-102">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="f5de5-102">TcpTransportBindingElement</span></span>
-<span data-ttu-id="f5de5-103">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="f5de5-103">TcpTransportBindingElement</span></span>  
+# <a name="tcptransportbindingelement"></a><span data-ttu-id="e7db7-102">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="e7db7-102">TcpTransportBindingElement</span></span>
+<span data-ttu-id="e7db7-103">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="e7db7-103">TcpTransportBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5de5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f5de5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7db7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e7db7-104">Syntax</span></span>  
   
 ```csharp
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -24,46 +24,46 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="f5de5-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="f5de5-105">Methods</span></span>  
- <span data-ttu-id="f5de5-106">Von der TcpTransportBindingElement-Klasse werden keine Methoden definiert.</span><span class="sxs-lookup"><span data-stu-id="f5de5-106">The TcpTransportBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="e7db7-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="e7db7-105">Methods</span></span>  
+ <span data-ttu-id="e7db7-106">Von der TcpTransportBindingElement-Klasse werden keine Methoden definiert.</span><span class="sxs-lookup"><span data-stu-id="e7db7-106">The TcpTransportBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="f5de5-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="f5de5-107">Properties</span></span>  
- <span data-ttu-id="f5de5-108">Die TcpTransportBindingElement-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="f5de5-108">The TcpTransportBindingElement class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="e7db7-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e7db7-107">Properties</span></span>  
+ <span data-ttu-id="e7db7-108">Die TcpTransportBindingElement-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="e7db7-108">The TcpTransportBindingElement class has the following properties:</span></span>  
   
-### <a name="connectionpoolsettings"></a><span data-ttu-id="f5de5-109">ConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="f5de5-109">ConnectionPoolSettings</span></span>  
- <span data-ttu-id="f5de5-110">Datentyp: TcpConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="f5de5-110">Data type: TcpConnectionPoolSettings</span></span>  
+### <a name="connectionpoolsettings"></a><span data-ttu-id="e7db7-109">ConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="e7db7-109">ConnectionPoolSettings</span></span>  
+ <span data-ttu-id="e7db7-110">Datentyp: TcpConnectionPoolSettings</span><span class="sxs-lookup"><span data-stu-id="e7db7-110">Data type: TcpConnectionPoolSettings</span></span>  
   
- <span data-ttu-id="f5de5-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f5de5-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="e7db7-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="e7db7-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f5de5-112">Die Verbindungspooleinstellungen.</span><span class="sxs-lookup"><span data-stu-id="f5de5-112">The connection pool settings.</span></span>  
+ <span data-ttu-id="e7db7-112">Die Verbindungspooleinstellungen.</span><span class="sxs-lookup"><span data-stu-id="e7db7-112">The connection pool settings.</span></span>  
   
-### <a name="listenbacklog"></a><span data-ttu-id="f5de5-113">ListenBacklog</span><span class="sxs-lookup"><span data-stu-id="f5de5-113">ListenBacklog</span></span>  
- <span data-ttu-id="f5de5-114">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="f5de5-114">Data type: sint32</span></span>  
+### <a name="listenbacklog"></a><span data-ttu-id="e7db7-113">ListenBacklog</span><span class="sxs-lookup"><span data-stu-id="e7db7-113">ListenBacklog</span></span>  
+ <span data-ttu-id="e7db7-114">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="e7db7-114">Data type: sint32</span></span>  
   
- <span data-ttu-id="f5de5-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f5de5-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="e7db7-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="e7db7-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f5de5-116">Maximal mögliche Anzahl der ausstehenden Verbindungsanforderungen in der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="f5de5-116">The maximum number of queued connection requests that can be pending.</span></span>  
+ <span data-ttu-id="e7db7-116">Maximal mögliche Anzahl der ausstehenden Verbindungsanforderungen in der Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="e7db7-116">The maximum number of queued connection requests that can be pending.</span></span>  
   
-### <a name="portsharingenabled"></a><span data-ttu-id="f5de5-117">PortSharingEnabled</span><span class="sxs-lookup"><span data-stu-id="f5de5-117">PortSharingEnabled</span></span>  
- <span data-ttu-id="f5de5-118">Datentyp: Boolesch</span><span class="sxs-lookup"><span data-stu-id="f5de5-118">Data type: boolean</span></span>  
+### <a name="portsharingenabled"></a><span data-ttu-id="e7db7-117">PortSharingEnabled</span><span class="sxs-lookup"><span data-stu-id="e7db7-117">PortSharingEnabled</span></span>  
+ <span data-ttu-id="e7db7-118">Datentyp: Boolesch</span><span class="sxs-lookup"><span data-stu-id="e7db7-118">Data type: boolean</span></span>  
   
- <span data-ttu-id="f5de5-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f5de5-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="e7db7-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="e7db7-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f5de5-120">Boolescher Wert, der angibt, ob die TCP-Portfreigabe für diese Verbindung aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="f5de5-120">A boolean value that specifies whether TCP port sharing is enabled for this connection.</span></span>  
+ <span data-ttu-id="e7db7-120">Boolescher Wert, der angibt, ob die TCP-Portfreigabe für diese Verbindung aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="e7db7-120">A boolean value that specifies whether TCP port sharing is enabled for this connection.</span></span>  
   
-### <a name="teredoenabled"></a><span data-ttu-id="f5de5-121">TeredoEnabled</span><span class="sxs-lookup"><span data-stu-id="f5de5-121">TeredoEnabled</span></span>  
- <span data-ttu-id="f5de5-122">Datentyp: Boolesch</span><span class="sxs-lookup"><span data-stu-id="f5de5-122">Data type: boolean</span></span>  
+### <a name="teredoenabled"></a><span data-ttu-id="e7db7-121">TeredoEnabled</span><span class="sxs-lookup"><span data-stu-id="e7db7-121">TeredoEnabled</span></span>  
+ <span data-ttu-id="e7db7-122">Datentyp: Boolesch</span><span class="sxs-lookup"><span data-stu-id="e7db7-122">Data type: boolean</span></span>  
   
- <span data-ttu-id="f5de5-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="f5de5-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="e7db7-123">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="e7db7-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="f5de5-124">Boolescher Wert, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f5de5-124">A boolean value that specifies whether Teredo (a technology for addressing clients that are behind firewalls) is enabled.</span></span>  
+ <span data-ttu-id="e7db7-124">Boolescher Wert, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e7db7-124">A boolean value that specifies whether Teredo (a technology for addressing clients that are behind firewalls) is enabled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5de5-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f5de5-125">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7db7-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e7db7-125">Requirements</span></span>  
   
-|<span data-ttu-id="f5de5-126">MOF</span><span class="sxs-lookup"><span data-stu-id="f5de5-126">MOF</span></span>|<span data-ttu-id="f5de5-127">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="f5de5-127">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="e7db7-126">MOF</span><span class="sxs-lookup"><span data-stu-id="e7db7-126">MOF</span></span>|<span data-ttu-id="e7db7-127">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="e7db7-127">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="f5de5-128">Namespace</span><span class="sxs-lookup"><span data-stu-id="f5de5-128">Namespace</span></span>|<span data-ttu-id="f5de5-129">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f5de5-129">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="e7db7-128">Namespace</span><span class="sxs-lookup"><span data-stu-id="e7db7-128">Namespace</span></span>|<span data-ttu-id="e7db7-129">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e7db7-129">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="f5de5-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f5de5-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7db7-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7db7-130">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
