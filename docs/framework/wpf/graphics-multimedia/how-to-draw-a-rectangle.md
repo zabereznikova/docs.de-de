@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
 ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947627"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Vorgehensweise: Zeichnen eines Rechtecks
 In diesem Beispiel wird gezeigt, wie zum Zeichnen eines Rechtecks mit dem <xref:System.Windows.Shapes.Rectangle> Element.  

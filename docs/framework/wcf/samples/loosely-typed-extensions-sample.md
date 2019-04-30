@@ -3,11 +3,11 @@ title: Beispiel zu lose typisierten Erweiterungen
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006576"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Beispiel zu lose typisierten Erweiterungen
 Das Syndication-Objektmodell bietet umfangreiche Unterstützung zum Arbeiten mit Erweiterungsdaten – Informationen, die in der XML-Darstellung eines Syndication-Feeds vorhanden, jedoch nicht explizit durch Klassen wie <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> verfügbar gemacht werden. Dieses Beispiel veranschaulicht die grundlegenden Techniken zum Arbeiten mit Erweiterungsdaten.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  Dieses Dokument enthält die folgenden einzelnen Erweiterungsdaten:  
   
--   Das `myAttribute`-Attribut des `<feed>`-Elements.  
+- Das `myAttribute`-Attribut des `<feed>`-Elements.  
   
--   `<simpleString>` Element.  
+- `<simpleString>` Element.  
   
--   `<DataContractExtension>` Element.  
+- `<DataContractExtension>` Element.  
   
--   `<XmlSerializerExtension>` Element.  
+- `<XmlSerializerExtension>` Element.  
   
--   `<xElementExtension>` Element.  
+- `<xElementExtension>` Element.  
   
 ## <a name="writing-extension-data"></a>Schreiben von Erweiterungsdaten  
  Attributerweiterungen werden erstellt, indem man der <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>-Auflistung Einträge hinzufügt, wie im folgenden Beispielcode gezeigt.  

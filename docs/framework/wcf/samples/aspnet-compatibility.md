@@ -3,11 +3,11 @@ title: ASP.NET-Kompatibilität
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002663"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET-Kompatibilität
 Dieses Beispiel veranschaulicht, wie ASP.NET Kompatibilitätsmodus in Windows Communication Foundation (WCF) zu aktivieren. Dienste, die unter ASP.NET-Kompatibilität Modus nehmen uneingeschränkt an der ASP.NET-Pipeline für die Anwendung und können ASP.NET-Funktionen wie z. B. Datei-/URL-Autorisierung, Sitzungsstatus, verwenden und die <xref:System.Web.HttpContext> Klasse. Die <xref:System.Web.HttpContext> Klasse ermöglicht den Zugriff auf Cookies, Sitzungen und andere ASP.NET-Funktionen. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.  

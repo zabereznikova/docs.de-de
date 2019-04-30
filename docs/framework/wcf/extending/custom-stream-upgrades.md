@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967907"
 ---
 # <a name="custom-stream-upgrades"></a>Benutzerdefinierte Stream-Upgrades
 Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt. Dieser Stream wird durch ein <xref:System.IO.Stream>-Objekt realisiert. Bei einem Stream-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf. Das Stream-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>-Objekts durch ein aktualisiertes Objekt.  
@@ -32,35 +32,35 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
 ## <a name="how-to-implement-a-stream-upgrade"></a>So implementieren Sie ein Streamupgrade  
  Windows Communication Foundation (WCF) bietet vier `abstract` Klassen, die Sie implementieren können:  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  Gehen Sie wie folgt vor, um ein benutzerdefiniertes Streamupgrade zu implementieren. Bei dieser Prozedur wird ein minimaler Streamupgradevorgang auf den Client- und Servercomputern implementiert.  
   
 1. Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> implementiert.  
   
-    1.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück. Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron zu initiieren.  
+    1. Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück. Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron zu initiieren.  
   
-    2.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>-Methode, um zusätzliche Upgrades zu suchen.  
+    2. Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>-Methode, um zusätzliche Upgrades zu suchen.  
   
 2. Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> implementiert.  
   
-    1.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück. Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron anzunehmen.  
+    1. Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>-Methode, um den zu aktualisierenden Stream anzugeben, und geben Sie den aktualisierten Stream zurück. Diese Methode funktioniert synchron; es gibt analoge Methoden, um das Upgrade asynchron anzunehmen.  
   
-    2.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>-Methode, um festzulegen, ob das angeforderte Upgrade von dem Annehmenden des Upgrades an dieser Stelle im Upgradeprozess unterstützt wird.  
+    2. Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>-Methode, um festzulegen, ob das angeforderte Upgrade von dem Annehmenden des Upgrades an dieser Stelle im Upgradeprozess unterstützt wird.  
   
 3. Erstellen Sie eine Klasse, die den <xref:System.ServiceModel.Channels.StreamUpgradeProvider> implementiert. Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A>-Methode und die <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A>-Methode, um Instanzen des in Schritt 1 und 2 definierten Annehmenden und Initiators zurückzugeben.  
   
 4. Erstellen Sie eine Klasse, die das <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> implementiert.  
   
-    1.  Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A>-Methode auf dem Client und die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A>-Methode auf dem Dienst.  
+    1. Überschreiben Sie die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A>-Methode auf dem Client und die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A>-Methode auf dem Dienst.  
   
-    2.  Überschreiben Sie die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>-Methode auf dem Client und die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>-Methode auf dem Dienst, um das Upgrade-Bindungselement zu <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> hinzuzufügen.  
+    2. Überschreiben Sie die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>-Methode auf dem Client und die <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>-Methode auf dem Dienst, um das Upgrade-Bindungselement zu <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> hinzuzufügen.  
   
 5. Fügen Sie das neue Stream-Upgrade-Bindungselement Bindungen auf den Server- und Clientcomputern hinzu.  
   

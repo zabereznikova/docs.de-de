@@ -3,24 +3,24 @@ title: Aggregatabfragen
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032551"
 ---
 # <a name="aggregate-queries"></a>Aggregatabfragen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Aggregatoperatoren `Average`, `Count`, `Max`, `Min` und `Sum`. Beachten Sie die folgenden Eigenschaften von Aggregatoperatoren in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Aggregatabfragen werden sofort ausgeführt.  
+- Aggregatabfragen werden sofort ausgeführt.  
   
      Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
--   Aggregatabfragen geben i. d. R. eine Zahl statt einer Auflistung zurück.  
+- Aggregatabfragen geben i. d. R. eine Zahl statt einer Auflistung zurück.  
   
      Weitere Informationen finden Sie unter [Aggregationsvorgänge](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
--   Sie können keine Aggregate für anonyme Typen aufrufen.  
+- Sie können keine Aggregate für anonyme Typen aufrufen.  
   
  Die Beispiele in den folgenden Abschnitten leiten sich von der Beispieldatenbank Northwind ab. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   

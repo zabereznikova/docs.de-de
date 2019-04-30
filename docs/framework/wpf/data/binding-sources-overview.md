@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023779"
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.  
@@ -42,13 +42,13 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 ### <a name="other-characteristics"></a>Weitere Merkmale  
  In der folgenden Liste finden Sie weitere zu beachtende Punkte:  
   
--   Wenn Sie das Objekt mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellen möchten, muss die Klasse über einen Standardkonstruktor verfügen. In einigen [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] Sprachen wie z. B. C#, der Standardkonstruktor für Sie erstellt werden kann.  
+- Wenn Sie das Objekt mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] erstellen möchten, muss die Klasse über einen Standardkonstruktor verfügen. In einigen [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] Sprachen wie z. B. C#, der Standardkonstruktor für Sie erstellt werden kann.  
   
--   Die als Bindungsquelleigenschaften für eine Bindung verwendeten Eigenschaften müssen öffentliche Eigenschaften der Klasse sein. Explizit definierte Schnittstelleneigenschaften sowie geschützte, private, interne und virtuelle Eigenschaften können nicht für eine Bindung herangezogen werden.  
+- Die als Bindungsquelleigenschaften für eine Bindung verwendeten Eigenschaften müssen öffentliche Eigenschaften der Klasse sein. Explizit definierte Schnittstelleneigenschaften sowie geschützte, private, interne und virtuelle Eigenschaften können nicht für eine Bindung herangezogen werden.  
   
--   An öffentliche Felder kann keine Bindung erfolgen.  
+- An öffentliche Felder kann keine Bindung erfolgen.  
   
--   Der in der Klasse deklarierte Eigenschaftentyp ist der an die Bindung übergebene Typ. Allerdings wird der letztendlich in der Bindung verwendete Typ durch die Eigenschaft des Bindungsziels und nicht durch die Bindungsquelleigenschaft bestimmt. Falls sich die Typen unterscheiden, können Sie ggf. einen Konverter erstellen, der vorgibt, wie die benutzerdefinierte Eigenschaft anfänglich an die Bindung übergeben wird. Weitere Informationen finden Sie unter <xref:System.Windows.Data.IValueConverter>.  
+- Der in der Klasse deklarierte Eigenschaftentyp ist der an die Bindung übergebene Typ. Allerdings wird der letztendlich in der Bindung verwendete Typ durch die Eigenschaft des Bindungsziels und nicht durch die Bindungsquelleigenschaft bestimmt. Falls sich die Typen unterscheiden, können Sie ggf. einen Konverter erstellen, der vorgibt, wie die benutzerdefinierte Eigenschaft anfänglich an die Bindung übergeben wird. Weitere Informationen finden Sie unter <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Verwenden von gesamten Objekten als Bindungsquelle  
@@ -80,11 +80,11 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
   
  In dieser Tabelle werden die folgenden wichtigen Punkte bezüglich der bei der Datenbindung erforderlichen Berechtigungen beschrieben:  
   
--   Bei [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Eigenschaften funktioniert die Datenbindung, solange die Bindungs-Engine mittels Reflektion auf die Bindungsquelleigenschaft zugreifen kann. Andernfalls wird von der Bindungs-Engine eine Warnung ausgegeben, dass die Eigenschaft nicht gefunden wurde. In diesem Fall wird der Fallbackwert bzw. der Standardwert (sofern verfügbar) verwendet.  
+- Bei [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Eigenschaften funktioniert die Datenbindung, solange die Bindungs-Engine mittels Reflektion auf die Bindungsquelleigenschaft zugreifen kann. Andernfalls wird von der Bindungs-Engine eine Warnung ausgegeben, dass die Eigenschaft nicht gefunden wurde. In diesem Fall wird der Fallbackwert bzw. der Standardwert (sofern verfügbar) verwendet.  
   
--   Sie können eine Bindung an Eigenschaften für dynamische Objekte herstellen, die zur Kompilier- oder Laufzeit definiert werden.  
+- Sie können eine Bindung an Eigenschaften für dynamische Objekte herstellen, die zur Kompilier- oder Laufzeit definiert werden.  
   
--   Eine Bindung an Abhängigkeitseigenschaften ist immer möglich.  
+- Eine Bindung an Abhängigkeitseigenschaften ist immer möglich.  
   
  Die erforderlichen Berechtigungen für [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Bindungen sind ähnlich. In einer teilweise vertrauenswürdigen Sandbox <xref:System.Windows.Data.XmlDataProvider> schlägt fehl, wenn sie nicht über die Berechtigungen zum Zugriff auf die angegebenen Daten verfügt.  
   

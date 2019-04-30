@@ -3,11 +3,11 @@ title: Zustandsautomatworkflows
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004682"
 ---
 # <a name="state-machine-workflows"></a>Zustandsautomatworkflows
 Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. Die <xref:System.Activities.Statements.StateMachine>-Aktivität kann zusammen mit <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> und anderen Aktivitäten verwendet werden, um Zustandsautomatenworkflow-Programme zu erstellen. Dieses Thema bietet eine Übersicht über das Erstellen von Zustandsautomatenworkflows.  
@@ -15,11 +15,11 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
 ## <a name="state-machine-workflow-overview"></a>Übersicht über Zustandsautomatenworkflows  
  Zustandsautomatenworkflows bieten eine Möglichkeit, Workflows in einer ereignisgesteuerten Weise zu modellieren. Eine <xref:System.Activities.Statements.StateMachine>-Aktivität enthält die Zustände und Übergänge, aus denen sich die Logik des Zustandsautomaten aufbaut, und kann überall dort verwendet werden, wo eine Aktivität verwendet werden kann. Es gibt mehrere Klassen in der Zustandsautomat-Laufzeit:  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  Um einen Zustandsautomatenworkflow erstellen, werden die Zustände einer <xref:System.Activities.Statements.StateMachine>-Aktivität hinzugefügt. Übergänge werden verwendet, um den Fluss zwischen den Zuständen zu steuern. Im folgenden Screenshot aus dem [Getting Started Tutorial](getting-started-tutorial.md) Schritt [Vorgehensweise: Erstellen Sie einen Statuscomputerworkflow](how-to-create-a-state-machine-workflow.md), ein zustandsautomatenworkflow mit drei Zuständen und drei Übergängen gezeigt. **Ziel initialisieren** ist der Anfangszustand und stellt den ersten Zustand im Workflow dar. Dadurch wird festgelegt, durch die Linie aus führt der **starten** Knoten. Der Endzustand im Workflow wird mit dem Namen **FinalState**, und stellt den Punkt, an dem der Workflow abgeschlossen ist.  
   

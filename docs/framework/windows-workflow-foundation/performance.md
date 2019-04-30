@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006937"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 
@@ -67,7 +67,7 @@ ms.locfileid: "57845734"
 ### <a name="environment-setup"></a>Umgebungssetup
  ![Einrichten der Umgebung für die Messung der Workflow-Leistung](./media/performance/performance-test-environment.gif)
 
- Die oben erwähnte Abbildung zeigt die zur Leistungsmessung auf Komponentenebene verwendete Computerkonfiguration. Ein einzelner Server und fünf Clients sind über eine 1-GBit/s-Ethernet-Netzwerkschnittstelle verbunden. Zur einfacheren Messung ist der Server so konfiguriert, dass ein einzelner Kern eines Dual-Proc/Quad-Core-Servers verwendet wird, der unter Windows Server 2008 x86 ausgeführt wird. Die CPU-Auslastung des Systems wird bei annähernd 100&#160;% gehalten.
+ Die oben erwähnte Abbildung zeigt die zur Leistungsmessung auf Komponentenebene verwendete Computerkonfiguration. Ein einzelner Server und fünf Clients sind über eine 1-GBit/s-Ethernet-Netzwerkschnittstelle verbunden. Zur einfacheren Messung ist der Server so konfiguriert, dass ein einzelner Kern eines Dual-Proc/Quad-Core-Servers verwendet wird, der unter Windows Server 2008 x86 ausgeführt wird. Die CPU-Auslastung des Systems wird bei annähernd 100&amp;#160;% gehalten.
 
 ### <a name="test-details"></a>Testdetails
  Die WF3-<xref:System.Workflow.Activities.CodeActivity> ist wahrscheinlich die einfachste Aktivität, die in einem WF3-Workflow verwendet werden kann.  Die Aktivität ruft eine Methode im Code-Behind auf, in die der Workflowprogrammierer benutzerdefinierten Code einfügen kann.  In WF4 gibt es kein direktes Pendant zur WF3-<xref:System.Workflow.Activities.CodeActivity>, die dieselbe Funktionalität bietet.  Beachten Sie, dass es eine <xref:System.Activities.CodeActivity>-Basisklasse in WF4 gibt, die nicht mit der WF3-<xref:System.Workflow.Activities.CodeActivity> im Zusammenhang steht.  Workflowautoren werden ermutigt, benutzerdefinierte Aktivitäten und Nur-XAML-Workflows zu erstellen.  Unten in den Tests wird eine Aktivität mit der Bezeichnung `Comment` anstelle einer leeren <xref:System.Workflow.Activities.CodeActivity> in WF4-Workflows verwendet.  Der Code in der `Comment`-Aktivität lautet folgendermaßen:
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  Beachten Sie, dass der WF4-SQL-Persistenzanbieter weitere Aufgaben in der Datenbankebene ausführt.  Die SQL-Datenbank kann zu einem Engpass führen. Daher ist die Überwachung der CPU und Datenträgerverwendung in diesem Fall von Bedeutung.  Nehmen Sie die folgenden Leistungsindikatoren aus der SQL-Datenbank bei den Leistungstests von Workflowanwendungen auf:
 
--   Physikalischer Datenträger\\% Lesezeit
+- Physikalischer Datenträger\\% Lesezeit
 
--   Physikalischer Datenträger\\Zeit (%)
+- Physikalischer Datenträger\\Zeit (%)
 
--   Physikalischer Datenträger\\% Datenträger Schreibzeit
+- Physikalischer Datenträger\\% Datenträger Schreibzeit
 
--   Physikalischer Datenträger\\%-durchschnittliche Länge der Datenträgerwarteschlange
+- Physikalischer Datenträger\\%-durchschnittliche Länge der Datenträgerwarteschlange
 
--   Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Lesevorgänge
+- Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Lesevorgänge
 
--   Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Schreibvorgänge
+- Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Schreibvorgänge
 
--   Physischer Datenträger\Aktuelle Warteschlangenlänge
+- Physischer Datenträger\Aktuelle Warteschlangenlänge
 
--   Prozessorinformationen\\Prozessorzeit (%)
+- Prozessorinformationen\\Prozessorzeit (%)
 
--   SQLServer:Latches\Durchschnittliche Latchwartezeit (ms)
+- SQLServer:Latches\Durchschnittliche Latchwartezeit (ms)
 
--   SQLServer:Latches\Latchwartezeiten/s
+- SQLServer:Latches\Latchwartezeiten/s
 
 ### <a name="tracking"></a>Nachverfolgung
  Die Workflownachverfolgung kann verwendet werden, um den Status eines Workflows nachzuverfolgen.  Die Informationen, die in den Nachverfolgungsereignissen enthalten sind, werden von einem Nachverfolgungsprofil bestimmt.  Mit der Komplexität des Nachverfolgungsprofils steigt der Aufwand für die Nachverfolgung.
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  Vorteile des Ansatzes der Verwendung von ETW zur Nachverfolgung anstelle von SQL:
 
--   Eine Auflistung von Nachverfolgungsereignissen kann in einem anderen Prozess abgetrennt werden.  Dies ermöglicht höhere Flexibilität beim Aufzeichnen der Ereignisse.
+- Eine Auflistung von Nachverfolgungsereignissen kann in einem anderen Prozess abgetrennt werden.  Dies ermöglicht höhere Flexibilität beim Aufzeichnen der Ereignisse.
 
--   ETW-Nachverfolgungsereignisse werden einfach mit den WCF-ETW-Ereignissen oder anderen ETW-Anbietern, z. B. eine SQL Server oder den Kernel-Anbieter kombiniert werden.
+- ETW-Nachverfolgungsereignisse werden einfach mit den WCF-ETW-Ereignissen oder anderen ETW-Anbietern, z. B. eine SQL Server oder den Kernel-Anbieter kombiniert werden.
 
--   Workflowautoren müssen keinen Workflow ändern, damit er besser mit einer bestimmten Nachverfolgungsimplementierung funktioniert, wie z. B. dem Batchmodus des WF3-SQL-Überwachungsdiensts.
+- Workflowautoren müssen keinen Workflow ändern, damit er besser mit einer bestimmten Nachverfolgungsimplementierung funktioniert, wie z. B. dem Batchmodus des WF3-SQL-Überwachungsdiensts.
 
--   Ein Administrator kann die Nachverfolgung aktivieren oder deaktivieren, ohne den Hostprozess wiederzuverwenden.
+- Ein Administrator kann die Nachverfolgung aktivieren oder deaktivieren, ohne den Hostprozess wiederzuverwenden.
 
  Die Leistungsvorteile der ETW-Nachverfolgung haben auch einen Nachteil.  ETW-Ereignisse können unter intensivem Ressourcendruck auf das System verloren gehen.  Die Verarbeitung von Ereignissen soll die normale Programmausführung nicht blockieren. Daher wird nicht garantiert, dass alle ETW-Ereignisse an ihre Abonnenten übertragen werden.  Daher eignet sich die ETW-Nachverfolgung hervorragend zum Systemmonitoring, ist aber nicht für das Auditing geeignet.
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972366"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
 `ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Einen dieser Mechanismen können im Designer die folgenden Funktionen:  
   
--   Die Eigenschaft enthält visuelle Anzeige im Eigenschaftenbrowser an, wenn er von seinem Standardwert geändert wurde.  
+- Die Eigenschaft enthält visuelle Anzeige im Eigenschaftenbrowser an, wenn er von seinem Standardwert geändert wurde.  
   
--   Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft, und wählen Sie **zurücksetzen** die Eigenschaft auf den Standardwert wiederherzustellen.  
+- Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft, und wählen Sie **zurücksetzen** die Eigenschaft auf den Standardwert wiederherzustellen.  
   
--   Der Designer generiert effizienteren Code.  
+- Der Designer generiert effizienteren Code.  
   
     > [!NOTE]
     >  Eine erfüllt die <xref:System.ComponentModel.DefaultValueAttribute> , oder geben Sie `Reset` *PropertyName* und `ShouldSerialize` *PropertyName* Methoden. Verwenden Sie nicht beide.  

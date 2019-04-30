@@ -9,11 +9,11 @@ ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985594"
 ---
 # <a name="hosting-structures"></a>Hostingstrukturen
 In diesem Abschnitt wird beschrieben, die nicht verwalteten Strukturen, die die hosting-API verwendet wird.  
@@ -23,25 +23,25 @@ In diesem Abschnitt wird beschrieben, die nicht verwalteten Strukturen, die die 
  Enthält ausführliche Informationen über die referenzierte Assembly.  
   
  [BucketParameters-Struktur](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- Speichert den Typnamen des ein Ereignis und die Parameter für die aktuelle Ausnahme, die dem Ereignis zugeordnet ist.  
+ Speichert den Typnamen eines Ereignisses und die Parameter für die aktuelle Ausnahme, die dem Ereignis zugeordnet ist.  
   
  [COR_GC_STATS-Struktur](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
  Stellt Statistiken über Garbage Collection-Mechanismus der common Language Runtime (CLR) bereit.  
   
  [COR_GC_THREAD_STATS-Struktur](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
- Enthält threadspezifische Statistiken zur Garbagecollection.  
+ Enthält pro-Thread-Statistiken, die Garbagecollection betreffen.  
   
  [CustomDumpItem-Struktur](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- Beschreibt ein Element, das ein benutzerdefiniertes Speicherabbild Fehlerberichterstattung hinzugefügt werden.  
+ Beschreibt ein Element ein benutzerdefiniertes Speicherabbild in der Fehlerberichterstattung hinzugefügt werden.  
   
  [MDAInfo-Struktur](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- Enthält Informationen über die `Event_MDAFired` -Ereignis, das die Erstellung von ein Assistent für verwaltetes Debuggen (MDA) ausgelöst.  
+ Enthält Informationen über die `Event_MDAFired` -Ereignis, das die Erstellung einer-Assistent für verwaltetes Debuggen (MDA) ausgelöst.  
   
  [ModuleBindInfo-Struktur](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
- Enthält ausführliche Informationen über das Modul verwiesen wird und die Assembly, die es enthält.  
+ Enthält ausführliche Informationen über das Modul verwiesen wird und die Assembly, die sie enthält.  
   
  [StackOverflowInfo-Struktur](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- Speichert den Typ des aufgetretenen Überlaufs und Informationen für die Ausnahme, die aufgrund eines Überlaufs in der ausgelöst wurde.  
+ Speichert den Typ der Überlauf, die aufgetreten sind und Informationen für die Ausnahme, die aufgrund der Überlauf ausgelöst wurde.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

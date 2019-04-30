@@ -3,11 +3,11 @@ title: 'Transport: WSE 3.0-TCP-Interoperabilität'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032737"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0-TCP-Interoperabilität
 Das Beispiel WSE 3.0-TCP-Interoperabilitätstransports veranschaulicht, wie eine TCP-duplexsitzung als ein benutzerdefiniertes Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte zeigen, wie Sie diesen benutzerdefinierten WCF-Transport zu erstellen:  
@@ -43,16 +43,16 @@ Das Beispiel WSE 3.0-TCP-Interoperabilitätstransports veranschaulicht, wie eine
   
  Der Basis-`WseTcpDuplexSessionChannel` geht davon aus, dass er einen verbundenen Socket empfängt. Die Basisklasse behandelt das Herunterfahren des Sockets. Es gibt drei Stellen, die mit einer Schließung des Sockets in Verbindung stehen:  
   
--   OnAbort -- schließt den Socket nicht ordnungsgemäß ("hartes" Schließen).  
+- OnAbort -- schließt den Socket nicht ordnungsgemäß ("hartes" Schließen).  
   
--   On[Begin]Close -- schließt den Socket ordnungsgemäß ("weiches" Schließen).  
+- On[Begin]Close -- schließt den Socket ordnungsgemäß ("weiches" Schließen).  
   
--   session.CloseOutputSession -- fährt den ausgehenden Datenstream herunter ("halbes" Schließen).  
+- session.CloseOutputSession -- fährt den ausgehenden Datenstream herunter ("halbes" Schließen).  
   
 ## <a name="channel-factory"></a>Kanalfactory  
  Der nächste Schritt beim Schreiben des TCP-Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle.  
   
--   `WseTcpChannelFactory` leitet sich von <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Das ist eine Factory, die `OnCreateChannel` überschreibt, um Clientkanäle zu erzeugen.  
+- `WseTcpChannelFactory` leitet sich von <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Das ist eine Factory, die `OnCreateChannel` überschreibt, um Clientkanäle zu erzeugen.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ Das Beispiel WSE 3.0-TCP-Interoperabilitätstransports veranschaulicht, wie eine
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` Fügt der Logik zur Basis `WseTcpDuplexSessionChannel` zur Verbindung mit eines TCP-Servers `channel.Open` Zeit. Zuerst wird der Hostname zu einer IP-Adresse aufgelöst, wie im folgenden Code dargestellt.  
+- `ClientWseTcpDuplexSessionChannel` Fügt der Logik zur Basis `WseTcpDuplexSessionChannel` zur Verbindung mit eines TCP-Servers `channel.Open` Zeit. Zuerst wird der Hostname zu einer IP-Adresse aufgelöst, wie im folgenden Code dargestellt.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Dann wird der Hostname in einer Schleife mit der ersten verfügbaren IP-Adresse verbunden, wie im folgenden Code dargestellt.  
+- Dann wird der Hostname in einer Schleife mit der ersten verfügbaren IP-Adresse verbunden, wie im folgenden Code dargestellt.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ Das Beispiel WSE 3.0-TCP-Interoperabilitätstransports veranschaulicht, wie eine
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   Als Teil des Kanalvertrags werden alle domänenspezifischen Ausnahmen eingebunden (wie `SocketException` in <xref:System.ServiceModel.CommunicationException>).  
+- Als Teil des Kanalvertrags werden alle domänenspezifischen Ausnahmen eingebunden (wie `SocketException` in <xref:System.ServiceModel.CommunicationException>).  
   
 ## <a name="channel-listener"></a>Kanallistener  
  Im nächsten Schritt wird eine Implementierung von <xref:System.ServiceModel.Channels.IChannelListener> zum Entgegennehmen von Serverkanälen erstellt.  
   
--   `WseTcpChannelListener` leitet sich von <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > und Außerkraftsetzungen auf [Begin] Open und On [Begin] schließen, um die Lebensdauer seines lauschsockets zu steuern. In OnOpen wird ein Socket zum Lauschen an IP_ANY erstellt. Weiter fortgeschrittene Implementierungen können einen zweiten Socket erstellen, um auch an IPv6 zu lauschen. Sie können außerdem zulassen, dass die IP-Adresse im Hostnamen angegeben wird.  
+- `WseTcpChannelListener` leitet sich von <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > und Außerkraftsetzungen auf [Begin] Open und On [Begin] schließen, um die Lebensdauer seines lauschsockets zu steuern. In OnOpen wird ein Socket zum Lauschen an IP_ANY erstellt. Weiter fortgeschrittene Implementierungen können einen zweiten Socket erstellen, um auch an IPv6 zu lauschen. Sie können außerdem zulassen, dass die IP-Adresse im Hostnamen angegeben wird.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. Führen Sie nach der Installation des `TcpSyncStockService`-Beispiels folgende Schritte aus:  
   
-    1.  Öffnen Sie den `TcpSyncStockService` in Visual Studio. (Das TcpSyncStockService-Beispiel wird mit WSE 3.0 installiert. Es ist nicht Bestandteil dieses Beispielcodes.)  
+    1. Öffnen Sie den `TcpSyncStockService` in Visual Studio. (Das TcpSyncStockService-Beispiel wird mit WSE 3.0 installiert. Es ist nicht Bestandteil dieses Beispielcodes.)  
   
-    2.  Legen Sie das StockService-Projekt als Startprojekt fest.  
+    2. Legen Sie das StockService-Projekt als Startprojekt fest.  
   
-    3.  Öffnen Sie StockService.cs im StockService-Projekt, und kommentieren Sie das [Policy]-Attribut in der `StockService`-Klasse aus. Dadurch werden die Sicherheitsfunktionen im Beispiel deaktiviert. Während WCF mit WSE 3.0 sichere Endpunkte zusammenarbeiten kann, ist die Sicherheit deaktiviert, um dieses Beispiel konzentriert sich auf die benutzerdefinierte TCP-Transport zu.  
+    3. Öffnen Sie StockService.cs im StockService-Projekt, und kommentieren Sie das [Policy]-Attribut in der `StockService`-Klasse aus. Dadurch werden die Sicherheitsfunktionen im Beispiel deaktiviert. Während WCF mit WSE 3.0 sichere Endpunkte zusammenarbeiten kann, ist die Sicherheit deaktiviert, um dieses Beispiel konzentriert sich auf die benutzerdefinierte TCP-Transport zu.  
   
-    4.  Drücken Sie F5, um `TcpSyncStockService` zu starten. Der Dienst wird in einem neuen Konsolenfenster gestartet.  
+    4. Drücken Sie F5, um `TcpSyncStockService` zu starten. Der Dienst wird in einem neuen Konsolenfenster gestartet.  
   
-    5.  Öffnen Sie dieses TCP-Transportbeispiel in Visual Studio.  
+    5. Öffnen Sie dieses TCP-Transportbeispiel in Visual Studio.  
   
-    6.  Aktualisieren Sie die Variable "hostname" in TestCode.cs so, dass sie mit dem Namen des Computers übereinstimmt, auf dem `TcpSyncStockService` ausgeführt wird.  
+    6. Aktualisieren Sie die Variable "hostname" in TestCode.cs so, dass sie mit dem Namen des Computers übereinstimmt, auf dem `TcpSyncStockService` ausgeführt wird.  
   
-    7.  Drücken Sie F5, um das TCP-Transportbeispiel zu starten.  
+    7. Drücken Sie F5, um das TCP-Transportbeispiel zu starten.  
   
-    8.  Der TCP-Transporttest-Client wird in einem neuen Konsolenfenster gestartet. Der Client fordert beim Dienst Aktienkurse an und zeigt die Ergebnisse dann in seinem Konsolenfenster an.  
+    8. Der TCP-Transporttest-Client wird in einem neuen Konsolenfenster gestartet. Der Client fordert beim Dienst Aktienkurse an und zeigt die Ergebnisse dann in seinem Konsolenfenster an.  

@@ -3,22 +3,22 @@ title: 'Vorgehensweise: Verwenden von Filtern'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972860"
 ---
 # <a name="how-to-use-filters"></a>Vorgehensweise: Verwenden von Filtern
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit mehreren Filtern zu erstellen. In diesem Beispiel werden Nachrichten an zwei Implementierungen eines Rechnerdiensts weitergeleitet: regularCalc und roundingCalc. Beide Implementierungen unterstützen die gleichen Vorgänge. Ein Dienst rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob die Rundungsversion des Diensts verwendet werden soll. Falls kein bevorzugter Dienst angegeben wird, wird für die Nachricht ein Lastenausgleich zwischen beiden Diensten durchgeführt. Beide Dienste machen die folgenden Vorgänge verfügbar:  
   
--   Hinzufügen  
+- Hinzufügen  
   
--   Subtrahieren  
+- Subtrahieren  
   
--   Multiplizieren  
+- Multiplizieren  
   
--   Teilen  
+- Teilen  
   
  Da beide Dienste die gleichen Vorgänge implementieren, können Sie den Aktionsfilter nicht verwenden, weil die in der Nachricht angegebene Aktion nicht eindeutig ist. Stattdessen müssen Sie weitere Schritte unternehmen, um sicherzustellen, dass die Nachrichten an die entsprechenden Endpunkte weitergeleitet werden.  
   
@@ -137,10 +137,10 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     > [!NOTE]
     >  Bei der Ermittlung einer Übereinstimmung wertet der PrefixEndpointAddress-Filter den Hostnamen nicht aus, weil auf einen einzelnen Host mit einer Vielzahl von Hostnamen verwiesen werden kann, die alle zulässige Möglichkeiten zum Verweisen auf den Host aus der Clientanwendung darstellen können. Es kann z. B. sein, dass alle unten aufgeführten Adressen auf den gleichen Host verweisen:  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. Der abschließende Filter muss das Routing von Nachrichten unterstützen, die ohne den benutzerdefinierten Header am allgemeinen Endpunkt ankommen. Für dieses Szenario sollten die Nachrichten zwischen dem regularCalc-Dienst und dem roundingCalc-Dienste wechseln. Verwenden Sie einen benutzerdefinierten Filter, der eine Filterinstanz für jede verarbeitete Nachricht entsprechend ermöglicht, um das "Roundrobin"-routing dieser Nachrichten zu unterstützen.  Im folgenden Code werden zwei Instanzen von RoundRobinMessageFilter definiert, die gruppiert werden und auf diese Weise angeben, dass dazwischen gewechselt werden soll.  
   

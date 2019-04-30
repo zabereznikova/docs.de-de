@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003885"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Vorgehensweise: Festlegen der JPEG-Komprimierungsebene
 Möglicherweise möchten Sie die Parameter eines Bilds ändern, wenn Sie das Bild auf einem Datenträger speichern, um dadurch die Dateigröße zu minimieren oder die Qualität zu verbessern. Sie können die Qualität eines JPEG-Bilds anpassen, indem Sie seine Komprimierungsebene ändern. Zum Angeben der Komprimierungsebene beim Speichern eines JPEG-Bilds müssen Sie erstellen eine <xref:System.Drawing.Imaging.EncoderParameters> -Objekt und übergeben Sie sie an der <xref:System.Drawing.Image.Save%2A> Methode der <xref:System.Drawing.Image> Klasse. Initialisieren der <xref:System.Drawing.Imaging.EncoderParameters> Objekt so, dass die It verfügt über ein Array, das eine besteht <xref:System.Drawing.Imaging.EncoderParameter>. Bei der Erstellung der <xref:System.Drawing.Imaging.EncoderParameter>, geben Sie die <xref:System.Drawing.Imaging.Encoder.Quality> Encoder und die gewünschte Komprimierungsebene.  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Eine Windows Forms-Anwendung  
+- Eine Windows Forms-Anwendung  
   
--   Ein <xref:System.Windows.Forms.PaintEventArgs>, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+- Ein <xref:System.Windows.Forms.PaintEventArgs>, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
   
--   Eine Bilddatei mit dem Namen `TestPhoto.jpg`, die unter **c:\\** gespeichert ist.  
+- Eine Bilddatei mit dem Namen `TestPhoto.jpg`, die unter **c:\\** gespeichert ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

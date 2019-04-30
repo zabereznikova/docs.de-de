@@ -3,11 +3,11 @@ title: HTTP-Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000843"
 ---
 # <a name="http-transport-security"></a>HTTP-Transportsicherheit
 Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird erläutert, wie SSL funktioniert und wie es in Windows Communication Foundation (WCF) implementiert wird.  
@@ -31,9 +31,9 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
 ## <a name="implementing-ssl-with-wcf"></a>Implementieren von SSL mit WCF  
  HTTP-transportsicherheit (oder SSL) wird für WCF extern bereitgestellt. Sie können SSL auf zwei Wegen implementieren; der entscheidende Faktor ist, wie die Anwendung gehostet wird:  
   
--   Bei Verwendung von Internetinformationsdienste (Internet Information Services, IIS) als Ihre WCF-Diensthost verwenden Sie die IIS-Infrastruktur, um ein SSL-Dienst einzurichten.  
+- Bei Verwendung von Internetinformationsdienste (Internet Information Services, IIS) als Ihre WCF-Diensthost verwenden Sie die IIS-Infrastruktur, um ein SSL-Dienst einzurichten.  
   
--   Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, können Sie ein SSL-Zertifikat an die Adresse, die mit dem Tool HttpCfg.exe binden.  
+- Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, können Sie ein SSL-Zertifikat an die Adresse, die mit dem Tool HttpCfg.exe binden.  
   
 ### <a name="using-iis-for-transport-security"></a>Verwenden von IIS für Transportsicherheit  
   

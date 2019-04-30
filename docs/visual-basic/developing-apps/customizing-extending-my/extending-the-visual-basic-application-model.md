@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014259"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Erweitern des Visual Basic-Anwendungsmodells
 Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreiben der `Overridable` Mitglied der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Klasse. Dieses Verfahren ermöglicht Ihnen das Anpassen des Verhaltens des Anwendungsmodells und Ihren eigenen Methoden zu aufrufen hinzufügen, wie die Anwendung startet und beendet wird.  
@@ -38,11 +38,11 @@ Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreib
   
      Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Methode ruft die folgenden Methoden:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Bestimmt, ob die Anwendung einen Begrüßungsbildschirm definiert wurde, und wenn dies der Fall ist, zeigt den Begrüßungsbildschirm in einem separaten Thread an.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Bestimmt, ob die Anwendung einen Begrüßungsbildschirm definiert wurde, und wenn dies der Fall ist, zeigt den Begrüßungsbildschirm in einem separaten Thread an.  
   
          Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Methode enthält den Code, dem der Begrüßungsbildschirm anzeigt, Bildschirm mindestens für die Anzahl der Millisekunden, die gemäß der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> Eigenschaft. Um diese Funktion verwenden zu können, müssen Sie den Begrüßungsbildschirm hinzufügen, auf Ihre Anwendung mit der **Projekt-Designer** (welche legt die `My.Application.MinimumSplashScreenDisplayTime` auf zwei Sekunden), oder legen Sie die `My.Application.MinimumSplashScreenDisplayTime` Eigenschaft in einer Methode, die die überschreibt<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> oder <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> Methode. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Ermöglicht einem Designer, Code auszugeben, die den Begrüßungsbildschirm initialisiert.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Ermöglicht einem Designer, Code auszugeben, die den Begrüßungsbildschirm initialisiert.  
   
          Standardmäßig führt diese Methode keine Aktion. Bei Auswahl ein Begrüßungsbildschirms für Ihre Anwendung in Visual Basic **Projekt-Designer**, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> Methode mit einer Methode, die festlegt der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> Eigenschaft, um eine neue Instanz des Formulars Splash-Bildschirm .  
   
@@ -54,11 +54,11 @@ Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreib
   
      Standardmäßig, bevor in der Windows Forms-Nachrichtenschleife, wird diese Methode ruft die `OnCreateMainForm` (zum Hauptformular der Anwendung zu erstellen) und `HideSplashScreen` (zum Schließen des Begrüßungsbildschirms) Methoden:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Bietet eine Möglichkeit für einen Designer zum Ausgeben von Code, der das Hauptformular initialisiert.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Bietet eine Möglichkeit für einen Designer zum Ausgeben von Code, der das Hauptformular initialisiert.  
   
          Standardmäßig führt diese Methode keine Aktion. Allerdings bei der Auswahl einer Hauptformular für Ihre Anwendung in Visual Basic **Projekt-Designer**, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> Methode mit einer Methode, die festlegt der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> Eigenschaft, um eine neue Instanz des Hauptformulars.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Wenn die Anwendung einen Begrüßungsbildschirm definiert und es geöffnet ist, schließt diese Methode den Begrüßungsbildschirm.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Wenn die Anwendung einen Begrüßungsbildschirm definiert und es geöffnet ist, schließt diese Methode den Begrüßungsbildschirm.  
   
          Standardmäßig schließt diese Methode den Begrüßungsbildschirm.  
   
@@ -97,7 +97,6 @@ Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreib
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

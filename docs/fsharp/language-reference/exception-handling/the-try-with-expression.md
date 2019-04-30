@@ -3,11 +3,11 @@ title: 'Ausnahmen: Der try...with-Ausdruck'
 description: Erfahren Sie, wie Sie mit der F# "try...with-" Ausdruck für die Ausnahmebehandlung.
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945534"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Ausnahmen: Der try...with-Ausdruck
 
@@ -38,9 +38,9 @@ Eine Vielzahl von Mustern können Sie den Ausnahmetyp und andere Bedingungen fil
 
 |Muster|Beschreibung|
 |-------|-----------|
-|:? *Typ der Ausnahme*|Entspricht den angegebenen Ausnahmetyp von .NET.|
+|:? *exception-type*|Entspricht den angegebenen Ausnahmetyp von .NET.|
 |:? *Typ der Ausnahme* als *Bezeichner*|Mit der angegebenen Ausnahme .NET Typ übereinstimmt, doch bieten der Ausnahme einen benannten Wert.|
-|*Ausnahme-Name*(*Argumente*)|Entspricht einem F# Ausnahmetyp und bindet die Argumente.|
+|*exception-name*(*arguments*)|Entspricht einem F# Ausnahmetyp und bindet die Argumente.|
 |*identifier*|Entspricht einer beliebigen Ausnahme aus, und bindet den Namen an das Ausnahmeobjekt. Äquivalent zu **:? System.Exception als**_Bezeichner_|
 |*Bezeichner* beim *Bedingung*|Entspricht einer beliebigen Ausnahme aus, wenn die Bedingung "true" ist.|
 

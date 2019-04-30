@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973302"
 ---
 # <a name="type-promotion-visual-basic"></a>Typerweiterung (Visual Basic)
 Wenn Sie ein Programmierelement ein Element in einem Modul deklarieren, stuft Visual Basic den Gültigkeitsbereich auf den Namespace, die das Modul. Dies bezeichnet man als *typerweiterung*.  
@@ -54,9 +54,9 @@ Wenn Sie ein Programmierelement ein Element in einem Modul deklarieren, stuft Vi
 ## <a name="recommendations"></a>Empfehlungen  
  Die folgenden Empfehlungen stellen programmiergrundlagen dar.  
   
--   **Eindeutige Namen.** Wenn Sie vollständige Kontrolle über die Benennung von Programmierelementen verfügen, ist es immer eine gute Idee, eindeutige Namen verwenden. Identische Namen können erfordern zusätzliche Qualifizierung und Ihren Code schwieriger zu lesen. Sie können auch Fehler auftreten zu unerwarteten Ergebnissen führen.  
+- **Eindeutige Namen.** Wenn Sie vollständige Kontrolle über die Benennung von Programmierelementen verfügen, ist es immer eine gute Idee, eindeutige Namen verwenden. Identische Namen können erfordern zusätzliche Qualifizierung und Ihren Code schwieriger zu lesen. Sie können auch Fehler auftreten zu unerwarteten Ergebnissen führen.  
   
--   **Vollständige Qualifizierung.** Wenn Sie Module und andere Elemente im selben Namespace arbeiten, ist am sichersten, immer vollständige Qualifizierung für alle Programmiersprachen Elemente verwenden. Wenn typerweiterung für einen Modulmember außer Kraft gesetzt wird, und Sie diesen Member nicht vollständig qualifizieren, konnten Sie versehentlich ein anderes Programmierelements zugreifen.  
+- **Vollständige Qualifizierung.** Wenn Sie Module und andere Elemente im selben Namespace arbeiten, ist am sichersten, immer vollständige Qualifizierung für alle Programmiersprachen Elemente verwenden. Wenn typerweiterung für einen Modulmember außer Kraft gesetzt wird, und Sie diesen Member nicht vollständig qualifizieren, konnten Sie versehentlich ein anderes Programmierelements zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch
 

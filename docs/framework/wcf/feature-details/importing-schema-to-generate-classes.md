@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972665"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
 Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communication Foundation (WCF) verwendet werden, die <xref:System.Runtime.Serialization.XsdDataContractImporter> Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
@@ -148,13 +148,13 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
   
 ##### <a name="design-considerations"></a>Entwurfsüberlegungen  
   
--   Es kann schwierig sein, direkt mit der schwach typisierten XML-Darstellung zu arbeiten. Sie sollten erwägen, eine alternative Serialisierungs-Engine zu verwenden, beispielsweise <xref:System.Xml.Serialization.XmlSerializer>, um mit Schemas arbeiten zu können, die mit stark typisierten Datenverträgen nicht kompatibel sind. Weitere Informationen finden Sie unter [mithilfe der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+- Es kann schwierig sein, direkt mit der schwach typisierten XML-Darstellung zu arbeiten. Sie sollten erwägen, eine alternative Serialisierungs-Engine zu verwenden, beispielsweise <xref:System.Xml.Serialization.XmlSerializer>, um mit Schemas arbeiten zu können, die mit stark typisierten Datenverträgen nicht kompatibel sind. Weitere Informationen finden Sie unter [mithilfe der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
--   Einige Schemakonstrukte können über <xref:System.Runtime.Serialization.XsdDataContractImporter> nicht importiert werden. Dies ist auch dann nicht möglich, wenn die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Eigenschaft auf `true` festgelegt ist. Sie sollten auch hierfür erwägen, <xref:System.Xml.Serialization.XmlSerializer> zu verwenden.  
+- Einige Schemakonstrukte können über <xref:System.Runtime.Serialization.XsdDataContractImporter> nicht importiert werden. Dies ist auch dann nicht möglich, wenn die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Eigenschaft auf `true` festgelegt ist. Sie sollten auch hierfür erwägen, <xref:System.Xml.Serialization.XmlSerializer> zu verwenden.  
   
--   Unterstützt die genauen Schemakonstrukte, die bei der <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> ist `true` oder `false` werden in beschrieben [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+- Unterstützt die genauen Schemakonstrukte, die bei der <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> ist `true` oder `false` werden in beschrieben [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
--   Schemas für generierte <xref:System.Xml.Serialization.IXmlSerializable>-Typen behalten beim Importieren und Exportieren ihre Originaltreue nicht bei. Wenn Sie das Schema also aus den generierten Typen exportieren und jeweils als Klasse importieren, wird nicht das Originalschema zurückgegeben.  
+- Schemas für generierte <xref:System.Xml.Serialization.IXmlSerializable>-Typen behalten beim Importieren und Exportieren ihre Originaltreue nicht bei. Wenn Sie das Schema also aus den generierten Typen exportieren und jeweils als Klasse importieren, wird nicht das Originalschema zurückgegeben.  
   
  Es ist möglich, die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Option mit der oben beschriebenen <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>-Option zu kombinieren. Für Typen, die als <xref:System.Xml.Serialization.IXmlSerializable>-Implementierungen generiert werden müssen, wird beim Verwenden der <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>-Funktion die Strukturprüfung übersprungen.  
   
@@ -175,9 +175,9 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
 #### <a name="import-options-advanced-options"></a>Importoptionen: Erweiterte Optionen  
  Bei den folgenden Optionen handelt es sich um erweiterte Importoptionen:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>-Eigenschaft. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>-Eigenschaft. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
+- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

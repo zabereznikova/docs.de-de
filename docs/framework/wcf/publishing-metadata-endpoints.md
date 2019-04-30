@@ -3,11 +3,11 @@ title: Veröffentlichen von Metadatenendpunkten
 ms.date: 03/30/2017
 ms.assetid: 29cd8a60-dfb7-460c-bf5a-c2b31b782671
 ms.openlocfilehash: 143a46ce18a0d9dee89bbbffac9be9a467e951df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955154"
 ---
 # <a name="publishing-metadata-endpoints"></a>Veröffentlichen von Metadatenendpunkten
 Windows Communication Foundation (WCF)-Dienste veröffentlichen Metadaten, indem Sie eine oder mehrere Metadatenendpunkte veröffentlichen. Die Veröffentlichung von Dienstmetadaten macht die Metadaten über die Nutzung standardisierter Protokolle verfügbar, z. B. WS-MetadataExchange (MEX) und HTTP/GET-Anforderungen. Metadatenendpunkte sind anderen Dienstendpunkten dahingehend ähnlich, dass sie über eine Adresse, eine Bindung und einen Vertrag verfügen und sie per Konfiguration oder in einem Code zu einem Diensthost hinzugefügt werden können. Fügen Sie das <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Dienstverhalten zum Dienst hinzu, um die Veröffentlichung von Metadatenendpunkten zu aktivieren.  

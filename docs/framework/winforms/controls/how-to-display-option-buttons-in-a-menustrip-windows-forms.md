@@ -10,11 +10,11 @@ helpviewer_keywords:
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
 ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013420"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Vorgehensweise: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms)
 Optionsfelder, auch bekannt als die Optionsfelder, ähneln der Kontrollkästchen, mit dem Unterschied, dass Benutzer nur jeweils eine auswählen können. Zwar wird standardmäßig die <xref:System.Windows.Forms.ToolStripMenuItem> -Klasse keinen Optionsfeld-aus-Verhalten, das die Klasse bietet ein Kontrollkästchen-Verhalten, das Sie anpassen können, um das Implementieren des Verhaltens von Optionsfeldern für Menüelemente in einem <xref:System.Windows.Forms.MenuStrip> Steuerelement.  
@@ -78,7 +78,7 @@ Optionsfelder, auch bekannt als die Optionsfelder, ähneln der Kontrollkästchen
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
+- Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 

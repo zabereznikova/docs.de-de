@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033461"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zurückgeben oder Überspringen von Elementen in einer Sequenz
 Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimmte Anzahl von Elementen in einer Sequenz zurückzugeben und den Rest zu überspringen.  
@@ -22,9 +22,9 @@ Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimm
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt <xref:System.Linq.Queryable.Skip%2A> mithilfe einer Unterabfrage mit SQL `NOT EXISTS` Klausel. Diese Übersetzung weist die folgenden Einschränkungen auf:  
   
--   Das Argument muss ein Satz sein. Multisets werden nicht unterstützt, auch dann nicht, wenn diese geordnet sind.  
+- Das Argument muss ein Satz sein. Multisets werden nicht unterstützt, auch dann nicht, wenn diese geordnet sind.  
   
--   Die erzeugte Abfrage kann wesentlich komplexer sein als die Abfrage, die für die Basisabfrage erstellt wurde, auf die <xref:System.Linq.Queryable.Skip%2A> angewendet wird. Diese Komplexität kann zu einer Abnahme der Leistung oder sogar zu einer Zeitüberschreitung führen.  
+- Die erzeugte Abfrage kann wesentlich komplexer sein als die Abfrage, die für die Basisabfrage erstellt wurde, auf die <xref:System.Linq.Queryable.Skip%2A> angewendet wird. Diese Komplexität kann zu einer Abnahme der Leistung oder sogar zu einer Zeitüberschreitung führen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird `Take` verwendet, um die ersten fünf eingestellten `Employees` auszuwählen. Beachten Sie, dass die Auflistung zuerst nach `HireDate` sortiert wird.  

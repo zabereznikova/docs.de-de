@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007733"
 ---
 # <a name="tracing-and-message-logging"></a>Ablaufverfolgung und Nachrichtenprotokollierung
 In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierenden ablaufverfolgungen und Nachrichtenprotokolle werden angezeigt mit der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -52,11 +52,11 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
   
  Durch das Erstellen von benutzerdefinierten Aktivitätsablaufverfolgungen kann die von ServiceModel bereitgestellte Ablaufverfolgung erweitert werden. Durch die benutzerdefinierte Aktivitätsablaufverfolgung kann der Benutzer Ablaufverfolgungsaktivitäten für folgenden Aktionen erstellen:  
   
--   Gruppieren von Ablaufverfolgungen in logische Arbeitseinheiten.  
+- Gruppieren von Ablaufverfolgungen in logische Arbeitseinheiten.  
   
--   Korrelieren von Aktivitäten durch Übertragungen und Weitergabe.  
+- Korrelieren von Aktivitäten durch Übertragungen und Weitergabe.  
   
--   Die Leistungskosten der WCF-Ablaufverfolgung (z. B. der benötigte Speicherplatz für eine Protokolldatei).  
+- Die Leistungskosten der WCF-Ablaufverfolgung (z. B. der benötigte Speicherplatz für eine Protokolldatei).  
   
  Weitere Informationen zur benutzerdefinierten aktivitätsablaufverfolgung finden Sie unter den [erweitern Ablaufverfolgung](../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel.  
   

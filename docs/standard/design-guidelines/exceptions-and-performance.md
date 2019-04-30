@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
 ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026431"
 ---
 # <a name="exceptions-and-performance"></a>Ausnahmen und Leistung
 Eine häufige Problem im Zusammenhang mit Ausnahmen ist, wenn Ausnahmen für Code, die routinemäßig ein Fehler auftritt verwendet werden, die Leistung der Implementierung nicht akzeptabel sein wird. Dies ist ein Grund zur Sorge. Wenn ein Element eine Ausnahme auslöst, kann die Leistung erheblich langsamer sein. Allerdings ist es möglich, erzielen gute Leistung bei strikt befolgen Sie die Ausnahme-Richtlinien, die nicht zulassen, mit Fehlercodes. Zwei Muster, die in diesem Abschnitt beschriebenen Möglichkeiten vorgeschlagen, dies zu tun.  

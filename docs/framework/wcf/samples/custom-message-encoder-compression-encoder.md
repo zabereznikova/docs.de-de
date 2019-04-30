@@ -6,8 +6,8 @@ ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003092"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder mit der Windows Communication Foundation (WCF)-Plattform implementiert werden.  
@@ -29,13 +29,13 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder m
   
  Das Beispiel veranschaulicht das Erstellen und integrieren einen benutzerdefinierten Nachrichtenencoder in einer WCF-Anwendung. Die Bibliothek "GZipEncoder.dll" wird sowohl mit dem Client als auch mit dem Dienst bereitgestellt. Das Beispiel zeigt auch, wie sich das Komprimieren von Nachrichten auswirkt. Der Code in der "GZipEncoder.dll" zeigt Folgendes:  
   
--   Das Erstellen eines benutzerdefinierten Encoders und einer Encoder-Factory.  
+- Das Erstellen eines benutzerdefinierten Encoders und einer Encoder-Factory.  
   
--   Das Entwickeln eines Bindungselements für einen benutzerdefinierten Encoder.  
+- Das Entwickeln eines Bindungselements für einen benutzerdefinierten Encoder.  
   
--   Das Verwenden der benutzerdefinierten Bindungskonfiguration zum Integrieren von benutzerdefinierten Bindungselementen.  
+- Das Verwenden der benutzerdefinierten Bindungskonfiguration zum Integrieren von benutzerdefinierten Bindungselementen.  
   
--   Das Entwickeln eines benutzerdefinierten Konfigurationshandlers, um die Dateikonfiguration eines benutzerdefinierten Bindungselements zu ermöglichen.  
+- Das Entwickeln eines benutzerdefinierten Konfigurationshandlers, um die Dateikonfiguration eines benutzerdefinierten Bindungselements zu ermöglichen.  
   
  Wie schon erwähnt, gibt es mehrere Ebenen, die in einem benutzerdefinierten Encoder implementiert werden. Um die Beziehungen zwischen den einzelnen Ebenen besser veranschaulichen zu können, enthält die folgende Liste eine vereinfachte Abfolge der Ereignisse beim Starten des Diensts.  
   
@@ -43,13 +43,13 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder m
   
 2. Die Konfigurationsinformationen werden gelesen.  
   
-    1.  Die Dienstkonfiguration registriert den benutzerdefinierten Konfigurationshandler.  
+    1. Die Dienstkonfiguration registriert den benutzerdefinierten Konfigurationshandler.  
   
-    2.  Der Diensthost wird erstellt und geöffnet.  
+    2. Der Diensthost wird erstellt und geöffnet.  
   
-    3.  Das benutzerdefinierte Konfigurationselement erstellt das benutzerdefinierte Bindungselement und gibt es zurück.  
+    3. Das benutzerdefinierte Konfigurationselement erstellt das benutzerdefinierte Bindungselement und gibt es zurück.  
   
-    4.  Das benutzerdefinierte Bindungselement erstellt eine Nachrichtenencoder-Factory und gibt sie zurück.  
+    4. Das benutzerdefinierte Bindungselement erstellt eine Nachrichtenencoder-Factory und gibt sie zurück.  
   
 3. Eine Nachricht wird empfangen.  
   

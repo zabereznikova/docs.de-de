@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023997"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine animierte Schaltfläche für die Verwendung in einer Windows Presentation Foundation (WPF)-Anwendung zu erstellen. In dieser exemplarischen Vorgehensweise verwendet und eine Vorlage zum Erstellen einer benutzerdefinierten Schaltflächenressource, die Wiederverwendung von Code und die Trennung von aus der Schaltflächendeklaration ermöglicht. In dieser exemplarischen Vorgehensweise wird ausschließlich in geschrieben [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -421,15 +421,15 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
 ## <a name="summary"></a>Zusammenfassung  
  In dieser exemplarischen Vorgehensweise haben Sie die folgenden Übungen:  
   
--   Ziel einer <xref:System.Windows.Style> in einen Objekttyp (<xref:System.Windows.Controls.Button>).  
+- Ziel einer <xref:System.Windows.Style> in einen Objekttyp (<xref:System.Windows.Controls.Button>).  
   
--   Gesteuert von grundlegenden Eigenschaften von Schaltflächen in der gesamten Anwendung mit der <xref:System.Windows.Style>.  
+- Gesteuert von grundlegenden Eigenschaften von Schaltflächen in der gesamten Anwendung mit der <xref:System.Windows.Style>.  
   
--   Ressourcen wie Farbverläufe, für Eigenschaftswerte erstellt die <xref:System.Windows.Style> Setter.  
+- Ressourcen wie Farbverläufe, für Eigenschaftswerte erstellt die <xref:System.Windows.Style> Setter.  
   
--   Die Darstellung der Schaltflächen in der gesamten Anwendung wird durch Anwenden einer Vorlage auf die Schaltflächen angepasst.  
+- Die Darstellung der Schaltflächen in der gesamten Anwendung wird durch Anwenden einer Vorlage auf die Schaltflächen angepasst.  
   
--   Anpassen des Verhaltens für die Schaltflächen als Reaktion auf Benutzeraktionen (z. B. <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, und <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), die Animationseffekte enthalten.  
+- Anpassen des Verhaltens für die Schaltflächen als Reaktion auf Benutzeraktionen (z. B. <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, und <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), die Animationseffekte enthalten.  
   
 ## <a name="see-also"></a>Siehe auch
 

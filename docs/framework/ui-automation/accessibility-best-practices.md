@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033227"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074234"
   
  Anwendungen sollten die folgenden Tastaturschnittstellen bereitstellen:  
   
--   Tabstopps für alle Steuerelemente, mit denen der Benutzer interagieren kann, z. B. Schaltflächen, Links oder Listenfelder  
+- Tabstopps für alle Steuerelemente, mit denen der Benutzer interagieren kann, z. B. Schaltflächen, Links oder Listenfelder  
   
--   Logische Aktivierreihenfolge  
+- Logische Aktivierreihenfolge  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Anzeigen des Tastaturfokus  
@@ -90,11 +90,11 @@ ms.locfileid: "59074234"
   
  Anwendungen sollten beim Tastaturfokus wie folgt vorgehen:  
   
--   Der Tastaturfokus sollte immer bei einem Element liegen.  
+- Der Tastaturfokus sollte immer bei einem Element liegen.  
   
--   Der Tastaturfokus muss sichtbar und unverkennbar sein.  
+- Der Tastaturfokus muss sichtbar und unverkennbar sein.  
   
--   Die Auswahl und/oder Elemente mit Fokus müssen visuell hervorgehoben werden.  
+- Die Auswahl und/oder Elemente mit Fokus müssen visuell hervorgehoben werden.  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Unterstützen von Navigationsstandards und leistungsstarken Navigationsschemas  
@@ -102,11 +102,11 @@ ms.locfileid: "59074234"
   
  Anwendungen sollten die folgenden Tastaturschnittstellen bereitstellen:  
   
--   Tastenkombinationen und unterstrichene Zugriffstasten für alle Befehle, Menüs und Steuerelemente  
+- Tastenkombinationen und unterstrichene Zugriffstasten für alle Befehle, Menüs und Steuerelemente  
   
--   Tastenkombinationen für wichtige Links  
+- Tastenkombinationen für wichtige Links  
   
--   Alle Menüelemente verfügen über eine Tastenkombination, alle Schaltflächen verfügen über Tastenkombinationen, alle Befehle verfügen über eine Tastenkombination.  
+- Alle Menüelemente verfügen über eine Tastenkombination, alle Schaltflächen verfügen über Tastenkombinationen, alle Befehle verfügen über eine Tastenkombination.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Vermeiden störender Auswirkungen der Mausposition auf die Tastaturnavigation  

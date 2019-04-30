@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968167"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject-Funktion
 Erstellt eine logische Kopie eines Enumerators unter Beibehaltung der aktuellen Position in einer Enumeration.

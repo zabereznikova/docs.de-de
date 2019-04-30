@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017842"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
 <a name="introduction"></a> Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie erhalten ein neues <xref:System.Windows.Controls.ControlTemplate>. Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung eines vorhandenen Steuerelements, ohne seine Funktionalität zu ändern. Angenommen, Sie können festlegen, dass die Schaltflächen in Ihrer Anwendung rund und nicht standardmäßig quadratisch, die Schaltfläche wird jedoch trotzdem ausgelöst der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
@@ -64,11 +64,11 @@ Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwende
   
  In diesem Beispiel besteht die visuelle Struktur aus den folgenden Bausteinen:  
   
--   Ein <xref:System.Windows.Controls.Border> mit dem Namen `RootElement` , dient als Grundlage für die Vorlage Stamm <xref:System.Windows.FrameworkElement>.  
+- Ein <xref:System.Windows.Controls.Border> mit dem Namen `RootElement` , dient als Grundlage für die Vorlage Stamm <xref:System.Windows.FrameworkElement>.  
   
--   Ein <xref:System.Windows.Controls.Grid> d. h. ein untergeordnetes Element des `RootElement`.  
+- Ein <xref:System.Windows.Controls.Grid> d. h. ein untergeordnetes Element des `RootElement`.  
   
--   Ein <xref:System.Windows.Controls.ContentPresenter> , die den Inhalt der Schaltfläche anzeigt. Die <xref:System.Windows.Controls.ContentPresenter> können beliebige Objekte angezeigt werden.  
+- Ein <xref:System.Windows.Controls.ContentPresenter> , die den Inhalt der Schaltfläche anzeigt. Die <xref:System.Windows.Controls.ContentPresenter> können beliebige Objekte angezeigt werden.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwende
   
  Die <xref:System.Windows.Controls.Control> -Klasse definiert mehrere Eigenschaften, die von der Steuerelementvorlage verwendet werden müssen, damit einen Effekt auf das Steuerelement aus, wenn sie festgelegt werden. Wie die <xref:System.Windows.Controls.ControlTemplate> verwendet, die die Eigenschaft hängt von der Eigenschaft. Die <xref:System.Windows.Controls.ControlTemplate> müssen die Eigenschaft in einem der folgenden Methoden verwenden:  
   
--   Ein Element in der <xref:System.Windows.Controls.ControlTemplate> Vorlage an die Eigenschaft gebunden.  
+- Ein Element in der <xref:System.Windows.Controls.ControlTemplate> Vorlage an die Eigenschaft gebunden.  
   
--   Ein Element in der <xref:System.Windows.Controls.ControlTemplate> erbt die Eigenschaft von einem übergeordneten Element <xref:System.Windows.FrameworkElement>.  
+- Ein Element in der <xref:System.Windows.Controls.ControlTemplate> erbt die Eigenschaft von einem übergeordneten Element <xref:System.Windows.FrameworkElement>.  
   
  Die folgende Tabelle enthält die von einem Steuerelement geerbten visuellen Eigenschaften der <xref:System.Windows.Controls.Control> Klasse. In der Tabelle wird außerdem angegeben, ob die standardmäßige Steuerelementvorlage eines Steuerelements den geerbten Eigenschaftswert verwendet, oder ob er vorlagengebunden sein muss.  
   
@@ -167,11 +167,11 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Sie können angeben, die Menge an Zeit, die eine Animation, um ein Steuerelement von einem Zustand in einen anderen reibungslos durch Hinzufügen von Übergang <xref:System.Windows.VisualTransition> Objekte die <xref:System.Windows.Controls.ControlTemplate>. Bei der Erstellung einer <xref:System.Windows.VisualTransition>, Sie einen oder mehrere der folgenden angeben:  
   
--   Die Zeitspanne für einen Wechsel zwischen Zuständen.  
+- Die Zeitspanne für einen Wechsel zwischen Zuständen.  
   
--   Zusätzliche Änderungen der Darstellung des Steuerelements im Moment des Übergangs.  
+- Zusätzliche Änderungen der Darstellung des Steuerelements im Moment des Übergangs.  
   
--   Welche Status die <xref:System.Windows.VisualTransition> auf angewendet wird.  
+- Welche Status die <xref:System.Windows.VisualTransition> auf angewendet wird.  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>Festlegen der Dauer eines Übergangs  
  Sie können angeben, wie lange dauert ein Übergang durch Festlegen der <xref:System.Windows.VisualTransition.GeneratedDuration%2A> Eigenschaft. Im vorherige Beispiel wurde eine <xref:System.Windows.VisualState> , der angibt, dass der Rahmen der Schaltfläche wird transparent, wenn die Schaltfläche gedrückt wird, aber die Animation erfordert zu viel Zeit erkennbar, wenn die schnell gedrückt und losgelassen wird. Sie können eine <xref:System.Windows.VisualTransition> an die Zeitspanne, während das Steuerelement für den Übergang in den gedrückten Zustand dauert. Im folgenden Beispiel wird die Zeitspanne für den Übergang in den gedrückten Zustand auf eine Hundertstelsekunde festgelegt.  
@@ -201,13 +201,13 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Das folgende Beispiel zeigt die <xref:System.Windows.VisualStateGroup> für die `CommonStates`. Das Beispiel definiert eine <xref:System.Windows.VisualTransition> für die Schaltfläche mit den folgenden geht.  
   
--   In den Zustand `Pressed`.  
+- In den Zustand `Pressed`.  
   
--   In den Zustand `MouseOver`.  
+- In den Zustand `MouseOver`.  
   
--   Aus dem Zustand `Pressed` in den Zustand `MouseOver`.  
+- Aus dem Zustand `Pressed` in den Zustand `MouseOver`.  
   
--   Aus dem Zustand `MouseOver` in den Zustand `Normal`.  
+- Aus dem Zustand `MouseOver` in den Zustand `Normal`.  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Ein Steuerelementvertrag besteht aus drei Elementen:  
   
--   Den visuellen Elementen, die die Logik des Steuerelements verwenden.  
+- Den visuellen Elementen, die die Logik des Steuerelements verwenden.  
   
--   Den Zuständen des Steuerelements und den Gruppen, zu denen die einzelnen Zustände gehören.  
+- Den Zuständen des Steuerelements und den Gruppen, zu denen die einzelnen Zustände gehören.  
   
--   Den öffentlichen Eigenschaften, die die visuelle Darstellung des Steuerelements beeinflussen.  
+- Den öffentlichen Eigenschaften, die die visuelle Darstellung des Steuerelements beeinflussen.  
   
 ### <a name="visual-elements-in-the-control-contract"></a>Visuelle Elemente im Steuerelementvertrag  
  In manchen Fällen interagiert die Logik eines Steuerelements mit einem <xref:System.Windows.FrameworkElement> , die sich in der <xref:System.Windows.Controls.ControlTemplate>. Das Steuerelement kann z.B. ein Ereignis für ein zugehöriges Element behandeln. Wenn ein Steuerelement davon ausgeht, einen bestimmten <xref:System.Windows.FrameworkElement> in der <xref:System.Windows.Controls.ControlTemplate>, müssen sie diese Informationen zum Vermitteln der <xref:System.Windows.Controls.ControlTemplate> erstellen. Das Steuerelement verwendet die <xref:System.Windows.TemplatePartAttribute> zur Übermittlung des erwarteten Elementtyps und was der Name des Elements sein sollte. Die <xref:System.Windows.Controls.Button> verfügt nicht über <xref:System.Windows.FrameworkElement> Teile im Steuerelementvertrag, aber andere Steuerelemente, z. B. die <xref:System.Windows.Controls.ComboBox>, führen.  
@@ -250,9 +250,9 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, es ist häufig am einfachsten, beginnen mit einem vorhandenen <xref:System.Windows.Controls.ControlTemplate> und Änderungen vornehmen. Führen Sie eine der folgenden zum Ändern einer vorhandenen <xref:System.Windows.Controls.ControlTemplate>:  
   
--   Verwenden Sie einen Designer, z.B. Expression Blend, der eine grafische Benutzeroberfläche zum Erstellen von Steuerelementvorlagen bereitstellt. Weitere Informationen finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](https://go.microsoft.com/fwlink/?LinkId=161153).  
+- Verwenden Sie einen Designer, z.B. Expression Blend, der eine grafische Benutzeroberfläche zum Erstellen von Steuerelementvorlagen bereitstellt. Weitere Informationen finden Sie unter [Formatieren eines Steuerelements, das Vorlagen unterstützt](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
--   Rufen Sie die Standard- <xref:System.Windows.Controls.ControlTemplate> und bearbeiten Sie sie. Standard-Steuerelementvorlagen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252) (Standard-WPF-Designs).  
+- Rufen Sie die Standard- <xref:System.Windows.Controls.ControlTemplate> und bearbeiten Sie sie. Standard-Steuerelementvorlagen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], finden Sie unter [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252) (Standard-WPF-Designs).  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Vollständiges Beispiel  

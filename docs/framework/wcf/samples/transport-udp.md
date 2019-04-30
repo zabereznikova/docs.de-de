@@ -3,11 +3,11 @@ title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007720"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast als einen benutzerdefinierten Windows Communication Foundation (WCF)-Transport implementiert wird. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
@@ -32,15 +32,15 @@ Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast 
 ## <a name="message-exchange-patterns"></a>Nachrichtenaustauschmuster  
  Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht darin zu entscheiden, welche Nachrichtenaustauschmuster für den Transport erforderlich sind. Es stehen drei Nachrichtenaustauschmuster zur Auswahl:  
   
--   Datagramm (IInputChannel/IOutputChannel)  
+- Datagramm (IInputChannel/IOutputChannel)  
   
      Bei Verwendung eines Datagramm-Nachrichtenaustauschmusters sendet ein Client eine Nachricht mit einem "fire and forget"-Austausch. Ein "fire and forget"-Austausch erfordert eine Out-of-Band-Bestätigung für die erfolgreiche Zustellung. Die Nachricht könnte unterwegs verloren gehen und den Dienst nicht erreichen. Wenn der Sendevorgang auf der Clientseite erfolgreich abgeschlossen wird, stellt dies keine Garantie dar, dass der Remoteendpunkt die Nachricht erhalten hat. Das Datagramm ist ein wesentlicher Baustein für den Nachrichtenaustausch, da Sie eigene Protokolle damit erstellen können, einschließlich zuverlässiger Protokolle und sicherer Protokolle. Clientdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IOutputChannel>-Schnittstelle, und Dienstdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IInputChannel>-Schnittstelle.  
   
--   Anforderung-Antwort (IRequestChannel/IReplyChannel)  
+- Anforderung-Antwort (IRequestChannel/IReplyChannel)  
   
      In diesem Nachrichtenaustauschmuster wird eine Nachricht gesendet, und eine Antwort wird empfangen. Das Muster besteht aus Anforderungs-Antwort-Paaren. Beispiele für Anforderungs-Antwort-Aufrufe sind Remoteprozeduraufrufe (RPC) und Browser-GET-Anforderungen. Dieses Muster wird auch als Halbduplex bezeichnet. In diesem Nachrichtenaustauschmuster implementieren Clientkanäle <xref:System.ServiceModel.Channels.IRequestChannel>, und Dienstkanäle implementieren <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Duplex (IDuplexChannel)  
+- Duplex (IDuplexChannel)  
   
      Das Duplex-Nachrichtenaustauschmuster ermöglicht, dass eine willkürliche Anzahl von Nachrichten von einem Client gesendet und in beliebiger Reihenfolge empfangen wird. Das Duplex-Nachrichtenaustauschmuster ist mit einem Telefongespräch vergleichbar, bei dem jedes gesprochene Wort einer Nachricht entspricht. Da beide Teilnehmer in diesem Nachrichtenaustauschmuster senden und empfangen können, ist die vom Client und von den Dienstkanälen implementierte Schnittstelle <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -52,17 +52,17 @@ Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast 
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Der ICommunicationObject- und der WCF-Objektlebenszyklus  
  WCF bietet einen allgemeinen Zustandsautomaten, der verwendet wird, zum Verwalten des legenszyklus von Objekten wie <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, und <xref:System.ServiceModel.Channels.IChannelListener> , die für die Kommunikation verwendet werden. Es gibt fünf Zustände, in denen diese Kommunikationsobjekte vorhanden sein können. Die Zustände werden durch die <xref:System.ServiceModel.CommunicationState>-Enumeration dargestellt und lauten wie folgt:  
   
--   Erstellt: Dies ist der Zustand einer <xref:System.ServiceModel.ICommunicationObject> Wenn es zuerst instanziiert. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
+- Erstellt: Dies ist der Zustand einer <xref:System.ServiceModel.ICommunicationObject> Wenn es zuerst instanziiert. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
   
--   Opening: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Open%2A> aufgerufen wird. An diesem Punkt werden Eigenschaften unveränderlich gemacht, und Eingabe/Ausgabe kann beginnen. Dieser Übergang ist nur vom Created-Zustand aus gültig.  
+- Opening: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Open%2A> aufgerufen wird. An diesem Punkt werden Eigenschaften unveränderlich gemacht, und Eingabe/Ausgabe kann beginnen. Dieser Übergang ist nur vom Created-Zustand aus gültig.  
   
--   Geöffnet: Objekt geht zu diesem Zustand, wenn der Öffnungsprozess abgeschlossen ist. Dieser Übergang ist nur vom Opening-Zustand aus gültig. An diesem Punkt ist das Objekt für die Übertragung voll verwendbar.  
+- Geöffnet: Objekt geht zu diesem Zustand, wenn der Öffnungsprozess abgeschlossen ist. Dieser Übergang ist nur vom Opening-Zustand aus gültig. An diesem Punkt ist das Objekt für die Übertragung voll verwendbar.  
   
--   Schließen: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein ordnungsgemäßes Herunterfahren aufgerufen wird. Dieser Übergang ist nur vom Opened-Zustand aus gültig.  
+- Schließen: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein ordnungsgemäßes Herunterfahren aufgerufen wird. Dieser Übergang ist nur vom Opened-Zustand aus gültig.  
   
--   Geschlossen: Im Closed werden Zustandsobjekte nicht mehr verwendet werden. Im Allgemeinen steht der größte Teil der Konfiguration noch zur Ansicht bereit, es kann aber keine Kommunikation auftreten. Dieser Zustand ist mit "Verworfen" vergleichbar.  
+- Geschlossen: Im Closed werden Zustandsobjekte nicht mehr verwendet werden. Im Allgemeinen steht der größte Teil der Konfiguration noch zur Ansicht bereit, es kann aber keine Kommunikation auftreten. Dieser Zustand ist mit "Verworfen" vergleichbar.  
   
--   Fehler: In den Faulted-Zustand sind die Objekte zugegriffen werden kann, um die Überprüfung jedoch nicht mehr verwendet werden. Wenn ein nicht behebbarer Fehler auftritt, geht das Objekt in diesen Zustand über. Der einzige gültige Übergang von diesem Status wird in der `Closed` Zustand.  
+- Fehler: In den Faulted-Zustand sind die Objekte zugegriffen werden kann, um die Überprüfung jedoch nicht mehr verwendet werden. Wenn ein nicht behebbarer Fehler auftritt, geht das Objekt in diesen Zustand über. Der einzige gültige Übergang von diesem Status wird in der `Closed` Zustand.  
   
  Es gibt Ereignisse, die für jeden Zustandsübergang ausgelöst werden. Die <xref:System.ServiceModel.ICommunicationObject.Abort%2A>-Methode kann jederzeit aufgerufen werden und sorgt dafür, dass das Objekt sofort vom aktuellen Zustand in den Closed-Zustand übergeht. Beim Aufrufen von <xref:System.ServiceModel.ICommunicationObject.Abort%2A> wird nicht abgeschlossene Arbeit beendet.  
   
@@ -70,13 +70,13 @@ Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast 
 ## <a name="channel-factory-and-channel-listener"></a>Kanalfactory und Kanallistener  
  Der nächste Schritt beim Schreiben eines benutzerdefinierten Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle und von <xref:System.ServiceModel.Channels.IChannelListener> für Dienstkanäle. Die Kanalebene verwendet ein Factorymuster zum Erstellen von Kanälen. WCF stellt basisklassenhilfen für diesen Prozess bereit.  
   
--   Die <xref:System.ServiceModel.Channels.CommunicationObject>-Klasse implementiert <xref:System.ServiceModel.ICommunicationObject> und setzt den zuvor in Schritt 2 beschriebenen Zustandsautomaten durch. 
+- Die <xref:System.ServiceModel.Channels.CommunicationObject>-Klasse implementiert <xref:System.ServiceModel.ICommunicationObject> und setzt den zuvor in Schritt 2 beschriebenen Zustandsautomaten durch. 
 
--   Die <xref:System.ServiceModel.Channels.ChannelManagerBase> -Klasse implementiert <xref:System.ServiceModel.Channels.CommunicationObject> und bietet eine einheitliche Basisklasse für <xref:System.ServiceModel.Channels.ChannelFactoryBase> und <xref:System.ServiceModel.Channels.ChannelListenerBase>. Die <xref:System.ServiceModel.Channels.ChannelManagerBase>-Klasse funktioniert in Verbindung mit <xref:System.ServiceModel.Channels.ChannelBase>. Dies ist eine Basisklasse, die <xref:System.ServiceModel.Channels.IChannel> implementiert.  
+- Die <xref:System.ServiceModel.Channels.ChannelManagerBase> -Klasse implementiert <xref:System.ServiceModel.Channels.CommunicationObject> und bietet eine einheitliche Basisklasse für <xref:System.ServiceModel.Channels.ChannelFactoryBase> und <xref:System.ServiceModel.Channels.ChannelListenerBase>. Die <xref:System.ServiceModel.Channels.ChannelManagerBase>-Klasse funktioniert in Verbindung mit <xref:System.ServiceModel.Channels.ChannelBase>. Dies ist eine Basisklasse, die <xref:System.ServiceModel.Channels.IChannel> implementiert.  
   
--   Die <xref:System.ServiceModel.Channels.ChannelFactoryBase> -Klasse implementiert <xref:System.ServiceModel.Channels.ChannelManagerBase> und <xref:System.ServiceModel.Channels.IChannelFactory> und konsolidiert die `CreateChannel` -Überladungen in einer `OnCreateChannel` abstrakte Methode.  
+- Die <xref:System.ServiceModel.Channels.ChannelFactoryBase> -Klasse implementiert <xref:System.ServiceModel.Channels.ChannelManagerBase> und <xref:System.ServiceModel.Channels.IChannelFactory> und konsolidiert die `CreateChannel` -Überladungen in einer `OnCreateChannel` abstrakte Methode.  
   
--   Die <xref:System.ServiceModel.Channels.ChannelListenerBase> -Klasse implementiert <xref:System.ServiceModel.Channels.IChannelListener>. Die Klasse wird für grundlegende Zustandsverwaltung verwendet.  
+- Die <xref:System.ServiceModel.Channels.ChannelListenerBase> -Klasse implementiert <xref:System.ServiceModel.Channels.IChannelListener>. Die Klasse wird für grundlegende Zustandsverwaltung verwendet.  
   
  In diesem Beispiel ist die Factoryimplementierung in "UdpChannelFactory.cs" enthalten, und die Listenerimplementierung ist in "UdpChannelListener.cs" enthalten. Die <xref:System.ServiceModel.Channels.IChannel>-Implementierungen sind in "UdpOutputChannel.cs" und "UdpInputChannel.cs" enthalten.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Hinzufügen einer Standardbindung  
  Das Bindungselement kann auf die beiden folgenden Arten verwendet werden:  
   
--   Durch eine benutzerdefinierte Bindung: Eine benutzerdefinierte Bindung ermöglicht den Benutzer, eigene Bindungen basierend auf einer beliebigen Gruppe von Bindungselementen erstellen.  
+- Durch eine benutzerdefinierte Bindung: Eine benutzerdefinierte Bindung ermöglicht den Benutzer, eigene Bindungen basierend auf einer beliebigen Gruppe von Bindungselementen erstellen.  
   
--   Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. WCF bietet mehrere vom System definierte Bindungen, z. B. `BasicHttpBinding`, `NetTcpBinding`, und `WsHttpBinding`. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
+- Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. WCF bietet mehrere vom System definierte Bindungen, z. B. `BasicHttpBinding`, `NetTcpBinding`, und `WsHttpBinding`. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
   
  Das Beispiel implementiert eine Profilbindung in `SampleProfileUdpBinding`, die von <xref:System.ServiceModel.Channels.Binding> abgeleitet wurde. `SampleProfileUdpBinding` enthält bis zu vier Bindungselemente: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` und `ReliableSessionBindingElement`.  
   
