@@ -3,11 +3,11 @@ title: ASP.NET-Zwischenspeicherungsintegration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002728"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
 In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  
@@ -34,11 +34,11 @@ In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HT
 ## <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
  Das Beispiel umfasst drei Projekte:  
   
--   **Dienst:** Ein Webanwendungsprojekt, die einen WCF-HTTP-Dienst, gehostet in ASP.NET enthält.  
+- **Dienst:** Ein Webanwendungsprojekt, die einen WCF-HTTP-Dienst, gehostet in ASP.NET enthält.  
   
--   **Client**: Ein Konsolenanwendungsprojekt, das Aufrufe an den Dienst ausführt.  
+- **Client**: Ein Konsolenanwendungsprojekt, das Aufrufe an den Dienst ausführt.  
   
--   **Allgemeine**: Eine freigegebene Bibliothek, die die vom Client und Dienst verwendeten Kundentyp enthält.  
+- **Allgemeine**: Eine freigegebene Bibliothek, die die vom Client und Dienst verwendeten Kundentyp enthält.  
   
  Während die Clientkonsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.  
   

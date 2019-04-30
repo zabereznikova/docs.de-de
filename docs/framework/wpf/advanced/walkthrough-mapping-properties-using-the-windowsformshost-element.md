@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007119"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element
 
@@ -21,17 +21,17 @@ In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie mit der <xref:Syst
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
--   Erstellen des Projekts
+- Erstellen des Projekts
 
--   Definieren des Anwendungslayouts
+- Definieren des Anwendungslayouts
 
--   Definieren einer neuen Eigenschaftenzuordnung
+- Definieren einer neuen Eigenschaftenzuordnung
 
--   Entfernen einer standardmäßigen Eigenschaftenzuordnung
+- Entfernen einer standardmäßigen Eigenschaftenzuordnung
 
--   Ersetzen einer standardmäßigen Eigenschaftenzuordnung
+- Ersetzen einer standardmäßigen Eigenschaftenzuordnung
 
--   Erweitern einer standardmäßigen Eigenschaftenzuordnung
+- Erweitern einer standardmäßigen Eigenschaftenzuordnung
 
 Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160019).
 
@@ -41,7 +41,7 @@ Wenn Sie fertig sind, Sie werden zum Zuordnen [!INCLUDE[TLA2#tla_winclient](../.
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>Erstellen und Einrichten des Projekts
 
@@ -76,7 +76,7 @@ Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element stellt meh
 
 ### <a name="to-define-a-new-property-mapping"></a>Definieren einer neuen Eigenschaftenzuordnung
 
--   Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ Entfernen eine standardmäßigen eigenschaftenzuordnung durch Aufrufen der <xref
 
 ### <a name="to-remove-a-default-property-mapping"></a>Entfernen einer standardmäßigen Eigenschaftenzuordnung
 
--   Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ Ersetzen eine standardmäßigen eigenschaftenzuordnung durch das Entfernen der s
 
 ### <a name="to-replace-a-default-property-mapping"></a>So ersetzen Sie eine standardmäßige Eigenschaftenzuordnung
 
--   Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ Sie können auch eine standardmäßige Eigenschaftenzuordnung verwenden und sie 
 
 ### <a name="to-extend-a-default-property-mapping"></a>So erweitern Sie eine standardmäßigen Eigenschaftenzuordnung
 
--   Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition der `Window1` Klasse.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ Richten Ihre eigenschaftenzuordnungen durch Aufrufen der oben beschriebenen Meth
 
      Die `WindowLoaded` verarbeitet die <xref:System.Windows.FrameworkElement.Loaded> Ereignis und führt die folgende Initialisierung.
 
-    -   Erstellt eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> Steuerelement.
+    - Erstellt eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> Steuerelement.
 
-    -   Sie ruft die Methoden, die Sie zuvor in der exemplarischen Vorgehensweise definiert haben, auf, um die Eigenschaftenzuordnungen einzurichten.
+    - Sie ruft die Methoden, die Sie zuvor in der exemplarischen Vorgehensweise definiert haben, auf, um die Eigenschaftenzuordnungen einzurichten.
 
-    -   Sie weist den zugeordneten Eigenschaften Anfangswerte zu.
+    - Sie weist den zugeordneten Eigenschaften Anfangswerte zu.
 
 2. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Klicken Sie auf das Kontrollkästchen, um die Wirkung sehen die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Zuordnung. Wenn Sie das Kontrollkästchen klicken, kehrt das Layout seine Links-Rechts-Ausrichtung um.
 

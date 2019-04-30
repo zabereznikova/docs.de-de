@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
 ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945508"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Namen von Klassen, Strukturen und Schnittstellen
 Die Benennungsrichtlinien, die Folgen gelten für die Benennung von "Allgemein".  
@@ -76,7 +76,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.Attribute`|**✓ DO** Namen von benutzerdefinierten Attributklassen das Suffix "Attribute" hinzugefügt.|  
 |`System.Delegate`|**✓ DO** fügen Sie das Suffix "EventHandler" in Namen von Delegaten, die in den Ereignissen verwendet werden.<br /><br /> **✓ DO** fügen Sie das Suffix "Callback" in Namen von Delegaten, ausgenommen derer, die als Ereignishandler verwendet.<br /><br /> **X DO NOT** fügen Sie das Suffix "Delegat" an einen Delegaten.|  
 |`System.EventArgs`|**✓ DO** fügen Sie das Suffix "EventArgs".|  
-|`System.Enum`|**X DO NOT** von dieser Klasse abgeleitet werden; verwenden Sie das Schlüsselwort stattdessen von der Sprache unterstützt; beispielsweise in c# verwenden das `enum` Schlüsselwort.<br /><br /> **X DO NOT** fügen Sie das Suffix "Enum" oder "Flag für"."|  
+|`System.Enum`|**X DO NOT** von dieser Klasse abgeleitet werden; verwenden Sie das Schlüsselwort stattdessen von der Sprache unterstützt; beispielsweise in C# verwenden das `enum` Schlüsselwort.<br /><br /> **X DO NOT** fügen Sie das Suffix "Enum" oder "Flag für"."|  
 |`System.Exception`|**✓ DO** fügen Sie das Suffix "Ausnahme".|  
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** fügen Sie das Suffix "Wörterbuch". Beachten Sie, dass `IDictionary` ist ein spezieller Typ der Auflistung, aber diese Richtlinie hat Vorrang vor mehr Auflistungen grundsätzlich, das folgt.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** fügen Sie das Suffix "Collection".|  

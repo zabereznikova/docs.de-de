@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981876"
 ---
 # <a name="textelement-content-model-overview"></a>Übersicht über das TextElement-Inhaltsmodell
 Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <xref:System.Windows.Documents.TextElement>. Die <xref:System.Windows.Documents.Paragraph> Klasse ist eine Art von <xref:System.Windows.Documents.TextElement>. Ein Inhaltsmodell beschreibt, welche Objekte/Elemente in anderen enthalten sein können. Diese Übersicht fasst das Inhaltsmodell für abgeleitete Objekte verwendet <xref:System.Windows.Documents.TextElement>. Weitere Informationen finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
@@ -57,11 +57,11 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
 ## <a name="working-with-textelement-content-programmatically"></a>Programmgesteuertes Arbeiten mit TextElement-Inhalt  
  Den Inhalt einer <xref:System.Windows.Documents.TextElement> besteht aus Sammlungen und daher programmgesteuert bearbeiten des Inhalts der <xref:System.Windows.Documents.TextElement> Objekte erfolgt durch die Arbeit mit diesen Sammlungen. Es gibt drei verschiedene Auflistungen von verwendeten <xref:System.Windows.Documents.TextElement> -abgeleitete Klassen:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Inline>-Elementen dar. <xref:System.Windows.Documents.InlineCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> und <xref:System.Windows.Controls.TextBlock>.  
+- <xref:System.Windows.Documents.InlineCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Inline>-Elementen dar. <xref:System.Windows.Documents.InlineCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> und <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Block>-Elementen dar. <xref:System.Windows.Documents.BlockCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> und <xref:System.Windows.Documents.Figure>.  
+- <xref:System.Windows.Documents.BlockCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Block>-Elementen dar. <xref:System.Windows.Documents.BlockCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> und <xref:System.Windows.Documents.Figure>.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Ein fortlaufendes Inhaltselement, das ein bestimmtes Inhaltselement in einer geordneten darstellt oder die ungeordneten <xref:System.Windows.Documents.List>.  
+- <xref:System.Windows.Documents.ListItemCollection>: Ein fortlaufendes Inhaltselement, das ein bestimmtes Inhaltselement in einer geordneten darstellt oder die ungeordneten <xref:System.Windows.Documents.List>.  
   
  Sie können ändern (hinzufügen oder Entfernen von Elementen) diese Auflistungen mithilfe der entsprechenden Eigenschaften der **Inlines**, **Blöcke**, und **ListItems**. Die folgenden Beispiele zeigen, wie Sie den Inhalt eines Span-Element mit Bearbeiten der **Inlines** Eigenschaft.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
 ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955505"
 ---
 # <a name="visual-basic-limitations"></a>Beschränkungen in Visual Basic
 Frühere Versionen von Visual Basic erzwungen Grenzen in Code, z. B. die Länge der Namen von Variablen, die Anzahl der Variablen in Modulen und Modulgröße zulässig. In Visual Basic .NET haben diese Einschränkungen gelockert wurden Ihnen nur größere freiheiten beim Schreiben und Anordnen von Ihrem Code.  
@@ -22,15 +22,15 @@ Frühere Versionen von Visual Basic erzwungen Grenzen in Code, z. B. die Länge 
   
  Im folgenden sind einige Einschränkungen, die Sie in extremen Fällen auftreten:  
   
--   **Länge des Namens.** Es ist eine maximale Anzahl von Zeichen für den Namen des jede deklariertes Programmierelement ein Element aus. Dieser Höchstwert gilt für eine gesamte Qualifizierungspfad auf, wenn der Elementname qualifiziert wird. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Länge des Namens.** Es ist eine maximale Anzahl von Zeichen für den Namen des jede deklariertes Programmierelement ein Element aus. Dieser Höchstwert gilt für eine gesamte Qualifizierungspfad auf, wenn der Elementname qualifiziert wird. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
--   **Zeilenlänge.** Es gibt höchstens 65535 Zeichen in einer physischen Zeile des Quellcodes. Die logische Quellcodezeile möglich länger, wenn Sie das Zeilenfortsetzungszeichen verwenden. Weitere Informationen finden Sie unter [How to: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+- **Zeilenlänge.** Es gibt höchstens 65535 Zeichen in einer physischen Zeile des Quellcodes. Die logische Quellcodezeile möglich länger, wenn Sie das Zeilenfortsetzungszeichen verwenden. Weitere Informationen finden Sie unter [How to: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
--   **Dimensionen des Arrays.** Es ist eine maximale Anzahl von Dimensionen, die Sie für ein Array deklarieren können. Dadurch wird beschränkt, wie viele Indizes, die Sie verwenden können, ein Arrayelement angeben. Finden Sie unter [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+- **Dimensionen des Arrays.** Es ist eine maximale Anzahl von Dimensionen, die Sie für ein Array deklarieren können. Dadurch wird beschränkt, wie viele Indizes, die Sie verwenden können, ein Arrayelement angeben. Finden Sie unter [Array Dimensions in Visual Basic](../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
--   **Länge der Zeichenfolge.** Es ist eine maximale Anzahl von Unicode-Zeichen, die in einer einzelnen Zeichenfolge gespeichert werden können. Finden Sie unter [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md).  
+- **Länge der Zeichenfolge.** Es ist eine maximale Anzahl von Unicode-Zeichen, die in einer einzelnen Zeichenfolge gespeichert werden können. Finden Sie unter [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
--   **Zeichenfolgenlänge der Umgebung.** Es gibt höchstens 32768 Zeichen für eine beliebige Umgebungszeichenfolge, die als Befehlszeilenargument verwendet. Dies ist eine Einschränkung auf allen Plattformen.  
+- **Zeichenfolgenlänge der Umgebung.** Es gibt höchstens 32768 Zeichen für eine beliebige Umgebungszeichenfolge, die als Befehlszeilenargument verwendet. Dies ist eine Einschränkung auf allen Plattformen.  
   
 ## <a name="see-also"></a>Siehe auch
 

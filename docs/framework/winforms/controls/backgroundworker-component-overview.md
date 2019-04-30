@@ -18,26 +18,26 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011813"
 ---
 # <a name="backgroundworker-component-overview"></a>Übersicht über die BackgroundWorker-Komponente
-Es gibt viele häufig verwendete Operationen, deren Ausführung lange dauern kann. Beispiel:  
+Es gibt viele häufig verwendete Operationen, deren Ausführung lange dauern kann. Zum Beispiel:  
   
--   Bilddownloads  
+- Bilddownloads  
   
--   Webdienstaufrufe  
+- Webdienstaufrufe  
   
--   Dateidownloads und -uploads (einschließlich für Peer-to-Peer-Anwendungen)  
+- Dateidownloads und -uploads (einschließlich für Peer-to-Peer-Anwendungen)  
   
--   Komplexe lokale Berechnungen  
+- Komplexe lokale Berechnungen  
   
--   Datenbanktransaktionen  
+- Datenbanktransaktionen  
   
--   Lokaler Festplattenzugriff, angesichts der langsamen Geschwindigkeit relativ zum Arbeitsspeicherzugriff  
+- Lokaler Festplattenzugriff, angesichts der langsamen Geschwindigkeit relativ zum Arbeitsspeicherzugriff  
   
  Operationen wie diese können bewirken, dass die Benutzeroberfläche während der Ausführung der Operation nicht mehr reagiert. Wenn Sie dies vermeiden möchten und bei solchen Operationen lange Verzögerungen auftreten, stellt die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine geeignete Alternative dar.  
   

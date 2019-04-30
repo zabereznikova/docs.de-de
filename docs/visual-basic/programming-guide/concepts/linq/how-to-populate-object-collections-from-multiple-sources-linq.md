@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LIN
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
 ms.openlocfilehash: 65c7e2c791ba8331416ee2eee292f1e8c4888712
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024325"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)
 

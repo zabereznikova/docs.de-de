@@ -17,11 +17,11 @@ helpviewer_keywords:
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
 ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967521"
 ---
 # <a name="matrix-representation-of-transformations"></a>Matrixdarstellung von Transformationen
 Eine m-x-n-Matrix ist eine Menge von Zahlen, die in m Zeilen und n Spalten angeordnet sind. Die folgende Abbildung zeigt mehrere Matrizen.  

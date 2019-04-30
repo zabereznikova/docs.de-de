@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031346"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme, die Sie beim Schreiben von bewusst sein sollten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen für den globalen Markt. Programmierelemente der Globalisierung werden in definiert [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.
@@ -69,59 +69,59 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 
  Die folgenden Skripts werden zurzeit unterstützt:
 
--   Arabisch
+- Arabisch
 
--   Bangla
+- Bangla
 
--   Devanagari
+- Devanagari
 
--   Kyrillisch
+- Kyrillisch
 
--   Griechisch
+- Griechisch
 
--   Gujarati
+- Gujarati
 
--   Gurmukhi
+- Gurmukhi
 
--   Hebräisch
+- Hebräisch
 
--   Ideografische Skripts
+- Ideografische Skripts
 
--   Kannada
+- Kannada
 
--   Laotisch
+- Laotisch
 
--   Latein
+- Latein
 
--   Malayalam
+- Malayalam
 
--   Mongolisch
+- Mongolisch
 
--   Odia
+- Odia
 
--   Syrisch
+- Syrisch
 
--   Tamil
+- Tamil
 
--   Telugu
+- Telugu
 
--   Thaana
+- Thaana
 
--   Thailändisch*
+- Thailändisch*
 
--   Tibetisch
+- Tibetisch
 
  *In dieser Version werden die Anzeige und Bearbeitung von thailändischem Text unterstützt. Die Wörtertrennung wird nicht unterstützt.
 
  Die folgenden Skripts werden zurzeit nicht unterstützt:
 
--   Khmer
+- Khmer
 
--   Koreanisch Old Hangul
+- Koreanisch Old Hangul
 
--   Myanmar
+- Myanmar
 
--   Singhalesisch
+- Singhalesisch
 
  Alle Schreibsystem-engines unterstützen [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftarten zählen die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Layouttabellen, mit denen Ersteller von Schriftarten bessere internationale und Highend-typografische-Schriftarten entwerfen können. Die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Layouttabellen der Schriftart enthalten Informationen über symbolersetzungen, symbolpositionierung, Ausrichtung und Positionierung Textverarbeitungstools Anwendungen Textlayout zu verbessern.
 
@@ -133,9 +133,9 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 ### <a name="international-layout"></a>Internationales Layout
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine einfache Möglichkeit für die Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In PresentationFramework der <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft kann verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:
 
--   *LeftToRight*: Horizontales Layout für Latein, Ostasiatisch usw.
+- *LeftToRight*: Horizontales Layout für Latein, Ostasiatisch usw.
 
--   *RightToLeft*: Bidirektional für Arabisch, Hebräisch usw.
+- *RightToLeft*: Bidirektional für Arabisch, Hebräisch usw.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>Entwickeln von lokalisierbaren Anwendungen

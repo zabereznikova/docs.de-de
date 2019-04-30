@@ -7,11 +7,11 @@ helpviewer_keywords:
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
 ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020243"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Vorgehensweise: Animieren einer Matrix mithilfe von Keyframes
 Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes.  

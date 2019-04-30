@@ -13,8 +13,8 @@ ms.openlocfilehash: fb58d50a63cca41420aa102ca0c8b63f3b14c0d6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006732"
 ---
 # <a name="how-to-call-a-page-function"></a>Vorgehensweise: Aufrufen einer Seitenfunktion
 Dieses Beispiel zeigt, wie Sie eine Seitenfunktion auf Aufrufen einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite.  

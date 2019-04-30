@@ -3,11 +3,11 @@ title: Benutzerdefinierte Encoder
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996904"
 ---
 # <a name="custom-encoders"></a>Benutzerdefinierte Encoder
 In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.  
@@ -30,11 +30,11 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
   
  WCF bietet die folgenden Typen von Bindungselementen, die von abgeleiteten der <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> -Klasse, die für Text, Binär und Message Transmission Optimization Mechanism (MTOM)-Codierung angeben kann:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Die größte Interoperabilität bietet, aber die am wenigsten effektive Encoder für XML-Nachrichten. Text-XML kann in der Regel von Webdiensten oder Webdienstclients interpretiert werden. Das Übermitteln umfangreicher Blöcke binärer Daten in Textform ist jedoch wenig effizient.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Die größte Interoperabilität bietet, aber die am wenigsten effektive Encoder für XML-Nachrichten. Text-XML kann in der Regel von Webdiensten oder Webdienstclients interpretiert werden. Das Übermitteln umfangreicher Blöcke binärer Daten in Textform ist jedoch wenig effizient.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Stellt das Bindungselement, das angibt, das die zeichencodierung und versionsverwaltung für binäre XML-Nachrichten verwendete dar. Dies ist die effizienteste Codierungsoptionen, aber gleichzeitig die geringste Interoperabilität, da sie nur von WCF-Endpunkten unterstützt wird.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Stellt das Bindungselement, das angibt, das die zeichencodierung und versionsverwaltung für binäre XML-Nachrichten verwendete dar. Dies ist die effizienteste Codierungsoptionen, aber gleichzeitig die geringste Interoperabilität, da sie nur von WCF-Endpunkten unterstützt wird.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Stellt das Bindungselement, das die zeichencodierung gibt an, und für eine Meldung mit MTOM-Message Transmission Optimization Mechanism (MTOM) verwendete meldungsversionierung dar. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu erschaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Stellt das Bindungselement, das die zeichencodierung gibt an, und für eine Meldung mit MTOM-Message Transmission Optimization Mechanism (MTOM) verwendete meldungsversionierung dar. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu erschaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung.  
   
  Vom Bindungselement wird eine Binär-, MTOM- oder Text-<xref:System.ServiceModel.Channels.MessageEncoderFactory> erstellt. Von der Factory wird eine <xref:System.ServiceModel.Channels.MessageEncoderFactory>-Binär-, MTOM- oder Textinstanz erstellt. Üblicherweise ist lediglich eine einzelne Instanz vorhanden. Bei Verwendung von Sitzungen kann jedoch für jede Sitzung ein anderer Encoder bereitgestellt werden. Vom Binärencoder wird diese Möglichkeit zum Koordinieren dynamischer Wörterbücher genutzt (siehe XML-Infrastruktur).  
   
@@ -69,19 +69,19 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
 ## <a name="writing-your-own-encoder"></a>Schreiben eigener Encoder  
  Zum Implementieren eines eigenen Nachrichtenencoders müssen benutzerdefinierte Implementierungen der folgenden abstrakten Basisklassen bereitgestellt werden:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  Die Umwandlung der speicherinternen Version einer Nachricht zu einer Version, die in einen Stream geschrieben werden kann, ist Teil der <xref:System.ServiceModel.Channels.MessageEncoder>-Klasse, die als Factory für XML-Reader und XML-Writer mit Unterstützung für bestimmte XML-Codierungstypen fungiert.  
   
--   Folgende Schlüsselmethoden dieser Klasse müssen außer Kraft gesetzt werden:  
+- Folgende Schlüsselmethoden dieser Klasse müssen außer Kraft gesetzt werden:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>: nimmt ein <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Objekt an und schreibt es in ein <xref:System.IO.Stream>-Objekt.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>: nimmt ein <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Objekt an und schreibt es in ein <xref:System.IO.Stream>-Objekt.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>: nimmt ein <xref:System.IO.Stream>-Objekt sowie eine maximale Headergröße an und gibt ein <xref:System.ServiceModel.Channels.Message>-Objekt zurück.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>: nimmt ein <xref:System.IO.Stream>-Objekt sowie eine maximale Headergröße an und gibt ein <xref:System.ServiceModel.Channels.Message>-Objekt zurück.  
   
  Die Umwandlung zwischen dem standardmäßigen Transportprotokoll und der benutzerdefinierten Codierung wird anhand des in diese Methoden geschriebenen Codes behandelt.  
   

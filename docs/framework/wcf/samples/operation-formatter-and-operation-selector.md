@@ -3,11 +3,11 @@ title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989689"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
 Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communication Foundation (WCF) verwendet werden können, um Nachrichtendaten in einem anderen Format wie erwartet, WCF dass zu ermöglichen. Standardmäßig erwarten die WCF-Formatierer Methodenparameter unter aufgenommen werden die `soap:body` Element. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
@@ -16,15 +16,15 @@ Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communicati
   
  Zu diesem Zweck enthält das Beispiel Folgendes:  
   
--   `QueryStringFormatter`, der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> und <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> für den Client bzw. den Server implementiert und die Daten in der Abfragezeichenfolge verarbeitet.  
+- `QueryStringFormatter`, der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> und <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> für den Client bzw. den Server implementiert und die Daten in der Abfragezeichenfolge verarbeitet.  
   
--   `UriOperationSelector`, die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> auf dem Server implementiert, um die Vorgangsverteilung anhand des Vorgangsnamens in der GET-Anforderung zu verteilen.  
+- `UriOperationSelector`, die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> auf dem Server implementiert, um die Vorgangsverteilung anhand des Vorgangsnamens in der GET-Anforderung zu verteilen.  
   
--   `EnableHttpGetRequestsBehavior`-Endpunktverhalten (und entsprechende Konfiguration), das die erforderliche Vorgangsauswahl der Laufzeit hinzufügt.  
+- `EnableHttpGetRequestsBehavior`-Endpunktverhalten (und entsprechende Konfiguration), das die erforderliche Vorgangsauswahl der Laufzeit hinzufügt.  
   
--   Zeigt, wie ein neuer Vorgangsformatierer in die Laufzeit eingefügt wird.  
+- Zeigt, wie ein neuer Vorgangsformatierer in die Laufzeit eingefügt wird.  
   
--   In diesem Beispiel sind sowohl der Client als auch der Dienst Konsolenanwendungen (.exe).  
+- In diesem Beispiel sind sowohl der Client als auch der Dienst Konsolenanwendungen (.exe).  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -36,15 +36,15 @@ Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communicati
   
  Anforderung:  
   
--   Das Beispiel verwendet die <xref:System.ComponentModel.TypeConverter>-Klasse, um Parameterdaten in der Anforderungsnachricht in und aus Zeichenfolgen zu konvertieren. Wenn ein <xref:System.ComponentModel.TypeConverter> für einen bestimmten Typ nicht verfügbar ist, löst der Beispielformatierer eine Ausnahme aus.  
+- Das Beispiel verwendet die <xref:System.ComponentModel.TypeConverter>-Klasse, um Parameterdaten in der Anforderungsnachricht in und aus Zeichenfolgen zu konvertieren. Wenn ein <xref:System.ComponentModel.TypeConverter> für einen bestimmten Typ nicht verfügbar ist, löst der Beispielformatierer eine Ausnahme aus.  
   
--   In der `IClientMessageFormatter.SerializeRequest`-Methode auf dem Client erstellt der Formatierer einen URI mit der entsprechenden Empfängeradresse und fügt den Vorgangsnamen als Suffix an. Dieser Name dient dann zum Verteilen zum entsprechenden Vorgang auf dem Server. Dann nimmt er das Array mit Parameterobjekten und serialisiert die Parameterdaten mithilfe von Parameternamen und den von der <xref:System.ComponentModel.TypeConverter>-Klasse konvertierten Werten in die URI-Abfragezeichenfolge. Die <xref:System.ServiceModel.Channels.MessageHeaders.To%2A>-Eigenschaft und die <xref:System.ServiceModel.Channels.MessageProperties.Via%2A>-Eigenschaft werden dann auf diesen URI festgelegt. Auf <xref:System.ServiceModel.Channels.MessageProperties> wird über die <xref:System.ServiceModel.Channels.Message.Properties%2A>-Eigenschaft zugegriffen.  
+- In der `IClientMessageFormatter.SerializeRequest`-Methode auf dem Client erstellt der Formatierer einen URI mit der entsprechenden Empfängeradresse und fügt den Vorgangsnamen als Suffix an. Dieser Name dient dann zum Verteilen zum entsprechenden Vorgang auf dem Server. Dann nimmt er das Array mit Parameterobjekten und serialisiert die Parameterdaten mithilfe von Parameternamen und den von der <xref:System.ComponentModel.TypeConverter>-Klasse konvertierten Werten in die URI-Abfragezeichenfolge. Die <xref:System.ServiceModel.Channels.MessageHeaders.To%2A>-Eigenschaft und die <xref:System.ServiceModel.Channels.MessageProperties.Via%2A>-Eigenschaft werden dann auf diesen URI festgelegt. Auf <xref:System.ServiceModel.Channels.MessageProperties> wird über die <xref:System.ServiceModel.Channels.Message.Properties%2A>-Eigenschaft zugegriffen.  
   
--   In der `IDispatchMessageFormatter.DeserializeRequest`-Methode auf dem Server ruft der Formatierer den `Via`-URI in den Eigenschaften der eingehenden Anforderungsnachricht ab. Er analysiert die Name-Wert-Paare in der URI-Abfragezeichenfolge in Parameternamen und Werte und füllt mit diesen Parameternamen und Werten das an die Methode übergebene Parameterarray auf. Beachten Sie, dass die Vorgangsverteilung bereits stattgefunden hat; daher wird das Namenssuffix in dieser Methode ignoriert.  
+- In der `IDispatchMessageFormatter.DeserializeRequest`-Methode auf dem Server ruft der Formatierer den `Via`-URI in den Eigenschaften der eingehenden Anforderungsnachricht ab. Er analysiert die Name-Wert-Paare in der URI-Abfragezeichenfolge in Parameternamen und Werte und füllt mit diesen Parameternamen und Werten das an die Methode übergebene Parameterarray auf. Beachten Sie, dass die Vorgangsverteilung bereits stattgefunden hat; daher wird das Namenssuffix in dieser Methode ignoriert.  
   
  Antwort:  
   
--   In diesem Beispiel wird HTTP GET nur für die Anforderung verwendet. Der Formatierer delegiert das Senden der Antwort an den ursprünglichen Formatierer, von dem XML-Nachrichten generiert worden wären. Eines der Ziele dieses Beispiels besteht darin, zu zeigen, wie solch ein delegierender Formatierer implementiert werden kann.  
+- In diesem Beispiel wird HTTP GET nur für die Anforderung verwendet. Der Formatierer delegiert das Senden der Antwort an den ursprünglichen Formatierer, von dem XML-Nachrichten generiert worden wären. Eines der Ziele dieses Beispiels besteht darin, zu zeigen, wie solch ein delegierender Formatierer implementiert werden kann.  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector-Klasse  
  Mit der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Schnittstelle können Benutzer ihre eigene Logik für die Entscheidung implementieren, für welchen Vorgang eine bestimmte Nachricht weitergeleitet werden soll.  
@@ -94,16 +94,16 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
  Auf dem Server:  
   
--   Die <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle muss implementiert werden, damit sie HTTP-GET-Anforderungen lesen und zum Schreiben von Antworten an den ursprünglichen Formatierer delegieren kann. Dies erfolgt durch Aufrufen derselben `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`-Hilfsmethode wie beim Client (siehe vorheriges Codebeispiel).  
+- Die <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle muss implementiert werden, damit sie HTTP-GET-Anforderungen lesen und zum Schreiben von Antworten an den ursprünglichen Formatierer delegieren kann. Dies erfolgt durch Aufrufen derselben `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`-Hilfsmethode wie beim Client (siehe vorheriges Codebeispiel).  
   
--   Das muss erfolgen, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. In diesem Beispiel wird gezeigt, wie der Formatierer manuell geändert wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. Dasselbe lässt sich auch erreichen, indem man eine Klasse von <xref:System.ServiceModel.ServiceHost> ableitet, die vor dem Öffnen `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` aufruft (Beispiel dazu finden Sie in der Hostingdokumentation).  
+- Das muss erfolgen, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. In diesem Beispiel wird gezeigt, wie der Formatierer manuell geändert wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. Dasselbe lässt sich auch erreichen, indem man eine Klasse von <xref:System.ServiceModel.ServiceHost> ableitet, die vor dem Öffnen `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` aufruft (Beispiel dazu finden Sie in der Hostingdokumentation).  
   
 ### <a name="user-experience"></a>Benutzerfreundlichkeit  
  Auf dem Server:  
   
--   Die `ICalculator`-Serverimplementierung muss nicht geändert werden.  
+- Die `ICalculator`-Serverimplementierung muss nicht geändert werden.  
   
--   Die „App.config“-Datei für den Dienst muss eine benutzerdefinierte POX-Bindung verwenden, die für das `messageVersion`-Attribut des `textMessageEncoding`-Elements `None` festlegt.  
+- Die „App.config“-Datei für den Dienst muss eine benutzerdefinierte POX-Bindung verwenden, die für das `messageVersion`-Attribut des `textMessageEncoding`-Elements `None` festlegt.  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   Außerdem muss die App.config-Datei für den Dienst das benutzerdefinierte `EnableHttpGetRequestsBehavior` angeben, indem sie es dem Abschnitt mit den Verhaltenserweiterungen hinzufügt und verwendet.  
+- Außerdem muss die App.config-Datei für den Dienst das benutzerdefinierte `EnableHttpGetRequestsBehavior` angeben, indem sie es dem Abschnitt mit den Verhaltenserweiterungen hinzufügt und verwendet.  
   
     ```xml  
     <behaviors>  
@@ -136,13 +136,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </extensions>  
     ```  
   
--   Fügen Sie Vorgangsformatierer vor dem Aufrufen von <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> hinzu.  
+- Fügen Sie Vorgangsformatierer vor dem Aufrufen von <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> hinzu.  
   
  Auf dem Client:  
   
--   Die Clientimplementierung muss nicht geändert werden.  
+- Die Clientimplementierung muss nicht geändert werden.  
   
--   Die Datei „App.config“ für den Client muss eine benutzerdefinierte POX-Bindung verwenden, die für das `messageVersion`-Attribut des `textMessageEncoding`-Elements `None` festlegt. Ein Unterschied zum Dienst besteht darin, dass der Client die manuelle Adressierung aktivieren muss, damit die Empfängeradresse der ausgehenden Nachricht geändert werden kann.  
+- Die Datei „App.config“ für den Client muss eine benutzerdefinierte POX-Bindung verwenden, die für das `messageVersion`-Attribut des `textMessageEncoding`-Elements `None` festlegt. Ein Unterschied zum Dienst besteht darin, dass der Client die manuelle Adressierung aktivieren muss, damit die Empfängeradresse der ausgehenden Nachricht geändert werden kann.  
   
     ```xml  
     <bindings>  
@@ -155,9 +155,9 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   Die App.config für den Client muss dasselbe benutzerdefinierte `EnableHttpGetRequestsBehavior` wie der Server angeben.  
+- Die App.config für den Client muss dasselbe benutzerdefinierte `EnableHttpGetRequestsBehavior` wie der Server angeben.  
   
--   Fügen Sie Vorgangsformatierer vor dem Aufrufen von <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> hinzu.  
+- Fügen Sie Vorgangsformatierer vor dem Aufrufen von <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> hinzu.  
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Alle vier Vorgänge (Add, Subtract, Multiply und Divide) müssen erfolgreich sein.  
   

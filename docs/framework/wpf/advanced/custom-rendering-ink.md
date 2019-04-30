@@ -10,26 +10,26 @@ helpviewer_keywords:
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
 ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010630"
 ---
 # <a name="custom-rendering-ink"></a>Benutzerdefiniertes Rendern von Freihandeingaben
 Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaft eines Strichs können Sie die Darstellung eines Strichs, z. B. seine Größe, Farbe und Form angeben, aber unter Umständen, die Sie zum Anpassen der Darstellung überschreiten möchten <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> ermöglichen. Sie können beispielsweise die Darstellung von Freihandeingaben so anpassen, dass sie wie ein Airbrush- oder Ölgemälde aussieht oder mit vielen weiteren Effekten gerendert wird. Die Windows Presentation Foundation (WPF) ermöglicht Ihnen benutzerdefiniertes Rendern von Freihandeingaben durch Implementierung eines benutzerdefinierten <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und <xref:System.Windows.Ink.Stroke> Objekt.  
   
  Dieses Thema enthält folgende Unterabschnitte:  
   
--   [Architektur](#Architecture)  
+- [Architektur](#Architecture)  
   
--   [Implementieren eines dynamischen Renderers](#ImplementingADynamicRenderer)  
+- [Implementieren eines dynamischen Renderers](#ImplementingADynamicRenderer)  
   
--   [Implementieren von benutzerdefinierten Strichen](#ImplementingCustomStrokes)  
+- [Implementieren von benutzerdefinierten Strichen](#ImplementingCustomStrokes)  
   
--   [Implementieren eines benutzerdefinierten InkCanvas](#ImplementingACustomInkCanvas)  
+- [Implementieren eines benutzerdefinierten InkCanvas](#ImplementingACustomInkCanvas)  
   
--   [Schlussfolgerung](#Conclusion)  
+- [Schlussfolgerung](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektur  
@@ -75,11 +75,11 @@ Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaft eines Str
   
  Um das Rendern Striche auf eine <xref:System.Windows.Controls.InkCanvas> gehen Sie folgendermaßen vor:  
   
--   Erstellen Sie eine abgeleitete Klasse die <xref:System.Windows.Controls.InkCanvas>.  
+- Erstellen Sie eine abgeleitete Klasse die <xref:System.Windows.Controls.InkCanvas>.  
   
--   Weisen Sie den benutzerdefinierten <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf die <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> Eigenschaft.  
+- Weisen Sie den benutzerdefinierten <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf die <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> Eigenschaft.  
   
--   Überschreiben Sie die <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>-Methode. Entfernen Sie in dieser Methode den Originalstrich, der InkCanvas hinzugefügt wurde. Klicken Sie dann einen benutzerdefinierten Strich zu erstellen, Hinzufügen der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> -Eigenschaft, und rufen Sie die Basisklasse mit einer neuen <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> , das den benutzerdefinierten Strich enthält.  
+- Überschreiben Sie die <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>-Methode. Entfernen Sie in dieser Methode den Originalstrich, der InkCanvas hinzugefügt wurde. Klicken Sie dann einen benutzerdefinierten Strich zu erstellen, Hinzufügen der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> -Eigenschaft, und rufen Sie die Basisklasse mit einer neuen <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> , das den benutzerdefinierten Strich enthält.  
   
  Die folgenden C# Code veranschaulicht eine benutzerdefinierte <xref:System.Windows.Controls.InkCanvas> Klasse, die eine benutzerdefinierte verwendet <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und benutzerdefinierte Striche erfasst.  
   

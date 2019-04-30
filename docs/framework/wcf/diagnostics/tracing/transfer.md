@@ -3,11 +3,11 @@ title: Übertragung
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964488"
 ---
 # <a name="transfer"></a>Übertragung
 Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WCF) aktivitätsablaufverfolgungs-Modell.  
@@ -35,9 +35,9 @@ Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WC
 ## <a name="example-of-transfers"></a>Beispiel für Übertragungen  
  Im Folgenden werden zwei Übertragungsbeispiele aufgelistet.  
   
--   Bei der Erstellung eines Diensthosts erhält der Konstruktor Steuerung über den Aufrufcode, oder der Aufrufcode überträgt zum Konstruktor. Wenn der Konstruktor die Ausführung beendet hat, gibt er die Steuerung zum aufrufenden Code zurück oder der Konstruktor überträgt zum aufrufenden Code zurück. Dies ist der Fall bei einer geschachtelten Beziehung.  
+- Bei der Erstellung eines Diensthosts erhält der Konstruktor Steuerung über den Aufrufcode, oder der Aufrufcode überträgt zum Konstruktor. Wenn der Konstruktor die Ausführung beendet hat, gibt er die Steuerung zum aufrufenden Code zurück oder der Konstruktor überträgt zum aufrufenden Code zurück. Dies ist der Fall bei einer geschachtelten Beziehung.  
   
--   Wenn ein Listener mit der Verarbeitung von Transportdaten beginnt, erstellt er einen neuen Thread und übergibt den geeigneten Kontext für die Verarbeitung, d. h. die Steuerung und die Daten, an die Bytes empfangen-Aktivität weiter. Hat dieser Thread die Verarbeitung der Anforderung beendet, gibt die Byteempfang-Aktivität keine Informationen zum Listener zurück. In diesem Fall haben wir eine Übertragung in die neue Threadaktivität, aber keine heraus. Die beiden Aktivitäten sind verknüpft, aber nicht geschachtelt.  
+- Wenn ein Listener mit der Verarbeitung von Transportdaten beginnt, erstellt er einen neuen Thread und übergibt den geeigneten Kontext für die Verarbeitung, d. h. die Steuerung und die Daten, an die Bytes empfangen-Aktivität weiter. Hat dieser Thread die Verarbeitung der Anforderung beendet, gibt die Byteempfang-Aktivität keine Informationen zum Listener zurück. In diesem Fall haben wir eine Übertragung in die neue Threadaktivität, aber keine heraus. Die beiden Aktivitäten sind verknüpft, aber nicht geschachtelt.  
   
 ## <a name="activity-transfer-sequence"></a>Aktivitätsübertragungssequenz  
  Eine gut strukturierte Aktivitätsübertragungssequenz schließt die folgenden Schritte ein.  

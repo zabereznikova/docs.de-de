@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956363"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Übersicht über das CheckedListBox-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.CheckedListBox> Steuerelement erweitert die <xref:System.Windows.Forms.ListBox> Steuerelement. Dies erfolgt fast alle Aufgaben, die ein Listenfeld, und auch ein Häkchen neben den Elementen in der Liste anzeigen kann. Andere Unterschiede zwischen den beiden Steuerelementen sind, die überprüft, Listenfeldern unterstützen nur <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; und, die überprüft, Listenfelder können nur ein Element oder keine ausgewählt. Beachten Sie, dass ein ausgewähltes Element hervorgehoben, auf dem Formular wird, und keines aktivierten Elements identisch.  

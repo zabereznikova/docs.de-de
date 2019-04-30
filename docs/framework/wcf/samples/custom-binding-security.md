@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943935"
 ---
 # <a name="custom-binding-security"></a>Sicherheit mit benutzerdefinierten Bindungen
 In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer benutzerdefinierten Bindung konfiguriert wird. Es zeigt, wie Sicherheit auf Nachrichtenebene und ein sicherer Transport mithilfe einer benutzerdefinierten Bindung aktiviert wird. Dies ist hilfreich, wenn ein sicherer Transport zum Übertragen von Nachrichten zwischen Client und Dienst erforderlich ist und daher die Nachrichten auf Nachrichtenebene gesichert werden müssen. Diese Konfiguration wird nicht von Bindungen unterstützt, die vom System bereitgestellt werden.
@@ -19,9 +19,9 @@ In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer b
 
  Die Dienstkonfiguration definiert eine benutzerdefinierte Bindung, die Folgendes unterstützt:
 
--   TCP-Kommunikation mit Schutz durch Verwendung des TLS/SSL-Protokolls.
+- TCP-Kommunikation mit Schutz durch Verwendung des TLS/SSL-Protokolls.
 
--   Windows-Nachrichtensicherheit.
+- Windows-Nachrichtensicherheit.
 
  Durch die benutzerdefinierte Bindungskonfiguration wird der sichere Transport ermöglicht, da gleichzeitig die Sicherheit auf Nachrichtenebene aktiviert wird. Die Reihenfolge der Bindungselemente ist wichtig, beim Definieren einer benutzerdefinierten Bindung, da jeweils eine Ebene im Kanalstapel darstellt (siehe [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)). Die benutzerdefinierte Bindung wird in den Dienst- und Clientkonfigurationsdateien definiert, wie in der folgenden Beispielkonfiguration dargestellt.
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien für dieses Beispiel, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:
 
--   Erstellen des Serverzertifikats.
+- Erstellen des Serverzertifikats.
 
      Mit den folgenden Zeilen aus der Datei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. In dieser Batchdatei ist der Servername standardmäßig auf localhost festgelegt.
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.
+- Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.
 
      Mit den folgenden Zeilen in der Datei "Setup.bat" wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. Auf dem Dienstcomputer:  
   
-    1.  Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis mit dem Namen servicemodelsamples.  
+    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis mit dem Namen servicemodelsamples.  
   
-    2.  Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren.  
+    2. Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren.  
   
-    3.  Kopieren Sie die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+    3. Kopieren Sie die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-    4.  Führen den folgenden Befehl in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet: `Setup.bat service`. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.  
+    4. Führen den folgenden Befehl in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet: `Setup.bat service`. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.  
   
         > [!NOTE]
         >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
 
-    5.  Ändern der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) in der Datei Service.exe.config entsprechend der Antragstellername des Zertifikats im vorherigen Schritt generiert haben.
+    5. Ändern der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) in der Datei Service.exe.config entsprechend der Antragstellername des Zertifikats im vorherigen Schritt generiert haben.
 
-    6.  Führen Sie Service.exe an einer Eingabeaufforderung aus.
+    6. Führen Sie Service.exe an einer Eingabeaufforderung aus.
 
 2. Auf dem Clientcomputer:
 
-    1.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ auf den Clientcomputer. Kopieren Sie auch die Datei Cleanup.bat.
+    1. Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ auf den Clientcomputer. Kopieren Sie auch die Datei Cleanup.bat.
 
-    2.  Führen Sie Cleanup.bat aus, um alte Zertifikate aus vorherigen Beispielen zu entfernen.
+    2. Führen Sie Cleanup.bat aus, um alte Zertifikate aus vorherigen Beispielen zu entfernen.
 
-    3.  Exportieren Sie das Zertifikat des Diensts, indem Sie die Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem dienstcomputer ausführen (ersetzen Sie `%SERVER_NAME%` mit dem vollqualifizierten Namen des Computers, in denen der Dienst ausgeführt wird):
+    3. Exportieren Sie das Zertifikat des Diensts, indem Sie die Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem dienstcomputer ausführen (ersetzen Sie `%SERVER_NAME%` mit dem vollqualifizierten Namen des Computers, in denen der Dienst ausgeführt wird):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  Kopieren Sie %SERVER_NAME%.cer auf den Clientcomputer (ersetzen Sie %SERVER_NAME% durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird).
+    4. Kopieren Sie %SERVER_NAME%.cer auf den Clientcomputer (ersetzen Sie %SERVER_NAME% durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird).
 
-    5.  Importieren Sie das Zertifikat des Diensts, indem Sie die Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Clientcomputer ausführen (ersetzen Sie %server_name% durch den vollqualifizierten Namen des Computers, in dem die Dienst wird ausgeführt):
+    5. Importieren Sie das Zertifikat des Diensts, indem Sie die Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Clientcomputer ausführen (ersetzen Sie %server_name% durch den vollqualifizierten Namen des Computers, in dem die Dienst wird ausgeführt):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          Die Schritte c, d und e sind nicht erforderlich, wenn das Zertifikat von einem vertrauenswürdigen Aussteller stammt.
 
-    6.  Ändern Sie die Datei App.config des Clients wie folgt:
+    6. Ändern Sie die Datei App.config des Clients wie folgt:
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  Wenn der Dienst unter einem anderen Konto als NetworkService oder LocalSystem in einer Domänenumgebung ausgeführt wird, müssen Sie möglicherweise die Endpunktidentität für den Dienstendpunkt in der Datei App.config des Clients ändern und den entsprechenden UPN oder SPN für das Konto angeben, unter dem der Dienst ausgeführt wird. Weitere Informationen zur Endpunktidentität finden Sie unter den [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) Thema.
+    7. Wenn der Dienst unter einem anderen Konto als NetworkService oder LocalSystem in einer Domänenumgebung ausgeführt wird, müssen Sie möglicherweise die Endpunktidentität für den Dienstendpunkt in der Datei App.config des Clients ändern und den entsprechenden UPN oder SPN für das Konto angeben, unter dem der Dienst ausgeführt wird. Weitere Informationen zur Endpunktidentität finden Sie unter den [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) Thema.
 
-    8.  Führen Sie an einer Eingabeaufforderung Client.exe aus.
+    8. Führen Sie an einer Eingabeaufforderung Client.exe aus.
 
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her
 
--   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.
+- Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.

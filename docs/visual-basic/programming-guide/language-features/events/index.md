@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973198"
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
 Sie sich Visual Studio-Projekt als eine Reihe von Prozeduren vorstellen, in einer Sequenz, in der Praxis ausgeführt, sind die meisten Programme ereignisgesteuerte – d. h. den Ausführungsablauf richtet sich nach externen Vorkommnissen aufgerufen *Ereignisse*.  
@@ -53,11 +53,11 @@ Sie sich Visual Studio-Projekt als eine Reihe von Prozeduren vorstellen, in eine
   
  Die `WithEvents`-Anweisung und die `Handles`-Klausel sind häufig die beste Wahl für Ereignishandler, da die hier verwendete Deklarationssyntax das Programmieren, Lesen und Debuggen der Ereignisbehandlung vereinfacht. Beachten Sie jedoch die folgenden Einschränkungen bei der Verwendung von `WithEvents`-Variablen:  
   
--   Sie können eine `WithEvents`-Variable nicht als Objektvariable verwenden. Dies bedeutet, dass Sie die Variable nicht als `Object` deklarieren können, sondern den Klassennamen angeben müssen, wenn Sie die Variable deklarieren.  
+- Sie können eine `WithEvents`-Variable nicht als Objektvariable verwenden. Dies bedeutet, dass Sie die Variable nicht als `Object` deklarieren können, sondern den Klassennamen angeben müssen, wenn Sie die Variable deklarieren.  
   
--   Da freigegebene Ereignisse nicht an Klasseninstanzen gebunden sind, können keine `WithEvents` auf deklarative Behandlung freigegebener Ereignisse. Ebenso können Sie `WithEvents` oder `Handles` nicht zum Behandeln von Ereignissen aus einer `Structure` verwenden. In beiden Fällen können Sie diese Ereignisse mit der `AddHandler`-Anweisung behandeln.  
+- Da freigegebene Ereignisse nicht an Klasseninstanzen gebunden sind, können keine `WithEvents` auf deklarative Behandlung freigegebener Ereignisse. Ebenso können Sie `WithEvents` oder `Handles` nicht zum Behandeln von Ereignissen aus einer `Structure` verwenden. In beiden Fällen können Sie diese Ereignisse mit der `AddHandler`-Anweisung behandeln.  
   
--   Sie können keine Arrays aus `WithEvents`-Variablen erstellen.  
+- Sie können keine Arrays aus `WithEvents`-Variablen erstellen.  
   
  Mit `WithEvents`-Variablen kann ein einziger Ereignishandler eine oder mehrere Ereignisarten bzw. einen oder mehrere Ereignishandler zur Behandlung derselben Art von Ereignissen verarbeiten.  
   
@@ -91,7 +91,7 @@ Sie sich Visual Studio-Projekt als eine Reihe von Prozeduren vorstellen, in eine
   
 ### <a name="to-handle-events-from-a-base-class"></a>So behandeln Sie Ereignisse aus einer Basisklasse  
   
--   Deklarieren Sie einen Ereignishandler in der abgeleiteten Klasse, indem Sie der Deklarationszeile der Prozedur für den Ereignishandler eine `Handles MyBase.`*Ereignisname*-Anweisung hinzufügen. Dabei ist *Ereignisname* der Name des zu behandelnden Ereignisses in der Basisklasse. Zum Beispiel:  
+- Deklarieren Sie einen Ereignishandler in der abgeleiteten Klasse, indem Sie der Deklarationszeile der Prozedur für den Ereignishandler eine `Handles MyBase.`*Ereignisname*-Anweisung hinzufügen. Dabei ist *Ereignisname* der Name des zu behandelnden Ereignisses in der Basisklasse. Zum Beispiel:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

@@ -6,8 +6,8 @@ ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004925"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ-Meldungsabfragekorrelation
 Dieses Beispiel veranschaulicht, wie die inhaltsbasierte Korrelation mithilfe einer benutzerdefinierten <xref:System.ServiceModel.Dispatcher.MessageQuery>-Implementierung im Gegensatz zu der vom System bereitgestellten <xref:System.ServiceModel.XPathMessageQuery> erfolgt.  
@@ -28,11 +28,11 @@ Dieses Beispiel veranschaulicht, wie die inhaltsbasierte Korrelation mithilfe ei
   
 2. Sobald die URL-ACLs hinzugefügt wurden, führen Sie die folgenden Schritte aus.  
   
-    1.  Erstellen Sie die Projektmappe.  
+    1. Erstellen Sie die Projektmappe.  
   
-    2.  Legen Sie mehrere Startprojekte fest, von der rechten Maustaste auf die Projektmappe, und wählen **Startprojekte**. Hinzufügen **Service** und **Client** (in dieser Reihenfolge) als mehrere Startprojekte.  
+    2. Legen Sie mehrere Startprojekte fest, von der rechten Maustaste auf die Projektmappe, und wählen **Startprojekte**. Hinzufügen **Service** und **Client** (in dieser Reihenfolge) als mehrere Startprojekte.  
   
-    3.  Führen Sie die Anwendung aus. Die Clientkonsole zeigt einen Workflow, der eine Bestellung sendet und die Bestell-ID empfängt und dann daraufhin den Auftrag bestätigt. Das Fenster "Dienst" zeigt die Anforderungen, die verarbeitet werden.  
+    3. Führen Sie die Anwendung aus. Die Clientkonsole zeigt einen Workflow, der eine Bestellung sendet und die Bestell-ID empfängt und dann daraufhin den Auftrag bestätigt. Das Fenster "Dienst" zeigt die Anforderungen, die verarbeitet werden.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

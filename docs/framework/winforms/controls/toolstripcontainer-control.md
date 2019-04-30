@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
 ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009512"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer-Steuerelement
 <xref:System.Windows.Forms.ToolStrip>-Steuerelemente bieten bei Verwendung von <xref:System.Windows.Forms.ToolStripContainer> Unterstützung für das integrierte Rafting (die gemeinsame Nutzung eines horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs im angedockten Zustand).  

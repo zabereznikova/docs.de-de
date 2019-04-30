@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032473"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
@@ -21,11 +21,11 @@ Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relational
 ## <a name="nulls-and-three-valued-logic"></a>NULL-Werte und dreiwertige Logik  
  Wenn in Spaltendefinitionen NULL-Werte zugelassen werden, wird dreiwertige Logik in die Anwendung eingeführt. Eine Vergleichsoperation wird mit einer der drei nachfolgenden Bedingungen ausgewertet:  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   Unbekannt  
+- Unbekannt  
   
  Da NULL als unbekannt betrachtet wird, gelten zwei miteinander verglichene NULL-Werte nicht als gleich. In Ausdrücken, die arithmetische Operatoren verwenden, ist das Ergebnis NULL, wenn einer der Operanden NULL ist.  
   

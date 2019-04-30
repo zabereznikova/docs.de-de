@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955492"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Verarbeiten der XML-Datei (Visual Basic)
 Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Informationen dazu, wie Code mit Tags versehen werden, finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten können die ID-Zeichenfolge zum Identifizieren der entsprechenden [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Metadaten-/ Reflektionselement.  
@@ -18,9 +18,9 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
   
  Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:  
   
--   In der Zeichenfolge wird kein Leerraum platziert.  
+- In der Zeichenfolge wird kein Leerraum platziert.  
   
--   Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet.  
+- Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet.  
   
 |Zeichen|Beschreibung|  
 |---|---|  
@@ -32,9 +32,9 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 |E|Ereignis: `Event`|  
 |!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Visual Basic-Compiler generiert die Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
   
--   Der zweite Teil der `String` ist der vollqualifizierte Name des Elements im Stammverzeichnis des Namespace ab. Der Name des Elements, seiner einschließenden Typen und den Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt durch ein Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element mit einem Nummernzeichen direkt im Namen hat. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre `System.String.#ctor`.  
+- Der zweite Teil der `String` ist der vollqualifizierte Name des Elements im Stammverzeichnis des Namespace ab. Der Name des Elements, seiner einschließenden Typen und den Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt durch ein Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element mit einem Nummernzeichen direkt im Namen hat. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre `System.String.#ctor`.  
   
--   Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie es in codiert wird eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Signatur.  
+- Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie es in codiert wird eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Signatur.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt, wie die ID für eine Klasse Zeichenfolgen und ihre Member generiert werden.  

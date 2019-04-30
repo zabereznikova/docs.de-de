@@ -3,11 +3,11 @@ title: Zuordnungssatz
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034609"
 ---
 # <a name="association-set"></a>Zuordnungssatz
 Ein *Zuordnungssatz* ist ein logischer Container für [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) Instanzen des gleichen Typs. Ein Zuordnungssatz ist keine Datenmodellkonstruktion; das heißt, er beschreibt nicht die Struktur von Daten oder Beziehungen. Vielmehr stellt ein Zuordnungssatz eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Zuordnungsinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
@@ -16,11 +16,11 @@ Ein *Zuordnungssatz* ist ein logischer Container für [Zuordnung](../../../../do
   
  Eine Definition für einen Zuordnungssatz enthält die folgenden Informationen:  
   
--   Den Namen des Zuordnungssatzes. (erforderlich)  
+- Den Namen des Zuordnungssatzes. (erforderlich)  
   
--   Die Zuordnung, von der er Instanzen enthält. (erforderlich)  
+- Die Zuordnung, von der er Instanzen enthält. (erforderlich)  
   
--   Zwei [zuordnungssatzenden](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Zwei [zuordnungssatzenden](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Beispiel  
  Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit zwei Zuordnungen: `PublishedBy` und `WrittenBy`. Obwohl die Abbildung keine Informationen zu Zuordnungssätzen bereitstellt, zeigt die nächste Abbildung ein Beispiel für Zuordnungssätze und Entitätenmengen auf Grundlage dieses Modells.  

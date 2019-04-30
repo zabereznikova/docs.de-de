@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013373"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333573"
   
  Es gibt drei grundlegende Aspekte der Formatierung der <xref:System.Windows.Forms.DataGrid> Steuerelement:  
   
--   Sie können festlegen, dass Eigenschaften zu, um einen Standardstil herzustellen, in dem Daten angezeigt werden.  
+- Sie können festlegen, dass Eigenschaften zu, um einen Standardstil herzustellen, in dem Daten angezeigt werden.  
   
--   Auf dieser Basis können Sie die Möglichkeit, die bestimmte Tabellen zur Laufzeit angezeigt werden, klicken Sie dann anpassen.  
+- Auf dieser Basis können Sie die Möglichkeit, die bestimmte Tabellen zur Laufzeit angezeigt werden, klicken Sie dann anpassen.  
   
--   Abschließend können Sie ändern, welche Spalten im Raster als auch die Farben angezeigt werden, und andere, die Formatierung wird angezeigt.  
+- Abschließend können Sie ändern, welche Spalten im Raster als auch die Farben angezeigt werden, und andere, die Formatierung wird angezeigt.  
   
  Als ersten Schritt bei der Formatierung ein Datenraster, können Sie festlegen, der Eigenschaften der <xref:System.Windows.Forms.DataGrid> selbst. Diese Farbe und Format-Auswahl bilden eine Basis, die aus der Sie dann abhängig von der Tabellen und Spalten angezeigt, können Änderungen vornehmen.  
   

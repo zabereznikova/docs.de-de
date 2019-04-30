@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007473"
 ---
 # <a name="ws-transaction-flow"></a>WS-Transaktionsfluss
 In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Client- und Serveroptionen für den Transaktionsfluss unter Verwendung des WS-Atomic-Transaktionsprotokolls oder des OleTransactions-Protokolls erläutert. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert, aber die Vorgänge zum Veranschaulichen der Verwendung von attributiert sind die `TransactionFlowAttribute` mit der **TransactionFlowOption** Enumeration, um zu bestimmen, in welchem Umfang der Transaktionsfluss aktiviert ist. Innerhalb des Bereichs des Transaktionsflusses wird ein Protokoll der angeforderten Vorgänge in eine Datenbank geschrieben. Dieses bleibt dort erhalten, bis die clientkoordinierte Transaktion fertiggestellt wurde. Wenn die Clienttransaktion nicht fertiggestellt wird, stellt die Webdiensttransaktion sicher, dass die entsprechenden Aktualisierungen der Datenbank nicht ausgeführt werden.  
@@ -39,13 +39,13 @@ public interface ICalculator
 
  Auf diese Weise werden die Vorgänge in der Reihenfolge, in der sie verarbeitet werden sollten, definiert:  
   
--   Eine `Add`-Vorgangsanforderung muss einen Transaktionsfluss beinhalten.  
+- Eine `Add`-Vorgangsanforderung muss einen Transaktionsfluss beinhalten.  
   
--   Eine `Subtract`-Vorgangsanforderung kann einen Transaktionsfluss beinhalten.  
+- Eine `Subtract`-Vorgangsanforderung kann einen Transaktionsfluss beinhalten.  
   
--   Eine `Multiply`-Vorgangsanforderung darf keinen Transaktionsfluss durch die explizite NotAllowed-Einstellung beinhalten.  
+- Eine `Multiply`-Vorgangsanforderung darf keinen Transaktionsfluss durch die explizite NotAllowed-Einstellung beinhalten.  
   
--   Eine `Divide`-Vorgangsanforderung darf keinen Transaktionsfluss durch die Auslassung eines `TransactionFlow`-Attributs beinhalten.  
+- Eine `Divide`-Vorgangsanforderung darf keinen Transaktionsfluss durch die Auslassung eines `TransactionFlow`-Attributs beinhalten.  
   
  Zum Aktivieren des Transaktionsflusses, Bindungen, bei denen die [ \<TransactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) -Eigenschaft aktiviert ist, muss zusätzlich zu den entsprechenden Vorgangsattributen verwendet werden. In diesem Beispiel macht die Dienstkonfiguration zusätzlich zu einem Metadatenaustausch-Endpunkt einen TCP-Endpunkt und einen HTTP-Endpunkt verfügbar. Der TCP-Endpunkt und den HTTP-Endpunkt verwenden Sie die folgenden Bindungen, die jeweils die [ \<TransactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) -Eigenschaft aktiviert ist.  
   
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  Die Aufrufe der Vorgänge sehen folgendermaßen aus:  
   
--   Die `Add`-Anforderung übergibt die erforderliche Transaktion an den Dienst, und die Aktionen des Diensts treten innerhalb des Bereichs der Transaktion des Clients auf.  
+- Die `Add`-Anforderung übergibt die erforderliche Transaktion an den Dienst, und die Aktionen des Diensts treten innerhalb des Bereichs der Transaktion des Clients auf.  
   
--   Die erste `Subtract`-Anforderung übergibt die zulässige Transaktion ebenfalls an den Dienst, und die Aktionen des Diensts treten erneut innerhalb des Bereichs der Transaktion des Clients auf.  
+- Die erste `Subtract`-Anforderung übergibt die zulässige Transaktion ebenfalls an den Dienst, und die Aktionen des Diensts treten erneut innerhalb des Bereichs der Transaktion des Clients auf.  
   
--   Die zweite `Subtract`-Anforderung wird innerhalb eines neuen Transaktionsbereichs ausgeführt, der mit der `TransactionScopeOption.Suppress`-Option deklariert wird. Auf diese Weise wird die initiale äußere Transaktion des Clients unterdrückt, und die Anforderung übergibt keine Transaktion an den Dienst. Mithilfe dieses Verfahrens kann ein Client explizit deaktiviert werden, und es wird verhindert, dass eine Transaktion an einen Dienst übergeben wird, wenn diese nicht erforderlich ist. Die Aktionen des Diensts treten innerhalb des Bereichs einer neuen und unverbundenen Transaktion auf.  
+- Die zweite `Subtract`-Anforderung wird innerhalb eines neuen Transaktionsbereichs ausgeführt, der mit der `TransactionScopeOption.Suppress`-Option deklariert wird. Auf diese Weise wird die initiale äußere Transaktion des Clients unterdrückt, und die Anforderung übergibt keine Transaktion an den Dienst. Mithilfe dieses Verfahrens kann ein Client explizit deaktiviert werden, und es wird verhindert, dass eine Transaktion an einen Dienst übergeben wird, wenn diese nicht erforderlich ist. Die Aktionen des Diensts treten innerhalb des Bereichs einer neuen und unverbundenen Transaktion auf.  
   
--   Die `Multiply`-Anforderung übergibt keine Transaktion an den Dienst, da die generierte Definition der `ICalculator`-Schnittstelle ein <xref:System.ServiceModel.TransactionFlowAttribute> beinhaltet, für das <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed` festgelegt wurde.  
+- Die `Multiply`-Anforderung übergibt keine Transaktion an den Dienst, da die generierte Definition der `ICalculator`-Schnittstelle ein <xref:System.ServiceModel.TransactionFlowAttribute> beinhaltet, für das <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed` festgelegt wurde.  
   
--   Die `Divide`-Anforderung übergibt keine Transaktion an den Dienst, da die generierte Definition der `ICalculator`-Schnittstelle wiederum kein `TransactionFlowAttribute` beinhaltet. Die Aktionen des Diensts treten erneut innerhalb des Bereichs einer anderen neuen und unverbundenen Transaktion auf.  
+- Die `Divide`-Anforderung übergibt keine Transaktion an den Dienst, da die generierte Definition der `ICalculator`-Schnittstelle wiederum kein `TransactionFlowAttribute` beinhaltet. Die Aktionen des Diensts treten erneut innerhalb des Bereichs einer anderen neuen und unverbundenen Transaktion auf.  
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
@@ -238,47 +238,47 @@ Press <ENTER> to terminate the service.
   
 1. Konfigurieren Sie MSDTC auf einem Dienstcomputer unter Windows Server 2003 oder Windows XP entsprechend den folgenden Anweisungen so, dass eingehende Netzwerktransaktionen zugelassen werden.  
   
-    1.  Von der **starten** Menü navigieren Sie zu **Systemsteuerung**, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
+    1. Von der **starten** Menü navigieren Sie zu **Systemsteuerung**, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
   
-    2.  Erweitern Sie **Komponentendienste**. Öffnen der **Computer** Ordner.  
+    2. Erweitern Sie **Komponentendienste**. Öffnen der **Computer** Ordner.  
   
-    3.  Mit der rechten Maustaste **Arbeitsplatz** , und wählen Sie **Eigenschaften**.  
+    3. Mit der rechten Maustaste **Arbeitsplatz** , und wählen Sie **Eigenschaften**.  
   
-    4.  Auf der **MSDTC** auf **Sicherheitskonfiguration**.  
+    4. Auf der **MSDTC** auf **Sicherheitskonfiguration**.  
   
-    5.  Überprüfen Sie **DTC-Netzwerkzugriff** und **zulassen eingehender**.  
+    5. Überprüfen Sie **DTC-Netzwerkzugriff** und **zulassen eingehender**.  
   
-    6.  Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
+    6. Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
   
-    7.  Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    7. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
 2. Konfigurieren Sie MSDTC auf einem Dienstcomputer unter Windows Server 2008 oder Windows Vista entsprechend den folgenden Anweisungen so, dass eingehende Netzwerktransaktionen zugelassen werden.  
   
-    1.  Von der **starten** Menü navigieren Sie zu **Systemsteuerung**, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
+    1. Von der **starten** Menü navigieren Sie zu **Systemsteuerung**, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
   
-    2.  Erweitern Sie **Komponentendienste**. Öffnen der **Computer** Ordner. Wählen Sie **Distributed Transaction Coordinator**.  
+    2. Erweitern Sie **Komponentendienste**. Öffnen der **Computer** Ordner. Wählen Sie **Distributed Transaction Coordinator**.  
   
-    3.  Mit der rechten Maustaste **Distributed Transaction Coordinator** , und wählen Sie **Eigenschaften**.  
+    3. Mit der rechten Maustaste **Distributed Transaction Coordinator** , und wählen Sie **Eigenschaften**.  
   
-    4.  Auf der **Sicherheit** Registerkarte **DTC-Netzwerkzugriff** und **Allow Inbound**.  
+    4. Auf der **Sicherheit** Registerkarte **DTC-Netzwerkzugriff** und **Allow Inbound**.  
   
-    5.  Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
+    5. Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
   
-    6.  Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
 3. Konfigurieren Sie auf dem Clientcomputer MSDTC zum Zulassen von ausgehenden Netzwerktransaktionen:  
   
-    1.  Von der **starten** Menü navigieren Sie zu `Control Panel`, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
+    1. Von der **starten** Menü navigieren Sie zu `Control Panel`, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
   
-    2.  Mit der rechten Maustaste **Arbeitsplatz** , und wählen Sie **Eigenschaften**.  
+    2. Mit der rechten Maustaste **Arbeitsplatz** , und wählen Sie **Eigenschaften**.  
   
-    3.  Auf der **MSDTC** auf **Sicherheitskonfiguration**.  
+    3. Auf der **MSDTC** auf **Sicherheitskonfiguration**.  
   
-    4.  Überprüfen Sie **DTC-Netzwerkzugriff** und **ausgehende zulassen**.  
+    4. Überprüfen Sie **DTC-Netzwerkzugriff** und **ausgehende zulassen**.  
   
-    5.  Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
+    5. Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
   
-    6.  Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

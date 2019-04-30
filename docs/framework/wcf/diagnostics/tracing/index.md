@@ -3,20 +3,20 @@ title: Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997983"
 ---
 # <a name="tracing"></a>Ablaufverfolgung
 Windows Communication Foundation (WCF) bietet Anwendungsinstrumentation und Diagnosedaten für die Fehlerüberwachung und Analyse. Sie können die Ablaufverfolgung an Stelle eines Debuggers verwenden, um zu erfahren, wie sich eine Anwendung verhält oder warum sie Fehler generiert. Für ein End-to-End-Ereignis können Sie auch Fehler und Verarbeitung über mehrere Komponenten hinweg korrelieren.  
   
  WCF gibt die folgenden Daten für die diagnoseablaufverfolgung aus:  
   
--   Ablaufverfolgungen für Verarbeitungsmeilensteine in allen Komponenten der Anwendungen, z.&amp;#160;B. Vorgangsaufrufe, Codeausnahmen, Warnungen und andere wichtige Verarbeitungsereignisse.  
+- Ablaufverfolgungen für Verarbeitungsmeilensteine in allen Komponenten der Anwendungen, z.&amp;#160;B. Vorgangsaufrufe, Codeausnahmen, Warnungen und andere wichtige Verarbeitungsereignisse.  
   
--   Windows-Fehlerereignisse bei Fehlern der Ablaufverfolgungsfunktion.  
+- Windows-Fehlerereignisse bei Fehlern der Ablaufverfolgungsfunktion.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  

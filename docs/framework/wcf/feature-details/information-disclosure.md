@@ -3,11 +3,11 @@ title: Veröffentlichung von Informationen
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972600"
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
 Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Informationen über ein System zu gelangen. Daher sollten Sie immer genau überlegen, welche Informationen offengelegt werden und ob sie von anderen Personen böswillig missbraucht werden könnten. Im Folgenden finden Sie eine Übersicht über mögliche Angriffe auf veröffentlichte Informationen mit den entsprechenden Entschärfungen.  
@@ -32,16 +32,16 @@ Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Inf
   
  Folgende Maßnahmen mindern das Risiko:  
   
--   Dienstverweise werden als vertrauenswürdig angesehen. Falls Sie Dienstverweisinstanzen übertragen, sollten Sie daher sicherstellen, dass diese nicht manipuliert wurden.  
+- Dienstverweise werden als vertrauenswürdig angesehen. Falls Sie Dienstverweisinstanzen übertragen, sollten Sie daher sicherstellen, dass diese nicht manipuliert wurden.  
   
--   Bei einigen Anwendungen haben Benutzer die Möglichkeit, die Vertrauenswürdigkeit interaktiv basierend auf Daten im Dienstverweis und anhand von vertrauenswürdigen Daten, die durch den Remotehost belegt wurden, herzustellen. WCF stellt Erweiterungspunkte für diese Funktion bereit, aber der Benutzer muss implementiert werden.  
+- Bei einigen Anwendungen haben Benutzer die Möglichkeit, die Vertrauenswürdigkeit interaktiv basierend auf Daten im Dienstverweis und anhand von vertrauenswürdigen Daten, die durch den Remotehost belegt wurden, herzustellen. WCF stellt Erweiterungspunkte für diese Funktion bereit, aber der Benutzer muss implementiert werden.  
   
 ## <a name="ntlm"></a>NTLM  
  In der Windows-Domänenumgebung wird zur Authentifizierung und Autorisierung von Benutzern über die Windows-Authentifizierung standardmäßig das Kerberos-Protokoll verwendet. Falls das Kerberos-Protokoll nicht verwendet werden kann, wird für diesen Zweck NT LAN Manager (NTLM) herangezogen. Sie können dieses Verhalten deaktivieren, indem Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false` festlegen. Beachten Sie unter anderem folgende Punkte, wenn Sie NTLM zulassen:  
   
--   NTLM gibt den Clientbenutzernamen bekannt. Falls der Benutzername vertraulich behandelt werden muss, legen Sie die `AllowNTLM`-Eigenschaft für die Bindung auf `false` fest.  
+- NTLM gibt den Clientbenutzernamen bekannt. Falls der Benutzername vertraulich behandelt werden muss, legen Sie die `AllowNTLM`-Eigenschaft für die Bindung auf `false` fest.  
   
--   NTLM stellt keine Serverauthentifizierung bereit. Daher hat der Client bei Verwendung von NTLM als Authentifizierungsprotokoll keine Möglichkeit sicherzustellen, dass die Kommunikation mit dem richtigen Dienst erfolgt.  
+- NTLM stellt keine Serverauthentifizierung bereit. Daher hat der Client bei Verwendung von NTLM als Authentifizierungsprotokoll keine Möglichkeit sicherzustellen, dass die Kommunikation mit dem richtigen Dienst erfolgt.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Die Angabe von Clientanmeldeinformationen oder eine ungültige Identität erzwingt die Verwendung von NTLM  
  Werden beim Erstellen eines Clients Clientanmeldeinformationen ohne Domänennamen oder eine ungültige Serveridentität angegeben, wird NTLM anstelle des Kerberos-Protokolls verwendet (sofern die `AlllowNtlm`-Eigenschaft auf `true` festgelegt wurde). Da NTLM keine Serverauthentifizierung durchführt, können Informationen potenziell offengelegt werden.  

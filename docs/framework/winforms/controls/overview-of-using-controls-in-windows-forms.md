@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012710"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Übersicht über die Verwendung von Steuerelementen in Windows Forms
 In diesem Thema wird beschrieben, die wesentlichen Bestandteile einer Windows Forms-Anwendung und bietet ein einfaches Beispiel, das Steuerelemente verwendet und behandelt Ereignisse, die in einer Windows Forms-Anwendung.  
@@ -22,9 +22,9 @@ In diesem Thema wird beschrieben, die wesentlichen Bestandteile einer Windows Fo
 ## <a name="simple-windows-forms-applications"></a>Einfaches Windows Forms-Anwendungen  
  Besteht aus mindestens eine Windows Forms-Anwendung die folgenden Elemente:  
   
--   Eine oder mehrere abgeleitete Klassen <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Eine oder mehrere abgeleitete Klassen <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Ein `Main` Methode, die aufruft der `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> -Methode auf und übergibt eine <xref:System.Windows.Forms.Form> Instanz darauf. Die <xref:System.Windows.Forms.Application.Run%2A> Methode verarbeitet Nachrichten aus dem Betriebssystem zur Anwendung.  
+- Ein `Main` Methode, die aufruft der `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> -Methode auf und übergibt eine <xref:System.Windows.Forms.Form> Instanz darauf. Die <xref:System.Windows.Forms.Application.Run%2A> Methode verarbeitet Nachrichten aus dem Betriebssystem zur Anwendung.  
   
  Das folgende Codebeispiel zeigt die wesentlichen Bestandteile einer Windows Forms-Anwendung.  
   

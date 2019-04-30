@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970832"
 ---
 # <a name="myresources-object"></a>My.Resources-Objekt
 Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendung bereit.  
@@ -32,11 +32,11 @@ Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendu
   
  Jede Ressource verfügt über ein Name, Kategorie und Wert und die ressourceneinstellungen für diese zu ermitteln, wie die Eigenschaft, die Zugriff auf die Ressource in angezeigt wird der `My.Resources` Objekt. Für Ressourcen, die hinzugefügt werden, der **Projekt-Designer**:  
   
--   Den Namen des bestimmt des Namens der Eigenschaft,  
+- Den Namen des bestimmt des Namens der Eigenschaft,  
   
--   Die Ressourcendaten ist der Wert der Eigenschaft,  
+- Die Ressourcendaten ist der Wert der Eigenschaft,  
   
--   Die Kategorie bestimmt den Typ der Eigenschaft:  
+- Die Kategorie bestimmt den Typ der Eigenschaft:  
   
 |Kategorie|Eigenschaftsdatentyp|  
 |---|---|  

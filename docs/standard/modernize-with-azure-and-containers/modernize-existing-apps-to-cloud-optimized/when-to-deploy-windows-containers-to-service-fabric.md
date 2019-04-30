@@ -1,25 +1,25 @@
 ---
-title: Beim Bereitstellen von Windows-Containern in Service Fabric
+title: Umstände, unter denen eine Bereitstellung von Windows-Containern in Service Fabric erfolgen sollte
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Beim Bereitstellen von Windows-Containern in Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973657"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Beim Bereitstellen von Windows-Containern in Service Fabric
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Umstände, unter denen eine Bereitstellung von Windows-Containern in Service Fabric erfolgen sollte
 
 Anwendungen, die auf Windows-Containern basieren müssen schnell Plattformen verwenden, die noch einen Schritt weiter entfernt vom virtuellen IaaS-Computern verschieben. Dies ist für die verbesserte automatische Skalierbarkeit und hohe Skalierbarkeit, und um wesentliche Verbesserungen in eine umfassende Verwaltungsoberfläche für Bereitstellungen zu erhalten. upgrades, Versionskontrolle, Rollbacks und Überwachung der Integrität. Sie können diese Ziele erreichen, mit der Orchestrator-Azure Service Fabric, in der Microsoft Azure-Cloud, sondern auch auf lokale oder sogar in einer anderen Cloud verfügbar.
 
 Viele Organisationen sind Lift & Shift bestehende monolithische Anwendungen in Container aus zwei Gründen:
 
--   Kostensenkungen, entweder durch die Konsolidierung und Entfernung der vorhandenen Hardware oder das Ausführen von Anwendungen mit einer höheren Dichte.
+- Kostensenkungen, entweder durch die Konsolidierung und Entfernung der vorhandenen Hardware oder das Ausführen von Anwendungen mit einer höheren Dichte.
 
--   Ein konsistenter bereitstellungvertrag zwischen Entwicklung und Betrieb.
+- Ein konsistenter bereitstellungvertrag zwischen Entwicklung und Betrieb.
 
 Verfolgen kosteneinsparungen verständlich ist und ist es wahrscheinlich, dass alle Unternehmen dieses Ziel referenzauswertung sind. Konsistente Bereitstellung ist schwieriger zu bewerten, aber es ist genauso wichtig. Ein konsistenter bereitstellungvertrag besagt, dass Entwickler können auch die Technologie verwenden, die ihnen passt, und das Betriebsteam Ruft eine einzelne Möglichkeit zum Bereitstellen und Verwalten von Anwendungen ab. Diese Vereinbarung behebt das Problem der Vorgänge, die die Komplexität der viele verschiedene Technologien verarbeiten müssen oder erzwingen, dass Entwickler arbeiten nur mit bestimmten Technologien. Im Wesentlichen wird jede Anwendung in einem eigenständigen Bereitstellungsabbild Container verwendet.
 

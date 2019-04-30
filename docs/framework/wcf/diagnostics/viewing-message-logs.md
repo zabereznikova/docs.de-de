@@ -3,11 +3,11 @@ title: Anzeigen von Nachrichtenprotokollen
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964397"
 ---
 # <a name="viewing-message-logs"></a>Anzeigen von Nachrichtenprotokollen
 In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können.  
@@ -29,9 +29,9 @@ In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können
   
  Sie können eine der folgenden Methoden verwenden, um dieses Problem zu lösen.  
   
--   Zeigen Sie nur zwei der drei Nachrichtenprotokolle im der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zu einem beliebigen Zeitpunkt.  
+- Zeigen Sie nur zwei der drei Nachrichtenprotokolle im der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zu einem beliebigen Zeitpunkt.  
   
--   Wenn Sie alle drei Protokolle anzeigen, müssen die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zur gleichen Zeit, können Sie den Relaydienst ändern, indem Sie beim Erstellen eines neuen <xref:System.ServiceModel.Channels.Message> Instanz. Bei dieser Instanz sollte es sich um eine Kopie des Textes der eingehenden Nachricht handeln und zusätzlich um alle Header mit Ausnahme des `ActivityId`-Headers und des `Action`-Headers. Der folgende Beispielcode veranschaulicht, wie Sie dabei vorgehen:  
+- Wenn Sie alle drei Protokolle anzeigen, müssen die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zur gleichen Zeit, können Sie den Relaydienst ändern, indem Sie beim Erstellen eines neuen <xref:System.ServiceModel.Channels.Message> Instanz. Bei dieser Instanz sollte es sich um eine Kopie des Textes der eingehenden Nachricht handeln und zusätzlich um alle Header mit Ausnahme des `ActivityId`-Headers und des `Action`-Headers. Der folgende Beispielcode veranschaulicht, wie Sie dabei vorgehen:  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Ausnahmefälle für ungenauen Nachrichtenprotokollierungsinhalt  
  Unter den folgenden Bedingungen entsprechen die protokollierten Nachrichten eventuell nicht genau der Darstellung des in der Verbindung vorhandenen octet-Streams.  
   
--   Für BasicHttpBinding werden Umschlagheader für die eingehenden Nachrichten im /adressing/non-Namespace protokolliert.  
+- Für BasicHttpBinding werden Umschlagheader für die eingehenden Nachrichten im /adressing/non-Namespace protokolliert.  
   
--   Leerräume können unpassend gepaart werden.  
+- Leerräume können unpassend gepaart werden.  
   
--   Für eingehende Nachrichten können leere Elemente unterschiedlich dargestellt werden. Z. B. \<Tag >\</-Tag > anstelle von \<Tag / >  
+- Für eingehende Nachrichten können leere Elemente unterschiedlich dargestellt werden. Z. B. \<Tag >\</-Tag > anstelle von \<Tag / >  
   
--   Wenn die bekannte PII-Protokollierung deaktiviert ist, indem standardmäßig oder ausdrücklich enableLoggingKnownPii auf "true" festgelegt wird.  
+- Wenn die bekannte PII-Protokollierung deaktiviert ist, indem standardmäßig oder ausdrücklich enableLoggingKnownPii auf "true" festgelegt wird.  
   
--   Die Codierung wird für die Transformation in UTF-8 aktiviert.  
+- Die Codierung wird für die Transformation in UTF-8 aktiviert.  
   
 ## <a name="see-also"></a>Siehe auch
 

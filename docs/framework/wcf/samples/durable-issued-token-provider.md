@@ -3,11 +3,11 @@ title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
 ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990209"
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
@@ -15,21 +15,21 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 ## <a name="discussion"></a>Diskussion  
  Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen angeben. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
--   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem der integrierte Tokenanbieter nicht umgehen kann.  
+- Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem der integrierte Tokenanbieter nicht umgehen kann.  
   
--   Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
+- Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
   
--   Wenn Sie ein benutzerdefiniertes Token erstellen.  
+- Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
  Dieses Beispiel veranschaulicht die Erstellung eines benutzerdefinierten Tokenanbieters, der von einem Sicherheitstokendienst (STS, Security Token Service) ausgestellte Token zwischenspeichert.  
   
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:  
   
--   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
+- Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
   
--   Wie ausgestellte Token zwischengespeichert und an den WCF-Client bereitgestellt werden können.  
+- Wie ausgestellte Token zwischengespeichert und an den WCF-Client bereitgestellt werden können.  
   
--   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
+- Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
   
  Das Beispiel besteht aus einem Clientkonsolenprogramm (Client.exe), einem Konsolenprogramm für den Sicherheitstokendienst (Securitytokenservice.exe) und einem Dienstkonsolenprogramm (Service.exe). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Der Client empfängt ein Sicherheitstoken vom STS und fordert beim Dienst asynchron einen bestimmten mathematischen Vorgang an. Der Dienst antwortet mit dem Ergebnis. Die Clientaktivität ist im Konsolenfenster sichtbar.  
   

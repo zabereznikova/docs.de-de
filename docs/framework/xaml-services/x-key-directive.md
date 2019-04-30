@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971820"
 ---
 # <a name="xkey-directive"></a>x:Key-Anweisung
 Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erstellt und referenziert werden. Einem XAML-Objektelement einen `x:Key`-Wert hinzuzufügen, ist der üblichste Weg, um eine Ressource in einem Ressourcenwörterbuch, beispielsweise in einem WPF- <xref:System.Windows.ResourceDictionary> zu identifizieren.  
@@ -61,9 +61,9 @@ Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erste
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
  Untergeordnete Objekte eines übergeordneten Objekts, bei dem es sich um eine <xref:System.Collections.IDictionary>-Implementierung wie z. B. WPF <xref:System.Windows.ResourceDictionary> handelt, müssen im Allgemeinen ein `x:Key`-Attribut enthalten, und der Schlüsselwert muss in diesem Wörterbuch eindeutig sein. Dabei gelten zwei wichtige Ausnahmen:  
   
--   Einige WPF-Typen deklarieren einen impliziten Schlüssel für Wörterbuchverwendung. Zum Beispiel kann sich ein <xref:System.Windows.Style> mit einem <xref:System.Windows.Style.TargetType%2A> oder ein <xref:System.Windows.DataTemplate> mit einem <xref:System.Windows.DataTemplate.DataType%2A> in einem <xref:System.Windows.ResourceDictionary> befinden und den impliziten Schlüssel verwenden.  
+- Einige WPF-Typen deklarieren einen impliziten Schlüssel für Wörterbuchverwendung. Zum Beispiel kann sich ein <xref:System.Windows.Style> mit einem <xref:System.Windows.Style.TargetType%2A> oder ein <xref:System.Windows.DataTemplate> mit einem <xref:System.Windows.DataTemplate.DataType%2A> in einem <xref:System.Windows.ResourceDictionary> befinden und den impliziten Schlüssel verwenden.  
   
--   WPF unterstützt das Konzept zusammengeführter Ressourcenwörterbücher. Schlüssel können zwischen den zusammengeführten Wörterbüchern freigegeben sein, und auf das Verhalten der freigegebenen Schlüssel kann mit <xref:System.Windows.FrameworkContentElement.FindResource%2A> zugegriffen werden. Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenverzeichnisse](../wpf/advanced/merged-resource-dictionaries.md).  
+- WPF unterstützt das Konzept zusammengeführter Ressourcenwörterbücher. Schlüssel können zwischen den zusammengeführten Wörterbüchern freigegeben sein, und auf das Verhalten der freigegebenen Schlüssel kann mit <xref:System.Windows.FrameworkContentElement.FindResource%2A> zugegriffen werden. Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenverzeichnisse](../wpf/advanced/merged-resource-dictionaries.md).  
   
  In der gesamten WPF-XAML-Implementierung und im Anwendungsmodell wird die Eindeutigkeit der Schlüssel nicht vom XAML-Markupcompiler überprüft. Stattdessen führen fehlende oder nicht eindeutige `x:Key`-Werte zu XAML-Parser-Ladezeitfehlern. Allerdings kann Visual Studio-Behandlung von Wörterbüchern für WPF solche Fehler häufig in der Entwurfsphase beachten.  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|Objektelement für das Objekt, das für ein angegebenes `object` in einem spezialisierten Wörterbuch als Schlüssel verwendet wird.|  
   
--   Der Container/das übergeordnete Element für diesen Typ der Verwendung wird hier nicht angezeigt. `object` wird erwartungsgemäß ein untergeordnetes Element eines Objektelements sein, das eine spezialisierte Wörterbuchimplementierung darstellt. `keyObject` ist erwartungsgemäß eine Objektinstanz (oder ein Wert eines Werttyps), die als Schlüssel für diese bestimmte spezialisierte Wörterbuchimplementierung geeignet ist.  
+- Der Container/das übergeordnete Element für diesen Typ der Verwendung wird hier nicht angezeigt. `object` wird erwartungsgemäß ein untergeordnetes Element eines Objektelements sein, das eine spezialisierte Wörterbuchimplementierung darstellt. `keyObject` ist erwartungsgemäß eine Objektinstanz (oder ein Wert eines Werttyps), die als Schlüssel für diese bestimmte spezialisierte Wörterbuchimplementierung geeignet ist.  
   
--   WPF implementiert keine Wörterbücher, die diese Verwendung erfordern. Objektschlüssel sind eine allgemeinere Funktion der XAML-Sprache. Sie sind möglicherweise nützlich für bestimmte Benutzerwörterbuchszenarien, in denen das Erstellen des Wörterbuchs in XAML wünschenswert ist. Bei WPF-Funktionen, wie beispielsweise impliziten Stilen, die für Ressourcen Schlüssel verwenden, die keine Zeichenfolgen sind, gibt es andere Techniken für das Festlegen oder das Angeben der Schlüssel. Deshalb ist es nicht notwendig, einen Objektschlüssel zu verwenden.  
+- WPF implementiert keine Wörterbücher, die diese Verwendung erfordern. Objektschlüssel sind eine allgemeinere Funktion der XAML-Sprache. Sie sind möglicherweise nützlich für bestimmte Benutzerwörterbuchszenarien, in denen das Erstellen des Wörterbuchs in XAML wünschenswert ist. Bei WPF-Funktionen, wie beispielsweise impliziten Stilen, die für Ressourcen Schlüssel verwenden, die keine Zeichenfolgen sind, gibt es andere Techniken für das Festlegen oder das Angeben der Schlüssel. Deshalb ist es nicht notwendig, einen Objektschlüssel zu verwenden.  
   
--   *KeyObject* möglicherweise auch eine Markuperweiterungsverwendung in Objektelementform anstelle einer direkten Objektinstanz.  
+- *KeyObject* möglicherweise auch eine Markuperweiterungsverwendung in Objektelementform anstelle einer direkten Objektinstanz.  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight-Verwendungshinweise  
  `x:Key` für Silverlight wird separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
 ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972184"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms
 Sie können ein Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente, um ein Fehlersymbol angezeigt wird, wenn der Benutzer unzulässige Daten eingibt. Sie müssen mindestens zwei Steuerelemente im Formular aus, um zwischen diesen gewechselt und aufgerufen Validierungscode verfügen.  

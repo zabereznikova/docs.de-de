@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973770"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms
 Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:System.Windows.Forms.DataGridView> -Steuerelements legen Sie die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und explizit die Interaktion mit dem Datenspeicher des Steuerelements verwalten. Dadurch können Sie die Leistung des Steuerelements in diesem Fall optimieren.  
@@ -112,16 +112,16 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
   
 #### <a name="to-test-the-form"></a>So testen Sie das Formular  
   
--   Kompilieren Sie die Anwendung, und führen Sie sie aus.  
+- Kompilieren Sie die Anwendung, und führen Sie sie aus.  
   
      Sie sehen eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit drei Kundendatensätze aufgefüllt. Sie können ändern Sie die Werte aus mehreren Zellen in einer Zeile, und drücken Sie ESC, zweimal im Bearbeitungsmodus befindet und einmal außerhalb Bearbeitungszustand versetzt, damit die gesamte Zeile auf die ursprünglichen Werte zurückgesetzt. Wenn Sie ändern, hinzufügen oder Löschen von Zeilen im Steuerelement `Customer` Objekte im Datenspeicher geändert, hinzugefügt oder ebenfalls gelöscht werden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Diese Anwendung verfügt über einen grundlegenden Überblick über die Ereignisse müssen Sie zum Implementieren virtuellen Modus im behandeln die <xref:System.Windows.Forms.DataGridView> Steuerelement. Sie können diese einfache vorlagenanwendung auf vielfältige Weise verbessern:  
   
--   Implementieren Sie einen Datenspeicher, der Werte aus einer externen Datenbank speichert. Der Cache sollte abrufen und die Werte nach Bedarf zu verwerfen, sodass sie nur enthält, was für die Anzeige während der Verarbeitung von einem kleinen Teil des Arbeitsspeichers auf dem Clientcomputer erforderlich ist.  
+- Implementieren Sie einen Datenspeicher, der Werte aus einer externen Datenbank speichert. Der Cache sollte abrufen und die Werte nach Bedarf zu verwerfen, sodass sie nur enthält, was für die Anzeige während der Verarbeitung von einem kleinen Teil des Arbeitsspeichers auf dem Clientcomputer erforderlich ist.  
   
--   Optimieren Sie die Leistung des Datenspeichers je nach Ihren Anforderungen. Beispielsweise empfiehlt es sich um für langsame Netzwerkverbindungen anstelle von Client-Computer-Memory-Einschränkungen zu kompensieren, indem Sie einen größeren Cache und Verringerung der Anzahl von Abfragen.  
+- Optimieren Sie die Leistung des Datenspeichers je nach Ihren Anforderungen. Beispielsweise empfiehlt es sich um für langsame Netzwerkverbindungen anstelle von Client-Computer-Memory-Einschränkungen zu kompensieren, indem Sie einen größeren Cache und Verringerung der Anzahl von Abfragen.  
   
  Weitere Informationen zum Zwischenspeichern von Werten aus einer externen Datenbank finden Sie unter [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das Windows Forms-DataGridView-Steuerelement](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   

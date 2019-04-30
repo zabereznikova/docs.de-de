@@ -8,11 +8,11 @@ helpviewer_keywords:
 - playback of media [WPF], repeating
 ms.assetid: 02ab486d-c6b6-4918-9edd-45a12aca4683
 ms.openlocfilehash: 788bc6f31d61626f15548791135adb8c60258b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942050"
 ---
 # <a name="how-to-repeat-media-playback"></a>Vorgehensweise: Wiederholen der Medienwiedergabe
 In diesem Beispiel wird gezeigt, wie Medien permanent bzw. in einer Endlosschleife wiedergegeben werden können.  

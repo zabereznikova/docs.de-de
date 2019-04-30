@@ -3,11 +3,11 @@ title: Einführung in das Routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991093"
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
 Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit, der Nachrichten basierend auf dem Nachrichteninhalts weiterleiten kann. Mit dem Routingdienst können Sie eine komplexe Routinglogik erstellen, mit der Sie Szenarios wie Dienstaggregation, Dienstversionsverwaltung, Prioritätsrouting und Multicastrouting implementieren können. Außerdem stellt der Routingdienst eine Fehlerbehandlung bereit. Damit können Sie Listen von Sicherungsendpunkten einrichten, an die Nachrichten gesendet werden, falls beim Senden an den primären Zielendpunkt ein Fehler auftritt.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Viele Routingdienstkonfigurationen verwenden zwar eine exklusive Filterlogik, die Nachrichten an nur einen bestimmten Endpunkt weiterleitet, aber es kann erforderlich sein, dass Sie eine bestimmte Nachricht an mehrere Zielendpunkte weiterleiten müssen. Um für eine Nachricht per Multicast an mehrere Ziele zu senden, müssen die folgenden Bedingungen erfüllt sein:  
   
--   Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
+- Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
   
--   Mehrere Filter müssen beim Auswerten der Nachricht `true` zurückgeben.  
+- Mehrere Filter müssen beim Auswerten der Nachricht `true` zurückgeben.  
   
  Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Das folgende Beispiel definiert eine Konfiguration für routing, das Nachrichten an beide Endpunkte weitergeleitet wird, ist die Endpunktadresse in der Nachricht dazu `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **Verarbeiten von Anforderungen**  
   
--   Abrufen der **MessageVersion** von der ausgehenden Bindung bzw. des Kanals.  
+- Abrufen der **MessageVersion** von der ausgehenden Bindung bzw. des Kanals.  
   
--   Rufen Sie den Textreader für die ursprüngliche Nachricht ab.  
+- Rufen Sie den Textreader für die ursprüngliche Nachricht ab.  
   
--   Erstellen Sie eine neue Nachricht mit der gleichen Aktion, TextReader und ein neues **MessageVersion**.  
+- Erstellen Sie eine neue Nachricht mit der gleichen Aktion, TextReader und ein neues **MessageVersion**.  
   
--   Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From "," FaultTo, kopieren und RelatesTo-Header in die neue Nachricht.  
+- Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From "," FaultTo, kopieren und RelatesTo-Header in die neue Nachricht.  
   
--   Kopieren Sie alle Eigenschaften der Nachricht in die neue Nachricht.  
+- Kopieren Sie alle Eigenschaften der Nachricht in die neue Nachricht.  
   
--   Speichern Sie die ursprüngliche Anforderungsnachricht, die zum Verarbeiten der Antwort verwendet werden soll.  
+- Speichern Sie die ursprüngliche Anforderungsnachricht, die zum Verarbeiten der Antwort verwendet werden soll.  
   
--   Geben Sie die neue Anforderungsnachricht zurück.  
+- Geben Sie die neue Anforderungsnachricht zurück.  
   
  **Antworten zu verarbeiten**  
   
--   Abrufen der **MessageVersion** der ursprünglichen Anforderungsnachricht.  
+- Abrufen der **MessageVersion** der ursprünglichen Anforderungsnachricht.  
   
--   Rufen Sie den Textreader für die empfangene Antwortnachricht ab.  
+- Rufen Sie den Textreader für die empfangene Antwortnachricht ab.  
   
--   Erstellen Sie eine neue Antwortnachricht mit der gleichen Aktion, TextReader und **MessageVersion** der ursprünglichen Anforderungsnachricht.  
+- Erstellen Sie eine neue Antwortnachricht mit der gleichen Aktion, TextReader und **MessageVersion** der ursprünglichen Anforderungsnachricht.  
   
--   Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From "," FaultTo, kopieren und RelatesTo-Header in die neue Nachricht.  
+- Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From "," FaultTo, kopieren und RelatesTo-Header in die neue Nachricht.  
   
--   Kopieren Sie die Eigenschaften der Nachricht in die neue Nachricht.  
+- Kopieren Sie die Eigenschaften der Nachricht in die neue Nachricht.  
   
--   Geben Sie die neue Antwortnachricht zurück.  
+- Geben Sie die neue Antwortnachricht zurück.  
   
  Standardmäßig die **SoapProcessingBehavior** wird automatisch hinzugefügt, den Clientendpunkten die <xref:System.ServiceModel.Routing.RoutingBehavior> Wenn der Dienst gestartet wird; allerdings können Sie steuern, ob SOAP-Verarbeitung mit allen Clientendpunkten hinzugefügt wird die <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> Eigenschaft. Sie können das Verhalten auch direkt einem bestimmten Endpunkt hinzufügen und es auf Endpunktebene aktivieren oder deaktivieren, falls eine präzisere Steuerung der SOAP-Verarbeitung erforderlich ist.  
   

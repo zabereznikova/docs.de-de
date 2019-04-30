@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Erstellen eines Anforderung-Antwort-Vertrags'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000986"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Vorgehensweise: Erstellen eines Anforderung-Antwort-Vertrags
 Ein Anforderung-Antwort-Vertrag gibt eine Methode an, die eine Antwort zurückgibt. Die Antwort muss gesendet und unter den Bedingungen dieses Vertrags mit der Anforderung in Beziehung gesetzt werden. Selbst wenn die Methode keine Antwort (`void` in C# oder `Sub` in Visual Basic) zurückgibt, wird von der Infrastruktur eine leere Nachricht erstellt und gesendet, um dem Aufrufer mitzuteilen, dass die Methode einen Wert zurückgegeben hat. Verwenden Sie einen unidirektionalen Vertrag für die Operation, um das Senden einer leeren Mitteilung zu unterbinden.  
@@ -43,9 +43,9 @@ public interface ICalculator
 }
 ```
   
--   Weitere Informationen zur Vorgehensweise beim Angeben von vorgangsverträgen finden Sie unter den <xref:System.ServiceModel.OperationContractAttribute> Klasse und die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Eigenschaft.  
+- Weitere Informationen zur Vorgehensweise beim Angeben von vorgangsverträgen finden Sie unter den <xref:System.ServiceModel.OperationContractAttribute> Klasse und die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> Eigenschaft.  
   
--   Durch Anwenden des <xref:System.ServiceModel.ServiceContractAttribute>-Attributs und des <xref:System.ServiceModel.OperationContractAttribute>-Attributs wird die automatische Generierung von Dienstvertragsdefinitionen in einem WSDL (Web Services Description Language)-Dokument ermöglicht, sobald der Dienst bereitgestellt wird. Das Dokument wird durch Anfügen von `?wsdl` an die HTTP-Basisadresse des Diensts heruntergeladen. Beispiel: `http://microsoft/CalculatorService?wsdl`  
+- Durch Anwenden des <xref:System.ServiceModel.ServiceContractAttribute>-Attributs und des <xref:System.ServiceModel.OperationContractAttribute>-Attributs wird die automatische Generierung von Dienstvertragsdefinitionen in einem WSDL (Web Services Description Language)-Dokument ermöglicht, sobald der Dienst bereitgestellt wird. Das Dokument wird durch Anfügen von `?wsdl` an die HTTP-Basisadresse des Diensts heruntergeladen. Beispiel: `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Siehe auch
 

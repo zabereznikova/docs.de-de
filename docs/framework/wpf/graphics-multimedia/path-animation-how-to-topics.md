@@ -8,11 +8,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
 ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973692"
 ---
 # <a name="path-animation-how-to-topics"></a>Gewusst-wie-Themen zur Pfadanimation
 In die Themen in diesem Abschnitt veranschaulichen, wie Sie ein Objekt entlang eines Pfads zu animieren.  

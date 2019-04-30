@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994044"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains-Methode
 Ruft einen Schnittstellenzeiger auf einem ICorDebugChainEnum-Enumerator, der alle Stapelketten in diesem ICorDebugThread-Objekt enthält.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Hinweise  
  Die Stapelkette stellt die physische Aufrufliste für den Thread dar. Die folgenden Situationen erstellen Sie eine Kette-Grenze von Stack:  
   
--   Ein Übergang verwalteten zum nicht verwalteten oder nicht verwaltet zu verwaltet.  
+- Ein Übergang verwalteten zum nicht verwalteten oder nicht verwaltet zu verwaltet.  
   
--   Ein Wechsel des Ausführungskontexts.  
+- Ein Wechsel des Ausführungskontexts.  
   
--   Ein debugger-Hijacking eines Benutzerthreads.  
+- Ein debugger-Hijacking eines Benutzerthreads.  
   
  Im einfachen Fall für einen Thread, der ausschließlich verwalteten Code in einem einzelnen Kontext ausgeführt wird, wird eine 1: 1-Entsprechung zwischen Threads und Stapelketten vorhanden.  
   

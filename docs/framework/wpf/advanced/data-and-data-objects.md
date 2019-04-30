@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010617"
 ---
 # <a name="data-and-data-objects"></a>Daten und Datenobjekte
 Als Teil eines Drag & Drop-Vorgangs übertragenen Daten werden in einem Datenobjekt gespeichert.  Konzeptionell besteht aus einem Datenobjekt eine oder mehrere der folgenden Paare:  
   
--   Ein <xref:System.Object> , die die eigentlichen Daten enthält.  
+- Ein <xref:System.Object> , die die eigentlichen Daten enthält.  
   
--   Einem entsprechenden Datenformatbezeichner.  
+- Einem entsprechenden Datenformatbezeichner.  
   
  Die Daten selbst können alle Elemente, die als Basis dargestellt werden können bestehen <xref:System.Object>.  Das entsprechende Datenformat ist eine Zeichenfolge oder <xref:System.Type> , der ein Hinweis zum format der Daten ist bereitstellt.  Datenobjekte unterstützen mehrere Daten/Format Paare hosten kann. Dies ermöglicht ein einzelnen Datenobjekt Daten in mehreren Formaten bereitstellen.  
   

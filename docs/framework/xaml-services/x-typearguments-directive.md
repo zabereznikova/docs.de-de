@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982591"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments-Anweisung
 Einschränken von übergibt Typargumente eines generischen an den Konstruktor des generischen Typs.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Generische XAML-Verwendungen von XAML 2006 und WPF  
  Für die Verwendung von XAML 2006 und XAML, das für WPF-Anwendungen verwendet wird, der die folgenden Einschränkungen gelten für `x:TypeArguments` und generische Typverwendungen aus XAML im Allgemeinen:  
   
--   Nur das Stammelement einer XAML-Datei kann es sich um einen generischen XAML-Verwendung unterstützen, die einen generischen Typ verweist.  
+- Nur das Stammelement einer XAML-Datei kann es sich um einen generischen XAML-Verwendung unterstützen, die einen generischen Typ verweist.  
   
--   Das Stammelement muss auf einen generischen Typ mit mindestens einem Typargument zugeordnet. Ein Beispiel hierfür ist <xref:System.Windows.Navigation.PageFunction%601>. Die Seitenfunktionen sind das primäre Szenario für die generischen Verwendung-Unterstützung in WPF-XAML.  
+- Das Stammelement muss auf einen generischen Typ mit mindestens einem Typargument zugeordnet. Ein Beispiel hierfür ist <xref:System.Windows.Navigation.PageFunction%601>. Die Seitenfunktionen sind das primäre Szenario für die generischen Verwendung-Unterstützung in WPF-XAML.  
   
--   Außerdem muss das Stammelement Element XAML-Objektelement für das generische deklariert eine partielle Klasse mit `x:Class`. Dies gilt auch, wenn Definieren eines WPF-Buildvorgang.  
+- Außerdem muss das Stammelement Element XAML-Objektelement für das generische deklariert eine partielle Klasse mit `x:Class`. Dies gilt auch, wenn Definieren eines WPF-Buildvorgang.  
   
--   `x:TypeArguments` Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
+- `x:TypeArguments` Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 oder XAML 2006 ohne WPF 3.0 oder WPF 3.5 Abhängigkeit  
  In .NET Framework-XAML-Dienste für XAML 2006 oder XAML 2009 sind die WPF-bezogene Einschränkungen für generische XAML-Verwendung gelockert. Sie können ein generisches Objektelement an einer beliebigen Position im XAML-Markup instanziieren, die das dahinter liegende Typ und dem Objektmodell unterstützen kann.  

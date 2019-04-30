@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
 ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004080"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>Vorgehensweise: Zeichnen von Text in einem Windows Form
 Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> zum Zeichnen von Text in einem Formular. Alternativ können Sie <xref:System.Windows.Forms.TextRenderer> zum Zeichnen von Text in einem Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md).  
@@ -30,7 +30,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der <xref:System.Dra
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die Schriftart Arial ist nicht installiert.  
+- Die Schriftart Arial ist nicht installiert.  
   
 ## <a name="see-also"></a>Siehe auch
 

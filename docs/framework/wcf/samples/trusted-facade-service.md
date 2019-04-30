@@ -3,11 +3,11 @@ title: Vertrauenswürdiger Fassadendienst
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007694"
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
 Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufrufers aus einem Dienst in eine andere mithilfe von Windows Communication Foundation (WCF) flow Sicherheitsinfrastruktur.  
@@ -16,11 +16,11 @@ Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufruf
   
  Dieses Beispiel besteht aus den folgenden Komponenten:  
   
--   Rechnerclient  
+- Rechnerclient  
   
--   Rechnerfassadendienst  
+- Rechnerfassadendienst  
   
--   Rechner-Back-End-Dienst  
+- Rechner-Back-End-Dienst  
   
  Der Fassadendienst ist für die Überprüfung der Anforderung und die Authentifizierung des Aufrufers verantwortlich. Nach erfolgreicher Authentifizierung und Validierung leitet er die Anforderung an den Back-End-Dienst mithilfe des gesteuerten Kommunikationskanals vom Perimeternetzwerk zum internen Netzwerk weiter. Als Teil der weitergeleiteten Anforderung beinhaltet der Fassadendienst Informationen über die Identität des Aufrufers. So kann der Back-End-Dienst diese Informationen in der Verarbeitung verwenden. Die Identität des Aufrufers wird mit einem `Username` -Sicherheitstoken im Nachrichten- `Security` -Header gesendet. Das Beispiel verwendet die WCF-Sicherheitsinfrastruktur zu übertragen, und extrahieren diese Informationen aus der `Security` Header.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  Im Folgenden wird eine kurze Übersicht über die verschiedenen Abschnitte der Batchdateien bereitgestellt.  
   
--   Erstellen des Serverzertifikats.  
+- Erstellen des Serverzertifikats.  
   
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      Die `%SERVER_NAME%` -Variable gibt den Servernamen an – der Standardwert ist "localhost". Das Zertifikat wird im LocalMachine-Speicher gespeichert.  
   
--   Installieren des Fassadendienstzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients.  
+- Installieren des Fassadendienstzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients.  
   
      Die folgenden Zeilen kopieren das Fassadendienstzertifikat in den Clientspeicher für vertrauenswürdige Personen. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.  
   

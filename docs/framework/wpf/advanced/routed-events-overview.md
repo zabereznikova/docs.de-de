@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982359"
 ---
 # <a name="routed-events-overview"></a>Übersicht über Routingereignisse
 Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Das Thema definiert die Terminologie von Routingereignissen, beschreibt, wie Routingereignisse anhand einer Struktur von Elementen weitergeleitet werden und führt Sie in das Erstellen Ihrer eigenen, benutzerdefinierten Routingereignisse ein.
@@ -86,11 +86,11 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
 ## <a name="routing-strategies"></a>Routingstrategien  
  Routingereignisse verwenden eine von drei Routingstrategien:  
   
--   **Bubbling:** Die Ereignisquelle Ereignishandler werden aufgerufen. Das Routingereignis wird dann auf nachfolgenden übergeordnete Elemente weitergeleitet, bis es den Stamm der Elementstruktur erreicht. Die meisten Routingereignisse verwenden die Bubblingroutingstrategie. Bubblingroutingereignisse werden üblicherweise verwendet, um Eingabe- oder Zustandänderungen von unterschiedlichen Steuerelemente oder andere Elementen der Benutzeroberfläche zu melden.  
+- **Bubbling:** Die Ereignisquelle Ereignishandler werden aufgerufen. Das Routingereignis wird dann auf nachfolgenden übergeordnete Elemente weitergeleitet, bis es den Stamm der Elementstruktur erreicht. Die meisten Routingereignisse verwenden die Bubblingroutingstrategie. Bubblingroutingereignisse werden üblicherweise verwendet, um Eingabe- oder Zustandänderungen von unterschiedlichen Steuerelemente oder andere Elementen der Benutzeroberfläche zu melden.  
   
--   **Direkt:** Nur das Quellelement selbst erhält die Gelegenheit, Reaktion Handler aufrufen. Dies entspricht dem „Routing“, das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] für Ereignisse verwendet. Anders als bei einer Standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] -Ereignis unterstützen direkte Routingereignisse Klassenbehandlung (die Klassenbehandlung wird in einem späteren Abschnitt erläutert) und kann verwendet werden, indem <xref:System.Windows.EventSetter> und <xref:System.Windows.EventTrigger>.  
+- **Direkt:** Nur das Quellelement selbst erhält die Gelegenheit, Reaktion Handler aufrufen. Dies entspricht dem „Routing“, das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] für Ereignisse verwendet. Anders als bei einer Standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] -Ereignis unterstützen direkte Routingereignisse Klassenbehandlung (die Klassenbehandlung wird in einem späteren Abschnitt erläutert) und kann verwendet werden, indem <xref:System.Windows.EventSetter> und <xref:System.Windows.EventTrigger>.  
   
--   **Tunneling:** Zunächst werden Ereignishandler am Stamm Elementstruktur aufgerufen. Das Routingereignis bewegt sich dann über eine Route durch die nachfolgenden untergeordneten Elemente in Richtung des Knotenelements, das die Quelle des Routingereignisses ist (das Element, das das Routingereignis ausgelöst). Tunnelingroutingereignisse werden oft als Teil der Zusammensetzung eines Steuerelements verwendet oder behandelt, sodass Elemente der einzelnen Teile von Ereignissen, die für das vollständige Steuerelement spezifisch sind, bewusst unterdrückt oder ersetzt werden können. Eingabeereignisse aus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sind oft als Tunneling/Bubbling-Paar implementiert. Tunnelingereignisse werden manchmal auch als Vorschauereignisse bezeichnet; dies liegt an einer Benennungskonvention für Paare.  
+- **Tunneling:** Zunächst werden Ereignishandler am Stamm Elementstruktur aufgerufen. Das Routingereignis bewegt sich dann über eine Route durch die nachfolgenden untergeordneten Elemente in Richtung des Knotenelements, das die Quelle des Routingereignisses ist (das Element, das das Routingereignis ausgelöst). Tunnelingroutingereignisse werden oft als Teil der Zusammensetzung eines Steuerelements verwendet oder behandelt, sodass Elemente der einzelnen Teile von Ereignissen, die für das vollständige Steuerelement spezifisch sind, bewusst unterdrückt oder ersetzt werden können. Eingabeereignisse aus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sind oft als Tunneling/Bubbling-Paar implementiert. Tunnelingereignisse werden manchmal auch als Vorschauereignisse bezeichnet; dies liegt an einer Benennungskonvention für Paare.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>Was ist der Vorteil von Routingereignissen?  
@@ -104,9 +104,9 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Neben dem Routingaspekt gibt es zwei andere Gründe, aus denen ein beliebiges [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignis möglicherweise als Routingereignis statt als [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignis implementiert wird. Wenn Sie Ihr eigenes Ereignis implementieren, können Sie auch folgende Prinzipien berücksichtigen:  
   
--   Bestimmte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stile und Vorlagen Features wie z. B. <xref:System.Windows.EventSetter> und <xref:System.Windows.EventTrigger> erfordern das verwiesene Ereignis ein Routingereignis ist. Dies ist das Szenario mit einem Ereignisbezeichner, das weiter oben erwähnt wurde.  
+- Bestimmte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stile und Vorlagen Features wie z. B. <xref:System.Windows.EventSetter> und <xref:System.Windows.EventTrigger> erfordern das verwiesene Ereignis ein Routingereignis ist. Dies ist das Szenario mit einem Ereignisbezeichner, das weiter oben erwähnt wurde.  
   
--   Routingereignisse unterstützen einen Mechanismus zur Klassenbehandlung, durch den die Klasse statische Methoden angeben kann, die die Möglichkeit haben, Routingereignisse zu behandeln, bevor registrierte Instanzenhandler darauf zugreifen können. Dies ist beim Entwerfen von Steuerelementen hilfreich, da Ihre Klasse ereignisgesteuertes Klassenverhalten erzwingen kann, das nicht versehentlich durch das Behandeln eines Ereignisses auf einer Instanz unterdrückt werden kann.  
+- Routingereignisse unterstützen einen Mechanismus zur Klassenbehandlung, durch den die Klasse statische Methoden angeben kann, die die Möglichkeit haben, Routingereignisse zu behandeln, bevor registrierte Instanzenhandler darauf zugreifen können. Dies ist beim Entwerfen von Steuerelementen hilfreich, da Ihre Klasse ereignisgesteuertes Klassenverhalten erzwingen kann, das nicht versehentlich durch das Behandeln eines Ereignisses auf einer Instanz unterdrückt werden kann.  
   
  Jeder der oben genannten Aspekte wird in einem separaten Abschnitt dieses Themas erläutert.  
   
@@ -147,21 +147,21 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Es ist jedoch bei dem Listener weiterhin Handler als Reaktion auf Routingereignisse ausgeführt können Mechanismus "HandledEventsToo", in denen <xref:System.Windows.RoutedEventArgs.Handled%2A> ist `true` in den Ereignisdaten. Das heißt, ist die Ereignisroute nicht wirklich durch Markieren der Ereignisdaten als behandelt beendet. Sie können den HandledEventsToo-Mechanismus nur verwenden, im Code oder in einem <xref:System.Windows.EventSetter>:  
   
--   Im Code anstelle einer sprachspezifischen Ereignissyntax, das funktioniert für allgemeine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Aufrufen von Ereignissen, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Methode <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> um Ihren Handler hinzuzufügen. Legen Sie den Wert von `handledEventsToo` auf `true` fest.  
+- Im Code anstelle einer sprachspezifischen Ereignissyntax, das funktioniert für allgemeine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Aufrufen von Ereignissen, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Methode <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> um Ihren Handler hinzuzufügen. Legen Sie den Wert von `handledEventsToo` auf `true` fest.  
   
--   In einer <xref:System.Windows.EventSetter>legen die <xref:System.Windows.EventSetter.HandledEventsToo%2A> Attribut `true`.  
+- In einer <xref:System.Windows.EventSetter>legen die <xref:System.Windows.EventSetter.HandledEventsToo%2A> Attribut `true`.  
   
  Zusätzlich zu dem Verhalten, <xref:System.Windows.RoutedEventArgs.Handled%2A> Zustand erzeugt in Routingereignisse das Konzept der <xref:System.Windows.RoutedEventArgs.Handled%2A> hat Auswirkungen, wie Sie Ihre Anwendung entwerfen und den Ereignishandlercode schreiben sollten. Sie können konzipieren <xref:System.Windows.RoutedEventArgs.Handled%2A> als ein einfaches Protokoll, das von Routingereignissen verfügbar gemacht wird. Wie Sie dieses Protokoll genau verwenden liegt bei Sie, aber der konzeptuelle Entwurf, wie der Wert des <xref:System.Windows.RoutedEventArgs.Handled%2A> soll verwendet werden, lautet wie folgt:  
   
--   Wenn ein Routingereignis als behandelt markiert ist, muss es nicht von anderen Elementen auf dieser Route erneut verarbeitet werden.  
+- Wenn ein Routingereignis als behandelt markiert ist, muss es nicht von anderen Elementen auf dieser Route erneut verarbeitet werden.  
   
--   Wenn ein Routingereignis nicht als behandelt markiert ist, haben andere Listener, die zuvor entlang der Route ausgewählt, entweder nicht registriert einen Handler, oder der Handler, die registrierten ausgewählt haben, nicht zum Bearbeiten von Daten für das Ereignis aus, und legen Sie <xref:System.Windows.RoutedEventArgs.Handled%2A> zu `true`. (Es ist selbstverständlich auch möglich, dass der aktuelle Listener der erste Punkt auf der Route ist.) Handler auf dem aktuellen Listener verfügen jetzt über drei mögliche Vorgehensweisen:  
+- Wenn ein Routingereignis nicht als behandelt markiert ist, haben andere Listener, die zuvor entlang der Route ausgewählt, entweder nicht registriert einen Handler, oder der Handler, die registrierten ausgewählt haben, nicht zum Bearbeiten von Daten für das Ereignis aus, und legen Sie <xref:System.Windows.RoutedEventArgs.Handled%2A> zu `true`. (Es ist selbstverständlich auch möglich, dass der aktuelle Listener der erste Punkt auf der Route ist.) Handler auf dem aktuellen Listener verfügen jetzt über drei mögliche Vorgehensweisen:  
   
-    -   Führen Sie keine Aktion durch; das Ereignis bleibt unbehandelt und wird an den nächsten Listener weitergeleitet.  
+    - Führen Sie keine Aktion durch; das Ereignis bleibt unbehandelt und wird an den nächsten Listener weitergeleitet.  
   
-    -   Führen Sie Code als Reaktion auf das Ereignis aus, aber seien Sie sich im Klaren, dass die Aktion nicht umfangreich genug war, um ein Markieren des Ereignisses als „handled“ zu rechtfertigen. Das Ereignis wird an den nächsten Listener weitergeleitet.  
+    - Führen Sie Code als Reaktion auf das Ereignis aus, aber seien Sie sich im Klaren, dass die Aktion nicht umfangreich genug war, um ein Markieren des Ereignisses als „handled“ zu rechtfertigen. Das Ereignis wird an den nächsten Listener weitergeleitet.  
   
-    -   Führen Sie Code als Reaktion auf das Ereignis aus. Markieren Sie das Ereignis in den an den Handler übergebenen Ereignisdaten als „handled“, weil die ausgeführte Aktion umfangreich genug war, um das Markieren als „handled“ zu rechtfertigen. Das Ereignis weiterhin weitergeleitet werden können, an den nächsten Listener, jedoch mit <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` in seinen Ereignisdaten, sodass nur `handledEventsToo` Listener haben die Möglichkeit, weitere Handler aufzurufen.  
+    - Führen Sie Code als Reaktion auf das Ereignis aus. Markieren Sie das Ereignis in den an den Handler übergebenen Ereignisdaten als „handled“, weil die ausgeführte Aktion umfangreich genug war, um das Markieren als „handled“ zu rechtfertigen. Das Ereignis weiterhin weitergeleitet werden können, an den nächsten Listener, jedoch mit <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` in seinen Ereignisdaten, sodass nur `handledEventsToo` Listener haben die Möglichkeit, weitere Handler aufzurufen.  
   
  Dieser konzeptuelle Entwurf wird durch die oben genannten Routingverhalten bestätigt: Es ist schwieriger (aber immer noch in Code und Formaten möglich), um Handler für Routingereignisse anzufügen, die aufgerufen werden, auch wenn ein vorheriger Handler entlang der Route bereitseingerichtethat<xref:System.Windows.RoutedEventArgs.Handled%2A>zu `true`.  
   

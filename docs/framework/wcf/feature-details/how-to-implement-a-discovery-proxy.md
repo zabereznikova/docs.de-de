@@ -3,22 +3,22 @@ title: 'Vorgehensweise: Implementieren eines Suchproxys'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000908"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Vorgehensweise: Implementieren eines Suchproxys
 In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zu den Discovery-Feature in Windows Communication Foundation (WCF), finden Sie unter [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System.IAsyncResult-Schnittstelle](xref:System.IAsyncResult).
 
  Das Implementieren eines Suchproxys ist in diesem Thema in drei Hauptteile aufgegliedert:
 
--   Definieren einer Klasse, die einen Datenspeicher enthält und die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert
+- Definieren einer Klasse, die einen Datenspeicher enthält und die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert
 
--   Implementieren der `AsyncResult`-Hilfsklasse
+- Implementieren der `AsyncResult`-Hilfsklasse
 
--   Hosten des Suchproxys
+- Hosten des Suchproxys
 
 ### <a name="to-create-a-new-console-application-project"></a>So erstellen Sie ein neues Konsolenanwendungsprojekt
 
@@ -28,9 +28,9 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
 
 3. Fügen Sie dem Projekt die folgenden Verweise hinzu.
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  Stellen Sie sicher, dass Sie für diese Assemblys auf Version 4.0 oder höher verweisen.

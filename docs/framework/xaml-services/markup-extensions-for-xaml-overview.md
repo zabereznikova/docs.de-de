@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971911"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
 Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen eines Werts, der weder ein primitiver noch ein spezifischer XAML-Typ ist. Für die Attributverwendung verwenden Markuperweiterungen die bekannte Zeichensequenz einer öffnenden geschweiften Klammer `{` für den Anfang des Markuperweiterungsbereichs und eine schließende geschweifte Klammer `}` zum Beenden. Beim Verwenden von .NET Framework-XAML-Diensten können Sie einige der vordefinierten XAML-Sprachmarkuperweiterungen aus der Assembly „System.Xaml“ verwenden. Sie können zudem in „System.Xaml“ definierte Subklassen aus der Klasse <xref:System.Windows.Markup.MarkupExtension> verwenden und Ihre eigenen Markuperweiterungen definieren. Alternativ können Sie durch ein bestimmtes Framework definierte Markuperweiterungen verwenden, wenn Sie dieses Framework bereits referenzieren.  
@@ -54,9 +54,9 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>Definieren des Unterstützungstyps für eine benutzerdefinierte Markuperweiterung  
  Beim Verwenden von .NET Framework-XAML-Diensten oder auf .NET Framework-XAML-Diensten aufbauenden Frameworks haben Sie zwei Optionen hinsichtlich der Benennung des Markup-Erweiterungsunterstützungstyps. Der Typname ist relevant für die Art und Weise des Zugriffsversuchs und Aufrufs von XAML-Objekt-Writern auf einen Markup-Erweiterungsunterstützungstyp, wenn sie eine Markuperweiterungsverwendung in XAML feststellen. Verwenden Sie eine der folgenden Strategien für die Benennung:  
   
--   Der Typname muss genau mit dem Namen des XAML-Markupverwendungstokens übereinstimmen. Benennen Sie beispielsweise für die Unterstützung einer `{Collate ...}` -Erweiterungsverwendung den Unterstützungstyp `Collate`.  
+- Der Typname muss genau mit dem Namen des XAML-Markupverwendungstokens übereinstimmen. Benennen Sie beispielsweise für die Unterstützung einer `{Collate ...}` -Erweiterungsverwendung den Unterstützungstyp `Collate`.  
   
--   Benennen Sie den Typnamen, sodass er das  Verwendungszeichenfolgentoken plus das Suffix `Extension`lautet. Benennen Sie beispielsweise für die Unterstützung einer `{Collate ...}` -Erweiterungsverwendung den Unterstützungstyp `CollateExtension`.  
+- Benennen Sie den Typnamen, sodass er das  Verwendungszeichenfolgentoken plus das Suffix `Extension`lautet. Benennen Sie beispielsweise für die Unterstützung einer `{Collate ...}` -Erweiterungsverwendung den Unterstützungstyp `CollateExtension`.  
   
  Entsprechend der Suchreihenfolge wird zunächst nach dem Klassennamen mit dem Suffix `Extension`und dann nach dem Klassennamen ohne dem Suffix `Extension` gesucht.  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  Die Verarbeitung erfolgt konzeptionell, als ob die Markuperweiterung ein zu erstellendes Objekt wäre, anschließend werden die zugehörigen Memberwerte festgelegt. Jede festzulegende angegebene Eigenschaft wird in ähnlicher Weise ausgewertet, wie ein angegebenes Member in einem erstellten Objekt festgelegt werden kann, wenn XAML analysiert wird. Es gibt zwei wichtige Unterschiede:  
   
--   Ein Markup-Erweiterungsunterstützungstyp benötigt, wie bereits erwähnt, keinen Standardkonstruktor, um in XAML instanziiert zu werden. Seine Objektkonstruktion wird verzögert, bis seine möglichen Argumente in der Textsyntax als Positions- oder Namensargumente in Token übersetzt und ausgewertet werden und der entsprechende Konstruktor zu diesem Zeitpunkt aufgerufen wird.  
+- Ein Markup-Erweiterungsunterstützungstyp benötigt, wie bereits erwähnt, keinen Standardkonstruktor, um in XAML instanziiert zu werden. Seine Objektkonstruktion wird verzögert, bis seine möglichen Argumente in der Textsyntax als Positions- oder Namensargumente in Token übersetzt und ausgewertet werden und der entsprechende Konstruktor zu diesem Zeitpunkt aufgerufen wird.  
   
--   Markuperweiterungsverwendungen können verschachtelt werden. Die innerste Markuperweiterung wird zuerst ausgewertet. Daher können Sie eine solche Verwendung annehmen und einen der Konstruktionsparameter als einen Typ deklarieren, für den ein zu generierender Wertkonverter (beispielsweise eine Markuperweiterung) erforderlich ist.  
+- Markuperweiterungsverwendungen können verschachtelt werden. Die innerste Markuperweiterung wird zuerst ausgewertet. Daher können Sie eine solche Verwendung annehmen und einen der Konstruktionsparameter als einen Typ deklarieren, für den ein zu generierender Wertkonverter (beispielsweise eine Markuperweiterung) erforderlich ist.  
   
  Der Einsatz dieser Verarbeitung wurde im vorherigen Beispiel gezeigt. Der XAML-Objekt-Writer für .NET Framework-XAML-Dienste verarbeitet Namen für Aufzählungskonstanten in Aufzählungswerte auf einer systemeigenen Ebene.  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> meldet die <xref:System.Type> -Informationen für den Objekttyp, den <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen. Dies umfasst Folgendes:  
   
--   Designer und IDEs, die möglicherweise in der Lage sind, eine typenkompatible Unterstützung für Markuperweiterungsverwendungen bereitzustellen.  
+- Designer und IDEs, die möglicherweise in der Lage sind, eine typenkompatible Unterstützung für Markuperweiterungsverwendungen bereitzustellen.  
   
--   Erweiterte Implementierungen von `SetMarkupExtension` -Handlern in Zielklassen, die sich auf die Berücksichtigung verlassen, um anstelle der Verzweigung auf spezifischen bekannten <xref:System.Windows.Markup.MarkupExtension> -Implementierungen nach Name den Rückgabetyp einer Markuperweiterung zu bestimmen  
+- Erweiterte Implementierungen von `SetMarkupExtension` -Handlern in Zielklassen, die sich auf die Berücksichtigung verlassen, um anstelle der Verzweigung auf spezifischen bekannten <xref:System.Windows.Markup.MarkupExtension> -Implementierungen nach Name den Rückgabetyp einer Markuperweiterung zu bestimmen  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>Serialisierung von Markuperweiterungsverwendungen  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
 ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947237"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Vorgehensweise: Interaktives Steuern einer Uhr
 Ein <xref:System.Windows.Media.Animation.Clock> des Objekts <xref:System.Windows.Media.Animation.ClockController> Eigenschaft können Sie interaktiv starten, anhalten, fortsetzen, suchen, fahren fort, um die Uhr um seines Füllbereichs, und Beenden der Uhr. Nur die Stammuhr einer Zeitstruktur kann interaktiv gesteuert werden.  

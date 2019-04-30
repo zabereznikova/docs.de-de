@@ -16,11 +16,11 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948802"
 ---
 # <a name="icordebugprocess4-interface"></a>ICorDebugProcess4-Schnittstelle
 
@@ -40,9 +40,9 @@ Diese Schnittstelle befindet sich in der Common Language Runtime und wird nicht 
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Keine
+**Header:** Keiner
 
-**Bibliothek:** Keine
+**Bibliothek:** Keiner
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 

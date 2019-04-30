@@ -3,11 +3,11 @@ title: Konfigurationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002242"
 ---
 # <a name="configuration-sample"></a>Konfigurationsbeispiel
 In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigurationsdatei erkennbar gemacht wird.  
@@ -27,15 +27,15 @@ In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigura
 ## <a name="service-configuration"></a>Dienstkonfiguration  
  Die Konfigurationsdatei in diesem Beispiel veranschaulicht zwei Funktionen:  
   
--   Erkennbar machen des Diensts über einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Erkennbar machen des Diensts über einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
--   Anpassen von die Suche betreffenden Informationen für den Anwendungsendpunkt des Diensts und Anpassen von die Suche betreffenden Einstellungen am Standardendpunkt.  
+- Anpassen von die Suche betreffenden Informationen für den Anwendungsendpunkt des Diensts und Anpassen von die Suche betreffenden Einstellungen am Standardendpunkt.  
   
  Um die Suche zu aktivieren, müssen einige Änderungen in der Anwendungskonfigurationsdatei für den Dienst vorgenommen werden:  
   
--   Ein Suchendpunkt muss zum `<service>`-Element hinzugefügt werden. Dabei handelt es sich um einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Endpunkt. Diesen Systemendpunkt ordnet die Laufzeit dem Suchdienst zu. Der Suchdienst lauscht an diesem Endpunkt nach Nachrichten.  
+- Ein Suchendpunkt muss zum `<service>`-Element hinzugefügt werden. Dabei handelt es sich um einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Endpunkt. Diesen Systemendpunkt ordnet die Laufzeit dem Suchdienst zu. Der Suchdienst lauscht an diesem Endpunkt nach Nachrichten.  
   
--   Das `<serviceDiscovery>`-Verhalten wird zum `<serviceBehaviors>`-Abschnitt hinzugefügt. Auf diese Weise kann der Dienst zur Laufzeit erkannt werden. Der zuvor erwähnte Suchendpunkt wird zum Lauschen nach Such-`Probe`-Nachrichten und Such-`Resolve`-Nachrichten verwendet. Mit diesen beiden Ergänzungen ist der Dienst am angegebenen Suchendpunkt erkennbar.  
+- Das `<serviceDiscovery>`-Verhalten wird zum `<serviceBehaviors>`-Abschnitt hinzugefügt. Auf diese Weise kann der Dienst zur Laufzeit erkannt werden. Der zuvor erwähnte Suchendpunkt wird zum Lauschen nach Such-`Probe`-Nachrichten und Such-`Resolve`-Nachrichten verwendet. Mit diesen beiden Ergänzungen ist der Dienst am angegebenen Suchendpunkt erkennbar.  
   
  Der folgende Konfigurationsausschnitt zeigt einen Dienst mit einem definierten Anwendungsendpunkt und einem definierten Suchendpunkt:  
   

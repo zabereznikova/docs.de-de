@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971222"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Übersicht über die HelpProvider-Komponente (Windows Forms)
 Die Windows-Formulare [HelpProvider](helpprovider-component-windows-forms.md) Komponente verwendet, um eine HTML Help 1.x-Hilfedatei (entweder eine mit HTML Help Workshop erstellte CHM-Datei oder eine HTM-Datei) mit der Windows-Anwendung zuzuordnen. Sie können die Hilfe in einer Vielzahl von Methoden angeben:  
   
--   Geben Sie kontextbezogene Hilfe für in Windows Forms-Steuerelemente.  
+- Geben Sie kontextbezogene Hilfe für in Windows Forms-Steuerelemente.  
   
--   Bereitstellen Sie kontextbezogener Hilfe auf einem bestimmten Dialogfeld oder für bestimmte Steuerelemente in einem Dialogfeld an.  
+- Bereitstellen Sie kontextbezogener Hilfe auf einem bestimmten Dialogfeld oder für bestimmte Steuerelemente in einem Dialogfeld an.  
   
--   Öffnen Sie eine Hilfe zu bestimmten Bereichen, z. B. die Hauptseite der Inhaltsverzeichnis, den Index oder eine Suchfunktion.  
+- Öffnen Sie eine Hilfe zu bestimmten Bereichen, z. B. die Hauptseite der Inhaltsverzeichnis, den Index oder eine Suchfunktion.  
   
 ## <a name="using-the-help-provider"></a>Verwenden des Hilfeanbieters  
  Hinzufügen einer <xref:System.Windows.Forms.HelpProvider> Komponente zu Ihrem Windows-Formular können Sie die anderen Steuerelemente im Formular aus, um die Hilfeeigenschaften verfügbar zu machen die <xref:System.Windows.Forms.HelpProvider> Komponente. Dadurch können Sie die Steuerelemente auf dem Windows-Formular Hilfe bereit. Sie können eine Textdatei mit Zuordnen der <xref:System.Windows.Forms.HelpProvider> -Komponente mithilfe der <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Eigenschaft. Sie geben den Typ der bereitgestellten durch Aufrufen von Hilfe <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> und einen Wert aus der <xref:System.Windows.Forms.HelpNavigator> Enumeration für das angegebene Steuerelement. Sie bieten das Schlüsselwort oder ein Thema Hilfe durch Aufrufen der <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Methode.  

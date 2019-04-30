@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972353"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Entwurfszeitfehler im Windows Forms-Designer
 In diesem Thema wird die Bedeutung und der Verwendungszweck der Entwurfszeitfehlerliste erläutert, die in Microsoft Visual Studio angezeigt wird, wenn der Windows Forms-Designer nicht geladen werden kann. Wenn diese Fehlerliste angezeigt wird, sollten Sie sie nicht als Fehler im Designer, sondern als Hilfe beim Beheben von Fehlern in Ihrem Code interpretieren.  
@@ -25,11 +25,11 @@ In diesem Thema wird die Bedeutung und der Verwendungszweck der Entwurfszeitfehl
   
  Sie können eine Fehlerkategorie erweitern oder reduzieren, indem Sie auf die Überschrift der Fehlerkategorie klicken oder indem Sie auf das Chevron zum Erweitern/Reduzieren klicken. Wenn Sie eine Fehlerkategorie erweitern, wird folgende zusätzliche Hilfe angezeigt:  
   
--   Instanzen dieses Fehlers.  
+- Instanzen dieses Fehlers.  
   
--   Hilfe zu diesem Fehler.  
+- Hilfe zu diesem Fehler.  
   
--   Forenbeiträge zu diesem Fehler.  
+- Forenbeiträge zu diesem Fehler.  
   
 ### <a name="instances-of-this-error"></a>Instanzen dieses Fehlers  
  In der zusätzlichen Hilfe werden alle Instanzen des Fehlers im aktuellen Projekt aufgeführt. Viele Fehler enthalten eine genaue Position im folgenden Format: *[Projektname]* *[Formularname]* Zeile:*[Zeilennummer]* Spalte:*[Spaltennummer]*. Über den Link **Gehe zu Code** gelangen Sie zu der Position im Code, an der der Fehler auftritt.  
@@ -45,9 +45,9 @@ In diesem Thema wird die Bedeutung und der Verwendungszweck der Entwurfszeitfehl
 ### <a name="forum-posts-about-this-error"></a>Forumbeiträge zu diesem Fehler  
  Die zusätzliche Hilfe umfasst einen Link zu MSDN-Forenbeiträgen zu dem Fehler. Die Foren werden basierend auf der Zeichenfolge der Fehlermeldung durchsucht. Sie können auch die folgenden Foren durchsuchen:  
   
--   [Forum von Windows Forms-Designer](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Forum von Windows Forms-Designer](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms-Foren](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows Forms-Foren](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignorieren und fortfahren  
  Sie können die Fehlerbedingung ignorieren und mit dem Laden des Designers fortfahren. Die Auswahl dieser Aktion kann zu unerwartetem Verhalten führen. Beispielsweise werden Steuerelemente möglicherweise nicht auf der Entwurfsoberfläche angezeigt.  

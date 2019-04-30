@@ -4,11 +4,11 @@ description: Store unstrukturierte Daten in der Cloud mit Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982513"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure Blob Storage mit F\#
 
@@ -242,7 +242,7 @@ Eine kostenlose eigenständige app von Microsoft, die Ihnen ermöglicht, die unt
 
 ### <a name="related-guides"></a>Verwandte Leitfäden
 
-- [Erste Schritte mit Azure Blob Storage in C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Erste Schritte mit Azure Blob Storage in c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Windows](/azure/storage/common/storage-use-azcopy)
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurieren von Azure Storage-Verbindungszeichenfolgen](/azure/storage/common/storage-configure-connection-string)

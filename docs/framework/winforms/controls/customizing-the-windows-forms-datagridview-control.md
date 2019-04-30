@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
 ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011414"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Anpassen des DataGridView-Steuerelements von Windows Forms
 Die `DataGridView` -Steuerelement umfasst mehrere Eigenschaften, die Sie verwenden können, um die Darstellung und das grundlegende Verhalten (Aussehen und Verhalten), der die Zellen, Zeilen und Spalten anzupassen. Wenn Sie besondere Anforderungen verfügen, die über die Funktionen von hinausgehen der <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse, allerdings können Sie auch Ownerdrawing für das Steuerelement implementieren oder Erweitern Sie die Funktionen, durch das Erstellen von benutzerdefinierten Zellen, Spalten und Zeilen.  

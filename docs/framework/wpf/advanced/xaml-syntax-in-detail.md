@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981369"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der XAML-Syntax verwendet werden. Diese Begriffe werden häufig in den restlichen dieser Dokumentation wird sowohl für WPF-Dokumentation verwendet, insbesondere und für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte, die aktiviert, indem die XAML-sprachunterstützung auf der Ebene "System.xaml" verwenden. Dieses Thema baut auf die grundlegende Terminologie eingeführt, die im Thema [XAML Overview (WPF)](xaml-overview-wpf.md).  
@@ -58,9 +58,9 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
 ## <a name="object-element-syntax"></a>Objektelementsyntax  
  *-Objekt Eigenschaftselementsyntax* ist die Syntax der XAML-Markup, das eine CLR-Klasse oder Struktur instanziiert werden, durch die Deklaration eines XML-Elements. Diese Syntax ähnelt die Syntax der anderer Markupsprachen, z. B. HTML. Objektelementsyntax beginnt mit einer linken spitzen Klammer (\<) unmittelbar folgen der Typname der Klasse oder Struktur, die instanziiert wird. NULL oder mehr Leerzeichen können folgen, den Typnamen, und NULL oder mehr Attribute können ebenfalls deklariert werden auf das Object-Element, klicken Sie mit der ein oder mehrere Leerzeichen, trennen Sie jedes Attributnamen = "Wert"-Paar. Schließlich muss eine der folgenden erfüllt sein:  
   
--   Das Element und der Tag müssen durch einen Schrägstrich (/), und unmittelbar danach eine öffnende spitze Klammer (>) geschlossen werden.  
+- Das Element und der Tag müssen durch einen Schrägstrich (/), und unmittelbar danach eine öffnende spitze Klammer (>) geschlossen werden.  
   
--   Das öffnende Tag muss durch eine schließende spitze Klammer (>) abgeschlossen werden. Andere Objektelementen, Eigenschaftenelementen oder inneren Text kann das öffnende Tag folgen. Genau hier enthalten sind die Inhalte werden möglicherweise wird durch das Objektmodell des Elements in der Regel eingeschränkt. Das entsprechende schließende Tag für das Object-Element muss außerdem vorhanden sind, in die richtige Schachtelung und mit anderen Paare mit öffnenden und schließenden Tag gleichmäßig zu verteilen.  
+- Das öffnende Tag muss durch eine schließende spitze Klammer (>) abgeschlossen werden. Andere Objektelementen, Eigenschaftenelementen oder inneren Text kann das öffnende Tag folgen. Genau hier enthalten sind die Inhalte werden möglicherweise wird durch das Objektmodell des Elements in der Regel eingeschränkt. Das entsprechende schließende Tag für das Object-Element muss außerdem vorhanden sind, in die richtige Schachtelung und mit anderen Paare mit öffnenden und schließenden Tag gleichmäßig zu verteilen.  
   
  XAML-Implementierung von .NET verfügt über einen Satz von Regeln, die Typen, Attribute, Eigenschaften oder Ereignisse und XAML-Namespaces zu CLR-Namespaces sowie die Assembly in Object-Elementen zuzuordnen. Für WPF und .NET Framework XAML-Objektelemente zuordnen [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Typen wie definiert in Assemblys verwiesen wird, und die Attribute für Mitglieder dieser Typen. Wenn Sie einen CLR-Typ in XAML verweisen, haben Sie Zugriff auf die geerbten Member dieses Typs auch.  
   
@@ -154,11 +154,11 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
 ## <a name="collection-syntax"></a>Auflistungssyntax  
  Die XAML-Spezifikation erfordert XAML-Implementierungen von ereignissprozessoren um Eigenschaften zu identifizieren, in dem eine Auflistung von der Werttyp ist. Die allgemeine XAML-Prozessor-Implementierung in .NET basiert auf verwaltetem Code und die CLR und identifiziert Auflistungstypen, die über eine der folgenden:  
   
--   Geben Sie implementiert <xref:System.Collections.IList>.  
+- Geben Sie implementiert <xref:System.Collections.IList>.  
   
--   Geben Sie implementiert <xref:System.Collections.IDictionary>.  
+- Geben Sie implementiert <xref:System.Collections.IDictionary>.  
   
--   Typ leitet sich von <xref:System.Array> (Weitere Informationen zu Arrays in XAML finden Sie unter [X: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
+- Typ leitet sich von <xref:System.Array> (Weitere Informationen zu Arrays in XAML finden Sie unter [X: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
   
  Wenn der Typ einer Eigenschaft eine Auflistung ist, klicken Sie dann muss der Auflistungstyp der abgeleiteten nicht im Markup als Objektelement angegeben werden. Stattdessen werden die Elemente, die vorgesehen sind, werden die Elemente in der Auflistung als ein oder mehrere untergeordnete Elemente des Property-Elements angegeben. Die einzelnen Elemente zu einem Objekt ausgewertet wird, während des Ladens und der Auflistung hinzugefügt werden, indem die `Add` -Methode der impliziten Auflistung. Z. B. die <xref:System.Windows.Style.Triggers%2A> Eigenschaft <xref:System.Windows.Style> der speziellen Auflistungstyp <xref:System.Windows.TriggerCollection>, implementiert <xref:System.Collections.IList>. Es ist nicht erforderlich, zum Instanziieren einer <xref:System.Windows.TriggerCollection> Object-Element im Markup. Stattdessen geben Sie eine oder mehrere <xref:System.Windows.Trigger> als Elemente innerhalb der `Style.Triggers` Property-Element, in denen <xref:System.Windows.Trigger> (oder einer abgeleiteten Klasse) ist der Typ als Elementtyp für die stark typisierte und implizite erwartet <xref:System.Windows.TriggerCollection>.  
   
@@ -264,9 +264,9 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
  Angefügte Eigenschaften verwendet eine Syntax, die Eigenschaftenelement-Syntax, ersten Blick ähnelt insofern, dass Sie auch angeben, ein *TypeName*. *PropertyName* Kombination. Es gibt zwei wichtige Unterschiede:  
   
--   Sie können die *TypeName*. *PropertyName* Kombination, selbst wenn Sie über die Attributsyntax eine angefügte Eigenschaft festlegen. Angefügte Eigenschaften sind, dass der einzige Fall, qualifizieren den Eigenschaftennamen in Attributsyntax erforderlich ist.  
+- Sie können die *TypeName*. *PropertyName* Kombination, selbst wenn Sie über die Attributsyntax eine angefügte Eigenschaft festlegen. Angefügte Eigenschaften sind, dass der einzige Fall, qualifizieren den Eigenschaftennamen in Attributsyntax erforderlich ist.  
   
--   Sie können auch Eigenschaftenelement-Syntax für angefügte Eigenschaften verwenden. Beachten Sie jedoch bei typischen Eigenschaftenelement-Syntax die *TypeName* Sie angeben, ist das Object-Element, das das Property-Element enthält. Wenn Sie auf eine angefügte Eigenschaft verweisen die *TypeName* ist die Klasse, die die angefügte Eigenschaft, nicht des enthaltenden Objekts-Elements definiert.  
+- Sie können auch Eigenschaftenelement-Syntax für angefügte Eigenschaften verwenden. Beachten Sie jedoch bei typischen Eigenschaftenelement-Syntax die *TypeName* Sie angeben, ist das Object-Element, das das Property-Element enthält. Wenn Sie auf eine angefügte Eigenschaft verweisen die *TypeName* ist die Klasse, die die angefügte Eigenschaft, nicht des enthaltenden Objekts-Elements definiert.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Angefügte Ereignisse  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002336"
 ---
 # <a name="timing-behaviors-overview"></a>Übersicht über Zeitsteuerungsverhalten
 Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <xref:System.Windows.Media.Animation.Timeline> Objekte.  
@@ -106,9 +106,9 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
   
  Das folgende Beispiel erstellt eine <xref:System.Windows.Media.Animation.Storyboard> Listenfeldsteuerelement mit zwei untergeordneten <xref:System.Windows.Media.Animation.DoubleAnimation> Objekte. Beide <xref:System.Windows.Media.Animation.DoubleAnimation> Objekte animieren das <xref:System.Windows.FrameworkElement.Width%2A> von einer <xref:System.Windows.Shapes.Rectangle> von 0 bis 100. Die <xref:System.Windows.Shapes.Rectangle> Elemente verfügen über nicht animiert <xref:System.Windows.FrameworkElement.Width%2A> -Werte von 500 [geräteunabhängigen Pixeln].  
   
--   Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft des ersten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, der Standardwert. Daher bleibt die Breite des Rechtecks bei 100, sobald die <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
+- Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft des ersten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, der Standardwert. Daher bleibt die Breite des Rechtecks bei 100, sobald die <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
   
--   Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> -Eigenschaft der zweiten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Daher die <xref:System.Windows.FrameworkElement.Width%2A> des zweiten <xref:System.Windows.Shapes.Rectangle> wird auf 500 nach der <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
+- Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> -Eigenschaft der zweiten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Daher die <xref:System.Windows.FrameworkElement.Width%2A> des zweiten <xref:System.Windows.Shapes.Rectangle> wird auf 500 nach der <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Eigenschaften, die die Geschwindigkeit einer Zeitachse steuern  
  Die <xref:System.Windows.Media.Animation.Timeline> -Klasse stellt drei Eigenschaften zum Festlegen ihrer Geschwindigkeit bereit:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Gibt die Geschwindigkeit relativ zum übergeordneten Element, an dem die Zeit, für abläuft eine <xref:System.Windows.Media.Animation.Timeline>. Werte größer als 1 erhöhen die Geschwindigkeit der <xref:System.Windows.Media.Animation.Timeline> und ihre untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte; die Werte zwischen 0 und 1 verlangsamen sie. Der Wert 1 gibt an, dass <xref:System.Windows.Media.Animation.Timeline> im Verlauf der gleiche Tarif wie das übergeordnete Element. Die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung einer Containerzeitachse wirkt sich auf alle untergeordneten <xref:System.Windows.Media.Animation.Timeline> auch Objekte.  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Gibt die Geschwindigkeit relativ zum übergeordneten Element, an dem die Zeit, für abläuft eine <xref:System.Windows.Media.Animation.Timeline>. Werte größer als 1 erhöhen die Geschwindigkeit der <xref:System.Windows.Media.Animation.Timeline> und ihre untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte; die Werte zwischen 0 und 1 verlangsamen sie. Der Wert 1 gibt an, dass <xref:System.Windows.Media.Animation.Timeline> im Verlauf der gleiche Tarif wie das übergeordnete Element. Die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung einer Containerzeitachse wirkt sich auf alle untergeordneten <xref:System.Windows.Media.Animation.Timeline> auch Objekte.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Beschleunigung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md). 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Beschleunigung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Verlangsamung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md).  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Verlangsamung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

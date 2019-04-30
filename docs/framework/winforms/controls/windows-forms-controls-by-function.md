@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969467"
 ---
 # <a name="windows-forms-controls-by-function"></a>Windows Forms-Steuerelemente nach Funktion
 Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktionen ausführen. Die folgende Tabelle enthält die Windows Forms-Steuerelemente und Komponenten entsprechend allgemeine Funktion. Wenn mehrere Steuerelemente vorhanden, die die gleiche Funktion dienen sind, ist das empfohlene Steuerelement darüber hinaus mit einem Hinweis in Bezug auf das Steuerelement aufgeführt, die sie ersetzt. In einer separaten nachfolgenden Tabelle werden die ersetzten Steuerelemente mit ihren empfohlenen Ersetzungen aufgeführt.  

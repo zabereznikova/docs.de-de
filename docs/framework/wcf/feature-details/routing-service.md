@@ -3,34 +3,34 @@ title: Routingdienst
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991042"
 ---
 # <a name="routing-service"></a>Routingdienst
 Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter fungiert. Die Kernfunktion des Routingdiensts ist die Fähigkeit, Nachrichten basierend auf Nachrichteninhalt weiterzuleiten. So können Nachrichten anhand eines Werts innerhalb der Nachricht selbst (im Header oder im Text) an einen Clientendpunkt weitergeleitet werden.  
   
  Die <xref:System.ServiceModel.Routing.RoutingService> wird als Dienst in Windows Communication Foundation (WCF) implementiert die <xref:System.ServiceModel.Routing> Namespace. Der Routingdienst macht einen oder mehrere Dienstendpunkte verfügbar, die Nachrichten empfangen und die einzelnen Nachrichten dann anhand ihres Inhalts an einen oder mehrere Clientendpunkte weiterleiten. Der Dienst stellt die folgenden Funktionen bereit:  
   
--   Inhaltsbasiertes Routing  
+- Inhaltsbasiertes Routing  
   
-    -   Dienstaggregation  
+    - Dienstaggregation  
   
-    -   Dienstversionsverwaltung  
+    - Dienstversionsverwaltung  
   
-    -   Prioritätsrouting  
+    - Prioritätsrouting  
   
-    -   Dynamische Konfiguration  
+    - Dynamische Konfiguration  
   
--   Protokollüberbrückung  
+- Protokollüberbrückung  
   
--   SOAP-Verarbeitung  
+- SOAP-Verarbeitung  
   
--   Erweiterte Fehlerbehandlung  
+- Erweiterte Fehlerbehandlung  
   
--   Sicherungsendpunkte  
+- Sicherungsendpunkte  
   
  Es ist möglich, einen Vermittlerdienst zu erstellen, der eine oder mehrere dieser Zielsetzungen erfüllt. Häufig ist eine Implementierung dieser Art jedoch an ein bestimmtes Szenario oder eine Projektmappe gebunden und kann nicht ohne Weiteres auf neue Anwendungen angewendet werden.  
   
@@ -48,13 +48,13 @@ Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter
   
  Aufgrund der Gruppierung von Nachrichtenfiltern in Filtertabellen kann eine Routinglogik erstellt werden, mit deren Hilfe Sie mehrere Routingszenarien verwenden können, z. B.:  
   
--   Dienstaggregation  
+- Dienstaggregation  
   
--   Dienstversionsverwaltung  
+- Dienstversionsverwaltung  
   
--   Prioritätsrouting  
+- Prioritätsrouting  
   
--   Dynamische Konfiguration  
+- Dynamische Konfiguration  
   
  Weitere Informationen zu Nachrichtenfiltern und Filtertabellen finden Sie unter [Routing Einführung](../../../../docs/framework/wcf/feature-details/routing-introduction.md) und [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ Der Routingdienst ist ein generischer SOAP-Vermittler, der als Nachrichtenrouter
 ## <a name="streaming"></a>Streaming  
  Der Routingdienst kann Nachrichten erfolgreich streamen, wenn Sie die Bindung für die Unterstützung von Streaming festlegen.  Es gibt jedoch einige Bedingungen, die möglicherweise das Puffern von Nachrichten erfordern:  
   
--   Multicast (puffern, um zusätzliche Nachrichtenkopien zu erstellen)  
+- Multicast (puffern, um zusätzliche Nachrichtenkopien zu erstellen)  
   
--   Failover (puffern, falls die Nachricht an eine Sicherung gesendet werden muss)  
+- Failover (puffern, falls die Nachricht an eine Sicherung gesendet werden muss)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly ist false (puffern, um die MessageFilterTable mit einem MessageBuffer bereitzustellen, damit Filter den Text überprüfen können)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly ist false (puffern, um die MessageFilterTable mit einem MessageBuffer bereitzustellen, damit Filter den Text überprüfen können)  
   
--   Dynamische Konfiguration  
+- Dynamische Konfiguration  
   
 ## <a name="see-also"></a>Siehe auch
 

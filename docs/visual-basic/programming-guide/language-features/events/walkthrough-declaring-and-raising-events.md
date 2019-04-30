@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973089"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Deklarieren und Auslösen von Ereignissen für eine Klasse, die mit dem Namen `Widget`. Nachdem Sie die Schritte abgeschlossen haben, Sie möchten das begleitthema lesen [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), erfahren, wie Sie Ereignisse aus `Widget` Objekte Statusinformationen in einer Anwendung bereitstellen.  
@@ -44,7 +44,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Um ein Ereignis für das Widget-Klasse zu deklarieren.  
   
--   Verwenden der `Event` -Schlüsselwort zu deklarieren, ein Ereignis in der `Widget` Klasse. Beachten Sie, dass ein Ereignis kann `ByVal` und `ByRef` Argumente als `Widget`des `PercentDone` Ereignis veranschaulicht wird:  
+- Verwenden der `Event` -Schlüsselwort zu deklarieren, ein Ereignis in der `Widget` Klasse. Beachten Sie, dass ein Ereignis kann `ByVal` und `ByRef` Argumente als `Widget`des `PercentDone` Ereignis veranschaulicht wird:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

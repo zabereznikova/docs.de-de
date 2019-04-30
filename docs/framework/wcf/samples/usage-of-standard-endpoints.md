@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006333"
 ---
 # <a name="usage-of-standard-endpoints"></a>Verwendung von Standardendpunkten
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Aktivieren Sie mehrere Projekte, um zu starten.
 
-    1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe Standardendpunkte, und wählen Sie dann **Eigenschaften**.
+    1. In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe Standardendpunkte, und wählen Sie dann **Eigenschaften**.
 
-    2.  In **allgemeine Eigenschaften**Option **Startprojekt**, und klicken Sie dann auf **mehrere Startprojekte**.
+    2. In **allgemeine Eigenschaften**Option **Startprojekt**, und klicken Sie dann auf **mehrere Startprojekte**.
 
-    3.  Verschieben Sie das Dienstprojekt an den Anfang der Liste mit den **Aktion** festgelegt **starten**.
+    3. Verschieben Sie das Dienstprojekt an den Anfang der Liste mit den **Aktion** festgelegt **starten**.
 
-    4.  Verschieben Sie die Client-Projekt nach dem Dienstprojekt, auch mit der **Aktion** festgelegt **starten**.
+    4. Verschieben Sie die Client-Projekt nach dem Dienstprojekt, auch mit der **Aktion** festgelegt **starten**.
 
          Dadurch wird angegeben, dass das Clientprojekt nach dem Dienstprojekt ausgeführt werden soll.
 

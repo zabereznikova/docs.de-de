@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020422"
 ---
 # <a name="drawing-objects-overview"></a>Übersicht über Zeichnungsobjekte
 In diesem Thema werden <xref:System.Windows.Media.Drawing> Objekte und beschreibt, wie Sie diese verwenden, um effizient Zeichnen von Formen, Bitmaps, Text und Medien. Verwenden Sie <xref:System.Windows.Media.Drawing> Zeichnen von Objekten, die bei der Erstellung von ClipArt-Objekt, mit einem <xref:System.Windows.Media.DrawingBrush>, oder verwenden Sie <xref:System.Windows.Media.Visual> Objekte.  
@@ -23,25 +23,25 @@ In diesem Thema werden <xref:System.Windows.Media.Drawing> Objekte und beschreib
 ## <a name="what-is-a-drawing-object"></a>Was ist ein Zeichnungsobjekt?  
  Ein <xref:System.Windows.Media.Drawing> -Objekt beschreibt sichtbaren Inhalt, z. B. eine Form, Bitmap, Video oder eine Textzeile. Verschiedene Arten von Zeichnungen beschreiben verschiedene Arten von Inhalten. Im Folgenden finden Sie eine Liste der unterschiedlichen Typen von Zeichnungsobjekten.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
+- <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
+- <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Gibt eine Audio- oder Videodatei.  
+- <xref:System.Windows.Media.VideoDrawing> – Gibt eine Audio- oder Videodatei.  
   
--   <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
+- <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
   
  <xref:System.Windows.Media.Drawing> -Objekte sind vielseitig. Es gibt viele Möglichkeiten, Sie können, eine <xref:System.Windows.Media.Drawing> Objekt.  
   
--   Sie können es als Bild anzeigen, indem Sie mit einem <xref:System.Windows.Media.DrawingImage> und <xref:System.Windows.Controls.Image> Steuerelement.  
+- Sie können es als Bild anzeigen, indem Sie mit einem <xref:System.Windows.Media.DrawingImage> und <xref:System.Windows.Controls.Image> Steuerelement.  
   
--   Können Sie sie mit einer <xref:System.Windows.Media.DrawingBrush> auf ein Objekt zu zeichnen, z. B. die <xref:System.Windows.Controls.Page.Background%2A> von einer <xref:System.Windows.Controls.Page>.  
+- Können Sie sie mit einer <xref:System.Windows.Media.DrawingBrush> auf ein Objekt zu zeichnen, z. B. die <xref:System.Windows.Controls.Page.Background%2A> von einer <xref:System.Windows.Controls.Page>.  
   
--   Sie können sie die Darstellung der beschreiben eine <xref:System.Windows.Media.DrawingVisual>.  
+- Sie können sie die Darstellung der beschreiben eine <xref:System.Windows.Media.DrawingVisual>.  
   
--   Sie können es verwenden, um den Inhalt der aufzulisten eine <xref:System.Windows.Media.Visual>.  
+- Sie können es verwenden, um den Inhalt der aufzulisten eine <xref:System.Windows.Media.Visual>.  
   
  WPF bietet andere Arten von Objekten, zeichnen Formen, Bitmaps, Text und Medien. Angenommen, Sie können auch <xref:System.Windows.Shapes.Shape> Objekte zum Zeichnen von Formen, und die <xref:System.Windows.Controls.MediaElement> Steuerelement bietet eine weitere Möglichkeit zum Hinzufügen von Videos für Ihre Anwendung. Wann also sollten Sie verwenden <xref:System.Windows.Media.Drawing> Objekte? Wenn Sie Frameworkfeatures auf Frameworkebene Leistungsvorteile Opfern können oder Sie müssen <xref:System.Windows.Freezable> Funktionen. Da <xref:System.Windows.Media.Drawing> Objekte unterstützen keine [Layout](../advanced/layout.md), Eingabe und Fokus, bieten sie Leistungsvorteile, die sie sich hervorragend zum Beschreiben von Hintergründen, ClipArt und zum Zeichnen auf niedriger Ebene mit machen <xref:System.Windows.Media.Visual> Objekte.  
   

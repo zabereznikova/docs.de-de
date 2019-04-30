@@ -3,11 +3,11 @@ title: Weitergabe
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971378"
 ---
 # <a name="propagation"></a>Weitergabe
 Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Windows Communication Foundation (WCF).  
@@ -26,11 +26,11 @@ Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Win
 ## <a name="propagation-definition"></a>Weitergabedefinition  
  Die gAId von Aktivität M wird an Aktivität N weitergegeben, wenn alle der folgenden Bedingungen erfüllt sind:  
   
--   N wird aufgrund von M erstellt.  
+- N wird aufgrund von M erstellt.  
   
--   Die gAId von M ist N bekannt.  
+- Die gAId von M ist N bekannt.  
   
--   Die gAId von N entspricht der gAId von M.  
+- Die gAId von N entspricht der gAId von M.  
   
  Die gAId wird über den ActivityId-Nachrichtenheader weitergegeben (wie im folgenden XML-Schema gezeigt):  
   

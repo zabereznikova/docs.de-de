@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940945"
 ---
-# <a name="serverless-architecture-considerations"></a>Überlegungen für eine serverlose Architektur
+# <a name="serverless-architecture-considerations"></a>Überlegungen zur serverlosen Architektur
 
 Einführung einer serverlosen Architektur mit einigen Herausforderungen stammen. In diesem Abschnitt werden einige allgemeinen Überlegungen zu beachten. All diese Herausforderungen bieten Lösungen. Wie bei allen architekturoptionen, sollten die Entscheidung, serverlose Architektur vorgenommen werden, erst nach dem sorgfältig abwägen der vor- und Nachteile. Je nach den Anforderungen Ihrer Anwendung können Sie entscheiden, dass eine serverlose Implementierung die richtige Lösung für bestimmte Komponenten nicht.
 
