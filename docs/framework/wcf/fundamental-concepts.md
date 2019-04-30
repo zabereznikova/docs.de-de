@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929596"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienst und Client finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). WCF-Programmierung finden Sie unter [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -34,11 +34,11 @@ Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communicat
   
  Ein anderes erforderliches Element des Kommunikationsstapels ist die Codierung, die angibt, wie jede Nachricht formatiert ist. WCF bietet die folgenden Codierungen:  
   
--   Textcodierung, eine interoperable Codierung.  
+- Textcodierung, eine interoperable Codierung.  
   
--   Message Transmission Optimization Mechanism (MTOM)-Codierung, eine interoperable Möglichkeit, unstrukturierte Binärdaten effizient an einem und von einem Dienst zu senden.  
+- Message Transmission Optimization Mechanism (MTOM)-Codierung, eine interoperable Möglichkeit, unstrukturierte Binärdaten effizient an einem und von einem Dienst zu senden.  
   
--   Binäre Codierung für effiziente Übertragung.  
+- Binäre Codierung für effiziente Übertragung.  
   
  Mehr Codierungsmechanismen (z. B. eine komprimierungscodierung) können mit den integrierten Erweiterungspunkten von WCF hinzugefügt werden.  
   

@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949941"
 ---
 # <a name="lazy-initialization"></a>Verzögerte Initialisierung
 *Verzögerte Initialisierung* eines Objekts bedeutet, dass seine Erstellung bis zur ersten Verwendung verzögert wird. (In diesem Thema werden die Begriffe *verzögerte Initialisierung* und *verzögerte Instanziierung* synonym gebraucht.) Die verzögerte Initialisierung wird vorwiegend verwendet, um die Leistung zu verbessern, aufwendige Berechnungen zu vermeiden und die Speicheranforderungen des Programms zu reduzieren. Die folgenden Szenarios sind die häufigsten:  
   
--   Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das möglicherweise nicht vom Programm verwendet wird. Angenommen, in Ihrem Speicher befindet sich ein `Customer`-Objekt mit einer `Orders`-Eigenschaft, die ein großes Array aus `Order`-Objekten enthält, das zur Initialisierung eine Datenbankverbindung benötigt. Fordert der Benutzer nie die Anzeige des Orders-Objekts oder die Verwendung der Daten in einer Berechnung an, ist es nicht notwendig, Systemspeicher oder Berechnungszyklen für seine Erstellung zu verwenden. Systemressourcen können geschont werden, wenn Sie die verzögerte Initialisierung für das `Orders`-Objekt mithilfe von `Lazy<Orders>` deklarieren, solange das Objekt nicht verwendet wird.  
+- Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das möglicherweise nicht vom Programm verwendet wird. Angenommen, in Ihrem Speicher befindet sich ein `Customer`-Objekt mit einer `Orders`-Eigenschaft, die ein großes Array aus `Order`-Objekten enthält, das zur Initialisierung eine Datenbankverbindung benötigt. Fordert der Benutzer nie die Anzeige des Orders-Objekts oder die Verwendung der Daten in einer Berechnung an, ist es nicht notwendig, Systemspeicher oder Berechnungszyklen für seine Erstellung zu verwenden. Systemressourcen können geschont werden, wenn Sie die verzögerte Initialisierung für das `Orders`-Objekt mithilfe von `Lazy<Orders>` deklarieren, solange das Objekt nicht verwendet wird.  
   
--   Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das daher erst erstellt werden soll, wenn andere teure Vorgänge abgeschlossen sind. Angenommen, das Programm lädt beim Start mehrere Objektinstanzen, von denen allerdings nur einige sofort benötigt werden. Hier kann die Startleistung des Programms verbessert werden, indem die Initialisierung der nicht benötigten Objekte verzögert wird, bis die benötigten Objekte erstellt wurden.  
+- Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das daher erst erstellt werden soll, wenn andere teure Vorgänge abgeschlossen sind. Angenommen, das Programm lädt beim Start mehrere Objektinstanzen, von denen allerdings nur einige sofort benötigt werden. Hier kann die Startleistung des Programms verbessert werden, indem die Initialisierung der nicht benötigten Objekte verzögert wird, bis die benötigten Objekte erstellt wurden.  
   
  Sie können für die verzögerte Initialisierung Ihren eigenen Code schreiben. Es ist jedoch empfehlenswert, stattdessen <xref:System.Lazy%601> zu verwenden. <xref:System.Lazy%601> und die zugehörigen verwandten Typen unterstützen auch die Threadsicherheit und stellen eine konsistente Richtlinie zur Ausnahmeweitergabe bereit.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182298"
   
  <xref:System.Threading.ThreadLocal%601> umschließt sein Objekt auf fast die gleiche Weise wie <xref:System.Lazy%601>, mit folgenden entscheidenden Unterschieden:  
   
--   Jeder Thread initialisiert die threadlokale Variable mit seinen eigenen privaten Daten, auf die von anderen Threads nicht zugegriffen werden kann.  
+- Jeder Thread initialisiert die threadlokale Variable mit seinen eigenen privaten Daten, auf die von anderen Threads nicht zugegriffen werden kann.  
   
--   Die <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType>-Eigenschaft verfügt über Lese-/Schreibzugriff und kann beliebig oft geändert werden. Dies kann sich auf die Ausnahmeweitergabe auswirken: So kann ein `get`-Vorgang z.B. eine Ausnahme auslösen, während der nächste den Wert erfolgreich initialisiert.  
+- Die <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType>-Eigenschaft verfügt über Lese-/Schreibzugriff und kann beliebig oft geändert werden. Dies kann sich auf die Ausnahmeweitergabe auswirken: So kann ein `get`-Vorgang z.B. eine Ausnahme auslösen, während der nächste den Wert erfolgreich initialisiert.  
   
--   <xref:System.Threading.ThreadLocal%601> initialisiert seinen umschlossenen Typ mit dem Standardwert des Typs, wenn kein Initialisierungsdelegat bereitgestellt wird. In dieser Hinsicht ist <xref:System.Threading.ThreadLocal%601> mit dem <xref:System.ThreadStaticAttribute>-Attribut konsistent.  
+- <xref:System.Threading.ThreadLocal%601> initialisiert seinen umschlossenen Typ mit dem Standardwert des Typs, wenn kein Initialisierungsdelegat bereitgestellt wird. In dieser Hinsicht ist <xref:System.Threading.ThreadLocal%601> mit dem <xref:System.ThreadStaticAttribute>-Attribut konsistent.  
   
  Das folgende Beispiel verdeutlicht, dass jeder auf die `ThreadLocal<int>`-Instanz zugreifende Thread eine eigene eindeutige Kopie der Daten erhält.  
   

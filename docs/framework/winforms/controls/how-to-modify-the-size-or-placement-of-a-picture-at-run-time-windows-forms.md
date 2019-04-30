@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913730"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit (Windows Forms)
 Bei Verwendung der Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement eines Formulars, Sie können festlegen, die <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft darauf, um:  
   
--   Ausrichten der oberen linken Ecke der Grafik mit der linken oberen Ecke des Steuerelements  
+- Ausrichten der oberen linken Ecke der Grafik mit der linken oberen Ecke des Steuerelements  
   
--   Zentrieren Sie das Bild innerhalb des Steuerelements  
+- Zentrieren Sie das Bild innerhalb des Steuerelements  
   
--   Passen Sie die Größe des Steuerelements auf das Bild anzupassen, das er zeigt  
+- Passen Sie die Größe des Steuerelements auf das Bild anzupassen, das er zeigt  
   
--   Um ein Bild angezeigt wird, um das Steuerelement eingepasst werden gestreckt  
+- Um ein Bild angezeigt wird, um das Steuerelement eingepasst werden gestreckt  
   
  Strecken ein Bild (vor allem eine Bitmap-Format) kann zu einem Verlust im Bildqualität führen. Metadateien, die Listen der Grafik-Anweisungen zum Darstellen von Bildern zur Laufzeit sind, eignen sich besser für Sie Streckung als Bitmaps sind.  
   

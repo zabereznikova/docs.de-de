@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
 ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913119"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Vorgehensweise: Rendern eines visuellen Stilelements
 Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespace weist <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> den Windows-Benutzer darstellende – Objekte Schnittstellenelemente (UI) von visuellen Stilen unterstützt. In diesem Thema wird veranschaulicht, wie Sie mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klasse zum Rendern der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> darstellt, die die **Abmelden** und **Herunterfahren** Schaltflächen des Startmenüs auf.  
@@ -37,11 +37,11 @@ Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namesp
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein benutzerdefiniertes Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.Control> Klasse.  
+- Ein benutzerdefiniertes Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.Control> Klasse.  
   
--   Ein <xref:System.Windows.Forms.Form> , die das benutzerdefinierte Steuerelement hostet.  
+- Ein <xref:System.Windows.Forms.Form> , die das benutzerdefinierte Steuerelement hostet.  
   
--   Verweise auf die <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespaces.  
+- Verweise auf die <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch
 

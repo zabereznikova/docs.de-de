@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
 ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936875"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Verwalten des Zustands eines Graphics-Objekts
 Die <xref:System.Drawing.Graphics> -Klasse ist das Herzstück von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Um alles zu zeichnen, Sie erhalten eine <xref:System.Drawing.Graphics> Objekt, dessen Eigenschaften festlegen und seine Methoden aufrufen <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, usw.).  
@@ -35,11 +35,11 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ## <a name="graphics-state"></a>Grafikzustand  
  Ein <xref:System.Drawing.Graphics> Objekt bietet mehr als Zeichenmethoden wie z. B. <xref:System.Drawing.Graphics.DrawLine%2A> und <xref:System.Drawing.Graphics.DrawRectangle%2A>. Ein <xref:System.Drawing.Graphics> -Objekt verwaltet auch den Grafikstatus, die in der folgenden Kategorien unterteilt werden können:  
   
--   Einstellungen für die Qualität  
+- Einstellungen für die Qualität  
   
--   Transformationen  
+- Transformationen  
   
--   Ausschneidebereich  
+- Ausschneidebereich  
   
 ### <a name="quality-settings"></a>Einstellungen für die Qualität  
  Ein <xref:System.Drawing.Graphics> Objekt verfügt über mehrere Eigenschaften, die die Qualität der Elemente beeinflussen, die gezeichnet werden. Sie können z. B. Festlegen der <xref:System.Drawing.Graphics.TextRenderingHint%2A> Eigenschaft, um den Typ des Antialiasing (sofern vorhanden), die auf einen Text angewendeten anzugeben. Andere Eigenschaften, die Qualität beeinflussen sind <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, und <xref:System.Drawing.Graphics.InterpolationMode%2A>.  

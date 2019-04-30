@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Überschreiben der XML-Serialisierung von codiertem SOAP'
+title: 'Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
 ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922589"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Vorgehensweise: Überschreiben der XML-Serialisierung von codiertem SOAP
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Vorgehensweise: Überschreiben von codierter SOAP-XML-Serialisierung
 
 Das Verfahren zum Überschreiben der XML-Serialisierung von Objekten als SOAP-Nachrichten ist mit dem zum Überschreiben der Standard-XML-Serialisierung vergleichbar. Informationen zum Überschreiben der standardmäßigen XML-Serialisierung finden Sie unter [Vorgehensweise: Angeben ein alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 

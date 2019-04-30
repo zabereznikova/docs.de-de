@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940477"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Vorgehensweise: Aktivieren der Erkennung einer Token-Replay-Erkennung
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche Prozeduren zum Aktivieren der Erkennung einer Tokenmehrfachverwendung in einer ASP.NET-Anwendung, die WIF verwendet, vorgestellt. Es werden auch Anleitungen bereitgestellt, wie die Anwendung danach überprüft werden kann, ob die Erkennung einer Tokenmehrfachverwendung aktiviert ist. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann von folgendem Speicherort heruntergeladen werden: [Identitäts- und Zugriffs-Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Übersicht  
+- Übersicht  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Erkennung einer Tokenmehrfachverwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Erkennung einer Tokenmehrfachverwendung  
   
--   Schritt 2 – Testen der Projektmappe  
+- Schritt 2 – Testen der Projektmappe  
   
 ## <a name="objectives"></a>Ziele  
   
--   Erstellen einer einfachen ASP.NET-Anwendung, die WIF und den Entwicklungs-STS aus dem Identitäts- und Zugriffs-Tool verwendet  
+- Erstellen einer einfachen ASP.NET-Anwendung, die WIF und den Entwicklungs-STS aus dem Identitäts- und Zugriffs-Tool verwendet  
   
--   Aktivieren Sie die Erkennung einer Tokenmehrfachverwendung, und versichern Sie sich, dass sie funktioniert  
+- Aktivieren Sie die Erkennung einer Tokenmehrfachverwendung, und versichern Sie sich, dass sie funktioniert  
   
 ## <a name="overview"></a>Übersicht  
  Ein Replay-Angriff tritt auf, wenn ein Client versucht, eine Authentifizierung bei einer vertrauenden Seite mit einem STS-Token vorzunehmen, der vom Client bereits verwendet wurde. WIF enthält ein Cache für die Replay-Erkennung von bereits verwendeten STS-Tokens, um diesem Angriff vorzubeugen. Wenn dieses aktiviert ist, überprüft die Replay-Erkennung den Token der eingehenden Anforderung und ob dieser zuvor bereits verwendet wurde oder nicht. Wenn der Token bereits verwendet wurde, wird die Anforderung abgelehnt und eine <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException>-Ausnahme wird ausgelöst.  
@@ -45,9 +45,9 @@ ms.locfileid: "59772920"
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Erkennung einer Tokenmehrfachverwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Erkennung einer Tokenmehrfachverwendung  
   
--   Schritt 2 – Testen der Projektmappe  
+- Schritt 2 – Testen der Projektmappe  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>Schritt 1: Erstellen einer einfachen ASP.NET-Web Forms-Anwendung und Aktivieren der Erkennung einer Tokenmehrfachverwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung und ändern die Datei *Web.config*, um die Replay-Erkennung zu aktivieren.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936356"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Zusammenführen von Menüelementen im MenuStrip-Steuerelement von Windows Forms
 Wenn Sie eine Anwendung für die Multiple Document Interface (MDI) verfügen, können Sie Menüelemente oder ganze Menüs aus dem untergeordnete Formular in den Menüs des übergeordneten Formulars zusammenführen.  
@@ -20,9 +20,9 @@ Wenn Sie eine Anwendung für die Multiple Document Interface (MDI) verfügen, k�
 ## <a name="general-concepts"></a>Allgemeine Konzepte  
  Das Zusammenführen von Prozeduren umfassen sowohl ein Ziel und ein Datenquellen-Steuerelement:  
   
--   Das Ziel ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement im Hauptformular oder das übergeordnete MDI-Formular, in dem Sie Menüelemente zusammengeführt werden.  
+- Das Ziel ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement im Hauptformular oder das übergeordnete MDI-Formular, in dem Sie Menüelemente zusammengeführt werden.  
   
--   Die Quelle ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement die untergeordneten MDI-Formulars, das die Menüelemente enthält, in dem Menü "Ziel" zusammenzuführen.  
+- Die Quelle ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement die untergeordneten MDI-Formulars, das die Menüelemente enthält, in dem Menü "Ziel" zusammenzuführen.  
   
  Die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> identifiziert das Menüelement, deren Dropdown-Listenfeld, füllen Sie die Titel der aktuellen MDI, übergeordnete Formular des untergeordneten MDI-Objekte. Angenommen, Sie untergeordnete MDI-Fenster, die derzeit geöffnet sind in der Regel Auflisten der **Fenster** Menü.  
   

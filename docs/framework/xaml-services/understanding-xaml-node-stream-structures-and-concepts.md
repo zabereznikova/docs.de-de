@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954088"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 
@@ -45,13 +45,13 @@ Eine grundlegende Leseknotenschleife zum Untersuchen eines XAML-Knotenstreams be
 
 - Verwenden Sie abhängig davon, welcher <xref:System.Xaml.XamlNodeType> als aktueller Knoten oder aktueller Datensatz gemeldet wird, einen der folgenden Aufrufe, um Informationen zum Knoteninhalt zu erhalten:
 
-    - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.StartMember> oder <xref:System.Xaml.XamlNodeType.EndMember>, rufen Sie <xref:System.Xaml.XamlXmlReader.Member%2A> auf, um <xref:System.Xaml.XamlMember> -Informationen zu einem Member zu erhalten. Da der Member eine <xref:System.Xaml.XamlDirective>sein könnte, ist er nicht zwingend ein konventioneller Member mit definiertem Typ des vorherigen Objekts. Ein auf ein Objekt angewendeter `x:Name` wird z. B. als XAML-Member angezeigt, bei dem <xref:System.Xaml.XamlMember.IsDirective%2A> "true" und der <xref:System.Xaml.XamlMember.Name%2A> des Members `Name`ist und andere Eigenschaften angeben, dass diese Direktive im XAML-Namespace der XAML-Sprache enthalten ist.
+  - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.StartMember> oder <xref:System.Xaml.XamlNodeType.EndMember>, rufen Sie <xref:System.Xaml.XamlXmlReader.Member%2A> auf, um <xref:System.Xaml.XamlMember> -Informationen zu einem Member zu erhalten. Da der Member eine <xref:System.Xaml.XamlDirective>sein könnte, ist er nicht zwingend ein konventioneller Member mit definiertem Typ des vorherigen Objekts. Ein auf ein Objekt angewendeter `x:Name` wird z. B. als XAML-Member angezeigt, bei dem <xref:System.Xaml.XamlMember.IsDirective%2A> "true" und der <xref:System.Xaml.XamlMember.Name%2A> des Members `Name`ist und andere Eigenschaften angeben, dass diese Direktive im XAML-Namespace der XAML-Sprache enthalten ist.
 
-    - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.StartObject> oder <xref:System.Xaml.XamlNodeType.EndObject>, rufen Sie <xref:System.Xaml.XamlXmlReader.Type%2A> auf, um <xref:System.Xaml.XamlType> -Informationen zu einem Objekt zu erhalten.
+  - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.StartObject> oder <xref:System.Xaml.XamlNodeType.EndObject>, rufen Sie <xref:System.Xaml.XamlXmlReader.Type%2A> auf, um <xref:System.Xaml.XamlType> -Informationen zu einem Objekt zu erhalten.
 
-    - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.Value>, rufen Sie <xref:System.Xaml.XamlXmlReader.Value%2A>auf. Ein Knoten ist nur ein Wert, wenn er der einfachste Ausdruck eines Werts für einen Member oder der Initialisierungstext für ein Objekt ist (dabei ist jedoch das weiter unten in diesem Thema beschriebene Typkonvertierungsverhalten zu beachten).
+  - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.Value>, rufen Sie <xref:System.Xaml.XamlXmlReader.Value%2A>auf. Ein Knoten ist nur ein Wert, wenn er der einfachste Ausdruck eines Werts für einen Member oder der Initialisierungstext für ein Objekt ist (dabei ist jedoch das weiter unten in diesem Thema beschriebene Typkonvertierungsverhalten zu beachten).
 
-    - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, rufen Sie <xref:System.Xaml.XamlXmlReader.Namespace%2A> auf, um Namespaceinformationen für einen Namespaceknoten zu erhalten.
+  - Lautet der <xref:System.Xaml.XamlXmlReader.NodeType%2A> <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>, rufen Sie <xref:System.Xaml.XamlXmlReader.Namespace%2A> auf, um Namespaceinformationen für einen Namespaceknoten zu erhalten.
 
 - Rufen Sie <xref:System.Xaml.XamlXmlReader.Read%2A> auf, um den XAML-Reader auf den nächsten Knoten im XAML-Knotenstream zu setzen, und wiederholen Sie die Schritte.
 
@@ -140,15 +140,15 @@ Im XAML-Knotenstream wird das folgende Verhalten verwendet:
 
 - Ein `Value` -Knoten stellt den Wert selbst dar. Es gibt kein "EndValue"-Element. Ihm kann nur ein `EndMember`folgen.
 
-    - Der XAML-Initialisierungstext des Objekts, wie er von der Konstruktion verwendet werden könnte, führt nicht zu einer Object-Value-Struktur. Stattdessen wird ein dedizierter Memberknoten für einen Member mit dem Namen `_Initialization` erstellt und dieser Memberknoten enthält die Initialisierungswertzeichenfolge. Falls vorhanden, ist `_Initialization` immer der erste `StartMember`. `_Initialization` wird in einigen XAML-Dienst-Darstellungen möglicherweise mit dem XAML-Namensbereich der XAML-Sprache qualifiziert, um klarzustellen, dass `_Initialization` keine definierte Eigenschaft in Unterstützungstypen ist.
+  - Der XAML-Initialisierungstext des Objekts, wie er von der Konstruktion verwendet werden könnte, führt nicht zu einer Object-Value-Struktur. Stattdessen wird ein dedizierter Memberknoten für einen Member mit dem Namen `_Initialization` erstellt und dieser Memberknoten enthält die Initialisierungswertzeichenfolge. Falls vorhanden, ist `_Initialization` immer der erste `StartMember`. `_Initialization` wird in einigen XAML-Dienst-Darstellungen möglicherweise mit dem XAML-Namensbereich der XAML-Sprache qualifiziert, um klarzustellen, dass `_Initialization` keine definierte Eigenschaft in Unterstützungstypen ist.
 
-    - Eine Member-Wert-Kombination stellt eine Attributeinstellung des Werts dar. An der Verarbeitung dieses Werts kann ein Wertkonverter beteiligt sein, und der Wert ist eine einfache Zeichenfolge. Das wird jedoch erst ausgewertet, wenn ein XAML-Objektwriter diesen Knotenstream verarbeitet. Der XAML-Objektwriter besitzt den notwendigen XAML-Schemakontext, die Typsystemzuordnung und andere Unterstützung, die für Wertkonvertierungen benötigt wird.
+  - Eine Member-Wert-Kombination stellt eine Attributeinstellung des Werts dar. An der Verarbeitung dieses Werts kann ein Wertkonverter beteiligt sein, und der Wert ist eine einfache Zeichenfolge. Das wird jedoch erst ausgewertet, wenn ein XAML-Objektwriter diesen Knotenstream verarbeitet. Der XAML-Objektwriter besitzt den notwendigen XAML-Schemakontext, die Typsystemzuordnung und andere Unterstützung, die für Wertkonvertierungen benötigt wird.
 
 - Einem `EndMember` -Knoten kann ein `StartMember` -Knoten für einen nachfolgenden Member oder ein `EndObject` -Knoten für den Memberbesitzer folgen.
 
 - Einem `EndObject` -Knoten kann ein `EndMember` -Knoten folgen. In Fällen, in denen Objekte Peers in den Elementen einer Auflistung sind, kann ihm auch ein `StartObject` -Knoten folgen. Ihm kann auch ein `Namespace` -Knoten folgen, der für ein späteres `StartObject`gilt.
 
-    - In dem besonderen Fall, dass ein gesamter Knotenstream geschlossen wird, folgt dem `EndObject` -Element des Stamms kein weiteres Element. Der Reader befindet sich jetzt am Dateiende, und <xref:System.Xaml.XamlReader.Read%2A> gibt `false`zurück.
+  - In dem besonderen Fall, dass ein gesamter Knotenstream geschlossen wird, folgt dem `EndObject` -Element des Stamms kein weiteres Element. Der Reader befindet sich jetzt am Dateiende, und <xref:System.Xaml.XamlReader.Read%2A> gibt `false`zurück.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

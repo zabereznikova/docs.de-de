@@ -3,17 +3,17 @@ title: WMI-Klassenreferenz
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915655"
 ---
 # <a name="wmi-class-reference"></a>WMI-Klassenreferenz
 Dieser Abschnitt enthält alle WMI-Klassen, die von der Windows Communication Foundation (WCF)-WMI-Anbieter verfügbar gemacht werden.  
   
 ## <a name="accessing-wmi-instances"></a>Zugreifen auf WMI-Instanzen  
- Alle in der WMI-Objektreferenz aufgeführten Klassen können nicht direkt instanziiert werden, mit Ausnahme von Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation und Endpoint. Um auf die anderen Instanzen zuzugreifen, können Sie auf die Eigenschaften der vorher erwähnten Klassen der obersten Ebene zugreifen. Zum Beispiel können Sie auf die "TransportBindingElement"Instanz über "Endpoint-Instanz -> Binding -> BindingElements" zugreifen.  
+ Alle in der WMI-Objektreferenz aufgeführten Klassen können nicht direkt instanziiert werden, mit Ausnahme von Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation und Endpoint. Um auf die anderen Instanzen zuzugreifen, können Sie auf die Eigenschaften der vorher erwähnten Klassen der obersten Ebene zugreifen. Sie können z. B. die TransportBindingElement-Instanz zugreifen aus dem Endpunkt, der Instanz ->-Bindung Bindungselemente >.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -80,7 +80,7 @@ Dieser Abschnitt enthält alle WMI-Klassen, die von der Windows Communication Fo
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- "Vorgang Class"  
+ "Operation-Klasse"  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   

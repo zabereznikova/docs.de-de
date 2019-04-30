@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940464"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Vorgehensweise: Aktivieren von WIF für eine WCF-Webdienstanwendung
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF in einem WCF-Webdienst vorgestellt. Sie enthält auch Anweisungen für Tests der Anwendung, mit denen überprüft werden kann, ob der Webdienst Ansprüche ordnungsgemäß darstellt, wenn die Anwendung ausgeführt wird. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann von folgendem Speicherort heruntergeladen werden: [Identitäts- und Zugriffs-Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Übersicht  
+- Übersicht  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1 – Erstellen eines einfachen WCF-Diensts  
+- Schritt 1 – Erstellen eines einfachen WCF-Diensts  
   
--   Schritt 2 – Erstellen einer Clientanwendung für den WCF-Dienst  
+- Schritt 2 – Erstellen einer Clientanwendung für den WCF-Dienst  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="objectives"></a>Ziele  
   
--   Erstellen eines WCF-Diensts, für den Token ausgestellt werden müssen  
+- Erstellen eines WCF-Diensts, für den Token ausgestellt werden müssen  
   
--   Erstellen eines WCF-Clients, für den ein Token aus einem STS erforderlich ist, der an den WCF-Dienst weitergeleitet wird  
+- Erstellen eines WCF-Clients, für den ein Token aus einem STS erforderlich ist, der an den WCF-Dienst weitergeleitet wird  
   
 ## <a name="overview"></a>Übersicht  
  In dieser Vorgehensweise wird veranschaulicht, wie ein Entwickler Verbundauthentifizierung bei der Entwicklung eines WCF-Diensts verwenden kann. Die Verwendung eines Verbunds in WCF-Diensten hat folgende Vorteile:  
@@ -55,11 +55,11 @@ ms.locfileid: "59977430"
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1 – Erstellen eines einfachen WCF-Diensts  
+- Schritt 1 – Erstellen eines einfachen WCF-Diensts  
   
--   Schritt 2 – Erstellen einer Clientanwendung für den WCF-Dienst  
+- Schritt 2 – Erstellen einer Clientanwendung für den WCF-Dienst  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>Schritt 1 – Erstellen eines einfachen WCF-Diensts  
  In diesem Schritt erstellen Sie einen neuen WCF-Dienst, für den der im Identitäts- und Zugriffs-Tool enthaltene Entwicklungs-STS verwendet wird.  

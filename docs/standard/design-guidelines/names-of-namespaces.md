@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940984"
 ---
 # <a name="names-of-namespaces"></a>Namen von Namespaces
 Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Namespaces erstellt ausreichend Klarheit für den Programmierer mit dem Framework sofort wissen, was der Inhalt des Namespace wahrscheinlich ist. Die folgende Vorlage gibt die allgemeine Regel für die Benennung von Namespaces an:  
@@ -49,7 +49,7 @@ Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Names
   
  Es gibt bestimmte Richtlinien zum Vermeiden von namenstypkonflikten für verschiedene Kategorien von Namespaces.  
   
--   **Application-Modell-namespaces**  
+- **Application-Modell-namespaces**  
   
      Namespaces für ein einziges Anwendungsmodell werden sehr häufig zusammen verwendet werden, aber sie werden fast nie mit Namespaces anderer Modelle für die Anwendung verwendet. Z. B. die <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace werden nur sehr selten zusammen mit den <xref:System.Web.UI?displayProperty=nameWithType> Namespace. Im folgenden finden eine Liste der bekannten Modell Namespace Anwendungsgruppen:  
   
@@ -60,11 +60,11 @@ Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Names
   
      Z. B. nicht auf einen Typ mit dem Namen hinzufügen `Page` auf die <xref:System.Web.UI.Adapters?displayProperty=nameWithType> -Namespace, da die <xref:System.Web.UI?displayProperty=nameWithType> -Namespace enthält bereits einen Typ namens `Page`.  
   
--   **Infrastrukturnamespaces**  
+- **Infrastrukturnamespaces**  
   
      Diese Gruppe enthält die Namespaces, die nur selten während der Entwicklung häufig genutzte Anwendungen importiert werden. Z. B. `.Design` Namespaces werden hauptsächlich verwendet, wenn das tools entwickeln, Programmieren. Vermeiden von Konflikten mit Typen aus den Namespaces ist unerheblich.  
   
--   **Core-namespaces**  
+- **Core-namespaces**  
   
      Core-Namespaces enthalten alle `System` Namespaces, mit Ausnahme von Namespaces der Anwendungsmodelle und die Infrastruktur-Namespaces. Core-Namespaces einschließen, u. a. `System`, `System.IO`, `System.Xml`, und `System.Net`.  
   
@@ -72,7 +72,7 @@ Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Names
   
      Verwenden Sie z. B. niemals `Stream` als Typname. Es steht in Konflikt mit <xref:System.IO.Stream?displayProperty=nameWithType>, ein sehr häufig verwendete Typ.  
   
--   **Technologie-Namespace-Gruppen**  
+- **Technologie-Namespace-Gruppen**  
   
      Diese Kategorie enthält alle Namespaces mit den gleichen Namespaceknoten der ersten beiden `(<Company>.<Technology>*`), wie z. B. `Microsoft.Build.Utilities` und `Microsoft.Build.Tasks`. Es ist wichtig, dass Typen, die auf eine einzelne Technologie gehören nicht miteinander in Konflikt stehen.  
   

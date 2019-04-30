@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940438"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Vorgehensweise: Transformieren eingehender Ansprüche
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche Prozeduren zum Erstellen einer einfachen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung und zum Transformieren eingehender Ansprüche vorgestellt. Sie enthält auch Anweisungen zum Testen der Anwendung, mit denen überprüft werden kann, ob transformierte Ansprüche dargestellt werden, wenn die Anwendung ausgeführt wird.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Übersicht  
+- Übersicht  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
+- Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="objectives"></a>Ziele  
   
--   Konfigurieren Sie eine ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung.  
+- Konfigurieren Sie eine ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung.  
   
--   Transformieren Sie eingehende Ansprüche durch Hinzufügen eines Administratorrollenanspruchs.  
+- Transformieren Sie eingehende Ansprüche durch Hinzufügen eines Administratorrollenanspruchs.  
   
--   Testen Sie die ASP.NET Web Forms-Anwendung, um festzustellen, ob sie ordnungsgemäß funktioniert.  
+- Testen Sie die ASP.NET Web Forms-Anwendung, um festzustellen, ob sie ordnungsgemäß funktioniert.  
   
 ## <a name="overview"></a>Übersicht  
  WIF macht eine Klasse mit dem Namen <xref:System.Security.Claims.ClaimsAuthenticationManager> verfügbar, mit der Benutzer Ansprüche ändern können, bevor sie in einer Anwendung der vertrauenden Seite (Relying Party, RP) dargestellt werden. <xref:System.Security.Claims.ClaimsAuthenticationManager> eignet sich für die Trennung von Bereichen zwischen Authentifizierung und zugrunde liegendem Anwendungscode. Das unten aufgeführte Beispiel zeigt, wie eine Rolle den Ansprüchen im eingehenden <xref:System.Security.Claims.ClaimsPrincipal> hinzugefügt wird, die möglicherweise für die vertrauende Seite erforderlich ist.  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
+- Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  

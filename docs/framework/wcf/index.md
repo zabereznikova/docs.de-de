@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928673"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Entwickeln von dienstorientierten Anwendungen mit WCF
 Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communication Foundation (WCF), einem einheitlichen Programmiermodell zum Erstellen von serviceorientierten Anwendungen. Es ermöglicht Entwicklern das Erstellen sicherer, zuverlässiger und transaktiver Lösungen für die plattformübergreifende Integration und bietet unfassende Interoperabilität mit vorhandenen Investitionen.
@@ -35,7 +35,7 @@ Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communicati
  Beschreibt die Grundlagen zum Erstellen von Windows Communication Foundation-Anwendungen.  
   
  [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md)  
- Zeigt Themen an, mit denen Sie auswählen, welche WCF-Funktion oder Funktionen Sie einsetzen müssen.  
+ Zeigt Themen an, mit denen Sie wählen die WCF-Funktion oder Funktionen, die Sie einsetzen möchten.  
   
  [Erweitern von WCF](../../../docs/framework/wcf/extending/index.md)  
  Beschreibt, wie die WCF-Laufzeitkomponenten geändert und erweitert werden.  
@@ -68,7 +68,7 @@ Dieser Abschnitt der Dokumentation enthält Informationen zu Windows Communicati
  Beispiele mit Anleitungen zu verschiedenen Aspekten von Windows Communication Foundation  
   
  [Windows Communication Foundation-Glossar](../../../docs/framework/wcf/glossary.md)  
- Zeigt eine Liste von Begriffen in WCF  
+ Zeigt eine Liste von Begriffen speziell zu WCF  
   
  [Allgemeine Referenz](../../../docs/framework/wcf/general-reference.md)  
  Der Abschnitt beschreibt die Elemente, die zum Konfigurieren der Windows Communication Foundation-Clients und -Dienste verwendet werden.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
 ms.openlocfilehash: 40fccee551e7840ef474e7775873d4e7178748fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941257"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms
 Manchmal möchten Sie nur einige der Spalten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms verfügbar sind. Benutzern, die sich mit Anmeldeinformationen der Geschäftsleitung anmelden, möchten Sie beispielsweise eine Spalte mit den Gehältern der Angestellten anzeigen, diese aber für andere Benutzer ausblenden. Oder aber Sie möchten das Steuerelement an eine Datenquelle binden, die viele Spalten enthält, von denen Sie nur einige anzeigen möchten. In diesem Fall entfernen Sie in der Regel die Spalten, deren Anzeige Sie nicht interessiert, anstatt sie auszublenden.  
@@ -25,7 +25,7 @@ Manchmal möchten Sie nur einige der Spalten anzeigen, die in einem <xref:System
   
 ### <a name="to-hide-a-column-programmatically"></a>So blenden Sie eine Spalte programmgesteuert aus  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> -Eigenschaft auf `false`fest. Wenn Sie eine während der Datenbindung automatisch generierte `CustomerID`-Spalte ausblenden möchten, platzieren Sie das folgende Codebeispiel in einem <xref:System.Windows.Forms.DataGridView.DataBindingComplete>-Ereignishandler.  
+- Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> -Eigenschaft auf `false`fest. Wenn Sie eine während der Datenbindung automatisch generierte `CustomerID`-Spalte ausblenden möchten, platzieren Sie das folgende Codebeispiel in einem <xref:System.Windows.Forms.DataGridView.DataBindingComplete>-Ereignishandler.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  
@@ -33,9 +33,9 @@ Manchmal möchten Sie nur einige der Spalten anzeigen, die in einem <xref:System
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte namens `CustomerID` enthält.  
+- Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte namens `CustomerID` enthält.  
   
--   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
 

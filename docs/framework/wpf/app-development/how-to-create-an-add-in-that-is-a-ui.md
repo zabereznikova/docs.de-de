@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947887"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) ist der von der eine eigenständige WPF-Anwendung gehostet wird.  
@@ -25,9 +25,9 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
  In diesem Beispiel hebt die WPF-Erweiterungen für die Add-In-Modell von .NET Framework, die dieses Szenario zu aktivieren, und es wird Folgendes vorausgesetzt:  
   
--   Kenntnisse in Bezug auf die Add-In-Modell von .NET Framework, einschließlich der Pipeline, add-Ins und Hostentwicklung. Wenn Sie mit diesen Begriffen nicht vertraut sind, finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und einer hostanwendung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Kenntnisse in Bezug auf die Add-In-Modell von .NET Framework, einschließlich der Pipeline, add-Ins und Hostentwicklung. Wenn Sie mit diesen Begriffen nicht vertraut sind, finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und einer hostanwendung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Kenntnisse in Bezug auf die WPF-Erweiterungen für die Add-In-Modell von .NET Framework. Finden Sie unter [Übersicht über das WPF-Add-Ins](wpf-add-ins-overview.md).  
+- Kenntnisse in Bezug auf die WPF-Erweiterungen für die Add-In-Modell von .NET Framework. Finden Sie unter [Übersicht über das WPF-Add-Ins](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Beispiel  
  Um ein Add-in zu erstellen, die eine WPF-UI ist spezieller Code für die einzelnen Pipelinesegmente, das Add-in und die hostanwendung erforderlich.  
@@ -87,9 +87,9 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
  Der Code zum Verarbeiten von Interaktionen mit der Add-in-Benutzeroberfläche, die in das Add-in der Anwendungsdomäne ausgeführt werden. Diese Interaktionen umfassen Folgendes:  
   
--   Behandeln der <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+- Behandeln der <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
--   Zeigt die <xref:System.Windows.MessageBox>.  
+- Zeigt die <xref:System.Windows.MessageBox>.  
   
  Diese Aktivität ist von der Hostanwendung vollständig isoliert.  
   

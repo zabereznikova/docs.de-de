@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
 ms.openlocfilehash: a03f477dd31909e8cb9dde9cd29da6f38d665758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904149"
 ---
 # <a name="how-to-define-a-name-scope"></a>Vorgehensweise: Definieren eines Namensbereichs
 Animieren mit <xref:System.Windows.Media.Animation.Storyboard> im Code müssen Sie erstellen eine <xref:System.Windows.NameScope> und registrieren Sie die Namen der Zielobjekte mit dem Element, das diesen Namensbereich besitzt. Im folgenden Beispiel eine <xref:System.Windows.NameScope> für erstellt `myMainPanel`. Zwei Schaltflächen, `button1` und `button2`, Bereich, und ihre registrierten Namen hinzugefügt werden. Mehrere Animationen und <xref:System.Windows.Media.Animation.Storyboard> werden erstellt. Storyboard <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode wird verwendet, um die Animationen zu starten.  

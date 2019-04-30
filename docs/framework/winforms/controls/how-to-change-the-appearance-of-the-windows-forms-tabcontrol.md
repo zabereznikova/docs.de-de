@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904266"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Vorgehensweise: Ändern der Darstellung der TabControl-Komponente in Windows Forms
 Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem Sie mit den Eigenschaften des der <xref:System.Windows.Forms.TabControl> und <xref:System.Windows.Forms.TabPage> Objekte, die die einzelnen Registerkarten des Steuerelements bilden. Durch Festlegen dieser Eigenschaften an, können Sie Bilder auf Registerkarten anzeigen, Anzeigen von Registerkarten vertikal statt horizontal, Anzeigen mehrerer Zeilen mit Registerkarten, und aktivieren oder deaktivieren Registerkarten programmgesteuert.  
@@ -43,7 +43,7 @@ Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem S
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>So ordnen Sie die Registerkarten im Zweifelsfall das Steuerelement an  
   
--   Legen Sie die <xref:System.Windows.Forms.TabControl.Alignment%2A> Eigenschaft der <xref:System.Windows.Forms.TabControl> zu <xref:System.Windows.Forms.TabAlignment.Left> oder <xref:System.Windows.Forms.TabAlignment.Right>.  
+- Legen Sie die <xref:System.Windows.Forms.TabControl.Alignment%2A> Eigenschaft der <xref:System.Windows.Forms.TabControl> zu <xref:System.Windows.Forms.TabAlignment.Left> oder <xref:System.Windows.Forms.TabAlignment.Right>.  
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Programmgesteuertes aktivieren oder deaktivieren alle Steuerelemente auf einer Registerkarte  
   
@@ -63,7 +63,7 @@ Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem S
   
 ### <a name="to-display-tabs-as-buttons"></a>Zum Anzeigen von Registerkarten als Schaltflächen  
   
--   Legen Sie die <xref:System.Windows.Forms.TabControl.Appearance%2A> Eigenschaft der <xref:System.Windows.Forms.TabControl> zu <xref:System.Windows.Forms.TabAppearance.Buttons> oder <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
+- Legen Sie die <xref:System.Windows.Forms.TabControl.Appearance%2A> Eigenschaft der <xref:System.Windows.Forms.TabControl> zu <xref:System.Windows.Forms.TabAppearance.Buttons> oder <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Siehe auch
 

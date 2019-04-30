@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937721"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Vorgehensweise: Erstellen einer neuen Einstellung zur Entwurfszeit
 Sie können eine neue Einstellung zur Entwurfszeit erstellen, mit dem Einstellungs-Designer. Der Einstellungs-Designer ist ein Raster-Style-Schnittstelle, mit dem Sie neue Einstellungen erstellen, und geben Sie Eigenschaften für diese Einstellungen. Sie müssen die Namen, Wert, Typ und Bereich für die neuen Einstellungen angeben. Sobald eine Einstellung erstellt wurde, ist es im Code zugegriffen werden kann.  

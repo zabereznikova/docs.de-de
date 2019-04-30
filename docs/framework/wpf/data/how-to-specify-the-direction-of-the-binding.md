@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931480"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Vorgehensweise: Angeben der Bindungsrichtung
 In diesem Beispiel wird erläutert, wie sich angeben lässt, ob die Bindung nur die Eigenschaft „Bindungsziel (Ziel)“, „Bindungsquelle (Quelle)“ oder sowohl die Ziel- als auch die Quelleigenschaft aktualisiert.  
@@ -19,15 +19,15 @@ In diesem Beispiel wird erläutert, wie sich angeben lässt, ob die Bindung nur 
 ## <a name="example"></a>Beispiel  
  Sie verwenden die <xref:System.Windows.Data.Binding.Mode%2A> Eigenschaft, um die Richtung der Bindung anzugeben. In der folgenden Enumerationsliste werden die verfügbaren Optionen für Bindungsaktualisierungen angezeigt:  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> aktualisiert die Zieleigenschaft bzw. die Eigenschaft, wenn sich die Zieleigenschaft oder die Quelleigenschaft ändert.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> aktualisiert die Zieleigenschaft bzw. die Eigenschaft, wenn sich die Zieleigenschaft oder die Quelleigenschaft ändert.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> aktualisiert die Zieleigenschaft, nur, wenn die Quelleigenschaft ändert.  
+- <xref:System.Windows.Data.BindingMode.OneWay> aktualisiert die Zieleigenschaft, nur, wenn die Quelleigenschaft ändert.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> aktualisiert die Zieleigenschaft, nur, wenn die Anwendung gestartet wird oder wenn die <xref:System.Windows.FrameworkElement.DataContext%2A> wird eine Änderung vorgenommen.  
+- <xref:System.Windows.Data.BindingMode.OneTime> aktualisiert die Zieleigenschaft, nur, wenn die Anwendung gestartet wird oder wenn die <xref:System.Windows.FrameworkElement.DataContext%2A> wird eine Änderung vorgenommen.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> Aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft ändert.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> Aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft ändert.  
   
--   <xref:System.Windows.Data.BindingMode.Default> bewirkt, dass der <xref:System.Windows.Data.Binding.Mode%2A> Wert der Zieleigenschaft verwendet werden.  
+- <xref:System.Windows.Data.BindingMode.Default> bewirkt, dass der <xref:System.Windows.Data.Binding.Mode%2A> Wert der Zieleigenschaft verwendet werden.  
   
  Weitere Informationen finden Sie unter der <xref:System.Windows.Data.BindingMode>-Enumeration.  
   

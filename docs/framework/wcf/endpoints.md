@@ -5,30 +5,30 @@ helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
 ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923187"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation-Endpunkte
-Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die einen WCF-Dienst anbietet.  
+Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionen, die ein WCF-Dienst bietet.  
   
- Eine Übersicht darüber, wie Sie einen Endpunkt zu erstellen, finden Sie unter [Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md). Jeder Endpunkt enthält Folgendes:  
+ Eine Übersicht dazu, wie Sie einen Endpunkt zu erstellen, finden Sie unter [Übersicht über die Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md). Jeder Endpunkt enthält Folgendes:  
   
--   Eine Adresse, die angibt, wo der Endpunkt zu finden ist.  
+- Eine Adresse, die angibt, wo der Endpunkt zu finden ist.  
   
--   Eine Bindung, die angibt, wie ein Client mit dem Endpunkt kommunizieren kann.  
+- Eine Bindung, die angibt, wie ein Client mit dem Endpunkt kommunizieren kann.  
   
--   Ein Vertrag, der die verfügbaren Methoden identifiziert.  
+- Ein Vertrag, der die verfügbaren Methoden identifiziert.  
   
  Beschreibungen, wie Sie diese einzelnen Teile eines Endpunkts angeben, finden Sie unter:  
   
--   [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+- [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
--   [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+- [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md)  
@@ -37,7 +37,7 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
  [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Beschreibt, wie die Kommunikation mit einem WCF-Dienst über Endpunkte erfolgt.  
   
- [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Veranschaulicht, wie Sie einen Dienstendpunkt in einer Konfiguration erstellen.  
   
  [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  

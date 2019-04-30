@@ -3,11 +3,11 @@ title: Grundlagen der HTTP-Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918904"
 ---
 # <a name="understanding-http-authentication"></a>Grundlagen der HTTP-Authentifizierung
 Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt ist, auf eine Ressource zuzugreifen. Das HTTP-Protokoll unterstützt die Authentifizierung zum Aushandeln des Zugriffs auf eine sichere Ressource.  
@@ -29,11 +29,11 @@ Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt i
 ## <a name="choosing-an-authentication-scheme"></a>Auswählen eines Authentifizierungsschemas  
  Bei potenziellen Authentifizierungsschemen für einen HTTP-Server müssen u. a. die folgenden Aspekte beachtet werden:  
   
--   Überprüfen Sie, ob die Ressourcen geschützt werden müssen. Für die HTTP-Authentifizierung müssen mehr Daten übertragen werden, zudem kann die Interoperabilität mit Clients eingeschränkt werden. Lassen Sie den anonymen Zugriff auf Ressourcen zu, die nicht geschützt werden müssen.  
+- Überprüfen Sie, ob die Ressourcen geschützt werden müssen. Für die HTTP-Authentifizierung müssen mehr Daten übertragen werden, zudem kann die Interoperabilität mit Clients eingeschränkt werden. Lassen Sie den anonymen Zugriff auf Ressourcen zu, die nicht geschützt werden müssen.  
   
--   Wenn die Ressource geschützt werden muss, überlegen Sie, welche Authentifizierungsschemen die gewünschte Sicherheitsstufe bieten. Das "schwächste", hier erläuterte Standardauthentifizierungsschema ist die Basic-Authentifizierung. Die Basic-Authentifizierung schützt nicht die Benutzeranmeldeinformationen. Das "stärkste" Standardauthentifizierungsschema ist die Negotiate-Authentifizierung, die zum Kerberos-Protokoll führt.  
+- Wenn die Ressource geschützt werden muss, überlegen Sie, welche Authentifizierungsschemen die gewünschte Sicherheitsstufe bieten. Das "schwächste", hier erläuterte Standardauthentifizierungsschema ist die Basic-Authentifizierung. Die Basic-Authentifizierung schützt nicht die Benutzeranmeldeinformationen. Das "stärkste" Standardauthentifizierungsschema ist die Negotiate-Authentifizierung, die zum Kerberos-Protokoll führt.  
   
--   Ein Server sollte kein Schema enthalten (in den WWW-Authentifizierungsheadern), das die geschützten Ressourcen nicht akzeptieren bzw. angemessen sichern kann. Clients können aus den unterschiedlichen Authentifizierungsschemen des Servers wählen. Einige Clients wählen standardmäßig ein schwaches Authentifizierungsschema oder das erste Authentifizierungsschema in der Liste des Servers.  
+- Ein Server sollte kein Schema enthalten (in den WWW-Authentifizierungsheadern), das die geschützten Ressourcen nicht akzeptieren bzw. angemessen sichern kann. Clients können aus den unterschiedlichen Authentifizierungsschemen des Servers wählen. Einige Clients wählen standardmäßig ein schwaches Authentifizierungsschema oder das erste Authentifizierungsschema in der Liste des Servers.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
 ms.openlocfilehash: 9f7f878649d8b96f050b56d5b878eb3d67e027ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918221"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Der Rückschluss von Typen, die NULL-Werte zulassen, wird in diesem Kontext nicht unterstützt
 Werttypen und Strukturen können auf NULL festlegbare deklariert werden.  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verwenden einer `As` -Klausel, um die Variable als auf NULL festlegbar deklariert werden.  
+- Verwenden einer `As` -Klausel, um die Variable als auf NULL festlegbar deklariert werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

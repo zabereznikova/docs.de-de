@@ -3,11 +3,11 @@ title: Dienstversionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949785"
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&amp;#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, Überlegungen zur versionsverwaltung in Windows Communication Foundation (WCF).  
@@ -15,13 +15,13 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ## <a name="four-categories-of-service-changes"></a>Vier Kategorien von Dienständerungen  
  Die Änderungen von Diensten, die eventuell erforderlich sind, können in vier Kategorien unterteilt werden:  
   
--   Vertragsänderungen: Beispielsweise kann ein Vorgang hinzugefügt werden, oder ein Datenelement in einer Nachricht hinzugefügt oder geändert werden kann.  
+- Vertragsänderungen: Beispielsweise kann ein Vorgang hinzugefügt werden, oder ein Datenelement in einer Nachricht hinzugefügt oder geändert werden kann.  
   
--   Adressänderungen: Verschiebt beispielsweise ein Dienst an einen anderen Speicherort, in dem Endpunkte neue Adressen aufweisen.  
+- Adressänderungen: Verschiebt beispielsweise ein Dienst an einen anderen Speicherort, in dem Endpunkte neue Adressen aufweisen.  
   
--   Bindungsänderungen: Z. B. ein Sicherheitsmechanismus oder seine Einstellungen zu ändern.  
+- Bindungsänderungen: Z. B. ein Sicherheitsmechanismus oder seine Einstellungen zu ändern.  
   
--   Implementierungsänderungen: Wenn eine interne methodenimplementierung ändert sich beispielsweise.  
+- Implementierungsänderungen: Wenn eine interne methodenimplementierung ändert sich beispielsweise.  
   
  Einige dieser Änderungen werden als "unterbrechend" und andere als "nicht unterbrechend" bezeichnet. Eine Änderung *geschützte* Wenn alle Nachrichten, die erfolgreich in der vorherigen Version verarbeitet worden wären, in der neuen Version erfolgreich verarbeitet wurden. Jede Änderung, die dieses Kriterium nicht erfüllt ist eine *wichtige* ändern.  
   
@@ -43,9 +43,9 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ### <a name="strict-versioning"></a>Strenge Versionsverwaltung  
  In vielen Szenarien, in denen das Ändern der Versionen ein Problem darstellt, hat der Dienstentwickler keine Kontrolle über die Clients und kann deshalb keine Annahmen darüber abgeben, wie sie auf Änderungen in der Nachrichten-XML oder im Schema reagieren würden. In diesen Fällen müssen Sie sicherstellen, dass die neuen Nachrichten aus zwei Gründen anhand des alten Schemas überprüft werden:  
   
--   Die alten Clients wurden mit der Annahme entwickelt, dass sich das Schema nicht ändert. Sie können eventuell keine Nachrichten verarbeiten, für die sie nicht vorgesehen waren.  
+- Die alten Clients wurden mit der Annahme entwickelt, dass sich das Schema nicht ändert. Sie können eventuell keine Nachrichten verarbeiten, für die sie nicht vorgesehen waren.  
   
--   Die alten Clients können eventuell anhand des alten Schemas eine tatsächliche Schemavalidierung durchführen, bevor sie versuchen, die Nachrichten zu verarbeiten.  
+- Die alten Clients können eventuell anhand des alten Schemas eine tatsächliche Schemavalidierung durchführen, bevor sie versuchen, die Nachrichten zu verarbeiten.  
   
  Die empfohlene Methode in solchen Szenarien besteht darin, vorhandene Datenverträge als unveränderlich zu behandeln und neue Verträge mit eindeutigen qualifizierten XML-Namen zu erstellen. Der Dienstentwickler würde dann entweder einem bereits vorhandenen Dienstvertrag neue Methoden hinzufügen oder einen neuen Dienstvertrag mit Methoden erstellen, die den neuen Datenvertrag verwenden.  
   
@@ -63,9 +63,9 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Unterscheidung zwischen Datenvertrags- und .NET-Typen  
  Eine .NET-Klasse oder eine Struktur kann als Datenvertrag projiziert werden, indem Sie der Klasse das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut hinzufügen. Der .NET-Typ und seine Datenvertragsprojektionen sind zwei verschiedene Dinge. Es können mehrere .NET-Typen mit derselben Datenvertragsprojektion vorhanden sein. Diese Unterscheidung ist besonders nützlich, wenn Sie den .NET-Typ ändern und gleichzeitig den projizierten Datenvertrag beibehalten möchten, wobei Sie gleichzeitig die Kompatibilität mit den bereits vorhandenen Clients bewahren. Sie sollten immer die folgenden beiden Maßnahmen ergreifen, um diese Unterscheidung zwischen .NET-Typ und Datenvertrag beizubehalten:  
   
--   Geben Sie einen <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und einen <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> an. Sie sollten immer den Namen und den Namespace Ihres Datenvertrags angeben, um zu verhindern, dass der Name und der Namespace Ihres .NET-Typs im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namespace oder -Typnamen zu einem späteren Zeitpunkt ändern möchten.  
+- Geben Sie einen <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und einen <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> an. Sie sollten immer den Namen und den Namespace Ihres Datenvertrags angeben, um zu verhindern, dass der Name und der Namespace Ihres .NET-Typs im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namespace oder -Typnamen zu einem späteren Zeitpunkt ändern möchten.  
   
--   Geben Sie <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>an. Sie sollten immer den Namen Ihrer Datenmember angeben, um zu verhindern, dass der Name des .NET-Members im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namen des Members zu einem späteren Zeitpunkt ändern möchten.  
+- Geben Sie <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>an. Sie sollten immer den Namen Ihrer Datenmember angeben, um zu verhindern, dass der Name des .NET-Members im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namen des Members zu einem späteren Zeitpunkt ändern möchten.  
   
 ### <a name="changing-or-removing-members"></a>Ändern oder Entfernen von Membern  
  Wenn Sie den Namen oder Datentyp eines Members ändern oder Datenmember entfernen, ist dies eine unterbrechende Änderung, auch wenn die weniger strenge Versionsverwaltung zulässig ist. Falls dies erforderlich ist, müssen Sie einen neuen Datenvertrag erstellen.  

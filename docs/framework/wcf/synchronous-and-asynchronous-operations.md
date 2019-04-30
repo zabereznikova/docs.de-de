@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935511"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -27,24 +27,24 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
   
  Die Unabhängigkeit des Dienstvertrags von der Dienst- oder Clientimplementierung ermöglicht die folgenden Formen asynchroner Ausführung in WCF-Anwendungen:  
   
--   Clients können Anforderungs-/Antwortvorgänge mit einem synchronen Nachrichtenaustausch asynchron aufrufen.  
+- Clients können Anforderungs-/Antwortvorgänge mit einem synchronen Nachrichtenaustausch asynchron aufrufen.  
   
--   Clients können asynchrone Anforderungs-/Antwortvorgänge mit einem synchronen Nachrichtenaustausch implementieren.  
+- Clients können asynchrone Anforderungs-/Antwortvorgänge mit einem synchronen Nachrichtenaustausch implementieren.  
   
--   Ein Nachrichtenaustausch kann unidirektional sein, unabhängig von der Implementierung des Clients oder Dienstes.  
+- Ein Nachrichtenaustausch kann unidirektional sein, unabhängig von der Implementierung des Clients oder Dienstes.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>Vorgeschlagene asynchrone Szenarien  
  Verwenden Sie den asynchronen Ansatz in der Implementierung eines Dienstvorgangs, wenn dieser Dienstvorgang blockierende Aufrufe, beispielsweise E/A-Vorgänge, vornimmt. Bei der Implementierung eines asynchronen Vorgangs sollten Sie versuchen, asynchrone Vorgänge und Methoden aufzurufen, um den asynchronen Aufrufpfad so weit wie möglich zu erweitern. Rufen Sie z.&amp;#160;B. innerhalb von `BeginOperationTwo()``BeginOperationOne()` auf.  
   
--   Verwenden Sie in den folgenden Fällen einen asynchronen Ansatz in einem Client oder in einer aufrufenden Anwendung:  
+- Verwenden Sie in den folgenden Fällen einen asynchronen Ansatz in einem Client oder in einer aufrufenden Anwendung:  
   
--   Wenn Sie Vorgänge von einer Anwendung der mittleren Ebene aufrufen. (Weitere Informationen zu solchen Szenarien finden Sie unter [Clientanwendungen mittlerer Ebene](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+- Wenn Sie Vorgänge von einer Anwendung der mittleren Ebene aufrufen. (Weitere Informationen zu solchen Szenarien finden Sie unter [Clientanwendungen mittlerer Ebene](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
--   Verwenden Sie asynchrone Seiten, wenn Sie Vorgänge innerhalb einer ASP.NET-Seite aufrufen.  
+- Verwenden Sie asynchrone Seiten, wenn Sie Vorgänge innerhalb einer ASP.NET-Seite aufrufen.  
   
--   Wenn Sie Vorgänge von einer Singlethread-Anwendung aufrufen, etwa einer Windows Forms- oder Windows Presentation Foundation-Anwendung (WPF). Bei Verwendung des ereignisgesteuerten asynchronen Aufrufmodells wird das resultierende Ereignis im UI-Thread ausgelöst. Dies erhöht die Ansprechempfindlichkeit der Anwendung gegenüber Benutzeraktivitäten, ohne dass Sie selbst mehrere Threads verwalten müssen.  
+- Wenn Sie Vorgänge von einer Singlethread-Anwendung aufrufen, etwa einer Windows Forms- oder Windows Presentation Foundation-Anwendung (WPF). Bei Verwendung des ereignisgesteuerten asynchronen Aufrufmodells wird das resultierende Ereignis im UI-Thread ausgelöst. Dies erhöht die Ansprechempfindlichkeit der Anwendung gegenüber Benutzeraktivitäten, ohne dass Sie selbst mehrere Threads verwalten müssen.  
   
--   Im Allgemeinen gilt: Haben Sie die Wahl zwischen einem synchronen oder einem asynchronen Aufruf, dann wählen Sie den asynchronen Aufruf.  
+- Im Allgemeinen gilt: Haben Sie die Wahl zwischen einem synchronen oder einem asynchronen Aufruf, dann wählen Sie den asynchronen Aufruf.  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>Implementieren eines asynchronen Dienstvorgangs  
  Asynchrone Vorgänge können auf eine der drei folgenden Arten implementiert werden:  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  So definieren Sie ein Vertragsvorgang `X`, der unabhängig von der Art des Aufrufs in der Clientanwendung asynchron ausgeführt wird:  
   
--   Definieren Sie zwei Methoden mit dem Muster `BeginOperation` und `EndOperation`.  
+- Definieren Sie zwei Methoden mit dem Muster `BeginOperation` und `EndOperation`.  
   
--   Die `BeginOperation`-Methode enthält den `in`-Parameter und den `ref`-Parameter für den Vorgang und gibt einen <xref:System.IAsyncResult>-Typ zurück.  
+- Die `BeginOperation`-Methode enthält den `in`-Parameter und den `ref`-Parameter für den Vorgang und gibt einen <xref:System.IAsyncResult>-Typ zurück.  
   
--   Die `EndOperation`-Methode enthält ebenfalls einen <xref:System.IAsyncResult>-Parameter sowie den `out`-Parameter und den `ref`-Parameter und gibt den Rückgabewert des Vorgangs zurück.  
+- Die `EndOperation`-Methode enthält ebenfalls einen <xref:System.IAsyncResult>-Parameter sowie den `out`-Parameter und den `ref`-Parameter und gibt den Rückgabewert des Vorgangs zurück.  
   
  Betrachten Sie beispielsweise die folgende Methode:  
   

@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948654"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 Aktiviert oder deaktiviert die virtuelle Modulteilung.  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>Verhaltensunterschiede  
  Container-Module weisen folgende Verhaltensweisen und Merkmale auf:  
   
--   Die Metadaten sind für alle enthaltenen untergeordneten Module zusammengeführt.  
+- Die Metadaten sind für alle enthaltenen untergeordneten Module zusammengeführt.  
   
--   Ihre Typennamen können geändert werden.  
+- Ihre Typennamen können geändert werden.  
   
--   Die [ICorDebugModule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) Methode gibt den Pfad zu einem Modul auf dem Datenträger zurück.  
+- Die [ICorDebugModule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) Methode gibt den Pfad zu einem Modul auf dem Datenträger zurück.  
   
--   Die [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) Methode gibt die Größe des Bildes zurück.  
+- Die [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) Methode gibt die Größe des Bildes zurück.  
   
--   Mit der ICorDebugAssembly3.EnumerateContainedAssemblies-Methode werden die untergeordneten Module aufgeführt.  
+- Mit der ICorDebugAssembly3.EnumerateContainedAssemblies-Methode werden die untergeordneten Module aufgeführt.  
   
--   Mit der ICorDebugAssembly3.GetContainerAssembly-Methode wird `S_FALSE` ausgegeben.  
+- Mit der ICorDebugAssembly3.GetContainerAssembly-Methode wird `S_FALSE` ausgegeben.  
   
  Untergeordnete Container-Module weisen folgende Verhaltensweisen und Merkmale auf:  
   
--   Sie verfügen über einen reduzierten Satz von Metadaten, der sich nur auf die ursprünglich zugsammengeführte Assembly bezieht.  
+- Sie verfügen über einen reduzierten Satz von Metadaten, der sich nur auf die ursprünglich zugsammengeführte Assembly bezieht.  
   
--   Die Metadatennamen werden nicht geändert.  
+- Die Metadatennamen werden nicht geändert.  
   
--   Die Metadatentoken entsprechen wahrscheinlich nicht den Token in der ursprünglichen Baugruppe vor dem Merge im Erstellungsprozess.  
+- Die Metadatentoken entsprechen wahrscheinlich nicht den Token in der ursprünglichen Baugruppe vor dem Merge im Erstellungsprozess.  
   
--   Die [ICorDebugModule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) -Methode gibt den Assemblynamen, keinen Dateipfad.  
+- Die [ICorDebugModule:: GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) -Methode gibt den Assemblynamen, keinen Dateipfad.  
   
--   Die [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) Methode gibt die ursprüngliche Bildgröße zurück.  
+- Die [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) Methode gibt die ursprüngliche Bildgröße zurück.  
   
--   Mit der ICorDebugAssembly3.GetContainerAssemblies-Methode wird `S_FALSE` ausgegeben.  
+- Mit der ICorDebugAssembly3.GetContainerAssemblies-Methode wird `S_FALSE` ausgegeben.  
   
--   Die ICorDebugAssembly3.GetContainerAssembly-Methode gibt das enthaltende Modul aus.  
+- Die ICorDebugAssembly3.GetContainerAssembly-Methode gibt das enthaltende Modul aus.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Aus Modulen abgerufene Schnittstellen  
  Es können verschiedene Schnittstellen erstellt oder aus Modulen abgerufen werden. Hierzu zählen:  
   
--   ICorDebugClass-Objekts, der zurückgegeben wird, durch die [ICorDebugModule:: GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) Methode.  
+- ICorDebugClass-Objekts, der zurückgegeben wird, durch die [ICorDebugModule:: GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) Methode.  
   
--   ICorDebugAssembly-Objekts, der zurückgegeben wird, durch die [ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) Methode.  
+- ICorDebugAssembly-Objekts, der zurückgegeben wird, durch die [ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) Methode.  
   
  Diese Objekte werden stets von zwischengespeichert [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md), zudem können sie die gleiche zeigeridentität unabhängig davon, ob sie erstellt oder aus dem containermodul oder einem untergeordneten Modul abgefragt wurden. Das untergeordnete Modul bietet eine gefilterte Ansicht dieser zwischengespeicherten Objekte, jedoch keinen separaten Cache mit eigenen Kopien.  
   

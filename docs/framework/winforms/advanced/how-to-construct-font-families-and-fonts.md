@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937968"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Vorgehensweise: Erstellen von Schriftartfamilien und Schriftarten
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Schriftarten mit dem gleichen Schriftart, aber verschiedene Formate gruppiert in Schriftfamilien. Die Familie der Schriftart Arial enthält beispielsweise die folgenden Schriftarten:  
   
--   Arial regulären  
+- Arial regulären  
   
--   Arial fett  
+- Arial fett  
   
--   Arial kursiv  
+- Arial kursiv  
   
--   Arial fett kursiv  
+- Arial fett kursiv  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Mithilfe von vier Formaten Familien: Normal, fett, kursiv und fett kursiv. Adjektive, z. B. *eingrenzen* und *gerundet* Stile werden nicht berücksichtigt stattdessen werden sie Teil des Namens der Familie. Arial breit genug ist z. B. eine Schriftfamilie mit den folgenden Elementen:  
   
--   Arial schmalen regulären  
+- Arial schmalen regulären  
   
--   Arial Schmal Fett  
+- Arial Schmal Fett  
   
--   Arial schmalen kursiv  
+- Arial schmalen kursiv  
   
--   Arial schmalen fett kursiv  
+- Arial schmalen fett kursiv  
   
  Bevor Sie mit Text zeichnen können [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], müssen Sie erstellen eine <xref:System.Drawing.FontFamily> Objekt und ein <xref:System.Drawing.Font> Objekt. Die <xref:System.Drawing.FontFamily> Objekt gibt an, die Schriftart (z. B. Arial), und die <xref:System.Drawing.Font> Objekt gibt an, die Größe, Stil und Einheiten.  
   

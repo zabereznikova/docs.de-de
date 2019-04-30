@@ -7,26 +7,26 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904544"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
 Windows Communication Foundation (WCF) ist ein Framework zum Erstellen dienstorientierter Anwendungen. Verwenden von WCF, können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt zu einem anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:
 
--   Ein sicherer Dienst zur Verarbeitung von Geschäftstransaktionen.
+- Ein sicherer Dienst zur Verarbeitung von Geschäftstransaktionen.
 
--   Ein Dienst, der aktuelle Daten für andere Dienste bereitstellt, z. B. für Netzwerkverkehrberichtsdienste oder andere Überwachungsdienste.
+- Ein Dienst, der aktuelle Daten für andere Dienste bereitstellt, z. B. für Netzwerkverkehrberichtsdienste oder andere Überwachungsdienste.
 
--   Ein Chatdienst, mit dem zwei Personen in Echtzeit kommunizieren oder Daten austauschen können.
+- Ein Chatdienst, mit dem zwei Personen in Echtzeit kommunizieren oder Daten austauschen können.
 
--   Eine Dashboardanwendung, die Daten von einem oder mehreren Diensten abfragt und logisch darstellt.
+- Eine Dashboardanwendung, die Daten von einem oder mehreren Diensten abfragt und logisch darstellt.
 
--   Macht einen mit Windows Workflow Foundation implementierten Workflow als WCF-Dienst verfügbar.
+- Macht einen mit Windows Workflow Foundation implementierten Workflow als WCF-Dienst verfügbar.
 
--   Eine Silverlight-Anwendung zum Abfragen aktueller Datenfeeds von einem Dienst.
+- Eine Silverlight-Anwendung zum Abfragen aktueller Datenfeeds von einem Dienst.
 
 Bei der Erstellung solcher Anwendungen möglich ist, bevor Sie das Vorhandensein von WCF ist, macht WCF die Entwicklung von Endpunkten einfacher als je zuvor. Zusammenfassend lässt sich sagen WCF soll einen verwaltbaren Ansatz zum Erstellen von Webdiensten und Webdienstclients zu bieten.
 
@@ -34,51 +34,51 @@ Bei der Erstellung solcher Anwendungen möglich ist, bevor Sie das Vorhandensein
 
 WCF umfasst die folgende Gruppe von Funktionen. Weitere Informationen finden Sie unter [WCF-Produktfeatures](../../../docs/framework/wcf/feature-details/index.md).
 
--   **Dienstausrichtung**
+- **Dienstausrichtung**
 
      Ein Vorteil der Verwendung von WS-Standards ist, dass WCF Ihnen die Erstellung ermöglicht *dienstorientierten* Anwendungen. Dienstorientierte Architektur (SOA) wird von Webdiensten für das Senden und Empfangen von Daten verwendet. Der allgemeine Vorteil der Dienste ist, dass sie untereinander lose verknüpft und nicht hartcodiert sind. Eine lose verknüpfte Beziehung impliziert, dass ein beliebiger Client, der auf einer beliebigen Plattform erstellt wurde, mit einem beliebigen Dienst verbunden werden kann, so lange die wesentlichen Vereinbarungen erfüllt sind.
 
--   **Interoperabilität**
+- **Interoperabilität**
 
      WCF implementiert aktuelle Branchenstandards für Webdienstinteroperabilität. Weitere Informationen zu den unterstützten Standards finden Sie unter [Interoperabilität und Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).
 
--   **Mehrere Nachrichtenmuster**
+- **Mehrere Nachrichtenmuster**
 
      Nachrichten werden in einem von mehreren Mustern ausgetauscht. Das gängigste Muster ist das Anforderung-Antwort-Muster, bei dem ein Endpunkt Daten von einem zweiten Endpunkt abfragt. Der zweite Endpunkt antwortet. Es gibt noch weitere Muster, wie z. B. eine unidirektionale Nachricht, bei der ein einzelner Endpunkt eine Nachricht ohne Erwartung einer Antwort sendet. Ein komplexeres Muster ist das Duplex-Nachrichtenaustauschmuster, bei dem zwei Endpunkte eine Verbindung herstellen und sich wie bei einem Programm für Sofortnachrichten gegenseitig Daten senden. Weitere Informationen zum Implementieren verschiedener Muster, die mithilfe von WCF finden Sie unter [Verträge](../../../docs/framework/wcf/feature-details/contracts.md).
 
--   **Dienstmetadaten**
+- **Dienstmetadaten**
 
      WCF unterstützt Veröffentlichen von Dienstmetadaten Formaten der Branchenstandards, z. B. WSDL, XML-Schema und WS-Richtlinie. Diese Metadaten kann verwendet werden, automatisch zu generieren und Konfigurieren von Clients für den Zugriff auf WCF-Dienste. Metadaten können per HTTP und HTTPS oder mit dem Austauschstandard für Webdienstmetadaten veröffentlicht werden. Weitere Informationen finden Sie unter [Metadaten](../../../docs/framework/wcf/feature-details/metadata.md).
 
--   **Datenverträge**
+- **Datenverträge**
 
      Da WCF erstellt wird, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es enthält auch Code-codefreundliche Methoden für die die Verträge, die Sie erzwingen möchten. Einer der universalen Vertragstypen ist der Datenvertrag. Beim Codieren des Diensts mit Visual C# oder Visual Basic lassen sich Daten am einfachsten durch das Erstellen von Klassen verwalten, die eine Datenentität mit zur Datenentität gehörenden Eigenschaften darstellen. WCF umfasst ein umfassendes System für die Arbeit mit Daten auf diese Weise einfach. Nachdem Sie die Klassen erstellt haben, die Daten darstellen, werden vom Dienst automatisch die Metadaten erstellt, mit denen Clients die von Ihnen entworfenen Datentypen verarbeiten können. Weitere Informationen finden Sie unter [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
--   **Sicherheit**
+- **Sicherheit**
 
      Nachrichten können zu Datenschutzzwecken verschlüsselt werden, und die Benutzer können zur Authentifizierung aufgefordert werden, bevor Sie Berechtigung zum Empfangen von Nachrichten erhalten. Sicherheit kann mit bekannten Standards wie SSL oder WS-SecureConversation implementiert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../../../docs/framework/wcf/feature-details/security.md).
 
--   **Mehrfache Transporte und Codierungen**
+- **Mehrfache Transporte und Codierungen**
 
      Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode ist zum Senden von codierter SOAP-Nachrichten mit HyperText Transfer Protocol (HTTP) für die Verwendung im World Wide Web Text. Alternativ können Sie zum Senden von Nachrichten über TCP mit dem Namen WCF Pipes oder MSMQ. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. Weitere Informationen zu von WCF unterstützten Transporten und Codierungen finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).
 
--   **Zuverlässige Nachrichtensendung und Nachrichten in Warteschlangen**
+- **Zuverlässige Nachrichtensendung und Nachrichten in Warteschlangen**
 
      WCF unterstützt zuverlässigen Nachrichtenaustausch mit zuverlässigen Sitzungen über WS-Reliable Messaging implementiert und der Verwendung von MSMQ. Weitere Informationen zu reliable und in der Warteschlange befindlichen messaging-Unterstützung in WCF finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).
 
--   **Permanente Nachrichten**
+- **Permanente Nachrichten**
 
      Bei einer permanenten Nachricht handelt es sich um eine Nachricht, die niemals aufgrund einer Unterbrechung der Kommunikation verloren geht. Die Nachrichten in einem Muster für permanente Nachrichten werden immer in einer Datenbank gespeichert. Wird die Verbindung unterbrochen, kann mit der Datenbank der Nachrichtenaustausch nach der erneuten Herstellung der Verbindung fortgesetzt werden. Sie können auch eine permanente Meldung mithilfe der Windows Workflow Foundation (WF) erstellen. Weitere Informationen finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md).
 
--   **Transaktionen**
+- **Transaktionen**
 
      WCF unterstützt auch Transaktionen, die mit einer der drei Transaktionsmodelle: WS-AtomicTtransactions, die APIs in der <xref:System.Transactions> -Namespace und Microsoft Distributed Transaction Coordinator. Weitere Informationen zu Transaktion-Unterstützung in WCF finden Sie unter [Transaktionen](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
--   **Unterstützung für AJAX und REST**
+- **Unterstützung für AJAX und REST**
 
      REST ist ein Beispiel für eine sich weiterentwickelnde Web 2.0-Technologie. WCF kann konfiguriert werden, um "einfache" XML-Daten zu verarbeiten, die nicht von einem SOAP-Umschlag umgeben sind. WCF kann auch erweitert werden, um spezifische XML-Formate wie ATOM (ein verbreiteter RSS-standard) und sogar nicht-XML-Formate wie JavaScript Object Notation (JSON) unterstützt.
 
--   **Erweiterungen**
+- **Erweiterungen**
 
      Die WCF-Architektur hat es sich um eine Reihe von Erweiterungspunkten. Wenn zusätzliche Fähigkeiten benötigt werden, können Sie an verschiedenen Punkten ansetzen, um das Verhalten eines Diensts anzupassen. Weitere Informationen zu verfügbaren Erweiterungspunkten finden Sie unter [Erweitern von WCF](../../../docs/framework/wcf/extending/index.md).
 

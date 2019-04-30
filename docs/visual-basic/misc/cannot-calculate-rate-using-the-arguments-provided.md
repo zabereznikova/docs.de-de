@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
 ms.openlocfilehash: 86f32251bdbd782e348bbfeb7f0429905b230153
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904240"
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>Die Rate kann mit den angegebenen Argumenten nicht berechnet werden.
 Die Ratenberechnung enthält nicht die erforderlichen Argumente.  

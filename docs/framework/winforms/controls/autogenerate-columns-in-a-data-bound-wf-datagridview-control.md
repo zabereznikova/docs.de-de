@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954309"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Vorgehensweise: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms
 Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen der Spalten aus einer Quelle an Sie gebundenen Daten in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Eigenschaftswert ist `true` (Standardeinstellung), eine <xref:System.Windows.Forms.DataGridViewColumn> für jede Spalte in der Tabelle der Datenquelle erstellt wird.  
@@ -28,11 +28,11 @@ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen der Spalten aus
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `customersDataGridView`.  
+- Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `customersDataGridView`.  
   
--   Ein <xref:System.Data.DataSet> Objekt mit dem Namen `customersDataSet` , die eine Tabelle namens hat `Customers`.  
+- Ein <xref:System.Data.DataSet> Objekt mit dem Namen `customersDataSet` , die eine Tabelle namens hat `Customers`.  
   
--   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> und <xref:System.Xml?displayProperty=nameWithType>.  
+- Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> und <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
 

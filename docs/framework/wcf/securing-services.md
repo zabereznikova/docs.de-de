@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949863"
 ---
 # <a name="securing-services"></a>Sichern von Diensten
 Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus zwei primären Anforderungen: übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, Überwachung von Sicherheitsereignissen, finden Sie im [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Verwenden die Funktionen von WCF, die beiden primären Anforderungen problemlos implementieren.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913262"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Vorgehensweise: Positionieren von Steuerelementen in Windows Forms
 Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft.  
@@ -30,7 +30,7 @@ Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie di
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Um ein Steuerelement auf der Entwurfsoberfläche des Windows Forms-Designers zu positionieren.  
   
--   Ziehen Sie das Steuerelement an die gewünschte Position mit der Maus ein.  
+- Ziehen Sie das Steuerelement an die gewünschte Position mit der Maus ein.  
   
     > [!NOTE]
     >  Wählen Sie das Steuerelement, und verschieben Sie, dass es mit dem Pfeil Schlüssel, um genauer zu positionieren. Darüber hinaus *Ausrichtungslinien* unterstützen Sie beim Einfügen von Steuerelementen genauer auf dem Formular. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  

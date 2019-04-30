@@ -3,11 +3,11 @@ title: Modellieren des Abbruchverhaltens in Workflows
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934705"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modellieren des Abbruchverhaltens in Workflows
 Aktivitäten können innerhalb eines Workflows abgebrochen werden, z. B. durch eine <xref:System.Activities.Statements.Parallel>-Aktivität, die unvollständige Verzweigungen abbricht, wenn ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>`true` ergibt, oder von außerhalb des Workflows, wenn der Host <xref:System.Activities.WorkflowApplication.Cancel%2A> aufruft. Workflowautoren können die Abbruchbehandlung mithilfe der <xref:System.Activities.Statements.CancellationScope>-Aktivität oder der <xref:System.Activities.Statements.CompensableActivity>-Aktivität bereitstellen oder können benutzerdefinierte Aktivitäten erstellen, die eine Abbruchlogik bereitstellen. Dieses Thema bietet eine Übersicht über den Abbruch in Workflows.  
@@ -46,7 +46,7 @@ Aktivitäten können innerhalb eines Workflows abgebrochen werden, z. B. durch 
 **CancellationHandler aufgerufen.**   
 **Workflow 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9 abgebrochen.**    
 ### <a name="canceling-an-activity-from-inside-a-workflow"></a>Abbrechen einer Aktivität innerhalb eines Workflows  
- Eine Aktivität kann auch von ihrem übergeordneten Element abgebrochen werden. Wenn eine <xref:System.Activities.Statements.Parallel>-Aktivität beispielsweise über mehrere ausgeführte Verzweigungen verfügt, und ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> ergibt `true`, werden ihre unvollständigen Verzweigungen abgebrochen. In diesem Beispiel wird eine <xref:System.Activities.Statements.Parallel>-Aktivität erstellt, das zwei Verzweigungen aufweist. Ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> ist auf `true` festgelegt, damit die <xref:System.Activities.Statements.Parallel> abgeschlossen wird, sobald die einzelnen Verzweigungen abgeschlossen sind. In diesem Beispiel wird Verzweigung 2 abgeschlossen, daher wird Verzweigung 1 abgebrochen.  
+ Eine Aktivität kann auch von ihrem übergeordneten Element abgebrochen werden. Wenn eine <xref:System.Activities.Statements.Parallel>-Aktivität beispielsweise über mehrere ausgeführte Branches verfügt, und ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> ergibt `true`, werden ihre unvollständigen Branches abgebrochen. In diesem Beispiel wird eine <xref:System.Activities.Statements.Parallel>-Aktivität erstellt, das zwei Branches aufweist. Ihre <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> ist auf `true` festgelegt, damit die <xref:System.Activities.Statements.Parallel> abgeschlossen wird, sobald der einzelne Branch abgeschlossen sind. In diesem Beispiel wird Branch 2 abgeschlossen, daher wird Branch 1 abgebrochen.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#37](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#37)]  
   
@@ -66,7 +66,7 @@ Aktivitäten können innerhalb eines Workflows abgebrochen werden, z. B. durch 
 **Ausnahme abgefangen.**   
 **Workflow e3c18939-121e-4c43-af1c-ba1ce977ce55 abgeschlossen.**   
 ### <a name="throwing-exceptions-from-a-cancellationhandler"></a>Auslösen von Ausnahmen von einem CancellationHandler aus  
- Alle vom <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> eines <xref:System.Activities.Statements.CancellationScope> ausgelösten Ausnahmen haben schwerwiegende Auswirkungen auf den Workflow. Wenn für Ausnahmen die Möglichkeit besteht, einen <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> zu umgehen, verwenden Sie im <xref:System.Activities.Statements.TryCatch> <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>, um diese Ausnahmen abzufangen und zu behandeln.  
+ Alle vom <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> eines <xref:System.Activities.Statements.CancellationScope> ausgelösten Ausnahmen haben schwerwiegende Auswirkungen auf den Workflow. Wenn für Ausnahmen die Möglichkeit besteht, einen <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> zu umgehen, verwenden Sie im <xref:System.Activities.Statements.TryCatch><xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>, um diese Ausnahmen abzufangen und zu behandeln.  
   
 ### <a name="cancellation-using-compensableactivity"></a>Abbruch mithilfe von CompensableActivity  
  Genau wie die <xref:System.Activities.Statements.CancellationScope>-Aktivität verfügt die <xref:System.Activities.Statements.CompensableActivity> über einen <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>. Wenn eine <xref:System.Activities.Statements.CompensableActivity> abgebrochen wird, werden alle Aktivitäten in ihrem <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> aufgerufen. Dies kann nützlich für das Rückgängigmachen teilweise abgeschlossener Arbeit sein. Informationen zur Verwendung von <xref:System.Activities.Statements.CompensableActivity> Kompensation und den Abbruch finden Sie unter [Kompensierung](compensation.md).  

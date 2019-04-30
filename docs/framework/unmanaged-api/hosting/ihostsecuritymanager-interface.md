@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957585"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager-Schnittstelle
 Enthält Methoden, die Zugriff auf und Kontrolle über den Sicherheitskontext des gerade ausgeführten Threads zu ermöglichen.  
@@ -42,13 +42,13 @@ Enthält Methoden, die Zugriff auf und Kontrolle über den Sicherheitskontext de
   
  Die CLR behandelt die intern verwalteten Thread-Kontext. Die Prozess-spezifischen Abfragen `IHostSecurityManager` in den folgenden Situationen:  
   
--   Der Finalizer-Thread, während der Finalizerausführung.  
+- Der Finalizer-Thread, während der Finalizerausführung.  
   
--   Während der Ausführung der Klasse "und"-Modul-Konstruktor.  
+- Während der Ausführung der Klasse "und"-Modul-Konstruktor.  
   
--   Auf den Arbeitsthread, in Aufrufen von asynchronen Zeitpunkten der [IHostThreadPoolManager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) Methode.  
+- Auf den Arbeitsthread, in Aufrufen von asynchronen Zeitpunkten der [IHostThreadPoolManager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) Methode.  
   
--   Im Wartungsmodus von e/a-Abschlussports.  
+- Im Wartungsmodus von e/a-Abschlussports.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

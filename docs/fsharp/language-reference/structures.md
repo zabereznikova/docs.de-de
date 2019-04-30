@@ -3,11 +3,11 @@ title: Strukturen
 description: Erfahren Sie mehr über die F# Struktur, einen kompakter Objekttyp, der häufig effizienter als eine Klasse für Typen mit einer geringeren Menge an Daten und ein einfaches Verhalten.
 ms.date: 05/16/2016
 ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925878"
 ---
 # <a name="structures"></a>Strukturen
 
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` impliziert nicht `Struct`. Sie müssen beide haben Hinzufügen einer `IsReadOnly` Struktur.
 
-Verwendung dieses Attributs gibt Metadaten können von F# und c# kennen, die sie behandeln, als `inref<'T>` und `in ref`bzw.
+Verwendung dieses Attributs gibt Metadaten können von F# und C# kennen, die sie behandeln, als `inref<'T>` und `in ref`bzw.
 
 Definieren eines änderbaren Werts innerhalb einer Struktur Readonly erzeugt einen Fehler.
 

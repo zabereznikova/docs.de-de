@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Steuerung der Serialisierung abgeleiteter Klassen'
+title: 'Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922511"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Vorgehensweise: Steuerung der Serialisierung abgeleiteter Klassen
+# <a name="how-to-control-serialization-of-derived-classes"></a>Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen
 Neben der Verwendung des **XmlElementAttribute**-Attributs zum Ändern eines XML-Elementnamens lässt sich die Objektserialisierung auch auf andere Weise anpassen. Sie können den XML-Stream ebenfalls anpassen, indem Sie von einer vorhandenen Klasse ableiten und die <xref:System.Xml.Serialization.XmlSerializer>-Instanz anweisen, wie die neue Klasse serialisiert werden soll.  
   
  Beispielsweise können Sie im Fall einer `Book`-Klasse von dieser Klasse ableiten und eine `ExpandedBook`-Klasse erstellen, die über zusätzliche Eigenschaften verfügt. Sie müssen **XmlSerializer** jedoch anweisen, den abgeleiteten Typ beim Serialisieren oder Deserialisieren zu akzeptieren. Erstellen Sie hierzu eine <xref:System.Xml.Serialization.XmlElementAttribute>-Instanz, und legen Sie deren **Typ**-Eigenschaft auf den Typ der abgeleiteten Klasse fest. Fügen Sie **XmlElementAttribute** zu einer <xref:System.Xml.Serialization.XmlAttributes>-Instanz hinzu. Fügen Sie dann **XmlAttributes** zu einer <xref:System.Xml.Serialization.XmlAttributeOverrides>-Instanz hinzu, und geben Sie dabei sowohl den Typ des zu überschreibenden Objekts als auch den Namen des Members an, der die abgeleitete Klasse akzeptiert. Dies wird im folgenden Beispiel gezeigt.  

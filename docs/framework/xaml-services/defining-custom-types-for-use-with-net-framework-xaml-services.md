@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971950"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten
 Beim Definieren von benutzerdefinierten Typen, die Geschäftsobjekte sind oder sind Typen, die nicht über eine Abhängigkeit auf bestimmten Frameworks verfügen, gibt es einige bewährten Methoden für XAML, die Sie ausführen können. Wenn Sie diese Vorgehensweisen ausführen, können .NET Framework-XAML-Dienste und die XAML-Readern und XAML-Writer die XAML-Eigenschaften des Typs ermitteln und geben sie entsprechende Darstellung in einem XAML-Knotenstream verwenden das XAML-Typsystem. Dieses Thema beschreibt bewährte Methoden für die Typdefinitionen, die Memberdefinitionen und CLR-Attributieren von Typen oder Member.  
@@ -17,9 +17,9 @@ Beim Definieren von benutzerdefinierten Typen, die Geschäftsobjekte sind oder s
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Konstruktormuster und Typdefinitionen für XAML  
  Um als Objektelement in XAML instanziiert werden, muss eine benutzerdefinierte Klasse die folgenden Anforderungen erfüllen:  
   
--   Die benutzerdefinierte Klasse muss öffentlich sein und einen (parameterlosen) öffentlichen Standardkonstruktor verfügbar machen. (Hinweise zu Strukturen finden Sie im folgenden Abschnitt.)  
+- Die benutzerdefinierte Klasse muss öffentlich sein und einen (parameterlosen) öffentlichen Standardkonstruktor verfügbar machen. (Hinweise zu Strukturen finden Sie im folgenden Abschnitt.)  
   
--   Die benutzerdefinierte Klasse muss eine geschachtelte Klasse nicht. Die zusätzlichen "Punkt" in den vollständigen Namen Pfad ist die Namespace der Klasse Division mehrdeutig und verursacht einen Konflikt mit anderen XAML-Funktionen wie z.B. angefügten Eigenschaften.  
+- Die benutzerdefinierte Klasse muss eine geschachtelte Klasse nicht. Die zusätzlichen "Punkt" in den vollständigen Namen Pfad ist die Namespace der Klasse Division mehrdeutig und verursacht einen Konflikt mit anderen XAML-Funktionen wie z.B. angefügten Eigenschaften.  
   
  Wenn ein Objekt als Objektelement instanziiert werden kann, kann das erstellte Objekt der Eigenschaft Element der Eigenschaften Ausfüllen von Formularen, die das Objekt als ihren zugrunde liegenden Typ akzeptieren.  
   
@@ -72,9 +72,9 @@ Beim Definieren von benutzerdefinierten Typen, die Geschäftsobjekte sind oder s
   
  `public static object Get` *PropertyName* `(object`  `target` `)`  
   
--   Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Damit können Sie die Verwendung des anfügbaren Members Bereich; Bei Verwendung außerhalb Ihrer vorgesehene Umfang löst ungültige Umwandlung von Ausnahmen, die dann von einem XAML-Analyse-Fehler angezeigt werden. Der Name des Parameters `target` nicht erforderlich ist, hat aber den Namen `target` gemäß der Konvention in den meisten Implementierungen.  
+- Das `target`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Damit können Sie die Verwendung des anfügbaren Members Bereich; Bei Verwendung außerhalb Ihrer vorgesehene Umfang löst ungültige Umwandlung von Ausnahmen, die dann von einem XAML-Analyse-Fehler angezeigt werden. Der Name des Parameters `target` nicht erforderlich ist, hat aber den Namen `target` gemäß der Konvention in den meisten Implementierungen.  
   
--   Der Rückgabewert kann als spezifischerer Typ in Ihrer Implementierung angegeben werden.  
+- Der Rückgabewert kann als spezifischerer Typ in Ihrer Implementierung angegeben werden.  
   
  Zur Unterstützung einer <xref:System.ComponentModel.TypeConverter> aktiviert Textsyntax für die Verwendung von Attributen des abzurufenden anfügbaren Members, gelten <xref:System.ComponentModel.TypeConverterAttribute> auf die `Get` *PropertyName* Accessor. Anwenden auf die `get` statt der `set` mag unkonventionell; allerdings kann diese Konvention unterstützen das Konzept von nur-Lese anfügbare Member, die serialisierbar sind, was in Szenarien nützlich ist.  
   
@@ -83,9 +83,9 @@ Beim Definieren von benutzerdefinierten Typen, die Geschäftsobjekte sind oder s
   
  `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
--   Die `target` Objekt kann als spezifischerer Typ in Ihrer Implementierung mit derselben Logik und die Konsequenzen angegeben werden, wie im vorherigen Abschnitt beschrieben.  
+- Die `target` Objekt kann als spezifischerer Typ in Ihrer Implementierung mit derselben Logik und die Konsequenzen angegeben werden, wie im vorherigen Abschnitt beschrieben.  
   
--   Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden.  
+- Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden.  
   
  Denken Sie daran, dass der Wert für diese Methode die Eingabe aus der XAML-Syntax, in der Regel in Attributform stammen. In Attributform sein Wert Konverter-Unterstützung für eine Textsyntax sind, und Sie auf das die `Get` *PropertyName* Accessor.  
   

@@ -5,51 +5,51 @@ ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940503"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Vorgehensweise: Anzeigen des Anmeldestatus mit WIF
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
  In diesem Thema wird beschrieben, wie der Anmeldestatus in einer WIF-aktivierten ASP.NET-Anwendung angezeigt wird. WIF bietet den Mechanismus, um die Anwendung für die Anspruchsunterstützung kompatibel zu machen sowie die Authentifizierung und Autorisierung für Anwendungsressourcen zu verwalten.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Übersicht  
+- Übersicht  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Einrichten der Identitäts- und Zugriffserweiterung  
+- Schritt 1: Einrichten der Identitäts- und Zugriffserweiterung  
   
--   Schritt 2: Erstellen einer abhängigen Seite der ASP.NET-Anwendung  
+- Schritt 2: Erstellen einer abhängigen Seite der ASP.NET-Anwendung  
   
--   Schritt 3: Aktivieren des lokalen Entwicklungs-STS zur Authentifizierung von Benutzern  
+- Schritt 3: Aktivieren des lokalen Entwicklungs-STS zur Authentifizierung von Benutzern  
   
--   Schritt 4: Ändern der ASP.NET-Anwendung zum Anzeigen des Anmeldestatus  
+- Schritt 4: Ändern der ASP.NET-Anwendung zum Anzeigen des Anmeldestatus  
   
--   Schritt 5: Testen der Integration zwischen WIF und der ASP.NET-Anwendung  
+- Schritt 5: Testen der Integration zwischen WIF und der ASP.NET-Anwendung  
   
 ## <a name="overview"></a>Übersicht  
  Dieses Thema veranschaulicht, wie eine einfache Ansprüche unterstützende Anwendung mithilfe von WIF erstellt und wie leicht angezeigt wird, ob ein Benutzer angemeldet ist oder nicht. In den folgenden Schritte wird der lokale Entwicklungs-STS verwendet, der in der Identitäts- und Zugriffserweiterung von Visual Studio enthalten ist. Der lokale Entwicklungs-STS ist für eine Test- und Entwicklungsumgebung vorgesehen, um eine einfache Methode der Integration von Ansprüchen in die Anwendung bereitzustellen. Er sollte nie in einer Produktionsumgebung verwendet werden, da er keine echte Authentifizierung ausführt und Anmeldeinformationen nicht erforderlich sind. Allerdings ist der imperative Code in den folgenden Schritten für eine produktionsbereite Anwendung, die eine echte Authentifizierung verwendet, identisch.  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Einrichten der Identitäts- und Zugriffserweiterung  
+- Schritt 1: Einrichten der Identitäts- und Zugriffserweiterung  
   
--   Schritt 2: Erstellen einer abhängigen Seite der ASP.NET-Anwendung  
+- Schritt 2: Erstellen einer abhängigen Seite der ASP.NET-Anwendung  
   
--   Schritt 3: Aktivieren des lokalen Entwicklungs-STS zur Authentifizierung von Benutzern  
+- Schritt 3: Aktivieren des lokalen Entwicklungs-STS zur Authentifizierung von Benutzern  
   
--   Schritt 4: Ändern der ASP.NET-Anwendung zum Anzeigen des Anmeldestatus  
+- Schritt 4: Ändern der ASP.NET-Anwendung zum Anzeigen des Anmeldestatus  
   
--   Schritt 5: Testen der Integration zwischen WIF und der ASP.NET-Anwendung  
+- Schritt 5: Testen der Integration zwischen WIF und der ASP.NET-Anwendung  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>Schritt 1: Einrichten der Identitäts- und Zugriffserweiterung  
  Dieser Schritt beschreibt, wie die Identitäts- und Zugriffserweiterung in Visual Studio 2012 konfiguriert wird. Diese Erweiterung automatisiert die Konfiguration der Anwendung, um mit STS-Endpunkten zu kommunizieren.  

@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967036"
 ---
 # <a name="data-binding-and-windows-forms"></a>Datenbindung und Windows Forms
 In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, sondern auch an beinahe alle Strukturen, die Daten enthalten. Sie können an ein Array von Werten binden, die Sie zur Laufzeit berechnen, aus einer Datei lesen oder aus den Werten anderer Steuerelemente ableiten.  
   
  Darüber hinaus können Sie jede Eigenschaft eines beliebigen Steuerelements an die Datenquelle binden. Bei der herkömmlichen Datenbindung binden Sie die Anzeigeeigenschaft, z. B. die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft eines <xref:System.Windows.Forms.TextBox>-Steuerelements, normalerweise an die Datenquelle. Mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] haben Sie außerdem die Möglichkeit, weitere Eigenschaften durch Bindung festzulegen. Mithilfe der Bindung können Sie folgende Aufgaben ausführen:  
   
--   Festlegen der Grafik eines Bildsteuerelements.  
+- Festlegen der Grafik eines Bildsteuerelements.  
   
--   Festlegen der Hintergrundfarbe für ein oder mehrere Steuerelemente.  
+- Festlegen der Hintergrundfarbe für ein oder mehrere Steuerelemente.  
   
--   Festlegen der Größe von Steuerelementen.  
+- Festlegen der Größe von Steuerelementen.  
   
  Datenbindung ist grundsätzlich ein automatisches Verfahren zum Festlegen der Laufzeitzugriffseigenschaften eines Steuerelements in einem Formular.  
   

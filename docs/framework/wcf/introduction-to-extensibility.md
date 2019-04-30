@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928608"
 ---
 # <a name="introduction-to-extensibility"></a>Einführung in die Erweiterbarkeit
 Das Anwendungsmodell Windows Communication Foundation (WCF) wurde entwickelt, um den größeren Teil der kommunikationsanforderungen aller beliebigen verteilten Anwendungen zu lösen. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Der WCF-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, aktivieren Sie das Systemverhalten auf jeder Ebene auch zum Ersatz des gesamten Anwendungsmodells ändern. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
@@ -19,11 +19,11 @@ Das Anwendungsmodell Windows Communication Foundation (WCF) wurde entwickelt, um
 ## <a name="areas-to-extend"></a>Zu erweiternde Bereiche  
  Folgende Werte können erweitert werden:  
   
--   Die Anwendungslaufzeit. Dies erweitert das Zustellen und Verarbeiten von Nachrichten für die Anwendung. Dieser Bereich beinhaltet auch die Erweiterung von Sicherheitssystem, Metadatensystem, Serialisierungssystem und der Bindungen und Bindungselemente, die die Anwendung mit dem zugrunde liegenden Kanalsystem verbinden.  
+- Die Anwendungslaufzeit. Dies erweitert das Zustellen und Verarbeiten von Nachrichten für die Anwendung. Dieser Bereich beinhaltet auch die Erweiterung von Sicherheitssystem, Metadatensystem, Serialisierungssystem und der Bindungen und Bindungselemente, die die Anwendung mit dem zugrunde liegenden Kanalsystem verbinden.  
   
--   Der Kanal und die Kanallaufzeit. Dadurch wird das auf Nachrichtenebene funktionierende System erweitert und Protokoll-, Transport- und Codierungsunterstützung bereitgestellt.  
+- Der Kanal und die Kanallaufzeit. Dadurch wird das auf Nachrichtenebene funktionierende System erweitert und Protokoll-, Transport- und Codierungsunterstützung bereitgestellt.  
   
--   Die Hostlaufzeit. Dadurch wird die Beziehung der Hostinganwendungsdomäne zum Kanal und der Anwendungslaufzeit erweitert.  
+- Die Hostlaufzeit. Dadurch wird die Beziehung der Hostinganwendungsdomäne zum Kanal und der Anwendungslaufzeit erweitert.  
   
 ### <a name="extending-the-application-runtime"></a>Erweitern der Anwendungslaufzeit  
  In WCF-Anwendungen wird unterschieden zwischen Nachrichten, die für einen entsprechenden Kanal bestimmt sind und Nachrichten, die für die Anwendung selbst bestimmt sind. Kanalnachrichten unterstützen einige kanalbezogene Funktionen, zum Beispiel das Einrichten einer sicheren Konversation oder einer zuverlässigen Sitzung. Diese Nachrichten sind nicht für die Anwendungslaufzeit verfügbar; sie werden vor Einbeziehung der Anwendungsebene verarbeitet.  

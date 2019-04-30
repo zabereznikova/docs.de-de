@@ -3,11 +3,11 @@ title: Problembehandlung bei der Korrelation
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932820"
 ---
 # <a name="troubleshooting-correlation"></a>Problembehandlung bei der Korrelation
 Mit Korrelation werden Workflowdienstnachrichten miteinander und mit der richtigen Workflowinstanz verknüpft. Wenn die Konfiguration jedoch nicht richtig durchgeführt wurde, werden Meldungen nicht empfangen, und Anwendungen funktionieren nicht ordnungsgemäß. Dieses Thema bietet eine Übersicht über mehrere Methoden zum Beheben von Korrelationsproblemen. Des Weiteren werden einige häufig auftretende Probleme aufgeführt, die bei der Verwendung der Korrelation auftreten können.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Persistenz ist nicht zulässig. zwischen einem <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> Paar oder ein <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> Paar. Es wird eine Zone ohne Persistenz erstellt, die vorhanden ist, bis beide Aktivitäten abgeschlossen wurden. Wenn in der Zone ohne Persistenz eine Aktivität, z. B. eine Verzögerungsaktivität, vorhanden ist, die den Workflow in den Leerlauf versetzt, bleibt der Workflow nicht erhalten, auch wenn der Host zum Beibehalten von in den Leerlauf versetzten Workflows konfiguriert ist. Wenn eine Aktivität, z. B. eine Persist-Aktivität, den Workflow in der Zone ohne Persistenz explizit beizubehalten versucht, wird ein schwerwiegender Ausnahmefehler ausgelöst, der Workflow wird abgebrochen, und an den Aufrufer wird eine <xref:System.ServiceModel.FaultException> zurückgegeben. Die Meldung zum schwerwiegenden Ausnahmefehler lautet "System.InvalidOperationException: Persist-Aktivitäten können nicht in nicht persistenten Blöcken enthalten sein." Diese Ausnahme wird nicht an den Aufrufer zurückgegeben, sie kann jedoch angezeigt werden, wenn Nachverfolgung aktiviert ist. Die für die <xref:System.ServiceModel.FaultException> an den Aufrufer zurückgegebene Meldung lautet "Der Vorgang konnte nicht ausgeführt werden, da die Workflowinstanz '5836145b-7da2-49d0-a052-a49162adeab6' abgeschlossen wurde".
+ Persistenz ist nicht zulässig. zwischen einem <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> Paar oder ein <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> Paar. Es wird eine Zone ohne Persistenz erstellt, die vorhanden ist, bis beide Aktivitäten abgeschlossen wurden. Wenn in der Zone ohne Persistenz eine Aktivität, z. B. eine Verzögerungsaktivität, vorhanden ist, die den Workflow in den Leerlauf versetzt, bleibt der Workflow nicht erhalten, auch wenn der Host zum Beibehalten von in den Leerlauf versetzten Workflows konfiguriert ist. Wenn eine Aktivität, z. B. eine Persist-Aktivität, den Workflow in der Zone ohne Persistenz explizit beizubehalten versucht, wird ein schwerwiegender Ausnahmefehler ausgelöst, der Workflow wird abgebrochen, und an den Aufrufer wird eine <xref:System.ServiceModel.FaultException> zurückgegeben. Meldung zum schwerwiegenden Ausnahmefehler ist "System.InvalidOperationException: Beibehalten Aktivitäten können nicht in nicht persistenten Blöcken enthalten sein. ". Diese Ausnahme wird nicht an den Aufrufer zurückgegeben, sie kann jedoch angezeigt werden, wenn Nachverfolgung aktiviert ist. Die für die <xref:System.ServiceModel.FaultException> an den Aufrufer zurückgegebene Meldung lautet "Der Vorgang konnte nicht ausgeführt werden, da die Workflowinstanz '5836145b-7da2-49d0-a052-a49162adeab6' abgeschlossen wurde".
 
  Weitere Informationen zu Anforderung-Antwort-Korrelation, finden Sie unter [Anforderung-Antwort](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Wenn eine XPath-Abfrage falsch konfiguriert ist, sodass keine Korrelationsdaten abgerufen werden, wird ein Fehler mit der folgenden Meldung zurückgegeben: „Eine Korrelationsabfrage ergab ein leeres Resultset. Stellen Sie sicher, dass die Korrelationsabfragen für den Endpunkt ordnungsgemäß konfiguriert sind." Dieser Fehler lässt sich schnell beheben, indem die XPath-Abfrage wie im vorherigen Abschnitt beschrieben durch einen Literalwert ersetzt wird. Dieses Problem kann auftreten, wenn Sie den XPath-Abfrage-Generator im Verwenden der **Add Correlation Initializers** oder **CorrelatesOn-Definition** Dialogfelder und der Workflowdienst Nachrichtenverträge verwendet. Im folgenden Beispiel wird eine Nachrichtenvertragsklasse definiert.
+ Wenn eine XPath-Abfrage falsch konfiguriert ist, sodass keine Korrelationsdaten abgerufen werden, wird ein Fehler mit der folgenden Meldung zurückgegeben: "Eine korrelationsabfrage ergab ein leeres Resultset. Stellen Sie sicher, dass die Korrelationsabfragen für den Endpunkt ordnungsgemäß konfiguriert sind." Dieser Fehler lässt sich schnell beheben, indem die XPath-Abfrage wie im vorherigen Abschnitt beschrieben durch einen Literalwert ersetzt wird. Dieses Problem kann auftreten, wenn Sie den XPath-Abfrage-Generator im Verwenden der **Add Correlation Initializers** oder **CorrelatesOn-Definition** Dialogfelder und der Workflowdienst Nachrichtenverträge verwendet. Im folgenden Beispiel wird eine Nachrichtenvertragsklasse definiert.
 
 ```csharp
 [MessageContract]

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938228"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Variable, die nicht geändert wird, im Wert (Visual Basic)
 Das Konzept einer Variablen, die nicht den Wert geändert wird möglicherweise angezeigt, widersprüchliche sein. Aber es gibt Situationen, wenn eine Konstante nicht möglich ist, und es ist sinnvoll, eine Variable mit einem festen Wert aufweisen. In diesem Fall können Sie eine Membervariable mit definieren die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.  
   
  Sie können keine der [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md) zu deklarieren und Zuweisen eines konstanten Werts in den folgenden Situationen:  
   
--   Die `Const` Anweisung akzeptiert nicht den Datentyp, die Sie verwenden möchten  
+- Die `Const` Anweisung akzeptiert nicht den Datentyp, die Sie verwenden möchten  
   
--   Sie ist der Wert zum Zeitpunkt der Kompilierung nicht bekannt.  
+- Sie ist der Wert zum Zeitpunkt der Kompilierung nicht bekannt.  
   
--   Sie werden kann nicht den konstanten Wert zur Kompilierungszeit berechnet  
+- Sie werden kann nicht den konstanten Wert zur Kompilierungszeit berechnet  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Erstellen Sie eine Variable, die nicht geändert wird, Wert  
   

@@ -3,11 +3,11 @@ title: Hostinganweisungen des Internetinformationsdiensts
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954855"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Hostinganweisungen des Internetinformationsdiensts
 Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet werden, müssen Sie sicherstellen, dass der IIS ordnungsgemäß installiert ist und ausgeführt wird.  
@@ -46,13 +46,13 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 8. Stellen Sie sicher, dass die folgenden Elemente ausgewählt sind:  
   
-    1.  **NET-Erweiterbarkeit**  
+    1. **NET-Erweiterbarkeit**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI-Erweiterungen**  
+    3. **ISAPI-Erweiterungen**  
   
-    4.  **ISAPI-Filter**  
+    4. **ISAPI-Filter**  
   
 9. Unter dem Element namens **WWW-Dienste**, erweitern Sie **allgemeine Http-Features**.  
   
@@ -104,13 +104,13 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 8. Stellen Sie sicher, dass die folgenden Elemente ausgewählt sind:  
   
-    1.  **NET-Erweiterbarkeit**  
+    1. **NET-Erweiterbarkeit**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI-Erweiterungen**  
+    3. **ISAPI-Erweiterungen**  
   
-    4.  **ISAPI-Filter**  
+    4. **ISAPI-Filter**  
   
 9. Erweitern Sie das Element namens **Webverwaltungstools**, und wählen Sie dann **IIS-Verwaltungskonsole**.  
   

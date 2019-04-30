@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
 ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920899"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>"\<Methodenname >' hat mehrere Definitionen mit identischen Signaturen
 Ein `Function` oder `Sub` Deklaration der Prozedur verwendet die gleichen Prozedurnamen Namen und die Argumentliste wie eine vorherige Deklaration. Eine mögliche Ursache ist der Versuch, die ursprüngliche Prozedur zu überladen. Überladene Prozeduren müssen unterschiedliche Argumentlisten haben.  
@@ -21,7 +21,7 @@ Ein `Function` oder `Sub` Deklaration der Prozedur verwendet die gleichen Prozed
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ändern Sie den Namen der Prozedur oder der Argumentliste, oder entfernen Sie die doppelte Deklaration.  
+- Ändern Sie den Namen der Prozedur oder der Argumentliste, oder entfernen Sie die doppelte Deklaration.  
   
 ## <a name="see-also"></a>Siehe auch
 

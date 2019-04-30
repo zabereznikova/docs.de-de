@@ -1,15 +1,15 @@
 ---
-title: Eigenschaften im Vergleich zu Argumente
+title: Eigenschaften vs. Argumente
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962629"
 ---
-# <a name="properties-vs-arguments"></a>Eigenschaften im Vergleich zu Argumente
+# <a name="properties-vs-arguments"></a>Eigenschaften vs. Argumente
 Es gibt mehrere Möglichkeiten für die Übergabe von Daten an eine Aktivität. Neben dem Verwenden von <xref:System.Activities.InArgument> können auch Aktivitäten entwickelt werden, um Daten entweder mit CLR-Standardeigenschaften oder öffentlichen <xref:System.Activities.ActivityAction>-Eigenschaften zu empfangen. In diesem Thema wird erläutert, wie der richtige Methodentyp ausgewählt wird.  
   
 ## <a name="using-clr-properties"></a>Verwenden von CLR-Eigenschaften  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
 ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911617"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Vorgehensweise: Hinzufügen eines Wasserzeichens zu einem TextBox-Objekt
 Das folgende Beispiel zeigt, wie die Verwendbarkeit einer <xref:System.Windows.Controls.TextBox> durch ein erläuternde Hintergrundbild in der die <xref:System.Windows.Controls.TextBox> bis der Benutzer Text eingibt, an diesem Punkt das Bild wird entfernt. Darüber hinaus wird das Hintergrundbild erneut wiederhergestellt werden, wenn der Benutzer die Eingabe entfernt. Finden Sie in der folgenden Abbildung aus.  

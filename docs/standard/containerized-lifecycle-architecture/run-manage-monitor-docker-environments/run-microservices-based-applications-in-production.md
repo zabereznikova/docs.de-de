@@ -1,17 +1,17 @@
 ---
-title: Ausführen von zusammengesetzten und auf Microservices basierende Anwendungen in produktionsumgebungen
+title: Ausführen von zusammengesetzten und auf Microservices basierenden Anwendungen in Produktionsumgebungen
 description: Lernen Sie die wesentlichen Komponenten bei containerbasierte Anwendungen in der Produktion ausführen kennen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921588"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Ausführen von zusammengesetzten und auf Microservices basierende Anwendungen in produktionsumgebungen
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Ausführen von zusammengesetzten und auf Microservices basierenden Anwendungen in Produktionsumgebungen
 
 Aus mehreren microservices bestehende Anwendungen müssen in der Orchestrator-Cluster, um die Komplexität der Bereitstellung und Umsetzung aus Sicht eines IT bereitgestellt werden. Ohne ein orchestratorcluster würde es schwierig sein, bereitstellen und skalieren Sie eine komplexe Microservices-Anwendung.
 

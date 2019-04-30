@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920717"
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
 Gibt an, dass eine Funktion oder `Get` Accessor ist ein Iterator.  
@@ -34,9 +34,9 @@ Gibt an, dass eine Funktion oder `Get` Accessor ist ein Iterator.
 ## <a name="usage"></a>Verwendung  
  Der `Iterator`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
--   [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine Iteratorfunktion. Die Iteratorfunktion verfügt über eine `Yield` -Anweisung, die innerhalb einer [für... Nächste](../../../visual-basic/language-reference/statements/for-next-statement.md) Schleife. Jeder Iteration der [für jede](../../../visual-basic/language-reference/statements/for-each-next-statement.md) -Anweisungstexts in `Main` erstellt einen Aufruf an die `Power` Iteratorfunktion. Jeder Aufruf der Iteratorfunktion führt bei der nächsten Iteration der `Yield`-Schleife zur nächsten Ausführung der `For…Next`-Anweisung.  

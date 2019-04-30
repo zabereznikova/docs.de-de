@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943350"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Vorgehensweise: Steuern der Verfügbarkeit einer Variablen (Visual Basic)
 Sie steuern die Verfügbarkeit einer Variablen durch Angabe der *Zugriffsebene*. Die Zugriffsebene bestimmt, welcher Code verfügt über die Berechtigung zum Lesen oder Schreiben auf die Variable.  
   
--   *Membervariablen* (definiert auf Modulebene und außerhalb einer Prozedur) standardmäßig öffentlichen Zugriff auf, d. h., jeder Code, der sie angezeigt werden kann, kann darauf zugreifen. Sie können dies ändern, indem Sie einen Zugriffsmodifizierer angeben.  
+- *Membervariablen* (definiert auf Modulebene und außerhalb einer Prozedur) standardmäßig öffentlichen Zugriff auf, d. h., jeder Code, der sie angezeigt werden kann, kann darauf zugreifen. Sie können dies ändern, indem Sie einen Zugriffsmodifizierer angeben.  
   
--   *Lokale Variablen* (innerhalb einer Prozedur definiert) nominell öffentlichen Zugriff haben, obwohl nur Code in die Prozedur darauf zugreifen kann. Die Zugriffsebene einer lokalen Variablen kann nicht geändert werden, aber Sie können ändern, die Zugriffsebene der Prozedur, die sie enthält.  
+- *Lokale Variablen* (innerhalb einer Prozedur definiert) nominell öffentlichen Zugriff haben, obwohl nur Code in die Prozedur darauf zugreifen kann. Die Zugriffsebene einer lokalen Variablen kann nicht geändert werden, aber Sie können ändern, die Zugriffsebene der Prozedur, die sie enthält.  
   
  Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   

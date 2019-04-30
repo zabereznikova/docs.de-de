@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949265"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
 <a name="top"></a> In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141530"
   
  Ladeprogrammereignisse werden in die folgenden Ereignisse unterteilt:  
   
--   [Anwendungsdomänenereignisse](#application_domain_events)  
+- [Anwendungsdomänenereignisse](#application_domain_events)  
   
--   [CLR-Ladeprogramm-Assemblyereignisse](#clr_loader_assembly_events)  
+- [CLR-Ladeprogramm-Assemblyereignisse](#clr_loader_assembly_events)  
   
--   [Modulereignisse](#module_events)  
+- [Modulereignisse](#module_events)  
   
--   [CLR-Domänenmodulereignisse](#clr_domain_module_events)  
+- [CLR-Domänenmodulereignisse](#clr_domain_module_events)  
   
--   [Modulbereichereignisse](#module_range_events)  
+- [Modulbereichereignisse](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Anwendungsdomänenereignisse  
@@ -134,11 +134,11 @@ ms.locfileid: "59141530"
   
 ### <a name="remarks"></a>Hinweise  
   
--   Die Felder mit "Pdb" im Namen können von Profilerstellungstools verwendet werden, um PDBs zu suchen, die den Modulen entsprechen, die während der Profilerstellungssitzung geladen wurden. Die Werte dieser Felder entsprechen den Daten, die in die IMAGE_DIRECTORY_ENTRY_DEBUG-Abschnitte des Moduls geschrieben werden, das normalerweise von Debuggern verwendet wird, um die Suche nach PDBs zu erleichtern, die den geladenen Modulen entsprechen.  
+- Die Felder mit "Pdb" im Namen können von Profilerstellungstools verwendet werden, um PDBs zu suchen, die den Modulen entsprechen, die während der Profilerstellungssitzung geladen wurden. Die Werte dieser Felder entsprechen den Daten, die in die IMAGE_DIRECTORY_ENTRY_DEBUG-Abschnitte des Moduls geschrieben werden, das normalerweise von Debuggern verwendet wird, um die Suche nach PDBs zu erleichtern, die den geladenen Modulen entsprechen.  
   
--   Die Feldnamen, die mit "ManagedPdb" beginnen, verweisen auf die verwaltete PDB, die dem MSIL-Modul entspricht, das vom verwalteten Compiler generiert wurde (z. B. dem C#- oder Visual Basic-Compiler). Diese PDB verwendet das verwaltete PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, MSIL-Elementen zugeordnet werden, die in das MSIL-Modul kompiliert werden.  
+- Die Feldnamen, die mit "ManagedPdb" beginnen, verweisen auf die verwaltete PDB, die dem MSIL-Modul entspricht, das vom verwalteten Compiler generiert wurde (z. B. dem C#- oder Visual Basic-Compiler). Diese PDB verwendet das verwaltete PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, MSIL-Elementen zugeordnet werden, die in das MSIL-Modul kompiliert werden.  
   
--   Die Feldnamen, die mit "NativePdb" beginnen, verweisen auf die NGen-PDB, die durch Aufrufen von `NGEN createPDB`generiert wurde. Diese PDB verwendet das systemeigene PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, systemeigenen Elementen zugeordnet werden, die in das NGen-Modul kompiliert werden.  
+- Die Feldnamen, die mit "NativePdb" beginnen, verweisen auf die NGen-PDB, die durch Aufrufen von `NGEN createPDB`generiert wurde. Diese PDB verwendet das systemeigene PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, systemeigenen Elementen zugeordnet werden, die in das NGen-Modul kompiliert werden.  
   
  [Zurück nach oben](#top)  
   

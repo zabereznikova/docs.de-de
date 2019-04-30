@@ -3,11 +3,11 @@ title: Warteschlangen und zuverlässige Sitzungen
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
 ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946691"
 ---
 # <a name="queues-and-reliable-sessions"></a>Warteschlangen und zuverlässige Sitzungen
 Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren. Die Themen in diesem Abschnitt erläutern die WCF-Funktionen für zuverlässigen messaging.  
@@ -16,15 +16,15 @@ Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Founda
   
  Die wichtigsten Aspekte für zuverlässiges Messaging sind:  
   
--   Übertragen von Zusicherungen für Nachrichten, die unabhängig von einem Fehler bei der Nachrichtenübertragung oder den Transportfehlern von einer Quelle an ein Ziel gesendet werden.  
+- Übertragen von Zusicherungen für Nachrichten, die unabhängig von einem Fehler bei der Nachrichtenübertragung oder den Transportfehlern von einer Quelle an ein Ziel gesendet werden.  
   
--   Trennen von Quelle und Ziel, was eine unabhängige Wiederherstellung nach einem Fehler von Quelle und Ziel sowie eine zuverlässige Übertragung und Zustellung von Nachrichten ermöglicht, auch wenn die Quelle oder das Ziel nicht verfügbar ist.  
+- Trennen von Quelle und Ziel, was eine unabhängige Wiederherstellung nach einem Fehler von Quelle und Ziel sowie eine zuverlässige Übertragung und Zustellung von Nachrichten ermöglicht, auch wenn die Quelle oder das Ziel nicht verfügbar ist.  
   
  Der Preis eines zuverlässigen Messagings besteht häufig in einer hohen Latenz. Latenz ist die Zeit, die eine Nachricht von der Quelle bis zum Ziel benötigt. WCF bietet daher die folgenden Typen von zuverlässigem messaging:  
   
--   [Zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), zuverlässigen Übertragung ohne hohe Latenz  
+- [Zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), zuverlässigen Übertragung ohne hohe Latenz  
   
--   [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), die zu bieten, zuverlässigen Übertragung und einer Trennung zwischen Quelle und Ziel.  
+- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), die zu bieten, zuverlässigen Übertragung und einer Trennung zwischen Quelle und Ziel.  
   
 ## <a name="reliable-sessions"></a>Zuverlässige Sitzungen  
  Zuverlässige Sitzungen bieten eine zuverlässige End-to-End-Übertragung von Nachrichten zwischen einer Quelle und einem Ziel. Dazu wird das WS-ReliableMessaging-Protokoll unabhängig von der Anzahl oder dem Typ der Vermittler verwendet, durch die die Messagingendpunkte (Quelle und Ziel) getrennt werden. Dies umfasst alle Transportvermittler, die kein SOAP (z.&amp;#160;B. HTTP-Proxys) verwenden, oder Vermittler, die SOAP (z.&amp;#160;B. SOAP-basierte Router oder Brücken) verwenden, und die für die Übertragung von Nachrichten zwischen den Endpunkten erforderlich sind. Zuverlässige Sitzungen verwenden ein Übertragungsfenster im Arbeitsspeicher, um SOAP-Fehler auf Nachrichtenebene zu maskieren und Verbindungen im Falle von Transportfehlern neu herzustellen.  

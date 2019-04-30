@@ -8,11 +8,11 @@ ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949252"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 
@@ -47,7 +47,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informa
 
 Die folgende Tabelle zeigt die Ereignisinformationen an.
 
-|Ereignis|Ereignis-ID|Beschreibung|
+|event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|Wird ausgelöst, wenn eine Methode Just-in-Time geladen (JIT-geladen) oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden diese Version nicht für Methodenladevorgänge. JIT-Hilfen verwenden nie diese Version.|
 |`MethodUnLoad_V1`|137|Wird ausgelöst, wenn ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden nie diese Version für das Entladen von Methoden.|
@@ -84,7 +84,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 
 Die folgende Tabelle zeigt die Ereignisinformationen an.
 
-|Ereignis|Ereignis-ID|Beschreibung|
+|event|Ereignis-ID|Beschreibung|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|Wird vor dem Start der Enumeration während eines Startrundowns gesendet.|
 |`DCStartComplete_V1`|145|Wird am Ende der Enumeration während eines Startrundowns gesendet.|
@@ -114,7 +114,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 
 Die folgende Tabelle zeigt die Ereignisinformationen an.
 
-|Ereignis|Ereignis-ID|Beschreibung|
+|event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Wird ausgelöst, wenn eine Methode JIT-geladen oder ein NGEN-Image geladen wird. Dynamische und generische Methoden verwenden immer diese Version für das Laden von Methoden. JIT-Hilfen verwenden immer diese Version.|
 |`MethodUnLoadVerbose_V1`|144|Wird ausgelöst, wenn eine dynamische Methode zerstört, ein Modul entladen oder eine Anwendungsdomäne zerstört wird. Dynamische Methoden verwenden immer diese Version für das Entladen von Methoden.|
@@ -153,7 +153,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 
 Die folgende Tabelle zeigt die Ereignisinformationen an.
 
-|Ereignis|Ereignis-ID|Beschreibung|
+|event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Wird ausgelöst, wenn eine Methode JIT-kompiliert wird.|
 

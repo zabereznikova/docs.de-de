@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938787"
 ---
 # <a name="xaml-security-considerations"></a>XAML-Sicherheitsüberlegungen
 Dieses Thema beschreibt bewährte Methoden für die Sicherheit in Anwendungen, bei der Verwendung von XAML und .NET Framework-XAML-Dienste-API.  
@@ -34,9 +34,9 @@ Dieses Thema beschreibt bewährte Methoden für die Sicherheit in Anwendungen, b
 ## <a name="xaml-namespaces-and-assembly-trust"></a>XAML-Namespaces und die Vertrauensstellung einer Assembly  
  Die grundlegende nicht qualifizierte Syntax und die Definition für die Interpretation von XAML auf einer benutzerdefinierten XAML-Namespace-Zuordnung zu einer Assembly unterscheidet nicht zwischen einem vertrauenswürdigen und nicht vertrauenswürdigen Assembly als in der Anwendungsdomäne geladen. Daher ist es technisch möglich ist, für eine nicht vertrauenswürdige Assembly das Spoofing von einer vertrauenswürdigen Assembly beabsichtigten XAML-Namespace-Zuordnung und das deklarierte Objekt einer XAML-Quelle und Eigenschafteninformationen erfassen. Ihre sicherheitsanforderungen diese Situation vermeiden können muss Ihre beabsichtigte XAML-Namespace-Zuordnung mit einer der folgenden Methoden erstellt werden:  
   
--   Verwenden Sie einen vollqualifizierten Assemblynamen mit starken Namen in eine beliebige XAML-Namespace-Zuordnung, die von Ihrer Anwendung XAML an.  
+- Verwenden Sie einen vollqualifizierten Assemblynamen mit starken Namen in eine beliebige XAML-Namespace-Zuordnung, die von Ihrer Anwendung XAML an.  
   
--   Beschränken Sie die Assembly, die auf einen festen Satz von Verweisassemblys, die durch das Erstellen eines bestimmtes Zuordnung <xref:System.Xaml.XamlSchemaContext> für Ihre XAML-Readern und XAML Objekt-Writer. Siehe <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+- Beschränken Sie die Assembly, die auf einen festen Satz von Verweisassemblys, die durch das Erstellen eines bestimmtes Zuordnung <xref:System.Xaml.XamlSchemaContext> für Ihre XAML-Readern und XAML Objekt-Writer. Siehe <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML-Typzuordnung und Systemzugriff Typ  
  XAML unterstützt eine eigene Typsystem, das in vielerlei Hinsicht gleichberechtigt ist, wie die CLR die einfache CLR-Typsystems implementiert. Für bestimmte Aspekte Typ wissen, wo Sie Entscheidungen zur Vertrauenswürdigkeit zu einem Typ, der basierend auf seine Typinformationen vornehmen, sollten Sie jedoch, um die Typinformationen in der CLR Unterstützungstypen verzögern. Dies ist, da einige der spezifischen reporting-Funktionen des XAML-Typsystems als virtuelle Methoden offen gelassen werden und sind daher nicht vollständig unter der Kontrolle der ursprünglichen Implementierungen von .NET Framework-XAML-Dienste. Diese Erweiterungspunkte vorhanden sein, da das XAML-Typsystem entsprechend der Erweiterbarkeit des XAML selbst und seine möglichen Alternativen Typzuordnung Strategien im Vergleich zu den CLR-gesicherten Standardimplementierung und XAML-Standardschemakontext erweiterbar ist. Weitere Informationen finden Sie unter der Hinweise auf einige der Eigenschaften von <xref:System.Xaml.XamlType> und <xref:System.Xaml.XamlMember>.  
