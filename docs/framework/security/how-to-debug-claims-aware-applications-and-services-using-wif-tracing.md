@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940490"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Vorgehensweise: Debuggen von Ansprüche unterstützenden Anwendungen und Diensten mittels WIF-Ablaufverfolgung
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Service Trace Viewer-Tool (SvcTraceViewer.exe)  
+- Service Trace Viewer-Tool (SvcTraceViewer.exe)  
   
--   Problembehandlung und Debuggen von WIF-Anwendungen  
+- Problembehandlung und Debuggen von WIF-Anwendungen  
   
 ## <a name="summary"></a>Zusammenfassung  
  Diese Anleitungen beschreiben die erforderlichen Schritte zum Konfigurieren der WIF-Ablaufverfolgung, zum Sammeln von Protokollen und zum Analysieren der Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool. Dieses Tool stellt eine allgemeine Zuordnung zwischen Protokolleinträgen und Aktionen bereit, die für die Behebung von WIF-bezogenen Problemen erforderlich sind.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
+- Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
   
--   Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
+- Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
   
--   Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
+- Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
   
--   Verwandte Elemente  
+- Verwandte Elemente  
   
 ## <a name="objectives"></a>Ziele  
   
--   Konfigurieren der WIF-Ablaufverfolgung.  
+- Konfigurieren der WIF-Ablaufverfolgung.  
   
--   Anzeigen von Ablaufverfolgungsprotokollen im Trace Viewer-Tool.  
+- Anzeigen von Ablaufverfolgungsprotokollen im Trace Viewer-Tool.  
   
--   Identifizieren von WIF-bezogenen Problemen in den Ablaufverfolgungsprotokollen.  
+- Identifizieren von WIF-bezogenen Problemen in den Ablaufverfolgungsprotokollen.  
   
--   Anwenden von Korrekturmaßnahmen auf WIF-bezogene Probleme, die in den Ablaufverfolgungsprotokollen gefunden wurden.  
+- Anwenden von Korrekturmaßnahmen auf WIF-bezogene Probleme, die in den Ablaufverfolgungsprotokollen gefunden wurden.  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
+- Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
   
--   Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
+- Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
   
--   Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
+- Schritt 3 – Identifizieren von Lösungen zum Beheben von WIF-bezogenen Problemen  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Schritt 1- Konfigurieren der WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
  In diesem Schritt fügen Sie Konfigurationsabschnitten in der Datei *Web.config* Änderungen hinzu, damit WIF die zugehörigen Ereignisse verfolgen und in einem Ablaufverfolgungsprotokoll speichern kann.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321548"
   
 ## <a name="related-items"></a>Verwandte Elemente  
   
--   [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
