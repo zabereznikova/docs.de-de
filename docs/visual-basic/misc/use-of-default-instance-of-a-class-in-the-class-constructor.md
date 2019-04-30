@@ -3,19 +3,19 @@ title: Die Verwendung der Standardinstanz einer Klasse im Klassenkonstruktor kan
 ms.date: 07/20/2015
 ms.assetid: 9645b47f-7de5-46d0-bb45-d5fdaa8aaa2a
 ms.openlocfilehash: 14c498bf3067415f8de2afaeaaa57cf3f28ae857
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58045266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022453"
 ---
-# <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a><span data-ttu-id="81d66-102">Die Verwendung der Standardinstanz einer Klasse im Klassenkonstruktor kann zu einem unendlichen rekursiven Aufruf führen.</span><span class="sxs-lookup"><span data-stu-id="81d66-102">Use of Default Instance of a class in the class constructor could lead to infinite recursive call</span></span>
-<span data-ttu-id="81d66-103">Eine Standardinstanz einer Klasse wurde im Konstruktor der Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="81d66-103">A default instance of a class has been used in the constructor of the class.</span></span> <span data-ttu-id="81d66-104">Dies kann zu einem unendlichen rekursiven Aufruf, auch bekannt als Endlosschleife, führen.</span><span class="sxs-lookup"><span data-stu-id="81d66-104">This can lead to an infinite recursive call, also known as an infinite loop.</span></span>  
+# <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a><span data-ttu-id="56a7f-102">Die Verwendung der Standardinstanz einer Klasse im Klassenkonstruktor kann zu einem unendlichen rekursiven Aufruf führen.</span><span class="sxs-lookup"><span data-stu-id="56a7f-102">Use of Default Instance of a class in the class constructor could lead to infinite recursive call</span></span>
+<span data-ttu-id="56a7f-103">Eine Standardinstanz einer Klasse wurde im Konstruktor der Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="56a7f-103">A default instance of a class has been used in the constructor of the class.</span></span> <span data-ttu-id="56a7f-104">Dies kann zu einem unendlichen rekursiven Aufruf, auch bekannt als Endlosschleife, führen.</span><span class="sxs-lookup"><span data-stu-id="56a7f-104">This can lead to an infinite recursive call, also known as an infinite loop.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="81d66-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="81d66-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="56a7f-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="56a7f-105">To correct this error</span></span>  
   
--   <span data-ttu-id="81d66-106">Entfernen Sie die Standardinstanz aus dem Klassenkonstruktor.</span><span class="sxs-lookup"><span data-stu-id="81d66-106">Remove the default instance from the class constructor.</span></span>  
+- <span data-ttu-id="56a7f-106">Entfernen Sie die Standardinstanz aus dem Klassenkonstruktor.</span><span class="sxs-lookup"><span data-stu-id="56a7f-106">Remove the default instance from the class constructor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81d66-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81d66-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56a7f-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56a7f-107">See also</span></span>
 
-- [<span data-ttu-id="81d66-108">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="81d66-108">Constructors</span></span>](~/docs/visual-basic/programming-guide/concepts/object-oriented-programming.md#constructors)
+- [<span data-ttu-id="56a7f-108">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="56a7f-108">Constructors</span></span>](~/docs/visual-basic/programming-guide/concepts/object-oriented-programming.md#constructors)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d4d5ec9119cdcf89e507f133288f569e6fb37ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000687"
 ---
-# <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a><span data-ttu-id="ee859-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs-Methode</span><span class="sxs-lookup"><span data-stu-id="ee859-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Method</span></span>
-<span data-ttu-id="ee859-103">Ruft die `ClassID` eines Typs mit dem Token der angegebenen Metadaten und die `ClassID` Werte aller Typargumente.</span><span class="sxs-lookup"><span data-stu-id="ee859-103">Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.</span></span>  
+# <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a><span data-ttu-id="ce746-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs-Methode</span><span class="sxs-lookup"><span data-stu-id="ce746-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Method</span></span>
+<span data-ttu-id="ce746-103">Ruft die `ClassID` eines Typs mit dem Token der angegebenen Metadaten und die `ClassID` Werte aller Typargumente.</span><span class="sxs-lookup"><span data-stu-id="ce746-103">Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee859-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ee859-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce746-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ce746-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassFromTokenAndTypeArgs(  
@@ -38,39 +38,39 @@ HRESULT GetClassFromTokenAndTypeArgs(
     [out] ClassID* pClassID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ee859-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ee859-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce746-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ce746-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="ee859-106">[in] Die ID des Moduls, in dem der Typ befindet.</span><span class="sxs-lookup"><span data-stu-id="ee859-106">[in] The ID of the module in which the type resides.</span></span>  
+ <span data-ttu-id="ce746-106">[in] Die ID des Moduls, in dem der Typ befindet.</span><span class="sxs-lookup"><span data-stu-id="ce746-106">[in] The ID of the module in which the type resides.</span></span>  
   
  `typeDef`  
- <span data-ttu-id="ee859-107">[in] Ein `mdTypeDef` Metadatentoken, das den Typ verweist.</span><span class="sxs-lookup"><span data-stu-id="ee859-107">[in] An `mdTypeDef` metadata token that references the type.</span></span>  
+ <span data-ttu-id="ce746-107">[in] Ein `mdTypeDef` Metadatentoken, das den Typ verweist.</span><span class="sxs-lookup"><span data-stu-id="ce746-107">[in] An `mdTypeDef` metadata token that references the type.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="ee859-108">[in] Die Anzahl der Typparameter für den angegebenen Typ.</span><span class="sxs-lookup"><span data-stu-id="ee859-108">[in] The number of type parameters for the given type.</span></span> <span data-ttu-id="ee859-109">Dieser Wert muss 0 (null) für nicht generische Typen sein.</span><span class="sxs-lookup"><span data-stu-id="ee859-109">This value must be zero for non-generic types.</span></span>  
+ <span data-ttu-id="ce746-108">[in] Die Anzahl der Typparameter für den angegebenen Typ.</span><span class="sxs-lookup"><span data-stu-id="ce746-108">[in] The number of type parameters for the given type.</span></span> <span data-ttu-id="ce746-109">Dieser Wert muss 0 (null) für nicht generische Typen sein.</span><span class="sxs-lookup"><span data-stu-id="ce746-109">This value must be zero for non-generic types.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="ee859-110">[in] Ein Array von `ClassID` Werten, von denen jeder ein Argument des Typs.</span><span class="sxs-lookup"><span data-stu-id="ee859-110">[in] An array of `ClassID` values, each of which is an argument of the type.</span></span> <span data-ttu-id="ee859-111">Der Wert des `typeArgs` kann NULL sein, wenn `cTypeArgs` auf 0 (null) festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="ee859-111">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
+ <span data-ttu-id="ce746-110">[in] Ein Array von `ClassID` Werten, von denen jeder ein Argument des Typs.</span><span class="sxs-lookup"><span data-stu-id="ce746-110">[in] An array of `ClassID` values, each of which is an argument of the type.</span></span> <span data-ttu-id="ce746-111">Der Wert des `typeArgs` kann NULL sein, wenn `cTypeArgs` auf 0 (null) festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="ce746-111">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
   
  `pClassID`  
- <span data-ttu-id="ee859-112">[out] Ein Zeiger auf die `ClassID` des angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="ee859-112">[out] A pointer to the `ClassID` of the specified type.</span></span>  
+ <span data-ttu-id="ce746-112">[out] Ein Zeiger auf die `ClassID` des angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="ce746-112">[out] A pointer to the `ClassID` of the specified type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ee859-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ee859-113">Remarks</span></span>  
- <span data-ttu-id="ee859-114">Aufrufen der `GetClassFromTokenAndTypeArgs` -Methode mit einer `mdTypeRef` anstelle von eine `mdTypeDef` Metadatentoken unvorhersehbare Ergebnisse haben; der Aufrufer sollte sich Auflösen der `mdTypeRef` auf ein `mdTypeDef` bei der Übergabe.</span><span class="sxs-lookup"><span data-stu-id="ee859-114">Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ce746-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ce746-113">Remarks</span></span>  
+ <span data-ttu-id="ce746-114">Aufrufen der `GetClassFromTokenAndTypeArgs` -Methode mit einer `mdTypeRef` anstelle von eine `mdTypeDef` Metadatentoken unvorhersehbare Ergebnisse haben; der Aufrufer sollte sich Auflösen der `mdTypeRef` auf ein `mdTypeDef` bei der Übergabe.</span><span class="sxs-lookup"><span data-stu-id="ce746-114">Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.</span></span>  
   
- <span data-ttu-id="ee859-115">Wenn der Typ nicht bereits geladen ist, wird beim Aufrufen `GetClassFromTokenAndTypeArgs` löst laden, die in vielen Kontexten einen gefährlichen Vorgang ist.</span><span class="sxs-lookup"><span data-stu-id="ee859-115">If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="ee859-116">Beispielsweise kann das Aufrufen dieser Methode während des Ladens von Modulen oder andere Typen zu einer Endlosschleife führen wie die Laufzeit versucht, die Ladevorgänge zirkulär durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="ee859-116">For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
+ <span data-ttu-id="ce746-115">Wenn der Typ nicht bereits geladen ist, wird beim Aufrufen `GetClassFromTokenAndTypeArgs` löst laden, die in vielen Kontexten einen gefährlichen Vorgang ist.</span><span class="sxs-lookup"><span data-stu-id="ce746-115">If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="ce746-116">Beispielsweise kann das Aufrufen dieser Methode während des Ladens von Modulen oder andere Typen zu einer Endlosschleife führen wie die Laufzeit versucht, die Ladevorgänge zirkulär durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="ce746-116">For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
   
- <span data-ttu-id="ee859-117">Im Allgemeinen die Verwendung von `GetClassFromTokenAndTypeArgs` wird abgeraten.</span><span class="sxs-lookup"><span data-stu-id="ee859-117">In general, use of `GetClassFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="ee859-118">Wenn Profiler Ereignissen für einen bestimmten Typ interessiert sind, sollten sie Speichern der `ModuleID` und `mdTypeDef` dieses Typs, und verwenden [ICorProfilerInfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) überprüfen, ob eine angegebene `ClassID` ist, die von der gewünschte Typ.</span><span class="sxs-lookup"><span data-stu-id="ee859-118">If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.</span></span>  
+ <span data-ttu-id="ce746-117">Im Allgemeinen die Verwendung von `GetClassFromTokenAndTypeArgs` wird abgeraten.</span><span class="sxs-lookup"><span data-stu-id="ce746-117">In general, use of `GetClassFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="ce746-118">Wenn Profiler Ereignissen für einen bestimmten Typ interessiert sind, sollten sie Speichern der `ModuleID` und `mdTypeDef` dieses Typs, und verwenden [ICorProfilerInfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) überprüfen, ob eine angegebene `ClassID` ist, die von der gewünschte Typ.</span><span class="sxs-lookup"><span data-stu-id="ce746-118">If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee859-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ee859-119">Requirements</span></span>  
- <span data-ttu-id="ee859-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee859-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce746-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ce746-119">Requirements</span></span>  
+ <span data-ttu-id="ce746-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce746-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee859-121">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ee859-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ce746-121">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ce746-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ee859-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ee859-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce746-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce746-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ee859-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee859-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ce746-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce746-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee859-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ee859-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce746-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce746-124">See also</span></span>
 
-- [<span data-ttu-id="ee859-125">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ee859-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="ee859-126">ICorProfilerInfo2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ee859-126">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="ce746-125">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ce746-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ce746-126">ICorProfilerInfo2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ce746-126">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

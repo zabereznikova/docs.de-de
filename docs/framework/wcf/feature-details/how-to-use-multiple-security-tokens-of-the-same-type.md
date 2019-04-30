@@ -6,45 +6,45 @@ ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972834"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="4b2d6-102">Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs</span><span class="sxs-lookup"><span data-stu-id="4b2d6-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
--   <span data-ttu-id="4b2d6-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.0 enthielt eine Clientnachricht nur ein Token eines beliebigen angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="4b2d6-104">Jetzt können Clientnachrichten mehrere Token eines Typs enthalten.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="4b2d6-105">In diesem Thema wird das Einfügen mehrerer Token desselben Typs in eine Clientnachricht erläutert.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="d8708-102">Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs</span><span class="sxs-lookup"><span data-stu-id="d8708-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
+- <span data-ttu-id="d8708-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.0 enthielt eine Clientnachricht nur ein Token eines beliebigen angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="d8708-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="d8708-104">Jetzt können Clientnachrichten mehrere Token eines Typs enthalten.</span><span class="sxs-lookup"><span data-stu-id="d8708-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="d8708-105">In diesem Thema wird das Einfügen mehrerer Token desselben Typs in eine Clientnachricht erläutert.</span><span class="sxs-lookup"><span data-stu-id="d8708-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  
   
--   <span data-ttu-id="4b2d6-106">Ein Dienst kann nicht auf diese Weise konfiguriert werden, da ein Dienst lediglich ein einzelnes unterstützendes Token enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-106">Note that you cannot configure a service in this way: a service can contain only one supporting token.</span></span>  
+- <span data-ttu-id="d8708-106">Ein Dienst kann nicht auf diese Weise konfiguriert werden, da ein Dienst lediglich ein einzelnes unterstützendes Token enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="d8708-106">Note that you cannot configure a service in this way: a service can contain only one supporting token.</span></span>  
   
-### <a name="to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="4b2d6-107">Gewusst wie: Verwenden mehrerer Sicherheitstokens desselben Typs</span><span class="sxs-lookup"><span data-stu-id="4b2d6-107">To use multiple security tokens of the same type</span></span>  
+### <a name="to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="d8708-107">Gewusst wie: Verwenden mehrerer Sicherheitstokens desselben Typs</span><span class="sxs-lookup"><span data-stu-id="d8708-107">To use multiple security tokens of the same type</span></span>  
   
-1. <span data-ttu-id="4b2d6-108">Erstellen Sie eine leere auszufüllende Bindungselementauflistung.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-108">Create an empty binding element collection to be populated.</span></span>  
+1. <span data-ttu-id="d8708-108">Erstellen Sie eine leere auszufüllende Bindungselementauflistung.</span><span class="sxs-lookup"><span data-stu-id="d8708-108">Create an empty binding element collection to be populated.</span></span>  
   
      [!code-csharp[C_CustomBinding#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#9)]  
   
-2. <span data-ttu-id="4b2d6-109">Erstellen Sie <xref:System.ServiceModel.Channels.SecurityBindingElement> durch Aufrufen von <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-109">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> by calling <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span></span>  
+2. <span data-ttu-id="d8708-109">Erstellen Sie <xref:System.ServiceModel.Channels.SecurityBindingElement> durch Aufrufen von <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="d8708-109">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> by calling <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span></span>  
   
      [!code-csharp[C_CustomBinding#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#10)]  
   
-3. <span data-ttu-id="4b2d6-110">Erstellen Sie eine <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters>-Auflistung.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-110">Create a <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> collection.</span></span>  
+3. <span data-ttu-id="d8708-110">Erstellen Sie eine <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters>-Auflistung.</span><span class="sxs-lookup"><span data-stu-id="d8708-110">Create a <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#11)]  
   
-4. <span data-ttu-id="4b2d6-111">Fügen Sie der Auflistung SAML-Tokens hinzu.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-111">Add SAML tokens to the collection.</span></span>  
+4. <span data-ttu-id="d8708-111">Fügen Sie der Auflistung SAML-Tokens hinzu.</span><span class="sxs-lookup"><span data-stu-id="d8708-111">Add SAML tokens to the collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#12)]  
   
-5. <span data-ttu-id="4b2d6-112">Fügen Sie die Auflistung <xref:System.ServiceModel.Channels.SecurityBindingElement> hinzu.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-112">Add the collection to the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
+5. <span data-ttu-id="d8708-112">Fügen Sie die Auflistung <xref:System.ServiceModel.Channels.SecurityBindingElement> hinzu.</span><span class="sxs-lookup"><span data-stu-id="d8708-112">Add the collection to the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
   
      [!code-csharp[C_CustomBinding#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#13)]  
   
-6. <span data-ttu-id="4b2d6-113">Fügen Sie der Bindungselementauflistung Bindungselemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-113">Add binding elements to the binding element collection.</span></span>  
+6. <span data-ttu-id="d8708-113">Fügen Sie der Bindungselementauflistung Bindungselemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="d8708-113">Add binding elements to the binding element collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#14)]  
   
-7. <span data-ttu-id="4b2d6-114">Geben Sie aus der Bindungselementauflistung eine neue benutzerdefinierte Bindung zurück.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-114">Return a new custom binding created from the binding element collection.</span></span>  
+7. <span data-ttu-id="d8708-114">Geben Sie aus der Bindungselementauflistung eine neue benutzerdefinierte Bindung zurück.</span><span class="sxs-lookup"><span data-stu-id="d8708-114">Return a new custom binding created from the binding element collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   
-## <a name="example"></a><span data-ttu-id="4b2d6-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4b2d6-115">Example</span></span>  
- <span data-ttu-id="4b2d6-116">Nachfolgend ist die gesamte Methode aufgeführt, die durch die vorherige Prozedur beschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="4b2d6-116">The following is the entire method described by the preceding procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="d8708-115">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d8708-115">Example</span></span>  
+ <span data-ttu-id="d8708-116">Nachfolgend ist die gesamte Methode aufgeführt, die durch die vorherige Prozedur beschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="d8708-116">The following is the entire method described by the preceding procedure.</span></span>  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  

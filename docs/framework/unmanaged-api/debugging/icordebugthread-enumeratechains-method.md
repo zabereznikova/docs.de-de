@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994044"
 ---
-# <a name="icordebugthreadenumeratechains-method"></a><span data-ttu-id="1357b-102">ICorDebugThread::EnumerateChains-Methode</span><span class="sxs-lookup"><span data-stu-id="1357b-102">ICorDebugThread::EnumerateChains Method</span></span>
-<span data-ttu-id="1357b-103">Ruft einen Schnittstellenzeiger auf einem ICorDebugChainEnum-Enumerator, der alle Stapelketten in diesem ICorDebugThread-Objekt enthält.</span><span class="sxs-lookup"><span data-stu-id="1357b-103">Gets an interface pointer to an ICorDebugChainEnum enumerator that contains all the stack chains in this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadenumeratechains-method"></a><span data-ttu-id="195a2-102">ICorDebugThread::EnumerateChains-Methode</span><span class="sxs-lookup"><span data-stu-id="195a2-102">ICorDebugThread::EnumerateChains Method</span></span>
+<span data-ttu-id="195a2-103">Ruft einen Schnittstellenzeiger auf einem ICorDebugChainEnum-Enumerator, der alle Stapelketten in diesem ICorDebugThread-Objekt enthält.</span><span class="sxs-lookup"><span data-stu-id="195a2-103">Gets an interface pointer to an ICorDebugChainEnum enumerator that contains all the stack chains in this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1357b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1357b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="195a2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="195a2-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateChains (  
@@ -35,28 +35,28 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1357b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1357b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="195a2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="195a2-105">Parameters</span></span>  
  `ppChains`  
- <span data-ttu-id="1357b-106">[out] Ein Zeiger auf die Adresse einer `ICorDebugChainEnum` -Objekt, das ermöglicht die Enumeration des alle-Stapels in diesem Thread, beginnend ab der Kette aktiv (d. h. die aktuellste) verkettet.</span><span class="sxs-lookup"><span data-stu-id="1357b-106">[out] A pointer to the address of an `ICorDebugChainEnum` object that allows enumeration of all the stack chains in this thread, starting at the active (that is, the most recent) chain.</span></span>  
+ <span data-ttu-id="195a2-106">[out] Ein Zeiger auf die Adresse einer `ICorDebugChainEnum` -Objekt, das ermöglicht die Enumeration des alle-Stapels in diesem Thread, beginnend ab der Kette aktiv (d. h. die aktuellste) verkettet.</span><span class="sxs-lookup"><span data-stu-id="195a2-106">[out] A pointer to the address of an `ICorDebugChainEnum` object that allows enumeration of all the stack chains in this thread, starting at the active (that is, the most recent) chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1357b-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1357b-107">Remarks</span></span>  
- <span data-ttu-id="1357b-108">Die Stapelkette stellt die physische Aufrufliste für den Thread dar.</span><span class="sxs-lookup"><span data-stu-id="1357b-108">The stack chain represents the physical call stack for the thread.</span></span> <span data-ttu-id="1357b-109">Die folgenden Situationen erstellen Sie eine Kette-Grenze von Stack:</span><span class="sxs-lookup"><span data-stu-id="1357b-109">The following circumstances create a stack chain boundary:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="195a2-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="195a2-107">Remarks</span></span>  
+ <span data-ttu-id="195a2-108">Die Stapelkette stellt die physische Aufrufliste für den Thread dar.</span><span class="sxs-lookup"><span data-stu-id="195a2-108">The stack chain represents the physical call stack for the thread.</span></span> <span data-ttu-id="195a2-109">Die folgenden Situationen erstellen Sie eine Kette-Grenze von Stack:</span><span class="sxs-lookup"><span data-stu-id="195a2-109">The following circumstances create a stack chain boundary:</span></span>  
   
--   <span data-ttu-id="1357b-110">Ein Übergang verwalteten zum nicht verwalteten oder nicht verwaltet zu verwaltet.</span><span class="sxs-lookup"><span data-stu-id="1357b-110">A managed-to-unmanaged or unmanaged-to-managed transition.</span></span>  
+- <span data-ttu-id="195a2-110">Ein Übergang verwalteten zum nicht verwalteten oder nicht verwaltet zu verwaltet.</span><span class="sxs-lookup"><span data-stu-id="195a2-110">A managed-to-unmanaged or unmanaged-to-managed transition.</span></span>  
   
--   <span data-ttu-id="1357b-111">Ein Wechsel des Ausführungskontexts.</span><span class="sxs-lookup"><span data-stu-id="1357b-111">A context switch.</span></span>  
+- <span data-ttu-id="195a2-111">Ein Wechsel des Ausführungskontexts.</span><span class="sxs-lookup"><span data-stu-id="195a2-111">A context switch.</span></span>  
   
--   <span data-ttu-id="1357b-112">Ein debugger-Hijacking eines Benutzerthreads.</span><span class="sxs-lookup"><span data-stu-id="1357b-112">A debugger hijacking of a user thread.</span></span>  
+- <span data-ttu-id="195a2-112">Ein debugger-Hijacking eines Benutzerthreads.</span><span class="sxs-lookup"><span data-stu-id="195a2-112">A debugger hijacking of a user thread.</span></span>  
   
- <span data-ttu-id="1357b-113">Im einfachen Fall für einen Thread, der ausschließlich verwalteten Code in einem einzelnen Kontext ausgeführt wird, wird eine 1: 1-Entsprechung zwischen Threads und Stapelketten vorhanden.</span><span class="sxs-lookup"><span data-stu-id="1357b-113">In the simple case for a thread that is running purely managed code in a single context, a one-to-one correspondence will exist between threads and stack chains.</span></span>  
+ <span data-ttu-id="195a2-113">Im einfachen Fall für einen Thread, der ausschließlich verwalteten Code in einem einzelnen Kontext ausgeführt wird, wird eine 1: 1-Entsprechung zwischen Threads und Stapelketten vorhanden.</span><span class="sxs-lookup"><span data-stu-id="195a2-113">In the simple case for a thread that is running purely managed code in a single context, a one-to-one correspondence will exist between threads and stack chains.</span></span>  
   
- <span data-ttu-id="1357b-114">Ein Debugger sollten die physischen Aufruflisten aller Threads in logischen Aufruflisten neu anzuordnen.</span><span class="sxs-lookup"><span data-stu-id="1357b-114">A debugger may want to rearrange the physical call stacks of all threads into logical call stacks.</span></span> <span data-ttu-id="1357b-115">Dies würde betreffen, sortieren die Threads Ketten nach deren Aufrufer-/Aufgerufener-Beziehungen und liefern sie.</span><span class="sxs-lookup"><span data-stu-id="1357b-115">This would involve sorting all the threads' chains by their caller/callee relationships and regrouping them.</span></span>  
+ <span data-ttu-id="195a2-114">Ein Debugger sollten die physischen Aufruflisten aller Threads in logischen Aufruflisten neu anzuordnen.</span><span class="sxs-lookup"><span data-stu-id="195a2-114">A debugger may want to rearrange the physical call stacks of all threads into logical call stacks.</span></span> <span data-ttu-id="195a2-115">Dies würde betreffen, sortieren die Threads Ketten nach deren Aufrufer-/Aufgerufener-Beziehungen und liefern sie.</span><span class="sxs-lookup"><span data-stu-id="195a2-115">This would involve sorting all the threads' chains by their caller/callee relationships and regrouping them.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1357b-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1357b-116">Requirements</span></span>  
- <span data-ttu-id="1357b-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1357b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="195a2-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="195a2-116">Requirements</span></span>  
+ <span data-ttu-id="195a2-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="195a2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1357b-118">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1357b-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="195a2-118">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="195a2-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1357b-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1357b-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="195a2-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="195a2-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1357b-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1357b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="195a2-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="195a2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

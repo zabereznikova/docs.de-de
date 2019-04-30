@@ -17,39 +17,39 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a20b79dd5eda9c431511cc49e7e3adaa9486b2aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969833"
 ---
-# <a name="iclrerrorreportingmanager-interface"></a><span data-ttu-id="1aa90-102">ICLRErrorReportingManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1aa90-102">ICLRErrorReportingManager Interface</span></span>
-<span data-ttu-id="1aa90-103">Bietet Methoden, mit die den Host benutzerdefinierte stapelabbilder für die Fehlerberichterstattung konfigurieren zu können.</span><span class="sxs-lookup"><span data-stu-id="1aa90-103">Provides methods that allow the host to configure custom stack dumps for error reporting.</span></span>  
+# <a name="iclrerrorreportingmanager-interface"></a><span data-ttu-id="12eee-102">ICLRErrorReportingManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="12eee-102">ICLRErrorReportingManager Interface</span></span>
+<span data-ttu-id="12eee-103">Bietet Methoden, mit die den Host benutzerdefinierte stapelabbilder für die Fehlerberichterstattung konfigurieren zu können.</span><span class="sxs-lookup"><span data-stu-id="12eee-103">Provides methods that allow the host to configure custom stack dumps for error reporting.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1aa90-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="1aa90-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="12eee-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="12eee-104">Methods</span></span>  
   
-|<span data-ttu-id="1aa90-105">Methode</span><span class="sxs-lookup"><span data-stu-id="1aa90-105">Method</span></span>|<span data-ttu-id="1aa90-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1aa90-106">Description</span></span>|  
+|<span data-ttu-id="12eee-105">Methode</span><span class="sxs-lookup"><span data-stu-id="12eee-105">Method</span></span>|<span data-ttu-id="12eee-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="12eee-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1aa90-107">BeginCustomDump-Methode</span><span class="sxs-lookup"><span data-stu-id="1aa90-107">BeginCustomDump Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|<span data-ttu-id="1aa90-108">Gibt die Konfiguration des benutzerdefinierten Stapeldumps für die Fehlerberichterstattung.</span><span class="sxs-lookup"><span data-stu-id="1aa90-108">Specifies the configuration of custom stack dumps for error reporting.</span></span>|  
-|[<span data-ttu-id="1aa90-109">EndCustomDump-Methode</span><span class="sxs-lookup"><span data-stu-id="1aa90-109">EndCustomDump Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|<span data-ttu-id="1aa90-110">Löscht die Konfiguration des benutzerdefinierten Dump der von einem früheren Aufruf festgelegte `BeginCustomDump`.</span><span class="sxs-lookup"><span data-stu-id="1aa90-110">Clears the custom stack dump configuration that was set by an earlier call to `BeginCustomDump`.</span></span>|  
-|[<span data-ttu-id="1aa90-111">GetBucketParametersForCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="1aa90-111">GetBucketParametersForCurrentException Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|<span data-ttu-id="1aa90-112">Ruft die Dr. Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.</span><span class="sxs-lookup"><span data-stu-id="1aa90-112">Gets the Watson bucket for the current exception on the calling thread.</span></span>|  
+|[<span data-ttu-id="12eee-107">BeginCustomDump-Methode</span><span class="sxs-lookup"><span data-stu-id="12eee-107">BeginCustomDump Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|<span data-ttu-id="12eee-108">Gibt die Konfiguration des benutzerdefinierten Stapeldumps für die Fehlerberichterstattung.</span><span class="sxs-lookup"><span data-stu-id="12eee-108">Specifies the configuration of custom stack dumps for error reporting.</span></span>|  
+|[<span data-ttu-id="12eee-109">EndCustomDump-Methode</span><span class="sxs-lookup"><span data-stu-id="12eee-109">EndCustomDump Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|<span data-ttu-id="12eee-110">Löscht die Konfiguration des benutzerdefinierten Dump der von einem früheren Aufruf festgelegte `BeginCustomDump`.</span><span class="sxs-lookup"><span data-stu-id="12eee-110">Clears the custom stack dump configuration that was set by an earlier call to `BeginCustomDump`.</span></span>|  
+|[<span data-ttu-id="12eee-111">GetBucketParametersForCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="12eee-111">GetBucketParametersForCurrentException Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|<span data-ttu-id="12eee-112">Ruft die Dr. Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.</span><span class="sxs-lookup"><span data-stu-id="12eee-112">Gets the Watson bucket for the current exception on the calling thread.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1aa90-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1aa90-113">Remarks</span></span>  
- <span data-ttu-id="1aa90-114">Die `BeginCustomDump` Methode legt die Konfiguration des benutzerdefinierten Dump fest.</span><span class="sxs-lookup"><span data-stu-id="1aa90-114">The `BeginCustomDump` method sets custom stack dump configuration.</span></span> <span data-ttu-id="1aa90-115">Die `EndCustomDump` Methode löscht die benutzerdefinierte Stapeldumpkonfiguration und alle zugeordneten Zustand freigibt.</span><span class="sxs-lookup"><span data-stu-id="1aa90-115">The `EndCustomDump` method clears the custom stack dump configuration and frees any associated state.</span></span> <span data-ttu-id="1aa90-116">Es sollte aufgerufen werden, nachdem das benutzerdefinierte Abbild abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="1aa90-116">It should be called after the custom dump is complete.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="12eee-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="12eee-113">Remarks</span></span>  
+ <span data-ttu-id="12eee-114">Die `BeginCustomDump` Methode legt die Konfiguration des benutzerdefinierten Dump fest.</span><span class="sxs-lookup"><span data-stu-id="12eee-114">The `BeginCustomDump` method sets custom stack dump configuration.</span></span> <span data-ttu-id="12eee-115">Die `EndCustomDump` Methode löscht die benutzerdefinierte Stapeldumpkonfiguration und alle zugeordneten Zustand freigibt.</span><span class="sxs-lookup"><span data-stu-id="12eee-115">The `EndCustomDump` method clears the custom stack dump configuration and frees any associated state.</span></span> <span data-ttu-id="12eee-116">Es sollte aufgerufen werden, nachdem das benutzerdefinierte Abbild abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="12eee-116">It should be called after the custom dump is complete.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="1aa90-117">Fehler beim Aufrufen `EndCustomDump` Speicherverluste verursacht.</span><span class="sxs-lookup"><span data-stu-id="1aa90-117">Failure to call `EndCustomDump` causes memory to leak.</span></span>  
+>  <span data-ttu-id="12eee-117">Fehler beim Aufrufen `EndCustomDump` Speicherverluste verursacht.</span><span class="sxs-lookup"><span data-stu-id="12eee-117">Failure to call `EndCustomDump` causes memory to leak.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1aa90-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1aa90-118">Requirements</span></span>  
- <span data-ttu-id="1aa90-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1aa90-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="12eee-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="12eee-118">Requirements</span></span>  
+ <span data-ttu-id="12eee-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="12eee-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1aa90-120">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1aa90-120">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="12eee-120">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="12eee-120">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1aa90-121">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="1aa90-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="12eee-121">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="12eee-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1aa90-122">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1aa90-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="12eee-122">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12eee-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1aa90-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1aa90-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12eee-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="12eee-123">See also</span></span>
 
-- [<span data-ttu-id="1aa90-124">ECustomDumpItemKind-Enumeration</span><span class="sxs-lookup"><span data-stu-id="1aa90-124">ECustomDumpItemKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
-- [<span data-ttu-id="1aa90-125">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1aa90-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="12eee-124">ECustomDumpItemKind-Enumeration</span><span class="sxs-lookup"><span data-stu-id="12eee-124">ECustomDumpItemKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
+- [<span data-ttu-id="12eee-125">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="12eee-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
