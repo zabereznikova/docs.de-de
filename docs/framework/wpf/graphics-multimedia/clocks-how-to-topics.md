@@ -10,21 +10,21 @@ helpviewer_keywords:
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
 ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970962"
 ---
-# <a name="clocks-how-to-topics"></a><span data-ttu-id="b16c5-102">Gewusst-wie-Themen zu Uhren</span><span class="sxs-lookup"><span data-stu-id="b16c5-102">Clocks How-to Topics</span></span>
-<span data-ttu-id="b16c5-103">In den folgenden Themen wird beschrieben, wie eine <xref:System.Windows.Media.Animation.Clock> Objekt, das Verwalten von Informationen zur zeitlichen Steuerung Zustand für eine <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="b16c5-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+# <a name="clocks-how-to-topics"></a><span data-ttu-id="4d755-102">Gewusst-wie-Themen zu Uhren</span><span class="sxs-lookup"><span data-stu-id="4d755-102">Clocks How-to Topics</span></span>
+<span data-ttu-id="4d755-103">In den folgenden Themen wird beschrieben, wie eine <xref:System.Windows.Media.Animation.Clock> Objekt, das Verwalten von Informationen zur zeitlichen Steuerung Zustand für eine <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="4d755-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b16c5-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b16c5-104">In This Section</span></span>  
- [<span data-ttu-id="b16c5-105">Animieren einer Eigenschaft mit AnimationClock</span><span class="sxs-lookup"><span data-stu-id="b16c5-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
- [<span data-ttu-id="b16c5-106">Interaktives Steuern einer Uhr</span><span class="sxs-lookup"><span data-stu-id="b16c5-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
- [<span data-ttu-id="b16c5-107">Synchrones Suchen einer Uhr</span><span class="sxs-lookup"><span data-stu-id="b16c5-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4d755-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4d755-104">In This Section</span></span>  
+ [<span data-ttu-id="4d755-105">Animieren einer Eigenschaft mit AnimationClock</span><span class="sxs-lookup"><span data-stu-id="4d755-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [<span data-ttu-id="4d755-106">Interaktives Steuern einer Uhr</span><span class="sxs-lookup"><span data-stu-id="4d755-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
+ [<span data-ttu-id="4d755-107">Synchrones Suchen einer Uhr</span><span class="sxs-lookup"><span data-stu-id="4d755-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
   
-## <a name="reference"></a><span data-ttu-id="b16c5-108">Referenz</span><span class="sxs-lookup"><span data-stu-id="b16c5-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4d755-108">Referenz</span><span class="sxs-lookup"><span data-stu-id="4d755-108">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Clock>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -33,7 +33,7 @@ ms.locfileid: "57361446"
   
  <xref:System.Windows.Media.Animation.Timeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="b16c5-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b16c5-109">Related Sections</span></span>  
- [<span data-ttu-id="b16c5-110">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="b16c5-110">Animation Overview</span></span>](animation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="4d755-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="4d755-109">Related Sections</span></span>  
+ [<span data-ttu-id="4d755-110">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="4d755-110">Animation Overview</span></span>](animation-overview.md)  
   
- [<span data-ttu-id="b16c5-111">Übersicht über Storyboards</span><span class="sxs-lookup"><span data-stu-id="b16c5-111">Storyboards Overview</span></span>](storyboards-overview.md)
+ [<span data-ttu-id="4d755-111">Übersicht über Storyboards</span><span class="sxs-lookup"><span data-stu-id="4d755-111">Storyboards Overview</span></span>](storyboards-overview.md)
