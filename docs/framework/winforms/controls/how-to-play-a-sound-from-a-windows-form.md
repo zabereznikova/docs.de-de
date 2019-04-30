@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913409"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Vorgehensweise: Wiedergabe von Sound in Windows Forms
 In diesem Beispiel wird zur Laufzeit ein Sound in einem bestimmten Pfad wiedergegeben.  
@@ -40,26 +40,26 @@ private void playSimpleSound()
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
+- Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
   
--   (C#) Einen Verweis auf die <xref:System.Media?displayProperty=nameWithType> Namespace.  
+- (C#) Einen Verweis auf die <xref:System.Media?displayProperty=nameWithType> Namespace.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Dateivorgänge sollten in entsprechende strukturierte Ausnahmebehandlungsblöcke eingeschlossen sein.  
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse).  
+- Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse).  
   
--   Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
+- Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
   
--   Der Pfadname ist `null` (<xref:System.ArgumentNullException>-Klasse).  
+- Der Pfadname ist `null` (<xref:System.ArgumentNullException>-Klasse).  
   
--   Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
+- Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
   
--   Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
+- Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
   
--   Der Pfad ist nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException> Klasse).  
+- Der Pfad ist nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException> Klasse).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei `Form1.vb` handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic-Quelldatei. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b37e9c2874448b5fff82f6a37f6ca850875f2b04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914601"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME-Enumeration
 Gibt an, die Version, Build, Kultur, Signatur und So weiter, der die Assembly, deren Eigenschaften abgerufen oder festgelegt werden [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) Methoden.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929297"
 ---
 # <a name="how-to-examine-the-security-context"></a>Vorgehensweise: Prüfen des Sicherheitskontexts
 Bei der Programmierung von Windows Communication Foundation (WCF)-Dienste kann dienstsicherheitskontextes Sie Details zu den Clientanmeldeinformationen und Ansprüche verwendet, um die Authentifizierung mit dem Dienst zu ermitteln. Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>-Klasse.  
@@ -25,7 +25,7 @@ Bei der Programmierung von Windows Communication Foundation (WCF)-Dienste kann d
   
 ### <a name="to-get-the-current-security-context"></a>So rufen Sie den aktuellen Sicherheitskontext ab  
   
--   Greifen Sie auf die statische <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>- Eigenschaft zu, um den aktuellen Sicherheitskontext abzurufen. Überprüfen Sie eine beliebige der Eigenschaften des aktuellen Kontexts für den Verweis.  
+- Greifen Sie auf die statische <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>- Eigenschaft zu, um den aktuellen Sicherheitskontext abzurufen. Überprüfen Sie eine beliebige der Eigenschaften des aktuellen Kontexts für den Verweis.  
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>So ermitteln Sie die Identität des Aufrufers  
   
@@ -46,13 +46,13 @@ Bei der Programmierung von Windows Communication Foundation (WCF)-Dienste kann d
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Der Code verwendet die folgenden Namespaces:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Siehe auch
 

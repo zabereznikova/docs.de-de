@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966869"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile
 In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Hosten ein Windows Forms-Steuerelements in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -44,11 +44,11 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 4. Fügen Sie der Klasse eine `Main`-Method hinzu.  
   
-    1.  Anwenden der <xref:System.STAThreadAttribute> zur c#- `Main` Methode an der Windows Forms-Anwendung ist eine Singlethread-Apartment. (Das Attribut ist nicht in Visual Basic erforderlich, da Windows Forms-Anwendungen mit Visual Basic verwenden ein Singlethread-Apartment-Modell in der Standardeinstellung entwickelt.)  
+    1. Anwenden der <xref:System.STAThreadAttribute> zur c#- `Main` Methode an der Windows Forms-Anwendung ist eine Singlethread-Apartment. (Das Attribut ist nicht in Visual Basic erforderlich, da Windows Forms-Anwendungen mit Visual Basic verwenden ein Singlethread-Apartment-Modell in der Standardeinstellung entwickelt.)  
   
-    2.  Rufen Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Betriebssystem Stile für Ihre Anwendung anwenden.  
+    2. Rufen Sie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Betriebssystem Stile für Ihre Anwendung anwenden.  
   
-    3.  Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.  
+    3. Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 2. Kompilieren Sie das Formular.  
   
-    -   Wenn Sie c# verwenden, geben Sie: `csc form1.cs`  
+    - Wenn Sie c# verwenden, geben Sie: `csc form1.cs`  
   
          `-or-`  
   
-    -   Wenn Sie Visual Basic verwenden, geben Sie ein: `vbc form1.vb`  
+    - Wenn Sie Visual Basic verwenden, geben Sie ein: `vbc form1.vb`  
   
 3. Geben Sie an der Eingabeaufforderung: `Form1.exe`  
   
@@ -111,7 +111,7 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Um den Code zu kompilieren, führen Sie die Anweisungen aus dem vorangehenden Verfahren aus, in denen beschrieben ist, wie die Anwendung zu kompilieren und auszuführen ist.  
+- Um den Code zu kompilieren, führen Sie die Anweisungen aus dem vorangehenden Verfahren aus, in denen beschrieben ist, wie die Anwendung zu kompilieren und auszuführen ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

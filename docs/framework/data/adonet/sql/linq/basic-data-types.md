@@ -3,11 +3,11 @@ title: Grundlegende Datentypen
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
 ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903369"
 ---
 # <a name="basic-data-types"></a>Grundlegende Datentypen
 Da LINQ to SQL-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Transact-SQL übersetzt werden, unterstützt LINQ to SQL einen Großteil der integrierten Funktionen, die SQL Server für grundlegende Datentypen bereitstellt.  
@@ -18,9 +18,9 @@ Da LINQ to SQL-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Tr
 ## <a name="equality-operators"></a>Gleichheitsoperatoren  
  LINQ to SQL unterstützt die folgenden Gleichheitsoperatoren für grundlegende Datentypen in LINQ to SQL-Abfragen:  
   
--   Gleich und Ungleichheitsoperator: Gleichheits-und Ungleichheitsoperatoren werden für numerische unterstützt <xref:System.Boolean>, <xref:System.DateTime>, und <xref:System.TimeSpan> Typen. Weitere Informationen zu Visual Basic-Operatoren `=` und `<>`, finden Sie unter [Vergleichsoperatoren](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Weitere Informationen zu C# Vergleichsoperatoren `==` und `!=`, finden Sie unter [Gleichheitsoperatoren](~/docs/csharp/language-reference/operators/equality-operators.md).
+- Gleich und Ungleichheitsoperator: Gleichheits-und Ungleichheitsoperatoren werden für numerische unterstützt <xref:System.Boolean>, <xref:System.DateTime>, und <xref:System.TimeSpan> Typen. Weitere Informationen zu Visual Basic-Operatoren `=` und `<>`, finden Sie unter [Vergleichsoperatoren](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Weitere Informationen zu C# Vergleichsoperatoren `==` und `!=`, finden Sie unter [Gleichheitsoperatoren](~/docs/csharp/language-reference/operators/equality-operators.md).
   
--   Is-Operator: Die `IS` Operator verfügt über eine unterstützte Übersetzung, wenn Vererbungsmapping verwendet wird. Er kann anstelle der direkten Prüfung der Diskriminatorspalte verwendet werden, um festzulegen, ob ein Objekt einen bestimmten Typ aufweist. Er wird in eine Prüfung der Diskriminatorspalte übersetzt. Weitere Informationen zu den Visual Basic und C# Is-Operatoren, finden Sie unter [Is Operator](~/docs/visual-basic/language-reference/operators/is-operator.md) und [ist](~/docs/csharp/language-reference/keywords/is.md).  
+- Is-Operator: Die `IS` Operator verfügt über eine unterstützte Übersetzung, wenn Vererbungsmapping verwendet wird. Er kann anstelle der direkten Prüfung der Diskriminatorspalte verwendet werden, um festzulegen, ob ein Objekt einen bestimmten Typ aufweist. Er wird in eine Prüfung der Diskriminatorspalte übersetzt. Weitere Informationen zu den Visual Basic und C# Is-Operatoren, finden Sie unter [Is Operator](~/docs/visual-basic/language-reference/operators/is-operator.md) und [ist](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

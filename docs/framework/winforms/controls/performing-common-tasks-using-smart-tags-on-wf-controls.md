@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932599"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags für Windows Forms-Steuerelemente
 Wie Sie Formulare und Steuerelemente für die Windows Forms-Anwendung erstellen, gibt es viele Aufgaben, die Sie wiederholt ausführen. Dies sind einige der häufig ausgeführten Aufgaben, die auftreten:  
   
--   Hinzufügen oder Entfernen einer Registerkarte auf eine <xref:System.Windows.Forms.TabControl>.  
+- Hinzufügen oder Entfernen einer Registerkarte auf eine <xref:System.Windows.Forms.TabControl>.  
   
--   Andocken eines Steuerelements zu seinem übergeordneten Element.  
+- Andocken eines Steuerelements zu seinem übergeordneten Element.  
   
--   Ändern der Ausrichtung einer <xref:System.Windows.Forms.SplitContainer> Steuerelement.  
+- Ändern der Ausrichtung einer <xref:System.Windows.Forms.SplitContainer> Steuerelement.  
   
  Um die Entwicklung zu beschleunigen, bieten viele Steuerelemente Smarttags, Kontextmenüs, die Ihnen ermöglichen, allgemeine Aufgaben wie das in einer einzigen Geste zur Entwurfszeit auszuführen. Diese Aufgaben heißen *Smarttag-Verben*.  
   
@@ -28,11 +28,11 @@ Wie Sie Formulare und Steuerelemente für die Windows Forms-Anwendung erstellen,
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Erstellen eines Windows Forms-Projekts  
+- Erstellen eines Windows Forms-Projekts  
   
--   Mithilfe von Smarttags  
+- Mithilfe von Smarttags  
   
--   Aktivieren und Deaktivieren von Smarttags  
+- Aktivieren und Deaktivieren von Smarttags  
   
  Wenn Sie diese Aufgaben durchgearbeitet haben, besitzen Sie ein Verständnis für die Rolle, die diese wichtigen Layoutfunktionen spielen.  
   

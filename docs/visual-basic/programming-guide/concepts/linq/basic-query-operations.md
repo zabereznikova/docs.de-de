@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925647"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Grundlegende Abfrageoperationen (Visual Basic)
 Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdrücke in Visual Basic, und klicken Sie auf einige der geläufigsten Vorgänge, die Sie in einer Abfrage ausführen. Weitere Informationen finden Sie unter den folgenden Themen:  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Um mehrere Felder aus der Datenquelle auswählen, haben Sie zwei Möglichkeiten:  
   
--   In der `Select` -Klausel, geben Sie die Felder im Resultset enthalten sein sollen. Der Compiler definieren einen anonymen Typ, der diese Felder als Eigenschaften verfügt. Weitere Informationen finden Sie unter [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+- In der `Select` -Klausel, geben Sie die Felder im Resultset enthalten sein sollen. Der Compiler definieren einen anonymen Typ, der diese Felder als Eigenschaften verfügt. Weitere Informationen finden Sie unter [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Da die zurückgegebenen Elemente im folgenden Beispiel Instanzen eines anonymen Typs sind, können nicht Sie in den Typ anhand des Namens an anderer Stelle in Ihrem Code verweisen. Der Compiler festgelegten Namen für den Typ enthält Zeichen, die in normalen Visual Basic-Code nicht gültig sind. Im folgenden Beispiel die Elemente in der Auflistung, die von der Abfrage in zurückgegeben wird `londonCusts4` sind Instanzen eines anonymen Typs  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      - oder -   
   
--   Definieren Sie einen benannten Typ, der die Felder, die Sie verwenden möchten enthält, im Resultset einschließen, erstellen und initialisieren Sie die Instanzen des Typs in der `Select` Klausel. Verwenden Sie diese Option nur, wenn Sie keine einzelne Ergebnisse außerhalb der Auflistung verwenden, in dem sie zurückgegeben werden, oder wenn Sie sie in Methodenaufrufen als Parameter übergeben. Der Typ des `londonCusts5` im folgenden Beispiel wird die IEnumerable (Of NamePhone).  
+- Definieren Sie einen benannten Typ, der die Felder, die Sie verwenden möchten enthält, im Resultset einschließen, erstellen und initialisieren Sie die Instanzen des Typs in der `Select` Klausel. Verwenden Sie diese Option nur, wenn Sie keine einzelne Ergebnisse außerhalb der Auflistung verwenden, in dem sie zurückgegeben werden, oder wenn Sie sie in Methodenaufrufen als Parameter übergeben. Der Typ des `londonCusts5` im folgenden Beispiel wird die IEnumerable (Of NamePhone).  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

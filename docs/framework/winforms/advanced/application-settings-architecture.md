@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946743"
 ---
 # <a name="application-settings-architecture"></a>Architektur der Anwendungseinstellungen
 In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellungen funktioniert. Außerdem werden erweiterte Funktionen der Architektur erläutert, z.B. gruppierte Einstellungen und Einstellungsschlüssel.  
@@ -24,15 +24,15 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
 ## <a name="defining-settings"></a>Definieren von Einstellungen  
  Die Architektur der Anwendungseinstellungen wird in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] und in Windows Forms verwendet und enthält eine Reihe von Basisklassen, die beide Umgebungen gemeinsam verwenden. Am wichtigsten ist <xref:System.Configuration.SettingsBase>, die ermöglicht den Zugriff auf Einstellungen über eine Auflistung, und stellt Low-Level-Methoden zum Laden und Speichern von Einstellungen. Jede Umgebung implementiert eine eigene Klasse abgeleitet <xref:System.Configuration.SettingsBase> um zusätzliche Einstellungsfunktionen für diese Umgebung bereitzustellen. In einer Windows Forms-basierten Anwendung, alle Anwendungseinstellungen definiert werden müssen, für eine Klasse, die von abgeleiteten der <xref:System.Configuration.ApplicationSettingsBase> -Klasse, die die Basisklasse der Klasse die folgende Funktionen hinzugefügt:  
   
--   Lade- und Speichervorgänge auf höherer Ebene  
+- Lade- und Speichervorgänge auf höherer Ebene  
   
--   Unterstützung für benutzerspezifische Einstellungen  
+- Unterstützung für benutzerspezifische Einstellungen  
   
--   Wiederherstellen der vordefinierten Standardeinstellungen eines Benutzers  
+- Wiederherstellen der vordefinierten Standardeinstellungen eines Benutzers  
   
--   Aktualisieren von Einstellungen aus einer früheren Anwendungsversion  
+- Aktualisieren von Einstellungen aus einer früheren Anwendungsversion  
   
--   Überprüfen von Einstellungen, bevor sie geändert oder bevor sie gespeichert werden  
+- Überprüfen von Einstellungen, bevor sie geändert oder bevor sie gespeichert werden  
   
  Die Einstellungen können über eine Reihe von Attributen, die in definierten beschrieben werden die <xref:System.Configuration> Namespace; diese werden beschrieben [Attribute für Anwendungseinstellungen](application-settings-attributes.md). Wenn Sie eine Einstellung definieren, müssen Sie sie anwenden, entweder mit <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>, das beschreibt, ob die Einstellung für die gesamte Anwendung oder nur für den aktuellen Benutzer gilt.  
   
@@ -46,11 +46,11 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
   
  Das Konfigurationssystem, das ursprünglich mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veröffentlicht wurde, unterstützt die Bereitstellung von statischen Anwendungskonfigurationsdaten über die Datei machine.config des lokalen Computers oder in einer Datei `app.`exe.config, die Sie mit Ihrer Anwendung bereitstellen. Die <xref:System.Configuration.LocalFileSettingsProvider> Klasse erweitert diese native Unterstützung auf folgende Weise:  
   
--   Anwendungsspezifische Einstellungen können in der Datei machine.config oder `app.`exe.config gespeichert werden. Die Datei machine.config ist immer schreibgeschützt, während `app`. exe.config aufgrund von Sicherheitsüberlegungen für die meisten Anwendungen schreibgeschützt ist.  
+- Anwendungsspezifische Einstellungen können in der Datei machine.config oder `app.`exe.config gespeichert werden. Die Datei machine.config ist immer schreibgeschützt, während `app`. exe.config aufgrund von Sicherheitsüberlegungen für die meisten Anwendungen schreibgeschützt ist.  
   
--   Benutzerspezifische Einstellungen können in `app`. exe.config-Dateien gespeichert werden und werden dann als statische Standardwerte behandelt.  
+- Benutzerspezifische Einstellungen können in `app`. exe.config-Dateien gespeichert werden und werden dann als statische Standardwerte behandelt.  
   
--   Nicht standardmäßige benutzerspezifische Einstellungen werden in einer neuen Datei, *benutzer*.config gespeichert, wobei *benutzer* der Benutzername der Person ist, die aktuell die Anwendung ausführt. Sie können angeben, den Standardwert für eine benutzerspezifische Einstellung mit <xref:System.Configuration.DefaultSettingValueAttribute>. Da sich benutzerspezifische Einstellungen häufig während der Ausführung der Anwendung ändern, hat `user`config Lese-/Schreibzugriff.  
+- Nicht standardmäßige benutzerspezifische Einstellungen werden in einer neuen Datei, *benutzer*.config gespeichert, wobei *benutzer* der Benutzername der Person ist, die aktuell die Anwendung ausführt. Sie können angeben, den Standardwert für eine benutzerspezifische Einstellung mit <xref:System.Configuration.DefaultSettingValueAttribute>. Da sich benutzerspezifische Einstellungen häufig während der Ausführung der Anwendung ändern, hat `user`config Lese-/Schreibzugriff.  
   
  Alle drei Konfigurationsdateien speichern Einstellungen im XML-Format. Das XML-Element der obersten Ebene für anwendungsspezifische Einstellungen ist `<appSettings>`, während `<userSettings>` für die benutzerspezifischen Einstellungen verwendet wird. Eine `app`. exe.config-Datei mit anwendungsspezifischen Einstellungen und Standardwerten für benutzerspezifische Einstellungen sieht wie folgt aus:  
   

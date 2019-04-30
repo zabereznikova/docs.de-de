@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949603"
 ---
 # <a name="sending-and-receiving-faults"></a>Senden und Empfangen von Fehlern
 SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst in einem interoperablen Verfahren. In der Regel definiert ein Dienst benutzerdefinierten Fehlerinhalt und legt fest, welche Vorgänge ihn zurückgeben können. (Weitere Informationen finden Sie unter [definieren und Angeben von Fehlern](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In diesem Thema wird erläutert, wie ein Dienst oder ein Duplexclient diese Fehler senden kann, wenn der entsprechende Fehlerzustand aufgetreten ist, und wie eine Client- oder Dienstanwendung diese Fehler verarbeitet. Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
 ## <a name="handling-faults"></a>Behandeln von Fehlern  
  SOAP-Fehler, die auftreten, während der Kommunikation, die für Clientanwendungen relevant sind, werden in WCF-Clients als verwaltete Ausnahmen ausgelöst. Es gibt zahlreiche Ausnahmen, die während der Ausführung eines Programms auftreten können, können Anwendungen, die über das Programmiermodell für die WCF-Client davon ausgehen, Ausnahmen von den folgenden beiden Typen als kommunikationsergebnis behandeln.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  <xref:System.TimeoutException>-Objekte werden ausgelöst, wenn ein Vorgang das angegebene Zeitlimit überschreitet.  
   
@@ -81,13 +81,13 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
   
  In der Regel werden Clientobjektkanäle auf eine der folgenden Möglichkeiten geschlossen:  
   
--   Wenn der WCF-Clientobjekt wiederverwendet wird.  
+- Wenn der WCF-Clientobjekt wiederverwendet wird.  
   
--   Wenn die Clientanwendung <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> aufruft.  
+- Wenn die Clientanwendung <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> aufruft.  
   
--   Wenn die Clientanwendung <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> aufruft.  
+- Wenn die Clientanwendung <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> aufruft.  
   
--   Wenn die Clientanwendung einen Vorgang aufruft, bei dem es sich um einen Vorgang handelt, der eine Sitzung beendet.  
+- Wenn die Clientanwendung einen Vorgang aufruft, bei dem es sich um einen Vorgang handelt, der eine Sitzung beendet.  
   
  In jedem Fall weist das Schließen des Kanals den Kanal an zu beginnen, alle zugrunde liegenden Kanäle zu schließen, die möglicherweise Nachrichten senden, um eine komplexe Funktionalität auf Anwendungsebene zu unterstützen. Wenn z. B. ein Vertrag Sitzungen erfordert, versucht eine Bindung eine Sitzung einzurichten, indem Nachrichten mit dem Dienstkanal ausgetauscht werden, bis eine Sitzung eingerichtet ist. Wenn der Kanal geschlossen wird, benachrichtigt der zugrunde liegende Sitzungskanal den Dienst, dass die Sitzung beendet wird. Wenn der Kanal bereits abgebrochen oder geschlossen ist oder aus anderen Gründen nicht verwendet werden kann (z. B. wenn ein Netzwerkkabel abgezogen wird), kann der Clientkanal dem Dienstkanal in diesem Fall nicht mitteilen, dass die Sitzung beendet wird, und dies kann zu einer Ausnahme führen.  
   

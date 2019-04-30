@@ -3,16 +3,16 @@ title: Aktivitäten zur Ablaufsteuerung in WF
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 ms.openlocfilehash: bcbb12210af2d0172977dca6f81355031baa043a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945911"
 ---
 # <a name="control-flow-activities-in-wf"></a>Aktivitäten zur Ablaufsteuerung in WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] stellt mehrere Aktivitäten zum Steuern des Ausführungsflusses innerhalb eines Workflows bereit. Einige dieser Aktivitäten (z. B. `Switch` und `If`) implementieren flusssteuerungsstrukturen ähnlich denen in programmierumgebungen wie z. B. Visual C#-, während andere (z. B. `Pick`) neue Programmierungsstrukturen modellieren.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] stellt mehrere Aktivitäten zum Steuern des Ausführungsflusses innerhalb eines Workflows bereit. Einige dieser Aktivitäten (wie z. B. `Switch` und `If`) implementieren flusssteuerungsstrukturen ähnlich denen in programmierumgebungen wie z.B. Visual C#, während andere (z. B. `Pick`) neue Programmierungsstrukturen modellieren.  
   
- Beachten Sie, dass Aktivitäten wie die Aktivitäten `Parallel` und `ParallelForEach` mehrere untergeordnete Aktivitäten für eine gleichzeitige Ausführung planen, bei einem Workflow jedoch nur ein einzelner Thread verwendet wird. Jede untergeordnete Aktivität in diesen Aktivitäten wird sequenziell ausgeführt, und nachfolgende Aktivitäten werden erst ausgeführt, wenn vorherige Aktivitäten beendet werden oder sich im Leerlauf befindet. Deshalb sind diese Aktivitäten sehr hilfreich bei Anwendungen, in denen sich die Ausführung mehrerer potenziell blockierender Aktivitäten überschneidet. Wenn keine der untergeordneten Aktivitäten in diesen Aktivitäten in den Leerlauf wechselt, wird eine `Parallel`-Aktivität auf dieselbe Weise wie eine `Sequence`-Aktivität ausgeführt, und eine `ParallelForEach`-Aktivität wird genau wie eine `ForEach`-Aktivität ausgeführt. Wenn jedoch asynchrone Aktivitäten (z. B. Aktivitäten, die von <xref:System.Activities.AsyncCodeActivity> abgeleitet werden) oder Messagingaktivitäten verwendet werden, geht die Steuerung auf die nächste Verzweigung über, während die untergeordnete Aktivität darauf wartet, dass ihre Nachricht empfangen oder ihre asynchrone Arbeit abgeschlossen wird.  
+ Beachten Sie, dass Aktivitäten wie die Aktivitäten `Parallel` und `ParallelForEach` mehrere untergeordnete Aktivitäten für eine gleichzeitige Ausführung planen, bei einem Workflow jedoch nur ein einzelner Thread verwendet wird. Jede untergeordnete Aktivität in diesen Aktivitäten wird sequenziell ausgeführt, und nachfolgende Aktivitäten werden erst ausgeführt, wenn vorherige Aktivitäten beendet werden oder sich im Leerlauf befindet. Deshalb sind diese Aktivitäten sehr hilfreich bei Anwendungen, in denen sich die Ausführung mehrerer potenziell blockierender Aktivitäten überschneidet. Wenn keine der untergeordneten Aktivitäten in diesen Aktivitäten in den Leerlauf wechselt, wird eine `Parallel`-Aktivität auf dieselbe Weise wie eine `Sequence`-Aktivität ausgeführt, und eine `ParallelForEach`-Aktivität wird genau wie eine `ForEach`-Aktivität ausgeführt. Wenn jedoch asynchrone Aktivitäten (z. B. Aktivitäten, die von <xref:System.Activities.AsyncCodeActivity> abgeleitet werden) oder Messagingaktivitäten verwendet werden, geht die Steuerung auf den nächsten Branch über, während die untergeordnete Aktivität darauf wartet, dass ihre Nachricht empfangen oder ihre asynchrone Arbeit abgeschlossen wird.  
   
 ## <a name="flow-control-activities"></a>Flusssteuerungsaktivitäten  
   

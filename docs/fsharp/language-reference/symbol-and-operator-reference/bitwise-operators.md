@@ -3,11 +3,11 @@ title: Bitweise Operatoren
 description: Erfahren Sie, bis die bitweisen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 07/20/2018
 ms.openlocfilehash: 01c68be485525b49eb3121dfaea6dce0adfe3972
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926294"
 ---
 # <a name="bitwise-operators"></a>Bitweise Operatoren
 

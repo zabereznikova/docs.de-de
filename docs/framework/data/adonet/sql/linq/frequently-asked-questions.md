@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903356"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
@@ -34,18 +34,18 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
   
  Die genauen Details der Verbindungsnutzung hängen von folgenden Faktoren ab:  
   
--   Verbindungsstatus, wenn <xref:System.Data.Linq.DataContext> mit einem Verbindungsobjekt erstellt wird.  
+- Verbindungsstatus, wenn <xref:System.Data.Linq.DataContext> mit einem Verbindungsobjekt erstellt wird.  
   
--   Verbindungszeichenfolgen-Einstellungen (z. B. Aktivieren von MARS (Multiple Active Result Sets)). Weitere Informationen finden Sie unter [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- Verbindungszeichenfolgen-Einstellungen (z. B. Aktivieren von MARS (Multiple Active Result Sets)). Weitere Informationen finden Sie unter [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Ausführen von Updates ohne Abfrage  
  F. Können Tabellendaten aktualisiert werden, ohne zuerst eine Datenbankabfrage auszuführen?  
   
  A. Obwohl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine mengenbasierten Updatebefehle bereitstellt, können Sie mithilfe einer der folgenden Techniken ohne vorherige Abfrage ein Update ausführen:  
   
--   Verwenden Sie <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>, um SQL-Code zu senden.  
+- Verwenden Sie <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>, um SQL-Code zu senden.  
   
--   Erstellen Sie eine neue Instanz des Objekts, und initialisieren Sie alle aktuellen Werte (Felder), die sich auf das Update auswirken. Fügen Sie das Objekt anschließend mithilfe von <xref:System.Data.Linq.DataContext> an <xref:System.Data.Linq.Table%601.Attach%2A> an, und ändern Sie das gewünschte Feld.  
+- Erstellen Sie eine neue Instanz des Objekts, und initialisieren Sie alle aktuellen Werte (Felder), die sich auf das Update auswirken. Fügen Sie das Objekt anschließend mithilfe von <xref:System.Data.Linq.DataContext> an <xref:System.Data.Linq.Table%601.Attach%2A> an, und ändern Sie das gewünschte Feld.  
   
 ## <a name="unexpected-query-results"></a>Unerwartete Abfrageergebnisse  
  F. Meine Abfrage gibt unerwartete Ergebnisse zurück. Wie kann der Fehler festgestellt werden?  
@@ -57,9 +57,9 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
   
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet zwei Möglichkeiten, von der Datenbank generierte Werte mithilfe gespeicherter Prozeduren zurückzugeben:  
   
--   Durch Benennen des Ausgabeergebnisses.  
+- Durch Benennen des Ausgabeergebnisses.  
   
--   Durch explizites Festlegen eines Ausgabeparameters.  
+- Durch explizites Festlegen eines Ausgabeparameters.  
   
  Im Folgenden ein Beispiel für eine fehlerhafte Ausgabe. Da die Ergebnisse von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht zugeordnet werden können, wird immer 0 zurückgegeben:  
   

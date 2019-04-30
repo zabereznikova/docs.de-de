@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907386"
 ---
 # <a name="composite-data-types-visual-basic"></a>Zusammengesetzte Datentypen (Visual Basic)
 Zusätzlich zu den bereitgestellten Typen Visual Basic elementarer Datentyp können Sie auch Elemente verschiedener Inhaltstypen erstellen zusammenstellen *zusammengesetzte Datentypen* wie z. B. Klassen, Strukturen und Arrays. Sie können zusammengesetzte Datentypen von elementare Typen und von anderen zusammengesetzten Typen erstellen. Beispielsweise können Sie ein Array von Strukturelementen oder eine Struktur mit Array-Elemente definieren.  
@@ -36,11 +36,11 @@ Ein Tupel ist eine einfache Struktur, die zwei oder mehr Felder enthält, deren 
 ## <a name="array-types"></a>Arraytypen  
  Es gibt keinen universellen Datentyp, der alle Arrays aus. Der Datentyp, der eine bestimmte Instanz eines Arrays wird durch Folgendes bestimmt:  
   
--   Die Tatsache, dass ein array  
+- Die Tatsache, dass ein array  
   
--   Der Rang (Anzahl der Dimensionen) des Arrays  
+- Der Rang (Anzahl der Dimensionen) des Arrays  
   
--   Der Elementtyp des Arrays  
+- Der Elementtyp des Arrays  
   
  Die Länge einer bestimmten Dimension ist vor allem nicht Teil der Datentyp der Instanz. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938936"
 ---
 # <a name="xstatic-markup-extension"></a>x:Statische Markuperweiterung
 Verweist auf alle statischen by-Value-Codeentitäten, die in definiert ist eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– konforme Speicherung. Die statische Eigenschaft, die auf die verwiesen wird kann verwendet werden, um den Wert einer Eigenschaft in XAML bereitzustellen.  
@@ -38,10 +38,10 @@ Verweist auf alle statischen by-Value-Codeentitäten, die in definiert ist eine 
 
 Die Codeentität, die auf die verwiesen wird, muss eine der folgenden sein:  
   
--   Eine Konstante  
--   Eine statische Eigenschaft  
--   Ein Feld  
--   Ein Enumerationswert
+- Eine Konstante  
+- Eine statische Eigenschaft  
+- Ein Feld  
+- Ein Enumerationswert
 
 Angeben einer beliebigen anderen Codeentität, z. B. eine nicht statische Eigenschaft bewirkt, dass einen Fehler während der Kompilierung ist die XAML-Markup kompiliert und eine XAML-Ladezeit-Analyseausnahme.  
 
@@ -74,11 +74,11 @@ In der .NET Framework-XAML-Dienste-Implementierung, wird die Handhabung dieser M
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
  Der XAML-Standardnamespace, die Sie für WPF-Programmierung verwenden enthält viele nützliche statische Eigenschaften nicht, und die meisten nützlich statische Eigenschaften Unterstützung wie z. B. Typkonverter, die die Verwendung ohne erleichtern `{x:Static}` . Für statische Eigenschaften müssen Sie ein Präfix für einen XAML-Namespace zuordnen, wenn eine der folgenden Aussagen zutrifft:  
   
--   Sie verweisen auf einen Typ, die in WPF vorhanden ist, aber ist nicht Teil der XAML-Standardnamespace für WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Dies ist ein gängiges Szenario für die Verwendung von `x:Static`. Können z. B. eine `x:Static` Verweis auf eine XAML-Namespace-Zuordnung zu den <xref:System> CLR-Namespace und Mscorlib-Assembly um die statischen Eigenschaften der verweisen die <xref:System.Environment> Klasse.  
+- Sie verweisen auf einen Typ, die in WPF vorhanden ist, aber ist nicht Teil der XAML-Standardnamespace für WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Dies ist ein gängiges Szenario für die Verwendung von `x:Static`. Können z. B. eine `x:Static` Verweis auf eine XAML-Namespace-Zuordnung zu den <xref:System> CLR-Namespace und Mscorlib-Assembly um die statischen Eigenschaften der verweisen die <xref:System.Environment> Klasse.  
   
--   Sie sind auf einen Typ aus einer benutzerdefinierten Assembly verweisen.  
+- Sie sind auf einen Typ aus einer benutzerdefinierten Assembly verweisen.  
   
--   Sie verweisen auf einen Typ, der in einer WPF-Assembly vorhanden ist, aber innerhalb eines CLR-Namespace ist, die nicht als Teil der WPF-XAML-Standardnamespace zugeordnet wurde. Die Zuordnung von CLR-Namespaces in der XAML-Standardnamespace für WPF von Definitionen in den verschiedenen WPF-Assemblys ausgeführt wird (Weitere Informationen zu diesem Konzept, finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Nicht zugeordnete CLR-Namespaces können vorhanden sein, wenn der CLR-Namespace besteht hauptsächlich aus Klassendefinitionen, die nicht in der Regel für XAML, wie z. B. <xref:System.Windows.Threading>.  
+- Sie verweisen auf einen Typ, der in einer WPF-Assembly vorhanden ist, aber innerhalb eines CLR-Namespace ist, die nicht als Teil der WPF-XAML-Standardnamespace zugeordnet wurde. Die Zuordnung von CLR-Namespaces in der XAML-Standardnamespace für WPF von Definitionen in den verschiedenen WPF-Assemblys ausgeführt wird (Weitere Informationen zu diesem Konzept, finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Nicht zugeordnete CLR-Namespaces können vorhanden sein, wenn der CLR-Namespace besteht hauptsächlich aus Klassendefinitionen, die nicht in der Regel für XAML, wie z. B. <xref:System.Windows.Threading>.  
   
  Weitere Informationen zur Verwendung von Präfixen und Namespaces von XAML für WPF finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
