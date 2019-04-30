@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5fefc933cc84fede1f3dea16d4b13e09801a96e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996150"
 ---
-# <a name="icordebugappdomainenumnext-method"></a><span data-ttu-id="b33d2-102">ICorDebugAppDomainEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="b33d2-102">ICorDebugAppDomainEnum::Next Method</span></span>
-<span data-ttu-id="b33d2-103">Ruft die angegebene Anzahl von Anwendungsdomänen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.</span><span class="sxs-lookup"><span data-stu-id="b33d2-103">Gets the specified number of application domains from the collection, starting at the current cursor position.</span></span>  
+# <a name="icordebugappdomainenumnext-method"></a><span data-ttu-id="43450-102">ICorDebugAppDomainEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="43450-102">ICorDebugAppDomainEnum::Next Method</span></span>
+<span data-ttu-id="43450-103">Ruft die angegebene Anzahl von Anwendungsdomänen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.</span><span class="sxs-lookup"><span data-stu-id="43450-103">Gets the specified number of application domains from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b33d2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b33d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43450-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="43450-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b33d2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b33d2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43450-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="43450-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="b33d2-106">[in] Die Anzahl von Anwendungsdomänen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b33d2-106">[in] The number of application domains to be retrieved.</span></span>  
+ <span data-ttu-id="43450-106">[in] Die Anzahl von Anwendungsdomänen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="43450-106">[in] The number of application domains to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="b33d2-107">[out] Ein Array von Zeigern, von denen jeder zu einem ICorDebugAppDomain-Objekt verweist, die eine Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="b33d2-107">[out] An array of pointers, each of which points to an ICorDebugAppDomain object that represents an application domain.</span></span>  
+ <span data-ttu-id="43450-107">[out] Ein Array von Zeigern, von denen jeder zu einem ICorDebugAppDomain-Objekt verweist, die eine Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="43450-107">[out] An array of pointers, each of which points to an ICorDebugAppDomain object that represents an application domain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="b33d2-108">[out] Ein Zeiger auf die Anzahl von Anwendungsdomänen, die tatsächlich zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="b33d2-108">[out] A pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="b33d2-109">Dieser Wert kann null sein, wenn `celt` ist.</span><span class="sxs-lookup"><span data-stu-id="b33d2-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="43450-108">[out] Ein Zeiger auf die Anzahl von Anwendungsdomänen, die tatsächlich zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="43450-108">[out] A pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="43450-109">Dieser Wert kann null sein, wenn `celt` ist.</span><span class="sxs-lookup"><span data-stu-id="43450-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b33d2-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b33d2-110">Requirements</span></span>  
- <span data-ttu-id="b33d2-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b33d2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43450-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="43450-110">Requirements</span></span>  
+ <span data-ttu-id="43450-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43450-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b33d2-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b33d2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="43450-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="43450-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b33d2-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b33d2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="43450-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43450-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b33d2-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b33d2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="43450-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43450-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

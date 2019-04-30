@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988984"
 ---
-# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="db8d5-102">ICorDebugEval2::NewParameterizedArray-Methode</span><span class="sxs-lookup"><span data-stu-id="db8d5-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
-<span data-ttu-id="db8d5-103">Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.</span><span class="sxs-lookup"><span data-stu-id="db8d5-103">Allocates a new array of the specified element type and dimensions.</span></span>  
+# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="53972-102">ICorDebugEval2::NewParameterizedArray-Methode</span><span class="sxs-lookup"><span data-stu-id="53972-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
+<span data-ttu-id="53972-103">Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.</span><span class="sxs-lookup"><span data-stu-id="53972-103">Allocates a new array of the specified element type and dimensions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db8d5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="db8d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53972-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="53972-104">Syntax</span></span>  
   
 ```  
 HRESULT NewParameterizedArray(  
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db8d5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="db8d5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53972-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="53972-105">Parameters</span></span>  
  `pElementType`  
- <span data-ttu-id="db8d5-106">[in] Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des im Array gespeicherten Elements darstellt.</span><span class="sxs-lookup"><span data-stu-id="db8d5-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
+ <span data-ttu-id="53972-106">[in] Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des im Array gespeicherten Elements darstellt.</span><span class="sxs-lookup"><span data-stu-id="53972-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
   
  `rank`  
- <span data-ttu-id="db8d5-107">[in] Die Anzahl der Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="db8d5-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="db8d5-108">In .NET Framework, Version 2.0 muss dieser Wert als 1 sein.</span><span class="sxs-lookup"><span data-stu-id="db8d5-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
+ <span data-ttu-id="53972-107">[in] Die Anzahl der Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="53972-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="53972-108">In .NET Framework, Version 2.0 muss dieser Wert als 1 sein.</span><span class="sxs-lookup"><span data-stu-id="53972-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
   
  `dims`  
- <span data-ttu-id="db8d5-109">[in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.</span><span class="sxs-lookup"><span data-stu-id="db8d5-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
+ <span data-ttu-id="53972-109">[in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.</span><span class="sxs-lookup"><span data-stu-id="53972-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
   
  `lowBounds`  
- <span data-ttu-id="db8d5-110">[in] Optional.</span><span class="sxs-lookup"><span data-stu-id="db8d5-110">[in] Optional.</span></span> <span data-ttu-id="db8d5-111">Die untere Grenze der einzelnen Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="db8d5-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="db8d5-112">Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension ausgegangen.</span><span class="sxs-lookup"><span data-stu-id="db8d5-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
+ <span data-ttu-id="53972-110">[in] Optional.</span><span class="sxs-lookup"><span data-stu-id="53972-110">[in] Optional.</span></span> <span data-ttu-id="53972-111">Die untere Grenze der einzelnen Dimensionen des Arrays.</span><span class="sxs-lookup"><span data-stu-id="53972-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="53972-112">Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension ausgegangen.</span><span class="sxs-lookup"><span data-stu-id="53972-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db8d5-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="db8d5-113">Remarks</span></span>  
- <span data-ttu-id="db8d5-114">Die Elemente des Arrays können es sich um Instanzen eines generischen Typs sein.</span><span class="sxs-lookup"><span data-stu-id="db8d5-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="db8d5-115">Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="db8d5-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="db8d5-116">In .NET Framework 2.0, den Wert der `rank` muss 1 sein.</span><span class="sxs-lookup"><span data-stu-id="db8d5-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53972-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="53972-113">Remarks</span></span>  
+ <span data-ttu-id="53972-114">Die Elemente des Arrays können es sich um Instanzen eines generischen Typs sein.</span><span class="sxs-lookup"><span data-stu-id="53972-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="53972-115">Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="53972-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="53972-116">In .NET Framework 2.0, den Wert der `rank` muss 1 sein.</span><span class="sxs-lookup"><span data-stu-id="53972-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db8d5-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="db8d5-117">Requirements</span></span>  
- <span data-ttu-id="db8d5-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db8d5-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53972-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="53972-117">Requirements</span></span>  
+ <span data-ttu-id="53972-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53972-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db8d5-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db8d5-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="53972-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="53972-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="db8d5-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db8d5-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="53972-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="53972-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="db8d5-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db8d5-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="53972-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53972-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

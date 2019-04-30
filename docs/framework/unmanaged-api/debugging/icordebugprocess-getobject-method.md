@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987726"
 ---
-# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="36e92-102">ICorDebugProcess::GetObject-Methode</span><span class="sxs-lookup"><span data-stu-id="36e92-102">ICorDebugProcess::GetObject Method</span></span>
-<span data-ttu-id="36e92-103">Diese Methode wurde nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="36e92-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="f6a60-102">ICorDebugProcess::GetObject-Methode</span><span class="sxs-lookup"><span data-stu-id="f6a60-102">ICorDebugProcess::GetObject Method</span></span>
+<span data-ttu-id="f6a60-103">Diese Methode wurde nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="f6a60-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36e92-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="36e92-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6a60-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f6a60-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject(  

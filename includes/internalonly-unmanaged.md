@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ad6526311fce09e49fd42707ff568745188df221
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703579"
+---
 
 > [!NOTE] 
-> <span data-ttu-id="c127d-101">Diese API ist nur zur internen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="c127d-101">This API is for internal use only.</span></span> <span data-ttu-id="c127d-102">Es ist nicht für die Verwendung im Entwickler-Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="c127d-102">It's not intended for use from developer code.</span></span>
+> <span data-ttu-id="d1b28-101">Diese API ist ausschließlich für die interne Verwendung vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="d1b28-101">This API is for internal use only.</span></span> <span data-ttu-id="d1b28-102">Sie ist nicht für die Verwendung im Entwicklercode vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="d1b28-102">It's not intended for use from developer code.</span></span>
