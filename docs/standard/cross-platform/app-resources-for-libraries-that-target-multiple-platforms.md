@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055016"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
 Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Projekttyp, um sicherzustellen, dass Ressourcen in den Klassenbibliotheken, die von mehreren Plattformen zugegriffen werden kann. Dieser Projekttyp ist in Visual Studio 2012 verfügbar und ist die portable Teilmenge der .NET Framework-Klassenbibliothek vorgesehen. Durch die Verwendung von [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird sichergestellt, dass von Desktop-Apps, Silverlight-Apps, Windows Phone-Apps und [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps auf die Bibliothek zugegriffen werden kann.
@@ -35,7 +35,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
 
  Das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt enthält die vier <xref:System.Resources.ResourceManager>-Member, die in der folgenden Tabelle aufgeführt sind. Diese Konstruktoren und Methoden ermöglichen es Ihnen, ein <xref:System.Resources.ResourceManager>-Objekt zu instanziieren und Zeichenfolgenressourcen abzurufen.
 
-|`ResourceManager`-Member|Beschreibung|
+|`ResourceManager` -Member|Beschreibung|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz für den Zugriff auf die benannte Ressourcendatei in der angegebenen Assembly.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz, die dem angegebenen Typ entspricht.|
@@ -67,7 +67,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
 |NameLength|25|
 |Titel|Mitarbeiterdatenbank|
 
- Der folgende Code definiert eine `UILibrary` -Klasse, den Resource Manager-Wrapper, der mit dem Namen verwendet `resources` von Visual Studio generiert bei der **Zugriffsmodifizierer** für die Datei, um geändert wird **öffentliche** . Die UILibrary-Klasse analysiert die Zeichenfolgendaten nach Bedarf. . Beachten Sie, dass sich die Klasse im `MyCompany.Employees`-Namespace befindet.
+ Der folgende Code definiert eine `UILibrary` -Klasse, den Resource Manager-Wrapper, der mit dem Namen verwendet `resources` von Visual Studio generiert bei der **Zugriffsmodifizierer** für die Datei, um geändert wird **öffentliche** . Die UILibrary-Klasse analysiert die Zeichenfolgendaten nach Bedarf. sein. Beachten Sie, dass sich die Klasse im `MyCompany.Employees`-Namespace befindet.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]

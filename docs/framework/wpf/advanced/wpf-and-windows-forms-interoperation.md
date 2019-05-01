@@ -9,11 +9,11 @@ helpviewer_keywords:
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
 ms.openlocfilehash: 2e3390c3e387e75168958f946472a5a24a4bd440
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053118"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interaktion zwischen WPF und Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bieten zwei verschiedene Architekturen zum Erstellen von Anwendungsschnittstellen. Die <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Namespace enthält Klassen, die üblichsten interoperations-Szenarios zu ermöglichen. Die zwei wichtigsten Klassen, die interoperations-Funktionalität zu implementieren sind <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost>. In diesem Thema wird beschrieben, welche Interoperations-Szenarios unterstützt werden und welche nicht.  
@@ -25,36 +25,36 @@ ms.locfileid: "59129271"
 ## <a name="hosting-windows-forms-controls-in-wpf"></a>Hosten eines Windows Forms-Steuerelements in WPF  
  Die folgenden interoperations-Szenarios werden unterstützt. wenn eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Steuerelement hostet, ein Windows Forms-Steuerelement:  
   
--   Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelement kann ein oder mehrere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente mithilfe von XAML hosten.  
+- Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelement kann ein oder mehrere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente mithilfe von XAML hosten.  
   
--   Es kann ein oder mehrere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente mithilfe von Code hosten.  
+- Es kann ein oder mehrere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente mithilfe von Code hosten.  
   
--   Es kann [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Containersteuerelemente hosten, die andere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente enthalten.  
+- Es kann [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Containersteuerelemente hosten, die andere [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente enthalten.  
   
--   Es kann ein Master-/Detailformular hosten, das aus einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Master und einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Detailformular besteht.  
+- Es kann ein Master-/Detailformular hosten, das aus einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Master und einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Detailformular besteht.  
   
--   Es kann ein Master-/Detailformular hosten, das aus einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Master und einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Detailformular besteht.  
+- Es kann ein Master-/Detailformular hosten, das aus einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Master und einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Detailformular besteht.  
   
--   Es kann ein oder mehrere [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]-Steuerelemente hosten.  
+- Es kann ein oder mehrere [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]-Steuerelemente hosten.  
   
--   Es kann ein oder mehrere zusammengesetzte Steuerelemente hosten.  
+- Es kann ein oder mehrere zusammengesetzte Steuerelemente hosten.  
   
--   Es kann hybride Steuerelemente mithilfe von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] hosten.  
+- Es kann hybride Steuerelemente mithilfe von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] hosten.  
   
--   Es kann hybride Steuerelemente mithilfe von Code hosten.  
+- Es kann hybride Steuerelemente mithilfe von Code hosten.  
   
 ### <a name="layout-support"></a>Layout-Unterstützung  
  Die folgende Liste beschreibt die bekannten Einschränkungen bei der <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element versucht, integrieren Sie ihre gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] steuern, in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem.  
   
--   In einigen Fällen kann die Größe von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelementen nicht geändert werden, oder die Größenänderung ist auf bestimmte Dimensionen beschränkt. Z. B. eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> -Steuerelement unterstützt nur eine einzige Höhe, die durch den Schriftgrad des Steuerelements definiert wird. In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -dynamischen Layout, das wird davon ausgegangen, dass Elemente vertikal, einem gehosteten gestreckt können <xref:System.Windows.Forms.ComboBox> -Steuerelement nicht wie erwartet gestreckt.  
+- In einigen Fällen kann die Größe von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelementen nicht geändert werden, oder die Größenänderung ist auf bestimmte Dimensionen beschränkt. Z. B. eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> -Steuerelement unterstützt nur eine einzige Höhe, die durch den Schriftgrad des Steuerelements definiert wird. In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -dynamischen Layout, das wird davon ausgegangen, dass Elemente vertikal, einem gehosteten gestreckt können <xref:System.Windows.Forms.ComboBox> -Steuerelement nicht wie erwartet gestreckt.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente können nicht gedreht oder verzerrt werden. Wenn Sie die z.B. Benutzeroberfläche um 90 Grad drehen, behalten gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente ihre aufrechte Position bei.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente können nicht gedreht oder verzerrt werden. Wenn Sie die z.B. Benutzeroberfläche um 90 Grad drehen, behalten gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente ihre aufrechte Position bei.  
   
--   In den meisten Fällen unterstützen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente keine proportionale Skalierung. Obwohl die gesamten Dimensionen des Steuerelements skaliert werden, können untergeordnete Steuerelemente und Komponenten des Steuerelements unter Umständen nicht wie erwartet skaliert werden. Diese Einschränkung hängt davon ab, in welcher Form das jeweilige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement eine Skalierung unterstützt.  
+- In den meisten Fällen unterstützen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente keine proportionale Skalierung. Obwohl die gesamten Dimensionen des Steuerelements skaliert werden, können untergeordnete Steuerelemente und Komponenten des Steuerelements unter Umständen nicht wie erwartet skaliert werden. Diese Einschränkung hängt davon ab, in welcher Form das jeweilige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement eine Skalierung unterstützt.  
   
--   In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche können Sie die Z-Reihenfolge der Elemente ändern, um ihr Verhalten bei Überlappung zu steuern. Ein gehostetes [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement wird in einem separaten HWND gezeichnet, befindet sich also immer über [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementen.  
+- In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche können Sie die Z-Reihenfolge der Elemente ändern, um ihr Verhalten bei Überlappung zu steuern. Ein gehostetes [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement wird in einem separaten HWND gezeichnet, befindet sich also immer über [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementen.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente unterstützen eine automatische Skalierung basierend auf dem Schriftgrad. In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche bewirkt eine Änderung des Schriftgrads keine Größenänderung des gesamten Layouts; einzelne Elemente können ihre Größe jedoch ggf. dynamisch anpassen.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente unterstützen eine automatische Skalierung basierend auf dem Schriftgrad. In einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Benutzeroberfläche bewirkt eine Änderung des Schriftgrads keine Größenänderung des gesamten Layouts; einzelne Elemente können ihre Größe jedoch ggf. dynamisch anpassen.  
   
 ### <a name="ambient-properties"></a>Umgebungseigenschaften  
  Einige Umgebungseigenschaften von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementen haben [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Entsprechungen. Diese Umgebungseigenschaften werden weitergegeben, an das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] steuert und als öffentliche Eigenschaften verfügbar gemacht, auf die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Steuerelement übersetzt jede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ambient-Eigenschaft in der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] entspricht.  
@@ -83,21 +83,21 @@ ms.locfileid: "59129271"
 ## <a name="hosting-wpf-controls-in-windows-forms"></a>Hosten von WPF-Steuerelementen in Windows Forms  
  Die folgenden interoperations-Szenarios werden unterstützt, wenn ein Windows Forms-Steuerelement hostet einen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelement:  
   
--   Hosten von einem oder mehreren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementen mithilfe von Code  
+- Hosten von einem oder mehreren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementen mithilfe von Code  
   
--   Zuordnen eines Eigenschaftenblatts zu einem oder mehreren gehosteten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelementen  
+- Zuordnen eines Eigenschaftenblatts zu einem oder mehreren gehosteten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelementen  
   
--   Hosten einer oder mehrerer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Seiten in einem Formular  
+- Hosten einer oder mehrerer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Seiten in einem Formular  
   
--   Starten eines [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Fensters  
+- Starten eines [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Fensters  
   
--   Hosten eines Master-/Detailformulars, das aus einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Master- und einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Detailformular besteht  
+- Hosten eines Master-/Detailformulars, das aus einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Master- und einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Detailformular besteht  
   
--   Hosten eines Master-/Detailformulars, das aus einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Master- und einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Detailformular besteht  
+- Hosten eines Master-/Detailformulars, das aus einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Master- und einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Detailformular besteht  
   
--   Hosten von benutzerdefinierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelementen  
+- Hosten von benutzerdefinierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelementen  
   
--   Hosten von hybriden Steuerelementen  
+- Hosten von hybriden Steuerelementen  
   
 ### <a name="ambient-properties"></a>Umgebungseigenschaften  
  Einige Umgebungseigenschaften von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelementen haben [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Entsprechungen. Diese Umgebungseigenschaften werden weitergegeben, an das gehostete [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] steuert und als öffentliche Eigenschaften verfügbar gemacht, auf die <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement. Die <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement übersetzt jede [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ambient-Eigenschaft, um die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entspricht.  

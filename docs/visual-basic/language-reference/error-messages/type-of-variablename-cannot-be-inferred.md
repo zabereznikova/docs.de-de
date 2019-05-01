@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052676"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Geben Sie der "\<Variablenname >' kann nicht abgeleitet werden, weil die schleifenbegrenzungen und die Step-Klausel nicht in denselben Typ konvertiert werden
 Sie geschrieben haben eine `For...Next` Schleife, in denen der Compiler nicht werden, einen Datentyp für die Schleifensteuerungsvariable abgeleitet kann da die folgenden Bedingungen erfüllt sind:  
   
--   Der Datentyp der Schleifensteuerungsvariablen wird nicht mit einer `As` -Klausel angegeben.  
+- Der Datentyp der Schleifensteuerungsvariablen wird nicht mit einer `As` -Klausel angegeben.  
   
--   Die Schleifenbegrenzungen und die step-Variable enthalten mindestens zwei Datentypen.  
+- Die Schleifenbegrenzungen und die step-Variable enthalten mindestens zwei Datentypen.  
   
--   Keine standardkonvertierungen vorhanden sein, zwischen den Datentypen.  
+- Keine standardkonvertierungen vorhanden sein, zwischen den Datentypen.  
   
  Aus diesem Grund kann nicht der Compiler den Datentyp, der eine Schleifensteuerungsvariable ableiten.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ändern Sie die Typen von die schleifenbegrenzungen und Schritt nach Bedarf, sodass mindestens eine von ihnen ein Typ ist, dem die anderen erweitert werden. Ändern Sie im vorherigen Beispiel ist den Typ des `stepVar` zu `Integer`.  
+- Ändern Sie die Typen von die schleifenbegrenzungen und Schritt nach Bedarf, sodass mindestens eine von ihnen ein Typ ist, dem die anderen erweitert werden. Ändern Sie im vorherigen Beispiel ist den Typ des `stepVar` zu `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Verwenden Sie explizite Konvertierungsfunktionen, um die schleifenbegrenzungen und Schritt in die entsprechenden Typen konvertieren. Im vorherigen Beispiel, gelten die `Val` -Funktion `stepVar`.  
+- Verwenden Sie explizite Konvertierungsfunktionen, um die schleifenbegrenzungen und Schritt in die entsprechenden Typen konvertieren. Im vorherigen Beispiel, gelten die `Val` -Funktion `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053659"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Vorgehensweise: Sortieren eines Arrays in Visual Basic
 In diesem Beispiel deklariert einen Array von `String` Objekte, die mit dem Namen `zooAnimals`, füllt es und sortiert es anschließend alphabetisch.  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Zugriff auf "mscorlib.dll" und die <xref:System> Namespace.  
+- Zugriff auf "mscorlib.dll" und die <xref:System> Namespace.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Array ist leer (<xref:System.ArgumentNullException> Klasse)  
+- Array ist leer (<xref:System.ArgumentNullException> Klasse)  
   
--   Array ist mehrdimensional (<xref:System.RankException> Klasse)  
+- Array ist mehrdimensional (<xref:System.RankException> Klasse)  
   
--   Ein oder mehrere Elemente des Arrays implementiert nicht die <xref:System.IComparable> Schnittstelle (<xref:System.InvalidOperationException> Klasse)  
+- Ein oder mehrere Elemente des Arrays implementiert nicht die <xref:System.IComparable> Schnittstelle (<xref:System.InvalidOperationException> Klasse)  
   
 ## <a name="see-also"></a>Siehe auch
 

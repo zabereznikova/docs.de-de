@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053794"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereignissen zu arbeiten. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie behandeln Ereignisse aus, wenn sie auftreten.  
@@ -76,7 +76,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 #### <a name="to-call-the-longtask-method"></a>Zum Aufrufen der Methode von LongTask  
   
--   Fügen Sie dem `Button1_Click` -Ereignishandler folgenden Code hinzu:  
+- Fügen Sie dem `Button1_Click` -Ereignishandler folgenden Code hinzu:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
@@ -105,7 +105,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 #### <a name="to-handle-events-for-a-different-widget"></a>Zum Behandeln von Ereignissen für einen anderen widget  
   
--   Fügen Sie die folgende Codezeile, die `Button1_Click` Prozedur, die unmittelbar vor der Zeile `mWidget.LongTask(12.2, 0.33)`:  
+- Fügen Sie die folgende Codezeile, die `Button1_Click` Prozedur, die unmittelbar vor der Zeile `mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   

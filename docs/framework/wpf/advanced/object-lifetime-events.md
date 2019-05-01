@@ -25,11 +25,11 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053222"
 ---
 # <a name="object-lifetime-events"></a>Objektlebensdauer-Ereignisse
 In diesem Thema werden die spezifischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignisse beschrieben, die die Phasen einer Objektlebensdauer darstellen (Erstellung, Verwendung und Zerstörung).  
@@ -66,11 +66,11 @@ In diesem Thema werden die spezifischen [!INCLUDE[TLA2#tla_winclient](../../../.
 ## <a name="lifetime-events-application-model-elements"></a>Anwendungsmodellelemente für Lebensdauerereignisse  
  Aufbauend auf den allgemeinen Lebensdauerereignissen sind folgende Anwendungsmodellelemente: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, und <xref:System.Windows.Controls.Frame>. Mit ihnen können die allgemeinen Lebensdauerereignisse, um zusätzliche Ereignisse erweitert werden, die relevant für ihren speziellen Zweck sind. Sie werden im Detail in folgenden Themen erläutert:  
   
--   <xref:System.Windows.Application>: [Übersicht über die Anwendungsverwaltung](../app-development/application-management-overview.md).  
+- <xref:System.Windows.Application>: [Übersicht über die Anwendungsverwaltung](../app-development/application-management-overview.md).  
   
--   <xref:System.Windows.Window>: [Übersicht über WPF-Windows](../app-development/wpf-windows-overview.md).  
+- <xref:System.Windows.Window>: [Übersicht über WPF-Windows](../app-development/wpf-windows-overview.md).  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, und <xref:System.Windows.Controls.Frame>: [Übersicht über die Navigation](../app-development/navigation-overview.md).  
+- <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, und <xref:System.Windows.Controls.Frame>: [Übersicht über die Navigation](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

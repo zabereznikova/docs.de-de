@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048243"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Best Practices für Sicherheit in WCF
 In den folgenden Abschnitten werden bewährte Methoden aufgeführt, die Sie beim Erstellen sicherer Anwendungen mit WCF (Windows Communication Foundation) berücksichtigen sollten. Weitere Informationen über Sicherheit finden Sie unter [Security Considerations (Sicherheitsüberlegungen)](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Security Considerations for Data (Sicherheitsüberlegungen zu Daten)](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) und [Security Considerations with Metadata (Sicherheitsüberlegungen zu Metadaten)](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -26,11 +26,11 @@ In den folgenden Abschnitten werden bewährte Methoden aufgeführt, die Sie beim
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Verwenden von X.509-Zertifikaten anstelle von NTLM  
  WCF bietet zwei Mechanismen für die Peer-zu-Peer-Authentifizierung: X509 Zertifikate, die (vom Peerkanal verwendet) und Windows-Authentifizierung, in denen eine SSPI-Aushandlung von Kerberos nach NTLM herabgestuft.  Die zertifikatbasierte Authentifizierung mit Schlüsselgrößen von 1024&amp;#160;Bits oder mehr wird gegenüber NTLM aus mehreren Gründen vorgezogen:  
   
--   Verfügbarkeit der gegenseitigen Authentifizierung  
+- Verfügbarkeit der gegenseitigen Authentifizierung  
   
--   Verwendung stärkerer Kryptografiealgorithmen  
+- Verwendung stärkerer Kryptografiealgorithmen  
   
--   Erschwerte Verwendung weitergeleiteter X509-Anmeldeinformationen  
+- Erschwerte Verwendung weitergeleiteter X509-Anmeldeinformationen  
    
 ## <a name="always-revert-after-impersonation"></a>Stellen Sie nach Identitätswechseln immer die ursprüngliche Identität wieder her  
  Wenn Sie APIs verwenden, die den Identitätswechsel eines Clients ermöglichen, stellen Sie sicher, dass die ursprüngliche Identität wiederhergestellt wird. Beim Einsatz von <xref:System.Security.Principal.WindowsIdentity> und <xref:System.Security.Principal.WindowsImpersonationContext> verwenden Sie beispielsweise in C# die `using`-Anweisung oder die `Using`-Anweisung in Visual Basic, wie im folgenden Code gezeigt. Die <xref:System.Security.Principal.WindowsImpersonationContext>-Klasse implementiert die <xref:System.IDisposable>-Schnittstelle, und daher stellt die CLR (Common Language Runtime) automatisch die ursprüngliche Identität wieder her, sobald die Ausführung des `using`-Blocks abgeschlossen ist.  

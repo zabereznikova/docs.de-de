@@ -3,11 +3,11 @@ title: Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048283"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI) Anbieter verfügbar.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur 
   
      Dieses PowerShell-Skript verwendet die Security Descriptor Definition Language (SDDL) um den integrierten Benutzergruppe Zugriff auf den WMI-Namespace "Root/Servicemodel" zu gewähren. Folgende ACLs werden angegeben:  
   
-    -   Integriertes Administratorkonto (Built-In Administrator, BA) - Hatte bereits Zugriff.  
+    - Integriertes Administratorkonto (Built-In Administrator, BA) - Hatte bereits Zugriff.  
   
-    -   Netzwerkdienst (Network Service, NS) - Hatte bereits Zugriff.  
+    - Netzwerkdienst (Network Service, NS) - Hatte bereits Zugriff.  
   
-    -   Lokales Systemkonto (Local System, LS) - Hatte bereits Zugriff.  
+    - Lokales Systemkonto (Local System, LS) - Hatte bereits Zugriff.  
   
-    -   Integrierte Gruppe "Benutzer" - Die Gruppe, für die der Zugriff erteilt wird.  
+    - Integrierte Gruppe "Benutzer" - Die Gruppe, für die der Zugriff erteilt wird.  
   
 #### <a name="to-grant-provider-registration-access"></a>So gewähren Sie Zugriff für die Anbieterregistrierung  
   

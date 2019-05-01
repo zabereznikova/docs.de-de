@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044134"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod-Methode
 Erstellt eine Definition für eine Methode oder globalen Funktion mit der angegebenen Signatur und ein Token an dieser Methodendefinition zurück.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Definieren eine Methode für PInvoke  
  Für jede nicht verwaltete Funktion, die über PInvoke aufgerufen werden müssen Sie eine verwaltete Methode definieren, die die, die nicht verwaltete Zielfunktion darstellt. Verwenden Sie zum Definieren der verwalteten Methode `DefineMethod` mit den Parametern, die bestimmten Werten, je nachdem, wie in der PInvoke verwendet wird:  
   
--   "True" PInvoke - schließt den Aufruf einer externen nicht verwaltete Methode, die in einer nicht verwalteten DLL befinden.  
+- "True" PInvoke - schließt den Aufruf einer externen nicht verwaltete Methode, die in einer nicht verwalteten DLL befinden.  
   
--   Lokale PInvoke - schließt den Aufruf einer systemeigenen, nicht verwaltete Methode, die im aktuellen verwalteten Modul eingebettet ist.  
+- Lokale PInvoke - schließt den Aufruf einer systemeigenen, nicht verwaltete Methode, die im aktuellen verwalteten Modul eingebettet ist.  
   
  Die parametereinstellungen, werden in der folgenden Tabelle angegeben.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053521"
 ---
 # <a name="read-only-dependency-properties"></a>Schreibgeschützte Abhängigkeitseigenschaften
 Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, einschließlich vorhandener schreibgeschützter Abhängigkeitseigenschaften und die Szenarien und Verfahren zum Erstellen einer benutzerdefinierten, schreibgeschützten Abhängigkeitseigenschaft.  
@@ -31,11 +31,11 @@ Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, ein
   
  Einiges des Prozesses zum Erstellen einer schreibgeschützten Abhängigkeitseigenschaft entspricht weitgehend den in [benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) und [Implementieren einer Abhängigkeitseigenschaft](how-to-implement-a-dependency-property.md) beschriebenen Themen. Es gibt drei wichtige Unterschiede:  
   
--   Wenn die Eigenschaft registrieren, rufen Sie die <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> Methode anstelle der normalen <xref:System.Windows.DependencyProperty.Register%2A> -Methode für die Registrierung.  
+- Wenn die Eigenschaft registrieren, rufen Sie die <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> Methode anstelle der normalen <xref:System.Windows.DependencyProperty.Register%2A> -Methode für die Registrierung.  
   
--   Stellen Sie bei der Implementierung der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-„Wrapper“-Eigenschaft sicher, dass auch der Wrapper keine festgelegte Implementierung hat, sodass keine Inkonsistenzen im schreibgeschützten Status für den öffentlichen Wrapper entstehen, den Sie verfügbar machen.  
+- Stellen Sie bei der Implementierung der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-„Wrapper“-Eigenschaft sicher, dass auch der Wrapper keine festgelegte Implementierung hat, sodass keine Inkonsistenzen im schreibgeschützten Status für den öffentlichen Wrapper entstehen, den Sie verfügbar machen.  
   
--   Die von der schreibgeschützten Registrierung zurückgegebene Objekt ist <xref:System.Windows.DependencyPropertyKey> statt <xref:System.Windows.DependencyProperty>. Speichern Sie dieses Feld weiterhin als Member, aber normalerweise sollten Sie es nicht zu einem öffentlichen Member des Typs machen.  
+- Die von der schreibgeschützten Registrierung zurückgegebene Objekt ist <xref:System.Windows.DependencyPropertyKey> statt <xref:System.Windows.DependencyProperty>. Speichern Sie dieses Feld weiterhin als Member, aber normalerweise sollten Sie es nicht zu einem öffentlichen Member des Typs machen.  
   
  Alle privaten Felder oder Werte, die Ihre schreibgeschützte Abhängigkeitseigenschaft unterstützen, können natürlich vollständig von Ihrer gewünschten Logik beschreibbar sein. Die einfachste Möglichkeit zum Festlegen der Eigenschaft, ob am Anfang oder als Teil der Laufzeitlogik, ist jedoch das Verwenden des Eigenschaftensystems [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], anstatt das Eigenschaftensystem zu umgehen und das private Unterstützungsfeld direkt festzulegen. Es ist eine Signatur der <xref:System.Windows.DependencyObject.SetValue%2A> nimmt einen Parameter vom Typ <xref:System.Windows.DependencyPropertyKey>. Wie und wo Sie diesen Wert programmgesteuert in der Anwendungslogik festlegen wirkt sich wie Sie möchten möglicherweise legen Sie den Zugriff auf die <xref:System.Windows.DependencyPropertyKey> erstellt, wenn Sie die Abhängigkeitseigenschaft zuerst registriert. Wenn Sie diese Logik innerhalb der Klasse bearbeiten, können Sie diese als privat einstellen, oder wenn Sie möchten, dass diese von anderen Teilen des Assembly festgelegt wird, müssen Sie dies intern festlegen. Ein Ansatz besteht darin, rufen Sie <xref:System.Windows.DependencyObject.SetValue%2A> innerhalb eines klassenereignishandlers eines relevanten Ereignisses, das eine Klasseninstanz darüber informiert, die der gespeicherte Eigenschaftswert geändert werden muss. Ein anderer Ansatz ist, um Abhängigkeitseigenschaften zu verbinden, mit der gekoppelt <xref:System.Windows.PropertyChangedCallback> und <xref:System.Windows.CoerceValueCallback> Rückrufen als Teil der Metadaten dieser Eigenschaften während der Registrierung.  
   

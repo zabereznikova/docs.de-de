@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053430"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Serialisierungseinschränkungen für XamlWriter.Save
 Die [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> können verwendet werden, um den Inhalt der serialisieren eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendung als eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Datei. Es gibt jedoch einige wichtige Einschränkungen darin, was genau serialisiert wird. Diese Einschränkungen und einige allgemeine Aspekte werden in diesem Thema dokumentiert.  
@@ -36,8 +36,8 @@ Die [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Sy
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Realistische Szenarios für die Verwendung von XAMLWriter.Save  
  Während die Einschränkungen aufgeführt. hier sind ziemlich umfangreich, es gibt noch mehrere geeignete Szenarien für die Verwendung <xref:System.Windows.Markup.XamlWriter.Save%2A> für die Serialisierung.  
   
--   Vektorausgabe oder grafische Ausgabe: Die Ausgabe des gerenderten Bereichs kann dazu verwendet werden, den gleichen Vektor oder Grafiken beim erneuten Laden zu reproduzieren.  
+- Vektorausgabe oder grafische Ausgabe: Die Ausgabe des gerenderten Bereichs kann dazu verwendet werden, den gleichen Vektor oder Grafiken beim erneuten Laden zu reproduzieren.  
   
--   Rich Text und Flussdokumente Dokumente: Text und alle Element elementformatierungen und elementeinschlüsse darin wird in der Ausgabe beibehalten. Dies kann für Mechanismen nützlich sein, die einer Zwischenablagefunktionalität ähneln.  
+- Rich Text und Flussdokumente Dokumente: Text und alle Element elementformatierungen und elementeinschlüsse darin wird in der Ausgabe beibehalten. Dies kann für Mechanismen nützlich sein, die einer Zwischenablagefunktionalität ähneln.  
   
--   Beibehalten von Daten für Geschäftsobjekte: Wenn Sie Daten in benutzerdefinierten Elementen wie z. B. gespeichert haben [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten, solange Ihre Geschäftsobjekte grundlegende folgen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Regeln wie das Bereitstellen von benutzerdefinierten Konstruktoren und das Konvertieren für durch Verweis Eigenschaftswerte, die diese Geschäftsobjekte werden können über die Serialisierung aufrechterhalten.
+- Beibehalten von Daten für Geschäftsobjekte: Wenn Sie Daten in benutzerdefinierten Elementen wie z. B. gespeichert haben [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten, solange Ihre Geschäftsobjekte grundlegende folgen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Regeln wie das Bereitstellen von benutzerdefinierten Konstruktoren und das Konvertieren für durch Verweis Eigenschaftswerte, die diese Geschäftsobjekte werden können über die Serialisierung aufrechterhalten.

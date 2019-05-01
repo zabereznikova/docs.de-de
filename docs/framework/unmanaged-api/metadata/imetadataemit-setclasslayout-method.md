@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050050"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout-Methode
 Schließt das Layout der Felder für eine Klasse, die von einem vorherigen Aufruf von definiert wurde [DefineTypeDef-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  Allerdings sollten Sie die Felder entsprechend der Anordnung, die von nicht Code verwaltetem angeordnet. In diesem Fall wählen Sie entweder sequenzielles oder explizites Layout und Aufruf `SetClassLayout` das Layout der Felder abgeschlossen:  
   
--   Sequenzielles Layout: Geben Sie die Komprimierungsgröße ist. Ein Feld wird entsprechend ihrer natürlichen Größe oder die Komprimierungsgröße ist, welche Ergebnisse in der kleineren Offset des Felds ausgerichtet. Legen Sie `rFieldOffsets` und `ulClassSize` 0 (null).  
+- Sequenzielles Layout: Geben Sie die Komprimierungsgröße ist. Ein Feld wird entsprechend ihrer natürlichen Größe oder die Komprimierungsgröße ist, welche Ergebnisse in der kleineren Offset des Felds ausgerichtet. Legen Sie `rFieldOffsets` und `ulClassSize` 0 (null).  
   
--   Explizites Layout: Geben Sie den Offset der einzelnen Felder oder geben Sie die Klassengröße und die Komprimierungsgröße ist.  
+- Explizites Layout: Geben Sie den Offset der einzelnen Felder oder geben Sie die Klassengröße und die Komprimierungsgröße ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

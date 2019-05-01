@@ -3,11 +3,11 @@ title: Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050726"
 ---
 # <a name="transport-security"></a>Transportsicherheit
 Die transportsicherheit in Windows Communication Foundation (WCF), abhängig von der ausgewählten Bindung ab. Der Transport, den die Bindung implementiert, bestimmt das tatsächliche Sicherheitsverfahren. In den Themen in diesem Abschnitt werden die implementierten Mechanismen und deren Optionen erläutert.  

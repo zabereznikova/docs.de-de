@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
 ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052156"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Vorgehensweise: Erstellen von Umschaltflächen in ToolStrip-Steuerelementen
 Wenn ein Benutzer eine Umschaltfläche klickt, wird abgesenkt dargestellt und behält die abgesenkt dargestellt, bis der Benutzer erneut auf die Schaltfläche klickt.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Erstellen Sie eine ToolStripButton  
   
--   Verwenden Sie Code wie im folgenden Codebeispiel wird ein. Dieser Code setzt voraus, dass das Formular enthält ein <xref:System.Windows.Forms.ToolStrip> -Steuerelement, und dass die <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung enthält ein <xref:System.Windows.Forms.ToolStripButton> namens `toolStripButton1`. Außerdem wird angenommen, dass Sie einen Ereignishandler mit dem Namen haben `toolStripButton1_CheckedChanged`.  
+- Verwenden Sie Code wie im folgenden Codebeispiel wird ein. Dieser Code setzt voraus, dass das Formular enthält ein <xref:System.Windows.Forms.ToolStrip> -Steuerelement, und dass die <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung enthält ein <xref:System.Windows.Forms.ToolStripButton> namens `toolStripButton1`. Außerdem wird angenommen, dass Sie einen Ereignishandler mit dem Namen haben `toolStripButton1_CheckedChanged`.  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053131"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Eigenschaftenzuordnung von Windows Forms und WPF
 Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Technologien verfügen über zwei ähnliche, aber unterschiedliche Eigenschaft Modelle. *Eigenschaftenzuordnung* unterstützt die Interoperation zwischen beiden Architekturen und bietet die folgenden Funktionen:  
   
--   Erleichtert die relevante eigenschaftsänderungen in der hostumgebung das gehostete Steuerelement oder Element zuzuordnen.  
+- Erleichtert die relevante eigenschaftsänderungen in der hostumgebung das gehostete Steuerelement oder Element zuzuordnen.  
   
--   Stellt Klassenbehandlung für das Zuordnen der am häufigsten standardmäßig Eigenschaften verwendet.  
+- Stellt Klassenbehandlung für das Zuordnen der am häufigsten standardmäßig Eigenschaften verwendet.  
   
--   Ermöglicht einfaches entfernen, überschreiben oder Erweitern von Eigenschaften an.  
+- Ermöglicht einfaches entfernen, überschreiben oder Erweitern von Eigenschaften an.  
   
--   Stellt sicher, dass der Eigenschaftswert ändert auf dem Host automatisch erkannt und in das gehostete Steuerelement oder Element übersetzt.  
+- Stellt sicher, dass der Eigenschaftswert ändert auf dem Host automatisch erkannt und in das gehostete Steuerelement oder Element übersetzt.  
   
 > [!NOTE]
 >  Eigenschaftenänderungsereignisse werden die hosting-Steuerelement oder die Hierarchie der Elemente nicht weitergegeben. Eigenschaft Übersetzung wird nicht ausgeführt werden, wenn Sie der lokale Wert einer Eigenschaft nicht ändert, aufgrund der direkten Einstellung, Stile, Vererbung, die Datenbindung oder andere Mechanismen, die den Wert der Eigenschaft zu ändern.  
@@ -54,66 +54,66 @@ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)
 ## <a name="updates-to-parent-properties"></a>Updates für die Eigenschaften für übergeordnetes Element  
  Die meisten Eigenschaften der übergeordneten Änderungen bewirken, dass Benachrichtigungen an das gehostete untergeordnete Steuerelement. Die folgende Liste beschreibt die Eigenschaften, die keine Benachrichtigungen verursachen, wenn sich ihre Werte ändern.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  Angenommen, Sie ändern, dass den Wert des der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft der <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element, das <xref:System.Windows.Forms.Control.BackColor%2A> -Eigenschaft des gehosteten Steuerelements nicht geändert.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>Zuordnung der Eigenschaft mit dem ElementHost-Steuerelement  
  Die folgenden Eigenschaften bieten integrierte änderungsbenachrichtigungen. Rufen Sie nicht die <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> Methode, wenn Sie diese Eigenschaften zuordnen:  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Cursor  
+- Cursor  
   
--   Andocken  
+- Andocken  
   
--   Aktiviert  
+- Aktiviert  
   
--   Schriftart  
+- Schriftart  
   
--   ForeColor  
+- ForeColor  
   
--   Speicherort  
+- Speicherort  
   
--   Rand  
+- Rand  
   
--   Abstand  
+- Abstand  
   
--   Übergeordnetes Element  
+- Übergeordnetes Element  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   Größe  
+- Größe  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   Text  
+- Text  
   
--   Sichtbar  
+- Sichtbar  
   
  Die <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement übersetzt Standard [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Eigenschaften, die ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Entsprechungen mithilfe der folgenden Übersetzungstabelle.  
   

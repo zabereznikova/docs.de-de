@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052260"
 ---
 # <a name="dialog-boxes-overview"></a>Übersicht über Dialogfelder
 Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die hauptsächlichen Daten über den die Anwendung ausgeführt wird, und macht die Funktionalität zum Verarbeiten dieser Daten über zeigt [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] -Mechanismen wie Menüleisten, Symbolleisten und Statusleisten. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  
   
--   Spezifische Informationen für Benutzer anzeigen.  
+- Spezifische Informationen für Benutzer anzeigen.  
   
--   Informationen von Benutzern erfassen.  
+- Informationen von Benutzern erfassen.  
   
--   Informationen sowohl anzeigen als auch erfassen.  
+- Informationen sowohl anzeigen als auch erfassen.  
   
  Diese Fenstertypen werden als bezeichnet *Dialogfelder*, und es gibt zwei Arten: modale und nicht modale.  
   
@@ -122,27 +122,27 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 #### <a name="configuring-a-modal-dialog-box"></a>Konfigurieren eines modalen Dialogfelds  
  Die Benutzeroberfläche für ein normales Dialogfeld enthält Folgendes:  
   
--   Die verschiedenen Steuerelemente, die zum Erfassen der gewünschten Daten erforderlich sind.  
+- Die verschiedenen Steuerelemente, die zum Erfassen der gewünschten Daten erforderlich sind.  
   
--   Zeigt eine **OK** Schaltfläche, durch die Benutzer klicken, um das Schließen des Dialogfelds, das an die Funktion zurück und setzt die Verarbeitung fort.  
+- Zeigt eine **OK** Schaltfläche, durch die Benutzer klicken, um das Schließen des Dialogfelds, das an die Funktion zurück und setzt die Verarbeitung fort.  
   
--   Zeigt eine **Abbrechen** Schaltfläche, die Benutzer klicken, um das Dialogfeld schließen und die Funktion die weitere Verarbeitung zu beenden.  
+- Zeigt eine **Abbrechen** Schaltfläche, die Benutzer klicken, um das Dialogfeld schließen und die Funktion die weitere Verarbeitung zu beenden.  
   
--   Zeigt eine **schließen** Schaltfläche in der Titelleiste angezeigt.  
+- Zeigt eine **schließen** Schaltfläche in der Titelleiste angezeigt.  
   
--   Ein Symbol.  
+- Ein Symbol.  
   
--   Mit **Minimieren**, **Maximieren**, und **wiederherstellen** Schaltflächen.  
+- Mit **Minimieren**, **Maximieren**, und **wiederherstellen** Schaltflächen.  
   
--   Zeigt eine **System** Menü zu minimieren, maximieren, wiederherstellen und das Dialogfeld zu schließen.  
+- Zeigt eine **System** Menü zu minimieren, maximieren, wiederherstellen und das Dialogfeld zu schließen.  
   
--   Eine freie Stelle über und in der Mitte des Fensters, das das Dialogfeld geöffnet hat.  
+- Eine freie Stelle über und in der Mitte des Fensters, das das Dialogfeld geöffnet hat.  
   
--   Die Größe von Dialogfeldern sollte sich nach Möglichkeit ändern lassen. Um zu verhindern, dass das Dialogfeld zu klein ist, und um für den Benutzer eine sinnvolle Standardgröße bereitzustellen, müssen Sie jeweils die Standard- und Mindestgröße festlegen.  
+- Die Größe von Dialogfeldern sollte sich nach Möglichkeit ändern lassen. Um zu verhindern, dass das Dialogfeld zu klein ist, und um für den Benutzer eine sinnvolle Standardgröße bereitzustellen, müssen Sie jeweils die Standard- und Mindestgröße festlegen.  
   
--   Drücken die ESC-Taste sollte als Tastenkombination, die bewirkt, dass konfiguriert werden die **Abbrechen** Schaltfläche gedrückt wird. Dies wird erreicht, indem die <xref:System.Windows.Controls.Button.IsCancel%2A> Eigenschaft der **Abbrechen** Schaltfläche `true`.  
+- Drücken die ESC-Taste sollte als Tastenkombination, die bewirkt, dass konfiguriert werden die **Abbrechen** Schaltfläche gedrückt wird. Dies wird erreicht, indem die <xref:System.Windows.Controls.Button.IsCancel%2A> Eigenschaft der **Abbrechen** Schaltfläche `true`.  
   
--   Drücken der EINGABETASTE (oder des RÜCKGABEWERTS)-Taste als Tastenkombination, die bewirkt, dass konfiguriert werden sollte die **OK** Schaltfläche gedrückt wird. Dies wird erreicht, indem die <xref:System.Windows.Controls.Button.IsDefault%2A> Eigenschaft der **OK** Schaltfläche `true`.  
+- Drücken der EINGABETASTE (oder des RÜCKGABEWERTS)-Taste als Tastenkombination, die bewirkt, dass konfiguriert werden sollte die **OK** Schaltfläche gedrückt wird. Dies wird erreicht, indem die <xref:System.Windows.Controls.Button.IsDefault%2A> Eigenschaft der **OK** Schaltfläche `true`.  
   
  Im folgenden Code wird diese Konfiguration veranschaulicht.  
   
@@ -183,13 +183,13 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 #### <a name="validating-user-provided-data"></a>Überprüfen der vom Benutzer bereitgestellten Daten  
  Wenn ein Dialogfeld geöffnet wird und der Benutzer die benötigten Daten zur Verfügung stellt, ist ein Dialogfeld aus folgenden Gründen dafür verantwortlich, dass die bereitgestellten Daten gültig sind:  
   
--   Aus Gründen der Datensicherheit sollten alle Eingaben überprüft werden.  
+- Aus Gründen der Datensicherheit sollten alle Eingaben überprüft werden.  
   
--   Aus domänenspezifischer Sicht verhindert die Datenvalidierung, dass fehlerhafte Daten vom Code verarbeitet werden, was zum Auslösen von Ausnahmen führen kann.  
+- Aus domänenspezifischer Sicht verhindert die Datenvalidierung, dass fehlerhafte Daten vom Code verarbeitet werden, was zum Auslösen von Ausnahmen führen kann.  
   
--   Aus Gründen der Benutzererfahrung kann ein Dialogfeld dazu beitragen, Benutzern zu helfen, indem ihnen gezeigt wird, welche der von ihnen eingegebenen Daten ungültig sind.  
+- Aus Gründen der Benutzererfahrung kann ein Dialogfeld dazu beitragen, Benutzern zu helfen, indem ihnen gezeigt wird, welche der von ihnen eingegebenen Daten ungültig sind.  
   
--   Unter Leistungsaspekten betrachtet, kann die Datenvalidierung in einer Anwendung mit mehreren Ebenen die Anzahl von Roundtrips zwischen der Client- und der Anwendungsebene vermindern, insbesondere, wenn die Anwendung aus Webdiensten oder serverbasierten Datenbanken besteht.  
+- Unter Leistungsaspekten betrachtet, kann die Datenvalidierung in einer Anwendung mit mehreren Ebenen die Anzahl von Roundtrips zwischen der Client- und der Anwendungsebene vermindern, insbesondere, wenn die Anwendung aus Webdiensten oder serverbasierten Datenbanken besteht.  
   
  Um ein gebundenes Steuerelement in überprüfen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], müssen Sie eine Validierungsregel definieren und die Bindung zuordnen. Eine Validierungsregel ist eine benutzerdefinierte abgeleitete Klasse <xref:System.Windows.Controls.ValidationRule>. Das folgende Beispiel zeigt eine Validierungsregel `MarginValidationRule`, der überprüft werden, die ein gebundener Wert ist eine <xref:System.Double> und innerhalb eines bestimmten Bereichs ist.  
   
@@ -329,11 +329,11 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 #### <a name="closing-a-modeless-dialog-box"></a>Schließen eines nicht modalen Dialogfelds  
  Da <xref:System.Windows.Window.DialogResult%2A> muss nicht festgelegt werden kann, ein nicht modales Dialogfeld kann geschlossen werden, mithilfe von System bieten Mechanismen, einschließlich der folgenden:  
   
--   Klicken auf die **schließen** Schaltfläche in der Titelleiste angezeigt.  
+- Klicken auf die **schließen** Schaltfläche in der Titelleiste angezeigt.  
   
--   Drücken von ALT+F4.  
+- Drücken von ALT+F4.  
   
--   Auswahl **schließen** aus der **System** Menü.  
+- Auswahl **schließen** aus der **System** Menü.  
   
  Sie können auch Ihren Code Aufrufen <xref:System.Windows.Window.Close%2A> bei der **schließen** geklickt wird.  
   

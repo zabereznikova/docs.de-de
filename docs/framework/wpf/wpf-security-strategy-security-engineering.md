@@ -11,24 +11,24 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053833"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF-Sicherheitsstrategie – Sicherheitsentwicklung
 Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird. Ein Schlüsselelement der Trustworthy Computing-Initiative ist der [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] ist ein Entwicklungsverfahren, das in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Erstellung von sicherem Code zu erleichtern. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Messbarkeit und zusätzlichen Strukturen kombinieren, darunter:  
   
--   Analyse des Sicherheitsentwurfs  
+- Analyse des Sicherheitsentwurfs  
   
--   Qualitätsprüfungen mithilfe von Tools  
+- Qualitätsprüfungen mithilfe von Tools  
   
--   Penetrationstests  
+- Penetrationstests  
   
--   Abschließende Sicherheitsüberprüfung  
+- Abschließende Sicherheitsüberprüfung  
   
--   Verwaltung der Produktsicherheit nach der Veröffentlichung  
+- Verwaltung der Produktsicherheit nach der Veröffentlichung  
   
 ## <a name="wpf-specifics"></a>WPF im Einzelnen  
  Das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Entwicklungsteam wendet den [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] an und ist auch für dessen Erweiterung zuständig; diese Kombination beinhaltet die folgenden Schlüsselaspekte:  
@@ -55,11 +55,11 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
   
  Die Erstellung von Gefahrenmodellen wird in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] durchgängig angewendet und schließt folgende Punkte ein:  
   
--   Die Weise, in der der [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]-Parser Dateien liest, Text zu entsprechenden Objektmodellklassen zuordnet und den tatsächlichen Code erstellt.  
+- Die Weise, in der der [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]-Parser Dateien liest, Text zu entsprechenden Objektmodellklassen zuordnet und den tatsächlichen Code erstellt.  
   
--   Wie ein Fensterhandle (hWnd) erstellt wird, Nachrichten sendet und zum Rendern der Inhalte eines Fensters verwendet wird.  
+- Wie ein Fensterhandle (hWnd) erstellt wird, Nachrichten sendet und zum Rendern der Inhalte eines Fensters verwendet wird.  
   
--   Wie die Datenbindung Ressourcen erhält und mit dem System interagiert.  
+- Wie die Datenbindung Ressourcen erhält und mit dem System interagiert.  
   
  Diese Gefahrenmodelle sind wichtig, um die Anforderungen an den Sicherheitsentwurf und die Maßnahmen der Gefahrenabwehr während des Entwicklungsprozesses zu bestimmen.  
   
@@ -67,23 +67,23 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
 ### <a name="source-analysis-and-editing-tools"></a>Quellcodeanalyse und Bearbeitungstools  
  Über die manuellen Elemente der Codesicherheitsprüfung im [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] hinaus verwendet das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Team eine Reihe von Tools für die Quellcodeanalyse und die zugeordneten Bearbeitungsschritte, um Sicherheitsschwachstellen zu vermindern. Es wird eine breite Palette von Tools für den Quellcode verwendet, darunter die folgenden:  
   
--   **FXCop**: Findet häufige Sicherheitsprobleme in verwaltetem Code von Vererbungsregeln bis hin zu Codeverwendung der zugriffssicherheit zum sicheren Zusammenwirken mit nicht verwaltetem Code. Weitere Informationen finden Sie unter [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FXCop**: Findet häufige Sicherheitsprobleme in verwaltetem Code von Vererbungsregeln bis hin zu Codeverwendung der zugriffssicherheit zum sicheren Zusammenwirken mit nicht verwaltetem Code. Weitere Informationen finden Sie unter [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
--   **Prefix/Prefast**: Findet Schwachstellen des Sicherheit und häufige Sicherheitsprobleme in nicht verwaltetem Code, z. B. Pufferüberläufe, Probleme bei Formatzeichenfolgen von Format und Überprüfung von Fehlern an.  
+- **Prefix/Prefast**: Findet Schwachstellen des Sicherheit und häufige Sicherheitsprobleme in nicht verwaltetem Code, z. B. Pufferüberläufe, Probleme bei Formatzeichenfolgen von Format und Überprüfung von Fehlern an.  
   
--   **Gesperrte APIs**: Durchsucht den Quellcode um die versehentliche Verwendung von Funktionen zu identifizieren, die für Sicherheitsprobleme, z. B. bekannt sind `strcpy`. Nach der Erkennung werden diese Funktionen durch Alternativen ersetzt, die mehr Sicherheit bieten.  
+- **Gesperrte APIs**: Durchsucht den Quellcode um die versehentliche Verwendung von Funktionen zu identifizieren, die für Sicherheitsprobleme, z. B. bekannt sind `strcpy`. Nach der Erkennung werden diese Funktionen durch Alternativen ersetzt, die mehr Sicherheit bieten.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Testverfahren  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet eine Reihe von Techniken zum Testen der Sicherheit, darunter:  
   
--   **Whiteboxtests**: Tester Anzeigen von Quellcode und entwickeln dann exploittests  
+- **Whiteboxtests**: Tester Anzeigen von Quellcode und entwickeln dann exploittests  
   
--   **Blackboxtests**: Tester versuchen, die zum Suchen Sicherheitsexploits, indem Sie APIs und Funktionen untersuchen und dann versuchen, das Produkt anzugreifen.  
+- **Blackboxtests**: Tester versuchen, die zum Suchen Sicherheitsexploits, indem Sie APIs und Funktionen untersuchen und dann versuchen, das Produkt anzugreifen.  
   
--   **Zurückverfolgen von Sicherheitsproblemen anderer Produkte**: Sofern Sie relevant sind, werden Sicherheitsprobleme von verwandten Produkten getestet. Beispielsweise wurden entsprechende Varianten von nahezu 60 Sicherheitsproblemen bei [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] erkannt und auf ihre Gültigkeit für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] hin überprüft.  
+- **Zurückverfolgen von Sicherheitsproblemen anderer Produkte**: Sofern Sie relevant sind, werden Sicherheitsprobleme von verwandten Produkten getestet. Beispielsweise wurden entsprechende Varianten von nahezu 60 Sicherheitsproblemen bei [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] erkannt und auf ihre Gültigkeit für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] hin überprüft.  
   
--   **Toolbasierte Penetrationstests durch Dateitests testen**: Datei-fuzzing ist, dass die Ausnutzung eines dateilesemodulen durch eine Vielzahl von Eingaben zur Eingabe gehört. Ein Beispiel, wo diese Technik in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet wird, besteht in der Prüfung von Code zur Bildentschlüsselung auf Fehler.  
+- **Toolbasierte Penetrationstests durch Dateitests testen**: Datei-fuzzing ist, dass die Ausnutzung eines dateilesemodulen durch eine Vielzahl von Eingaben zur Eingabe gehört. Ein Beispiel, wo diese Technik in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet wird, besteht in der Prüfung von Code zur Bildentschlüsselung auf Fehler.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Verwaltung von sicherheitsrelevantem Code  

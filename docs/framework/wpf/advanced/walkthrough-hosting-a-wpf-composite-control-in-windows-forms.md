@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052546"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code, es kann zum Erweitern Ihrer vorhandenen effektiver sein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anstatt sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn eine eingebettet werden soll, oder weitere Steuerelemente implementiert wird, mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] innerhalb der Windows Forms-Anwendung. Weitere Informationen zum Anpassen von WPF-Steuerelemente finden Sie unter [Anpassung von Steuerelementen](../controls/control-customization.md).  
@@ -20,9 +20,9 @@ ms.locfileid: "59322835"
   
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:  
   
--   Implementieren des zusammengesetzten WPF-Steuerelements  
+- Implementieren des zusammengesetzten WPF-Steuerelements  
   
--   Implementieren der Windows Forms-Hostanwendung  
+- Implementieren der Windows Forms-Hostanwendung  
   
  Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
@@ -54,13 +54,13 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
  Das Projekt sollte Verweise auf die folgenden System-DLLs aufweisen. Sollten eine oder mehrere dieser DLLs nicht standardmäßig enthalten sein, fügen Sie diese manuell zum Projekt hinzu.  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   System  
+- System  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>Erstellen der Benutzeroberfläche  
  Die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] für das zusammengesetzte Steuerelement implementiert [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Das zusammengesetzte Steuerelement [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] besteht aus fünf <xref:System.Windows.Controls.TextBox> Elemente. Jede <xref:System.Windows.Controls.TextBox> Element verfügt über eine zugeordnete <xref:System.Windows.Controls.TextBlock> -Element, das als Beschriftung dient. Es gibt zwei <xref:System.Windows.Controls.Button> Elemente im unteren Bereich **OK** und **Abbrechen**. Wenn der Benutzer auf eine Schaltfläche klickt, löst das Steuerelement ein benutzerdefiniertes Ereignis aus, um die Informationen an den Host zurückzugeben.  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>Initialisieren des Steuerelements  
  Im folgenden Code werden mehrere grundlegende Aufgaben implementiert:  
   
--   Deklarieren eines privaten Ereignisses, `OnButtonClick`, und seines zugeordneten Delegaten `MyControlEventHandler`.  
+- Deklarieren eines privaten Ereignisses, `OnButtonClick`, und seines zugeordneten Delegaten `MyControlEventHandler`.  
   
--   Erstellen von mehreren privaten globalen Variablen, welche die Benutzerdaten speichern. Diese Daten werden durch entsprechende Eigenschaften verfügbar gemacht.  
+- Erstellen von mehreren privaten globalen Variablen, welche die Benutzerdaten speichern. Diese Daten werden durch entsprechende Eigenschaften verfügbar gemacht.  
   
--   Implementieren eines Handlers `Init`, für des Steuerelements des <xref:System.Windows.FrameworkElement.Loaded> Ereignis. Dieser Handler initialisiert die globalen Variablen, indem er ihnen die in MyControl1.xaml definierten Werte zuweist. Zu diesem Zweck verwendet er die <xref:System.Windows.FrameworkElement.Name%2A> einer typischen zugewiesen <xref:System.Windows.Controls.TextBlock> Element `nameLabel`, um die Einstellungen der Eigenschaften des Elements zugreifen.  
+- Implementieren eines Handlers `Init`, für des Steuerelements des <xref:System.Windows.FrameworkElement.Loaded> Ereignis. Dieser Handler initialisiert die globalen Variablen, indem er ihnen die in MyControl1.xaml definierten Werte zuweist. Zu diesem Zweck verwendet er die <xref:System.Windows.FrameworkElement.Name%2A> einer typischen zugewiesen <xref:System.Windows.Controls.TextBlock> Element `nameLabel`, um die Einstellungen der Eigenschaften des Elements zugreifen.  
   
  Löschen Sie den vorhandenen Konstruktor, und fügen Sie den folgenden Code Ihrer `MyControl1` Klasse.  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>Behandeln der Click-Ereignisse der Schaltflächen  
  Der Benutzer gibt an, dass die Dateneingabe abgeschlossen ist, indem Sie entweder auf die **OK** Schaltfläche oder die **Abbrechen** Schaltfläche. Beide Schaltflächen verwenden denselben <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler `ButtonClicked`. Beide Schaltflächen besitzen einen Namen, `btnOK` oder `btnCancel`, ermöglicht den Handler, um zu bestimmen, welche Schaltfläche geklickt wurde, durch die Auswertung des Werts für die `sender` Argument. Der Handler führt die folgenden Aktionen aus:  
   
--   Erstellt eine `MyControlEventArgs` -Objekt, enthält die Daten aus, der <xref:System.Windows.Controls.TextBox> Elemente.  
+- Erstellt eine `MyControlEventArgs` -Objekt, enthält die Daten aus, der <xref:System.Windows.Controls.TextBox> Elemente.  
   
--   Wenn der Benutzer auf die **Abbrechen** Schaltfläche legt die `MyControlEventArgs` des Objekts `IsOK` Eigenschaft `false`.  
+- Wenn der Benutzer auf die **Abbrechen** Schaltfläche legt die `MyControlEventArgs` des Objekts `IsOK` Eigenschaft `false`.  
   
--   Löst die `OnButtonClick` Ereignis an den Host an, wenn der Benutzer abgeschlossen ist, und übergibt die gesammelten Daten.  
+- Löst die `OnButtonClick` Ereignis an den Host an, wenn der Benutzer abgeschlossen ist, und übergibt die gesammelten Daten.  
   
  Fügen Sie den folgenden Code Ihrer `MyControl1` -Klasse nach der `Init` Methode.  
   
@@ -209,15 +209,15 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
   
 4. Fügen Sie Verweise auf die folgenden Assemblys hinzu.  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>Implementieren der Benutzeroberfläche für die Anwendung  
  Die Benutzeroberfläche für die Windows Forms-Anwendung enthält mehrere Steuerelemente, die dazu dienen, mit dem zusammengesetzten WPF-Steuerelement zu interagieren.  
@@ -296,9 +296,9 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
   
  Die verbleibenden zwei Zeilen in der `Form1_Load` -Methode binden Handler an zwei Steuerelement-Ereignisse:  
   
--   `OnButtonClick` ist ein benutzerdefiniertes Ereignis, das durch das zusammengesetzte Steuerelement ausgelöst wird, klickt der Benutzer die **OK** oder **Abbrechen** Schaltfläche. Behandeln Sie dieses Ereignis, um die Antwort des Benutzers zu erhalten und alle vom Benutzer angegebenen Daten zu erfassen.  
+- `OnButtonClick` ist ein benutzerdefiniertes Ereignis, das durch das zusammengesetzte Steuerelement ausgelöst wird, klickt der Benutzer die **OK** oder **Abbrechen** Schaltfläche. Behandeln Sie dieses Ereignis, um die Antwort des Benutzers zu erhalten und alle vom Benutzer angegebenen Daten zu erfassen.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> ist ein Standardereignis, das ausgelöst wird, indem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] steuern, wenn es vollständig geladen wurde. Das Ereignis wird hier verwendet, da dieses Beispiel mehrere globale Variablen mithilfe der Eigenschaften des Steuerelements initialisieren muss. Zum Zeitpunkt der des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das Steuerelement ist nicht vollständig geladen, und diese Werte sind immer noch um festgelegt `null`. Sie müssen warten, bis des Steuerelements des <xref:System.Windows.FrameworkElement.Loaded> Ereignis tritt auf, bevor Sie diese Eigenschaften zugreifen können.  
+- <xref:System.Windows.FrameworkElement.Loaded> ist ein Standardereignis, das ausgelöst wird, indem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] steuern, wenn es vollständig geladen wurde. Das Ereignis wird hier verwendet, da dieses Beispiel mehrere globale Variablen mithilfe der Eigenschaften des Steuerelements initialisieren muss. Zum Zeitpunkt der des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das Steuerelement ist nicht vollständig geladen, und diese Werte sind immer noch um festgelegt `null`. Sie müssen warten, bis des Steuerelements des <xref:System.Windows.FrameworkElement.Loaded> Ereignis tritt auf, bevor Sie diese Eigenschaften zugreifen können.  
   
  Die <xref:System.Windows.FrameworkElement.Loaded> -Ereignishandler wird im vorherigen Code gezeigt. Die `OnButtonClick` -Handler wird im nächsten Abschnitt erläutert.  
   

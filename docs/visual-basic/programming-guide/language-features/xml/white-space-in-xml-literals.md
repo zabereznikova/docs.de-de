@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054938"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Leerzeichen in XML-Literalen (Visual Basic)
 Visual Basic-Compiler bindet nur die signifikanten Leerzeichen aus einem XML-Literal, wenn er erstellt eine [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekt. Bedeutungslose Leerzeichen sind nicht integriert.  
@@ -18,11 +18,11 @@ Visual Basic-Compiler bindet nur die signifikanten Leerzeichen aus einem XML-Lit
 ## <a name="significant-and-insignificant-white-space"></a>Erhebliche und nicht signifikanter Leerraum  
  Leerzeichen in XML-Literale sind wichtig, nur in drei Bereichen:  
   
--   Wenn sie sich in einem Attributwert sind.  
+- Wenn sie sich in einem Attributwert sind.  
   
--   Wenn sie sind Bestandteil des Textinhalts eines Elements und der Text auch andere Zeichen enthält.  
+- Wenn sie sind Bestandteil des Textinhalts eines Elements und der Text auch andere Zeichen enthält.  
   
--   Wenn sie sich in einem eingebetteten Ausdruck für den Textinhalt des Elements sind.  
+- Wenn sie sich in einem eingebetteten Ausdruck für den Textinhalt des Elements sind.  
   
  Andernfalls der Compiler behandelt Leerzeichen als nicht signifikant und schließt Sie nicht der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekt für das Literal.  
   

@@ -3,11 +3,11 @@ title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052104"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Internet Information Services (IIS) gehostet und von einem gemeinsamen virtuellen Verzeichnis ausführen. Diesem einmaligen Setupverfahren erstellt einen Ordner auf dem Datenträger; Es fügt auch ein virtuelles Verzeichnis in IIS **ServiceModelSamples**.
@@ -48,9 +48,9 @@ Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Interne
   
 9. Führen Sie die **Setupvroot.bat** Batchdatei. Die folgenden Schritte werden ausgeführt:  
   
-    -   In IIS wird ein virtuelles Verzeichnis mit dem Namen ServiceModelSamples erstellt.  
+    - In IIS wird ein virtuelles Verzeichnis mit dem Namen ServiceModelSamples erstellt.  
   
-    -   Es werden die neuen Datenträgerverzeichnisse %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples und %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin erstellt.  
+    - Es werden die neuen Datenträgerverzeichnisse %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples und %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin erstellt.  
   
      Wenn Sie diese Verzeichnisse manuell einrichten möchten, finden Sie unter den [Anleitung zum Einrichten von virtuellen Verzeichnisses](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Um alle in diesem Schritt vorgenommenen Änderungen rückgängig zu machen, führen Sie cleanupvroot.bat aus, sobald die Beispiele nicht mehr benötigt werden.  
   
@@ -66,11 +66,11 @@ Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Interne
 
 12. Führen Sie die Datei "Setupcerttool.bat" aus. Diese Datei befindet sich der \<"InstallPath" > \WF_WCF_Samples\WCF\Setup\-Ordner.  Mit diesem Skript werden folgende Aufgaben ausgeführt:
 
-    -   Erstellen des Tools FindPrivateKey
+    - Erstellen des Tools FindPrivateKey
 
-    -   Erstellen eines Verzeichnisses mit dem Namen %ProgramFiles%\ServiceModelSampleTools
+    - Erstellen eines Verzeichnisses mit dem Namen %ProgramFiles%\ServiceModelSampleTools
 
-    -   Kopieren Sie das neue Tool FindPrivateKey in dieses Verzeichnis.
+    - Kopieren Sie das neue Tool FindPrivateKey in dieses Verzeichnis.
 
      Dieses Tool ist für Beispiele erforderlich, die Zertifikate verwenden und in IIS gehostet werden.
 

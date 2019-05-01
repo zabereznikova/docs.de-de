@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054370"
 ---
 # <a name="layout"></a>Layout
 Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Das Verstehen, wie und wann Layoutberechnungen auftreten, ist wichtige für die Erstellung von Benutzeroberflächen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Umgebende Felder für Elemente](#LayoutSystem_BoundingBox)  
+- [Umgebende Felder für Elemente](#LayoutSystem_BoundingBox)  
   
--   [Das Layoutsystem](#LayoutSystem_Overview)  
+- [Das Layoutsystem](#LayoutSystem_Overview)  
   
--   [Messen und Anordnen von untergeordneten Elementen](#LayoutSystem_Measure_Arrange)  
+- [Messen und Anordnen von untergeordneten Elementen](#LayoutSystem_Measure_Arrange)  
   
--   [Panel-Elemente und benutzerdefiniertes Layoutverhalten](#LayoutSystem_PanelsCustom)  
+- [Panel-Elemente und benutzerdefiniertes Layoutverhalten](#LayoutSystem_PanelsCustom)  
   
--   [Überlegungen zur Layoutleistung](#LayoutSystem_Performance)  
+- [Überlegungen zur Layoutleistung](#LayoutSystem_Performance)  
   
--   [Subpixel-Rendering und Layoutrundung](#LayoutSystem_LayoutRounding)  
+- [Subpixel-Rendering und Layoutrundung](#LayoutSystem_LayoutRounding)  
   
--   [Weitere Informationen](#LayoutSystem_whatsnext)  
+- [Weitere Informationen](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Umgebende Felder für Elemente  
@@ -120,19 +120,19 @@ Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../
 ## <a name="layout-performance-considerations"></a>Überlegungen zur Layoutleistung  
  Layout ist ein rekursiver Prozess. Jedes untergeordnete Element in einem <xref:System.Windows.Controls.Panel.Children%2A> Auflistung bei jedem Aufruf des Layoutsystems verarbeitet wird. Daher sollte das Auslösen des Layoutsystems vermieden werden, wenn es nicht erforderlich ist. Folgendes können Sie für eine bessere Leistung tun.  
   
--   Achten Sie darauf, welche Änderungen des Eigenschaftswerts ein rekursives Update durch das Layoutsystem erzwingt.  
+- Achten Sie darauf, welche Änderungen des Eigenschaftswerts ein rekursives Update durch das Layoutsystem erzwingt.  
   
      Abhängigkeitseigenschaften, deren Werte bewirken, dass das Layoutsystem initialisiert werden kann, werden mit öffentlichen Flags gekennzeichnet. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> und <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> bieten nützliche Hinweise darüber, welche Änderungen einen rekursiven erzwingt aktualisieren, indem Sie das Layoutsystem. Jede Eigenschaft, die die Größe des umgebenden Felds eines Elements beeinflussen kann müssen im Allgemeinen eine <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag auf True festgelegt ist. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).  
   
--   Verwenden Sie nach Möglichkeit eine <xref:System.Windows.UIElement.RenderTransform%2A> statt einer <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Verwenden Sie nach Möglichkeit eine <xref:System.Windows.UIElement.RenderTransform%2A> statt einer <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Ein <xref:System.Windows.FrameworkElement.LayoutTransform%2A> möglich, dass eine sehr gute Möglichkeit, eine Beeinflussung des Inhalts einer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Allerdings verfügt der Effekt der Umwandlung nicht auf die Position anderer Elemente auswirken, ist es am besten, verwenden eine <xref:System.Windows.UIElement.RenderTransform%2A> stattdessen da <xref:System.Windows.UIElement.RenderTransform%2A> das Layoutsystem nicht aufruft. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Wendet die Transformation, und erzwingt ein rekursives Layoutupdate, um die neue Position des betroffenen Elements zu berücksichtigen.  
   
--   Vermeiden Sie unnötige Aufrufe zu <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Vermeiden Sie unnötige Aufrufe zu <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      Die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode erzwingt ein rekursives Layoutupdate und ist häufig nicht erforderlich. Wenn Sie sicher sind, dass eine vollständige Aktualisierung erforderlich ist, verlassen Sie sich auf das Layoutsystem, das diese Methode für Sie aufruft.  
   
--   Bei der Arbeit mit einer großen <xref:System.Windows.Controls.Panel.Children%2A> -Auflistung, erwägen Sie die Verwendung einer <xref:System.Windows.Controls.VirtualizingStackPanel> anstatt einer regulären <xref:System.Windows.Controls.StackPanel>.  
+- Bei der Arbeit mit einer großen <xref:System.Windows.Controls.Panel.Children%2A> -Auflistung, erwägen Sie die Verwendung einer <xref:System.Windows.Controls.VirtualizingStackPanel> anstatt einer regulären <xref:System.Windows.Controls.StackPanel>.  
   
      Die untergeordnete Auflistung virtualisiert das <xref:System.Windows.Controls.VirtualizingStackPanel> behält nur die Objekte im Arbeitsspeicher, die zurzeit innerhalb des ViewPort der übergeordneten sind. Daher wird die Leistung in den meisten Szenarios erheblich verbessert.  
   

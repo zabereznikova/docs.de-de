@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046930"
 ---
 # <a name="integrating-with-com-applications"></a>Integrieren von COM+-Anwendungen
 Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen. Wenn Sie bereits erheblichen Aufwand in komponentenbasierte Anwendungslogik, die in COM+ gehostet haben, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben. Die Themen in diesem Abschnitt wird beschrieben, wie COM+ mit WCF.  

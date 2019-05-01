@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050765"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlung für die Verwendung von Warteschlangen in Windows Communication Foundation (WCF).  
@@ -29,11 +29,11 @@ Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlu
   
  **Antwort:** Die folgenden Features sind in MSMQ 4.0 jedoch nicht in MSMQ 3.0 verfügbar:  
   
--   Benutzerdefinierte Warteschlange für unzustellbare Nachrichten wird nur in MSMQ 4.0 unterstützt.  
+- Benutzerdefinierte Warteschlange für unzustellbare Nachrichten wird nur in MSMQ 4.0 unterstützt.  
   
--   In MSMQ 3.0 und 4.0 werden nicht verarbeitbare Nachrichten unterschiedlich behandelt.  
+- In MSMQ 3.0 und 4.0 werden nicht verarbeitbare Nachrichten unterschiedlich behandelt.  
   
--   Nur MSMQ 4.0 unterstützt remote durchgeführte Lesevorgänge.  
+- Nur MSMQ 4.0 unterstützt remote durchgeführte Lesevorgänge.  
   
  Weitere Informationen finden Sie unter [Unterschiede in Queuing-Funktionen in Windows Vista, Windows Server 2003 und Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlu
   
  **Antwort:** Um die Antwort zu bestimmen, arbeiten Sie über die folgende Liste:  
   
--   Überprüfen Sie, ob die Anforderungen der Transaktionswarteschlange mit den angegebenen Zusicherungen kompatibel sind. Beachten Sie die folgenden Prinzipien:  
+- Überprüfen Sie, ob die Anforderungen der Transaktionswarteschlange mit den angegebenen Zusicherungen kompatibel sind. Beachten Sie die folgenden Prinzipien:  
   
-    -   Sie können senden permanente Nachrichten (Datagramme und Sitzungen) mit "genau einmal"-zusicherungen (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) nur an eine Transaktionswarteschlange.  
+    - Sie können senden permanente Nachrichten (Datagramme und Sitzungen) mit "genau einmal"-zusicherungen (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) nur an eine Transaktionswarteschlange.  
   
-    -   Sitzungen können nur mit "genau einmal"-Zusicherungen gesendet werden.  
+    - Sitzungen können nur mit "genau einmal"-Zusicherungen gesendet werden.  
   
-    -   Eine Transaktion ist erforderlich, um Nachrichten in einer Sitzung von einer Transaktionswarteschlange zu empfangen.  
+    - Eine Transaktion ist erforderlich, um Nachrichten in einer Sitzung von einer Transaktionswarteschlange zu empfangen.  
   
-    -   Sie können Nachrichten senden oder empfangen beispielsweise flüchtiger oder permanente (nur Datagramme) ohne zusicherungen (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) nur für eine nicht transaktionale Warteschlange.  
+    - Sie können Nachrichten senden oder empfangen beispielsweise flüchtiger oder permanente (nur Datagramme) ohne zusicherungen (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) nur für eine nicht transaktionale Warteschlange.  
   
--   Überprüfen Sie die Warteschlange für unzustellbare Nachrichten. Wenn Sie die Nachrichten dort finden, stellen Sie fest, warum sie nicht zugestellt wurden.  
+- Überprüfen Sie die Warteschlange für unzustellbare Nachrichten. Wenn Sie die Nachrichten dort finden, stellen Sie fest, warum sie nicht zugestellt wurden.  
   
--   Überprüfen Sie die ausgehenden Warteschlangen auf Konnektivitäts- oder Adressierungsprobleme.  
+- Überprüfen Sie die ausgehenden Warteschlangen auf Konnektivitäts- oder Adressierungsprobleme.  
   
  **Q:** Eine benutzerdefinierte Warteschlange für unzustellbare angegeben ist, aber wenn ich die senderanwendung zu starten, erhalte ich eine Ausnahme, die entweder über die Warteschlange für unzustellbare Nachrichten nicht gefunden wird oder die sendende Anwendung hat keine Berechtigung für die Warteschlange für unzustellbare Nachrichten. Warum geschieht das?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Antwort:** Für dieses Problem gibt es drei mögliche Ursachen:  
   
--   Im Domänenmodus ist für remote durchgeführte Empfangsvorgänge ein MSDTC-Netzwerkzugriff (Microsoft Distributed Transaction Coordinator) erforderlich. Sie können dies mit **Komponenten hinzufügen/entfernen**.  
+- Im Domänenmodus ist für remote durchgeführte Empfangsvorgänge ein MSDTC-Netzwerkzugriff (Microsoft Distributed Transaction Coordinator) erforderlich. Sie können dies mit **Komponenten hinzufügen/entfernen**.  
   
      ![Screenshot mit Aktivieren der Netzwerk-DTC Zugriff.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   Überprüfen Sie den Authentifizierungsmodus für die Kommunikation mit dem Transaktions-Manager. Wenn Sie im Arbeitsgruppenmodus ausgeführt sind, muss "Keine Authentifizierung erforderlich" ausgewählt werden. Wenn Sie im Domänenmodus sind, muss "Gegenseitige Authentifizierung erforderlich" ausgewählt werden.  
+- Überprüfen Sie den Authentifizierungsmodus für die Kommunikation mit dem Transaktions-Manager. Wenn Sie im Arbeitsgruppenmodus ausgeführt sind, muss "Keine Authentifizierung erforderlich" ausgewählt werden. Wenn Sie im Domänenmodus sind, muss "Gegenseitige Authentifizierung erforderlich" ausgewählt werden.  
   
      ![Aktivieren von XA-Transaktionen](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Stellen Sie sicher, dass MSDTC in der Liste der Ausnahmen in der **Internetverbindungsfirewall** Einstellungen.  
+- Stellen Sie sicher, dass MSDTC in der Liste der Ausnahmen in der **Internetverbindungsfirewall** Einstellungen.  
   
--   Stellen Sie sicher, dass Sie [!INCLUDE[wv](../../../../includes/wv-md.md)] verwenden. MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt remote durchgeführte Lesevorgänge. MSMQ in früheren Windows-Releases unterstützt keine remote durchgeführten Lesevorgänge.  
+- Stellen Sie sicher, dass Sie [!INCLUDE[wv](../../../../includes/wv-md.md)] verwenden. MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt remote durchgeführte Lesevorgänge. MSMQ in früheren Windows-Releases unterstützt keine remote durchgeführten Lesevorgänge.  
   
  **Q:** Wenn der Dienst, der aus der Warteschlange liest einen Netzwerkdienst ist, wird z. B. in einer Web-Host, warum ich eine zugriffsverweigerung-Ausnahme erhalte ausgelöst, wenn aus der Warteschlange zu lesen?  
   

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053443"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
@@ -37,19 +37,19 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
   
  Es gibt zwei Zugriffsmöglichkeiten auf die [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]: eine verwaltete Komponente und eine nicht verwaltete Komponente. Die nicht verwaltete Komponente stellt die folgenden Features bereit.  
   
--   Erweiterbarkeitsmodell für neue oder proprietäre Bildformate.  
+- Erweiterbarkeitsmodell für neue oder proprietäre Bildformate.  
   
--   Verbesserte Leistung und Sicherheit auf nativen Bildformate wie [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] und die Symboldatei (.ICO).  
+- Verbesserte Leistung und Sicherheit auf nativen Bildformate wie [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] und die Symboldatei (.ICO).  
   
--   Beibehaltung von Bilddaten mit hoher Bittiefe von bis zu 8 Bits pro Kanal (32 Bits pro Pixel).  
+- Beibehaltung von Bilddaten mit hoher Bittiefe von bis zu 8 Bits pro Kanal (32 Bits pro Pixel).  
   
--   Nicht destruktive Bildskalieren, Zuschneiden und Drehungen.  
+- Nicht destruktive Bildskalieren, Zuschneiden und Drehungen.  
   
--   Vereinfachte Farbverwaltung.  
+- Vereinfachte Farbverwaltung.  
   
--   Unterstützung für in der Datei enthaltene proprietäre Metadaten.  
+- Unterstützung für in der Datei enthaltene proprietäre Metadaten.  
   
--   Die verwaltete Komponente nutzt die nicht verwaltete Infrastruktur, um die nahtlose Integration von Bildern mit anderen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Funktionen, z.B. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], Animation und Grafiken, bereitzustellen. Die verwaltete Komponente profitiert ebenfalls von der Windows Presentation Foundation (WPF) zum Erstellen von Abbildern Codec-Erweiterbarkeitsmodell die automatische Erkennung neuer Bildformate in ermöglicht [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen.  
+- Die verwaltete Komponente nutzt die nicht verwaltete Infrastruktur, um die nahtlose Integration von Bildern mit anderen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Funktionen, z.B. [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], Animation und Grafiken, bereitzustellen. Die verwaltete Komponente profitiert ebenfalls von der Windows Presentation Foundation (WPF) zum Erstellen von Abbildern Codec-Erweiterbarkeitsmodell die automatische Erkennung neuer Bildformate in ermöglicht [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen.  
   
  Der Großteil der verwalteten [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] befinden sich in der <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> -Namespace, obwohl einige wichtigen Typen, z. B. <xref:System.Windows.Media.ImageBrush> und <xref:System.Windows.Media.ImageDrawing> befinden sich in der <xref:System.Windows.Media?displayProperty=nameWithType> Namespace und <xref:System.Windows.Controls.Image> befindet sich in der <xref:System.Windows.Controls?displayProperty=nameWithType> Namespace.  
   
@@ -132,13 +132,13 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
 #### <a name="stretching-images"></a>Dehnen von Bildern  
  Die <xref:System.Windows.Controls.Image.Stretch%2A> -Eigenschaft steuert, wie ein Bild auf den Füllbereich seines Containers ausgedehnt wird. Die <xref:System.Windows.Controls.Image.Stretch%2A> Eigenschaft akzeptiert die folgenden Werte, die von definiert die <xref:System.Windows.Media.Stretch> Enumeration:  
   
--   <xref:System.Windows.Media.Stretch.None>: Das Bild wird nicht gestreckt, um den Ausgabebereich auszufüllen. Wenn das Bild größer als der Ausgabebereich ist, wird das Bild in den Ausgabebereich gezogen, und alle überstehenden Bereiche werden abgeschnitten.  
+- <xref:System.Windows.Media.Stretch.None>: Das Bild wird nicht gestreckt, um den Ausgabebereich auszufüllen. Wenn das Bild größer als der Ausgabebereich ist, wird das Bild in den Ausgabebereich gezogen, und alle überstehenden Bereiche werden abgeschnitten.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Das Bild wird skaliert, um die Größe des Ausgabebereichs. Da Höhe und Breite des Bilds unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Bilds möglicherweise nicht beibehalten. Dies bedeutet, dass das Bild möglicherweise verzerrt wird, um den Ausgabecontainer vollständig auszufüllen.  
+- <xref:System.Windows.Media.Stretch.Fill>: Das Bild wird skaliert, um die Größe des Ausgabebereichs. Da Höhe und Breite des Bilds unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Bilds möglicherweise nicht beibehalten. Dies bedeutet, dass das Bild möglicherweise verzerrt wird, um den Ausgabecontainer vollständig auszufüllen.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Das Bild wird skaliert, sodass er vollständig in den Ausgabebereich passt. Das Seitenverhältnis des Inhalts wird beibehalten.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Das Bild wird skaliert, sodass er vollständig in den Ausgabebereich passt. Das Seitenverhältnis des Inhalts wird beibehalten.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Das Bild wird skaliert, sodass er den Ausgabebereich vollständig ausfüllt, und gleichzeitig das ursprüngliche Seitenverhältnis des.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Das Bild wird skaliert, sodass er den Ausgabebereich vollständig ausfüllt, und gleichzeitig das ursprüngliche Seitenverhältnis des.  
   
  Im folgenden Beispiel wird jede der verfügbaren <xref:System.Windows.Media.Stretch> Enumerationen zu einer <xref:System.Windows.Controls.Image>.  
   

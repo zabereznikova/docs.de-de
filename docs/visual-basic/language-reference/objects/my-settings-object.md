@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050310"
 ---
 # <a name="mysettings-object"></a>My.Settings-Objekt
 Stellt Eigenschaften und Methoden für den Zugriff auf die Einstellungen der Anwendung.  
@@ -25,13 +25,13 @@ Stellt Eigenschaften und Methoden für den Zugriff auf die Einstellungen der Anw
   
  Jede Einstellung eine **Namen**, **Typ**, **Bereich**, und **Wert**, und diese Einstellungen bestimmen, wie die Eigenschaft auf jede Einstellung wird in der `My.Settings` Objekt:  
   
--   **Namen** bestimmt den Namen der Eigenschaft.  
+- **Namen** bestimmt den Namen der Eigenschaft.  
   
--   **Typ** bestimmt den Typ der Eigenschaft.  
+- **Typ** bestimmt den Typ der Eigenschaft.  
   
--   **Bereich** gibt an, ob die Eigenschaft schreibgeschützt ist. Wenn der Wert ist **Anwendung**, die Eigenschaft schreibgeschützt ist; wenn der Wert ist **Benutzer**, die Eigenschaft ist schreibgeschützt.  
+- **Bereich** gibt an, ob die Eigenschaft schreibgeschützt ist. Wenn der Wert ist **Anwendung**, die Eigenschaft schreibgeschützt ist; wenn der Wert ist **Benutzer**, die Eigenschaft ist schreibgeschützt.  
   
--   **Wert** ist der Standardwert der Eigenschaft.  
+- **Wert** ist der Standardwert der Eigenschaft.  
   
 ## <a name="methods"></a>Methoden  
   

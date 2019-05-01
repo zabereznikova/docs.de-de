@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053092"
 ---
 # <a name="wpf-brushes-overview"></a>Übersicht über WPF-Pinsel
 Alles, was auf dem Bildschirm sichtbar ist sichtbar, da es mit einem Pinsel gezeichnet wurde. Beispielsweise wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, die Vordergrundfarbe des Texts und des Ausfüllens einer Form zu beschreiben. In diesem Thema werden die Konzepte Zeichnen mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
@@ -131,9 +131,9 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
 ## <a name="paint-using-predefined-and-system-brushes"></a>Zeichnen Sie vordefinierte mit Systempinsel  
  Der Einfachheit halber stellt Windows Presentation Foundation (WPF) bereit, einen Satz vordefinierter und System Pinsel, dass Sie zum Zeichnen von Objekten verwenden können.  
   
--   Eine Liste der verfügbaren vordefinierten Pinsel, finden Sie unter den <xref:System.Windows.Media.Brushes> Klasse. Ein Beispiel ein vordefiniertes Pinsels verwenden, finden Sie unter [Zeichnen eines Bereichs mit einer Volltonfarbe](how-to-paint-an-area-with-a-solid-color.md).  
+- Eine Liste der verfügbaren vordefinierten Pinsel, finden Sie unter den <xref:System.Windows.Media.Brushes> Klasse. Ein Beispiel ein vordefiniertes Pinsels verwenden, finden Sie unter [Zeichnen eines Bereichs mit einer Volltonfarbe](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Eine Liste der verfügbaren Systempinsel, finden Sie unter den <xref:System.Windows.SystemColors> Klasse. Ein Beispiel finden Sie unter [Zeichnen eines Bereichs mit einem Systempinsel](how-to-paint-an-area-with-a-system-brush.md).  
+- Eine Liste der verfügbaren Systempinsel, finden Sie unter den <xref:System.Windows.SystemColors> Klasse. Ein Beispiel finden Sie unter [Zeichnen eines Bereichs mit einem Systempinsel](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Allgemeine Funktionen für Pinsel  

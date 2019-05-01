@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047960"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
 Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.WSHttpBinding> Klasse, die transportsicherheit verwendet, müssen Sie auch einen Port mit einem x. 509-Zertifikat. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -27,15 +27,15 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
   
  In diesem Thema wird die Ausführung einer Reihe von Prozeduren beschrieben:  
   
--   Bestimmen der aktuellen Anschlusskonfiguration eines Computers  
+- Bestimmen der aktuellen Anschlusskonfiguration eines Computers  
   
--   Abrufen des Fingerabdrucks eines Zertifikats (notwendig für die beiden anschließenden Prozeduren)  
+- Abrufen des Fingerabdrucks eines Zertifikats (notwendig für die beiden anschließenden Prozeduren)  
   
--   Binden eines SSL-Zertifikats an eine Anschlusskonfiguration  
+- Binden eines SSL-Zertifikats an eine Anschlusskonfiguration  
   
--   Binden eines SSL-Zertifikats an eine Anschlusskonfiguration und Unterstützen von Clientzertifikaten  
+- Binden eines SSL-Zertifikats an eine Anschlusskonfiguration und Unterstützen von Clientzertifikaten  
   
--   Löschen eines SSL-Zertifikats aus einer Anschlussnummer  
+- Löschen eines SSL-Zertifikats aus einer Anschlussnummer  
   
  Zum Ändern der auf dem Computer gespeicherten Zertifikate sind Administratorrechte erforderlich.  
   
@@ -71,9 +71,9 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   Die **-i** Switch verfügt über die Syntax der `IP`:`port` und weist das Tool, um das Zertifikat auf den Anschluss 8012 des Computers festzulegen. Optional können Sie die vier Nullen vor der Nummer auch durch die tatsächliche IP-Adresse des Computers ersetzen.  
+    - Die **-i** Switch verfügt über die Syntax der `IP`:`port` und weist das Tool, um das Zertifikat auf den Anschluss 8012 des Computers festzulegen. Optional können Sie die vier Nullen vor der Nummer auch durch die tatsächliche IP-Adresse des Computers ersetzen.  
   
-    -   Die **-h** Option gibt den Fingerabdruck des Zertifikats an.  
+    - Die **-h** Option gibt den Fingerabdruck des Zertifikats an.  
   
 2. Verwenden Sie unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das Netsh.exe-Tool, wie im folgenden Beispiel gezeigt:  
   
@@ -81,11 +81,11 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   Die **Certhash** Parameter gibt den Fingerabdruck des Zertifikats.  
+    - Die **Certhash** Parameter gibt den Fingerabdruck des Zertifikats.  
   
-    -   Die **Ipport** Parameter gibt an, die IP-Adresse und den Port und funktioniert genauso wie die **-i** -Schalter des Httpcfg.exe-Tools, beschrieben.  
+    - Die **Ipport** Parameter gibt an, die IP-Adresse und den Port und funktioniert genauso wie die **-i** -Schalter des Httpcfg.exe-Tools, beschrieben.  
   
-    -   Die **Appid** -Parameter ist eine GUID, die verwendet werden kann, um die besitzende Anwendung zu identifizieren.  
+    - Die **Appid** -Parameter ist eine GUID, die verwendet werden kann, um die besitzende Anwendung zu identifizieren.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>So binden Sie ein SSL-Zertifikat an eine Anschlussnummer und unterstützen Clientzertifikate  
   

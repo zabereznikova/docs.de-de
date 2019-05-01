@@ -3,11 +3,11 @@ title: WCF-Diensthost (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052611"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie zum Starten von Visual Studio-Debugger (F5), um automatisch zu hosten und Testen einen Dienst, den Sie implementiert haben. Anschließend können Sie den Dienst mithilfe von WCF-Testclient (WcfTestClient.exe) oder Ihre eigenen-Clients zum Suchen und beheben potenzielle Fehler testen.  
@@ -72,32 +72,32 @@ Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie z
   
  Die **WCF-Diensthost** Hauptfenster umfasst zwei Menüs:  
   
--   **Datei**: Enthält die **schließen** und **beenden** Befehle. Beim Klicken auf **schließen**, **WCF-Diensthost** Dialogfeld wird geschlossen, aber der Dienst wird weiterhin gehostet werden. Beim Klicken auf **beenden**, WCF-Diensthost wird heruntergefahren. Dadurch werden auch alle gehosteten Dienste gestoppt.  
+- **Datei**: Enthält die **schließen** und **beenden** Befehle. Beim Klicken auf **schließen**, **WCF-Diensthost** Dialogfeld wird geschlossen, aber der Dienst wird weiterhin gehostet werden. Beim Klicken auf **beenden**, WCF-Diensthost wird heruntergefahren. Dadurch werden auch alle gehosteten Dienste gestoppt.  
   
--   **Hilfe**: Enthält die **zu** -Befehl, der Versionsinformationen enthält. Es enthält auch die **Hilfe** -Befehl, der eine Hilfedatei öffnen kann.  
+- **Hilfe**: Enthält die **zu** -Befehl, der Versionsinformationen enthält. Es enthält auch die **Hilfe** -Befehl, der eine Hilfedatei öffnen kann.  
   
  Die Main **WCF-Diensthost** umfasst zwei Bereiche:  
   
--   Der erste Bereich ist **Service**. Er enthält eine Liste mit grundlegenden Informationen zu allen Diensten. Zu diesen Informationen zählen:  
+- Der erste Bereich ist **Service**. Er enthält eine Liste mit grundlegenden Informationen zu allen Diensten. Zu diesen Informationen zählen:  
   
-    -   **Dienst:** Listet alle Dienste an.  
+    - **Dienst:** Listet alle Dienste an.  
   
-    -   **Status**: Listet den Status des Diensts. Gültige Werte sind "Gestartet", "Beendet" und "Error".  
+    - **Status**: Listet den Status des Diensts. Gültige Werte sind "Gestartet", "Beendet" und "Error".  
   
-    -   **Metadatenadresse**: Zeigt die Adresse der Metadaten der Dienste.  
+    - **Metadatenadresse**: Zeigt die Adresse der Metadaten der Dienste.  
   
--   Der zweite Bereich ist **Zusatzinformationen**. Eine ausführliche Erläuterung der Status angezeigt, wenn die entsprechende dienstzeile im ausgewählt ist die **Service** Bereich. Wenn der Status auf Fehler gesetzt ist, können Sie am Bildschirm die vollständige Fehlermeldung anzeigen.  
+- Der zweite Bereich ist **Zusatzinformationen**. Eine ausführliche Erläuterung der Status angezeigt, wenn die entsprechende dienstzeile im ausgewählt ist die **Service** Bereich. Wenn der Status auf Fehler gesetzt ist, können Sie am Bildschirm die vollständige Fehlermeldung anzeigen.  
   
 ## <a name="stopping-wcf-service-host"></a>Beenden des WCF-Diensthostes  
  Sie können WCF-Diensthost in der folgenden vier Wege Herunterfahren:  
   
--   Beenden Sie die Debugsitzung in Visual Studio.  
+- Beenden Sie die Debugsitzung in Visual Studio.  
   
--   Wählen Sie **beenden** aus der **Datei** im Menü der **WCF-Diensthost** Fenster.  
+- Wählen Sie **beenden** aus der **Datei** im Menü der **WCF-Diensthost** Fenster.  
   
--   Wählen Sie **beenden** im Kontextmenü des WCF-Diensthost-Taskleistensymbols im systembenachrichtigungsbereich.  
+- Wählen Sie **beenden** im Kontextmenü des WCF-Diensthost-Taskleistensymbols im systembenachrichtigungsbereich.  
   
--   WCF-Testclient zu beenden, wenn sie verwendet wird.  
+- WCF-Testclient zu beenden, wenn sie verwendet wird.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Verwenden des Diensthosts ohne Administratorberechtigung  
  Um Benutzer ohne Administratorrechte zum Entwickeln von WCF-Dienste zu aktivieren, wird eine ACL (Access Control List) erstellt, für den Namespace "http://+:8731/Design_Time_Addresses" während der Installation von Visual Studio. Die ACL wird auf (UI) festgelegt, wodurch alle interaktiven, am Computer angemeldeten Benutzer eingeschlossen werden. Administratoren können hinzufügen oder Benutzer aus dieser ACL entfernen oder zusätzliche Ports öffnen. Mit dieser ACL können Benutzer die WCF-Dienst-Auto-Host (wcfSvcHost.exe) zu verwenden, ohne ihnen Administratorrechte zu gewähren.  

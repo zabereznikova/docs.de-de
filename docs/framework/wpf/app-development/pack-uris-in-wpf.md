@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050613"
 ---
 # <a name="pack-uris-in-wpf"></a>Paket-URI in WPF
 In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] werden verwendet, um zu identifizieren und Laden von Dateien in vielerlei Hinsicht, einschließlich der folgenden:  
   
--   Angeben der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] anzuzeigenden beim ersten Starten einer Anwendung.  
+- Angeben der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] anzuzeigenden beim ersten Starten einer Anwendung.  
   
--   Laden von Bildern  
+- Laden von Bildern  
   
--   Navigieren zu Seiten  
+- Navigieren zu Seiten  
   
--   Laden von nicht ausführbaren Datendateien  
+- Laden von nicht ausführbaren Datendateien  
   
  Darüber hinaus [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kann verwendet werden, um zu identifizieren und Laden von Dateien aus einer Vielzahl von Standorten, einschließlich der folgenden:  
   
--   Die aktuelle Assembly.  
+- Die aktuelle Assembly.  
   
--   Eine Assembly, auf die verwiesen wird.  
+- Eine Assembly, auf die verwiesen wird.  
   
--   Ein zu einer Assembly relativer Speicherort.  
+- Ein zu einer Assembly relativer Speicherort.  
   
--   Die Ursprungssite der Anwendung.  
+- Die Ursprungssite der Anwendung.  
   
  Um einen einheitlichen Mechanismus zum Identifizieren und laden diese Arten von Dateien in diesen Speicherorten bieten [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nutzt die Erweiterbarkeit von der *Paket-URI-Schema*. Dieses Thema bietet eine Übersicht über das Schema, wird beschrieben, wie Sie Paket-erstellen [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] für eine Vielzahl von Szenarien, erläutert werden, Absolute und Relative [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] und [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Auflösung, bevor die zeigt, wie Sie Paket- [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] aus beiden Markup und Code.  
 
@@ -59,15 +59,15 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Pakete und Teile entsprechen Anwendungen und Dateien: eine Anwendung (ein Paket) kann eine oder mehrere Dateien (Teile) enthalten, darunter:  
   
--   Ressourcendateien, die in die lokale Assembly kompiliert werden  
+- Ressourcendateien, die in die lokale Assembly kompiliert werden  
   
--   Ressourcendateien, die in eine Assembly kompiliert werden, auf die verwiesen wird  
+- Ressourcendateien, die in eine Assembly kompiliert werden, auf die verwiesen wird  
   
--   Ressourcendateien, die in eine verweisende Assembly kompiliert werden  
+- Ressourcendateien, die in eine verweisende Assembly kompiliert werden  
   
--   Inhaltsdateien  
+- Inhaltsdateien  
   
--   Dateien der Ursprungssite  
+- Dateien der Ursprungssite  
   
  Diese Arten von Dateien, den Zugriff auf [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt zwei Autoritäten: Application: / / / und Siteoforigin: / / /. Durch die Autorität „application:///“ werden Anwendungsdatendateien identifiziert, die zur Kompilierungszeit bekannt sind, darunter Ressourcen- und Inhaltsdateien. Durch die Autorität „siteoforigin:///“ werden die Dateien der Ursprungssite identifiziert. Der Bereich der Autoritäten wird in der folgenden Abbildung veranschaulicht.  
   
@@ -86,9 +86,9 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 ### <a name="local-assembly-resource-file"></a>Ressourcendatei der lokalen Assembly  
  Das Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine Ressource, die in die lokale Assembly kompiliert wird verwendet, folgende Autorität und folgenden Pfad:  
   
--   **Autorität**: application:///.  
+- **Autorität**: application:///.  
   
--   **Pfad**: Der Name der Ressourcendatei, einschließlich seines Pfads, relativ zum Stammverzeichnis des Projektordners lokalen Assembly.  
+- **Pfad**: Der Name der Ressourcendatei, einschließlich seines Pfads, relativ zum Stammverzeichnis des Projektordners lokalen Assembly.  
   
  Das folgende Beispiel zeigt den Paket- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ressourcendatei, die im Stammverzeichnis des Projektordners der lokalen Assembly gespeichert ist.  
   
@@ -102,21 +102,21 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 ### <a name="referenced-assembly-resource-file"></a>Ressourcendatei der Assembly, auf die verwiesen wird  
  Das Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine Ressource, die in einer referenzierten Assembly kompiliert wird verwendet, folgende Autorität und folgenden Pfad:  
   
--   **Autorität**: application:///.  
+- **Autorität**: application:///.  
   
--   **Pfad**: Der Name einer Ressourcendatei, die in einer referenzierten Assembly kompiliert wird. Der Pfad muss dem folgenden Format entsprechen:  
+- **Pfad**: Der Name einer Ressourcendatei, die in einer referenzierten Assembly kompiliert wird. Der Pfad muss dem folgenden Format entsprechen:  
   
      *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
-    -   **AssemblyShortName**: Der Kurzname für die Assembly, auf die verwiesen wird.  
+    - **AssemblyShortName**: Der Kurzname für die Assembly, auf die verwiesen wird.  
   
-    -   **;Version** [optional]: Die Version der Assembly, auf die verwiesen wird, die die Ressourcendatei enthält. Wird verwendet, wenn mindestens zwei Assemblys, auf die verwiesen wird und die über denselben Kurznamen verfügen, geladen werden.  
+    - **;Version** [optional]: Die Version der Assembly, auf die verwiesen wird, die die Ressourcendatei enthält. Wird verwendet, wenn mindestens zwei Assemblys, auf die verwiesen wird und die über denselben Kurznamen verfügen, geladen werden.  
   
-    -   **;PublicKey** [optional]: Der öffentliche Schlüssel, der zum Signieren der Assembly verwendet wird, auf die verwiesen wird. Wird verwendet, wenn mindestens zwei Assemblys, auf die verwiesen wird und die über denselben Kurznamen verfügen, geladen werden.  
+    - **;PublicKey** [optional]: Der öffentliche Schlüssel, der zum Signieren der Assembly verwendet wird, auf die verwiesen wird. Wird verwendet, wenn mindestens zwei Assemblys, auf die verwiesen wird und die über denselben Kurznamen verfügen, geladen werden.  
   
-    -   **;component**: Gibt an, dass von der lokalen Assembly auf die Assembly verwiesen wird.  
+    - **;component**: Gibt an, dass von der lokalen Assembly auf die Assembly verwiesen wird.  
   
-    -   **/Path**: Der Name der Ressourcendatei, einschließlich des Pfads, relativ zum Stammverzeichnis des Projektordners der Assembly, auf die verwiesen wird.  
+    - **/Path**: Der Name der Ressourcendatei, einschließlich des Pfads, relativ zum Stammverzeichnis des Projektordners der Assembly, auf die verwiesen wird.  
   
  Das folgende Beispiel zeigt den Paket- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ressourcendatei, die im Stammverzeichnis des Projektordners der Assembly, auf die verwiesen wird, gespeichert ist.  
   
@@ -138,9 +138,9 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 ## <a name="content-file-pack-uris"></a>Paket-URIs der Inhaltsdatei  
  Das Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine Inhaltsdatei, folgende Autorität und folgenden Pfad verwendet:  
   
--   **Autorität**: application:///.  
+- **Autorität**: application:///.  
   
--   **Pfad**: Der Name der Inhaltsdatei, einschließlich seines Pfads relativ zu den Dateisystempfad der ausführbaren Hauptassembly der Anwendung.  
+- **Pfad**: Der Name der Inhaltsdatei, einschließlich seines Pfads relativ zu den Dateisystempfad der ausführbaren Hauptassembly der Anwendung.  
   
  Das folgende Beispiel zeigt den Paket- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Inhaltsdatei, die sich im selben Ordner wie die ausführbare Assembly befinden.  
   
@@ -157,9 +157,9 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 ## <a name="site-of-origin-pack-uris"></a>Paket-URIs der Ursprungssite  
  Das Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine Ursprungssite-Datei verwendet folgende Autorität und folgenden Pfad:  
   
--   **Autorität**: siteoforigin:///.  
+- **Autorität**: siteoforigin:///.  
   
--   **Pfad**: Der Name des Standorts-Datei der Ursprungssite, einschließlich seines Pfads relativ zum Speicherort, an dem die ausführbare Assembly gestartet wurde.  
+- **Pfad**: Der Name des Standorts-Datei der Ursprungssite, einschließlich seines Pfads relativ zum Speicherort, an dem die ausführbare Assembly gestartet wurde.  
   
  Das folgende Beispiel zeigt den Paket- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei der Ursprungssite, an dem Speicherort, von dem die ausführbare Assembly gestartet wird, gespeichert.  
   
@@ -175,17 +175,17 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  Die Typen von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien, die häufig als konfiguriert sind [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente weisen einen der folgenden als Stammelement:  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>Absolute und relative Paket-URIs  
@@ -246,11 +246,11 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] -Auflösung gilt nicht für [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] mit Verweisen auf die folgenden:  
   
--   Inhaltsdateien in Assemblys verwiesen wird: Diese Dateitypen werden nicht unterstützt, indem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+- Inhaltsdateien in Assemblys verwiesen wird: Diese Dateitypen werden nicht unterstützt, indem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
--   Eingebettete Dateien in Assemblys verwiesen wird: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , identifizieren sie eindeutig sind, da sie den Namen der referenzierten Assembly enthalten und die `;component` Suffix.  
+- Eingebettete Dateien in Assemblys verwiesen wird: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , identifizieren sie eindeutig sind, da sie den Namen der referenzierten Assembly enthalten und die `;component` Suffix.  
   
--   Dateien der Ursprungssite: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , identifizieren sie eindeutig sind, da sie die einzigen Dateien sind, die vom Pack identifiziert werden können [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , enthalten die Siteoforigin: / / / der Autorität.  
+- Dateien der Ursprungssite: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , identifizieren sie eindeutig sind, da sie die einzigen Dateien sind, die vom Pack identifiziert werden können [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] , enthalten die Siteoforigin: / / / der Autorität.  
   
  Eine Vereinfachung, die pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Auflösung kann für Code ein wenig von den Speicherorten der Ressourcen-und Inhaltsdateien unabhängig ist. Wenn Sie eine Ressourcendatei in der lokalen Assembly haben, umkonfiguriert wird, um eine Inhaltsdatei, die das Pack werden z. B. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die Ressource unverändert bleibt, wie der Code, der die Pack verwendet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
@@ -258,17 +258,17 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 ## <a name="programming-with-pack-uris"></a>Programmieren mit Paket-URIs  
  Viele [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Klassen implementieren Eigenschaften, die mit Pack festgelegt werden, können [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)], einschließlich:  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  Diese Eigenschaften können sowohl im Markup als auch im Code festgelegt werden. In diesem Abschnitt werden die grundlegenden Konstruktionen beider Varianten beschrieben, und es werden Beispiele für allgemeine Szenarien gezeigt.  
   

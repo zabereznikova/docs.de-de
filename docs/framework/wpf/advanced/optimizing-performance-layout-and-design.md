@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050219"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimieren der Leistung: Layout und Entwurf
 Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung kann die Leistung durch unnötigen Mehraufwand durch die Berechnung des Layouts und das Überprüfung von Objektverweisen beeinträchtigen. Das Erstellen von Objekten, insbesondere zur Laufzeit, kann sich auf die Leistungsmerkmale Ihrer Anwendung auswirken.  
@@ -26,25 +26,25 @@ Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
   
  Das Layoutsystem führt zwei Durchläufe für jeden untergeordneten Member in einer Auflistung durch: einen Messdurchlauf und einen Anordnungsdurchlauf. Jedes Objekt verfügt über seine eigene überschriebene Implementierung von der <xref:System.Windows.UIElement.Measure%2A> und <xref:System.Windows.UIElement.Arrange%2A> Methoden, um sein eigenes spezifisches Layoutverhalten bereitzustellen. Ganz einfach ausgedrückt bedeutet dies, dass Layout ein rekursives System ist, das die Größe und Position eines Elements anpasst und dieses auf dem Bildschirm zeichnet.  
   
--   Ein untergeordnetes Element <xref:System.Windows.UIElement> Objekt startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen.  
+- Ein untergeordnetes Element <xref:System.Windows.UIElement> Objekt startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen.  
   
--   Des Objekts <xref:System.Windows.FrameworkElement> Eigenschaften, die der Größe,, z. B. verknüpft sind <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>, ausgewertet werden.  
+- Des Objekts <xref:System.Windows.FrameworkElement> Eigenschaften, die der Größe,, z. B. verknüpft sind <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>, ausgewertet werden.  
   
--   <xref:System.Windows.Controls.Panel>-spezifische Logik angewendet wird, wie z. B. die <xref:System.Windows.Controls.DockPanel.Dock%2A> Eigenschaft der <xref:System.Windows.Controls.DockPanel>, oder die <xref:System.Windows.Controls.StackPanel.Orientation%2A> Eigenschaft der <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-spezifische Logik angewendet wird, wie z. B. die <xref:System.Windows.Controls.DockPanel.Dock%2A> Eigenschaft der <xref:System.Windows.Controls.DockPanel>, oder die <xref:System.Windows.Controls.StackPanel.Orientation%2A> Eigenschaft der <xref:System.Windows.Controls.StackPanel>.  
   
--   Nachdem alle untergeordneten Objekte ausgemessen wurden, wird der Inhalt angeordnet oder positioniert.  
+- Nachdem alle untergeordneten Objekte ausgemessen wurden, wird der Inhalt angeordnet oder positioniert.  
   
--   Die Auflistung der untergeordneten Objekte wird auf dem Bildschirm dargestellt.  
+- Die Auflistung der untergeordneten Objekte wird auf dem Bildschirm dargestellt.  
   
  Der Layoutdurchlauf wird erneut aufgerufen, wenn eine der folgenden Aktionen ausgeführt wird:  
   
--   Ein untergeordnetes Objekt wird der Auflistung hinzugefügt.  
+- Ein untergeordnetes Objekt wird der Auflistung hinzugefügt.  
   
--   Ein <xref:System.Windows.FrameworkElement.LayoutTransform%2A> auf das untergeordnete Objekt angewendet wird.  
+- Ein <xref:System.Windows.FrameworkElement.LayoutTransform%2A> auf das untergeordnete Objekt angewendet wird.  
   
--   Die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode für das untergeordnete Objekt aufgerufen wird.  
+- Die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode für das untergeordnete Objekt aufgerufen wird.  
   
--   Wenn sich der Wert einer Abhängigkeitseigenschaft ändert, die mit Metadaten markiert ist, die die Messungs- oder Anordnungsdurchläufe beeinflussen  
+- Wenn sich der Wert einer Abhängigkeitseigenschaft ändert, die mit Metadaten markiert ist, die die Messungs- oder Anordnungsdurchläufe beeinflussen  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Verwenden Sie das effizienteste Panel soweit möglich  
  Die Komplexität im Layoutprozess basiert direkt auf das Layoutverhalten der <xref:System.Windows.Controls.Panel>-abgeleitete Elemente, die Sie verwenden. Z. B. eine <xref:System.Windows.Controls.Grid> oder <xref:System.Windows.Controls.StackPanel> Steuerelement bietet viel mehr Funktionen als ein <xref:System.Windows.Controls.Canvas> Steuerelement. Für diese erhöhte Funktionalität büßen Sie an Leistung ein. Jedoch wenn Sie nicht die Funktionalität benötigen, die eine <xref:System.Windows.Controls.Grid> Steuerelement bereitgestellt werden, sollten Sie weniger leistungsaufwändige alternativen verwenden, z. B. Verwenden einer <xref:System.Windows.Controls.Canvas> oder ein benutzerdefiniertes Panel.  

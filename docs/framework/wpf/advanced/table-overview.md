@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053105"
 ---
 # <a name="table-overview"></a>Übersicht über Tabellen
 <xref:System.Windows.Documents.Table> ist ein Element auf Blockebene, die rasterbasierte Darstellung von Flussdokumentinhalten unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Grundlagen zu Tabellen](#table_basics)  
+- [Grundlagen zu Tabellen](#table_basics)  
   
--   [Worin unterscheidet sich eine Tabelle von einem Raster?](#table_vs_Grid)  
+- [Worin unterscheidet sich eine Tabelle von einem Raster?](#table_vs_Grid)  
   
--   [Grundlegende Tabellenstruktur](#basic_table_structure)  
+- [Grundlegende Tabellenstruktur](#basic_table_structure)  
   
--   [Tabellenkapselung](#table_containment)  
+- [Tabellenkapselung](#table_containment)  
   
--   [Zeilengruppen](#row_groupings)  
+- [Zeilengruppen](#row_groupings)  
   
--   [Hintergrundrendering-Rangfolge](#rendering_precedence)  
+- [Hintergrundrendering-Rangfolge](#rendering_precedence)  
   
--   [Überspannen von Zeilen oder Spalten](#spanning_rows_or_columns)  
+- [Überspannen von Zeilen oder Spalten](#spanning_rows_or_columns)  
   
--   [Erstellen einer Tabelle mit Code](#building_a_table_with_code)  
+- [Erstellen einer Tabelle mit Code](#building_a_table_with_code)  
   
--   [Verwandte Themen] 
+- [Verwandte Themen] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Grundlagen zu Tabellen  
@@ -50,15 +50,15 @@ ms.locfileid: "59317661"
 ### <a name="basic-table-structure"></a>Grundlegende Tabellenstruktur  
  <xref:System.Windows.Documents.Table> ermöglicht die rasterbasierte Darstellung von Spalten (dargestellt durch <xref:System.Windows.Documents.TableColumn> Elemente) und Zeilen (dargestellt durch <xref:System.Windows.Documents.TableRow> Elemente). <xref:System.Windows.Documents.TableColumn> -Elemente hosten keinen Inhalt. Sie definieren lediglich Spalten und deren Eigenschaften. <xref:System.Windows.Documents.TableRow> Elemente müssen gehostet werden, einem <xref:System.Windows.Documents.TableRowGroup> -Element, das eine Gruppierung von Zeilen für die Tabelle definiert. <xref:System.Windows.Documents.TableCell> Elemente, die enthalten den eigentlichen Inhalt der Tabelle angezeigt werden, müssen gehostet werden, einem <xref:System.Windows.Documents.TableRow> Element. <xref:System.Windows.Documents.TableCell> kann nur Elemente enthalten, die abgeleitet <xref:System.Windows.Documents.Block>.  Gültige untergeordnete Elemente für eine <xref:System.Windows.Documents.TableCell> enthalten.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> -Elemente hosten Textinhalt möglicherweise nicht direkt. Weitere Informationen über die Kapselungsregeln für fortlaufenden Inhaltselemente wie <xref:System.Windows.Documents.TableCell>, finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59317661"
 ### <a name="table-containment"></a>Tabellenkapselung  
  <xref:System.Windows.Documents.Table> leitet sich von der <xref:System.Windows.Documents.Block> -Element, und die allgemeinen Regeln für <xref:System.Windows.Documents.Block> Ebene von Elementen.  Ein <xref:System.Windows.Documents.Table> Element kann eines der folgenden Elemente enthalten sein:  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Zeilengruppen  

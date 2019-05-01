@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050661"
 ---
 # <a name="using-data-contracts"></a>Verwenden von Datenverträgen
 Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und einem Client, in dem die auszutauschenden Daten abstrakt beschrieben werden. Das heißt, der Client und der Dienst müssen, um kommunizieren zu können, nicht denselben Typ verwenden, sondern nur dieselben Datenverträge. Ein Datenvertrag definiert für jeden Parameter oder Rückgabetyp genau, welche Daten für einen Austausch serialisiert (in XML umgewandelt) werden.  
@@ -38,21 +38,21 @@ Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und
 ### <a name="notes"></a>Hinweise  
  Berücksichtigen Sie beim Erstellen von Datenverträgen die folgenden Hinweise:  
   
--   Das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> -Attribut wird nur berücksichtigt, wenn es zusammen mit nicht markierten Typen verwendet wird. Dazu zählen Typen, die weder mit einem <xref:System.Runtime.Serialization.DataContractAttribute>-, <xref:System.SerializableAttribute>-, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>- oder <xref:System.Runtime.Serialization.EnumMemberAttribute> -Attribut noch auf andere Weise als serialisierbar markiert sind (beispielsweise mithilfe von <xref:System.Xml.Serialization.IXmlSerializable>).  
+- Das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> -Attribut wird nur berücksichtigt, wenn es zusammen mit nicht markierten Typen verwendet wird. Dazu zählen Typen, die weder mit einem <xref:System.Runtime.Serialization.DataContractAttribute>-, <xref:System.SerializableAttribute>-, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>- oder <xref:System.Runtime.Serialization.EnumMemberAttribute> -Attribut noch auf andere Weise als serialisierbar markiert sind (beispielsweise mithilfe von <xref:System.Xml.Serialization.IXmlSerializable>).  
   
--   Sie können das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut auf Felder und Eigenschaften anwenden.  
+- Sie können das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut auf Felder und Eigenschaften anwenden.  
   
--   Memberzugriffsebenen (internal, private, protected oder public) haben keinerlei Einfluss auf den Datenvertrag.  
+- Memberzugriffsebenen (internal, private, protected oder public) haben keinerlei Einfluss auf den Datenvertrag.  
   
--   Das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird ignoriert, wenn es auf statische Member angewendet wird.  
+- Das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird ignoriert, wenn es auf statische Member angewendet wird.  
   
--   Bei der Serialisierung werden mit einem Aufruf von property-get-Code für Eigenschaftsdatenmember die Werte der zu serialisierenden Eigenschaften abgerufen.  
+- Bei der Serialisierung werden mit einem Aufruf von property-get-Code für Eigenschaftsdatenmember die Werte der zu serialisierenden Eigenschaften abgerufen.  
   
--   Bei der Deserialisierung wird zuerst ein nicht initialisiertes Objekt erstellt, ohne dass Konstruktoren für den Typ aufgerufen werden. Dann werden alle Datenmember deserialisiert.  
+- Bei der Deserialisierung wird zuerst ein nicht initialisiertes Objekt erstellt, ohne dass Konstruktoren für den Typ aufgerufen werden. Dann werden alle Datenmember deserialisiert.  
   
--   Mit einem Aufruf von property-set-Code für Eigenschaftsdatenmember werden bei der Deserialisierung die Werte der zu deserialisierenden Eigenschaften festgelegt.  
+- Mit einem Aufruf von property-set-Code für Eigenschaftsdatenmember werden bei der Deserialisierung die Werte der zu deserialisierenden Eigenschaften festgelegt.  
   
--   Damit ein Datenvertrag gültig ist, müssen alle seine Datenmember serialisiert werden können. Eine vollständige Liste der serialisierbaren Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Damit ein Datenvertrag gültig ist, müssen alle seine Datenmember serialisiert werden können. Eine vollständige Liste der serialisierbaren Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
      Generische Typen werden auf genau die gleiche Weise behandelt wie nicht generische Typen. Es gibt keine besonderen Anforderungen für generische Parameter. Betrachten Sie z.&#160;B. den folgenden Typ:  
   

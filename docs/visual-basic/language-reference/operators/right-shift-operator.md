@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053287"
 ---
 # <a name="-operator-visual-basic"></a>>>-Operator (Visual Basic)
 Führt eine arithmetische rechtsverschiebung in einem Bitmuster aus.  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
   
--   `result1` 2560 (0000 1010-0000-0000) ist.  
+- `result1` 2560 (0000 1010-0000-0000) ist.  
   
--   `result2` ist 160 (0000 0000 1010 0000).  
+- `result2` ist 160 (0000 0000 1010 0000).  
   
--   `result3` ist 2 (0000-0000-0000-0010).  
+- `result3` ist 2 (0000-0000-0000-0010).  
   
--   `result4` ist 640 (0000 0010 1000 0000).  
+- `result4` ist 640 (0000 0010 1000 0000).  
   
--   `result5` ist 0 (15 Stellen nach rechts verschoben).  
+- `result5` ist 0 (15 Stellen nach rechts verschoben).  
   
  Der Betrag der Verschiebung für `result4` wird berechnet als 18 und 15, die gleich 2 ist.  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
   
--   `negresult1` ist-512 (1111 1110 0000-0000).  
+- `negresult1` ist-512 (1111 1110 0000-0000).  
   
--   `negresult2` ist-1 (das signierte Bit wird weitergegeben).  
+- `negresult2` ist-1 (das signierte Bit wird weitergegeben).  
   
 ## <a name="see-also"></a>Siehe auch
 

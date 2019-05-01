@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050362"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Arbeiten mit NATs und Firewalls
 Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung. Die Datenpakete werden gefiltert, weitergeleitet, analysiert und transformiert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk. Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.  
@@ -45,11 +45,11 @@ Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig n
   
  In einer Standardtopologie für Client-Server-Anwendungen verfügen Clients hinter einer Netzwerkadressübersetzung ohne Teredo über eine Firewall nur für ausgehende Verbindungen, und der direkt adressierbare Server wird durch eine leistungsstarke Firewall geschützt. In diesem Szenario funktionieren der TCP-Transport mit einem Duplex-Nachrichtenaustauschmuster und ein HTTP-Transport mit einem Anforderung-Antwort-Nachrichtenaustauschmuster ordnungsgemäß. In einer gängigen Peer-to-Peer-Topologie befinden sich beide Endpunkte hinter einem NAT-Mechanismus sowie hinter einer Firewall. In diesem Szenario sowie in Szenarien mit einer unbekannten Netzwerktopologie sollten Sie folgende Empfehlungen beachten:  
   
--   Verwenden Sie keine dualen Transporte. Duale Transporte öffnen mehr Verbindungen. Dadurch sinkt die Chance, erfolgreich eine Verbindung herzustellen.  
+- Verwenden Sie keine dualen Transporte. Duale Transporte öffnen mehr Verbindungen. Dadurch sinkt die Chance, erfolgreich eine Verbindung herzustellen.  
   
--   Unterstützen Sie die Einrichtung von Rückkanälen über die ursprüngliche Verbindung. Durch Rückkanäle (wie bei Duplex-TCP) werden weniger Verbindungen geöffnet, und die Wahrscheinlichkeit steigt, dass eine Verbindung hergestellt werden kann.  
+- Unterstützen Sie die Einrichtung von Rückkanälen über die ursprüngliche Verbindung. Durch Rückkanäle (wie bei Duplex-TCP) werden weniger Verbindungen geöffnet, und die Wahrscheinlichkeit steigt, dass eine Verbindung hergestellt werden kann.  
   
--   Verwenden Sie einen erreichbaren Dienst zum Registrieren von Endpunkten oder zum Weiterleiten von Datenverkehr. Durch einen global erreichbaren Verbindungsdienst wie einem Teredo-Server wird die Wahrscheinlichkeit deutlich erhöht, eine Verbindung herzustellen, wenn die Netzwerktopologie eingeschränkt oder unbekannt ist.  
+- Verwenden Sie einen erreichbaren Dienst zum Registrieren von Endpunkten oder zum Weiterleiten von Datenverkehr. Durch einen global erreichbaren Verbindungsdienst wie einem Teredo-Server wird die Wahrscheinlichkeit deutlich erhöht, eine Verbindung herzustellen, wenn die Netzwerktopologie eingeschränkt oder unbekannt ist.  
   
  In den folgenden Tabellen untersuchen, der unidirektionale, Anforderung-Antwort und duplex-Nachrichtenaustauschmuster und den standardmäßigen TCP, TCP mit Teredo und Standard- und dual-HTTP-Transporte in WCF.  
   

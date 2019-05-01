@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053157"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement
 
@@ -21,13 +21,13 @@ In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie mit der <xref:Syst
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
--   Erstellen des Projekts.
+- Erstellen des Projekts.
 
--   Definieren einer neuen Eigenschaftenzuordnung
+- Definieren einer neuen Eigenschaftenzuordnung
 
--   Entfernen einer standardmäßigen Eigenschaftenzuordnung
+- Entfernen einer standardmäßigen Eigenschaftenzuordnung
 
--   Erweitern einer standardmäßigen Eigenschaftenzuordnung
+- Erweitern einer standardmäßigen Eigenschaftenzuordnung
 
 Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160018).
 
@@ -37,7 +37,7 @@ Wenn Sie fertig sind, Sie werden zum Zuordnen [!INCLUDE[TLA#tla_winforms](../../
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>Erstellen des Projekts
 
@@ -47,13 +47,13 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 2. In **Projektmappen-Explorer**, fügen Sie Verweise auf die folgenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Assemblys.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. Kopieren Sie den folgenden Code oben in der `Form1` Codedatei.
 
@@ -101,7 +101,7 @@ Entfernen eine standardmäßigen eigenschaftenzuordnung durch Aufrufen der <xref
 
 ### <a name="to-remove-a-default-property-mapping"></a>Entfernen einer standardmäßigen Eigenschaftenzuordnung
 
--   Kopieren Sie den folgenden Code in die Definition der `Form1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition der `Form1` Klasse.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ Sie können auch eine standardmäßige Eigenschaftenzuordnung verwenden und sie 
 
 ### <a name="to-extend-a-default-property-mapping"></a>So erweitern Sie eine standardmäßigen Eigenschaftenzuordnung
 
--   Kopieren Sie den folgenden Code in die Definition der `Form1` Klasse.
+- Kopieren Sie den folgenden Code in die Definition der `Form1` Klasse.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ Sie können auch eine standardmäßige Eigenschaftenzuordnung verwenden und sie 
 
      Die `Form1_Load` verarbeitet die <xref:System.Windows.Forms.Form.Load> Ereignis und führt die folgende Initialisierung.
 
-    -   Erstellt eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> Element.
+    - Erstellt eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> Element.
 
-    -   Sie ruft die Methoden, die Sie zuvor in der exemplarischen Vorgehensweise definiert haben, auf, um die Eigenschaftenzuordnungen einzurichten.
+    - Sie ruft die Methoden, die Sie zuvor in der exemplarischen Vorgehensweise definiert haben, auf, um die Eigenschaftenzuordnungen einzurichten.
 
-    -   Sie weist den zugeordneten Eigenschaften Anfangswerte zu.
+    - Sie weist den zugeordneten Eigenschaften Anfangswerte zu.
 
 2. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048270"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -21,9 +21,9 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 ## <a name="audit-level-and-behavior"></a>Überwachungsstufe und Überwachungsverhalten  
  Es gibt zwei Stufen für die Sicherheitsüberwachung:  
   
--   Autorisierung auf Dienstebene: Es wird ein Aufrufer autorisiert.  
+- Autorisierung auf Dienstebene: Es wird ein Aufrufer autorisiert.  
   
--   Auf der Nachrichtenebene, in der WCF für die Gültigkeit der Nachricht überprüft und authentifiziert den Aufrufer.  
+- Auf der Nachrichtenebene, in der WCF für die Gültigkeit der Nachricht überprüft und authentifiziert den Aufrufer.  
   
  Sie können beide Überwachungsstufen auf Erfolg oder Fehler, die so genannte überprüfen die *Überwachungsverhalten*.  
   

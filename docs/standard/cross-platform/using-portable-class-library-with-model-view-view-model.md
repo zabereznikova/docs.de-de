@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050496"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Verwenden der portablen Klassenbibliothek mit Model-View-View Model
 Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) das Model-View-View Model (MVVM)-Muster implementieren, und geben Sie die Assemblys auf mehreren Plattformen frei.
@@ -32,27 +32,27 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
 ## <a name="classes-that-support-mvvm"></a>Klassen, die MVVM unterstützen.
  Wenn Sie das Ziel der [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight oder Windows Phone 7.5 für Ihre [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] -Projekt die folgenden Klassen sind für die Implementierung des MVVM-Musters verfügbar:
 
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>-Klasse
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>-Klasse
 
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>-Klasse
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>-Klasse
 
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>-Klasse
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>-Klasse
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>-Klasse
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>-Klasse
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>-Klasse
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>-Klasse
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>-Klasse
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>-Klasse
 
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>-Klasse
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>-Klasse
 
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>-Klasse
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>-Klasse
 
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>-Klasse
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>-Klasse
 
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>-Klasse
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>-Klasse
 
--   Alle Klassen in der <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> Namespace
+- Alle Klassen in der <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> Namespace
 
 ## <a name="implementing-mvvm"></a>Implementierung von MVVM
  Zum Implementieren von MVVM normalerweise erstellen Sie sowohl das Modell und das Ansichtsmodell in einem [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Projekt, da eine [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Projekt kann nicht auf ein nicht portables Projekt verweisen. Das Modell und das Ansichtsmodell kann im selben Projekt oder in separaten Projekten. Wenn Sie separate Projekte verwenden, fügen Sie einen Verweis aus dem Projekt der Modelle anzeigen, auf das Modellprojekt.

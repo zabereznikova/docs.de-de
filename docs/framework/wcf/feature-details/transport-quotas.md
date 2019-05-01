@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050713"
 ---
 # <a name="transport-quotas"></a>Transportkontingente
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
@@ -19,11 +19,11 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ## <a name="types-of-transport-quotas"></a>Typen von Transportkontingenten  
  WCF-Transporte haben drei Typen von Kontingenten:  
   
--   *Timeouts* mindern Denial of Service-Angriffe, die abhängig sind, auf die Ressourcen für längere Zeit binden.  
+- *Timeouts* mindern Denial of Service-Angriffe, die abhängig sind, auf die Ressourcen für längere Zeit binden.  
   
--   *Zuordnung des Arbeitsspeicherlimits* zu verhindern, dass eine einzelne Verbindung Systemspeicher für schwellenwertbenachrichtigungen und Dienst zu anderen Verbindungen verweigert.  
+- *Zuordnung des Arbeitsspeicherlimits* zu verhindern, dass eine einzelne Verbindung Systemspeicher für schwellenwertbenachrichtigungen und Dienst zu anderen Verbindungen verweigert.  
   
--   *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die Speicher indirekt Belegen oder beschränkt zur Verfügung sind.  
+- *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die Speicher indirekt Belegen oder beschränkt zur Verfügung sind.  
   
 ## <a name="transport-quota-descriptions"></a>Transportkontingentbeschreibungen  
  In diesem Abschnitt werden die transportkontingente beschrieben für die standard-WCF-Transporte zur Verfügung: HTTP (S), TCP/IP und named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048114"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurieren der WS-AtomicTransaction-Unterstützung
 In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unterstützung mit dem WS-AT-Konfigurationshilfsprogramm konfigurieren können.  
@@ -106,17 +106,17 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
   
 4. In der **Wertdaten** Eingabefeld, geben Sie einen der folgenden gültigen Werte an das Level der Ablaufverfolgung, Sie aktivieren möchten.  
   
--   0: Aus  
+- 0: Aus  
   
--   1: Kritisch  
+- 1: Kritisch  
   
--   3: Fehler. Dies ist der Standardwert.  
+- 3: Fehler. Dies ist der Standardwert.  
   
--   7: Warnung  
+- 7: Warnung  
   
--   15: Informationen  
+- 15: Informationen  
   
--   31: Ausführlich  
+- 31: Ausführlich  
   
 ## <a name="see-also"></a>Siehe auch
 
