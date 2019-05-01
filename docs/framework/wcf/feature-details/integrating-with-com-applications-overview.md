@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047008"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM-Anwendungen
 Windows Communication Foundation (WCF) bietet die Entwickler von verwaltetem Code eine reichhaltige Umgebung zum Erstellen von verbundenen Anwendungen. Jedoch wenn Sie eine erhebliche Investition in nicht verwaltetem Code mit COM-basierten haben und nicht migrieren möchten, können Sie weiterhin WCF-Webdienste direkt in den vorhandenen Code integrieren mit den WCF-Dienstmoniker. Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) bietet die Entwickler von verwaltetem Cod
   
  Enthält, die auch andere WCF-Clients, wenn den Moniker verwenden Geben Sie Anwendungen, die Adresse, Bindung und Vertrag für die Kommunikation mit einem Dienst. Der Vertrag kann mithilfe der folgenden Methoden spezifiziert werden:  
   
--   Typisierter Vertrag: Der Vertrag wird auf dem Clientcomputer als für COM sichtbarer Typ registriert.  
+- Typisierter Vertrag: Der Vertrag wird auf dem Clientcomputer als für COM sichtbarer Typ registriert.  
   
--   WSDL-Vertrag: Der Vertrag wird in Form eines WSDL-Dokuments angegeben.  
+- WSDL-Vertrag: Der Vertrag wird in Form eines WSDL-Dokuments angegeben.  
   
--   MEX-Vertrag: Der Vertrag wird zur Laufzeit von einem MEX (Metadata Exchange)-Endpunkt abgerufen.  
+- MEX-Vertrag: Der Vertrag wird zur Laufzeit von einem MEX (Metadata Exchange)-Endpunkt abgerufen.  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>Vom Dienstmoniker unterstützte Parameter  
  In der folgenden Tabelle werden die Parameter aufgeführt, die vom Dienstmoniker unterstützt werden.  

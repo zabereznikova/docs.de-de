@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048048"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debuggen von Windows-Authentifizierungsfehlern
 Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt die Security Support Provider-Schnittstelle (SSPI) Sicherheitsprozesse ab. Wenn Sicherheitsfehler auf der SSPI-Schicht auftreten, werden sie von Windows Communication Foundation (WCF) angegeben. Dieses Thema enthält ein Framework und eine Reihe von Fragen zur Diagnose der Fehler.  
@@ -45,13 +45,13 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
  Zu den vier Kontotypen gehören im Einzelnen:  
   
--   Lokaler Benutzer: Das Benutzerprofil ist nur für Computer. Beispiel: `MachineName\Administrator` oder `MachineName\ProfileName`.  
+- Lokaler Benutzer: Das Benutzerprofil ist nur für Computer. Beispiel: `MachineName\Administrator` oder `MachineName\ProfileName`.  
   
--   Lokales System: Das integrierte Konto SYSTEM auf einem Computer, der nicht mit einer Domäne verknüpft ist.  
+- Lokales System: Das integrierte Konto SYSTEM auf einem Computer, der nicht mit einer Domäne verknüpft ist.  
   
--   Domänenbenutzer: Ein Benutzerkonto in einer Windows-Domäne. Beispiel: `DomainName\ProfileName`.  
+- Domänenbenutzer: Ein Benutzerkonto in einer Windows-Domäne. Beispiel: `DomainName\ProfileName`.  
   
--   Mit der Domänencomputer: Ein Prozess mit Computeridentität, die auf einem Computer, der Mitglied einer Windows-Domäne ausgeführt werden soll. Beispiel: `MachineName\Network Service`.  
+- Mit der Domänencomputer: Ein Prozess mit Computeridentität, die auf einem Computer, der Mitglied einer Windows-Domäne ausgeführt werden soll. Beispiel: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Die Dienstanmeldeinformationen werden aufgezeichnet, wenn die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode der <xref:System.ServiceModel.ServiceHost>-Klasse aufgerufen wird. Die Clientanmeldeinformationen werden immer dann gelesen, wenn der Client eine Nachricht sendet.  
@@ -85,15 +85,15 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
 2. SSPI-Aushandlung erforderlich:  
   
-    1.  Wenn Sie Standardbindungen verwenden, legen Sie die `NegotiateServiceCredential`-Eigenschaft auf `true` fest.  
+    1. Wenn Sie Standardbindungen verwenden, legen Sie die `NegotiateServiceCredential`-Eigenschaft auf `true` fest.  
   
-    2.  Bei Verwendung von benutzerdefinierten Bindungen legen Sie das `AuthenticationMode`-Attribut des `Security`-Elements auf `SspiNegotiated` fest.  
+    2. Bei Verwendung von benutzerdefinierten Bindungen legen Sie das `AuthenticationMode`-Attribut des `Security`-Elements auf `SspiNegotiated` fest.  
   
 3. Legen Sie fest, dass die SSPI-Aushandlung Kerberos verwenden muss, indem Sie die Verwendung von NTLM nicht zulasssen:  
   
-    1.  Führen Sie dies mit der folgenden Anweisung in Code aus: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. Führen Sie dies mit der folgenden Anweisung in Code aus: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist Bestandteil der [ \<Windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist Bestandteil der [ \<Windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>NTLM-Protokoll  
   

@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Dienstversionsverwaltung'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047476"
 ---
 # <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionsverwaltung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
@@ -17,13 +17,13 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
  Beide Dienste machen die folgenden Vorgänge verfügbar:  
   
--   Hinzufügen  
+- Hinzufügen  
   
--   Subtrahieren  
+- Subtrahieren  
   
--   Multiplizieren  
+- Multiplizieren  
   
--   Teilen  
+- Teilen  
   
  Da beide Dienstimplementierungen die gleichen Vorgänge behandeln und bis auf die zurückgegebenen Daten im Wesentlichen identisch sind, sind die Basisdaten von Nachrichten, die aus Clientanwendungen gesendet werden, nicht eindeutig genug, um die Weiterleitung der Anforderung einwandfrei bestimmen zu können. Aktionsfilter können z. B. nicht verwendet werden, weil die Standardaktionen für beide Dienste gleich sind.  
   

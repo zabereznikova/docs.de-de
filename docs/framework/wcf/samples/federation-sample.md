@@ -3,11 +3,11 @@ title: Verbundbeispiel
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051909"
 ---
 # <a name="federation-sample"></a>Verbundbeispiel
 Dieses Beispiel veranschaulicht die Verbundsicherheit.  
@@ -17,13 +17,13 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
   
  Das Szenario besteht aus 4 Einheiten:  
   
--   BookStore-Dienst  
+- BookStore-Dienst  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore-Client  
+- BookStore-Client  
   
  Der BookStore-Dienst unterstützt zwei Vorgänge: `BrowseBooks` und `BuyBook`. Es lässt anonymen Zugriff auf den `BrowseBooks`-Vorgang zu, aber erfordert authentifizierten Zugriff, um auf den `BuyBooks`-Vorgang zuzugreifen. Die Authentifizierung hat das Format eines Tokens, das von BookStore STS ausgegeben wird. Die Konfigurationsdatei zum BookStore-Dienst verweist Clients mit `wsFederationHttpBinding` auf BookStore STS.  
   

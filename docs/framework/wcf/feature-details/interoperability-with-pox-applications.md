@@ -3,18 +3,18 @@ title: Interoperabilität mit POX-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046891"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilität mit POX-Anwendungen
 
 "Plain Old XML" (POX)-Anwendungen kommunizieren, indem Sie den Austausch von unformatierte HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einem SOAP-Umschlag eingeschlossen ist. Windows Communication Foundation (WCF) bieten, die Dienste und Clients, die POX-Nachrichten verwenden. Für den Dienst kann WCF verwendet werden, Implementieren von Diensten, die Endpunkte für Clients, z. B. Webbrowser verfügbar zu machen und Skriptsprachen, mit die POX-Nachrichten senden und empfangen. Auf dem Client kann die WCF-Programmiermodell verwendet werden, zur Implementierung von Clients, die mit POX-basierten Diensten kommunizieren.  
   
 > [!NOTE]
-> Dieses Dokument wurde ursprünglich für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&#160;3.0 geschrieben.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.5 verfügt über intergrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> Dieses Dokument wurde ursprünglich für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.0 geschrieben.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;amp;#160;3.5 verfügt über intergrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>POX-Programmierung mit WCF
 
@@ -31,9 +31,9 @@ WCF-Dienste, die Kommunikation über HTTP unter Verwendung von POX-Nachrichten v
 
 Diese benutzerspezifische Bindung enthält zwei Elemente:
 
-- [\<HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+- [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
 
-- [\<TextMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
+- [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
 
 Der Standard, speziell für die Verwendung konfiguriert Textnachrichtenencoder WCF, die <xref:System.ServiceModel.Channels.MessageVersion.None%2A> -Wert, der kann zum Verarbeiten von XML-Nutzlasten für Nachrichten, die nicht eingetroffen in einen SOAP-Umschlag eingeschlossen.
 

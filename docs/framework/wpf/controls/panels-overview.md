@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051025"
 ---
 # <a name="panels-overview"></a>Übersicht über Panel-Elemente
 <xref:System.Windows.Controls.Panel> -Elemente sind Komponenten, die das Rendern von Elementen steuern – ihre Größe und Dimensionen, deren Position und die Anordnung des untergeordneten Inhalts. Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine Reihe von vordefinierten <xref:System.Windows.Controls.Panel> Elementen sowie die Möglichkeit zum Erstellen von benutzerdefinierten <xref:System.Windows.Controls.Panel> Elemente.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Die Panel-Klasse](#Panels_view_from_10000_feet)  
+- [Die Panel-Klasse](#Panels_view_from_10000_feet)  
   
--   [Allgemeine Member von Panel-Elementen](#Panels_declared_members)  
+- [Allgemeine Member von Panel-Elementen](#Panels_declared_members)  
   
--   [Abgeleitete Panel-Elemente](#Panels_derived_elements)  
+- [Abgeleitete Panel-Elemente](#Panels_derived_elements)  
   
--   [Panels der Benutzeroberfläche](#Panels_main_UI_elements)  
+- [Panels der Benutzeroberfläche](#Panels_main_UI_elements)  
   
--   [Geschachtelte Panel-Elemente](#Panels_nested_panel_elements)  
+- [Geschachtelte Panel-Elemente](#Panels_nested_panel_elements)  
   
--   [Benutzerdefinierte Panel-Elemente](#Panels_custom_panel_elements)  
+- [Benutzerdefinierte Panel-Elemente](#Panels_custom_panel_elements)  
   
--   [Unterstützung für Lokalisierung/Globalisierung](#Panels_global_localization)  
+- [Unterstützung für Lokalisierung/Globalisierung](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Die Panel-Klasse  

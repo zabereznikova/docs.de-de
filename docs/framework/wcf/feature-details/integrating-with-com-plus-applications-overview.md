@@ -6,24 +6,24 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046917"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
 Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen. Wenn Sie bereits komponentenbasierte Anwendungslogik, die in COM+ gehostet verwenden, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
   
  Wenn eine Schnittstelle auf einer COM+-Komponente als Webdienst verfügbar gemacht wird, werden die Spezifikation und der Vertrag dieser Dienste von einer automatischen Zuordnung bestimmt, die zur Anwendungsinitialisierungszeit ausgeführt wird. In der folgenden Liste wird das Modell für diese Zuordnung gezeigt:  
   
--   Ein Dienst wird für jede verfügbar gemachte COM-Klasse definiert.  
+- Ein Dienst wird für jede verfügbar gemachte COM-Klasse definiert.  
   
--   Der Vertrag für den Dienst wird direkt von der Schnittstellendefinition der ausgewählten Komponente abgeleitet, wobei die Möglichkeit des Methodenausschlusses in der Konfiguration definiert wird.  
+- Der Vertrag für den Dienst wird direkt von der Schnittstellendefinition der ausgewählten Komponente abgeleitet, wobei die Möglichkeit des Methodenausschlusses in der Konfiguration definiert wird.  
   
--   Die Vorgänge in diesem Vertrag werden direkt von den Methoden in der Schnittstellendefinition der Komponente abgeleitet.  
+- Die Vorgänge in diesem Vertrag werden direkt von den Methoden in der Schnittstellendefinition der Komponente abgeleitet.  
   
--   Die Parameter für diese Vorgänge werden direkt von dem COM-Interoperabilitätstyp abgeleitet, der den Methodenparametern der Komponente entspricht.  
+- Die Parameter für diese Vorgänge werden direkt von dem COM-Interoperabilitätstyp abgeleitet, der den Methodenparametern der Komponente entspricht.  
   
  Standardadressen und Transportbindungen für den Dienst werden in einer Dienstkonfigurationsdatei bereitgestellt, sie können jedoch ggf. neu konfiguriert werden.  
   
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
 ## <a name="supported-interfaces"></a>Unterstützte Schnittstellen  
  Es gibt einige Beschränkungen beim Typ von Schnittstellen, die als Webdienst verfügbar gemacht werden können. Die folgenden Typen von Schnittstellen werden nicht unterstützt:  
   
--   Schnittstellen, die Objektverweise als Parameter übergeben; der folgende beschränkte Objektverweisansatz wird im Abschnitt "Beschränkte Objektverweisunterstützung" beschrieben.  
+- Schnittstellen, die Objektverweise als Parameter übergeben; der folgende beschränkte Objektverweisansatz wird im Abschnitt "Beschränkte Objektverweisunterstützung" beschrieben.  
   
--   Schnittstellen, die Typen übergeben, die mit den [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-COM-Interoperabilitätskonvertierungen nicht kompatibel sind.  
+- Schnittstellen, die Typen übergeben, die mit den [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-COM-Interoperabilitätskonvertierungen nicht kompatibel sind.  
   
--   Schnittstellen für Anwendungen, in denen beim Hosten durch COM+ das Anwendungspooling aktiviert ist.  
+- Schnittstellen für Anwendungen, in denen beim Hosten durch COM+ das Anwendungspooling aktiviert ist.  
   
--   Schnittstellen von Komponenten, die für die Anwendung als privat markiert sind.  
+- Schnittstellen von Komponenten, die für die Anwendung als privat markiert sind.  
   
--   COM+-Infrastrukturschnittstellen.  
+- COM+-Infrastrukturschnittstellen.  
   
--   Schnittstellen aus der Systemanwendung.  
+- Schnittstellen aus der Systemanwendung.  
   
--   Schnittstellen aus Enterprise Services-Komponenten, die dem globalen Assemblycache nicht hinzugefügt wurden.  
+- Schnittstellen aus Enterprise Services-Komponenten, die dem globalen Assemblycache nicht hinzugefügt wurden.  
   
 ### <a name="limited-object-reference-support"></a>Beschränkte Objektverweisunterstützung  
  Da einige bereitgestellte COM+-Komponenten Objekte als Verweisparameter verwenden, wie Rückgabe eines ADO-Recordset-Objekts, schließt die COM+-Integration beschränkte Unterstützung für Objektverweisparameter ein. Die Unterstützung ist auf Objekte beschränkt, die die `IPersistStream`-COM-Schnittstelle implementieren. Sie schließt ADO-Recordset-Objekte ein und kann für anwendungsspezifische COM-Objekte implementiert werden.  
@@ -76,15 +76,15 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
 ## <a name="selecting-the-hosting-mode"></a>Auswählen des Hostingmodus  
  COM+ macht Webdienste in einem der folgenden Hostingmodi verfügbar:  
   
--   COM+-gehostet  
+- COM+-gehostet  
   
      Der Webdienst wird im dedizierten COM+-Serverprozess (Dllhost.exe) der Anwendung gehostet. Dieser Modus erfordert, dass die Anwendung explizit gestartet wird, bevor sie Webdienstanforderungen erhalten kann. Mit den COM+-Optionen "Als NT-Dienst ausführen" oder "Bei Leerlauf nicht herunterfahren" kann das Herunterfahren der Anwendung und ihrer Dienste bei Leerlauf verhindert werden. Dieser Modus bietet Webdiensten und DCOM Zugriff auf die Serveranwendung.  
   
--   Im Internet gehostet  
+- Im Internet gehostet  
   
      Der Webdienst wird in einem Webserver-Arbeitsprozess gehostet. In diesem Modus muss COM+ nicht aktiv sein, wenn die ursprüngliche Anforderung empfangen wird. Wenn die Anwendung beim Empfangen dieser Anforderung nicht aktiv ist, wird sie automatisch vor dem Verarbeiten der Anforderung aktiviert. Dieser Modus bietet ebenfalls Webdiensten und DCOM Zugriff auf die Serveranwendung, er bewirkt jedoch einen Prozesshop für Webdienstanforderungen. Dies erfordert in der Regel, dass der Client den Identitätswechsel aktiviert. In WCF dies erreichen Sie mit der <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential> -Klasse, die als Eigenschaft der generischen erfolgt <xref:System.ServiceModel.ChannelFactory%601> -Klasse, als auch die <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> Enumerationswert.  
   
--   Prozessintern im Internet gehostet  
+- Prozessintern im Internet gehostet  
   
      Der Webdienst und die COM+-Anwendungslogik werden im Webserver-Arbeitsprozess gehostet. Dieser bietet die automatische Aktivierung des Modus "Im Internet gehostet", ohne einen Prozesshop für Webdienstanforderungen zu bewirken. Der Nachteil besteht darin, dass der Zugriff auf die Serveranwendung über DCOM nicht möglich ist.  
   

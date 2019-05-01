@@ -3,11 +3,11 @@ title: Identitätswechsel und Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050674"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Identitätswechsel und Transportsicherheit
 *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, die Identität des Clients anzunehmen. Dienste greifen bei der Validierung des Zugriffs auf Ressourcen häufig auf den Identitätswechsel zurück. Die Serveranwendung wird unter einem Dienstkonto ausgeführt. Wenn der Server eine Clientverbindung akzeptiert, nimmt er die Identität des Clients an, das heißt, Zugriffsvalidierungen werden mit den Anmeldeinformationen des Clients durchgeführt. Bei der Transportsicherheit handelt es sich um einen Mechanismus, mit dem Anmeldeinformationen übergeben und die Kommunikation mit diesen Anmeldeinformationen gesichert werden können. Dieses Thema beschreibt, mit der Identitätswechselfunktion Transport Security in Windows Communication Foundation (WCF) verwenden. Weitere Informationen zum Identitätswechsel unter Verwendung der nachrichtensicherheit finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -33,24 +33,24 @@ ms.locfileid: "59151436"
 ### <a name="named-pipe-transport"></a>Named Pipe-Transport  
  Die folgenden Elemente werden mit dem Named Pipe-Transport verwendet:  
   
--   Der Named Pipe-Transport ist nur für die Verwendung auf dem lokalen Computer bestimmt. Die named Pipe-Transport in WCF lässt explizit keine computerübergreifenden Verbindungen zu.  
+- Der Named Pipe-Transport ist nur für die Verwendung auf dem lokalen Computer bestimmt. Die named Pipe-Transport in WCF lässt explizit keine computerübergreifenden Verbindungen zu.  
   
--   Named Pipes können nicht mit den Identitätswechselebenen `Impersonate` und `Delegate` verwendet werden. Die Named Pipe kann bei diesen Identitätswechselebenen keine computerinterne Kommunikation garantieren.  
+- Named Pipes können nicht mit den Identitätswechselebenen `Impersonate` und `Delegate` verwendet werden. Die Named Pipe kann bei diesen Identitätswechselebenen keine computerinterne Kommunikation garantieren.  
   
  Weitere Informationen zu named Pipes finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP-Transport  
  Die Bindungen, die den HTTP-Transport verwenden (<xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.BasicHttpBinding>) unterstützen verschiedene Authentifizierungsschemas, siehe [Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Die unterstützte Ebene des Identitätswechsels ist abhängig vom Authentifizierungsschema. Die folgenden Elemente werden mit dem HTTP-Transport verwendet:  
   
--   Das `Anonymous`-Authentifizierungsschema ignoriert den Identitätswechsel.  
+- Das `Anonymous`-Authentifizierungsschema ignoriert den Identitätswechsel.  
   
--   Die `Basic` -Authentifizierungsschema unterstützt nur die `Delegate` Ebene. Alle niedrigeren Identitätswechselebenen werden hochgestuft.  
+- Die `Basic` -Authentifizierungsschema unterstützt nur die `Delegate` Ebene. Alle niedrigeren Identitätswechselebenen werden hochgestuft.  
   
--   Das `Digest`-Authentifizierungsschema unterstützt nur die `Impersonate`-Ebene und die `Delegate`-Ebene.  
+- Das `Digest`-Authentifizierungsschema unterstützt nur die `Impersonate`-Ebene und die `Delegate`-Ebene.  
   
--   Das `NTLM`-Authentifizierungsschema, das entweder direkt oder durch Aushandlung ausgewählt werden kann, unterstützt nur die `Delegate`-Ebene auf dem lokalen Computer.  
+- Das `NTLM`-Authentifizierungsschema, das entweder direkt oder durch Aushandlung ausgewählt werden kann, unterstützt nur die `Delegate`-Ebene auf dem lokalen Computer.  
   
--   Das Kerberos-Authentifizierungsschema, das nur durch Aushandlung ausgewählt werden kann, kann mit allen unterstützten Ebenen des Identitätswechsels verwendet werden.  
+- Das Kerberos-Authentifizierungsschema, das nur durch Aushandlung ausgewählt werden kann, kann mit allen unterstützten Ebenen des Identitätswechsels verwendet werden.  
   
  Weitere Informationen zu den HTTP-Transport, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   

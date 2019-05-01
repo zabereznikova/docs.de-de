@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043216"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember-Methode
 Erstellt einen Verweis auf den angegebenen Member eines Typs oder ein Modul, das außerhalb des aktuellen Bereichs definiert ist, und definiert ein Token für diesen Verweis.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  Im Allgemeinen, bevor Sie verwenden die `DefineImportMember` -Methode, Sie müssen erstellen, den aktuellen Bereich ein Typverweis oder eine Modul-Referenz für des Zielmembers übergeordnete Klasse, Schnittstelle oder Moduls. Das Metadatentoken für diesen Verweis dann übergeben die `tkParent` Argument. Sie müssen sich nicht um einen Verweis auf den Zielmember übergeordnete zu erstellen, wenn sie später vom Compiler oder Linker aufgelöst wird. Zusammenfassung:  
   
--   Wenn der Zielmember ein Feld oder eine Methode ist, verwenden Sie entweder die [IMetaDataEmit:: DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) oder [IMetaDataEmit:: DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) Methode erstellen Sie einen Typverweis, im aktuellen Bereich, für die übergeordnete Klasse oder Schnittstelle des Members.  
+- Wenn der Zielmember ein Feld oder eine Methode ist, verwenden Sie entweder die [IMetaDataEmit:: DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) oder [IMetaDataEmit:: DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) Methode erstellen Sie einen Typverweis, im aktuellen Bereich, für die übergeordnete Klasse oder Schnittstelle des Members.  
   
--   Wenn der Zielmember eine globale Variable oder Funktion (d. h. nicht Mitglied einer Klasse oder Schnittstelle) ist, verwenden die [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) Methode, um einen Modulverweis im aktuellen Bereich, für das Element übergeordneten Elements erstellen Modul.  
+- Wenn der Zielmember eine globale Variable oder Funktion (d. h. nicht Mitglied einer Klasse oder Schnittstelle) ist, verwenden die [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) Methode, um einen Modulverweis im aktuellen Bereich, für das Element übergeordneten Elements erstellen Modul.  
   
--   Wenn der Zielmember übergeordneten später vom Compiler oder Linker aufgelöst wird, übergeben Sie `mdTokenNil` in `tkParent`. Ist das einzige Szenario, in dem dies gilt, wenn eine globale Funktion oder globale Variable wird aus einer OBJ-Datei, die letztendlich in das aktuelle Modul verknüpft werden, wird importiert, und die Metadaten zusammengeführt.  
+- Wenn der Zielmember übergeordneten später vom Compiler oder Linker aufgelöst wird, übergeben Sie `mdTokenNil` in `tkParent`. Ist das einzige Szenario, in dem dies gilt, wenn eine globale Funktion oder globale Variable wird aus einer OBJ-Datei, die letztendlich in das aktuelle Modul verknüpft werden, wird importiert, und die Metadaten zusammengeführt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

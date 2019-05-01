@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Margin property [WPF], setting
 ms.assetid: 70ebee01-6f87-4352-8dd4-402c65eaaed6
 ms.openlocfilehash: 3263810806b6b4bbec15eadfd1f1da3a57d12698
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052364"
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a>Vorgehensweise: Festlegen von Rändern von Elementen und Steuerelementen
 In diesem Beispiel wird beschrieben, wie zum Festlegen der <xref:System.Windows.FrameworkElement.Margin%2A> Eigenschaft ändern Sie alle vorhandenen Eigenschaftswerte für den Rand bei Code-Behind. Die <xref:System.Windows.FrameworkElement.Margin%2A> Eigenschaft ist eine Eigenschaft der <xref:System.Windows.FrameworkElement> Basis-Element und wird daher durch eine Vielzahl von Steuerelementen und anderen Elementen geerbt.  

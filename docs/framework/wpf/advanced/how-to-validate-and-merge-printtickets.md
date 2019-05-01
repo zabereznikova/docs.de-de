@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
 ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051107"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Vorgehensweise: Überprüfen und Zusammenführen von PrintTickets
 Die [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Druckschema](https://go.microsoft.com/fwlink/?LinkId=186397) enthält, die flexible und erweiterbare <xref:System.Printing.PrintCapabilities> und <xref:System.Printing.PrintTicket> Elemente. Ersteres aufführt, die Funktionen von einem Druckgerät und letzterer angibt, wie das Gerät auf diese Funktionen in Bezug auf eine bestimmte Sequenz von Dokumenten, einzelnes Dokument oder einzelne Seite verwenden soll.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050700"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
@@ -30,18 +30,18 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
   
  Die Bindung weist die folgenden Eigenschaften für eine Warteschlange für unzustellbare Nachrichten auf:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten  
  Eine Anwendung, die Nachrichten aus einer Warteschlange für unzustellbare Nachrichten liest, ist ähnlich wie ein WCF-Dienst, der aus einer Anwendungswarteschlange, mit Ausnahme der folgenden geringfügige Unterschiede liest:  
   
--   Zum Lesen von Nachrichten aus einer transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI (Uniform Resource Identifier) folgendes Format aufweisen: net.msmq://localhost/system$;DeadXact.  
+- Zum Lesen von Nachrichten aus einer transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI (Uniform Resource Identifier) folgendes Format aufweisen: net.msmq://localhost/system$;DeadXact.  
   
--   Zum Lesen von Nachrichten aus einer nicht transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI folgendes Format aufweisen: net.msmq://localhost/system$;DeadLetter.  
+- Zum Lesen von Nachrichten aus einer nicht transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI folgendes Format aufweisen: net.msmq://localhost/system$;DeadLetter.  
   
--   Um eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten gelesen werden, der URI muss von der Form: Net.msmq://localhost/private/ sein\<*Custom-Dlq-Name*>, in denen *Custom-Dlq-Name* ist der Name des benutzerdefinierten Dead Letter-Warteschlange.  
+- Um eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten gelesen werden, der URI muss von der Form: Net.msmq://localhost/private/ sein\<*Custom-Dlq-Name*>, in denen *Custom-Dlq-Name* ist der Name des benutzerdefinierten Dead Letter-Warteschlange.  
   
  Weitere Informationen dazu, wie Sie die Adresse von Warteschlangen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

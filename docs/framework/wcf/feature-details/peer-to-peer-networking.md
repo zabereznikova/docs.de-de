@@ -3,11 +3,11 @@ title: Peer-to-Peer-Netzwerke
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 ms.openlocfilehash: 388f6659602276cd3f356da2af63e4d31b5e22d6
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046413"
 ---
 # <a name="peer-to-peer-networking"></a>Peer-to-Peer-Netzwerke
 Peerkanal ist eine mehrparteien-, Peer-zu-Peer (P2P) kommunikationstechnologie in Windows Communication Foundation (WCF). Er stellt einen sicheren und skalierbaren nachrichtenbasierten P2P-Kommunikationschannel für Anwendungsentwickler bereit. Ein allgemeines Beispiel einer Mehrparteienanwendung, die vom Peerkanal profitieren kann, sind gemeinschaftliche Anwendungen, wie beispielsweise Chat, in denen eine Gruppe von Benutzern direkt miteinander kommunizieren kann, ohne dass Server erforderlich sind. Peerkanal ermöglicht P2P-Zusammenarbeit, Inhaltsverteilung, Lastenausgleich und verteilte Verarbeitung sowohl bei Consumer- als auch Unternehmensszenarios.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052130"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Vorgehensweise: Zugreifen auf Member eines Objekts (Visual Basic)
 Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten Sie häufig die Member des Objekts, z. B. die Methoden, Eigenschaften, Felder und Ereignisse zusammenarbeiten. Angenommen, nachdem Sie erstellt haben ein neues <xref:System.Windows.Forms.Form> -Objekts können Sie festlegen möchten die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft oder der Aufruf der <xref:System.Windows.Forms.Control.Focus%2A> Methode.  
@@ -20,7 +20,7 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
   
 #### <a name="to-access-members-of-an-object"></a>Auf Member eines Objekts zugreifen.  
   
--   Verwenden Sie den Memberzugriffsoperator (`.`) zwischen den Namen der Objektvariablen und den Namen des Members.  
+- Verwenden Sie den Memberzugriffsoperator (`.`) zwischen den Namen der Objektvariablen und den Namen des Members.  
   
     ```  
     currentText = newForm.Text  
