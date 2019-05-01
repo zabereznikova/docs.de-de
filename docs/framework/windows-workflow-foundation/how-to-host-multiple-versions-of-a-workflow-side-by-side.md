@@ -5,66 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329452"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809462"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Vorgehensweise: Paralleles Hosten mehrerer Workflowversionen
+
 `WorkflowIdentity` bietet Entwicklern von Workflowanwendungen die Möglichkeit, einer Worfklowdefinition einen Namen und eine Version zuzuordnen und diese Informationen mit einer persistenten Workflowinstanz zu verknüpfen. Entwickler von Workflowanwendungen können diese Identitätsinformationen verwenden, um Szenarien wie die parallele Ausführung mehrerer Versionen einer Workflowdefinition umzusetzen. Darüber hinaus bilden sie die Grundlage für andere Funktionen wie dynamische Updates. In diesem Schritt des Lernprogramms wird veranschaulicht, wie mit `WorkflowIdentity` mehrere Versionen eines Workflows gleichzeitig gehostet werden.
 
 > [!NOTE]
->  Um den download einer vervollständigten Version oder eine Videodemonstration des Lernprogramms anzuzeigen, finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
-  
-## <a name="in-this-topic"></a>In diesem Thema  
- In diesem Schritt des Lernprogramms werden die `WriteLine`-Aktivitäten im Workflow geändert, um zusätzliche Informationen bereitzustellen. Außerdem wird eine neue `WriteLine`-Aktivität hinzugefügt. Eine Kopie der ursprünglichen Workflowassembly wird gespeichert, und die Hostanwendung wird aktualisiert, sodass der ursprüngliche und der aktualisierte Workflow gleichzeitig ausgeführt werden können.  
-  
--   [Um eine Kopie des NumberGuessWorkflowActivities-Projekts erstellen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
-  
--   [Aktualisieren von workflows](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
-  
-    -   [StateMachine-Workflow aktualisieren](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
-  
-    -   [So aktualisieren Sie die Flussdiagramm-workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
-  
-    -   [Aktualisieren Sie den sequenziellen workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
-  
--   [So aktualisieren Sie WorkflowVersionMap, um die vorherigen workflowversionen einzuschließen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
-  
--   [Zum Erstellen und Ausführen der Anwendungs](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
-  
-> [!NOTE]
->  Bevor Sie die Schritte in diesem Thema ausführen, führen Sie die Anwendung aus, starten mehrere Workflows jedes Typs und geben einen oder zwei Schätzwerte für jeden Typ an. Diese persistenten Workflows werden in diesem Schritt und den folgenden Schritt aus, verwendet [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
+> Um den download einer vervollständigten Version oder eine Videodemonstration des Lernprogramms anzuzeigen, finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+
+## <a name="in-this-topic"></a>In diesem Thema
+
+In diesem Schritt des Lernprogramms werden die `WriteLine`-Aktivitäten im Workflow geändert, um zusätzliche Informationen bereitzustellen. Außerdem wird eine neue `WriteLine`-Aktivität hinzugefügt. Eine Kopie der ursprünglichen Workflowassembly wird gespeichert, und die Hostanwendung wird aktualisiert, sodass der ursprüngliche und der aktualisierte Workflow gleichzeitig ausgeführt werden können.
+
+- [Um eine Kopie des NumberGuessWorkflowActivities-Projekts erstellen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)
+
+- [Aktualisieren von workflows](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
+
+    - [StateMachine-Workflow aktualisieren](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+
+    - [So aktualisieren Sie die Flussdiagramm-workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+
+    - [Aktualisieren Sie den sequenziellen workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+
+- [So aktualisieren Sie WorkflowVersionMap, um die vorherigen workflowversionen einzuschließen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
+
+- [Zum Erstellen und Ausführen der Anwendungs](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)
 
 > [!NOTE]
->  Jeder Schritt im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Schritten ab. Wenn Sie nicht die vorherigen Schritte abgeschlossen haben, können Sie eine abgeschlossene Version des Lernprogramms von herunterladen [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
-  
-### <a name="BKMK_BackupCopy"></a> Um eine Kopie des NumberGuessWorkflowActivities-Projekts erstellen  
-  
-1. Öffnen Sie die **WF45GettingStartedTutorial** -Lösung in Visual Studio 2012, wenn er nicht geöffnet ist.  
-  
-2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
-  
-3. Schließen der **WF45GettingStartedTutorial** Lösung.  
-  
-4. Öffnen Sie Windows-Explorer, und navigieren Sie zu dem Ordner, in dem sich die Projektmappendatei und die Projektordner des Lernprogramms befinden.  
-  
-5. Erstellen Sie einen neuen Ordner namens **PreviousVersions** im gleichen Ordner wie **NumberGuessWorkflowHost** und **NumberGuessWorkflowActivities**. In diesem Ordner werden die Assemblys gespeichert, die die verschiedenen Versionen der in den folgenden Lernprogrammschritten verwendeten Workflows enthalten.  
-  
-6. Navigieren Sie zu der **NumberGuessWorkflowActivities\bin\debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen). Kopie **NumberGuessWorkflowActivities.dll** , und fügen Sie ihn in das **PreviousVersions** Ordner.  
-  
-7. Benennen Sie **NumberGuessWorkflowActivities.dll** in die **PreviousVersions** Ordner **NumberGuessWorkflowActivities_v1.dll**.  
-  
+> Bevor Sie die Schritte in diesem Thema ausführen, führen Sie die Anwendung aus, starten mehrere Workflows jedes Typs und geben einen oder zwei Schätzwerte für jeden Typ an. Diese persistenten Workflows werden in diesem Schritt und den folgenden Schritt aus, verwendet [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
+
+> [!NOTE]
+> Jeder Schritt im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Schritten ab. Wenn Sie nicht die vorherigen Schritte abgeschlossen haben, können Sie eine abgeschlossene Version des Lernprogramms von herunterladen [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+
+### <a name="BKMK_BackupCopy"></a> Um eine Kopie des NumberGuessWorkflowActivities-Projekts erstellen
+
+1. Öffnen Sie die **WF45GettingStartedTutorial** -Lösung in Visual Studio 2012, wenn er nicht geöffnet ist.
+
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+
+3. Schließen der **WF45GettingStartedTutorial** Lösung.
+
+4. Öffnen Sie Windows-Explorer, und navigieren Sie zu dem Ordner, in dem sich die Projektmappendatei und die Projektordner des Lernprogramms befinden.
+
+5. Erstellen Sie einen neuen Ordner namens **PreviousVersions** im gleichen Ordner wie **NumberGuessWorkflowHost** und **NumberGuessWorkflowActivities**. In diesem Ordner werden die Assemblys gespeichert, die die verschiedenen Versionen der in den folgenden Lernprogrammschritten verwendeten Workflows enthalten.
+
+6. Navigieren Sie zu der **NumberGuessWorkflowActivities\bin\debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen). Kopie **NumberGuessWorkflowActivities.dll** , und fügen Sie ihn in das **PreviousVersions** Ordner.
+
+7. Benennen Sie **NumberGuessWorkflowActivities.dll** in die **PreviousVersions** Ordner **NumberGuessWorkflowActivities_v1.dll**.
+
     > [!NOTE]
-    >  Die Schritte in diesem Thema zeigen eine Möglichkeit zur Verwaltung der Assemblys, in denen mehrere Versionen der Workflows enthalten sind. Andere Methoden, wie starke Namen für die Assemblys und das Registrieren der Assemblys im globalen Assemblycache, können ebenfalls verwendet werden.
+    > Die Schritte in diesem Thema zeigen eine Möglichkeit zur Verwaltung der Assemblys, in denen mehrere Versionen der Workflows enthalten sind. Andere Methoden, wie starke Namen für die Assemblys und das Registrieren der Assemblys im globalen Assemblycache, können ebenfalls verwendet werden.
 
 8. Erstellen Sie einen neuen Ordner namens **NumberGuessWorkflowActivities_du** im gleichen Ordner wie **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, und die neu hinzugefügt **PreviousVersions** Ordner und kopieren Sie alle Dateien und Unterordner aus dem **NumberGuessWorkflowActivities** Ordner in das neue  **NumberGuessWorkflowActivities_du** Ordner. Diese Sicherungskopie des Projekts für die erste Version der Aktivitäten werden in [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Öffnen Sie erneut die **WF45GettingStartedTutorial** -Lösung in Visual Studio 2012.
 
 ### <a name="BKMK_UpdateWorkflows"></a> Aktualisieren von workflows
+
  In diesem Abschnitt werden die Workflowdefinitionen aktualisiert. Die beiden `WriteLine`-Aktivitäten, die Feedback zum Schätzwert des Benutzers geben, werden aktualisiert, und es wird eine neue `WriteLine`-Aktivität hinzugefügt, die zusätzliche Informationen zum Spiel bereitstellt, nachdem die Zahl geschätzt wurde.
 
 #### <a name="BKMK_UpdateStateMachine"></a> StateMachine-Workflow aktualisieren
@@ -278,7 +281,7 @@ ms.locfileid: "59329452"
     map.Add(SequentialNumberGuessIdentity, new SequentialNumberGuessWorkflow());
     ```
 
-     Durch den darin enthaltenen Code werden dem Wörterbuch die aktuellen Workflowversionen hinzugefügt. Der Code verwendet die aktuellen Versionen, auf die im Projekt verwiesen wird. Aus diesem Grund muss der Code, durch den die Workflowdefinitionen initialisiert werden, nicht aktualisiert werden.
+    Durch den darin enthaltenen Code werden dem Wörterbuch die aktuellen Workflowversionen hinzugefügt. Der Code verwendet die aktuellen Versionen, auf die im Projekt verwiesen wird. Aus diesem Grund muss der Code, durch den die Workflowdefinitionen initialisiert werden, nicht aktualisiert werden.
 
 5. Fügen Sie den folgenden Code im Konstruktor unmittelbar nach dem Code hinzu, durch den dem Wörterbuch die aktuellen Versionen hinzugefügt werden.
 
@@ -324,7 +327,7 @@ ms.locfileid: "59329452"
     };
     ```
 
-     Diese Workflowidentitäten werden den ursprünglichen Versionen der entsprechenden Workflowdefinitionen zugeordnet.
+    Diese Workflowidentitäten werden den ursprünglichen Versionen der entsprechenden Workflowdefinitionen zugeordnet.
 
 6. Als Nächstes laden Sie die Assembly, die die ursprüngliche Version der Workflowdefinitionen enthält, und erstellen die entsprechenden Workflowdefinitionen und fügen sie dem Wörterbuch hinzu.
 
@@ -366,7 +369,7 @@ ms.locfileid: "59329452"
         v1Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     Das folgende Beispiel enthält die vollständige Auflistung für die aktualisierte `WorkflowVersionMap`-Klasse.
+    Das folgende Beispiel enthält die vollständige Auflistung für die aktualisierte `WorkflowVersionMap`-Klasse.
 
     ```vb
     Public Module WorkflowVersionMap
@@ -555,29 +558,35 @@ ms.locfileid: "59329452"
 
 2. Starten Sie einen neuen Workflow, indem Sie auf **neues Spiel**. Die Version des Workflows wird unter dem Statusfenster angezeigt und gibt die aktualisierte Version der zugeordneten `WorkflowIdentity` an. Notieren Sie die `InstanceId`, sodass Sie beim Abschluss des Workflows dessen Nachverfolgungsdatei anzeigen können. Geben Sie dann Schätzwerte ein, bis das Spiel abgeschlossen ist. Beachten Sie, wie sich der Schätzwert des Benutzers gemäß den Updates der `WriteLine`-Aktivitäten in den Informationen im Statusfenster verändert.
 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**  
-**5 ist zu hoch.**  
-**Bitte geben Sie eine Zahl zwischen 1 und 10**  
-**3 ist zu hoch.**  
-**Bitte geben Sie eine Zahl zwischen 1 und 10**  
-**1 ist zu niedrig.**  
-**Bitte geben Sie eine Zahl zwischen 1 und 10**  
-**Herzlichen Glückwunsch, Sie die Zahl 4 wiederum erraten.**  
+    ```
+    Please enter a number between 1 and 10
+    5 is too high.
+    Please enter a number between 1 and 10
+    3 is too high.
+    Please enter a number between 1 and 10
+    1 is too low.
+    Please enter a number between 1 and 10
+    Congratulations, you guessed the number in 4 turns.
+    ```
 
     > [!NOTE]
-    >  Der aktualisierte Text aus den `WriteLine`-Aktivitäten wird angezeigt, die Ausgabe der endgültigen, in diesem Thema hinzugefügten `WriteLine`-Aktivität jedoch nicht. Das liegt daran, dass das Statusfenster vom `PersistableIdle`-Handler aktualisiert wird. Da der Workflow abgeschlossen wird, statt nach der letzten Aktivität in den Leerlauf zu wechseln, wird der `PersistableIdle`-Handler nicht aufgerufen. Im Statusfenster wird jedoch eine ähnliche Meldung vom `Completed`-Handler angezeigt. Bei Bedarf kann Code dem `Completed`-Handler hinzugefügt werden, um den Text aus `StringWriter` zu extrahieren und ihn im Statusfenster anzuzeigen.
+    > Der aktualisierte Text aus den `WriteLine`-Aktivitäten wird angezeigt, die Ausgabe der endgültigen, in diesem Thema hinzugefügten `WriteLine`-Aktivität jedoch nicht. Das liegt daran, dass das Statusfenster vom `PersistableIdle`-Handler aktualisiert wird. Da der Workflow abgeschlossen wird, statt nach der letzten Aktivität in den Leerlauf zu wechseln, wird der `PersistableIdle`-Handler nicht aufgerufen. Im Statusfenster wird jedoch eine ähnliche Meldung vom `Completed`-Handler angezeigt. Bei Bedarf kann Code dem `Completed`-Handler hinzugefügt werden, um den Text aus `StringWriter` zu extrahieren und ihn im Statusfenster anzuzeigen.
 
 3. Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowHost\bin\debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen), und öffnen Sie die Nachverfolgungsdatei, die mit dem Editor, der entspricht mit dem abgeschlossenen Workflow. Wenn Sie sich noch nicht vorgenommen haben die `InstanceId`, können Sie die richtige Nachverfolgungsdatei identifizieren, mit der **Änderungsdatum** Informationen im Windows-Explorer.
 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**5 ist zu hoch.** 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**3 ist zu hoch.** 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**1 ist zu niedrig.** 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**2 richtig ist. Sie ahnen es bereits in 4 deaktiviert.**      Die aktualisierte `WriteLine`-Ausgabe ist in der Nachverfolgungsdatei enthalten, einschließlich der Ausgabe der `WriteLine`-Aktivität, die diesem Thema hinzugefügt wurde.
+    ```
+    Please enter a number between 1 and 10
+    5 is too high.
+    Please enter a number between 1 and 10
+    3 is too high.
+    Please enter a number between 1 and 10
+    1 is too low.
+    Please enter a number between 1 and 10
+    2 is correct. You guessed it in 4 turns.
+    ```
+
+    Die aktualisierte `WriteLine`-Ausgabe ist in der Nachverfolgungsdatei enthalten, einschließlich der Ausgabe der `WriteLine`-Aktivität, die diesem Thema hinzugefügt wurde.
 
 4. Wechseln Sie zurück zur Anwendung zum Schätzen der Zahl, und wählen Sie einen der Workflows aus, die vor den Updates gestartet wurden. Sie können die Version des aktuell ausgewählten Workflows anhand der Versionsinformationen identifizieren, die unter dem Statusfenster angezeigt werden. Geben Sie mehrere Schätzwerte ein. Sie werden feststellen, dass die Statusupdates mit der Ausgabe der `WriteLine`-Aktivität aus der vorherigen Version übereinstimmen und keine Schätzwerte des Benutzers enthalten. Das liegt daran, dass diese Workflows die vorherige Workflowdefinition verwenden, die nicht über die `WriteLine`-Updates verfügt.
 
-     Im nächsten Schritt [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md), die laufende `v1` Workflowinstanzen werden aktualisiert, damit sie die neue Funktionen als enthalten die `v2` Instanzen.
+    Im nächsten Schritt [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md), die laufende `v1` Workflowinstanzen werden aktualisiert, damit sie die neue Funktionen als enthalten die `v2` Instanzen.

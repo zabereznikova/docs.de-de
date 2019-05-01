@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212413"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808330"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitgestellt werden, sondern nutzt auch die Sicherheitsfeatures der zugrundeliegenden Plattform, die das Betriebssystem enthält, die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], und [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
   
- ![WPF-Sicherheitsdarstellung](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![Diagramm, das das WPF-Sicherheit-Modell zeigt.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  Im weiteren Verlauf dieses Themas werden die Features auf den einzelnen Ebenen erläutert, die besonders [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] betreffen.  
 
@@ -39,9 +39,9 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Zusätzlich zu einer allgemeinen Beurteilung und Erhöhung der Sicherheit von Windows, es gibt drei wichtige Features [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] , die in diesem Thema wird erläutert:  
   
--   /GS-Kompilierung  
+- /GS-Kompilierung  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS-Kompilierung  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] bietet Schutz durch das erneute Kompilieren vieler zentraler Systembibliotheken, einschließlich aller [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Abhängigkeiten wie die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], um das Risiko von Pufferüberläufen zu verringern. Dies wird mit dem /GS-Parameter und dem C/C++-Befehlszeilencompiler erreicht. Obwohl Pufferüberläufe ausdrücklich vermieden werden sollten, ist die Kompilierung mit /GS ein Beispiel für eine tiefgreifende Verteidigungsmaßnahme gegen potenzielle Sicherheitslücken, die versehentlich oder böswillig durch Pufferüberläufe erzeugt werden.  
@@ -66,9 +66,9 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Anwendungen nur mit den unbedingt erforderlichen Berechtigungen auszuführen, ist eine Möglichkeit, sich vor dieser Sicherheitsbedrohung zu schützen. Dieses sogenannte "Prinzip der geringsten Rechte" ist ein zentrales Feature des Betriebssystems [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]. Diese als Benutzerkontensteuerung bezeichnete Funktion wird von [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] auf zweierlei Weise verwendet:  
   
--   Die meisten Anwendungen werden standardmäßig mit den Rechten der Benutzerkontensteuerung ausgeführt, selbst wenn der Benutzer ein Administrator ist; nur Anwendungen, die Administratorrechte benötigen, werden mit Administratorrechten ausgeführt. Um mit Administratorrechten ausgeführt zu werden, müssen Anwendungen entweder in ihrem Anwendungsmanifest oder als Eintrag in der Sicherheitsrichtlinie besonders gekennzeichnet werden.  
+- Die meisten Anwendungen werden standardmäßig mit den Rechten der Benutzerkontensteuerung ausgeführt, selbst wenn der Benutzer ein Administrator ist; nur Anwendungen, die Administratorrechte benötigen, werden mit Administratorrechten ausgeführt. Um mit Administratorrechten ausgeführt zu werden, müssen Anwendungen entweder in ihrem Anwendungsmanifest oder als Eintrag in der Sicherheitsrichtlinie besonders gekennzeichnet werden.  
   
--   Bereitstellen von Kompatibilitätslösungen wie die Virtualisierung. Viele Anwendungen versuchen beipielsweise, in eingeschränkte Speicherorte wie "C:\Programme" zu schreiben. Für Anwendungen, die über die Benutzerkontensteuerung ausgeführt werden, steht ein alternativer benutzerbezogener Speicherort zur Verfügung, der für Schreibvorgänge keine Administratorrechte erfordert. Für Anwendungen, die über die Benutzerkontensteuerung ausgeführt werden, wird "C:\Programme" virtualisiert. Dadurch wird der Anschein erweckt, dass die Anwendungen in dieses Verzeichnis schreiben, obwohl sie stattdessen in den alternativen, benutzerbezogenen Speicherort schreiben. Dank dieser Art von Kompatibilität kann das Betriebssystem viele Anwendungen ausführen, die zuvor nicht mit der Benutzerkontensteuerung ausgeführt werden konnten.  
+- Bereitstellen von Kompatibilitätslösungen wie die Virtualisierung. Viele Anwendungen versuchen beipielsweise, in eingeschränkte Speicherorte wie "C:\Programme" zu schreiben. Für Anwendungen, die über die Benutzerkontensteuerung ausgeführt werden, steht ein alternativer benutzerbezogener Speicherort zur Verfügung, der für Schreibvorgänge keine Administratorrechte erfordert. Für Anwendungen, die über die Benutzerkontensteuerung ausgeführt werden, wird "C:\Programme" virtualisiert. Dadurch wird der Anschein erweckt, dass die Anwendungen in dieses Verzeichnis schreiben, obwohl sie stattdessen in den alternativen, benutzerbezogenen Speicherort schreiben. Dank dieser Art von Kompatibilität kann das Betriebssystem viele Anwendungen ausführen, die zuvor nicht mit der Benutzerkontensteuerung ausgeführt werden konnten.  
   
 #### <a name="code-integrity-checks"></a>Integritätsprüfungen für Code  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] enthält strengere Integritätsprüfungen für Code, um zu verhindern, dass bösartiger Code zur Lade-/Laufzeit in Systemdateien oder den Kernel eingeschleust wird. Dies geht über den Schutz der Systemdateien hinaus.  
@@ -100,11 +100,11 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Verwaltete Anwendungen werden in Microsoft Intermediate Language (MSIL) kompiliert. Wenn Methoden in einer verwalteten Anwendung ausgeführt werden, wird die MSIL über Just-in-Time (JIT)-Kompilierung in systemeigenen Code kompiliert. Die JIT-Kompilierung enthält einen Prüfprozess mit vielen Sicherheits- und Stabilitätsregeln, die sicherstellen, dass der Code keine der folgenden Eigenschaften aufweist:  
   
--   Verletzen von Typverträgen  
+- Verletzen von Typverträgen  
   
--   Verursachen von Pufferüberläufen  
+- Verursachen von Pufferüberläufen  
   
--   Unkontrollierter Zugriff auf den Arbeitsspeicher  
+- Unkontrollierter Zugriff auf den Arbeitsspeicher  
   
  Verwalteter Code, der den Prüfregeln nicht entspricht, darf nur dann ausgeführt werden, wenn er als vertrauenswürdiger Code gilt.  
   
@@ -116,29 +116,29 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Der Satz von Rechten, den [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] einer verwalteten Anwendung beim Starten gewährt, wird als Berechtigungssatz bezeichnet. Er richtet sich nach den von der Anwendung bereitgestellten Nachweisen. Bei [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen wird als Nachweis der Speicherort oder die Zone bereitgestellt, von dem bzw. der die Anwendungen gestartet werden. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] identifiziert die folgenden Zonen:  
   
--   **Arbeitsplatz**. Anwendungen, die auf dem Clientcomputer gestartet werden (voll vertrauenswürdig).  
+- **Arbeitsplatz**. Anwendungen, die auf dem Clientcomputer gestartet werden (voll vertrauenswürdig).  
   
--   **Lokales Intranet**. Anwendungen, die aus dem Intranet gestartet werden (in gewisser Weise vertrauenswürdig).  
+- **Lokales Intranet**. Anwendungen, die aus dem Intranet gestartet werden (in gewisser Weise vertrauenswürdig).  
   
--   **Internet**. Anwendungen, die aus dem Internet gestartet werden (wenig vertrauenswürdig).  
+- **Internet**. Anwendungen, die aus dem Internet gestartet werden (wenig vertrauenswürdig).  
   
--   **Vertrauenswürdige Sites**. Anwendungen, die von einem Benutzer als vertrauenswürdig identifiziert wurden (wenig vertrauenswürdig).  
+- **Vertrauenswürdige Sites**. Anwendungen, die von einem Benutzer als vertrauenswürdig identifiziert wurden (wenig vertrauenswürdig).  
   
--   **Nicht vertrauenswürdige Sites**. Anwendungen, die von einem Benutzer als nicht vertrauenswürdig identifiziert wurden (nicht vertrauenswürdig).  
+- **Nicht vertrauenswürdige Sites**. Anwendungen, die von einem Benutzer als nicht vertrauenswürdig identifiziert wurden (nicht vertrauenswürdig).  
   
  Für jede dieser Zonen stellt [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] einen vordefinierten Berechtigungssatz bereit, der die Berechtigungen enthält, die der jeweils zugeordneten Vertrauensebene entsprechen. Dazu gehören:  
   
--   **FullTrust**. Für Anwendungen, die gestartet werden, aus der **Arbeitsplatz** Zone. Alle möglichen Berechtigungen werden gewährt.  
+- **FullTrust**. Für Anwendungen, die gestartet werden, aus der **Arbeitsplatz** Zone. Alle möglichen Berechtigungen werden gewährt.  
   
--   **LocalIntranet**. Für Anwendungen, die gestartet werden, aus der **Lokales Intranet** Zone. Für einen moderaten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, uneingeschränkter Zugriff auf die Benutzeroberfläche und Dateidialogfelder, eingeschränkte Reflektion sowie eingeschränkter Zugriff auf Umgebungsvariablen. Berechtigungen für kritische Ressourcen wie die Registrierung werden nicht bereitgestellt.  
+- **LocalIntranet**. Für Anwendungen, die gestartet werden, aus der **Lokales Intranet** Zone. Für einen moderaten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, uneingeschränkter Zugriff auf die Benutzeroberfläche und Dateidialogfelder, eingeschränkte Reflektion sowie eingeschränkter Zugriff auf Umgebungsvariablen. Berechtigungen für kritische Ressourcen wie die Registrierung werden nicht bereitgestellt.  
   
--   **Internet**. Für Anwendungen, die gestartet werden, aus der **Internet** oder **vertrauenswürdige Sites** Zone. Für einen eingeschränkten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, Öffnen von Dateien sowie eingeschränkter Zugriff auf die Benutzeroberfläche. Im Grunde isolieren diese Berechtigungssätze die Anwendungen vom Clientcomputer.  
+- **Internet**. Für Anwendungen, die gestartet werden, aus der **Internet** oder **vertrauenswürdige Sites** Zone. Für einen eingeschränkten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, Öffnen von Dateien sowie eingeschränkter Zugriff auf die Benutzeroberfläche. Im Grunde isolieren diese Berechtigungssätze die Anwendungen vom Clientcomputer.  
   
  Anwendungen, die aus der **nicht vertrauenswürdige Sites** Zone werden keine Berechtigungen erteilt [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] überhaupt. Daher gibt es für diese Anwendungen keinen vordefinierten Berechtigungssatz.  
   
- Die folgende Abbildung veranschaulicht die Beziehung zwischen Zonen, Berechtigungssätzen, Berechtigungen und Ressourcen.  
+ Die folgende Abbildung veranschaulicht die Beziehung zwischen Zonen, Berechtigungssätzen, Berechtigungen und Ressourcen:  
   
- ![CAS-Berechtigungssätze](./media/caspermissionsets.png "CASPermissionSets")  
+ ![Das Diagramm, das CAS-Berechtigungssätze anzeigt.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  Die Einschränkungen des Sicherheitssandkastens der Internetzone gelten in gleicher Weise für jeden Code, den eine [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] aus einer Systembibliothek importiert (einschließlich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]). Dadurch wird sichergestellt, dass jedes Bit des Codes (selbst [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]) gesperrt wird. Unglücklicherweise muss eine [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] jedoch, um ausgeführt zu werden, Funktionalität ausführen, die mehr Berechtigungen erfordert, als im Rahmen des Sicherheitssandkastens der Internetzone gewährt werden.  
   
@@ -149,11 +149,11 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Zum Ausführen dieser [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] muss der zugrunde liegende [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Code mehr Funktionalität ausführen, als der aufrufenden [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] zur Verfügung steht. Dazu zählen:  
   
--   Erstellen eines Fensterhandles (hWnd) für das Rendering  
+- Erstellen eines Fensterhandles (hWnd) für das Rendering  
   
--   Verteilen von Nachrichten  
+- Verteilen von Nachrichten  
   
--   Laden der Schriftart Tahoma  
+- Laden der Schriftart Tahoma  
   
  Unter dem Gesichtspunkt der Sicherheit wäre die Gewährung des direkten Zugriffs auf diese Vorgänge für die im Sicherheitssandkasten ausgeführte Anwendung eine Katastrophe.  
   
@@ -190,11 +190,11 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Vor [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] mussten Benutzer mit Folgendem rechnen:  
   
--   Zufällige Popupfenster  
+- Zufällige Popupfenster  
   
--   Verwirrende Skriptumleitung  
+- Verwirrende Skriptumleitung  
   
--   Zahlreiche Sicherheitsdialogfelder auf manchen Websites  
+- Zahlreiche Sicherheitsdialogfelder auf manchen Websites  
   
  In einigen Fällen versuchten nicht vertrauenswürdige Websites, Benutzer durch Spoofing der Installationsbenutzeroberfläche [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] oder wiederholtes Anzeigen eines [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)]-Installationsdialogfelds zu täuschen, obwohl der Benutzer den Vorgang bereits abgebrochen hatte. Mit diesen Techniken ist es möglich, eine große Anzahl von Benutzern zu schlechten Entscheidungen zu verleiten, die zur Installation von Spyware-Anwendungen führen.  
   

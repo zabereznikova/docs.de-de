@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517836"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773928"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Vorgehensweise: Entwickeln von WCF Data Services auf IIS ausgeführt wird
 
@@ -23,9 +23,9 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 > [!NOTE]
 > Um den Northwind-Datendienst zu erstellen, muss die Northwind-Beispieldatenbank auf dem lokalen Computer installiert sein. Diese Beispieldatenbank kann von der Downloadseite [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)heruntergeladen werden.
 
- In diesem Thema wird gezeigt, wie ein Datendienst mithilfe des Entity Framework-Anbieters erstellt wird. Weitere Datendiensteanbieter sind verfügbar. Weitere Informationen finden Sie unter [Datendiensteanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+In diesem Thema wird gezeigt, wie ein Datendienst mithilfe des Entity Framework-Anbieters erstellt wird. Weitere Datendiensteanbieter sind verfügbar. Weitere Informationen finden Sie unter [Datendiensteanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienstressourcen bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren des Zugriffs auf den Datendienst](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienstressourcen bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren des Zugriffs auf den Datendienst](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Erstellen der ASP.NET-Webanwendung, die unter IIS ausgeführt wird.
 
@@ -35,7 +35,7 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 
 3. Wählen Sie die **ASP.NET-Webanwendung** Vorlage.
 
-1. Geben Sie `NorthwindService` als den Namen des Projekts.
+4. Geben Sie `NorthwindService` als den Namen des Projekts.
 
 5. Klicken Sie auf **OK**.
 
@@ -47,13 +47,13 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 
 9. Führen Sie an der Eingabeaufforderung mit Administratorrechten einen der folgenden Befehle aus (je nach Betriebssystem):
 
-    -   32-Bit-Systeme:
+    - 32-Bit-Systeme:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64-Bit-Systeme:
+    - 64-Bit-Systeme:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 
 10. Führen Sie an der Eingabeaufforderung mit Administratorrechten einen der folgenden Befehle aus (je nach Betriebssystem):
 
-    -   32-Bit-Systeme:
+    - 32-Bit-Systeme:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64-Bit-Systeme:
+    - 64-Bit-Systeme:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 
 5. Verbinden Sie das Datenmodell mit der Datenbank, indem er einen der folgenden Schritte aus, und klicken Sie dann auf **Weiter**:
 
-    -   Wenn Sie keine datenbankverbindung, die bereits konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Verbindungen zu SQL Server-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=123631). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
+    - Wenn Sie keine datenbankverbindung, die bereits konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Verbindungen zu SQL Server-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=123631). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
 
          \- oder –
 
-    -   Wenn bereits eine Datenbankverbindung für die Northwind-Datenbank konfiguriert wurde, wählen Sie diese Verbindung in der Liste der Verbindungen aus.
+    - Wenn bereits eine Datenbankverbindung für die Northwind-Datenbank konfiguriert wurde, wählen Sie diese Verbindung in der Liste der Verbindungen aus.
 
 6. Aktivieren Sie auf der letzten Seite des Assistenten die Kontrollkästchen für alle Tabellen in der Datenbank, und deaktivieren Sie die Kontrollkästchen für Sichten und gespeicherte Prozeduren.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222060"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809534"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Vorgehensweise: Binden der Eigenschaften von zwei Steuerelementen
 Dieses Beispiel zeigt, wie Sie die Eigenschaft eines instanziierten Steuerelements an, die von einem anderen mit binden die <xref:System.Windows.Data.Binding.ElementName%2A> Eigenschaft.  
@@ -23,9 +23,10 @@ Dieses Beispiel zeigt, wie Sie die Eigenschaft eines instanziierten Steuerelemen
   
  Bei Rendern dieses Beispiels sieht es folgendermaßen aus:  
   
- ![Canvas mit grünem Hintergrund](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **Beachten Sie** die Bindungsziel-Eigenschaft (in diesem Beispiel die <xref:System.Windows.Controls.Panel.Background%2A> Eigenschaft) muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](data-binding-overview.md).  
+![Screenshot, der ein Kombinationsfeld anzeigt, das mit dem Wert, der grüne aktiviert und ein grünes Quadrat.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> Die Bindungsziel-Eigenschaft (in diesem Beispiel die <xref:System.Windows.Controls.Panel.Background%2A> Eigenschaft) muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

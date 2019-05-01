@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Qualifizieren von XML-Element- und XML-Attributnamen'
+title: 'Vorgehensweise: Qualifizieren von XML-Element- und XML-Attributnamen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176733"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807815"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Gewusst wie: Qualifizieren von XML-Element- und XML-Attributnamen
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Vorgehensweise: Qualifizieren von XML-Element- und XML-Attributnamen
 
 Von Instanzen der enthaltenen XML-Namespaces der <xref:System.Xml.Serialization.XmlSerializerNamespaces> Spezifikation des World Wide Web Consortium (W3C) Klasse entsprechen [Namespaces in XML-](https://www.w3.org/TR/REC-xml-names/).
 
@@ -32,7 +32,7 @@ Sie können die in einem XML-Dokument verwendeten Präfixe festlegen, indem Sie 
 
 3. Wenden Sie das geeignete `System.Xml.Serialization`-Attribut auf jeden Member oder jede Klasse an, die von <xref:System.Xml.Serialization.XmlSerializer> in ein XML-Dokument serialisiert werden soll.
 
-  Folgende Attribute sind verfügbar: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> und <xref:System.Xml.Serialization.XmlTypeAttribute>.
+    Folgende Attribute sind verfügbar: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> und <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
 4. Legen Sie die `Namespace`-Eigenschaft jedes Attributs auf einen der Namespacewerte aus dem `XmlSerializerNamespaces`-Objekt fest.
 

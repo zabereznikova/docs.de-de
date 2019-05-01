@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343591"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807967"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Erste Schritte mit Freihandeingaben in WPF
 
@@ -104,7 +104,7 @@ Sie können alle WPF-Funktionen aus prozeduralen Code zugreifen. Um eine "Hello 
 
 1. Fügen Sie Verweise auf die Assemblys PresentationCore, PresentationFramework und WindowsBase hinzu, indem Sie mit der rechten Maustaste auf **Verweise** in **Projektmappen-Explorer** und **VerweisHinzufügen**.
 
-   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](./media/getting-started-with-ink/references.png)
+   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. Erstellen Sie die Anwendung durch Drücken von **F5**.
 

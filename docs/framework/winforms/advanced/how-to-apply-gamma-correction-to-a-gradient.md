@@ -8,12 +8,12 @@ helpviewer_keywords:
 - gradient brushes [Windows Forms], gamma correction
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-ms.openlocfilehash: 066ccc649105018d20cb86b6e576a1a238e0dc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e812e441233c1d29a67dac639048e20a659549f0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973265"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809493"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Vorgehensweise: Anwenden der Gammakorrektur bei einem Farbverlauf
 Sie können die Gammakorrektur für Pinsels mit linearem Farbverlauf aktivieren, durch Festlegen des Pinsels <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> Eigenschaft `true`. Sie können die Gammakorrektur deaktivieren, indem die <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> Eigenschaft `false`. Gammakorrektur ist standardmäßig deaktiviert.  
@@ -24,7 +24,7 @@ Im folgende Beispiel wird eine Methode, die von eines Steuerelements aufgerufen 
   
  Die folgende Abbildung zeigt die beiden ausgefüllten Rechtecke. Das oberste Rechteck, das Gammakorrektur nicht besitzt, wird in der Mitte dunkel angezeigt. Die unteren Rechteck, das Gammakorrektur, scheint gleichmäßige Intensität.  
   
- ![Farbverlauf](./media/gammagradient1.png "gammagradient1")  
+ ![Zwei Verläufen Rechtecke, mit und ohne die Gammakorrektur.](./media/how-to-apply-gamma-correction-to-a-gradient/two-rectangles-gamma-gradient.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  

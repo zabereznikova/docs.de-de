@@ -2,19 +2,19 @@
 title: Gruppieren von Daten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842056"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808116"
 ---
 # <a name="grouping-data-visual-basic"></a>Gruppieren von Daten (Visual Basic)
 Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass die Elemente in jeder Gruppe über ein gemeinsames Attribut verfügen.  
   
  Die folgende Abbildung zeigt die Ergebnisse der Gruppierung einer Zeichenfolge. Der Schlüssel für jede Gruppe ist das Zeichen.  
   
- ![LINQ-Gruppierungsvorgänge](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![Diagramm einen LINQ-Gruppierungsmethoden-Vorgang zeigt.](./media/grouping-data/linq-group-operation.png)  
   
  Die Methoden des Standardabfrageoperators, die Datenelemente gruppieren, sind im folgenden Abschnitt aufgeführt.  
   

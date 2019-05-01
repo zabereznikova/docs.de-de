@@ -4,54 +4,52 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297927"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807871"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt.
-Eine ungültiges Objekt-Variable wird verwiesen wird.   Dieser Fehler kann mehrere Ursachen haben:  
-  
--   Eine Variable wurde deklariert, ohne Angabe eines Typs. Wenn eine Variable ohne Angabe eines Typs deklariert ist, wird standardmäßig Typ `Object`.  
-  
-     Z. B. eine Variable mit `Dim x` vom Typ `Object;` eine Variable mit `Dim x As String` vom Typ `String`.  
-  
-    > [!TIP]
-    >  Die `Option Strict` Anweisung lässt keine impliziten Typisierung der Ergebnisse in eine `Object` Typ. Wenn Sie den Typ weglassen, wird ein Fehler während der Kompilierung auftreten. Finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
-  
--   Sie versuchen, ein Objekt zu verweisen, die festgelegt wurde `Nothing`  
-  
-     sein.  
-  
--   Sie versuchen, ein Element eine Array-Variable zuzugreifen, die ordnungsgemäß deklariert war nicht.  
-  
-     Zum Beispiel ein Array deklariert als `products() As String` den Fehler wird ausgelöst, wenn Sie versuchen, ein Element des Arrays verweisen `products(3) = "Widget"`. Das Array verfügt über keine Elemente und wird als Objekt behandelt.  
-  
--   Sie versuchen, den Zugriff von Code in einem `With...End With` zu blockieren, bevor der Block initialisiert wurde.   Ein `With...End With` Block muss initialisiert werden, indem Sie Ausführung der `With` Einstiegspunkt für die Anweisung.  
-  
-> [!NOTE]
->  In früheren Versionen von Visual Basic oder VBA wurde dieser Fehler auch durch Zuweisen eines Werts einer Variablen ohne Verwendung von ausgelöst der `Set` Schlüsselwort (`x = "name"` anstelle von `Set x = "name"`). Die `Set` Schlüsselwort ist nicht mehr in Visual Basic.NET gültig.  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1. Legen Sie `Option Strict` zu `On` durch den folgenden Code am Anfang der das Hinzufügen:  
-  
-```vb  
-Option Strict On  
-```  
+Eine ungültiges Objekt-Variable wird verwiesen wird.   Dieser Fehler kann mehrere Ursachen haben:
 
-     When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
-  
-2. Wenn Sie nicht aktivieren möchten `Option Strict`, Durchsuchen Ihres gesamten Codes für alle Variablen, die ohne einen Typ angegeben wurden (`Dim x` anstelle von `Dim x As String`), und fügen Sie der Deklaration der gewünschte Typ hinzu.  
-  
-3. Stellen Sie sicher, dass Sie einer Objektvariablen, die festgelegt wurde, verweisen sind nicht `Nothing`.  Suchen Sie Ihren Code für das Schlüsselwort `Nothing`, und Ihren Code so überarbeiten, dass das Objekt, dass festgelegt wurde `Nothing` erst nach dem Sie darauf verwiesen haben.  
-  
-4. Stellen Sie sicher, dass alle Arrayvariablen, die dimensioniert werden, bevor Sie darauf zugreifen. Sie können entweder eine Dimension zuweisen, wenn Sie das Array erstellen (`Dim x(5) As String` anstelle von `Dim x() As String`), oder verwenden Sie die `ReDim` Schlüsselwort, um die Dimensionen des Arrays festgelegt, bevor Sie zuerst darauf zugreifen.  
-  
-5. Stellen Sie sicher, dass Ihre `With` Block wird initialisiert, indem Sie Ausführung der `With` Einstiegspunkt für die Anweisung.  
-  
+- Eine Variable wurde deklariert, ohne Angabe eines Typs. Wenn eine Variable ohne Angabe eines Typs deklariert ist, wird standardmäßig Typ `Object`.
+
+    Z. B. eine Variable mit `Dim x` vom Typ `Object;` eine Variable mit `Dim x As String` vom Typ `String`.
+
+    > [!TIP]
+    >  Die `Option Strict` Anweisung lässt keine impliziten Typisierung der Ergebnisse in eine `Object` Typ. Wenn Sie den Typ weglassen, wird ein Fehler während der Kompilierung auftreten. Finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).
+
+- Sie versuchen, ein Objekt zu verweisen, die festgelegt wurde, `Nothing`.
+
+- Sie versuchen, ein Element eine Array-Variable zuzugreifen, die ordnungsgemäß deklariert war nicht.
+
+    Zum Beispiel ein Array deklariert als `products() As String` den Fehler wird ausgelöst, wenn Sie versuchen, ein Element des Arrays verweisen `products(3) = "Widget"`. Das Array verfügt über keine Elemente und wird als Objekt behandelt.
+
+- Sie versuchen, den Zugriff von Code in einem `With...End With` zu blockieren, bevor der Block initialisiert wurde.   Ein `With...End With` Block muss initialisiert werden, indem Sie Ausführung der `With` Einstiegspunkt für die Anweisung.
+
+> [!NOTE]
+> In früheren Versionen von Visual Basic oder VBA wurde dieser Fehler auch durch Zuweisen eines Werts einer Variablen ohne Verwendung von ausgelöst der `Set` Schlüsselwort (`x = "name"` anstelle von `Set x = "name"`). Die `Set` Schlüsselwort ist nicht mehr in Visual Basic.NET gültig.
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Legen Sie `Option Strict` zu `On` durch den folgenden Code am Anfang der das Hinzufügen:
+
+    ```vb
+    Option Strict On
+    ```
+
+    Wenn Sie das Projekt ausführen, wird ein Compilerfehler angezeigt, der **Fehlerliste** für jede Variable, die ohne einen Typ angegeben wurde.
+
+2. Wenn Sie nicht aktivieren möchten `Option Strict`, Durchsuchen Ihres gesamten Codes für alle Variablen, die ohne einen Typ angegeben wurden (`Dim x` anstelle von `Dim x As String`), und fügen Sie der Deklaration der gewünschte Typ hinzu.
+
+3. Stellen Sie sicher, dass Sie einer Objektvariablen, die festgelegt wurde, verweisen sind nicht `Nothing`.  Suchen Sie Ihren Code für das Schlüsselwort `Nothing`, und Ihren Code so überarbeiten, dass das Objekt, dass festgelegt wurde `Nothing` erst nach dem Sie darauf verwiesen haben.
+
+4. Stellen Sie sicher, dass alle Arrayvariablen, die dimensioniert werden, bevor Sie darauf zugreifen. Sie können entweder eine Dimension zuweisen, wenn Sie das Array erstellen (`Dim x(5) As String` anstelle von `Dim x() As String`), oder verwenden Sie die `ReDim` Schlüsselwort, um die Dimensionen des Arrays festgelegt, bevor Sie zuerst darauf zugreifen.
+
+5. Stellen Sie sicher, dass Ihre `With` Block wird initialisiert, indem Sie Ausführung der `With` Einstiegspunkt für die Anweisung.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Deklaration von Objektvariablen](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
