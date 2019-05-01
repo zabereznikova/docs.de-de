@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
 ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052195"
 ---
-# <a name="canvas"></a><span data-ttu-id="d231f-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="d231f-102">Canvas</span></span>
-<span data-ttu-id="d231f-103"><xref:System.Windows.Controls.Canvas> ist ein Layoutsteuerelement, das absolute Positionierung der untergeordneten Elemente ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="d231f-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="9c051-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="9c051-102">Canvas</span></span>
+<span data-ttu-id="9c051-103"><xref:System.Windows.Controls.Canvas> ist ein Layoutsteuerelement, das absolute Positionierung der untergeordneten Elemente ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="9c051-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d231f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d231f-104">In This Section</span></span>  
- [<span data-ttu-id="d231f-105">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="d231f-105">How-to Topics</span></span>](canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9c051-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9c051-104">In This Section</span></span>  
+ [<span data-ttu-id="9c051-105">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="9c051-105">How-to Topics</span></span>](canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d231f-106">Referenz</span><span class="sxs-lookup"><span data-stu-id="d231f-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9c051-106">Referenz</span><span class="sxs-lookup"><span data-stu-id="9c051-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57351044"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="d231f-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d231f-107">Related Sections</span></span>  
- [<span data-ttu-id="d231f-108">Layout</span><span class="sxs-lookup"><span data-stu-id="d231f-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="9c051-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9c051-107">Related Sections</span></span>  
+ [<span data-ttu-id="9c051-108">Layout</span><span class="sxs-lookup"><span data-stu-id="9c051-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="d231f-109">Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)</span><span class="sxs-lookup"><span data-stu-id="d231f-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="9c051-109">Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)</span><span class="sxs-lookup"><span data-stu-id="9c051-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="d231f-110">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="d231f-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="9c051-110">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="9c051-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

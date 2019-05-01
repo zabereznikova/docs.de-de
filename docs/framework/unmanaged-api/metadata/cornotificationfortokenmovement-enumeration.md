@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 15c5e8b34f2748868611bd7dc47ef73c491b1338
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045434"
 ---
-# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="f14c6-102">CorNotificationForTokenMovement-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f14c6-102">CorNotificationForTokenMovement Enumeration</span></span>
-<span data-ttu-id="f14c6-103">Gibt an, die Benachrichtigungen, die an den Metadaten-API-Client gesendet werden, wenn ein token neuzuordnung erfolgt.</span><span class="sxs-lookup"><span data-stu-id="f14c6-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
+# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="061a1-102">CorNotificationForTokenMovement-Enumeration</span><span class="sxs-lookup"><span data-stu-id="061a1-102">CorNotificationForTokenMovement Enumeration</span></span>
+<span data-ttu-id="061a1-103">Gibt an, die Benachrichtigungen, die an den Metadaten-API-Client gesendet werden, wenn ein token neuzuordnung erfolgt.</span><span class="sxs-lookup"><span data-stu-id="061a1-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f14c6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f14c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="061a1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="061a1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNotificationForTokenMovement {  
@@ -61,44 +61,44 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f14c6-105">Member</span><span class="sxs-lookup"><span data-stu-id="f14c6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="061a1-105">Member</span><span class="sxs-lookup"><span data-stu-id="061a1-105">Members</span></span>  
   
-|<span data-ttu-id="f14c6-106">Member</span><span class="sxs-lookup"><span data-stu-id="f14c6-106">Member</span></span>|<span data-ttu-id="f14c6-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f14c6-107">Description</span></span>|  
+|<span data-ttu-id="061a1-106">Member</span><span class="sxs-lookup"><span data-stu-id="061a1-106">Member</span></span>|<span data-ttu-id="061a1-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="061a1-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDNotifyDefault`|<span data-ttu-id="f14c6-108">Benachrichtigen, wenn `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, oder `mdFieldDef` Token verschieben.</span><span class="sxs-lookup"><span data-stu-id="f14c6-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
-|`MDNotifyAll`|<span data-ttu-id="f14c6-109">Benachrichtigen Sie, wenn jedes Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-109">Notify when any token moves.</span></span>|  
-|`MDNotifyNone`|<span data-ttu-id="f14c6-110">Nicht benachrichtigen Sie, wenn das Token verschieben.</span><span class="sxs-lookup"><span data-stu-id="f14c6-110">Do not notify when tokens move.</span></span>|  
-|`MDNotifyMethodDef`|<span data-ttu-id="f14c6-111">Benachrichtigen, wenn ein `mdMethodDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-111">Notify when an `mdMethodDef` token moves.</span></span>|  
-|`MDNotifyMemberRef`|<span data-ttu-id="f14c6-112">Benachrichtigen, wenn ein `mdMemberRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-112">Notify when an `mdMemberRef` token moves.</span></span>|  
-|`MDNotifyFieldDef`|<span data-ttu-id="f14c6-113">Benachrichtigen, wenn ein `mdFieldDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-113">Notify when an `mdFieldDef` token moves.</span></span>|  
-|`MDNotifyTypeRef`|<span data-ttu-id="f14c6-114">Benachrichtigen, wenn ein `mdTypeRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-114">Notify when an `mdTypeRef` token moves.</span></span>|  
-|`MDNotifyTypeDef`|<span data-ttu-id="f14c6-115">Benachrichtigen, wenn ein `mdTypeDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-115">Notify when an `mdTypeDef` token moves.</span></span>|  
-|`MDNotifyParamDef`|<span data-ttu-id="f14c6-116">Benachrichtigen, wenn ein `mdParamDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-116">Notify when an `mdParamDef` token moves.</span></span>|  
-|`MDNotifyInterfaceImpl`|<span data-ttu-id="f14c6-117">Benachrichtigen, wenn ein `mdInterfaceImpl` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
-|`MDNotifyProperty`|<span data-ttu-id="f14c6-118">Benachrichtigen, wenn ein `mdProperty` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-118">Notify when an `mdProperty` token moves.</span></span>|  
-|`MDNotifyEvent`|<span data-ttu-id="f14c6-119">Benachrichtigen, wenn ein `mdEvent` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-119">Notify when an `mdEvent` token moves.</span></span>|  
-|`MDNotifySignature`|<span data-ttu-id="f14c6-120">Benachrichtigen, wenn ein `mdSignature` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-120">Notify when an `mdSignature` token moves.</span></span>|  
-|`MDNotifyTypeSpec`|<span data-ttu-id="f14c6-121">Benachrichtigen, wenn ein `mdTypeSpec` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
-|`MDNotifyCustomAttribute`|<span data-ttu-id="f14c6-122">Benachrichtigen, wenn ein `mdCustomAttribute` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
-|`MDNotifySecurityValue`|<span data-ttu-id="f14c6-123">Benachrichtigen, wenn ein `mdSecurityValue` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
-|`MDNotifyPermission`|<span data-ttu-id="f14c6-124">Benachrichtigen, wenn ein `mdPermission` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-124">Notify when an `mdPermission` token moves.</span></span>|  
-|`MDNotifyModuleRef`|<span data-ttu-id="f14c6-125">Benachrichtigen, wenn ein `mdModuleRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-125">Notify when an `mdModuleRef` token moves.</span></span>|  
-|`MDNotifyNameSpace`|<span data-ttu-id="f14c6-126">Benachrichtigen, wenn ein `mdNameSpace` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-126">Notify when an `mdNameSpace` token moves.</span></span>|  
-|`MDNotifyAssemblyRef`|<span data-ttu-id="f14c6-127">Benachrichtigen, wenn ein `mdAssemblyRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
-|`MDNotifyFile`|<span data-ttu-id="f14c6-128">Benachrichtigen, wenn ein `mdFile` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-128">Notify when an `mdFile` token moves.</span></span>|  
-|`MDNotifyExportedType`|<span data-ttu-id="f14c6-129">Benachrichtigen, wenn ein `mdExportedType` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-129">Notify when an `mdExportedType` token moves.</span></span>|  
-|`MDNotifyResource`|<span data-ttu-id="f14c6-130">Benachrichtigen, wenn ein `mdManifestResource` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="f14c6-130">Notify when an `mdManifestResource` token moves.</span></span>|  
+|`MDNotifyDefault`|<span data-ttu-id="061a1-108">Benachrichtigen, wenn `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, oder `mdFieldDef` Token verschieben.</span><span class="sxs-lookup"><span data-stu-id="061a1-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
+|`MDNotifyAll`|<span data-ttu-id="061a1-109">Benachrichtigen Sie, wenn jedes Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-109">Notify when any token moves.</span></span>|  
+|`MDNotifyNone`|<span data-ttu-id="061a1-110">Nicht benachrichtigen Sie, wenn das Token verschieben.</span><span class="sxs-lookup"><span data-stu-id="061a1-110">Do not notify when tokens move.</span></span>|  
+|`MDNotifyMethodDef`|<span data-ttu-id="061a1-111">Benachrichtigen, wenn ein `mdMethodDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-111">Notify when an `mdMethodDef` token moves.</span></span>|  
+|`MDNotifyMemberRef`|<span data-ttu-id="061a1-112">Benachrichtigen, wenn ein `mdMemberRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-112">Notify when an `mdMemberRef` token moves.</span></span>|  
+|`MDNotifyFieldDef`|<span data-ttu-id="061a1-113">Benachrichtigen, wenn ein `mdFieldDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-113">Notify when an `mdFieldDef` token moves.</span></span>|  
+|`MDNotifyTypeRef`|<span data-ttu-id="061a1-114">Benachrichtigen, wenn ein `mdTypeRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-114">Notify when an `mdTypeRef` token moves.</span></span>|  
+|`MDNotifyTypeDef`|<span data-ttu-id="061a1-115">Benachrichtigen, wenn ein `mdTypeDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-115">Notify when an `mdTypeDef` token moves.</span></span>|  
+|`MDNotifyParamDef`|<span data-ttu-id="061a1-116">Benachrichtigen, wenn ein `mdParamDef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-116">Notify when an `mdParamDef` token moves.</span></span>|  
+|`MDNotifyInterfaceImpl`|<span data-ttu-id="061a1-117">Benachrichtigen, wenn ein `mdInterfaceImpl` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
+|`MDNotifyProperty`|<span data-ttu-id="061a1-118">Benachrichtigen, wenn ein `mdProperty` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-118">Notify when an `mdProperty` token moves.</span></span>|  
+|`MDNotifyEvent`|<span data-ttu-id="061a1-119">Benachrichtigen, wenn ein `mdEvent` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-119">Notify when an `mdEvent` token moves.</span></span>|  
+|`MDNotifySignature`|<span data-ttu-id="061a1-120">Benachrichtigen, wenn ein `mdSignature` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-120">Notify when an `mdSignature` token moves.</span></span>|  
+|`MDNotifyTypeSpec`|<span data-ttu-id="061a1-121">Benachrichtigen, wenn ein `mdTypeSpec` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
+|`MDNotifyCustomAttribute`|<span data-ttu-id="061a1-122">Benachrichtigen, wenn ein `mdCustomAttribute` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
+|`MDNotifySecurityValue`|<span data-ttu-id="061a1-123">Benachrichtigen, wenn ein `mdSecurityValue` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
+|`MDNotifyPermission`|<span data-ttu-id="061a1-124">Benachrichtigen, wenn ein `mdPermission` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-124">Notify when an `mdPermission` token moves.</span></span>|  
+|`MDNotifyModuleRef`|<span data-ttu-id="061a1-125">Benachrichtigen, wenn ein `mdModuleRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-125">Notify when an `mdModuleRef` token moves.</span></span>|  
+|`MDNotifyNameSpace`|<span data-ttu-id="061a1-126">Benachrichtigen, wenn ein `mdNameSpace` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-126">Notify when an `mdNameSpace` token moves.</span></span>|  
+|`MDNotifyAssemblyRef`|<span data-ttu-id="061a1-127">Benachrichtigen, wenn ein `mdAssemblyRef` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
+|`MDNotifyFile`|<span data-ttu-id="061a1-128">Benachrichtigen, wenn ein `mdFile` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-128">Notify when an `mdFile` token moves.</span></span>|  
+|`MDNotifyExportedType`|<span data-ttu-id="061a1-129">Benachrichtigen, wenn ein `mdExportedType` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-129">Notify when an `mdExportedType` token moves.</span></span>|  
+|`MDNotifyResource`|<span data-ttu-id="061a1-130">Benachrichtigen, wenn ein `mdManifestResource` -Token verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="061a1-130">Notify when an `mdManifestResource` token moves.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f14c6-131">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f14c6-131">Remarks</span></span>  
- <span data-ttu-id="f14c6-132">Ein Token möglicherweise erneut zugeordnet werden (die verschoben wird) während eines Merge Metadaten.</span><span class="sxs-lookup"><span data-stu-id="f14c6-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="061a1-131">Hinweise</span><span class="sxs-lookup"><span data-stu-id="061a1-131">Remarks</span></span>  
+ <span data-ttu-id="061a1-132">Ein Token möglicherweise erneut zugeordnet werden (die verschoben wird) während eines Merge Metadaten.</span><span class="sxs-lookup"><span data-stu-id="061a1-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f14c6-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f14c6-133">Requirements</span></span>  
- <span data-ttu-id="f14c6-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f14c6-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="061a1-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="061a1-133">Requirements</span></span>  
+ <span data-ttu-id="061a1-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="061a1-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f14c6-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f14c6-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="061a1-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="061a1-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f14c6-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f14c6-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="061a1-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="061a1-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f14c6-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f14c6-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="061a1-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="061a1-137">See also</span></span>
 
-- [<span data-ttu-id="f14c6-138">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="f14c6-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="061a1-138">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="061a1-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

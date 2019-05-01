@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
 ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053235"
 ---
-# <a name="contextmenu"></a><span data-ttu-id="7a59e-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="7a59e-102">ContextMenu</span></span>
-<span data-ttu-id="7a59e-103">Die <xref:System.Windows.Controls.ContextMenu> ermöglicht es einem Steuerelement zum Anzeigen einer <xref:System.Windows.Controls.Menu> , der auf den Kontext des Steuerelements spezifisch ist.</span><span class="sxs-lookup"><span data-stu-id="7a59e-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="7a59e-104">In der Regel die <xref:System.Windows.Controls.ContextMenu> verfügbar gemacht wird, werden der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] über die rechte Maustaste gedrückt oder über die Tastatur auf die Menüschaltfläche.</span><span class="sxs-lookup"><span data-stu-id="7a59e-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="dc05a-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="dc05a-102">ContextMenu</span></span>
+<span data-ttu-id="dc05a-103">Die <xref:System.Windows.Controls.ContextMenu> ermöglicht es einem Steuerelement zum Anzeigen einer <xref:System.Windows.Controls.Menu> , der auf den Kontext des Steuerelements spezifisch ist.</span><span class="sxs-lookup"><span data-stu-id="dc05a-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="dc05a-104">In der Regel die <xref:System.Windows.Controls.ContextMenu> verfügbar gemacht wird, werden der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] über die rechte Maustaste gedrückt oder über die Tastatur auf die Menüschaltfläche.</span><span class="sxs-lookup"><span data-stu-id="dc05a-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="7a59e-105">Die folgende Abbildung veranschaulicht einen <xref:System.Windows.Controls.ContextMenu> in zwei unterschiedlichen Zuständen: den Standardzustand und den Zustand "geöffnet".</span><span class="sxs-lookup"><span data-stu-id="7a59e-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="7a59e-106">Die Standardwerte wird das Steuerelement reduziert.</span><span class="sxs-lookup"><span data-stu-id="7a59e-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="7a59e-107">Wenn die rechten Maustaste auf das übergeordnete Element des Menüs gedrückt wird, wird das Steuerelement erweitert und zeigt die Menüelemente im.</span><span class="sxs-lookup"><span data-stu-id="7a59e-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="dc05a-105">Die folgende Abbildung veranschaulicht einen <xref:System.Windows.Controls.ContextMenu> in zwei unterschiedlichen Zuständen: den Standardzustand und den Zustand "geöffnet".</span><span class="sxs-lookup"><span data-stu-id="dc05a-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="dc05a-106">Die Standardwerte wird das Steuerelement reduziert.</span><span class="sxs-lookup"><span data-stu-id="dc05a-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="dc05a-107">Wenn die rechten Maustaste auf das übergeordnete Element des Menüs gedrückt wird, wird das Steuerelement erweitert und zeigt die Menüelemente im.</span><span class="sxs-lookup"><span data-stu-id="dc05a-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="7a59e-108">![ContextMenu-Zustände](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="7a59e-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="7a59e-109">Kontextmenü in unterschiedlichen Zuständen</span><span class="sxs-lookup"><span data-stu-id="7a59e-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="dc05a-108">![ContextMenu-Zustände](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="dc05a-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="dc05a-109">Kontextmenü in unterschiedlichen Zuständen</span><span class="sxs-lookup"><span data-stu-id="dc05a-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7a59e-110">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7a59e-110">In This Section</span></span>  
- [<span data-ttu-id="7a59e-111">Übersicht über ContextMenu</span><span class="sxs-lookup"><span data-stu-id="7a59e-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dc05a-110">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="dc05a-110">In This Section</span></span>  
+ [<span data-ttu-id="dc05a-111">Übersicht über ContextMenu</span><span class="sxs-lookup"><span data-stu-id="dc05a-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="7a59e-112">Referenz</span><span class="sxs-lookup"><span data-stu-id="7a59e-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="dc05a-112">Referenz</span><span class="sxs-lookup"><span data-stu-id="dc05a-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="7a59e-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="7a59e-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="dc05a-113">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="dc05a-113">Related Sections</span></span>
