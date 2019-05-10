@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e02b9daa40a5f8a2f8bfd8874d006550628a70b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654721"
 ---
 # <a name="toolstrip-control-architecture"></a>Architektur des ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem> Klassen bieten ein flexibles, erweiterbares System zum Anzeigen der Symbolleiste, Status und Menüelementen. Diese Klassen sind in enthalten die <xref:System.Windows.Forms> -Namespace, und sie werden alle in der Regel mit dem Präfix "ToolStrip" benannt (z. B. <xref:System.Windows.Forms.ToolStripOverflow>) oder mit dem Suffix "Entfernen" (z. B. <xref:System.Windows.Forms.MenuStrip>).  

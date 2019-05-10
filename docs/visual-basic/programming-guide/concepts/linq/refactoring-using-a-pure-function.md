@@ -2,12 +2,12 @@
 title: Refactoring mit reiner Funktion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 96e8534280d560502b04b1880273cf7254f36e20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787113"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666091"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring mit reiner Funktion (Visual Basic)
 Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), um eine reine Funktion In diesem Beispiel ist der Code zum Suchen der Text eines Absatzes in die reine statische Methode verschoben`ParagraphText`.  

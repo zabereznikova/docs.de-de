@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072973"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624037"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.ImageList> Komponente wird mit Bildern in der Regel aufgefüllt, bevor sie mit einem Steuerelement verknüpft ist. Sie können jedoch hinzufügen und entfernen Bilder, nachdem die Bildliste mit einem Steuerelement.  
@@ -28,7 +28,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ImageList> Komponente wird mit 
   
 ### <a name="to-add-images-programmatically"></a>Programmgesteuertes Hinzufügen von Bildern  
   
--   Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> -Methode der Liste der Bilder <xref:System.Windows.Forms.ImageList.Images%2A> Eigenschaft.  
+- Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> -Methode der Liste der Bilder <xref:System.Windows.Forms.ImageList.Images%2A> Eigenschaft.  
   
      Das folgende Codebeispiel zeigt der Pfad festgelegt, für der Speicherort des Images ist der **eigene** Ordner. Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass dieser Ordner enthält die meisten Computer, auf denen die Windows-Betriebssystem ausgeführt werden. Dieser Speicherort können auch Benutzer mit minimalen Systemzugriffsebenen Weitere problemlos die Anwendung auszuführen. Das folgende Codebeispiel ist erforderlich, dass ein Formular mit einem <xref:System.Windows.Forms.ImageList> Steuerelement bereits hinzugefügt.  
   
@@ -76,7 +76,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ImageList> Komponente wird mit 
   
 ### <a name="to-add-images-with-a-key-value"></a>Hinzufügen von Bildern mit einem Schlüsselwert.  
   
--   Gehen Sie die <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Methoden der Liste der Bilder <xref:System.Windows.Forms.ImageList.Images%2A> -Eigenschaft, die einen Schlüsselwert verwendet.  
+- Gehen Sie die <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Methoden der Liste der Bilder <xref:System.Windows.Forms.ImageList.Images%2A> -Eigenschaft, die einen Schlüsselwert verwendet.  
   
      Das folgende Codebeispiel zeigt der Pfad festgelegt, für der Speicherort des Images ist der **eigene** Ordner. Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass dieser Ordner enthält die meisten Computer, auf denen die Windows-Betriebssystem ausgeführt werden. Dieser Speicherort können auch Benutzer mit minimalen Systemzugriffsebenen Weitere problemlos die Anwendung auszuführen. Das folgende Codebeispiel ist erforderlich, dass ein Formular mit einem <xref:System.Windows.Forms.ImageList> Steuerelement bereits hinzugefügt.  
   
@@ -107,7 +107,7 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>So entfernen Sie alle Bilder programmgesteuert  
   
--   Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> Methode, um ein einzelnes Bild entfernen  
+- Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> Methode, um ein einzelnes Bild entfernen  
   
      , – oder –  
   
@@ -129,7 +129,7 @@ imageList1.Images.Clear();
   
 ### <a name="to-remove-images-by-key"></a>So entfernen Sie die Bilder nach Schlüssel  
   
--   Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> Methode, um ein einzelnes Abbild über seinen Schlüssel zu entfernen.  
+- Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> Methode, um ein einzelnes Abbild über seinen Schlüssel zu entfernen.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

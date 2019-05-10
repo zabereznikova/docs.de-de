@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31593fa8b0cc2670b9d59b8cd61ae66efd219269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659756"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Erweitern des My-Namespaces in Visual Basic
 Die `My` Namespaces in Visual Basic verfügbar macht, Eigenschaften und Methoden, mit denen Sie problemlos von der Leistungsfähigkeit von .NET Framework nutzen können. Die `My` Namespace vereinfacht häufige Programmierprobleme, häufig eine schwierige Aufgabe auf eine einzige Zeile Code zu reduzieren. Darüber hinaus die `My` Namespace ist vollständig erweiterbar, sodass Sie das Verhalten anpassen können `My` und seiner Hierarchie zur Anpassung an die spezifischen Anforderungen Ihrer Anwendung neue Dienste hinzugefügt. Beide in diesem Thema Anpassen von vorhandenen Mitglieder der `My` Namespace und wie Sie eigene benutzerdefinierten Klassen zum Hinzufügen der `My` Namespace.  

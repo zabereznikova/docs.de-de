@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748444"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639745"
 ---
 # <a name="vector-graphics-overview"></a>Übersicht über Vektorgrafiken
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zeichnet Linien, Rechtecke und andere Formen auf einem Koordinatensystem an. Sie können aus einer Vielzahl von Koordinatensysteme auswählen, aber das Standardkoordinatensystem ist des Ursprungs in der oberen linken Ecke, mit der x-Achse nach rechts und die y-Achse nach unten zeigender Pfeil zeigt. Die Maßeinheit in das Standardkoordinatensystem ist Pixel.  
