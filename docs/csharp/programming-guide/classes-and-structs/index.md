@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646331"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584542"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
 Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Typsystems in .NET Framework. Bei beiden handelt es sich um eine Datenstruktur, die einen als logische Einheit zusammengehörenden Satz von Daten und Verhalten kapselt. Die Daten und die Verhalten sind die *Member* der Klasse oder Struktur. Diese enthalten deren Methoden, Eigenschaften, Ereignisse usw., die weiter unten in diesem Thema aufgeführt werden.  
@@ -44,25 +44,25 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
 ### <a name="members"></a>Member  
  Alle Methoden, Felder, Konstanten, Eigenschaften und Ereignisse müssen innerhalb eines Typs deklariert werden. Diese Elemente werden als *Member* des Typs bezeichnet. In C# gibt es im Gegensatz zu einigen anderen Sprachen keine globalen Variablen oder Methoden. Selbst der Einstiegspunkt eines Programms, die `Main`-Methode, muss innerhalb einer Klasse oder einer Struktur deklariert werden. In der folgenden Liste werden sämtliche Arten von Membern aufgeführt, die in einer Klasse bzw. einer Struktur deklariert werden können.  
   
--   [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
   
--   [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
   
--   [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Zugriff  
  Einige Methoden und Eigenschaften sind für den Aufruf oder Zugriff von als *Clientcode* bezeichnetem Code außerhalb der Klasse oder Struktur vorgesehen. Andere Methoden und Eigenschaften dienen nur der Verwendung in der Klasse oder Struktur selbst. Es ist wichtig, den Zugriff auf den Code einzuschränken, damit nur der Clientcode darauf zugreifen kann, der dafür vorgesehen ist. Inwieweit Clientcode auf die Typen und deren Member zugreifen kann, können Sie mit den Zugriffsmodifizierern [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) und [private protected](../../../csharp/language-reference/keywords/private-protected.md) festlegen. Die Standardeinstellung für den Zugriff lautet `private`. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  

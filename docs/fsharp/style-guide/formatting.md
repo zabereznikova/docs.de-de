@@ -2,12 +2,12 @@
 title: F#Richtlinien für die codeformatierung
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902589"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063606"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>Setzen Sie die Argumente der Funktion mit einem Leerzeichen
+
+Wenn Sie eine Funktion zu definieren, verwenden Sie Leerraum um jedes Argument.
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>Typanmerkungen
+
+#### <a name="right-pad-function-argument-type-annotations"></a>Argument-typanmerkungen rechts aufgefüllt-Funktion
+
+Wenn Sie Argumente mit typanmerkungen zu definieren, verwenden Sie Leerzeichen nach den `:` Symbol:
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>Umschließen Rückgabetyp Anmerkungen mit einem Leerzeichen
+
+Verwenden Sie in einer Let gebundenen Funktion oder einen Wert typanmerkung (Rückgabetyp bei einer Funktion), Leerzeichen vor und nach der `:` Symbol:
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>Formatieren von Leerzeilen

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954805"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063724"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Vorgehensweise: Verwenden einer Farbmatrix zum Transformieren einer Farbe
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Objekte speichern die Farbe jedes Pixels als 32-Bit-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha. Jede der vier Komponenten ist es sich um eine Zahl zwischen 0 und 255, wobei 0 für keine Intensität und 255, die vollständigen Intensität darstellt. Die alpha-Komponente gibt die Transparenz der Farbe an: 0 vollständig transparent ist, und 255 vollständig deckend ist.  
@@ -32,13 +32,13 @@ ms.locfileid: "61954805"
   
  Die folgende Matrixmultiplikation führt die beiden Transformationen in entsprechender Reihenfolge aufgelistet.  
   
- ![Recoloring](./media/recoloring01.gif "recoloring01")  
+ ![Screenshot des eine Multiplikation Transformationsmatrix.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  Die Elemente einer Farbmatrix werden von Zeilen- und klicken Sie dann (die nullbasierte) indiziert. Beispielsweise ist der Eintrag in der fünften Zeile und dritten Spalte der Matrix M durch M [4] [2] gekennzeichnet.  
   
  Die 5 x 5-Identitätsmatrix (in der folgenden Abbildung dargestellt) verfügt über 1 s, auf der diagonalen und 0, die alle anderen Elemente. Wenn Sie einen Vektor Farbe durch die Identitätsmatrix multiplizieren, ändert sich der Vektor Farbe nicht. Eine einfache Möglichkeit, bilden die Matrix eine Farbe-Transformation ist mit die Identitätsmatrix beginnen, und stellen eine kleine Änderung, die die gewünschte Transformation erzeugt.  
   
- ![Recoloring](./media/recoloring02.gif "recoloring02")  
+ ![Screenshot des eine Identitätsmatrix 5 x 5, für die Color-Transformation.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  Eine ausführlichere Erläuterung von Matrizen und Transformationen, finden Sie unter [Koordinatensysteme und Transformationen](coordinate-systems-and-transformations.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954805"
   
  Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die transformierten auf der rechten Seite an.  
   
- ![Farben](./media/colortrans1.png "colortrans1")  
+ ![Eine violette Quadrat auf der linken Seite und ein Fuchsie Quadrat auf der rechten Seite.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  Der Code im folgenden Beispiel verwendet die folgenden Schritte aus, um die über erneutes Einfärben auszuführen:  
   

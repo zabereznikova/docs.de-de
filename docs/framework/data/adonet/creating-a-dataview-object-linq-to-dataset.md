@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583542"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Erstellen eines DataView-Objekts (LINQ to DataSet)
 Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zu erstellen. Sie können das <xref:System.Data.DataView>-Objekt auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage einer <xref:System.Data.DataTable> erstellen, oder Sie können es auf der Grundlage einer typisierten oder nicht typisierten <xref:System.Data.DataTable> erstellen. In beiden Fällen erstellen Sie die <xref:System.Data.DataView> mithilfe eines der <xref:System.Data.DataTableExtensions.AsDataView%2A> Erweiterungsmethoden. <xref:System.Data.DataView> konstruierbar ist; nicht direkt in die [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Kontext.  
