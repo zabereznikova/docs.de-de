@@ -2,12 +2,12 @@
 title: Erstellen eines Workflowdiensts mit langer Ausführungszeit
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048148"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063796"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Erstellen eines Workflowdiensts mit langer Ausführungszeit
 In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit erstellt wird. Workflowdienste mit langer Laufzeit können über einen sehr großen Zeitraum hinweg ausgeführt werden. Währenddessen kann der Workflow in den Leerlauf wechseln und auf weitere Informationen warten. In diesem Fall wird der Workflow in einer SQL-Datenbank beibehalten und aus dem Arbeitsspeicher entfernt. Wenn weitere Informationen für die Workflowinstanz verfügbar sind, wird diese wieder in den Arbeitsspeicher geladen, und die Ausführung wird fortgesetzt.  In diesem Szenario implementieren Sie ein stark vereinfachtes Bestellsystem.  Zunächst wird eine Nachricht vom Client an den Workflow gesendet, um die Bestellung zu beginnen. Die Bestell-ID wird an den Client zurückgegeben. Der Workflowdienst wartet nun auf eine weitere Nachricht vom Client, wechselt in den Leerlauf und wird in der SQL-Datenbank beibehalten.  Wenn die nächste Nachricht vom Client mit der Bestellung eines Artikels empfangen wird, wird der Workflowdienst wieder in den Arbeitsspeicher geladen, und die Bestellung wird abschließend bearbeitet. In diesem Codebeispiel wird eine Zeichenfolge zurückgegeben, die angibt, dass der Artikel der Bestellung hinzugefügt wurde. Das Codebeispiel ist nicht als reale Anwendung der Technologie gedacht. Es soll vielmehr auf einfache Weise einen Workflowdienst mit langer Laufzeit veranschaulichen. In diesem Thema wird davon ausgegangen, dass Sie wissen, wie Visual Studio 2012-Projekte und Projektmappen zu erstellen.
@@ -100,10 +100,15 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
     1. Wählen Sie die **Sequenz** , enthält die neu hinzugefügte **Receive** und **"SendReply"** Aktivitäten, und klicken Sie auf die **Variablen** Schaltfläche. Fügen Sie die in der folgenden Abbildung hervorgehobene Variable hinzu:
 
          ![Hinzufügen neuer Variablen](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "fügen Sie die Element-ID-Variable.")
+         
+         Fügen Sie auch `orderResult` als **Zeichenfolge** in die `Sequence` Bereich.
 
     2. Wählen Sie die **Receive** Aktivität und Festlegen der Eigenschaften, die in der folgenden Abbildung gezeigt:
 
          ![Legen Sie die Receive-Aktivitätseigenschaften](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "legen Sie die Eigenschaften der Receive-Aktivitäten.")
+         
+         > [!NOTE]
+         >  Vergessen Sie nicht so ändern Sie **ServiceContractName** Feld `../IAddItem`.
 
     3. Klicken Sie auf die **definieren...**  -link in der **ReceiveAddItem** Aktivität und fügen Sie die Parameter in der folgenden Abbildung gezeigt: Dadurch wird die Receive-Aktivität akzeptiert zwei Parameter: die Bestell-ID und die ID des zu sortierenden Elements konfiguriert.
 

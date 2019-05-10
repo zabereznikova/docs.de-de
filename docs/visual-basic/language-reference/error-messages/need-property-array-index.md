@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
-ms.openlocfilehash: c68e134237c0dfa4642a1e528c58c98a49ad8b74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8534066317748055a0eaf544d5c8c9d0a5b355d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918384"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591988"
 ---
 # <a name="need-property-array-index"></a>Ein Eigenschaftenarrayindex wird benötigt
 Dieser Eigenschaftswert besteht aus einem Array, anstelle eines einzelnen Werts. Sie haben keinen Index für das Eigenschaftenarray angegeben, auf das Sie zugreifen wollten.  
