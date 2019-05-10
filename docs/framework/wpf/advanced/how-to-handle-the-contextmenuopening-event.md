@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340398"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614629"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Vorgehensweise: Behandeln des ContextMenuOpening-Ereignisses
 Die <xref:System.Windows.FrameworkElement.ContextMenuOpening> -Ereignis behandelt werden, in einer Anwendung anpassen, entweder ein vorhandenes Kontext vor oder im Menü zu unterdrücken, die andernfalls durch Festlegen von angezeigt werden würden die <xref:System.Windows.RoutedEventArgs.Handled%2A> Eigenschaft `true` in den Ereignisdaten. Der Hauptgrund für die Einstellung <xref:System.Windows.RoutedEventArgs.Handled%2A> zu `true` in der Daten befindet, klicken Sie im Menü vollständig durch einen neuen ersetzt <xref:System.Windows.Controls.ContextMenu> Objekt, der in einigen Fällen erfordert der Vorgang abgebrochen wird, und starten eine neue Open. Wenn Sie Handler für Schreiben der <xref:System.Windows.FrameworkElement.ContextMenuOpening> -Ereignis, sollten Sie Bedenken der Probleme mit der zeitsteuerung zwischen eine <xref:System.Windows.Controls.ContextMenu> Steuerelement und der Dienst, der für das Öffnen und die Position des Kontextmenüs für Steuerelemente in der Regel zuständig ist. In diesem Thema veranschaulicht einige der Codetechniken für verschiedene Szenarien öffnen Kontextmenü, und zeigt einen Fall, in dem das Problem der zeitlichen Steuerung ins Spiel kommt.  
   
  Es gibt mehrere Szenarios für die Behandlung der <xref:System.Windows.FrameworkElement.ContextMenuOpening> Ereignis:  
   
--   Anpassen von die Menüelemente vor der Anzeige.  
+- Anpassen von die Menüelemente vor der Anzeige.  
   
--   Ersetzen das gesamte Menü vor der Anzeige.  
+- Ersetzen das gesamte Menü vor der Anzeige.  
   
--   Vollständig unterdrücken vorhandenen Kontextmenü, und kein Kontextmenü angezeigt.  
+- Vollständig unterdrücken vorhandenen Kontextmenü, und kein Kontextmenü angezeigt.  
   
 ## <a name="example"></a>Beispiel  
   

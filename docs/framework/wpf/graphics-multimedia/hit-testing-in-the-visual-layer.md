@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a69e5922d2f66d295024149764c3836f9760b685
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762449"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591234"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Treffertests in der visuellen Ebene
 Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuellen Ebene. Unterstützung für den Treffertest können Sie bestimmen, ob ein Geometrie- oder Punktwert Wert innerhalb des gerenderten Inhalts liegt eine <xref:System.Windows.Media.Visual>, sodass Sie Benutzeroberflächenverhalten, wie z. B. ein Positionierungsrechteck zum Auswählen von mehreren Objekten zu implementieren.  

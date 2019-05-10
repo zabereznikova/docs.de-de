@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8adc9644f987166729c43b79a6891960978341dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340333"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612728"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Vorgehensweise: Erstellen von Steuerelementen für Windows Forms
 Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und der Anwendung dar. Ein Steuerelement kann Daten bereitstellen oder verarbeiten, Benutzereingaben akzeptieren, auf Ereignisse reagieren oder eine beliebige Anzahl von anderen Funktionen ausführen, die eine Verbindung zwischen dem Benutzer und der Anwendung herstellen. Da es sich bei einem Steuerelement im Wesentlichen um eine Komponente mit grafischer Schnittstelle handelt, kann sie den gleichen Zwecken dienen wie eine Komponente, sowie Benutzerinteraktion bereitstellen. Steuerelemente werden erstellt, um bestimmte Zwecke zu erfüllen, und das Erstellen von Steuerelementen ist einfach eine weitere Aufgabe als Programmierer. Vor diesem Hintergrund bieten die folgenden Schritte einen Überblick über das Erstellen von Steuerelementen. Links bieten zusätzliche Informationen zu den einzelnen Schritten.  
@@ -25,13 +25,13 @@ Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und d
   
 1. Bestimmen Sie, was Sie mit dem Steuerelement erreichen möchten bzw. welche Rolle es in Ihrer Anwendung spielen soll. Zu berücksichtigende Faktoren sind:  
   
-    -   Welche Art grafische Benutzeroberfläche benötigen Sie?  
+    - Welche Art grafische Benutzeroberfläche benötigen Sie?  
   
-    -   Welche besonderen Benutzerinteraktionen werden von diesem Steuerelement behandelt?  
+    - Welche besonderen Benutzerinteraktionen werden von diesem Steuerelement behandelt?  
   
-    -   Wird die benötigte Funktionalität von vorhandenen Steuerelementen bereitgestellt?  
+    - Wird die benötigte Funktionalität von vorhandenen Steuerelementen bereitgestellt?  
   
-    -   Erhalten Sie die Funktionalität, die Sie benötigen, durch Kombinieren mehrerer Windows Forms-Steuerelemente?  
+    - Erhalten Sie die Funktionalität, die Sie benötigen, durch Kombinieren mehrerer Windows Forms-Steuerelemente?  
   
 2. Bestimmen Sie, wenn Sie ein Objektmodell für das Steuerelement benötigen, wie die Funktionalität im Objektmodell verteilt wird, und teilen Sie die Funktionalität zwischen dem Steuerelement und beliebigen Unterobjekten auf. Ein Objektmodell kann nützlich sein, wenn Sie ein komplexes Steuerelement planen oder mehrere Funktionen eingebunden werden soll.  
   

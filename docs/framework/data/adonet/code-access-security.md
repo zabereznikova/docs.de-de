@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174108"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583570"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -27,11 +27,11 @@ ms.locfileid: "59174108"
   
  Es gibt die folgenden drei Arten von Codezugriffsberechtigungen:  
   
--   `Code access permissions` leiten sich aus der <xref:System.Security.CodeAccessPermission>-Klasse her. Die Berechtigungen werden benötigt, um auf geschützte Ressourcen, z. B. Dateien und Umgebungsvariablen, zugreifen und geschützte Vorgänge, z. B. das Zugreifen auf nicht verwalteten Code, ausführen zu können.  
+- `Code access permissions` leiten sich aus der <xref:System.Security.CodeAccessPermission>-Klasse her. Die Berechtigungen werden benötigt, um auf geschützte Ressourcen, z. B. Dateien und Umgebungsvariablen, zugreifen und geschützte Vorgänge, z. B. das Zugreifen auf nicht verwalteten Code, ausführen zu können.  
   
--   `Identity permissions` stehen für Eigenschaften, die eine Assembly identifizieren. Die Berechtigungen werden einer Assembly nach Vorlage eines Beweises gewährt. Als Beweise gelten z. B. digitale Signaturen oder der Ursprung des Codes. Identitätsberechtigungen leiten sich auch von der <xref:System.Security.CodeAccessPermission>-Basisklasse her.  
+- `Identity permissions` stehen für Eigenschaften, die eine Assembly identifizieren. Die Berechtigungen werden einer Assembly nach Vorlage eines Beweises gewährt. Als Beweise gelten z. B. digitale Signaturen oder der Ursprung des Codes. Identitätsberechtigungen leiten sich auch von der <xref:System.Security.CodeAccessPermission>-Basisklasse her.  
   
--   `Role-based security permissions` basieren darauf, ob ein Prinzipal eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Die Klasse <xref:System.Security.Permissions.PrincipalPermission> ermöglicht sowohl deklarative als auch imperative Berechtigungsprüfungen des aktiven Prinzipals.  
+- `Role-based security permissions` basieren darauf, ob ein Prinzipal eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Die Klasse <xref:System.Security.Permissions.PrincipalPermission> ermöglicht sowohl deklarative als auch imperative Berechtigungsprüfungen des aktiven Prinzipals.  
   
  Zur Bestimmung, ob Code auf eine Ressource zugreifen oder einen Vorgang ausführen darf, durchläuft das Laufzeit-Sicherheitssystem die Aufrufliste und vergleicht dabei die gewährten Berechtigungen der einzelnen Aufrufer mit den angeforderten Berechtigungen. Wenn einer der Aufrufer in der Aufrufliste die angeforderte Berechtigung nicht besitzt, wird eine <xref:System.Security.SecurityException> ausgelöst, und der Zugriff wird verweigert.  
   
