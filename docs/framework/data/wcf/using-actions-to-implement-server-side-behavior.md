@@ -2,12 +2,12 @@
 title: Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875250"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063159"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 
@@ -46,7 +46,7 @@ OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData
   
 3. Speichern der Ergebnisse von Invoke(), sodass sie mit GetResult() abgerufen werden können  
   
- Die Parameter können als Token übergeben werden. Das liegt daran, dass ein Datendienstanbieter mit Unterstützung für Token geschrieben werden kann, die Ressourcen darstellen. In diesem Fall müssen die Token u. U. in tatsächliche Ressourcen konvertiert (gemarshallt) werden, bevor sie an die tatsächliche Aktion verteilt werden. Nachdem der Parameter gemarshallt wurde, muss er sich in einem bearbeitbaren Zustand befinden, damit alle Änderungen an der Ressource, die beim Aufrufen der Aktion auftreten, gespeichert und auf den Datenträger geschrieben werden.  
+ Die Parameter können als Token übergeben werden. Das liegt daran, dass ein Datendienstanbieter mit Unterstützung für Token geschrieben werden kann, die Ressourcen darstellen. In diesem Fall müssen die Token u. U. in tatsächliche Ressourcen konvertiert (gemarshallt) werden, bevor sie an die tatsächliche Aktion verteilt werden. Nachdem der Parameter gemarshallt wurde, muss in einem bearbeitbaren Zustand sein, damit alle Änderungen an der Ressource, die auftreten, wenn die Aktion aufgerufen wird, gespeichert und auf Festplatte geschrieben werden.  
   
  Diese Schnittstelle erfordert zwei Methoden: Invoke und GetResult. Mit Invoke wird der Delegat aufgerufen, der das Verhalten der Aktion implementiert, und GetResult gibt das Ergebnis der Aktion zurück.  
   

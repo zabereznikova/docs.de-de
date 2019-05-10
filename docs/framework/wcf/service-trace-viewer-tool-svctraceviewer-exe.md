@@ -2,12 +2,12 @@
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15024c0d2308da8cf2cc0d72d79c9f585f2912
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606018"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die Analyse der diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, ganz einfach zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit können Sie diagnostizieren, reparieren und prüfen die WCF-Dienstprobleme.  
@@ -62,11 +62,11 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Öffnen und Anzeigen von WCF-Ablaufverfolgungsdateien  
  Service Trace Viewer unterstützt drei Dateitypen:  
   
--   WCF-Ablaufverfolgungsdatei (.svcLog)  
+- WCF-Ablaufverfolgungsdatei (.svcLog)  
   
--   Ereignisablaufverfolgungs-Datei (.etl)  
+- Ereignisablaufverfolgungs-Datei (.etl)  
   
--   Crimson-Ablaufverfolgungsdatei  
+- Crimson-Ablaufverfolgungsdatei  
   
  Mit Service Trace Viewer können Sie jede unterstützte Ablaufverfolgungsdatei öffnen, weitere Ablaufverfolgungsdateien hinzufügen und integrieren oder eine Gruppe von Ablaufverfolgungsdateien gleichzeitig öffnen und zusammenführen.  
   
@@ -106,9 +106,9 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
  Es gibt zwei Möglichkeiten zum Verwalten von Projekten:  
   
--   In der **Datei** Menü öffnen, speichern und schließen Sie Projekte.  
+- In der **Datei** Menü öffnen, speichern und schließen Sie Projekte.  
   
--   In der **Projekt** Registerkarte können Sie ein Projekt Dateien hinzufügen.  
+- In der **Projekt** Registerkarte können Sie ein Projekt Dateien hinzufügen.  
   
 ### <a name="viewing-wcf-traces"></a>Anzeigen von WCF-Ablaufverfolgungen  
  WCF gibt ablaufverfolgungen im aktivitätsablaufverfolgungs-Format. Im Aktivitätsablaufverfolgungs-Modell werden einzelne Ablaufverfolgungen nach ihrem jeweiligen Zweck in Aktivitäten gruppiert. Zwischen den Aktivitäten wird eine logische Ablaufsteuerung übertragen. Zum Beispiel werden während der Lebensdaueraktivität einer Anwendung zahlreiche Nachrichtensendeaktivitäten angezeigt und wieder entfernt. Weitere Informationen zum Anzeigen von ablaufverfolgungen und Aktivitäten und die Benutzeroberfläche des Service Trace Viewer zu finden Sie unter [mithilfe von Service Trace Viewer für korreliert Ablaufverfolgungen anzeigen und Problembehandlung](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
@@ -116,13 +116,13 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 #### <a name="switching-to-different-views"></a>Umschalten zu anderen Ansichten  
  Der Service Trace Viewer umfasst die folgenden Ansichten. Sie werden als Registerkarten im linken Bereich des Viewers angezeigt und kann auch aus zugegriffen werden die **Ansicht** Menü.  
   
--   Aktivitätsansicht  
+- Aktivitätsansicht  
   
--   Projektansicht  
+- Projektansicht  
   
--   Nachrichtenansicht  
+- Nachrichtenansicht  
   
--   Diagrammansicht  
+- Diagrammansicht  
   
 ##### <a name="activity-view"></a>Aktivitätsansicht  
  Nachdem die Ablaufverfolgungsdateien geöffnet sind, sehen Sie die ablaufverfolgungen in Aktivitäten gruppiert und angezeigt, der **Aktivität** im linken Bereich.  
@@ -144,9 +144,12 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
 ##### <a name="project-view"></a>Projektansicht  
  Diese Ansicht ermöglicht Ihnen, Ablaufverfolgungsdateien im aktuellen Projekt zu verwalten. Weitere Informationen finden Sie im Abschnitt über das Verwalten des Projekts.  
-  
+
+##### <a name="message-view"></a>Nachrichtenansicht
+ Diese Ansicht ermöglicht es, Ihnen alle Message-Protokoll anzeigen ablaufverfolgungen, einschließlich der Aktion "," Datum/Uhrzeit-Prozess, Acivity und vom bzw. an, und navigieren Sie zu der zugeordneten Nachrichtenprotokoll-Ablaufverfolgung. Sie können die Nachrichtenprotokoll-ablaufverfolgungen von Aktivitätsgrenze, Prozess-/Threadtokens, oder senden und empfangen für die einfachere Navigation des Nachrichtenflusses gruppieren.
+ 
 ##### <a name="graph-view"></a>Diagrammansicht  
- Eines der leistungsstärksten Funktionen von Service Trace Viewer ist der **Graph** Ansicht, in der die Ablaufverfolgungsdaten für eine bestimmte Aktivität als Diagramm angezeigt. Im Diagramm können Sie die schrittweise Ausführung von Ereignissen und die Wechselbeziehungen zwischen mehreren Aktivitäten nachvollziehen, während die Daten diese durchlaufen.  
+ Diese Ansicht zeigt die Ablaufverfolgungsdaten für eine bestimmte Aktivität in Diagrammform an. Im Diagramm können Sie die schrittweise Ausführung von Ereignissen und die Wechselbeziehungen zwischen mehreren Aktivitäten nachvollziehen, während die Daten diese durchlaufen.  
   
  So wechseln Sie zu **Graph** anzuzeigen, wählen Sie eine Aktivität in der **Aktivität** anzuzeigen, und klicken Sie auf die **Aktivität** Registerkarte oder auf eine Nachrichtenprotokoll-Ablaufverfolgung in der **Nachricht**Anzeigen. Wenn mehrere Ablaufverfolgungsdateien geladen sind und die Aktivität Ablaufverfolgungen aus mehr als einer Datei umfasst, werden alle relevanten Ablaufverfolgungen in der Diagrammansicht angezeigt. Doppelklicken auf die Aktivitäten und Nachrichtenprotokoll-ablaufverfolgungen auch gelangen Sie in der **Graph** anzeigen.  
   
@@ -192,9 +195,9 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 ###### <a name="options"></a>Optionen  
  Sie können zwei Optionen auswählen der **Option** Menü in der Diagrammansicht.  
   
--   Ablaufverfolgungen für Aktivitätsgrenzen anzeigen: Wenn diese Option nicht aktiviert ist, werden die Ablaufverfolgungen für Aktivitätsgrenzen im Diagramm ignoriert.  
+- Ablaufverfolgungen für Aktivitätsgrenzen anzeigen: Wenn diese Option nicht aktiviert ist, werden die Ablaufverfolgungen für Aktivitätsgrenzen im Diagramm ignoriert.  
   
--   Ausführliche Ablaufverfolgungen ohne Nachrichten anzeigen: Wenn diese Option deaktiviert ist, werden ausführliche Ebenenablaufverfolgungen, außer Nachrichtenablaufverfolgungen, ignoriert. In den meisten Fällen sind ausführliche Ebenenablaufverfolgungen für die Analyse weniger wichtig. Diese Option ist nützlich, wenn Sie ausführliche Ebenenablaufverfolgungen nicht analysieren möchten, sondern sich auf wichtigere Ablaufverfolgungen konzentrieren möchten.  
+- Ausführliche Ablaufverfolgungen ohne Nachrichten anzeigen: Wenn diese Option deaktiviert ist, werden ausführliche Ebenenablaufverfolgungen, außer Nachrichtenablaufverfolgungen, ignoriert. In den meisten Fällen sind ausführliche Ebenenablaufverfolgungen für die Analyse weniger wichtig. Diese Option ist nützlich, wenn Sie ausführliche Ebenenablaufverfolgungen nicht analysieren möchten, sondern sich auf wichtigere Ablaufverfolgungen konzentrieren möchten.  
   
 ###### <a name="layout-mode"></a>Layoutmodus  
  Der Viewer hat zwei Layoutmodi: **Prozess** und **Thread**. Diese Einstellung definiert die größte Organisationseinheit. Der Standardwert ist **Prozess**, was bedeutet, dass die Aktivitäten im Diagramm nach Prozessen gruppiert werden.  
@@ -222,22 +225,22 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 ### <a name="filtering-wcf-traces"></a>Filtern von WCF-Ablaufverfolgungen  
  Um die Analyse von Ablaufverfolgungsdateien zu vereinfachen, können Sie sie auf folgende Weisen filtern:  
   
--   Die Filtersymbolleiste ermöglicht den Zugriff auf vordefinierte und benutzerdefinierte Filter. Es kann aktiviert werden, über die **Ansicht** Menü.  
+- Die Filtersymbolleiste ermöglicht den Zugriff auf vordefinierte und benutzerdefinierte Filter. Es kann aktiviert werden, über die **Ansicht** Menü.  
   
--   Der vordefinierte Filter des Viewers kann verwendet werden, um Teile der WCF-ablaufverfolgungen selektiv zu filtern. Standardmäßig ist der Filter so eingestellt, dass alle Infrastrukturablaufverfolgungen zugelassen werden. Die Einstellungen dieses Filters werden definiert, der **Filteroptionen** Untermenü unter **Ansicht** Menü.  
+- Der vordefinierte Filter des Viewers kann verwendet werden, um Teile der WCF-ablaufverfolgungen selektiv zu filtern. Standardmäßig ist der Filter so eingestellt, dass alle Infrastrukturablaufverfolgungen zugelassen werden. Die Einstellungen dieses Filters werden definiert, der **Filteroptionen** Untermenü unter **Ansicht** Menü.  
   
--   Benutzerdefinierte XPath-Filter ermöglichen Benutzern den Vollzugriff auf die Filterung. Sie können definiert werden, der **benutzerdefinierter Filter** unter **Ansicht** Menü.  
+- Benutzerdefinierte XPath-Filter ermöglichen Benutzern den Vollzugriff auf die Filterung. Sie können definiert werden, der **benutzerdefinierter Filter** unter **Ansicht** Menü.  
   
  Es werden nur die Ablaufverfolgungen angezeigt, die alle Filter durchlaufen haben.  
   
 #### <a name="using-the-filter-toolbar"></a>Verwenden der Filtersymbolleiste  
  Die Filtersymbolleiste wird im oberen Teil des Tools angezeigt. Wenn es nicht vorhanden ist, können Sie sie in Aktivieren der **Ansicht** Menü. Die Leiste verfügt über drei Komponenten:  
   
--   Schaue nach: **Suchen Sie nach** definiert das Objekt, bei dem Filtervorgang gesucht. Z. B. Wenn Sie alle ablaufverfolgungen, die ausgegeben wird, wurden im Kontext des Prozesses X finden möchten, legen Sie dieses Feld x und **Suchen In** Feld 'Prozessname'. Dieses Feld ändert sich in ein DateTime-Auswahlsteuerelement, wenn ein zeitbasierter Filter ausgewählt wird.  
+- Schaue nach: **Suchen Sie nach** definiert das Objekt, bei dem Filtervorgang gesucht. Z. B. Wenn Sie alle ablaufverfolgungen, die ausgegeben wird, wurden im Kontext des Prozesses X finden möchten, legen Sie dieses Feld x und **Suchen In** Feld 'Prozessname'. Dieses Feld ändert sich in ein DateTime-Auswahlsteuerelement, wenn ein zeitbasierter Filter ausgewählt wird.  
   
--   Suchen Sie: Dieses Feld definiert den Typ des anzuwendenden Filters.  
+- Suchen Sie: Dieses Feld definiert den Typ des anzuwendenden Filters.  
   
--   Ebene: Die ebeneneinstellung definiert die minimale vom Filter zugelassene Ablaufverfolgungsebene. So werden bei Auswahl der Error-Ebene oder höher nur die Ablaufverfolgungen auf Fehlerebene oder einer höheren Ebene angezeigt. Dieser Filter wird mit den unter Suchen nach und Suchen in angegebenen Kriterien kombiniert.  
+- Ebene: Die ebeneneinstellung definiert die minimale vom Filter zugelassene Ablaufverfolgungsebene. So werden bei Auswahl der Error-Ebene oder höher nur die Ablaufverfolgungen auf Fehlerebene oder einer höheren Ebene angezeigt. Dieser Filter wird mit den unter Suchen nach und Suchen in angegebenen Kriterien kombiniert.  
   
  Die **jetzt filtern** Schaltfläche wird der Filtervorgang gestartet. Die Ausführung einiger Filter kann sehr lange dauern, insbesondere dann, wenn sie auf einen umfangreichen Datensatz angewendet werden. Sie können den Filtervorgang Abbrechen, indem Sie durch Drücken der **beenden** , in der Statusleiste unter erscheint, dem **Vorgänge** im Menü.  
   
@@ -321,27 +324,27 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 ### <a name="finding-data"></a>Suchen von Daten  
  Der Viewer bietet folgende Möglichkeiten zum Suchen von Daten:  
   
--   Die Symbolleiste Suchen stellt bietet schnellen Zugriff auf die allgemeinen Suchoptionen.  
+- Die Symbolleiste Suchen stellt bietet schnellen Zugriff auf die allgemeinen Suchoptionen.  
   
--   Das Dialogfeld Suchen stellt weitere Suchoptionen zur Verfügung. Es ist über die **bearbeiten** Menü oder die Tastenkombination STRG + F.  
+- Das Dialogfeld Suchen stellt weitere Suchoptionen zur Verfügung. Es ist über die **bearbeiten** Menü oder die Tastenkombination STRG + F.  
   
  Die Symbolleiste Suchen wird am oberen Rand des Viewers angezeigt. Wenn es nicht vorhanden ist, können Sie sie in Aktivieren der **Ansicht** Menü. Die Leiste verfügt über zwei Komponenten:  
   
--   Suchen Sie nach: Ermöglicht Ihnen, Suchschlüsselwort eingeben.  
+- Suchen Sie nach: Ermöglicht Ihnen, Suchschlüsselwort eingeben.  
   
--   Suchen Sie In: Können Sie den Suchbereich einzugeben. Sie können auswählen, ob in allen Aktivitäten oder nur in der aktuellen Aktivität gesucht werden soll.  
+- Suchen Sie In: Können Sie den Suchbereich einzugeben. Sie können auswählen, ob in allen Aktivitäten oder nur in der aktuellen Aktivität gesucht werden soll.  
   
  Das Suchdialogfeld stellt zwei zusätzliche Optionen bereit:  
   
--   Ziel suchen:  
+- Ziel suchen:  
   
-    -   Die Option "nicht aufbereitete Protokolldaten" nach dem Stichwort gesucht, in allen unformatierten Daten.  
+    - Die Option "nicht aufbereitete Protokolldaten" nach dem Stichwort gesucht, in allen unformatierten Daten.  
   
-    -   Die Optionen "XML-Text" und "XML-Attribute" werden nur in XML-Elementen suchen.  
+    - Die Optionen "XML-Text" und "XML-Attribute" werden nur in XML-Elementen suchen.  
   
-    -   Die Option "Protokollierte Nachricht" nach dem Stichwort gesucht, nur in Nachrichten.  
+    - Die Option "Protokollierte Nachricht" nach dem Stichwort gesucht, nur in Nachrichten.  
   
--   Ignorieren Sie Stammaktivität: Die Suche werden die ablaufverfolgungen in der Aktivität "000000000000" ignoriert. Hierdurch wird die Leistung bei umfangreichen Ablaufverfolgungsdateien verbessert, wenn die Stammaktivität über Tausende von Ablaufverfolgungen verfügt, bei denen es sich zum Großteil um Übertragungen handelt.  
+- Ignorieren Sie Stammaktivität: Die Suche werden die ablaufverfolgungen in der Aktivität "000000000000" ignoriert. Hierdurch wird die Leistung bei umfangreichen Ablaufverfolgungsdateien verbessert, wenn die Stammaktivität über Tausende von Ablaufverfolgungen verfügt, bei denen es sich zum Großteil um Übertragungen handelt.  
   
 ### <a name="navigating-traces"></a>Navigieren in Ablaufverfolgungen  
  Da Ablaufverfolgungen bei Laufzeit der Anwendung Schritt für Schritt aufgezeichnet werden, kann Sie das Navigieren in Ablaufverfolgungen beim Debuggen Ihrer Anwendung unterstützen. Service Trace Viewer bietet mehrere Möglichkeiten zum Navigieren in Ablaufverfolgungen.  
@@ -349,9 +352,9 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 #### <a name="step-forward-or-backward"></a>Schritt vorwärts oder zurück  
  Wenn Sie jede Ablaufverfolgung als eine einzige Zeile Code in der Anwendung in Betracht ziehen, ist die einen Schritt vorwärts "Prozedurschritt" in der Visual Studio integrierte Entwicklungsumgebung (IDE) sehr ähnlich. Der Unterschied ist, dass Sie in der Ablaufverfolgung auch einen Schritt zurück gehen können. Einen Schritt vorwärts zu gehen bedeutet, zur nächsten Ablaufverfolgung in der Aktivität zu gehen.  
   
--   Schritt vorwärts: Verwenden der **Aktivität** Menü, oder drücken Sie "F10". Sie können auch oben-Taste "down" im ablaufverfolgungsbereich verwenden.  
+- Schritt vorwärts: Verwenden der **Aktivität** Menü, oder drücken Sie "F10". Sie können auch oben-Taste "down" im ablaufverfolgungsbereich verwenden.  
   
--   Schritt zurück: Verwenden der **Aktivität** Menü, oder drücken Sie "F9". Sie können auch im ablaufverfolgungsbereich oben-Taste "up" verwenden.  
+- Schritt zurück: Verwenden der **Aktivität** Menü, oder drücken Sie "F9". Sie können auch im ablaufverfolgungsbereich oben-Taste "up" verwenden.  
   
 > [!NOTE]
 >  Dies können Sie zu einer Aktivität auftreten in einem anderen Prozess oder sogar auf einem anderen Computer nutzen, da die WCF-Meldungen Aktivitäts-IDs enthalten können, die Computer umfassen.  
@@ -363,9 +366,9 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
  Es gibt zwei Möglichkeiten, einer Übertragung zu folgen: mit der Maus oder der Tastatur:  
   
--   Mit der Maus: Doppelklicken Sie auf die übertragen-Ablaufverfolgung im ablaufverfolgungsbereich.  
+- Mit der Maus: Doppelklicken Sie auf die übertragen-Ablaufverfolgung im ablaufverfolgungsbereich.  
   
--   Mit der Tastatur: Wählen Sie eine übertragungsablaufverfolgung aus, und verwenden Sie "Übertragung verfolgen" in der **Aktivität** Menü, oder drücken Sie "F11"  
+- Mit der Tastatur: Wählen Sie eine übertragungsablaufverfolgung aus, und verwenden Sie "Übertragung verfolgen" in der **Aktivität** Menü, oder drücken Sie "F11"  
   
 > [!NOTE]
 >  Wenn Aktivität A an Aktivität B übertragen wird, wartet Aktivität A in vielen Fällen, bis Aktivität B an Aktivität A zurückübertragen wurde. Dies bedeutet, dass für Aktivität A während des Zeitraums, in dem eine aktive Ablaufverfolgung für Aktivität B erfolgt, keine Ablaufverfolgung protokolliert wird. Es ist jedoch auch möglich, dass Aktivität A nicht wartet und mit dem Protokollieren von Ablaufverfolgungen fortfährt. Es ist auch möglich, dass Aktivität B nicht an Aktivität A zurückübertragen wird. In diesem Sinne unterscheiden sich Aktivitätsübertragungen weiterhin von Funktionsaufrufen. Aktivitätsübertragungen werden in der Diagrammansicht noch besser verdeutlicht.  
@@ -373,9 +376,9 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 #### <a name="jump-to-next-or-previous-transfer"></a>Zur nächsten oder zur vorherigen Übertragung wechseln  
  Wenn Sie die aktuelle Aktivität oder mehrere ausgewählte Aktivitäten analysieren, möchten Sie die Aktivitäten, an die die Übertragung stattfindet, möglicherweise schnell finden. "Zur nächsten Übertragung springen" ermöglicht Ihnen die nächste übertragungsablaufverfolgung in der Aktivität zu suchen. Wenn Sie die übertragungsablaufverfolgung gefunden haben, können um einen Einzelschritt für die nächste Aktivität Sie "Übertragung verfolgen".  
   
--   Zu nächsten Übertragung springen: Verwenden der **Aktivität** Menü, oder drücken Sie "STRG + F10".  
+- Zu nächsten Übertragung springen: Verwenden der **Aktivität** Menü, oder drücken Sie "STRG + F10".  
   
--   Zur vorherigen Übertragung wechseln: Verwenden der **Aktivität** Menü, oder drücken Sie "STRG + F9".  
+- Zur vorherigen Übertragung wechseln: Verwenden der **Aktivität** Menü, oder drücken Sie "STRG + F9".  
   
 #### <a name="navigate-in-graph-view"></a>Navigieren in der Diagrammansicht  
  Obwohl das Navigieren im Aktivitätsbereich und ablaufverfolgungsbereich dem debugging ähnlich ist, **Graph** Ansicht bietet eine viel bessere Erfahrung im Navigationsbereich. Weitere Informationen finden Sie unter "Diagrammansicht" Abschnitt.  

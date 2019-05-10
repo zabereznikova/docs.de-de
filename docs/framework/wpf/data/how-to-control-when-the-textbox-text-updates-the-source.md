@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052000"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063493"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Vorgehensweise: Steuern, wann der TextBox-Text die Quelle aktualisiert
 In diesem Thema wird beschrieben, wie Sie mit der <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Eigenschaft, um Aktualisierungen von Bindungsquellen zeitlich steuern. In diesem Thema wird die <xref:System.Windows.Controls.TextBox> Steuerelement als Beispiel.  
@@ -28,7 +28,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.Windows.Data.Bind
   
  Daher die <xref:System.Windows.Controls.TextBlock> zeigt denselben Text (da die Quelle ändert), wenn der Benutzer Text in die <xref:System.Windows.Controls.TextBox>, wie im folgenden Screenshot des Beispiels veranschaulicht:  
   
- ![Einfache Daten-beispielscreenshot: Bindung](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Screenshot mit einfache Datenbindung.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  Wenn Sie ein Dialogfeld oder eine vom Benutzer bearbeitbaren Formular und quellenaktualisierungen zu verzögern, bis der Benutzer die Felder bearbeiten abgeschlossen ist, und klickt auf "OK" werden sollen, Sie können festlegen, die <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> -Wert Ihrer Bindungen auf <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, wie im folgenden Beispiel:  
   

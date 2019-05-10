@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f4e74e1e8fa71d1492a10162191822c1edfb635
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678087"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608039"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Unsicherer Code und Zeiger (C#-Programmierhandbuch)
 Um Typsicherheit und Sicherheit zu gewährleisten, unterstützt C# standardmäßig keine Zeigerarithmetik. Sie können jedoch das [unsafe](../../../csharp/language-reference/keywords/unsafe.md)-Schlüsselwort verwenden, um einen unsicheren Kontext zu definieren, in dem Zeiger verwendet werden können. Weitere Informationen über Zeiger finden Sie unter [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
@@ -27,26 +27,26 @@ Um Typsicherheit und Sicherheit zu gewährleisten, unterstützt C# standardmäß
 ## <a name="unsafe-code-overview"></a>Übersicht über unsicheren Code  
  Unsicherer Code verfügt über die folgenden Eigenschaften:  
   
--   Methoden, Typen und Codeblöcke können als unsicher definiert werden.  
+- Methoden, Typen und Codeblöcke können als unsicher definiert werden.  
   
--   In manchen Fällen kann unsicherer Code die Leistung einer Anwendung erhöhen, indem die Überprüfung von Arraygrenzen entfernt wird.  
+- In manchen Fällen kann unsicherer Code die Leistung einer Anwendung erhöhen, indem die Überprüfung von Arraygrenzen entfernt wird.  
   
--   Unsicherer Code ist erforderlich, wenn Sie native Funktionen aufrufen, die Zeiger erfordern.  
+- Unsicherer Code ist erforderlich, wenn Sie native Funktionen aufrufen, die Zeiger erfordern.  
   
--   Die Verwendung von unsicherem Code führt zu Sicherheits- und Stabilitätsrisiken.  
+- Die Verwendung von unsicherem Code führt zu Sicherheits- und Stabilitätsrisiken.  
   
--   Damit unsicherer Code in C# kompiliert werden kann, muss die Anwendung mit [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) kompiliert werden.  
+- Damit unsicherer Code in C# kompiliert werden kann, muss die Anwendung mit [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) kompiliert werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  
   
--   [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
--   [Puffer fester Größe](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
+- [Puffer fester Größe](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+- [Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

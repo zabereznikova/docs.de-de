@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10483c747e0f86816db6f03dd8df17472f31f15c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773503"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063771"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Vorgehensweise: Erstellen eines Flussdiagrammworkflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.Flowchart> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -142,7 +142,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
      Im folgenden Beispiel wird der abgeschlossene Workflow dargestellt.  
   
-     ![Windows Workflow Foundation abgeschlossen](./media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     ![Diagramm, das eine abgeschlossene Windows Workflow Foundation-Flussdiagramm zeigt.](./media/how-to-create-a-flowchart-workflow/completed-windows-workflow-flowchart.png)  
   
 ### <a name="to-build-the-workflow"></a>So erstellen Sie den Workflow  
   
