@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 718514c843bbfc0fcc56e89ca0b60bd3ec65b3cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801763"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630643"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Vorgehensweise: Implementieren der IListSource-Schnittstelle
 Implementieren der <xref:System.ComponentModel.IListSource> Schnittstelle, um eine bindbare Klasse zu erstellen, die nicht implementiert <xref:System.Collections.IList> stattdessen bieten Sie eine Liste von einem anderen Speicherort.  

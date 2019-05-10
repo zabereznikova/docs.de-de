@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618040"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Hinzufügen, Ändern und Löschen von Daten in einer Datenbank bereit. Sie werden eine Kopie der Beispieldatenbank Northwind verwenden, um einen Kunden hinzuzufügen, den Namen des Kunden zu ändern und eine Bestellung zu löschen.  
@@ -19,13 +19,13 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese exemplarische Vorgehensweise wird Folgendes vorausgesetzt:  
   
--   Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest6") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
+- Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest6") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
   
--   Die Beispieldatenbank Northwind.  
+- Die Beispieldatenbank Northwind.  
   
      Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei northwnd.mdf in den Ordner c:\linqtest6.  
   
--   Eine von der Datenbank Northwind generierte C#-Codedatei.  
+- Eine von der Datenbank Northwind generierte C#-Codedatei.  
   
      Sie können diese Datei erzeugen, indem Sie entweder den [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] oder das SQLMetal-Tool verwenden. Diese exemplarische Vorgehensweise wurde mithilfe des SQLMetal-Tools mit der folgenden Befehlszeile geschrieben:  
   
@@ -36,17 +36,17 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 ## <a name="overview"></a>Übersicht  
  Diese exemplarische Vorgehensweise umfasst sechs Hauptaufgaben:  
   
--   Erstellen der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projektmappe in Visual Studio.  
+- Erstellen der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projektmappe in Visual Studio.  
   
--   Hinzufügen der Datenbank-Codedatei zum Projekt.  
+- Hinzufügen der Datenbank-Codedatei zum Projekt.  
   
--   Erstellen eines neuen Kundenobjekts.  
+- Erstellen eines neuen Kundenobjekts.  
   
--   Ändern des Kontaktnamens eines Kunden.  
+- Ändern des Kontaktnamens eines Kunden.  
   
--   Löschen einer Bestellung.  
+- Löschen einer Bestellung.  
   
--   Übergeben dieser Änderungen an der Datenbank Northwind.  
+- Übergeben dieser Änderungen an der Datenbank Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
  In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, die die erforderlichen Verweise zur Erstellung und Ausführung enthält eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
@@ -126,7 +126,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-change-the-name-of-a-customer"></a>So ändern Sie den Namen eines Kunden  
   
--   Fügen Sie den folgenden Code oberhalb von `Console.ReadLine();` ein:  
+- Fügen Sie den folgenden Code oberhalb von `Console.ReadLine();` ein:  
   
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
@@ -137,7 +137,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-delete-a-row"></a>So löschen Sie eine Zeile  
   
--   Fügen Sie den folgenden Code genau oberhalb von `Console.ReadLine();` ein.  
+- Fügen Sie den folgenden Code genau oberhalb von `Console.ReadLine();` ein.  
   
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   

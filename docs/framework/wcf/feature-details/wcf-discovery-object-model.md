@@ -2,12 +2,12 @@
 title: Objektmodell der WCF-Suche
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d305528c379bd4ded339854ee1f9fa55c76b40c0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614794"
 ---
 # <a name="wcf-discovery-object-model"></a>Objektmodell der WCF-Suche
 Die WCF-Suche besteht aus einem Satz von Typen, die zusammen ein einheitliches Programmiermodell bereitstellen. Damit können Sie Dienste schreiben, die zur Laufzeit erkennbar sind, sowie Clients, die nach diesen Diensten suchen und diese verwenden.  

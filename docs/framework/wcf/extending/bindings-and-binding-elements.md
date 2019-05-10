@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613362"
 ---
 # <a name="bindings-and-binding-elements"></a>Bindungen und Bindungselemente
 Bindungen sind Sammlungen spezieller Konfigurationselemente, die Namen *Bindungselemente*, die von der Service-Laufzeit, wenn ein Client ausgewertet werden oder Dienstendpunkt erstellt wird. Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.  

@@ -2,21 +2,21 @@
 title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613045"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das Windows Communication Foundation (WCF)-WEB-HTTP-Programmiermodell bietet die grundlegenden Elemente zum Erstellen von WEB-HTTP-Diensten mit WCF. WCF-WEB-HTTP-Diensten sind die größtmögliche Palette an möglichen Clients, einschließlich Webbrowsern zugegriffen werden soll und haben die folgenden besonderen Anforderungen:  
   
--   **URIs und URI-Verarbeitung** URIs spielen eine zentrale Rolle beim Entwurf von WEB-HTTP-Diensten. Der WCF-Webprogrammiermodell verwendet die <xref:System.UriTemplate> und <xref:System.UriTemplateTable> Klasse, um URI-Verarbeitungsfunktionen bereitzustellen.  
+- **URIs und URI-Verarbeitung** URIs spielen eine zentrale Rolle beim Entwurf von WEB-HTTP-Diensten. Der WCF-Webprogrammiermodell verwendet die <xref:System.UriTemplate> und <xref:System.UriTemplateTable> Klasse, um URI-Verarbeitungsfunktionen bereitzustellen.  
   
--   **Unterstützung für Get- und POST-Vorgänge** -WEB-HTTP-Dienste nutzen das GET-Verb für den Datenabruf, neben den verschiedenen aufrufverben für datenbearbeitung und Remoteaufrufe. Der WCF-Webprogrammiermodell verwendet die <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> zuordnen Dienstvorgänge sowohl get-als auch andere HTTP-Verben wie PUT, POST, und löschen.  
+- **Unterstützung für Get- und POST-Vorgänge** -WEB-HTTP-Dienste nutzen das GET-Verb für den Datenabruf, neben den verschiedenen aufrufverben für datenbearbeitung und Remoteaufrufe. Der WCF-Webprogrammiermodell verwendet die <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> zuordnen Dienstvorgänge sowohl get-als auch andere HTTP-Verben wie PUT, POST, und löschen.  
   
--   **Mehrere Datenformate** Webdienste viele Arten von Daten, zusätzlich zu SOAP-Nachrichten zu verarbeiten. Der WCF-Webprogrammiermodell verwendet die <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior> zur Unterstützung von vielen verschiedenen Datenformaten, einschließlich der XML-Dokumente, JSON-Datenobjekte und Streams mit Binärdaten wie Bilder, Videodateien oder Klartext.  
+- **Mehrere Datenformate** Webdienste viele Arten von Daten, zusätzlich zu SOAP-Nachrichten zu verarbeiten. Der WCF-Webprogrammiermodell verwendet die <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior> zur Unterstützung von vielen verschiedenen Datenformaten, einschließlich der XML-Dokumente, JSON-Datenobjekte und Streams mit Binärdaten wie Bilder, Videodateien oder Klartext.  
   
  Das WCF-WEB-HTTP-Programmiermodell erweitert den Einsatzbereich von WCF, um Szenarien mit Web-ähnliches abzudecken, die WEB-HTTP-Dienste, AJAX- und JSON-Dienste Syndication-Feeds (ATOM/RSS sowie). Weitere Informationen zu AJAX- und JSON-Dienste, finden Sie unter [AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Weitere Informationen zur Syndication finden Sie unter [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
@@ -33,23 +33,23 @@ Das Windows Communication Foundation (WCF)-WEB-HTTP-Programmiermodell bietet die
   
  Diese Vorlage beschreibt URIs wie die Folgenden:  
   
--   a/x/c  
+- a/x/c  
   
--   a/y/c  
+- a/y/c  
   
--   a/z/c  
+- a/z/c  
   
--   und so weiter.  
+- und so weiter.  
   
  In dieser Vorlage gibt die Notation mit geschweiften Klammern ("{segment}") ein variables Segment statt eines Literalwerts an.  
   
  .NET Framework stellt eine API mit dem Namen <xref:System.UriTemplate> zum Arbeiten mit URI-Vorlagen bereit. Mit `UriTemplates` können Sie Folgendes ausführen:  
   
--   Rufen Sie eine der der `Bind` Methoden mit einer Reihe von Parametern zum Erzeugen einer *vollständig geschlossenen URI* , der mit die Vorlage übereinstimmt. Dies bedeutet, dass alle Variablen innerhalb der URI-Vorlage durch Istwerte ersetzt werden.  
+- Rufen Sie eine der der `Bind` Methoden mit einer Reihe von Parametern zum Erzeugen einer *vollständig geschlossenen URI* , der mit die Vorlage übereinstimmt. Dies bedeutet, dass alle Variablen innerhalb der URI-Vorlage durch Istwerte ersetzt werden.  
   
--   Sie können `Match`() mit einem potenziellen URI aufrufen. Diese Methode schlüsselt den potenziellen URI mithilfe einer Vorlage in seine Bestandteile auf und gibt ein Wörterbuch zurück, in dem die verschiedenen URI-Teile mit den zugehörigen Variablen aus der Vorlage verzeichnet sind.  
+- Sie können `Match`() mit einem potenziellen URI aufrufen. Diese Methode schlüsselt den potenziellen URI mithilfe einer Vorlage in seine Bestandteile auf und gibt ein Wörterbuch zurück, in dem die verschiedenen URI-Teile mit den zugehörigen Variablen aus der Vorlage verzeichnet sind.  
   
--   `Bind`() und `Match`() sind Gegenstücke, sodass Sie `Match`( `Bind`( x ) ) aufrufen können und wieder zur Ausgangsumgebung zurückkehren.  
+- `Bind`() und `Match`() sind Gegenstücke, sodass Sie `Match`( `Bind`( x ) ) aufrufen können und wieder zur Ausgangsumgebung zurückkehren.  
   
  Es ist häufig wünschenswert (insbesondere auf dem Server, wo es erforderlich ist, eine Anforderung basierend auf dem URI an einen Dienstvorgang weiterzuleiten), einen Satz von <xref:System.UriTemplate>-Objekten in einer Datenstruktur zu verfolgen, die unabhängig voneinander die einzelnen darin enthaltenen Vorlagen darstellen können. <xref:System.UriTemplateTable> stellt einen Satz von URI-Vorlagen dar und wählt aus einem gegebenen Vorlagensatz die beste Übereinstimmung für den zu prüfenden URI aus. Dies ist nicht mit verbundene keinen bestimmten Netzwerkstapel (WCF enthalten), damit Sie ihn an die nötigen verwenden können.  
   
@@ -127,11 +127,11 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formate und das WCF-WEB-HTTP-Programmiermodell  
  Das WCF-WEB-HTTP-Programmiermodell verfügt über neue Funktionen, mit vielen verschiedenen Datenformaten ermöglichen. Auf der Bindungsebene kann <xref:System.ServiceModel.WebHttpBinding> die folgenden anderen Arten von Daten lesen und schreiben:  
   
--   XML  
+- XML  
   
--   JSON  
+- JSON  
   
--   Nicht transparente binäre Streams  
+- Nicht transparente binäre Streams  
   
  Dies bedeutet, dass der WCF-WEB-HTTP-Programmiermodell kann alle Arten von Daten behandeln, aber Sie Umständen die Programmierung mit <xref:System.IO.Stream>.  
   

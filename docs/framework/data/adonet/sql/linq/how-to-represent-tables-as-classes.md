@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 84dda12b-88a2-4cd2-92b3-8db87b28d14c
-ms.openlocfilehash: 49e7d6768d8739bba94c9e8d38bcc582c8bd6e4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff943fbc7ae137128d6c635fd2366ad14cf70d15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902901"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620029"
 ---
 # <a name="how-to-represent-tables-as-classes"></a>Vorgehensweise: Darstellen von Tabellen als Klassen
 Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.TableAttribute> Attribut, um eine Klasse als Entitätsklasse eine Datenbanktabelle zugeordnet zu kennzeichnen.  

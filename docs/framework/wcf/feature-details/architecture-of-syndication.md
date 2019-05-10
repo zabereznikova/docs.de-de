@@ -2,12 +2,12 @@
 title: Architektur von Syndication
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18719c1a6ece24008cc97f36278e3ea8d3355393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596361"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606222"
 ---
 # <a name="architecture-of-syndication"></a>Architektur von Syndication
 Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell zu bieten, mit dem es möglich ist, Schlagzeilen in verschiedenen Formaten zu schreiben und direkt zu übertragen. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  

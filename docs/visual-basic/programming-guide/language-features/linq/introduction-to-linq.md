@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781003"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633497"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Einführung in LINQ in Visual Basic
 Language Integrated Query (LINQ) bietet Abfragefunktionen in Visual Basic sowie einfache und leistungsstarke Funktionen bei der Arbeit mit allen Arten von Daten. Anstatt senden eine Abfrage an eine Datenbank verarbeitet werden, oder Arbeiten mit unterschiedlichen Abfragesyntaxarten für jeden Typ von Daten, die Sie suchen, werden von LINQ Abfragen als Teil der Visual Basic-Sprache eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
