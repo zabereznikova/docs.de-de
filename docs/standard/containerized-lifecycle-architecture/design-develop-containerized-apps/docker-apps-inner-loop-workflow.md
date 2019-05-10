@@ -4,12 +4,12 @@ description: Erfahren Sie, die "innere Schleife"-Workflow für die Entwicklung v
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050574"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664376"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Inner-Loop-Entwicklungsworkflow für Docker-Apps
 
@@ -21,11 +21,11 @@ Vor dem Auslösen des äußeren Schleife Workflows umfasst den gesamten DevOps-Z
 
 Der Container oder eine Instanz eines Docker-Images werden diese Komponenten enthalten:
 
--   Eine Betriebssystemauswahl (z.B. eine Linux-Distribution oder Windows)
+- Eine Betriebssystemauswahl (z.B. eine Linux-Distribution oder Windows)
 
 - Dateien, die vom Entwickler (z.B. app-Binärdateien) hinzugefügt
 
--   Konfiguration (z. B. umgebungseinstellungen und Abhängigkeiten)
+- Konfiguration (z. B. umgebungseinstellungen und Abhängigkeiten)
 
 - Anweisungen für welche Aspekte Sie verarbeitet die Ausführung von Docker
 
@@ -115,7 +115,7 @@ Im folgenden finden eine DockerFile-Beispieldatei für eine .NET Core-Container:
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-Das Bild in diesem Fall basiert auf Version 2.1 von der offiziellen ASP.NET Core-Docker-Image (Multi-Arch für Linux und Windows), gemäß der Zeile `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Weitere Informationen zu diesem Thema finden Sie unter den [ASP.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Seite und die [.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-core/) Seite).
+Das Bild in diesem Fall basiert auf Version 2.2 des offiziellen ASP.NET Core-Docker Images (Multi-Arch für Linux und Windows), gemäß der Zeile `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Weitere Informationen zu diesem Thema finden Sie unter den [ASP.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Seite und die [.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-core/) Seite).
 
 In der dockerfile-Datei können Sie auch weisen Docker an zum TCP-Port zu lauschen, die Sie zur Laufzeit (z. B. Port 80) verwenden.
 
