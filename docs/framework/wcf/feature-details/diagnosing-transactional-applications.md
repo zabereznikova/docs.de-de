@@ -2,12 +2,12 @@
 title: Erkennen einer Transaktionsanwendung
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856738"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751116"
 ---
 # <a name="diagnosing-transactional-applications"></a>Erkennen einer Transaktionsanwendung
 Dieses Thema beschreibt, wie Sie die Windows Communication Foundation (WCF)-Verwaltung und die Diagnosefunktion zu verwenden, um einer transaktionsanwendung zu beheben.  

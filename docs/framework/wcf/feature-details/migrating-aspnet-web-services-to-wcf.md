@@ -2,12 +2,12 @@
 title: Migrieren von ASP.NET-Webdiensten zu WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8102b91ba14b75ec9cbd2a683b68c3723a77aed0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649436"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrieren von ASP.NET-Webdiensten zu WCF
 ASP.NET stellt .NET Framework-Klassenbibliotheken und Tools zum Erstellen von Webdiensten sowie Funktionen für Hostingdienste innerhalb von Internetinformationsdienste (IIS) bereit. Windows Communication Foundation (WCF) bietet .NET Framework-Klassenbibliotheken, Tools und Hostingfunktionen zum Aktivieren von Softwareentitäten zur Kommunikation über alle Protokolle, einschließlich von Webdiensten verwendet werden.  Migrieren von ASP.NET-Webdiensten zu WCF ermöglicht Ihren Anwendungen nutzen Sie die Vorteile der neuen Features und Verbesserungen, die für WCF eindeutig sind.  

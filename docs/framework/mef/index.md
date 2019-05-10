@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648496"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>Schlussbemerkung
  In diesem Thema wurden die grundlegenden Konzepte des MEF behandelt.
 
--   Teile, Kataloge und der Kompositionscontainer
+- Teile, Kataloge und der Kompositionscontainer
 
      Die Teile und der Kompositionscontainer sind die Grundbausteine einer MEF-Anwendung. Ein Teil ist jedes Objekt, durch das ein Wert importiert oder exportiert wird, einschließlich des Objekts selbst. Ein Katalog stellt eine Auflistung der Teile einer bestimmten Quelle bereit. Der Kompositionscontainer verwendet die von einem Katalog bereitgestellten Teile, um eine Komposition (die Bindung von Importen an Exporte) durchzuführen.
 
--   Importe und Exporte
+- Importe und Exporte
 
      Durch Importe und Exporte kommunizieren Komponenten miteinander. Durch einen Import fordert eine Komponente einen bestimmten Wert oder ein Objekt an. Mit einem Export wird die Verfügbarkeit eines Werts angezeigt. Jeder Import wird anhand seines Vertrags mit einer Reihe von Exporten verglichen.
 

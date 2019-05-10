@@ -2,12 +2,12 @@
 title: Verwalten von Parallelität mit DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 62cbb8825171628b29a5519ca9e3ae31c2058a03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793639"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662966"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Verwalten von Parallelität mit DependentTransaction
 Das <xref:System.Transactions.Transaction>-Objekt wird mit der <xref:System.Transactions.Transaction.DependentClone%2A>-Methode erstellt. Sein einziger Zweck besteht darin, sicherzustellen, dass die Transaktion keinen Commit durchführen kann, während andere Codeteile (beispielsweise ein Arbeitsthread) noch Aktionen für die Transaktion ausführen. Wenn die Aktionen innerhalb der geklonten Transaktion abgeschlossen und für den Commit bereit sind, kann es den Ersteller der Transaktion mithilfe der <xref:System.Transactions.DependentTransaction.Complete%2A>-Methode informieren. Auf diese Weise können Sie Konsistenz und Richtigkeit der Daten bewahren.  

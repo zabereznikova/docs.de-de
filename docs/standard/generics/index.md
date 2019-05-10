@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683300"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622807"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683300"
   
  Dieses Thema bietet eine Übersicht über Generics in .NET und eine Zusammenfassung der generischen Typen oder Methoden. Es enthält die folgenden Abschnitte:  
   
--   [Definieren und Verwenden von Generics](#defining_and_using_generics)  
+- [Definieren und Verwenden von Generics](#defining_and_using_generics)  
   
--   [Generics-Terminologie](#generics_terminology)  
+- [Generics-Terminologie](#generics_terminology)  
   
--   [Klassenbibliothek und Sprachunterstützung](#class_library_and_language_support)  
+- [Klassenbibliothek und Sprachunterstützung](#class_library_and_language_support)  
   
--   [Geschachtelte Typen und Generics](#nested_types_and_generics)  
+- [Geschachtelte Typen und Generics](#nested_types_and_generics)  
   
--   [Verwandte Themen](#related_topics)  
+- [Verwandte Themen](#related_topics)  
   
--   [Verweis](#reference)  
+- [Verweis](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>Definieren und Verwenden von Generics  
@@ -71,21 +71,21 @@ ms.locfileid: "61683300"
 ### <a name="generics-terminology"></a>Generics-Terminologie  
  Die folgenden Begriffe werden bei der Erörterung von Generics in .NET verwendet:  
   
--   Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> -Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
+- Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> -Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
   
--   *Generische Typparameter*, oder *Typparameter*, sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
+- *Generische Typparameter*, oder *Typparameter*, sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
   
--   Ein *konstruierter generischer Typ*, oder *konstruierter Typ*, ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
+- Ein *konstruierter generischer Typ*, oder *konstruierter Typ*, ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
   
--   Ein *generisches Typargument* ist jeder Typ, der durch einen generischen Typparameter ersetzt wird.  
+- Ein *generisches Typargument* ist jeder Typ, der durch einen generischen Typparameter ersetzt wird.  
   
--   Der allgemeine Begriff *generischer Typ* schließt sowohl konstruierte Typen als auch generische Typdefinitionen ein.  
+- Der allgemeine Begriff *generischer Typ* schließt sowohl konstruierte Typen als auch generische Typdefinitionen ein.  
   
--   *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz*bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
+- *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz*bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen Standardkonstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
+- *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen Standardkonstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
   
--   Eine *generische Methodendefinition* ist eine Methode mit zwei Parameterlisten: eine Liste der generischen Typparameter und eine Liste der formalen Parameter. Typparameter können als Rückgabetyp oder als Typen der formalen Parameter auftreten, wie im folgenden Code dargestellt.  
+- Eine *generische Methodendefinition* ist eine Methode mit zwei Parameterlisten: eine Liste der generischen Typparameter und eine Liste der formalen Parameter. Typparameter können als Rückgabetyp oder als Typen der formalen Parameter auftreten, wie im folgenden Code dargestellt.  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683300"
 ## <a name="advantages-and-disadvantages-of-generics"></a>Vor- und Nachteile von Generics  
  Es gibt viele Vorteile für die Verwendung von generischen Auflistungen und Delegaten:  
   
--   Typsicherheit. Generics übertragen die Last der Typsicherheit an den Compiler. Es ist nicht erforderlich, dass Sie Code schreiben, um auf den richtigen Datentyp hin zu testen, da dieser zum Zeitpunkt der Kompilierung erzwungen wird. Die Notwendigkeit einer Typumwandlung und die Möglichkeit von Laufzeitfehlern werden verringert.  
+- Typsicherheit. Generics übertragen die Last der Typsicherheit an den Compiler. Es ist nicht erforderlich, dass Sie Code schreiben, um auf den richtigen Datentyp hin zu testen, da dieser zum Zeitpunkt der Kompilierung erzwungen wird. Die Notwendigkeit einer Typumwandlung und die Möglichkeit von Laufzeitfehlern werden verringert.  
   
--   Es ist weniger Code erforderlich, und Code kann leichter wiederverwendet werden. Die Vererbung von einem Basistyp oder das Überschreiben von Membern ist nicht erforderlich. <xref:System.Collections.Generic.LinkedList%601> ist beispielsweise sofort einsatzbereit. So können Sie mit der folgenden Variablendeklaration eine verknüpfte Liste von Zeichenfolgen erstellen:  
+- Es ist weniger Code erforderlich, und Code kann leichter wiederverwendet werden. Die Vererbung von einem Basistyp oder das Überschreiben von Membern ist nicht erforderlich. <xref:System.Collections.Generic.LinkedList%601> ist beispielsweise sofort einsatzbereit. So können Sie mit der folgenden Variablendeklaration eine verknüpfte Liste von Zeichenfolgen erstellen:  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   Bessere Leistung. Generische Auflistungstypen bieten im Allgemeinen eine bessere Leistung zum Speichern und Bearbeiten von Werttypen, da das Boxing von Werttypen nicht erforderlich ist.  
+- Bessere Leistung. Generische Auflistungstypen bieten im Allgemeinen eine bessere Leistung zum Speichern und Bearbeiten von Werttypen, da das Boxing von Werttypen nicht erforderlich ist.  
   
--   Generische Delegaten ermöglichen typsichere Rückrufe, ohne mehrere Delegatklassen erstellen zu müssen. Der generische Delegat <xref:System.Predicate%601> ermöglicht es Ihnen beispielsweise, Ihre eigenen Suchkriterien für einen bestimmten Typ zu implementieren und Ihre Methode für Methoden vom Typ <xref:System.Array> zu verwenden, z. B. <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>und <xref:System.Array.FindAll%2A>.  
+- Generische Delegaten ermöglichen typsichere Rückrufe, ohne mehrere Delegatklassen erstellen zu müssen. Der generische Delegat <xref:System.Predicate%601> ermöglicht es Ihnen beispielsweise, Ihre eigenen Suchkriterien für einen bestimmten Typ zu implementieren und Ihre Methode für Methoden vom Typ <xref:System.Array> zu verwenden, z. B. <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>und <xref:System.Array.FindAll%2A>.  
   
--   Generics optimieren dynamisch generierten Code. Wenn Sie Generics mit dynamisch generiertem Code verwenden, müssen Sie nicht den Typ generieren. Dies erhöht die Anzahl der Szenarios, in denen Sie einfache dynamische Methoden verwenden können, anstatt ganze Assemblys zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) und <xref:System.Reflection.Emit.DynamicMethod>.  
+- Generics optimieren dynamisch generierten Code. Wenn Sie Generics mit dynamisch generiertem Code verwenden, müssen Sie nicht den Typ generieren. Dies erhöht die Anzahl der Szenarios, in denen Sie einfache dynamische Methoden verwenden können, anstatt ganze Assemblys zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) und <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Es folgen einige Einschränkungen von Generics:  
   
--   Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
+- Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
   
--   Enumerationen können keine generischen Typparameter haben. Eine Enumeration kann nur durch Zufall generisch sein (z. B. weil sie in einem generischen Typ verschachtelt ist, der mit Visual Basic, C# oder C++ definiert wurde). Weitere Informationen finden Sie unter "Enumerationen" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
+- Enumerationen können keine generischen Typparameter haben. Eine Enumeration kann nur durch Zufall generisch sein (z. B. weil sie in einem generischen Typ verschachtelt ist, der mit Visual Basic, C# oder C++ definiert wurde). Weitere Informationen finden Sie unter "Enumerationen" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
--   Einfache dynamische Methoden können nicht generisch sein.  
+- Einfache dynamische Methoden können nicht generisch sein.  
   
--   In Visual Basic, C# und C++ kann ein geschachtelter Typ, der in einem generischen Typ eingeschlossen ist, nicht instanziiert werden, es sei denn, die Typen wurden den Typparametern aller einschließenden Typen zugewiesen. Anders ausgedrückt: Ein geschachtelter Typ, der mit diesen Sprachen definiert wurde, enthält bei näherer Betrachtung die Typparameter aller einschließenden Typen. Dadurch können die Typparameter von einschließenden Typen in den Memberdefinitionen eines geschachtelten Typs verwendet werden. Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
+- In Visual Basic, C# und C++ kann ein geschachtelter Typ, der in einem generischen Typ eingeschlossen ist, nicht instanziiert werden, es sei denn, die Typen wurden den Typparametern aller einschließenden Typen zugewiesen. Anders ausgedrückt: Ein geschachtelter Typ, der mit diesen Sprachen definiert wurde, enthält bei näherer Betrachtung die Typparameter aller einschließenden Typen. Dadurch können die Typparameter von einschließenden Typen in den Memberdefinitionen eines geschachtelten Typs verwendet werden. Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
     >  Ein geschachtelter Typ, der durch Ausgabe von Code in einer dynamischen Assembly oder durch Verwendung von [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) definiert wird, ist nicht erforderlich, um die Typparameter seiner einschließenden Typen zu beinhalten; wenn sie jedoch nicht enthalten sind, befinden sich die Typparameter nicht im Gültigkeitsbereich der geschachtelten Klasse.  
@@ -138,9 +138,9 @@ ms.locfileid: "61683300"
 ## <a name="class-library-and-language-support"></a>Klassenbibliothek und Sprachunterstützung  
  .NET bietet eine Reihe generischer Auflistungsklassen in den folgenden Namespaces:  
   
--   Der Namespace <xref:System.Collections.Generic> enthält die meisten generischen Auflistungstypen, die von .NET bereitgestellt werden, z.B. die generischen Klassen <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602>.  
+- Der Namespace <xref:System.Collections.Generic> enthält die meisten generischen Auflistungstypen, die von .NET bereitgestellt werden, z.B. die generischen Klassen <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602>.  
   
--   Der Namespace <xref:System.Collections.ObjectModel> enthält zusätzliche generische Auflistungstypen, z. B. die generische Klasse <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, die zum Offenlegen von Objektmodellen für die Benutzer der Klasse nützlich sind.  
+- Der Namespace <xref:System.Collections.ObjectModel> enthält zusätzliche generische Auflistungstypen, z. B. die generische Klasse <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, die zum Offenlegen von Objektmodellen für die Benutzer der Klasse nützlich sind.  
   
  Generische Schnittstellen für die Implementierung von Sortier- und Übereinstimmungsvergleichen finden Sie im <xref:System> -Namespace zusammen mit generischen Delegattypen für Ereignishandler, Konvertierungen und Suchprädikate.  
   
