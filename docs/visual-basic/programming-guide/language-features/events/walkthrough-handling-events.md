@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aa3c1f00922cda46d3ce5a788b606a6f5da52636
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053794"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604043"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereignissen zu arbeiten. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie behandeln Ereignisse aus, wenn sie auftreten.  
