@@ -2,12 +2,12 @@
 title: Verwenden des WCF-Monikers mit COM-Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 827ea3295bc052f7272eeff241ece10caf5a9704
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624255"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Verwenden des WCF-Monikers mit COM-Clients
 In diesem Beispiel wird veranschaulicht, wie Sie mit, dass der Windows Communication Foundation (WCF)-Dienstmoniker um Webdienste in COM-basierte entwicklungsumgebungen, wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 zu integrieren. Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden. Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf. Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  

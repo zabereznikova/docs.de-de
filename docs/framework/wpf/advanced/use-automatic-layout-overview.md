@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098779"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620883"
 ---
 # <a name="use-automatic-layout-overview"></a>Übersicht über die Verwendung eines automatischen Layouts
 In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendungen mit lokalisierbarem [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In der Vergangenheit nahm die Lokalisierung einer Benutzeroberfläche viel Zeit in Anspruch. Jede Sprache, die für die Benutzeroberfläche angepasst wurde, benötigt eine pixelweise Anpassung. Sofort mit dem richtigen Entwurfs- und Codierungsstandards können [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] konstruiert werden kann, sodass Lokalisierer Ändern der Größe und die neupositionierung vorhanden sind. Der Ansatz zum Schreiben von Anwendungen, die einfacher geändert und neu positioniert werden können ist als automatisches Layout bezeichnet und kann erreicht werden, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsentwurf.  
@@ -19,15 +19,15 @@ In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[T
 ## <a name="advantages-of-using-automatic-layout"></a>Vorteile der Verwendung des automatischen Layouts  
  Da die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Präsentationssystem ist leistungsfähiger und flexibler, es bietet die Möglichkeit, Elemente in einer Anwendung, die die Anforderungen für verschiedene Sprachen angepasst werden kann. Die folgende Liste hebt einige der Vorteile des automatischen Layouts hervor.  
 
--   Benutzeroberfläche wird in jeder Sprache gut angezeigt werden.  
+- Benutzeroberfläche wird in jeder Sprache gut angezeigt werden.  
 
--   Reduziert nach der Übersetzung des Text die Notwendigkeit der Anpassung von Position und Größe von Steuerelementen.  
+- Reduziert nach der Übersetzung des Text die Notwendigkeit der Anpassung von Position und Größe von Steuerelementen.  
   
--   Reduziert die Notwendigkeit zur Anpassung der Fenstergröße.  
+- Reduziert die Notwendigkeit zur Anpassung der Fenstergröße.  
 
--   Layout der Benutzeroberfläche, die korrekt in einer beliebigen Sprache gerendert werden.  
+- Layout der Benutzeroberfläche, die korrekt in einer beliebigen Sprache gerendert werden.  
 
--   Die Lokalisierung kann bis zu dem Punkt reduziert werden, dass sie nur wenig komplexer als eine Zeichenfolgeübersetzung ist.  
+- Die Lokalisierung kann bis zu dem Punkt reduziert werden, dass sie nur wenig komplexer als eine Zeichenfolgeübersetzung ist.  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>Automatisches Layout und Steuerelemente  

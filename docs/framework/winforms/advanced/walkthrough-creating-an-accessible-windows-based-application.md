@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747550"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665930"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen
 Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter Bedeutung. Bei vielen staatlichen Stellen gibt es für den Kauf von Software Vorschriften hinsichtlich der Barrierefreiheit. Das Certified for Windows-Logo beinhaltet Anforderungen zur Barrierefreiheit. Allein in den USA gibt es etwa 30 Millionen Menschen, viele davon potenzielle Kunden, für die die Barrierefreiheit von Software maßgeblich ist.  
   
  In dieser exemplarischen Vorgehensweise werden die fünf Anforderungen zur Barrierefreiheit für das Certified for Windows-Logo erläutert. Entsprechend diesen Anforderungen muss eine barrierefreie Anwendung folgende Forderungen erfüllen:  
   
--   Unterstützung der Systemsteuerungseinstellungen für Größe, Farbe, Schriftart und Eingabe. Wenn ein Benutzer die Einstellungen der Systemsteuerung ändert, wird die Größe der Menüleiste, der Titelleiste, der Ränder und der Statusleiste automatisch geändert. In dieser Anwendung sind keine weiteren Änderungen an den Steuerelementen oder am Code erforderlich.  
+- Unterstützung der Systemsteuerungseinstellungen für Größe, Farbe, Schriftart und Eingabe. Wenn ein Benutzer die Einstellungen der Systemsteuerung ändert, wird die Größe der Menüleiste, der Titelleiste, der Ränder und der Statusleiste automatisch geändert. In dieser Anwendung sind keine weiteren Änderungen an den Steuerelementen oder am Code erforderlich.  
   
--   Unterstützung für den Modus für hohe Kontraste.  
+- Unterstützung für den Modus für hohe Kontraste.  
   
--   Bereitstellen von dokumentierten Tastaturzugriffen auf alle Features.  
+- Bereitstellen von dokumentierten Tastaturzugriffen auf alle Features.  
   
--   Visuelle und programmgesteuerte Anzeige der Position des Tastaturfokus.  
+- Visuelle und programmgesteuerte Anzeige der Position des Tastaturfokus.  
   
--   Vermeiden, dass wichtige Informationen ausschließlich akustisch übermittelt werden.  
+- Vermeiden, dass wichtige Informationen ausschließlich akustisch übermittelt werden.  
   
  Weitere Informationen finden Sie unter [Ressourcen für das Entwerfen von Anwendungen mit Barrierefreiheit](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
@@ -41,29 +41,29 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
   
 #### <a name="to-begin-making-the-application"></a>So beginnen Sie mit der Erstellung der Anwendung  
   
--   Erstellen Sie eine neue Windows-Anwendung in Visual Basic oder Visual C#. Geben Sie dem Projekt den Namen **Pizzabestellung**. (Weitere Informationen finden Sie unter [Erstellen neuer Projektmappen und Projekte](/visualstudio/ide/creating-solutions-and-projects).)  
+- Erstellen Sie eine neue Windows-Anwendung in Visual Basic oder Visual C#. Geben Sie dem Projekt den Namen **Pizzabestellung**. (Weitere Informationen finden Sie unter [Erstellen neuer Projektmappen und Projekte](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Hinzufügen der Steuerelemente zum Formular  
  Wenn Sie Steuerelemente zu einem Formular hinzufügen, sollten Sie die folgenden Richtlinien für eine barrierefreie Anwendung beachten:  
   
--   Legen Sie für die Eigenschaften <xref:System.Windows.Forms.Control.AccessibleDescription%2A> und <xref:System.Windows.Forms.Control.AccessibleName%2A> fest. In diesem Beispiel ist die Einstellung "Default" für <xref:System.Windows.Forms.Control.AccessibleRole%2A> ausreichend. Weitere Informationen zu den Eigenschaften von Barrierefreiheit finden Sie unter [Informationen über die Barrierefreiheit für Steuerelemente in Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+- Legen Sie für die Eigenschaften <xref:System.Windows.Forms.Control.AccessibleDescription%2A> und <xref:System.Windows.Forms.Control.AccessibleName%2A> fest. In diesem Beispiel ist die Einstellung "Default" für <xref:System.Windows.Forms.Control.AccessibleRole%2A> ausreichend. Weitere Informationen zu den Eigenschaften von Barrierefreiheit finden Sie unter [Informationen über die Barrierefreiheit für Steuerelemente in Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
--   Legen Sie den Schriftgrad auf 10 Punkt oder größer fest.  
+- Legen Sie den Schriftgrad auf 10 Punkt oder größer fest.  
   
     > [!NOTE]
     >  Wenn Sie den Schriftgrad des Formulars auf 10 festlegen, wenn Sie beginnen, haben alle dem Formular anschließend hinzugefügten Steuerelemente ebenfalls den Schriftgrad 10.  
   
--   Stellen Sie sicher, dass jedes Label-Steuerelement, das ein TextBox-Steuerelement beschreibt, dem TextBox-Steuerelement in der Aktivierreihenfolge direkt vorangestellt ist.  
+- Stellen Sie sicher, dass jedes Label-Steuerelement, das ein TextBox-Steuerelement beschreibt, dem TextBox-Steuerelement in der Aktivierreihenfolge direkt vorangestellt ist.  
   
--   Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eines beliebigen Steuerelements, die der Benutzer navigieren kann soll.  
+- Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eines beliebigen Steuerelements, die der Benutzer navigieren kann soll.  
   
--   Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der Bezeichnung, die einem Steuerelement vorangestellt, die der Benutzer ggf. ist zu navigieren. Legen Sie <xref:System.Windows.Forms.Label.UseMnemonic%2A>-Eigenschaft der Bezeichnungen auf `true` fest, sodass der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt wird, wenn der Benutzer die Zugriffstaste drückt.  
+- Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der Bezeichnung, die einem Steuerelement vorangestellt, die der Benutzer ggf. ist zu navigieren. Legen Sie <xref:System.Windows.Forms.Label.UseMnemonic%2A>-Eigenschaft der Bezeichnungen auf `true` fest, sodass der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt wird, wenn der Benutzer die Zugriffstaste drückt.  
   
--   Fügen Sie allen Menüelementen Zugriffstasten hinzu.  
+- Fügen Sie allen Menüelementen Zugriffstasten hinzu.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>So gestalten Sie eine Windows-Anwendung barrierefrei  
   
--   Gehen Sie entsprechend der nachstehenden Beschreibung vor, um dem Formular die Steuerelemente hinzuzufügen und die Eigenschaften festzulegen. Am Ende der Tabelle finden Sie ein Bild, das ein Modell für die Anordnung der Steuerelemente auf dem Formular zeigt.  
+- Gehen Sie entsprechend der nachstehenden Beschreibung vor, um dem Formular die Steuerelemente hinzuzufügen und die Eigenschaften festzulegen. Am Ende der Tabelle finden Sie ein Bild, das ein Modell für die Anordnung der Steuerelemente auf dem Formular zeigt.  
   
     |Object|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
     |MenuItem|Name|exitApp|  
     ||Text|&Beenden|
     
-      Das Formular sieht in etwa wie in der folgenden Abbildung:
+      Your form will look something like the following image:
     
-      ![Die pizzabestellformular mit einer Namen im Textfeld "und" Größe "und" Beläge Auswahl.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>Unterstützen des Modus für hohe Kontraste  
  Der Modus für hohe Kontraste ist eine Windows-Systemeinstellung, die die Lesbarkeit verbessert, indem kontrastreiche Farben und Schriftgrade verwendet werden, die für sehbehinderte Benutzer vorteilhaft sind. Die <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Eigenschaft wird bereitgestellt, um zu bestimmen, ob der Modus für hohe Kontraste festgelegt ist.  
   
  Wenn "SystemInformation.HighContrast" gleich `true` ist, muss die Anwendung wie folgt vorgehen:  
   
--   Sie zeigt alle Elemente der Benutzeroberfläche mit dem Systemfarbschema an.  
+- Sie zeigt alle Elemente der Benutzeroberfläche mit dem Systemfarbschema an.  
   
--   Alle durch Farbe vermittelten Informationen müssen auch durch visuelle Hinweise oder durch Töne vermittelt werden. Wenn beispielsweise bestimmte Listenelemente in roter Schrift hervorgehoben sind, können Sie diese auch noch fett formatieren, sodass der Benutzer einen nicht farblichen Hinweis hat, dass die Elemente hervorgehoben sind.  
+- Alle durch Farbe vermittelten Informationen müssen auch durch visuelle Hinweise oder durch Töne vermittelt werden. Wenn beispielsweise bestimmte Listenelemente in roter Schrift hervorgehoben sind, können Sie diese auch noch fett formatieren, sodass der Benutzer einen nicht farblichen Hinweis hat, dass die Elemente hervorgehoben sind.  
   
--   Hinter Text dürfen weder Symbole oder Muster angezeigt werden.  
+- Hinter Text dürfen weder Symbole oder Muster angezeigt werden.  
   
  Die Anwendung muss beim Start die Einstellung von <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> überprüfen und danach auf das Systemereignis <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> reagieren. Das <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>-Ereignis wird immer dann ausgelöst, wenn sich der Wert von <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> geändert hat.  
   

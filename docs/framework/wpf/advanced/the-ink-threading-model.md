@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007387"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621362"
 ---
 # <a name="the-ink-threading-model"></a>Das Threadmodell für Freihandeingaben
 Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wie beim Schreiben mit einem regulären Stift und Papier fühlt sich.  Um dies zu erreichen, erfasst der Tablettstift Eingabedaten sehr viel schneller als eine Maus und Freihandeingaben während des Schreibvorgangs rendert.  Thread (Benutzeroberflächenthread) der Anwendung ist nicht für das Sammeln von Daten und zum Rendern von Freihandeingaben, ausreichend, da er blockiert werden kann.  Um dies zu lösen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung verwendet zwei zusätzliche Threads aus, wenn der Freihandeingabe.  

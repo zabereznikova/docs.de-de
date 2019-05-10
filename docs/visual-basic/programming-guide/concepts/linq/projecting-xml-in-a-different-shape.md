@@ -2,12 +2,12 @@
 title: Projektieren von XML in eine andere Form (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e5639948cbc264a4b17cffe80de70b011e4d2a70
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666119"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projektieren von XML in eine andere Form (Visual Basic)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  

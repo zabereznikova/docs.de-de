@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614229"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469533"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
 Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentierung versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.   
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Durch Implementieren eines eigenen Listeners können Sie benutzerdefinierte Ergebnisse erzielen. Ein benutzerdefinierter Ablaufverfolgungslistener könnte die Meldungen z. B. in einem Meldungsfeld anzeigen oder die Verbindung zu einer Datenbank herstellen, in der die Meldungen zu einer Tabelle hinzugefügt werden. Alle benutzerdefinierten Listener sollten die sechs oben genannten Methoden unterstützen. Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.   
   
 > [!NOTE]
->  In [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] wurde die in früheren Versionen von Visual Basic verfügbare **Debug.Print**-Methode durch die Methoden **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** und **Debug.WriteLineIf** ersetzt.  
+>  In Visual Basic die **Debug.Write**, **Debug.Write**, **Debug.WriteLine**, und **Debug.WriteLine** Methoden ersetzt die **Debug.Print** -Methode, die in früheren Versionen von Visual Basic verfügbar war.  
   
  Die Methoden **Write** und **WriteLine** schreiben immer den von Ihnen angegebenen Text. **Assert**, **WriteIf** und **WriteLineIf** erfordern ein boolesches Argument, das steuert, ob der angegebene Text geschrieben wird oder nicht. Der angegebene Text wird nur geschrieben, wenn der Ausdruck **TRUE** (bei **WriteIf** und **WriteLineIf**) oder **FALSE** (bei **Assert**) lautet. Die **Fehler**-Methode schreibt immer den angegebenen Text. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) und der .NET Framework-Verweis.  
   

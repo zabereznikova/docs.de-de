@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795379"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063314"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Erstellen von CI/CD-Pipelines in Azure DevOps Services für eine .NET Core 2.0-Anwendung auf Containern und anschließendes Bereitstellen für ein Kubernetes-Cluster
 
@@ -21,7 +21,7 @@ In Abbildung 5-12 sehen Sie die End-to-End-DevOps-Szenario für die Verwaltung v
 
 Es ist wichtig, hervorzuheben, dass die zwei Pipelines, Build/CI und Release/CD, über die Docker-Registrierung (z. B. Docker Hub oder Azure Container Registry-Instanz) verbunden sind. Die Docker-Registrierung ist eine der wichtigsten Unterschiede im Vergleich zu einem traditionellen CI-/CD-Prozess ohne Docker.
 
-Wie in Abbildung 5-13 dargestellt, ist die erste Phase der Build/CI-Pipeline. In Azure DevOps-Dienste können Sie Build/CD-Pipelines erstellen, die Kompilieren des Codes, die Docker-Images erstellen und per push an eine Docker-Registrierung, wie Docker Hub oder Azure Container Registry-Instanz wird.
+Wie in Abbildung 5-13 dargestellt, ist die erste Phase der Build/CI-Pipeline. In Azure DevOps-Dienste können Sie Build/CI-Pipelines erstellen, die Kompilieren des Codes, die Docker-Images erstellen und per push an eine Docker-Registrierung, wie Docker Hub oder Azure Container Registry-Instanz wird.
 
 ![Browseransicht des Azure DevOps, Builddefinition, Prozess-Aufgabe.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

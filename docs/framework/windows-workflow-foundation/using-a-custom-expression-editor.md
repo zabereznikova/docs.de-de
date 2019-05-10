@@ -2,12 +2,12 @@
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669601"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650916"
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  

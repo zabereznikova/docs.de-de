@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710081"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452720"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 
@@ -48,12 +48,11 @@ Namespaces verfügen über die folgenden Eigenschaften:
   
 ## <a name="see-also"></a>Siehe auch
 
+- [C#-Programmierhandbuch](../index.md)
 - [Using-Namespaces](using-namespaces.md)
 - [Vorgehensweise: Verwenden des globalen Namespacealias](how-to-use-the-global-namespace-alias.md)
 - [Vorgehensweise: Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
-- [C#-Programmierhandbuch](../index.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
 - [Namespaceschlüsselwörter](../../language-reference/keywords/namespace-keywords.md)
 - [using-Direktive](../../language-reference/keywords/using-directive.md)
 - [:: Operator](../../language-reference/operators/namespace-alias-qualifer.md)
-- [. Operator](../../language-reference/operators/member-access-operator.md)

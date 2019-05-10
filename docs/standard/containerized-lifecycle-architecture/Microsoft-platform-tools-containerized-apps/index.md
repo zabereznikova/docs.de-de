@@ -4,12 +4,12 @@ description: Lernen Sie die Microsoft Lösungen zur Unterstützung der Lebenszyk
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934659"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664391"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und-Tools für Container-apps
 
@@ -31,7 +31,7 @@ Tabelle 3-1 zeigt, dass die Absicht von Microsoft DevOps für Docker-Containeran
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Plattform für Docker-Apps   | • Microsoft Visual Studio und Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Beliebiger Code-Editor (z.B. Sublime)<br /> • Beliebige Sprache (Node.js, Java, Go usw.)<br /> • Beliebiger Orchestrator und Scheduler<br /> • Beliebige Docker-Registrierung<br /> |
 | DevOps für Docker-Apps     | • Azure DevOps-Dienste<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion usw.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI usw.<br /> • Lokales Docker-Datencenter, Docker Swarm, Mesos DC/OS, Kubernetes usw.<br /> |
-| Verwaltung und Überwachung  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos usw.<br />
+| Verwaltung und Überwachung  | • Azure überwachen | • Marathon, Chronos usw.<br />|
 
 Die Microsoft-Plattform und die Tools für containerisierte Docker-Anwendungen, wie in Tabelle 3-1 definiert, bestehen aus den folgenden Komponenten:
 

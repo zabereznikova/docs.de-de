@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664346"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Verwenden von Docker-Tools in Visual Studio 2017 unter Windows
 
@@ -79,7 +79,7 @@ In der folgende Tabelle können Sie entscheiden, wie Sie diese Optionen festlege
 | Ziehen Sie erforderlichen Docker-Images automatisch beim Laden von Projekten | Ein | Docker Compose | Zur Steigerung der Leistung beim Laden von Projekten von startet Visual Studio einen Docker Pull-Vorgang im Hintergrund, damit das Bild, wenn Sie bereit zum Ausführen des Codes sind, bereits heruntergeladen wurde oder gerade heruntergeladen. Wenn Sie nur Projekte laden und Durchsuchen von Code, können Sie diese deaktivieren, um zu vermeiden, Herunterladen von containerimages, die Sie nicht benötigen. |
 | Container im Hintergrund automatisch starten | Ein | Docker Compose | Erneut zur Steigerung der Leistung Visual Studio erstellt einen Container mit volumebereitstellungen bereit für die beim Erstellen und Ausführen Ihrer Container. Wenn Sie möchten steuern, wenn Ihr Container erstellt wird, deaktivieren Sie diese Option aus. |
 | Kill Lösung Container schließen automatisch | Ein | Docker Compose | Deaktivieren Sie diese Option, wenn Sie Container für Ihre Lösung, um anzugeben, dass nach dem Schließen der Projektmappe oder das Schließen von Visual Studio ausführen möchten. |
-| Fordert nicht zur vertrauenden Localhost-SSL-Zertifikat | Aus | ASP.NET Core 2.1-Projekten | Wenn die Localhost-SSL-Zertifikat nicht vertrauenswürdig ist, wird ein Visual Studio aufgefordert, jedes Mal, wenn Sie das Projekt auszuführen, wenn dieses Kontrollkästchen aktiviert ist. |
+| Fordert nicht zur vertrauenden Localhost-SSL-Zertifikat | Aus | ASP.NET Core-2.2-Projekte | Wenn die Localhost-SSL-Zertifikat nicht vertrauenswürdig ist, wird ein Visual Studio aufgefordert, jedes Mal, wenn Sie das Projekt auszuführen, wenn dieses Kontrollkästchen aktiviert ist. |
 
 > [!WARNING]
 > Wenn die Localhost-SSL-Zertifikat nicht vertrauenswürdig ist, und Sie das Kontrollkästchen zum Unterdrücken der eingabeaufforderungen, können der HTTPS-webanforderungen zur Laufzeit in Ihrer app oder Ihres Diensts fehlschlagen. In diesem Fall deaktivieren Sie die **keine Aufforderung** aktiviert, führen Sie das Projekt, und vertrauen an der Eingabeaufforderung angeben.
