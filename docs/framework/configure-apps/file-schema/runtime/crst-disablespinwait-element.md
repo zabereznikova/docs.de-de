@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704829"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754678"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait >-Element
 
-Gibt an, ob die Spin-warten auf einen kritischen Abschnitt bei Konflikten deaktiviert. \ 
+Gibt an, ob die Spin-warten auf einen kritischen Abschnitt bei Konflikten deaktiviert.  
   
  \<configuration>  
 \<runtime>  
@@ -36,14 +36,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**enabled**|Gibt an, ob Spin-warten auf kritische Abschnitte aktiviert ist, wenn diese Anzahl von Konflikten vorliegt.|  
+|**enabled**|Gibt an, ob Spin-warten auf kritische Abschnitte, wenn diese Anzahl von Konflikten vorliegt deaktiviert ist.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|1|Drehfeld-Waiting ist aktiviert.|  
-|0|Drehfeld-Waiting ist deaktiviert. Dies ist der Standardwert|  
+|1|Deaktivieren Sie Spin-Waiting aus, wenn ein Kritischer Abschnitt kann nicht abgerufen werden.|  
+|0|Drehfeld-Waiting kann nicht deaktiviert werden, wenn ein Kritischer Abschnitt kann nicht abgerufen werden. Dies ist der Standardwert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e6af8d6410c4e383990bdaa27f97cc698be71719
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776544"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649200"
 ---
 # <a name="how-to-clone-a-printer"></a>Vorgehensweise: Klonen eines Druckers
 Die meisten Unternehmen werden irgendwann mehrere Drucker desselben Modells erwerben. Diese werden alle in der Regel mit nahezu identischen Konfigurationseinstellungen installiert. Installieren die einzelnen Drucker kann sehr zeitaufwändig sein und fehleranfällig. Die <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Namespace und die <xref:System.Printing.PrintServer.InstallPrintQueue%2A> -Klasse, die mit Microsoft .NET Framework verfügbar gemacht werden ermöglicht, eine beliebige Anzahl von zusätzlichen Druckwarteschlangen, die geklont werden sofort aus einer vorhandenen Druckwarteschlange zu installieren.  
