@@ -2,41 +2,41 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dbd10d1bd08529d11e86c3d9296e68264564a21d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650153"
 ---
-# <a name="customchannelstester"></a><span data-ttu-id="c8910-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="c8910-102">CustomChannelsTester</span></span>
-<span data-ttu-id="c8910-103">Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefinierten Channelimplementierungen mit einem Satz vordefinierter Dienstverträge verwenden können.</span><span class="sxs-lookup"><span data-stu-id="c8910-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="c8910-104">Sie können einen Satz von Dienstverträgen auswählen und diesen mithilfe einer XML-Datei an das Tool übergeben.</span><span class="sxs-lookup"><span data-stu-id="c8910-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="c8910-105">Anschließend generiert das Tool den Dienst und den Client, die die benutzerdefinierten Channelimplementierungen während des Nachrichtenaustauschs ausführen.</span><span class="sxs-lookup"><span data-stu-id="c8910-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
+# <a name="customchannelstester"></a><span data-ttu-id="43f5b-102">CustomChannelsTester</span><span class="sxs-lookup"><span data-stu-id="43f5b-102">CustomChannelsTester</span></span>
+<span data-ttu-id="43f5b-103">Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefinierten Channelimplementierungen mit einem Satz vordefinierter Dienstverträge verwenden können.</span><span class="sxs-lookup"><span data-stu-id="43f5b-103">The `CustomChannelsTester` is a tool that you can use to test your custom channel implementations against a set of predefined service contracts.</span></span> <span data-ttu-id="43f5b-104">Sie können einen Satz von Dienstverträgen auswählen und diesen mithilfe einer XML-Datei an das Tool übergeben.</span><span class="sxs-lookup"><span data-stu-id="43f5b-104">You can select the set of service contracts and pass it to the tool using an XML file.</span></span> <span data-ttu-id="43f5b-105">Anschließend generiert das Tool den Dienst und den Client, die die benutzerdefinierten Channelimplementierungen während des Nachrichtenaustauschs ausführen.</span><span class="sxs-lookup"><span data-stu-id="43f5b-105">The tool then generates the service and client that exercises your custom channel implementations during message exchange.</span></span>  
   
-### <a name="to-build-the-tool"></a><span data-ttu-id="c8910-106">So erstellen Sie das Tool</span><span class="sxs-lookup"><span data-stu-id="c8910-106">To build the tool</span></span>  
+### <a name="to-build-the-tool"></a><span data-ttu-id="43f5b-106">So erstellen Sie das Tool</span><span class="sxs-lookup"><span data-stu-id="43f5b-106">To build the tool</span></span>  
   
-1. <span data-ttu-id="c8910-107">Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c8910-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="43f5b-107">Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="43f5b-107">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="c8910-108">Erstellen der Projektmappe werden drei Dateien generiert: CustomChannelsTester.exe, "Testspec.xml" und "samplerun.cmd".</span><span class="sxs-lookup"><span data-stu-id="c8910-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="c8910-109">Die Datei "samplerun.cmd" verfügt über eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="c8910-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
+2. <span data-ttu-id="43f5b-108">Erstellen der Projektmappe werden drei Dateien generiert: CustomChannelsTester.exe, "Testspec.xml" und "samplerun.cmd".</span><span class="sxs-lookup"><span data-stu-id="43f5b-108">Building the solution generates three files: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd.</span></span> <span data-ttu-id="43f5b-109">Die Datei "samplerun.cmd" verfügt über eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.</span><span class="sxs-lookup"><span data-stu-id="43f5b-109">The file SampleRun.cmd has a sample command line that shows how to use this tool to test the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-### <a name="to-run-the-tool"></a><span data-ttu-id="c8910-110">So führen Sie das Tool aus</span><span class="sxs-lookup"><span data-stu-id="c8910-110">To run the tool</span></span>  
+### <a name="to-run-the-tool"></a><span data-ttu-id="43f5b-110">So führen Sie das Tool aus</span><span class="sxs-lookup"><span data-stu-id="43f5b-110">To run the tool</span></span>  
   
-- <span data-ttu-id="c8910-111">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="c8910-111">At the command prompt type the following command:</span></span>  
+- <span data-ttu-id="43f5b-111">Geben Sie an der Eingabeaufforderung folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="43f5b-111">At the command prompt type the following command:</span></span>  
   
     ```  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     <span data-ttu-id="c8910-112">Die Verwendung der `/binding`-Option ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c8910-112">Using the `/binding` option is required.</span></span>  
+     <span data-ttu-id="43f5b-112">Die Verwendung der `/binding`-Option ist erforderlich.</span><span class="sxs-lookup"><span data-stu-id="43f5b-112">Using the `/binding` option is required.</span></span>  
   
-     <span data-ttu-id="c8910-113">`/dll` ist erforderlich, wenn "Bindung" keine vom System bereitgestellten Bindung von Windows Communication Foundation (WCF) bereitgestellt ist.</span><span class="sxs-lookup"><span data-stu-id="c8910-113">`/dll` is required if "binding" is not a system-provided binding provided by Windows Communication Foundation (WCF).</span></span>  
+     <span data-ttu-id="43f5b-113">`/dll` ist erforderlich, wenn "Bindung" keine vom System bereitgestellten Bindung von Windows Communication Foundation (WCF) bereitgestellt ist.</span><span class="sxs-lookup"><span data-stu-id="43f5b-113">`/dll` is required if "binding" is not a system-provided binding provided by Windows Communication Foundation (WCF).</span></span>  
   
-     <span data-ttu-id="c8910-114">`/testspec` ist optional.</span><span class="sxs-lookup"><span data-stu-id="c8910-114">`/testspec` is optional.</span></span>  
+     <span data-ttu-id="43f5b-114">`/testspec` ist optional.</span><span class="sxs-lookup"><span data-stu-id="43f5b-114">`/testspec` is optional.</span></span>  
   
-     <span data-ttu-id="c8910-115">Auf diese Weise werden Server und Clients auf der Grundlage der Testspezifikationen und der Bindung erstellt.</span><span class="sxs-lookup"><span data-stu-id="c8910-115">This creates server and clients based on the test specifications and the binding.</span></span>  
+     <span data-ttu-id="43f5b-115">Auf diese Weise werden Server und Clients auf der Grundlage der Testspezifikationen und der Bindung erstellt.</span><span class="sxs-lookup"><span data-stu-id="43f5b-115">This creates server and clients based on the test specifications and the binding.</span></span>  
   
-     <span data-ttu-id="c8910-116">Der Client und der Server werden ausgeführt und die Ergebnisse zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="c8910-116">Executes the client and server and returns the results.</span></span>  
+     <span data-ttu-id="43f5b-116">Der Client und der Server werden ausgeführt und die Ergebnisse zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="43f5b-116">Executes the client and server and returns the results.</span></span>  
   
-     <span data-ttu-id="c8910-117">Folgendes ist der Beispiel-XML-Code für die Beschreibung der Testspezifikationen (testspec.xml):</span><span class="sxs-lookup"><span data-stu-id="c8910-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
+     <span data-ttu-id="43f5b-117">Folgendes ist der Beispiel-XML-Code für die Beschreibung der Testspezifikationen (testspec.xml):</span><span class="sxs-lookup"><span data-stu-id="43f5b-117">The following is the sample XML for the description of the test specifications (testspec.xml):</span></span>  
   
     ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   
