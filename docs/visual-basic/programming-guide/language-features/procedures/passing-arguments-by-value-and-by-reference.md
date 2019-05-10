@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb2260c6547d4f1cd7d9c23445ac38ac600e3535
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791923"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638863"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
 Sie können ein Argument an eine Prozedur übergeben, in Visual Basic *nach Wert* oder *Verweisübergabe*. Dies bezeichnet man als den *Übergabemechanismus*, und es wird bestimmt, ob die Prozedur das Programmierelement zugrunde liegenden Arguments im aufrufenden Code ändern kann. Der Prozedurdeklaration des Übergabemechanismus für die einzelnen Parameter durch Angabe der [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort.  

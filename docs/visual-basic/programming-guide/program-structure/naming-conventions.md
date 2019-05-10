@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ce8d4c5ede0d722d2c1768b9c2cd7929f296114e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050375"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651236"
 ---
 # <a name="visual-basic-naming-conventions"></a>Benennungskonventionen in Visual Basic
 Wenn Sie ein Element in Visual Basic-Anwendung benennen, muss das erste Zeichen des Namens ein alphabetisches Zeichen oder einem Unterstrich sein. Beachten Sie jedoch, dass die Namen, die mit einem Unterstrich beginnen mit nicht konform sind die [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS).  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777051"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640869"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu Freihanddaten
 Sie können Freihand benutzerdefinierte Daten hinzufügen, die beim Speichern der Freihandeingabe als serialisierte Freihandeingabe-Format (ISF) gespeichert werden.  Sie können die benutzerdefinierten Daten zu speichern die <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, oder die <xref:System.Windows.Ink.Stroke>.  Wird zum Speichern von benutzerdefinierter Daten für drei Objekte können Ihnen die Möglichkeit der beste Ort zum Speichern der Daten zu entscheiden.  Alle drei Klassen verwenden ähnliche Methoden zum Speichern und auf benutzerdefinierte Daten zugreifen.  
