@@ -9,12 +9,12 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4118f526af1e02982f181dba9e86f8ce5b806fbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746973"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612149"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Vorgehensweise: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung
 Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeigen und Drucken von HTML-Dokumente ohne den vollen Funktionsumfang von einem Internet-Web-Browser. Dies ist nützlich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber möchten nicht, dass Ihre Benutzer, beliebige Webseiten zu laden, die nicht vertrauenswürdigen Websteuerelemente oder potenziell bösartige Skriptcode enthalten kann. Möglicherweise möchten Sie die Funktionalität des Einschränken der <xref:System.Windows.Forms.WebBrowser> Steuern auf diese Weise kann z. B. für die Verwendung als eine HTML-e-Mail-Viewer oder zum HTML-Hilfe in Ihrer Anwendung bereitstellen.  
