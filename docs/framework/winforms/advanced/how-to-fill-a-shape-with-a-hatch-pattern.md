@@ -9,12 +9,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781349"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645468"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Vorgehensweise: Ausfüllen einer Form mit einer Schraffur
 Eine Schraffur besteht aus zwei Farben: eine für den Hintergrund und eine für die Zeilen, die über dem Hintergrund der Muster bilden. Um eine geschlossene Form mit einer Schraffur zu füllen, verwenden eine <xref:System.Drawing.Drawing2D.HatchBrush> Objekt. Im folgenden Beispiel wird veranschaulicht, wie eine Ellipse mit einer Schraffur füllen:  
