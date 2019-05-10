@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d1b9efb4016fbc3c4f7e14ea4a1c63308d992504
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008762"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649175"
 ---
 # <a name="gridview-overview"></a>Übersicht über GridView
 <xref:System.Windows.Controls.GridView> Modus der Listenansicht ist einer der Ansichtsmodi für eine <xref:System.Windows.Controls.ListView> Steuerelement. Die <xref:System.Windows.Controls.GridView> -Klasse und die unterstützenden Klassen ermöglichen Ihnen und Ihren Benutzern um Element Auflistungen in einer Tabelle anzuzeigen, die in der Regel Schaltflächen als interaktive Spaltenheader verwendet. In diesem Thema werden die <xref:System.Windows.Controls.GridView> Klasse und ihre Verwendung erläutert.  
