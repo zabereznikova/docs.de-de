@@ -2,12 +2,12 @@
 title: Entitätsschlüssel
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879182"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599645"
 ---
 # <a name="entity-key"></a>Entitätsschlüssel
 Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) oder einen Satz von Eigenschaften einer [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) , mit denen die Identität zu ermitteln. Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt. Die Werte von entitätsschlüsseleigenschaften müssen eindeutig identifiziert eine Instanz eines Entitätstyps innerhalb einer [Entitätenmenge](../../../../docs/framework/data/adonet/entity-set.md) zur Laufzeit. Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  

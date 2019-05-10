@@ -7,12 +7,12 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 008fd599e527ad4a8d483d2468a57ece1d2b4bdc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934809"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598595"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Vorgehensweise: Zugriff XML-Nachfolgerelemente (Visual Basic)
 Dieses Beispiel zeigt, wie Sie mit einer untergeordneten Achseneigenschaft auf alle XML-Elemente, die einen angegebenen Namen aufweisen und in ein XML-Element enthalten sind. Insbesondere verwendet die `Value` Eigenschaft, um dem Wert des ersten Elements in der Sammlung abrufen, die die `name` -Achseneigenschaft zurückgibt. Die `name` Nachfolgerachseneigenschaft Ruft alle Elemente, die mit dem Namen `name` enthalten sind die `contacts` Objekt. Dieses Beispiel verwendet auch die `phone` Nachfolgerachseneigenschaft auf alle Nachfolger namens `phone` enthalten sind die `contacts` Objekt.  

@@ -2,12 +2,12 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbd73d879a3e2fe4cc38d6c8548434d21ca06467
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701904"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597086"
 ---
 # <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
@@ -21,30 +21,30 @@ Das folgende Beispiel zeigt den vollständigen Abfragevorgang. Der vollständige
 
 ## <a name="query-expression-overview"></a>Übersicht über Abfrageausdrücke
 
--   Abfrageausdrücke können verwendet werden, um Daten aus einer beliebigen LINQ-fähigen Datenquelle abzufragen und zu transformieren. Mit einer einzigen Abfrage können z.B. Daten aus einer SQL-Datenbank abgerufen und ein XML-Stream als Ausgabe generiert werden.  
+- Abfrageausdrücke können verwendet werden, um Daten aus einer beliebigen LINQ-fähigen Datenquelle abzufragen und zu transformieren. Mit einer einzigen Abfrage können z.B. Daten aus einer SQL-Datenbank abgerufen und ein XML-Stream als Ausgabe generiert werden.  
   
--   Die Arbeit mit Abfrageausdrücken ist einfach, da sie viele vertraute Konstrukte der Sprache C# verwenden.  
+- Die Arbeit mit Abfrageausdrücken ist einfach, da sie viele vertraute Konstrukte der Sprache C# verwenden.  
   
--   Alle Variablen in einem Abfrageausdruck sind stark typisiert, obwohl Sie den Typ in vielen Fällen nicht explizit angeben müssen, da der Compiler ihn ableiten kann. Weitere Informationen finden Sie unter [Typbeziehungen in LINQ-Abfragevorgängen](type-relationships-in-linq-query-operations.md).  
+- Alle Variablen in einem Abfrageausdruck sind stark typisiert, obwohl Sie den Typ in vielen Fällen nicht explizit angeben müssen, da der Compiler ihn ableiten kann. Weitere Informationen finden Sie unter [Typbeziehungen in LINQ-Abfragevorgängen](type-relationships-in-linq-query-operations.md).  
   
--   Eine Abfrage wird erst ausgeführt, wenn Sie die Abfragevariable durchlaufen, z.B. in einer `foreach`-Anweisung. Weitere Informationen finden Sie unter [Einführung in LINQ-Abfragen](introduction-to-linq-queries.md).  
+- Eine Abfrage wird erst ausgeführt, wenn Sie die Abfragevariable durchlaufen, z.B. in einer `foreach`-Anweisung. Weitere Informationen finden Sie unter [Einführung in LINQ-Abfragen](introduction-to-linq-queries.md).  
   
--   Zur Kompilierzeit werden Abfrageausdrücke gemäß den in der C#-Spezifikation festgelegten Regeln in Methodenaufrufe des Standardabfrageoperators konvertiert. Jede Abfrage, die mithilfe der Abfragesyntax ausgedrückt werden kann, kann auch mithilfe der Methodensyntax ausgedrückt werden. In den meisten Fällen ist aber die Abfragesyntax präziser und besser lesbar. Weitere Informationen finden Sie unter [Spezifikation für die Sprache C#](~/_csharplang/spec/expressions.md#query-expressions) und [Übersicht über Standardabfrageoperatoren](standard-query-operators-overview.md).  
+- Zur Kompilierzeit werden Abfrageausdrücke gemäß den in der C#-Spezifikation festgelegten Regeln in Methodenaufrufe des Standardabfrageoperators konvertiert. Jede Abfrage, die mithilfe der Abfragesyntax ausgedrückt werden kann, kann auch mithilfe der Methodensyntax ausgedrückt werden. In den meisten Fällen ist aber die Abfragesyntax präziser und besser lesbar. Weitere Informationen finden Sie unter [Spezifikation für die Sprache C#](~/_csharplang/spec/expressions.md#query-expressions) und [Übersicht über Standardabfrageoperatoren](standard-query-operators-overview.md).  
   
--   Beim Schreiben von LINQ-Abfragen empfiehlt sich diese Faustregel: Verwenden Sie die Abfragesyntax, wann immer es möglich ist, und verwenden Sie die Methodensyntax nur, wenn es nötig ist. Zwischen den beiden Formen gibt es keine semantischen oder leistungsbezogenen Unterschiede. Abfrageausdrücke sind oft besser lesbar als die entsprechenden in der Methodensyntax geschriebenen Ausdrücke.  
+- Beim Schreiben von LINQ-Abfragen empfiehlt sich diese Faustregel: Verwenden Sie die Abfragesyntax, wann immer es möglich ist, und verwenden Sie die Methodensyntax nur, wenn es nötig ist. Zwischen den beiden Formen gibt es keine semantischen oder leistungsbezogenen Unterschiede. Abfrageausdrücke sind oft besser lesbar als die entsprechenden in der Methodensyntax geschriebenen Ausdrücke.  
   
--   Für einige Abfragevorgänge, wie z.B. <xref:System.Linq.Enumerable.Count%2A> oder <xref:System.Linq.Enumerable.Max%2A>, gibt es keine entsprechende Abfrageausdrucksklausel, daher müssen diese als Methodenaufruf ausgedrückt werden. Die Methodensyntax kann auf verschiedene Weise mit der Abfragesyntax kombiniert werden. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](query-syntax-and-method-syntax-in-linq.md).  
+- Für einige Abfragevorgänge, wie z.B. <xref:System.Linq.Enumerable.Count%2A> oder <xref:System.Linq.Enumerable.Max%2A>, gibt es keine entsprechende Abfrageausdrucksklausel, daher müssen diese als Methodenaufruf ausgedrückt werden. Die Methodensyntax kann auf verschiedene Weise mit der Abfragesyntax kombiniert werden. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](query-syntax-and-method-syntax-in-linq.md).  
   
--   Abfrageausdrücke können in Ausdrucksbaumstrukturen oder Delegaten kompiliert werden, je nachdem, auf welchen Typ die Abfrage angewendet wird. <xref:System.Collections.Generic.IEnumerable%601>-Abfragen werden zu Delegaten kompiliert. <xref:System.Linq.IQueryable>- und <xref:System.Linq.IQueryable%601>-Abfragen werden zu Ausdrucksbaumstrukturen kompiliert. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](../../../expression-trees.md).  
+- Abfrageausdrücke können in Ausdrucksbaumstrukturen oder Delegaten kompiliert werden, je nachdem, auf welchen Typ die Abfrage angewendet wird. <xref:System.Collections.Generic.IEnumerable%601>-Abfragen werden zu Delegaten kompiliert. <xref:System.Linq.IQueryable>- und <xref:System.Linq.IQueryable%601>-Abfragen werden zu Ausdrucksbaumstrukturen kompiliert. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](../../../expression-trees.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um mehr zu LINQ zu erfahren, machen Sie sich zunächst unter [Grundlagen zu Abfrageausdrücken](../../../linq/query-expression-basics.md) mit einigen grundlegenden Konzepten vertraut, und lesen Sie dann die Dokumentation für die LINQ-Technologie, die Sie interessiert:   
--   XML-Dokumente: [LINQ to XML](linq-to-xml.md)  
+- XML-Dokumente: [LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   .NET-Collections, -Dateien, -Zeichenfolgen usw.: [LINQ to Objects](linq-to-objects.md)
+- .NET-Collections, -Dateien, -Zeichenfolgen usw.: [LINQ to Objects](linq-to-objects.md)
 
 Tiefer greifende Einblicke in LINQ im Allgemeinen erhalten Sie unter [LINQ in C#](../../../linq/linq-in-csharp.md).
 
