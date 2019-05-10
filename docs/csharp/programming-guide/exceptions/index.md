@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680661"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595399"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
 Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder außergewöhnliche Situationen zu verarbeiten, die beim Ausführen von Programmen auftreten können. Die Ausnahmebehandlung verwendet die Schlüsselwörter `try`, `catch` und `finally`, um Aktionen zu testen, die möglicherweise nicht erfolgreich sind, um Fehler zu behandeln, wenn Sie entscheiden, dass dies vernünftig ist, und um später Ressourcen zu bereinigen. Ausnahmen können von der Common Language Runtime (CLR), vom .NET Framework bzw. anderen Drittanbieterbibliotheken oder vom Anwendungscode generiert werden. Ausnahmen werden mit dem Schlüsselwort `throw` erstellt.  
@@ -26,40 +26,40 @@ Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder au
 ## <a name="exceptions-overview"></a>Übersicht über Ausnahmen  
  Ausnahmen weisen folgende Eigenschaften auf:  
   
--   Bei Ausnahmen handelt es sich um Typen, die alle letztlich von `System.Exception` abgeleitet werden.  
+- Bei Ausnahmen handelt es sich um Typen, die alle letztlich von `System.Exception` abgeleitet werden.  
   
--   Verwenden Sie einen `try`-Block um die Anweisungen, die möglicherweise Ausnahmen auslösen.  
+- Verwenden Sie einen `try`-Block um die Anweisungen, die möglicherweise Ausnahmen auslösen.  
   
--   Sobald eine Ausnahme im `try`-Block auftritt, springt der Steuerungsfluss zum ersten zugeordneten Ausnahmehandler, der sich an einer beliebigen Stelle in der Aufrufliste befindet. In C# wird das Schlüsselwort `catch` zum Definieren eines Ausnahmehandlers verwendet.  
+- Sobald eine Ausnahme im `try`-Block auftritt, springt der Steuerungsfluss zum ersten zugeordneten Ausnahmehandler, der sich an einer beliebigen Stelle in der Aufrufliste befindet. In C# wird das Schlüsselwort `catch` zum Definieren eines Ausnahmehandlers verwendet.  
   
--   Wenn für eine bestimmte Ausnahme kein Ausnahmehandler vorhanden ist, beendet das Programm die Ausführung mit einer Fehlermeldung.  
+- Wenn für eine bestimmte Ausnahme kein Ausnahmehandler vorhanden ist, beendet das Programm die Ausführung mit einer Fehlermeldung.  
   
--   Fangen Sie Ausnahmen nur dann ab, wenn Sie sie behandeln und die Anwendung in einem bekannten Zustand belassen können. Wenn Sie `System.Exception` abfangen, lösen Sie diese mithilfe des Schlüsselworts `throw` am Ende des `catch`-Blocks erneut aus.  
+- Fangen Sie Ausnahmen nur dann ab, wenn Sie sie behandeln und die Anwendung in einem bekannten Zustand belassen können. Wenn Sie `System.Exception` abfangen, lösen Sie diese mithilfe des Schlüsselworts `throw` am Ende des `catch`-Blocks erneut aus.  
   
--   Wenn ein `catch`-Block eine Ausnahmevariable definiert, können Sie diese verwenden, um weitere Informationen zum Typ der aufgetretenen Ausnahme abzurufen.  
+- Wenn ein `catch`-Block eine Ausnahmevariable definiert, können Sie diese verwenden, um weitere Informationen zum Typ der aufgetretenen Ausnahme abzurufen.  
   
--   Ausnahmen können von einem Programm mithilfe des Schlüsselworts `throw` explizit generiert werden.  
+- Ausnahmen können von einem Programm mithilfe des Schlüsselworts `throw` explizit generiert werden.  
   
--   Ausnahmeobjekte enthalten detaillierte Informationen über den Fehler, z.B. den Zustand der Aufrufliste und eine Textbeschreibung des Fehlers.  
+- Ausnahmeobjekte enthalten detaillierte Informationen über den Fehler, z.B. den Zustand der Aufrufliste und eine Textbeschreibung des Fehlers.  
   
--   Code in einem `finally`-Block wird auch dann ausgeführt, wenn eine Ausnahme ausgelöst wurde. Verwenden Sie einen `finally`-Block, um Ressourcen freizugeben, beispielsweise um Streams oder Dateien zu schließen, die im `try`-Block geöffnet wurden.  
+- Code in einem `finally`-Block wird auch dann ausgeführt, wenn eine Ausnahme ausgelöst wurde. Verwenden Sie einen `finally`-Block, um Ressourcen freizugeben, beispielsweise um Streams oder Dateien zu schließen, die im `try`-Block geöffnet wurden.  
   
--   Zusätzlich zum strukturierten Win32-Mechanismus zur Ausnahmebehandlung wurden im .NET Framework verwaltete Ausnahmen implementiert. Weitere Informationen finden Sie unter [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Strukturierte Ausnahmebehandlung [C/C++]) und [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Schnellkurs zu den Details der strukturierten Win32-Ausnahmebehandlung).  
+- Zusätzlich zum strukturierten Win32-Mechanismus zur Ausnahmebehandlung wurden im .NET Framework verwaltete Ausnahmen implementiert. Weitere Informationen finden Sie unter [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Strukturierte Ausnahmebehandlung [C/C++]) und [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Schnellkurs zu den Details der strukturierten Win32-Ausnahmebehandlung).  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen zu Ausnahmen und zur Ausnahmebehandlung finden Sie in den folgenden Themen:  
   
--   [Verwenden von Ausnahmen](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [Verwenden von Ausnahmen](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
--   [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)  
   
--   [Erstellen und Auslösen von Ausnahmen](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [Erstellen und Auslösen von Ausnahmen](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
   
--   [Vom Compiler generierte Ausnahmen](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [Vom Compiler generierte Ausnahmen](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierhandbuch)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierhandbuch)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Vorgehensweise: Ausführen von Bereinigungscode mit „finally“](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [Vorgehensweise: Ausführen von Bereinigungscode mit „finally“](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
