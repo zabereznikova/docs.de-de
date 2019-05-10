@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-ms.openlocfilehash: 4dadad63f4321e88b79f2006a9e6b7befa27909a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 831cab0871405f342f389ed21d77ec15639803a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619579"
 ---
-# <a name="array-subscript-expression-missing"></a><span data-ttu-id="e1b4b-102">Fehlender Arraysubscriptausdruck</span><span class="sxs-lookup"><span data-stu-id="e1b4b-102">Array subscript expression missing</span></span>
-<span data-ttu-id="e1b4b-103">Eine Arrayinitialisierung bewirkt, dass Sie eine oder mehrere die tiefgestellten Zeichen, die die Arraygrenzen definieren.</span><span class="sxs-lookup"><span data-stu-id="e1b4b-103">An array initialization leaves out one or more of the subscripts that define the array bounds.</span></span> <span data-ttu-id="e1b4b-104">Die Anweisung kann beispielsweise den Ausdruck enthalten `myArray (5,5,,10)`, d. h., das dritte Subscript.</span><span class="sxs-lookup"><span data-stu-id="e1b4b-104">For example, the statement might contain the expression `myArray (5,5,,10)`, which leaves out the third subscript.</span></span>  
+# <a name="array-subscript-expression-missing"></a><span data-ttu-id="56aa3-102">Fehlender Arraysubscriptausdruck</span><span class="sxs-lookup"><span data-stu-id="56aa3-102">Array subscript expression missing</span></span>
+<span data-ttu-id="56aa3-103">Eine Arrayinitialisierung bewirkt, dass Sie eine oder mehrere die tiefgestellten Zeichen, die die Arraygrenzen definieren.</span><span class="sxs-lookup"><span data-stu-id="56aa3-103">An array initialization leaves out one or more of the subscripts that define the array bounds.</span></span> <span data-ttu-id="56aa3-104">Die Anweisung kann beispielsweise den Ausdruck enthalten `myArray (5,5,,10)`, d. h., das dritte Subscript.</span><span class="sxs-lookup"><span data-stu-id="56aa3-104">For example, the statement might contain the expression `myArray (5,5,,10)`, which leaves out the third subscript.</span></span>  
   
- <span data-ttu-id="e1b4b-105">**Fehler-ID:** BC30306</span><span class="sxs-lookup"><span data-stu-id="e1b4b-105">**Error ID:** BC30306</span></span>  
+ <span data-ttu-id="56aa3-105">**Fehler-ID:** BC30306</span><span class="sxs-lookup"><span data-stu-id="56aa3-105">**Error ID:** BC30306</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e1b4b-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="e1b4b-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="56aa3-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="56aa3-106">To correct this error</span></span>  
   
-- <span data-ttu-id="e1b4b-107">Geben Sie den fehlenden Index.</span><span class="sxs-lookup"><span data-stu-id="e1b4b-107">Supply the missing subscript.</span></span>  
+- <span data-ttu-id="56aa3-107">Geben Sie den fehlenden Index.</span><span class="sxs-lookup"><span data-stu-id="56aa3-107">Supply the missing subscript.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1b4b-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e1b4b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56aa3-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56aa3-108">See also</span></span>
 
-- [<span data-ttu-id="e1b4b-109">Arrays</span><span class="sxs-lookup"><span data-stu-id="e1b4b-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="56aa3-109">Arrays</span><span class="sxs-lookup"><span data-stu-id="56aa3-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

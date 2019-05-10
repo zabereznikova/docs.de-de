@@ -10,35 +10,35 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 68dbad807e79f16bdc3cbdd3f55c62c3d6c854e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621303"
 ---
-# <a name="how-to-print-a-windows-form"></a><span data-ttu-id="fd741-102">Vorgehensweise: Drucken in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fd741-102">How to: Print a Windows Form</span></span>
-<span data-ttu-id="fd741-103">Im Rahmen des Entwicklungsprozesses sollten Sie in der Regel eine Kopie Ihres Windows-Formulars drucken.</span><span class="sxs-lookup"><span data-stu-id="fd741-103">As part of the development process, you typically will want to print a copy of your Windows Form.</span></span> <span data-ttu-id="fd741-104">Im folgenden Codebeispiel wird veranschaulicht, wie so drucken Sie eine Kopie des aktuellen Formulars mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="fd741-104">The following code example shows how to print a copy of the current form by using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method.</span></span>  
+# <a name="how-to-print-a-windows-form"></a><span data-ttu-id="1985d-102">Vorgehensweise: Drucken in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1985d-102">How to: Print a Windows Form</span></span>
+<span data-ttu-id="1985d-103">Im Rahmen des Entwicklungsprozesses sollten Sie in der Regel eine Kopie Ihres Windows-Formulars drucken.</span><span class="sxs-lookup"><span data-stu-id="1985d-103">As part of the development process, you typically will want to print a copy of your Windows Form.</span></span> <span data-ttu-id="1985d-104">Im folgenden Codebeispiel wird veranschaulicht, wie so drucken Sie eine Kopie des aktuellen Formulars mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="1985d-104">The following code example shows how to print a copy of the current form by using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fd741-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fd741-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1985d-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1985d-105">Example</span></span>  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fd741-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="fd741-106">Compiling the Code</span></span>  
- <span data-ttu-id="fd741-107">Dies ist ein vollständiges Codebeispiel, das enthält eine `Main` Methode.</span><span class="sxs-lookup"><span data-stu-id="fd741-107">This is a complete code example that contains a `Main` method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1985d-106">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="1985d-106">Compiling the Code</span></span>  
+ <span data-ttu-id="1985d-107">Dies ist ein vollständiges Codebeispiel, das enthält eine `Main` Methode.</span><span class="sxs-lookup"><span data-stu-id="1985d-107">This is a complete code example that contains a `Main` method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="fd741-108">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="fd741-108">Robust Programming</span></span>  
- <span data-ttu-id="fd741-109">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="fd741-109">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="1985d-108">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="1985d-108">Robust Programming</span></span>  
+ <span data-ttu-id="1985d-109">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="1985d-109">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="fd741-110">Sie haben keine Berechtigung zum Zugriff auf den Drucker.</span><span class="sxs-lookup"><span data-stu-id="fd741-110">You do not have permission to access the printer.</span></span>  
+- <span data-ttu-id="1985d-110">Sie haben keine Berechtigung zum Zugriff auf den Drucker.</span><span class="sxs-lookup"><span data-stu-id="1985d-110">You do not have permission to access the printer.</span></span>  
   
-- <span data-ttu-id="fd741-111">Es ist kein Drucker installiert.</span><span class="sxs-lookup"><span data-stu-id="fd741-111">There is no printer installed.</span></span>  
+- <span data-ttu-id="1985d-111">Es ist kein Drucker installiert.</span><span class="sxs-lookup"><span data-stu-id="1985d-111">There is no printer installed.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="fd741-112">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="fd741-112">.NET Framework Security</span></span>  
- <span data-ttu-id="fd741-113">Um dieses Codebeispiel ausführen, benötigen Sie die Berechtigung zum Zugriff auf den Drucker, die, den Sie mit Ihrem Computer zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="fd741-113">In order to run this code example, you must have permission to access the printer you use with your computer.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="1985d-112">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="1985d-112">.NET Framework Security</span></span>  
+ <span data-ttu-id="1985d-113">Um dieses Codebeispiel ausführen, benötigen Sie die Berechtigung zum Zugriff auf den Drucker, die, den Sie mit Ihrem Computer zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="1985d-113">In order to run this code example, you must have permission to access the printer you use with your computer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd741-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fd741-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1985d-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1985d-114">See also</span></span>
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [<span data-ttu-id="fd741-115">Vorgehensweise: Darstellen von Bildern mit GDI +</span><span class="sxs-lookup"><span data-stu-id="fd741-115">How to: Render Images with GDI+</span></span>](how-to-render-images-with-gdi.md)
-- [<span data-ttu-id="fd741-116">Vorgehensweise: Drucken von Grafiken in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fd741-116">How to: Print Graphics in Windows Forms</span></span>](how-to-print-graphics-in-windows-forms.md)
+- [<span data-ttu-id="1985d-115">Vorgehensweise: Darstellen von Bildern mit GDI +</span><span class="sxs-lookup"><span data-stu-id="1985d-115">How to: Render Images with GDI+</span></span>](how-to-render-images-with-gdi.md)
+- [<span data-ttu-id="1985d-116">Vorgehensweise: Drucken von Grafiken in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1985d-116">How to: Print Graphics in Windows Forms</span></span>](how-to-print-graphics-in-windows-forms.md)
