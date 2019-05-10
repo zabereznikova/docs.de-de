@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625870"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Vorgehensweise: Erstellen einer Herausgeberrichtlinie
 Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version einer Assembly verwenden sollen, dazu eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly ist. Die Herausgeberrichtliniendatei gibt Assemblyumleitungen und Code-Basis-Einstellungen, und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei ist in eine Assembly kompiliert und im globalen Assemblycache platziert.  
@@ -57,15 +57,15 @@ Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version
   
      In diesem Befehl:  
   
-    -   Die *PublisherPolicyFile* -Argument ist der Name der Herausgeberrichtliniendatei.  
+    - Die *PublisherPolicyFile* -Argument ist der Name der Herausgeberrichtliniendatei.  
   
-    -   Die *PublisherPolicyAssemblyFile* Argument ist der Name der Herausgeberrichtlinienassembly an, die durch diesen Befehl entsteht. Der Assemblyname für die Datei muss Folgendes Format aufweisen:  
+    - Die *PublisherPolicyAssemblyFile* Argument ist der Name der Herausgeberrichtlinienassembly an, die durch diesen Befehl entsteht. Der Assemblyname für die Datei muss Folgendes Format aufweisen:  
   
          **die Richtlinie.** *MajorNumber* **.** *MinorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   Die *KeyPairFile* Argument ist der Name der Datei mit dem Schlüsselpaar. Sie müssen die Assembly und der Herausgeberrichtlinienassembly mit dem gleichen Schlüsselpaar anmelden.  
+    - Die *KeyPairFile* Argument ist der Name der Datei mit dem Schlüsselpaar. Sie müssen die Assembly und der Herausgeberrichtlinienassembly mit dem gleichen Schlüsselpaar anmelden.  
   
-    -   Die *ProcessorArchitecture* Argument identifiziert die Plattform, die von einer Assembly macht prozessorspezifische.  
+    - Die *ProcessorArchitecture* Argument identifiziert die Plattform, die von einer Assembly macht prozessorspezifische.  
   
         > [!NOTE]
         >  Die Möglichkeit, eine bestimmte Prozessorarchitektur ist neu in .NET Framework, Version 2.0.  

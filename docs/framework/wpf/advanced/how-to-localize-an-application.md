@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298317"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614623"
 ---
 # <a name="how-to-localize-an-application"></a>Vorgehensweise: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
@@ -91,21 +91,21 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
 4. Für ein Ausführen von LocBaml können Sie folgende Optionen angeben:  
   
-    -   **Analysieren von** oder **-p:** Analysiert BAML-, oder [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] Dateien, um eine CSV- oder TXT-Datei zu generieren.  
+    - **Analysieren von** oder **-p:** Analysiert BAML-, oder [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] Dateien, um eine CSV- oder TXT-Datei zu generieren.  
   
-    -   **Generieren von** oder **-g:** Generiert eine lokalisierte Binärdatei, indem eine übersetzte Datei.  
+    - **Generieren von** oder **-g:** Generiert eine lokalisierte Binärdatei, indem eine übersetzte Datei.  
   
-    -   **out** oder **- e/a** {*Dateiverzeichnis*] **:** Name der Ausgabedatei.  
+    - **out** oder **- e/a** {*Dateiverzeichnis*] **:** Name der Ausgabedatei.  
   
-    -   **Kultur** oder **- Cul** {*Kultur*] **:** Gebietsschema der Ausgabeassemblys.  
+    - **Kultur** oder **- Cul** {*Kultur*] **:** Gebietsschema der Ausgabeassemblys.  
   
-    -   **Übersetzung** oder **- Trans** {*translation.csv*] **:** Übersetzte oder lokalisierte Datei.  
+    - **Übersetzung** oder **- Trans** {*translation.csv*] **:** Übersetzte oder lokalisierte Datei.  
   
-    -   **Asmpath** oder **- Asmpath:** {*Dateiverzeichnis*] **:** Wenn Ihre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Code benutzerdefinierte Steuerelemente enthält, geben Sie an der **Asmpath** für die benutzerdefinierte Steuerelementassembly.  
+    - **Asmpath** oder **- Asmpath:** {*Dateiverzeichnis*] **:** Wenn Ihre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Code benutzerdefinierte Steuerelemente enthält, geben Sie an der **Asmpath** für die benutzerdefinierte Steuerelementassembly.  
   
-    -   **nologo:** Werden keine Informationen Logo noch Copyrightinformationen angezeigt.  
+    - **nologo:** Werden keine Informationen Logo noch Copyrightinformationen angezeigt.  
   
-    -   **verbose:** Zeigt Informationen im ausführlichen Modus an.  
+    - **verbose:** Zeigt Informationen im ausführlichen Modus an.  
   
     > [!NOTE]
     >  Wenn Sie eine Liste der Optionen benötigen, wenn Sie das Tool ausgeführt werden, geben Sie **LocBaml.exe** und drücken Sie EINGABETASTE.  
@@ -133,19 +133,19 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 
    Die sieben Felder sind:  
   
-   1.  **BAML-Name**. Der Name der BAML-Ressource bezogen auf die Satellitenassembly für die Ausgangssprache.  
+   1. **BAML-Name**. Der Name der BAML-Ressource bezogen auf die Satellitenassembly für die Ausgangssprache.  
   
-   2.  **Ressourcenschlüssel**. Der lokalisierte Ressourcenbezeichner.  
+   2. **Ressourcenschlüssel**. Der lokalisierte Ressourcenbezeichner.  
   
-   3.  **Kategorie**. Der Werttyp. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   3. **Kategorie**. Der Werttyp. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   4.  **Lesbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   4. **Lesbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   5.  **Änderbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool geändert werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   5. **Änderbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool geändert werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   6.  **Kommentare**. Zusätzliche Beschreibung des Werts, um zu ermitteln, wie ein Wert lokalisiert wird. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   6. **Kommentare**. Zusätzliche Beschreibung des Werts, um zu ermitteln, wie ein Wert lokalisiert wird. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   7.  **Wert**. Der Textwert, der in die gewünschte Sprache übersetzt werden soll.  
+   7. **Wert**. Der Textwert, der in die gewünschte Sprache übersetzt werden soll.  
   
    Die folgende Tabelle zeigt, wie diese Felder den durch Trennzeichen getrennten Werten der CSV-Datei zugeordnet sind:  
   
@@ -188,9 +188,9 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
 7. Um die neue Satellitenassembly zu testen, müssen Sie die Kultur ändern, unter der Ihre Anwendung ausgeführt wird. Dazu haben Sie zwei Möglichkeiten:  
   
-    -   Ändern Sie die regionalen Einstellungen des Betriebssystems (**starten** &#124; **Systemsteuerung** &#124; **Regions- und Sprachoptionen**).  
+    - Ändern Sie die regionalen Einstellungen des Betriebssystems (**starten** &#124; **Systemsteuerung** &#124; **Regions- und Sprachoptionen**).  
   
-    -   Fügen Sie in Ihrer Anwendung den folgenden Code in "App.xaml.cs" hinzu:  
+    - Fügen Sie in Ihrer Anwendung den folgenden Code in "App.xaml.cs" hinzu:  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Einige Tipps zum Verwenden von LocBaml  
   
--   Alle abhängigen Assemblys, die benutzerdefinierte Steuerelemente definieren, müssen in das lokale Verzeichnis von LocBaml kopiert oder im globalen Assemblycache (GAC) installiert werden. Dies ist notwendig, da die Lokalisierungs-API Zugriff auf die abhängigen Assemblys haben muss, wenn sie die [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] liest.  
+- Alle abhängigen Assemblys, die benutzerdefinierte Steuerelemente definieren, müssen in das lokale Verzeichnis von LocBaml kopiert oder im globalen Assemblycache (GAC) installiert werden. Dies ist notwendig, da die Lokalisierungs-API Zugriff auf die abhängigen Assemblys haben muss, wenn sie die [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] liest.  
   
--   Wenn die Hauptassembly signiert ist, muss auch die generierte Ressourcen-DLL signiert sein, damit sie geladen werden kann.  
+- Wenn die Hauptassembly signiert ist, muss auch die generierte Ressourcen-DLL signiert sein, damit sie geladen werden kann.  
   
--   Die Version der lokalisierten Ressourcen-DLL muss mit der Hauptassembly synchronisiert werden.  
+- Die Version der lokalisierten Ressourcen-DLL muss mit der Hauptassembly synchronisiert werden.  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>Weitere Informationen  

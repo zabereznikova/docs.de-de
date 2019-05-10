@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID58
 ms.assetid: 04c2811f-b164-4e46-b4f0-ee9c948adade
-ms.openlocfilehash: b1c6a0c2f6c50d580eab1068e72c06577690670b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2d40e29a4c03dd8483547675cfb16befdd34b8f9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610945"
 ---
 # <a name="file-already-exists"></a>Datei bereits vorhanden
 Dieser Fehler tritt auf, wenn eine neue Datei mit dem Namen einer vorhandenen Datei benannt wird oder der Befehl **Speichern unter** verwendet wird, um ein aktuell geladenes Projekt unter einem Namen zu speichern, der bereits vorhanden ist.  
