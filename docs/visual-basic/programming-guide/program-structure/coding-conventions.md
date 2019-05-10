@@ -6,205 +6,205 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: f73648888b28c349104a70e78c29eb208d438b78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639835"
 ---
-# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="3cd02-102">Codierungskonventionen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3cd02-102">Visual Basic Coding Conventions</span></span>
-<span data-ttu-id="3cd02-103">Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="3cd02-104">Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="3cd02-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
+# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="d1100-102">Codierungskonventionen in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d1100-102">Visual Basic Coding Conventions</span></span>
+<span data-ttu-id="d1100-103">Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen.</span><span class="sxs-lookup"><span data-stu-id="d1100-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="d1100-104">Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:</span><span class="sxs-lookup"><span data-stu-id="d1100-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
   
-- <span data-ttu-id="3cd02-105">Der Code erhält eine konsistente Gestaltung, damit sich die Leser mehr auf den Inhalt und nicht auf das Layout konzentrieren.</span><span class="sxs-lookup"><span data-stu-id="3cd02-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
+- <span data-ttu-id="d1100-105">Der Code erhält eine konsistente Gestaltung, damit sich die Leser mehr auf den Inhalt und nicht auf das Layout konzentrieren.</span><span class="sxs-lookup"><span data-stu-id="d1100-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
   
-- <span data-ttu-id="3cd02-106">Leser verstehen den Code schneller, da sie Rückschlüsse aus früheren Erfahrungen ziehen können.</span><span class="sxs-lookup"><span data-stu-id="3cd02-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
+- <span data-ttu-id="d1100-106">Leser verstehen den Code schneller, da sie Rückschlüsse aus früheren Erfahrungen ziehen können.</span><span class="sxs-lookup"><span data-stu-id="d1100-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
   
-- <span data-ttu-id="3cd02-107">Sie können den Code kopieren, ändern und leichter pflegen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-107">You can copy, change, and maintain the code more easily.</span></span>  
+- <span data-ttu-id="d1100-107">Sie können den Code kopieren, ändern und leichter pflegen.</span><span class="sxs-lookup"><span data-stu-id="d1100-107">You can copy, change, and maintain the code more easily.</span></span>  
   
-- <span data-ttu-id="3cd02-108">Sie können sicherstellen, dass der Code die "empfohlenen Vorgehensweisen" für Visual Basic berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="3cd02-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
+- <span data-ttu-id="d1100-108">Sie können sicherstellen, dass der Code die "empfohlenen Vorgehensweisen" für Visual Basic berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="d1100-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
   
-## <a name="naming-conventions"></a><span data-ttu-id="3cd02-109">Namenskonventionen</span><span class="sxs-lookup"><span data-stu-id="3cd02-109">Naming Conventions</span></span>  
+## <a name="naming-conventions"></a><span data-ttu-id="d1100-109">Namenskonventionen</span><span class="sxs-lookup"><span data-stu-id="d1100-109">Naming Conventions</span></span>  
   
-- <span data-ttu-id="3cd02-110">Informationen zu Benennungsrichtlinien finden Sie unter [Benennungsrichtlinien für die](../../../standard/design-guidelines/naming-guidelines.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="3cd02-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
+- <span data-ttu-id="d1100-110">Informationen zu Benennungsrichtlinien finden Sie unter [Benennungsrichtlinien für die](../../../standard/design-guidelines/naming-guidelines.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="d1100-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
   
-- <span data-ttu-id="3cd02-111">Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens.</span><span class="sxs-lookup"><span data-stu-id="3cd02-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="3cd02-112">Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.</span><span class="sxs-lookup"><span data-stu-id="3cd02-112">This practice creates confusion with the `My` objects.</span></span>  
+- <span data-ttu-id="d1100-111">Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens.</span><span class="sxs-lookup"><span data-stu-id="d1100-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="d1100-112">Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.</span><span class="sxs-lookup"><span data-stu-id="d1100-112">This practice creates confusion with the `My` objects.</span></span>  
   
-- <span data-ttu-id="3cd02-113">Sie müssen die Namen von Objekten in automatisch generiertem Code nicht ändern, um sie an die Richtlinien anzupassen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
+- <span data-ttu-id="d1100-113">Sie müssen die Namen von Objekten in automatisch generiertem Code nicht ändern, um sie an die Richtlinien anzupassen.</span><span class="sxs-lookup"><span data-stu-id="d1100-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
   
-## <a name="layout-conventions"></a><span data-ttu-id="3cd02-114">Layoutkonventionen</span><span class="sxs-lookup"><span data-stu-id="3cd02-114">Layout Conventions</span></span>  
+## <a name="layout-conventions"></a><span data-ttu-id="d1100-114">Layoutkonventionen</span><span class="sxs-lookup"><span data-stu-id="d1100-114">Layout Conventions</span></span>  
   
-- <span data-ttu-id="3cd02-115">Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
+- <span data-ttu-id="d1100-115">Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.</span><span class="sxs-lookup"><span data-stu-id="d1100-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
   
-- <span data-ttu-id="3cd02-116">Verwendung **Einrückung Einrückung des Codes** Neuformatieren von Code im Code-Editor.</span><span class="sxs-lookup"><span data-stu-id="3cd02-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="3cd02-117">Weitere Informationen finden Sie unter [Optionen, Text-Editor, Standard (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="3cd02-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
+- <span data-ttu-id="d1100-116">Verwendung **Einrückung Einrückung des Codes** Neuformatieren von Code im Code-Editor.</span><span class="sxs-lookup"><span data-stu-id="d1100-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="d1100-117">Weitere Informationen finden Sie unter [Optionen, Text-Editor, Standard (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="d1100-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
   
-- <span data-ttu-id="3cd02-118">Verwenden Sie pro Zeile nur eine Anweisung.</span><span class="sxs-lookup"><span data-stu-id="3cd02-118">Use only one statement per line.</span></span> <span data-ttu-id="3cd02-119">Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).</span><span class="sxs-lookup"><span data-stu-id="3cd02-119">Don't use the Visual Basic line separator character (:).</span></span>  
+- <span data-ttu-id="d1100-118">Verwenden Sie pro Zeile nur eine Anweisung.</span><span class="sxs-lookup"><span data-stu-id="d1100-118">Use only one statement per line.</span></span> <span data-ttu-id="d1100-119">Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).</span><span class="sxs-lookup"><span data-stu-id="d1100-119">Don't use the Visual Basic line separator character (:).</span></span>  
   
-- <span data-ttu-id="3cd02-120">Vermeiden Sie, das explizite Zeilenfortsetzungszeichen "_" zugunsten der impliziten Zeilenfortsetzung, wenn die Sprache dies ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="3cd02-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
+- <span data-ttu-id="d1100-120">Vermeiden Sie, das explizite Zeilenfortsetzungszeichen "_" zugunsten der impliziten Zeilenfortsetzung, wenn die Sprache dies ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="d1100-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
   
-- <span data-ttu-id="3cd02-121">Verwenden Sie pro Zeile nur eine Deklaration.</span><span class="sxs-lookup"><span data-stu-id="3cd02-121">Use only one declaration per line.</span></span>  
+- <span data-ttu-id="d1100-121">Verwenden Sie pro Zeile nur eine Deklaration.</span><span class="sxs-lookup"><span data-stu-id="d1100-121">Use only one declaration per line.</span></span>  
   
-- <span data-ttu-id="3cd02-122">Wenn **Einrückung Einrückung des Codes** nicht Fortsetzungszeilen automatisch zum einrücken manuell Fortsetzung einen Tabstopp.</span><span class="sxs-lookup"><span data-stu-id="3cd02-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="3cd02-123">In einer Liste werden jedoch die Elemente immer links ausgerichtet.</span><span class="sxs-lookup"><span data-stu-id="3cd02-123">However, always left-align items in a list.</span></span>  
+- <span data-ttu-id="d1100-122">Wenn **Einrückung Einrückung des Codes** nicht Fortsetzungszeilen automatisch zum einrücken manuell Fortsetzung einen Tabstopp.</span><span class="sxs-lookup"><span data-stu-id="d1100-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="d1100-123">In einer Liste werden jedoch die Elemente immer links ausgerichtet.</span><span class="sxs-lookup"><span data-stu-id="d1100-123">However, always left-align items in a list.</span></span>  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
-- <span data-ttu-id="3cd02-124">Fügen Sie zwischen Methoden- und Eigenschaftendefinitionen mindestens eine Leerzeile ein.</span><span class="sxs-lookup"><span data-stu-id="3cd02-124">Add at least one blank line between method and property definitions.</span></span>  
+- <span data-ttu-id="d1100-124">Fügen Sie zwischen Methoden- und Eigenschaftendefinitionen mindestens eine Leerzeile ein.</span><span class="sxs-lookup"><span data-stu-id="d1100-124">Add at least one blank line between method and property definitions.</span></span>  
   
-## <a name="commenting-conventions"></a><span data-ttu-id="3cd02-125">Konventionen für Kommentare</span><span class="sxs-lookup"><span data-stu-id="3cd02-125">Commenting Conventions</span></span>  
+## <a name="commenting-conventions"></a><span data-ttu-id="d1100-125">Konventionen für Kommentare</span><span class="sxs-lookup"><span data-stu-id="d1100-125">Commenting Conventions</span></span>  
   
-- <span data-ttu-id="3cd02-126">Fügen Sie den Kommentar in einer eigenen Zeile und nicht am Ende einer Codezeile ein.</span><span class="sxs-lookup"><span data-stu-id="3cd02-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
+- <span data-ttu-id="d1100-126">Fügen Sie den Kommentar in einer eigenen Zeile und nicht am Ende einer Codezeile ein.</span><span class="sxs-lookup"><span data-stu-id="d1100-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
   
-- <span data-ttu-id="3cd02-127">Beginnen Sie den Kommentartext mit einem Großbuchstaben, und beenden Sie ihn mit einem Punkt.</span><span class="sxs-lookup"><span data-stu-id="3cd02-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
+- <span data-ttu-id="d1100-127">Beginnen Sie den Kommentartext mit einem Großbuchstaben, und beenden Sie ihn mit einem Punkt.</span><span class="sxs-lookup"><span data-stu-id="d1100-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
   
-- <span data-ttu-id="3cd02-128">Fügen Sie ein Leerzeichen zwischen dem Kommentartrennzeichen (') und dem Kommentartext ein.</span><span class="sxs-lookup"><span data-stu-id="3cd02-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
+- <span data-ttu-id="d1100-128">Fügen Sie ein Leerzeichen zwischen dem Kommentartrennzeichen (') und dem Kommentartext ein.</span><span class="sxs-lookup"><span data-stu-id="d1100-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- <span data-ttu-id="3cd02-129">Erstellen Sie keine formatierten Blöcke von Sternchen, die die Kommentare umgeben.</span><span class="sxs-lookup"><span data-stu-id="3cd02-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
+- <span data-ttu-id="d1100-129">Erstellen Sie keine formatierten Blöcke von Sternchen, die die Kommentare umgeben.</span><span class="sxs-lookup"><span data-stu-id="d1100-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
   
-## <a name="program-structure"></a><span data-ttu-id="3cd02-130">Programmstruktur</span><span class="sxs-lookup"><span data-stu-id="3cd02-130">Program Structure</span></span>  
+## <a name="program-structure"></a><span data-ttu-id="d1100-130">Programmstruktur</span><span class="sxs-lookup"><span data-stu-id="d1100-130">Program Structure</span></span>  
   
-- <span data-ttu-id="3cd02-131">Wenn Sie die `Main`-Methode verwenden, verwenden Sie das Standardkonstrukt für neue Konsolenanwendungen, und verwenden Sie `My` für Befehlszeilenargumente.</span><span class="sxs-lookup"><span data-stu-id="3cd02-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
+- <span data-ttu-id="d1100-131">Wenn Sie die `Main`-Methode verwenden, verwenden Sie das Standardkonstrukt für neue Konsolenanwendungen, und verwenden Sie `My` für Befehlszeilenargumente.</span><span class="sxs-lookup"><span data-stu-id="d1100-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
-## <a name="language-guidelines"></a><span data-ttu-id="3cd02-132">Sprachrichtlinien</span><span class="sxs-lookup"><span data-stu-id="3cd02-132">Language Guidelines</span></span>  
+## <a name="language-guidelines"></a><span data-ttu-id="d1100-132">Sprachrichtlinien</span><span class="sxs-lookup"><span data-stu-id="d1100-132">Language Guidelines</span></span>  
   
-### <a name="string-data-type"></a><span data-ttu-id="3cd02-133">String-Datentyp</span><span class="sxs-lookup"><span data-stu-id="3cd02-133">String Data Type</span></span>  
+### <a name="string-data-type"></a><span data-ttu-id="d1100-133">String-Datentyp</span><span class="sxs-lookup"><span data-stu-id="d1100-133">String Data Type</span></span>  
   
-- <span data-ttu-id="3cd02-134">Verwenden Sie zum Verketten von Zeichenfolgen, ein kaufmännisches und-Zeichen (&).</span><span class="sxs-lookup"><span data-stu-id="3cd02-134">To concatenate strings, use an ampersand (&).</span></span>  
+- <span data-ttu-id="d1100-134">Verwenden Sie zum Verketten von Zeichenfolgen, ein kaufmännisches und-Zeichen (&).</span><span class="sxs-lookup"><span data-stu-id="d1100-134">To concatenate strings, use an ampersand (&).</span></span>  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
-- <span data-ttu-id="3cd02-135">Verwenden Sie das <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzuhängen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
+- <span data-ttu-id="d1100-135">Verwenden Sie das <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzuhängen.</span><span class="sxs-lookup"><span data-stu-id="d1100-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="3cd02-136">Weniger strenge Delegaten in Ereignishandlern</span><span class="sxs-lookup"><span data-stu-id="3cd02-136">Relaxed Delegates in Event Handlers</span></span>  
- <span data-ttu-id="3cd02-137">Um Ereignishandler zu vermeiden, qualifizieren Sie die Argumente (Object und EventArgs) nicht explizit.</span><span class="sxs-lookup"><span data-stu-id="3cd02-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="3cd02-138">Wenn Sie nicht die Ereignisargumente verwenden, die an ein Ereignis übergeben werden (z. B. Sender als Objekt, "e" als EventArgs), verwenden Sie weniger strenge Delegaten, und lassen Sie die Ereignisargumente im Code aus:</span><span class="sxs-lookup"><span data-stu-id="3cd02-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
+### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="d1100-136">Weniger strenge Delegaten in Ereignishandlern</span><span class="sxs-lookup"><span data-stu-id="d1100-136">Relaxed Delegates in Event Handlers</span></span>  
+ <span data-ttu-id="d1100-137">Um Ereignishandler zu vermeiden, qualifizieren Sie die Argumente (Object und EventArgs) nicht explizit.</span><span class="sxs-lookup"><span data-stu-id="d1100-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="d1100-138">Wenn Sie nicht die Ereignisargumente verwenden, die an ein Ereignis übergeben werden (z. B. Sender als Objekt, "e" als EventArgs), verwenden Sie weniger strenge Delegaten, und lassen Sie die Ereignisargumente im Code aus:</span><span class="sxs-lookup"><span data-stu-id="d1100-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
-### <a name="unsigned-data-type"></a><span data-ttu-id="3cd02-139">Datentyp ohne Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="3cd02-139">Unsigned Data Type</span></span>  
+### <a name="unsigned-data-type"></a><span data-ttu-id="d1100-139">Datentyp ohne Vorzeichen</span><span class="sxs-lookup"><span data-stu-id="d1100-139">Unsigned Data Type</span></span>  
   
-- <span data-ttu-id="3cd02-140">Verwenden Sie `Integer` anstelle von Typen ohne Vorzeichen, wenn sie nicht notwendig sind.</span><span class="sxs-lookup"><span data-stu-id="3cd02-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
+- <span data-ttu-id="d1100-140">Verwenden Sie `Integer` anstelle von Typen ohne Vorzeichen, wenn sie nicht notwendig sind.</span><span class="sxs-lookup"><span data-stu-id="d1100-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
   
-### <a name="arrays"></a><span data-ttu-id="3cd02-141">Arrays</span><span class="sxs-lookup"><span data-stu-id="3cd02-141">Arrays</span></span>  
+### <a name="arrays"></a><span data-ttu-id="d1100-141">Arrays</span><span class="sxs-lookup"><span data-stu-id="d1100-141">Arrays</span></span>  
   
-- <span data-ttu-id="3cd02-142">Verwenden Sie die kurze Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren.</span><span class="sxs-lookup"><span data-stu-id="3cd02-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="3cd02-143">Sie können z. B. folgende Syntax verwenden.</span><span class="sxs-lookup"><span data-stu-id="3cd02-143">For example, use the following syntax.</span></span>  
+- <span data-ttu-id="d1100-142">Verwenden Sie die kurze Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren.</span><span class="sxs-lookup"><span data-stu-id="d1100-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="d1100-143">Sie können z. B. folgende Syntax verwenden.</span><span class="sxs-lookup"><span data-stu-id="d1100-143">For example, use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     <span data-ttu-id="3cd02-144">Verwenden Sie nicht die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="3cd02-144">Do not use the following syntax.</span></span>  
+     <span data-ttu-id="d1100-144">Verwenden Sie nicht die folgende Syntax.</span><span class="sxs-lookup"><span data-stu-id="d1100-144">Do not use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- <span data-ttu-id="3cd02-145">Legen Sie den Arraybezeichner im Typ und nicht in der Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="3cd02-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="3cd02-146">Sie können z. B. folgende Syntax verwenden:</span><span class="sxs-lookup"><span data-stu-id="3cd02-146">For example, use the following syntax:</span></span>  
+- <span data-ttu-id="d1100-145">Legen Sie den Arraybezeichner im Typ und nicht in der Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="d1100-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="d1100-146">Sie können z. B. folgende Syntax verwenden:</span><span class="sxs-lookup"><span data-stu-id="d1100-146">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     <span data-ttu-id="3cd02-147">Verwenden Sie nicht die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="3cd02-147">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="d1100-147">Verwenden Sie nicht die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="d1100-147">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- <span data-ttu-id="3cd02-148">Verwenden Sie die { }-Syntax, wenn Sie Arrays aus grundlegenden Datentypen deklarieren und initialisieren.</span><span class="sxs-lookup"><span data-stu-id="3cd02-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="3cd02-149">Sie können z. B. folgende Syntax verwenden:</span><span class="sxs-lookup"><span data-stu-id="3cd02-149">For example, use the following syntax:</span></span>  
+- <span data-ttu-id="d1100-148">Verwenden Sie die { }-Syntax, wenn Sie Arrays aus grundlegenden Datentypen deklarieren und initialisieren.</span><span class="sxs-lookup"><span data-stu-id="d1100-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="d1100-149">Sie können z. B. folgende Syntax verwenden:</span><span class="sxs-lookup"><span data-stu-id="d1100-149">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     <span data-ttu-id="3cd02-150">Verwenden Sie nicht die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="3cd02-150">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="d1100-150">Verwenden Sie nicht die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="d1100-150">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a><span data-ttu-id="3cd02-151">Verwenden des with-Schlüsselworts</span><span class="sxs-lookup"><span data-stu-id="3cd02-151">Use the With Keyword</span></span>  
- <span data-ttu-id="3cd02-152">Wenn Sie eine Reihe von Aufrufen eines Objekts ausführen, sollten Sie erwägen, das `With`-Schlüsselwort zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="3cd02-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
+### <a name="use-the-with-keyword"></a><span data-ttu-id="d1100-151">Verwenden des with-Schlüsselworts</span><span class="sxs-lookup"><span data-stu-id="d1100-151">Use the With Keyword</span></span>  
+ <span data-ttu-id="d1100-152">Wenn Sie eine Reihe von Aufrufen eines Objekts ausführen, sollten Sie erwägen, das `With`-Schlüsselwort zu verwenden:</span><span class="sxs-lookup"><span data-stu-id="d1100-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="3cd02-153">Verwenden Sie try-catch-Anweisungen zur Ausnahmebehandlung.</span><span class="sxs-lookup"><span data-stu-id="3cd02-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
- <span data-ttu-id="3cd02-154">Verwenden Sie nicht `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="3cd02-154">Do not use `On Error Goto`.</span></span>  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="d1100-153">Verwenden Sie try-catch-Anweisungen zur Ausnahmebehandlung.</span><span class="sxs-lookup"><span data-stu-id="d1100-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
+ <span data-ttu-id="d1100-154">Verwenden Sie nicht `On Error Goto`.</span><span class="sxs-lookup"><span data-stu-id="d1100-154">Do not use `On Error Goto`.</span></span>  
   
-### <a name="use-the-isnot-keyword"></a><span data-ttu-id="3cd02-155">Verwenden des IsNot-Schlüsselworts</span><span class="sxs-lookup"><span data-stu-id="3cd02-155">Use the IsNot Keyword</span></span>  
- <span data-ttu-id="3cd02-156">Verwenden Sie das Schlüsselwort `IsNot` statt `Not...Is Nothing`.</span><span class="sxs-lookup"><span data-stu-id="3cd02-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
+### <a name="use-the-isnot-keyword"></a><span data-ttu-id="d1100-155">Verwenden des IsNot-Schlüsselworts</span><span class="sxs-lookup"><span data-stu-id="d1100-155">Use the IsNot Keyword</span></span>  
+ <span data-ttu-id="d1100-156">Verwenden Sie das Schlüsselwort `IsNot` statt `Not...Is Nothing`.</span><span class="sxs-lookup"><span data-stu-id="d1100-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
   
-### <a name="new-keyword"></a><span data-ttu-id="3cd02-157">New-Schlüsselwort</span><span class="sxs-lookup"><span data-stu-id="3cd02-157">New Keyword</span></span>  
+### <a name="new-keyword"></a><span data-ttu-id="d1100-157">New-Schlüsselwort</span><span class="sxs-lookup"><span data-stu-id="d1100-157">New Keyword</span></span>  
   
-- <span data-ttu-id="3cd02-158">Verwenden Sie die kurze Instanziierung.</span><span class="sxs-lookup"><span data-stu-id="3cd02-158">Use short instantiation.</span></span> <span data-ttu-id="3cd02-159">Sie können z. B. folgende Syntax verwenden:</span><span class="sxs-lookup"><span data-stu-id="3cd02-159">For example, use the following syntax:</span></span>  
+- <span data-ttu-id="d1100-158">Verwenden Sie die kurze Instanziierung.</span><span class="sxs-lookup"><span data-stu-id="d1100-158">Use short instantiation.</span></span> <span data-ttu-id="d1100-159">Sie können z. B. folgende Syntax verwenden:</span><span class="sxs-lookup"><span data-stu-id="d1100-159">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     <span data-ttu-id="3cd02-160">Die vorangehende Zeile entspricht der Folgenden:</span><span class="sxs-lookup"><span data-stu-id="3cd02-160">The preceding line is equivalent to this:</span></span>  
+     <span data-ttu-id="d1100-160">Die vorangehende Zeile entspricht der Folgenden:</span><span class="sxs-lookup"><span data-stu-id="d1100-160">The preceding line is equivalent to this:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- <span data-ttu-id="3cd02-161">Verwenden Sie für neue Objekte Objektinitialisierer anstelle des parameterlosen Konstruktors:</span><span class="sxs-lookup"><span data-stu-id="3cd02-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
+- <span data-ttu-id="d1100-161">Verwenden Sie für neue Objekte Objektinitialisierer anstelle des parameterlosen Konstruktors:</span><span class="sxs-lookup"><span data-stu-id="d1100-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
-### <a name="event-handling"></a><span data-ttu-id="3cd02-162">Ereignisbehandlung</span><span class="sxs-lookup"><span data-stu-id="3cd02-162">Event Handling</span></span>  
+### <a name="event-handling"></a><span data-ttu-id="d1100-162">Ereignisbehandlung</span><span class="sxs-lookup"><span data-stu-id="d1100-162">Event Handling</span></span>  
   
-- <span data-ttu-id="3cd02-163">Verwenden Sie eher `Handles` als `AddHandler`:</span><span class="sxs-lookup"><span data-stu-id="3cd02-163">Use `Handles` rather than `AddHandler`:</span></span>  
+- <span data-ttu-id="d1100-163">Verwenden Sie eher `Handles` als `AddHandler`:</span><span class="sxs-lookup"><span data-stu-id="d1100-163">Use `Handles` rather than `AddHandler`:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- <span data-ttu-id="3cd02-164">Verwenden Sie `AddressOf`, und instanziieren Sie den Delegaten nicht explizit:</span><span class="sxs-lookup"><span data-stu-id="3cd02-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
+- <span data-ttu-id="d1100-164">Verwenden Sie `AddressOf`, und instanziieren Sie den Delegaten nicht explizit:</span><span class="sxs-lookup"><span data-stu-id="d1100-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- <span data-ttu-id="3cd02-165">Wenn Sie ein Ereignis definieren, verwenden Sie die kurze Syntax, und lassen Sie den Delegaten vom Compiler definieren:</span><span class="sxs-lookup"><span data-stu-id="3cd02-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
+- <span data-ttu-id="d1100-165">Wenn Sie ein Ereignis definieren, verwenden Sie die kurze Syntax, und lassen Sie den Delegaten vom Compiler definieren:</span><span class="sxs-lookup"><span data-stu-id="d1100-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- <span data-ttu-id="3cd02-166">Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="3cd02-167">Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.</span><span class="sxs-lookup"><span data-stu-id="3cd02-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
+- <span data-ttu-id="d1100-166">Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="d1100-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="d1100-167">Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.</span><span class="sxs-lookup"><span data-stu-id="d1100-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
   
-### <a name="using-shared-members"></a><span data-ttu-id="3cd02-168">Verwenden von Shared-Membern</span><span class="sxs-lookup"><span data-stu-id="3cd02-168">Using Shared Members</span></span>  
- <span data-ttu-id="3cd02-169">Rufen Sie `Shared`-Member über den Klassennamen auf, nicht von einer Instanzvariablen aus.</span><span class="sxs-lookup"><span data-stu-id="3cd02-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
+### <a name="using-shared-members"></a><span data-ttu-id="d1100-168">Verwenden von Shared-Membern</span><span class="sxs-lookup"><span data-stu-id="d1100-168">Using Shared Members</span></span>  
+ <span data-ttu-id="d1100-169">Rufen Sie `Shared`-Member über den Klassennamen auf, nicht von einer Instanzvariablen aus.</span><span class="sxs-lookup"><span data-stu-id="d1100-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
   
-### <a name="use-xml-literals"></a><span data-ttu-id="3cd02-170">Verwenden von XML-Literalen</span><span class="sxs-lookup"><span data-stu-id="3cd02-170">Use XML Literals</span></span>  
- <span data-ttu-id="3cd02-171">XML-Literale vereinfachen allgemeine Aufgaben bei der Arbeit mit XML (z. B. Laden, Abfragen und Transformieren).</span><span class="sxs-lookup"><span data-stu-id="3cd02-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="3cd02-172">Beachten Sie bei der Entwicklung mit XML die folgenden Richtlinien:</span><span class="sxs-lookup"><span data-stu-id="3cd02-172">When you develop with XML, follow these guidelines:</span></span>  
+### <a name="use-xml-literals"></a><span data-ttu-id="d1100-170">Verwenden von XML-Literalen</span><span class="sxs-lookup"><span data-stu-id="d1100-170">Use XML Literals</span></span>  
+ <span data-ttu-id="d1100-171">XML-Literale vereinfachen allgemeine Aufgaben bei der Arbeit mit XML (z. B. Laden, Abfragen und Transformieren).</span><span class="sxs-lookup"><span data-stu-id="d1100-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="d1100-172">Beachten Sie bei der Entwicklung mit XML die folgenden Richtlinien:</span><span class="sxs-lookup"><span data-stu-id="d1100-172">When you develop with XML, follow these guidelines:</span></span>  
   
-- <span data-ttu-id="3cd02-173">Verwenden Sie zum Erstellen von XML-Dokumenten und –Fragmenten XML-Literale, anstatt die XML-APIs direkt aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
+- <span data-ttu-id="d1100-173">Verwenden Sie zum Erstellen von XML-Dokumenten und –Fragmenten XML-Literale, anstatt die XML-APIs direkt aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="d1100-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
   
-- <span data-ttu-id="3cd02-174">Importieren Sie XML-Namespaces auf Datei- oder Projektebene, um die Leistungsoptimierung für XML-Literale zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="3cd02-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
+- <span data-ttu-id="d1100-174">Importieren Sie XML-Namespaces auf Datei- oder Projektebene, um die Leistungsoptimierung für XML-Literale zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="d1100-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
   
-- <span data-ttu-id="3cd02-175">Verwenden Sie die XML-Achseneigenschaften, um auf Elemente und Attribute in einem XML-Dokument zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="3cd02-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
+- <span data-ttu-id="d1100-175">Verwenden Sie die XML-Achseneigenschaften, um auf Elemente und Attribute in einem XML-Dokument zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="d1100-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
   
-- <span data-ttu-id="3cd02-176">Verwenden Sie eingebettete Ausdrücke, um Werte einzuschließen und XML aus vorhandenen Werten zu erstellen, anstatt API-Aufrufe wie die `Add`-Methode zu nutzen:</span><span class="sxs-lookup"><span data-stu-id="3cd02-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
+- <span data-ttu-id="d1100-176">Verwenden Sie eingebettete Ausdrücke, um Werte einzuschließen und XML aus vorhandenen Werten zu erstellen, anstatt API-Aufrufe wie die `Add`-Methode zu nutzen:</span><span class="sxs-lookup"><span data-stu-id="d1100-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
-### <a name="linq-queries"></a><span data-ttu-id="3cd02-177">LINQ-Abfragen</span><span class="sxs-lookup"><span data-stu-id="3cd02-177">LINQ Queries</span></span>  
+### <a name="linq-queries"></a><span data-ttu-id="d1100-177">LINQ-Abfragen</span><span class="sxs-lookup"><span data-stu-id="d1100-177">LINQ Queries</span></span>  
   
-- <span data-ttu-id="3cd02-178">Verwenden Sie aussagekräftige Namen für Abfragevariablen:</span><span class="sxs-lookup"><span data-stu-id="3cd02-178">Use meaningful names for query variables:</span></span>  
+- <span data-ttu-id="d1100-178">Verwenden Sie aussagekräftige Namen für Abfragevariablen:</span><span class="sxs-lookup"><span data-stu-id="d1100-178">Use meaningful names for query variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- <span data-ttu-id="3cd02-179">Geben Sie Aliasnamen für Elemente in einer Abfrage an, um eine korrekte Großschreibung von Eigenschaftennamen anonymer Typen in Pascal-Schreibweise sicherzustellen:</span><span class="sxs-lookup"><span data-stu-id="3cd02-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
+- <span data-ttu-id="d1100-179">Geben Sie Aliasnamen für Elemente in einer Abfrage an, um eine korrekte Großschreibung von Eigenschaftennamen anonymer Typen in Pascal-Schreibweise sicherzustellen:</span><span class="sxs-lookup"><span data-stu-id="d1100-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- <span data-ttu-id="3cd02-180">Benennen Sie Eigenschaften um, wenn die Eigenschaftennamen im Ergebnis nicht eindeutig sind.</span><span class="sxs-lookup"><span data-stu-id="3cd02-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="3cd02-181">Wenn die Abfrage beispielsweise einen Kundennamen und eine Auftrags-ID zurückgibt, sollten Sie diese im Ergebnis umbenennen, anstatt `Name` und `ID` zu übernehmen:</span><span class="sxs-lookup"><span data-stu-id="3cd02-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
+- <span data-ttu-id="d1100-180">Benennen Sie Eigenschaften um, wenn die Eigenschaftennamen im Ergebnis nicht eindeutig sind.</span><span class="sxs-lookup"><span data-stu-id="d1100-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="d1100-181">Wenn die Abfrage beispielsweise einen Kundennamen und eine Auftrags-ID zurückgibt, sollten Sie diese im Ergebnis umbenennen, anstatt `Name` und `ID` zu übernehmen:</span><span class="sxs-lookup"><span data-stu-id="d1100-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- <span data-ttu-id="3cd02-182">Verwenden Sie den Typrückschluss in der Deklaration von Abfragevariablen und Bereichsvariablen:</span><span class="sxs-lookup"><span data-stu-id="3cd02-182">Use type inference in the declaration of query variables and range variables:</span></span>  
+- <span data-ttu-id="d1100-182">Verwenden Sie den Typrückschluss in der Deklaration von Abfragevariablen und Bereichsvariablen:</span><span class="sxs-lookup"><span data-stu-id="d1100-182">Use type inference in the declaration of query variables and range variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- <span data-ttu-id="3cd02-183">Richten Sie Abfrageklauseln unter der `From`-Anweisung aus:</span><span class="sxs-lookup"><span data-stu-id="3cd02-183">Align query clauses under the `From` statement:</span></span>  
+- <span data-ttu-id="d1100-183">Richten Sie Abfrageklauseln unter der `From`-Anweisung aus:</span><span class="sxs-lookup"><span data-stu-id="d1100-183">Align query clauses under the `From` statement:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- <span data-ttu-id="3cd02-184">Verwenden Sie vor anderen Abfrageklauseln `Where`-Klauseln, sodass die nachfolgenden Abfrageklauseln für den reduzierten, gefilterten Datensatz ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="3cd02-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
+- <span data-ttu-id="d1100-184">Verwenden Sie vor anderen Abfrageklauseln `Where`-Klauseln, sodass die nachfolgenden Abfrageklauseln für den reduzierten, gefilterten Datensatz ausgeführt werden:</span><span class="sxs-lookup"><span data-stu-id="d1100-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- <span data-ttu-id="3cd02-185">Verwenden Sie zum expliziten Definieren eines Verbindungsvorgangs die `Join`-Klausel anstelle der `Where`-Klausel, bei der ein Verbindungsvorgang implizit definiert wird:</span><span class="sxs-lookup"><span data-stu-id="3cd02-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
+- <span data-ttu-id="d1100-185">Verwenden Sie zum expliziten Definieren eines Verbindungsvorgangs die `Join`-Klausel anstelle der `Where`-Klausel, bei der ein Verbindungsvorgang implizit definiert wird:</span><span class="sxs-lookup"><span data-stu-id="d1100-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a><span data-ttu-id="3cd02-186">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3cd02-186">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1100-186">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1100-186">See also</span></span>
 
-- [<span data-ttu-id="3cd02-187">Richtlinien für das Schreiben von sicherem Code</span><span class="sxs-lookup"><span data-stu-id="3cd02-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="d1100-187">Richtlinien für das Schreiben von sicherem Code</span><span class="sxs-lookup"><span data-stu-id="d1100-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
