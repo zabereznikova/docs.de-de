@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955622"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648782"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
 Wenn Ihr Code schreiben, können Sie gelegentlich lange Anweisungen erstellen, die erfordern, horizontalen Bildlauf im Code-Editor. Obwohl dies Einfluss auf die nicht Ihr Code ausgeführt wird, erleichtert es schwierig für Sie oder andere Personen Lesen des Codes, wie er auf dem Bildschirm angezeigt wird. In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen unterteilt.  
