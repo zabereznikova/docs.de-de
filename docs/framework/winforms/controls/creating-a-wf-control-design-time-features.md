@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011570"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211206"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt
 
@@ -68,17 +68,13 @@ Die vollständige codeauflistung finden Sie unter [Vorgehensweise: Erstellen Sie
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
-
-- Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.
+Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio.
 
 ## <a name="creating-the-project"></a>Erstellen des Projekts
 
 Der erste Schritt ist das Anwendungsprojekt zu erstellen. Sie können dieses Projekt zum Erstellen der Anwendung, die das benutzerdefinierte Steuerelement hostet.
 
-### <a name="to-create-the-project"></a>So erstellen Sie das Projekt
-
-- Erstellen Sie eine Windows Forms-Anwendung mit dem Namen "MarqueeControlTest" (**Datei** > **neu** > **Projekt**  >   **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).
+Öffnen Sie Visual Studio, und erstellen Sie eine Windows Forms-Anwendung mit dem Namen "MarqueeControlTest" (**Datei** > **neu** > **Projekt**  >  **Visual C#**  oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).
 
 ## <a name="creating-a-control-library-project"></a>Erstellen ein Steuerelementbibliothek-Projekt
 

@@ -8,27 +8,25 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912859"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211630"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Vorgehensweise: Festlegen von Rasteroptionen für alle Windows Forms
-Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwendet, können Sie Einstellungen für die Formulare und Projekte, mit denen, die Sie zusammenarbeiten, im Windows Forms-Designer festlegen.  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-global-windows-forms-options"></a>Festlegen von Optionen für globale Windows Forms  
-  
-1. Von der **Tools** , wählen Sie im Menü **Optionen**.  
-  
-2. Im linken Bereich die **Optionen** Dialogfeld klicken Sie auf **Windows Forms-Designer**.  
-  
-     Klicken Sie im rechten Bereich unter der **Layouteinstellungen** Überschrift können legen Sie die standardmäßige Einstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Größe des Rasters gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen zu Ausrichtungslinien, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
-  
+
+Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwendet, können Sie Einstellungen für die Formulare und Projekte, mit denen, die Sie zusammenarbeiten, im Windows Forms-Designer festlegen.
+
+## <a name="set-global-windows-forms-options"></a>Festlegen von Optionen für globale Windows Forms
+
+1. In Visual Studio aus der **Tools** , wählen Sie im Menü **Optionen**.
+
+2. Im linken Bereich die **Optionen** Dialogfeld klicken Sie auf **Windows Forms-Designer**.
+
+   Klicken Sie im rechten Bereich unter der **Layouteinstellungen** Überschrift können legen Sie die standardmäßige Einstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Größe des Rasters gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen zu Ausrichtungslinien, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

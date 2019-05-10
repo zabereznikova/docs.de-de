@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053872"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598659"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Markieren von Routingereignissen als behandelt und Klassenbehandlung
 Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdaten als behandelt markieren. Das Behandeln des Ereignisses verkürzt die Route. Die Klassenbehandlung ist ein Programmierkonzept, das von Routingereignissen unterstützt wird. Ein Klassenhandler hat die Möglichkeit, ein bestimmtes Routingereignis auf Klassenebene mit einem Ereignishandler zu verarbeiten, der vor jedem Instanzenhandler auf jeder Instanz der Klasse aufgerufen wird.  

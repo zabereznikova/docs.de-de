@@ -2,26 +2,26 @@
 title: Zuordnungstyp
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fbdc0316b1f9fd0bb282fd466857b1426c41df1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411446"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583717"
 ---
 # <a name="association-type"></a>Zuordnungstyp
 Ein *Zuordnungstyp* (auch als Zuordnung bezeichnet) ist der wesentliche Baustein zum Beschreiben von Beziehungen im Entity Data Model (EDM). In einem konzeptionellen Modell stellt eine Zuordnung eine Beziehung zwischen zwei [Entitätstypen](../../../../docs/framework/data/adonet/entity-type.md) (z. B. `Customer` und `Order`). In einer Anwendung stellt eine Instanz einer Zuordnung eine bestimmte Zuordnung dar (z. B. eine Zuordnung zwischen einer Instanz von `Customer` und einer Instanz von `Order`). Zuordnungsinstanzen werden logisch gruppiert, eine [Zuordnungssatz](../../../../docs/framework/data/adonet/association-set.md).  
   
  Eine Zuordnungsdefinition enthält die folgenden Informationen:  
   
--   Eine eindeutige Bezeichnung. (erforderlich)  
+- Eine eindeutige Bezeichnung. (erforderlich)  
   
--   Zwei [Zuordnungsenden](../../../../docs/framework/data/adonet/association-end.md), eine für jeden Entitätstyp in der Beziehung. (erforderlich)  
+- Zwei [Zuordnungsenden](../../../../docs/framework/data/adonet/association-end.md), eine für jeden Entitätstyp in der Beziehung. (erforderlich)  
   
     > [!NOTE]
     >  Eine Zuordnung kann keine Beziehung zwischen mehr als zwei Entitätstypen darstellen. Eine Zuordnung kann jedoch eine Selbstbeziehung definieren, indem der gleichen Entitätstyp für beide Zuordnungsenden angegeben wird.  
   
--   Ein [Einschränkung der referenziellen Integrität](../../../../docs/framework/data/adonet/referential-integrity-constraint.md). (Optional)  
+- Ein [Einschränkung der referenziellen Integrität](../../../../docs/framework/data/adonet/referential-integrity-constraint.md). (Optional)  
   
  Geben Sie jedes Zuordnungsende muss eine [zuordnungsendes](../../../../docs/framework/data/adonet/association-end-multiplicity.md) , der die Anzahl der Instanzen eines Entitätstyps, die an einem Ende der Zuordnung angibt. Ein zuordnungsendes kann einen Wert von eins (1), NULL oder eins (0.. 1) oder viele haben (\*). Auf Entitätstypinstanzen an einem Ende einer Zuordnung können Sie über zugreifen [Navigationseigenschaften](../../../../docs/framework/data/adonet/navigation-property.md) oder Fremdschlüssel, wenn sie für einen Entitätstyp verfügbar gemacht werden. Weitere Informationen finden Sie unter [Entity Data Model: Fremdschlüssel](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   
