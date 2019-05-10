@@ -8,57 +8,57 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621433"
 ---
-# <a name="xml-cdata-literal-visual-basic"></a><span data-ttu-id="05848-102">XML-CDATA-Literal (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="05848-102">XML CDATA Literal (Visual Basic)</span></span>
-<span data-ttu-id="05848-103">Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XCData> Objekt.</span><span class="sxs-lookup"><span data-stu-id="05848-103">A literal representing an <xref:System.Xml.Linq.XCData> object.</span></span>  
+# <a name="xml-cdata-literal-visual-basic"></a><span data-ttu-id="c57ac-102">XML-CDATA-Literal (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c57ac-102">XML CDATA Literal (Visual Basic)</span></span>
+<span data-ttu-id="c57ac-103">Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XCData> Objekt.</span><span class="sxs-lookup"><span data-stu-id="c57ac-103">A literal representing an <xref:System.Xml.Linq.XCData> object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05848-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="05848-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c57ac-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c57ac-104">Syntax</span></span>  
   
 ```xml  
 <![CDATA[content]]>  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="05848-105">Teile</span><span class="sxs-lookup"><span data-stu-id="05848-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="c57ac-105">Teile</span><span class="sxs-lookup"><span data-stu-id="c57ac-105">Parts</span></span>  
  `<![CDATA[`  
- <span data-ttu-id="05848-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="05848-106">Required.</span></span> <span data-ttu-id="05848-107">Kennzeichnet den Anfang des XML-CDATA-Abschnitts.</span><span class="sxs-lookup"><span data-stu-id="05848-107">Denotes the start of the XML CDATA section.</span></span>  
+ <span data-ttu-id="c57ac-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c57ac-106">Required.</span></span> <span data-ttu-id="c57ac-107">Kennzeichnet den Anfang des XML-CDATA-Abschnitts.</span><span class="sxs-lookup"><span data-stu-id="c57ac-107">Denotes the start of the XML CDATA section.</span></span>  
   
  `content`  
- <span data-ttu-id="05848-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="05848-108">Required.</span></span> <span data-ttu-id="05848-109">Der Textinhalt in einem XML-CDATA-Abschnitt angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="05848-109">Text content to appear in the XML CDATA section.</span></span>  
+ <span data-ttu-id="c57ac-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c57ac-108">Required.</span></span> <span data-ttu-id="c57ac-109">Der Textinhalt in einem XML-CDATA-Abschnitt angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="c57ac-109">Text content to appear in the XML CDATA section.</span></span>  
   
  `]]>`  
- <span data-ttu-id="05848-110">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="05848-110">Required.</span></span> <span data-ttu-id="05848-111">Kennzeichnet das Ende des Abschnitts.</span><span class="sxs-lookup"><span data-stu-id="05848-111">Denotes the end of the section.</span></span>  
+ <span data-ttu-id="c57ac-110">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c57ac-110">Required.</span></span> <span data-ttu-id="c57ac-111">Kennzeichnet das Ende des Abschnitts.</span><span class="sxs-lookup"><span data-stu-id="c57ac-111">Denotes the end of the section.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="05848-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="05848-112">Return Value</span></span>  
- <span data-ttu-id="05848-113">Ein <xref:System.Xml.Linq.XCData>-Objekt.</span><span class="sxs-lookup"><span data-stu-id="05848-113">An <xref:System.Xml.Linq.XCData> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c57ac-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c57ac-112">Return Value</span></span>  
+ <span data-ttu-id="c57ac-113">Ein <xref:System.Xml.Linq.XCData>-Objekt.</span><span class="sxs-lookup"><span data-stu-id="c57ac-113">An <xref:System.Xml.Linq.XCData> object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05848-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="05848-114">Remarks</span></span>  
- <span data-ttu-id="05848-115">XML-CDATA-Abschnitten enthalten die unformatierten Text, der sollten enthalten, aber nicht analysiert werden, mit dem XML, das es enthält.</span><span class="sxs-lookup"><span data-stu-id="05848-115">XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it.</span></span> <span data-ttu-id="05848-116">Ein XML-CDATA-Abschnitt kann es sich um einen beliebigen Text enthalten.</span><span class="sxs-lookup"><span data-stu-id="05848-116">A XML CDATA section can contain any text.</span></span> <span data-ttu-id="05848-117">Dies schließt die reservierte XML-Zeichen.</span><span class="sxs-lookup"><span data-stu-id="05848-117">This includes reserved XML characters.</span></span> <span data-ttu-id="05848-118">Die XML-CDATA-Abschnitt endet mit der Sequenz "]] >".</span><span class="sxs-lookup"><span data-stu-id="05848-118">The XML CDATA section ends with the sequence "]]>".</span></span> <span data-ttu-id="05848-119">Dies bedeutet Folgendes:</span><span class="sxs-lookup"><span data-stu-id="05848-119">This implies the following points:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c57ac-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c57ac-114">Remarks</span></span>  
+ <span data-ttu-id="c57ac-115">XML-CDATA-Abschnitten enthalten die unformatierten Text, der sollten enthalten, aber nicht analysiert werden, mit dem XML, das es enthält.</span><span class="sxs-lookup"><span data-stu-id="c57ac-115">XML CDATA sections contain raw text that should be included, but not parsed, with the XML that contains it.</span></span> <span data-ttu-id="c57ac-116">Ein XML-CDATA-Abschnitt kann es sich um einen beliebigen Text enthalten.</span><span class="sxs-lookup"><span data-stu-id="c57ac-116">A XML CDATA section can contain any text.</span></span> <span data-ttu-id="c57ac-117">Dies schließt die reservierte XML-Zeichen.</span><span class="sxs-lookup"><span data-stu-id="c57ac-117">This includes reserved XML characters.</span></span> <span data-ttu-id="c57ac-118">Die XML-CDATA-Abschnitt endet mit der Sequenz "]] >".</span><span class="sxs-lookup"><span data-stu-id="c57ac-118">The XML CDATA section ends with the sequence "]]>".</span></span> <span data-ttu-id="c57ac-119">Dies bedeutet Folgendes:</span><span class="sxs-lookup"><span data-stu-id="c57ac-119">This implies the following points:</span></span>  
   
-- <span data-ttu-id="05848-120">Sie können keinen eingebetteten Ausdruck in eine XML CDATA-literal verwenden, da die Trennzeichen für eingebettete Ausdrücke gültige XML-CDATA-Inhalt sind.</span><span class="sxs-lookup"><span data-stu-id="05848-120">You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.</span></span>  
+- <span data-ttu-id="c57ac-120">Sie können keinen eingebetteten Ausdruck in eine XML CDATA-literal verwenden, da die Trennzeichen für eingebettete Ausdrücke gültige XML-CDATA-Inhalt sind.</span><span class="sxs-lookup"><span data-stu-id="c57ac-120">You cannot use an embedded expression in an XML CDATA literal because the embedded expression delimiters are valid XML CDATA content.</span></span>  
   
-- <span data-ttu-id="05848-121">XML-CDATA-Abschnitte können nicht geschachtelt werden, da `content` dürfen nicht den Wert "]] >".</span><span class="sxs-lookup"><span data-stu-id="05848-121">XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".</span></span>  
+- <span data-ttu-id="c57ac-121">XML-CDATA-Abschnitte können nicht geschachtelt werden, da `content` dürfen nicht den Wert "]] >".</span><span class="sxs-lookup"><span data-stu-id="c57ac-121">XML CDATA sections cannot be nested, because `content` cannot contain the value "]]>".</span></span>  
   
- <span data-ttu-id="05848-122">Sie können eine XML CDATA-literal einer Variablen zuweisen oder in einem XML-Elementliteral einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="05848-122">You can assign an XML CDATA literal to a variable, or include it in an XML element literal.</span></span>  
+ <span data-ttu-id="c57ac-122">Sie können eine XML CDATA-literal einer Variablen zuweisen oder in einem XML-Elementliteral einzuschließen.</span><span class="sxs-lookup"><span data-stu-id="c57ac-122">You can assign an XML CDATA literal to a variable, or include it in an XML element literal.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="05848-123">Ein XML-literal kann mehrere Zeilen umfassen, aber keine Zeilenfortsetzungszeichen verwendet.</span><span class="sxs-lookup"><span data-stu-id="05848-123">An XML literal can span multiple lines but does not use line continuation characters.</span></span> <span data-ttu-id="05848-124">Dadurch können Sie zum Kopieren von Inhalt aus einem XML-Dokument, und fügen ihn direkt in Visual Basic-Programms.</span><span class="sxs-lookup"><span data-stu-id="05848-124">This enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+>  <span data-ttu-id="c57ac-123">Ein XML-literal kann mehrere Zeilen umfassen, aber keine Zeilenfortsetzungszeichen verwendet.</span><span class="sxs-lookup"><span data-stu-id="c57ac-123">An XML literal can span multiple lines but does not use line continuation characters.</span></span> <span data-ttu-id="c57ac-124">Dadurch können Sie zum Kopieren von Inhalt aus einem XML-Dokument, und fügen ihn direkt in Visual Basic-Programms.</span><span class="sxs-lookup"><span data-stu-id="c57ac-124">This enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
   
- <span data-ttu-id="05848-125">Visual Basic-Compiler konvertiert XML CDATA-literal in einem Aufruf der <xref:System.Xml.Linq.XCData.%23ctor%2A> Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="05848-125">The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.</span></span>  
+ <span data-ttu-id="c57ac-125">Visual Basic-Compiler konvertiert XML CDATA-literal in einem Aufruf der <xref:System.Xml.Linq.XCData.%23ctor%2A> Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="c57ac-125">The Visual Basic compiler converts the XML CDATA literal to a call to the <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="05848-126">Beispiel</span><span class="sxs-lookup"><span data-stu-id="05848-126">Example</span></span>  
- <span data-ttu-id="05848-127">Das folgende Beispiel erstellt einen CDATA-Abschnitt mit dem Text "darf Literale \<XML > Tags".</span><span class="sxs-lookup"><span data-stu-id="05848-127">The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".</span></span>  
+## <a name="example"></a><span data-ttu-id="c57ac-126">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c57ac-126">Example</span></span>  
+ <span data-ttu-id="c57ac-127">Das folgende Beispiel erstellt einen CDATA-Abschnitt mit dem Text "darf Literale \<XML > Tags".</span><span class="sxs-lookup"><span data-stu-id="c57ac-127">The following example creates a CDATA section that contains the text "Can contain literal \<XML> tags".</span></span>  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
-## <a name="see-also"></a><span data-ttu-id="05848-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="05848-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c57ac-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c57ac-128">See also</span></span>
 
 - <xref:System.Xml.Linq.XCData>
-- [<span data-ttu-id="05848-129">XML-Elementliteral</span><span class="sxs-lookup"><span data-stu-id="05848-129">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="05848-130">XML-Literale</span><span class="sxs-lookup"><span data-stu-id="05848-130">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="05848-131">Erstellen von XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="05848-131">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="c57ac-129">XML-Elementliteral</span><span class="sxs-lookup"><span data-stu-id="c57ac-129">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="c57ac-130">XML-Literale</span><span class="sxs-lookup"><span data-stu-id="c57ac-130">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="c57ac-131">Erstellen von XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c57ac-131">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
