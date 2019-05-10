@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951709"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626274"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code
 Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in systemeigenem Code, etwa Win32). Hierbei ist größte Vorsicht geboten, denn dies bedeutet, dass der Sicherheitsbereich für verwalteten Code verlassen wird. Wenn Ihr Code sicherheitsneutral ist, müssen sowohl Ihr Code als auch jeder Code, der Ihren Code aufruft, eine Berechtigung für nicht verwalteten Code haben (<xref:System.Security.Permissions.SecurityPermission> mit angegebenem <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> -Flag).  

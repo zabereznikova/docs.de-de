@@ -2,12 +2,12 @@
 title: Segmentierungskanal
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4640135ec693233017bf38548a9b1684d941ff50
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002366"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626004"
 ---
 # <a name="chunking-channel"></a>Segmentierungskanal
 Beim Senden großer Nachrichten mit Windows Communication Foundation (WCF) ist es oft wünschenswert, um die Menge an Arbeitsspeicher verwendet, um die Pufferung dieser Nachrichten einzuschränken. Eine mögliche Lösung besteht im Streamen des Nachrichtentexts (vorausgesetzt, der größte Teil der Daten befindet sich dort). Einige Protokolle erfordern jedoch die Pufferung der Nachricht als Ganzes. Zuverlässiges Messaging und Sicherheit sind zwei solche Beispiele. Eine weitere mögliche Lösung besteht darin, die große Nachricht in kleinere Nachrichten zu teilen, so genannte Segmente, diese Segmente jeweils einzeln zu senden und dann auf der Empfängerseite die große Nachricht wiederherzustellen. Die Anwendung selbst könnte diese Segmentierung und Desegmentierung vornehmen, oder es könnte alternativ ein benutzerdefinierter Kanal dafür verwendet werden. Das Beispiel für den Segmentierungskanal zeigt, wie mit einem benutzerdefinierten Protokollkanal oder Mehrschicht-Kanal das Segmentieren und Desegmentieren beliebig großer Nachrichten vorgenommen werden kann.  

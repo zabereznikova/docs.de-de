@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
-ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778780"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615264"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
 Eine der grundlegenden entwurfsentscheidungen, die alle Framework-Designer zeigt ist, ob einen Typ als eine Klasse (Referenztyp) oder als eine Struktur (Werttyp) entwerfen. Die Kenntnis der Unterschiede im Verhalten von Verweistypen und Werttypen ist in dieser Auswahl entscheidend.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c129f902937363972e6be1a6518ae5a97e467f44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973749"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625694"
 ---
 # <a name="tilebrush-overview"></a>Übersicht über TileBrush
 <xref:System.Windows.Media.TileBrush> -Objekte bieten Ihnen viel Kontrolle wie ein Bereich mit einem Bild, gezeichnet wird <xref:System.Windows.Media.Drawing>, oder <xref:System.Windows.Media.Visual>. In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.TileBrush> Funktionen erhalten Sie weitere steuern, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627050"
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Best Practices: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

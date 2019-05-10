@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622795"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Übersicht über das Visual Basic-Anwendungsmodell
 Visual Basic bietet ein klar definiertes Modell zur Steuerung des Verhaltens von Windows Forms-Anwendungen: das Visual Basic-Anwendungsmodell. Dieses Modell enthält Ereignisse für die Behandlung von der Anwendung starten und Herunterfahren, als auch Ereignisse für das Abfangen von nicht behandelten Ausnahmen. Darüber hinaus Unterstützung für die Entwicklung von Einzel-Instanz-Anwendungen. Das Anwendungsmodell ist erweiterbar und, damit Entwickler, die mehr Kontrolle benötigen die überschreibbaren Methoden anpassen können.  

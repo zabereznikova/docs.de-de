@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0323c0f10538eda2ed3b365a54470bdecac061a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747927"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586205"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Parallele Versionsverwaltung in WorkflowServiceHost
 Die parallele <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Versionsverwaltung, die in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] eingeführt wurde, ermöglicht das Hosten mehrerer Versionen eines Workflowdiensts auf einem einzelnen Endpunkt. Mit der parallelen Funktionalität lässt sich ein Workflowdienst so konfigurieren, dass neue Instanzen des Workflowdiensts mithilfe der neuen Workflowdefinition erstellt werden, während gegenwärtig ausgeführte Instanzen auf Grundlage der vorhandenen Definition abgeschlossen werden. Dieses Thema bietet eine Übersicht über die parallele Ausführung des Workflowdiensts mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

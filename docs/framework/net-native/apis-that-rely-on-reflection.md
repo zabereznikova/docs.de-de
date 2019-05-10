@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624698"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs, die auf Refelktion beruhen
 In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlich, und daher behält die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette zur Laufzeit benötigte Metadaten nicht bei. In diesem Thema werden einige gängige APIs oder Programmiermuster behandelt, die nicht als Teil der Reflektions-API betrachtet werden, aber Reflektion benötigen, um erfolgreich ausgeführt zu werden. Wenn Sie diese im Quellcode verwenden, können Sie Informationen darüber in die Laufzeitanweisungsdatei (.rd.xml) einfügen, sodass Aufrufe dieser APIs zur Laufzeit keine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme oder sonstige Ausnahmen auslösen.  
