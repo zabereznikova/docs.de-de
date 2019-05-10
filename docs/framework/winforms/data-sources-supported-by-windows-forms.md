@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967088"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626785"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Von Windows Forms unterstützte Datenquellen
 In der Vergangenheit wurde die Datenbindung in Anwendungen verwendet, um Daten in Datenbanken nutzen. Mit Windows Forms-Datenbindung, können Sie Daten aus Datenbanken sowie Daten in andere Datenstrukturen, z. B. Arrays und Sammlungen, zugreifen, solange Sie bestimmte Mindestanforderungen erfüllt sind.  

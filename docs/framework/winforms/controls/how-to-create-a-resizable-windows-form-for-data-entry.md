@@ -11,12 +11,12 @@ helpviewer_keywords:
 - forms [Windows Forms], creating resizable
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
-ms.openlocfilehash: ebccad248927d8a201bd5758e5ddf2d5414455f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 724dfa79358548530eab49683f1cb2db55f889c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746640"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625979"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Vorgehensweise: Erstellen von in der Größe veränderbaren Windows Forms für die Dateneingabe
 Ein gutes Layout reagiert angemessen auf Änderungen in den Dimensionen des übergeordneten Formulars. Sie können das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement verwenden, um das Layout Ihres Formulars so zu gestalten, dass die Größe und die Position Ihrer Steuerelemente auf konsistente Weise geändert werden, wenn sich die Dimensionen des Formulars ändern. Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ist auch nützlich, wenn Änderungen am Inhalt Ihrer Steuerelemente Änderungen im Layout verursachen. Der in diesem Verfahren beschriebene Vorgang kann innerhalb der Visual Studio-Umgebung ausgeführt werden.  Siehe auch [Exemplarische Vorgehensweise: Erstellen in der Größe veränderbaren Windows Forms für die Dateneingabe](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)).  

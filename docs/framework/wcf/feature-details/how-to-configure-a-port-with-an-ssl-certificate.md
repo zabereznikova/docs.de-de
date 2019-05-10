@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fb5ca2c5e0040ed86c9f51323f390d625d658903
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047960"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622942"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
 Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.WSHttpBinding> Klasse, die transportsicherheit verwendet, müssen Sie auch einen Port mit einem x. 509-Zertifikat. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

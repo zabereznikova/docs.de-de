@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c14edebb7fd5ee133ce60769327e6b32dac1c7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759855"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623705"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms
 Wenn Sie Data-Eintrag-Funktionalität für Benutzer angezeigt wird, müssen Sie häufig in Ihr Formular eingegebenen Daten zu überprüfen. Die <xref:System.Windows.Forms.DataGridView> -Klasse bietet eine bequeme Möglichkeit, die Validierung ausführen, bevor Daten an den Datenspeicher übertragen werden. Sie können Daten validieren, durch Behandeln der <xref:System.Windows.Forms.DataGridView.CellValidating> -Ereignis, das ausgelöst wird, indem die <xref:System.Windows.Forms.DataGridView> Wenn die aktuelle Zelle geändert wird.  
