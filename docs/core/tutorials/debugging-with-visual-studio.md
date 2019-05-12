@@ -3,16 +3,16 @@ title: Debuggen Ihrer „Hallo Welt“-.NET Core-Anwendung mit Visual Studio 201
 description: Sie erfahren, wie Sie eine in C# oder Visual Basic geschriebene „Hallo Welt“-App mit Visual Studio 2017 debuggen.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610716"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063058"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017
 
-Bisher haben Sie die Schritte unter [Building a C# Hello World Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](with-visual-studio.md)) oder [Build a Visual Basic Hallo Welt Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017)](vb-with-visual-studio.md) zum Erstellen und Ausführen einer einfachen Konsolenanwendung befolgt. Sobald Sie Ihre Anwendung kompiliert und geschrieben haben, können Sie beginnen, sie zu testen. Visual Studio enthält einen umfassenden Satz von Debugtools, die Sie beim Testen Ihrer Anwendung und der Problembehandlung verwenden können.
+Bisher haben Sie die Schritte unter [Building a C# Hello World Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](with-visual-studio.md)) oder [Build a Visual Basic Hallo Welt Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017)](vb-with-visual-studio.md) zum Erstellen und Ausführen einer einfachen Konsolenanwendung befolgt. Sobald Sie Ihre Anwendung kompiliert und geschrieben haben, können Sie beginnen, sie zu testen. Visual Studio enthält einen umfassenden Satz von Debugtools, die Sie beim Testen Ihrer Anwendung und der Problembehandlung verwenden können. 
 
 ## <a name="debugging-in-debug-mode"></a>Debuggen im Debugmodus
 

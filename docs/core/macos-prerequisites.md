@@ -5,12 +5,12 @@ author: guardrex
 ms.author: adegeo
 ms.custom: updateeachvsrelease
 ms.date: 12/14/2018
-ms.openlocfilehash: cee57856c75ce4424bee8d96fccfa5a6aee2dbf5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 3f5dce25ed03061d690432684975909d15bbad57
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317869"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64752955"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Erforderliche Komponenten für .NET Core unter macOS
 
@@ -18,7 +18,7 @@ Dieser Artikel zeigt Ihnen die unterstützten macOS-Versionen und .NET Core-Abh�
 
 ## <a name="supported-macos-versions"></a>Unterstützte macOS-Versionen
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x wird von folgenden macOS-Versionen unterstützt:
 
@@ -28,7 +28,7 @@ Unter [Von .NET Core 2.1 unterstützte Betriebssystemversionen](https://github.c
 
 Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 2.2-Downloads](https://www.microsoft.com/net/download/dotnet-core/2.2) oder [.NET Core 2.1-Downloads](https://www.microsoft.com/net/download/dotnet-core/2.1).
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 .NET Core 1.x wird von folgenden macOS-Versionen unterstützt:
 
@@ -39,7 +39,7 @@ Unter [Von .NET Core 1.1 unterstützte Betriebssystemversionen](https://github.c
 
 Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 1.1-Downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) oder [.NET Core 1.0-Downloads](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
-# [<a name="net-core-30"></a>.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 Vorschauversion 3 wird von folgenden macOS-Versionen unterstützt:
 
@@ -53,11 +53,11 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 3.
 
 ## <a name="net-core-dependencies"></a>.NET Core-Abhängigkeiten
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Laden Sie das .NET Core SDK von [.NET Downloads](https://www.microsoft.com/net/download/core) herunter, und installieren Sie es. Wenn Sie Probleme bei der Installation auf macOS haben, sehen Sie sich für Ihre installierte Version das Thema [Known issues (Bekannte Probleme)](https://github.com/dotnet/core/tree/master/release-notes/2.1) an.
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 .NET Core 1.x erfordert unter macOS OpenSSL. Eine einfache Möglichkeit zum Abrufen von OpenSSL ist mithilfe des [Homebrew („brew“)](https://brew.sh/)-Paket-Managers für macOS. Installieren Sie nach der Installation von *brew* OpenSSL durch Ausführen der folgenden Befehle in einer Terminaleingabeaufforderung (Befehl):
 
@@ -71,13 +71,13 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 Laden Sie das .NET Core SDK von [.NET Downloads](https://www.microsoft.com/net/download/core) herunter, und installieren Sie es. Wenn Sie Probleme bei der Installation auf macOS haben, sehen Sie sich die Themen [1.0.0 Known Issues (1.0.0 Bekannte Probleme)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) und [1.0.1 Known Issues (1.0.1 Bekannte Probleme)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) an.
 
-# [<a name="net-core-30"></a>.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
 Laden Sie das .NET Core SDK von [.NET Downloads](https://www.microsoft.com/net/download/core) herunter, und installieren Sie es. Wenn Sie Probleme bei der Installation unter macOS haben, sehen Sie sich für Ihre installierte Version das Thema [Anmerkungen zu dieser Version](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) an.
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Erhöhen des Limits für die maximale Anzahl von geöffneten Dateien (.NET Core Versionen vor .NET Core SDK 2.0.2) 
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Erhöhen des Limits für die maximale Anzahl von geöffneten Dateien (.NET Core Versionen vor .NET Core SDK 2.0.2)
 
 In früheren Versionen von .NET Core (vor .NET Core SDK 2.0.2) ist das Standardlimit für geöffnete Dateien unter macOS für einige .NET Core-Workloads möglicherweise nicht ausreichend, z.B. für das Wiederherstellen von Projekten oder das Ausführen von Komponententests.
 
@@ -85,28 +85,28 @@ Sie können dieses Limit erhöhen, indem Sie diese Schritte befolgen:
 
 1. Erstellen Sie mithilfe eines Text-Editors die neue Datei _/Library/LaunchDaemons/limit.maxfiles.plist_, und speichern Sie die Datei mit diesem Inhalt:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-    <key>Label</key>
-    <string>limit.maxfiles</string>
-    <key>ProgramArguments</key>
-    <array>
-      <string>launchctl</string>
-      <string>limit</string>
-      <string>maxfiles</string>
-      <string>2048</string>
-      <string>4096</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>ServiceIPC</key>
-    <false/>
-  </dict>
-</plist>
-```
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>limit.maxfiles</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>launchctl</string>
+          <string>limit</string>
+          <string>maxfiles</string>
+          <string>2048</string>
+          <string>4096</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>ServiceIPC</key>
+        <false/>
+      </dict>
+    </plist>
+    ```
 
 2. Führen Sie in einem Terminalfenster folgenden Befehl aus:
 
@@ -118,7 +118,7 @@ Sie können dieses Limit erhöhen, indem Sie diese Schritte befolgen:
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio für Mac
 
-Sie können einen Editor zur .NET Core-Anwendungsentwicklung mit dem .NET Core SDK verwenden. Wenn Sie jedoch .NET Core-Anwendungen unter Mac in einer integrierten Entwicklungsumgebung entwickeln möchten, können Sie [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) verwenden. 
+Sie können einen Editor zur .NET Core-Anwendungsentwicklung mit dem .NET Core SDK verwenden. Wenn Sie jedoch .NET Core-Anwendungen unter Mac in einer integrierten Entwicklungsumgebung entwickeln möchten, können Sie [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) verwenden.
 
 Für die .NET Core-Entwicklung unter macOS mit Visual Studio für Mac benötigen Sie Folgendes:
 

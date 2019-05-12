@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613446"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750873"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -94,45 +94,45 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 2. Nennen Sie Ihre Datei `MyClass.cs`. Sie müssen sie mit der `.cs`-Erweiterung speichern, damit sie als Csharp-Datei erkannt wird.
 3. Fügen Sie den folgenden Code zum Erstellen Ihrer ersten Klasse hinzu. Achten Sie darauf, den richtigen Namespace einzubeziehen, damit Sie von Ihrer `Program.cs`-Datei darauf verweisen können.
 
-``` csharp
-using System;
+    ``` csharp
+    using System;
 
-namespace HelloWorld
-{
-    public class MyClass
+    namespace HelloWorld
     {
-        public string ReturnMessage()
+        public class MyClass
         {
-            return "Happy coding!";
+            public string ReturnMessage()
+            {
+                return "Happy coding!";
+            }
         }
     }
-}
-```
+    ```
 
 4. Rufen Sie die neue Klasse von Ihrer Main-Methode in `Program.cs` aus auf, indem Sie den folgenden Code hinzufügen.
 
-```csharp
-using System;
-
-namespace HelloWorld
-{
-    class Program
+    ```csharp
+    using System;
+    
+    namespace HelloWorld
     {
-        static void Main(string[] args)
+        class Program
         {
-            MyClass c1 = new MyClass();
-            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            static void Main(string[] args)
+            {
+                MyClass c1 = new MyClass();
+                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            }
         }
     }
-}
-```
+    ```
 
 5. Speichern Sie die Änderungen, und führen Sie das Programm erneut aus. Die neue Nachricht sollte mit der angefügten Zeichenfolge angezeigt werden.
 
-```console
-> dotnet run
-Hello World! Happy coding!
-```
+    ```console
+    > dotnet run
+    Hello World! Happy coding!
+    ```
 
 ## <a name="faq"></a>FAQ
 

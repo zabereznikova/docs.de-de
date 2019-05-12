@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die.NET Core-Runtime vom nativen Code aus hos
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 0ebd5b1532af77c082a2d8cd6508a83e969b325e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481144"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587047"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Schreiben Sie einen benutzerdefinierten .NET Core-Host, um die .NET-Runtime über den systemeigenen Code zu steuern.
 
@@ -68,13 +68,11 @@ Bevor Sie die Runtime starten, müssen Sie einige Eigenschaften auf bestimmte Ve
 
 Das gilt üblicherweise für folgende Eigenschaften:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Diese Eigenschaft stellt eine Liste der Assemblypfade (unter Windows durch „;“ und unter Linux durch „:“ getrennt) dar, die die Runtime standardmäßig auflösen kann. Einige Hosts verfügen über hartcodierte Manifeste mit Assemblys, die geladen werden können. Andere platzieren Bibliotheken in dieser Liste an bestimmten Positionen (z. B. neben *coreclr.dll*).
-* `APP_PATHS`
-  Dies ist eine Liste der Pfade, in denen nach einer Assembly gesucht werden soll, wenn sie in der Liste der vertrauenswürdigen Plattformassemblys (TPA) nicht gefunden werden kann. Da der Host mehr Kontrolle darüber hat, welche Assemblys mithilfe der TPA-Liste geladen werden, wird empfohlen, für alle Hosts festzulegen, welche Assemblys diese erwarten und diese explizit aufzulisten. Über diese Eigenschaft können Sie auch die Überprüfung von Runtimes aktivieren.
-*  `APP_NI_PATHS`: Diese Liste ähnelt APP_PATHS sehr ähnlich, gilt jedoch für Pfade, die nach nativen Images durchsucht werden sollen.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES`: Diese Eigenschaft ist eine Liste der Pfade, die das Ladeprogramm durchsuchen soll, wenn es nach nativen Bibliotheken sucht, die über p/invoke aufgerufen werden.
-*  `PLATFORM_RESOURCE_ROOTS` Diese Liste enthält die Pfade, in denen nach Assemblys der Ressourcensatelliten (in kulturspezifischen Unterverzeichnissen) gesucht wird.
+* `TRUSTED_PLATFORM_ASSEMBLIES`: Diese Eigenschaft stellt eine Liste der Assemblypfade (unter Windows durch „;“ und unter Linux durch „:“ getrennt) dar, die die Runtime standardmäßig auflösen kann. Einige Hosts verfügen über hartcodierte Manifeste mit Assemblys, die geladen werden können. Andere platzieren Bibliotheken in dieser Liste an bestimmten Positionen (z. B. neben *coreclr.dll*).
+* `APP_PATHS` Dies ist eine Liste der Pfade, in denen nach einer Assembly gesucht werden soll, wenn sie in der Liste der vertrauenswürdigen Plattformassemblys (TPA) nicht gefunden werden kann. Da der Host mehr Kontrolle darüber hat, welche Assemblys mithilfe der TPA-Liste geladen werden, wird empfohlen, für alle Hosts festzulegen, welche Assemblys diese erwarten und diese explizit aufzulisten. Über diese Eigenschaft können Sie auch die Überprüfung von Runtimes aktivieren.
+* `APP_NI_PATHS`: Diese Liste ähnelt APP_PATHS sehr ähnlich, gilt jedoch für Pfade, die nach nativen Images durchsucht werden sollen.
+* `NATIVE_DLL_SEARCH_DIRECTORIES`: Diese Eigenschaft ist eine Liste der Pfade, die das Ladeprogramm durchsuchen soll, wenn es nach nativen Bibliotheken sucht, die über p/invoke aufgerufen werden.
+* `PLATFORM_RESOURCE_ROOTS` Diese Liste enthält die Pfade, in denen nach Assemblys der Ressourcensatelliten (in kulturspezifischen Unterverzeichnissen) gesucht wird.
 
 In diesem Beispielhost wird die TPA-Liste erstellt, indem alle Bibliotheken im aktuellen Verzeichnis aufgelistet werden:
 
@@ -166,13 +164,11 @@ Nach der Entscheidung, welche der AppDomain-Flags verwendet werden, müssen die 
 
 Allgemeine AppDomain-Eigenschaften beinhalten:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Dies ist eine Liste der Assemblypfade (unter Windows durch `;` und unter Linux/Mac durch `:` getrennt), die von Anwendungsdomänen bevorzugt geladen und als komplett vertrauenswürdig eingestuft werden sollen (auch in teilweise vertrauenswürdigen Domänen). Diese Liste soll „Framework“-Assemblys und andere vertrauenswürdige Module, ähnlich dem GAC in .NET Framework-Szenarios, enthalten. Einige Hosts platzieren eine Bibliothek neben *coreclr.dll* in dieser Liste, andere haben andere hartcodierte Manifeste, die vertrauenswürdige Assemblys für ihre Zwecke listen.
-* `APP_PATHS`
-  Dies ist eine Liste der Pfade, in denen nach einer Assembly gesucht werden soll, wenn sie in der Liste der vertrauenswürdigen Plattformassemblys (TPA) nicht gefunden werden kann. Da der Host mehr Kontrolle darüber hat, welche Assemblys mithilfe der TPA-Liste geladen werden, wird empfohlen, für alle Hosts festzulegen, welche Assemblys diese erwarten und diese explizit aufzulisten. Über diese Eigenschaft können Sie auch die Überprüfung von Runtimes aktivieren.
-*  `APP_NI_PATHS` Diese Liste ist APP_PATHS sehr ähnlich, außer dass es Pfade sein sollten, in denen nach nativen Images gesucht werden sollen.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES` Diese Eigenschaft ist eine Liste der Pfade, die das Ladeprogramm durchsuchen sollte, wenn es nach nativen DLLs sucht, die über p/invoke aufgerufen werden.
-*  `PLATFORM_RESOURCE_ROOTS` Diese Liste enthält die Pfade, in denen nach Assemblys der Ressourcensatelliten (in kulturspezifischen Unterverzeichnissen) gesucht wird.
+* `TRUSTED_PLATFORM_ASSEMBLIES`: Dies ist eine Liste der Assemblypfade (unter Windows durch `;` und unter Linux/Mac durch `:` getrennt), die von Anwendungsdomänen bevorzugt geladen und als komplett vertrauenswürdig eingestuft werden sollen (auch in teilweise vertrauenswürdigen Domänen). Diese Liste soll „Framework“-Assemblys und andere vertrauenswürdige Module, ähnlich dem GAC in .NET Framework-Szenarios, enthalten. Einige Hosts platzieren eine Bibliothek neben *coreclr.dll* in dieser Liste, andere haben andere hartcodierte Manifeste, die vertrauenswürdige Assemblys für ihre Zwecke listen.
+* `APP_PATHS` Dies ist eine Liste der Pfade, in denen nach einer Assembly gesucht werden soll, wenn sie in der Liste der vertrauenswürdigen Plattformassemblys (TPA) nicht gefunden werden kann. Da der Host mehr Kontrolle darüber hat, welche Assemblys mithilfe der TPA-Liste geladen werden, wird empfohlen, für alle Hosts festzulegen, welche Assemblys diese erwarten und diese explizit aufzulisten. Über diese Eigenschaft können Sie auch die Überprüfung von Runtimes aktivieren.
+* `APP_NI_PATHS` Diese Liste ist APP_PATHS sehr ähnlich, außer dass es Pfade sein sollten, in denen nach nativen Images gesucht werden sollen.
+* `NATIVE_DLL_SEARCH_DIRECTORIES` Diese Eigenschaft ist eine Liste der Pfade, die das Ladeprogramm durchsuchen sollte, wenn es nach nativen DLLs sucht, die über p/invoke aufgerufen werden.
+* `PLATFORM_RESOURCE_ROOTS` Diese Liste enthält die Pfade, in denen nach Assemblys der Ressourcensatelliten (in kulturspezifischen Unterverzeichnissen) gesucht wird.
 
 In unserem [einfache Beispielhost](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree) sind diese Eigenschaften wie folgt eingerichtet:
 
