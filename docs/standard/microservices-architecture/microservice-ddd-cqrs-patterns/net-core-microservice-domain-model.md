@@ -4,14 +4,14 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb07f11e4c123ed04232e41d5d50d4ef59b76bbd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363019"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621225"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
 Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt soll dargestellt werden, wie Sie das Domänenmodell mithilfe von .NET Core (einfacher C\#-Code) und EF Core implementieren. Beachten Sie dass das Domänenmodell in diesem Beispiel nur aus Ihrem Code besteht. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
 
@@ -60,7 +60,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +74,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +83,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +117,7 @@ Wenn Sie sich z.B. an die Muster des domänengesteuerten Designs halten, **sollt
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -177,6 +177,6 @@ Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere pri
 - **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[Zurück](microservice-domain-model.md)
->[Weiter](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [Zurück](microservice-domain-model.md)
+> [Weiter](seedwork-domain-model-base-classes-interfaces.md)

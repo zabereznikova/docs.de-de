@@ -8,67 +8,67 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114689"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663444"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Veraltete Typen in .NET Framework
 <a name="introduction"></a> In den Tabellen dieses Artikels sind die Typen aufgeführt, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] veraltet sind, geordnet nach Assembly. Über die nachfolgenden Links finden Sie eine Liste der veralteten Typen und empfohlenen Alternativen in den jeweiligen Assemblys. Da diese Typen veraltet sind, sind alle ihrer Member ebenfalls veraltet. Eine Liste weiterer veralteter Member in der .NET Framework-Klassenbibliothek finden Sie unter [Veraltete Member](obsolete-members.md).
 
--   [Veraltete Typen in Systemassemblys](#obsolete_types_in_system_assemblies)
+- [Veraltete Typen in Systemassemblys](#obsolete_types_in_system_assemblies)
 
-    -   [mscorlib.dll](#mscorlib)
+    - [mscorlib.dll](#mscorlib)
 
-    -   [System.Core.dll](#Core)
+    - [System.Core.dll](#Core)
 
-    -   [System.Data.dll](#data)
+    - [System.Data.dll](#data)
 
-    -   [System.Data.OracleClient.dll](#oracleclient)
+    - [System.Data.OracleClient.dll](#oracleclient)
 
-    -   [System.Design.dll](#design)
+    - [System.Design.dll](#design)
 
-    -   [System.dll](#system)
+    - [System.dll](#system)
 
-    -   [System.EnterpriseServices.dll](#enterpriseservices)
+    - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    -   [System.Net.dll](#net)
+    - [System.Net.dll](#net)
 
-    -   [System.ServiceModel.dll](#servicemodel)
+    - [System.ServiceModel.dll](#servicemodel)
 
-    -   [System.Web.dll](#web)
+    - [System.Web.dll](#web)
 
-    -   [System.Web.Mobile.dll](#mobile)
+    - [System.Web.Mobile.dll](#mobile)
 
-    -   [System.Workflow.Activities.dll](#workflow_activities)
+    - [System.Workflow.Activities.dll](#workflow_activities)
 
-    -   [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    -   [System.Workflow.Runtime.dll](#workflow_runtime)
+    - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    -   [System.WorkflowServices.dll](#workflowservices)
+    - [System.WorkflowServices.dll](#workflowservices)
 
-    -   [System.Xaml.dll](#xaml)
+    - [System.Xaml.dll](#xaml)
 
-    -   [System.Xml.dll](#xml)
+    - [System.Xml.dll](#xml)
 
-    -   [WindowsBase.dll](#WindowsBase)
+    - [WindowsBase.dll](#WindowsBase)
 
--   [Veraltete Typen in Microsoft-Assemblys](#obsolete_types_in_microsoft_assemblies)
+- [Veraltete Typen in Microsoft-Assemblys](#obsolete_types_in_microsoft_assemblies)
 
-    -   [IEHost.dll und IEExec.exe](#IEHost)
+    - [IEHost.dll und IEExec.exe](#IEHost)
 
-    -   [Microsoft.Build.Engine.dll](#Engine)
+    - [Microsoft.Build.Engine.dll](#Engine)
 
-    -   [Microsoft.JScript.dll](#jscript)
+    - [Microsoft.JScript.dll](#jscript)
 
-    -   [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    -   [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    -   [Microsoft.VisualC.dll](#visualc)
+    - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
 ## <a name="obsolete-types-in-system-assemblies"></a>Veraltete Typen in Systemassemblys
@@ -130,7 +130,7 @@ ms.locfileid: "59114689"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Verwenden Sie stattdessen <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> wird nur für .NET 2.0-Transparenzkompatibilität verwendet.|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> wird nur für .NET 2.0-Transparenzkompatibilität verwendet. Verwenden Sie stattdessen <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Dieser Typ ist veraltet und wird in einem der nächsten Releases von .NET Framework entfernt.|

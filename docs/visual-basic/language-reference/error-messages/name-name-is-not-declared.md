@@ -1,5 +1,5 @@
 ---
-title: Der Name "<name>" wurde nicht deklariert.
+title: Der Name '<name>' wurde nicht deklariert.
 ms.date: 10/10/2018
 f1_keywords:
 - bc30451
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61651024"
 ---
-# <a name="name-name-is-not-declared"></a>Name "\<Name >' ist nicht deklariert
+# <a name="name-name-is-not-declared"></a>Name '\<Name >' ist nicht deklariert
 Eine Anweisung verweist auf ein Programmierelement, aber der Compiler kein Element mit genau diesem Namen gefunden.  
   
  **Fehler-ID:** BC30451  

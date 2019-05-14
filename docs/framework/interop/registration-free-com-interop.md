@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648524"
 ---
 # <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
 COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  
   
  Die Aktivierung der Assemblys ohne Registrierung bietet im Vergleich zur Registrierung bei der Bereitstellung zwei Vorteile:  
   
--   Sie können steuern, welche DLL-Version aktiviert wird, wenn mehrere Versionen auf einem Computer installiert sind.  
+- Sie können steuern, welche DLL-Version aktiviert wird, wenn mehrere Versionen auf einem Computer installiert sind.  
   
--   Endbenutzer können mit XCOPY oder FTP die Anwendung in ein geeignetes Verzeichnis auf dem Computer kopieren. Die Anwendung kann dann von diesem Verzeichnis aus ausgeführt werden.  
+- Endbenutzer können mit XCOPY oder FTP die Anwendung in ein geeignetes Verzeichnis auf dem Computer kopieren. Die Anwendung kann dann von diesem Verzeichnis aus ausgeführt werden.  
   
  In diesem Abschnitt werden die beiden Arten von Manifesten beschrieben, die für COM-Interop ohne Registrierung erforderlich sind: Anwendungs- und Komponentenmanifeste. Diese Manifeste sind XML-Dateien. Ein Anwendungsmanifest, das von einem Anwendungsentwickler erstellt wird, enthält Metadaten zur Beschreibung von Assemblys und Assemblyabhängigkeiten. Ein Komponentenmanifest, das von einem Komponentenentwickler erstellt wird, enthält Informationen, die ansonsten in der Windows-Registrierung gespeichert sind.  
   

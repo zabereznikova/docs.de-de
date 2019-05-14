@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626306"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Vorgehensweise: Verweisen auf .NET-Typen in COM
 Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM und .NET Framework. Microsoft Visual Basic-Clients können ein .NET-Objekt im Objektkatalog anzeigen. Dort werden Objektmethoden und –syntax sowie Eigenschaften und Felder in gleicher Weise angegeben wie für ein beliebiges anderes COM-Objekt.  
@@ -28,7 +28,7 @@ Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM u
   
 ### <a name="to-import-a-library"></a>So importieren Sie eine Bibliothek  
   
--   Geben Sie die **raw_interfaces_only**-Option in der **#import**-Anweisung an. Beispiel:  
+- Geben Sie die **raw_interfaces_only**-Option in der **#import**-Anweisung an. Beispiel:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM u
   
      - oder -   
   
--   Schließen Sie eine #import-Anweisung für Mscorlib.tlb ein. Beispiel:  
+- Schließen Sie eine #import-Anweisung für Mscorlib.tlb ein. Beispiel:  
   
     ```cpp  
     #import "mscorlib.tlb"  
@@ -46,6 +46,6 @@ Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM u
 ## <a name="see-also"></a>Siehe auch
 
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
-- [Registrieren von Assemblys mit COM](registering-assemblies-with-com.md)
+- [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)
 - [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Bereitstellung einer Anwendung für COM-Zugriff](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

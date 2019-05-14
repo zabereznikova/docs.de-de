@@ -2,12 +2,12 @@
 title: Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 05ddb2c76a16ed4f79d795510434aa3abb5615d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295743"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583370"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Abbrechen einer asynchronen Aufgabe oder Aufgabenliste (C#)
 
@@ -70,14 +70,14 @@ Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sampl
 
 3. Nehmen Sie die folgenden Änderungen in `startButton_Click` vor, dem Ereignishandler für die Schaltfläche **Start**.
 
-    -   Instanziieren Sie die `CancellationTokenSource`, `cts`.
+    - Instanziieren Sie die `CancellationTokenSource`, `cts`.
 
         ```csharp
         // ***Instantiate the CancellationTokenSource.
         cts = new CancellationTokenSource();
         ```
 
-    -   Senden Sie im Aufruf von `AccessTheWebAsync`, wodurch der Inhalt einer bestimmten Website heruntergeladen wird, die <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType>-Eigenschaft von `cts` als Argument. Die `Token`-Eigenschaft gibt die Meldung weiter, wenn ein Abbruch angefordert wird. Fügen Sie einen catch-Block hinzu, der eine Meldung angezeigt, wenn der Benutzer den Downloadvorgang abbrechen möchte. Im folgende Code sind alle Änderungen dargestellt.
+    - Senden Sie im Aufruf von `AccessTheWebAsync`, wodurch der Inhalt einer bestimmten Website heruntergeladen wird, die <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType>-Eigenschaft von `cts` als Argument. Die `Token`-Eigenschaft gibt die Meldung weiter, wenn ein Abbruch angefordert wird. Fügen Sie einen catch-Block hinzu, der eine Meldung angezeigt, wenn der Benutzer den Downloadvorgang abbrechen möchte. Im folgende Code sind alle Änderungen dargestellt.
 
         ```csharp
         try

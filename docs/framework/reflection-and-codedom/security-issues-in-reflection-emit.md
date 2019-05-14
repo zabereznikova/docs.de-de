@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591380"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), jeweils mit eigenen Sicherheitsproblemen:  
   
--   [Dynamische Assemblys](#Dynamic_Assemblies)  
+- [Dynamische Assemblys](#Dynamic_Assemblies)  
   
--   [Anonym gehostete dynamische Methoden](#Anonymously_Hosted_Dynamic_Methods)  
+- [Anonym gehostete dynamische Methoden](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Vorhandenen Assemblys zugeordnete dynamische Methoden](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Vorhandenen Assemblys zugeordnete dynamische Methoden](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Unabhängig davon, wie Sie dynamischen Code generieren, erfordert die Ausführung des generierten Codes alle Berechtigungen, die für die Typen und Methoden erforderlich sind, die von dem generierten Code verwendet werden.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074520"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Generieren von dynamischen Assemblys aus teilweise vertrauenswürdigem Code  
  Beachten Sie die Bedingungen, unter denen eine Assembly mit Internetberechtigungen eine flüchtige dynamische Assembly generieren und deren Code ausführen kann:  
   
--   Die dynamische Assembly verwendet nur öffentliche Typen und Member aus anderen Assemblys.  
+- Die dynamische Assembly verwendet nur öffentliche Typen und Member aus anderen Assemblys.  
   
--   Die für diese Typen und Member erforderlichen Berechtigungen sind im Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
+- Die für diese Typen und Member erforderlichen Berechtigungen sind im Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
   
--   Die Assembly wird nicht auf den Datenträger gespeichert.  
+- Die Assembly wird nicht auf den Datenträger gespeichert.  
   
--   Es werden keine Debugsymbole generiert. (`Internet`- und `LocalIntranet`-Berechtigungssätze enthalten nicht die notwendigen Berechtigungen.)  
+- Es werden keine Debugsymbole generiert. (`Internet`- und `LocalIntranet`-Berechtigungssätze enthalten nicht die notwendigen Berechtigungen.)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Anonym gehostete dynamische Methoden  
@@ -70,9 +70,9 @@ ms.locfileid: "59074520"
   
  Wenn die Anwendungsdomäne es zulässt, können anonym gehostete dynamische Methoden JIT-Sichtbarkeitsprüfungen gemäß der folgenden Einschränkung überspringen: Die nicht öffentlichen Typen und Member, auf die durch eine anonym gehostete dynamische Methode zugegriffen wird, müssen sich in Assemblys befinden, deren Berechtigungssätze entweder mit den Berechtigungssätzen der ausgebenden Aufrufliste übereinstimmen oder Teilmengen davon sind. Diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen wird aktiviert, wenn die Anwendungsdomäne mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag <xref:System.Security.Permissions.ReflectionPermission> erteilt.  
   
--   Wenn Ihre Methode nur öffentliche Typen und Member verwendet, sind während der Erstellung keine Berechtigungen erforderlich.  
+- Wenn Ihre Methode nur öffentliche Typen und Member verwendet, sind während der Erstellung keine Berechtigungen erforderlich.  
   
--   Wenn Sie angeben, dass JIT-Sichtbarkeitsprüfungen übersprungen werden sollen, enthält die Anforderung, die gestellt wird, wenn die Methode erstellt wird, <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag und dem Berechtigungssatz der Assembly, die den nicht öffentlichen Member enthält, auf den zugegriffen wird.  
+- Wenn Sie angeben, dass JIT-Sichtbarkeitsprüfungen übersprungen werden sollen, enthält die Anforderung, die gestellt wird, wenn die Methode erstellt wird, <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag und dem Berechtigungssatz der Assembly, die den nicht öffentlichen Member enthält, auf den zugegriffen wird.  
   
  Da der Berechtigungssatz des nicht öffentlichen Members berücksichtigt wird, kann teilweise vertrauenswürdiger Code, dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> gewährt wurde, seine Rechte nicht durch die Ausführung nicht öffentlicher Member vertrauenswürdiger Assemblys erhöhen.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074520"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Generieren von anonym gehosteten dynamischen Methoden aus teilweise vertrauenswürdigem Code  
  Beachten Sie die Bedingungen, unter denen eine Assembly mit Internetberechtigungen eine anonym gehostete dynamische Methode generieren und ausführen kann:  
   
--   Die dynamische Methode verwendet nur öffentliche Typen und Member. Wenn ihr Berechtigungssatz <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> enthält, kann sie nicht öffentliche Typen und Member jeder Assembly verwenden, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt.  
+- Die dynamische Methode verwendet nur öffentliche Typen und Member. Wenn ihr Berechtigungssatz <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> enthält, kann sie nicht öffentliche Typen und Member jeder Assembly verwenden, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt.  
   
--   Die für alle von der dynamischen Methode verwendeten Typen und Member erforderlichen Berechtigungen sind in dem Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
+- Die für alle von der dynamischen Methode verwendeten Typen und Member erforderlichen Berechtigungen sind in dem Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
   
 > [!NOTE]
 >  Dynamische Methoden unterstützen keine Debugsymbole.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074520"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Vorhandenen Assemblys zugeordnete dynamische Methoden  
  Um eine dynamische Methode einem Typ oder Modul in einer vorhandenen Assembly zuzuordnen, verwenden Sie einen der <xref:System.Reflection.Emit.DynamicMethod>-Konstruktoren, die den zugeordneten Typ bzw. das zugeordnete Modul angeben. Die Berechtigungen, die erforderlich sind, um diese Konstruktoren aufzurufen, variieren, da das Zuordnen einer dynamischen Methode zu einem vorhandenen Typ oder Modul der dynamischen Methode den Zugriff auf nicht öffentliche Typen und Member gewährt:  
   
--   Eine dynamische Methode, die einem Typ zugeordnet ist, hat Zugriff auf alle Member dieses Typs, einschließlich privater Member, sowie auf alle internen Typen und Member in der Assembly, die den zugeordneten Typ enthält.  
+- Eine dynamische Methode, die einem Typ zugeordnet ist, hat Zugriff auf alle Member dieses Typs, einschließlich privater Member, sowie auf alle internen Typen und Member in der Assembly, die den zugeordneten Typ enthält.  
   
--   Eine dynamische Methode, die einem Modul zugeordnet ist, hat Zugriff auf alle `internal`-Typen und -Member (`Friend` in Visual Basic, `assembly` in Common Language Runtime-Metadaten) in dem Modul.  
+- Eine dynamische Methode, die einem Modul zugeordnet ist, hat Zugriff auf alle `internal`-Typen und -Member (`Friend` in Visual Basic, `assembly` in Common Language Runtime-Metadaten) in dem Modul.  
   
  Darüber hinaus können Sie einen Konstruktor verwenden, der die Fähigkeit zum Überspringen der Sichtbarkeitsprüfungen des JIT-Compilers angibt. Auf diese Weise erhält Ihre dynamische Methode Zugriff auf alle Typen und Member in allen Assemblys, unabhängig von der Zugriffsebene.  
   
  Die vom Konstruktor angeforderten Berechtigungen sind davon abhängig, in welchem Umfang Sie Ihrer dynamischen Methode Zugriff erteilen möchten:  
   
--   Wenn Ihre Methode nur öffentliche Typen und Member verwendet, und Sie sie Ihrem eigenen Typ bzw. Modul zuordnen, sind keine Berechtigungen erforderlich.  
+- Wenn Ihre Methode nur öffentliche Typen und Member verwendet, und Sie sie Ihrem eigenen Typ bzw. Modul zuordnen, sind keine Berechtigungen erforderlich.  
   
--   Wenn Sie angeben, dass JIT-Sichtbarkeitsprüfungen übersprungen werden sollen, erfordert der Konstruktor <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag.  
+- Wenn Sie angeben, dass JIT-Sichtbarkeitsprüfungen übersprungen werden sollen, erfordert der Konstruktor <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag.  
   
--   Wenn Sie die dynamische Methode einem anderen Typ zuordnen, auch wenn es ein anderer Typ in Ihrer eigenen Assembly sein sollte, erfordert der Konstruktor <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag sowie <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>-Flag.  
+- Wenn Sie die dynamische Methode einem anderen Typ zuordnen, auch wenn es ein anderer Typ in Ihrer eigenen Assembly sein sollte, erfordert der Konstruktor <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag sowie <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>-Flag.  
   
--   Wenn Sie die dynamische Methode einem Typ oder Modul in einer anderen Assembly zuordnen, erfordert der Konstruktor zwei Dinge: <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag sowie den Berechtigungssatz der Assembly, die das andere Modul enthält. Das heißt, Ihre Aufrufliste muss alle Berechtigungen aus dem Berechtigungssatz des Zielmoduls enthalten, zuzüglich <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Wenn Sie die dynamische Methode einem Typ oder Modul in einer anderen Assembly zuordnen, erfordert der Konstruktor zwei Dinge: <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag sowie den Berechtigungssatz der Assembly, die das andere Modul enthält. Das heißt, Ihre Aufrufliste muss alle Berechtigungen aus dem Berechtigungssatz des Zielmoduls enthalten, zuzüglich <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Um Abwärtskompatibilität zu gewährleisten, wenn die Anforderung des Zielberechtigungssatzes zuzüglich <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> fehlschlägt, erfordert der Konstruktor <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>-Flag.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074520"
   
  Beachten Sie die Bedingungen, unter denen eine Assembly mit Internetberechtigungen eine dynamische Methode generieren und ausführen kann:  
   
--   Entweder ist die dynamische Methode dem Modul oder Typ zugeordnet, das/den sie ausgibt, oder ihr Berechtigungssatz enthält <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> und dieser ist einem Modul in einer Assembly zugeordnet, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt.  
+- Entweder ist die dynamische Methode dem Modul oder Typ zugeordnet, das/den sie ausgibt, oder ihr Berechtigungssatz enthält <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> und dieser ist einem Modul in einer Assembly zugeordnet, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt.  
   
--   Die dynamische Methode verwendet nur öffentliche Typen und Member. Wenn ihr Berechtigungssatz <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> enthält und dieser einem Modul in einer Assembly zugeordnet ist, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt, kann sie Typen und Member verwenden, die in dem zugeordneten Modul als `internal` (`Friend` in Visual Basic, `assembly` in Common Language Runtime-Metadaten) markiert sind.  
+- Die dynamische Methode verwendet nur öffentliche Typen und Member. Wenn ihr Berechtigungssatz <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> enthält und dieser einem Modul in einer Assembly zugeordnet ist, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt, kann sie Typen und Member verwenden, die in dem zugeordneten Modul als `internal` (`Friend` in Visual Basic, `assembly` in Common Language Runtime-Metadaten) markiert sind.  
   
--   Die für alle von der dynamischen Methode verwendeten Typen und Member angeforderten Berechtigungen sind in dem Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
+- Die für alle von der dynamischen Methode verwendeten Typen und Member angeforderten Berechtigungen sind in dem Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
   
--   Die dynamische Methode überspringt keine JIT-Sichtbarkeitsprüfungen.  
+- Die dynamische Methode überspringt keine JIT-Sichtbarkeitsprüfungen.  
   
 > [!NOTE]
 >  Dynamische Methoden unterstützen keine Debugsymbole.  
@@ -155,5 +155,5 @@ ms.locfileid: "59074520"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitsüberlegungen für die Reflektion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
 - [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

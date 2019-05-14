@@ -2,12 +2,12 @@
 title: Peer-to-Peer-Zusammenarbeit
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623177"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
 
@@ -19,21 +19,21 @@ Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementieru
 
  Eine typische Peer-zu-Peer-Kollaborationsanwendung umfasst die folgenden Schritte:  
   
--   Der Peer bestimmt die Identität eines Peers, der sich für das Hosten einer Kollaborationssitzung interessiert.  
+- Der Peer bestimmt die Identität eines Peers, der sich für das Hosten einer Kollaborationssitzung interessiert.  
   
--   Eine Anforderung zum Hosten einer Sitzung wird aus irgendeinem Grund gesendet, und der Peer erklärt sich dazu bereit, die Kollaborationstätigkeit zu verwalten.  
+- Eine Anforderung zum Hosten einer Sitzung wird aus irgendeinem Grund gesendet, und der Peer erklärt sich dazu bereit, die Kollaborationstätigkeit zu verwalten.  
   
--   Der Host lädt Kontakte im Subnetz (einschließlich des Anforderers) zu einer Sitzung ein.  
+- Der Host lädt Kontakte im Subnetz (einschließlich des Anforderers) zu einer Sitzung ein.  
   
--   Alle Peers, die kollaborieren möchten, können den Host zu Ihrem Kontaktmanager hinzufügen.  
+- Alle Peers, die kollaborieren möchten, können den Host zu Ihrem Kontaktmanager hinzufügen.  
   
--   Die meisten Peers senden die Antwort auf die Einladung, ob akzeptiert oder abgelehnt, zeitnah zurück an den Hostpeer.  
+- Die meisten Peers senden die Antwort auf die Einladung, ob akzeptiert oder abgelehnt, zeitnah zurück an den Hostpeer.  
   
--   Alle Peers, die kollaborieren möchten, abonnieren den Hostpeer.  
+- Alle Peers, die kollaborieren möchten, abonnieren den Hostpeer.  
   
--   Während die Peers ihre anfängliche Kollaborationsaktivität ausführen, kann der Hostpeer Remotepeers zu seinem Kontaktmanager hinzufügen. Er verarbeitet auch alle Antworten auf Einladungen, um zu bestimmen, wer die Einladung akzeptiert, wer sie abgelehnt, und wer nicht geantwortet hat.  Er kann möglicherweise Einladungen an jene, die nicht geantwortet haben, widerrufen oder einige andere Aktivitäten durchführen.  
+- Während die Peers ihre anfängliche Kollaborationsaktivität ausführen, kann der Hostpeer Remotepeers zu seinem Kontaktmanager hinzufügen. Er verarbeitet auch alle Antworten auf Einladungen, um zu bestimmen, wer die Einladung akzeptiert, wer sie abgelehnt, und wer nicht geantwortet hat.  Er kann möglicherweise Einladungen an jene, die nicht geantwortet haben, widerrufen oder einige andere Aktivitäten durchführen.  
   
--   An diesem Punkt kann der Hostpeer eine Kollaborationssitzung mit allen eingeladenen Peers starten oder eine Anwendung mit der Kollaborationsinfrastruktur registrieren.  P2P-Anwendungen verwenden die Infrastruktur für die Peer-zu-Peer-Kollaboration und den <xref:System.Net.PeerToPeer.Collaboration>-Namespace, um die Kommunikation für Spiele, Bulletin Boards, Konferenzen und andere serverlose Anwendungen zu koordinieren.  
+- An diesem Punkt kann der Hostpeer eine Kollaborationssitzung mit allen eingeladenen Peers starten oder eine Anwendung mit der Kollaborationsinfrastruktur registrieren.  P2P-Anwendungen verwenden die Infrastruktur für die Peer-zu-Peer-Kollaboration und den <xref:System.Net.PeerToPeer.Collaboration>-Namespace, um die Kommunikation für Spiele, Bulletin Boards, Konferenzen und andere serverlose Anwendungen zu koordinieren.  
   
 ## <a name="peer-to-peer-networking-security"></a>Sicherheit von Peer-to-Peer-Netzwerken  
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149356"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626413"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Erstellen einer Klasse zum Halten von DLL-Funktionen
 Das Umschließen einer häufig verwendeten DLL-Funktion in einer verwalteten Klasse ist als effektiver Ansatz zu verstehen, Plattformfunktionen zu kapseln. Obwohl es nicht in jedem Fall erforderlich ist, können Sie mithilfe von Klassenwrappern DLL-Funktionen mit weniger Aufwand und geringerer Fehleranfälligkeit definieren. Wenn Sie in Visual Basic oder C# programmieren, müssen Sie die DLL-Funktionen innerhalb einer Klasse oder eines Visual Basic-Moduls deklarieren.  
@@ -28,11 +28,11 @@ Das Umschließen einer häufig verwendeten DLL-Funktion in einer verwalteten Kla
   
  Beim Entwurf einer verwalteten Klasse für Plattformaufruf, beachten Sie die Beziehungen zwischen Klassen und DLL-Funktionen. Sie haben unter anderem folgende Möglichkeiten:  
   
--   Deklarieren von DLL-Funktionen innerhalb einer vorhandenen Klasse.  
+- Deklarieren von DLL-Funktionen innerhalb einer vorhandenen Klasse.  
   
--   Erstellen Sie eine einzelne Klasse für jede DLL-Funktion, indem Funktionen isoliert und leicht auffindbar bleiben.  
+- Erstellen Sie eine einzelne Klasse für jede DLL-Funktion, indem Funktionen isoliert und leicht auffindbar bleiben.  
   
--   Erstellen Sie eine Klasse für eine Gruppe von verwandten DLL-Funktionen, um logische Gruppierungen zu bilden und den Verwaltungsaufwand zu reduzieren.  
+- Erstellen Sie eine Klasse für eine Gruppe von verwandten DLL-Funktionen, um logische Gruppierungen zu bilden und den Verwaltungsaufwand zu reduzieren.  
   
  Sie können die Klasse und ihre Methoden beliebig benennen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   

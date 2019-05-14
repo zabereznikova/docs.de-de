@@ -10,23 +10,23 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: 93136d4c87463db7128a68957b243c1ef13a90eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d4071a7f8dbb1cca1440fa69ae40df17330b060
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174056"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624654"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität
 Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cacherichtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie. Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.  
   
  Die folgenden Beispiele veranschaulichen die Cacherichtlinie, die von der Wechselwirkung aus dem maximalen Alter (`maxAge`) und der minimalen Aktualität (`minFresh`) der Werte entsteht.  
   
--   Wenn die Cacherichtlinie `maxAge` = 2 Tage festlegt und `minFresh` nicht angegeben ist, wird der Inhalt am 3. Januar erneut überprüft.  
+- Wenn die Cacherichtlinie `maxAge` = 2 Tage festlegt und `minFresh` nicht angegeben ist, wird der Inhalt am 3. Januar erneut überprüft.  
   
--   Wenn die Cacherichtlinie `maxAge` = 2 Tage und `minFresh` = 1 Tag festlegt, ist der Inhalt gemäß `maxAge` bis zum 3. Januar aktuell. Entsprechend dem `minFresh`, ist der Inhalt bis zum 3. Januar aktuell. Aus diesem Grund muss der Inhalt am 3. Januar erneut überprüft werden.  
+- Wenn die Cacherichtlinie `maxAge` = 2 Tage und `minFresh` = 1 Tag festlegt, ist der Inhalt gemäß `maxAge` bis zum 3. Januar aktuell. Entsprechend dem `minFresh`, ist der Inhalt bis zum 3. Januar aktuell. Aus diesem Grund muss der Inhalt am 3. Januar erneut überprüft werden.  
   
--   Wenn die Cacherichtlinie `maxAge` = 2 Tage und `minFresh` = 2 Tage festlegt, ist der Inhalt gemäß `maxAge` bis zum 3. Januar aktuell. Entsprechend dem `minFresh`, ist der Inhalt bis zum 2. Januar aktuell. Aus diesem Grund muss der Inhalt am 2. Januar erneut überprüft werden.  
+- Wenn die Cacherichtlinie `maxAge` = 2 Tage und `minFresh` = 2 Tage festlegt, ist der Inhalt gemäß `maxAge` bis zum 3. Januar aktuell. Entsprechend dem `minFresh`, ist der Inhalt bis zum 2. Januar aktuell. Aus diesem Grund muss der Inhalt am 2. Januar erneut überprüft werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

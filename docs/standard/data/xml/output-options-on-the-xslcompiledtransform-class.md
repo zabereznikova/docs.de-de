@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205003"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647843"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Ausgabeoptionen für die XslCompiledTransform-Klasse
 In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptionen. Sie können Ausgabeoptionen im Stylesheet oder in der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode angeben.  
@@ -55,7 +55,7 @@ In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptione
   
 ## <a name="notes"></a>Hinweise  
   
--   Beim Schreiben leerer Tags wird ein Leerzeichen zwischen das letzte Zeichen des Elementnamens und den umgekehrten Schrägstrich geschrieben, beispielsweise `<myElement />`. Dadurch können die generierten HTML-Seiten in älteren Webbrowsern ordnungsgemäß angezeigt werden.  
+- Beim Schreiben leerer Tags wird ein Leerzeichen zwischen das letzte Zeichen des Elementnamens und den umgekehrten Schrägstrich geschrieben, beispielsweise `<myElement />`. Dadurch können die generierten HTML-Seiten in älteren Webbrowsern ordnungsgemäß angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

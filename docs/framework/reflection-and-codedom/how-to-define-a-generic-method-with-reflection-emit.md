@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344233"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591730"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe
 Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode mit zwei Typparametern erstellt wird und wie auf die Typparameter Klasseneinschränkungen, Schnittstelleneinschränkungen und besonderen Einschränkungen angewendet werden.  
@@ -164,11 +164,11 @@ Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode m
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
+- Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
   
--   Er werden keine weiteren Assemblyverweise benötigt.  
+- Er werden keine weiteren Assemblyverweise benötigt.  
   
--   Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
+- Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

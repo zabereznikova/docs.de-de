@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644817"
 ---
 # <a name="managed-threading-basics"></a>Grundlagen des verwalteten Threadings
 
@@ -42,9 +42,6 @@ Die ersten fünf Themen in diesem Abschnitt sollen Ihnen helfen, zu bestimmen, w
   
  [Verwaltetes und nicht verwaltetes Threading in Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Beschreibt die Beziehung zwischen verwaltetem und nicht verwaltetem Threading, listet verwaltete Entsprechungen für Windows-Threading-APIs auf und erläutert die Interaktion von COM-Apartments und verwalteten Threads.  
-  
- [Thread.Suspend, Garbage Collection und Sicherungspunkte](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- Beschreibt Anhalten von Threads und Garbage Collection.  
   
  [Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Beschreibt threadbezogene Speichermechanismen.  

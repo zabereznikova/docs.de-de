@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622733"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generics
 <a name="top"></a> Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
   
--   `Covariance`  
+- `Covariance`  
   
      Ermöglicht die Verwendung eines stärker abgeleiteten Typs als ursprünglich angegeben.  
   
      Sie können eine Instanz von `IEnumerable<Derived>` (`IEnumerable(Of Derived)` in Visual Basic) einer Variablen des Typs `IEnumerable<Base>`zuweisen.  
   
--   `Contravariance`  
+- `Contravariance`  
   
      Ermöglicht die Verwendung eines generischeren (weniger stark abgeleiteten) Typs als ursprünglich angegeben.  
   
      Sie können eine Instanz von `Action<Base>` (`Action(Of Base)` in Visual Basic) einer Variablen des Typs `Action<Derived>`zuweisen.  
   
--   `Invariance`  
+- `Invariance`  
   
      Bedeutet, dass nur der ursprünglich angegebene Typ verwendet werden kann. Ein invarianter generischer Typparameter ist also weder kovariant noch kontravariant.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836421"
   
  Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Ein generischer Typparameter, der nicht als kovariant oder kontravariant markiert ist, wird als *invariant*bezeichnet. Im Folgenden sehen Sie eine kurze Zusammenfassung der Fakten zur Varianz in der Common Language Runtime:  
   
--   In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]sind variante Typparameter auf generische Schnittstellen und generische Delegattypen beschränkt.  
+- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]sind variante Typparameter auf generische Schnittstellen und generische Delegattypen beschränkt.  
   
--   Eine generische Schnittstelle oder ein generischer Delegattyp kann sowohl kovariante, als auch kontravariante Typparameter haben.  
+- Eine generische Schnittstelle oder ein generischer Delegattyp kann sowohl kovariante, als auch kontravariante Typparameter haben.  
   
--   Varianz gilt nur für Verweistypen. Wenn Sie für einen varianten Typparameter einen Werttyp angeben, ist dieser Typparameter für den resultierenden konstruierten Typ invariant.  
+- Varianz gilt nur für Verweistypen. Wenn Sie für einen varianten Typparameter einen Werttyp angeben, ist dieser Typparameter für den resultierenden konstruierten Typ invariant.  
   
--   Varianz gilt nicht für eine Delegatkombination. Bei zwei Delegaten vom Typ `Action<Derived>` und `Action<Base>` (`Action(Of Derived)` und `Action(Of Base)` in Visual Basic) können Sie folglich den zweiten Delegaten nicht mit dem ersten kombinieren, obwohl das Ergebnis typsicher wäre. Bei Varianz kann der zweite Delegat einer Variable des `Action<Derived>`-Typs zugewiesen werden, Delegaten können aber nur kombiniert werden, wenn ihre Typen genau überstimmen.  
+- Varianz gilt nicht für eine Delegatkombination. Bei zwei Delegaten vom Typ `Action<Derived>` und `Action<Base>` (`Action(Of Derived)` und `Action(Of Base)` in Visual Basic) können Sie folglich den zweiten Delegaten nicht mit dem ersten kombinieren, obwohl das Ergebnis typsicher wäre. Bei Varianz kann der zweite Delegat einer Variable des `Action<Derived>`-Typs zugewiesen werden, Delegaten können aber nur kombiniert werden, wenn ihre Typen genau überstimmen.  
   
  In den folgenden Unterabschnitten werden Kovariante und kontravariante Typparameter ausführlich beschrieben:  
   
--   [Generische Schnittstellen mit kovarianten Typparametern](#InterfaceCovariantTypeParameters)  
+- [Generische Schnittstellen mit kovarianten Typparametern](#InterfaceCovariantTypeParameters)  
   
--   [Generische Schnittstellen mit kontravarianten generischen Typparametern](#InterfaceCovariantTypeParameters)  
+- [Generische Schnittstellen mit kontravarianten generischen Typparametern](#InterfaceCovariantTypeParameters)  
   
--   [Generische Delegaten mit varianten Typparametern](#DelegateVariantTypeParameters)  
+- [Generische Delegaten mit varianten Typparametern](#DelegateVariantTypeParameters)  
   
--   [Definieren von varianten generischen Schnittstellen und Delegaten](#DefiningVariantTypeParameters)  
+- [Definieren von varianten generischen Schnittstellen und Delegaten](#DefiningVariantTypeParameters)  
   
--   [Liste der varianten generischen Schnittstellen und Delegattypen](#VariantList)  
+- [Liste der varianten generischen Schnittstellen und Delegattypen](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Generische Schnittstellen mit kovarianten Typparametern  

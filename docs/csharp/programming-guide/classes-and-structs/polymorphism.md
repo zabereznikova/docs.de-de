@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322081"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583063"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
   
--   In Methodenparametern, Auflistungen und Arrays können Objekte einer abgeleiteten Klasse zur Laufzeit als Objekte einer Basisklasse behandelt werden. In diesem Fall ist der deklarierte Typ des Objekts nicht mehr mit dem Laufzeittyp identisch.  
+- In Methodenparametern, Auflistungen und Arrays können Objekte einer abgeleiteten Klasse zur Laufzeit als Objekte einer Basisklasse behandelt werden. In diesem Fall ist der deklarierte Typ des Objekts nicht mehr mit dem Laufzeittyp identisch.  
   
--   Basisklassen können [virtuelle](../../../csharp/language-reference/keywords/virtual.md) *Methoden* definieren und implementieren und können von abgeleiteten Klassen [überschrieben](../../../csharp/language-reference/keywords/override.md) werden, was bedeutet, dass sie ihre eigene Definition und Implementierung bereitstellen. Zur Laufzeit, wenn die Methode von Clientcode aufgerufen wird, sucht die CLR den Laufzeittyp des Objekts und ruft die Überschreibung der virtuellen Methode auf. In Ihrem Quellcode können Sie daher eine Methode in einer Basisklasse aufrufen und bewirken, dass die Methodenversion der abgeleiteten Klasse ausgeführt wird.  
+- Basisklassen können [virtuelle](../../../csharp/language-reference/keywords/virtual.md) *Methoden* definieren und implementieren und können von abgeleiteten Klassen [überschrieben](../../../csharp/language-reference/keywords/override.md) werden, was bedeutet, dass sie ihre eigene Definition und Implementierung bereitstellen. Zur Laufzeit, wenn die Methode von Clientcode aufgerufen wird, sucht die CLR den Laufzeittyp des Objekts und ruft die Überschreibung der virtuellen Methode auf. In Ihrem Quellcode können Sie daher eine Methode in einer Basisklasse aufrufen und bewirken, dass die Methodenversion der abgeleiteten Klasse ausgeführt wird.  
   
  Dank virtueller Methoden können Sie auf einheitliche Weise mit Gruppen verwandter Objekte arbeiten. Nehmen Sie beispielsweise an, Sie haben eine Zeichenanwendung, mit der ein Benutzer verschiedene Arten von Formen auf einer Zeichenoberfläche erstellen kann. Zur Kompilierzeit wissen Sie nicht, welche spezifischen Typen von Formen der Benutzer erstellen wird. Die Anwendung muss jedoch alle verschiedenen Formentypen, die erstellt werden, nachverfolgen und diese als Antwort auf die Mausaktionen des Benutzers aktualisieren. Sie können Polymorphismus verwenden, um dieses Problem mithilfe von zwei einfachen Schritten zu lösen:  
   
@@ -37,11 +37,11 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
 ### <a name="virtual-members"></a>Virtuelle Member  
  Wenn eine abgeleitete Klasse von einer Basisklasse erbt, erhält sie alle Methoden, Felder, Eigenschaften und Ereignisse der Basisklasse. Der Designer der abgeleiteten Klassen kann entscheiden, ob:  
   
--   virtuelle Member in der Basisklasse überschrieben werden sollen  
+- virtuelle Member in der Basisklasse überschrieben werden sollen  
   
--   die nächste Basisklassenmethoden ohne Überschreiben vererbt werden soll,  
+- die nächste Basisklassenmethoden ohne Überschreiben vererbt werden soll,  
   
--   neue nicht virtuelle Implementierungen der Member definiert werden sollen, die die Basisklassenimplementierungen verbergen  
+- neue nicht virtuelle Implementierungen der Member definiert werden sollen, die die Basisklassenimplementierungen verbergen  
   
  Eine abgeleitete Klasse kann einen Basisklassenmember nur überschreiben, wenn der Basisklassenmember als [virtuell](../../../csharp/language-reference/keywords/virtual.md) oder [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert ist. Der abgeleitete Member muss das [override](../../../csharp/language-reference/keywords/override.md)-Schlüsselwort verwenden, um explizit anzugeben, dass die Methode an dem virtuellen Aufruf beteiligt sein soll. Der folgende Code veranschaulicht dies:  
   
@@ -89,11 +89,11 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Vorgehensweise: Überschreiben der ToString-Methode](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Vorgehensweise: Überschreiben der ToString-Methode](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

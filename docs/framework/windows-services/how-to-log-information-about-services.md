@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591653"
 ---
 # <a name="how-to-log-information-about-services"></a>Vorgehensweise: Protokollinformationen über Dienste
 Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisprotokoll zugreifen und Informationen sowie Ausnahmen in das Protokoll schreiben. Sie geben über die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft an, ob Sie diese Funktionalität in Ihrer Anwendung nutzen möchten. Standardmäßig ist die Protokollierung für jeden Dienst aktiviert, den Sie mit den Projektvorlagen für Windows-Dienste erstellen. Sie können eine statische Form der <xref:System.Diagnostics.EventLog> -Klasse verwenden, um Dienstinformationen in ein Protokoll zu schreiben, ohne dass Sie eine Instanz von einer <xref:System.Diagnostics.EventLog> -Komponente erstellen oder eine Quelle manuell registrieren müssen.  
@@ -32,14 +32,14 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>So aktivieren Sie die Standardereignisprotokollierung für Ihren Dienst  
   
--   Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft für Ihre Komponente auf `true`fest.  
+- Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft für Ihre Komponente auf `true`fest.  
   
     > [!NOTE]
     >  Standardmäßig ist diese Eigenschaft auf `true`festgelegt. Sie müssen dies nur dann explizit festlegen, wenn Sie eine komplexere Verarbeitung erstellen, etwa Auswerten einer Bedingung und dann Festlegen der <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft anhand des Ergebnisses dieser Bedingung.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>So deaktivieren Sie die Ereignisprotokollierung für Ihren Dienst  
   
--   Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft für Ihre Komponente auf `false`fest.  
+- Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft für Ihre Komponente auf `false`fest.  
   
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  

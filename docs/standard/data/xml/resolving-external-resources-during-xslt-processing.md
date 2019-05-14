@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555478"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590031"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Auflösen von externen Ressourcen während der XSLT-Verarbeitung
 Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
@@ -30,13 +30,13 @@ Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressource
   
  In der folgenden Liste wird erläutert, wann ein <xref:System.Xml.XmlResolver>-Objekt angegeben werden kann.  
   
--   Wenn der XSLT-Vorgang auf eine Netzwerkressource zugreifen muss, die eine Authentifizierung erfordert, können Sie einen <xref:System.Xml.XmlResolver> mit den notwendigen Anmeldeinformationen verwenden.  
+- Wenn der XSLT-Vorgang auf eine Netzwerkressource zugreifen muss, die eine Authentifizierung erfordert, können Sie einen <xref:System.Xml.XmlResolver> mit den notwendigen Anmeldeinformationen verwenden.  
   
--   Wenn Sie die Ressourcen einschränken möchten, auf die der XSLT-Vorgang zugreifen kann, können Sie einen <xref:System.Xml.XmlSecureResolver> mit den korrekt festgelegten Einstellungen verwenden. Verwenden Sie die <xref:System.Xml.XmlSecureResolver>-Klasse, wenn Sie eine Ressource öffnen möchten, die nicht von Ihnen gesteuert wird oder die nicht vertrauenswürdig ist.  
+- Wenn Sie die Ressourcen einschränken möchten, auf die der XSLT-Vorgang zugreifen kann, können Sie einen <xref:System.Xml.XmlSecureResolver> mit den korrekt festgelegten Einstellungen verwenden. Verwenden Sie die <xref:System.Xml.XmlSecureResolver>-Klasse, wenn Sie eine Ressource öffnen möchten, die nicht von Ihnen gesteuert wird oder die nicht vertrauenswürdig ist.  
   
--   Wenn Sie das Verhalten anpassen möchten, können Sie eine eigene <xref:System.Xml.XmlResolver>-Klasse implementieren und diese zum Auflösen von Ressourcen verwenden.  
+- Wenn Sie das Verhalten anpassen möchten, können Sie eine eigene <xref:System.Xml.XmlResolver>-Klasse implementieren und diese zum Auflösen von Ressourcen verwenden.  
   
--   Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das `null`-Argument <xref:System.Xml.XmlResolver> angeben.  
+- Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das `null`-Argument <xref:System.Xml.XmlResolver> angeben.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Stylesheet kompiliert, das in einer Netzwerkressource gespeichert ist. Ein <xref:System.Xml.XmlUrlResolver>-Objekt gibt die Anmeldeinformationen an, die für den Zugriff auf das Stylesheet erforderlich sind.  

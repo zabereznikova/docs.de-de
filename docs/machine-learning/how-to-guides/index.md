@@ -1,16 +1,16 @@
 ---
-title: Schrittanleitungen für .NET Machine Learning – ML.NET
+title: ML.NET-Schrittanleitungen
 description: Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83188e65ccd02e6928cb4b87577105a75ee96245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649144"
 ---
-# <a name="net-machine-learning-how-to-guides---mlnet"></a>Schrittanleitungen für .NET Machine Learning – ML.NET
+# <a name="net-machine-learning-how-to-guides"></a>Schrittanleitungen für .NET Machine Learning 
 
 Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell Antworten auf häufige Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein, damit sie einfacher zu finden sind.
 

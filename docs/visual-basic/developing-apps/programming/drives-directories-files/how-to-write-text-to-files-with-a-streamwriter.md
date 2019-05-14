@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: ca792106bdd341fa4be8f3554ce70cd7d3f22522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b4f74836b32fea0e5c24fd4500581f17e39cd4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623132"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Vorgehensweise: Schreiben von Text in Dateien mit einem StreamWriter in Visual Basic
 In diesem Beispiel wird ein <xref:System.IO.StreamWriter>-Objekt mit der `My.Computer.FileSystem.OpenTextFileWriter`-Methode geöffnet. Es wird dazu verwendet, eine Zeichenfolge mit der <xref:System.IO.TextWriter.WriteLine%2A>-Methode der <xref:System.IO.StreamWriter>-Klasse in eine Textdatei zu schreiben.  
@@ -22,11 +22,11 @@ In diesem Beispiel wird ein <xref:System.IO.StreamWriter>-Objekt mit der `My.Com
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
+- Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
   
--   Der Datenträger ist voll (<xref:System.IO.IOException>).  
+- Der Datenträger ist voll (<xref:System.IO.IOException>).  
   
--   Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>).  
+- Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).  

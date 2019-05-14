@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788543"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623796"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)
 Das aufgabenbasierte asynchrone Muster (TAP) basiert auf den Typen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> im <xref:System.Threading.Tasks?displayProperty=nameWithType>-Namespace, mit denen beliebige asynchrone Vorgänge dargestellt werden. TAP ist das empfohlene Entwurfsmuster für asynchrone Neuentwicklungen.  
@@ -39,9 +39,9 @@ TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines 
 ## <a name="initiating-an-asynchronous-operation"></a>Initiieren eines asynchronen Vorgangs  
  Eine asynchrone Methode, die auf TAP basiert, kann eine kleine Menge an Arbeit synchron ausführen, beispielsweise das Überprüfen von Argumenten und das Initiieren des asynchronen Vorgangs, bevor sie die resultierende Aufgabe zurückgibt. Synchrone Arbeiten sollten auf ein Minimum beschränkt werden, damit die asynchrone Methode schnell zurückgeben kann. Gründe für eine schnelle Rückgabe umfassen Folgendes:  
   
--   Asynchrone Methoden können von den Threads der Benutzeroberfläche aufgerufen werden und jede synchrone Arbeit mit langer Laufzeit kann die Reaktionszeit der Anwendung beeinträchtigen.  
+- Asynchrone Methoden können von den Threads der Benutzeroberfläche aufgerufen werden und jede synchrone Arbeit mit langer Laufzeit kann die Reaktionszeit der Anwendung beeinträchtigen.  
   
--   Mehrere asynchrone Methoden können gleichzeitig ausgelöst werden. Daher kann jede Arbeit mit langer Laufzeit im synchronen Teil einer asynchronen Methode die Initiierung anderer asynchroner Operationen verzögern und so sie die Vorteile der Nebenläufigkeit verringern.  
+- Mehrere asynchrone Methoden können gleichzeitig ausgelöst werden. Daher kann jede Arbeit mit langer Laufzeit im synchronen Teil einer asynchronen Methode die Initiierung anderer asynchroner Operationen verzögern und so sie die Vorteile der Nebenläufigkeit verringern.  
   
  In einigen Fällen ist der Arbeitsaufwand, der erforderlich ist, um den Vorgang abzuschließen, kleiner als der Arbeitsaufwand, der erforderlich ist, um den Vorgang asynchron zu starten. Lesen aus einem Stream, bei dem der Lesevorgang durch Daten erfüllt werden kann, die bereits im Arbeitsspeicher gepuffert werden, ist ein Beispiel für ein solches Szenario. In solchen Fällen wird der Vorgang möglicherweise synchron abgeschlossen, und eine bereits abgeschlossene Aufgabe kann zurückgegeben werden.  
   

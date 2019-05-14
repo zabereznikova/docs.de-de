@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6b092b499af2003e8a43987677b13741c362b1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662710"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen in Visual Basic
 In diesem Thema wird beschrieben, wie `My.Computer.Ports` zum Anzeigen der verfügbaren seriellen Ports eines Computers in Visual Basic verwendet wird.  
@@ -31,11 +31,11 @@ In diesem Thema wird beschrieben, wie `My.Computer.Ports` zum Anzeigen der verf�
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein Projektverweis auf „System.Windows.Forms.dll“.  
+- Ein Projektverweis auf „System.Windows.Forms.dll“.  
   
--   Zugriff auf die Member des <xref:System.Windows.Forms>-Namespace Fügen Sie eine `Imports`-Anweisung hinzu, wenn Sie Membernamen in Ihrem Code nicht vollqualifizieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Zugriff auf die Member des <xref:System.Windows.Forms>-Namespace Fügen Sie eine `Imports`-Anweisung hinzu, wenn Sie Membernamen in Ihrem Code nicht vollqualifizieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
--   Dass Ihr Formular ein <xref:System.Windows.Forms.ListBox>-Steuerelement mit dem Namen `ListBox1` hat.  
+- Dass Ihr Formular ein <xref:System.Windows.Forms.ListBox>-Steuerelement mit dem Namen `ListBox1` hat.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Sie müssen nicht das <xref:System.Windows.Forms.ListBox>-Steuerelement verwenden, um die Namen der verfügbaren seriellen Anschlüsse anzuzeigen. Stattdessen können Sie <xref:System.Windows.Forms.ComboBox> oder ein anderes Steuerelement verwenden. Wenn die Anwendung keine Antwort des Benutzers erfordert, können Sie ein <xref:System.Windows.Forms.TextBox>-Steuerungselement verwenden, um die Informationen anzuzeigen.  

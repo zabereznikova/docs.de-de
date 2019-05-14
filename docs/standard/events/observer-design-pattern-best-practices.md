@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599997"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615191"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Empfohlene Vorgehensweisen für Beobachterentwurfsmuster
 Im .NET Framework wird das Beobachterentwurfsmuster als Satz von Schnittstellen implementiert. Die <xref:System.IObservable%601?displayProperty=nameWithType>-Schnittstelle stellt den Datenanbieter dar, der auch für die Bereitstellung einer <xref:System.IDisposable>-Implementierung verantwortlich ist, mit der Beobachter Benachrichtigungsabonnements kündigen können. Die <xref:System.IObserver%601?displayProperty=nameWithType>-Schnittstelle stellt den Beobachter dar. Dieses Thema beschreibt die empfohlenen Vorgehensweisen, die Entwickler befolgen sollten, wenn sie das Beobachterentwurfsmuster unter Verwendung dieser Schnittstellen implementieren.  
@@ -31,11 +31,11 @@ Im .NET Framework wird das Beobachterentwurfsmuster als Satz von Schnittstellen 
   
  Der Anbieter sollte diese empfohlenen Vorgehensweisen beim Verarbeiten von Ausnahmen und dem Aufrufen der <xref:System.IObserver%601.OnError%2A>-Methode verwenden:  
   
--   Der Anbieter muss seine eigenen Ausnahmen verarbeiten, wenn er spezielle Anforderungen hat.  
+- Der Anbieter muss seine eigenen Ausnahmen verarbeiten, wenn er spezielle Anforderungen hat.  
   
--   Der Anbieter sollte nicht erwarten oder voraussetzen, dass Beobachter Ausnahmen auf eine bestimmte Weise verarbeiten.  
+- Der Anbieter sollte nicht erwarten oder voraussetzen, dass Beobachter Ausnahmen auf eine bestimmte Weise verarbeiten.  
   
--   Der Anbieter sollte die <xref:System.IObserver%601.OnError%2A>-Methode aufrufen, wenn er eine Ausnahme behandelt, die die Bereitstellung von Updates gefährdet. Informationen zu solchen Ausnahmen können an den Beobachter übergeben werden. In anderen Fällen besteht keine Notwendigkeit, den Beobachter über eine Ausnahme zu benachrichtigen.  
+- Der Anbieter sollte die <xref:System.IObserver%601.OnError%2A>-Methode aufrufen, wenn er eine Ausnahme behandelt, die die Bereitstellung von Updates gefährdet. Informationen zu solchen Ausnahmen können an den Beobachter übergeben werden. In anderen Fällen besteht keine Notwendigkeit, den Beobachter über eine Ausnahme zu benachrichtigen.  
   
  Sobald der Anbieter die <xref:System.IObserver%601.OnError%2A>- oder <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Methode aufruft, sollte es keine weiteren Benachrichtigungen geben, und der Anbieter kann seine Beobachter kündigen. Allerdings können die Beobachter das Abonnement auch jederzeit selbst kündigen, auch bevor oder nachdem sie eine <xref:System.IObserver%601.OnError%2A>- oder <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Benachrichtigung empfangen. Das Beobachterentwurfsmuster schreibt nicht vor, ob der Anbieter oder der Beobachter für die Kündigung zuständig ist; aus diesem Grund besteht die Möglichkeit, dass beide versuchen, zu kündigen. Wenn Beobachter kündigen, werden sie in der Regel aus einer Abonnentenauflistung entfernt. In einer Single-Thread-Anwendung sollte die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung sicherstellen, dass ein Objektverweis gültig ist und dass das Objekt ein Mitglied der Abonnentenauflistung ist, bevor der Versuch unternommen wird, es zu entfernen. In einer Multithreadanwendung sollte ein threadsicheres Auflistungsobjekt, z. B. ein <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>-Objekt, verwendet werden.  
   
@@ -44,12 +44,12 @@ Im .NET Framework wird das Beobachterentwurfsmuster als Satz von Schnittstellen 
   
  Der Beobachter sollte diesen empfohlenen Vorgehensweisen bei der Reaktion auf einen <xref:System.IObserver%601.OnError%2A>-Methodenaufruf von einem Anbieter folgen:  
   
--   Der Beobachter sollte keine Ausnahmen in seinen Schnittstellenimplementierungen auslösen, z. B. <xref:System.IObserver%601.OnNext%2A> oder <xref:System.IObserver%601.OnError%2A>. Wenn der Beobachter aber Ausnahmen auslöst, sollte er davon ausgehen, dass diese Ausnahmen nicht behandelt werden.  
+- Der Beobachter sollte keine Ausnahmen in seinen Schnittstellenimplementierungen auslösen, z. B. <xref:System.IObserver%601.OnNext%2A> oder <xref:System.IObserver%601.OnError%2A>. Wenn der Beobachter aber Ausnahmen auslöst, sollte er davon ausgehen, dass diese Ausnahmen nicht behandelt werden.  
   
--   Um die Aufrufliste beizubehalten, sollte ein Beobachter, der ein <xref:System.Exception>-Objekt, das an die <xref:System.IObserver%601.OnError%2A>-Methode übergeben wurde, auslösen möchte, die Ausnahme vor dem Auslösen umschließen. Zu diesem Zweck sollte ein Standardausnahmeobjekt verwendet werden.  
+- Um die Aufrufliste beizubehalten, sollte ein Beobachter, der ein <xref:System.Exception>-Objekt, das an die <xref:System.IObserver%601.OnError%2A>-Methode übergeben wurde, auslösen möchte, die Ausnahme vor dem Auslösen umschließen. Zu diesem Zweck sollte ein Standardausnahmeobjekt verwendet werden.  
   
 ## <a name="additional-best-practices"></a>Weitere empfohlene Vorgehensweisen  
- Der Versuch, die Registrierung in der <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode aufzuheben, kann ein einem Nullverweis resultieren. Aus diesem Grund wird empfohlen, dieses Verfahren zu vermeiden.  
+ Der Versuch, die Registrierung in der <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode aufzuheben, kann in einem Nullverweis resultieren. Aus diesem Grund wird empfohlen, dieses Verfahren zu vermeiden.  
   
  Es ist zwar möglich, einen Beobachter an mehrere Anbieter anzufügen, das empfohlene Muster ist aber das Anfügen einer <xref:System.IObserver%601>-Instanz an nur eine <xref:System.IObservable%601>-Instanz.  
   

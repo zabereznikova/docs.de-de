@@ -1,5 +1,5 @@
 ---
-title: Auf "<name>" kann nicht verwiesen werden, da es ein Member des auf Werttypen basierenden Felds "<name>" der Klasse "<classname>" ist, die "System.MarshalByRefObject" als Basisklasse hat.
+title: Auf '<name>' kann nicht verwiesen werden, da es ein Member des auf Werttypen basierenden Felds '<name>' der Klasse '<classname>' ist, die 'System.MarshalByRefObject' als Basisklasse hat.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30310
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61649932"
 ---
-# <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>Kann nicht auf verweisen "\<Name >', da es sich um ein Mitglied der Werttypen basierenden Felds ist"\<Name > "der Klasse\<Klassenname >" die "System.MarshalByRefObject" als Basisklasse hat
+# <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>Kann nicht auf verweisen '\<Name >', da es sich um ein Mitglied der Werttypen basierenden Felds ist'\<Name > 'der Klasse\<Klassenname >' die 'System.MarshalByRefObject' als Basisklasse hat
 Die `System.MarshalByRefObject` -Klasse ermöglicht es Anwendungen, die remote-Zugriff auf Objekte über Anwendungsdomänen hinweg zu unterstützen. Typen müssen erben von der `MarshalByRejectObject` Klasse, wenn der Typ über Anwendungsdomänengrenzen hinweg verwendet wird. Der Zustand des Objekts muss nicht kopiert werden, da die Member des Objekts nicht außerhalb der Anwendungsdomäne verwendet werden, in denen sie erstellt wurden.  
   
  **Fehler-ID:** BC30310  
