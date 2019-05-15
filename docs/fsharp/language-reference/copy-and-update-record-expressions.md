@@ -3,12 +3,12 @@ title: Kopieren und Aktualisieren von Datensatzausdrücken
 description: Informationen Sie zum Schreiben von 'kopieren und aktualisieren Datensatz Ausdruck', die einen vorhandenen Datensatz, Updates kopiert Felder angegeben und gibt den aktualisierten Datensatz zurück.
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7657b0295c9437890baea258295f9e9ab10073dd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766050"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645578"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopieren und Aktualisieren von Datensatzausdrücken
 
