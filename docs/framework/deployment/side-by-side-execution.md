@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341074"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641037"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können.  
@@ -33,15 +33,15 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
   
  Die parallele Ausführung und .NET Framework bieten die folgenden Features zur Vermeidung von DLL-Konflikten:  
   
--   Assemblys mit starkem Namen  
+- Assemblys mit starkem Namen  
   
      Die parallele Ausführung verwendet Assemblys mit starken Namen, um Typinformationen an eine bestimmte Version einer Assembly zu binden. Dadurch wird verhindert, dass eine Anwendung oder Komponente an eine ungültige Version einer Assembly gebunden wird. Assemblys mit starken Namen ermöglichen außerdem das Vorhandensein mehrerer Versionen einer Datei auf demselben Computer und deren Verwendung durch Anwendungen. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Versionsabhängige Codespeicherung  
+- Versionsabhängige Codespeicherung  
   
      .NET Framework bietet versionsabhängige Codespeicherung im globalen Assemblycache. Der globale Asssemblycache ist ein Codecache für den gesamten Computer, der auf allen Computern vorhanden ist, auf denen .NET Framework installiert ist. Im Cache werden Assemblys anhand der Version, Kultur und Herstellerinformationen gespeichert, und es werden mehrere Versionen von Komponenten und Anwendungen unterstützt. Weitere Informationen finden Sie unter [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md).  
   
--   Isolation.  
+- Isolation.  
   
      Mit .NET Framework können Sie Anwendungen und Komponenten erstellen, die isoliert ausgeführt werden. Isolation ist eine wesentliche Komponente der parallelen Ausführung. Sie umfasst sowohl die Erkennung der verwendeten Ressourcen als auch die zuverlässige gemeinsame Verwendung von Ressourcen durch mehrere Versionen einer Anwendung oder Komponente. Die Isolation umfasst außerdem das versionsspezifische Speichern von Dateien. Weitere Informationen zur Isolation finden Sie unter [Richtlinien für die Erstellung von Anwendungen und Komponenten für die parallele Ausführung](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,9 +66,9 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Bestimmen der zu ladenden Laufzeitversion  
  Die Common Language Runtime verwendet die folgenden Informationen, um zu bestimmen, welche Version der Runtime für eine Anwendung geladen werden soll:  
   
--   Die verfügbaren Runtime-Versionen  
+- Die verfügbaren Runtime-Versionen  
   
--   Die Runtime-Versionen, die von einer Anwendung unterstützt werden  
+- Die Runtime-Versionen, die von einer Anwendung unterstützt werden  
   
 ### <a name="supported-runtime-versions"></a>Unterstützte Runtime-Versionen  
  Die Common Language Runtime verwendet die Anwendungskonfigurationsdatei und den PE-Dateiheader (Portable Executable, übertragbare ausführbare Datei), um zu bestimmen, welche Version der Runtime von einer Anwendung unterstützt wird. Wenn keine Anwendungskonfigurationsdatei vorhanden ist, lädt die Runtime die im PE-Dateiheader der Anwendung angegebene Runtime-Version, sofern diese verfügbar ist.  

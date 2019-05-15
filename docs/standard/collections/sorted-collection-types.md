@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517759"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664560"
 ---
 # <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
 Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
   
--   Alle drei Klassen implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die zwei generischen Klassen implementieren außerdem die generische <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>-Schnittstelle.  
+- Alle drei Klassen implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die zwei generischen Klassen implementieren außerdem die generische <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>-Schnittstelle.  
   
--   Jedes Element ist ein Schlüssel-Wert-Paar zu Enumerationszwecken.  
+- Jedes Element ist ein Schlüssel-Wert-Paar zu Enumerationszwecken.  
   
     > [!NOTE]
     >  Die nicht-generische <xref:System.Collections.SortedList>-Klasse gibt bei einer Enumeration <xref:System.Collections.DictionaryEntry>-Objekte zurück, obwohl zwei generische Typen <xref:System.Collections.Generic.KeyValuePair%602>-Objekte zurückgeben.  
   
--   Elemente werden nach einer <xref:System.Collections.IComparer?displayProperty=nameWithType>-Implementierung (für nicht-generische <xref:System.Collections.SortedList>) oder einer <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>-Implementierung (für die zwei generischen Klassen) sortiert.  
+- Elemente werden nach einer <xref:System.Collections.IComparer?displayProperty=nameWithType>-Implementierung (für nicht-generische <xref:System.Collections.SortedList>) oder einer <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>-Implementierung (für die zwei generischen Klassen) sortiert.  
   
--   Jede Klasse enthält Eigenschaften, die Sammlungen zurückgeben, die nur die Schlüssel oder nur die Werte enthalten.  
+- Jede Klasse enthält Eigenschaften, die Sammlungen zurückgeben, die nur die Schlüssel oder nur die Werte enthalten.  
   
  Die folgende Tabelle enthält einige Unterschiede zwischen den beiden SortedList-Klassen und der <xref:System.Collections.Generic.SortedDictionary%602>-Klasse.  
   

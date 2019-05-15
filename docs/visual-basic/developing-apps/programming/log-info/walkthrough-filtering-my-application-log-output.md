@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298395"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647095"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von „My.Application.Log“ (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßige Filtern von Protokollen für das `My.Application.Log`-Objekt ändern, um zu steuern, welche Informationen vom `Log`-Objekt an die Listener übergeben werden und welche Informationen von den Listenern geschrieben werden. Sie können das Protokollierungsverhalten auch nach dem Erstellen der Anwendung ändern, da die Konfigurationsinformationen in der Konfigurationsdatei der Anwendung gespeichert sind.  
@@ -77,11 +77,11 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
      Wenn keine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
 2. Suchen Sie den Abschnitt `<switches>`, der sich im Abschnitt `<system.diagnostics>` im Abschnitt `<configuration>` der obersten Ebene befindet.  
   
@@ -152,11 +152,11 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
      Wenn keine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
 2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“. Wählen Sie **Öffnen** aus.  
   

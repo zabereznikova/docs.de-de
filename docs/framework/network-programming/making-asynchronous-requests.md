@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66cacfbb031a531190a8cc5eafdb3e375609ee1e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647305"
 ---
 # <a name="making-asynchronous-requests"></a>Vornehmen von asynchronen Anforderungen
 Die <xref:System.Net>-Klassen verwenden das .NET Framework-Standardmodell für asynchrones Programmieren für den asynchronen Zugriff auf Internetressourcen. Die Methoden <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A> der Klasse <xref:System.Net.WebRequest> starten asynchrone Anforderungen für eine Internetressource und schließen diese ab.  
@@ -32,15 +32,15 @@ Die <xref:System.Net>-Klassen verwenden das .NET Framework-Standardmodell für a
   
  Die **ClientGetAsync**-Klasse implementiert eine asynchrone Anforderung einer Internetressource und schreibt die resultierende Antwort in die Konsole. Sie enthält die in der folgenden Liste aufgeführten Methoden und Eigenschaften.  
   
--   Die `allDone`-Eigenschaft enthält eine Instanz der <xref:System.Threading.ManualResetEvent>-Klasse, die die Vervollständigung der Anforderung signalisiert.  
+- Die `allDone`-Eigenschaft enthält eine Instanz der <xref:System.Threading.ManualResetEvent>-Klasse, die die Vervollständigung der Anforderung signalisiert.  
   
--   Die `Main()`-Methode liest die Befehlszeile und startet die Anforderung für die angegebene Internetressource. Sie erstellt die **WebRequest**-Klasse `wreq` und die **RequestState**-Klasse `rs`, ruft **BeginGetResponse** auf, um die Verarbeitung der Anforderung zu starten, und ruft dann die `allDone.WaitOne()`-Methode auf, sodass die Anwendung nicht beendet wird, bis der Rückruf abgeschlossen ist. Nachdem die Antwort von der Internetressource gelesen wurde, schreibt `Main()` diese in die Konsole, und die Anwendung wird beendet.  
+- Die `Main()`-Methode liest die Befehlszeile und startet die Anforderung für die angegebene Internetressource. Sie erstellt die **WebRequest**-Klasse `wreq` und die **RequestState**-Klasse `rs`, ruft **BeginGetResponse** auf, um die Verarbeitung der Anforderung zu starten, und ruft dann die `allDone.WaitOne()`-Methode auf, sodass die Anwendung nicht beendet wird, bis der Rückruf abgeschlossen ist. Nachdem die Antwort von der Internetressource gelesen wurde, schreibt `Main()` diese in die Konsole, und die Anwendung wird beendet.  
   
--   Die `showusage()`-Methode schreibt eine Beispielbefehlszeile in die Konsole. Sie wird von `Main()` aufgerufen, wenn in der Befehlszeile kein URI angegeben ist.  
+- Die `showusage()`-Methode schreibt eine Beispielbefehlszeile in die Konsole. Sie wird von `Main()` aufgerufen, wenn in der Befehlszeile kein URI angegeben ist.  
   
--   Die `RespCallBack()`-Methode implementiert die asynchrone Rückrufmethode für die Internetanforderung. Sie erstellt die **WebResponse**-Instanz, die die Antwort der Internetressource enthält, ruft den Antwortdatenstrom ab und startet dann mit dem asynchronen Lesen der Daten aus dem Datenstrom.  
+- Die `RespCallBack()`-Methode implementiert die asynchrone Rückrufmethode für die Internetanforderung. Sie erstellt die **WebResponse**-Instanz, die die Antwort der Internetressource enthält, ruft den Antwortdatenstrom ab und startet dann mit dem asynchronen Lesen der Daten aus dem Datenstrom.  
   
--   Die `ReadCallBack()`-Methode implementiert die asynchrone Rückrufmethode zum Lesen des Antwortdatenstroms. Sie überträgt von der Internetressource empfangene Daten in die **ResponseData**-Eigenschaft der **RequestState**-Instanz und startet dann ein weiteres asynchrones Lesen des Antwortdatenstroms, bis keine Daten mehr zurückgegeben werden. Nachdem alle Daten gelesen wurden, schließt `ReadCallBack()` den Antwortdatenstrom und ruft die `allDone.Set()`-Methode auf, um anzugeben, dass sich die gesamte Antwort in **ResponseData** befindet.  
+- Die `ReadCallBack()`-Methode implementiert die asynchrone Rückrufmethode zum Lesen des Antwortdatenstroms. Sie überträgt von der Internetressource empfangene Daten in die **ResponseData**-Eigenschaft der **RequestState**-Instanz und startet dann ein weiteres asynchrones Lesen des Antwortdatenstroms, bis keine Daten mehr zurückgegeben werden. Nachdem alle Daten gelesen wurden, schließt `ReadCallBack()` den Antwortdatenstrom und ruft die `allDone.Set()`-Methode auf, um anzugeben, dass sich die gesamte Antwort in **ResponseData** befindet.  
   
     > [!NOTE]
     >  Es ist wichtig, dass alle Netzwerkdatenströme geschlossen werden. Wird nicht jede Antwort und jeder Datenstrom geschlossen, verfügt die Anwendung nicht mehr über genügend Verbindungen mit dem Server und kann weitere Anforderungen nicht mehr verarbeiten.  

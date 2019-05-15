@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59346105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634681"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  
   
--   Ein Encoder, der eine Folge von Zeichen in eine Folge von numerischen Werten (Bytes) übersetzt  
+- Ein Encoder, der eine Folge von Zeichen in eine Folge von numerischen Werten (Bytes) übersetzt  
   
--   Ein Decoder, der eine Bytefolge in eine Folge von Zeichen übersetzt  
+- Ein Decoder, der eine Bytefolge in eine Folge von Zeichen übersetzt  
   
  Die Zeichencodierung gibt die Regeln für die Funktionsweise von Encoder und Decoder an. Zum Beispiel beschreibt die <xref:System.Text.UTF8Encoding> -Klasse die Regeln zum Codieren und Decodieren von UTF-8 (8-Bit-Unicode Transformation Format). In diesem Format werden für die Darstellung eines einzelnen Unicode-Zeichens ein bis vier Bytes verwendet. Die Codierung und Decodierung können auch eine Validierung beinhalten. Die <xref:System.Text.UnicodeEncoding> -Klasse prüft z. B. alle Ersatzzeichen, um sicherzustellen, dass sie gültige Ersatzzeichenpaare bilden. (Ein Ersatzzeichenpaar besteht aus einem Zeichen mit einem Codepunkt zwischen U+D800 und U+DBFF gefolgt von einem Zeichen mit einem Codepunkt zwischen U+DC00 und U+DFFF.)  Eine Fallbackstrategie legt fest, wie ein Encoder ungültige Zeichen behandelt oder wie ein Decoder ungültige Bytes behandelt.  
   
@@ -37,27 +37,27 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Codierungen in .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [Codierungen in .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [Auswählen einer Encoding-Klasse](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [Auswählen einer Encoding-Klasse](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [Verwenden eines Codierungsobjekts](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [Verwenden eines Codierungsobjekts](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [Auswählen einer Fallbackstrategie](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [Auswählen einer Fallbackstrategie](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>Codierungen in .NET  
  Alle Zeichencodierungsklassen in .NET erben von der abstrakten <xref:System.Text.Encoding?displayProperty=nameWithType>-Klasse, die die Funktionen definiert, die für alle Zeichencodierungen gleich sind. Um auf die einzelnen in .NET implementierten Codierungsobjekte zuzugreifen, gehen Sie wie folgt vor:  
   
--   Verwenden Sie die statischen Eigenschaften der <xref:System.Text.Encoding>-Klasse, die Objekte zurückgibt, die die in .NET verfügbaren Standardzeichencodierungen darstellen (ASCII, UTF-7, UTF-8, UTF-16 und UTF-32). Zum Beispiel gibt die <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> -Eigenschaft ein <xref:System.Text.UnicodeEncoding> -Objekt zurück. Jedes Objekt verwendet einen Ersatzfallback für die Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. (Weitere Informationen finden Sie im Abschnitt [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) .)  
+- Verwenden Sie die statischen Eigenschaften der <xref:System.Text.Encoding>-Klasse, die Objekte zurückgibt, die die in .NET verfügbaren Standardzeichencodierungen darstellen (ASCII, UTF-7, UTF-8, UTF-16 und UTF-32). Zum Beispiel gibt die <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> -Eigenschaft ein <xref:System.Text.UnicodeEncoding> -Objekt zurück. Jedes Objekt verwendet einen Ersatzfallback für die Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. (Weitere Informationen finden Sie im Abschnitt [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) .)  
   
--   Rufen Sie den Klassenkonstruktor der Codierung auf. Objekte für ASCII-, UTF-7-, UTF-8-, UTF-16- und UTF-32-Codierungen können auf diese Weise instanziiert werden. Standardmäßig verwendet jedes Objekt den Ersatzfallback zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Sie können aber angeben, dass stattdessen eine Ausnahme ausgelöst werden soll. (Weitere Informationen finden Sie in den Abschnitten [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) und [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) .)  
+- Rufen Sie den Klassenkonstruktor der Codierung auf. Objekte für ASCII-, UTF-7-, UTF-8-, UTF-16- und UTF-32-Codierungen können auf diese Weise instanziiert werden. Standardmäßig verwendet jedes Objekt den Ersatzfallback zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Sie können aber angeben, dass stattdessen eine Ausnahme ausgelöst werden soll. (Weitere Informationen finden Sie in den Abschnitten [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) und [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) .)  
   
--   Rufen Sie den <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> -Konstruktor auf, und übergeben Sie eine ganze Zahl, die die Codierung darstellt. Standardcodierungsobjekte verwenden den Ersatzfallback, und Codepage- und DBCS (Doppelbyte-Zeichensatz)-Codierungsobjekte verwenden den Fallback mit ähnlichen Zeichen zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. (Weitere Informationen finden Sie im Abschnitt [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) .)  
+- Rufen Sie den <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> -Konstruktor auf, und übergeben Sie eine ganze Zahl, die die Codierung darstellt. Standardcodierungsobjekte verwenden den Ersatzfallback, und Codepage- und DBCS (Doppelbyte-Zeichensatz)-Codierungsobjekte verwenden den Fallback mit ähnlichen Zeichen zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. (Weitere Informationen finden Sie im Abschnitt [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) .)  
   
--   Rufen Sie die <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>-Methode auf, die jede in .NET verfügbare Standard-, Codepage- oder DBCS-Codierung zurückgibt. Mithilfe von Überladungen können Sie sowohl für den Encoder als auch den Decoder ein Fallbackobjekt angeben.  
+- Rufen Sie die <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>-Methode auf, die jede in .NET verfügbare Standard-, Codepage- oder DBCS-Codierung zurückgibt. Mithilfe von Überladungen können Sie sowohl für den Encoder als auch den Decoder ein Fallbackobjekt angeben.  
   
 > [!NOTE]
 >  Gemäß Unicode-Standard werden jedem Zeichen aller unterstützten Skripts ein Codepunkt (eine Zahl) und ein Name zugewiesen. Das Zeichen "A" wird beispielsweise durch den Codepunkt U+0041 und den Namen "LATIN CAPITAL LETTER A" dargestellt. Die UTF (Unicode-Transformation Format)-Codierungen definieren Möglichkeiten, diesen Codepunkt in eine Abfolge aus einem oder mehreren Bytes zu codieren. Ein Unicode-Datencodierungsschema vereinfacht die Entwicklung weltweit einsetzbarer Anwendungen, da es die Darstellung von Zeichen aus beliebigen Zeichensätzen in einer Codierung ermöglicht. Anwendungsentwickler müssen nicht mehr das Codierungsschema verfolgen, das für die Erstellung von Zeichen für eine bestimmte Sprache oder ein Schreibsystem verwendet wurde, und die Daten können länderübergreifend auf allen Systemen verwendet werden, ohne beschädigt zu werden.  
@@ -87,17 +87,17 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Wenn Sie eine ASCII-Codierung (<xref:System.Text.ASCIIEncoding>) verwenden möchten, wählen Sie stattdessen <xref:System.Text.UTF8Encoding> . Die beiden Codierungen sind für den ASCII-Zeichensatz identisch. <xref:System.Text.UTF8Encoding> bietet allerdings die folgenden Vorteile:  
   
--   Alle Unicode-Zeichen können dargestellt werden, während <xref:System.Text.ASCIIEncoding> nur die Unicode-Zeichenwerte zwischen U+0000 und U+007F unterstützt.  
+- Alle Unicode-Zeichen können dargestellt werden, während <xref:System.Text.ASCIIEncoding> nur die Unicode-Zeichenwerte zwischen U+0000 und U+007F unterstützt.  
   
--   Weitere Vorteile sind die Fehlererkennung und die verbesserte Sicherheit.  
+- Weitere Vorteile sind die Fehlererkennung und die verbesserte Sicherheit.  
   
--   Die Geschwindigkeit wurde optimiert und sollte schneller sein als jede andere Codierung. Selbst bei Inhalten, bei denen es sich um reine ASCII-Daten handelt, erfolgen mit <xref:System.Text.UTF8Encoding> durchgeführte Operationen schneller als mit <xref:System.Text.ASCIIEncoding>durchgeführte Operationen.  
+- Die Geschwindigkeit wurde optimiert und sollte schneller sein als jede andere Codierung. Selbst bei Inhalten, bei denen es sich um reine ASCII-Daten handelt, erfolgen mit <xref:System.Text.UTF8Encoding> durchgeführte Operationen schneller als mit <xref:System.Text.ASCIIEncoding>durchgeführte Operationen.  
   
  Sie sollten daher in Erwägung ziehen, <xref:System.Text.ASCIIEncoding> nur für ältere Anwendungen zu verwenden. Allerdings kann <xref:System.Text.UTF8Encoding> auch für ältere Anwendungen aus folgenden Gründen die bessere Wahl sein (ausgehend von den Standardeinstellungen):  
   
--   Wenn die Anwendung Inhalte, die keine reinen ASCII-Daten sind, mit <xref:System.Text.ASCIIEncoding>codiert, wird jedes Nicht-ASCII-Zeichen als Fragezeichen (?) codiert. Wenn die Anwendung diese Daten anschließend decodiert, gehen die Informationen verloren.  
+- Wenn die Anwendung Inhalte, die keine reinen ASCII-Daten sind, mit <xref:System.Text.ASCIIEncoding>codiert, wird jedes Nicht-ASCII-Zeichen als Fragezeichen (?) codiert. Wenn die Anwendung diese Daten anschließend decodiert, gehen die Informationen verloren.  
   
--   Wenn die Anwendung Inhalte, die keine reinen ASCII-Daten sind, mit <xref:System.Text.UTF8Encoding>codiert und als ASCII-Daten interpretiert, erscheint das Ergebnis unverständlich. Wenn die Anwendung dann jedoch einen UTF-8-Decoder verwendet, um diese Daten zu decodieren, durchlaufen sie einen erfolgreichen Roundtrip.  
+- Wenn die Anwendung Inhalte, die keine reinen ASCII-Daten sind, mit <xref:System.Text.UTF8Encoding>codiert und als ASCII-Daten interpretiert, erscheint das Ergebnis unverständlich. Wenn die Anwendung dann jedoch einen UTF-8-Decoder verwendet, um diese Daten zu decodieren, durchlaufen sie einen erfolgreichen Roundtrip.  
   
  In einer Webanwendung sollten die Zeichen, die als Antwort auf eine Webanforderung an den Client gesendet werden, die auf dem Client verwendete Codierung widerspiegeln. In den meisten Fällen sollten Sie die <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> -Eigenschaft auf den Wert festlegen, der von der <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird, um Text in der vom Benutzer erwarteten Codierung anzuzeigen.  
   
@@ -130,11 +130,11 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
 ## <a name="choosing-a-fallback-strategy"></a>Auswählen einer Fallbackstrategie  
  Wenn eine Methode versucht, ein Zeichen zu codieren oder zu decodieren, aber keine Zuordnung vorhanden ist, muss eine Fallbackstrategie implementiert werden. Diese legt fest, wie die fehlende Zuordnung behandelt werden soll. Es gibt drei Arten von Fallbackstrategien:  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  Bei Codierungsvorgängen treten Probleme am häufigsten dann auf, wenn ein Unicode-Zeichen keiner bestimmten Codepagecodierung zugeordnet werden kann. Zu den am häufigsten auftretenden Problem bei Decodierungsvorgängen gehört es, wenn ungültige Bytefolgen nicht in gültige Unicode-Zeichen übersetzt werden können. Aus diesen Gründen sollten Sie wissen, welche Fallbackstrategien von bestimmten Codierungsobjekten verwendet werden. Nach Möglichkeit sollten Sie die von einem Codierungsobjekt verwendete Fallbackstrategie beim Instanziieren des Objekts festlegen.  
@@ -195,9 +195,9 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Das <xref:System.Text.EncoderFallbackException> -Objekt und das <xref:System.Text.DecoderFallbackException> -Objekt stellen die folgenden Informationen über die Bedingung bereit, durch die die Ausnahme ausgelöst wurde:  
   
--   Das <xref:System.Text.EncoderFallbackException> -Objekt enthält eine <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> -Methode, die angibt, ob die Zeichen, die nicht codiert werden können, ein unbekanntes Ersatzzeichenpaar darstellen (in diesem Fall gibt die Methode `true`zurück) oder ob sie ein unbekanntes einzelnes Zeichen darstellen (in diesem Fall gibt die Methode `false`zurück). Die Zeichen im Ersatzzeichenpaar sind über die <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> -Eigenschaft und die <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> -Eigenschaft verfügbar. Das unbekannte einzelne Zeichen ist über die <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> -Eigenschaft verfügbar. Die <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> -Eigenschaft gibt die Position in der Zeichenfolge an, an der das erste Zeichen gefunden wurde, das nicht codiert werden kann.  
+- Das <xref:System.Text.EncoderFallbackException> -Objekt enthält eine <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> -Methode, die angibt, ob die Zeichen, die nicht codiert werden können, ein unbekanntes Ersatzzeichenpaar darstellen (in diesem Fall gibt die Methode `true`zurück) oder ob sie ein unbekanntes einzelnes Zeichen darstellen (in diesem Fall gibt die Methode `false`zurück). Die Zeichen im Ersatzzeichenpaar sind über die <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> -Eigenschaft und die <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> -Eigenschaft verfügbar. Das unbekannte einzelne Zeichen ist über die <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> -Eigenschaft verfügbar. Die <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> -Eigenschaft gibt die Position in der Zeichenfolge an, an der das erste Zeichen gefunden wurde, das nicht codiert werden kann.  
   
--   Das <xref:System.Text.DecoderFallbackException> -Objekt enthält eine <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> -Eigenschaft, die ein Bytearray zurückgibt, das nicht decodiert werden kann. Die <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> -Eigenschaft gibt die Anfangsposition der unbekannten Bytes an.  
+- Das <xref:System.Text.DecoderFallbackException> -Objekt enthält eine <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> -Eigenschaft, die ein Bytearray zurückgibt, das nicht decodiert werden kann. Die <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> -Eigenschaft gibt die Anfangsposition der unbekannten Bytes an.  
   
  Obwohl das <xref:System.Text.EncoderFallbackException> -Objekt und das <xref:System.Text.DecoderFallbackException> -Objekt angemessene Diagnoseinformationen zu der Ausnahme bereitstellen, ermöglichen sie keinen Zugriff auf den Codierungs- oder Decodierungspuffer. Daher ist es nicht möglich, innerhalb der Codierungs- oder Decodierungsmethode ungültige Daten zu ersetzen oder zu korrigieren.  
   
@@ -205,13 +205,13 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  Neben der Zuordnung mit ähnlichen Zeichen, die intern von Codepages implementiert wird, beinhaltet .NET die folgenden Klassen für die Implementierung einer Fallbackstrategie:  
   
--   Verwenden Sie <xref:System.Text.EncoderReplacementFallback> und <xref:System.Text.EncoderReplacementFallbackBuffer> , um Zeichen in Codierungsvorgängen zu ersetzen.  
+- Verwenden Sie <xref:System.Text.EncoderReplacementFallback> und <xref:System.Text.EncoderReplacementFallbackBuffer> , um Zeichen in Codierungsvorgängen zu ersetzen.  
   
--   Verwenden Sie <xref:System.Text.DecoderReplacementFallback> und <xref:System.Text.DecoderReplacementFallbackBuffer> , um Zeichen in Decodierungsvorgängen zu ersetzen.  
+- Verwenden Sie <xref:System.Text.DecoderReplacementFallback> und <xref:System.Text.DecoderReplacementFallbackBuffer> , um Zeichen in Decodierungsvorgängen zu ersetzen.  
   
--   Verwenden Sie <xref:System.Text.EncoderExceptionFallback> und <xref:System.Text.EncoderExceptionFallbackBuffer> , um eine <xref:System.Text.EncoderFallbackException> auszulösen, wenn ein Zeichen nicht codiert werden kann.  
+- Verwenden Sie <xref:System.Text.EncoderExceptionFallback> und <xref:System.Text.EncoderExceptionFallbackBuffer> , um eine <xref:System.Text.EncoderFallbackException> auszulösen, wenn ein Zeichen nicht codiert werden kann.  
   
--   Verwenden Sie <xref:System.Text.DecoderExceptionFallback> und <xref:System.Text.DecoderExceptionFallbackBuffer> , um eine <xref:System.Text.DecoderFallbackException> auszulösen, wenn ein Zeichen nicht decodiert werden kann.  
+- Verwenden Sie <xref:System.Text.DecoderExceptionFallback> und <xref:System.Text.DecoderExceptionFallbackBuffer> , um eine <xref:System.Text.DecoderFallbackException> auszulösen, wenn ein Zeichen nicht decodiert werden kann.  
   
  Darüber hinaus können Sie eine benutzerdefinierte Lösung implementieren, die den Fallback mit ähnlichen Zeichen, den Ersatzfallback oder den Ausnahmefallback verwendet. Führen Sie hierzu folgende Schritte aus:  
   
@@ -226,24 +226,24 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Beim Erstellen einer benutzerdefinierten Fallbacklösung für einen Encoder oder einen Decoder müssen Sie die folgenden Member implementieren:  
   
--   Die <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> -Eigenschaft oder die <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> -Eigenschaft, die die höchstmögliche Anzahl von Zeichen zurückgibt, die der Fallback mit ähnlichen Zeichen, der Ersatz- oder der Ausnahmefallback zurückgeben kann, um ein einzelnes Zeichen zu ersetzen. Für einen benutzerdefinierten Ausnahmefallback ist der Wert Null.  
+- Die <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> -Eigenschaft oder die <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> -Eigenschaft, die die höchstmögliche Anzahl von Zeichen zurückgibt, die der Fallback mit ähnlichen Zeichen, der Ersatz- oder der Ausnahmefallback zurückgeben kann, um ein einzelnes Zeichen zu ersetzen. Für einen benutzerdefinierten Ausnahmefallback ist der Wert Null.  
   
--   Die <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> -Methode, die die benutzerdefinierte <xref:System.Text.EncoderFallbackBuffer> -Implementierung oder die benutzerdefinierte <xref:System.Text.DecoderFallbackBuffer> -Implementierung zurückgibt. Die Methode wird vom Encoder aufgerufen, wenn das erste Zeichen erkannt wird, das nicht erfolgreich codiert werden kann, oder vom Decoder, wenn das erste Byte erkannt wird, das nicht erfolgreich decodiert werden kann.  
+- Die <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> -Methode, die die benutzerdefinierte <xref:System.Text.EncoderFallbackBuffer> -Implementierung oder die benutzerdefinierte <xref:System.Text.DecoderFallbackBuffer> -Implementierung zurückgibt. Die Methode wird vom Encoder aufgerufen, wenn das erste Zeichen erkannt wird, das nicht erfolgreich codiert werden kann, oder vom Decoder, wenn das erste Byte erkannt wird, das nicht erfolgreich decodiert werden kann.  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>Ableiten von EncoderFallbackBuffer oder DecoderFallbackBuffer  
  Um eine benutzerdefinierte Fallbacklösung zu implementieren, müssen Sie für Codierungsvorgänge außerdem eine Klasse erstellen, die von <xref:System.Text.EncoderFallbackBuffer> erbt. Für Decodierungsvorgänge erstellen Sie eine Klasse, die von <xref:System.Text.DecoderFallbackBuffer> erbt. Instanzen dieser Klasse werden von der <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> -Methode der <xref:System.Text.EncoderFallback> -Klasse und der <xref:System.Text.DecoderFallback> -Klasse zurückgegeben. Die <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> -Methode wird vom Encoder aufgerufen, wenn das erste Zeichen erkannt wird, das nicht codiert werden kann. Die <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> -Methode wird vom Decoder aufgerufen, wenn ein oder mehrere Bytes erkannt werden, die nicht decodiert werden können. Die <xref:System.Text.EncoderFallbackBuffer> -Klasse und die <xref:System.Text.DecoderFallbackBuffer> -Klasse stellen die Fallbackimplementierung bereit. Jede Instanz stellt einen Puffer dar, der die Fallbackzeichen enthält, die das Zeichen ersetzen, das nicht codiert werden kann, bzw. die die Bytesequenz ersetzen, die nicht decodiert werden kann.  
   
  Beim Erstellen einer benutzerdefinierten Fallbacklösung für einen Encoder oder einen Decoder müssen Sie die folgenden Member implementieren:  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> oder die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> -Methode. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> wird vom Encoder aufgerufen, um dem Fallbackpuffer Informationen über das Zeichen bereitzustellen, das nicht codiert werden kann. Da das zu codierende Zeichen möglicherweise ein Ersatzzeichenpaar ist, wird diese Methode überladen. Einer Überladung werden das zu codierende Zeichen und der zugehörige Index in der Zeichenfolge übergeben. Der zweiten Überladung werden das hohe und das niedrige Ersatzzeichen zusammen mit dem Index in der Zeichenfolge übergeben. Die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> -Methode wird vom Decoder aufgerufen, um dem Fallbackpuffer Informationen über die Bytes bereitzustellen, die nicht decodiert werden können. Dieser Methode wird zusammen mit dem Index des ersten Bytes ein Bytearray übergeben, das nicht decodiert werden kann. Die Fallbackmethode sollte `true` zurückgeben, wenn der Fallbackpuffer ein ähnliches Zeichen oder ein bzw. mehrere Ersatzzeichen bereitstellen kann. Andernfalls sollte sie `false`zurückgeben. Bei einem Ausnahmefallback sollte die Fallbackmethode eine Ausnahme auslösen.  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> oder die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> -Methode. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> wird vom Encoder aufgerufen, um dem Fallbackpuffer Informationen über das Zeichen bereitzustellen, das nicht codiert werden kann. Da das zu codierende Zeichen möglicherweise ein Ersatzzeichenpaar ist, wird diese Methode überladen. Einer Überladung werden das zu codierende Zeichen und der zugehörige Index in der Zeichenfolge übergeben. Der zweiten Überladung werden das hohe und das niedrige Ersatzzeichen zusammen mit dem Index in der Zeichenfolge übergeben. Die <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> -Methode wird vom Decoder aufgerufen, um dem Fallbackpuffer Informationen über die Bytes bereitzustellen, die nicht decodiert werden können. Dieser Methode wird zusammen mit dem Index des ersten Bytes ein Bytearray übergeben, das nicht decodiert werden kann. Die Fallbackmethode sollte `true` zurückgeben, wenn der Fallbackpuffer ein ähnliches Zeichen oder ein bzw. mehrere Ersatzzeichen bereitstellen kann. Andernfalls sollte sie `false`zurückgeben. Bei einem Ausnahmefallback sollte die Fallbackmethode eine Ausnahme auslösen.  
   
--   Die <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> -Methode, die wiederholt vom Encoder oder Decoder aufgerufen wird, um das nächste Zeichen aus dem Fallbackpuffer abzurufen. Wenn alle Fallbackzeichen zurückgegeben wurden, sollte die Methode U+0000 zurückgeben.  
+- Die <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> -Methode, die wiederholt vom Encoder oder Decoder aufgerufen wird, um das nächste Zeichen aus dem Fallbackpuffer abzurufen. Wenn alle Fallbackzeichen zurückgegeben wurden, sollte die Methode U+0000 zurückgeben.  
   
--   Die <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> -Eigenschaft oder die <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> -Eigenschaft, die die Anzahl der Zeichen zurückgibt, die im Fallbackpuffer verbleiben.  
+- Die <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> -Eigenschaft oder die <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> -Eigenschaft, die die Anzahl der Zeichen zurückgibt, die im Fallbackpuffer verbleiben.  
   
--   Die <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> -Methode, die die aktuelle Position im Fallbackpuffer zum vorangehenden Zeichen verschiebt.  
+- Die <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> -Methode, die die aktuelle Position im Fallbackpuffer zum vorangehenden Zeichen verschiebt.  
   
--   Die <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> -Methode, die den Fallbackpuffer erneut initialisiert.  
+- Die <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> -Methode oder die <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> -Methode, die den Fallbackpuffer erneut initialisiert.  
   
  Wenn es sich bei der Fallbackimplementierung um einen Fallback mit ähnlichen Zeichen oder einen Ersatzfallback handelt, enthalten die von <xref:System.Text.EncoderFallbackBuffer> und <xref:System.Text.DecoderFallbackBuffer> abgeleiteten Klassen außerdem zwei private Instanzfelder: die genaue Anzahl von Zeichen im Puffer und der Index des nächsten Zeichens im Puffer, das zurückgegeben werden soll.  
   

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647264"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] -Komponente von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
   
--   Generieren von Quellcode und Zuordnungsattributen oder einer Zuordnungsdatei von einer Datenbank aus  
+- Generieren von Quellcode und Zuordnungsattributen oder einer Zuordnungsdatei von einer Datenbank aus  
   
--   Generieren einer DBML-Datei (Intermediate Database Markup Language) zum Anpassen von einer Datenbank aus  
+- Generieren einer DBML-Datei (Intermediate Database Markup Language) zum Anpassen von einer Datenbank aus  
   
--   Generieren von Code und Zuordnungsattributen oder einer Zuordnungsdatei von einer DBML-Datei aus  
+- Generieren von Code und Zuordnungsattributen oder einer Zuordnungsdatei von einer DBML-Datei aus  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Standardmäßig befindet sich die Datei unter " `drive`:\Programme\Microsoft SDKs\Windows\v`n.nn`\bin". Wenn Sie Visual Studio nicht installieren, können Sie die SQLMetal-Datei auch über einen Download des [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)erhalten.  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>Anmerkungen  
  Die SqlMetal-Funktionalität umfasst eigentlich zwei Schritte:  
   
--   Extrahieren der Datenbank-Metadaten in eine DBML-Datei  
+- Extrahieren der Datenbank-Metadaten in eine DBML-Datei  
   
--   Generieren einer Codeausgabedatei  
+- Generieren einer Codeausgabedatei  
   
      Durch Verwenden der entsprechenden Befehlszeilenoptionen können Sie Visual Basic- oder C#-Quellcode bzw. eine XML-Zuordnungsdatei erstellen.  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] löst eine Ausnahme aus, wenn mindestens eine der folgenden Bedingungen erfüllt ist:  
   
--   SqlMetal versucht, eine gespeicherte Prozedur zu extrahieren, die sich selbst aufruft.  
+- SqlMetal versucht, eine gespeicherte Prozedur zu extrahieren, die sich selbst aufruft.  
   
--   Die Schachtelungsebene einer gespeicherten Prozedur, Funktion, oder Ansicht übersteigt 32.  
+- Die Schachtelungsebene einer gespeicherten Prozedur, Funktion, oder Ansicht übersteigt 32.  
   
      SqlMetal fängt diese Ausnahme ab und gibt sie als Warnung aus.  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Vorgehensweise: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Codegenerierung in LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Externe Zuordnung](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [External Mapping (Externe Zuordnung)](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

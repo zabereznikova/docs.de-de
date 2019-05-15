@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313267"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649409"
 ---
 # <a name="how-to-create-windows-services"></a>Vorgehensweise: Erstellen von Windows-Diensten
 Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektvorlage **Windows-Dienst** verwenden. Von dieser Vorlage wird ein großer Teil der Arbeit übernommen, indem auf die entsprechenden Klassen und Namespaces verwiesen wird, die Vererbung von den Basisklassen für Dienste eingerichtet wird und eine Reihe von Methoden überschrieben werden, die voraussichtlich überschrieben werden sollen.  
@@ -21,11 +21,11 @@ Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektv
   
  Das Erstellen eines funktionierenden Diensts erfordert mindestens:  
   
--   Legen Sie die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft fest.  
+- Legen Sie die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>-Eigenschaft fest.  
   
--   Das Erstellen der für die Dienstanwendung erforderlichen Installationsprogramme.  
+- Das Erstellen der für die Dienstanwendung erforderlichen Installationsprogramme.  
   
--   Durch das Überschreiben der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode und der <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Methode und die Eingabe von Code wird das Verhalten des Diensts angepasst.  
+- Durch das Überschreiben der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode und der <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Methode und die Eingabe von Code wird das Verhalten des Diensts angepasst.  
   
 ### <a name="to-create-a-windows-service-application"></a>So erstellen Sie eine Windows-Dienstanwendung  
   
@@ -45,11 +45,11 @@ Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektv
   
     |Eigenschaft|Einstellung|  
     |--------------|-------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` dient zum Anzeigen, dass vom Dienst Anforderungen zum Beenden angenommen werden. Mit `false` wird verhindert, dass der Dienst beendet werden kann.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` dient zum Angeben, dass der Dienst benachrichtigt werden soll, wenn der ausführende Computer heruntergefahren wird. Dadurch wird ermöglicht, dass die <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>-Prozedur aufgerufen werden kann.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` dient zum Angeben, dass vom Dienst Anforderungen zum Anhalten und Fortsetzen angenommen werden. Mit `false` wird verhindert, dass der Dienst angehalten oder fortgesetzt werden kann.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` dient zum Angeben, dass der Dienst Benachrichtigungen zu Änderungen des Leistungsstatus eines Computers verarbeiten kann. `false` gibt an, dass der Dienst nicht über diese Änderungen informiert wird.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` dient zum Schreiben informativer Einträge in das Anwendungsereignisprotokoll, sobald vom Dienst eine Aktion durchgeführt wird. Mit `false` wird diese Funktion deaktiviert. Weitere Informationen finden Sie unter [Vorgehensweise: Protokollinformationen über Dienste](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Hinweis**:  <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ist standardmäßig auf `true` festgelegt.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|Mit `True` wird angezeigt, dass vom Dienst Anforderungen zum Beenden angenommen werden. Mit `false` wird verhindert, dass der Dienst beendet werden kann.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|Mit `True` wird angegeben, dass der Dienst benachrichtigt werden soll, wenn der ausführende Computer heruntergefahren wird. Dadurch wird ermöglicht, dass die <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>-Prozedur aufgerufen werden kann.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|Mit `True` wird angegeben, dass vom Dienst Anforderungen zum Anhalten und Fortsetzen angenommen werden. Mit `false` wird verhindert, dass der Dienst angehalten oder fortgesetzt werden kann.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|Mit `True` wird angegeben, dass der Dienst Benachrichtigungen zu Änderungen des Leistungsstatus eines Computers verarbeiten kann. `false` gibt an, dass der Dienst nicht über diese Änderungen informiert wird.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|Mit `True` werden informative Einträge in das Anwendungsereignisprotokoll geschrieben, sobald vom Dienst eine Aktion durchgeführt wird. Mit `false` wird diese Funktion deaktiviert. Weitere Informationen finden Sie unter [Vorgehensweise: Protokollinformationen über Dienste](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Hinweis**:  <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> ist standardmäßig auf `true` festgelegt.|  
   
     > [!NOTE]
     >  Wenn <xref:System.ServiceProcess.ServiceBase.CanStop%2A> oder <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> auf `false` festgelegt sind, werden vom **Dienststeuerungs-Manager** die entsprechenden Menüoptionen zum Beenden, Anhalten oder Fortsetzen des Diensts deaktiviert.  
@@ -76,4 +76,4 @@ Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektv
 - [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
 - [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

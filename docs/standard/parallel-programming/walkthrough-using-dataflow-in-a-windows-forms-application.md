@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654416"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Verwenden von Dataflow in einer Windows Forms-Anwendung
 Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstellt wird, die eine Bildverarbeitung in einer Windows Forms-Anwendung durchführen.  
@@ -29,13 +29,13 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
 ## <a name="sections"></a>Abschnitte  
  Diese exemplarische Vorgehensweise enthält folgende Abschnitte:  
   
--   [Erstellen der Windows Forms-Anwendung](#winforms)  
+- [Erstellen der Windows Forms-Anwendung](#winforms)  
   
--   [Erstellen des Datenflussnetzwerks](#network)  
+- [Erstellen des Datenflussnetzwerks](#network)  
   
--   [Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche](#ui)  
+- [Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche](#ui)  
   
--   [Vollständiges Beispiel](#complete)  
+- [Vollständiges Beispiel](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  

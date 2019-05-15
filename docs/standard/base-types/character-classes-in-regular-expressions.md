@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634709"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 <a name="Top"></a> Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
   
--   Positive Zeichengruppen. Ein Zeichen in der Eingabezeichenfolge muss mit einem Zeichen in einem angegebenen Zeichensatz übereinstimmen. Weitere Informationen finden Sie unter [Positive Zeichengruppe](#PositiveGroup).  
+- Positive Zeichengruppen. Ein Zeichen in der Eingabezeichenfolge muss mit einem Zeichen in einem angegebenen Zeichensatz übereinstimmen. Weitere Informationen finden Sie unter [Positive Zeichengruppe](#PositiveGroup).  
   
--   Negative Zeichengruppen. Ein Zeichen in der Eingabezeichenfolge darf nicht mit einem Zeichen in einem angegebenen Zeichensatz übereinstimmen. Weitere Informationen finden Sie unter [Negative Zeichengruppe](#NegativeGroup).  
+- Negative Zeichengruppen. Ein Zeichen in der Eingabezeichenfolge darf nicht mit einem Zeichen in einem angegebenen Zeichensatz übereinstimmen. Weitere Informationen finden Sie unter [Negative Zeichengruppe](#NegativeGroup).  
   
--   Jedes Zeichen. Beim `.`-Zeichen (Punkt) in einem regulären Ausdruck handelt es sich um ein Platzhalterzeichen, das mit Ausnahme von `\n` mit jedem Zeichen übereinstimmt. Weitere Informationen finden Sie unter [Alle Zeichen](#AnyCharacter).  
+- Jedes Zeichen. Beim `.`-Zeichen (Punkt) in einem regulären Ausdruck handelt es sich um ein Platzhalterzeichen, das mit Ausnahme von `\n` mit jedem Zeichen übereinstimmt. Weitere Informationen finden Sie unter [Alle Zeichen](#AnyCharacter).  
   
--   Eine allgemeine Unicode-Kategorie oder ein benannter Block. Ein Zeichen in der Eingabezeichenfolge muss einer bestimmten Unicode-Kategorie oder einem zusammenhängenden Bereich von Unicode-Zeichen angehören, damit eine Übereinstimmung vorliegt. Weitere Informationen finden Sie unter [Unicode-Kategorie oder Unicode-Block](#CategoryOrBlock).  
+- Eine allgemeine Unicode-Kategorie oder ein benannter Block. Ein Zeichen in der Eingabezeichenfolge muss einer bestimmten Unicode-Kategorie oder einem zusammenhängenden Bereich von Unicode-Zeichen angehören, damit eine Übereinstimmung vorliegt. Weitere Informationen finden Sie unter [Unicode-Kategorie oder Unicode-Block](#CategoryOrBlock).  
   
--   Eine negative allgemeine Unicode-Kategorie oder ein benannter Block. Ein Zeichen in der Eingabezeichenfolge darf weder einer bestimmten Unicode-Kategorie noch einem zusammenhängenden Bereich von Unicode-Zeichen angehören, damit eine Übereinstimmung vorliegt. Weitere Informationen finden Sie unter [Negative Unicode-Kategorie oder negativer Unicode-Block](#NegativeCategoryOrBlock).  
+- Eine negative allgemeine Unicode-Kategorie oder ein benannter Block. Ein Zeichen in der Eingabezeichenfolge darf weder einer bestimmten Unicode-Kategorie noch einem zusammenhängenden Bereich von Unicode-Zeichen angehören, damit eine Übereinstimmung vorliegt. Weitere Informationen finden Sie unter [Negative Unicode-Kategorie oder negativer Unicode-Block](#NegativeCategoryOrBlock).  
   
--   Ein Wortzeichen. Ein Zeichen in der Eingabezeichenfolge kann allen Unicode-Kategorien angehören, die für Zeichen in Wörtern geeignet sind. Weitere Informationen finden Sie unter [Wortzeichen](#WordCharacter).  
+- Ein Wortzeichen. Ein Zeichen in der Eingabezeichenfolge kann allen Unicode-Kategorien angehören, die für Zeichen in Wörtern geeignet sind. Weitere Informationen finden Sie unter [Wortzeichen](#WordCharacter).  
   
--   Ein Nicht-Wortzeichen. Ein Zeichen in der Eingabezeichenfolge kann jeder Unicode-Kategorie angehören, bei der es sich nicht um ein Wortzeichen handelt. Weitere Informationen finden Sie unter [Nicht-Wortzeichen](#NonWordCharacter).  
+- Ein Nicht-Wortzeichen. Ein Zeichen in der Eingabezeichenfolge kann jeder Unicode-Kategorie angehören, bei der es sich nicht um ein Wortzeichen handelt. Weitere Informationen finden Sie unter [Nicht-Wortzeichen](#NonWordCharacter).  
   
--   Ein Leerzeichen. Ein Zeichen in der Eingabezeichenfolge kann sowohl jedes Unicode-Trennzeichen als auch jedes Zeichen aus einer Anzahl von Steuerzeichen sein. Weitere Informationen finden Sie unter [Leerzeichen](#WhitespaceCharacter).  
+- Ein Leerzeichen. Ein Zeichen in der Eingabezeichenfolge kann sowohl jedes Unicode-Trennzeichen als auch jedes Zeichen aus einer Anzahl von Steuerzeichen sein. Weitere Informationen finden Sie unter [Leerzeichen](#WhitespaceCharacter).  
   
--   Ein Nicht-Leerzeichen. Ein Zeichen in der Eingabezeichenfolge kann jedes Nicht-Leerzeichen sein. Weitere Informationen finden Sie unter [Nicht-Leerzeichen](#NonWhitespaceCharacter).  
+- Ein Nicht-Leerzeichen. Ein Zeichen in der Eingabezeichenfolge kann jedes Nicht-Leerzeichen sein. Weitere Informationen finden Sie unter [Nicht-Leerzeichen](#NonWhitespaceCharacter).  
   
--   Eine Dezimalzahl. Ein Zeichen in der Eingabezeichenfolge kann jedes als Unicode-Dezimalzeichen klassifiziertes Zeichen sein. Weitere Informationen finden Sie unter [Dezimalzeichen](#DigitCharacter).  
+- Eine Dezimalzahl. Ein Zeichen in der Eingabezeichenfolge kann jedes als Unicode-Dezimalzeichen klassifiziertes Zeichen sein. Weitere Informationen finden Sie unter [Dezimalzeichen](#DigitCharacter).  
   
--   Ein Nicht-Dezimalzeichen. Ein Zeichen in der Eingabezeichenfolge kann mit Ausnahme von Unicode-Dezimalzeichen jedes Zeichen sein. Weitere Informationen finden Sie unter [Dezimalzeichen](#NonDigitCharacter).  
+- Ein Nicht-Dezimalzeichen. Ein Zeichen in der Eingabezeichenfolge kann mit Ausnahme von Unicode-Dezimalzeichen jedes Zeichen sein. Weitere Informationen finden Sie unter [Dezimalzeichen](#NonDigitCharacter).  
   
  .NET unterstützt Zeichenklassensubtraktions-Ausdrücke. Hierdurch können Sie einen Zeichensatz definieren, der das Ergebnis des Ausschlusses einer Zeichenklasse von einer anderen darstellt. Weitere Informationen finden Sie unter [Zeichenklassensubtraktion](#CharacterClassSubtraction).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622948"
 ## <a name="any-character-"></a>Alle Zeichen: .  
  Das Punktzeichen (.) stimmt mit Ausnahme von `\n` (dem Zeichen für einen Zeilenumbruch, "\u000A") mit allen Zeichen überein. Hierfür gelten die folgenden beiden Qualifikationen:  
   
--   Wenn ein Muster für reguläre Ausdrücke durch die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder der Teil des Musters mit der `.`-Zeichenklasse durch die `s`-Option geändert wird, stimmt `.` mit allen Zeichen überein. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
+- Wenn ein Muster für reguläre Ausdrücke durch die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option oder der Teil des Musters mit der `.`-Zeichenklasse durch die `s`-Option geändert wird, stimmt `.` mit allen Zeichen überein. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
   
      Im folgenden Beispiel wird das unterschiedliche Verhalten der `.`-Zeichenklasse in der Standardeinstellung und mit der <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option veranschaulicht. Der reguläre `^.+`-Ausdruck beginnt am Anfang der Zeichenfolge und stimmt mit jedem Zeichen überein. Standardmäßig endet die Übereinstimmung am Ende der ersten Zeile. Das Muster für den regulären Ausdruck stimmt mit dem Wagenrücklaufzeichen (`\r` oder "\u000D"), jedoch nicht mit `\n` überein. Da die gesamte Eingabezeichenfolge von der <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option als einzelne Zeile interpretiert wird, liegt für jedes enthaltene Zeichen eine Übereinstimmung vor, einschließlich `\n`.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54622948"
 > [!NOTE]
 >  Da für die `.`-Zeichenklasse mit Ausnahme von `\n` eine Übereinstimmung mit jedem Zeichen vorliegt, stimmt `\r` (das Wagenrücklaufzeichen, "\u000D") ebenfalls überein.  
   
--   In einer positiven oder negativen Zeichengruppe wird ein Punkt anstatt einer Zeichenklasse als Literalzeichen behandelt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Positive Zeichengruppe](#PositiveGroup) und [Negative Zeichengruppe](#NegativeGroup). Im folgenden Beispiel wird zur Veranschaulichung ein regulärer Ausdruck definiert, der das Punktzeichen (`.`) sowohl als Zeichenklasse als auch als Mitglied einer positiven Zeichengruppe aufweist. Der reguläre Ausdruck `\b.*[.?!;:](\s|\z)` beginnt an einer Wortgrenze und stimmt bis zum Erreichen eines von fünf Interpunktionszeichen (einschließlich eines Punkts) mit jedem Zeichen überein. Anschließend liegt entweder eine Übereinstimmung mit einem Leerzeichen oder dem Ende der Zeichenfolge vor.  
+- In einer positiven oder negativen Zeichengruppe wird ein Punkt anstatt einer Zeichenklasse als Literalzeichen behandelt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Positive Zeichengruppe](#PositiveGroup) und [Negative Zeichengruppe](#NegativeGroup). Im folgenden Beispiel wird zur Veranschaulichung ein regulärer Ausdruck definiert, der das Punktzeichen (`.`) sowohl als Zeichenklasse als auch als Mitglied einer positiven Zeichengruppe aufweist. Der reguläre Ausdruck `\b.*[.?!;:](\s|\z)` beginnt an einer Wortgrenze und stimmt bis zum Erreichen eines von fünf Interpunktionszeichen (einschließlich eines Punkts) mit jedem Zeichen überein. Anschließend liegt entweder eine Übereinstimmung mit einem Leerzeichen oder dem Ende der Zeichenfolge vor.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -462,7 +462,7 @@ ms.locfileid: "54622948"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - oder -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> - oder - <br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -506,7 +506,7 @@ ms.locfileid: "54622948"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - oder -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - oder - <br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  

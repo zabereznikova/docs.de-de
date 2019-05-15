@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633326"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analysieren numerischer Zeichenfolgen in .NET
 Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `TryParse`, mit denen Sie die Zeichenfolgendarstellung einer Zahl in einen numerischen Typ konvertieren können. Mit diesen Methoden können Sie Zeichenfolgen analysieren, die mithilfe der Formatzeichenfolgen erstellt wurden, die unter [Standardformatzeichenfolgen für Zahlen](../../../docs/standard/base-types/standard-numeric-format-strings.md) und [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md) dokumentiert sind. In der Standardeinstellung können die Methoden `Parse` und `TryParse` Zeichenfolgen, die nur Vorkommastellen enthalten, erfolgreich in ganzzahlige Werte konvertieren. Sie können Zeichenfolgen, die Vor- und Nachkommastellen, Gruppentrennzeichen und ein Dezimaltrennzeichen enthalten, erfolgreich in Gleitkommawerte konvertieren. Die `Parse`-Methode löst eine Ausnahme aus, wenn der Vorgang einen Fehler verursacht, wohingegen die `TryParse`-Methode `false` zurückgibt.  
@@ -28,9 +28,9 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
   
  Ein Formatanbieter wird durch eine <xref:System.IFormatProvider>-Implementierung dargestellt. Diese Schnittstelle verfügt über einen einzelnen Member, die <xref:System.IFormatProvider.GetFormat%2A>-Methode, deren einziger Parameter ein <xref:System.Type>-Objekt für den zu formatierenden Typ ist. Diese Methode gibt das Objekt mit den Formatierungsinformationen zurück. .NET unterstützt die folgenden beiden <xref:System.IFormatProvider>-Implementierungen zur Analyse numerischer Zeichenfolgen:  
   
--   Ein <xref:System.Globalization.CultureInfo>-Objekt, dessen <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType>-Methode ein <xref:System.Globalization.NumberFormatInfo>-Objekt mit kulturspezifischen Formatierungsinformationen zurückgibt.  
+- Ein <xref:System.Globalization.CultureInfo>-Objekt, dessen <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType>-Methode ein <xref:System.Globalization.NumberFormatInfo>-Objekt mit kulturspezifischen Formatierungsinformationen zurückgibt.  
   
--   Ein <xref:System.Globalization.NumberFormatInfo> Objekt, dessen <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType>-Methode sich selbst zurückgibt.  
+- Ein <xref:System.Globalization.NumberFormatInfo> Objekt, dessen <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType>-Methode sich selbst zurückgibt.  
   
  Im folgenden Beispiel wird versucht, jede Zeichenfolge in einem Array in einen <xref:System.Double>-Wert zu konvertieren. Zuerst wird versucht, die Zeichenfolge anhand eines Formatanbieters zu analysieren, der die Konventionen der Kultur „Englisch (USA)“ wiedergibt. Wenn dieser Vorgang eine <xref:System.FormatException> auslöst, wird versucht, die Zeichenfolge anhand eines Formatanbieters zu analysieren, der die Konventionen der Kultur „Französisch (Frankreich)“ darstellt.  
   

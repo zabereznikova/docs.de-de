@@ -2,12 +2,12 @@
 title: Warteschlangen und zuverlässige Sitzungen
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643530"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557157"
 ---
 # <a name="queues-and-reliable-sessions"></a>Warteschlangen und zuverlässige Sitzungen
 Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Foundation (WCF)-Funktionen, die zuverlässiges messaging implementieren. Die Themen in diesem Abschnitt erläutern die WCF-Funktionen für zuverlässigen messaging.  
@@ -31,7 +31,7 @@ Warteschlangen und zuverlässige Sitzungen sind die Windows Communication Founda
   
  Zuverlässige Sitzungen bieten zuverlässige Nachrichtenübertragungen mit niedriger Latenz. Sie stellen SOAP-Nachrichten über Proxys oder Vermittler bereit, vergleichbar mit der TCP-Bereitstellung für Pakete über IP-Brücken. Weitere Informationen zu zuverlässigen Sitzungen finden Sie unter [zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>Warteschlangen  
+## <a name="queues"></a>Warteschlangen  
  Warteschlangen in WCF bieten zuverlässigen Übertragungen von Nachrichten und eine Trennung zwischen Quellen und Zielen Nachteil hoher Latenz. WCF in der Warteschlange Kommunikation baut auf Message Queuing (auch bekannt als MSMQ).  
   
  MSMQ wird als Option mit Windows zur Verfügung gestellt und wird als NT-Dienst ausgeführt. Er erfasst Nachrichten, die in einer Übertragungswarteschlange der Quelle übertragen und einer Zielwarteschlange zugestellt werden. Die Zielwarteschlange akzeptiert Nachrichten im Auftrag des Ziels für eine spätere Zustellung, wenn das Ziel Nachrichten anfordert. Die MSMQ-Warteschlangen-Manager implementieren ein zuverlässiges Nachrichtenübertragungsprotokoll, damit Nachrichten bei der Übertragung nicht verloren gehen. Das Protokoll kann entweder systemeigen oder SOAP-basiert sein, zum Beispiel das SOAP Reliable Messaging Protocol (SRMP).  

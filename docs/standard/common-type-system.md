@@ -4,12 +4,12 @@ description: Erfahren Sie, wie das allgemeine Typsystem (CTS) und die Common Lan
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675367"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664517"
 ---
 # <a name="common-type-system--common-language-specification"></a>Allgemeines Typsystem und Common Language Specification
 
@@ -21,10 +21,10 @@ Beachten Sie zunächst, dass eine .NET-Implementierung _sprachunabhängig_ ist. 
 
 Damit dies transparent erfolgen kann, ist eine allgemeine Methode zur Beschreibung aller unterstützten Typen erforderlich. Hierzu dient das allgemeine Typsystem (Common Type System, CTS). Es ist für verschiedene Zwecke bestimmt:
 
-*   Einrichten eines Frameworks für die sprachübergreifende Ausführung.
-*   Bereitstellen eines objektorientierten Modells zur Unterstützung der Implementierung verschiedener Sprachen in einer .NET-Implementierung.
-*   Definieren eines Satzes von Regeln, die alle Programmiersprachen bei der Arbeit mit Typen einhalten müssen.
-*   Bereitstellen einer Bibliothek, die die bei der Anwendungsentwicklung verwendeten grundlegenden primitiven Datentypen enthält (z.B. `Boolean`, `Byte`, `Char` usw.)
+* Einrichten eines Frameworks für die sprachübergreifende Ausführung.
+* Bereitstellen eines objektorientierten Modells zur Unterstützung der Implementierung verschiedener Sprachen in einer .NET-Implementierung.
+* Definieren eines Satzes von Regeln, die alle Programmiersprachen bei der Arbeit mit Typen einhalten müssen.
+* Bereitstellen einer Bibliothek, die die bei der Anwendungsentwicklung verwendeten grundlegenden primitiven Datentypen enthält (z.B. `Boolean`, `Byte`, `Char` usw.)
 
 CTS definiert zwei Hauptarten von Typen, die unterstützt werden sollten: Verweis- und Werttypen. Ihre Namen weisen auf ihre Definitionen.
 
@@ -34,11 +34,11 @@ Werttypen sind das Gegenteil, wobei die Objekte durch ihre Werte dargestellt wer
 
 CTS definiert verschiedene Kategorien von Typen, jeweils mit ihrer spezifischen Semantik und Nutzung:
 
-*   Klassen
-*   Strukturen
-*   Enumerationen
-*   Schnittstellen
-*   Delegaten
+* Klassen
+* Strukturen
+* Enumerationen
+* Schnittstellen
+* Delegaten
 
 CTS definiert auch alle anderen Eigenschaften der Typen, z.B. Zugriffsmodifizierer, welche Typmember gültig sind, wie Vererbung und Überladung funktionieren usw. Leider ist es nicht möglich, in einem Einführungsartikel wie diesem einen dieser Aspekte ausführlich zu behandeln, aber Sie finden im Abschnitt [Weitere Ressourcen](#more-resources) am Ende Links zu ausführlicheren Dokumenten, die diese Themen behandeln.
 
@@ -52,5 +52,5 @@ Die im Abschnitt [Weitere Ressourcen](#more-resources) unten aufgelisteten Dokum
 
 ## <a name="more-resources"></a>Weitere Ressourcen
 
-*   [Allgemeines Typsystem](./base-types/common-type-system.md)
-*   [Common Language Specification](language-independence-and-language-independent-components.md)
+* [Allgemeines Typsystem](./base-types/common-type-system.md)
+* [Common Language Specification](language-independence-and-language-independent-components.md)

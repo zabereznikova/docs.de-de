@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133336"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634521"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
 Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern bestehende benutzerdefinierte numerische Formatzeichenfolge erstellen, um anzugeben, wie numerische Daten formatiert werden sollen. Eine benutzerdefinierte numerische Formatzeichenfolge wird wie jede Formatzeichenfolge definiert, bei der es sich nicht um eine [standardmäßige numerische Formatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md)handelt.  
-  
 
  Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladungen der `ToString` -Methode aller numerischen Typen unterstützt. Sie können z. B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29> -Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> -Methode des <xref:System.Int32> -Typs übergeben. Benutzerdefinierte numerische Formatzeichenfolgen werden auch vom .NET-Feature für die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md) unterstützt, die von einigen `Write`-Methoden und `WriteLine`-Methoden der <xref:System.Console>-Klasse und der <xref:System.IO.StreamWriter>-Klasse, der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und der <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode verwendet wird. Das Feature [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) unterstützt auch benutzerdefinierte numerische Formatzeichenfolgen.  
   
@@ -109,11 +108,11 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 ## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „,“  
  Das Zeichen "," dient sowohl als Bezeichner für Gruppentrennzeichen als auch als Bezeichner für Zahlenskalierung.  
   
--   Gruppentrennzeichen: Wenn mindestens ein Komma zwischen zwei Ziffernplatzhaltern (0 oder #) angegeben ist, das die ganzzahligen Ziffern einer Zahl formatiert, wird zwischen jeder Zahlengruppe im ganzzahligen Teil der Ausgabe ein Gruppentrennzeichen eingefügt.  
+- Gruppentrennzeichen: Wenn mindestens ein Komma zwischen zwei Ziffernplatzhaltern (0 oder #) angegeben ist, das die ganzzahligen Ziffern einer Zahl formatiert, wird zwischen jeder Zahlengruppe im ganzzahligen Teil der Ausgabe ein Gruppentrennzeichen eingefügt.  
   
      Die <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> -Eigenschaft und die <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> -Eigenschaft des aktuellen <xref:System.Globalization.NumberFormatInfo> -Objekts bestimmen das als Zahlengruppentrennzeichen verwendete Zeichen und die Größe der einzelnen Zahlengruppen. Wenn z. B. zum Formatieren der Zahl 1000 die Zeichenfolge "#,#" und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000".  
   
--   Zahlenskalierungsspezifizierer: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen mindestens ein Komma angegeben wird, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100".  
+- Zahlenskalierungsspezifizierer: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen mindestens ein Komma angegeben wird, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100".  
   
  Sie können in der gleichen Formatzeichenfolge sowohl Bezeichner für Gruppentrennzeichen als auch für Zahlenskalierung verwenden. Wenn z. B. zum Formatieren der Zahl 1 Milliarde die Zeichenfolge "#,0,," und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000".  
   

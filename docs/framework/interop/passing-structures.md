@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8e35a09bd3348d5f53c662cf6e0ee9fec733d88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e932481496aef7fd0533054316deb32f65e95deb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142817"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063186"
 ---
 # <a name="passing-structures"></a>Übergeben von Strukturen
 Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen (benutzerdefinierte Typen in Visual Basic) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden. Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten. Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut, das Sie zum Definieren formatierter Typen verwenden. Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**-Enumeration bereitgestellt werden.  
@@ -29,11 +29,11 @@ Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukture
   
  Die Tabelle beschreibt die folgenden Richtlinien für Plattformaufrufdeklarationen:  
   
--   Verwenden Sie eine Struktur, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion keine Dereferenzierung erfordert.  
+- Verwenden Sie eine Struktur, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion keine Dereferenzierung erfordert.  
   
--   Verwenden Sie eine Struktur, die durch einen Verweis übergeben wird, oder verwenden Sie eine Klasse, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion eine Dereferenzierungsebene erfordert.  
+- Verwenden Sie eine Struktur, die durch einen Verweis übergeben wird, oder verwenden Sie eine Klasse, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion eine Dereferenzierungsebene erfordert.  
   
--   Verwenden Sie eine Klasse, die durch einen Verweis übergeben wird, wenn die nicht verwaltete Funktion zwei Dereferenzierungsebenen erfordert.  
+- Verwenden Sie eine Klasse, die durch einen Verweis übergeben wird, wenn die nicht verwaltete Funktion zwei Dereferenzierungsebenen erfordert.  
   
 ## <a name="declaring-and-passing-structures"></a>Deklarieren und Übergeben von Strukturen  
  Im folgenden Beispiel wird gezeigt, wie Sie `Point`-Strukturen und `Rect`-Strukturen in verwaltetem Code definieren und die Typen als Parameter an die **PtInRect**-Funktion in der Datei „User32.dll“ übergeben können. **PtInRect** hat folgende nicht verwaltete Signatur:  
@@ -59,8 +59,8 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Friend Class WindowsAPI      
-    Friend Shared Declare Auto Function PtInRect Lib "user32.dll" (
+Friend Class NativeMethods      
+    Friend Declare Auto Function PtInRect Lib "user32.dll" (
         ByRef r As Rect, p As Point) As Boolean  
 End Class  
 ```  
@@ -82,7 +82,7 @@ public struct Rect {
     [FieldOffset(12)] public int bottom;  
 }     
   
-internal static class WindowsAPI
+internal static class NativeMethods
 {  
     [DllImport("User32.dll")]  
     internal static extern bool PtInRect(ref Rect r, Point p);  
@@ -99,9 +99,7 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  Im Unterschied zu Werttypen besitzen Klassen immer mindestens eine Dereferenzierungsebene.  
   
 ```vb  
-Imports System  
 Imports System.Runtime.InteropServices  
-Imports Microsoft.VisualBasic  
   
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
@@ -114,17 +112,17 @@ Imports Microsoft.VisualBasic
     Public wMiliseconds As Short  
 End Class  
   
-Friend Class WindowsAPI  
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods  
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         sysTime As MySystemTime)  
-    Friend Shared Declare Auto Function MessageBox Lib "User32.dll" (
+    Friend Declare Auto Function MessageBox Lib "User32.dll" (
         hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
 Public Class TestPlatformInvoke      
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
-        WindowsAPI.GetSystemTime(sysTime)  
+        NativeMethods.GetSystemTime(sysTime)  
   
         Dim dt As String  
         dt = "System time is:" & ControlChars.CrLf & _  
@@ -132,7 +130,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
 ```  
@@ -149,7 +147,7 @@ public class MySystemTime {
     public ushort wSecond;   
     public ushort wMilliseconds;   
 }  
-internal static class WindowsAPI
+internal static class NativeMethods
 {  
     [DllImport("Kernel32.dll")]  
     internal static extern void GetSystemTime(MySystemTime st);  
@@ -164,7 +162,7 @@ public class TestPlatformInvoke
     public static void Main()  
     {  
         MySystemTime sysTime = new MySystemTime();  
-        WindowsAPI.GetSystemTime(sysTime);  
+        NativeMethods.GetSystemTime(sysTime);  
   
         string dt;  
         dt = "System time is: \n" +  
@@ -172,7 +170,7 @@ public class TestPlatformInvoke
               "Month: " + sysTime.wMonth + "\n" +  
               "DayOfWeek: " + sysTime.wDayOfWeek + "\n" +  
               "Day: " + sysTime.wDay;  
-        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
     }  
 }  
 ```  
@@ -180,6 +178,5 @@ public class TestPlatformInvoke
 ## <a name="see-also"></a>Siehe auch
 
 - [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
-- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

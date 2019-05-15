@@ -1,6 +1,6 @@
 ---
 title: C#-Operatoren
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689813"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452370"
 ---
 # <a name="c-operators"></a>C#-Operatoren
 
-C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, welche Operationen (Mathematik, Indizierung, Funktionsaufruf usw.) in einem Ausdruck ausgeführt werden. Sie können viele Operatoren [überladen](../../programming-guide/statements-expressions-operators/overloadable-operators.md), um ihre Bedeutung zu ändern, wenn sie auf einen benutzerdefinierten Typ angewendet werden.
+C# bietet eine Reihe vordefinierter Operatoren, die von den integrierten Typen unterstützt werden. Beispielsweise führen [arithmetische Operatoren](arithmetic-operators.md) arithmetische Vorgänge mit Operanden von integrierten numerischen Typen durch, und [boolesche logische Operatoren](boolean-logical-operators.md) führen logische Vorgänge mit den [bool](../keywords/bool.md)-Operanden aus.
 
-Operationen mit Ganzzahltypen (wie `==`, `!=`, `<`, `>`, `&`, `|`) sind grundsätzlich auch für Aufzählungstypen (`enum`) zulässig.
+Ein benutzerdefinierter Typ kann bestimmte Operatoren überladen, um das zugehörige Verhalten für die Operanden dieses Typs zu definieren. Weitere Informationen finden Sie im Artikel zum Schlüsselwort [operator](../keywords/operator.md).
 
 Die folgenden Abschnitte listen die C#-Operatoren auf, und zwar von der höchsten zur niedrigsten Rangfolge. Die Operatoren in jedem Abschnitt verwenden die gleiche Rangfolgenebene.
 
@@ -37,15 +37,15 @@ Die folgenden Abschnitte listen die C#-Operatoren auf, und zwar von der höchste
 
 Hierbei handelt es sich um die höchsten Rangfolgenoperatoren.
 
-[x.y](member-access-operator.md) – Memberzugriff.
+[x.y](member-access-operators.md#member-access-operator-) – Memberzugriff.
 
-[x?.y](null-conditional-operators.md) – nullbedingter Memberzugriff. Gibt `null` zurück, wenn der linke Operand `null` ist.
+[x?.y](member-access-operators.md#null-conditional-operators--and-) – nullbedingter Memberzugriff. Gibt `null` zurück, wenn der linke Operand `null` ist.
 
-[x?[y]](null-conditional-operators.md) – nullbedingter Indexzugriff. Gibt `null` zurück, wenn der linke Operand `null` ist.
+[x?[y]](member-access-operators.md#null-conditional-operators--and-) – nullbedingter Arrayelement- oder Typindexerzugriff. Gibt `null` zurück, wenn der linke Operand `null` ist.
 
-[f(x)](invocation-operator.md) – Funktionsaufruf.
+[f(x)](member-access-operators.md#invocation-operator-) – Methodenaufruf oder Delegataufruf.
 
-[a&#91;x&#93;](index-operator.md) – Aggregatobjektindizierung.
+[a&#91;x&#93;](member-access-operators.md#indexer-operator-) – Arrayelement- oder Typindexerzugriff.
 
 [x++](arithmetic-operators.md#increment-operator-) – Postfixinkrement. Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins größer ist (für gewöhnlich wird die Ganzzahl 1 addiert).
 
@@ -61,9 +61,13 @@ Hierbei handelt es sich um die höchsten Rangfolgenoperatoren.
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md): erzeugt den Standardwert des Typs T.
 
+[nameof](../keywords/nameof.md) – Ruft den einfachen (nicht qualifizierten) Namen einer Variablen, eines Typs oder eines Members als konstante Zeichenfolge ab.
+
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – Deklariert eine Delegatinstanz und gibt sie zurück.
 
 [sizeof](../keywords/sizeof.md) – Gibt die Größe des Typoperanden in Byte zurück.
+
+[stackalloc](../keywords/stackalloc.md) – Belegt einen Speicherblock auf dem Stapel.
 
 [->](dereference-operator.md) – Mit Memberzugriff kombinierte Zeigerdereferenzierung.
 
@@ -125,13 +129,13 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x \< y](less-than-operator.md) – Kleiner als (wahr, wenn x kleiner als y ist).
+[x \< y](comparison-operators.md#less-than-operator-) – Kleiner als (wahr, wenn x kleiner als y ist).
 
-[x > y](greater-than-operator.md) – Größer als (wahr, wenn x größer als y ist).
+[x > y](comparison-operators.md#greater-than-operator-) – Größer als (wahr, wenn x größer als y ist).
 
-[x \<= y](less-than-equal-operator.md) – Ist kleiner oder gleich.
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – Ist kleiner oder gleich.
 
-[x >= y](greater-than-equal-operator.md) – Ist größer gleich.
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – Ist größer gleich.
 
 [is](../keywords/is.md) – Typkompatibilität. Gibt TRUE zurück, wenn der ausgewertete linke Operand in den im rechten Operanden (ein statischer Typ) angegebenen Typ umgewandelt werden kann.
 
@@ -187,7 +191,7 @@ Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine g
 
 [t ? x : y](conditional-operator.md): Wenn der Test `t` TRUE ist, wird `x` ausgewertet und zurückgegeben, ansonsten wird `y` ausgewertet und zurückgegeben.
 
-## <a name="assignment-and-lambda-operators"></a>Zuweisung- und Lambdaoperatoren
+## <a name="assignment-and-lambda-operators"></a>Zuweisungs- und Lambdaoperatoren
 
 Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 

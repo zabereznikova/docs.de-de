@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678290"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629012"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
   
  Das ereignisbasierte asynchrone Muster stellt die Vorteile von Multithreadanwendungen zur Verfügung und blendet gleichzeitig viele komplexe Aspekte von Multithreadentwürfen aus. Die Verwendung einer Klasse, die dieses Muster unterstützt, ermöglicht Folgendes:  
   
--   Führen Sie zeitaufwendige Aufgaben wie Downloads und Datenbankvorgänge „in Hintergrund“ aus, ohne Ihre Anwendung zu unterbrechen.  
+- Führen Sie zeitaufwendige Aufgaben wie Downloads und Datenbankvorgänge „in Hintergrund“ aus, ohne Ihre Anwendung zu unterbrechen.  
   
--   Führen Sie mehrere Vorgänge gleichzeitig aus, und erhalten Sie Benachrichtigungen, wenn jede abgeschlossen ist.  
+- Führen Sie mehrere Vorgänge gleichzeitig aus, und erhalten Sie Benachrichtigungen, wenn jede abgeschlossen ist.  
   
--   Warten Sie, bis Ressourcen verfügbar werden, ohne Ihre Anwendung anzuhalten („hängen“).  
+- Warten Sie, bis Ressourcen verfügbar werden, ohne Ihre Anwendung anzuhalten („hängen“).  
   
--   Kommunizieren Sie mit ausstehenden asynchronen Vorgängen über das vertraute Modell mit Ereignissen und Delegaten. Weitere Informationen zum Verwenden von Ereignishandlern und Delegaten finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
+- Kommunizieren Sie mit ausstehenden asynchronen Vorgängen über das vertraute Modell mit Ereignissen und Delegaten. Weitere Informationen zum Verwenden von Ereignishandlern und Delegaten finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
   
  Eine Klasse, die das ereignisbasierte asynchrone Muster unterstützt, verfügt über mindesten eine Methode namens _MethodName_**Async**. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein _MethodName_**Completed**-Ereignis und eine _MethodName_**AsyncCancel**-Methode (kurz **CancelAsync**) verfügen.  
   

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664601"
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
@@ -19,9 +19,9 @@ Klassenbibliotheken sind das Konzept der [freigegebenen Bibliothek](https://en.w
 
 Es gibt drei Arten von Klassenbibliotheken, die Sie verwenden können:
 
-*   **Plattformspezifische** Klassenbibliotheken haben Zugriff auf alle APIs einer bestimmten Plattform (z.B. .NET Framework, Xamarin iOS), können jedoch nur von Apps und Bibliotheken verwendet werden, deren Ziel diese Plattform ist.
-*   **Portable** Klassenbibliotheken haben Zugriff auf eine Teilmenge der APIs und können von Apps und Bibliotheken verwendet werden, deren Ziel mehrere Plattformen sind.
-*   **.NET Standard**-Klassenbibliotheken führen das Konzept plattformspezifischer und portabler Bibliotheken in einem einzelnen Modell zusammen, das das Beste aus beiden Welten bietet.
+* **Plattformspezifische** Klassenbibliotheken haben Zugriff auf alle APIs einer bestimmten Plattform (z.B. .NET Framework, Xamarin iOS), können jedoch nur von Apps und Bibliotheken verwendet werden, deren Ziel diese Plattform ist.
+* **Portable** Klassenbibliotheken haben Zugriff auf eine Teilmenge der APIs und können von Apps und Bibliotheken verwendet werden, deren Ziel mehrere Plattformen sind.
+* **.NET Standard**-Klassenbibliotheken führen das Konzept plattformspezifischer und portabler Bibliotheken in einem einzelnen Modell zusammen, das das Beste aus beiden Welten bietet.
 
 ## <a name="platform-specific-class-libraries"></a>Plattformspezifische Klassenbibliotheken
 

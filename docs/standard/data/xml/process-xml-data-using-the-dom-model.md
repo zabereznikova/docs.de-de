@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c59d84148aae35794410f5f7237cef96ab5b7560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d34d22d8329f0bc26c1e29653137211bf300d324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570355"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647823"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Verarbeiten von XML-Daten mithilfe des DOM
 Das XML-DOM (Dokumentobjektmodell) behandelt XML-Daten wie eine Standardgruppe von Objekten und wird zur Verarbeitung von XML-Daten im Speicher verwendet. Der `System.Xml`-Namespace bietet eine programmgesteuerte Darstellung von XML-Dokumenten, XML-Fragmenten, XML-Knoten und XML-Knotengruppen. Diese basiert auf den W3C-Empfehlungen (World Wide Web Consortium) zu DOM Level 1 Core und DOM Level 2 Core.  
@@ -19,43 +19,43 @@ Das XML-DOM (Dokumentobjektmodell) behandelt XML-Daten wie eine Standardgruppe v
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   
--   [XML-Knotentypen](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [XML-Knotentypen](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
   
--   [Hierarchie im XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
+- [Hierarchie im XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
   
--   [Zuordnen der Objekthierarchie zu XML-Daten](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
+- [Zuordnen der Objekthierarchie zu XML-Daten](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
   
--   [Erstellen eines XML-Dokuments](../../../../docs/standard/data/xml/xml-document-creation.md)  
+- [Erstellen eines XML-Dokuments](../../../../docs/standard/data/xml/xml-document-creation.md)  
   
--   [Einlesen eines XML-Dokuments in das DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)  
+- [Einlesen eines XML-Dokuments in das DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)  
   
--   [Einfügen von Knoten in ein XML-Dokument](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
+- [Einfügen von Knoten in ein XML-Dokument](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
   
--   [Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)  
+- [Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)  
   
--   [Ändern von Knoten, Inhalten und Werten in einem XML-Dokument](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)  
+- [Ändern von Knoten, Inhalten und Werten in einem XML-Dokument](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)  
   
--   [Validieren eines XML-Dokuments im DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
+- [Validieren eines XML-Dokuments im DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
   
--   [Speichern und Ausgeben eines Dokuments](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
+- [Speichern und Ausgeben eines Dokuments](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
   
--   [Auswählen von Knoten mithilfe der XPath-Navigation](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
+- [Auswählen von Knoten mithilfe der XPath-Navigation](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
   
--   [Auflösen von externen Ressourcen](../../../../docs/standard/data/xml/resolving-external-resources.md)  
+- [Auflösen von externen Ressourcen](../../../../docs/standard/data/xml/resolving-external-resources.md)  
   
--   [Objektvergleich mit „XmlNameTable“](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)  
+- [Objektvergleich mit „XmlNameTable“](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)  
   
--   [Knotensammlungen in „NamedNodeMaps“ und „NodeLists“](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)  
+- [Knotensammlungen in „NamedNodeMaps“ und „NodeLists“](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)  
   
--   [Dynamische Updates von „NodeLists“ und „NamedNodeMaps“](../../../../docs/standard/data/xml/dynamic-updates-to-nodelists-and-namednodemaps.md)  
+- [Dynamische Updates von „NodeLists“ und „NamedNodeMaps“](../../../../docs/standard/data/xml/dynamic-updates-to-nodelists-and-namednodemaps.md)  
   
--   [Namespaceunterstützung im DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
+- [Namespaceunterstützung im DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
   
--   [Ereignisbehandlung in einem XML-Dokument mit „XmlNodeChangedEventArgs“](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
+- [Ereignisbehandlung in einem XML-Dokument mit „XmlNodeChangedEventArgs“](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
   
--   [Erweitern des DOM](../../../../docs/standard/data/xml/extending-the-dom.md)  
+- [Erweitern des DOM](../../../../docs/standard/data/xml/extending-the-dom.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151267"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648702"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importieren einer Typbibliothek als Assembly
 Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im Gegensatz dazu erzeugen CLS-kompatible Compiler Typmetadaten in einer Assembly. Die zwei Quellen von Typinformationen sind sehr unterschiedlich. In diesem Thema werden Techniken zum Generieren von Metadaten aus einer Typbibliothek beschrieben. Die sich ergebende Assembly wird Interop-Assembly genannt, und die darin enthaltenen Typinformationen erlauben .NET Framework-Anwendungen die Verwendung von COM-Typen.  
   
  Es gibt zwei Möglichkeiten, um diese Typinformationen für Ihre Anwendung verfügbar zu machen:  
   
--   Mithilfe der Interopassemblys, die nur zur Entwurfszeit verwendet werden: Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie den Compiler anweisen, die Typinformationen aus einer Interopassembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.  
+- Mithilfe der Interopassemblys, die nur zur Entwurfszeit verwendet werden: Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie den Compiler anweisen, die Typinformationen aus einer Interopassembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.  
   
--   Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Wenn Sie Interop-Assemblys nur zur Entwurfszeit verwenden, können Sie Typinformationen aus der primären Interop-Assembly einbetten, die vom Autor der COM-Komponente veröffentlicht wurden. Sie müssen jedoch die primäre Interop-Assembly nicht mit Ihrer Anwendung bereitstellen.  
   
@@ -42,29 +42,29 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
   
  Nachdem Sie die Typbibliothek gesucht haben, die die Implementierung des Ziel-COM-Typs enthält, haben Sie die folgenden Optionen zum Generieren einer Interop-Assembly, die Typmetadaten enthält:  
   
--   Visual Studio  
+- Visual Studio  
   
      Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [Vorgehensweise: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
--   [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
      Das Type Library Importer-Tool stellt Befehlszeilenoptionen zum Anpassen von Metadaten in der resultierenden Interop-Datei zur Verfügung, importiert Typen aus einer vorhandenen Typbibliothek und generiert eine Interop-Assembly und einen Namespace. Anweisungen hierzu finden Sie unter [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> class  
+- <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>-Klasse  
   
      Diese Klasse stellt Methoden zum Konvertieren von Co-Klassen und Schnittstellen in einer Typbibliothek in Metadaten in einer Assembly bereit. Sie erzeugt dieselbe Metadatenausgabe wie „Tlbimp.exe“. Anders als bei „Tlbimp.exe“, kann die <xref:System.Runtime.InteropServices.TypeLibConverter>-Klasse eine In-Memory-Typbibliothek in Metadaten konvertieren.  
   
--   Benutzerdefinierte Wrapper  
+- Benutzerdefinierte Wrapper  
   
      Wenn eine Typbibliothek falsch oder nicht verfügbar ist, ist eine Option das Erstellen einer doppelten Definition der Klasse oder Schnittstelle in verwaltetem Quellcode. Anschließend kompilieren Sie den Quellcode mit einem Compiler, der die Runtime zur Erstellung von Metadaten in einer Assembly anzielt.  
   
      Um COM-Typen manuell zu definieren, benötigen Sie Zugriff auf die folgenden Elemente:  
   
-    -   Genaue Beschreibungen der Co-Klassen und -Schnittstellen, die definiert werden.  
+    - Genaue Beschreibungen der Co-Klassen und -Schnittstellen, die definiert werden.  
   
-    -   Einen Compiler, z.B. den C#-Compiler, der die entsprechenden .NET Framework-Klassendefinitionen generieren kann.  
+    - Einen Compiler, z.B. den C#-Compiler, der die entsprechenden .NET Framework-Klassendefinitionen generieren kann.  
   
-    -   Kenntnisse der Konvertierungsregeln einer Typbibliothek in eine Assembly.  
+    - Kenntnisse der Konvertierungsregeln einer Typbibliothek in eine Assembly.  
   
      Das Schreiben eines benutzerdefinierten Wrappers ist ein erweitertes Verfahren. Weitere Informationen zum Generieren von benutzerdefinierten Wrappern finden Sie unter [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).  
   
@@ -73,7 +73,7 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
 - [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648596"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshallen verschiedener Typen von Arrays
 Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente des gleichen Typs enthält. Obwohl es sich bei Arrays um Verweistypen handelt, werden sie als In-Parameter an unverwaltete Funktionen übergeben. Dieses Verhalten entspricht nicht der Art und Weise, wie verwaltete Arrays an verwaltete Objekte übergeben werden, d. h. Als In-/Out-Parameter. Weitere Details finden Sie unter [Kopieren und Fixieren](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente 
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie die folgenden Arraytypen übergeben werden:  
   
--   Array aus ganzen Zahlen nach Wert  
+- Array aus ganzen Zahlen nach Wert  
   
--   Array aus ganzen Zahlen nach Verweis, dessen Größe geändert werden kann  
+- Array aus ganzen Zahlen nach Verweis, dessen Größe geändert werden kann  
   
--   Mehrdimensionales Array (Matrix) mit ganzen Zahlen nach Wert  
+- Mehrdimensionales Array (Matrix) mit ganzen Zahlen nach Wert  
   
--   Array aus Zeichenfolgen nach Wert  
+- Array aus Zeichenfolgen nach Wert  
   
--   Array aus Strukturen mit ganzen Zahlen  
+- Array aus Strukturen mit ganzen Zahlen  
   
--   Array aus Strukturen mit Zeichenfolgen  
+- Array aus Strukturen mit Zeichenfolgen  
   
  Sofern ein Array nicht explizit nach Verweis gemarshallt wird, wird das Standardverhalten des Arrays als In-Parameter gemarshallt. Sie können dieses Verhalten ändern, indem Sie explizit die Attribute <xref:System.Runtime.InteropServices.InAttribute> und <xref:System.Runtime.InteropServices.OutAttribute> anwenden.  
   
  Das Beispiel für Arrays verwendet die folgenden nicht verwalteten Funktionen, die jeweils zusammen mit ihrer ursprünglichen Funktionsdeklaration aufgeführt werden:  
   
--   **TestArrayOfInts** aus PinvokeLib.dll exportiert.  
+- **TestArrayOfInts** aus PinvokeLib.dll exportiert.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** aus PinvokeLib.dll exportiert.  
+- **TestRefArrayOfInts** aus PinvokeLib.dll exportiert.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** aus PinvokeLib.dll exportiert.  
+- **TestMatrixOfInts** aus PinvokeLib.dll exportiert.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** aus PinvokeLib.dll exportiert.  
+- **TestArrayOfStrings** aus PinvokeLib.dll exportiert.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** aus PinvokeLib.dll exportiert.  
+- **TestArrayOfStructs** aus PinvokeLib.dll exportiert.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** aus PinvokeLib.dll exportiert.  
+- **TestArrayOfStructs2** aus PinvokeLib.dll exportiert.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

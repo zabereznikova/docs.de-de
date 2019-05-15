@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634731"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -35,13 +35,13 @@ ms.locfileid: "54615977"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Linearer Vergleich ohne Rückverfolgung](#linear_comparison_without_backtracking)  
+- [Linearer Vergleich ohne Rückverfolgung](#linear_comparison_without_backtracking)  
   
--   [Rückverfolgung mit optionalen Quantifizierern oder Alternierungskonstrukten](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [Rückverfolgung mit optionalen Quantifizierern oder Alternierungskonstrukten](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [Rückverfolgung mit geschachtelten optionalen Quantifizierern](#backtracking_with_nested_optional_quantifiers)  
+- [Rückverfolgung mit geschachtelten optionalen Quantifizierern](#backtracking_with_nested_optional_quantifiers)  
   
--   [Steuern der Rückverfolgung](#controlling_backtracking)  
+- [Steuern der Rückverfolgung](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Linearer Vergleich ohne Rückverfolgung  
@@ -91,15 +91,15 @@ ms.locfileid: "54615977"
   
  Hierzu verwendet die Engine für reguläre Ausdrücke das Zurückverfolgen wie folgt:  
   
--   Die gesamte Eingabezeichenfolge wird auf Übereinstimmung mit `.*` (Übereinstimmung mit keinem, einem oder mehreren Vorkommen beliebiger Zeichen) geprüft.  
+- Die gesamte Eingabezeichenfolge wird auf Übereinstimmung mit `.*` (Übereinstimmung mit keinem, einem oder mehreren Vorkommen beliebiger Zeichen) geprüft.  
   
--   Es wird versucht, eine Übereinstimmung mit "e" im Muster des regulären Ausdrucks zu finden. Die Eingabezeichenfolge weist jedoch keine weiteren Zeichen für eine Übereinstimmung auf.  
+- Es wird versucht, eine Übereinstimmung mit "e" im Muster des regulären Ausdrucks zu finden. Die Eingabezeichenfolge weist jedoch keine weiteren Zeichen für eine Übereinstimmung auf.  
   
--   Es wird eine Rückverfolgung zur letzten erfolgreichen Übereinstimmung ausgeführt ("Essential services are provided by regular expressions") und versucht, eine Übereinstimmung von "e" mit dem Punkt am Satzende zu finden. Die Übereinstimmung schlägt fehl.  
+- Es wird eine Rückverfolgung zur letzten erfolgreichen Übereinstimmung ausgeführt ("Essential services are provided by regular expressions") und versucht, eine Übereinstimmung von "e" mit dem Punkt am Satzende zu finden. Die Übereinstimmung schlägt fehl.  
   
--   Die Rückverfolgung zu einer vorherigen erfolgreichen Übereinstimmung wird um je ein Zeichen fortgesetzt, bis die vorläufige übereinstimmende Teilzeichenfolge "Essential services are provided by regular expr" lautet. Anschließend wird das "e" im Muster mit dem zweiten "e" in "expressions" verglichen, und es wird eine Übereinstimmung gefunden.  
+- Die Rückverfolgung zu einer vorherigen erfolgreichen Übereinstimmung wird um je ein Zeichen fortgesetzt, bis die vorläufige übereinstimmende Teilzeichenfolge "Essential services are provided by regular expr" lautet. Anschließend wird das "e" im Muster mit dem zweiten "e" in "expressions" verglichen, und es wird eine Übereinstimmung gefunden.  
   
--   Das "s" im Muster wird mit dem "s" verglichen, das dem übereinstimmenden Zeichen "e" folgt (das erste "s" in"expressions"). Die Übereinstimmung ist erfolgreich.  
+- Das "s" im Muster wird mit dem "s" verglichen, das dem übereinstimmenden Zeichen "e" folgt (das erste "s" in"expressions"). Die Übereinstimmung ist erfolgreich.  
   
  Bei einer Rückverfolgung erfordert das Abgleichen des regulären Ausdrucksmusters mit der Eingabezeichenfolge, die 55 Zeichen lang ist, 67 Vergleichsoperationen. Wenn das Muster eines regulären Ausdrucks ein einzelnes Alternierungskonstrukt oder einen einzelnen optionalen Quantifizierer enthält, ist die Anzahl der zum Abgleichen eines Musters erforderlichen Vergleichsoperationen im Allgemeinen mehr als doppelt so hoch wie die Anzahl der Zeichen in der Eingabezeichenfolge.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615977"
   
  Wie die Ausgabe des Beispiels zeigt, brauchte die Engine für reguläre Ausdrücke zum Bestimmen, dass eine Eingabezeichenfolge nicht mit dem Muster übereinstimmt, etwa doppelt so lang wie für die Ermittlung einer übereinstimmenden Zeichenfolge. Dies liegt daran, dass eine fehlgeschlagene Übereinstimmung immer den ungünstigsten Fall darstellt. Die Engine für reguläre Ausdrücke muss den regulären Ausdruck verwenden, um allen möglichen Pfaden durch die Daten zu folgen, bevor es feststellen kann, ob die Übereinstimmung fehlschlägt. Durch die geschachtelten Klammern werden viele zusätzliche Pfade durch die Daten erstellt. Die Engine für reguläre Ausdrücke stellt fest, dass die zweite Zeichenfolge nicht mit dem Muster übereinstimmt, indem wie folgt vorgegangen wird:  
   
--   Das Modul überprüft, ob es sich am Anfang der Zeichenfolge befindet, und vergleicht dann die ersten fünf Zeichen in der Zeichenfolge mit dem Muster `a+`. Anschließend wird sichergestellt, dass keine weiteren Gruppen des Zeichens "a" in der Zeichenfolge vorhanden sind. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 9 Vergleiche. Die Engine für reguläre Ausdrücke speichert darüber hinaus Zustandsinformationen aus den Übereinstimmungen von "a" (hier bezeichnet als Übereinstimmung 1), "aa" (Übereinstimmung 2), "aaa" (Übereinstimmung 3) und "aaaa" (Übereinstimmung 4).  
+- Das Modul überprüft, ob es sich am Anfang der Zeichenfolge befindet, und vergleicht dann die ersten fünf Zeichen in der Zeichenfolge mit dem Muster `a+`. Anschließend wird sichergestellt, dass keine weiteren Gruppen des Zeichens "a" in der Zeichenfolge vorhanden sind. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 9 Vergleiche. Die Engine für reguläre Ausdrücke speichert darüber hinaus Zustandsinformationen aus den Übereinstimmungen von "a" (hier bezeichnet als Übereinstimmung 1), "aa" (Übereinstimmung 2), "aaa" (Übereinstimmung 3) und "aaaa" (Übereinstimmung 4).  
   
--   Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 4 zurück. Es wird ermittelt, dass ein zusätzliches Zeichen "a" vorhanden ist, das einer zusätzlichen Erfassungsgruppe zugewiesen werden soll. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 4 Vergleiche. Bisher wurden insgesamt 13 Vergleiche ausgeführt.  
+- Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 4 zurück. Es wird ermittelt, dass ein zusätzliches Zeichen "a" vorhanden ist, das einer zusätzlichen Erfassungsgruppe zugewiesen werden soll. Schließlich wird das Ende der Zeichenfolge überprüft. Da ein zusätzliches Zeichen in der Zeichenfolge verbleibt, schlägt die Übereinstimmung fehl. Diese fehlgeschlagene Suche nach Übereinstimmung erfordert 4 Vergleiche. Bisher wurden insgesamt 13 Vergleiche ausgeführt.  
   
--   Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 3 zurück. Es wird ermittelt, dass zwei zusätzliche "a"-Zeichen vorhanden sind, die einer zusätzlichen Erfassungsgruppe zugewiesen werden sollen. Allerdings schlägt die Überprüfung des Zeichenfolgenendes fehl. Anschließend kehrt das Modul zur Übereinstimmung 3 zurück und versucht, die zwei zusätzlichen "a"-Zeichen in zwei zusätzlichen Erfassungsgruppen abzugleichen. Die Überprüfung des Zeichenfolgenendes schlägt weiterhin fehl. Diese fehlgeschlagenen Übereinstimmungen erfordern 12 Vergleiche. Bisher wurden insgesamt 25 Vergleiche ausgeführt.  
+- Das Modul kehrt zur zuvor gespeicherten Übereinstimmung 3 zurück. Es wird ermittelt, dass zwei zusätzliche "a"-Zeichen vorhanden sind, die einer zusätzlichen Erfassungsgruppe zugewiesen werden sollen. Allerdings schlägt die Überprüfung des Zeichenfolgenendes fehl. Anschließend kehrt das Modul zur Übereinstimmung 3 zurück und versucht, die zwei zusätzlichen "a"-Zeichen in zwei zusätzlichen Erfassungsgruppen abzugleichen. Die Überprüfung des Zeichenfolgenendes schlägt weiterhin fehl. Diese fehlgeschlagenen Übereinstimmungen erfordern 12 Vergleiche. Bisher wurden insgesamt 25 Vergleiche ausgeführt.  
   
  Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis die Engine für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt es sich bei diesem Vergleich um O(2<sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* für die Anzahl von Zeichen in der Eingabezeichenfolge steht. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.  
   

@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979956"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664653"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
 Standardformatzeichenfolgen für Zahlen werden für die Formatierung allgemeiner numerischer Typen verwendet. Eine Standardformatzeichenfolge für Zahlen besitzt das Format `Axx`, wobei:  
   
--   `A` ist ein einzelnes alphabetisches Zeichen, das als *Formatbezeichner* bezeichnet wird. Jede Zahlenformatzeichenfolge, die mehr als ein alphabetisches Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` ist ein einzelnes alphabetisches Zeichen, das als *Formatbezeichner* bezeichnet wird. Jede Zahlenformatzeichenfolge, die mehr als ein alphabetisches Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` ist eine optionale ganze Zahl, die als *Genauigkeitsspezifizierer* (Genauigkeitsangabe) bezeichnet wird. Die Genauigkeitsangabe reicht von 0 bis 99 und wirkt sich auf die Anzahl der Ziffern im Ergebnis aus. Beachten Sie, dass die Genauigkeitsangabe die Anzahl der Ziffern in der Zeichenfolgendarstellung einer Zahl steuert. Die Zahl selbst wird nicht gerundet. Verwenden Sie für einen Rundungsvorgang die <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>-, <xref:System.Math.Floor%2A?displayProperty=nameWithType>- oder <xref:System.Math.Round%2A?displayProperty=nameWithType>-Methode.  
+- `xx` ist eine optionale ganze Zahl, die als *Genauigkeitsspezifizierer* (Genauigkeitsangabe) bezeichnet wird. Die Genauigkeitsangabe reicht von 0 bis 99 und wirkt sich auf die Anzahl der Ziffern im Ergebnis aus. Beachten Sie, dass die Genauigkeitsangabe die Anzahl der Ziffern in der Zeichenfolgendarstellung einer Zahl steuert. Die Zahl selbst wird nicht gerundet. Verwenden Sie für einen Rundungsvorgang die <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>-, <xref:System.Math.Floor%2A?displayProperty=nameWithType>- oder <xref:System.Math.Round%2A?displayProperty=nameWithType>-Methode.  
   
     Wenn der *Genauigkeitsspezifizierer* die Anzahl von Dezimalstellen in der Ergebniszeichenfolge steuert, gibt die Ergebniszeichenfolge eine Zahl an, die auf ein darstellbares Ergebnis gerundet wird, das am ehesten dem unendlich präzisen Ergebnis entspricht. Wenn zwei gleich nahe darstellbare Ergebnisse vorhanden sind:
     - **In .NET Framework und in .NET Core bis .NET Core 2.0** wählt die Runtime das Ergebnis mit der größeren am wenigsten signifikanten Ziffer aus (d.h. <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -73,13 +73,13 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
 
 Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formatierung eines numerischen Werts wie folgt zu definieren:  
   
--   Die Zeichenfolge kann an eine Überladung der `ToString`-Methode übergeben werden, die über einen `format`-Parameter verfügt. Im folgenden Beispiel wird ein numerischer Wert in der aktuellen Kultur (in diesem Fall „en-US“) als Währungszeichenfolge formatiert.  
+- Die Zeichenfolge kann an eine Überladung der `ToString`-Methode übergeben werden, die über einen `format`-Parameter verfügt. Im folgenden Beispiel wird ein numerischer Wert in der aktuellen Kultur (in diesem Fall „en-US“) als Währungszeichenfolge formatiert.  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Die Zeichenfolge kann als `formatString`-Argument in einem Formatelement angegeben werden, das beispielsweise mit den Methoden <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> und <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> verwendet wird. Weitere Informationen finden Sie unter [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md). Im folgenden Beispiel wird ein Währungswert mit einem Formatelement in eine Zeichenfolge eingefügt.  
+- Die Zeichenfolge kann als `formatString`-Argument in einem Formatelement angegeben werden, das beispielsweise mit den Methoden <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> und <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> verwendet wird. Weitere Informationen finden Sie unter [Zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md). Im folgenden Beispiel wird ein Währungswert mit einem Formatelement in eine Zeichenfolge eingefügt.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formati
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Die Zeichenfolge kann als `formatString`-Argument in einem interpolierten Ausdruckselement einer interpolierten Zeichenfolge bereitgestellt werden. Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) der C#-Referenz oder im Artikel [Interpolierte Zeichenfolgen](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) in der Visual Basic-Referenz.  
+- Die Zeichenfolge kann als `formatString`-Argument in einem interpolierten Ausdruckselement einer interpolierten Zeichenfolge bereitgestellt werden. Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) der C#-Referenz oder im Artikel [Interpolierte Zeichenfolgen](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) in der Visual Basic-Referenz.  
   
  Die folgenden Abschnitte enthalten ausführliche Informationen zu den einzelnen numerischen Standardformatzeichenfolgen.  
   

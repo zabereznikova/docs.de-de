@@ -1,5 +1,5 @@
 ---
-title: 'Fehler beim Speichern der temporären Win32-Ressourcendatei "<filename>": <error message>'
+title: "Fehler beim Speichern der temporären Win32-Ressourcendatei '<filename>': <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30137
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61803246"
 ---
-# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Fehler beim Speichern der temporären Win32-Ressourcendatei "\<Dateiname >': \<Fehlermeldung >
+# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Fehler beim Speichern der temporären Win32-Ressourcendatei '\<Dateiname >': \<Fehlermeldung >
 Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren. Der Linker meldet einen Fehler beim Abrufen eines Dateinamen zum Schreiben einer speicherinternen Ressource.  
   
  **Fehler-ID:** BC30137  

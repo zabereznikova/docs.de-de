@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648439"
 ---
 # <a name="mitigation-path-normalization"></a>Entschärfung: Pfadnormalisierung
 Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an hat sich die Pfadnormalisierung in .NET Framework geändert.  
@@ -17,26 +17,26 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 ## <a name="what-is-path-normalization"></a>Was ist Pfadnormalisierung?  
  Das Normalisieren eines Pfads beinhaltet das Verändern der Zeichenfolge, die einen Pfad oder eine Datei kennzeichnet, in einer Weise, dass sie einem gültigen Pfad im Zielbetriebssystem entspricht. Normalisierung umfasst ist in der Regel:  
   
--   Die Kanonisierung von Komponenten- und Verzeichnistrennzeichen.  
+- Die Kanonisierung von Komponenten- und Verzeichnistrennzeichen.  
   
--   Die Anwendung des aktuellen Verzeichnisses auf einen relativen Pfad.  
+- Die Anwendung des aktuellen Verzeichnisses auf einen relativen Pfad.  
   
--   Die Auswertung des relativen Verzeichnisses (`.`) oder des übergeordneten Verzeichnisses (`..`) in einem Pfad.  
+- Die Auswertung des relativen Verzeichnisses (`.`) oder des übergeordneten Verzeichnisses (`..`) in einem Pfad.  
   
--   Das Verkürzen um angegebene Zeichen.  
+- Das Verkürzen um angegebene Zeichen.  
   
 ## <a name="the-changes"></a>Die Änderungen  
  Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an hat sich die Pfadnormalisierung in folgender Weise geändert:  
   
--   Die Runtime greift auf die Funktion [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) des Betriebssystems zurück, um Pfade zu normalisieren.  
+- Die Runtime greift auf die Funktion [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) des Betriebssystems zurück, um Pfade zu normalisieren.  
   
--   Die Normalisierung beinhaltet nicht mehr das Verkürzen des Endes von Verzeichnissegmenten (etwa im Fall eines Leerzeichens am Ende eines Verzeichnisnamens).  
+- Die Normalisierung beinhaltet nicht mehr das Verkürzen des Endes von Verzeichnissegmenten (etwa im Fall eines Leerzeichens am Ende eines Verzeichnisnamens).  
   
--   Unterstützung für Gerätepfadsyntax mit vollem Vertrauen, einschließlich `\\.\` und `\\?\` für Datei-E/A-APIs in mscorlib.dll.  
+- Unterstützung für Gerätepfadsyntax mit vollem Vertrauen, einschließlich `\\.\` und `\\?\` für Datei-E/A-APIs in mscorlib.dll.  
   
--   Die Runtime überprüft Gerätesyntaxpfade nicht.  
+- Die Runtime überprüft Gerätesyntaxpfade nicht.  
   
--   Die Verwendung von Gerätesyntax für den Zugriff auf alternative Datenströme wird unterstützt.  
+- Die Verwendung von Gerätesyntax für den Zugriff auf alternative Datenströme wird unterstützt.  
   
 ## <a name="impact"></a>Auswirkungen  
  Für Apps mit der Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher sind diese Änderungen standardmäßig aktiviert. Sie sollten die Leistung verbessern und Methoden zugleich den Zugriff auf zuvor nicht zugängliche Pfade ermöglichen.  

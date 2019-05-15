@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 57934742e378df9bf77938e8c6b3b49cb25e6ecf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647758"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  
@@ -34,41 +34,41 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  In diesem Artikel:  
   
--   [CLS-Konformitätsregeln](#Rules)  
+- [CLS-Kompatibilitätsregeln](#Rules)  
   
-    -   [Typen und Typmembersignaturen](#Types)  
+    - [Typen und Typmembersignaturen](#Types)  
   
-    -   [Namenskonventionen ](#naming)  
+    - [Namenskonventionen](#naming)  
   
-    -   [Typkonvertierung](#conversion)  
+    - [Typkonvertierung](#conversion)  
   
-    -   [Arrays](#arrays)  
+    - [Arrays](#arrays)  
   
-    -   [Schnittstellen](#Interfaces)  
+    - [Schnittstellen](#Interfaces)  
   
-    -   [Enumerationen](#enums)  
+    - [Enumerationen](#enums)  
   
-    -   [Typmember im Allgemeinen](#members)  
+    - [Typmember im Allgemeinen](#members)  
   
-    -   [Memberzugriff](#MemberAccess)  
+    - [Memberzugriff](#MemberAccess)  
   
-    -   [Generische Typen und Member](#Generics)  
+    - [Generische Typen und Member](#Generics)  
   
-    -   [Konstruktoren](#ctors)  
+    - [Konstruktoren](#ctors)  
   
-    -   [Eigenschaften](#properties)  
+    - [Eigenschaften](#properties)  
   
-    -   [Ereignisse](#events)  
+    - [Ereignisse](#events)  
   
-    -   [Overloads](#overloads)  
+    - [Überladungen](#overloads)  
   
-    -   [Ausnahmen](#exceptions)  
+    - [Ausnahmen](#exceptions)  
   
-    -   [Attribute](#attributes)  
+    - [Attribute](#attributes)  
   
--   [Das CLSCompliantAttribute-Attribut](#CLSAttribute)  
+- [Das CLSCompliantAttribute-Attribut](#CLSAttribute)  
   
--   [Sprachübergreifende Interoperabilität](#CrossLang)  
+- [Sprachübergreifende Interoperabilität](#CrossLang)  
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS-Kompatibilitätsregeln  
@@ -94,11 +94,11 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Die öffentliche Schnittstelle einer Bibliothek besteht aus folgenden Elementen:  
   
--   Definitionen öffentlicher Klassen  
+- Definitionen öffentlicher Klassen  
   
--   Definitionen öffentlicher Member von öffentlichen Klassen sowie in Definitionen von Membern, auf die abgeleitete Klassen zugreifen können (d. h. geschützte Member).  
+- Definitionen öffentlicher Member von öffentlichen Klassen sowie in Definitionen von Membern, auf die abgeleitete Klassen zugreifen können (d. h. geschützte Member).  
   
--   Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können.  
+- Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können.  
   
  Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten.  
   
@@ -121,8 +121,8 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 |Ereignisse|[Ereignisse](#events)|Die `add` und `remove`-Methoden eines Ereignisses müssen jeweils einen Parameter erhalten, dessen Typ den Ereignistyp definiert. Dieser Typ muss von <xref:System.Delegate?displayProperty=nameWithType> abgeleitet sein.|32|  
 |Ereignisse|[Ereignisse](#events)|Ereignisse müssen einem bestimmten Benennungsschema folgen. Das `SpecialName`-Attribut, auf das in CLS-Regel 29 verwiesen wird, muss in den entsprechenden Namensvergleichen ignoriert werden und Bezeichnerregeln befolgen.|33|  
 |Ausnahmen|[Ausnahmen](#exceptions)|Ausgelöste Objekte müssen vom Typ <xref:System.Exception?displayProperty=nameWithType> oder eines davon geerbten Typs sein. Dennoch müssen CLS-kompatible Methoden die Weitergabe anderer Ausnahmetypen nicht blockieren.|40|  
-|Allgemein|[CLS-Konformität: die Regeln](#Rules)|CLS-Regeln gelten nur für die Teile eines Typs, die außerhalb der definierenden Assembly sichtbar sind und auf die außerhalb der definierenden Assembly zugegriffen werden kann.|1|  
-|Allgemein|[CLS-Konformität: die Regeln](#Rules)|Member von Typen, die nicht CLS-kompatibel sind, dürfen nicht als CLS-kompatibel gekennzeichnet werden.|2|  
+|Allgemein|[CLS-Kompatibilität: die Regeln](#Rules)|CLS-Regeln gelten nur für die Teile eines Typs, die außerhalb der definierenden Assembly sichtbar sind und auf die außerhalb der definierenden Assembly zugegriffen werden kann.|1|  
+|Allgemein|[CLS-Kompatibilität: die Regeln](#Rules)|Member von Typen, die nicht CLS-kompatibel sind, dürfen nicht als CLS-kompatibel gekennzeichnet werden.|2|  
 |Generics|[Generische Typen und Member](#Generics)|Geschachtelte Typen müssen mindestens so viele generische Parameter aufweisen wie der einschließende Typ. Die Position von generischen Parametern in einem geschachtelten Typ entspricht der Position der generischen Parameter im einschließenden Typ.|42|  
 |Generics|[Generische Typen und Member](#Generics)|Der Name eines generischen Typs muss die Anzahl von Typparametern, die auf dem nicht geschachtelten Typ deklariert oder neu in den Typ eingeführt werden, kodieren, wenn er entsprechend der oben definierten Regeln geschachtelt ist.|43|  
 |Generics|[Generische Typen und Member](#Generics)|Ein generischer Typ muss genügend Einschränkungen neu deklarieren, um zu gewährleisten, dass alle Einschränkungen des Basistyps oder der Schnittstellen durch die Einschränkungen des generischen Typs erfüllt sein würden.|4444|  
@@ -134,9 +134,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 |Member|[Typmember im Allgemeinen](#members)|Globale static-Felder und Methoden sind nicht CLS-kompatibel.|36|  
 |Member|--|Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist).|13|  
 |Member|[Typmember im Allgemeinen](#members)|Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention.|15|  
-|Namenskonventionen |[Namenskonventionen ](#naming)|Assemblys müssen Anhang 7 des technischen Berichts 15 von Unicode Standard 3.0 befolgen, in dem Zeichen geregelt werden, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter <https://www.unicode.org/unicode/reports/tr15/tr15-18.html> verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration.|4|  
-|Überladen|[Namenskonventionen ](#naming)|Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich.|5|  
-|Überladen|[Namenskonventionen ](#naming)|Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (gemäß Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben).|6|  
+|Namenskonventionen |[Namenskonventionen](#naming)|Assemblys müssen Anhang 7 des technischen Berichts 15 von Unicode Standard 3.0 befolgen, in dem Zeichen geregelt werden, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter <https://www.unicode.org/unicode/reports/tr15/tr15-18.html> verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration.|4|  
+|Überladen|[Namenskonventionen](#naming)|Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich.|5|  
+|Überladen|[Namenskonventionen](#naming)|Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (gemäß Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben).|6|  
 |Überladen|[Overloads](#overloads)|Nur Eigenschaften und Methoden können überladen werden.|37|  
 |Überladen|[Overloads](#overloads)|Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können.|38|  
 |Überladen|--|Wenn mindestens zwei CLS-kompatible Methoden, die in einem Typ deklariert werden, den gleichen Namen und für einen bestimmten Satz von Typinstanziierungen die gleichen Parameter und Rückgabetypen nutzen, dann müssen alle diese Methoden bei diesen Typinstanziierungen semantisch gleichwertig sein.|48|  
@@ -163,9 +163,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyps oder des Eigenschaftentyps einer Methode, müssen CLS-kompatibel sein. Außerdem ist für generische Typen Folgendes erforderlich:  
   
--   Alle Typen, die einen instanziierten generischen Typ zusammensetzen, müssen CLS-kompatibel sein.  
+- Alle Typen, die einen instanziierten generischen Typ zusammensetzen, müssen CLS-kompatibel sein.  
   
--   Alle als Einschränkungen für generische Parameter verwendeten Typen müssen CLS-kompatibel sein.  
+- Alle als Einschränkungen für generische Parameter verwendeten Typen müssen CLS-kompatibel sein.  
   
  Das [allgemeine Typsystem](../../docs/standard/base-types/common-type-system.md) von .NET Framework enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.  
   
@@ -177,7 +177,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 |<xref:System.Int64>|64-Bit-Ganzzahl mit Vorzeichen|  
 |<xref:System.Single>|Gleitkommawert mit einfacher Genauigkeit|  
 |<xref:System.Double>|Gleitkommawert mit doppelter Genauigkeit|  
-|<xref:System.Boolean>|`true` oder `false`-Werttyp|  
+|<xref:System.Boolean>|`true` oder `false` value_type|  
 |<xref:System.Char>|UTF-16-codierte Codeeinheit|  
 |<xref:System.Decimal>|Dezimalzahl ohne Gleitkomma|  
 |<xref:System.IntPtr>|Zeiger oder Handle einer Plattform-definierten Größe|  
@@ -196,11 +196,11 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel:  
   
--   Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int*` namens `Value` verfügt. Da `int*` ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.  
+- Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int*` namens `Value` verfügt. Da `int*` ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.  
   
      [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   Typisierte Verweise, die spezielle Konstrukte sind, in denen ein Verweis auf ein Objekt und ein Verweis auf einen Typ enthalten sind. Typisierte Verweise werden in .NET Framework von der <xref:System.TypedReference>-Klasse dargestellt.  
+- Typisierte Verweise, die spezielle Konstrukte sind, in denen ein Verweis auf ein Objekt und ein Verweis auf einen Typ enthalten sind. Typisierte Verweise werden in .NET Framework von der <xref:System.TypedReference>-Klasse dargestellt.  
   
  Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` darauf anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#CLSAttribute).  
   
@@ -228,9 +228,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Programmiersprachenbezeichner, wie die Namen von Namespaces, Typen und Membern, müssen dem [Unicode-Standard 3.0, Fachbericht 15, Anhang 7](https://www.unicode.org/reports/tr15/tr15-18.html) entsprechen. Dies bedeutet Folgendes:  
   
--   Das erste Zeichen eines Bezeichners kann jeder Unicode-Großbuchstabe, Kleinbuchstabe, großer Anfangsbuchstabe, Modifiziererbuchstabe, anderer Buchstabe oder jede Buchstabenzahl sein. Informationen zu Unicode-Zeichenkategorien finden Sie unter der <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>-Enumeration.  
+- Das erste Zeichen eines Bezeichners kann jeder Unicode-Großbuchstabe, Kleinbuchstabe, großer Anfangsbuchstabe, Modifiziererbuchstabe, anderer Buchstabe oder jede Buchstabenzahl sein. Informationen zu Unicode-Zeichenkategorien finden Sie unter der <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>-Enumeration.  
   
--   Nachfolgende Zeichen können aus einer der Kategorien wie das erste Zeichen stammen, und sie können auch Markierungen ohne Zwischenraum, Sperrmarkierungen, Dezimalwerte, Connectorinterpunktionen und Formatierungscodes umfassen.  
+- Nachfolgende Zeichen können aus einer der Kategorien wie das erste Zeichen stammen, und sie können auch Markierungen ohne Zwischenraum, Sperrmarkierungen, Dezimalwerte, Connectorinterpunktionen und Formatierungscodes umfassen.  
   
  Bevor Sie Bezeichner vergleichen, sollten Sie Formatierungscodes herausfiltern und die Bezeichner in die Unicode-Normalisierungsform C konvertieren, da ein einzelnes Zeichen durch mehrere UTF-16-codierte Codeeinheiten dargestellt werden kann. Zeichensequenzen, die die gleichen Codeeinheiten in der Unicode-Normalisierungsform C erzeugen, sind nicht CLS-kompatibel. Im folgenden Beispiel werden zwei Eigenschaften definiert: eine namens `Å`, die aus dem Zeichen ÅNGSTRÖM-ZEICHEN (U+212B) besteht, und eine zweite namens `Å`, die aus dem Zeichen LATEINISCHER GROSSBUCHSTABE A MIT RING OBEN (U+00C5) besteht. Die Compiler von C#- und Visual Basic kennzeichnen den Quellcode als nicht CLS-kompatibel.  
   
@@ -239,9 +239,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Membernamen innerhalb eines bestimmten Bereichs (wie den Namespaces innerhalb einer Assembly, den Typen in einem Namespace oder den Membern innerhalb eines Typs) müssen eindeutig sein, abgesehen von Namen, die durch Überladen aufgelöst werden. Diese Anforderung ist zwingender als die des allgemeinen Typsystems, bei dem mehrere Member innerhalb eines Bereichs über identische Namen verfügen dürfen, solange es unterschiedliche Arten von Membern sind (zum Beispiel eine Methode und ein Feld). Insbesondere für Typmember:  
   
--   Felder und geschachtelte Typen werden allein nach Namen unterschieden.  
+- Felder und geschachtelte Typen werden allein nach Namen unterschieden.  
   
--   Methoden, Eigenschaften und Ereignisse mit demselben Namen müssen sich durch mehr als nur den Rückgabetyp unterscheiden.  
+- Methoden, Eigenschaften und Ereignisse mit demselben Namen müssen sich durch mehr als nur den Rückgabetyp unterscheiden.  
   
  Im folgenden Beispiel wird die Anforderung veranschaulicht, dass Membernamen innerhalb des Bereichs eindeutig sein müssen. Es wird eine Klasse namens `Converter` definiert, die vier Member namens `Conversion` umfasst. Drei Methoden und eine Eigenschaft. Die Methode, die einen Parameter <xref:System.Int64> umfasst, hat einen eindeutigen Namen, doch die beiden Methoden mit einem <xref:System.Int32>-Parameter sind nicht eindeutig, da der Rückgabewert nicht als ein Teil der Signatur eines Members gültig ist. Die `Conversion`- Eigenschaft verstößt auch gegen diese Anforderung, da Eigenschaften nicht den gleichen Namen wie überladene Methoden besitzen dürfen.  
   
@@ -260,9 +260,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="type-conversion"></a>Typkonvertierung  
  In der Common Language Specification werden zwei Konvertierungsoperatoren definiert:  
   
--   `op_Implicit`, das für Erweiterungskonvertierungen verwendet wird, die zu keinem Datenverlust oder Genauigkeitsverlust führen. Zum Beispiel umfasst die <xref:System.Decimal>-Struktur einen überladenen `op_Implicit`-Operator, um Werte ganzzahliger Typen und <xref:System.Char>-Werte in <xref:System.Decimal>-Werte zu konvertieren.  
+- `op_Implicit`, das für Erweiterungskonvertierungen verwendet wird, die zu keinem Datenverlust oder Genauigkeitsverlust führen. Zum Beispiel umfasst die <xref:System.Decimal>-Struktur einen überladenen `op_Implicit`-Operator, um Werte ganzzahliger Typen und <xref:System.Char>-Werte in <xref:System.Decimal>-Werte zu konvertieren.  
   
--   `op_Explicit`, der für einschränkende Konvertierungen verwendet wird, die zu Größenverlusten (ein Wert wird in einen Wert konvertiert, der über einen kleineren Bereich verfügt) bzw. zu Verlusten der Genauigkeit führen können. Zum Beispiel umfasst die <xref:System.Decimal>-Struktur einen überladenen `op_Explicit`-Operator, um den <xref:System.Double>-Wert und den <xref:System.Single>-Wert in <xref:System.Decimal> zu konvertieren und die <xref:System.Decimal>-Werte in die ganzzahligen Werte <xref:System.Double>, <xref:System.Single> und <xref:System.Char> zu konvertieren.  
+- `op_Explicit`, der für einschränkende Konvertierungen verwendet wird, die zu Größenverlusten (ein Wert wird in einen Wert konvertiert, der über einen kleineren Bereich verfügt) bzw. zu Verlusten der Genauigkeit führen können. Zum Beispiel umfasst die <xref:System.Decimal>-Struktur einen überladenen `op_Explicit`-Operator, um den <xref:System.Double>-Wert und den <xref:System.Single>-Wert in <xref:System.Decimal> zu konvertieren und die <xref:System.Decimal>-Werte in die ganzzahligen Werte <xref:System.Double>, <xref:System.Single> und <xref:System.Char> zu konvertieren.  
   
  Allerdings wird Operatorüberladung oder die Definition benutzerdefinierter Operatoren nicht von allen Sprachen unterstützt. Wenn Sie diese Konvertierungsoperatoren implementieren, sollten Sie eine alternative Methode zum Ausführen der Konvertierung bereitstellen. Es wird empfohlen, `From`*Xxx*- und `To`*Xxx*-Methoden bereitzustellen.  
   
@@ -275,17 +275,17 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="arrays"></a>Arrays  
  CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:  
   
--   Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass vom Compiler ungeachtet des Vorhandenseins des <xref:System.CLSCompliantAttribute>-Attributs nicht erkannt wird, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.  
+- Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass vom Compiler ungeachtet des Vorhandenseins des <xref:System.CLSCompliantAttribute>-Attributs nicht erkannt wird, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   Alle Arrayelemente müssen aus CLS-kompatiblen Typen bestehen. Im folgenden Beispiel werden zwei Methoden, die nicht CLS-kompatible Arrays zurückgeben, definiert. Die erste Methode gibt ein Array von <xref:System.UInt32>-Werten zurück. Die zweite Methode gibt ein <xref:System.Object>-Array zurück, das den <xref:System.Int32>-Wert und den <xref:System.UInt32>-Wert umfasst. Obwohl der Compiler das erste Array aufgrund des <xref:System.UInt32>-Typs als nicht kompatibel identifiziert, wird nicht erkannt, dass das zweite Array nicht CLS-kompatible Elemente umfasst.  
+- Alle Arrayelemente müssen aus CLS-kompatiblen Typen bestehen. Im folgenden Beispiel werden zwei Methoden, die nicht CLS-kompatible Arrays zurückgeben, definiert. Die erste Methode gibt ein Array von <xref:System.UInt32>-Werten zurück. Die zweite Methode gibt ein <xref:System.Object>-Array zurück, das den <xref:System.Int32>-Wert und den <xref:System.UInt32>-Wert umfasst. Obwohl der Compiler das erste Array aufgrund des <xref:System.UInt32>-Typs als nicht kompatibel identifiziert, wird nicht erkannt, dass das zweite Array nicht CLS-kompatible Elemente umfasst.  
   
      [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
      [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   Die Überladungsauflösung für Methoden mit Arrayparametern basiert sowohl auf der Tatsache, dass es Arrays sind, als auch auf dem Elementtyp. Aus diesem Grund ist die folgende Definition einer überladenen `GetSquares`-Methode CLS-kompatibel.  
+- Die Überladungsauflösung für Methoden mit Arrayparametern basiert sowohl auf der Tatsache, dass es Arrays sind, als auch auf dem Elementtyp. Aus diesem Grund ist die folgende Definition einer überladenen `GetSquares`-Methode CLS-kompatibel.  
   
      [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
      [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
@@ -294,11 +294,11 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="interfaces"></a>Schnittstellen  
  CLS-kompatible Schnittstellen können Eigenschaften, Ereignisse und virtuelle Methoden (Methoden ohne Implementierung) definieren. Eine CLS-kompatible Schnittstelle kann keine der folgenden Aspekte aufweisen:  
   
--   Statische Methoden oder statische Felder Der C#- und der Visual Basic-Compiler erstellen Compilerfehler, wenn Sie einen statischen Member in einer Schnittstelle definieren.  
+- Statische Methoden oder statische Felder Der C#- und der Visual Basic-Compiler erstellen Compilerfehler, wenn Sie einen statischen Member in einer Schnittstelle definieren.  
   
--   Felder Die Compiler von C# und Visual Basic generieren Compilerfehler, wenn Sie ein Feld in einer Schnittstelle definieren.  
+- Felder Die Compiler von C# und Visual Basic generieren Compilerfehler, wenn Sie ein Feld in einer Schnittstelle definieren.  
   
--   Methoden, die nicht CLS-kompatibel sind. Zum Beispiel umfasst die folgende Schnittstellendefinition eine Methode, `INumber.GetUnsigned`, die als nicht CLS-kompatibel gekennzeichnet wird. In diesem Beispiel wird eine Compilerwarnung generiert.  
+- Methoden, die nicht CLS-kompatibel sind. Zum Beispiel umfasst die folgende Schnittstellendefinition eine Methode, `INumber.GetUnsigned`, die als nicht CLS-kompatibel gekennzeichnet wird. In diesem Beispiel wird eine Compilerwarnung generiert.  
   
      [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
      [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
@@ -314,24 +314,24 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="enumerations"></a>Enumerationen  
  Bei CLS-kompatiblen Enumerationen müssen die folgenden Regeln beachtet werden:  
   
--   Der zugrunde liegende Typ der Enumeration muss ein systeminterner CLS-kompatibler Ganzzahltyp sein (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> oder <xref:System.Int64>). Im folgenden Code wird beispielsweise versucht, eine Enumeration zu definieren, deren zugrunde liegender Typ <xref:System.UInt32> ist. Es wird eine Compilerwarnung generiert.  
+- Der zugrunde liegende Typ der Enumeration muss ein systeminterner CLS-kompatibler Ganzzahltyp sein (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> oder <xref:System.Int64>). Im folgenden Code wird beispielsweise versucht, eine Enumeration zu definieren, deren zugrunde liegender Typ <xref:System.UInt32> ist. Es wird eine Compilerwarnung generiert.  
   
      [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
      [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   Ein Enumerationstyp muss über ein Feld namens `Value__` mit einer einzelnen Instanz verfügen, das mit dem <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>-Attribut markiert ist. Damit können Sie den Feldwert implizit verweisen.  
+- Ein Enumerationstyp muss über ein Feld namens `Value__` mit einer einzelnen Instanz verfügen, das mit dem <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>-Attribut markiert ist. Damit können Sie den Feldwert implizit verweisen.  
   
--   Eine Enumeration umfasst literale statische Felder, deren Typen vom gleichen Typ wie die Enumeration selbst sein müssen. Wenn Sie zum Beispiel eine `State`-Enumeration mit den Werten aus `State.On` und `State.Off` definieren, sind `State.On` und `State.Off` literale statische Felder, deren Typ `State` ist.  
+- Eine Enumeration umfasst literale statische Felder, deren Typen vom gleichen Typ wie die Enumeration selbst sein müssen. Wenn Sie zum Beispiel eine `State`-Enumeration mit den Werten aus `State.On` und `State.Off` definieren, sind `State.On` und `State.Off` literale statische Felder, deren Typ `State` ist.  
   
--   Es gibt zwei Arten von Enumerationen.  
+- Es gibt zwei Arten von Enumerationen.  
   
-    -   Eine Enumeration, die einen Satz wechselseitig exklusiver, benannter ganzzahliger Werte darstellt. Dieser Typ der Enumeration wird durch das Fehlen des benutzerdefinierten <xref:System.FlagsAttribute?displayProperty=nameWithType>-Attributs angegeben.  
+    - Eine Enumeration, die einen Satz wechselseitig exklusiver, benannter ganzzahliger Werte darstellt. Dieser Typ der Enumeration wird durch das Fehlen des benutzerdefinierten <xref:System.FlagsAttribute?displayProperty=nameWithType>-Attributs angegeben.  
   
-    -   Eine Enumeration, die einen Satz von Bitflags darstellt, die zum Generieren eines unbenannten Werts kombiniert werden können. Dieser Typ der Enumeration wird durch das Vorhandensein des benutzerdefinierten <xref:System.FlagsAttribute?displayProperty=nameWithType>-Attributs angegeben.  
+    - Eine Enumeration, die einen Satz von Bitflags darstellt, die zum Generieren eines unbenannten Werts kombiniert werden können. Dieser Typ der Enumeration wird durch das Vorhandensein des benutzerdefinierten <xref:System.FlagsAttribute?displayProperty=nameWithType>-Attributs angegeben.  
   
      Weitere Informationen finden Sie in der Dokumentation zur <xref:System.Enum>-Struktur.  
   
--   Der Wert einer Enumeration wird nicht auf den Bereich der angegebenen Werte beschränkt. Das heißt, der Wertebereich einer Enumeration ist der Bereich des zugrunde liegenden Werts. Sie können die <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>-Methode verwenden, um zu bestimmen, ob ein angegebener Wert ein Member einer Enumeration ist.  
+- Der Wert einer Enumeration wird nicht auf den Bereich der angegebenen Werte beschränkt. Das heißt, der Wertebereich einer Enumeration ist der Bereich des zugrunde liegenden Werts. Sie können die <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>-Methode verwenden, um zu bestimmen, ob ein angegebener Wert ein Member einer Enumeration ist.  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>Typmember im Allgemeinen  
@@ -390,34 +390,34 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="constructors"></a>Konstruktoren  
  Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folgenden Regeln beachtet werden:  
   
--   Der Konstruktor einer abgeleiteten Klasse muss den Instanzkonstruktor der Basisklasse aufrufen, bevor er auf geerbte Instanzdaten zugreift. Diese Anforderung basiert auf der Tatsache, dass Konstruktoren nicht nach ihren abgeleiteten Klassen geerbt werden. Diese Regel gilt nicht für Strukturen, die keine direkte Vererbung unterstützen.  
+- Der Konstruktor einer abgeleiteten Klasse muss den Instanzkonstruktor der Basisklasse aufrufen, bevor er auf geerbte Instanzdaten zugreift. Diese Anforderung basiert auf der Tatsache, dass Konstruktoren nicht nach ihren abgeleiteten Klassen geerbt werden. Diese Regel gilt nicht für Strukturen, die keine direkte Vererbung unterstützen.  
   
      In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Kompatibilität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Doch die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor nicht zum Initialisieren geerbter Instanzfelder aufrufen.  
   
      [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
      [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   Ein Objektkonstruktor kann nur aufgerufen werden, um ein Objekt zu erstellen. Außerdem kann ein Objekt nicht zweimal initialisiert werden. Das bedeutet zum Beispiel, dass <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> und solche Deserialisierungsmethoden wie <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> keine Konstruktoren aufrufen dürfen.  
+- Ein Objektkonstruktor kann nur aufgerufen werden, um ein Objekt zu erstellen. Außerdem kann ein Objekt nicht zweimal initialisiert werden. Das bedeutet zum Beispiel, dass <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> und solche Deserialisierungsmethoden wie <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> keine Konstruktoren aufrufen dürfen.  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>Eigenschaften  
  Eigenschaften in den CLS-kompatiblen Typen müssen die folgenden Regeln beachten:  
   
--   Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert, das bedeutet, dass sie als separate Methoden (der Getter hat den Namen `get_`*Eigenschaftsname* und der Setter den Namen `set_`*Eigenschaftsname*) erscheinen, die als `SpecialName` gekennzeichnet in den Metadaten der Assembly angezeigt werden. Die Compiler von C# und Visual Basic erzwingen diese Regel automatisch, ohne das <xref:System.CLSCompliantAttribute>-Attribut anzuwenden.  
+- Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert, das bedeutet, dass sie als separate Methoden (der Getter hat den Namen `get_`*Eigenschaftsname* und der Setter den Namen `set_`*Eigenschaftsname*) erscheinen, die als `SpecialName` gekennzeichnet in den Metadaten der Assembly angezeigt werden. Die Compiler von C# und Visual Basic erzwingen diese Regel automatisch, ohne das <xref:System.CLSCompliantAttribute>-Attribut anzuwenden.  
   
--   Ein Typ der Eigenschaft entspricht dem Rückgabetyp der Getter-Methode der Eigenschaft und dem letzten Argument der Setter-Methode. Diese Typen müssen CLS-kompatibel sein, und Argumente können der Eigenschaft nicht mithilfe eines Verweises zugewiesen werden (das heißt, es können keine verwalteten Zeiger sein).  
+- Ein Typ der Eigenschaft entspricht dem Rückgabetyp der Getter-Methode der Eigenschaft und dem letzten Argument der Setter-Methode. Diese Typen müssen CLS-kompatibel sein, und Argumente können der Eigenschaft nicht mithilfe eines Verweises zugewiesen werden (das heißt, es können keine verwalteten Zeiger sein).  
   
--   Wenn eine Eigenschaft einen Getter und einen Setter aufweist, müssen beide "virtual", "static" oder "instance" sein. Die Compiler von C#- und Visual Basic erzwingen diese Regel automatisch mithilfe der Eigenschaftendefinitionssyntax.  
+- Wenn eine Eigenschaft einen Getter und einen Setter aufweist, müssen beide "virtual", "static" oder "instance" sein. Die Compiler von C#- und Visual Basic erzwingen diese Regel automatisch mithilfe der Eigenschaftendefinitionssyntax.  
   
 <a name="events"></a>   
 ### <a name="events"></a>Ereignisse  
  Ein Ereignis wird vom Namen und dem Typ definiert. Der Ereignistyp ist ein Delegat, der zum Angeben des Ereignisses verwendet wird. Zum Beispiel hat das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis den Typ <xref:System.ResolveEventHandler>. Neben dem Ereignis selbst, stellen drei Methoden mit Namen basierend auf dem Ereignisnamen die Implementierung des Ereignisses bereit und werden in den Metadaten der Assembly als `SpecialName` gekennzeichnet:  
   
--   Eine Methode zum Hinzufügen eines Ereignishandlers namens `add_`*Ereignisname*. Die Ereignisabonnementmethode für das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis hat zum Beispiel den Namen `add_AssemblyResolve`.  
+- Eine Methode zum Hinzufügen eines Ereignishandlers namens `add_`*Ereignisname*. Die Ereignisabonnementmethode für das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis hat zum Beispiel den Namen `add_AssemblyResolve`.  
   
--   Eine Methode zum Entfernen eines Ereignishandlers namens `remove_`*Ereignisname*. Die Entfernenmethode für das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis hat zum Beispiel den Namen `remove_AssemblyResolve`.  
+- Eine Methode zum Entfernen eines Ereignishandlers namens `remove_`*Ereignisname*. Die Entfernenmethode für das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis hat zum Beispiel den Namen `remove_AssemblyResolve`.  
   
--   Eine Methode für den Hinweis, dass das Ereignis namens `raise_`*Ereignisname* aufgetreten ist.  
+- Eine Methode für den Hinweis, dass das Ereignis namens `raise_`*Ereignisname* aufgetreten ist.  
   
 > [!NOTE]
 >  Die meisten Regeln der Common Language Specification zu Ereignissen werden von den Sprachcompilern implementiert und sind für Komponentenentwickler transparent.  
@@ -433,11 +433,11 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="overloads"></a>Overloads  
  Die Common Language Specification erzwingt die folgenden Anforderungen für überladene Member:  
   
--   Member können auf Grundlage der Anzahl und des Typs eines Parameters überladen werden. Aufrufkonvention, Rückgabetyp, die benutzerdefinierten Modifizierer, die auf die Methode oder deren Parameter angewendet werden und, ob Parameter nach Wert oder nach Verweis übergeben werden, werden bei der Unterscheidung zwischen Überladungen nicht beachtet. Ein Beispiel finden Sie im Abschnitt [Namenskonventionen](#naming) im Code für die Anforderung, dass Namen innerhalb eines Bereichs eindeutig sein müssen.  
+- Member können auf Grundlage der Anzahl und des Typs eines Parameters überladen werden. Aufrufkonvention, Rückgabetyp, die benutzerdefinierten Modifizierer, die auf die Methode oder deren Parameter angewendet werden und, ob Parameter nach Wert oder nach Verweis übergeben werden, werden bei der Unterscheidung zwischen Überladungen nicht beachtet. Ein Beispiel finden Sie im Abschnitt [Namenskonventionen](#naming) im Code für die Anforderung, dass Namen innerhalb eines Bereichs eindeutig sein müssen.  
   
--   Nur Eigenschaften und Methoden können überladen werden. Felder und Ereignisse können nicht überladen werden.  
+- Nur Eigenschaften und Methoden können überladen werden. Felder und Ereignisse können nicht überladen werden.  
   
--   Generische Methoden können auf Grundlage der Anzahl ihrer generischen Parameter überladen werden.  
+- Generische Methoden können auf Grundlage der Anzahl ihrer generischen Parameter überladen werden.  
   
 > [!NOTE]
 >  Der `op_Explicit`-Operator und der `op_Implicit`-Operator sind Ausnahmen von der Regel, dass Rückgabewerte nicht als Teil einer Methodensignatur für Überladungsauflösung gelten. Diese beiden Operatoren können auf Grundlage ihrer Parameter und ihrer Rückgabewerte überladen werden.  
@@ -465,27 +465,27 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können nur die folgenden Typen verfügbar machen:  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Type>  
+- <xref:System.Type>  
   
--   Ein Enumerationstyp, dessen zugrunde liegender Typ <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> oder <xref:System.Int64> ist.  
+- Ein Enumerationstyp, dessen zugrunde liegender Typ <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> oder <xref:System.Int64> ist.  
   
  Im folgenden Beispiel wird eine von `DescriptionAttribute` abgeleitete <xref:System.Attribute>-Klasse definiert. Der Klassenkonstruktor verfügt über einen Parameter des Typs `Descriptor`, sodass die Klasse nicht CLS-kompatibel ist. Beachten Sie, dass der C#-Compiler eine Warnung ausgibt, aber erfolgreich kompiliert, während der Visual Basic-Compiler weder eine Warnung noch einen Fehler ausgibt.  
   
@@ -500,9 +500,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Komponentenentwickler können das <xref:System.CLSCompliantAttribute>-Attribut auf zwei Arten verwenden:  
   
--   Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann.  
+- Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann.  
   
--   Um sicherzustellen, dass die öffentliche Schnittstelle der Komponentenbibliothek nur Programmelemente verfügbar macht, die CLS-kompatibel sind. Wenn Elemente nicht CLS-kompatibel sind, geben Compiler im Allgemeinen eine Warnung aus.  
+- Um sicherzustellen, dass die öffentliche Schnittstelle der Komponentenbibliothek nur Programmelemente verfügbar macht, die CLS-kompatibel sind. Wenn Elemente nicht CLS-kompatibel sind, geben Compiler im Allgemeinen eine Warnung aus.  
   
 > [!WARNING]
 >  In einigen Fällen erzwingen CLS-kompatible Sprachcompiler Regeln unabhängig davon, ob das <xref:System.CLSCompliantAttribute>-Attribut verwendet wird. Das Definieren eines statischen Members in einer Schnittstelle verstößt zum Beispiel gegen eine CLS-Regel. In dieser Hinsicht zeigen die Compiler von C# und Visual Basic eine Fehlermeldung an und können die App nicht kompilieren, wenn Sie einen `static`-Member (in C#) oder einen `Shared`-Member (in Visual Basic) in einer Schnittstelle definieren.  

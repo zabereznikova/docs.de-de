@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315763"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063319"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  So bestimmt der Marshaller beispielsweise, dass der Klassenwrapper zum Umschließen der Schnittstelle verwendet werden soll, die an verwalteten Code übergeben wurde. Wenn die Schnittstelle erstmals über den Marshaller übergeben wird, prüft der Marshaller, ob die Schnittstelle von einem bekannten Objekt stammt. Diese Überprüfung erfolgt in zwei Situationen:  
   
--   Eine Schnittstelle wird von einem anderen verwalteten Objekt implementiert, das an anderer Stelle an COM übergeben wurde. Der Marshaller kann die Schnittstellen, die von verwalteten Objekten verfügbar gemacht werden, leicht identifizieren und ist in der Lage, die Schnittstelle mit dem verwalteten Objekt zu vergleichen, das die Implementierung bereitstellt. Das verwaltete Objekt wird dann an die Methode übergeben, und es wird kein Wrapper benötigt.  
+- Eine Schnittstelle wird von einem anderen verwalteten Objekt implementiert, das an anderer Stelle an COM übergeben wurde. Der Marshaller kann die Schnittstellen, die von verwalteten Objekten verfügbar gemacht werden, leicht identifizieren und ist in der Lage, die Schnittstelle mit dem verwalteten Objekt zu vergleichen, das die Implementierung bereitstellt. Das verwaltete Objekt wird dann an die Methode übergeben, und es wird kein Wrapper benötigt.  
   
--   Ein bereits umschlossenes Objekt implementiert die Schnittstelle. Um festzustellen, ob dies der Fall ist, fragt der Marshaller das Objekt nach seiner **IUnknown-Schnittstelle**, und vergleicht die zurückgegebene Schnittstelle mit den Schnittstellen von anderen Objekten, die bereits umschlossen sind. Wenn die Schnittstelle die gleiche wie die des anderen Wrappers ist, haben die Objekte die gleiche Identität, und der vorhandene Wrapper wird an die Methode übergeben.  
+- Ein bereits umschlossenes Objekt implementiert die Schnittstelle. Um festzustellen, ob dies der Fall ist, fragt der Marshaller das Objekt nach seiner **IUnknown-Schnittstelle**, und vergleicht die zurückgegebene Schnittstelle mit den Schnittstellen von anderen Objekten, die bereits umschlossen sind. Wenn die Schnittstelle die gleiche wie die des anderen Wrappers ist, haben die Objekte die gleiche Identität, und der vorhandene Wrapper wird an die Methode übergeben.  
   
  Wenn die Schnittstelle nicht von einem bekannten Objekt stammt, geht der Marshaller folgendermaßen vor:  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Standardmäßiges Marshalling für Delegaten  
  Ein verwalteter Delegat wird als COM-Schnittstelle oder als Funktionszeiger gemarshallt, und zwar basierend auf dem Aufrufmechanismus:  
   
--   Für Plattformaufrufe wird ein Delegat standardmäßig als unverwalteter Funktionszeiger gemarshallt.  
+- Für Plattformaufrufe wird ein Delegat standardmäßig als unverwalteter Funktionszeiger gemarshallt.  
   
--   Für COM-Interop wird ein Delegat standardmäßig als COM-Schnittstelle vom Typ **_Delegate** gemarshallt. Die **_Delegate**-Schnittstelle ist in der Typbibliothek Mscorlib.tlb definiert und enthält die <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>-Methode, mit der Sie in der Lage sind, die Methode aufzurufen, auf die der Delegat verweist.  
+- Für COM-Interop wird ein Delegat standardmäßig als COM-Schnittstelle vom Typ **_Delegate** gemarshallt. Die **_Delegate**-Schnittstelle ist in der Typbibliothek Mscorlib.tlb definiert und enthält die <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>-Methode, mit der Sie in der Lage sind, die Methode aufzurufen, auf die der Delegat verweist.  
   
  Die folgende Tabelle zeigt die Marshalling-Optionen für den Datentyp "Verwalteter Delegat". Das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut stellt mehrere <xref:System.Runtime.InteropServices.UnmanagedType>-Enumerationswerte zum Marshallen von Delegaten bereit.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  Dieser Abschnitt enthält Informationen zu den folgenden formatierten Werttypen:  
   
--   [Im Plattformaufruf verwendete Werttypen](#value-types-used-in-platform-invoke)  
+- [Im Plattformaufruf verwendete Werttypen](#value-types-used-in-platform-invoke)  
   
--   [In COM-Interop verwendete Werttypen](#value-types-used-in-com-interop)  
+- [In COM-Interop verwendete Werttypen](#value-types-used-in-com-interop)  
   
  Neben einer Beschreibung formatierter Typen befasst sich dieses Thema mit [Systemwerttypen](#system-value-types), die ein ungewöhnliches Marshallingverhalten aufweisen.  
   
  Ein formatierter Typ ist ein komplexer Typ, der Informationen enthält, mit denen explizit das Layout seiner Member im Speicher gesteuert wird. Informationen zum Memberlayout werden mit dem <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut bereitgestellt. Das Layout kann einen der folgenden <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswerte aufweisen:  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Gibt an, dass die Common Language Runtime die Member dieses Typs aus Gründen der Effizienz frei neu anordnen kann. Wenn ein Werttyp allerdings an nicht verwalteten Code übergeben wird, ist das Layout der Member vorhersehbar. Der Versuch, eine solche Struktur automatisch zu marshallen, bewirkt eine Ausnahme.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Gibt an, dass die Member des Typs im nicht verwalteten Speicher in der gleichen Reihenfolge angeordnet werden sollen, in der sie in der Definition des verwalteten Typs erscheinen.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Gibt an, dass die Member entsprechend dem <xref:System.Runtime.InteropServices.FieldOffsetAttribute> angeordnet werden, das mit jedem Feld angegeben wird.  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  Sie können Strukturen unter Verwendung der folgenden Definition des Plattformaufrufs übergeben:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  Die entsprechende Definition des Plattformaufrufs für **GetSystemTime** lautet wie folgt:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

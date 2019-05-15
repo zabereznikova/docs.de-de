@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355635"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750425"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 
@@ -40,13 +40,13 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
 
 - **Exitcodes** Mit den folgenden Exitcodes im Befehl zum Aufrufen des verteilbaren Programms für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird angegeben, ob das Setup erfolgreich war oder mit einem Fehler beendet wurde:
 
-    - 0 - erfolgreich abgeschlossenes Setup.
+  - 0 - erfolgreich abgeschlossenes Setup.
 
-    - 3010 – Setup wurde erfolgreich abgeschlossen. Das System muss neu gestartet werden.
+  - 3010 – Setup wurde erfolgreich abgeschlossen. Das System muss neu gestartet werden.
 
-    - 1602 – Setup wurde abgebrochen.
+  - 1602 – Setup wurde abgebrochen.
 
-    - Alle anderen Codes - in Setup sind Fehler aufgetreten; Details dazu finden Sie in den unter "%temp%" erstellten Protokolldateien.
+  - Alle anderen Codes - in Setup sind Fehler aufgetreten; Details dazu finden Sie in den unter "%temp%" erstellten Protokolldateien.
 
 - **Abbrechen des Setups** Sie können Setup jederzeit abbrechen, indem Sie mit der `Abort`-Methode das `m_downloadAbort`-Flag und das `m_ installAbort`-Flag im MMIO-Abschnitt festlegen.
 

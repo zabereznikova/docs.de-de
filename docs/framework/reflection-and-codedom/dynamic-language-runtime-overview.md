@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e873f23e0178efefe37f371c379caa3d15bde4cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649502"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
 
@@ -24,11 +24,11 @@ Dynamische Sprachen können den Typ eines Objekts zur Runtime identifizieren, wo
 
 Die dynamischsten Sprachen bieten die folgenden Vorteile für Entwickler:
 
--   Die Möglichkeit, schnelle Feedbackschleifen (REPL oder „Lesen-Auswerten-Ausgeben-Schleife“) zu verwenden. Dadurch können Sie mehrere Anweisungen eingeben und sie sofort ausführen, um die Ergebnisse anzuzeigen.
+- Die Möglichkeit, schnelle Feedbackschleifen (REPL oder „Lesen-Auswerten-Ausgeben-Schleife“) zu verwenden. Dadurch können Sie mehrere Anweisungen eingeben und sie sofort ausführen, um die Ergebnisse anzuzeigen.
 
--   Unterstützung für Entwicklung „von oben“ und die traditionellere Entwicklung „von unten“. Wenn Sie z.B. einen „von oben“-Ansatz nutzen, können Sie Funktionen aufrufen, die noch nicht implementiert wurden und dann zugrunde liegende Implementierungen hinzufügen, wenn Sie diese benötigen.
+- Unterstützung für Entwicklung „von oben“ und die traditionellere Entwicklung „von unten“. Wenn Sie z.B. einen „von oben“-Ansatz nutzen, können Sie Funktionen aufrufen, die noch nicht implementiert wurden und dann zugrunde liegende Implementierungen hinzufügen, wenn Sie diese benötigen.
 
--   Einfachere Umgestaltung und Codeänderung, da Sie die statischen Typdeklarationen im gesamten Code nicht verändern müssen.
+- Einfachere Umgestaltung und Codeänderung, da Sie die statischen Typdeklarationen im gesamten Code nicht verändern müssen.
 
 Dynamische Sprachen können hervorragende Skriptsprachen sein. Kunden können Anwendungen leicht erweitern, die mithilfe dynamischer Sprachen mit neuen Befehlen und Funktionen erstellt wurden. Dynamische Sprachen werden auch häufig zum Erstellen von Websites und Testumgebungen verwendet, zudem zum Verwalten von Serverfarmen, zum Entwickeln verschiedenster Hilfsprogramme und zum Ausführen von Datentransformationen.
 
@@ -51,9 +51,9 @@ Wie die CLR ist die DLR auch ein Teil von .NET Framework und wird mit dem .NET F
 
 Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgendes:
 
--   IronPython. Als Open-Source-Software auf der [GitHub](https://github.com/IronLanguages/ironpython2)-Website verfügbar.
+- IronPython. Als Open-Source-Software auf der [GitHub](https://github.com/IronLanguages/ironpython2)-Website verfügbar.
 
--   IronRuby Als Open-Source-Software auf der [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044)-Website verfügbar.
+- IronRuby Als Open-Source-Software auf der [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044)-Website verfügbar.
 
 ## <a name="primary-dlr-advantages"></a>Wesentliche Vorteile der DLR
  Die Verwendung der DLR bietet die folgenden Vorteile:
@@ -80,11 +80,11 @@ Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgen
 
  Die DLR fügt der CLR eine Reihe von Diensten hinzu, um dynamische Sprachen besser zu unterstützen. Einige dieser Dienste sind:
 
--   Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) oder [Ausdrucksbaumstrukturen (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
+- Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) oder [Ausdrucksbaumstrukturen (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
--   Zwischenspeichern der Aufrufwebsite. Eine *dynamische Aufrufwebsite* ist ein Ort im Code, an dem Sie einen Vorgang wie `a + b` oder `a.b()` auf dynamischen Objekten ausführen können. Die DLR speichert die Eigenschaften von `a` und `b` (normalerweise die Typen dieser Objekte) sowie Informationen über den Vorgang. Wenn solch ein Vorgang zuvor ausgeführt wurde, ruft die DLR alle nötigen Informationen aus dem Cache für den schnellen Versand ab.
+- Zwischenspeichern der Aufrufwebsite. Eine *dynamische Aufrufwebsite* ist ein Ort im Code, an dem Sie einen Vorgang wie `a + b` oder `a.b()` auf dynamischen Objekten ausführen können. Die DLR speichert die Eigenschaften von `a` und `b` (normalerweise die Typen dieser Objekte) sowie Informationen über den Vorgang. Wenn solch ein Vorgang zuvor ausgeführt wurde, ruft die DLR alle nötigen Informationen aus dem Cache für den schnellen Versand ab.
 
--   Dynamische Objektinteroperabilität Die DLR stellt einen Satz von Klassen und Schnittstellen bereit, die dynamische Objekte und Vorgänge darstellen und von Verantwortlichen für die Sprachimplementierung und Autoren dynamischer Bibliotheken genutzt werden können. Diese Klassen und Schnittstellen enthalten <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> und <xref:System.Dynamic.ExpandoObject>.
+- Dynamische Objektinteroperabilität Die DLR stellt einen Satz von Klassen und Schnittstellen bereit, die dynamische Objekte und Vorgänge darstellen und von Verantwortlichen für die Sprachimplementierung und Autoren dynamischer Bibliotheken genutzt werden können. Diese Klassen und Schnittstellen enthalten <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> und <xref:System.Dynamic.ExpandoObject>.
 
 Die DLR verwendet Binder in Aufrufwebsites, um nicht nur mit .NET Framework zu kommunizieren, sondern auch mit anderen Infrastrukturen und Diensten, einschließlich Silverlight und COM. Binder kapseln die Semantik einer Sprache ein und geben an, wie Vorgänge in einer Aufrufwebsite durchgeführt werden, indem Ausdrucksbaumstrukturen verwendet werden. Dadurch werden dynamische und statisch typisierte Sprachen aktiviert, die die DLR zum Freigeben von Bibliotheken und Erhalten von Zugriff auf alle Technologien verwenden, die die DLR unterstützt.
 
