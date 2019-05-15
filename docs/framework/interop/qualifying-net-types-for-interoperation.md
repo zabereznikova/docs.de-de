@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648560"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualifizieren von .NET-Typen für die Interoperation
 Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügbar zu machen, beachten Sie zur Entwurfszeit die Anforderungen von Com-Interop. Verwaltete Typen (Klassen, Schnittstellen, Strukturen und Enumerationen) lassen sich nahtlos in COM-Typen integrieren, wenn Sie die folgenden Richtlinien einhalten:  
   
--   Klassen sollten Schnittstellen explizit implementieren.  
+- Klassen sollten Schnittstellen explizit implementieren.  
   
      COM-Interop stellt zwar einen Mechanismus bereit, mit dem automatisch eine Schnittstelle generiert wird, die alle Member einer Klasse und die Member der dazugehörigen Basisklasse enthält, dennoch ist es besser, explizite Schnittstellen bereitzustellen. Die automatisch generierte Schnittstelle wird als Klassenschnittstelle bezeichnet. Informationen zu Richtlinien finden Sie unter [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Sie können Visual Basic, C# und C++ verwenden, um Schnittstellendefinitionen in Ihren Code einzuschließen. So müssen Sie nicht die Interface Definition Language (IDL) oder eine ähnliche Sprache verwenden. Einzelheiten zur Syntax finden Sie in der Dokumentation zur Sprache.  
   
--   Verwaltete Typen müssen öffentlich sein.  
+- Verwaltete Typen müssen öffentlich sein.  
   
      Nur öffentliche Typen in einer Assembly werden registriert und in die Typbibliothek exportiert. Dies hat zur Folge, dass nur öffentliche Typen für das COM sichtbar sind.  
   
      Dank verwalteter Typen stehen Funktionen auch in anderem verwaltetem Code zur Verfügung, der möglicherweise nicht für COM verfügbar ist. COM-Clients haben z.B. keinen Zugriff auf parametrisierte Konstruktoren, statische Methoden und Konstantenfelder. Wenn die Runtime Daten in einen Typ hinein und aus einem Typ heraus marshallt, werden diese Daten möglicherweise kopiert oder umgewandelt.  
   
--   Methoden, Eigenschaften, Felder und Ereignisse müssen öffentlich sein.  
+- Methoden, Eigenschaften, Felder und Ereignisse müssen öffentlich sein.  
   
      Member öffentlicher Typen müssen ebenfalls öffentlich sein, wenn sie im COM sichtbar sein sollen. Sie können die Sichtbarkeit einer Assembly, eines öffentlichen Typs oder öffentlicher Member eines öffentlichen Typs einschränken, indem Sie die Klasse <xref:System.Runtime.InteropServices.ComVisibleAttribute> anwenden. Standardmäßig sind alle öffentlichen Typen und Member sichtbar.  
   
--   Typen müssen über einen öffentlichen Standardkonstruktor verfügen, der sich über das COM aktivieren lässt.  
+- Typen müssen über einen öffentlichen Standardkonstruktor verfügen, der sich über das COM aktivieren lässt.  
   
      Verwaltete, öffentliche Typen sind im COM sichtbar. Ohne einen öffentlichen Standardkonstruktor (d.h. einen Konstruktor ohne Argumente) können COM-Clients den Typ nicht erstellen. Wenn er auf andere Art und Weise aktiviert wird, können sie den Typ aber dennoch verwenden.  
   
--   Typen können nicht abstrakt sein.  
+- Typen können nicht abstrakt sein.  
   
      Weder COM-Clients noch .NET-Clients können abstrakte Typen erstellen.  
   

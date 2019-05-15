@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628931"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Asynchrones Programmiermodell (APM)
 Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwendet, wird als zwei Methoden namens `BeginOperationName` und `EndOperationName` implementiert, die den asynchronen Vorgang *OperationName* starten bzw. beenden. Die <xref:System.IO.FileStream> -Klasse stellt z. B. die Methoden <xref:System.IO.FileStream.BeginRead%2A> und <xref:System.IO.FileStream.EndRead%2A> zum asynchronen Lesen von Bytes aus einer Datei bereit. Diese Methoden implementieren die asynchrone Version der <xref:System.IO.FileStream.Read%2A> -Methode.  
@@ -55,15 +55,15 @@ Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwe
   
  Anwendungsentwickler verfügen über mehrere Entwurfsoptionen für den Zugriff auf die Ergebnisse des asynchronen Vorgangs. Die richtige Wahl hängt davon ab, ob die Anwendung über Anweisungen verfügt, die ausgeführt werden können, während der Vorgang abgeschlossen wird. Wenn eine Anwendung keine zusätzlichen Aufgaben erledigen kann, bis sie die Ergebnisse des asynchronen Vorgangs erhält, muss die Anwendung blockiert werden, bis die Ergebnisse verfügbar sind. Sie können einen der folgenden Ansätze zum Blockieren verwenden, bis der asynchrone Vorgang abgeschlossen ist:  
   
--   Rufen Sie `EndOperationName` im Hauptthread der Anwendung auf, wodurch die Ausführung der Anwendung blockiert wird, bis der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+- Rufen Sie `EndOperationName` im Hauptthread der Anwendung auf, wodurch die Ausführung der Anwendung blockiert wird, bis der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
--   Verwenden Sie den <xref:System.IAsyncResult.AsyncWaitHandle%2A> zum Blockieren der Ausführung der Anwendung, bis mindestens ein Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Verwenden Sie den <xref:System.IAsyncResult.AsyncWaitHandle%2A> zum Blockieren der Ausführung der Anwendung, bis mindestens ein Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
  Anwendungen, die nicht blockiert werden müssen, während der asynchrone Vorgang abgeschlossen wird, können einen der folgenden Ansätze verwenden:  
   
--   Fragen Sie den Abschlussstatus des Vorgangs durch Überprüfen der <xref:System.IAsyncResult.IsCompleted%2A>-Eigenschaft in regelmäßigen Abständen ab, und rufen Sie `EndOperationName` auf, wenn der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+- Fragen Sie den Abschlussstatus des Vorgangs durch Überprüfen der <xref:System.IAsyncResult.IsCompleted%2A>-Eigenschaft in regelmäßigen Abständen ab, und rufen Sie `EndOperationName` auf, wenn der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
   
--   Verwenden Sie einen <xref:System.AsyncCallback> -Delegat, um eine Methode aufzurufen, wenn der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- Verwenden Sie einen <xref:System.AsyncCallback> -Delegat, um eine Methode aufzurufen, wenn der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

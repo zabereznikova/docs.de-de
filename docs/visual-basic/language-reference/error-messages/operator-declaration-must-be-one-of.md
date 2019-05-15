@@ -1,5 +1,5 @@
 ---
-title: 'Operatordeklaration muss eine der: +,-, *, /, ^, &amp;, Like, Mod, und, Or, Xor, nicht der Fall, <<>> ",", =, <>, <, < =, >, > =, CType, IsTrue, IsFalse'
+title: "Operatordeklaration muss eine der: +,-, *, /, ^, &amp;, Like, Mod, und, Or, Xor, nicht der Fall, <<>> ',', =, <>, <, < =, >, > =, CType, IsTrue, IsFalse"
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336134"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590040"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Entfernen von Attributen aus einem Elementknoten im DOM
 Es gibt viele Möglichkeiten, Attribute zu entfernen. Eine Möglichkeit besteht darin, Attribute aus der Attributauflistung zu entfernen. Dabei werden die folgenden Schritte ausgeführt:  
@@ -19,19 +19,19 @@ Es gibt viele Möglichkeiten, Attribute zu entfernen. Eine Möglichkeit besteht 
   
 2. Entfernen Sie das Attribut aus der Attributauflistung mithilfe einer dieser drei Methoden:  
   
-    -   Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.Remove%2A> ein bestimmtes Attribut.  
+    - Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.Remove%2A> ein bestimmtes Attribut.  
   
-    -   Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> alle Attribute aus der Auflistung, sodass das Element keine Attribute mehr aufweist.  
+    - Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> alle Attribute aus der Auflistung, sodass das Element keine Attribute mehr aufweist.  
   
-    -   Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> ein Attribut mithilfe der entsprechenden Indexnummer dieses Attributs aus der Attributauflistung.  
+    - Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> ein Attribut mithilfe der entsprechenden Indexnummer dieses Attributs aus der Attributauflistung.  
   
  Die folgenden Methoden entfernen Attribute aus dem Elementknoten.  
   
--   Verwenden Sie <xref:System.Xml.XmlElement.RemoveAllAttributes%2A>, um die Attributauflistung zu entfernen.  
+- Verwenden Sie <xref:System.Xml.XmlElement.RemoveAllAttributes%2A>, um die Attributauflistung zu entfernen.  
   
--   Entfernen Sie mit <xref:System.Xml.XmlElement.RemoveAttribute%2A> ein einzelnes Attribut anhand seines Namens aus der Auflistung.  
+- Entfernen Sie mit <xref:System.Xml.XmlElement.RemoveAttribute%2A> ein einzelnes Attribut anhand seines Namens aus der Auflistung.  
   
--   Entfernen Sie mit <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> ein einzelnes Attribut anhand seiner Indexnummer aus der Auflistung.  
+- Entfernen Sie mit <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> ein einzelnes Attribut anhand seiner Indexnummer aus der Auflistung.  
   
  Eine weitere Möglichkeit ist das Abrufen des Elements, das Abrufen des Attributs aus der Attributauflistung und das direkte Entfernen des Attributknotens. Zum Abrufen des Attributs aus der Attributauflistung können Sie einen Namen verwenden, `XmlAttribute attr = attrs["attr_name"];`, einen Index `XmlAttribute attr = attrs[0];`, oder Sie können den Namen mit dem Namespace `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]` voll qualifizieren.  
   

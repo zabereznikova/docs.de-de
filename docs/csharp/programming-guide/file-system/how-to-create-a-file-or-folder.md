@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970713"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595641"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Vorgehensweise: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)
 Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.  
@@ -25,7 +25,7 @@ Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unt
   
  Wenn Sie die folgenden Änderungen im Beispiel vornehmen, können Sie, je nachdem, ob eine Datei mit einem bestimmten Namen bereits vorhanden ist, unterschiedliche Ergebnisse erzeugen. Wenn eine solche Datei nicht vorhanden ist, erstellt der Code sie. Wenn eine solche Datei vorhanden ist, fügt der Code Daten an diese Datei an.  
   
--   Geben Sie einen nicht zufälligen Dateinamen an.  
+- Geben Sie einen nicht zufälligen Dateinamen an.  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unt
     string fileName = "MyNewFile.txt";  
     ```  
   
--   Ersetzen Sie im folgenden Code die `if`-`else`-Anweisung durch die `using`-Anweisung.  
+- Ersetzen Sie im folgenden Code die `if`-`else`-Anweisung durch die `using`-Anweisung.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unt
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Ordnername ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse). Verwenden Sie die <xref:System.IO.Path>-Klasse, um gültige Pfadnamen zu erstellen.  
+- Der Ordnername ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse). Verwenden Sie die <xref:System.IO.Path>-Klasse, um gültige Pfadnamen zu erstellen.  
   
--   Der übergeordnete Ordner des zu erstellenden Ordners ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
+- Der übergeordnete Ordner des zu erstellenden Ordners ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
   
--   Der Ordnername ist `null` (<xref:System.ArgumentNullException>-Klasse).  
+- Der Ordnername ist `null` (<xref:System.ArgumentNullException>-Klasse).  
   
--   Der Ordnername ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
+- Der Ordnername ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
   
--   Der Ordnername besteht nur aus einem Doppelpunkt ":" (<xref:System.IO.PathTooLongException>-Klasse).  
+- Der Ordnername besteht nur aus einem Doppelpunkt ":" (<xref:System.IO.PathTooLongException>-Klasse).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Eine Instanz der <xref:System.Security.SecurityException>-Klasse kann in nur teilweise vertrauenswürdigen Umgebungen ausgelöst werden.  

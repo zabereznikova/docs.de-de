@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634001"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern
 Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den gregorianischen Kalender als Standardkalender. Das bedeutet, dass ein Aufruf der `ToString`-Methode eines Datums- und Uhrzeitwerts die Zeichenfolgendarstellung dieses Datums und dieser Uhrzeit im gregorianischen Kalender anzeigt, selbst wenn dieses Datum und diese Uhrzeit in einem anderen Kalender erstellt wurden. Dies wird im folgenden Beispiel veranschaulicht. Hierbei werden zwei verschiedene Möglichkeiten verwendet, um einen Datums- und Uhrzeitwert mit dem persischen Kalender zu erstellen. Beim Aufruf der <xref:System.DateTime.ToString%2A>-Methode werden diese Datums- und Uhrzeitwerte aber weiterhin im gregorianischen Kalender angezeigt. Dieses Beispiel zeigt zwei häufig verwendete, aber falsche Verfahren zum Anzeigen des Datums in einem bestimmten Kalender.  
@@ -51,19 +51,19 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
   
 3. Rufen Sie für jedes Datums- und Uhrzeitelement, das Sie anzeigen möchten, die `Get`... -Methode. Die folgenden Methoden sind verfügbar:  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A> zum Anzeigen des Jahres im entsprechenden Kalender.  
+    - <xref:System.Globalization.Calendar.GetYear%2A> zum Anzeigen des Jahrs im entsprechenden Kalender  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>zum Anzeigen des Monats im entsprechenden Kalender.  
+    - <xref:System.Globalization.Calendar.GetMonth%2A> zum Anzeigen des Monats im entsprechenden Kalender  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>zum Anzeigen der Zahl, die dem Tag des Monats im entsprechenden Kalender entspricht.  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A> zum Anzeigen der Zahl, die dem Tag des Monats im entsprechenden Kalender entspricht  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>zum Anzeigen der Stunde des Tages im entsprechenden Kalender.  
+    - <xref:System.Globalization.Calendar.GetHour%2A> zum Anzeigen der Stunde des Tages im entsprechenden Kalender  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>zum Anzeigen der Minuten in der Stunde im entsprechenden Kalender.  
+    - <xref:System.Globalization.Calendar.GetMinute%2A> zum Anzeigen der Minuten in der Stunde im entsprechenden Kalender  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>zum Anzeigen der Sekunden in der Minute im entsprechenden Kalender.  
+    - <xref:System.Globalization.Calendar.GetSecond%2A> zum Anzeigen der Sekunden in der Minute im entsprechenden Kalender  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> zum Anzeigen der Millisekunden in der Sekunde im entsprechenden Kalender.  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A> zum Anzeigen der Millisekunden in der Sekunde im entsprechenden Kalender  
   
 ## <a name="example"></a>Beispiel  
  Das Beispiel zeigt ein Datum mithilfe von zwei verschiedenen Kalendern an. Es zeigt das Datum an, nachdem der Hijri-Kalender als Standardkalender für die Kultur „ar-JO“ definiert wurde, und es zeigt das Datum unter Verwendung des persischen Kalenders an, der nicht als optionaler Kalender von der fa-IR-Kultur unterstützt wird.  
@@ -75,13 +75,13 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
   
  Das Beispiel definiert eine wiederverwendbare Kalenderhilfsprogrammklasse, `CalendarUtility`, um viele der Details beim Generieren der Zeichenfolgendarstellung eines Datums mithilfe eines bestimmten Kalenders zu verarbeiten. Die `CalendarUtility`-Klasse verfügt über die folgenden Member:  
   
--   Einen parametrisierten Konstruktor, dessen einziger Parameter ein <xref:System.Globalization.Calendar>-Objekt ist, in dem ein Datum dargestellt werden soll. Dieser wird einem privaten Klassenfeld zugewiesen.  
+- Einen parametrisierten Konstruktor, dessen einziger Parameter ein <xref:System.Globalization.Calendar>-Objekt ist, in dem ein Datum dargestellt werden soll. Dieser wird einem privaten Klassenfeld zugewiesen.  
   
--   `CalendarExists`, eine private Methode, die einen booleschen Wert zurückgibt, um anzugeben, ob der durch das `CalendarUtility`-Objekt dargestellte Kalender vom <xref:System.Globalization.CultureInfo>-Objekt unterstützt wird, das als Parameter an die Methode übergeben wird. Die Methode umschließt einen Aufruf der <xref:System.Array.Exists%2A?displayProperty=nameWithType>-Methode, an die das <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>-Array übergeben wird.  
+- `CalendarExists`, eine private Methode, die einen booleschen Wert zurückgibt, um anzugeben, ob der durch das `CalendarUtility`-Objekt dargestellte Kalender von dem <xref:System.Globalization.CultureInfo>-Objekt unterstützt wird, das als Parameter an die Methode übergeben wird. Die Methode umschließt einen Aufruf der <xref:System.Array.Exists%2A?displayProperty=nameWithType>-Methode, an die das <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>-Array übergeben wird.  
   
--   `HasSameName`, eine dem <xref:System.Predicate%601>-Delegaten zugewiesene private Methode, die als Parameter an die <xref:System.Array.Exists%2A?displayProperty=nameWithType>-Methode übergeben wird. Jeder Member des Arrays wird an die Methode übergeben, bis die Methode `true` zurückgibt. Die Methode bestimmt, ob der Name eines optionalen Kalenders dem Kalender entspricht, der durch das `CalendarUtility`-Objekt dargestellt wird.  
+- `HasSameName`, eine dem <xref:System.Predicate%601>-Delegaten zugewiesene private Methode, die als Parameter an die <xref:System.Array.Exists%2A?displayProperty=nameWithType>-Methode übergeben wird. Jeder Member des Arrays wird an die Methode übergeben, bis die Methode `true` zurückgibt. Die Methode bestimmt, ob der Name eines optionalen Kalenders dem Kalender entspricht, der durch das `CalendarUtility`-Objekt dargestellt wird.  
   
--   `DisplayDate`, eine überladene öffentliche Methode, an die zwei Parameter übergeben werden: erstens entweder ein <xref:System.DateTime>- oder ein <xref:System.DateTimeOffset>-Wert, der in dem durch das `CalendarUtility`-Objekt dargestellten Kalender ausgedrückt werden soll. Zweitens wird die Kultur übergeben, deren Formatierungsregeln verwendet werden sollen. Das Verhalten bei der Rückgabe der Zeichenfolgendarstellung eines Datums richtet sich danach, ob der Zielkalender von der Kultur unterstützt wird, deren Formatierungsregeln verwendet werden sollen.  
+- `DisplayDate`, eine überladene öffentliche Methode, an die zwei Parameter übergeben werden: erstens entweder ein <xref:System.DateTime>- oder ein <xref:System.DateTimeOffset>-Wert, der in dem durch das `CalendarUtility`-Objekt dargestellten Kalender ausgedrückt werden soll. Zweitens wird die Kultur übergeben, deren Formatierungsregeln verwendet werden sollen. Das Verhalten bei der Rückgabe der Zeichenfolgendarstellung eines Datums richtet sich danach, ob der Zielkalender von der Kultur unterstützt wird, deren Formatierungsregeln verwendet werden sollen.  
   
  Unabhängig von dem Kalender, der in diesem Beispiel zum Erstellen eines <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Werts verwendet wird, wird dieser Wert üblicherweise als gregorianisches Datum ausgedrückt. Dies liegt daran, dass die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> keine Kalenderinformationen beibehalten. Intern werden sie als Anzahl von Zeiteinheiten (Ticks) dargestellt, die seit Mitternacht des 1. Januar 0001 verstrichen sind. Die Interpretation dieser Zahl hängt vom Kalender ab. In den meisten Kulturen ist der Gregorianische Kalender der Standardkalender.  
   

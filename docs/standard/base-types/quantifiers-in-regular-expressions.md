@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678264"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633643"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
@@ -228,11 +228,11 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 ## <a name="greedy-and-lazy-quantifiers"></a>Gierige und träge Quantifizierer  
  Eine Reihe von Quantifizierern gibt es in zwei Versionen:  
   
--   Eine gierige Version.  
+- Eine gierige Version.  
   
      Ein gieriger Quantifizierer versucht, ein Element so oft wie möglich abzugleichen.  
   
--   Eine nicht gierige (oder träge) Version.  
+- Eine nicht gierige (oder träge) Version.  
   
      Ein nicht gieriger Quantifizierer versucht, ein Element so selten wie möglich abzugleichen. Sie können einen gierigen Quantifizierer in einen trägen Quantifizierer umwandeln, indem Sie einfach ein `?` hinzufügen.  
   

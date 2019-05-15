@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340606"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633833"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Vorgehensweise: Roundtrip-Datums- und -Uhrzeitwerte
 In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. In diesem Thema wird gezeigt, wie ein <xref:System.DateTime>-Wert, ein <xref:System.DateTimeOffset>-Wert sowie ein Datums- und Uhrzeitwert mit Zeitzoneninformationen so gespeichert und wiederhergestellt werden, dass der wiederhergestellte Wert denselben Zeitpunkt bezeichnet wie der gespeicherte Wert.  
@@ -83,24 +83,24 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Diese Beispiele erfordern Folgendes:  
   
--   Importieren der folgenden Namespaces mithilfe von `using`-Anweisungen (C#) oder `Imports`-Anweisungen (Visual Basic):  
+- Importieren der folgenden Namespaces mithilfe von `using`-Anweisungen (C#) oder `Imports`-Anweisungen (Visual Basic):  
   
-    -   <xref:System> (nur C#).  
+    - <xref:System> (nur C#)  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>sein.  
+    - <xref:System.Globalization?displayProperty=nameWithType>.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>sein.  
+    - <xref:System.IO?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>sein.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>sein.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
--   Ein Verweis auf „System.Core.dll“  
+- Ein Verweis auf „System.Core.dll“  
   
--   Jedes Codebeispiel, ausgenommen der `DateInTimeZone`-Klasse, sollte in eine Klasse oder ein Visual Basic-Modul eingefügt, in Methoden umschlossen und über die `Main`-Methode aufgerufen werden.  
+- Jedes Codebeispiel, ausgenommen der `DateInTimeZone`-Klasse, sollte in eine Klasse oder ein Visual Basic-Modul eingefügt, in Methoden umschlossen und über die `Main`-Methode aufgerufen werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Auswählen zwischen „DateTime“, „DateTimeOffset“, „TimeSpan“ und „TimeZoneInfo“](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

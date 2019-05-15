@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633871"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Vorgehensweise: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
@@ -35,9 +35,9 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
   
 4. Rufen Sie entweder die `TryParse`- oder `Parse`-Methode des <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Typs ab, um die Konvertierung zu versuchen. Verwenden Sie eine Überladung der `TryParse`- oder `Parse`-Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
   
-    -   Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>-Objekt  
+    - Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>-Objekt  
   
-    -   Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>-Objekts  
+    - Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>-Objekts  
   
 5. Wenn bei der Konvertierung ein Fehler auftritt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
   
@@ -65,9 +65,9 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
   
 10. Rufen Sie entweder die <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>- oder <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType>-Methode zum Konvertieren von Datum und Uhrzeit der Anforderung des Benutzers in einen <xref:System.DateTime>-Wert auf. Verwenden Sie eine Überladung der Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
   
-    -   Das in Schritt 8 erstellte <xref:System.Globalization.CultureInfo>-Objekt.  
+    - Das in Schritt 8 erstellte <xref:System.Globalization.CultureInfo>-Objekt.  
   
-    -   Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 8 erstellten <xref:System.Globalization.CultureInfo>-Objekts.  
+    - Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 8 erstellten <xref:System.Globalization.CultureInfo>-Objekts.  
   
 11. Wenn beim Analysevorgang in Schritt 10 ein Fehler auftritt, fahren Sie mit Schritt 13 fort. Rufen Sie andernfalls die <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType>-Methode auf, um die Zeichenfolgendarstellung des Offsets der Zeitzone des Benutzers in eine ganze Zahl zu konvertieren.  
   
@@ -100,13 +100,13 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um den Code zu kompilieren, erstellen Sie eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite ohne CodeBehind. Anschließend kopieren Sie das Beispiel in die Webseite, damit es den vorhandenen Code ersetzt. Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite sollte folgende Steuerelemente enthalten:  
   
--   Ein <xref:System.Web.UI.WebControls.Label>-Steuerelement, auf das nicht im Code verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A>-Eigenschaft auf „Geben Sie eine Zahl ein:“ fest.  
+- Ein <xref:System.Web.UI.WebControls.Label>-Steuerelement, auf das nicht im Code verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A>-Eigenschaft auf „Geben Sie eine Zahl ein:“ fest.  
   
--   Ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement namens `DateString`.  
+- Ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement namens `DateString`.  
   
--   Ein <xref:System.Web.UI.WebControls.Button>-Steuerelement namens `OKButton`. Legen Sie seine <xref:System.Web.UI.WebControls.Button.Text%2A>-Eigenschaft auf „OK“ fest.  
+- Ein <xref:System.Web.UI.WebControls.Button>-Steuerelement namens `OKButton`. Legen Sie seine <xref:System.Web.UI.WebControls.Button.Text%2A>-Eigenschaft auf „OK“ fest.  
   
--   Ein <xref:System.Web.UI.WebControls.HiddenField>-Steuerelement namens `DateInfo`.  
+- Ein <xref:System.Web.UI.WebControls.HiddenField>-Steuerelement namens `DateInfo`.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Um zu verhindern, dass ein Benutzer ein Skript in den HTML-Stream einfügt, sollte eine Benutzereingabe nie direkt in der Antwort des Servers wiederholt werden. Sie sollte stattdessen mithilfe der <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>-Methode codiert werden.  

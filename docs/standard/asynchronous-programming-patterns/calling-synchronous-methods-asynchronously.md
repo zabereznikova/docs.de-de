@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702880"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629104"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Asynchrones Aufrufen von synchronen Methoden
 
@@ -45,13 +45,13 @@ Die Ergebnisse dieses asynchronen Aufrufs werden dann mithilfe der `EndInvoke` -
 
 Die in diesem Abschnitt verwendeten Codebeispiele veranschaulichen die vier gebräuchlichen Arten der Verwendung von `BeginInvoke` und `EndInvoke` bei asynchronen Aufrufen. Nach dem Aufrufen von `BeginInvoke` können Sie Folgendes tun:
 
--   Sie können etwas Arbeit erledigen und dann `EndInvoke` aufrufen, um eine Blockierung bis zum Abschluss des Aufrufs zu erreichen.
+- Sie können etwas Arbeit erledigen und dann `EndInvoke` aufrufen, um eine Blockierung bis zum Abschluss des Aufrufs zu erreichen.
 
--   Rufen Sie ein <xref:System.Threading.WaitHandle> mithilfe der <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>-Eigenschaft ab. Verwenden Sie deren <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode, um die Ausführung zu blockieren, bis das <xref:System.Threading.WaitHandle> signalisiert wurde, und rufen Sie dann `EndInvoke` auf.
+- Rufen Sie ein <xref:System.Threading.WaitHandle> mithilfe der <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> -Eigenschaft ab. Verwenden Sie deren <xref:System.Threading.WaitHandle.WaitOne%2A> -Methode, um die Ausführung zu blockieren, bis das <xref:System.Threading.WaitHandle> signalisiert wurde, und rufen Sie dann `EndInvoke`auf.
 
--   Sie können das von <xref:System.IAsyncResult> zurückgegebene `BeginInvoke` abrufen, um zu ermitteln, wann der asynchrone Aufruf beendet wurde, und dann `EndInvoke`abrufen.
+- Sie können das von <xref:System.IAsyncResult> zurückgegebene `BeginInvoke` abrufen, um zu ermitteln, wann der asynchrone Aufruf beendet wurde, und dann `EndInvoke`abrufen.
 
--   Sie können einen Delegaten für eine Rückrufmethode an `BeginInvoke` übergeben. Die Methode wird bei Beendigung des asynchronen Aufrufs für einen <xref:System.Threading.ThreadPool> -Thread ausgeführt. Die Rückrufmethode ruft die `EndInvoke`-Methode auf.
+- Sie können einen Delegaten für eine Rückrufmethode an `BeginInvoke`übergeben. Die Methode wird bei Beendigung des asynchronen Aufrufs für einen <xref:System.Threading.ThreadPool> -Thread ausgeführt. Die Rückrufmethode ruft die `EndInvoke`-Methode auf.
 
 > [!IMPORTANT]
 > Unabhängig von der Vorgehensweise wird immer `EndInvoke` aufgerufen, um den asynchronen Aufruf abzuschließen.
@@ -81,7 +81,7 @@ Die in diesem Abschnitt verwendeten Codebeispiele veranschaulichen die vier gebr
  Bei Verwendung eines <xref:System.Threading.WaitHandle>kann vor oder nach Abschluss des asynchronen Aufrufs eine weitere Verarbeitung erfolgen. Dies ist jedoch nur vor dem Abrufen der Ergebnisse über den Aufruf von `EndInvoke` möglich.
 
 > [!NOTE]
-> Das Wait-Handle wird nicht automatisch geschlossen, wenn Sie `EndInvoke` aufrufen. Wenn Sie alle Verweise auf das Wait-Handle freigeben, werden Systemressourcen frei, sobald das Wait-Handle von der Garbage Collection zurückgefordert wird. Um die Systemressourcen unmittelbar nach der Verwendung des Wait-Handles freizugeben, löschen Sie es, indem Sie die <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>-Methode aufrufen. Garbage Collection arbeitet effizienter, wenn verwerfbare Objekte explizit entfernt werden.
+> Das Wait-Handle wird nicht automatisch geschlossen, wenn Sie `EndInvoke`aufrufen. Wenn Sie alle Verweise auf das Wait-Handle freigeben, werden Systemressourcen frei, sobald das Wait-Handle von der Garbage Collection zurückgefordert wird. Um die Systemressourcen unmittelbar nach der Verwendung des Wait-Handles freizugeben, löschen Sie es, indem Sie die <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> -Methode aufrufen. Garbage Collection arbeitet effizienter, wenn verwerfbare Objekte explizit entfernt werden.
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -97,15 +97,15 @@ Die in diesem Abschnitt verwendeten Codebeispiele veranschaulichen die vier gebr
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>Ausführen einer Rückrufmethode bei Beendigung eines asynchronen Aufrufs
  Wenn der Thread, der den asynchronen Aufruf gestartet hat, die Ergebnisse nicht verarbeiten muss, können Sie bei Beendigung des Aufrufs eine Rückrufmethode ausführen. Die Rückrufmethode wird auf einem <xref:System.Threading.ThreadPool> -Thread ausgeführt.
 
- Um eine Rückrufmethode verwenden zu können, müssen Sie `BeginInvoke` an einen <xref:System.AsyncCallback> -Delegaten übergeben, der die Rückrufmethode darstellt. Sie können auch ein Objekt übergeben, das die von der Rückrufmethode zu verwendenden Informationen enthält. Mit der Rückrufmethode können Sie das <xref:System.IAsyncResult>, das den einzigen Parameter der Rückrufmethode darstellt, in ein <xref:System.Runtime.Remoting.Messaging.AsyncResult> -Objekt umwandeln. Mithilfe der <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType>-Eigenschaft erhalten Sie dann den Delegaten, der zur Initiierung des Aufrufs verwendet wurde, sodass Sie `EndInvoke` aufrufen können.
+ Um eine Rückrufmethode verwenden zu können, müssen Sie `BeginInvoke` an einen <xref:System.AsyncCallback> -Delegaten übergeben, der die Rückrufmethode darstellt. Sie können auch ein Objekt übergeben, das die von der Rückrufmethode zu verwendenden Informationen enthält. Mit der Rückrufmethode können Sie das <xref:System.IAsyncResult>, das den einzigen Parameter der Rückrufmethode darstellt, in ein <xref:System.Runtime.Remoting.Messaging.AsyncResult> -Objekt umwandeln. Mithilfe der <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> -Eigenschaft erhalten Sie dann den Delegaten, der zur Initiierung des Aufrufs verwendet wurde, sodass Sie `EndInvoke`aufrufen können.
 
  Hinweise zum Beispiel:
 
--   Der `threadId`-Parameter von `TestMethod` ist ein `out`-Parameter ([`<Out>` `ByRef` in Visual Basic). Deshalb wird sein Eingabewert niemals von `TestMethod` verwendet. Eine Dummyvariable wird an den `BeginInvoke` -Aufruf übergeben. Wenn der `threadId` -Parameter ein `ref` -Parameter wäre (`ByRef` in Visual Basic), müsste die Variable ein Feld auf Klassenebene darstellen, damit sie sowohl an `BeginInvoke` als auch an `EndInvoke`übergeben werden könnte.
+- Der `threadId`-Parameter von `TestMethod` ist ein `out`-Parameter ([`<Out>` `ByRef` in Visual Basic). Deshalb wird sein Eingabewert niemals von `TestMethod` verwendet. Eine Dummyvariable wird an den `BeginInvoke` -Aufruf übergeben. Wenn der `threadId` -Parameter ein `ref` -Parameter wäre (`ByRef` in Visual Basic), müsste die Variable ein Feld auf Klassenebene darstellen, damit sie sowohl an `BeginInvoke` als auch an `EndInvoke`übergeben werden könnte.
 
--   Die an `BeginInvoke` übergebenen Zustandsinformationen bestehen aus einer Formatzeichenfolge, die von der Rückrufmethode zum Formatieren einer Ausgabemeldung verwendet wird. Da sie als <xref:System.Object>-Typ übergeben werden, müssen die Zustandsinformationen vor der Verwendung in den geeigneten Typ umgewandelt werden.
+- Die an `BeginInvoke` übergebenen Zustandsinformationen bestehen aus einer Formatzeichenfolge, die von der Rückrufmethode zum Formatieren einer Ausgabemeldung verwendet wird. Da sie als <xref:System.Object>-Typ übergeben werden, müssen die Zustandsinformationen vor der Verwendung in den geeigneten Typ umgewandelt werden.
 
--   Der Rückruf erfolgt in einem <xref:System.Threading.ThreadPool> -Thread. <xref:System.Threading.ThreadPool> -Threads sind Hintergrundthreads, die nicht dafür sorgen, dass die Anwendung weiter ausgeführt wird, wenn der Hauptthread beendet wird. Aus diesem Grund muss der Hauptthread des Beispiels im Ruhezustand verbleiben, bis der Rückruf abgeschlossen ist.
+- Der Rückruf erfolgt in einem <xref:System.Threading.ThreadPool> -Thread. <xref:System.Threading.ThreadPool> -Threads sind Hintergrundthreads, die nicht dafür sorgen, dass die Anwendung weiter ausgeführt wird, wenn der Hauptthread beendet wird. Aus diesem Grund muss der Hauptthread des Beispiels im Ruhezustand verbleiben, bis der Rückruf abgeschlossen ist.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650496"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
@@ -34,9 +34,9 @@ Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollt
 ## <a name="retrieving-resources-from-assemblies"></a>Abrufen von Ressourcen aus Assemblys  
  Die <xref:System.Resources.ResourceManager> Klasse ermöglicht den Zugriff auf Ressourcen zur Laufzeit. Verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> -Methode, um Zeichenfolgenressourcen abzurufen und die <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> - oder <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> - Methode, um Nicht-Zeichenfolgenressourcen abzurufen. Jede Methode enthält zwei Überladungen:  
   
--   Eine Überladung, deren einzelner Parameter eine Zeichenfolge ist, der den Namen der Ressource enthält. Die Methode versucht, die Ressource für die aktuelle Threadkultur abzurufen. Weitere Informationen finden Sie in den Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
+- Eine Überladung, deren einzelner Parameter eine Zeichenfolge ist, der den Namen der Ressource enthält. Die Methode versucht, die Ressource für die aktuelle Threadkultur abzurufen. Weitere Informationen finden Sie in den Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
   
--   Eine Überladung, die über zwei Parameter verfügt: eine Zeichenfolge mit dem Namen der Ressource und ein <xref:System.Globalization.CultureInfo> -Objekt, das die Kultur darstellt, deren Ressourcen abgerufen werden. Wenn keine Ressource für diese Kultur gefunden werden kann, verwendet der Ressourcen-Manager Fallback-Regeln, um eine entsprechende Ressource abzurufen. Weitere Informationen finden Sie in den Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
+- Eine Überladung, die über zwei Parameter verfügt: eine Zeichenfolge mit dem Namen der Ressource und ein <xref:System.Globalization.CultureInfo> -Objekt, das die Kultur darstellt, deren Ressourcen abgerufen werden. Wenn keine Ressource für diese Kultur gefunden werden kann, verwendet der Ressourcen-Manager Fallback-Regeln, um eine entsprechende Ressource abzurufen. Weitere Informationen finden Sie in den Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
  Der Ressourcen-Manager verwendet den Ressourcenfallback-Prozess um zu steuern, wie die Anwendung kulturabhängige Ressourcen abruft. Weitere Informationen finden Sie im Abschnitt „Ressourcenfallback-Prozess“ in [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Informationen zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts finden Sie im Abschnitt „Instanziieren eines ResourceManager-Objekts“ in der <xref:System.Resources.ResourceManager> -Themenklasse.  
   

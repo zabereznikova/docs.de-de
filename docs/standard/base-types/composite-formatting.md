@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314008"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634556"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -57,7 +57,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 ## <a name="format-item-syntax"></a>Formatelementsyntax  
  Alle Formatelemente weisen die folgende Form auf und bestehen aus folgenden Komponenten:  
   
- `{` *Index*[`,`*Ausrichtung*][`:`*formatString*]`}`  
+ `{` *Index*[`,`*Ausrichtung*][`:`*Formatzeichenfolge*]`}`  
   
  Die übereinstimmenden geschweiften Klammern ("{" and "}") sind erforderlich.  
   
@@ -89,9 +89,9 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
 |Typ oder Typkategorie|Siehe|  
 |---------------------------|---------|  
-|Datums-/Zeittypen (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Enumerationstypen (alle Typen abgeleitet von <xref:System.Enum?displayProperty=nameWithType>)|[Enumerationsformatzeichenfolgen](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Numerische Typen (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Datums-/Zeittypen (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Enumerationstypen (alle Typen abgeleitet von <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Numerische Typen (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -126,11 +126,11 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
 3. Wenn der Wert die <xref:System.IFormattable>-Schnittstelle implementiert, wird die <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode der Schnittstelle aufgerufen. Der *Formatzeichenfolge*-Wert wird, sofern im Formatelement vorhanden, an die Methode übergeben. Ist dies nicht der Fall, wird `null` übergeben. Das <xref:System.IFormatProvider>-Argument wird wie folgt bestimmt:  
   
-    -   Bei einem numerischen Wert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.NumberFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.NumberFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
+    - Bei einem numerischen Wert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.NumberFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.NumberFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
   
-    -   Bei einem Datums- und Uhrzeitwert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
+    - Bei einem Datums- und Uhrzeitwert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
   
-    -   Bei Objekten anderer Typen wird beim Aufruf einer kombinierten Formatierungsmethode mit einem <xref:System.IFormatProvider>-Argument der zugehörige Wert direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben. Andernfalls wird `null` an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
+    - Bei Objekten anderer Typen wird beim Aufruf einer kombinierten Formatierungsmethode mit einem <xref:System.IFormatProvider>-Argument der zugehörige Wert direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben. Andernfalls wird `null` an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
   
 4. Die parameterlose `ToString`-Methode des Typs, die entweder <xref:System.Object.ToString?displayProperty=nameWithType> überschreibt oder das Verhalten ihrer Basisklasse erbt, wird aufgerufen. In diesem Fall wird die von der *formatString*-Komponente im Formatelement angegebene Formatzeichenfolge (sofern vorhanden) ignoriert.  
   
@@ -168,8 +168,8 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 - [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
 - [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumerationsformatzeichenfolgen](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

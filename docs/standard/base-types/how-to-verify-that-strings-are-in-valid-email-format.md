@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890500"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633438"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeichenfolge ein gültiges E-Mail-Format aufweist.  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  Wenn Sie eine Klassenbibliothek mit dem Namen "RegexUtilities.dll" erstellt haben, die den regulären Ausdruck zur E-Mail-Gültigkeitsprüfung enthält, können Sie dieses Beispiel mit einer der folgenden Methoden kompilieren:  
   
--   In Visual Studio durch Erstellen eine Konsolenanwendung und Hinzufügen eines Verweises auf RegexUtilities.dll zum Projekt.  
+- In Visual Studio durch Erstellen eine Konsolenanwendung und Hinzufügen eines Verweises auf RegexUtilities.dll zum Projekt.  
   
--   Über die Befehlszeile durch Kopieren und Einfügen des Quellcodes in eine Textdatei und durch Kompilieren mit einem Befehl wie dem folgenden (vorausgesetzt der Name der Quellcodedatei ist "Example.cs" oder "Example.vb"):  
+- Über die Befehlszeile durch Kopieren und Einfügen des Quellcodes in eine Textdatei und durch Kompilieren mit einem Befehl wie dem folgenden (vorausgesetzt der Name der Quellcodedatei ist "Example.cs" oder "Example.vb"):  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

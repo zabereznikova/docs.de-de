@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208581"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647890"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ändern. Sie haben folgende Möglichkeiten:  
   
--   Den Wert von Knoten mithilfe der <xref:System.Xml.XmlNode.Value%2A>-Eigenschaft ändern.  
+- Den Wert von Knoten mithilfe der <xref:System.Xml.XmlNode.Value%2A>-Eigenschaft ändern.  
   
--   Eine ganze Gruppe von Knoten durch Ersetzen der Knoten mit neuen Knoten ändern. Dies geschieht mithilfe der <xref:System.Xml.XmlNode.InnerXml%2A>-Eigenschaft.  
+- Eine ganze Gruppe von Knoten durch Ersetzen der Knoten mit neuen Knoten ändern. Dies geschieht mithilfe der <xref:System.Xml.XmlNode.InnerXml%2A>-Eigenschaft.  
   
--   Vorhandene Knoten mithilfe der <xref:System.Xml.XmlNode.RemoveChild%2A>-Methode durch neue Knoten ersetzen.  
+- Vorhandene Knoten mithilfe der <xref:System.Xml.XmlNode.RemoveChild%2A>-Methode durch neue Knoten ersetzen.  
   
--   Den Knoten, die von der <xref:System.Xml.XmlCharacterData>-Klasse erben, mithilfe einer der Methoden <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> oder <xref:System.Xml.XmlCharacterData.ReplaceData%2A> zusätzliche Zeichen hinzufügen.  
+- Den Knoten, die von der <xref:System.Xml.XmlCharacterData>-Klasse erben, mithilfe einer der Methoden <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> oder <xref:System.Xml.XmlCharacterData.ReplaceData%2A> zusätzliche Zeichen hinzufügen.  
   
--   Inhalt ändern, indem ein Bereich von Zeichen mithilfe der <xref:System.Xml.XmlCharacterData.DeleteData%2A>-Methode von Knotentypen entfernt wird, die von <xref:System.Xml.XmlCharacterData> erben.  
+- Inhalt ändern, indem ein Bereich von Zeichen mithilfe der <xref:System.Xml.XmlCharacterData.DeleteData%2A>-Methode von Knotentypen entfernt wird, die von <xref:System.Xml.XmlCharacterData> erben.  
   
  Eine einfache Möglichkeit zum Ändern des Werts eines Knotens bietet `node.Value = "new value";`. In der folgenden Tabelle ist aufgelistet, für welche Knotentypen diese einzelne Codezeile funktioniert und welche Daten des Knotentyps geändert wurden.  
   

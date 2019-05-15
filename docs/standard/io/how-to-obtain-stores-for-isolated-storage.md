@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524571"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622691"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Vorgehensweise: Erhalten von Speichern für isolierten Speicher
 Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot verfügbar. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Klasse bietet eine Reihe von Methoden für die Interaktion mit einem isolierten Speicher. Zum Erstellen und Abrufen von Speichern stellt <xref:System.IO.IsolatedStorage.IsolatedStorageFile> drei statische Methoden bereit:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> gibt Speicher zurück, der nach Benutzer und Assembly isoliert ist.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> gibt Speicher zurück, der nach Benutzer und Assembly isoliert ist.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> gibt Speicher zurück, der nach Domäne und Assembly isoliert ist.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> gibt Speicher zurück, der nach Domäne und Assembly isoliert ist.  
   
      Beide Methoden rufen einen Speicher ab, der zu dem Code gehört, von dem sie aufgerufen werden.  
   
--   Die statische Methode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> gibt einen isolierten Speicher zurück, der durch die Übergabe einer Kombination von Bereichsparametern angegeben wird.  
+- Die statische Methode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> gibt einen isolierten Speicher zurück, der durch die Übergabe einer Kombination von Bereichsparametern angegeben wird.  
   
  Der folgende Code gibt einen Speicher zurück, der nach Benutzer, Assembly und Domäne isoliert ist.  
   

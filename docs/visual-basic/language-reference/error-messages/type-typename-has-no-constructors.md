@@ -1,5 +1,5 @@
 ---
-title: Der Typ "<typename>" hat keinen Konstruktor.
+title: Der Typ '<typename>' hat keinen Konstruktor.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62031147"
 ---
-# <a name="type-typename-has-no-constructors"></a>Typ "\<Typname >' hat keine Konstruktoren
+# <a name="type-typename-has-no-constructors"></a>Typ '\<Typname >' hat keine Konstruktoren
 Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.  
   
  **Fehler-ID:** BC30251  

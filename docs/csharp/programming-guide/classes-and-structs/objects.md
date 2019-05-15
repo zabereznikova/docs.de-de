@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: c4122237cccc154d9dc9034ea047f5f44a4b1134
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545740"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599956"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
@@ -38,28 +38,28 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
 ## <a name="object-identity-vs-value-equality"></a>Objektidentität im Vergleich zur Wertgleichheit  
  Wenn Sie zwei Objekte auf Gleichheit vergleichen, müssen Sie zuerst unterscheiden, ob Sie wissen möchten, ob die zwei Variablen das gleiche Objekt im Speicher darstellen, oder ob die Werte von einem oder mehreren Feldern gleich sind. Wenn Sie planen, Werte zu vergleichen, müssen Sie berücksichtigen, ob die Objekte Instanzen von Werttypen (Strukturen) oder Referenztypen (Klassen, Delegate, Arrays) sind.  
   
--   Verwenden Sie die statische Methode <xref:System.Object.Equals%2A>, um zu bestimmen, ob zwei Klasseninstanzen auf den gleichen Speicherort im Arbeitsspeicher verweisen (d.h., sie haben die gleiche *Identität*). (<xref:System.Object?displayProperty=nameWithType> ist die implizite Basisklasse für alle Wert- und Referenztypen, einschließlich benutzerdefinierter Strukturen und Klassen.)  
+- Verwenden Sie die statische Methode <xref:System.Object.Equals%2A>, um zu bestimmen, ob zwei Klasseninstanzen auf den gleichen Speicherort im Arbeitsspeicher verweisen (d.h., sie haben die gleiche *Identität*). (<xref:System.Object?displayProperty=nameWithType> ist die implizite Basisklasse für alle Wert- und Referenztypen, einschließlich benutzerdefinierter Strukturen und Klassen.)  
   
--   Verwenden Sie die Methode <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, um zu bestimmen, ob die Instanzfelder in zwei Strukturinstanzen die gleichen Werte haben. Da alle Strukturen implizit von <xref:System.ValueType?displayProperty=nameWithType> erben, rufen Sie die Methode direkt an Ihrem Objekt auf, wie im folgenden Beispiel gezeigt wird:  
+- Verwenden Sie die Methode <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, um zu bestimmen, ob die Instanzfelder in zwei Strukturinstanzen die gleichen Werte haben. Da alle Strukturen implizit von <xref:System.ValueType?displayProperty=nameWithType> erben, rufen Sie die Methode direkt an Ihrem Objekt auf, wie im folgenden Beispiel gezeigt wird:  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  Die Implementierung <xref:System.ValueType?displayProperty=nameWithType> von `Equals` verwendet Reflektion, da sie bestimmen muss, was die Felder in jeder Struktur sind. Wenn Sie eigene Strukturen erstellen, überschreiben Sie die Methode `Equals`, um einen effizienten Gleichheitsalgorithmus bereitzustellen, der spezifisch für Ihren Typ ist.  
   
--   Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die hier beschriebenen Richtlinien zu befolgen: [Vorgehensweise: Definieren von Wertgleichheit für einen Typ ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die hier beschriebenen Richtlinien zu befolgen: [Vorgehensweise: Definieren von Wertgleichheit für einen Typ ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:   
   
--   [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
