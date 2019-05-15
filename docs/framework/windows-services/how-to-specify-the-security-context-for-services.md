@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335809"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591668"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Vorgehensweise: Angeben des Sicherheitskontexts für Dienste
 Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt als dem des angemeldeten Benutzers. Dienste werden im Kontext des Standardsystemkontos, `LocalSystem`, ausgeführt, das ihnen andere Zugriffsberechtigungen für Systemressourcen erteilt als dem Benutzer. Sie können dieses Verhalten ändern und ein anderes Benutzerkonto angeben, unter dem Ihr Dienst ausgeführt werden sollte.  
   
  Der Sicherheitskontext lässt sich festlegen, indem Sie die Eigenschaft <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> für den Prozess bearbeiten, in dem der Dienst ausgeführt wird. Mit dieser Eigenschaft können Sie den Dienst auf einen von vier Kontotypen festlegen:  
   
--   `User`: Bewirkt, dass das System bei der Installation des Diensts zur Eingabe eines gültigen Benutzernamens und eines gültigen Kennworts auffordert und im Zusammenhang mit einem Konto ausgeführt wird, das von einem Benutzer im Netzwerk angegeben wurde.  
+- `User`: Bewirkt, dass das System bei der Installation des Diensts zur Eingabe eines gültigen Benutzernamens und eines gültigen Kennworts auffordert und im Zusammenhang mit einem Konto ausgeführt wird, das von einem Benutzer im Netzwerk angegeben wurde.  
   
--   `LocalService`: Wird im Zusammenhang mit einem Konto ausgeführt, das als nicht berechtigter Benutzer des lokalen Computers fungiert, und stellt für beliebige Remoteserver Anmeldeinformationen bereit.  
+- `LocalService`: Wird im Zusammenhang mit einem Konto ausgeführt, das als nicht berechtigter Benutzer des lokalen Computers fungiert, und stellt für beliebige Remoteserver Anmeldeinformationen bereit.  
   
--   `LocalSystem`: Wird im Zusammenhang mit einem Konto ausgeführt, auf dem umfassende lokale Berechtigungen bereitgestellt werden, und stellt für beliebige Remoteserver die Anmeldeinformationen des Computers bereit.  
+- `LocalSystem`: Wird im Zusammenhang mit einem Konto ausgeführt, auf dem umfassende lokale Berechtigungen bereitgestellt werden, und stellt für beliebige Remoteserver die Anmeldeinformationen des Computers bereit.  
   
--   `NetworkService`: Wird im Zusammenhang mit einem Konto ausgeführt, das als nicht berechtigter Benutzer des lokalen Computers fungiert, und stellt für beliebige Remoteserver die Anmeldeinformationen des Computers bereit.  
+- `NetworkService`: Wird im Zusammenhang mit einem Konto ausgeführt, das als nicht berechtigter Benutzer des lokalen Computers fungiert, und stellt für beliebige Remoteserver die Anmeldeinformationen des Computers bereit.  
   
  Weitere Informationen finden Sie unter der <xref:System.ServiceProcess.ServiceAccount>-Enumeration.  
   

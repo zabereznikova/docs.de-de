@@ -2,12 +2,12 @@
 title: LINQ to XML-Sicherheit (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2e535b67b6c9b599eb9e8c9b71e150079c626ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597019"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML-Sicherheit (C#)
 In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörtert. Darüber hinaus finden Sie hier einige Empfehlungen zur Minderung der Sicherheitsrisiken.  
@@ -26,25 +26,25 @@ In diesem Thema werden Sicherheitsfragen im Zusammenhang mit LINQ to XML erörte
   
  In einer weniger sicheren Umgebung gibt es eine Reihe von Sicherheitsproblemen im Zusammenhang mit XML und der Verwendung der Klassen in <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> und <xref:System.Xml.Xsl?displayProperty=nameWithType>. Dazu gehören u. a. folgende Probleme:  
   
--   XSD, XPath und XSLT sind zeichenfolgenbasierte Sprachen, in denen Sie Vorgänge angeben können, die zeit- oder speicherintensiv sind. Es liegt in der Verantwortung des Anwendungsprogrammierers, der XSD-, XPath- oder XSLT-Zeichenfolgen aus nicht vertrauenswürdigen Quellen verwendet, zu validieren, dass die Zeichenfolgen nicht bösartig sind, oder zu überwachen und die Wahrscheinlichkeit zu verringern, dass die Auswertung dieser Zeichenfolgen zu einem übermäßig hohen Verbrauch der Systemressourcen führt.  
+- XSD, XPath und XSLT sind zeichenfolgenbasierte Sprachen, in denen Sie Vorgänge angeben können, die zeit- oder speicherintensiv sind. Es liegt in der Verantwortung des Anwendungsprogrammierers, der XSD-, XPath- oder XSLT-Zeichenfolgen aus nicht vertrauenswürdigen Quellen verwendet, zu validieren, dass die Zeichenfolgen nicht bösartig sind, oder zu überwachen und die Wahrscheinlichkeit zu verringern, dass die Auswertung dieser Zeichenfolgen zu einem übermäßig hohen Verbrauch der Systemressourcen führt.  
   
--   XSD-Schemas (auch Inlineschemas) sind von Natur aus anfällig für DoS-Angriffe. Sie sollten daher keine Schemas aus nicht vertrauenswürdigen Quellen akzeptieren.  
+- XSD-Schemas (auch Inlineschemas) sind von Natur aus anfällig für DoS-Angriffe. Sie sollten daher keine Schemas aus nicht vertrauenswürdigen Quellen akzeptieren.  
   
--   XSD und XSLT können Verweise auf andere Dateien enthalten, und solche Verweise können zu zonen- und domänenübergreifenden Angriffen führen.  
+- XSD und XSLT können Verweise auf andere Dateien enthalten, und solche Verweise können zu zonen- und domänenübergreifenden Angriffen führen.  
   
--   Externe Entitäten in DTDs können zu zonen- und domänenübergreifenden Angriffen führen.  
+- Externe Entitäten in DTDs können zu zonen- und domänenübergreifenden Angriffen führen.  
   
--   DTDs sind anfällig für DoS-Angriffe.  
+- DTDs sind anfällig für DoS-Angriffe.  
   
--   Ausgesprochen tief verschachtelte XML-Dokumente bergen die Gefahr von DoS-Angriffen. Es empfiehlt sich u. U., die Tiefe von XML-Dokumenten zu beschränken.  
+- Ausgesprochen tief verschachtelte XML-Dokumente bergen die Gefahr von DoS-Angriffen. Es empfiehlt sich u. U., die Tiefe von XML-Dokumenten zu beschränken.  
   
--   Akzeptieren Sie keine unterstützenden Komponenten, wie <xref:System.Xml.NameTable>-Objekte, <xref:System.Xml.XmlNamespaceManager>-Objekte und <xref:System.Xml.XmlResolver>-Objekte aus nicht vertrauenswürdigen Assemblys.  
+- Akzeptieren Sie keine unterstützenden Komponenten, wie <xref:System.Xml.NameTable>-Objekte, <xref:System.Xml.XmlNamespaceManager>-Objekte und <xref:System.Xml.XmlResolver>-Objekte aus nicht vertrauenswürdigen Assemblys.  
   
--   Lesen Sie Daten in Ausschnitten, um große Dokumentangriffe abzuwehren.  
+- Lesen Sie Daten in Ausschnitten, um große Dokumentangriffe abzuwehren.  
   
--   Skriptblöcke in XSLT-Stylesheets können eine Reihe von Angriffen möglich machen.  
+- Skriptblöcke in XSLT-Stylesheets können eine Reihe von Angriffen möglich machen.  
   
--   Nehmen Sie vor dem Konstruieren dynamischer XPath-Ausdrücke eine sorgfältige Validierung vor.  
+- Nehmen Sie vor dem Konstruieren dynamischer XPath-Ausdrücke eine sorgfältige Validierung vor.  
   
 ## <a name="linq-to-xml-security-issues"></a>Sicherheitsprobleme in LINQ to XML  
  Die Aufzählung der in diesem Thema genannten Sicherheitsprobleme folgt keiner bestimmten Reihenfolge. Alle Probleme sind gleichermaßen wichtig und sollten entsprechend behandelt werden.  

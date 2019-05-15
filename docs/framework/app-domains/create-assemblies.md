@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607765"
 ---
 # <a name="creating-assemblies"></a>Erstellen von Assemblys
 
@@ -24,23 +24,23 @@ Sie können eine Mehrfachdateiassembly aus mehreren Codemodulen und Ressourcenda
 
 Beim Gruppieren von Codemodulen und Ressourcen in Assemblys stehen Ihnen mehrere Optionen zur Verfügung. Diese hängen von folgenden Faktoren ab:
 
--   Versionskontrolle
+- Versionskontrolle
 
      Gruppieren von Modulen, die die gleichen Versionsinformationen haben sollten
 
--   Bereitstellung
+- Bereitstellung
 
      Gruppieren von Modulen und Ressourcen, die Ihr Bereitstellungsmodell unterstützen
 
--   Wiederverwendung
+- Wiederverwendung
 
      Gruppieren von Modulen, wenn diese logisch für bestimmte Zwecke zusammen verwendet werden können. Beispielsweise eine Assembly, die aus Typen und Klassen besteht, die unregelmäßig zur Wartung eines Programms verwendet werden, kann in die gleiche Assembly platziert werden. Zusätzlich sollten Typen, die Sie für mehrere Anwendungen freigeben möchten, in einer Assembly gruppiert sein. Diese Assembly sollte mit einem starken Namen signiert werden.
 
--   Sicherheit
+- Sicherheit
 
      Gruppieren von Modulen, die Typen enthalten, die die gleichen Sicherheitsberechtigungen erfordern
 
--   Bewerten
+- Bewerten
 
      Gruppieren von Modulen, die Typen enthalten, deren Sichtbarkeit auf die gleiche Assembly eingeschränkt sein soll
 

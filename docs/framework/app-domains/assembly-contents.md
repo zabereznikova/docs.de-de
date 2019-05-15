@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607828"
 ---
 # <a name="assembly-contents"></a>Assemblyinhalte
 Im Allgemeinen kann eine statische Assembly vier Elemente enthalten:  
   
--   Das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md), das die Assemblymetadaten enthält.  
+- Das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md), das die Assemblymetadaten enthält.  
   
--   Die Typmetadaten.  
+- Die Typmetadaten.  
   
--   MSIL-Code (Microsoft Intermediate Language), der die Typen implementiert.  
+- MSIL-Code (Microsoft Intermediate Language), der die Typen implementiert.  
   
--   Eine Gruppe von Ressourcen.  
+- Eine Gruppe von Ressourcen.  
   
  Von diesen ist nur das Assemblymanifest erforderlich. Um der Assembly jedoch eine sinnvolle Funktion zu geben, sind entweder Typen oder Ressourcen erforderlich.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583109"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter "override" und "new" verwendet werden? (C#-Programmierhandbuch)
 In C# kann eine Methode in einer abgeleiteten Klasse den gleichen Namen wie eine Methode in einer Basisklasse haben. Sie können mit den Schlüsselwörtern [new](../../../csharp/language-reference/keywords/new.md) und [override](../../../csharp/language-reference/keywords/override.md) festlegen, wie die Methoden interagieren. Der `override`-Modifizierer *erweitert* die Methode der Basisklasse, und der `new`-Modifizierer *verbirgt* sie. Der Unterschied wird in den Beispielen in diesem Thema veranschaulicht.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  Deklarieren Sie in der `Main`-Methode die Variablen `bc`, `dc` und `bcdc`.  
   
--   `bc` ist vom Typ `BaseClass`, und sein Wert ist vom Typ `BaseClass`.  
+- `bc` ist vom Typ `BaseClass`, und sein Wert ist vom Typ `BaseClass`.  
   
--   `dc` ist vom Typ `DerivedClass`, und sein Wert ist vom Typ `DerivedClass`.  
+- `dc` ist vom Typ `DerivedClass`, und sein Wert ist vom Typ `DerivedClass`.  
   
--   `bcdc` ist vom Typ `BaseClass`, und sein Wert ist vom Typ `DerivedClass`. Auf diese Variable müssen Sie achten.  
+- `bcdc` ist vom Typ `BaseClass`, und sein Wert ist vom Typ `DerivedClass`. Auf diese Variable müssen Sie achten.  
   
  Da `bc` und `bcdc` vom Typ `BaseClass` sind, können sie nur direkt auf `Method1` zugreifen, es sei denn, sie verwenden Umwandlungen. Die Variable `dc` kann sowohl auf `Method1` als auch auf `Method2` zugreifen. Diese Beziehungen werden im folgenden Code gezeigt.  
   

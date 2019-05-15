@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607907"
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 
@@ -41,18 +41,18 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Die Isolierung durch Anwendungsdomänen bietet folgende Vorteile:  
   
--   Fehler in einer Anwendung haben keine Auswirkungen auf andere Anwendungen. Da typsicherer Code keine Speicherfehler verursacht, ist bei der Verwendung von Anwendungsdomänen sichergestellt, dass der in einer Domäne ausgeführte Code keine anderen Anwendungen in dem Prozess beeinflussen kann.  
+- Fehler in einer Anwendung haben keine Auswirkungen auf andere Anwendungen. Da typsicherer Code keine Speicherfehler verursacht, ist bei der Verwendung von Anwendungsdomänen sichergestellt, dass der in einer Domäne ausgeführte Code keine anderen Anwendungen in dem Prozess beeinflussen kann.  
   
--   Einzelne Anwendungen können beendet werden, ohne den gesamten Prozess zu beenden. Mit Anwendungsdomänen können Sie den in einer Anwendung ausgeführten Code entladen.  
+- Einzelne Anwendungen können beendet werden, ohne den gesamten Prozess zu beenden. Mit Anwendungsdomänen können Sie den in einer Anwendung ausgeführten Code entladen.  
   
     > [!NOTE]
     >  Einzelne Assemblys oder Typen können nicht entladen werden. Es können nur vollständige Domänen entladen werden.  
   
--   Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ <xref:System.IO.FileNotFoundException> fehlschlagen. Weitere Informationen finden Sie unter [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ <xref:System.IO.FileNotFoundException> fehlschlagen. Weitere Informationen finden Sie unter [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   Das Verhalten von Code wird durch die Anwendung beschränkt, in der er ausgeführt wird. Die Anwendungsdomäne stellt Konfigurationseinstellungen bereit, z. B. Richtlinien der Anwendungsversion, den Speicherort von Remoteassemblys, auf die zugegriffen wird, sowie Informationen zum Suchen von Assemblys, die in die Domäne geladen werden.  
+- Das Verhalten von Code wird durch die Anwendung beschränkt, in der er ausgeführt wird. Die Anwendungsdomäne stellt Konfigurationseinstellungen bereit, z. B. Richtlinien der Anwendungsversion, den Speicherort von Remoteassemblys, auf die zugegriffen wird, sowie Informationen zum Suchen von Assemblys, die in die Domäne geladen werden.  
   
--   Berechtigungen für Code können durch die Anwendungsdomäne gesteuert werden, in der dieser ausgeführt wird.  
+- Berechtigungen für Code können durch die Anwendungsdomäne gesteuert werden, in der dieser ausgeführt wird.  
   
 ## <a name="application-domains-and-assemblies"></a>Anwendungsdomänen und Assemblys
 
@@ -60,9 +60,9 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Die Art und Weise, wie eine Assembly geladen wird, legt fest, ob der zugehörige JIT-kompilierte (Just-In-Time) Code von mehreren Anwendungsdomänen im Prozess gemeinsam genutzt und ob die Assembly aus dem Prozess entladen werden kann.  
   
--   Wird eine Assembly domänenneutral geladen, können alle Anwendungsdomänen, die dieselbe Sicherheitsberechtigung gemeinsam nutzen, auch denselben JIT-kompilierten Code verwenden. Dadurch wird der von der Anwendung benötigte Speicher reduziert. Die Assembly kann jedoch nie aus dem Prozess entladen werden.  
+- Wird eine Assembly domänenneutral geladen, können alle Anwendungsdomänen, die dieselbe Sicherheitsberechtigung gemeinsam nutzen, auch denselben JIT-kompilierten Code verwenden. Dadurch wird der von der Anwendung benötigte Speicher reduziert. Die Assembly kann jedoch nie aus dem Prozess entladen werden.  
   
--   Wird eine Assembly nicht domänenneutral geladen, muss sie in jeder Anwendungsdomäne, in die sie geladen wird, JIT-kompiliert werden. Die Assembly kann jedoch aus dem Prozess entladen werden, indem alle Anwendungsdomänen entladen werden, in denen die Assembly geladen ist.  
+- Wird eine Assembly nicht domänenneutral geladen, muss sie in jeder Anwendungsdomäne, in die sie geladen wird, JIT-kompiliert werden. Die Assembly kann jedoch aus dem Prozess entladen werden, indem alle Anwendungsdomänen entladen werden, in denen die Assembly geladen ist.  
   
  Der Laufzeithost legt beim Laden der Common Language Runtime in einen Prozess fest, ob Assemblys als domänenneutral geladen werden. Wenden Sie für verwaltete Anwendungen das <xref:System.LoaderOptimizationAttribute>-Attribut auf die Einstiegspunktmethode für den Prozess an, und geben Sie einen Wert aus der dazugehörigen <xref:System.LoaderOptimization>-Enumeration an. Geben Sie für nicht verwaltete Anwendungen, in denen sich die Common Language Runtime befindet, beim Aufrufen der [CorBindToRuntimeEx](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)-Methode das entsprechende Flag an.  
   
@@ -84,9 +84,9 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Bei der Entscheidung, Assemblys als domänenneutral zu laden, müssen Sie einen Kompromiss zwischen einem geringeren Speicherbedarf und anderen Leistungsfaktoren finden.  
   
--   Der Zugriff auf statische Daten und Methoden erfolgt bei domänenneutralen Assemblys langsamer, weil eine Isolierung der Assemblys erforderlich ist. Jede Anwendungsdomäne, die auf die Assembly zugreift, muss über eine eigene Kopie der statischen Daten verfügen, um domänenübergreifende Verweise auf Objekte in statischen Feldern zu verhindern. Daher enthält die Laufzeit zusätzliche Logik, mit der Aufrufer an die richtige Kopie der statischen Daten oder Methoden verwiesen werden. Durch diese zusätzliche Logik wird der Aufruf verlangsamt.  
+- Der Zugriff auf statische Daten und Methoden erfolgt bei domänenneutralen Assemblys langsamer, weil eine Isolierung der Assemblys erforderlich ist. Jede Anwendungsdomäne, die auf die Assembly zugreift, muss über eine eigene Kopie der statischen Daten verfügen, um domänenübergreifende Verweise auf Objekte in statischen Feldern zu verhindern. Daher enthält die Laufzeit zusätzliche Logik, mit der Aufrufer an die richtige Kopie der statischen Daten oder Methoden verwiesen werden. Durch diese zusätzliche Logik wird der Aufruf verlangsamt.  
   
--   Alle Abhängigkeiten einer Assembly müssen beim domänenneutralen Laden der Assembly gefunden und geladen werden, denn eine Abhängigkeit, die nicht domänenneutral geladen werden kann, verhindert das domänenneutrale Laden der Assembly.  
+- Alle Abhängigkeiten einer Assembly müssen beim domänenneutralen Laden der Assembly gefunden und geladen werden, denn eine Abhängigkeit, die nicht domänenneutral geladen werden kann, verhindert das domänenneutrale Laden der Assembly.  
   
 ## <a name="application-domains-and-threads"></a>Anwendungsdomänen und Threads
 
@@ -100,9 +100,9 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 
  Die Kultur, die durch ein <xref:System.Globalization.CultureInfo>-Objekt dargestellt wird, ist Threads zugeordnet. Sie können die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen, indem Sie die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft verwenden. Mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft können Sie die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen oder festlegen. Wenn die einem Thread zugeordnete Kultur durch Verwendung der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft explizit festgelegt wurde, bleibt sie diesem Thread zugeordnet, wenn der Thread Anwendungsdomänengrenzen überschreitet. Andernfalls wird die Kultur, die dem Thread jeweils zugeordnet ist, durch den Wert der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft in der Anwendungsdomäne bestimmt, in der der Thread ausgeführt wird:  
   
--   Wenn der Wert der Eigenschaft nicht `null` ist, wird die Kultur, die von der Eigenschaft zurückgegeben wird, dem Thread zugeordnet (und daher durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben).  
+- Wenn der Wert der Eigenschaft nicht `null` ist, wird die Kultur, die von der Eigenschaft zurückgegeben wird, dem Thread zugeordnet (und daher durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben).  
   
--   Wenn der Wert der Eigenschaft `null` ist, wird die aktuelle Systemkultur dem Thread zugeordnet.  
+- Wenn der Wert der Eigenschaft `null` ist, wird die aktuelle Systemkultur dem Thread zugeordnet.  
   
 ## <a name="programming-with-application-domains"></a>Programmieren mit Anwendungsdomänen
 
@@ -132,15 +132,15 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Anmerkungen
 
  Eine typische Anwendung lädt mehrere Assemblys in eine Anwendungsdomäne, bevor der Code, den sie enthalten, ausgeführt werden kann.  
   
  Die Methode, mit der die Assembly geladen wird, bestimmt, ob ihr Just-In-Time-(JIT)-kompilierter Code von mehreren Anwendungsdomänen im Prozess gemeinsam genutzt werden kann.  
   
--   Wird eine Assembly domänenneutral geladen, können alle Anwendungsdomänen, die dieselbe Sicherheitsberechtigung gemeinsam nutzen, auch denselben JIT-kompilierten Code verwenden. Dadurch wird der von der Anwendung benötigte Speicherplatz reduziert.  
+- Wird eine Assembly domänenneutral geladen, können alle Anwendungsdomänen, die dieselbe Sicherheitsberechtigung gemeinsam nutzen, auch denselben JIT-kompilierten Code verwenden. Dadurch wird der von der Anwendung benötigte Speicherplatz reduziert.  
   
--   Wird eine Assembly nicht domänenneutral geladen, muss sie in jeder Anwendungsdomäne, in der sie geladen wird, JIT-kompiliert werden, und das Ladeprogramm darf keine internen Ressourcen über Anwendungsdomänen hinweg freigeben.  
+- Wird eine Assembly nicht domänenneutral geladen, muss sie in jeder Anwendungsdomäne, in der sie geladen wird, JIT-kompiliert werden, und das Ladeprogramm darf keine internen Ressourcen über Anwendungsdomänen hinweg freigeben.  
   
  Wenn dieser Wert auf 1 gesetzt ist, zwingt das COMPLUS_LoaderOptimizations-Umgebungsflag den Laufzeithost, alle Assemblys auf nicht domänenneutrale Weise zu laden, die als SingleDomain bezeichnet wird. SingleDomain lädt keine Assemblys als domänenneutral, mit Ausnahme von Mscorlib, die immer domänenneutral geladen wird. Diese Einstellung wird als Einzeldomäne bezeichnet, da sie häufig verwendet wird, wenn der Host nur eine Anwendung im Prozess ausführt.  
   

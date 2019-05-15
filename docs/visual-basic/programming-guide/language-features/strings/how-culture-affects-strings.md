@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610416"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591963"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
 Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um zeichenfolgenkonvertierungen und vergleichen zu können.  
@@ -38,7 +38,7 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
 ## <a name="using-a-specific-culture"></a>Eine bestimmte Kultur  
  Stellen Sie sich, dass Sie eine Anwendung, die ein Datum entwickeln (als Zeichenfolge formatiert) an einen Webdienst sendet. In diesem Fall muss die Anwendung eine bestimmte Kultur für die zeichenfolgenkonvertierung verwenden. Um daher zu veranschaulichen, betrachten Sie in das Ergebnis unter Verwendung des Datums des <xref:System.DateTime.ToString> Methode: Wenn Ihre Anwendung diese Methode verwendet, so formatieren Sie das Datum 4. Juli 2005, gibt "7/4/2005 12:00:00 Uhr" bei der Ausführung mit der Kultur Englisch für USA (En-US), gibt jedoch eine "04.07.2005 00:00:00" bei der Ausführung mit die Kultur für Deutsch (de-DE).  
   
- Wenn Sie eine zeichenfolgenkonvertierung in eine bestimmte Kulturformat ausführen müssen, sollten Sie verwenden die `CultureInfo` -Klasse, die in integrierten der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sie können ein neues erstellen `CultureInfo` Objekt für eine bestimmte Kultur durch Übergabe von den Namen der Kultur, die <xref:System.Globalization.CultureInfo.%23ctor%2A> Konstruktor. Die unterstützte Kulturnamen finden Sie in der <xref:System.Globalization.CultureInfo> Hilfeseite für die Klasse.  
+ Wenn Sie eine zeichenfolgenkonvertierung in eine bestimmte Kulturformat ausführen müssen, sollten Sie verwenden die `CultureInfo` -Klasse, die in .NET Framework integriert ist. Sie können ein neues erstellen `CultureInfo` Objekt für eine bestimmte Kultur durch Übergabe von den Namen der Kultur, die <xref:System.Globalization.CultureInfo.%23ctor%2A> Konstruktor. Die unterstützte Kulturnamen finden Sie in der <xref:System.Globalization.CultureInfo> Hilfeseite für die Klasse.  
   
  Alternativ können Sie eine Instanz von Abrufen der *invariante Kultur* aus der <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> Eigenschaft. Die invariante Kultur basiert auf der Kultur Englisch, aber es gibt einige Unterschiede. Beispielsweise gibt die invariante Kultur 24-Stunden-Format statt 12-Stunden-Format an.  
   
@@ -62,7 +62,7 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Können Sie auch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Partner die `StrComp` -Funktion, die <xref:System.String.Compare%2A?displayProperty=nameWithType> Methode. Dies ist eine statische, überladene Methode der Basisklasse String-Klasse. Im folgende Beispiel wird veranschaulicht, wie diese Methode verwendet wird:  
+ Sie können auch die .NET Framework-Partner, der die `StrComp` -Funktion, die <xref:System.String.Compare%2A?displayProperty=nameWithType> Methode. Dies ist eine statische, überladene Methode der Basisklasse String-Klasse. Im folgende Beispiel wird veranschaulicht, wie diese Methode verwendet wird:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608738"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Vorgehensweise: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch)
 In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklariert werden.  
@@ -42,7 +42,7 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
   
--   Deklarieren von Delegaten  
+- Deklarieren von Delegaten  
   
      Mit der folgenden Anweisung wird ein neuer Delegattyp deklariert.  
   
@@ -50,7 +50,7 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
      Durch die einzelnen Delegattypen werden Anzahl und Typen von Argumenten sowie Rückgabewerte von Methoden beschrieben, die gekapselt werden können. Sobald neue Argumenttypen benötigt werden oder ein neuer Rückgabewerttyp erforderlich ist, muss ein neuer Delegattyp deklariert werden.  
   
--   Instanziieren von Delegaten  
+- Instanziieren von Delegaten  
   
      Nachdem ein Delegattyp deklariert wurde, muss ein Delegatobjekt erstellt und einer bestimmten Methode zugeordnet werden. Im vorherigen Beispiel übergeben Sie dazu die `PrintTitle`-Methode an die `ProcessPaperbackBooks`-Methode, wie im folgenden Beispiel gezeigt:  
   
@@ -64,7 +64,7 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
      Nach der Erstellung eines Delegaten wird die diesem zugeordnete Methode nicht mehr geändert. Delegatobjekte sind unveränderlich.  
   
--   Aufrufen von Delegaten  
+- Aufrufen von Delegaten  
   
      Nachdem ein Delegatobjekt erstellt wurde, wird es normalerweise an anderen Code übergeben, durch den der Delegat aufgerufen wird. Ein Delegatobjekt wird über seinen Namen aufgerufen. Auf den Namen folgen (in Klammern gesetzte) Argumente, die an den Delegaten übergeben werden sollen. Es folgt ein Beispiel für einen Delegataufruf:  
   

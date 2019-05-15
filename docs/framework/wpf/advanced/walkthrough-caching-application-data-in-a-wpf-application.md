@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630775"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591204"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
 
- Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet Klassen, die Ihnen ermöglichen, verwenden der Zwischenspeicherung in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Anwendungen. Diese Klassen befinden sich in der <xref:System.Runtime.Caching> Namespace.
+ .NET Framework bietet Klassen, die Sie zur Verwendung von caching in .NET Framework-Anwendungen zu ermöglichen. Diese Klassen befinden sich in der <xref:System.Runtime.Caching> Namespace.
 
 > [!NOTE]
->  Die <xref:System.Runtime.Caching> Namespace ist neu in der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Dieser Namespace stellt Zwischenspeichern steht allen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Anwendungen. In früheren [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Versionen war die Zwischenspeicherung nur im <xref:System.Web>-Namespace verfügbar, und erforderte daher eine Abhängigkeit der ASP.NET-Klassen.
+>  Die <xref:System.Runtime.Caching> Namespace ist neu in der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Dieser Namespace stellt Zwischenspeichern für alle .NET Framework-Anwendungen verfügbar ist. In früheren Versionen von .NET Framework war die Zwischenspeicherung verfügbar nur in der <xref:System.Web> Namespace und erforderte daher eine Abhängigkeit der ASP.NET-Klassen.
 
- In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Funktionen zum Zwischenspeichern verwenden, verfügbar in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] als Teil einer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung. In der exemplarischen Vorgehensweise Zwischenspeichern Sie den Inhalt einer Textdatei.
+ In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Funktionen zum Zwischenspeichern verwenden, verfügbar in .NET Framework als Teil einer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung. In der exemplarischen Vorgehensweise Zwischenspeichern Sie den Inhalt einer Textdatei.
 
  In dieser exemplarischen Vorgehensweise werden u. a. die folgenden Aufgaben beschrieben:
 
@@ -67,7 +67,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 4. In der **neues Projekt** wählen Sie im Dialogfeld **WPF-Anwendung**.
 
     > [!NOTE]
-    >  Wenn Sie nicht angezeigt werden der **WPF-Anwendung** Vorlage stellen Sie sicher, dass Sie eine Version Anzielen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , die WPF unterstützt. In der **neues Projekt** wählen Sie im Dialogfeld [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] aus der Liste.
+    >  Wenn Sie nicht sehen die **WPF-Anwendung** Vorlage stellen Sie sicher, dass Sie eine Version von .NET Framework Anzielen, die WPF unterstützt. In der **neues Projekt** wählen Sie im Dialogfeld [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] aus der Liste.
 
 5. In der **Namen** Text Geben Sie einen Namen für Ihr Projekt. Sie können z. B. eingeben **"WPFCaching"**.
 

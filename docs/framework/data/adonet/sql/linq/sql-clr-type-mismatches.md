@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876862"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582719"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR-Typenkonflikte
 
@@ -39,7 +39,7 @@ Die folgenden Typen weisen keine angemessenen Gegenstücke auf.
   - **TimeSpan**. Dieser Typ steht für den Unterschied zwischen zwei `DateTime`-Werten und entspricht nicht dem `timestamp` von SQL Server. Die CLR-<xref:System.TimeSpan?displayProperty=nameWithType> wird möglicherweise auch dem `TIME`-Typ in SQL Server zugeordnet. Der `TIME`-Typ in SQL Server kann nur positive Werte unter 24 Stunden darstellen. Die CLR-<xref:System.TimeSpan> hat einen viel größeren Bereich.
 
   > [!NOTE]
-  > SQL Server-spezifische [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] Typen im <xref:System.Data.SqlTypes> sind in diesem Vergleich nicht enthalten.
+  > SQL Server-spezifische .NET Framework-Typen in <xref:System.Data.SqlTypes> sind in diesem Vergleich nicht enthalten.
 
 - Konflikte in SQL Server:
 
@@ -167,7 +167,7 @@ Im Wesentlichen vergleichbare Operatoren und Funktionen verfügen über eine lei
 
   - Eine freie Übersetzung in `AND` / `OR` Operatoren können unerwartete Fehler verursachen, wenn die C# Ausdruck basiert auf die Auswertung den zweiten Operand wird basierend auf dem Ergebnis der Auswertung des ersten Operanden.
 
-- Die `Round()`-Funktion weist in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] und in T-SQL unterschiedliche Semantiken auf.
+- `Round()` Funktion hat eine andere Semantik in .NET Framework und in T-SQL.
 
 - Der Startindex für Zeichenfolgen in CLR ist 0, in SQL jedoch 1. Aus diesem Grund muss jede Funktion mit einem Index übersetzt werden.
 
@@ -194,7 +194,7 @@ Im Wesentlichen vergleichbare Operatoren und Funktionen verfügen über eine lei
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL führt eine symmetrische arithmetische Rundung aus, während [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] unverzerrte Rundung (Banker's Rounding) verwendet. Weitere Informationen finden Sie im Knowledge Base-Artikel 196652.
+- SQL führt eine symmetrische arithmetische Rundung während .NET Framework unverzerrte Rundung verwendet. Weitere Informationen finden Sie im Knowledge Base-Artikel 196652.
 
 - Standardmäßig wird in SQL die Groß- und Kleinschreibung bei Zeichenfolgenvergleichen für allgemeine Gebietsschemas nicht beachtet. In Visual Basic und C# wird die Groß-/Kleinschreibung beachtet. Z. B. `s == "Food"` (`s = "Food"` in Visual Basic) und `s == "Food"` können unterschiedliche Ergebnisse liefern, wenn `s` ist `food`.
 

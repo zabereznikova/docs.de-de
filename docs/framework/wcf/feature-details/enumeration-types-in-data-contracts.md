@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586675"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
@@ -39,7 +39,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
  Sie können beispielsweise `CarConditionEnum` auf der Absenderseite und `CarConditionWithNumbers` auf der Empfängerseite verwenden. Obwohl die Absenderseite den Wert 1 und die Empfängerseite den Wert 20 für `Used` verwendet, lautet die XML-Darstellung für beide Seiten `<condition>Used</condition>`.  
   
- Um das Einbinden in den Datenvertrag zu erreichen, müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut anwenden. Unter [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] können Sie immer den Sonderwert 0 (Null) auf eine Enumeration anwenden. Dabei handelt es sich auch um den Standardwert für Enumerationen. Auch dieser Sonderwert 0 kann jedoch nur serialisiert werden, wenn er mithilfe des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs gekennzeichnet ist.  
+ Um das Einbinden in den Datenvertrag zu erreichen, müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut anwenden. In .NET Framework können Sie immer den Sonderwert 0 (null) auf eine Enumeration anwenden handelt es sich auch der Standardwert für Enumerationen. Auch dieser Sonderwert 0 kann jedoch nur serialisiert werden, wenn er mithilfe des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs gekennzeichnet ist.  
   
  Dabei gelten zwei Ausnahmen:  
   

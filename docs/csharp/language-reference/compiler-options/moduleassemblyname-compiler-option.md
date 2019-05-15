@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361264"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593056"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C#-Compileroption)
 Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.  
@@ -31,11 +31,11 @@ Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreif
 ## <a name="remarks"></a>Anmerkungen  
  **-moduleassemblyname** sollte beim Erstellen einer NETMODULE-Datei und wenn die folgenden Bedingungen erfüllt sind verwendet werden:  
   
--   Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.  
+- Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.  
   
--   Sie kennen den Namen der Assembly, in die die NETMODULE-Datei integriert wird.  
+- Sie kennen den Namen der Assembly, in die die NETMODULE-Datei integriert wird.  
   
--   Die vorhandene Assembly hat der Assembly, in die die NETMODULE-Datei integriert wird, Friend-Assembly-Zugriff erteilt.  
+- Die vorhandene Assembly hat der Assembly, in die die NETMODULE-Datei integriert wird, Friend-Assembly-Zugriff erteilt.  
   
  Weitere Informationen zum Erstellen einer NETMODULE-Datei finden Sie unter [-target:module (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

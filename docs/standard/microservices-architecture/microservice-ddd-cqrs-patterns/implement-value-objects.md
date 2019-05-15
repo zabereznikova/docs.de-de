@@ -1,15 +1,13 @@
 ---
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611379"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063067"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -324,7 +322,7 @@ public class Address
 - **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)**. Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** Basisklasse der Wertobjekte in eShopOnContainers.**  \
+- **ValueObject.cs.** Basisklasse der Wertobjekte in eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Klasse „Address“** Beispielklasse der Wertobjekte in eShopOnContainers. \

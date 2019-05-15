@@ -10,27 +10,27 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511837"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592992"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked und Unchecked (C#-Referenz)
 C#-Anweisungen könnten entweder in einem geprüften oder nicht geprüften Kontext (checked oder unchecked) ausgeführt werden. In einem überprüften Kontext löst der arithmetische Überlauf eine Ausnahme aus. In einem nicht aktivierten Kontext wird der arithmetische Überlauf ignoriert und das Ergebnis gekürzt, indem alle höherwertigen Bits verworfen werden, die nicht in den Zieltyp passen.  
   
--   [checked](checked.md) Gibt einen geprüften Kontext an.  
+- [checked](checked.md) Gibt einen geprüften Kontext an.  
   
--   [unchecked](unchecked.md) Gibt einen ungeprüften Kontext an.  
+- [unchecked](unchecked.md) Gibt einen ungeprüften Kontext an.  
   
  Die folgenden Vorgänge sind von der Überlaufüberprüfung betroffen:  
   
--   Ausdrücke, die die folgenden vordefinierten Operatoren für ganzzahlige Typen verwenden:  
+- Ausdrücke, die die folgenden vordefinierten Operatoren für ganzzahlige Typen verwenden:  
   
      `++`, `--`, unäres `-`, `+`, `-`, `*`, `/`  
   
--   Explizite numerische Konvertierungen zwischen ganzzahligen Typen oder von `float` oder `double` in einen integralen Typ.  
+- Explizite numerische Konvertierungen zwischen ganzzahligen Typen oder von `float` oder `double` in einen integralen Typ.  
   
  Wenn weder `checked` noch `unchecked` festgelegt ist, wird der Standardkontext für nicht konstante Ausdrücke (Ausdrücke, die zur Laufzeit ausgewertet werden) vom Wert der Compileroption [-checked](../compiler-options/checked-compiler-option.md) definiert. Standardmäßig ist der Wert dieser Option nicht festgelegt, und arithmetische Operationen werden in einem nicht geprüften Kontext ausgeführt.
  

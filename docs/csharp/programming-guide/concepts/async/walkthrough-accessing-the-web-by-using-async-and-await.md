@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c9616cc7bed3170803ee3c917fa651afc5ae6fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306728"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599687"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)
 
@@ -46,19 +46,19 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie [Asynchron
 
 4. Markieren Sie das **TextBox**-Steuerelement, und legen Sie im Fenster **Eigenschaften** die folgenden Werte fest:
 
-    -   Legen Sie die Eigenschaft **Name** auf `resultsTextBox` fest.
+    - Legen Sie die Eigenschaft **Name** auf `resultsTextBox` fest.
 
-    -   Legen Sie die Eigenschaft **Height** auf „250“ fest.
+    - Legen Sie die Eigenschaft **Height** auf „250“ fest.
 
-    -   Legen Sie die Eigenschaft **Width** auf „500“ fest.
+    - Legen Sie die Eigenschaft **Width** auf „500“ fest.
 
-    -   Geben Sie auf der Registerkarte **Text** eine Festbreitenschriftart wie Lucida Console oder Global Monospace an.
+    - Geben Sie auf der Registerkarte **Text** eine Festbreitenschriftart wie Lucida Console oder Global Monospace an.
 
 5. Markieren Sie das **Button**-Steuerelement, und legen Sie im Fenster **Eigenschaften** die folgenden Werte fest:
 
-    -   Legen Sie die Eigenschaft **Name** auf `startButton` fest.
+    - Legen Sie die Eigenschaft **Name** auf `startButton` fest.
 
-    -   Ändern Sie den Wert der Eigenschaft **Content** von **Button** zu **Start**.
+    - Ändern Sie den Wert der Eigenschaft **Content** von **Button** zu **Start**.
 
 6. Positionieren Sie das Textfeld und die Schaltfläche so, dass beide im Fenster **MainWindow** angezeigt werden.
 
@@ -108,13 +108,13 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie [Asynchron
 
 3. Der Code für die synchrone Lösung enthält die folgenden vier Methoden:
 
-    -   `SumPageSizes`. Enthält eine Liste von Webseiten-URLs aus `SetUpURLList` und ruft dann `GetURLContents` und `DisplayResults` auf, um jede URL zu verarbeiten.
+    - `SumPageSizes`. Enthält eine Liste von Webseiten-URLs aus `SetUpURLList` und ruft dann `GetURLContents` und `DisplayResults` auf, um jede URL zu verarbeiten.
 
-    -   `SetUpURLList`. Erstellt und gibt eine Liste der Webadressen zurück.
+    - `SetUpURLList`. Erstellt und gibt eine Liste der Webadressen zurück.
 
-    -   `GetURLContents`. Lädt Inhalte jeder Website herunter und gibt die Inhalte als ein Bytearray zurück.
+    - `GetURLContents`. Lädt Inhalte jeder Website herunter und gibt die Inhalte als ein Bytearray zurück.
 
-    -   `DisplayResults`. Zeigt die Anzahl der Bytes im Bytearray für jede URL an.
+    - `DisplayResults`. Zeigt die Anzahl der Bytes im Bytearray für jede URL an.
 
     Kopieren Sie die folgenden vier Methoden, und fügen Sie sie dann unter dem `startButton_Click`-Ereignishandler in „MainWindow.xaml.cs“ ein:
 
@@ -258,9 +258,9 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
 3. Da Sie den Operator `await` im vorherigen Schritt hinzugefügt haben, tritt ein Compilerfehler auf. Der Operator kann nur in Methoden verwendet werden, die mit dem Modifizierer [async](../../../../csharp/language-reference/keywords/async.md) markiert sind. Ignorieren Sie den Fehler, während Sie die Konvertierungsschritte zum Ersetzen des Aufrufs von `CopyTo` mit einem Aufruf von `CopyToAsync` wiederholen.
 
-    -   Ändern Sie den Namen der Methode, die für <xref:System.IO.Stream.CopyToAsync%2A> aufgerufen wird.
+    - Ändern Sie den Namen der Methode, die für <xref:System.IO.Stream.CopyToAsync%2A> aufgerufen wird.
 
-    -   Die Methode `CopyTo` oder `CopyToAsync` kopiert Bytes zu ihrem Argument `content` und gibt keinen sinnvollen Wert zurück. In der synchronen Version ist der Aufruf von `CopyTo` eine einfache Anweisung, die keinen Wert zurückgibt. Die asynchrone Version `CopyToAsync` gibt ein <xref:System.Threading.Tasks.Task> zurück. Die Aufgabe funktioniert wie „Task(void)“ und ermöglicht, dass auf die Methode gewartet wird. Wenden Sie `Await` oder `await` auf den Aufruf von `CopyToAsync` an, wie dies im folgenden Code gezeigt wird.
+    - Die Methode `CopyTo` oder `CopyToAsync` kopiert Bytes zu ihrem Argument `content` und gibt keinen sinnvollen Wert zurück. In der synchronen Version ist der Aufruf von `CopyTo` eine einfache Anweisung, die keinen Wert zurückgibt. Die asynchrone Version `CopyToAsync` gibt ein <xref:System.Threading.Tasks.Task> zurück. Die Aufgabe funktioniert wie „Task(void)“ und ermöglicht, dass auf die Methode gewartet wird. Wenden Sie `Await` oder `await` auf den Aufruf von `CopyToAsync` an, wie dies im folgenden Code gezeigt wird.
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
      Die Methode `GetURLContents` verfügt über eine return-Anweisung, und die Anweisung gibt ein Bytearray zurück. Daher ist der Rückgabetyp der der asynchronen Version „Task(T)“, wobei „T“ ein Bytearray ist. Nehmen Sie folgende Änderungen in der Methodensignatur vor:
 
-    -   Ändern Sie den Rückgabetyp zu `Task<byte[]>`.
+    - Ändern Sie den Rückgabetyp zu `Task<byte[]>`.
 
-    -   Asynchrone Methoden verfügen gemäß der Konvention über Namen, die auf „Async“ enden. Benennen Sie also die Methode `GetURLContentsAsync` um.
+    - Asynchrone Methoden verfügen gemäß der Konvention über Namen, die auf „Async“ enden. Benennen Sie also die Methode `GetURLContentsAsync` um.
 
      Im folgenden Code sind diese Änderungen dargestellt.
 
@@ -305,9 +305,9 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
 1. Wiederholen Sie die Schritte des vorherigen Verfahrens für `SumPageSizes`. Ändern Sie zunächst den Aufruf von `GetURLContents` zu einem asynchronen Aufruf.
 
-    -   Ändern Sie den Namen der Methode, die aufgerufen wird, von `GetURLContents` zu `GetURLContentsAsync`, sofern Sie dies nicht bereits getan haben.
+    - Ändern Sie den Namen der Methode, die aufgerufen wird, von `GetURLContents` zu `GetURLContentsAsync`, sofern Sie dies nicht bereits getan haben.
 
-    -   Wenden Sie `await` auf die Aufgabe an, die durch `GetURLContentsAsync` zurückgegeben wird, um den Bytearraywert abzurufen.
+    - Wenden Sie `await` auf die Aufgabe an, die durch `GetURLContentsAsync` zurückgegeben wird, um den Bytearraywert abzurufen.
 
      Im folgenden Code sind diese Änderungen dargestellt.
 
@@ -326,11 +326,11 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
 2. Nehmen Sie folgende Änderungen in der Methodensignatur vor:
 
-    -   Markieren Sie die Methode mit dem Modifizierer `async`.
+    - Markieren Sie die Methode mit dem Modifizierer `async`.
 
-    -   Fügen Sie dem Methodennamen „Async“ hinzu.
+    - Fügen Sie dem Methodennamen „Async“ hinzu.
 
-    -   Es ist dieses Mal keine Aufgabenrückgabevariable „T“ vorhanden, da `SumPageSizesAsync` keinen Wert für „T“ zurückgibt. (Die Methode weist keine `return`-Anweisung auf.) Die Methode muss jedoch eine `Task` zurückgeben, die awaitable ist. Ändern Sie daher den Rückgabetyp der Methode von `void` in `Task`.
+    - Es ist dieses Mal keine Aufgabenrückgabevariable „T“ vorhanden, da `SumPageSizesAsync` keinen Wert für „T“ zurückgibt. (Die Methode weist keine `return`-Anweisung auf.) Die Methode muss jedoch eine `Task` zurückgeben, die awaitable ist. Ändern Sie daher den Rückgabetyp der Methode von `void` in `Task`.
 
     Im folgenden Code sind diese Änderungen dargestellt.
 
@@ -391,9 +391,9 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
 2. Es sollte eine Ausgabe angezeigt werden, die der Ausgabe der synchronen Lösung gleicht. Folgende Unterschiede sind jedoch zu berücksichtigen.
 
-    -   Die Ergebnisse treten nicht alle gleichzeitig auf, nachdem die Verarbeitung abgeschlossen wurde. Beispielsweise enthalten beide Programme eine Zeile in `startButton_Click`, die das Textfeld löscht. Es ist vorgesehen, das Textfeld zwischen zwei Ausführungen zu löschen, wenn Sie die Schaltfläche **Start** ein zweites Mal auswählen, nachdem ein Ergebnissatz angezeigt wurde. In der synchronen Version wird das Textfeld unmittelbar vor der zweiten Anzeige des Zählers gelöscht, wenn die Downloads abgeschlossen sind und der UI-Thread für die Verarbeitung anderer Aktionen frei ist. In der asynchronen Version wird das Textfeld unmittelbar gelöscht, nachdem Sie die Schaltfläche **Start** ausgewählt haben.
+    - Die Ergebnisse treten nicht alle gleichzeitig auf, nachdem die Verarbeitung abgeschlossen wurde. Beispielsweise enthalten beide Programme eine Zeile in `startButton_Click`, die das Textfeld löscht. Es ist vorgesehen, das Textfeld zwischen zwei Ausführungen zu löschen, wenn Sie die Schaltfläche **Start** ein zweites Mal auswählen, nachdem ein Ergebnissatz angezeigt wurde. In der synchronen Version wird das Textfeld unmittelbar vor der zweiten Anzeige des Zählers gelöscht, wenn die Downloads abgeschlossen sind und der UI-Thread für die Verarbeitung anderer Aktionen frei ist. In der asynchronen Version wird das Textfeld unmittelbar gelöscht, nachdem Sie die Schaltfläche **Start** ausgewählt haben.
 
-    -   Das Wichtigste ist jedoch, dass der UI-Thread nicht blockiert wird, während Downloads vorgenommen werden. Sie können das Fenster verschieben oder dessen Größe anpassen, während die Webressourcen heruntergeladen, gezählt und angezeigt werden. Wenn eine der Websites langsam ist oder nicht antwortet, können Sie den Vorgang abbrechen, indem Sie die Schaltfläche **Schließen** (das x im roten Feld in der oberen rechten Ecke) auswählen.
+    - Das Wichtigste ist jedoch, dass der UI-Thread nicht blockiert wird, während Downloads vorgenommen werden. Sie können das Fenster verschieben oder dessen Größe anpassen, während die Webressourcen heruntergeladen, gezählt und angezeigt werden. Wenn eine der Websites langsam ist oder nicht antwortet, können Sie den Vorgang abbrechen, indem Sie die Schaltfläche **Schließen** (das x im roten Feld in der oberen rechten Ecke) auswählen.
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Ersetzen der Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode
 

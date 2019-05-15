@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9503af53cd699405d14f4f92a1d962a59918f759
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979865"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608563"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Ausnahmebehandlung (C#-Programmierhandbuch)
 Ein [try](../../../csharp/language-reference/keywords/try-catch.md)-Block wird von C#-Programmierern verwendet, um Code zu partitionieren, der von einer Ausnahme betroffen sein könnte. Zugeordnete [catch](../../../csharp/language-reference/keywords/try-catch.md)-Blöcke werden verwendet, um die sich ergebenden Ausnahmen zu behandeln. Ein [finally](../../../csharp/language-reference/keywords/try-finally.md)-Block enthält Code, der ausgeführt wird, unabhängig davon, ob eine Ausnahme im `try`-Block ausgelöst wird, z.B. das Freigeben von Ressourcen, die im `try`-Block zugeordnet werden. Ein `try`-Block erfordert einen oder mehrere zugeordnete `catch`-Blöcke oder ein `finally`-Block oder beides.  
@@ -33,13 +33,13 @@ Ein [try](../../../csharp/language-reference/keywords/try-catch.md)-Block wird v
   
  Sie sollten die Ausnahmen abfangen, wenn Folgendes zutrifft:  
   
--   Sie verstehen, warum die Ausnahme ausgelöst werden kann, und Sie können eine bestimmte Wiederherstellung implementieren, wie z.B. den Benutzer auffordern, einen neuen Dateinamen einzugeben, wenn Sie ein Objekt <xref:System.IO.FileNotFoundException> abfangen.  
+- Sie verstehen, warum die Ausnahme ausgelöst werden kann, und Sie können eine bestimmte Wiederherstellung implementieren, wie z.B. den Benutzer auffordern, einen neuen Dateinamen einzugeben, wenn Sie ein Objekt <xref:System.IO.FileNotFoundException> abfangen.  
   
--   Sie können eine neue und spezifischere Ausnahme erstellen und auslösen.  
+- Sie können eine neue und spezifischere Ausnahme erstellen und auslösen.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
--   Sie möchten eine Ausnahme teilweise behandeln, bevor Sie sie für eine zusätzliche Behandlung weitergeben. Im folgenden Beispiel wird ein `catch`-Block verwendet, um dem Fehlerprotokoll einen Eintrag hinzufügen, bevor die Ausnahme erneut ausgelöst wird.  
+- Sie möchten eine Ausnahme teilweise behandeln, bevor Sie sie für eine zusätzliche Behandlung weitergeben. Im folgenden Beispiel wird ein `catch`-Block verwendet, um dem Fehlerprotokoll einen Eintrag hinzufügen, bevor die Ausnahme erneut ausgelöst wird.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   

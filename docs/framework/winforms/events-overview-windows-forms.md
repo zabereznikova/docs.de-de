@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: ab4a52409e1d24c053184cf65a5e11f735ad89b9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211496"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591011"
 ---
 # <a name="events-overview-windows-forms"></a>Übersicht über Ereignisse (Windows Forms)
 Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“ können. Ereignisse können durch eine Benutzeraktion generiert werden, z. B. durch Klicken mit der Maus oder Drücken auf eine Taste; durch Programmcode; oder durch das System.
@@ -29,7 +29,7 @@ Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“
  Weitere Informationen zum Auslösen und Nutzen eines Ereignisses, finden Sie unter [Ereignisse](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Delegaten und ihre Rolle
- Delegaten sind Klassen, die häufig in den in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zu erstellenden ereignishandhabenden Mechanismen verwendet werden. Delegaten entsprechen in etwa Funktionszeigern, die häufig in [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] und anderen objektorientierten Sprachen verwendet werden. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert, typsicher und sicher. Darüber hinaus bestehen Sie im Vergleich zu Funktionszeigern, die nur einen Verweis zu einer bestimmten Funktion enthalten, aus einem Verweis zu einem Objekt und Verweisen zu einem oder mehren Methoden in dem Objekt.
+ Delegaten sind Klassen, die häufig in .NET Framework zum Erstellen von ereignishandhabenden Mechanismen verwendet. Delegaten entsprechen in etwa Funktionszeigern, die häufig in [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] und anderen objektorientierten Sprachen verwendet werden. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert, typsicher und sicher. Darüber hinaus bestehen Sie im Vergleich zu Funktionszeigern, die nur einen Verweis zu einer bestimmten Funktion enthalten, aus einem Verweis zu einem Objekt und Verweisen zu einem oder mehren Methoden in dem Objekt.
 
  Das Ereignismodell verwendet *Delegaten* um Ereignisse an die Methoden zu binden, die verwendet werden, um sie zu behandeln. Mit dem Delegat können andere Klassen für eine Ereignisbenachrichtigung registriert werden, indem eine Handlermethode angegeben wird. Wenn das Ereignis auftritt, ruft der Delegat die gebundene Methode auf. Weitere Informationen zum Definieren von Delegaten finden Sie unter [Ereignisse](../../standard/events/index.md).
 

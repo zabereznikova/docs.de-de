@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218069"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607694"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
 <a name="top"></a> Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen. Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.  
   
  Beweise werden auf zwei unterschiedliche Arten verwendet:  
   
--   Die Eingabebeweise werden mit den vom Ladeprogramm erfassten Beweisen zusammengeführt, um einen endgültigen Beweissatz zu erstellen. Dieser wird für die Richtlinienauflösung verwendet. Diese Semantik wird von den Methoden **Assembly.Load**, **Assembly.LoadFrom** und **Activator.CreateInstance** verwendet.  
+- Die Eingabebeweise werden mit den vom Ladeprogramm erfassten Beweisen zusammengeführt, um einen endgültigen Beweissatz zu erstellen. Dieser wird für die Richtlinienauflösung verwendet. Diese Semantik wird von den Methoden **Assembly.Load**, **Assembly.LoadFrom** und **Activator.CreateInstance** verwendet.  
   
--   Die Eingabebeweise werden unverändert als endgültiger Beweissatz für die Richtlinienauflösung verwendet. Diese Semantik wird von den Methoden **Assembly.Load(byte[])** und **AppDomain.DefineDynamicAssembly()** verwendet.  
+- Die Eingabebeweise werden unverändert als endgültiger Beweissatz für die Richtlinienauflösung verwendet. Diese Semantik wird von den Methoden **Assembly.Load(byte[])** und **AppDomain.DefineDynamicAssembly()** verwendet.  
   
  Optionale Berechtigungen können über die [Sicherheitsrichtlinien](../../../docs/framework/misc/code-access-security-basics.md) erteilt werden, die auf dem Computer festgelegt sind, auf dem die Assembly ausgeführt wird. Wenn der Code alle potenziellen Sicherheitsausnahmen behandeln soll, können Sie eines der folgenden Verfahren durchführen:  
   
--   Sie fügen eine Berechtigungsanforderung für alle Berechtigungen ein, über die der Code verfügen muss, und behandeln zuerst den Ladezeitfehler, der auftritt, wenn die Berechtigungen nicht erteilt werden.  
+- Sie fügen eine Berechtigungsanforderung für alle Berechtigungen ein, über die der Code verfügen muss, und behandeln zuerst den Ladezeitfehler, der auftritt, wenn die Berechtigungen nicht erteilt werden.  
   
--   Sie fordern die vom Code eventuell benötigten Berechtigungen nicht mit Berechtigungsanforderungen an, bereiten jedoch die Behandlung von Sicherheitsausnahmen für den Fall vor, dass keine Berechtigungen erteilt werden.  
+- Sie fordern die vom Code eventuell benötigten Berechtigungen nicht mit Berechtigungsanforderungen an, bereiten jedoch die Behandlung von Sicherheitsausnahmen für den Fall vor, dass keine Berechtigungen erteilt werden.  
   
     > [!NOTE]
     >  Sicherheit ist ein komplexer Themenbereich, und Sie können aus einer Vielzahl von Optionen auswählen. Weitere Informationen finden Sie unter [Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md).  

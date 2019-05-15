@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990885"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591530"
 ---
 # <a name="security-considerations-for-data"></a>Sicherheitsüberlegungen zu Daten
 
@@ -28,7 +28,7 @@ Eine Anzahl von Stellen in der Windows Communication Foundation (WCF)-Infrastruk
 
 Der Autor des Codes muss sicherstellen, dass kein Sicherheitsrisiko entsteht. Angenommen, Sie erstellen einen Datenvertragstyp mit einer Datenmembereigenschaft vom Typ Integer und ordnen in der Implementierung des `set` -Accessors basierend auf dem Eigenschaftswert ein Array zu. In diesem Fall setzen Sie den Server der Gefahr eines Denial-of-Service-Angriffs aus, wenn eine böswillige Nachricht einen extrem langen Wert für diesen Datenmember enthält. Vermeiden Sie in der Regel Zuordnungen, die auf eingehenden Daten oder langwierigen Verarbeitungen im Benutzercode basieren (insbesondere, wenn die langwierige Verarbeitung durch wenige eingehende Daten verursacht werden kann). Berücksichtigen Sie bei der Sicherheitsanalyse von Benutzercode auch alle möglichen Schwachstellen (d. h. alle Codeverzweigungen, an denen Ausnahmen ausgelöst werden).
 
-Der Code, der sich innerhalb der Dienstimplementierung für die einzelnen Vorgänge befindet, ist das letzte Beispiel für Benutzercode. Für die Sicherheit Ihrer Dienstimplementierung sind Sie verantwortlich. Es kann leicht passieren, dass versehentlich unsichere Vorgänge implementiert werden, die das Risiko von Denial-of-Service-Angriffen mit sich bringen. Stellen Sie sich z.&#160;B. einen Vorgang vor, der anhand einer Zeichenfolge aus einer Datenbank eine Liste der Kunden zurückgibt, deren Name mit dieser Zeichenfolge beginnt. Wenn Sie mit großen Datenbanken arbeiten und die übergebene Zeichenfolge besteht nur aus einem einzelnen Buchstaben, ist die Nachricht, die der Code zu erstellen versucht, möglicherweise größer als der verfügbare Arbeitspeicher. Somit schlägt der gesamte Dienst fehl. (Eine <xref:System.OutOfMemoryException> kann in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nicht behoben werden und führt immer zum Beenden der Anwendung.)
+Der Code, der sich innerhalb der Dienstimplementierung für die einzelnen Vorgänge befindet, ist das letzte Beispiel für Benutzercode. Für die Sicherheit Ihrer Dienstimplementierung sind Sie verantwortlich. Es kann leicht passieren, dass versehentlich unsichere Vorgänge implementiert werden, die das Risiko von Denial-of-Service-Angriffen mit sich bringen. Stellen Sie sich z.&#160;B. einen Vorgang vor, der anhand einer Zeichenfolge aus einer Datenbank eine Liste der Kunden zurückgibt, deren Name mit dieser Zeichenfolge beginnt. Wenn Sie mit großen Datenbanken arbeiten und die übergebene Zeichenfolge besteht nur aus einem einzelnen Buchstaben, ist die Nachricht, die der Code zu erstellen versucht, möglicherweise größer als der verfügbare Arbeitspeicher. Somit schlägt der gesamte Dienst fehl. (Eine <xref:System.OutOfMemoryException> kann nicht rückgängig gemacht, in .NET Framework und führt immer die Beendigung der Anwendung.)
 
 Stellen Sie sicher, dass die verschiedenen Erweiterbarkeitspunkte keinen schädlichen Code enthalten. Dies ist besonders dann relevant, wenn er unter teilweiser Vertrauenswürdigkeit ausgeführt wird, und mit Typen arbeitet, die in nicht voll vertrauenswürdigen Assemblys deklariert sind, oder Komponenten erstellt, die von teilweise vertrauenswürdigem Code verwendet werden. Weitere Informationen finden Sie unter "Bedrohungen durch teilweise vertrauenswürdigen Code" in einem späteren Abschnitt.
 
@@ -54,7 +54,7 @@ Wenn die Empfängerseite dazu veranlasst wird, eine erhebliche Arbeitsspeicherme
 
 Denial-of-Service-Angriffe werden häufig mithilfe von Kontingenten abgeschwächt. Beim Überschreiten eines Kontingents wird in der Regel eine <xref:System.ServiceModel.QuotaExceededException> -Ausnahme ausgelöst. Ohne Kontingent kann eine böswillige Nachricht den gesamten verfügbaren Arbeitsspeicher belegen und eine <xref:System.OutOfMemoryException> -Ausnahme auslösen, oder es werden alle verfügbaren Stapel verbraucht, was zu einer <xref:System.StackOverflowException>führt.
 
-Das Problem eines überschrittenen Kontingents ist behebbar. Wenn dabei ein Dienst aktiv ist, wird die aktuell verarbeitete Nachricht verworfen, der Dienst wird weiterhin ausgeführt und verarbeitet weitere Nachrichten. Wenn jedoch kein Arbeitspeicher mehr verfügbar ist oder ein Stapelüberlauf eintritt, kann das Problem in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]nicht behoben werden. Der Dienst wird im Fall dieser Ausnahmen beendet.
+Das Problem eines überschrittenen Kontingents ist behebbar. Wenn dabei ein Dienst aktiv ist, wird die aktuell verarbeitete Nachricht verworfen, der Dienst wird weiterhin ausgeführt und verarbeitet weitere Nachrichten. Die Out-of-Memory- und Stack Overflow-Szenarien können jedoch nicht an einer beliebigen Stelle in .NET Framework wiederhergestellt werden; der Dienst beendet wird, wenn solche Ausnahmen auftreten.
 
 Alle Vorabbelegung von beinhalten Kontingenten in WCF nicht. Ist beispielsweise das <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> -Kontingent (das für verschiedene Klassen verwendet wir) auf 128 KB festgelegt, heißt das nicht, dass automatisch jeder Nachricht 128 KB zugeordnet werden. Die tatsächliche zugeordnete Menge hängt von der tatsächlichen Größe der eingehenden Nachricht ab.
 
@@ -274,7 +274,7 @@ Diese Situation ist vermeidbar, wenn folgenden Punkte beachtet werden:
 
 - Entwerfen Sie Datenvertragstypen nicht nach einer bestimmten Reihenfolge, in der Eigenschaftensetter aufgerufen werden müssen.
 
-- Seien Sie vorsichtig, wenn Sie ältere Typen verwenden, die mit dem <xref:System.SerializableAttribute> -Attribut gekennzeichnet sind. Viele davon wurden für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting zur ausschließlichen Verwendung mit vertrauenswürdigen Daten entwickelt. Bei der Entwicklung vorhandener Typen, die mit diesem Attribut gekennzeichnet sind, spielte die Sicherheit möglicherweise keine Rolle.
+- Seien Sie vorsichtig, wenn Sie ältere Typen verwenden, die mit dem <xref:System.SerializableAttribute> -Attribut gekennzeichnet sind. Viele davon wurden für die Arbeit mit .NET Framework-Remoting für die Verwendung mit vertrauenswürdigen Daten nur entworfen. Bei der Entwicklung vorhandener Typen, die mit diesem Attribut gekennzeichnet sind, spielte die Sicherheit möglicherweise keine Rolle.
 
 - Verlassen Sie sich nicht darauf, dass die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> -Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> -Attributs das Vorhandensein von Daten in einem sicheren Zustand garantiert. Deren Status könnte auch `null`, `zero`oder `invalid`lauten.
 
@@ -282,7 +282,7 @@ Diese Situation ist vermeidbar, wenn folgenden Punkte beachtet werden:
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>Sicheres Verwenden von NetDataContractSerializer
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> ist ein Serialisierungsmodul, das eng verknüpfte Typen verwendet. Das ist mit <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>vergleichbar. Das heißt, der zu instanziierende Typ wird ermittelt, indem die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Assembly und der Typnamen in den eingehenden Daten gelesen wird. Obwohl es sich um einen Teil von WCF ist, besteht keine Möglichkeit diese Serialisierungs-Engine unter Verwendung der; benutzerdefinierter Code muss geschrieben werden. Die `NetDataContractSerializer` in erster Linie die Migration von erleichtern [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting und WCF. Weitere Informationen finden Sie unter dem entsprechenden Abschnitt unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+<xref:System.Runtime.Serialization.NetDataContractSerializer> ist ein Serialisierungsmodul, das eng verknüpfte Typen verwendet. Das ist mit <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>vergleichbar. Es ermittelt Typs instanziieren, indem Sie die .NET Framework-Assembly und einen Typnamen aus den eingehenden Daten lesen. Obwohl es sich um einen Teil von WCF ist, besteht keine Möglichkeit diese Serialisierungs-Engine unter Verwendung der; benutzerdefinierter Code muss geschrieben werden. Die `NetDataContractSerializer` in erster Linie die um Migration von .NET Framework-Remoting nach WCF zu erleichtern. Weitere Informationen finden Sie unter dem entsprechenden Abschnitt unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
 Da die Nachricht selbst möglicherweise alle ladbaren Typen angibt, ist der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Mechanismus grundsätzlich unsicher und sollte nur mit vertrauenswürdigen Daten verwendet werden. Sie können den Mechanismus sichern, indem Sie einen sicheren, Typen einschränkenden Typbinder schreiben, der nur das Laden sicherer Typen zulässt (mithilfe der <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> -Eigenschaft).
 

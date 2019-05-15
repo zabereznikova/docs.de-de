@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300696"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607686"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 
@@ -36,9 +36,9 @@ Im folgenden Szenario wird kurz umrissen, wie eine Assembly mit einem starken Na
 
 1. Assembly A wird auf eine der folgenden Weisen mit einem starken Namen erstellt:
 
-    -   Durch Verwenden einer Entwicklungsumgebung, die das Erstellen starker Namen unterstützt, wie z.B. Visual Studio.
+    - Durch Verwenden einer Entwicklungsumgebung, die das Erstellen starker Namen unterstützt, wie z.B. Visual Studio.
 
-    -   Durch Erstellen eines kryptografischen Schlüsselpaars mithilfe des [Strong Name-Tools (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) und Zuweisen dieses Schlüsselpaars zur Assembly unter Verwendung eines Befehlszeilencompilers oder mit dem [Assemblylinker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Das Windows Software Development Kit (SDK) stellt sowohl Sn.exe als auch Al.exe zur Verfügung.
+    - Durch Erstellen eines kryptografischen Schlüsselpaars mithilfe des [Strong Name-Tools (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) und Zuweisen dieses Schlüsselpaars zur Assembly unter Verwendung eines Befehlszeilencompilers oder mit dem [Assemblylinker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Das Windows Software Development Kit (SDK) stellt sowohl Sn.exe als auch Al.exe zur Verfügung.
 
 2. Die Entwicklungsumgebung oder das Tool signiert den Hash der Datei, die das Assemblymanifest enthält, mit dem privaten Schlüssel des Entwicklers. Diese digitale Signatur wird in der PE (Portable Executable)-Datei gespeichert, die das Manifest von Assembly A enthält.
 
@@ -55,13 +55,13 @@ Ab [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] werden S
 
 Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert ist und die folgenden Eigenschaften aufweist:
 
--   Voll vertrauenswürdig ohne <xref:System.Security.Policy.StrongName>-Beweis (hat z. B. `MyComputer`-Zonenbeweis)
+- Voll vertrauenswürdig ohne <xref:System.Security.Policy.StrongName>-Beweis (hat z. B. `MyComputer`-Zonenbeweis)
 
--   Geladen in eine voll vertrauenswürdige <xref:System.AppDomain>
+- Geladen in eine voll vertrauenswürdige <xref:System.AppDomain>
 
--   Geladen von einem Speicherort unter der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft von dieser <xref:System.AppDomain>
+- Geladen von einem Speicherort unter der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft von dieser <xref:System.AppDomain>
 
--   Nicht verzögert signiert
+- Nicht verzögert signiert
 
 Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert werden. Weitere Informationen finden Sie unter [How to: Deaktivieren der Strong-Name-Bypass-Funktion](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 
@@ -75,6 +75,6 @@ Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert we
 |[Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Beschreibt, wie auf Typen oder Ressourcen in einer Assembly mit starkem Namen zur Kompilier- oder Laufzeit verwiesen wird.|
 |[Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Beschreibt, wie die Funktion, die die Validierung von Signaturen mit starkem Namen umgeht, deaktiviert wird. Diese Funktion kann für alle oder bestimmte Anwendungen deaktiviert werden.|
 |[Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)|Bietet eine Übersicht über Einfach- und Mehrfachdateiassemblys.|
-|[Gewusst wie: Verzögern der Signierung einer Assembly (Visual Studio)](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Erläutert das Signieren einer Assembly mit einem starken Namen nach dem Erstellen der Assembly.|
+|[So erstellen Sie eine Assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Erläutert das Signieren einer Assembly mit einem starken Namen nach dem Erstellen der Assembly.|
 |[Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem Assemblys mit starken Namen erstellt werden können. Dieses Tool stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.|
 |[Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem eine Datei generiert wird, die ein Assemblymanifest von Modulen oder Ressourcendateien besitzt.|
