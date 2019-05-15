@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcendatei "<filename>" konnte nicht eingebettet werden: <error message>'
+title: "Ressourcendatei '<filename>' konnte nicht eingebettet werden: <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30143
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61792079"
 ---
-# <a name="unable-to-embed-resource-file-filename-error-message"></a>Konnte nicht eingebettet Ressourcendatei "\<Dateiname >': \<Fehlermeldung >
+# <a name="unable-to-embed-resource-file-filename-error-message"></a>Konnte nicht eingebettet Ressourcendatei '\<Dateiname >': \<Fehlermeldung >
 Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren. Der Linker meldet einen Fehler beim direkten Einbetten einer nativen COM+-Ressourcedatei in die Assembly.  
   
  **Fehler-ID:** BC30143  

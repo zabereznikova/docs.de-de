@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: f92fc78aa7645abb742fdb38c360ac6641b1591d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627058"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592590"
 ---
 # <a name="data-member-default-values"></a>Standardwerte der Datenelemente
-In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen Typen ein Konzept von *Standardwerte*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  
+In .NET Framework, besitzen Typen ein Konzept von *Standardwerte*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  
   
  Um ein Element aus den serialisierten Daten zu löschen, legen Sie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> des Attributs <xref:System.Runtime.Serialization.DataMemberAttribute> auf `false` fest (der Standardwert ist `true`).  
   

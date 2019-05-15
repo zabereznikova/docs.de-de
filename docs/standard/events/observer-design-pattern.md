@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615162"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
 Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen. Es ist für jedes Szenario geeignet, das pushbasierte Benachrichtigungen erfordert. Das Muster definiert einen *Anbieter* (auch als *Antragssteller* oder *Observable* bezeichnet) und keinen, einen oder mehrere *Beobachter*. Beobachter registrieren sich beim Anbieter, und sobald eine vordefinierte Bedingung, ein Ereignis oder eine Statusänderung stattfindet, benachrichtigt der Anbieter automatisch alle Beobachter, indem er eine ihrer Methoden aufruft. In diesem Methodenaufruf kann der Anbieter den Beobachtern auch aktuelle Statusinformationen bereitstellen. In .NET Framework wird das Entwurfsmuster "Beobachter" angewendet, indem die generischen Schnittstellen <xref:System.IObservable%601?displayProperty=nameWithType> und <xref:System.IObserver%601?displayProperty=nameWithType> implementiert werden. Der generische Typparameter stellt den Typ dar, der Benachrichtigungsinformationen bereitstellt.  
@@ -29,21 +29,21 @@ Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter re
   
  Für eine Implementierung des Musters wird Folgendes benötigt:  
   
--   Ein Anbieter oder Antragsteller, der das Objekt darstellt, das Benachrichtigungen an die Beobachter sendet. Ein Anbieter ist eine Klasse oder eine Struktur, die die <xref:System.IObservable%601>-Schnittstelle implementiert. Der Anbieter muss eine einzelne <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode implementieren, die von Beobachtern aufgerufen wird, die Benachrichtigungen vom Anbieter erhalten möchten.  
+- Ein Anbieter oder Antragsteller, der das Objekt darstellt, das Benachrichtigungen an die Beobachter sendet. Ein Anbieter ist eine Klasse oder eine Struktur, die die <xref:System.IObservable%601>-Schnittstelle implementiert. Der Anbieter muss eine einzelne <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode implementieren, die von Beobachtern aufgerufen wird, die Benachrichtigungen vom Anbieter erhalten möchten.  
   
--   Ein Beobachter, bei dem es sich um ein Objekt handelt, das Benachrichtigungen von einem Anbieter empfängt. Ein Beobachter ist eine Klasse oder eine Struktur, die die <xref:System.IObserver%601>-Schnittstelle implementiert. Der Beobachter muss drei Methoden implementieren, die alle vom Anbieter aufgerufen werden:  
+- Ein Beobachter, bei dem es sich um ein Objekt handelt, das Benachrichtigungen von einem Anbieter empfängt. Ein Beobachter ist eine Klasse oder eine Struktur, die die <xref:System.IObserver%601>-Schnittstelle implementiert. Der Beobachter muss drei Methoden implementieren, die alle vom Anbieter aufgerufen werden:  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, die dem Beobachter neue oder aktuelle Informationen bereitstellt.  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, die dem Beobachter neue oder aktuelle Informationen bereitstellt.  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, die den Beobachter informiert, dass ein Fehler aufgetreten ist.  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, die den Beobachter informiert, dass ein Fehler aufgetreten ist.  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, die angibt, dass der Anbieter das Senden von Benachrichtigungen abgeschlossen hat.  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, die angibt, dass der Anbieter das Senden von Benachrichtigungen abgeschlossen hat.  
   
--   Ein Mechanismus, mit dem der Anbieter Beobachter verwalten kann. In der Regel verwendet der Anbieter ein Containerobjekt, z. B. ein <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Objekt, um Verweise auf die <xref:System.IObserver%601>-Implementierungen zu speichern, die Benachrichtigungen abonniert haben. Durch das Verwenden eines Speichercontainers zu diesem Zweck kann der Anbieter eine beliebige Anzahl von Beobachtern behandeln. Die Reihenfolge, in der Beobachter Benachrichtigungen empfangen, ist nicht definiert. Der Anbieter kann die Methode zum Bestimmen der Reihenfolge frei wählen.  
+- Ein Mechanismus, mit dem der Anbieter Beobachter verwalten kann. In der Regel verwendet der Anbieter ein Containerobjekt, z. B. ein <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Objekt, um Verweise auf die <xref:System.IObserver%601>-Implementierungen zu speichern, die Benachrichtigungen abonniert haben. Durch das Verwenden eines Speichercontainers zu diesem Zweck kann der Anbieter eine beliebige Anzahl von Beobachtern behandeln. Die Reihenfolge, in der Beobachter Benachrichtigungen empfangen, ist nicht definiert. Der Anbieter kann die Methode zum Bestimmen der Reihenfolge frei wählen.  
   
--   Eine <xref:System.IDisposable>-Implementierung, die es dem Anbieter ermöglicht, Beobachter zu entfernen, wenn die Benachrichtigungen abgeschlossen wurden. Beobachter erhalten einen Verweis auf die <xref:System.IDisposable>-Implementierung der <xref:System.IObservable%601.Subscribe%2A>-Methode, sodass sie die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode ebenfalls aufrufen können, um das Abonnement zu kündigen, bevor der Anbieter das Senden von Benachrichtigungen abgeschlossen hat.  
+- Eine <xref:System.IDisposable>-Implementierung, die es dem Anbieter ermöglicht, Beobachter zu entfernen, wenn die Benachrichtigungen abgeschlossen wurden. Beobachter erhalten einen Verweis auf die <xref:System.IDisposable>-Implementierung der <xref:System.IObservable%601.Subscribe%2A>-Methode, sodass sie die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode ebenfalls aufrufen können, um das Abonnement zu kündigen, bevor der Anbieter das Senden von Benachrichtigungen abgeschlossen hat.  
   
--   Ein Objekt, das die Daten enthält, die vom Anbieter an die Beobachter gesendet werden. Der Typ des Objekts entspricht dem generischen Typparameter der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601>. Obwohl dieses Objekt vom selben Typ sein kann wie die <xref:System.IObservable%601>-Implementierung, handelt es sich in den meisten Fällen um einen separaten Typ.  
+- Ein Objekt, das die Daten enthält, die vom Anbieter an die Beobachter gesendet werden. Der Typ des Objekts entspricht dem generischen Typparameter der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601>. Obwohl dieses Objekt vom selben Typ sein kann wie die <xref:System.IObservable%601>-Implementierung, handelt es sich in den meisten Fällen um einen separaten Typ.  
   
 > [!NOTE]
 >  Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise bestehen [Reagierende Erweiterungen für .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) aus einem Satz von Erweiterungsmethoden und LINQ-Standardsequenzoperatoren, um die asynchrone Programmierung zu unterstützen.  
@@ -56,9 +56,9 @@ Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter re
   
  Eine `BaggageHandler`-Klasse ist für den Empfang von Informationen über ankommende Flüge und die Gepäckausgabebänder verantwortlich. Intern werden zwei Auflistungen verwaltet:  
   
--   `observers` - Eine Auflistung der Clients, die aktualisierte Informationen erhalten.  
+- `observers` - Eine Auflistung der Clients, die aktualisierte Informationen erhalten.  
   
--   `flights` - Eine Auflistung der Flüge und zugewiesenen Laufbänder.  
+- `flights` - Eine Auflistung der Flüge und zugewiesenen Laufbänder.  
   
  Beide Auflistungen werden von generischen <xref:System.Collections.Generic.List%601>-Objekten dargestellt, die im `BaggageHandler`-Klassenkonstruktor instanziiert werden. Der Quellcode für die `BaggageHandler`-Klasse wird im folgenden Beispiel gezeigt.  
   

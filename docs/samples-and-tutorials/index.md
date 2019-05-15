@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950851"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469466"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -60,6 +60,10 @@ Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksba
 **LINQ-Beispiele**
 
 Diese Beispielserie veranschaulicht viele der Funktionen von Language Integrated Query (sprachintegrierte Abfrage, LINQ). Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/linq/csharp) finden Sie im dotnet/samples-Repository auf GitHub.
+
+**Beispiel für einen verwalteten COM-Server**
+
+Das [COM-Server](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)-Beispiel veranschaulicht, wie ein verwalteter COM-Server erstellt wird und global registriert werden kann.
 
 **Beispiel zu Microsoft Office-PIAs**
 

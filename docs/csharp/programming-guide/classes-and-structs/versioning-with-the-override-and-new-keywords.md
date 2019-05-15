@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975856"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583127"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csharp/language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../../csharp/language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
   
  In C# können abgeleitete Klassen Methoden mit dem gleichen Namen wie Basisklassen-Methoden enthalten.  
   
--   Die Basisklasse muss als [virtual](../../../csharp/language-reference/keywords/virtual.md) definiert werden.  
+- Die Basisklasse muss als [virtual](../../../csharp/language-reference/keywords/virtual.md) definiert werden.  
   
--   Wenn der Methode in der abgeleiteten Klasse nicht die Schlüsselwörter [new](../../../csharp/language-reference/keywords/new.md) oder [override](../../../csharp/language-reference/keywords/override.md) vorangestellt sind, gibt der Compiler eine Warnung aus, und die Methode verhält sich, als ob das Schlüsselwort `new` vorhanden wäre.  
+- Wenn der Methode in der abgeleiteten Klasse nicht die Schlüsselwörter [new](../../../csharp/language-reference/keywords/new.md) oder [override](../../../csharp/language-reference/keywords/override.md) vorangestellt sind, gibt der Compiler eine Warnung aus, und die Methode verhält sich, als ob das Schlüsselwort `new` vorhanden wäre.  
   
--   Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `new` vorangestellt ist, wird die Methode als unabhängig von der Methode in der Basisklasse definiert.  
+- Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `new` vorangestellt ist, wird die Methode als unabhängig von der Methode in der Basisklasse definiert.  
   
--   Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `override` vorangestellt ist, rufen Objekte der abgeleiteten Klasse diese Methode anstatt der Methode der Basisklasse auf.  
+- Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `override` vorangestellt ist, rufen Objekte der abgeleiteten Klasse diese Methode anstatt der Methode der Basisklasse auf.  
   
--   Die Methode der Basisklasse kann mithilfe des Schlüsselworts `base` aus der Basisklasse heraus aufgerufen werden.  
+- Die Methode der Basisklasse kann mithilfe des Schlüsselworts `base` aus der Basisklasse heraus aufgerufen werden.  
   
--   Die Schlüsselwörter `override`, `virtual` und `new` können auch auf Eigenschaften, Indexer und Ereignisse angewendet werden.  
+- Die Schlüsselwörter `override`, `virtual` und `new` können auch auf Eigenschaften, Indexer und Ereignisse angewendet werden.  
   
  Standardmäßig sind C#-Methoden nicht virtuell. Wenn eine Methode als virtuell deklariert wird, kann jede Klasse, die die Methode erbt, ihre eigene Version implementieren. Um eine Methode in eine virtuelle Methode zu transformieren, wird der Modifizierer `virtual` in der Methodendeklaration der Basisklasse verwendet. Die abgeleitete Klasse kann anschließend die virtuelle Methode der Basisklasse mithilfe des Schlüsselworts `override` überschreiben oder die virtuelle Methode in der Basisklasse mithilfe des Schlüsselworts `new` verbergen. Wenn weder das Schlüsselwort `override` noch das Schlüsselwort `new` angegeben ist, gibt der Compiler eine Warnung aus, und die Methode in der abgeleiteten Klasse verbirgt die Methode in der Basisklasse.  
   

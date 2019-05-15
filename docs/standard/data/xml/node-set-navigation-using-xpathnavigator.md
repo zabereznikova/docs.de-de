@@ -1,18 +1,18 @@
 ---
-title: Navigieren in Knotengruppen mit XPathNavigator
+title: Navigieren in Knotengruppen mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b102cf160dcc4b3f188451d42d3b8dbefa5d1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590182"
 ---
-# <a name="node-set-navigation-using-xpathnavigator"></a>Navigieren in Knotengruppen mit XPathNavigator
+# <a name="node-set-navigation-using-xpathnavigator"></a>Navigieren in Knotengruppen mit "XPathNavigator"
 Sie können mit den Navigationsmethoden für Knotengruppen der <xref:System.Xml.XPath.XPathDocument>-Klasse durch Knoten in einem <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathNavigator> navigieren. Sie können durch alle Knoten oder durch eine von den Auswahlmethoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegebene Gruppe von Knoten navigieren.  
   
 ## <a name="element-node-set-navigation"></a>Navigation durch Gruppen von Elementknoten  
@@ -36,21 +36,21 @@ Sie können mit den Navigationsmethoden für Knotengruppen der <xref:System.Xml.
 ## <a name="comments-and-processing-instruction-node-navigation"></a>Navigation durch Kommentare und Knoten mit Verarbeitungsanweisungen  
  Die folgenden Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse sind zum Positionieren auf Kommentare und Verarbeitungsanweisungen in einem XML-Dokument bestimmt.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
 ## <a name="see-also"></a>Siehe auch
 

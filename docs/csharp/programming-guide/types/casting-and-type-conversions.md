@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: bfcad2669c5ae34605c142f9834c52b4b84c36ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201117"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608092"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -28,13 +28,13 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  Manchmal müssen Sie möglicherweise einen Wert in eine Variable oder einen Methodenparameter eines anderen Typen kopieren. Sie haben z.B. möglicherweise eine Ganzzahlvariable, die Sie an eine Methode übergeben müssen, deren Parameter vom Type `double` ist. Möglicherweise müssen Sie auch einer Variablen eines Schnittstellentyps eine Klassenvariable zuweisen. Derartige Vorgänge werden als *Typkonvertierungen* bezeichnet. In C# können Sie folgende Arten von Konvertierungen durchführen:  
   
--   **Implizite Konvertierungen**: Es ist keine besondere Syntax erforderlich, da die Konvertierung typsicher ist und keine Daten verloren gehen. Beispiele sind Konvertierungen von kleinere in größere Ganzzahltypen und Konvertierungen von abgeleiteten in Basisklassen.  
+- **Implizite Konvertierungen**: Es ist keine besondere Syntax erforderlich, da die Konvertierung typsicher ist und keine Daten verloren gehen. Beispiele sind Konvertierungen von kleinere in größere Ganzzahltypen und Konvertierungen von abgeleiteten in Basisklassen.  
   
--   **Explizite Konvertierungen (Umwandlungen)**: Für explizite Konvertierungen ist ein Umwandlungsoperator erforderlich. Eine Umwandlung ist erforderlich, wenn Informationen bei einer Konvertierung verloren gehen können oder wenn die Konvertierung aus anderen Gründen fehlschlagen könnte.  Häufig auftretende Beispiele sind u.a. numerische Konvertierungen in einen Typen, der eine geringere Genauigkeit oder einen kleineren Bereich aufweist, oder Konvertierungen einer Instanz einer Basisklasse in eine abgeleitete Klasse.  
+- **Explizite Konvertierungen (Umwandlungen)**: Für explizite Konvertierungen ist ein Umwandlungsoperator erforderlich. Eine Umwandlung ist erforderlich, wenn Informationen bei einer Konvertierung verloren gehen können oder wenn die Konvertierung aus anderen Gründen fehlschlagen könnte.  Häufig auftretende Beispiele sind u.a. numerische Konvertierungen in einen Typen, der eine geringere Genauigkeit oder einen kleineren Bereich aufweist, oder Konvertierungen einer Instanz einer Basisklasse in eine abgeleitete Klasse.  
   
--   **Benutzerdefinierte Konvertierungen**: Benutzerdefinierte Konvertierungen werden anhand spezieller Methoden durchgeführt, die Sie definieren können, um explizite und implizite Konvertierungen zwischen benutzerdefinierten Typen zu ermöglichen, die nicht in einer Beziehung „Basisklasse – abgeleitete Klasse“ zueinander stehen. Weitere Informationen finden Sie unter [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
+- **Benutzerdefinierte Konvertierungen**: Benutzerdefinierte Konvertierungen werden anhand spezieller Methoden durchgeführt, die Sie definieren können, um explizite und implizite Konvertierungen zwischen benutzerdefinierten Typen zu ermöglichen, die nicht in einer Beziehung „Basisklasse – abgeleitete Klasse“ zueinander stehen. Weitere Informationen finden Sie unter [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
--   **Konvertierungen mit Hilfsklassen**: Für eine Konvertierung von nicht kompatiblen Typen, z.B. von ganzen Zahlen und <xref:System.DateTime?displayProperty=nameWithType>-Objekten, oder von Hexadezimalzeichenfolgen und Bytearrays können Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse, die <xref:System.Convert?displayProperty=nameWithType>-Klasse und die `Parse`-Methoden der integrierten numerischen Typen (z.B. <xref:System.Int32.Parse%2A?displayProperty=nameWithType>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+- **Konvertierungen mit Hilfsklassen**: Für eine Konvertierung von nicht kompatiblen Typen, z.B. von ganzen Zahlen und <xref:System.DateTime?displayProperty=nameWithType>-Objekten, oder von Hexadezimalzeichenfolgen und Bytearrays können Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse, die <xref:System.Convert?displayProperty=nameWithType>-Klasse und die `Parse`-Methoden der integrierten numerischen Typen (z.B. <xref:System.Int32.Parse%2A?displayProperty=nameWithType>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Implizite Konvertierungen
 
