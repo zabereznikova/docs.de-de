@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971506"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608138"
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
 Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. Häufig verwendete Aktionen umfassen das Deklarieren von Variablen, Zuweisen von Werten, Aufrufen von Methoden, Durchlaufen von Auflistungen und das Verzweigen auf einen oder einen anderen Codeblock, je nach gegebener Bedingung. Die Reihenfolge, in der Anweisungen in einem Programm ausgeführt werden, wird „Ablaufsteuerung“ oder „Ausführungsablauf“ genannt. Die Ablaufsteuerung kann jedes Mal, wenn ein Programm ausgeführt wird, variieren, je nachdem, wie die Anwendung auf eine Eingabe reagiert, die sie während der Laufzeit empfängt.  
@@ -83,11 +83,11 @@ Die folgenden Beispiele zeigen zwei Verwendungen für eine leere Anweisung:
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
--   [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

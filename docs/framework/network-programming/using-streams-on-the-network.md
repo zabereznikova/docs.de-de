@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: a593ea324d39d8161ad87c4df6d6010970f3e1c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109056"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583475"
 ---
 # <a name="using-streams-on-the-network"></a>Verwenden von Streams im Netzwerk
 Netzwerkressourcen werden in .NET Framework als Streams dargestellt. Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:  
   
--   Eine allgemeine Möglichkeit zum Senden und Empfangen von Webdaten. Unabhängig vom tatsächlichen Inhalt der Datei — HTML, XML oder Sonstiges — wird Ihre Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> zum Senden und Empfangen von Daten verwenden.  
+- Eine allgemeine Möglichkeit zum Senden und Empfangen von Webdaten. Unabhängig vom tatsächlichen Inhalt der Datei — HTML, XML oder Sonstiges — wird Ihre Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> zum Senden und Empfangen von Daten verwenden.  
   
--   Kompatibilität mit Streams in .NET Framework. Streams werden überall in .NET Framework verwendet. .NET Framework besitzt eine umfangreiche Infrastruktur für deren Behandlung. Beispielsweise können Sie eine Anwendung ändern, die XML-Daten aus einer <xref:System.IO.FileStream> liest, sodass sie die Daten stattdessen aus einer <xref:System.Net.Sockets.NetworkStream> liest, anstelle einer einfachen Änderung der Codezeilen, die den Stream initialisieren. Die wichtigsten Unterschiede zwischen der **NetworkStream**-Klasse und anderen Streams sind die folgenden: **NetworkStream** ist nicht durchsuchbar, die <xref:System.Net.Sockets.NetworkStream.CanSeek%2A>-Eigenschaft gibt immer **FALSE** zurück, und die <xref:System.Net.Sockets.NetworkStream.Seek%2A>- und <xref:System.Net.Sockets.NetworkStream.Position%2A>-Methoden lösen eine <xref:System.NotSupportedException> aus.  
+- Kompatibilität mit Streams in .NET Framework. Streams werden überall in .NET Framework verwendet. .NET Framework besitzt eine umfangreiche Infrastruktur für deren Behandlung. Beispielsweise können Sie eine Anwendung ändern, die XML-Daten aus einer <xref:System.IO.FileStream> liest, sodass sie die Daten stattdessen aus einer <xref:System.Net.Sockets.NetworkStream> liest, anstelle einer einfachen Änderung der Codezeilen, die den Stream initialisieren. Die wichtigsten Unterschiede zwischen der **NetworkStream**-Klasse und anderen Streams sind die folgenden: **NetworkStream** ist nicht durchsuchbar, die <xref:System.Net.Sockets.NetworkStream.CanSeek%2A>-Eigenschaft gibt immer **FALSE** zurück, und die <xref:System.Net.Sockets.NetworkStream.Seek%2A>- und <xref:System.Net.Sockets.NetworkStream.Position%2A>-Methoden lösen eine <xref:System.NotSupportedException> aus.  
   
--   Die Verarbeitung der eingehenden Daten. Streams bieten Zugriff auf eingehende Daten über das Netzwerk, anstatt die Anwendung zu zwingen, zu warten, bis der gesamte Datensatz heruntergeladen wurde.  
+- Die Verarbeitung der eingehenden Daten. Streams bieten Zugriff auf eingehende Daten über das Netzwerk, anstatt die Anwendung zu zwingen, zu warten, bis der gesamte Datensatz heruntergeladen wurde.  
   
  Der <xref:System.Net.Sockets>-Namespace enthält eine **NetworkStream**-Klasse, die die <xref:System.IO.Stream>-Klasse speziell zur Verwendung mit Netzwerkressourcen implementiert. Klassen im <xref:System.Net.Sockets>-Namespace verwenden die **NetworkStream**-Klasse, um Streams darzustellen.  
   
@@ -72,15 +72,15 @@ End Try
   
  Wenn Sie Streams aus Netzwerkressourcen verwenden, dann beachten Sie die folgenden Punkte:  
   
--   Die **CanSeek**-Eigenschaft gibt immer **FALSE** zurück, da die **NetworkStream**-Klasse die Position im Stream nicht ändern kann. Die **Seek**- und **Position**-Methoden lösen eine **NotSupportedException** aus.  
+- Die **CanSeek**-Eigenschaft gibt immer **FALSE** zurück, da die **NetworkStream**-Klasse die Position im Stream nicht ändern kann. Die **Seek**- und **Position**-Methoden lösen eine **NotSupportedException** aus.  
   
--   Wenn Sie **WebRequest** und **WebResponse** verwenden, sind Streaminstanzen, die durch den Aufruf von **GetResponseStream** erstellt wurden, schreibgeschützt und Streaminstanzen, die durch den Aufruf von **GetRequestStream** erstellt wurden, lesegeschützt.  
+- Wenn Sie **WebRequest** und **WebResponse** verwenden, sind Streaminstanzen, die durch den Aufruf von **GetResponseStream** erstellt wurden, schreibgeschützt und Streaminstanzen, die durch den Aufruf von **GetRequestStream** erstellt wurden, lesegeschützt.  
   
--   Verwenden Sie die <xref:System.IO.StreamReader>-Klasse, um die Codierung einfacher zu machen. Im folgenden Codebeispiel wird ein ASCII-codierter Stream mit einem **StreamReader** aus einer **WebResponse** gelesen (das Beispiel zeigt die Anforderungserstellung nicht).  
+- Verwenden Sie die <xref:System.IO.StreamReader>-Klasse, um die Codierung einfacher zu machen. Im folgenden Codebeispiel wird ein ASCII-codierter Stream mit einem **StreamReader** aus einer **WebResponse** gelesen (das Beispiel zeigt die Anforderungserstellung nicht).  
   
--   Der Aufruf von **GetResponse** könnte blockiert werden, wenn Netzwerkressourcen nicht verfügbar sind. Verwenden Sie eine asynchrone Anforderung mit den <xref:System.Net.WebRequest.BeginGetResponse%2A>- und <xref:System.Net.WebRequest.EndGetResponse%2A>-Methoden.  
+- Der Aufruf von **GetResponse** könnte blockiert werden, wenn Netzwerkressourcen nicht verfügbar sind. Verwenden Sie eine asynchrone Anforderung mit den <xref:System.Net.WebRequest.BeginGetResponse%2A>- und <xref:System.Net.WebRequest.EndGetResponse%2A>-Methoden.  
   
--   Der Aufruf von **GetRequestStream** könnte blockiert werden während die Verbindung mit dem Server erstellt wird. Verwenden Sie eine asynchrone Anforderung für den Stream mit den <xref:System.Net.WebRequest.BeginGetRequestStream%2A>- und <xref:System.Net.WebRequest.EndGetRequestStream%2A>-Methoden.  
+- Der Aufruf von **GetRequestStream** könnte blockiert werden während die Verbindung mit dem Server erstellt wird. Verwenden Sie eine asynchrone Anforderung für den Stream mit den <xref:System.Net.WebRequest.BeginGetRequestStream%2A>- und <xref:System.Net.WebRequest.EndGetRequestStream%2A>-Methoden.  
   
 ```csharp  
 // Create a response object.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314528"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591530"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion
 Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ereignisse nicht mit Sprachfunktionen wie dem Operator `+=` von C# oder der [AddHandler-Anweisung](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) von Visual Basic verknüpfen. In den folgenden Verfahrensweisen wird veranschaulicht, wie eine vorhandene Methode mit einem Ereignis verknüpft wird, indem alle erforderlichen Typen über Reflektion abgerufen werden, und wie eine dynamische Methode mithilfe von Reflektionsausgabe erstellt und mit einem Ereignis verknüpft wird.  
@@ -107,11 +107,11 @@ Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ere
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
+- Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
   
--   Für die Kompilierung von der Befehlszeile aus sind keine zusätzlichen Assemblyverweise erforderlich. In Visual Studio müssen Sie einen Verweis auf System.Windows.Forms.dll hinzufügen, da es sich bei diesem Beispiel um eine Konsolenanwendung handelt.  
+- Für die Kompilierung von der Befehlszeile aus sind keine zusätzlichen Assemblyverweise erforderlich. In Visual Studio müssen Sie einen Verweis auf System.Windows.Forms.dll hinzufügen, da es sich bei diesem Beispiel um eine Konsolenanwendung handelt.  
   
--   Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
+- Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

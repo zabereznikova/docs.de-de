@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336147"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647722"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
@@ -58,9 +58,9 @@ ms.locfileid: "59336147"
 ## <a name="compiling-msil-to-native-code"></a>Kompilieren von MSIL in systemeigenen Code  
  Bevor Microsoft Intermediate Language (MSIL) ausgeführt werden kann, muss sie in der Common Language Runtime in systemeigenen Code für die Architektur des Zielcomputers kompiliert werden. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zwei Möglichkeiten zum Ausführen dieser Konvertierung:  
   
--   Einen .NET Framework-Just-In-Time (JIT)-Compiler.  
+- Einen .NET Framework-Just-In-Time (JIT)-Compiler.  
   
--   Den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) von .NET Framework  
+- Den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) von .NET Framework  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Kompilierung durch den JIT-Compiler  
  Bei der JIT-Kompilierung wird MSIL zur Anwendungslaufzeit auf Abruf in systemeigenen Code konvertiert, sobald der Inhalt einer Assembly geladen und ausgeführt wird. Da die Common Language Runtime für jede unterstützte CPU-Architektur einen JIT-Compiler bereitstellt, können Entwickler eine Reihe von MSIL-Assemblys erstellen, die JIT-kompiliert und auf unterschiedlichen Computern mit abweichender Architektur ausgeführt werden können. Wenn der verwaltete Code jedoch plattformspezifische systemeigene APIs oder eine plattformspezifische Klassenbibliothek aufruft, kann er nur unter diesem Betriebssystem ausgeführt werden.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336147"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Codegenerierung bei der Installation mithilfe von NGen.exe  
  Da der JIT-Compiler die MSIL einer Assembly in systemeigenen Code konvertiert, wenn einzelne in dieser Assembly definierte Methoden aufgerufen werden, treten zur Laufzeit unweigerlich Leistungseinbußen auf. In den meisten Fällen sind diese Leistungseinbußen hinnehmbar. Eine größere Rolle spielt jedoch, dass der vom JIT-Compiler generierte Code an den Prozess gebunden ist, durch den die Kompilierung ausgelöst wurde. Er kann also nicht für mehrere Prozesse verwendet werden. Damit der generierte Code für mehrere Aufrufe einer Anwendung oder mehrere Prozesse verwendet werden kann, die eine Gruppe von Assemblys gemeinsam nutzen, unterstützt die Common Language Runtime einen vorzeitigen Kompilierungsmodus. Dieser vorzeitige Kompilierungsmodus verwendet den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md), um MSIL-Assemblys ähnlich wie der JIT-Compiler in nativen Code zu konvertieren. Die Ausführung von Ngen.exe unterscheidet sich jedoch auf drei Weisen von der Ausführung des JIT-Compilers:  
   
--   Die Konvertierung von MSIL in systemeigenen Code wird vor und nicht während der Ausführung der Anwendung durchgeführt.  
+- Die Konvertierung von MSIL in systemeigenen Code wird vor und nicht während der Ausführung der Anwendung durchgeführt.  
   
--   Es werden jeweils ganze Assemblys und nicht einzelne Methoden kompiliert.  
+- Es werden jeweils ganze Assemblys und nicht einzelne Methoden kompiliert.  
   
--   Der generierte Code im Cache für systemeigene Abbilder wird als Datei auf dem Datenträger beibehalten.  
+- Der generierte Code im Cache für systemeigene Abbilder wird als Datei auf dem Datenträger beibehalten.  
   
 ### <a name="code-verification"></a>Codeüberprüfung  
  Beim Kompilieren in systemeigenen Code muss der MSIL-Code eine Überprüfung durchlaufen. Dies ist nicht erforderlich, wenn der Administrator Sicherheitsrichtlinien erstellt hat, mit denen die Überprüfung des Codes umgangen werden kann. MSIL und Metadaten werden daraufhin überprüft, ob der Code typsicher ist, d. h., ob er nur auf Speicherorte zugreift, für die ihm der Zugriff gewährt ist. Typsicherheit ermöglicht das Isolieren von Objekten voneinander und trägt zum Schutz dieser Objekte vor unabsichtlicher oder böswilliger Beschädigung bei. Typsicherheit bietet außerdem die Gewissheit, dass Sicherheitsbeschränkung für Code zuverlässig erzwungen werden können.  
   
  Für die Laufzeit ist erforderlich, dass die folgenden Aussagen auf überprüfbar typsicheren Code zutreffen:  
   
--   Ein Verweis auf einen Typ ist vollständig kompatibel mit dem Typ, auf den verwiesen wird.  
+- Ein Verweis auf einen Typ ist vollständig kompatibel mit dem Typ, auf den verwiesen wird.  
   
--   Für ein Objekt werden nur angemessen definierte Operationen aufgerufen.  
+- Für ein Objekt werden nur angemessen definierte Operationen aufgerufen.  
   
--   Identitäten sind, was sie von sich behaupten.  
+- Identitäten sind, was sie von sich behaupten.  
   
  Während der Überprüfung von MSIL-Code wird versucht sicherzustellen, dass dieser nur über ordnungsgemäß definierte Typen auf Speicherorte zugreifen und Methoden aufrufen kann. Code muss z. B. die Überlastung von Speicherorten beim Zugriff auf Felder eines Objekts verhindern. Code wird außerdem daraufhin überprüft, ob die MSIL fehlerfrei generiert wurde, da fehlerhafte MSIL zu einer Verletzung der Regeln für die Typsicherheit führen kann. Bei der Überprüfung wird ein genau definierter Abschnitt typsicheren Codes übergeben, und es wird ausschließlich Code übergeben, der typsicher ist. Aufgrund einiger Einschränkungen während der Überprüfung ist es jedoch möglich, dass ein Teil des typsicheren Codes die Überprüfung nicht besteht. Zudem kann in einigen Sprachen kein überprüfbar typsicherer Code erstellt werden. Wenn die Sicherheitsrichtlinien typsicheren Code erfordern, aber der Code die Überprüfung nicht besteht, wird bei der Ausführung des Codes eine Ausnahme ausgelöst.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "59336147"
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht](../../docs/framework/get-started/overview.md)
-- [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadaten und selbstbeschreibende Komponenten](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL-Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Sicherheit](../../docs/standard/security/index.md)
-- [Interoperation mit nicht verwaltetem Code](../../docs/framework/interop/index.md)
+- [Interoperabilität mit nicht verwaltetem Code](../../docs/framework/interop/index.md)
 - [Bereitstellung](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Anwendungsdomänen](../../docs/framework/app-domains/application-domains.md)

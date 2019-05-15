@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593646"
 ---
 # <a name="delay-signing-an-assembly"></a>Verzögertes Signieren einer Assembly
 Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, auf das Entwickler nicht täglich zugreifen können. Der öffentliche Schlüssel stünde zur Verfügung, während der Zugriff auf den privaten Schlüssel nur einigen Wenigen erlaubt wäre. Beim Entwickeln von Assemblys mit starken Namen enthält jede Assembly, die auf die Zielassembly mit dem starken Namen verweist, das Token des öffentlichen Schlüssels, mit dem der starke Name der Zielassembly erzeugt wird. Aus diesem Grund muss der öffentliche Schlüssel während des Entwicklungsprozesses verfügbar sein.  
@@ -32,9 +32,9 @@ Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, au
   
 2. Kommentieren Sie den Quellcode für die Assembly mit den zwei benutzerdefinierten Attribute aus <xref:System.Reflection>:  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, das den Namen der Datei mit dem öffentlichen Schlüssel als Parameter an den Konstruktor übergibt  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, das den Namen der Datei mit dem öffentlichen Schlüssel als Parameter an den Konstruktor übergibt  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, das angibt, dass beim verzögerten Signieren **TRUE** als Parameter an den Konstruktor übergeben wird Beispiel:  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, das angibt, dass beim verzögerten Signieren **TRUE** als Parameter an den Konstruktor übergeben wird Beispiel:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

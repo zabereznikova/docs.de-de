@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664679"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
  Reguläre Ausdrücke sind Muster, für die die Engine für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -170,9 +170,9 @@ ms.locfileid: "58410523"
   
  Sie können eine Inlineoption auf zwei Arten angeben:  
   
--   Mit [dem Konstrukt](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, wobei ein vor einer Option oder Optionsgruppe stehendes Minuszeichen (-) die betreffenden Optionen deaktiviert. Zum Beispiel aktiviert `(?i-mn)` Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung (`i`), deaktiviert Mehrzeilenmodus (`m`) und deaktiviert unbenannte Gruppenerfassungen (`n`). Die Option gilt für das Muster des regulären Ausdrucks ab dem Punkt, an dem die Option definiert ist, und ist entweder bis zum Ende des Musters oder bis zu dem Punkt gültig, an dem ein anderes Konstrukt die Option umkehrt.  
+- Mit [dem Konstrukt](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, wobei ein vor einer Option oder Optionsgruppe stehendes Minuszeichen (-) die betreffenden Optionen deaktiviert. Zum Beispiel aktiviert `(?i-mn)` Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung (`i`), deaktiviert Mehrzeilenmodus (`m`) und deaktiviert unbenannte Gruppenerfassungen (`n`). Die Option gilt für das Muster des regulären Ausdrucks ab dem Punkt, an dem die Option definiert ist, und ist entweder bis zum Ende des Musters oder bis zu dem Punkt gültig, an dem ein anderes Konstrukt die Option umkehrt.  
   
--   Mit [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*Teilausdruck*`)`, das die Optionen nur für die angegebene Gruppe definiert.  
+- Mit [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*Teilausdruck*`)`, das die Optionen nur für die angegebene Gruppe definiert.  
   
  Die .NET-Engine für reguläre Ausdrücke unterstützt die folgenden Inlineoptionen.  
   

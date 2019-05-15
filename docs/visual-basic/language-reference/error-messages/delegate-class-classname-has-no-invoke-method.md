@@ -1,5 +1,5 @@
 ---
-title: Die Delegatklasse "<classname>" hat keine Invoke-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein.
+title: Die Delegatklasse '<classname>' hat keine Invoke-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30220
@@ -21,7 +21,7 @@ Ein Aufruf von `Invoke` über einen Delegaten ist fehlgeschlagen, da `Invoke` is
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Stellen Sie sicher, dass mit eine Instanz von der "Delegate"-Klasse erstellt wurde eine `Dim` -Anweisung und die Delegatinstanz mit eine Prozedur zugewiesen wurde die `AddressOf` Operator.  
+1. Stellen Sie sicher, dass mit eine Instanz von der 'Delegate'-Klasse erstellt wurde eine `Dim` -Anweisung und die Delegatinstanz mit eine Prozedur zugewiesen wurde die `AddressOf` Operator.  
   
 2. Suchen Sie den Code, der die Delegate-Klasse implementiert, und stellen Sie sicher, dass es implementiert die `Invoke` Verfahren.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591523"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Assembly Binding Log Viewer-Tool)
 In der Assemblybindungs-Protokollanzeige werden Details zu Assemblybindungen angezeigt. Mit diesen Informationen lässt sich leichter diagnostizieren, weshalb zur Laufzeit in .NET Framework keine Assembly gefunden werden kann. Diese Fehler resultieren normalerweise aus einer Assembly, die am falschen Ort bereitgestellt wird, einem systemeigenen Abbild, das nicht mehr gültig ist, oder aus Abweichungen bei Versionsnummern oder Kulturen. Wenn die Common Language Runtime eine Assembly nicht finden kann, wird dies in der Anwendung als <xref:System.TypeLoadException> angezeigt.  
@@ -51,17 +51,17 @@ fuslogvw
   
      Für den markierten Bindungsfehler werden folgende Details angezeigt:  
   
-    -   Der Grund, warum die Bindung fehlgeschlagen ist, z. B. "Datei nicht gefunden" oder "Versionskonflikt".  
+    - Der Grund, warum die Bindung fehlgeschlagen ist, z. B. "Datei nicht gefunden" oder "Versionskonflikt".  
   
-    -   Daten zur Anwendung, welche die Bindung initialisiert hat, z. B. Name und Stammverzeichnis (AppBase) der Anwendung sowie gegebenenfalls eine Beschreibung des privaten Suchpfades.  
+    - Daten zur Anwendung, welche die Bindung initialisiert hat, z. B. Name und Stammverzeichnis (AppBase) der Anwendung sowie gegebenenfalls eine Beschreibung des privaten Suchpfades.  
   
-    -   Die Identität der gesuchten Assembly.  
+    - Die Identität der gesuchten Assembly.  
   
-    -   Gegebenenfalls eine Beschreibung aller angewendeten Versionsrichtlinien (Anwendung, Herausgeber oder Administrator).  
+    - Gegebenenfalls eine Beschreibung aller angewendeten Versionsrichtlinien (Anwendung, Herausgeber oder Administrator).  
   
-    -   Angabe, ob die Assembly im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) vorhanden ist.  
+    - Angabe, ob die Assembly im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) vorhanden ist.  
   
-    -   Eine Liste aller bei der Untersuchung verwendeten URLs.  
+    - Eine Liste aller bei der Untersuchung verwendeten URLs.  
   
  Das folgende Beispiel zeigt einen Protokolleintrag mit den Details einer fehlgeschlagenen Assemblybindung.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>So löschen Sie alle Einträge aus dem Protokoll  
   
--   Klicken Sie auf die Schaltfläche **Alles löschen**.  
+- Klicken Sie auf die Schaltfläche **Alles löschen**.  
   
 ### <a name="to-refresh-the-user-interface"></a>So aktualisieren Sie die Benutzeroberfläche  
   
--   Klicken Sie auf die Schaltfläche **Aktualisieren**. Neue Protokolleinträge werden nicht automatisch in die Anzeige aufgenommen. Sie werden erst angezeigt, wenn Sie auf **Aktualisieren** klicken.  
+- Klicken Sie auf die Schaltfläche **Aktualisieren**. Neue Protokolleinträge werden nicht automatisch in die Anzeige aufgenommen. Sie werden erst angezeigt, wenn Sie auf **Aktualisieren** klicken.  
   
 ### <a name="to-change-the-log-settings"></a>So ändern Sie die Protokolleinstellungen  
   
--   Klicken Sie auf die Schaltfläche **Einstellungen**, um das Dialogfeld **Protokolleinstellungen** zu öffnen.  
+- Klicken Sie auf die Schaltfläche **Einstellungen**, um das Dialogfeld **Protokolleinstellungen** zu öffnen.  
   
 ### <a name="to-view-the-about-dialog"></a>So zeigen Sie das Dialogfeld "Info" an  
   
--   Klicken Sie auf die Schaltfläche **Info**.  
+- Klicken Sie auf die Schaltfläche **Info**.  
   
 ## <a name="binding-logs-for-native-images"></a>Binden von Protokollen für native Abbilder  
  Standardmäßig protokolliert "Fuslogvw.exe" normale Assembly-Bindungsanforderungen. Alternativ können Sie Assemblybindungen für native Bilder protokollieren, die mit dem [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellt wurden.  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>So protokollieren Sie Assemblybindungen für systemeigene Abbildungen  
   
--   Wählen Sie in der Gruppe **Kategorien protokollieren** das Optionsfeld **Native Bilder** aus.  
+- Wählen Sie in der Gruppe **Kategorien protokollieren** das Optionsfeld **Native Bilder** aus.  
   
  Im folgenden Protokoll ist ein Fehler aufgeführt, der von einer Abhängigkeit ausgelöst wurde, die nicht vorhanden war, als das systemeigene Abbild für die Anwendung erstellt wurde. Wenn sich die Abhängigkeiten zur Laufzeit von den Abhängigkeiten beim Ausführen von "Ngen.exe" unterscheiden, ist das Binden an ein systemeigenes Abbild nicht zulässig.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>So deaktivieren Sie die Protokollierung  
   
--   Wählen Sie das Optionsfeld **Protokoll deaktiviert** aus.  Beachten Sie, dass diese Option in der Standardeinstellung aktiviert ist.  
+- Wählen Sie das Optionsfeld **Protokoll deaktiviert** aus.  Beachten Sie, dass diese Option in der Standardeinstellung aktiviert ist.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>So protokollieren Sie Assemblybindungen in Ausnahmen  
   
--   Wählen Sie das Optionsfeld **In Ausnahmetext protokollieren** aus. Nur die am wenigsten ausführlichen Fusionsprotokollinformationen werden in Ausnahmetext protokolliert. Um die vollständigen Informationen anzuzeigen, müssen Sie eine der anderen Einstellungen verwenden.  
+- Wählen Sie das Optionsfeld **In Ausnahmetext protokollieren** aus. Nur die am wenigsten ausführlichen Fusionsprotokollinformationen werden in Ausnahmetext protokolliert. Um die vollständigen Informationen anzuzeigen, müssen Sie eine der anderen Einstellungen verwenden.  
   
      Im wichtigen Hinweis finden Sie Informationen über Assemblys, die als domänenneutrale Assemblys geladen werden.  
   
 #### <a name="to-log-assembly-bind-failures"></a>So protokollieren Sie Assemblybindungsfehler  
   
--   Wählen Sie das Optionsfeld **Fehler von Bindungen an Datenträger protokollieren** aus.  
+- Wählen Sie das Optionsfeld **Fehler von Bindungen an Datenträger protokollieren** aus.  
   
      Im wichtigen Hinweis finden Sie Informationen über Assemblys, die als domänenneutrale Assemblys geladen werden.  
   
 #### <a name="to-log-all-assembly-binds"></a>So protokollieren Sie alle Assemblybindungen  
   
--   Wählen Sie das Optionsfeld **Alle Bindungen an Datenträger protokollieren** aus.  
+- Wählen Sie das Optionsfeld **Alle Bindungen an Datenträger protokollieren** aus.  
   
      Im wichtigen Hinweis finden Sie Informationen über Assemblys, die als domänenneutrale Assemblys geladen werden.  
   

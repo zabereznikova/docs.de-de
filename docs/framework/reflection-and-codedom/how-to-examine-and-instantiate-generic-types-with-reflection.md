@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592394"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion
 Informationen zu generischen Typen können Sie genauso abrufen wie Informationen zu anderen Typen: indem Sie sich ein <xref:System.Type>-Objekt anschauen, das den generischen Typ darstellt. Der größte Unterschied besteht dabei darin, dass eine generischer Type eine Liste von <xref:System.Type>-Objekten hat, die dessen generischen Typparameter darstellen. Die erste Prozedur in diesem Abschnitt beschäftigt sich mit generischen Typen.  
@@ -117,11 +117,11 @@ Informationen zu generischen Typen können Sie genauso abrufen wie Informationen
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
+- Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
   
--   Er werden keine weiteren Assemblyverweise benötigt.  
+- Er werden keine weiteren Assemblyverweise benötigt.  
   
--   Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
+- Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

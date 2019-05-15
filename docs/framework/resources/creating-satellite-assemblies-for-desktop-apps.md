@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295990"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592351"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Erstellen von Satellitenassemblys für Desktop-Apps
 Ressourcendatei spielen eine tragende Rolle in lokalisierten Anwendungen. Durch sie kann eine Anwendung Zeichenfolgen, Images und andere Daten in der Sprache und Kultur des Benutzers anzeigen und alternative Daten bereitstellen, wenn keine Ressourcen für die Sprache oder Kultur des Benutzers verfügbar sind. .NET Framework verwendet ein Speichenarchitekturmodell (Hub and Spoke), um lokalisierte Ressourcen zu finden und aufzurufen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, die verwendet wird, wenn keine lokalisierten Ressourcen verfügbar sind. Sie verwenden das <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut, um die Standardkultur der Anwendung festzulegen. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne lokalisierte Kultur aber keinen Code enthält. Da die Satellitenassemblys kein Teil der Hauptassembly sind, können Sie die Ressourcen problemlos entsprechend einer bestimmten Kultur ersetzen oder aktualisieren, ohne die Hauptassembly der App ersetzen zu müssen.  
@@ -41,16 +41,16 @@ Ressourcendatei spielen eine tragende Rolle in lokalisierten Anwendungen. Durch 
 ## <a name="satellite-assembly-name-and-location"></a>Name und Speicherort einer Satellitenassembly  
  Das Speichenarchitekturmodell erfordert, dass Sie Ressourcen an bestimmten Speicherorten speichern, damit Sie leicht gefunden und verwendet werden können. Wenn Sie Ressourcen nicht wie erwartet kompilieren und benennen, oder wenn Sie sie nicht am richtigen Speicherort speichern, kann die Common Language Runtime diese nicht finden und verwendet stattdessen die Ressourcen der Standardkultur. Der Ressourcen-Manager von .NET Framework, der vom <xref:System.Resources.ResourceManager>-Objekt dargestellt wird, wird verwendet, um automatisch auf lokalisierte Ressourcen zuzugreifen. Der Ressourcen-Manager hat folgende Anforderungen:  
   
--   Eine einzelne Satellitenassembly muss alle Ressourcen für eine bestimmte Kultur enthalten. Dies bedeutet, dass Sie mehrere TXT- oder RESX-Dateien in eine einzelne RESOURCES-Binärdatei kompilieren sollten.  
+- Eine einzelne Satellitenassembly muss alle Ressourcen für eine bestimmte Kultur enthalten. Dies bedeutet, dass Sie mehrere TXT- oder RESX-Dateien in eine einzelne RESOURCES-Binärdatei kompilieren sollten.  
   
--   Das Anwendungsverzeichnis muss ein separates Unterverzeichnis für jede lokalisierte Kultur haben, in dem die Kulturressourcen gespeichert sind. Der Name des Unterverzeichnisses muss dem Namen der Kultur entsprechen. Alternativ können Sie Ihre Satellitenassemblys im globalen Assemblycache (GAC) speichern. In diesem Fall muss die Kulturinformationskomponente des starken Namens der Assembly deren Kultur angeben. (Weitere Informationen finden Sie im Abschnitt [Installieren von Satellitenassemblys im globalen Assemblycache](#SN) weiter unten in diesem Thema.)  
+- Das Anwendungsverzeichnis muss ein separates Unterverzeichnis für jede lokalisierte Kultur haben, in dem die Kulturressourcen gespeichert sind. Der Name des Unterverzeichnisses muss dem Namen der Kultur entsprechen. Alternativ können Sie Ihre Satellitenassemblys im globalen Assemblycache (GAC) speichern. In diesem Fall muss die Kulturinformationskomponente des starken Namens der Assembly deren Kultur angeben. (Weitere Informationen finden Sie im Abschnitt [Installieren von Satellitenassemblys im globalen Assemblycache](#SN) weiter unten in diesem Thema.)  
   
     > [!NOTE]
     >  Wenn Ihre Anwendung Ressourcen für Subkulturen enthält, platzieren Sie jede Subkultur in separaten Unterverzeichnisse im Anwendungsverzeichnis. Platzieren Sie Subkulturen nicht in Unterverzeichnis im Hauptkulturverzeichnis.  
   
--   Die Satellitenassembly muss den gleichen Namen wie die Anwendung haben und muss das Suffix „.resources.dll“ verwenden. Wenn eine Anwendung z.B. „beispiel.exe“ heißt, sollte der Name jeder Satellitenassembly „beispiel.resources.dll“ sein. Beachten Sie, dass der Name der Satellitenassembly nicht die Kultur seiner Ressourcendatei angibt. Die Satellitenassembly wird aber in einem Verzeichnis angezeigt, das die Kultur angibt.  
+- Die Satellitenassembly muss den gleichen Namen wie die Anwendung haben und muss das Suffix „.resources.dll“ verwenden. Wenn eine Anwendung z.B. „beispiel.exe“ heißt, sollte der Name jeder Satellitenassembly „beispiel.resources.dll“ sein. Beachten Sie, dass der Name der Satellitenassembly nicht die Kultur seiner Ressourcendatei angibt. Die Satellitenassembly wird aber in einem Verzeichnis angezeigt, das die Kultur angibt.  
   
--   Informationen zur Kultur der Satellitenassembly müssen in den Metadaten der Assembly enthalten sein. Um den Namen der Kultur in den Assemblymetadaten zu speichern, geben Sie die `/culture`-Option an, wenn Sie den [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) verwenden, um Ressourcen in die Satellitenassembly einzubetten.  
+- Informationen zur Kultur der Satellitenassembly müssen in den Metadaten der Assembly enthalten sein. Um den Namen der Kultur in den Assemblymetadaten zu speichern, geben Sie die `/culture`-Option an, wenn Sie den [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) verwenden, um Ressourcen in die Satellitenassembly einzubetten.  
   
  Die folgende Abbildung zeigt eine beispielhafte Verzeichnisstruktur und Speicherortanforderungen für Anwendungen, die nicht im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) installiert sind. Die Elemente mit TXT- und RESOURCES-Suffixen werden nicht mit der fertigen Anwendung geliefert. Dabei handelt es sich nur um die vorläufigen Ressourcendateien, die dazu verwendet werden, die endgültigen Ressourcensatellitenassemblys zu erstellen. In diesem Beispiel sollten Sie TXT-Dateien durch RESX-Dateien ersetzen. Weitere Informationen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. Fügen Sie Unterstützung für weitere Kulturen (en-US, fr-FR und ru-RU) wie folgt in der Anwendung hinzu:  
   
-    -   Um die Kultur „en-US“ bzw. Englisch (USA) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „greeting.en-US.resx“ oder „greeting.en-US.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `HelloString` in dieser, deren Wert „Hi world!“ ist  
+    - Um die Kultur „en-US“ bzw. Englisch (USA) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „greeting.en-US.resx“ oder „greeting.en-US.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `HelloString` in dieser, deren Wert „Hi world!“ ist  
   
-    -   Um die Kultur „fr-FR“ bzw. Französisch (Frankreich) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „greeting.fr-FR.resx“ oder „greeting.fr-FR.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `HelloString` in dieser, deren Wert „Salut tout le monde!“ ist.  
+    - Um die Kultur „fr-FR“ bzw. Französisch (Frankreich) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „greeting.fr-FR.resx“ oder „greeting.fr-FR.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `HelloString` in dieser, deren Wert „Salut tout le monde!“ ist.  
   
-    -   Um die Kultur „ru-RU“ bzw. Russisch (Russland) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „greeting.ru-RU.resx“ oder „greeting.ru-RU.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `HelloString` in dieser, deren Wert „Всем привет!“ ist.  
+    - Um die Kultur „ru-RU“ bzw. Russisch (Russland) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „greeting.ru-RU.resx“ oder „greeting.ru-RU.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `HelloString` in dieser, deren Wert „Всем привет!“ ist.  
   
 4. Kompilieren Sie mit [resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) jede Text- oder XML-Ressourcendatei in eine RESOURCES-Binärdatei. Die Ausgabe ist ein Satz von Dateien, die den gleichen Stammdateinamen wie die RESX- oder TXT-Dateien haben, aber mit der Dateiendung „.resources“. Wenn Sie ein Beispiel mit Visual Studio erstellen, wird das Kompilieren automatisch behandelt. Wenn Sie Visual Studio verwenden, führen Sie die folgenden Befehle aus, um die RESX-Dateien in RESOURCES-Dateien zu kompilieren:  
   
@@ -117,7 +117,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 5. Kompilieren Sie folgenden Quellcode zusammen mit den Ressourcen für die Standardkultur in die Hauptassembly der Anwendung:  
   
     > [!IMPORTANT]
-    >  Wenn Sie die Befehlszeile und nicht Visual Studio zum Erstellen des Beispiels verwenden, sollten Sie den Aufruf des <xref:System.Resources.ResourceManager>-Klassenkonstruktors in das Folgende ändern: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  Wenn Sie die Befehlszeile und nicht Visual Studio zum Erstellen des Beispiels verwenden, sollten Sie den Aufruf des <xref:System.Resources.ResourceManager>-Klassenkonstruktors in das Folgende ändern: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`.  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. Fügen Sie Unterstützung für weitere Kulturen (en-US, fr-FR und ru-RU) wie folgt in der Anwendung hinzu:  
   
-    -   Um die Kultur „en-US“ bzw. Englisch (USA) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „strings.en-US.resx“ oder „strings.en-US.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `Greeting` in dieser, deren Wert „Hello!“ ist.  
+    - Um die Kultur „en-US“ bzw. Englisch (USA) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „strings.en-US.resx“ oder „strings.en-US.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `Greeting` in dieser, deren Wert „Hello!“ ist.  
   
-    -   Um die Kultur „fr-FR“ bzw. Französisch (Frankreich) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „strings.fr-FR.resx“ oder „strings.fr-FR.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `Greeting` in dieser, deren Wert „Bon jour!“ ist.  
+    - Um die Kultur „fr-FR“ bzw. Französisch (Frankreich) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „strings.fr-FR.resx“ oder „strings.fr-FR.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `Greeting` in dieser, deren Wert „Bon jour!“ ist.  
   
-    -   Um die Kultur „ru-RU“ bzw. Russisch (Russland) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „strings.ru-RU.resx“ oder „strings.ru-RU.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `Greeting` in dieser, deren Wert „Привет!“ ist.  
+    - Um die Kultur „ru-RU“ bzw. Russisch (Russland) zu unterstützen, erstellen Sie eine Ressourcendatei mit dem Namen „strings.ru-RU.resx“ oder „strings.ru-RU.txt“, und speichern Sie eine einzelne Zeichenfolge mit dem Namen `Greeting` in dieser, deren Wert „Привет!“ ist.  
   
 6. Kompilieren Sie mit [resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) jede Text- oder XML-Ressourcendatei in eine RESOURCES-Binärdatei. Die Ausgabe ist ein Satz von Dateien, die den gleichen Stammdateinamen wie die RESX- oder TXT-Dateien haben, aber mit der Dateiendung „.resources“. Wenn Sie ein Beispiel mit Visual Studio erstellen, wird das Kompilieren automatisch behandelt. Wenn Sie Visual Studio nicht verwenden, führen Sie den folgenden Befehl aus, um die RESX-Dateien in RESOURCES-Dateien zu kompilieren:  
   

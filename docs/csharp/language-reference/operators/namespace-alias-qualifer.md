@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 2618131f27271e7c06cb6d425fc22b5bd9750c49
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 324f6711cdec478e5647b05d84c281f79e95f036
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333316"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452362"
 ---
 # <a name="-operator-c-reference"></a>::-Operator (C#-Referenz)
 
@@ -29,7 +29,7 @@ Der Operator `::` kann auch mit einer *Alias-Direktive* verwendet werden:
 var numbers = new Col::List<int> { 1, 2, 3 };
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Der Namespacealias-Qualifizierer kann `global` sein. Dadurch wird eine Suche im globalen Namespace anstatt Namespacealias aufgerufen.
 
@@ -49,5 +49,5 @@ Ein Beispiel zur Verwendung des `::`-Operators finden Sie im folgenden Abschnitt
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [Namespaceschlüsselwörter](../keywords/namespace-keywords.md)
-- [.-Operator](member-access-operator.md)
+- [.-Operator](member-access-operators.md#member-access-operator-)
 - [extern alias](../keywords/extern-alias.md)

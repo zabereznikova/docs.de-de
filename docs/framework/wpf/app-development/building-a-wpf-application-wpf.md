@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: ff0c9ab4c4257e39b0d0ae0f9f3799e2847e7068
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31b6bf1c58b965a6e96c24cb960cc542a990a7c7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662171"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589394"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
-Windows Presentation Foundation (WPF)-Anwendungen erstellt werden können, als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ausführbare Dateien (.exe), Libraries (DLL) oder eine Kombination beider Typen von Assemblys. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.  
+Windows Presentation Foundation (WPF)-Anwendungen können als .NET Framework ausführbare Dateien (.exe), Libraries (DLL) oder eine Kombination aus beiden Typen von Assemblys erstellt werden. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.  
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>Erstellen einer WPF-Anwendung  

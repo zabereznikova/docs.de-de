@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296172"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593615"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  
@@ -28,9 +28,9 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>So können Sie die Strong-Name-Bypass-Funktion für alle Anwendungen deaktivieren  
   
--   Erstellen Sie auf 32-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
+- Erstellen Sie auf 32-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
   
--   Erstellen Sie auf 64-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter den Schlüsseln „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ und „HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
+- Erstellen Sie auf 64-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter den Schlüsseln „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ und „HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>So können Sie die Strong-Name-Bypass-Funktion für eine Anwendung deaktivieren  
   

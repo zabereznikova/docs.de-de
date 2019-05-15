@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664584"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Sammlungen
 Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Verwaltung von Auflistungen Vergleiche durch, sei es bei der Suche nach zu entfernenden Elementen oder bei der Rückgabe eines Schlüssel-Wert-Paars.  
@@ -30,9 +30,9 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
 ## <a name="checking-for-equality"></a>Durchführen von Gleichheitsüberprüfungen  
  Methoden wie `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>und `Remove` verwenden einen Gleichheitsvergleich für die Elemente der Auflistung. Wenn die Auflistung generisch ist, werden die Elemente anhand der folgenden Richtlinien auf Gleichheit hin verglichen:  
   
--   Wenn Typ T die generische Schnittstelle <xref:System.IEquatable%601> implementiert, dann ist der Gleichheitsvergleich die <xref:System.IEquatable%601.Equals%2A> -Methode dieser Schnittstelle.  
+- Wenn Typ T die generische Schnittstelle <xref:System.IEquatable%601> implementiert, dann ist der Gleichheitsvergleich die <xref:System.IEquatable%601.Equals%2A> -Methode dieser Schnittstelle.  
   
--   Wenn der Typ T <xref:System.IEquatable%601>nicht implementiert, wird <xref:System.Object.Equals%2A?displayProperty=nameWithType> verwendet.  
+- Wenn der Typ T <xref:System.IEquatable%601>nicht implementiert, wird <xref:System.Object.Equals%2A?displayProperty=nameWithType> verwendet.  
   
  Darüber hinaus akzeptieren einige Konstruktorüberladungen für Wörterbuchauflistungen eine <xref:System.Collections.Generic.IEqualityComparer%601> -Implementierung, die zum Vergleichen von Schlüsseln auf Gleichheit hin verwendet wird. Ein Beispiel dafür finden Sie unter <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> -Konstruktor.  
   
@@ -42,11 +42,11 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
   
  Der Standardvergleich beruht auf dem Vergleich von mindestens einem Objekt, um die **IComparable** -Schnittstelle zu implementieren. Es ist empfehlenswert, **IComparable** in allen Klassen zu implementieren, die als Werte in einer Listenauflistung oder als Schlüssel in einer Wörterbuchauflistung verwendet werden. Bei einer generischen Auflistung wird der Gleichheitsvergleich gemäß dem Folgenden bestimmt:  
   
--   Wenn Typ T die generische Schnittstelle <xref:System.IComparable%601?displayProperty=nameWithType> implementiert, dann ist der Standardvergleich die <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> -Methode dieser Schnittstelle.  
+- Wenn Typ T die generische Schnittstelle <xref:System.IComparable%601?displayProperty=nameWithType> implementiert, dann ist der Standardvergleich die <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> -Methode dieser Schnittstelle.  
   
--   Wenn Typ T die nicht generische Schnittstelle <xref:System.IComparable?displayProperty=nameWithType> implementiert, dann ist der Standardvergleich die <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> -Methode dieser Schnittstelle.  
+- Wenn Typ T die nicht generische Schnittstelle <xref:System.IComparable?displayProperty=nameWithType> implementiert, dann ist der Standardvergleich die <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> -Methode dieser Schnittstelle.  
   
--   Wenn Typ T keine der Schnittstellen implementiert, gibt es keinen Standardvergleich, und ein Vergleich oder ein Vergleichsdelegat muss explizit angegeben werden.  
+- Wenn Typ T keine der Schnittstellen implementiert, gibt es keinen Standardvergleich, und ein Vergleich oder ein Vergleichsdelegat muss explizit angegeben werden.  
   
  Um explizite Vergleiche zu ermöglichen, akzeptieren einige Methoden eine **IComparer** -Implementierung als Parameter. Beispiel: Die <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> -Methode akzeptiert eine <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> -Implementierung.  
   

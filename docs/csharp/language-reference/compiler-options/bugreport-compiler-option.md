@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587388"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C#-Compileroptionen)
 Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei eingefügt werden sollen.  
@@ -28,22 +28,22 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
  `file`  
  Der Name der Datei, die den Problembericht enthalten soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Die Option **-bugreport** gibt an, dass die folgende Informationen in `file` eingefügt werden soll:  
   
--   Eine Kopie aller Quellcodedateien in der Kompilierung.  
+- Eine Kopie aller Quellcodedateien in der Kompilierung.  
   
--   Eine Liste der bei der Kompilierung verwendeten Compileroptionen.  
+- Eine Liste der bei der Kompilierung verwendeten Compileroptionen.  
   
--   Versionsinformationen über den Compiler, die Laufzeit und das Betriebssystem.  
+- Versionsinformationen über den Compiler, die Laufzeit und das Betriebssystem.  
   
--   Assemblys und Module, auf die verwiesen wird und die als Hexadezimalzahlen gespeichert sind, außer im Lieferumfang von .NET Framework und dem SDK enthaltene Assemblys.  
+- Assemblys und Module, auf die verwiesen wird und die als Hexadezimalzahlen gespeichert sind, außer im Lieferumfang von .NET Framework und dem SDK enthaltene Assemblys.  
   
--   Compilerausgabe, falls vorhanden.  
+- Compilerausgabe, falls vorhanden.  
   
--   Eine Beschreibung des Problems. Sie werden aufgefordert, diese Beschreibung einzugeben.  
+- Eine Beschreibung des Problems. Sie werden aufgefordert, diese Beschreibung einzugeben.  
   
--   Eine Beschreibung Ihres Vorschlags zur Beseitigung des Problems. Sie werden aufgefordert, diese Beschreibung einzugeben.  
+- Eine Beschreibung Ihres Vorschlags zur Beseitigung des Problems. Sie werden aufgefordert, diese Beschreibung einzugeben.  
   
  Wenn diese Option mit **-errorreport:prompt** oder **-errorreport:send** verwendet wird, werden die Informationen in der Datei an die Microsoft Corporation gesendet.  
   

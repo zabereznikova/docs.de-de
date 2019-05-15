@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c286c240c405fc2d01b267bb4395701ec091c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620696"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen von deren Werten in Visual Basic
 Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden, um einen Registrierungsschlüssel zu erstellen.  
@@ -25,7 +25,7 @@ Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet wer
   
 #### <a name="to-create-a-registry-key"></a>Erstellen eines Registrierungsschlüssels  
   
--   Verwenden Sie die `CreateSubKey`-Methode, geben sie dabei an, unter welcher Struktur der Schlüssel platziert werden soll sowie den Namen des Schlüssels. Der Parameter `Subkey` unterscheidet nicht zwischen Groß- und Kleinschreibung. Dieses Beispiel erstellt den Registrierungsschlüssel `MyTestKey` unter HKEY_CURRENT_USER.  
+- Verwenden Sie die `CreateSubKey`-Methode, geben sie dabei an, unter welcher Struktur der Schlüssel platziert werden soll sowie den Namen des Schlüssels. Der Parameter `Subkey` unterscheidet nicht zwischen Groß- und Kleinschreibung. Dieses Beispiel erstellt den Registrierungsschlüssel `MyTestKey` unter HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet wer
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Name des Schlüssels lautet `Nothing` (<xref:System.ArgumentNullException>).  
+- Der Name des Schlüssels lautet `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Der Benutzer ist nicht zum Erstellen von Registrierungsschlüsseln berechtigt (<xref:System.Security.SecurityException>).  
+- Der Benutzer ist nicht zum Erstellen von Registrierungsschlüsseln berechtigt (<xref:System.Security.SecurityException>).  
   
--   Der Name des Schlüssels überschreitet das Limit von 255 Zeichen (<xref:System.ArgumentException>).  
+- Der Name des Schlüssels überschreitet das Limit von 255 Zeichen (<xref:System.ArgumentException>).  
   
--   Der Schlüssel ist geschlossen (<xref:System.IO.IOException>).  
+- Der Schlüssel ist geschlossen (<xref:System.IO.IOException>).  
   
--   Der Registrierungsschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
+- Der Registrierungsschlüssel ist schreibgeschützt (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Die Assembly benötigt zum Ausführen dieses Prozesses eine von der <xref:System.Security.Permissions.RegistryPermission>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Ebenso muss der Benutzer die richtigen Zugriffssteuerungslisten zum Erstellen von oder Schreiben auf Einstellungen verfügen. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../../framework/misc/code-access-security-basics.md).  

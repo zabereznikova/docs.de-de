@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607548"
 ---
 # <a name="setting-assembly-attributes"></a>Festlegen von Assemblyattributen
 Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Die Attribute sind in die folgenden Gruppen von Informationen unterteilt:  
   
--   Attribute für Assemblyidentitäten.  
+- Attribute für Assemblyidentitäten.  
   
--   Informationsattribute.  
+- Informationsattribute.  
   
--   Attribute für Assemblymanifeste.  
+- Attribute für Assemblymanifeste.  
   
--   Attribute für starke Namen.  
+- Attribute für starke Namen.  
   
 ## <a name="assembly-identity-attributes"></a>Attribute für Assemblyidentitäten  
  Drei Attribute bestimmen zusammen mit einem starken Namen (falls zutreffend) die Identität einer Assembly: "name", "version" und "culture". Diese Attribute bilden den vollständigen Namen der Assembly und sind erforderlich, wenn im Code auf die Assembly verwiesen wird. Mit Attributen können die Version und Kultur einer Assembly festgelegt werden. Der Compiler oder der [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) legt beim Erstellen der Assembly den Namenswert auf Grundlage der Datei fest, die das Assemblymanifest enthält.  

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591432"
 ---
 # <a name="how-to-write-services-programmatically"></a>Vorgehensweise: Programmgesteuertes Schreiben von Diensten
 Wenn Sie nicht die Projektvorlage Windows-Dienst verwenden möchten, können Sie durch Einrichten der Vererbung und anderer Infrastrukturelemente eigene Dienste schreiben. Sobald Sie einen Dienst programmgesteuert erstellen, müssen sie mehrere Schritte ausführen, die andernfalls von der Vorlage behandelt würden:  
   
--   Sie müssen die Dienstklasse einrichten, damit sie von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt.  
+- Sie müssen die Dienstklasse einrichten, damit sie von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt.  
   
--   Sie müssen für das Dienstprojekt eine `Main`-Methode erstellen, von der die auszuführenden Dienste festgelegt werden. Des Weiteren muss von ihr die <xref:System.ServiceProcess.ServiceBase.Run%2A>-Methode für die Dienste aufgerufen werden.  
+- Sie müssen für das Dienstprojekt eine `Main`-Methode erstellen, von der die auszuführenden Dienste festgelegt werden. Des Weiteren muss von ihr die <xref:System.ServiceProcess.ServiceBase.Run%2A>-Methode für die Dienste aufgerufen werden.  
   
--   Sie müssen die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Prozedur und die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Prozedur überschreiben und den Code einfügen, den diese ausführen sollen.  
+- Sie müssen die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Prozedur und die <xref:System.ServiceProcess.ServiceBase.OnStop%2A>-Prozedur überschreiben und den Code einfügen, den diese ausführen sollen.  
   
 ### <a name="to-write-a-service-programmatically"></a>So schreiben Sie einen Dienst programmgesteuert  
   
 1. Erstellen Sie ein leeres Projekt und einen Verweis auf die notwendigen Namespaces, indem Sie die folgenden Schritte ausführen:  
   
-    1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
+    1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-    2.  Führen Sie auf der Registerkarte **.NET Framework** einen Bildlauf zu **System.dll** durch, und klicken Sie auf **Auswählen**.  
+    2. Führen Sie auf der Registerkarte **.NET Framework** einen Bildlauf zu **System.dll** durch, und klicken Sie auf **Auswählen**.  
   
-    3.  Führen Sie einen Bildlauf zu **System.ServiceProcess.dll** durch, und klicken Sie auf **Auswählen**.  
+    3. Führen Sie einen Bildlauf zu **System.ServiceProcess.dll** durch, und klicken Sie auf **Auswählen**.  
   
-    4.  Klicken Sie auf **OK**.  
+    4. Klicken Sie auf **OK**.  
   
 2. Fügen Sie eine Klasse hinzu, und konfigurieren Sie diese, damit sie von <xref:System.ServiceProcess.ServiceBase> erbt:  
   
@@ -76,4 +76,4 @@ Wenn Sie nicht die Projektvorlage Windows-Dienst verwenden möchten, können Sie
 - [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
 - [Vorgehensweise: Protokollinformationen über Dienste](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
-- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

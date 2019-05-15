@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466152"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647795"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
   
  Zudem ist der Zugriff auf isolierte Speicherplätze durch die Identität eingeschränkt, die mit der Domäne und Assembly der Anwendung oder nur mit der Assembly verbunden ist. Die Runtime erhält diese Identitäten auf folgende Weise:  
   
--   Die Domänenidentität stellt den Beweis für die Anwendung dar, die im Falle einer Webanwendung die vollständige URL sein kann. Bei Shell-gehostetem Code kann die Domänenidentität auf dem Pfad des Anwendungsverzeichnisses basieren. Wenn die ausführbare Datei beispielsweise aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, lautet die Domänenidentität C:\Office\MyApp.exe.  
+- Die Domänenidentität stellt den Beweis für die Anwendung dar, die im Falle einer Webanwendung die vollständige URL sein kann. Bei Shell-gehostetem Code kann die Domänenidentität auf dem Pfad des Anwendungsverzeichnisses basieren. Wenn die ausführbare Datei beispielsweise aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, lautet die Domänenidentität C:\Office\MyApp.exe.  
   
--   Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../../../docs/framework/app-domains/strong-named-assemblies.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) (Programmieren mit Assemblys).  
+- Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../../../docs/framework/app-domains/strong-named-assemblies.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) (Programmieren mit Assemblys).  
   
--   Roamingspeicher wandern mit einem Benutzer, der über ein Roamingbenutzerprofil verfügt. Die Dateien werden in ein Netzwerkverzeichnis geschrieben und auf jeden Computer heruntergeladen, bei dem sich der Benutzer anmeldet. Weitere Informationen zu Roamingbenutzerprofilen finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Roamingspeicher wandern mit einem Benutzer, der über ein Roamingbenutzerprofil verfügt. Die Dateien werden in ein Netzwerkverzeichnis geschrieben und auf jeden Computer heruntergeladen, bei dem sich der Benutzer anmeldet. Weitere Informationen zu Roamingbenutzerprofilen finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Durch die Kombination der Konzepte von Benutzer-, Domänen- und Assemblyidentität kann ein isolierter Speicher die Daten wie folgt isolieren, wobei es für jede dieser Methoden eigene Verwendungsszenarien gibt:  
   
--   [Isolation nach Benutzer und Assembly](#UserAssembly)  
+- [Isolation nach Benutzer und Assembly](#UserAssembly)  
   
--   [Isolation nach Benutzer, Domäne und Assembly](#UserDomainAssembly)  
+- [Isolation nach Benutzer, Domäne und Assembly](#UserDomainAssembly)  
   
  Jede dieser Isolationen kann mit einem Roamingbenutzerprofil kombiniert werden. Weitere Informationen finden Sie im Abschnitt [Isolierter Speicher und Roaming](#Roaming).  
   
