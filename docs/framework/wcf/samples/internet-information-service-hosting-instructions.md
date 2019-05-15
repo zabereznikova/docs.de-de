@@ -2,12 +2,12 @@
 title: Hostinganweisungen des Internetinformationsdiensts
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600251"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591881"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Hostinganweisungen des Internetinformationsdiensts
 Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet werden, müssen Sie sicherstellen, dass der IIS ordnungsgemäß installiert ist und ausgeführt wird.  
@@ -163,7 +163,7 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
 4. Es sollte eine Webseite mit dem Text "Hello World" angezeigt werden.  
   
 > [!NOTE]
->  Jedes Mal, wenn Sie eine neue Version von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] installieren, müssen Sie aspnet_isapi erneut als Webdiensterweiterung für IIS registrieren. Dazu geben Sie den `aspnet_regiis –I –enable`-Befehl aus.  
+>  Jedes Mal, die Sie eine neue Version von .NET Framework installieren, müssen Sie Aspnet_isapi als Webdiensterweiterung für IIS erneut registrieren. Dazu geben Sie den `aspnet_regiis –I –enable`-Befehl aus.  
   
 ## <a name="sample-code"></a>Beispielcode  
   

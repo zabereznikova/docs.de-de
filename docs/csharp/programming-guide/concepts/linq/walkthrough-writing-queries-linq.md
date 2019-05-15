@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309224"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595788"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
 Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.  
@@ -41,17 +41,17 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
 ## <a name="create-an-in-memory-data-source"></a>Erstellen einer In-Memory-Datenquelle  
  Die Datenquelle für die Abfragen ist eine einfache Liste mit `Student`-Objekten. Jeder `Student`-Datensatz umfasst einen Vornamen, einen Nachnamen und ein Array von Ganzzahlen, das die Testergebnisse der einzelnen Studenten in der Klasse darstellt. Kopieren Sie diesen Code in Ihr Projekt. Beachten Sie die folgenden Eigenschaften:  
   
--   Die `Student`-Klasse besteht aus automatisch implementierten Eigenschaften.  
+- Die `Student`-Klasse besteht aus automatisch implementierten Eigenschaften.  
   
--   Jeder Student in der Liste wird mit einem Objektinitialisierer initialisiert.  
+- Jeder Student in der Liste wird mit einem Objektinitialisierer initialisiert.  
   
--   Die Liste selbst wird mit einem Auflistungsinitialisierer initialisiert.  
+- Die Liste selbst wird mit einem Auflistungsinitialisierer initialisiert.  
   
  Die gesamte Datenstruktur wird ohne explizite Aufrufe eines beliebigen Konstruktors oder expliziten Memberzugriff initialisiert und instanziiert. Weitere Informationen zu diesen neuen Funktionen finden Sie unter [Automatisch implementierte Eigenschaften](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) und [Objekt- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>So fügen Sie die Datenquelle hinzu  
   
--   Fügen Sie die `Student`-Klasse und die initialisierte Liste der Studenten zur `Program`-Klasse in Ihrem Projekt hinzu.  
+- Fügen Sie die `Student`-Klasse und die initialisierte Liste der Studenten zur `Program`-Klasse in Ihrem Projekt hinzu.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 #### <a name="to-create-a-simple-query"></a>So erstellen Sie eine einfache Abfrage  
   
--   Erstellen Sie in der `Main`-Methode der Anwendung eine einfache Abfrage, die bei Ausführung eine Liste aller Studenten erzeugt, deren Ergebnis im ersten Test höher als 90 war. Beachten Sie, dass der Typ der Abfrage `Student` ist, da das gesamte `IEnumerable<Student>`-Objekt ausgewählt wird. Obwohl der Code auch die implizite Typisierung mithilfe des Schlüsselworts [var](../../../../csharp/language-reference/keywords/var.md) verwenden könnte, wird die explizite Typisierung verwendet, um die Ergebnisse deutlich darzustellen. (Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- Erstellen Sie in der `Main`-Methode der Anwendung eine einfache Abfrage, die bei Ausführung eine Liste aller Studenten erzeugt, deren Ergebnis im ersten Test höher als 90 war. Beachten Sie, dass der Typ der Abfrage `Student` ist, da das gesamte `IEnumerable<Student>`-Objekt ausgewählt wird. Obwohl der Code auch die implizite Typisierung mithilfe des Schlüsselworts [var](../../../../csharp/language-reference/keywords/var.md) verwenden könnte, wird die explizite Typisierung verwendet, um die Ergebnisse deutlich darzustellen. (Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Beachten Sie auch, dass `student`, die Bereichsvariable der Abfrage, als Verweis auf jeden `Student` in der Quelle dient und Memberzugriff auf jedes Objekt bietet.  
   
@@ -75,9 +75,9 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 1. Schreiben Sie jetzt die `foreach`-Schleife, die das Ausführen der Abfrage auslöst. Beachten Sie Folgendes beim Code:  
   
-    -   Auf jedes Element in der zurückgegebenen Sequenz wird über die Iterationsvariable in der `foreach`-Schleife zugegriffen.  
+    - Auf jedes Element in der zurückgegebenen Sequenz wird über die Iterationsvariable in der `foreach`-Schleife zugegriffen.  
   
-    -   Der Typ dieser Variable ist `Student`, und der Typ der Abfragevariable, `IEnumerable<Student>`, ist kompatibel.  
+    - Der Typ dieser Variable ist `Student`, und der Typ der Abfragevariable, `IEnumerable<Student>`, ist kompatibel.  
   
 2. Erstellen Sie die Anwendung, und führen Sie sie aus, nachdem Sie diesen Code hinzugefügt haben, um die Ergebnisse im Fenster **Konsole** anzeigen zu lassen.  
   

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: d7e0f5f6687ffb4293209a29279ca16361e7424e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d3febf7090c6662e5593bbaf94c04236a162e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592136"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)
 In diesem Thema erfahren Sie, wie eine Ausdrucksbaumstruktur ausgeführt wird. Die Ausführung einer Ausdrucksbaumstruktur gibt möglicherweise einen Wert zurück. Es kann jedoch auch nur eine Aktion ausgeführt werden, z.B. das Aufrufen einer Methode.  
@@ -43,8 +43,6 @@ MsgBox(result)
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
-  
-- Fügen Sie einen Projektverweis auf „System.Core.dll“ hinzu, wenn nicht bereits darauf verwiesen wird.  
   
 - Binden Sie den System.Linq.Expressions-Namespace ein.  
   

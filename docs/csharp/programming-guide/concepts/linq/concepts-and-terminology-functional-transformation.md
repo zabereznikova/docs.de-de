@@ -2,12 +2,12 @@
 title: Konzepte und Terminologie (funktionale Transformation) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597827"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Konzepte und Terminologie (funktionale Transformation) (C#)
 Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mit reinen funktionalen Transformationen verwendet werden. Bei Verwendung der funktionalen Transformation zum Transformieren von Daten erhalten Sie Code, der häufig schneller programmiert werden kann, ausdrucksstärker ist und einfacher von Fehlern bereinigt und verwaltet werden kann als Code, der auf die herkömmliche imperative Methode zurückzuführen ist.  
@@ -17,9 +17,9 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
 ## <a name="what-is-pure-functional-transformation"></a>Was ist die reine funktionale Transformation?  
  Bei der *reinen funktionalen Transformation* definiert ein Satz von Funktionen, die sogenannten *reinen Funktionen*, wie ein Satz strukturierter Daten aus ihrer Originalform in eine andere Form transformiert werden soll. Das Wort „rein“ bedeutet dabei, dass die Funktionen *zusammensetzbar* sind. Dazu müssen sie die folgenden Voraussetzungen erfüllen:  
   
--   Sie müssen *eigenständig* sein, damit sie frei und ohne jede Verflechtungen oder Abhängigkeiten vom Rest des Programms geordnet und umgeordnet werden können. Reine Transformationen existieren komplett unabhängig von ihrer Umgebung und beeinflussen diese auch nicht. Damit haben die in der Transformation verwendeten Funktionen keinerlei *Nebenwirkungen*.  
+- Sie müssen *eigenständig* sein, damit sie frei und ohne jede Verflechtungen oder Abhängigkeiten vom Rest des Programms geordnet und umgeordnet werden können. Reine Transformationen existieren komplett unabhängig von ihrer Umgebung und beeinflussen diese auch nicht. Damit haben die in der Transformation verwendeten Funktionen keinerlei *Nebenwirkungen*.  
   
--   Sie müssen *zustandslos* sein, damit das Ausführen ein und derselben Funktion oder eines bestimmten Satzes von Funktionen bei ein und derselben Eingabe auch immer zur selben Ausgabe führt. Reine Transformationen besitzen keine „Erinnerung“ an ihre vorherige Verwendung.  
+- Sie müssen *zustandslos* sein, damit das Ausführen ein und derselben Funktion oder eines bestimmten Satzes von Funktionen bei ein und derselben Eingabe auch immer zur selben Ausgabe führt. Reine Transformationen besitzen keine „Erinnerung“ an ihre vorherige Verwendung.  
   
 > [!IMPORTANT]
 >  Im übrigen Teil dieses Lernprogramms wird der Begriff „reine Funktion“ allgemein als Bezeichnung für einen Programmieransatz und nicht als Bezeichnung für eine bestimmte Sprachfunktion verwendet.  
@@ -73,5 +73,5 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Funktionale Programmierung und Imperative Programmierung (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

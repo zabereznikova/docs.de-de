@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469513"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589042"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Steuerelemente für Windows Forms
 Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Komponenten, die in Windows Forms verwendet werden können. Zusätzlich zu den in diesem Abschnitt behandelten Windows Forms-Steuerelementen können Windows Forms auch ActiveX- und benutzerdefinierte Steuerelemente hinzugefügt werden. Wenn Sie die von Ihnen benötigten Steuerelemente hier nicht finden, können Sie auch eigene erstellen. Ausführliche Informationen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md). Weitere Informationen zum Auswählen des benötigten Steuerelements finden Sie unter [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Visual Basic-Steuerelemente werden auf Grundlage von bereitgestellten Klassen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Visual Basic-Steuerelemente basieren auf Klassen, die von .NET Framework bereitgestellt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)  
- Enthält eine Aufstellung und Beschreibung von Windows Forms-Steuerelementen, die auf [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] basieren.  
+ Aufgelistet und beschrieben die Windows Forms-Steuerelemente, die auf .NET Framework basiert.  
   
  [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](controls-with-built-in-owner-drawing-support.md)  
  Beschreibt, wie Aspekte der Darstellung eines Steuerelements geändert werden, die nicht über Eigenschaften verfügbar sind.  
@@ -168,7 +168,7 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  Ermöglicht Benutzern, die Größe eines angedockten Steuerelements zu ändern.  
   
  [Splitter-Steuerelement](splitter-control-windows-forms.md)  
- Ermöglicht Benutzern, die Größe eines angedockten Steuerelements zu ändern. ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], Version 1.x).  
+ Ermöglicht dem Benutzer zum Ändern der Größe eines angedockten Steuerelements (.NET Framework-Version 1.x).  
   
  [StatusBar-Steuerelement](statusbar-control-windows-forms.md)  
  Zeigt Statusinformationen zum ausgewählten Steuerelement an. Obwohl <xref:System.Windows.Forms.StatusStrip> das <xref:System.Windows.Forms.StatusBar>-Steuerelement vorheriger Versionen ersetzt und erweitert, wird das <xref:System.Windows.Forms.StatusBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  

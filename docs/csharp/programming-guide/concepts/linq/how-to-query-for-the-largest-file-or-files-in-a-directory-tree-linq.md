@@ -2,25 +2,25 @@
 title: 'Vorgehensweise: Abfragen der größten Datei(en) in einer Verzeichnisstruktur (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597070"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Vorgehensweise: Abfragen der größten Datei(en) in einer Verzeichnisstruktur (LINQ) (C#)
 Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:  
   
--   So rufen Sie die Größe in Bytes der größten Datei ab  
+- So rufen Sie die Größe in Bytes der größten Datei ab  
   
--   So rufen Sie die Größe in Bytes der kleinsten Datei ab  
+- So rufen Sie die Größe in Bytes der kleinsten Datei ab  
   
--   So rufen Sie das <xref:System.IO.FileInfo>-Objekt der größten oder kleinsten Datei aus einem oder mehreren Ordnern unter einem bestimmten Stammordner ab  
+- So rufen Sie das <xref:System.IO.FileInfo>-Objekt der größten oder kleinsten Datei aus einem oder mehreren Ordnern unter einem bestimmten Stammordner ab  
   
--   So rufen Sie eine Sequenz ab, wie z.B. die 10 größten Dateien  
+- So rufen Sie eine Sequenz ab, wie z.B. die 10 größten Dateien  
   
--   So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes und ignorieren dabei die Dateien, die kleiner als eine angegebene Größe sind  
+- So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes und ignorieren dabei die Dateien, die kleiner als eine angegebene Größe sind  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel enthält fünf separate Abfragen, die zeigen, wie Sie Dateien je nach ihrer Dateigröße in Bytes abfragen und gruppieren. Sie können diese Beispiele ganz einfach verändern, um die Abfrage auf eine andere Eigenschaft des <xref:System.IO.FileInfo>-Objekts anzuwenden.  

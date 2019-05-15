@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087533"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607757"
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
 Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine EXE- oder DLL-Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
@@ -28,15 +28,15 @@ Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, i
   
  Jedes Manifest einer Assembly hat folgende Funktionen:  
   
--   Auflisten der Dateien, aus denen die Assembly besteht.  
+- Auflisten der Dateien, aus denen die Assembly besteht.  
   
--   Steuern, wie Verweise auf die Typen und Ressourcen der Assembly den Dateien zugeordnet sind, die die entsprechenden Deklarationen und Implementierungen enthalten.  
+- Steuern, wie Verweise auf die Typen und Ressourcen der Assembly den Dateien zugeordnet sind, die die entsprechenden Deklarationen und Implementierungen enthalten.  
   
--   Auflisten anderer Assemblys, von denen die Assembly abhängig ist.  
+- Auflisten anderer Assemblys, von denen die Assembly abhängig ist.  
   
--   Bereitstellen einer Dereferenzierungsebene zwischen den Consumern der Assembly und den Implementierungsdetails der Assembly.  
+- Bereitstellen einer Dereferenzierungsebene zwischen den Consumern der Assembly und den Implementierungsdetails der Assembly.  
   
--   Wiedergabe der Selbstbeschreibung der Assembly.  
+- Wiedergabe der Selbstbeschreibung der Assembly.  
   
 ## <a name="assembly-manifest-contents"></a>Inhalt des Assemblymanifests  
  Die folgende Tabelle enthält die im Assemblymanifest enthaltenen Informationen. Die Identität einer Assembly setzt sich aus den ersten vier Elementen zusammen (Assemblyname, Versionsnummer, Kultur und Informationen über den starken Namen).  

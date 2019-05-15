@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592808"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C#-Compileroptionen)
 Mit der Option **-nowarn** können Sie unterdrücken, dass der Compiler eine oder mehrere Warnungen anzeigt. Trennen Sie mehrere Warnnummern durch ein Komma.  
@@ -35,11 +35,11 @@ Mit der Option **-nowarn** können Sie unterdrücken, dass der Compiler eine ode
   
  Die folgenden Warnungen können nicht durch die Option `-nowarn` unterdrückt werden.  
   
--   Compilerwarnung (Stufe 1) CS2002  
+- Compilerwarnung (Stufe 1) CS2002  
   
--   Compilerwarnung (Stufe 1) CS2023  
+- Compilerwarnung (Stufe 1) CS2023  
   
--   Compilerwarnung (Stufe 1) CS2029  
+- Compilerwarnung (Stufe 1) CS2029  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   

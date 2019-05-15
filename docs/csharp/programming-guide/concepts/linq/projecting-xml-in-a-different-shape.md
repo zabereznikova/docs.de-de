@@ -2,12 +2,12 @@
 title: Projektieren von XML in eine andere Form (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac9c6e05b366c9d34f82c6da9bf154d741840b3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723783"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596813"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektieren von XML in eine andere Form (C#)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel werden Sie eine Abfrage erstellen, die sämtlichen Text in einem Word-Dokument ermittelt:  
   
--   [Finding Text in Word Documents (C#) (Suchen von Text in Word-Dokumenten (C#))](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Finding Text in Word Documents (C#) (Suchen von Text in Word-Dokumenten (C#))](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

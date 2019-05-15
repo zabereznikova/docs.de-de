@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 797dbf7f6203b7f85846dc6596751c4298e96481
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593305"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592262"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Rückgabetyp der Funktion "\<Prozedurname >' ist nicht CLS-kompatibel.
 Ein `Function` Verfahren wird als markiert `<CLSCompliant(True)>` gibt jedoch einen Typ mit der Kennzeichnung `<CLSCompliant(False)>`, nicht markiert ist oder nicht geeignet ist, da es sich um einen nicht kompatiblen Typ handelt.  
@@ -43,4 +43,4 @@ Ein `Function` Verfahren wird als markiert `<CLSCompliant(True)>` gibt jedoch ei
   
 - Wenn die `Function` Prozedur CLS-kompatibel sein müssen, Ändern des Rückgabetyps in den ähnlichsten CLS-kompatibler Typ aus. Anstelle von `UInteger` könnten Sie beispielsweise `Integer` verwenden, wenn Sie den Wertebereich über 2.147.483.647 nicht benötigen. Wenn Sie den erweiterten Bereich benötigen, können Sie `UInteger` durch `Long`ersetzen.  
   
-- Beachten Sie beim Verbinden mit Automatisierungs- oder COM-Objekten, dass einige Typen über andere Datenbreiten als im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügen. Zum Beispiel umfasst `int` in anderen Umgebungen oft 16 Bits. Wenn Sie eine 16-Bit-Ganzzahl an eine solche Komponente zurückgeben, deklarieren Sie sie als `Short` anstelle von `Integer` in verwaltetem Visual Basic-Code.
+- Wenn Sie mit Automatisierungs- oder COM-Objekten verbunden ist, Bedenken Sie, dass einige Typen in .NET Framework über andere Datenbreiten als verfügen. Zum Beispiel umfasst `int` in anderen Umgebungen oft 16 Bits. Wenn Sie eine 16-Bit-Ganzzahl an eine solche Komponente zurückgeben, deklarieren Sie sie als `Short` anstelle von `Integer` in verwaltetem Visual Basic-Code.

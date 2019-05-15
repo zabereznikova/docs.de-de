@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595014"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing und Unboxing (C#-Programmierhandbuch)
 Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../../csharp/language-reference/keywords/value-types.md) in den Typ `object` oder in einen beliebigen anderen Schnittstellentyp, der durch diesen Werttyp implementiert wird. Wenn die CLR einen Werttyp schachtelt, wird der Wert in einem System.Object geschachtelt und im verwalteten Heap gespeichert. Durch Unboxing wird der Werttyp aus dem Objekt extrahiert. Boxing ist implizit, Unboxing ist explizit. Das Konzept von Boxing und Unboxing unterliegt der einheitlichen C#-Ansicht des Typsystems, in dem ein Wert eines beliebigen Typs als Objekt behandelt werden kann.  
@@ -63,9 +63,9 @@ Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../../cshar
 ## <a name="unboxing"></a>Unboxing  
  Beim Unboxing handelt es sich um eine explizite Konvertierung vom `object`-Typ in einen [Werttyp](../../../csharp/language-reference/keywords/value-types.md) bzw. von einem Schnittstellentyp in einen Werttyp, durch den die Schnittstelle implementiert wird. Ein Unboxing-Vorgang umfasst folgende Schritte:  
   
--   Überprüfen der Objektinstanz, um sicherzustellen, dass es sich um einen mittels Boxing "verpackten" Wert des jeweiligen Werttyps handelt.  
+- Überprüfen der Objektinstanz, um sicherzustellen, dass es sich um einen mittels Boxing "verpackten" Wert des jeweiligen Werttyps handelt.  
   
--   Kopieren des Werts aus der Instanz in die Werttypvariable.  
+- Kopieren des Werts aus der Instanz in die Werttypvariable.  
   
  Anhand der folgenden Anweisungen werden sowohl Boxing-Vorgänge als auch Unboxing-Vorgänge veranschaulicht:  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:   
   
--   [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
+- [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

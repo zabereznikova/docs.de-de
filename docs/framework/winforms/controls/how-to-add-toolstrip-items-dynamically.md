@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: 9426c7cb3251dbbd95727b78c57be7a0b71556e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08d08a292995cc5e12fbab3e91a0962c3b895a02
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624014"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588876"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>Vorgehensweise: Dynamisches Hinzufügen von ToolStrip-Elementen
 Sie können die Auflistung von Menüelementen eines <xref:System.Windows.Forms.ToolStrip>-Steuerelements dynamisch ausfüllen, wenn das Menü geöffnet wird.  
@@ -33,8 +33,6 @@ Sie können die Auflistung von Menüelementen eines <xref:System.Windows.Forms.T
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
 

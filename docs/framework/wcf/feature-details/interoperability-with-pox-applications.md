@@ -2,19 +2,19 @@
 title: Interoperabilität mit POX-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046891"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591052"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilität mit POX-Anwendungen
 
 "Plain Old XML" (POX)-Anwendungen kommunizieren, indem Sie den Austausch von unformatierte HTTP-Nachrichten, die nur XML-Anwendungsdaten enthalten, die nicht in einem SOAP-Umschlag eingeschlossen ist. Windows Communication Foundation (WCF) bieten, die Dienste und Clients, die POX-Nachrichten verwenden. Für den Dienst kann WCF verwendet werden, Implementieren von Diensten, die Endpunkte für Clients, z. B. Webbrowser verfügbar zu machen und Skriptsprachen, mit die POX-Nachrichten senden und empfangen. Auf dem Client kann die WCF-Programmiermodell verwendet werden, zur Implementierung von Clients, die mit POX-basierten Diensten kommunizieren.  
   
 > [!NOTE]
-> Dieses Dokument wurde ursprünglich für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;#160;3.0 geschrieben.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&amp;amp;#160;3.5 verfügt über intergrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> In diesem Dokument wurde ursprünglich für .NET Framework 3.0 geschrieben.  .NET Framework 3.5 verfügt über integrierte Unterstützung für die Arbeit mit POX-Anwendungen. Weitere Informationen finden Sie unter [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>POX-Programmierung mit WCF
 

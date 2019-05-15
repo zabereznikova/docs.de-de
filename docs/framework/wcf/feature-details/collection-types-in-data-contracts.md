@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654452"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588817"
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
-Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
+Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In .NET Framework, können solche Listen mithilfe von Arrays oder eine Vielzahl anderer Typen dargestellt werden (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, oder <xref:System.Collections.ArrayList>). Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
   
- Es gibt eine spezielle Sammlungsform, die eine Zuordnung zwischen einem Element (dem "Schlüssel") und einem anderen Element (dem "Wert") darstellt. Im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]werden diese Sammlungen durch Typen wie <xref:System.Collections.Hashtable> und das generische Wörterbuch dargestellt. Eine Zuordnungssammlung kann z. B. eine Stadt ("Schlüssel") der zugehörigen Bevölkerung ("Wert") zuordnen. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Wörterbuchsammlungen*bezeichnet.  
+ Es gibt eine spezielle Sammlungsform, die eine Zuordnung zwischen einem Element (dem "Schlüssel") und einem anderen Element (dem "Wert") darstellt. In .NET Framework, diese durch dargestellt Typen wie z. B. <xref:System.Collections.Hashtable> und das generische Wörterbuch. Eine Zuordnungssammlung kann z. B. eine Stadt ("Schlüssel") der zugehörigen Bevölkerung ("Wert") zuordnen. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Wörterbuchsammlungen*bezeichnet.  
   
  Sammlungen werden im Datenvertragsmodell besonders behandelt.  
   

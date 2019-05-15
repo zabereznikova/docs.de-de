@@ -2,12 +2,12 @@
 title: Varianz bei Delegaten (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657206"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598058"
 ---
 # <a name="variance-in-delegates-c"></a>Varianz bei Delegaten (C#)
 Mit .NET Framework 3.5 wurde die Unterstützung von Varianz eingeführt, um Methodensignaturen und Delegattypen in allen Delegaten in C# vergleichen zu können. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
@@ -112,15 +112,15 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Generische Delegaten mit varianten Typparametern in .NET Framework  
  Mit .NET Framework 4 wurde die Unterstützung von Varianz für generische Typparameter in verschiedenen vorhandenen generischen Delegaten eingeführt:  
   
--   `Action`-Delegaten aus dem <xref:System>-Namespace, z.B. <xref:System.Action%601> und <xref:System.Action%602>  
+- `Action`-Delegaten aus dem <xref:System>-Namespace, z.B. <xref:System.Action%601> und <xref:System.Action%602>  
   
--   `Func`-Delegaten aus dem <xref:System>-Namespace, z.B. <xref:System.Func%601> und <xref:System.Func%602>  
+- `Func`-Delegaten aus dem <xref:System>-Namespace, z.B. <xref:System.Func%601> und <xref:System.Func%602>  
   
--   Der <xref:System.Predicate%601>-Delegat.  
+- Der <xref:System.Predicate%601>-Delegat.  
   
--   Der <xref:System.Comparison%601>-Delegat.  
+- Der <xref:System.Comparison%601>-Delegat.  
   
--   Der <xref:System.Converter%602>-Delegat.  
+- Der <xref:System.Converter%602>-Delegat.  
   
  Weitere Informationen und Beispiele finden Sie unter [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Generika](~/docs/standard/generics/index.md)
+- [Generics](~/docs/standard/generics/index.md)
 - [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 - [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

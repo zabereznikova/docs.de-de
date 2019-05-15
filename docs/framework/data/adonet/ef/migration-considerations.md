@@ -2,22 +2,22 @@
 title: Migrationsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 6453e0960af5a91e5abc40d1ce6002b7733175dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641273"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583566"
 ---
 # <a name="migration-considerations-entity-framework"></a>Migrationsüberlegungen (Entity Framework)
 Das [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework bietet für eine vorhandene Anwendung mehrere Vorteile. Einer der wichtigsten dieser Vorteile ist die Möglichkeit, mithilfe eines konzeptionellen Modells von der Anwendung verwendete Datenstrukturen vom Schema in der Datenquelle zu trennen. Damit können Änderungen am Speichermodell oder an der Datenquelle selbst vorgenommen werden, ohne dass entsprechende Änderungen an der Anwendung notwendig werden. Weitere Informationen zu den Vorteilen der Verwendung der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], finden Sie unter [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) und [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
   
- Nutzen der Vorteile bei der die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], Sie können eine vorhandene Anwendung Migrieren der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Einige Aufgaben müssen für alle migrierten Anwendungen durchgeführt werden. Diesen gemeinsamen Aufgaben gehören das Aktualisieren der Anwendung zur Verwendung der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ab Version 3.5 Servicepack 1 (SP1), Definition von Modellen und Zuordnung und Konfiguration des Entity Framework. Beim Migrieren einer Anwendung zu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sind weitere Überlegungen erforderlich. Diese Überlegungen sind vom Typ der migrierten Anwendung sowie von deren spezifischer Funktion abhängig. In diesem Thema werden Informationen zur Auswahl der besten Methode zur Aktualisierung einer vorhandenen Anwendung bereitgestellt.  
+ Nutzen der Vorteile bei der die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], Sie können eine vorhandene Anwendung Migrieren der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Einige Aufgaben müssen für alle migrierten Anwendungen durchgeführt werden. Diesen gemeinsamen Aufgaben gehören das Aktualisieren der Anwendung zur Verwendung von .NET Framework ab Version 3.5 Servicepack 1 (SP1), definieren Modelle zuordnen und Entity Framework konfiguriert. Beim Migrieren einer Anwendung zu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sind weitere Überlegungen erforderlich. Diese Überlegungen sind vom Typ der migrierten Anwendung sowie von deren spezifischer Funktion abhängig. In diesem Thema werden Informationen zur Auswahl der besten Methode zur Aktualisierung einer vorhandenen Anwendung bereitgestellt.  
   
 ## <a name="general-migration-considerations"></a>Allgemeine Überlegungen zur Migration  
  Folgende Aspekte sollten bei der Migration einer Anwendung zu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] beachtet werden:  
   
-- Jede Anwendung, verwendet der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ab Version 3.5 SP1 kann zu Entity Framework migriert werden, solange der Datenanbieter für die Datenquelle, die von der Anwendung verwendet wird, Entity Framework unterstützt.  
+- Jede Anwendung, die verwendet .NET Framework ab Version 3.5 SP1, kann zu Entity Framework migriert werden, solange der Datenanbieter für die Datenquelle, die von der Anwendung verwendet wird, Entity Framework unterstützt.  
   
 - Entity Framework unterstützt möglicherweise nicht alle Funktionen eines Datenquellenanbieters, auch wenn dieser Anbieter das Entity Framework unterstützt.  
   
@@ -33,7 +33,7 @@ Das [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framewor
   
 1. Aktualisieren der Anwendung.  
   
-     Ein Projekt mit einer früheren Version von Visual Studio erstellt und die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] muss aktualisiert werden, damit Visual Studio 2008 SP1 und die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ab Version 3.5 SP1.  
+     Ein Projekt erstellt wurde, mithilfe einer früheren Version von Visual Studio und .NET Framework muss aktualisiert werden, um Visual Studio 2008 SP1 und .NET Framework ab Version 3.5 SP1 zu verwenden.  
   
 2. Definieren der Modelle und Zuordnungen.  
   
@@ -53,7 +53,7 @@ Das [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framewor
      Verweise auf [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Assemblys und das Modell und die Mapping-Dateien müssen Visual Studio-Projekt hinzugefügt werden. Sie können diese Mappingdateien dem Projekt hinzufügen, um zu gewährleisten, dass sie mit der Anwendung am in der Verbindungszeichenfolge angegebenen Speicherort bereitgestellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Konfigurieren eines Entity Framework-Projekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Überlegungen für Anwendungen mit vorhandenen Objekten  
- Ab [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Version 4 unterstützt [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] „einfache alte“ CLR-Objekte (POCO), auch Dauerhaftigkeit ignorierende Objekte genannt. In den meisten Fällen können vorhandene Objekte bei nur geringfügigen Änderungen mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] arbeiten. Weitere Informationen finden Sie unter [arbeiten mit POCO-Entitäten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Sie können auch eine Anwendung Migrieren der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] und verwenden Sie die Datenklassen, die von den Entity Framework-Tools generiert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden des Assistenten für Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+ Ab .NET Framework 4, die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt "einfache alte" CLR-Objekte (POCO), auch Dauerhaftigkeit ignorierende Objekte genannt. In den meisten Fällen können vorhandene Objekte bei nur geringfügigen Änderungen mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] arbeiten. Weitere Informationen finden Sie unter [arbeiten mit POCO-Entitäten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Sie können auch eine Anwendung Migrieren der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] und verwenden Sie die Datenklassen, die von den Entity Framework-Tools generiert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden des Assistenten für Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Überlegungen für Anwendungen, die ADO.NET-Anbieter verwenden  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Anbieter, z.B. SqlClient, ermöglichen Sie zum Abfragen einer Datenquelle, um Tabellendaten zurückzugeben. Daten können auch geladen werden, in eine [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] DataSet. Die folgende Liste enthält Überlegungen zum Aktualisieren einer Anwendung, die einen vorhandenen [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]-Anbieter verwendet:  
@@ -69,7 +69,7 @@ Das [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framewor
   Wenn die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bietet keine Funktionen eines Datasets, die von Ihrer Anwendung benötigt, immer noch profitieren Sie von den Vorteilen von LINQ-Abfragen mithilfe von [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Überlegungen für Anwendungen, die Daten an Steuerelemente binden  
- Die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] können Sie die Daten in einer Datenquelle, z. B. ein DataSet oder ein kapseln [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Datenquellensteuerelement, und klicken Sie dann Elemente der Benutzeroberfläche an diese Datensteuerelemente gebunden. Die folgende Liste enthält Überlegungen zu Bindungssteuerelementen für Entity Framework-Daten.  
+ .NET Framework können Sie die Daten in einer Datenquelle, z. B. ein DataSet oder ein kapseln [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Datenquellensteuerelement, und klicken Sie dann Elemente der Benutzeroberfläche an diese Datensteuerelemente gebunden. Die folgende Liste enthält Überlegungen zu Bindungssteuerelementen für Entity Framework-Daten.  
   
 - Binden von Daten an Steuerelemente.  
 

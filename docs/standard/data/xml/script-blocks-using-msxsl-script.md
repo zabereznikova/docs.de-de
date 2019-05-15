@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589979"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Skriptblöcke, die "msxsl:script" verwenden
 Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete Skripts unter Verwendung des `msxsl:script`-Elements. Beim Laden des Stylesheets werden alle definierten Funktionen von CodeDOM (Code Document Object Model) in die Microsoft Intermediate Language (MSIL) kompiliert und zur Laufzeit ausgeführt. Die aus dem eingebetteten Skriptblock generierte Assembly und die für das Stylesheet generierte Assembly sind voneinander verschieden.  
@@ -71,11 +71,11 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 #### <a name="assemblies"></a>Assemblys  
  In der Standardeinstellung wird auf die folgenden zwei Assemblys verwiesen:  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll (bei Skriptsprache VB)  
+- Microsoft.VisualBasic.dll (bei Skriptsprache VB)  
   
  Mithilfe des `msxsl:assembly`-Elements können Sie die zusätzlichen Assemblys importieren. Dies gilt auch für die Assembly beim Kompilieren des Stylesheets. Das `msxsl:assembly`-Element weist folgende Definition auf:  
   
@@ -94,21 +94,21 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 #### <a name="namespaces"></a>Namespaces  
  In der Standardeinstellung sind die folgenden Namespaces enthalten:  
   
--   System  
+- System  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic (bei Skriptsprache VB)  
+- Microsoft.VisualBasic (bei Skriptsprache VB)  
   
  Mithilfe des `namespace`-Attributs können Sie Unterstützung für zusätzliche Namespaces hinzufügen. Der Attributwert ist der Name des Namespaces.  
   

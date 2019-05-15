@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dateien Gruppieren nach Erweiterung (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f36be784641d45aaae447097ae2bebb5fd650034
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778078"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593480"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Vorgehensweise: Dateien Gruppieren nach Erweiterung (LINQ) (Visual Basic)
 In dieses Beispiel wird veranschaulicht, wie Sie mithilfe von LINQ erweiterte Gruppierungs- und Sortiervorgänge mit Datei- oder Ordnerlisten ausführen können. Es zeigt auch, wie der Bildlauf für die Ausgabe im Konsolenfenster mithilfe der Methoden <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Take%2A> durchgeführt wird.  
@@ -94,7 +94,7 @@ End Module
  Die Ausgabe dieses Programms kann je nach den Details des lokalen Dateisystems und der Einstellung für `startFolder` lang sein. Um alle Ergebnisse anzuzeigen, wird in diesem Beispiel gezeigt, wie Sie Ergebnisse seitenweise anzeigen. Die gleichen Techniken können auf Windows- und Webanwendungen angewendet werden. Beachten Sie, dass eine geschachtelte `For Each`-Schleife erforderlich ist, da der Code die Elemente in einer Gruppe seitenweise anzeigt. Es ist auch sinnvoll, die aktuelle Position in der Liste berechnen zu können und es dem Benutzer zu ermöglichen, das seitenweise Anzeigen anzuhalten und das Programm zu beenden. In diesem speziellen Fall wird die Abfrage zum seitenweise Anzeigen gegen die zwischengespeicherten Ergebnisse aus der ursprünglichen Abfrage ausgeführt. In anderen Kontexten wie LINQ to SQL ist ein solches Zwischenspeichern nicht erforderlich.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein Projekt, das .NET Framework Version 3.5 oder höher mit einem Verweis auf "System.Core.dll" und ein `Imports` -Anweisung für den Namespace "System.Linq".  
+Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637267"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591946"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienst und Client finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). WCF-Programmierung finden Sie unter [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Ein konkrete Implementierung eines Bindungselements. Die Bindung stellt die Konfiguration dar, und der Kanal ist die Implementierung, die mit dieser Konfiguration verknüpft ist. Deshalb ist jedem Bindungselement ein Kanal zugeordnet. Kanäle werden übereinander gestapelt, um die konkrete Implementierung der Bindung zu erstellen: den Kanalstapel.  
   
  WCF-Client (WCF client)  
- Ein Clientanwendungskonstrukt, das die Dienstvorgänge als Methoden verfügbar macht (in der gewünschten [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Programmiersprache, u. a. Visual Basic oder Visual C#). Jede Anwendung kann einen WCF-Client hosten, einschließlich einer Anwendung, die einen Dienst hostet. Deshalb ist es möglich, einen Dienst zu erstellen, der WCF-Clients anderer Dienste einschließt.  
+ Ein clientanwendungskonstrukt, das die Dienstvorgänge als Methoden verfügbar macht (in der .NET Framework-Programmiersprache Ihrer Wahl, z. B. Visual Basic oder Visual C#). Jede Anwendung kann einen WCF-Client hosten, einschließlich einer Anwendung, die einen Dienst hostet. Deshalb ist es möglich, einen Dienst zu erstellen, der WCF-Clients anderer Dienste einschließt.  
   
  Ein WCF-Client kann automatisch generiert werden, mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) und verweisen auf einen ausgeführten Dienst, der Metadaten veröffentlicht.  
   

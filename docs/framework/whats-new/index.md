@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914833"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063864"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -35,7 +35,7 @@ Dieser Artikel beschreibt wichtige Funktionen und Änderungen in den folgenden V
 Dieser Artikel enthält keine umfassenden Informationen zu jeder neuen Funktion und unterliegt möglichen Änderungen. Allgemeine Informationen zu .NET Framework finden Sie unter [Erste Schritte](../get-started/index.md). Informationen zu unterstützten Plattformen finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md). Downloadlinks und Installationsanweisungen finden Sie im [Installationshandbuch](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Das .NET Framework-Team veröffentlicht auch Features mithilfe von NuGet außer der Reihe, um die Plattformunterstützung zu erweitern und neue Features einzuführen, z.B. unveränderliche Sammlungen und SIMD-fähige Vektortypen. Weitere Informationen finden Sie unter [Zusätzliche Klassenbibliotheken und APIs](../additional-apis/index.md) und [.NET Framework und Out-of-Band-Releases](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Lassen Sie eine [vollständige Liste von NuGet-Paketen](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) für .NET Framework anzeigen, oder abonnieren Sie [unseren Feed](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> Das .NET Framework-Team veröffentlicht zusätzlich mit NuGet Funktionen außer der Reihe, um die Plattformunterstützung zu erweitern und neue Funktionen einzuführen, z. B. unveränderliche Auflistungen und SIMD-fähige Vektortypen. Weitere Informationen finden Sie unter [Zusätzliche Klassenbibliotheken und APIs](../additional-apis/index.md) und [.NET Framework und Out-of-Band-Releases](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Siehe die [vollständige Liste der NuGet-Pakete](https://www.nuget.org/profiles/dotnetframework) für .NET Framework.
 
 <a name="v48" />
 
@@ -115,6 +115,17 @@ Es gibt zwei Möglichkeiten, den Integritätsendpunkt verfügbar zu machen und I
      healthBehavior = new ServiceHealthBehavior();
   }
    host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - Mithilfe einer Konfigurationsdatei. Beispiel:
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 Das Ereignis wird nicht ausgelöst (und sein `add`-Accessor wird ignoriert), es sei denn,  <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) -Umgebungsvariable wurde festgelegt.
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  Zusätzlich enthält die <xref:System.Web.SessionState.SessionStateUtility>-Klasse zwei neue Methoden, <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> und <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, die verwendet werden können, um asynchrone Vorgänge zu unterstützen.
@@ -1515,6 +1542,10 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          Die Bibliothek muss überprüfen, ob ein Consumer den Wert der Option deklariert hat, und dann entsprechend reagieren.
 
         ```csharp
@@ -1526,15 +1557,31 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          Es empfiehlt sich, ein konsistentes Format für Optionen zu verwenden, da es sich hierbei um eine formellen Vertrag handelt, der von einer Bibliothek verfügbar gemacht wird. Das folgende Beispiel zeigt zwei offensichtliche Formate.
@@ -1781,6 +1828,14 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
                                               IPromotableSinglePhaseNotification promotableNotification,
                                               ISinglePhaseNotification enlistmentNotification,
                                               EnlistmentOptions enlistmentOptions)
+    ```
+
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
     ```
 
      Diese Methode wird möglicherweise durch eine Eintragung verwendet, die zuvor durch <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> als Antwort auf die <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>-Methode erstellt wurde. Sie fragt `System.Transactions` ab, um die Transaktion zu einer MSDTC-Transaktion heraufzustufen und um die heraufstufbare Eintragung zu einer dauerhaften Eintragung zu „konvertieren“. Nachdem die Methode erfolgreich abgeschlossen wurde, wird die <xref:System.Transactions.IPromotableSinglePhaseNotification>-Schnittstelle nicht mehr durch `System.Transactions` referenziert, und alle künftigen Benachrichtigungen gelangen zur angegebenen <xref:System.Transactions.ISinglePhaseNotification>-Schnittstelle. Die entsprechende Eintrag muss als eine dauerhafte Eintragung fungieren und die Transaktionsprotokollierung und -wiederherstellung unterstützen. Unter <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> finden Sie entsprechende Einzelheiten. Darüber hinaus muss die Eintragung <xref:System.Transactions.ISinglePhaseNotification> unterstützen.  Diese Methode kann *nur* während der Verarbeitung eines <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>-Aufrufs aufgerufen werden. Wenn dies nicht der Fall ist, wird eine <xref:System.Transactions.TransactionException>-Ausnahme ausgelöst.

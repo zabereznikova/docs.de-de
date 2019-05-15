@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: ae55752a5a317b749c755ea5f4f479a9faec5745
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecf8fb93688c0e7566083f43581ada8dce53d2ca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648174"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589596"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens
 Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von Möglichkeiten, sein Aussehen und Verhalten mithilfe von Eigenschaften, Ereignissen und Assistentenklassen anzupassen. Gelegentlich haben Sie möglicherweise Anforderungen an die Zellen, die über die Möglichkeiten hinausgehen, die diese Features bieten können. Sie können Ihre eigene benutzerdefinierte <xref:System.Windows.Forms.DataGridViewCell>-Klasse erstellen, um erweiterte Funktionalität bereitzustellen.  
@@ -67,9 +67,7 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf die Assemblys "System", "System.Windows.Forms" und "System.Drawing".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.
-  
+ 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.DataGridView>

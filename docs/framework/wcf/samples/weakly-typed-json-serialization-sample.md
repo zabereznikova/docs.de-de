@@ -2,12 +2,12 @@
 title: Beispiel zur schwach typisierten JSON-Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006355"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589213"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Beispiel zur schwach typisierten JSON-Serialisierung
 Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragungsformat oder beim Deserialisieren eines Übertragungsformats zurück in einen benutzerdefinierten Typ muss der jeweilige benutzerdefinierte Typ für den Dienst und den Client verfügbar sein. Hierzu wird normalerweise das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf diese benutzerdefinierten Typen angewendet, und das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird auf ihre Member angewendet. Dieser Mechanismus gilt auch beim Arbeiten mit JavaScript Object Notation (JSON)-Objekten, wie beschrieben im Thema [Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragung
   
  Dies kann aufwändig sein, insbesondere, wenn der Client mehrere Typen von JSON-Objekten behandeln muss.  
   
- Der in diesem Beispiel bereitgestellte `JsonObject` -Typ führt eine schwach typisierte Darstellung des deserialisierten JSON-Objekts ein. `JsonObject` verwendet die natürliche Zuordnung zwischen JSON-Objekten und [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Wörterbüchern und die Zuordnung zwischen JSON-Arrays und [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Arrays. Der folgende Code veranschaulicht den `JsonObject` -Typ:  
+ Der in diesem Beispiel bereitgestellte `JsonObject` -Typ führt eine schwach typisierte Darstellung des deserialisierten JSON-Objekts ein. `JsonObject` verwendet die natürliche Zuordnung zwischen JSON-Objekte und .NET Framework-Wörterbüchern und die Zuordnung zwischen JSON-Arrays und .NET Framework-Arrays. Der folgende Code veranschaulicht den `JsonObject` -Typ:  
   
 ```  
 // Instantiation of JsonObject json omitted  

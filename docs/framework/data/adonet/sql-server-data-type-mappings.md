@@ -2,17 +2,17 @@
 title: SQL Server-Datentypzuordnungen
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664089"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583721"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server-Datentypzuordnungen
 SQL Server und .NET Framework basieren auf unterschiedlichen Typsystemen. Die <xref:System.Decimal>-Struktur von .NET Framework hat eine maximale Skalierung von 28, die dezimalen und numerischen Datentypen von SQL Server haben hingegen eine maximale Skalierung von 38. Um die Integrität beim Lesen und Schreiben von Daten zu gewährleisten, stellt der <xref:System.Data.SqlClient.SqlDataReader> Accessormethoden für SQL Server-spezifische Typen zur Verfügung, die Objekte als <xref:System.Data.SqlTypes> zurückgeben. Zusätzlich werden Accessormethoden zum Zurückgeben von .NET Framework-Typen zur Verfügung gestellt. Sowohl die SQL Server- als auch die .NET Framework-Typen werden weiterhin als Enumerationen in der <xref:System.Data.DbType>-Klasse und <xref:System.Data.SqlDbType>Klasse dargestellt, die zum Angeben von <xref:System.Data.SqlClient.SqlParameter>-Datentypen verwendet werden können.  
   
- In der folgenden Tabelle werden der abgeleitete [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ, die Enumerationen von <xref:System.Data.DbType> und <xref:System.Data.SqlDbType> sowie die Accessormethoden für den <xref:System.Data.SqlClient.SqlDataReader> dargestellt.  
+ Die folgende Tabelle zeigt die hergeleiteten .NET Framework-Typ der <xref:System.Data.DbType> und <xref:System.Data.SqlDbType> Enumerationen und Accessormethoden für den <xref:System.Data.SqlClient.SqlDataReader>.  
   
 |SQL Server-Datenbank-Engine-Typ|.NET Framework-Typ|SqlDbType-Enumeration|SqlDataReader-Accessor vom Typ SqlTypes|DbType-Enumeration|SqlDataReader-Accessor vom DbType-Typ|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

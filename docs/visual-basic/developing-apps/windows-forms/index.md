@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615108"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590787"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von Windows Forms-Anwendungen, die lokal auf Benutzercomputern ausgeführt werden. Sie können Visual Studio verwenden, um die mithilfe von Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Eine Windows Forms-Anwendung baut auf Klassen aus der <xref:System.Windows.Forms> Namespace.  
@@ -25,7 +25,7 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
 - [Windows-Dienstanwendungen](../../../framework/windows-services/index.md). Enthält Themen, die erläutern, wie Sie Windows-Dienste zu erstellen.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Erstellen von interaktiven Benutzeroberflächen mit anspruchsvollen Grafiken  
- Windows Forms ist die Smart Client-Komponente von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], einen Satz verwalteter Bibliotheken, die generelle Anwendungsaufgaben wie Lesen und Schreiben in das Dateisystem zu ermöglichen. Verwenden einer Entwicklungsumgebung wie Visual Studio, können Sie erstellen Windows Forms-Anwendungen, die Informationen anzeigen, Eingaben von Benutzern anfordern, und die Kommunikation mit Remotecomputern über ein Netzwerk.  
+ Windows Forms ist die Smart Client-Komponente von .NET Framework, ein Satz verwalteter Bibliotheken, die generelle Anwendungsaufgaben wie Lesen und Schreiben in das Dateisystem zu ermöglichen. Verwenden einer Entwicklungsumgebung wie Visual Studio, können Sie erstellen Windows Forms-Anwendungen, die Informationen anzeigen, Eingaben von Benutzern anfordern, und die Kommunikation mit Remotecomputern über ein Netzwerk.  
   
  In Windows Forms ist ein Formular eine visuelle Oberfläche, die auf der Sie die Informationen für den Benutzer anzuzeigen. Im Allgemeinen erstellen Sie Windows Forms-Anwendungen von Steuerelementen auf Formularen platzieren und Reaktionen auf Benutzeraktionen wie Mausklicks oder Tastatureingaben entwickeln. Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement (UI-Element), das Daten anzeigt oder Dateneingaben akzeptiert.  
   
@@ -86,7 +86,7 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
 |Verwalten der Sicherheit mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Vorgehensweise: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Andere Steuerelemente und Funktionen  
- In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus die robusten Sicherheitssystem von Windows Forms verwendet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], sodass Sie sicherere Anwendungen für Ihre Kunden freigeben.  
+ In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus verwendet Windows Forms die stabiles Sicherheitssystem von .NET Framework, sodass Sie sicherere Anwendungen für Ihre Kunden freigeben.  
   
  Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie unter den folgenden Hilfethemen:  
   

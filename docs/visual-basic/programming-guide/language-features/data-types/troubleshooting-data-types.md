@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906957"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591101"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Problembehandlung bei Datentypen (Visual Basic)
 Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei der Durchführung von Vorgängen für systeminterne Datentypen.  
@@ -66,7 +66,7 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
  Beachten Sie, dass es nicht ausreichen, um zu deklarieren, `decimalRemainder` als `Decimal`. Sie müssen außerdem die Literale, erzwingen `Decimal`, oder sie verwenden `Double` standardmäßig und `decimalRemainder` empfängt ungenauen denselben Wert wie `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean-Typ konvertiert nicht in numerischen Typ genau  
- [Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht Zahlen entsprechen. Kompatibilität mit früheren Versionen, Visual Basic bietet Konvertierungsschlüsselwörter ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`usw.) für die Konvertierung zwischen `Boolean` und numerischen Typen. Allerdings andere Sprachen manchmal diese Konvertierungen anders ausgeführt, wie die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Methoden.  
+ [Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sollen nicht Zahlen entsprechen. Kompatibilität mit früheren Versionen, Visual Basic bietet Konvertierungsschlüsselwörter ([CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`usw.) für die Konvertierung zwischen `Boolean` und numerischen Typen. Jedoch führen andere Sprachen manchmal diese Konvertierungen unterschiedlich, wie .NET Framework-Methoden.  
   
  Schreiben Sie Code, der auf den entsprechenden numerischen Werten für basiert `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen, um die logischen Werte, die für die sie entworfen werden. Wenn Sie kombinieren müssen `Boolean` und numerische Werte, stellen Sie sicher, dass Sie die Konvertierungsmethode verstehen, die Sie auswählen.  
   
@@ -96,7 +96,7 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
 ## <a name="string-conversion-fails-at-run-time"></a>Zeichenfolgenkonvertierung zur Laufzeit fehlschlägt.  
  Die [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) nur sehr wenige erweiterungskonvertierungen beteiligt. `String` wird nur auf sich selbst und `Object`, und nur `Char` und `Char()` (eine `Char` Arrays) zu erweitert `String`. Grund hierfür ist, `String` können Variablen und Konstanten Werte, die andere Datentypen enthalten, darf nicht enthalten.  
   
- Wenn die typüberprüfung wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On`, der Compiler lässt alle implizite einschränkende Konvertierungen. Dies schließt Personen im Zusammenhang mit `String`. Code kann dennoch Konvertierungsschlüsselwörter wie z. B. `CStr` und [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), welche direkt den [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] , die Konvertierung auszuführen.  
+ Wenn die typüberprüfung wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On`, der Compiler lässt alle implizite einschränkende Konvertierungen. Dies schließt Personen im Zusammenhang mit `String`. Code kann dennoch Konvertierungsschlüsselwörter wie z. B. `CStr` und [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md), die direkte .NET Framework, um die Konvertierung auszuführen.  
   
 > [!NOTE]
 >  Der einschränkende Konvertierung-Fehler unterdrückt für Konvertierungen aus den Elementen in einem `For Each…Next` -Auflistung, um die Schleifensteuerungsvariable. Weitere Informationen und Beispiele finden Sie im Abschnitt "Einschränkende Konvertierungen" in [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  

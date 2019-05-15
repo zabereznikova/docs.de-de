@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f1dbfde5e13d771f82ab1542e02de4c72b68678
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607744"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly
 Um den vollqualifizierten Namen einer Assembly im globalen Assemblycache zu ermitteln, verwenden Sie das GAC-Tool ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Weitere Informationen finden Sie unter [How to: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Für Assemblys, die sich nicht im globalen Assemblycache befinden, können Sie den vollqualifizierten Assemblynamen auf verschiedene Weisen abrufen: Sie können Code verwenden, um die Informationen auf der Konsole oder in einer Variablen auszugeben. Alternativ können Sie auch den [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) zum Untersuchen der Metadaten verwenden, die den vollqualifizierten Namen der Assembly enthalten.  
   
--   Wenn die Assembly bereits von der Anwendung geladen wird, können Sie den Wert der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>-Eigenschaft abrufen, um den vollqualifizierten Namen abzurufen. Sie können diesen Ansatz verwenden, und zwar unabhängig davon, ob sich die Assembly im GAC befindet. Dies wird im Beispiel veranschaulicht.  
+- Wenn die Assembly bereits von der Anwendung geladen wird, können Sie den Wert der <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>-Eigenschaft abrufen, um den vollqualifizierten Namen abzurufen. Sie können diesen Ansatz verwenden, und zwar unabhängig davon, ob sich die Assembly im GAC befindet. Dies wird im Beispiel veranschaulicht.  
   
--   Wenn Sie den Dateisystempfad der Assembly kennen, können Sie die statische (`Shared` in Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType>-Methode aufrufen, um den vollqualifizierten Assemblynamen abzurufen. Im Folgenden finden Sie ein einfaches Beispiel.  
+- Wenn Sie den Dateisystempfad der Assembly kennen, können Sie die statische (`Shared` in Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType>-Methode aufrufen, um den vollqualifizierten Assemblynamen abzurufen. Im Folgenden finden Sie ein einfaches Beispiel.  
   
      [!code-csharp[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/cs/getassemblyname1.cs#1)]
      [!code-vb[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/vb/getassemblyname1.vb#1)]  
   
--   Sie können den [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um die Metadaten der Assembly zu überprüfen, die den vollqualifizierten Namen enthalten.  
+- Sie können den [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um die Metadaten der Assembly zu überprüfen, die den vollqualifizierten Namen enthalten.  
   
  Weitere Informationen zum Festlegen von Assemblyattributen wie Version, Kultur und Assemblyname finden Sie unter [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md). Weitere Informationen zum Vergeben eines starken Namens für eine Assembly finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   

@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202885"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584388"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
 Mit Finalizern (die auch als **Destruktoren** bezeichnet werden) werden alle erforderlichen endgültigen Bereinigungen durchgeführt, wenn eine Klasseninstanz vom Garbage Collector gesammelt wird.  
   
 ## <a name="remarks"></a>Anmerkungen  
   
--   Finalizer können nicht in Strukturen definiert werden. Sie werden nur mit Klassen verwendet.  
+- Finalizer können nicht in Strukturen definiert werden. Sie werden nur mit Klassen verwendet.  
   
--   Eine Klasse kann nur über einen Finalizer verfügen.  
+- Eine Klasse kann nur über einen Finalizer verfügen.  
   
--   Finalizer können nicht vererbt oder überladen werden.  
+- Finalizer können nicht vererbt oder überladen werden.  
   
--   Finalizer können nicht aufgerufen werden. Sie werden automatisch aufgerufen.  
+- Finalizer können nicht aufgerufen werden. Sie werden automatisch aufgerufen.  
   
--   Ein Finalizer kann nicht über Modifizierer oder Parameter verfügen.  
+- Ein Finalizer kann nicht über Modifizierer oder Parameter verfügen.  
   
  Folgendes ist z.B. eine Deklaration eines Finalizers für die Klasse `Car`:
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  Weitere Informationen zum Bereinigen von Ressourcen finden Sie unter den folgenden Themen:  
   
--   [Bereinigen von nicht verwalteten Ressourcen](../../../standard/garbage-collection/unmanaged.md)  
+- [Bereinigen von nicht verwalteten Ressourcen](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implementieren einer Dispose-Methode](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementieren einer Dispose-Methode](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)  
+- [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt drei Klassen, die eine Vererbungskette bilden. Die Klasse `First` ist die Basisklasse, `Second` wird von `First` abgeleitet, und `Third` wird von `Second` abgeleitet. Alle drei verfügen über Finalizer. In `Main` wird eine Instanz der am meisten abgeleiteten Klasse erstellt. Wenn das Programm ausgeführt wird, beachten Sie, dass die Finalizer der drei Klassen automatisch und in Reihenfolge von der am meisten bis zu der am wenigsten abgeleiteten aufgerufen werden.  

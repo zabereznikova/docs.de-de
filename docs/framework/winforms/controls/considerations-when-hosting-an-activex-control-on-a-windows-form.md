@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 9b037dfbb3a82b8df4c91468eeb8b2dea24e2a37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b604502e0fea591460f30cae28b64ff1703da65
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625425"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589434"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms
 Obwohl Windows Forms zum Hosten von Windows Forms-Steuerelementen optimiert wurde, können Sie weiterhin ActiveX-Steuerelemente verwenden. Bei Verwendung von ActiveX-Steuerelementen in einer Anwendung sollten Sie Folgendes berücksichtigen:  
@@ -26,7 +26,7 @@ Obwohl Windows Forms zum Hosten von Windows Forms-Steuerelementen optimiert wurd
     >  Zum Arbeiten mit ActiveX-Steuerelementen ist ein COM-Interop-Wrapper erforderlich. Weitere Informationen finden Sie unter [COM-Interoperabilität in Visual Basic und Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
     > [!NOTE]
-    >  Wenn der Name eines Members des ActiveX-Steuerelements mit einem Namen, die in definierten übereinstimmt der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], und klicken Sie dann der ActiveX Control Importer den Membernamen mit dem Präfix **Ctl** beim Erstellen der <xref:System.Windows.Forms.AxHost> abgeleitete Klasse. Wenn beispielsweise das ActiveX-Steuerelement ein Member mit dem Namen **Layout** enthält, wird dieser Name in der von AxHost abgeleiteten Klasse in **CtlLayout** geändert, da in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] das **Layout**-Ereignis bereits definiert ist.  
+    >  Wenn der Name eines Members des ActiveX-Steuerelements mit einem Namen, die in .NET Framework definierten übereinstimmt, der ActiveX Control Importer den Membernamen mit dem Präfix **Ctl** beim Erstellen der <xref:System.Windows.Forms.AxHost> abgeleitete Klasse. Beispielsweise verfügt das ActiveX-Steuerelement ein Element mit dem Namen **Layout**, umbenannt **CtlLayout** in der von AxHost abgeleiteten Klasse da die **Layout** Ereignis wird definiert, in der. .NET Framework.  
   
 ## <a name="see-also"></a>Siehe auch
 

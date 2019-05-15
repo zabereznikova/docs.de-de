@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616703"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586705"
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
 Sie sich Visual Studio-Projekt als eine Reihe von Prozeduren vorstellen, in einer Sequenz, in der Praxis ausgeführt, sind die meisten Programme ereignisgesteuerte – d. h. den Ausführungsablauf richtet sich nach externen Vorkommnissen aufgerufen *Ereignisse*.  
@@ -104,6 +104,6 @@ Sie sich Visual Studio-Projekt als eine Reihe von Prozeduren vorstellen, in eine
 |[Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen, um die Blockierung zu vermeiden](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das einen asynchronen Aufruf seiner Ereignishandler zulässt.|  
 |[Vorgehensweise: Deklarieren von benutzerdefinierten Ereignissen zum Einsparen von Arbeitsspeicher](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Veranschaulicht die Definition eines benutzerdefinierten Ereignisses, das nur bei der Behandlung des Ereignisses Arbeitsspeicher nutzt.|  
 |[Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Führt häufige Probleme auf, die bei Ereignishandlern in geerbten Komponenten auftreten können.|  
-|[Ereignisse](../../../../standard/events/index.md)|Bietet eine Übersicht über das Ereignismodell in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[Ereignisse](../../../../standard/events/index.md)|Bietet eine Übersicht über das Ereignismodell in .NET Framework.|  
 |[Erstellen von Ereignishandlern in Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Beschreibt die Verwendung von Ereignissen, die Windows Forms-Objekten zugeordnet sind.|  
 |[Delegaten](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Stellt eine Übersicht über Delegaten in Visual Basic bereit.|

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469695"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591544"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Objektlebensdauer: Wie die Objekte werden erstellt und zerstört (Visual Basic)
 Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Initialisierungsaufgaben müssen häufig für neue Objekte ausgeführt werden, bevor sie verwendet werden. Gebräuchliche Initialisierungsaufgaben umfassen das Öffnen von Dateien, Verbinden mit Datenbanken und das Lesen von Werten von Registrierungsschlüsseln. Visual Basic steuert die Initialisierung neuer Objekte mit Prozeduren mit Namen *Konstruktoren* (spezielle Methoden, die Kontrolle über die Initialisierung zu ermöglichen).  
@@ -140,7 +140,7 @@ End Sub
  Eine abgeleitete Klasse darf nicht die <xref:System.IDisposable.Dispose%2A>- und `Finalize`-Methode der Basisklasse überschreiben. Wenn diese Methoden aus einer Instanz der abgeleiteten Klasse aufgerufen werden, ruft die Basisklassenimplementierung dieser Methoden die Überschreibung der `Dispose(disposing)`-Methode auf.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Garbagecollection und der Finalize-Destruktor  
- Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwendet die *verweisverfolgenden Garbagecollection* System regelmäßig nicht verwendete Ressourcen freizugeben. Visual Basic 6.0 und früheren Versionen verwendet ein anderes System namens *verweiszählung* zum Verwalten von Ressourcen. Obwohl beide Systeme dieselbe Funktion automatisch ausführen, gibt es einige wichtige Unterschiede.  
+ .NET Framework verwendet die *verweisverfolgenden Garbagecollection* System regelmäßig nicht verwendete Ressourcen freizugeben. Visual Basic 6.0 und früheren Versionen verwendet ein anderes System namens *verweiszählung* zum Verwalten von Ressourcen. Obwohl beide Systeme dieselbe Funktion automatisch ausführen, gibt es einige wichtige Unterschiede.  
   
  Die CLR zerstört Objekte in regelmäßigen Abständen, wenn das System feststellt, dass diese Objekte nicht mehr benötigt werden. Objekte werden schneller freigegeben, wenn die Systemressourcen knapp und ansonsten seltener sind. Die Verzögerung zwischen dem Zeitpunkt, an dem ein Objekt seinen Gültigkeitsbereich verliert, und der Freigabe durch der CLR bedeutet, dass im Unterschied zu Objekten in Visual Basic 6.0 und früheren Versionen, Sie genau bestimmen können, wann das Objekt zerstört wird. In diesem Fall Objekte bewirken, haben *nicht deterministische Lebensdauer*. In den meisten Fällen ändert die nicht deterministische Lebensdauer nicht das Schreiben von Anwendungen, solange beachtet wird, dass der `Finalize`-Destruktor möglicherweise nicht sofort nach Verlust des Gültigkeitsbereichs eines Objekts ausgeführt wird.  
   

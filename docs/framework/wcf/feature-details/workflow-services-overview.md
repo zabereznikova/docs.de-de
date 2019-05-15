@@ -2,12 +2,12 @@
 title: Übersicht über Workflowdienste – WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050336"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590073"
 ---
 # <a name="workflow-services-overview"></a>Übersicht über Workflowdienste
 
@@ -48,7 +48,7 @@ WCF definiert zwei MSMQ-basierten Bindungen, und zwar <xref:System.ServiceModel.
 
 Workflowdienste müssen gehostet werden, wie WCF-Dienste. WCF-Dienste verwenden die <xref:System.ServiceModel.ServiceHost> -Klasse zum Hosten von Diensten und Workflow-Dienste verwenden <xref:System.ServiceModel.Activities.WorkflowServiceHost> zum Hosten von Diensten. Wie WCF-Dienste können Workflowdienste in einer Vielzahl von Möglichkeiten, z. B. gehostet werden:
 
-- In einer verwalteten [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Anwendung
+- In einer verwalteten .NET Framework-Anwendung.
 
 - in Internetinformationsdienste (IIS).
 
@@ -56,7 +56,7 @@ Workflowdienste müssen gehostet werden, wie WCF-Dienste. WCF-Dienste verwenden 
 
 - Unter einem verwalteten Windows-Dienst
 
-Unter einer verwalteten [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Anwendung oder einem verwalteten Windows-Dienst gehostete Workflowdienste erstellen eine Instanz der <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse und übergeben an diese eine Instanz von <xref:System.ServiceModel.Activities.WorkflowService>, worin die Workflowdefinition innerhalb der <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>-Eigenschaft enthalten ist. Eine Workflowdefinition, die Messagingaktivitäten enthält, wird als Workflowdienst verfügbar gemacht.
+In einer verwalteten .NET Framework-Anwendung gehostete Workflowdienste, oder erstellen Sie eine Instanz von einem verwalteten Windows-Dienst die <xref:System.ServiceModel.Activities.WorkflowServiceHost> Klasse, und übergeben Sie es mit eine Instanz von der <xref:System.ServiceModel.Activities.WorkflowService> , enthält die Workflowdefinition innerhalb der <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> Eigenschaft. Eine Workflowdefinition, die Messagingaktivitäten enthält, wird als Workflowdienst verfügbar gemacht.
 
 Um einen Workflowdienst unter IIS zu hosten, fügen Sie die XAMLX-Datei mit der Workflowdienstdefinition in ein virtuelles Verzeichnis ein. Ein Standardendpunkt (mit <xref:System.ServiceModel.BasicHttpBinding>) ist für Weitere Informationen automatisch erstellt, finden Sie [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md). Sie können auch eine Web.config-Datei in das virtuelle Verzeichnis einfügen, um eigene Endpunkte anzugeben. Wenn sich die Workflowdefinition in einer Assembly befindet, können Sie eine SVC-Datei in das virtuelle Verzeichnis und die Workflowassembly in das Verzeichnis "App_Code" einfügen. In der SVC-Datei muss die Diensthostfactory und die Klasse angegeben sein, die den Workflowdienst implementiert. Das folgende Beispiel zeigt, wie Sie die Diensthostfactory und die Klasse angeben, die den Workflowdienst implementiert.
 

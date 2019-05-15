@@ -2,21 +2,21 @@
 title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543041"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597108"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
   
--   Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
+- Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
   
--   Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
+- Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
   
--   Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
+- Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
   
     > [!NOTE]
     >  Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  

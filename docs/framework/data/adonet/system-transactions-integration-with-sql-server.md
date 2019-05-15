@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033370"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583484"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions-Integration in SQL Server
-Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 wurde ein neues Transaktionsframework eingeführt, auf das über den <xref:System.Transactions> -Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die vollständig in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]integriert ist, einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework, Version 2.0 eingeführt, ein neues Transaktionsframework, die über zugegriffen werden kann die <xref:System.Transactions> Namespace. Dieses Framework macht Transaktionen auf eine Weise, die vollständig in .NET Framework integriert ist einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Zusätzlich zu den Erweiterungen bei der Programmierbarkeit können <xref:System.Transactions> und [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zusammenarbeiten, um beim Arbeiten mit Transaktionen Optimierungen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte (lokale) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
   
  Beginnend mit [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> unterstützt heraufstufbare Transaktionen, bei der Arbeit mit SQL Server. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff seitens des Entwicklers.  
   
- Heraufstufbare Transaktionen sind nur verfügbar, wenn Sie verwenden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (`SqlClient`) mit SQL Server.  
+ Heraufstufbare Transaktionen sind nur verfügbar, wenn Sie die .NET Framework-Datenanbieter für SQL Server verwenden (`SqlClient`) mit SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Erstellen heraufstufbarer Transaktionen  
- Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im behandelt werden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> Namespace. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
+ Der .NET Framework-Anbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im .NET Framework <xref:System.Transactions>-Namespace behandelt werden. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
   
 > [!NOTE]
 >  In einem teilweise vertrauenswürdigen Szenario wird die <xref:System.Transactions.DistributedTransactionPermission> benötigt, wenn eine Transaktion zu einer verteilten Transaktion heraufgestuft wird.  

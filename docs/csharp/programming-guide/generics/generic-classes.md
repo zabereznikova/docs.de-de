@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970219"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596286"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Generische Klassen (C#-Programmierhandbuch)
 Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmten Datentyp sind. Generische Klassen werden am häufigsten bei Auflistungen verwendet, z.B. bei verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen, Strukturen usw. Vorgänge wie das Hinzufügen oder Entfernen von Elementen aus der Auflistung werden nahezu auf die gleiche Art und Weise ausgeführt, unabhängig vom Typ der gespeicherten Daten.  
@@ -20,19 +20,19 @@ Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmt
   
  In der Regel erstellen Sie generische Klassen, indem Sie von einer vorhandenen konkreten Klasse ausgehen und Typen in Typparameter ändern (einen nach dem anderen), bis das optimale Verhältnis zwischen Verallgemeinerung und Verwendbarkeit gefunden ist. Wenn Sie eigene generische Klassen erstellen möchten, sollten Sie die folgenden wichtigen Aspekte beachten:  
   
--   Welche Typen sollen in Typparameter verallgemeinert werden.  
+- Welche Typen sollen in Typparameter verallgemeinert werden.  
   
      Im Allgemeinen gilt: Je mehr Typen Sie parametrisieren können, umso flexibler und besser wiederverwendbar ist Ihr Code. Jedoch kann ein Zuviel an Verallgemeinerung zu Code führen, der von anderen Entwicklern nur schwer gelesen oder verstanden wird.  
   
--   Welche Einschränkungen sollen ggf. auf die Typparameter angewendet werden (siehe [Constraints on Type Parameters (Einschränkungen für Typparameter)](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
+- Welche Einschränkungen sollen ggf. auf die Typparameter angewendet werden (siehe [Constraints on Type Parameters (Einschränkungen für Typparameter)](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
   
      Es empfiehlt sich, alle Einschränkungen anzuwenden, die maximal möglich sind, und bei denen Sie dennoch sämtliche Typen, die Sie behandeln müssen, auch behandeln können. Wenn Sie zum Beispiel wissen, dass die generische Klasse nur mit Referenztypen verwendet werden soll, dann können Sie die Klasseneinschränkung anwenden. Dadurch wird verhindert, dass die Klasse unbeabsichtigt mit Werttypen verwendet wird. Gleichzeitig können Sie den Operator `as` für `T` verwenden und nach NULL-Werten suchen.  
   
--   Ob das generische Verhalten in Basisklassen und Unterklassen zerlegt werden soll.  
+- Ob das generische Verhalten in Basisklassen und Unterklassen zerlegt werden soll.  
   
      Da generische Klassen als Basisklassen dienen können, sind hier beim Entwurf die gleichen Aspekte zu berücksichtigen wie bei nicht generischen Klassen. Weitere Informationen bieten die Regeln zum Erben von generischen Basisklassen weiter unten in diesem Thema.  
   
--   Ob eine oder mehrere generische Schnittstellen implementiert werden soll.  
+- Ob eine oder mehrere generische Schnittstellen implementiert werden soll.  
   
      Wenn Sie beispielsweise eine Klasse entwerfen, die zum Erstellen von Elementen in einer Generics-basierten Auflistung verwendet wird, müssen Sie unter Umständen eine Schnittstelle implementieren, z.B. <xref:System.IComparable%601>, wobei `T` der Typ Ihrer Klasse ist.  
   

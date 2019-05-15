@@ -1,5 +1,5 @@
 ---
-title: 'Aus der Schlüsseldatei "<filename>" konnte keine Assembly mit starkem Namen erstellt werden: <error>'
+title: "Aus der Schlüsseldatei '<filename>' konnte keine Assembly mit starkem Namen erstellt werden: <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31026
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61764178"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Kann nicht zum Erstellen der Assembly mit starkem Namen aus der Schlüsseldatei "\<Dateiname >': \<Fehler >
+# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Kann nicht zum Erstellen der Assembly mit starkem Namen aus der Schlüsseldatei '\<Dateiname >': \<Fehler >
 Eine Assembly mit starkem Namen konnte nicht aus der angegebenen Schlüsseldatei erstellt werden.  
   
  **Fehler-ID:** BC31026  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593336"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt (Visual Basic)
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Standardeinstellungen außer Kraft setzen und das `Log` -Objekt dazu bringen können, in andere Protokolllistener zu schreiben.  
@@ -28,11 +28,11 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
      Wenn keine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
 2. Suchen Sie den `<listeners>` -Abschnitt unter dem `<source>` -Abschnitt mit dem `name` -Attribut "DefaultSource" im Abschnitt `<sources>` . Der Abschnitt `<sources>` befindet sich im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
@@ -153,13 +153,13 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
      Dies sind einige der Typen, die Sie verwenden können:  
   
-    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>-Listener, der in ein Dateiprotokoll schreibt.  
+    - Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>-Listener, der in ein Dateiprotokoll schreibt.  
   
-    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>-Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData`-Parameter angegeben ist.  
+    - Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>-Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData`-Parameter angegeben ist.  
   
-    -   Die Listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, die in die Datei schreiben, die im `initializeData`-Parameter angegeben ist.  
+    - Die Listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, die in die Datei schreiben, die im `initializeData`-Parameter angegeben ist.  
   
-    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>-Listener, der in die Befehlszeilenkonsole schreibt.  
+    - Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>-Listener, der in die Befehlszeilenkonsole schreibt.  
   
      Informationen dazu, wohin andere Typen von Protokolllistenern Informationen schreiben, finden Sie in der Dokumentation zum entsprechenden Typ.  
   
