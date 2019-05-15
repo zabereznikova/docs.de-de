@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626854"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592307"
 ---
 # <a name="data-binding-and-windows-forms"></a>Datenbindung und Windows Forms
 In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, sondern auch an beinahe alle Strukturen, die Daten enthalten. Sie können an ein Array von Werten binden, die Sie zur Laufzeit berechnen, aus einer Datei lesen oder aus den Werten anderer Steuerelemente ableiten.  
   
- Darüber hinaus können Sie jede Eigenschaft eines beliebigen Steuerelements an die Datenquelle binden. Bei der herkömmlichen Datenbindung binden Sie die Anzeigeeigenschaft, z. B. die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft eines <xref:System.Windows.Forms.TextBox>-Steuerelements, normalerweise an die Datenquelle. Mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] haben Sie außerdem die Möglichkeit, weitere Eigenschaften durch Bindung festzulegen. Mithilfe der Bindung können Sie folgende Aufgaben ausführen:  
+ Darüber hinaus können Sie jede Eigenschaft eines beliebigen Steuerelements an die Datenquelle binden. Bei der herkömmlichen Datenbindung binden Sie die Anzeigeeigenschaft, z. B. die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft eines <xref:System.Windows.Forms.TextBox>-Steuerelements, normalerweise an die Datenquelle. Mit .NET Framework können Sie auch weitere Eigenschaften durch Bindung festzulegen. Mithilfe der Bindung können Sie folgende Aufgaben ausführen:  
   
 - Festlegen der Grafik eines Bildsteuerelements.  
   

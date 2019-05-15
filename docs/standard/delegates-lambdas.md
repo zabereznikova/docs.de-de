@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656153"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615316"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
@@ -46,9 +46,9 @@ public class Program
 
 Um den Entwicklungsprozess zu optimieren, enthält .NET eine Reihe von Delegattypen, die Programmierer verwenden können, damit sie keine neuen Typen erstellen müssen. Dies sind `Func<>`, `Action<>` und `Predicate<>`. Sie können an verschiedenen Stellen in den .NET-APIs verwendet werden, ohne dass neue Delegattypen definiert werden müssen. Natürlich gibt es Unterschiede zwischen den drei Typen, wie Sie in ihren Signaturen erkennen können. Hierbei handelt es sich meist um Unterschiede in der Art und Weise der Verwendung dieser Typen:
 
-*   `Action<>` wird verwendet, wenn eine Aktion mithilfe der Argumente des Delegaten ausgeführt werden muss.
-*   `Func<>` wird üblicherweise verwendet, wenn eine Transformation ausgeführt werden muss, Sie also die Argumente des Delegaten in ein anderes Ergebnis transformieren müssen. Projektionen sind ein gutes Beispiel hierfür.
-*   `Predicate<>` wird verwendet, wenn Sie ermitteln müssen, ob das Argument die Bedingung des Delegaten erfüllt. Der Typ kann auch als `Func<T, bool>` geschrieben werden.
+* `Action<>` wird verwendet, wenn eine Aktion mithilfe der Argumente des Delegaten ausgeführt werden muss.
+* `Func<>` wird üblicherweise verwendet, wenn eine Transformation ausgeführt werden muss, Sie also die Argumente des Delegaten in ein anderes Ergebnis transformieren müssen. Projektionen sind ein gutes Beispiel hierfür.
+* `Predicate<>` wird verwendet, wenn Sie ermitteln müssen, ob das Argument die Bedingung des Delegaten erfüllt. Der Typ kann auch als `Func<T, bool>` geschrieben werden.
 
 Wir schreiben jetzt das obige Beispiel neu, indem wir den `Func<>`-Delegaten anstelle eines benutzerdefinierten Typs verwenden. Das Programm wird weiterhin genau gleich ausgeführt.
 
@@ -159,6 +159,6 @@ Der `+=`-Operator in diesem Kontext wird zum Abonnieren eines [Ereignisses](../.
 
 ## <a name="further-reading-and-resources"></a>Weitere Informationen und Ressourcen
 
-*   [Delegaten](../../docs/csharp/programming-guide/delegates/index.md)
-*   [Anonyme Funktionen](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Lambda-Ausdrücke](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Delegaten](../../docs/csharp/programming-guide/delegates/index.md)
+* [Anonyme Funktionen](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Lambda-Ausdrücke](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 465f1d8141f51de179dbb4e963a8fcac8c09fa33
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022310"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592696"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekte in Visual Basic
-Wenn Sie neue Anwendungen oder Komponenten erstellen möchten, empfiehlt es sich zum Erstellen von .NET Framework-Assemblys. Allerdings erleichtert Visual Basic auch .NET Framework-Komponenten für COM verfügbar gemacht. Dadurch können Sie frühere anwendungssuites neue Komponenten bereit, die COM-Komponenten erfordern. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Visual Basic verwenden, um verfügbar zu machen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Objekte als COM-Objekte mit und ohne COM-Klassenvorlage.  
+Wenn Sie neue Anwendungen oder Komponenten erstellen möchten, empfiehlt es sich zum Erstellen von .NET Framework-Assemblys. Allerdings erleichtert Visual Basic auch .NET Framework-Komponenten für COM verfügbar gemacht. Dadurch können Sie frühere anwendungssuites neue Komponenten bereit, die COM-Komponenten erfordern. Diese exemplarische Vorgehensweise veranschaulicht, wie Sie mithilfe von Visual Basic .NET Framework-Objekte als COM-Objekte mit und ohne COM-Klassenvorlage verfügbar zu machen.  
   
  Die einfachste Möglichkeit zum COM-Objekte verfügbar zu machen, ist die Verwendung von COM-Klassenvorlage. COM-Klassenvorlage erstellt eine neue Klasse, und klicken Sie dann Ihr Projekt zum Generieren der Klasse und Interoperabilität-Schicht als COM-Objekt, und registrieren Sie ihn mit dem Betriebssystem konfiguriert.  
   

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626295"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF
 Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model). In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.  
   
--   Der Remotedienst gibt ein Objekt per Wert an den Client zurück.  
+- Der Remotedienst gibt ein Objekt per Wert an den Client zurück.  
   
--   Der Client sendet einen Objekt per Wert an den Remotedienst.  
+- Der Client sendet einen Objekt per Wert an den Remotedienst.  
   
--   Der Remotedienst gibt ein Objekt per Verweis an den Client zurück.  
+- Der Remotedienst gibt ein Objekt per Verweis an den Client zurück.  
   
  Aus Sicherheitsgründen ist es in WCF nicht zulässig, ein Objekt per Verweis vom Client an den Dienst zu senden. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden.  Weitere Informationen zu Duplexdiensten finden Sie unter [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)
 - [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md)

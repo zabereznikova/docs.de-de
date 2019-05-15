@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858038"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592747"
 ---
 # <a name="duplex-services"></a>Duplexdienste
 
@@ -87,10 +87,10 @@ Der folgende Beispielcode zeigt, wie Sie die Clientendpunktadresse in der Konfig
 ```
 
 > [!WARNING]
-> Das Schließen des zugehörigen Kanals durch einen Dienst oder Client wird vom Duplexmodell nicht in jedem Fall automatisch erkannt. Wenn ein Client unerwartet beendet wird, wird der Dienst daher (standardmäßig) nicht benachrichtigt. Clients und Dienste können eigene Protokolle implementieren, um sich bei Bedarf wechselseitig zu benachrichtigen.
+> Das Schließen des zugehörigen Kanals durch einen Dienst oder Client wird vom Duplexmodell nicht in jedem Fall automatisch erkannt. Also, wenn ein Client unerwartet beendet wird, wird standardmäßig der Dienst nicht benachrichtigt werden, oder wenn ein Dienst unerwartet beendet wird, wird der Client nicht benachrichtigt. Clients und Dienste können eigene Protokolle implementieren, um sich bei Bedarf wechselseitig zu benachrichtigen. Weitere Informationen zur Fehlerbehandlung finden Sie unter [WCF-Fehlerbehandlung](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
-- [Angeben des Clientlaufzeitverhaltens](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Vorgehensweise: Erstellen einer Kanalfactory und zum Erstellen und Verwalten von Kanälen](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Duplex](../samples/duplex.md)
+- [Angeben des Clientlaufzeitverhaltens](../specifying-client-run-time-behavior.md)
+- [Vorgehensweise: Erstellen einer Kanalfactory und zum Erstellen und Verwalten von Kanälen](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

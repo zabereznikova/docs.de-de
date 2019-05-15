@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498072"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622774"
 ---
 # <a name="latency-modes"></a>Latenzmodi
 Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads einer Anwendung beenden. In einigen Situationen, z. B. wenn eine Anwendung Daten abruft oder Inhalte anzeigt, kann eine vollständige Garbage Collection zu einem kritischen Zeitpunkt erfolgen und die Leistung beeinträchtigen. Sie können das Ausmaß der Garbage Collection anpassen, indem Sie die <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>-Werte festlegen.  
   
  Der Begriff Latenz bezieht sich auf die Zeit, während der der Garbage Collector in die Anwendung eingreift. In Zeiten mit geringer Latenz verhält sich der Garbage Collector bei der Freigabe von Objekten zurückhaltender und weniger intrusiv. Die <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>-Enumeration bietet zwei Einstellungen mit geringer Latenz:  
   
--   <xref:System.Runtime.GCLatencyMode.LowLatency> unterdrückt Garbage Collections der Generation 2 und führt nur Garbage Collections der Generationen 0 und 1 aus. Diese Einstellung kann nur für kurze Zeiträume verwendet werden. Über längere Zeiträume (und wenn auf dem System nicht genügend Arbeitsspeicher vorhanden ist) löst der Garbage Collector eine Auflistung aus, die die Anwendung kurz anhalten und einen zeitkritischen Vorgang unterbrechen kann. Diese Einstellung ist nur für die Garbage Collection auf Arbeitsstationen verfügbar.  
+- <xref:System.Runtime.GCLatencyMode.LowLatency> unterdrückt Garbage Collections der Generation 2 und führt nur Garbage Collections der Generationen 0 und 1 aus. Diese Einstellung kann nur für kurze Zeiträume verwendet werden. Über längere Zeiträume (und wenn auf dem System nicht genügend Arbeitsspeicher vorhanden ist) löst der Garbage Collector eine Auflistung aus, die die Anwendung kurz anhalten und einen zeitkritischen Vorgang unterbrechen kann. Diese Einstellung ist nur für die Garbage Collection auf Arbeitsstationen verfügbar.  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> unterdrückt Garbage Collections der Generation 2 im Vordergrund und führt nur Garbage Collections der Generationen 0 und 1 sowie Garbage Collections der Generation 2 im Hintergrund aus. Diese Einstellung kann für längere Zeiträume verwendet werden und ist für die Garbage Collection für die Arbeitsstation und für die Garbage Collection auf dem Server verfügbar. Diese Einstellung kann nicht verwendet werden, wenn die [gleichzeitige Garbage Collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) deaktiviert ist.  
+- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> unterdrückt Garbage Collections der Generation 2 im Vordergrund und führt nur Garbage Collections der Generationen 0 und 1 sowie Garbage Collections der Generation 2 im Hintergrund aus. Diese Einstellung kann für längere Zeiträume verwendet werden und ist für die Garbage Collection für die Arbeitsstation und für die Garbage Collection auf dem Server verfügbar. Diese Einstellung kann nicht verwendet werden, wenn die [gleichzeitige Garbage Collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) deaktiviert ist.  
   
  In Zeiten mit geringer Latenz werden Garbage Collections der Generation 2 unterdrückt, außer wenn Folgendes geschieht:  
   
--   Das System erhält vom Betriebssystem eine Benachrichtigung über unzureichenden Arbeitsspeicher.  
+- Das System erhält vom Betriebssystem eine Benachrichtigung über unzureichenden Arbeitsspeicher.  
   
--   Der Anwendungscode initiiert eine Garbage Collection, indem die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode aufgerufen und für den `generation`-Parameter der Wert "2" angegeben wird.  
+- Der Anwendungscode initiiert eine Garbage Collection, indem die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode aufgerufen und für den `generation`-Parameter der Wert "2" angegeben wird.  
   
  In der folgenden Tabelle werden die Anwendungsszenarien für die Verwendung der <xref:System.Runtime.GCLatencyMode>-Werte aufgeführt.  
   
@@ -42,17 +42,17 @@ Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads
 ## <a name="guidelines-for-using-low-latency"></a>Richtlinien für die Verwendung von geringer Latenz  
  Beachten Sie beim Verwenden des <xref:System.Runtime.GCLatencyMode.LowLatency>-Modus die folgenden Richtlinien:  
   
--   Halten Sie die Zeiten mit geringer Latenz möglichst kurz.  
+- Halten Sie die Zeiten mit geringer Latenz möglichst kurz.  
   
--   Vermeiden Sie es, in Zeiten mit geringer Latenz große Speichermengen zu belegen. Benachrichtigungen über unzureichenden Arbeitsspeicher können ausgegeben werden, wenn die Garbage Collection weniger Objekte freigibt.  
+- Vermeiden Sie es, in Zeiten mit geringer Latenz große Speichermengen zu belegen. Benachrichtigungen über unzureichenden Arbeitsspeicher können ausgegeben werden, wenn die Garbage Collection weniger Objekte freigibt.  
   
--   Minimieren Sie im Modus für geringe Latenz die Anzahl der Zuordnungen, insbesondere Zuordnungen für den großen Objektheap und fixierte Objekte.  
+- Minimieren Sie im Modus für geringe Latenz die Anzahl der Zuordnungen, insbesondere Zuordnungen für den großen Objektheap und fixierte Objekte.  
   
--   Achten Sie auf potenziell zuordnende Threads. Weil die Einstellung der <xref:System.Runtime.GCSettings.LatencyMode%2A>-Eigenschaft prozessweit gültig ist, könnte für jeden potenziell zuordnenden Thread eine <xref:System.OutOfMemoryException> ausgelöst werden.  
+- Achten Sie auf potenziell zuordnende Threads. Weil die Einstellung der <xref:System.Runtime.GCSettings.LatencyMode%2A>-Eigenschaft prozessweit gültig ist, könnte für jeden potenziell zuordnenden Thread eine <xref:System.OutOfMemoryException> ausgelöst werden.  
   
--   Umschließen Sie den Code mit geringer Latenz in eingeschränkten Ausführungsbereichen (weitere Informationen finden Sie unter [Eingeschränkte Ausführungsbereiche](../../../docs/framework/performance/constrained-execution-regions.md)).  
+- Umschließen Sie den Code mit geringer Latenz in eingeschränkten Ausführungsbereichen (weitere Informationen finden Sie unter [Eingeschränkte Ausführungsbereiche](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
--   Sie können Garbage Collections der Generation 2 in Zeiten mit geringer Latenz erzwingen, indem Sie die <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>-Methode aufrufen.  
+- Sie können Garbage Collections der Generation 2 in Zeiten mit geringer Latenz erzwingen, indem Sie die <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>-Methode aufrufen.  
   
 ## <a name="see-also"></a>Siehe auch
 

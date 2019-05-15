@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652117"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592226"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
 Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem WCF-Dienst erfordert eine wohldefinierte Bindung. Dieses Thema beschreibt die Typen von Kommunikationsdetails, die die Bindungen definieren die Elemente einer Bindung, welche Bindungen in WCF enthalten sind und wie eine Bindung für einen Endpunkt angegeben werden kann.  
@@ -36,9 +36,9 @@ Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Ve
   
 - <xref:System.ServiceModel.WSHttpBinding>: Eine interoperable Bindung, die für Verbindungen mit Endpunkten, die die WS - entsprechen, geeignete * Protokolle.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verbindung mit anderen WCF-Endpunkten auf demselben Computer.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: .NET Framework verwendet bei der Herstellung einer Verbindung mit anderen WCF-Endpunkten auf demselben Computer.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Nachrichten in der Warteschlange Verbindungen mit anderen WCF-Endpunkten zu erstellen.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Verwendet, die in .NET Framework zum Erstellen der Warteschlange Nachrichten-Verbindungen mit anderen WCF-Endpunkten.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Diese Bindung bietet eine höhere Leistung als HTTP-Bindungen und eignet sich ideal für die Verwendung in einem lokalen Netzwerk.
   

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592161"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592547"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592161"
 ## <a name="terminology"></a>Terminologie
  Die in [!INCLUDE[wf1](../../../includes/wf1-md.md)] eingeführte [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Version wird in den übrigen Abschnitten dieses Themas als WF4 bezeichnet.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde in .NET 3.0 eingeführt und hatte einige geringfügige Revisionen über [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. Die [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Version von Workflow Foundation wird in den restlichen Abschnitten dieses Themas als WF3 bezeichnet. WF3 wird in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] parallel mit WF4 ausgeliefert. Weitere Informationen zum Migrieren von WF3-Artefakten zu WF4 finden Sie unter: [Migrationsanleitung für Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der wichtigsten Komponenten von der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+ Windows Communication Foundation (WCF) ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der wichtigsten Komponenten von .NET Framework.
 
  Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 wurde mit einem auf SQL-basierenden Nachverfolgungsdienst geliefert.  Dieser Dienst funktionierte im Batchmodus und in Nicht-Batch-Modi.  Im Nicht-Batch-Modus werden Nachverfolgungsereignisse direkt in die Datenbank geschrieben.  Im Batchmodus werden Nachverfolgungsereignisse im selben Batch wie der Workflowinstanzzustand gesammelt.  Der Batchmodus weist für den größten Bereich von Workflowentwürfen die beste Leistung auf.  Die Batchverarbeitung kann jedoch negative Auswirkungen auf die Leistung haben, wenn der Workflow viele Aktivitäten ohne Persistenz ausführt und diese Aktivitäten nachverfolgt werden.  Dies trat am häufigsten in Schleifen auf. Dieses Szenario wird am besten vermieden, indem große Schleifen entworfen werden, die einen Persistenzpunkt enthalten.  Das Einfügen eines Persistenzpunkts in eine Schleife kann negative Auswirkungen auf die Leistung haben. Daher müssen sich die jeweiligen Kosten gegeneinander aufwiegen.
 
- WF4 wird nicht mit einem SQL-Nachverfolgungsdienst bereitgestellt.  Das Aufzeichnen von Nachverfolgungsinformationen in einer SQL-Datenbank kann besser über einen Anwendungsserver als über eine Integration in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] abgewickelt werden. Daher wird die SQL-Nachverfolgung jetzt von AppFabric abgewickelt.  Der Standardnachverfolgungsanbieter in WF4 basiert auf der Ereignisablaufverfolgung für Windows (ETW).
+ WF4 wird nicht mit einem SQL-Nachverfolgungsdienst bereitgestellt.  Aufzeichnen von Nachverfolgungsinformationen in einer SQL­Datenbank kann besser von einem Anwendungsserver verarbeitet anstatt im .NET Framework integriert. Daher wird die SQL-Nachverfolgung jetzt von AppFabric abgewickelt.  Der Standardnachverfolgungsanbieter in WF4 basiert auf der Ereignisablaufverfolgung für Windows (ETW).
 
  ETW ist ein in Windows integriertes Ereignissystem mit niedriger Latenzzeit auf Kernelebene.  Es verwendet ein Anbieter-/Consumermodell, das ermöglicht, dass die Strafe für die Ereignisablaufverfolgung nur übernommen wird, wenn tatsächlich ein Consumer vorhanden ist.  Zusätzlich zu Kernel-Ereignissen, wie z. B. Prozessor, Datenträger, Arbeitsspeicher und Netzwerkverwendung, nutzen auch viele Anwendungen ETW.  ETW-Ereignisse sind insofern leistungsstärker als Leistungsindikatoren, da Ereignisse an die Anwendung angepasst werden können.  Ein Ereignis kann Text enthalten, wie z. B. eine Workflow-ID oder eine Informationsmeldung.  Zudem werden Ereignisse mit Bitmasken kategorisiert, da die Verarbeitung einer bestimmten Teilmenge von Ereignissen geringere Auswirkungen auf die Leistung als das Erfassen sämtlicher Ereignisse hat.
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609459"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590080"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Auflösen von externen XSLT-Stylesheets und Dokumenten
 Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
@@ -20,16 +20,16 @@ Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auf
   
  Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen:  
   
--   Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein externes Stylesheet zu suchen.  
+- Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein externes Stylesheet zu suchen.  
   
--   Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein beliebiges `<xsl:include>`-Element oder ein beliebiges `<xsl:import>`-Element im Stylesheet aufzulösen.  
+- Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein beliebiges `<xsl:include>`-Element oder ein beliebiges `<xsl:import>`-Element im Stylesheet aufzulösen.  
   
--   Während <xref:System.Xml.Xsl.XslTransform.Transform%2A> ausgeführt wird, um eine beliebige `document()`-Funktion aufzulösen.  
+- Während <xref:System.Xml.Xsl.XslTransform.Transform%2A> ausgeführt wird, um eine beliebige `document()`-Funktion aufzulösen.  
   
 ## <a name="using-the-xmlresolver-class"></a>Verwenden der XmlResolver-Klasse  
  Wenn für den Zugriff auf eine Netzwerkressource eine Authentifizierung erforderlich ist, verwenden Sie die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden, die über einen <xref:System.Xml.XmlResolver>-Parameter verfügen, um das <xref:System.Xml.XmlResolver>-Objekt zu übergeben, bei dem die notwendigen Anmeldeeigenschaften festgelegt sind.  
   
- Wenn Sie einen benutzerdefinierten <xref:System.Xml.XmlResolver> verwenden möchten, oder wenn Sie abweichende Anmeldeinformationen angeben müssen, finden Sie in der nachfolgenden Tabelle die erforderliche Vorgehensweise, je nach dem, für das Auflösen der externen Ressource erforderlichen Zeitpunkt.  
+ Wenn Sie einen benutzerdefinierten <xref:System.Xml.XmlResolver> verwenden möchten, oder wenn Sie abweichende Anmeldeinformationen angeben müssen, finden Sie in der nachfolgenden Tabelle die erforderliche Vorgehensweise, je nach dem für das Auflösen der externen Ressource erforderlichen Zeitpunkt.  
   
 |Aufzulösender Prozess|Erforderliche Vorgehensweise|  
 |--------------------------------------|-------------------|  

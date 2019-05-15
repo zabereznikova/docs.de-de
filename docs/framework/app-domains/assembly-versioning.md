@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305194"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593656"
 ---
 # <a name="assembly-versioning"></a>Assemblyversionen
 Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
@@ -42,9 +42,9 @@ Jede Version einer Assembly, die die Common Language Runtime verwendet, wird a
 ## <a name="version-information"></a>Versionsinformationen  
  Jede Assembly besitzt zwei unterschiedliche Methoden zur Darstellung der Versionsinformationen:  
   
--   Die Versionsnummer der Assembly, die zusammen mit dem Assemblynamen und den Kulturinformationen zur Identität der Assembly gehört. Diese Nummer wird von der Common Language Runtime zum Erzwingen von Versionsrichtlinien verwendet und spielt zur Laufzeit eine Schlüsselrolle im Vorgang der Typauflösung.  
+- Die Versionsnummer der Assembly, die zusammen mit dem Assemblynamen und den Kulturinformationen zur Identität der Assembly gehört. Diese Nummer wird von der Common Language Runtime zum Erzwingen von Versionsrichtlinien verwendet und spielt zur Laufzeit eine Schlüsselrolle im Vorgang der Typauflösung.  
   
--   Eine Informationsversion, d. h. eine Zeichenfolge, die zusätzliche Versionsinformationen enthält und ausschließlich Informationszwecken dient.  
+- Eine Informationsversion, d. h. eine Zeichenfolge, die zusätzliche Versionsinformationen enthält und ausschließlich Informationszwecken dient.  
   
 ### <a name="assembly-version-number"></a>Assemblyversionsnummer  
  Die Versionsnummer ist Teil der Identität einer Assembly. Daher betrachtet die Common Language Runtime zwei Assemblys mit unterschiedlichen Versionsnummern als zwei völlig verschiedene Assemblys. Diese Versionsnummer wird physisch als vierteilige Zeichenfolge im folgenden Format dargestellt:  

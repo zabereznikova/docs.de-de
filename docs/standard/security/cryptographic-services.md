@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795303"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592734"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -112,7 +112,7 @@ Die Verschlüsselung mit geheimem Schlüssel hat den Nachteil, dass sich zwei Te
 
 Vorausgesetzt, dass Alice und Bob um zwei Teilnehmer, die über einen unsicheren Kanal miteinander kommunizieren möchten handelt, können sie die Verschlüsselung mit geheimem Schlüssel wie folgt verwenden: Alice und Bob stimmen auf einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erstellt einen Netzwerkstream (eventuell eine benannte Pipe oder eine Netzwerk-e-Mail) auf dem die Nachricht zu senden. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementiert werden:
+.NET Framework bietet die folgenden Klassen, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
 
 - <xref:System.Security.Cryptography.AesManaged> (eingeführt in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
 
@@ -154,7 +154,7 @@ In der folgenden Liste werden Kryptographiealgorithmen mit öffentlichem und geh
 
 - Algorithmen mit öffentlichem Schlüssel sind im Vergleich zu Algorithmen mit geheimem Schlüssel extrem langsam und für die Verschlüsselung großer Datenmengen nicht geeignet. Algorithmen mit öffentlichem Schlüssel sind nur für die Übertragung sehr kleiner Datenmengen sinnvoll. In der Regel werden bei der Verschlüsselung mit öffentlichem Schlüssel ein Schlüssel und ein Initialisierungsvektor verschlüsselt, die in einem Algorithmus mit geheimem Schlüssel verwendet werden sollen. Nach der Übertragung von Schlüssel und Initialisierungsvektor wird für die restliche Sitzung die Verschlüsselung mit geheimem Schlüssel verwendet.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Verschlüsselungsalgorithmen mit öffentlichem Schlüssel implementiert werden:
+.NET Framework bietet die folgenden Klassen, die Algorithmen für Verschlüsselung mit öffentlichem Schlüssel implementieren:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Um die Kryptografie mit öffentlichem Schlüssel zum digitalen Signieren einer N
 > [!NOTE]
 > Eine Signatur kann von jedem überprüft werden, da der öffentliche Schlüssel des Absenders allgemein bekannt und in der Regel im digitalen Signaturformat enthalten ist. Mit dieser Methode wird die Nachricht nicht geheim gehalten. Hierzu muss sie zusätzlich verschlüsselt werden.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die digitale Signaturalgorithmen implementiert werden:
+.NET Framework bietet die folgenden Klassen, die digitale Signaturalgorithmen implementiert:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten von Alice lesen, da sie als Klartext übertragen werden. Vollständige Sicherheit ist in der Regel nur mit digitalen Signaturen (Signieren von Nachrichten) und Verschlüsselung möglich.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Hashalgorithmen implementiert werden:
+.NET Framework bietet die folgenden Klassen, die Hashalgorithmen implementiert:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten 
 
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung
 
-Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] erzeugen mit Zufallszahlengeneratoren kryptografische Schlüssel.
+Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in .NET Framework verwenden Zufallszahlengeneratoren kryptografische Schlüssel zu generieren.
 
 Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.
 

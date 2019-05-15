@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698890"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625620"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Benutzerdefinierte Partitionierer für PLINQ und TPL
 Einer der wesentlichen Schritte, um einen Vorgang für eine Datenquelle zu parallelisieren, ist das *Partitionieren* der Quelle in mehrere Abschnitte, auf die mehrere Threads gleichzeitig zugreifen können. PLINQ und die Task Parallel Library (TPL) stellen standardmäßige Partitionierer bereit, die transparent arbeiten, wenn Sie eine parallele Abfrage oder <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife schreiben. Für erweiterte Szenarien können Sie Ihren eigenen Partitionierer einbeziehen.  
@@ -43,7 +43,7 @@ Einer der wesentlichen Schritte, um einen Vorgang für eine Datenquelle zu paral
   
 |Überladung|Verwendet Lastenausgleich|  
 |--------------|-------------------------|  
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Immer|  
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Always|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Wenn das boolesche Argument als „true“ angegeben wird|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Wenn das boolesche Argument als „true“ angegeben wird|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Nie|  
@@ -100,25 +100,25 @@ Einer der wesentlichen Schritte, um einen Vorgang für eine Datenquelle zu paral
 ### <a name="contract-for-partitioners"></a>Vertrag für Partitionierer  
  Wenn Sie einen benutzerdefinierten Partitionierer implementieren, befolgen Sie diese Richtlinien, um ordnungsgemäße Interaktion mit PLINQ und <xref:System.Threading.Tasks.Parallel.ForEach%2A> in der TPL sicherzustellen:  
   
--   Wenn <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> mit einem Argument von 0 (null) oder weniger für `partitionsCount` aufgerufen wird, soll <xref:System.ArgumentOutOfRangeException> ausgelöst werden. Obwohl PLINQ und TPL niemals eine `partitionCount` gleich 0 übergeben werden, sollten Sie dennoch einen Schutz vor dieser Möglichkeit einbauen.  
+- Wenn <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> mit einem Argument von 0 (null) oder weniger für `partitionsCount` aufgerufen wird, soll <xref:System.ArgumentOutOfRangeException> ausgelöst werden. Obwohl PLINQ und TPL niemals eine `partitionCount` gleich 0 übergeben werden, sollten Sie dennoch einen Schutz vor dieser Möglichkeit einbauen.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> sollten stets eine `partitionsCount` Anzahl von Partitionen zurückgeben. Wenn dem Partitionierer keine Daten mehr zur Verfügung stehen, sodass er nicht mehr so viele Partitionen wie angefordert erstellen kann, sollte die Methode für jede der verbleibenden Partitionen einen leeren Enumerator zurückgeben. Andernfalls löst sowohl PLINQ als auch TPL eine <xref:System.InvalidOperationException> aus.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> sollten stets eine `partitionsCount` Anzahl von Partitionen zurückgeben. Wenn dem Partitionierer keine Daten mehr zur Verfügung stehen, sodass er nicht mehr so viele Partitionen wie angefordert erstellen kann, sollte die Methode für jede der verbleibenden Partitionen einen leeren Enumerator zurückgeben. Andernfalls löst sowohl PLINQ als auch TPL eine <xref:System.InvalidOperationException> aus.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> sollten niemals `null` (`Nothing` in Visual Basic) zurückgeben. Wenn dies doch der Fall ist, lösen PLINQ/TPL eine <xref:System.InvalidOperationException> aus.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> und <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> sollten niemals `null` (`Nothing` in Visual Basic) zurückgeben. Wenn dies doch der Fall ist, lösen PLINQ/TPL eine <xref:System.InvalidOperationException> aus.  
   
--   Partitionen zurückgebende Methoden sollten immer Partitionen zurückgeben, die die Datenquelle vollständig und eindeutig aufzählen können. Sofern nicht ausdrücklich vom Entwurf des Partitionierers gefordert, dürfen in der Datenquelle keine Duplikate oder übersprungenen Elemente enthalten sein. Wenn diese Regel nicht befolgt wird, kann die Ausgabereihenfolge durcheinander geraten.  
+- Partitionen zurückgebende Methoden sollten immer Partitionen zurückgeben, die die Datenquelle vollständig und eindeutig aufzählen können. Sofern nicht ausdrücklich vom Entwurf des Partitionierers gefordert, dürfen in der Datenquelle keine Duplikate oder übersprungenen Elemente enthalten sein. Wenn diese Regel nicht befolgt wird, kann die Ausgabereihenfolge durcheinander geraten.  
   
--   Die folgenden booleschen Getter müssen immer genau die folgenden Werte zurückgeben, damit die Reihenfolge der Ausgabe nicht durcheinander gerät:  
+- Die folgenden booleschen Getter müssen immer genau die folgenden Werte zurückgeben, damit die Reihenfolge der Ausgabe nicht durcheinander gerät:  
   
-    -   `KeysOrderedInEachPartition`: Jede Partition gibt Elemente mit zunehmenden Schlüsselindizes zurück.  
+    - `KeysOrderedInEachPartition`: Jede Partition gibt Elemente mit zunehmenden Schlüsselindizes zurück.  
   
-    -   `KeysOrderedAcrossPartitions`: Für alle zurückgegebenen Partitionen sind die Schlüsselindizes in Partition *i* höher als diejenigen in Partition *i*-1.  
+    - `KeysOrderedAcrossPartitions`: Für alle zurückgegebenen Partitionen sind die Schlüsselindizes in Partition *i* höher als diejenigen in Partition *i*-1.  
   
-    -   `KeysNormalized`: Alle Schlüsselindizes nehmen beginnend mit 0 (null) ohne Lücken monoton zu.  
+    - `KeysNormalized`: Alle Schlüsselindizes nehmen beginnend mit 0 (null) ohne Lücken monoton zu.  
   
--   Alle Indizes müssen eindeutig sein. Es darf keine doppelten Indizes geben. Wenn diese Regel nicht befolgt wird, kann die Ausgabereihenfolge durcheinander geraten.  
+- Alle Indizes müssen eindeutig sein. Es darf keine doppelten Indizes geben. Wenn diese Regel nicht befolgt wird, kann die Ausgabereihenfolge durcheinander geraten.  
   
--   Alle Indizes dürfen nicht negativ sein. Wenn diese Regel nicht befolgt wird, kann PLINQ/TPL Ausnahmen auslösen.  
+- Alle Indizes dürfen nicht negativ sein. Wenn diese Regel nicht befolgt wird, kann PLINQ/TPL Ausnahmen auslösen.  
   
 ## <a name="see-also"></a>Siehe auch
 

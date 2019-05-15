@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung in C#
 description: Ein Überblick über die C#-Sprachunterstützung für asynchrone Programmierung mit async, await, Task und Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668678"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064116"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>Das aufgabenbasierte asynchrone Programmiermodell in C\#
 
@@ -22,7 +22,7 @@ Dies ist das Ziel dieser Syntax: Code zu aktivieren, der sich wie eine Folge von
 1. Bestreichen Sie das getoastete Brot mit Butter und Marmelade.
 1. Schenken Sie sich ein Glas Orangensaft ein.
 
-Wenn Sie Erfahrung beim Kochen mitbringen, würden Sie diese Anweisungen **asynchron** ausführen. Sie würden zunächst die Pfanne für die Eier erhitzen und dann mit dem Frühstücksspeck beginnen. Sie würden das Brot in den Toaster stecken und danach mit den Eiern beginnen. Bei jedem Schritt des Prozesses würden Sie eine Aufgabe starten und dann Ihre Aufmerksamkeit auf Aufgaben lenken, die für Ihre Aufmerksamkeit bereit sind.
+Wenn Sie über Erfahrung im Kochen verfügen, würden Sie diese Anweisungen **asynchron** ausführen. Sie würden zunächst die Pfanne für die Eier erhitzen und dann mit dem Frühstücksspeck beginnen. Sie würden das Brot in den Toaster stecken und danach mit den Eiern beginnen. Bei jedem Schritt des Prozesses würden Sie eine Aufgabe starten und dann Ihre Aufmerksamkeit auf Aufgaben lenken, die für Ihre Aufmerksamkeit bereit sind.
 
 Die Zubereitung eines Frühstücks ist ein gutes Beispiel für asynchrone Arbeiten, die nicht parallel ausgeführt werden. Eine Person (oder ein Thread) kann alle diese Aufgaben erledigen. Um beim Beispiel des Frühstücks zu bleiben: Eine Person kann das Frühstück asynchron zubereiten, indem sie die nächste Aufgabe startet, bevor die erste Aufgabe abgeschlossen ist. Die Zubereitung schreitet voran, und zwar unabhängig davon, ob jemand eine Auge darauf hat oder nicht. Sobald Sie damit beginnen, die Pfanne für die Eier zu erhitzen, können Sie mit dem Braten des Frühstücksspecks beginnen. Nachdem Sie das Braten des Frühstücksspecks begonnen haben, können Sie das Brot in den Toaster stecken.
 

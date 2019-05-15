@@ -2,12 +2,12 @@
 title: Peer Name Resolution-Protokoll (PNRP)
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623020"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution-Protokoll (PNRP)
 In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, um Namen oder andere Arten von Bezeichner in die Netzwerkadressen des jeweils anderen Peers (Adressen, Protokolle und Ports) aufzulösen. In der Vergangenheit ist die Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Mängel im Domänennamenserver (DNS) erschwert worden.  
@@ -20,31 +20,31 @@ In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, u
   
 Das Peer Name Resolution-Protokoll hat die folgenden Eigenschaften:  
   
--   Verteilt und nahezu serverlos. Server werden nur in der Bootstrapping-Phase benötigt.  
+- Verteilt und nahezu serverlos. Server werden nur in der Bootstrapping-Phase benötigt.  
   
--   Speichern Sie die Namensveröffentlichung ohne die Beteiligung Dritter. Im Gegensatz zur DNS-Namensveröffentlichung ist die PNRP-Namensveröffentlichung ohne Verzögerung und kostenlos.  
+- Speichern Sie die Namensveröffentlichung ohne die Beteiligung Dritter. Im Gegensatz zur DNS-Namensveröffentlichung ist die PNRP-Namensveröffentlichung ohne Verzögerung und kostenlos.  
   
--   PNRP wird in Echtzeit aktualisiert. Somit wird die Auflösung veralteter Adressen verhindert.  
+- PNRP wird in Echtzeit aktualisiert. Somit wird die Auflösung veralteter Adressen verhindert.  
   
--   Die Auflösung von Namen per PNRP erstreckt sich über Computer hinaus, indem die Namensauflösung für Dienste zugelassen wird.  
+- Die Auflösung von Namen per PNRP erstreckt sich über Computer hinaus, indem die Namensauflösung für Dienste zugelassen wird.  
   
 ## <a name="the-systemnetpeertopeer-namespace"></a>Der System.Net.PeerToPeer-Namespace  
   
--   Die PNRP-Funktionalität wird durch den <xref:System.Net.PeerToPeer>-Namespace in .NET Framework, Version 3.5 definiert. Sie stellt eine Reihe von Typen zur Verfügung, die zum Registrieren und Auflösen von Peernamen mit einem verfügbaren PNRP-Dienst verwendet werden können.  
+- Die PNRP-Funktionalität wird durch den <xref:System.Net.PeerToPeer>-Namespace in .NET Framework, Version 3.5 definiert. Sie stellt eine Reihe von Typen zur Verfügung, die zum Registrieren und Auflösen von Peernamen mit einem verfügbaren PNRP-Dienst verwendet werden können.  
   
--   (PNRP und benutzerdefinierte PeerResolver können mithilfe der im <xref:System.ServiceModel.PeerResolvers>-Namespace zur Verfügung gestellten Typen instanziiert und erstellt werden.)  
+- (PNRP und benutzerdefinierte PeerResolver können mithilfe der im <xref:System.ServiceModel.PeerResolvers>-Namespace zur Verfügung gestellten Typen instanziiert und erstellt werden.)  
   
--   Die grundlegenden Typen, die zum Registrieren und Auflösen von Namen mit einem verfügbaren PNRP-Dienst verwendet werden, sind wie folgt:  
+- Die grundlegenden Typen, die zum Registrieren und Auflösen von Namen mit einem verfügbaren PNRP-Dienst verwendet werden, sind wie folgt:  
   
--   <xref:System.Net.PeerToPeer.Cloud>: Definiert die Informationen, die eine verfügbare PNRP-Cloud, einschließlich ihres Bereichs beschreiben.  
+- <xref:System.Net.PeerToPeer.Cloud>: Definiert die Informationen, die eine verfügbare PNRP-Cloud, einschließlich ihres Bereichs beschreiben.  
   
--   <xref:System.Net.PeerToPeer.PeerName>: Definiert einen Peernamen, der zum Registrieren und anschließendem Auflösen von einem Peer in einer Cloud verwendet werden kann.  
+- <xref:System.Net.PeerToPeer.PeerName>: Definiert einen Peernamen, der zum Registrieren und anschließendem Auflösen von einem Peer in einer Cloud verwendet werden kann.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRecord>: Definiert den Datensatz in der PNRP-Cloud, die die Registrierungsinformationen für einen Peer enthält, der die Netzwerk-Endpunkte mit einschließt, an denen der Peer kontaktiert werden kann.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: Definiert den Datensatz in der PNRP-Cloud, die die Registrierungsinformationen für einen Peer enthält, der die Netzwerk-Endpunkte mit einschließt, an denen der Peer kontaktiert werden kann.  
   
--   <xref:System.Net.PeerToPeer.PeerNameRegistration>: Definiert den Registrierungsvorgang für einen Peernamen, einschließlich der Methoden, um die Peer-Namensregistrierung zu starten oder zu beenden.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Definiert den Registrierungsvorgang für einen Peernamen, einschließlich der Methoden, um die Peer-Namensregistrierung zu starten oder zu beenden.  
   
--   <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiert den Prozess zum Auflösen eines Peernamens in den/die zugehörigen Netzwerk-Endpunkt(e), einschließlich der synchronen und asynchronen Methoden für die Auflösung.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiert den Prozess zum Auflösen eines Peernamens in den/die zugehörigen Netzwerk-Endpunkt(e), einschließlich der synchronen und asynchronen Methoden für die Auflösung.  
   
 ## <a name="see-also"></a>Siehe auch
 

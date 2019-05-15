@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211782"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583459"
 ---
 # <a name="windows-forms-overview"></a>Übersicht über Windows Forms
 
@@ -22,7 +22,7 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
 
 ### <a name="build-rich-interactive-user-interfaces"></a>Erstellen Sie vielseitige, interaktive Benutzeroberflächen
 
- Windows Forms ist die Technologie zur Erstellung intelligenter Clients für [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dieser Satz verwalteter Bibliotheken erleichtert allgemeine Anwendungsaufgaben, z. B. Lese- und Schreibzugriffe auf das Dateisystem. Wenn Sie eine Entwicklungsumgebung wie Visual Studio verwenden, können Sie die Windows Forms-Smart Client-Anwendungen, die Informationen anzeigen, Eingaben von Benutzern anfordern, und die Kommunikation mit Remotecomputern erstellen, über ein Netzwerk.
+ Windows Forms ist eine smart Clienttechnologie für die .NET Framework, ein Satz verwalteter Bibliotheken, die generelle Anwendungsaufgaben wie Lesen und Schreiben in das Dateisystem zu vereinfachen. Wenn Sie eine Entwicklungsumgebung wie Visual Studio verwenden, können Sie die Windows Forms-Smart Client-Anwendungen, die Informationen anzeigen, Eingaben von Benutzern anfordern, und die Kommunikation mit Remotecomputern erstellen, über ein Netzwerk.
 
  In Windows Forms stellt ein *Formular* eine visuelle Oberfläche dar, auf der Informationen für den Benutzer angezeigt werden. In der Regel erstellen Sie Windows Forms-Anwendungen, indem Sie Steuerelemente in Formulare einfügen und Antworten auf Benutzeraktionen, wie Maus- und Tastatureingaben, entwickeln. Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement (UI-Element), das Daten anzeigt oder Dateneingaben akzeptiert.
 
@@ -90,7 +90,7 @@ Eine umfassende Einführung in [!INCLUDE[ndptecclick](../../../includes/ndpteccl
 
 ### <a name="other-controls-and-features"></a>Andere Steuerelemente und features
 
-In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus bedient sich Windows Forms des stabilen Sicherheitssystems von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Mit diesem System können Sie für Ihre Kunden Anwendungen bereitstellen, die erhöhte Sicherheitsanforderungen erfüllen.
+In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus verwendet die stabiles Sicherheitssystem von .NET Framework Windows Forms. Mit diesem System können Sie für Ihre Kunden Anwendungen bereitstellen, die erhöhte Sicherheitsanforderungen erfüllen.
 
 #### <a name="implement-other-controls-and-features"></a>Implementieren Sie weiterer Steuerelemente und features
 

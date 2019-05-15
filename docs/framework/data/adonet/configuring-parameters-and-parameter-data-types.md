@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034553"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583826"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurieren von Parametern und Parameterdatentypen
 
@@ -33,7 +33,7 @@ Beim Hinzufügen von Parametern müssen Sie für alle Parameter, die keine Einga
 
 ## <a name="working-with-parameter-placeholders"></a>Arbeiten mit Parameterplatzhaltern
 
-Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquelle. Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter handhaben die Benennung und das Angeben von Parametern und Parameterplatzhaltern unterschiedlich. Diese Syntax wird an eine bestimmte Datenquelle angepasst, wie in der folgenden Tabelle beschrieben.
+Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquelle. Die .NET Framework-Datenanbieter handhaben die Benennung und das Angeben von Parametern und Parameterplatzhaltern unterschiedlich. Diese Syntax wird an eine bestimmte Datenquelle angepasst, wie in der folgenden Tabelle beschrieben.
 
 |Datenanbieter|Syntax für Parameterbenennung|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquell
 
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen
 
-Der Datentyp eines Parameters ist abhängig vom [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter. Durch Angabe des Typs wird der Wert von `Parameter` in den Typ des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters konvertiert, bevor er an die Datenquelle übergeben wird. Der Typ eines `Parameter` kann auch in generischer Form angegeben werden, indem die `DbType` -Eigenschaft des `Parameter` -Objekts auf einen bestimmten <xref:System.Data.DbType>festgelegt wird.
+Der Datentyp eines Parameters ist jeweils datenanbieterspezifisch. Gibt den Typ konvertiert den Wert der `Parameter` in den .NET Framework-Anbieter-Datentyp vor dem Übergeben des Werts an die Datenquelle. Der Typ eines `Parameter` kann auch in generischer Form angegeben werden, indem die `DbType` -Eigenschaft des `Parameter` -Objekts auf einen bestimmten <xref:System.Data.DbType>festgelegt wird.
 
-Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbietertyp eines `Parameter` -Objekts wird vom [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typ des `Value` des `Parameter` -Objekts oder vom `DbType` des `Parameter` -Objekts hergeleitet. Die folgende Tabelle zeigt den abgeleiteten `Parameter` -Typ basierend auf dem als `Parameter` -Wert übergebenen Objekt oder dem angegebenen `DbType`.
+Der .NET Framework-Anbieter-Datentyp, der eine `Parameter` vom .NET Framework-Typ des Objekts abgeleitet wird die `Value` von der `Parameter` -Objekt, oder die `DbType` von der `Parameter` Objekt. Die folgende Tabelle zeigt den abgeleiteten `Parameter` -Typ basierend auf dem als `Parameter` -Wert übergebenen Objekt oder dem angegebenen `DbType`.
 
 |.NET Framework-Typ|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendung
 > [!NOTE]
 > Parametrisierte Anweisungen werden auf dem Server mit `sp_executesql,` ausgeführt, sodass die Wiederverwendung von Abfrageplänen möglich ist. Lokale Cursor oder Variablen im `sp_executesql` -Batch sind für den Batch, der `sp_executesql`aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der `sp_executesql` -Anweisung gültig. Weitere Informationen finden Sie unter [Sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Wenn Sie Parameter mit einem <xref:System.Data.SqlClient.SqlCommand> verwenden, um eine gespeicherte SQL Server-Prozedur auszuführen, müssen die der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung hinzugefügten Parameternamen mit den Namen der Parametermarkierungen in der gespeicherten Prozedur übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server unterstützt keine Fragezeichenplatzhalter (?) für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. Er behandelt die Parameter in der gespeicherten Prozedur als benannte Parameter und sucht nach den entsprechenden Parametermarkierungen. Nehmen wir z. B. an, die gespeicherte Prozedur `CustOrderHist` ist mit einem Parameter mit dem Namen `@CustomerID`definiert. Wenn Ihr Code die gespeicherte Prozedur ausführt, muss er ebenfalls einen Parameter mit dem Namen `@CustomerID`verwenden.
+Wenn Sie Parameter mit einem <xref:System.Data.SqlClient.SqlCommand> verwenden, um eine gespeicherte SQL Server-Prozedur auszuführen, müssen die der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung hinzugefügten Parameternamen mit den Namen der Parametermarkierungen in der gespeicherten Prozedur übereinstimmen. Der .NET Framework-Datenanbieter für SQL Server unterstützt keine Fragezeichenplatzhalter (?) für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. Er behandelt die Parameter in der gespeicherten Prozedur als benannte Parameter und sucht nach den entsprechenden Parametermarkierungen. Nehmen wir z. B. an, die gespeicherte Prozedur `CustOrderHist` ist mit einem Parameter mit dem Namen `@CustomerID`definiert. Wenn Ihr Code die gespeicherte Prozedur ausführt, muss er ebenfalls einen Parameter mit dem Namen `@CustomerID`verwenden.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ Dieses Beispiel zeigt, wie Sie eine gespeicherte SQL Server-Prozedur in der `Nor
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Verwenden von Parametern mit einem "OleDbCommand" oder OdbcCommand
 
-Wenn Sie Parameter mit einem <xref:System.Data.OleDb.OleDbCommand> oder einem <xref:System.Data.Odbc.OdbcCommand>verwenden, muss die Reihenfolge der der `Parameters` -Auflistung hinzugefügten Parameter mit der Reihenfolge der in der gespeicherten Prozedur definierten Parameter übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC behandeln Parameter in einer gespeicherten Prozedur als Platzhalter und wenden Parameterwerte der Reihe nach an. Außerdem müssen der `Parameters` -Auflistung zuerst die Parameter für die Rückgabewerte hinzugefügt werden.
+Wenn Sie Parameter mit einem <xref:System.Data.OleDb.OleDbCommand> oder einem <xref:System.Data.Odbc.OdbcCommand>verwenden, muss die Reihenfolge der der `Parameters` -Auflistung hinzugefügten Parameter mit der Reihenfolge der in der gespeicherten Prozedur definierten Parameter übereinstimmen. Der .NET Framework-Datenanbieter für OLE DB und der .NET Framework-Datenanbieter für ODBC behandeln Parameter in einer gespeicherten Prozedur als Platzhalter und wenden Parameterwerte der Reihe nach an. Außerdem müssen der `Parameters` -Auflistung zuerst die Parameter für die Rückgabewerte hinzugefügt werden.
 
-Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC unterstützen keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. In diesem Fall muss der Fragezeichenplatzhalter (?) verwenden. Dies wird im folgenden Beispiel dargestellt.
+Der .NET Framework-Datenanbieter für OLE DB und der .NET Framework-Datenanbieter für ODBC unterstützen keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. In diesem Fall muss der Fragezeichenplatzhalter (?) verwenden. Dies wird im folgenden Beispiel dargestellt.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

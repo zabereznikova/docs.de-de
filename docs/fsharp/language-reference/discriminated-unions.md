@@ -2,12 +2,12 @@
 title: Unterscheidungs-Unions
 description: Erfahren Sie, wie Sie mit F# Unterscheidungs-Unions.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766025"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557963"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Namen der Union zu qualifizieren. Wenn Sie den Namen immer mit dem Namen der Union qualifiziert werden möchten, können Sie anwenden der [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) -Attribut auf die Definition der union-Typs.
+Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Namen der Union zu qualifizieren. Wenn Sie den Namen immer mit dem Namen der Union qualifiziert werden möchten, können Sie anwenden der [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) -Attribut auf die Definition der union-Typs.
 
 ### <a name="unwrapping-discriminated-unions"></a>Zum Entpacken Unterscheidungs-Unions
 

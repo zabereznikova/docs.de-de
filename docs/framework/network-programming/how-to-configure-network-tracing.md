@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151553"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613714"
 ---
 # <a name="how-to-configure-network-tracing"></a>Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung
 Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die das Format und die Inhalte von Netzwerkablaufverfolgungen bestimmen. Bevor Sie diese Verfahren ausführen, stellen Sie sicher, dass die Ablaufverfolgung aktiviert ist. Weitere Informationen zur Aktivierung der Netzwerkablaufverfolgung finden Sie unter [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -27,7 +27,7 @@ Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die
   
 ### <a name="to-configure-network-tracing"></a>So konfigurieren Sie die Netzwerkablaufverfolgung  
   
--   Fügen Sie der jeweiligen Konfigurationsdatei die folgenden Zeilen hinzu. Die Werte und Optionen für diese Einstellungen sind in den folgenden Tabellen beschrieben.  
+- Fügen Sie der jeweiligen Konfigurationsdatei die folgenden Zeilen hinzu. Die Werte und Optionen für diese Einstellungen sind in den folgenden Tabellen beschrieben.  
   
     ```xml  
     <configuration>  

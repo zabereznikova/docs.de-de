@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968035"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644737"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -103,15 +103,15 @@ Daher stellt sich die folgende Frage: **Sollten Sie einfach die Abfragesyntax ve
 
 Die Antwort auf diese Frage ist **Ja**, wenn...
 
-*   Ihre vorhandene Codebasis bereits die Abfragesyntax verwendet
-*   Sie den Bereich von Variablen in Ihren Abfragen aufgrund der Komplexität festlegen müssen
-*   Sie die Abfragesyntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
+* Ihre vorhandene Codebasis bereits die Abfragesyntax verwendet
+* Sie den Bereich von Variablen in Ihren Abfragen aufgrund der Komplexität festlegen müssen
+* Sie die Abfragesyntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
 
 Die Antwort auf diese Frage ist **Nein**, wenn...
 
-*   Ihre vorhandene Codebasis die API-Syntax bereits verwendet
-*   Sie den Bereich von Variablen in Ihren Abfragen nicht festlegen müssen
-*   Sie die API-Syntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
+* Ihre vorhandene Codebasis die API-Syntax bereits verwendet
+* Sie den Bereich von Variablen in Ihren Abfragen nicht festlegen müssen
+* Sie die API-Syntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
 
 ## <a name="essential-samples"></a>Grundlegende Beispiele
 
@@ -119,7 +119,7 @@ Eine umfassende Liste der LINQ-Beispiele finden Sie unter [101 LINQ Samples](htt
 
 Im Folgenden finden eine kurze Darstellung einiger der grundlegenden Bestandteile von LINQ. Sie ist bei weitem nicht vollständig, da LINQ erheblich mehr Funktionen bietet, als hier präsentiert werden.
 
-*   Die Grundbestandteile sind `Where`, `Select` und `Aggregate`:
+* Die Grundbestandteile sind `Where`, `Select` und `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Reduzieren einer Liste mit Listen:
+* Reduzieren einer Liste mit Listen:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Vereinigung von zwei Gruppen (mit benutzerdefiniertem Vergleichsoperator):
+* Vereinigung von zwei Gruppen (mit benutzerdefiniertem Vergleichsoperator):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Schnittmenge zwischen zwei Gruppen:
+* Schnittmenge zwischen zwei Gruppen:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Sortierung:
+* Sortierung:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Schließlich ein erweitertes Beispiel: Ermitteln, ob die Werte der Eigenschaften von zwei Instanzen desselben Typs gleich sind (aus [diesem StackOverflow-Beitrag](https://stackoverflow.com/a/844855) übernommen und geändert):
+* Schließlich ein erweitertes Beispiel: Ermitteln, ob die Werte der Eigenschaften von zwei Instanzen desselben Typs gleich sind (aus [diesem StackOverflow-Beitrag](https://stackoverflow.com/a/844855) übernommen und geändert):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ Parallelisierbare CPU-gebundene Aufträge, die problemlos über LINQ ausgedrück
 
 ## <a name="further-resources"></a>Weitere Ressourcen:
 
-*   [101 LINQ-Beispiele](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), ein E-Book, in dem die Implementierung von LINQ to Objects erläutert wird
+* [101 LINQ-Beispiele](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), ein E-Book, in dem die Implementierung von LINQ to Objects erläutert wird

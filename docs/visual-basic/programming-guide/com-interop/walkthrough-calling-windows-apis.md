@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022401"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592713"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Exemplarische Vorgehensweise: Aufrufen von Windows-APIs (Visual Basic)
 Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssystems sind. Können Sie diese Aufgaben auszuführen, wenn es schwierig, Ihre eigenen Prozeduren zu schreiben ist. Windows stellt z. B. eine Funktion namens `FlashWindowEx` , mit der Sie die Titelleiste für eine Anwendung wechseln Sie zwischen hellen und dunklen Graustufen.  
   
  Der Vorteil der Verwendung von Windows-APIs in Ihrem Code ist, dass sie Entwicklungszeit einsparen können, da sie enthalten, Dutzende von nützlichen Funktionen, die bereits geschrieben wurden und darauf warten, verwendet werden. Der Nachteil ist, dass die Windows-APIs arbeiten mit und fehleranfällig, wenn etwas schief geht, schwierig sein kann.  
   
- Windows-APIs stellen eine besondere Kategorie der Interoperabilität dar. Windows-APIs verwenden nicht verwalteten Code, verfügen nicht über integrierte Typbibliotheken, und verwenden die Datentypen unterscheiden, die mit Visual Studio verwendet. Aufgrund dieser Unterschiede und da Windows-APIs nicht COM-Objekten, die Interoperabilität mit Windows-APIs sind und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] erfolgt unter Verwendung der Plattform aufrufen, oder PInvoke. Der Plattformaufruf ist ein Dienst, der von verwaltetem Code zum Aufrufen von nicht verwalteter Funktionen in DLLs implementiert werden können. Weitere Informationen finden Sie unter [Consuming Unmanaged DLL Functions](../../../framework/interop/consuming-unmanaged-dll-functions.md). Sie können die PInvoke in Visual Basic verwenden, indem Sie entweder die `Declare` -Anweisung oder das Anwenden der `DllImport` -Attribut auf eine leere Prozedur.  
+ Windows-APIs stellen eine besondere Kategorie der Interoperabilität dar. Windows-APIs verwenden nicht verwalteten Code, verfügen nicht über integrierte Typbibliotheken, und verwenden die Datentypen unterscheiden, die mit Visual Studio verwendet. Aufgrund dieser Unterschiede und daran, dass Windows-APIs sind nicht COM-Objekten, die Interoperabilität mit Windows-APIs und .NET Framework erfolgt mithilfe von Plattformaufruf, oder PInvoke. Der Plattformaufruf ist ein Dienst, der von verwaltetem Code zum Aufrufen von nicht verwalteter Funktionen in DLLs implementiert werden können. Weitere Informationen finden Sie unter [Consuming Unmanaged DLL Functions](../../../framework/interop/consuming-unmanaged-dll-functions.md). Sie können die PInvoke in Visual Basic verwenden, indem Sie entweder die `Declare` -Anweisung oder das Anwenden der `DllImport` -Attribut auf eine leere Prozedur.  
   
- Windows-API-Aufrufe ein wichtiger Teil der Visual Basic-Programmierung in der Vergangenheit wurden, sind aber selten notwendig, mit Visual Basic .NET. Wann immer möglich, sollten Sie verwalteten Code von verwenden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zum Ausführen von Aufgaben anstelle von Windows-API-Aufrufe. Diese exemplarische Vorgehensweise enthält Informationen über die Situationen, in denen die Verwendung Windows-APIs erforderlich ist.  
+ Windows-API-Aufrufe ein wichtiger Teil der Visual Basic-Programmierung in der Vergangenheit wurden, sind aber selten notwendig, mit Visual Basic .NET. Wann immer möglich, sollten Sie verwalteten Code von .NET Framework zum Ausführen von Aufgaben anstelle von Windows-API-Aufrufe verwenden. Diese exemplarische Vorgehensweise enthält Informationen über die Situationen, in denen die Verwendung Windows-APIs erforderlich ist.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

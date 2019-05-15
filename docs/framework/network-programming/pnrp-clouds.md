@@ -2,12 +2,12 @@
 title: PNRP-Clouds
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110044"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623032"
 ---
 # <a name="pnrp-clouds"></a>PNRP-Clouds
 Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk miteinander kommunizieren können. Der Begriff „Cloud“ wird synonym mit „Peermesh“ und „Peer-to-Peer-Diagramm“ verwendet.  
@@ -18,9 +18,9 @@ Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk mitein
   
  PNRP verwendet drei Cloudbereiche, wobei diese Bereiche eine Gruppe von Computern darstellen, die sich gegenseitig finden können:  
   
--   Die globale Cloud entspricht dem globalen IPv6-Adressbereich sowie globalen Adressen. Sie stellt alle Computer des gesamten IPv6-Internets dar. Es gibt nur eine einzige globale Cloud.  
+- Die globale Cloud entspricht dem globalen IPv6-Adressbereich sowie globalen Adressen. Sie stellt alle Computer des gesamten IPv6-Internets dar. Es gibt nur eine einzige globale Cloud.  
   
--   Die verbindungslokale Cloud entspricht dem verbindungslokalen IPv6-Adressbereich sowie verbindungslokalen Adressen. Eine verbindungslokale Cloud gilt für einen bestimmten Link, der in der Regel mit dem lokal verbundenen Subnetz identisch ist. Es können mehrere verbindungslokale Clouds vorhanden sein.  
+- Die verbindungslokale Cloud entspricht dem verbindungslokalen IPv6-Adressbereich sowie verbindungslokalen Adressen. Eine verbindungslokale Cloud gilt für einen bestimmten Link, der in der Regel mit dem lokal verbundenen Subnetz identisch ist. Es können mehrere verbindungslokale Clouds vorhanden sein.  
   
  Eine dritte Möglichkeit ist die standortspezifische Cloud, die dem standortspezifischen IPv6-Adressbereich sowie standortlokalen Adressen entspricht. Diese Cloud ist veraltet, wird jedoch weiterhin in PNRP unterstützt.  
   
