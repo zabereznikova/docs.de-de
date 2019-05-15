@@ -2,12 +2,12 @@
 title: Verwendung des Serialisierungsbinders
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677decebcf444fed95311bd02acf8a96e0a4eca9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007590"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591780"
 ---
 # <a name="usage-of-serialization-binder"></a>Verwendung des Serialisierungsbinders
 In diesem Beispiel wird gezeigt, wie der <xref:System.Runtime.Serialization.SerializationBinder> verwendet wird, um die Version eines generischen Typs zu ändern, während diese serialisiert wird.  
@@ -16,7 +16,7 @@ In diesem Beispiel wird gezeigt, wie der <xref:System.Runtime.Serialization.Seri
  <xref:System.Runtime.Serialization.SerializationBinder>, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
   
 ## <a name="discussion"></a>Diskussion  
- In diesem Beispiel wird gezeigt, wie zwei Entitäten, die andere [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Versionen als Ziel haben, mit dem binären Formatierungsprogramm und dem Serialisierungsbinder kommunizieren können.  
+ Dieses Beispiel zeigt wie zwei Entitäten, sind mit verschiedene Versionen von .NET Framework können kommunizieren mit dem binären Formatierungsprogramm und dem Serialisierungsbinder.  
   
  Dieses Beispiel wurde mit .NET-Remoting entwickelt. Das Beispiel besteht aus einem Server mit der Zielversion [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], mit dem ein Vertrag mit generischen Typen implementiert wird, und zwei verschiedene Clients, einer mit der Zielversion [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] und einer mit der Zielversion [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
   

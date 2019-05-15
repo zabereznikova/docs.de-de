@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 047ca9f656ed2f15c23df305878ac8727648fb7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dae528d69c6c08c2005fd30d7d16fafa67afb53
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612022"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590560"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Vorgehensweise: Erstellen eines MDI-Formulars mit ToolStripPanel-Steuerelementen
 Sie können ein Formular mit einer mehrfachen Dokumentschnittstelle (MDI) erstellen, das mit <xref:System.Windows.Forms.ToolStrip>-Steuerelementen auf allen vier Seiten umrahmt wird.  
@@ -36,8 +36,6 @@ Sie können ein Formular mit einer mehrfachen Dokumentschnittstelle (MDI) erstel
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
 

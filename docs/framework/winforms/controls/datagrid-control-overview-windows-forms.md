@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648129"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589020"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648129"
   
  Das <xref:System.Windows.Forms.DataGrid>-Steuerelement kann eine Benutzeroberfläche für ein DataSet, die Navigation zwischen verknüpften Tabellen sowie umfangreiche Formatierungs- und Bearbeitungsfunktionen bereitstellen.  
   
- Die Anzeige und Bearbeitung von Daten sind verschiedene Funktionen auf: Das Steuerelement die Benutzeroberfläche, verarbeitet, während Aktualisierungen an den Daten, von der Architektur der Windows Forms-Datenbindung und verarbeitet werden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter. Aus diesem Grund werden mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, immer synchronisiert.  
+ Die Anzeige und Bearbeitung von Daten sind verschiedene Funktionen auf: Das Steuerelement behandelt die Benutzeroberfläche, während der Aktualisierung von Daten durch die Datenbindungsarchitektur von Windows Forms und von .NET Framework-Datenanbietern behandelt werden. Aus diesem Grund werden mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, immer synchronisiert.  
   
 > [!NOTE]
 >  Wenn Sie mit dem DataGrid-Steuerelement in Visual Basic 6.0 vertraut sind, werden Ihnen beim <xref:System.Windows.Forms.DataGrid>-Steuerelement in Windows Forms wesentliche Unterschiede auffallen.  
