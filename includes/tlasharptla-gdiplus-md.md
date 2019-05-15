@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ddb5a2b1c77f84e91f93b3f428e4b7258ba16cfc
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 4b72505f7fbee417b605660c3546da944f19dcfc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "25705107"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671635"
 ---
-<span data-ttu-id="9b6d6-101">Microsoft Windows GDI+</span><span class="sxs-lookup"><span data-stu-id="9b6d6-101">Microsoft Windows GDI+</span></span>
+<span data-ttu-id="2a518-101">Microsoft Windows GDI+</span><span class="sxs-lookup"><span data-stu-id="2a518-101">Microsoft Windows GDI+</span></span>
