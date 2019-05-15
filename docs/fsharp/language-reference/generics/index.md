@@ -2,12 +2,12 @@
 title: Generics
 description: Erfahren Sie, wie Sie mithilfe generischer F#-Funktionen und Typen, die Sie Code schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code wiederholen zu ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937526"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641853"
 ---
 # <a name="generics"></a>Generics
 

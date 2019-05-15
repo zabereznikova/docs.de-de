@@ -1,15 +1,13 @@
 ---
 title: Umstände, unter denen keine Bereitstellung in Windows-Containern erfolgen sollte
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Wann Sie nicht auf Windows-Containern bereitstellen
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: e06793065d1fd55bbef855576174b07dc9ace4c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751399"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638898"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Umstände, unter denen keine Bereitstellung in Windows-Containern erfolgen sollte
 

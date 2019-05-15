@@ -1,15 +1,13 @@
 ---
 title: Erstellen Sie belastbarer Dienste, die für die Cloud bereit. Beheben vorübergehender Fehler in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Erstellen Sie belastbarer Dienste, die für die Cloud bereit. Beheben vorübergehender Fehler in der Cloud
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca5d5e0c3af772ac52a02894c96889c776cf7d48
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614512"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643738"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
 

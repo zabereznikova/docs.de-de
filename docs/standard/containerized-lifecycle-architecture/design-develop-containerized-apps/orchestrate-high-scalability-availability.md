@@ -1,15 +1,13 @@
 ---
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 description: Produktionsanwendungen müssen bereitgestellt und verwaltet mit orchestratoren, die Integrität, arbeitsauslastung und Lebenszyklen aller Container behandelt werden.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644897"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644726"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 

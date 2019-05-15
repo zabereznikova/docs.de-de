@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779157"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637517"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
 In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schritte-Tutorial, und beschreibt, wie Sie einen Workflowhost erstellen und Ausführen des Workflows, die definiert, in der vorherigen [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md) Thema.

@@ -2,12 +2,12 @@
 title: Vergleichsausdrücke
 description: Erfahren Sie, wie die F# Vergleichsausdruck stellt verzweigungssteuerung, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
 ms.date: 04/19/2018
-ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69ff8de1617e6b55d112d310bfcd8b2f967b6e8a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903954"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645199"
 ---
 # <a name="match-expressions"></a>Vergleichsausdrücke
 

@@ -1,15 +1,13 @@
 ---
 title: Erstellen von ASP.NET Core-2.2-Anwendungen wie Linux-Container in AKS/Kubernetes-Cluster bereitgestellt
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452790"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644781"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen Sie 2.2 von ASP.NET Core-Anwendungen, die als Linux-Container bereitgestellt werden, in einem AKS/Kubernetes-orchestrator
 

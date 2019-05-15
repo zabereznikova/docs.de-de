@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: e7cf058ef5e6b007a39213aa0ca5748a3b77458a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1f671b75972642670e28b9e761a8174d02d39c4e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590642"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642175"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Typ des Parameters "\<Parametername >' ist nicht CLS-kompatibel.
 Eine Prozedur wird als markiert `<CLSCompliant(True)>` deklariert jedoch einen Parameter mit einem Typ mit der Kennzeichnung `<CLSCompliant(False)>`, nicht markiert ist oder nicht geeignet ist, da es sich um einen nicht kompatiblen Typ handelt.  

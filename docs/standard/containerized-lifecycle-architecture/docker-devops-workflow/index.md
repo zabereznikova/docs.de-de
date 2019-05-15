@@ -1,15 +1,13 @@
 ---
 title: Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 description: Containerisierten Docker-Anwendungslebenszyklus mit Microsoft Platform und Tools, DevOps-Workflow mit Microsoft-tools
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795290"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644824"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
