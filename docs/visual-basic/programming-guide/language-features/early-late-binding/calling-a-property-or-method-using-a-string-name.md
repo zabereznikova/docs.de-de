@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973341"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590033"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen (Visual Basic)
 In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eines Objekts zur Entwurfszeit und Schreiben von Code, damit sie verarbeitet. Jedoch in einigen Fällen Sie möglicherweise nicht über Eigenschaften und Methoden eines Objekts im Voraus kennen, oder die Flexibilität, Benutzer, geben Sie Eigenschaften oder Methoden zur Laufzeit ausführen kann auch sinnvoll sein.  
@@ -31,7 +31,7 @@ In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eine
   
  Das erste Argument, *Objekt*, erhält den Namen des Objekts, auf die reagiert werden soll. Die *Prozedurname* Argument akzeptiert eine Zeichenfolge, die den Namen der aufzurufenden Methode oder Eigenschaft Prozedur enthält. Die *CallType* Argument akzeptiert eine Konstante, die den Typ des aufzurufenden Prozedur darstellt: eine Methode (`Microsoft.VisualBasic.CallType.Method`), eine Eigenschaft zu lesen (`Microsoft.VisualBasic.CallType.Get`), oder eine Eigenschaft festzulegen (`Microsoft.VisualBasic.CallType.Set`). Die *Argumente* -Argument, das optional ist, nimmt ein Array vom Typ `Object` , die keine Argumente an die Prozedur enthält.  
   
- Sie können `CallByName` mit Klassen in der aktuellen Lösung, sondern wird meistens den Zugriff auf COM-Objekte verwendet, oder Objekte aus [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys.  
+ Sie können `CallByName` mit Klassen in der aktuellen Lösung, aber es wird am häufigsten auf COM-Objekten oder Objekte aus .NET Framework-Assemblys verwendet.  
   
  Angenommen, Sie über einen Verweis auf eine Assembly hinzufügen, die eine Klasse namens enthält `MathClass`, die über eine neue Funktion, die mit dem Namen verfügt `SquareRoot`, wie im folgenden Code gezeigt:  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753620"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591566"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 
@@ -176,7 +176,7 @@ Andererseits können die in einem Modul deklarierten Member standardmäßig öff
 
 Mit Objekten können Sie Variablen und Prozeduren einmal deklarieren und anschließend bei Bedarf jederzeit wiederverwenden. Beispiel: Wenn Sie einer Anwendung eine Rechtschreibprüfung hinzufügen möchten, können Sie sämtliche Variablen und Supportfunktionen definieren, um die Rechtschreibprüfungsfunktion bereitzustellen. Wenn Sie Ihre Rechtschreibprüfung als Klasse erstellen, können Sie sie anschließend in anderen Anwendungen wiederverwenden, indem Sie einen Verweis auf die kompilierte Assembly hinzufügen. Sie können sich möglicherweise sogar selbst etwas Arbeit sparen, indem Sie eine Rechtschreibprüfungsklasse verwenden, die bereits von jemand anderem entwickelt wurde.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bietet viele Beispiele von Komponenten, die zur Verwendung verfügbar sind. Das folgende Beispiel verwendet die <xref:System.TimeZone>-Klasse im <xref:System>-Namespace. <xref:System.TimeZone> enthält Member, die Ihnen das Abrufen von Informationen über die Zeitzone des aktuellen Computersystems ermöglichen.
+.NET Framework bietet viele Beispiele von Komponenten, die für die Verwendung verfügbar sind. Das folgende Beispiel verwendet die <xref:System.TimeZone>-Klasse im <xref:System>-Namespace. <xref:System.TimeZone> enthält Member, die Ihnen das Abrufen von Informationen über die Zeitzone des aktuellen Computersystems ermöglichen.
 
 ```vb
 Public Sub examineTimeZone()

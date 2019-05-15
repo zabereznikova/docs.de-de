@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600943"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589819"
 ---
 # <a name="value-types-and-reference-types"></a>Wert- und Verweistypen
 In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen werden anhand des Verhaltens klassifiziert, je nachdem, ob eine Variable eines bestimmten Typs die eigenen Daten speichert oder einen Zeiger auf die Daten. Wenn sie ihre eigenen Daten speichert, handelt es sich um einen *Werttyp*. Wenn sie einen Zeiger auf die Daten an einer anderer Stelle im Arbeitsspeicher enthält, ist es eim *Verweistyp*.  
@@ -46,7 +46,7 @@ In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementi
   
 - Delegaten  
   
- Eine Klasse ist eine *Verweistyp*. Aus diesem Grund verweisen auf Typen wie z. B. `Object` und `String` werden von unterstützt [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Klassen. Beachten Sie, dass jedes Array ein Verweistyp ist, auch wenn seine Member Werttypen sind.  
+ Eine Klasse ist eine *Verweistyp*. Aus diesem Grund verweisen auf Typen wie z. B. `Object` und `String` von .NET Framework-Klassen unterstützt werden. Beachten Sie, dass jedes Array ein Verweistyp ist, auch wenn seine Member Werttypen sind.  
   
  Da jede Verweistyp eine zugrunde liegende .NET Framework-Klasse darstellt, müssen Sie verwenden die [neuer Operator](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort, die Sie bei der Initialisierung. Die folgende Anweisung initialisiert ein Array.  
   

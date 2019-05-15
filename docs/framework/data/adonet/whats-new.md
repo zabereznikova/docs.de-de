@@ -2,12 +2,12 @@
 title: Neues in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 76ded71e7fa5ece382d0b0947eefa05682dc0f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673104"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583435"
 ---
 # <a name="whats-new-in-adonet"></a>Neues in ADO.NET
 
@@ -15,7 +15,7 @@ Die folgenden Funktionen sind neu in [!INCLUDE[vstecado](../../../../includes/vs
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-Die folgenden Features sind neu in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server auf [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Die folgenden Features sind neu in der .NET Framework-Datenanbieter für SQL Server auf [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
 
 - Mit den Verbindungszeichenfolgen von ConnectRetryCount und ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) können Sie die resiliente Verbindungsfunktion im Leerlauf steuern.
 
