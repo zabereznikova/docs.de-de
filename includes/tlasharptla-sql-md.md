@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0db1a896c8c2be513abd4cc7c33619017cc2f9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f74c3a26a35dbf5189744caf47763384e80456bf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021046"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671054"
 ---
-<span data-ttu-id="a00a7-101">Strukturierte Abfragesprache (Structured Query Language; SQL)</span><span class="sxs-lookup"><span data-stu-id="a00a7-101">Structured Query Language (SQL)</span></span>
+<span data-ttu-id="819bd-101">Strukturierte Abfragesprache (Structured Query Language; SQL)</span><span class="sxs-lookup"><span data-stu-id="819bd-101">Structured Query Language (SQL)</span></span>

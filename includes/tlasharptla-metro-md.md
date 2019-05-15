@@ -1,1 +1,9 @@
-<span data-ttu-id="45d86-101">XML Paper Specification (XPS)</span><span class="sxs-lookup"><span data-stu-id="45d86-101">XML Paper Specification (XPS)</span></span>
+---
+ms.openlocfilehash: 0ee874e2f0b76c8de92d9e8db12af6f8fc22a93a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669540"
+---
+<span data-ttu-id="8c814-101">XML Paper Specification (XPS)</span><span class="sxs-lookup"><span data-stu-id="8c814-101">XML Paper Specification (XPS)</span></span>

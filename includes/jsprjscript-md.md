@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 7b443c0492b178b0bdf9adea3dbf7d5cfb843a51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4c845c864093a9ee35487f8c988f5879e36c601e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011908"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672776"
 ---
-<span data-ttu-id="efcbe-101">JScript</span><span class="sxs-lookup"><span data-stu-id="efcbe-101">JScript</span></span>
+<span data-ttu-id="8d31a-101">JScript</span><span class="sxs-lookup"><span data-stu-id="8d31a-101">JScript</span></span>

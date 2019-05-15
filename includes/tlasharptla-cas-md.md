@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 6e71e25cc4636e65e441efbfb690a56f84a26b28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ddac139df83a175ddbcdd4ed5151f217b028a5d1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696523"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670055"
 ---
-<span data-ttu-id="fb215-101">Codezugriffssicherheit (Code Access Security, CAS)</span><span class="sxs-lookup"><span data-stu-id="fb215-101">Code Access Security (CAS)</span></span>
+<span data-ttu-id="175c7-101">Codezugriffssicherheit (Code Access Security, CAS)</span><span class="sxs-lookup"><span data-stu-id="175c7-101">Code Access Security (CAS)</span></span>
