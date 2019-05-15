@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622807"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592245"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622807"
   
  Es folgen einige Einschränkungen von Generics:  
   
-- Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
+- Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). .NET Framework unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
   
 - Enumerationen können keine generischen Typparameter haben. Eine Enumeration kann nur durch Zufall generisch sein (z. B. weil sie in einem generischen Typ verschachtelt ist, der mit Visual Basic, C# oder C++ definiert wurde). Weitere Informationen finden Sie unter "Enumerationen" in [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
