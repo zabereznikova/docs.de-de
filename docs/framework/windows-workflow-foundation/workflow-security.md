@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 4553a81fcd15426bf09d2f293cb35dbe831aeb07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b14dd600526612b6af8b9fad15f65a748eb0b368
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655817"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637526"
 ---
 # <a name="workflow-security"></a>Workflowsicherheit
 Windows Workflow Foundation (WF) ist in eine Reihe verschiedener Technologien, wie z. B. Microsoft SQL Server und Windows Communication Foundation (WCF) integriert. Die Interaktion mit diesen Technologien kann zu Sicherheitsproblemen für den Workflow führen, falls diese nicht ordnungsgemäß durchgeführt wird.

@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Zusammensetzungen mit NativeActivity
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c88a4a7794ef5f9e721669bc61402e97f6032da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005198"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637605"
 ---
 # <a name="custom-composite-using-native-activity"></a>Benutzerdefinierte Zusammensetzungen mit NativeActivity
 In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.NativeActivity> geschrieben wird, die andere <xref:System.Activities.Activity>-Objekte plant, um den Fluss der Ausführung eines Workflows zu steuern. Zur Veranschaulichung dieses Vorgangs werden in diesem Beispiel zwei häufige Ablaufsteuerungen verwendet: Sequence und While.

@@ -4,12 +4,12 @@ description: Mit Azure Logic Apps ermöglichen die Entwicklung automatisierter s
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712780"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638802"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
 

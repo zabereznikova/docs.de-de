@@ -1,15 +1,13 @@
 ---
 title: Umstände, unter denen eine Bereitstellung von Windows-Containern in Ihrer lokalen IaaS-VM-Infrastruktur erfolgen sollte
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Wenn zum Bereitstellen von Windows-Containern in Ihrer lokalen IaaS-VM-Infrastruktur
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: bcfc4990a261b8675c36358c5188a8d26d76479d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5986073e295eeba5921a2d899b236c68a27251fd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621030"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643773"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>Umstände, unter denen eine Bereitstellung von Windows-Containern in Ihrer lokalen IaaS-VM-Infrastruktur erfolgen sollte
 

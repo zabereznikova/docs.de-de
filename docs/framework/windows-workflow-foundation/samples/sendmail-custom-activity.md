@@ -2,12 +2,12 @@
 title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 3bbb16fd99d5d7de4183b26030c0afe65ebc90cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617314"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637658"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet, das die Funktionen des <xref:System.Net.Mail.SmtpClient> asynchron senden von e-Mails und zum Senden von e-Mails mit der Authentifizierung. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  

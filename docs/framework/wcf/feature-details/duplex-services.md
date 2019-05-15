@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592747"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636284"
 ---
 # <a name="duplex-services"></a>Duplexdienste
 
@@ -87,7 +87,7 @@ Der folgende Beispielcode zeigt, wie Sie die Clientendpunktadresse in der Konfig
 ```
 
 > [!WARNING]
-> Das Schließen des zugehörigen Kanals durch einen Dienst oder Client wird vom Duplexmodell nicht in jedem Fall automatisch erkannt. Also, wenn ein Client unerwartet beendet wird, wird standardmäßig der Dienst nicht benachrichtigt werden, oder wenn ein Dienst unerwartet beendet wird, wird der Client nicht benachrichtigt. Clients und Dienste können eigene Protokolle implementieren, um sich bei Bedarf wechselseitig zu benachrichtigen. Weitere Informationen zur Fehlerbehandlung finden Sie unter [WCF-Fehlerbehandlung](../wcf-error-handling.md)
+> Vom duplexmodell erkennen nicht automatisch, wenn der Kanal geschlossen, einen Dienst oder Client wird. Also, wenn ein Client unerwartet beendet wird, wird standardmäßig der Dienst nicht benachrichtigt werden, oder wenn ein Dienst unerwartet beendet wird, wird der Client nicht benachrichtigt. Wenn Sie einen Dienst, die getrennt ist verwenden, die <xref:System.ServiceModel.CommunicationException> Ausnahme ausgelöst. Clients und Dienste können eigene Protokolle implementieren, um sich bei Bedarf wechselseitig zu benachrichtigen. Weitere Informationen zur Fehlerbehandlung finden Sie unter [WCF-Fehlerbehandlung](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Siehe auch
 
