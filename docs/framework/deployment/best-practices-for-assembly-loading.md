@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614140"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Best Practices für das Laden von Assemblys
 In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können. In diesem Artikel werden folgende Empfehlungen besprochen:  
   
--   [Vor- und Nachteile von Load-Kontexten](#load_contexts)  
+- [Vor- und Nachteile von Load-Kontexten](#load_contexts)  
   
--   [Vermeiden von Bindungen bei partiellen Assemblynamen](#avoid_partial_names)  
+- [Vermeiden von Bindungen bei partiellen Assemblynamen](#avoid_partial_names)  
   
--   [Vermeiden des Ladens von Assemblys in mehrere Kontexte](#avoid_loading_into_multiple_contexts)  
+- [Vermeiden des Ladens von Assemblys in mehrere Kontexte](#avoid_loading_into_multiple_contexts)  
   
--   [Vermeiden des Ladens von mehreren Versionen einer Assembly in denselben Kontext](#avoid_loading_multiple_versions)  
+- [Vermeiden des Ladens von mehreren Versionen einer Assembly in denselben Kontext](#avoid_loading_multiple_versions)  
   
--   [Ziehen Sie in Erwägung, zum Standard-Load-Kontext zu wechseln](#switch_to_default)  
+- [Ziehen Sie in Erwägung, zum Standard-Load-Kontext zu wechseln](#switch_to_default)  
   
  In der ersten Empfehlung, [Vor- und Nachteile von Load-Kontexten](#load_contexts), erhalten Sie Hintergrundinformationen zu den anderen Empfehlungen, da diese alle eine Kenntnis von Load-Kontexten voraussetzen.  
   
@@ -40,13 +40,13 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Vor- und Nachteile von Load-Kontexten  
  Assemblys können innerhalb einer Anwendungsdomäne in einen von drei Kontexten geladen werden. Alternativ können sie auch ohne Kontext geladen werden:  
   
--   Der Standard-Load-Kontext enthält Assemblys, die beim Durchsuchen des globalen Assemblycaches, des Hostassemblyspeichers (wenn die Runtime gehostet wird, z.B. in SQL Server) und der Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> der Anwendungsdomäne gefunden wurden. Die meisten Überladungen der Methode <xref:System.Reflection.Assembly.Load%2A> laden Assemblys in diesen Kontext.  
+- Der Standard-Load-Kontext enthält Assemblys, die beim Durchsuchen des globalen Assemblycaches, des Hostassemblyspeichers (wenn die Runtime gehostet wird, z.B. in SQL Server) und der Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> der Anwendungsdomäne gefunden wurden. Die meisten Überladungen der Methode <xref:System.Reflection.Assembly.Load%2A> laden Assemblys in diesen Kontext.  
   
--   Der LoadFrom-Kontext enthält Assemblys, die von Speicherorten geladen werden, die vom Ladeprogramm nicht durchsucht wurden. Add-Ins können z.B. in einem Verzeichnis installiert sein, dass sich nicht im Anwendungspfad befindet. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> und <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sind Beispiel für Methoden, die anhand des Pfads laden.  
+- Der LoadFrom-Kontext enthält Assemblys, die von Speicherorten geladen werden, die vom Ladeprogramm nicht durchsucht wurden. Add-Ins können z.B. in einem Verzeichnis installiert sein, dass sich nicht im Anwendungspfad befindet. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> und <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sind Beispiel für Methoden, die anhand des Pfads laden.  
   
--   Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
--   Wenn Sie eine vorübergehende dynamische Assembly mit der Reflektionsausgabe erstellt haben, befindet die Assembly sich in keinem Kontext. Außerdem werden Assemblys, die mit der <xref:System.Reflection.Assembly.LoadFile%2A>-Methode geladen wurden, ohne Kontext geladen. Assemblys, die aus Bytearrays geladen werden, werden ohne Kontext geladen, es sei denn, ihre Identität (nachdem eine Richtlinie angewendet wurde) gibt an, dass sie sich im globalen Assemblycache befinden.  
+- Wenn Sie eine vorübergehende dynamische Assembly mit der Reflektionsausgabe erstellt haben, befindet die Assembly sich in keinem Kontext. Außerdem werden Assemblys, die mit der <xref:System.Reflection.Assembly.LoadFile%2A>-Methode geladen wurden, ohne Kontext geladen. Assemblys, die aus Bytearrays geladen werden, werden ohne Kontext geladen, es sei denn, ihre Identität (nachdem eine Richtlinie angewendet wurde) gibt an, dass sie sich im globalen Assemblycache befinden.  
   
  Der Ausführungskontexte haben Vor- und Nachteile, wie in den folgenden Abschnitten beschrieben.  
   
@@ -55,28 +55,28 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
  Das Verwenden des Standard-Load-Kontexts hat folgende Nachteile:  
   
--   Abhängigkeiten, die in die andere Kontexte geladen werden, stehen nicht zur Verfügung.  
+- Abhängigkeiten, die in die andere Kontexte geladen werden, stehen nicht zur Verfügung.  
   
--   Sie können keine Assemblys von Speicherorten in den Standard-Load-Kontext laden, die sich außerhalb des Suchpfads befindet.  
+- Sie können keine Assemblys von Speicherorten in den Standard-Load-Kontext laden, die sich außerhalb des Suchpfads befindet.  
   
 ### <a name="load-from-context"></a>LoadFrom-Kontext  
  Im LoadFrom-Kontext können Sie eine Assembly aus einem Pfad laden, der sich nicht im Anwendungspfad befindet und deshalb bei der Suche nicht berücksichtigt wird. So können Abhängigkeiten in diesem Pfad gefunden und geladen werden, da die Pfadinformationen vom Kontext verwaltet werden. Des Weiteren können Assemblys in diesem Kontext Abhängigkeiten verwenden, die in den Standard-Load-Kontext geladen wurden.  
   
  Das Laden von Assemblys mit der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>-Methode oder einer der anderen Methoden, die anhand des Pfads laden, hat folgende Nachteile:  
   
--   Wenn eine Assembly mit der gleichen Identität bereits geladen wurde, gibt <xref:System.Reflection.Assembly.LoadFrom%2A> die geladene Assembly zurück, auch wenn ein anderer Pfad angegeben wurde.  
+- Wenn eine Assembly mit der gleichen Identität bereits geladen wurde, gibt <xref:System.Reflection.Assembly.LoadFrom%2A> die geladene Assembly zurück, auch wenn ein anderer Pfad angegeben wurde.  
   
--   Wenn eine Assembly mit <xref:System.Reflection.Assembly.LoadFrom%2A> geladen wird und eine Assembly im Standard-Load-Kontext zu einem späteren Zeitpunkt versucht, dieselbe Assembly anhand des Anzeigenamens zu laden, schlägt der Ladeversuch fehl. Dies kann auftreten, wenn eine Assembly deserialisiert ist.  
+- Wenn eine Assembly mit <xref:System.Reflection.Assembly.LoadFrom%2A> geladen wird und eine Assembly im Standard-Load-Kontext zu einem späteren Zeitpunkt versucht, dieselbe Assembly anhand des Anzeigenamens zu laden, schlägt der Ladeversuch fehl. Dies kann auftreten, wenn eine Assembly deserialisiert ist.  
   
--   Wenn eine Assembly mit <xref:System.Reflection.Assembly.LoadFrom%2A> geladen wurde und der Suchpfad eine Assembly mit der gleichen Identität an einem anderen Speicherort enthält, kann eine <xref:System.InvalidCastException>, <xref:System.MissingMethodException> oder ein anderes unerwartetes Verhalten auftreten.  
+- Wenn eine Assembly mit <xref:System.Reflection.Assembly.LoadFrom%2A> geladen wurde und der Suchpfad eine Assembly mit der gleichen Identität an einem anderen Speicherort enthält, kann eine <xref:System.InvalidCastException>, <xref:System.MissingMethodException> oder ein anderes unerwartetes Verhalten auftreten.  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> fordert <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> und <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> oder <xref:System.Net.WebPermission> im angegebenen Pfad.  
+- <xref:System.Reflection.Assembly.LoadFrom%2A> fordert <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> und <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> oder <xref:System.Net.WebPermission> im angegebenen Pfad.  
   
--   Wenn für die Assembly ein natives Image vorhanden ist, wird sie nicht verwendet.  
+- Wenn für die Assembly ein natives Image vorhanden ist, wird sie nicht verwendet.  
   
--   Die Assembly kann nicht als domänenneutral geladen werden.  
+- Die Assembly kann nicht als domänenneutral geladen werden.  
   
--   In .NET Framework Version 1.0 und 1.1 wird die Richtlinie nicht angewendet.  
+- In .NET Framework Version 1.0 und 1.1 wird die Richtlinie nicht angewendet.  
   
 ### <a name="no-context"></a>Kein Kontext  
  Das Laden ohne Kontext ist die einzige Möglichkeit für vorübergehende, durch die Reflektionsausgabe generierte Assemblys. Das Laden ohne Kontext ist die einzige Möglichkeit, mehrere Assemblys mit der gleichen Identität in eine Anwendungsdomäne zu laden. Der Suchaufwand wird umgangen.  
@@ -85,17 +85,17 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
  Das Laden ohne Kontext hat folgende Nachteile:  
   
--   Es können keine anderen Assemblys an Assemblys gebunden werden, die ohne Kontext geladen wurden, es sei denn, sie behandeln das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis.  
+- Es können keine anderen Assemblys an Assemblys gebunden werden, die ohne Kontext geladen wurden, es sei denn, sie behandeln das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis.  
   
--   Abhängigkeiten werden nicht automatisch geladen. Sie können sie vorab ohne Kontext oder in den Standard-Load-Kontext laden. Zudem können Sie sie laden, indem Sie das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis behandeln.  
+- Abhängigkeiten werden nicht automatisch geladen. Sie können sie vorab ohne Kontext oder in den Standard-Load-Kontext laden. Zudem können Sie sie laden, indem Sie das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis behandeln.  
   
--   Das Laden mehrerer Assemblys mit der gleichen Identität ohne Kontext kann zu Probleme mit der Typidentität führen. Diese ähneln den Problemen, die durch das Laden von Assemblys mit der gleichen Identität in mehreren Kontexten verursacht werden. Weitere Informationen finden Sie unter [Vermeiden des Ladens von Assemblys in mehrere Kontexte](#avoid_loading_into_multiple_contexts).  
+- Das Laden mehrerer Assemblys mit der gleichen Identität ohne Kontext kann zu Probleme mit der Typidentität führen. Diese ähneln den Problemen, die durch das Laden von Assemblys mit der gleichen Identität in mehreren Kontexten verursacht werden. Weitere Informationen finden Sie unter [Vermeiden des Ladens von Assemblys in mehrere Kontexte](#avoid_loading_into_multiple_contexts).  
   
--   Wenn für die Assembly ein natives Image vorhanden ist, wird sie nicht verwendet.  
+- Wenn für die Assembly ein natives Image vorhanden ist, wird sie nicht verwendet.  
   
--   Die Assembly kann nicht als domänenneutral geladen werden.  
+- Die Assembly kann nicht als domänenneutral geladen werden.  
   
--   In .NET Framework Version 1.0 und 1.1 wird die Richtlinie nicht angewendet.  
+- In .NET Framework Version 1.0 und 1.1 wird die Richtlinie nicht angewendet.  
   
 <a name="avoid_partial_names"></a>   
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Vermeiden von Bindungen bei partiellen Assemblynamen  
@@ -103,15 +103,15 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
  Die partielle Namensbindung kann zu vielen Problemen führen, u.a.:  
   
--   Die <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>-Methode lädt möglicherweise eine andere Assembly mit dem gleichen einfachen Namen. Möglicherweise werden so zwei völlig verschiedene Assemblys von zwei Anwendungen im globalen Assemblycache installiert, beide mit dem einfachen Namen `GraphicsLibrary`.  
+- Die <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>-Methode lädt möglicherweise eine andere Assembly mit dem gleichen einfachen Namen. Möglicherweise werden so zwei völlig verschiedene Assemblys von zwei Anwendungen im globalen Assemblycache installiert, beide mit dem einfachen Namen `GraphicsLibrary`.  
   
--   Die Assembly, die tatsächlich geladen wird, ist möglicherweise nicht abwärtskompatibel. Wenn Sie z.B. die Version nicht angeben, kann dies dazu führen, dass eine deutlich spätere Version als die Version geladen wird, für die Ihr Programm eigentlich geschrieben wurde. Änderungen in der späteren Version verursachen möglicherweise Fehler in Ihrer Anwendung.  
+- Die Assembly, die tatsächlich geladen wird, ist möglicherweise nicht abwärtskompatibel. Wenn Sie z.B. die Version nicht angeben, kann dies dazu führen, dass eine deutlich spätere Version als die Version geladen wird, für die Ihr Programm eigentlich geschrieben wurde. Änderungen in der späteren Version verursachen möglicherweise Fehler in Ihrer Anwendung.  
   
--   Die Assembly, die tatsächlich geladen wird, ist möglicherweise nicht aufwärtskompatibel. Ihre Anwendung kann z.B. mit der aktuellsten Version der Assembly entwickelt und geprüft worden sein, aber die partielle Bindung lädt möglicherweise eine sehr viel frühere Version, die nicht über die Funktionen verfügt,die Ihre Anwendung verwendet.  
+- Die Assembly, die tatsächlich geladen wird, ist möglicherweise nicht aufwärtskompatibel. Ihre Anwendung kann z.B. mit der aktuellsten Version der Assembly entwickelt und geprüft worden sein, aber die partielle Bindung lädt möglicherweise eine sehr viel frühere Version, die nicht über die Funktionen verfügt,die Ihre Anwendung verwendet.  
   
--   Das Installieren einer neuen Anwendung kann bereits vorhandene Anwendungen unterbrechen. Eine Anwendung, die die <xref:System.Reflection.Assembly.LoadWithPartialName%2A>-Methode verwendet, kann durch die Installation einer neueren, inkompatiblen Version einer freigegebenen Assembly unterbrochen werden.  
+- Das Installieren einer neuen Anwendung kann bereits vorhandene Anwendungen unterbrechen. Eine Anwendung, die die <xref:System.Reflection.Assembly.LoadWithPartialName%2A>-Methode verwendet, kann durch die Installation einer neueren, inkompatiblen Version einer freigegebenen Assembly unterbrochen werden.  
   
--   Das unvorhergesehene Laden von Abhängigkeiten kann auftreten. Wenn Sie zwei Assemblys mit einer gemeinsamen Abhängigkeit laden, kann das Laden mit partieller Bindung dazu führen, dass eine Assembly eine Komponente verwendet, für die sie nicht entwickelt bzw. geprüft wurde.  
+- Das unvorhergesehene Laden von Abhängigkeiten kann auftreten. Wenn Sie zwei Assemblys mit einer gemeinsamen Abhängigkeit laden, kann das Laden mit partieller Bindung dazu führen, dass eine Assembly eine Komponente verwendet, für die sie nicht entwickelt bzw. geprüft wurde.  
   
  Aufgrund der Probleme, die sie verursachen kann, wurde die <xref:System.Reflection.Assembly.LoadWithPartialName%2A>-Methode als veraltet markiert. Es wird empfohlen, dass Sie stattdessen die <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>-Methode verwenden, und dass Sie vollständige Assemblyanzeigenamen angeben. Weitere Informationen finden Sie unter [Vor- und Nachteile von Load-Kontexten](#load_contexts) und [Ziehen Sie in Erwägung, zum Standard-Load-Kontext zu wechseln](#switch_to_default).  
   

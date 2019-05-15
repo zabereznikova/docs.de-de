@@ -2,12 +2,12 @@
 title: International Resource Identifier-Unterstützung in System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647339"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>International Resource Identifier-Unterstützung in System.Uri
 Die Klasse <xref:System.Uri?displayProperty=nameWithType> wurde um die Unterstützung von International Resource Identifier (IRI) und von internationalen Domänennamen (IDN) erweitert. Diese Erweiterungen sind in .NET Framework 3.5, 3.0 SP1 und 2.0 SP1 verfügbar.  
@@ -15,11 +15,11 @@ Die Klasse <xref:System.Uri?displayProperty=nameWithType> wurde um die Unterstü
 ## <a name="iri-and-idn-support"></a>IRI- und IDN-Unterstützung  
  Webadressen werden in der Regel mithilfe von Uniform Resource Identifiers (URI) ausgedrückt, die aus einem sehr eingeschränkten Satz von Zeichen bestehen:  
   
--   ASCII-Großbuchstaben und -Kleinbuchstaben des englischen Alphabets  
+- ASCII-Großbuchstaben und -Kleinbuchstaben des englischen Alphabets  
   
--   Ziffern von 0 bis 9  
+- Ziffern von 0 bis 9  
   
--   einer kleinen Anzahl weiterer ASCII-Symbole  
+- einer kleinen Anzahl weiterer ASCII-Symbole  
   
  Die URI-Spezifikationen werden in RFC 2396 und RFC 3986 dokumentiert, die von der Internet Engineering Task Force (IETF) veröffentlicht werden.  
   

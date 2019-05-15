@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634549"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
 
@@ -348,11 +348,11 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "HH" in
 
 Der benutzerdefinierte Formatbezeichner "K" stellt die Zeitzoneninformationen eines Datums- und Uhrzeitwerts dar. Bei Verendung dieses Formatbezeichners mit <xref:System.DateTime>-Werten wird die Ergebniszeichenfolge durch den Wert der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft definiert:
 
--   Für die lokale Zeitzone (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) ist dieser Bezeichner gleich dem Bezeichner "zzz" und erzeugt eine Ergebniszeichenfolge, die den lokalen Offset der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält, z. B. "-07:00".
+- Für die lokale Zeitzone (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) ist dieser Bezeichner gleich dem Bezeichner "zzz" und erzeugt eine Ergebniszeichenfolge, die den lokalen Offset der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält, z. B. "-07:00".
 
--   Für eine UTC-Zeit (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) umfasst die Ergebniszeichenfolge ein Zeichen "Z", das ein UTC-Datum darstellt.
+- Für eine UTC-Zeit (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) umfasst die Ergebniszeichenfolge ein Zeichen "Z", das ein UTC-Datum darstellt.
 
--   Für eine Zeit in einer nicht spezifizierten Zeitzone (eine Zeit, deren <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft gleich <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist), entspricht das Ergebnis <xref:System.String.Empty?displayProperty=nameWithType>.
+- Für eine Zeit in einer nicht spezifizierten Zeitzone (eine Zeit, deren <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft gleich <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist), entspricht das Ergebnis <xref:System.String.Empty?displayProperty=nameWithType>.
 
 Für <xref:System.DateTimeOffset>-Werte ist der Formatbezeichner „K“ gleich dem Formatbezeichner „zzz“ und erzeugt eine Ergebniszeichenfolge, die den Offset des <xref:System.DateTimeOffset>-Werts von der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält.
 
@@ -699,5 +699,5 @@ Die von vielen der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit e
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
-- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Beispiel: .NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

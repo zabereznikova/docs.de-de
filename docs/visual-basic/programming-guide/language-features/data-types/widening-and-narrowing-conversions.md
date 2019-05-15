@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600896"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586306"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Erweiternde und eingrenzende Konvertierungen (Visual Basic)
 Ein wichtiger Aspekt bei einer typkonvertierung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Ziel-Datentyps.  
@@ -93,7 +93,7 @@ Ein wichtiger Aspekt bei einer typkonvertierung ist, ob das Ergebnis der Konvert
   
 - <xref:System.OverflowException> – (nur bei ganzzahligen Typen), wenn der konvertierte Wert für den Zieltyp zu groß ist.  
   
- Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als Operator für die Konvertierung in oder aus dieser Klasse oder Struktur, dienen, `CType` können geeignete Ausnahmen auslösen. Darüber hinaus, `CType` kann Visual Basic-Funktionen aufrufen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Methoden, die wiederum eine Vielzahl von Ausnahmen auslösen können.  
+ Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als Operator für die Konvertierung in oder aus dieser Klasse oder Struktur, dienen, `CType` können geeignete Ausnahmen auslösen. Darüber hinaus, `CType` kann Visual Basic-Funktionen oder Methoden in .NET Framework, die wiederum eine Vielzahl von Ausnahmen auslösen könnten aufrufen.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Änderungen bei der Verweistypkonvertierungen  
  Eine Konvertierung von einem *Verweistyp* wird nur der Zeiger auf den Wert. Der Wert selbst werden nicht kopiert oder in einer Weise geändert. Das einzige, das geändert werden kann ist den Datentyp der Variablen den Zeiger enthält. Klicken Sie im folgenden Beispiel der Datentyp aus der abgeleiteten Klasse konvertiert wird, mit der Basisklasse, aber das Objekt, dem beide Variablen zeigen jetzt auf bleibt unverändert.  

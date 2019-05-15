@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590418"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Die Assembly kann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>So kopieren Sie die XML- und die XSLT-Dateien auf den lokalen Computer  
   
--   Kopieren Sie die XSLT-Datei auf den lokalen Computer, und nennen Sie sie &lt;legacyBold&gt;Transform.xsl&lt;/legacyBold&gt;.  
+- Kopieren Sie die XSLT-Datei auf den lokalen Computer, und nennen Sie sie &lt;legacyBold&gt;Transform.xsl&lt;/legacyBold&gt;.  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Ass
     </xsl:stylesheet>  
     ```  
   
--   Kopieren Sie die XML-Datei auf den lokalen Computer, und nennen Sie sie `books.xml`.  
+- Kopieren Sie die XML-Datei auf den lokalen Computer, und nennen Sie sie `books.xml`.  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -184,6 +184,6 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XSLT-Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT-Compiler („xsltc.exe“)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Erstellen über die Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

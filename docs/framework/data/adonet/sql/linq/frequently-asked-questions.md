@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657060"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583498"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  F. Ist System.Data.Linq für die Verwendung durch teilweise vertrauenswürdigen Code markiert?  
   
- A. Ja, die System.Data.Linq.dll-Assembly gehört zu den [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]-Assemblys, die mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut markiert sind. Assemblys in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], die diese Markierung nicht aufweisen, sind nur für die Verwendung durch voll vertrauenswürdigen Code vorgesehen.  
+ A. Ja, die System.Data.Linq.dll-Assembly gehört zu .NET Framework-Assemblys mit markiert die <xref:System.Security.AllowPartiallyTrustedCallersAttribute> Attribut. Ohne diese Markierung ist, werden Assemblys in .NET Framework für die Verwendung nur durch voll vertrauenswürdigen Code vorgesehen.  
   
  Das Dienstprinzipal Szenario in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Zulassen teilweise vertrauenswürdiger Aufrufer ist die Aktivierung der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Assembly über Webanwendungen zugegriffen werden, in dem die *Vertrauensstellung* Konfiguration ist Mittel.  
   

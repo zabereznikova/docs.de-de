@@ -2,18 +2,18 @@
 title: Übersicht über Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034063"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583844"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist ein Satz von Technologien in ADO.NET, der die Entwicklung datenorientierter Softwareanwendungen unterstützt. Architekten und Entwickler datenorientierter Anwendungen mussten zwei sehr verschiedene Ziele erreichen. Sie mussten die Entitäten, die Beziehungen und die Logik der zu lösenden Geschäftsprobleme modellieren und mit den zum Speichern und Abrufen von Daten verwendeten Daten-Engines arbeiten. Die Daten können auf mehrere Speichersysteme verteilt sein, die jeweils über eigene Protokolle verfügen. Selbst Anwendungen, die mit nur einem Speichersystem arbeiten, müssen ein ausgewogenes Verhältnis zwischen den Anforderungen des Speichersystems und den Anforderungen beim Schreiben von effizientem und verwaltbarem Anwendungscode finden.
 
-Mithilfe von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Entwickler mit Daten in der Form domänenspezifischer Objekte und Eigenschaften arbeiten, wie z. B. Kunden und Kundenadressen, ohne sich über die zugrunde liegenden Datenbanktabellen und -spalten Gedanken machen zu müssen, in denen diese Daten gespeichert sind. Mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Entwickler beim Umgang mit Daten auf einer höheren Abstraktionsebene arbeiten und mit weniger Code als in herkömmlichen Anwendungen datenorientierte Anwendungen erstellen und warten. Da das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eine Komponente des [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] ist, können [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]Anwendungen auf jedem Computer ausgeführt werden, auf dem mindestens die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Version 3.5 SP1 installiert ist.
+Mithilfe von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Entwickler mit Daten in der Form domänenspezifischer Objekte und Eigenschaften arbeiten, wie z. B. Kunden und Kundenadressen, ohne sich über die zugrunde liegenden Datenbanktabellen und -spalten Gedanken machen zu müssen, in denen diese Daten gespeichert sind. Mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Entwickler beim Umgang mit Daten auf einer höheren Abstraktionsebene arbeiten und mit weniger Code als in herkömmlichen Anwendungen datenorientierte Anwendungen erstellen und warten. Da die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist eine Komponente von .NET Framework, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendungen können ausgeführt werden auf jedem Computer, auf dem .NET Framework ab Version 3.5 SP1 installiert ist.
 
 ## <a name="give-life-to-models"></a>Geben Sie leben auf Modelle
  Ein seit langem befolgter und verbreiteter Entwurfsansatz beim Erstellen einer Anwendung oder eines Dienstes besteht darin, die Anwendung oder den Dienst in drei Teile aufzuspalten: in ein Domänenmodell, ein logisches Modell und ein physisches Modell. Das Domänenmodell definiert die Entitäten und Beziehungen in dem zu modellierenden System. Das logische Modell für eine relationale Datenbank normalisiert die Entitäten und Beziehungen in Tabellen mit Fremdschlüsseleinschränkungen. Das physische Modell bezieht sich auf die Funktionen einer bestimmten Daten-Engine und gibt die Speicherdetails, wie z.B. Partitionierung und Indizierung, an.

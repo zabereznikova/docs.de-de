@@ -2,18 +2,18 @@
 title: Programmierhandbuch (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785579"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592919"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Programmierhandbuch (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Programmieren mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="who-should-read-this-documentation"></a>Zielgruppe  
- Diese Dokumentation richtet sich an Entwickler, die bereits Visual Basic und einige grundlegende Aspekte verstehen der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ Diese Dokumentation richtet sich an Entwickler, die Visual Basic und einige grundlegende Aspekte von .NET Framework bereits vertraut sind.  
   
  Ziel dieser Dokumentation ist es, Entwicklern das Arbeiten mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zu erleichtern. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vereinfacht die XML-Programmierung. und kann auch von Entwicklern verwendet werden, die keine ausgesprochenen Experten auf diesem Gebiet sind.  
   

@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215039"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623409"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Services Installation-Tool)
 Mit dem .NET Services Installation-Tool können folgende Aktionen ausgeführt werden:  
   
--   Laden und Registrieren einer Assembly  
+- Laden und Registrieren einer Assembly  
   
--   Generieren, Registrieren und Installieren einer Typbibliothek in einer angegebenen COM+-Anwendung  
+- Generieren, Registrieren und Installieren einer Typbibliothek in einer angegebenen COM+-Anwendung  
   
--   Konfigurieren von Diensten, die Sie programmgesteuert einer Klasse hinzugefügt haben  
+- Konfigurieren von Diensten, die Sie programmgesteuert einer Klasse hinzugefügt haben  
   
  Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -60,7 +60,7 @@ Mit dem .NET Services Installation-Tool können folgende Aktionen ausgeführt we
 |**/parname:** *name*|Gibt den Namen oder die ID der zu suchenden oder zu erstellenden COM+-Anwendung an.|  
 |**/reconfig**|Konfiguriert eine vorhandene Zielanwendung neu. Dies ist die Standardeinstellung.|  
 |**/tlb:** *typelibraryfile*|Gibt die zu installierende Typbibliotheksdatei an.|  
-|**/U**|Deinstalliert die Zielanwendung.|  
+|**/u**|Deinstalliert die Zielanwendung.|  
 |**/quiet**|Gibt den stillen Modus an und unterdrückt das Logo und die Anzeige von Erfolgsmeldungen.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
@@ -88,6 +88,6 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

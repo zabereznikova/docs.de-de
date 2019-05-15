@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589859"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validieren eines XML-Dokuments im Dokumentobjektmodell
 Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Dokumentobjektmodell) standardmäßig nicht anhand eines XSD-Schemas (XML Schema Definition Language) oder einer DTD (Document Type Definition). Das XML-Dokument wird nur validiert, damit es wohlgeformt ist.  
@@ -56,9 +56,9 @@ Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Doku
   
  Beachten Sie Folgendes, wenn Sie XML-Daten beim Laden in das DOM validieren.  
   
--   Im vorangehenden Beispiel wird der <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> immer aufgerufen, sobald ein ungültiger Typ erkannt wird. Wenn im validierenden <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> kein <xref:System.Xml.XmlReader> festgelegt ist, wird beim Aufrufen von <xref:System.Xml.Schema.XmlSchemaValidationException> eine <xref:System.Xml.XmlDocument.Load%2A> ausgelöst, wenn ein Attribut- oder Elementtyp nicht mit dem entsprechenden Typ übereinstimmt, der im validierenden Schema angegeben ist.  
+- Im vorangehenden Beispiel wird der <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> immer aufgerufen, sobald ein ungültiger Typ erkannt wird. Wenn im validierenden <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> kein <xref:System.Xml.XmlReader> festgelegt ist, wird beim Aufrufen von <xref:System.Xml.Schema.XmlSchemaValidationException> eine <xref:System.Xml.XmlDocument.Load%2A> ausgelöst, wenn ein Attribut- oder Elementtyp nicht mit dem entsprechenden Typ übereinstimmt, der im validierenden Schema angegeben ist.  
   
--   Wenn ein XML-Dokument in ein <xref:System.Xml.XmlDocument>-Objekt mit einem zugeordneten Schema geladen wird, das Standardwerte definiert, behandelt das <xref:System.Xml.XmlDocument>-Objekt diese Standardwerte, als wären diese im XML-Dokument enthalten. Das bedeutet, dass die <xref:System.Xml.XmlReader.IsEmptyElement%2A>-Eigenschaft immer den Wert `false` für ein Element zurückgibt, das als Standardwert aus dem Schema entnommen wurde. Es wird auch im XML-Dokument als leeres Element geschrieben.  
+- Wenn ein XML-Dokument in ein <xref:System.Xml.XmlDocument>-Objekt mit einem zugeordneten Schema geladen wird, das Standardwerte definiert, behandelt das <xref:System.Xml.XmlDocument>-Objekt diese Standardwerte, als wären diese im XML-Dokument enthalten. Das bedeutet, dass die <xref:System.Xml.XmlReader.IsEmptyElement%2A>-Eigenschaft immer den Wert `false` für ein Element zurückgibt, das als Standardwert aus dem Schema entnommen wurde. Es wird auch im XML-Dokument als leeres Element geschrieben.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>Validieren eines XML-Dokuments im Dokumentobjektmodell  
  Die <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse validiert die in das DOM geladenen XML-Daten anhand der Schemata in der <xref:System.Xml.XmlDocument>-Eigenschaft des <xref:System.Xml.XmlDocument.Schemas%2A>-Objekts. Nach erfolgreicher Validierung werden Schemastandards angewendet, Textwerte bei Bedarf in atomare Werte konvertiert und Typinformationen validierten Informationselementen zugeordnet. Daher werden zuvor nicht typisierte XML-Daten durch typisierte XML-Daten ersetzt.  

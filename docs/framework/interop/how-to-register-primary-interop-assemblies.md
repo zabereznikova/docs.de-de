@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314749"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626257"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interopassemblys
 
@@ -28,9 +28,9 @@ Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Sc
 
  Obwohl eine Registrierung von primären Interop-Assemblys nur dann erforderlich ist, wenn Sie Visual Studio verwenden möchten, bietet eine Registrierung zwei Vorteile:
 
--   Eine registrierte primäre Interop-Assembly ist eindeutig unter dem Registrierungsschlüssel der ursprünglichen Typbibliothek gekennzeichnet. Die Registrierung ist die beste Möglichkeit für Sie, nach einer primären Interop-Assembly auf dem Computer zu suchen.
+- Eine registrierte primäre Interop-Assembly ist eindeutig unter dem Registrierungsschlüssel der ursprünglichen Typbibliothek gekennzeichnet. Die Registrierung ist die beste Möglichkeit für Sie, nach einer primären Interop-Assembly auf dem Computer zu suchen.
 
--   Sie können vermeiden, versehentlich eine neue Interop-Assembly zu generieren und zu verwenden, wenn Sie irgendwann in der Zukunft Visual Studio verwenden, um auf einen Typ zu verweisen, für den Sie eine nicht registrierte primäre Interop-Assembly haben.
+- Sie können vermeiden, versehentlich eine neue Interop-Assembly zu generieren und zu verwenden, wenn Sie irgendwann in der Zukunft Visual Studio verwenden, um auf einen Typ zu verweisen, für den Sie eine nicht registrierte primäre Interop-Assembly haben.
 
 Verwenden Sie das [Assembly Registration-Tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), um eine primäre Interop-Assembly zu registrieren.
 
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Programmieren mit primären Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Programming with Primary Interop Assemblies (Programmieren mit primären Interop-Assemblys)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Suchen primärer Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
 - [Verteilen primärer Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

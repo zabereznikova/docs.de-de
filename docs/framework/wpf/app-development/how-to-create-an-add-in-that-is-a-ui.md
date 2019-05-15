@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625371"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592664"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) ist der von der eine eigenständige WPF-Anwendung gehostet wird.  
@@ -81,7 +81,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implementieren der Hostanwendung  
- Der hostseitige Adapter und die Hostansicht erstellt wurden, können die hostanwendung die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell, um die Pipeline zu öffnen und eine Hostansicht des Add-Ins abzurufen. Diese Schritte werden im folgenden Code gezeigt.  
+ Der hostseitige Adapter und die Hostansicht erstellt wurden kann die hostanwendung das Add-In-Modell von .NET Framework verwenden, öffnen Sie die Pipeline und eine Hostansicht des Add-Ins abzurufen. Diese Schritte werden im folgenden Code gezeigt.  
 
  Die hostanwendung verwendet typischen Code von .NET Framework-Add-in-Modell, aktivieren Sie das Add-in, das die hostanwendung die Hostansicht implizit an die hostanwendung zurückgibt. Die hostanwendung zeigt anschließend die Hostansicht (d.h. eine <xref:System.Windows.Controls.UserControl>) aus einer <xref:System.Windows.Controls.Grid>.  
   

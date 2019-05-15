@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874236"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582811"
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Verfolgen der Leistung mithilfe des Systemmonitors (Perfmon.exe)  
- Der Systemmonitor ist das einfachste Tool zur Profilerstellung für Ihre [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Anwendung. Der Systemmonitor stellt in den .NET Framework-Leistungsindikatoren erfasste Daten grafisch dar, die mit der Common Language Runtime und dem [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]installiert werden. Mithilfe dieser Leistungsindikatoren können Sie von der Speicherverwaltung bis zur JIT-Compilerleistung (JIT) sämtliche Informationen überwachen. Sie informieren Sie über die von der Anwendung verwendeten Ressourcen, die ein indirektes Maß für die Leistung der Anwendung sind. Verwenden Sie diese Leistungsindikatoren, um zu verstehen, wie die Anwendung intern funktioniert.  
+ Der Systemmonitor ist das einfachste Tool verwenden, um Ihre .NET Framework-Anwendung ein Profil. Der Systemmonitor stellt in den .NET Framework-Leistungsindikatoren erfasste Daten grafisch dar, die mit der Common Language Runtime und dem [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]installiert werden. Mithilfe dieser Leistungsindikatoren können Sie von der Speicherverwaltung bis zur JIT-Compilerleistung (JIT) sämtliche Informationen überwachen. Sie informieren Sie über die von der Anwendung verwendeten Ressourcen, die ein indirektes Maß für die Leistung der Anwendung sind. Verwenden Sie diese Leistungsindikatoren, um zu verstehen, wie die Anwendung intern funktioniert.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>So führen Sie „Perfmon.exe“ unter Windows Vista und höheren Versionen aus  
   
@@ -57,7 +57,7 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
 >  Auf Systemen, auf denen [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] installiert ist, zeigt der Systemmonitor möglicherweise in einigen Kategorien, z. B. in **.NET CLR-Daten** und **.NET CLR-Netzwerk**, keine Daten für Leistungsindikatoren für Anwendungen an, die mithilfe von [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]entwickelt wurden. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programmgesteuertes Lesen und Erstellen von Leistungsindikatoren  
- Der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt Klassen bereit, mit denen Sie programmgesteuert auf dieselben Leistungsdaten zugreifen können, die in der Leistungskonsole verfügbar sind. Mithilfe dieser Klassen können Sie auch benutzerdefinierte Leistungsindikatoren erstellen. In der folgenden Tabelle sind einige der Systemmonitorklassen beschrieben, die im [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]bereitgestellt werden.  
+ .NET Framework bietet Klassen, die Sie verwenden können, um programmgesteuert auf dieselben Leistungsdaten zugreifen, die in der Leistungskonsole verfügbar ist. Mithilfe dieser Klassen können Sie auch benutzerdefinierte Leistungsindikatoren erstellen. Die folgende Tabelle beschreibt einige der systemmonitorklassen, die in .NET Framework bereitgestellt werden.  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  

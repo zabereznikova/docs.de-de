@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 8254e48444fef248adb7c33b14faa43242647d59
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f2fb48e07243694b14904b240bdcb0739175c2fc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655611"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593525"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode
-Sie können Probleme mit der Component Object Model-Interoperabilität (COM) beheben, indem Sie die Windows Form in einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Nachrichtenschleife anzeigen, die Sie mit der <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> -Methode erstellen können.  
+Sie können Probleme mit der Component Object Model (COM) Interoperabilität beheben, durch das Anzeigen von Ihrem Windows-Formular in einer Schleife der .NET Framework-Nachricht, die erstellt wird die <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> Methode.  
   
  Damit ein Formular aus einer COM-Clientanwendung heraus ordnungsgemäß funktioniert, müssen Sie es in einer Windows Forms-Nachrichtenschleife ausführen. Hierzu können Sie einen der folgenden Ansätze verwenden:  
   
@@ -25,17 +25,17 @@ Sie können Probleme mit der Component Object Model-Interoperabilität (COM) beh
 - Zeigen Sie jedes Windows Form in einem separaten Thread an. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Prozedur  
- Die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode ist möglicherweise die einfachste Möglichkeit, eine Form in einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Nachrichtenschleife anzuzeigen, weil es von allen Ansätzen die geringste Codeimplementierung erfordert.  
+ Mithilfe der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode ist möglicherweise die einfachste Möglichkeit zum Anzeigen eines Formulars in einer .NET Framework-Nachrichtenschleife, da von allen Ansätzen, ist es erforderlich, am wenigsten Code implementieren.  
   
- Die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode unterbricht die Nachrichtenschleife der nicht verwalteten Anwendung und zeigt die Form als Dialogfeld an. Da die Schleife der Hostanwendung angehalten wurde, erstellt die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode eine neue [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Nachrichtenschleife zum Verarbeiten der Nachrichten der Form.  
+ Die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode unterbricht die Nachrichtenschleife der nicht verwalteten Anwendung und zeigt die Form als Dialogfeld an. Da die Nachrichtenschleife der hostanwendung angehalten wurde, die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> Methode erstellt eine neue .NET Framework-Meldungsschleife zum Verarbeiten der Nachrichten der Form.  
   
- Der Nachteil der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode ist, dass die Form als modales Dialogfeld geöffnet wird. Dieses Verhalten blockiert solange jede Benutzeroberfläche (UI) in der aufrufenden Anwendung, wie die Windows Form geöffnet ist. Wenn der Benutzer die Form schließt, wird die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Nachrichtenschleife geschlossen und die zuvor erstellte Nachrichtenschleife der Anwendung erneut ausgeführt.  
+ Der Nachteil der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode ist, dass die Form als modales Dialogfeld geöffnet wird. Dieses Verhalten blockiert solange jede Benutzeroberfläche (UI) in der aufrufenden Anwendung, wie die Windows Form geöffnet ist. Wenn der Benutzer das Formular verlässt, schließt die .NET Framework-Meldungsschleife und der früheren Anwendung Meldungsschleife erneut gestartet wird.  
   
  Sie können eine Klassenbibliothek in Windows Forms erstellen, die über eine Methode zum Anzeigen der Form verfügt, und die Klassenbibliothek anschließend für COM-Interop bauen. Sie können diese DLL-Datei aus Visual Basic 6.0 oder Microsoft Foundation Classes (MFC) verwenden, und Sie können in jeder dieser Umgebungen die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode aufrufen, um die Form anzuzeigen.  
   
 #### <a name="to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>So unterstützen Sie COM-Interop durch Anzeigen einer Windows Form mit der ShowDialog-Methode  
   
-- Ersetzen Sie in Ihrer <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> -Komponente alle Aufrufe der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode durch Aufrufe der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Methode.  
+- Ersetzen Sie alle Aufrufe der <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> Methode durch Aufrufe der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode in der .NET Framework-Komponente.  
   
 ## <a name="see-also"></a>Siehe auch
 

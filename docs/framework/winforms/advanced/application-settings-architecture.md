@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625774"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592780"
 ---
 # <a name="application-settings-architecture"></a>Architektur der Anwendungseinstellungen
 In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellungen funktioniert. Außerdem werden erweiterte Funktionen der Architektur erläutert, z.B. gruppierte Einstellungen und Einstellungsschlüssel.  
@@ -44,7 +44,7 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
 ## <a name="settings-persistence"></a>Beibehaltung von Einstellungen  
  Die <xref:System.Configuration.ApplicationSettingsBase> Klasse nicht selbst beibehalten oder Einstellungen geladen werden; diese Aufgabe übernimmt des Einstellungsanbieters, eine abgeleitete Klasse <xref:System.Configuration.SettingsProvider>. Wenn eine abgeleitete Klasse von <xref:System.Configuration.ApplicationSettingsBase> gibt keinen Einstellungsanbieter über die <xref:System.Configuration.SettingsProviderAttribute>, und klicken Sie dann den Standardanbieter <xref:System.Configuration.LocalFileSettingsProvider>, verwendet wird.  
   
- Das Konfigurationssystem, das ursprünglich mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veröffentlicht wurde, unterstützt die Bereitstellung von statischen Anwendungskonfigurationsdaten über die Datei machine.config des lokalen Computers oder in einer Datei `app.`exe.config, die Sie mit Ihrer Anwendung bereitstellen. Die <xref:System.Configuration.LocalFileSettingsProvider> Klasse erweitert diese native Unterstützung auf folgende Weise:  
+ Das Konfigurationssystem, die ursprünglich mit .NET Framework veröffentlicht wurde unterstützt die Bereitstellung von statischen Anwendungskonfigurationsdaten über entweder auf dem lokalen Computer die machine.config-Datei oder in einem `app.`exe.config-Datei, die Sie mit bereitstellen. Ihre Anwendung. Die <xref:System.Configuration.LocalFileSettingsProvider> Klasse erweitert diese native Unterstützung auf folgende Weise:  
   
 - Anwendungsspezifische Einstellungen können in der Datei machine.config oder `app.`exe.config gespeichert werden. Die Datei machine.config ist immer schreibgeschützt, während `app`. exe.config aufgrund von Sicherheitsüberlegungen für die meisten Anwendungen schreibgeschützt ist.  
   

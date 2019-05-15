@@ -2,12 +2,12 @@
 title: FILESTREAM-Daten
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032486"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582708"
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 
@@ -20,7 +20,7 @@ Wenn das FILESTREAM-Attribut für eine varbinary(max)-Spalte festgelegt ist, wer
 
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient-Unterstützung für FILESTREAM
 
-Die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, <xref:System.Data.SqlClient>, unterstützt das Lesen und Schreiben von FILESTREAM-Daten mithilfe der <xref:System.Data.SqlTypes.SqlFileStream> Klasse definiert die <xref:System.Data.SqlTypes> Namespace. `SqlFileStream` erbt von der <xref:System.IO.Stream>-Klasse, die Methoden zum Lesen und Schreiben der Datenströme bereitstellt. Beim Lesen aus einem Strom werden die Daten vom Strom in eine Datenstruktur übertragen, z. B. in ein Bytearray. Beim Schreiben werden die Daten von einer Datenstruktur in einen Strom übertragen.
+Die .NET Framework-Datenanbieter für SQL Server <xref:System.Data.SqlClient>, unterstützt das Lesen und Schreiben von FILESTREAM-Daten mithilfe der <xref:System.Data.SqlTypes.SqlFileStream> Klasse definiert die <xref:System.Data.SqlTypes> Namespace. `SqlFileStream` erbt von der <xref:System.IO.Stream>-Klasse, die Methoden zum Lesen und Schreiben der Datenströme bereitstellt. Beim Lesen aus einem Strom werden die Daten vom Strom in eine Datenstruktur übertragen, z. B. in ein Bytearray. Beim Schreiben werden die Daten von einer Datenstruktur in einen Strom übertragen.
 
 ### <a name="creating-the-sql-server-table"></a>Erstellen der SQL Server-Tabelle
 

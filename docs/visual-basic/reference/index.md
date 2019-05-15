@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: af8d2c99015304507b2b3361a8a851d125c14a81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5142fb9f4b5cd49bb35b58fdd92e4fb84b8ecc03
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968336"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593059"
 ---
 # <a name="reference-visual-basic"></a>Referenz
 Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekten der Programmierung mit Visual Basic.  
@@ -23,7 +23,7 @@ Dieser Abschnitt enthält Links zu Referenzinformationen zu verschiedenen Aspekt
  Enthält Links zu Informationen über den Befehlszeilencompiler, der eine Alternative zur Kompilierung von Visual Studio-IDE-Programmen bietet.  
   
  [.NET Framework-Referenzinformationen](../../visual-basic/reference/net-framework-reference-information.md)  
- Enthält Links zu Informationen zum Verwenden der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek.  
+ Enthält Links zu Informationen zum Arbeiten mit der .NET Framework-Klassenbibliothek.  
   
  [Visual Basic-Sprachspezifikation](../../visual-basic/reference/language-specification/index.md)  
  Enthält Links zu die vollständige Visual Basic-Sprachspezifikation, die detaillierte Informationen zu allen Aspekten der Programmiersprache enthält.  

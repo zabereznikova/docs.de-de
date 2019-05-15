@@ -1,5 +1,5 @@
 ---
-title: 'Die erste Anweisung des Sub New-Blocks muss ein expliziter Aufruf an "MyBase.New" oder "MyClass.New" sein, da "<constructorname>" in der <baseclassname>-Basisklasse von "<derivedclassname>" als veraltet markiert ist: "<errormessage>"'
+title: "Die erste Anweisung des Sub New-Blocks muss ein expliziter Aufruf an 'MyBase.New' oder 'MyClass.New' sein, da '<constructorname>' in der <baseclassname>-Basisklasse von '<derivedclassname>' als veraltet markiert ist: '<errormessage>'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61801880"
 ---
-# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Die erste Anweisung dieser "Sub New" muss ein expliziter Aufruf an "MyBase.New" oder "MyClass.New" sein, da die '\<Konstruktorname >' in der Basisklasse\<Basisklassenname >' von '\<Name der abgeleiteten Klasse > "als veraltet markiert ist:"\< Fehlermeldung >'
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Die erste Anweisung dieser 'Sub New' muss ein expliziter Aufruf an 'MyBase.New' oder 'MyClass.New' sein, da die '\<Konstruktorname >' in der Basisklasse\<Basisklassenname >' von '\<Name der abgeleiteten Klasse > 'als veraltet markiert ist:'\< Fehlermeldung >'
 Ein Klassenkonstruktor ruft nicht explizit einen Basisklassenkonstruktor auf, und der implizite Basisklassenkonstruktor ist mit dem Attribut <xref:System.ObsoleteAttribute> und der Direktive versehen, dies als Fehler zu behandeln.  
   
  Wenn der Konstruktor einer abgeleiteten Klasse keinen Basisklassenkonstruktor aufruft, versucht Visual Basic einen impliziten Aufruf eines parameterlosen Basisklassenkonstruktors zu generieren. Ist es kein zugänglicher Konstruktor in der Basisklasse, die ohne Argumente aufgerufen werden kann, kann nicht in Visual Basic einen impliziten Aufruf generieren. In diesem Fall wird der erforderliche Konstruktor mit markiert die <xref:System.ObsoleteAttribute> Attribut, sodass Visual Basic nicht aufrufen kann.  

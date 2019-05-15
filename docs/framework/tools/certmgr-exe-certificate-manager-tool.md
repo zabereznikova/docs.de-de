@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221100"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591564"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
@@ -75,13 +75,13 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
 ## <a name="remarks"></a>Anmerkungen  
  Von "Certmgr.exe" werden die folgenden Basisfunktionen ausgeführt:  
   
--   Zeigt Zertifikate, CTLs und CRLs in der Konsole an.  
+- Zeigt Zertifikate, CTLs und CRLs in der Konsole an.  
   
--   Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.  
+- Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.  
   
--   Löscht Zertifikate, CTLs und CRLs aus einem Zertifikatspeicher.  
+- Löscht Zertifikate, CTLs und CRLs aus einem Zertifikatspeicher.  
   
--   Speichert ein X.509-Zertifikat, eine CTL oder eine CRL aus einem Zertifikatspeicher in einer Datei.  
+- Speichert ein X.509-Zertifikat, eine CTL oder eine CRL aus einem Zertifikatspeicher in einer Datei.  
   
  In „Certmgr.exe“ werden zwei Typen von Zertifikatspeichern verwendet: **StoreFile** und der Systemspeicher. Sie müssen den Typ des Zertifikatspeichers nicht angeben. "Certmgr.exe" kann den Speichertyp erkennen und die entsprechenden Operationen ausführen.  
   
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Makecert.exe (Tool für die Zertifikaterstellung)](/windows/desktop/SecCrypto/makecert)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
