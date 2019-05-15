@@ -2,16 +2,16 @@
 title: Asynchrone Programmierung
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846128"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584488"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
-In diesem Thema erläutert die Unterstützung für asynchrone Programmierung in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (SqlClient) einschließlich der Erweiterungen zur Unterstützung von Funktionen, die in eingeführt wurde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+In diesem Thema erläutert die Unterstützung für asynchrone Programmierung in .NET Framework-Datenanbieter für SQL Server (SqlClient) einschließlich der Erweiterungen zur Unterstützung von Funktionen, die in eingeführt wurde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
 
 ## <a name="legacy-asynchronous-programming"></a>Asynchrone Programmierung (Legacy)
 
@@ -44,7 +44,7 @@ Weitere Informationen zu der in [!INCLUDE[net_v45](../../../../includes/net-v45-
 
 Wenn die Benutzeroberfläche nicht mehr reagiert oder der Server nicht skaliert, ist es wahrscheinlich, dass Sie den Code asynchroner programmieren müssen. Das Schreiben von asynchronem Code umfasste üblicherweise die Installation eines Rückrufs (auch als Fortsetzung bekannt), um die Logik auszudrücken, die nach Ende des asynchronen Vorgangs ausgeführt wird. Dadurch wird die Struktur des asynchronen Codes im Vergleich zu synchronem Code komplizierter.
 
-Sie können nun Aufrufe in asynchrone Methoden ohne Rückrufe ausführen, und ohne Code auf mehrere Methoden oder Lambda-Ausdrücke zu verteilen.
+Sie können nun Aufrufe in asynchrone Methoden ohne Rückrufe ausführen, und ohne Code auf mehrere Methoden oder Lambdaausdrücke zu verteilen.
 
 Der `async`-Modifizierer gibt an, dass eine Methode asynchron ist. Wenn eine `async`-Methode aufgerufen wird, wird eine Aufgabe zurückgegeben. Wenn die `await` -Operator auf eine Aufgabe angewendet wird, die aktuelle Methode sofort beendet. Nach Beendigung der Aufgabe wird die Ausführung in derselben Methode fortgesetzt.
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034540"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583804"
 ---
 # <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren
-In früheren Versionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], Überprüfungen zur Kompilierzeit für Verbindungszeichenfolgen mit verketteten Zeichenfolge, die Werte nicht stattgefunden hat, sodass zur Laufzeit ein falsches Schlüsselwort generiert eine <xref:System.ArgumentException>. Jeder [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter unterstützte eine andere Syntax für Schlüsselwörter in Verbindungszeichenfolgen, was die manuelle Konstruktion gültiger Verbindungszeichenfolgen erschwerte. Zur Beseitigung dieses Problems wurden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 neue Verbindungszeichenfolgen-Generatoren für jeden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter eingeführt. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter und ihre jeweiligen Verbindungszeichenfolgen-Generatorklassen aufgelistet.  
+In früheren Versionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], Überprüfungen zur Kompilierzeit für Verbindungszeichenfolgen mit verketteten Zeichenfolge, die Werte nicht stattgefunden hat, sodass zur Laufzeit ein falsches Schlüsselwort generiert eine <xref:System.ArgumentException>. Jeder von .NET Framework-Datenanbietern unterstützt andere Syntax für Schlüsselwörter in Verbindungszeichenfolgen, was die erstellen gültige Verbindungszeichenfolgen schwierig, wenn Sie manuell durchgeführt. Zur Beseitigung dieses Problems [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wurden neue Verbindungszeichenfolgen-Generatoren für jeden .NET Framework-Datenanbieter eingeführt. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die .NET Framework-Datenanbieter und ihre jeweiligen ConnectionStringBuilder-Klassen aufgelistet.  
   
 |Anbieter|ConnectionStringBuilder-Klasse|  
 |--------------|-----------------------------------|  

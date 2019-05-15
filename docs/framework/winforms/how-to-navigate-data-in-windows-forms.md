@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801711"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583741"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Vorgehensweise: Navigieren durch Daten in Windows Forms
 In einer Windows-Anwendung ist die einfachste Möglichkeit zum Navigieren durch Datensätze in einer Datenquelle zum Binden einer <xref:System.Windows.Forms.BindingSource> -Komponente an die Datenquelle und dann Binden von Steuerelementen an die <xref:System.Windows.Forms.BindingSource>. Anschließend können Sie die integrierte Navigationsmethode auf die <xref:System.Windows.Forms.BindingSource> solche eine <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> und <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Mit diesen Methoden wird angepasst, die <xref:System.Windows.Forms.BindingSource.Position%2A> und <xref:System.Windows.Forms.BindingSource.Current%2A> Eigenschaften der <xref:System.Windows.Forms.BindingSource> entsprechend. Können Sie auch auf ein Element stoßen und es als aktuelles Element festlegen, durch Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft.  
@@ -26,7 +26,7 @@ In einer Windows-Anwendung ist die einfachste Möglichkeit zum Navigieren durch 
 1. Legen Sie die <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft der <xref:System.Windows.Forms.BindingSource> für die gebundenen Daten auf die Position des Datensatzes zu wechseln. Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.BindingSource.MoveNext%2A> -Methode der der <xref:System.Windows.Forms.BindingSource> zur Erhöhung der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft bei der `nextButton` geklickt wird. Die <xref:System.Windows.Forms.BindingSource> zugeordnet ist die `Customers` Tabelle eines Datasets `Northwind`.  
   
     > [!NOTE]
-    >  Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft auf einen Wert nach der ersten oder letzten Datensatz führt nicht zu einem Fehler wie der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lässt nicht die Position auf einen Wert außerhalb der Grenzen der Liste festlegen. Wenn es ist wichtig für Ihre Anwendung aus, um herauszufinden, ob Sie nach der ersten oder letzten Datensatz gelesen haben, enthalten Sie eine Logik zum Überprüfen, ob Sie die Anzahl der Elemente überschreitet.  
+    >  Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft auf einen Wert nach der ersten oder letzten Datensatz führt nicht zu einem Fehler, wie Sie festlegen, der die Position auf einen Wert außerhalb der Grenzen der Liste der .NET Framework nicht zugelassen wird. Wenn es ist wichtig für Ihre Anwendung aus, um herauszufinden, ob Sie nach der ersten oder letzten Datensatz gelesen haben, enthalten Sie eine Logik zum Überprüfen, ob Sie die Anzahl der Elemente überschreitet.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
