@@ -4,12 +4,12 @@
     - name: Puffer fester Größe
       href: fixed-size-buffers.md
     - name: Zeigertypen
-      href: pointer-types.md
       items:
+        - name: Übersicht
+          href: pointer-types.md
         - name: Zeigerkonvertierungen
           href: pointer-conversions.md
         - name: Zeigerausdrücke
-          href: pointer-expressions.md
           items:
             - name: 'Vorgehensweise: Abrufen des Werts einer Zeigervariablen'
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: 'Vorgehensweise: Zugreifen auf ein Arrayelement mit einem Zeiger'
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: Bearbeiten von Zeigern
-              href: manipulating-pointers.md
               items:
                 - name: 'Vorgehensweise: Inkrementieren und Dekrementieren von Zeigern'
                   href: how-to-increment-and-decrement-pointers.md
