@@ -1,0 +1,2382 @@
+- name: Willkommen
+  href: welcome.md
+- name: Leitfaden für .NET
+  href: standard/index.md
+  items:
+    - name: Erste Schritte mit .NET
+      href: standard/get-started.md
+    - name: Einführung in .NET
+      href: standard/tour.md
+    - name: .NET-Architekturkomponenten
+      href: standard/components.md
+    - name: .NET-Standard
+      href: standard/net-standard.md
+      items:
+        - name: Neuerungen im .NET Standard
+          href: standard/whats-new/whats-new-in-dotnet-standard.md
+    - name: Zielframeworks
+      href: standard/frameworks.md
+    - name: .NET-Glossar
+      href: standard/glossary.md
+    - name: Architekturleitfaden
+      href: standard/guidance-architecture.md
+      items:
+        - name: Entwerfen moderner Webanwendungen mit ASP.NET Core und Microsoft Azure
+          href: standard/modern-web-apps-azure-architecture/
+        - name: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern
+          href: standard/modernize-with-azure-and-containers/
+        - name: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+          href: standard/containerized-lifecycle-architecture/
+        - name: '.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen'
+          href: standard/microservices-architecture/
+        - name: 'Serverlose Apps: Architektur, Muster und Azure-Implementierung'
+          href: standard/serverless-architecture/
+    - name: Leitfaden für die Open Source-Bibliothek
+      href: standard/library-guidance/
+    - name: Wahl zwischen .NET Core und .NET Framework für Server-Apps
+      href: standard/choosing-core-framework-server.md
+    - name: Was ist „verwalteter Code“?
+      href: standard/managed-code.md
+      items:
+        - name: Automatic Memory Management
+          href: standard/automatic-memory-management.md
+    - name: Common Language Runtime (CLR)
+      href: standard/clr.md
+    - name: Sprachunabhängigkeit
+      href: standard/language-independence.md
+      items:
+        - name: Sprachenunabhängigkeit und sprachunabhängige Komponenten
+          href: standard/language-independence-and-language-independent-components.md
+    - name: Frameworkbibliotheken
+      href: standard/framework-libraries.md
+      items:
+        - name: Übersicht über die Klassenbibliothek
+          href: standard/class-library-overview.md
+        - name: Basistypen
+          href: standard/base-types/
+    - name: .NET-Klassenbibliotheken
+      href: standard/class-libraries.md
+    - name: Analyzer
+      href: standard/analyzers/index.md
+      items:
+        - name: API-Analysetool
+          href: standard/analyzers/api-analyzer.md
+        - name: Portability Analyzer
+          href: standard/analyzers/portability-analyzer.md
+        - name: Framework Analyzer
+          href: standard/analyzers/framework-analyzer.md
+    - name: Behandeln und Auslösen von Ausnahmen
+      href: standard/exceptions/
+    - name: Assemblys in .NET
+      href: standard/assembly/index.md
+      items:
+        - name: .NET-Assemblydateiformat
+          href: standard/assembly/file-format.md
+        - name: 'Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core'
+          href: standard/assembly/unloadability-howto.md
+    - name: Garbage Collection
+      href: standard/garbage-collection/
+    - name: Generische Typen
+      href: standard/generics.md
+    - name: Delegaten und Lambdas
+      href: standard/delegates-lambdas.md
+    - name: LINQ
+      href: standard/using-linq.md
+    - name: Allgemeines Typsystem und Common Language Specification
+      href: standard/common-type-system.md
+    - name: 'Parallelverarbeitung, Parallelität und Async'
+      href: standard/parallel-processing-and-concurrency.md
+      items:
+        - name: Asynchrone Programmierung
+          href: standard/async.md
+          items:
+            - name: Ausführliche Informationen zur asynchronen Programmierung
+              href: standard/async-in-depth.md
+            - name: Muster für die asynchrone Programmierung
+              href: standard/asynchronous-programming-patterns/
+        - name: Parallele Programmierung
+          href: standard/parallel-programming/
+        - name: Threading
+          href: standard/threading/
+    - name: Memory- und Span-bezogene Typen
+      href: standard/memory-and-spans/index.md
+      items:
+        - name: Leitfaden zur Verwendung von Memory<T> und Span<T>
+          href: standard/memory-and-spans/memory-t-usage-guidelines.md
+    - name: Native Interoperabilität
+      href: standard/native-interop/index.md
+      items:
+        - name: P/Invoke
+          href: standard/native-interop/pinvoke.md
+        - name: Marshalling von Typen
+          href: standard/native-interop/type-marshaling.md
+        - name: Anpassen des Marshallings für Strukturen
+          href: standard/native-interop/customize-struct-marshaling.md
+        - name: Anpassen des Marshallings für Parameter
+          href: standard/native-interop/customize-parameter-marshaling.md
+        - name: Leitfaden zur Interoperabilität
+          href: standard/native-interop/best-practices.md
+        - name: Zeichensätze und Marshalling
+          href: standard/native-interop/charset.md
+    - name: Auflistungen und Datenstrukturen
+      href: standard/collections/
+    - name: Numerische Ausdrücke in .NET
+      href: standard/numerics.md
+    - name: 'Datumsangaben, Uhrzeiten und Zeitzonen'
+      href: standard/datetime/
+    - name: Ereignisse
+      href: standard/events/
+    - name: Verwalteter Ausführungsprozess
+      href: standard/managed-execution-process.md
+    - name: Metadaten und selbstbeschreibende Komponenten
+      href: standard/metadata-and-self-describing-components.md
+    - name: Erstellen von Konsolenanwendungen
+      href: standard/building-console-apps.md
+    - name: Grundlagen der Anwendung
+      href: standard/application-essentials.md
+    - name: Datei- und Stream-E/A
+      href: standard/io/index.md
+    - name: Globalisierung und Lokalisierung
+      href: standard/globalization-localization/
+    - name: Attribute
+      href: standard/attributes/
+    - name: Frameworkentwurfsrichtlinien
+      href: standard/design-guidelines/
+    - name: XML-Dokumente und XML-Daten
+      href: standard/data/xml/
+    - name: Sicherheit
+      href: standard/security/
+    - name: Serialisierung
+      href: standard/serialization/
+    - name: Entwickeln für mehrere Plattformen
+      href: standard/cross-platform/
+- name: Leitfaden für .NET Core
+  href: core/index.md
+  items:
+    - name: Weitere Informationen zu .NET Core
+      href: core/about.md
+    - name: Erste Schritte
+      href: core/get-started.md
+      items:
+        - name: 'Erste Schritte mit C# und Visual Studio Code'
+          href: core/tutorials/with-visual-studio-code.md
+        - name: 'Erstellen einer „Hallo Welt“-App in C# mit .NET Core in Visual Studio 2017'
+          href: core/tutorials/with-visual-studio.md
+        - name: Erstellen einer „Hallo Welt“-App in Visual Basic mit .NET Core in Visual Studio 2017
+          href: core/tutorials/vb-with-visual-studio.md
+        - name: Erstellen einer .NET Core-Anwendung mit Plug-Ins
+          href: core/tutorials/creating-app-with-plugin-support.md
+        - name: 'Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017'
+          href: core/tutorials/debugging-with-visual-studio.md
+        - name: Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
+          href: core/tutorials/publishing-with-visual-studio.md
+        - name: 'Erstellen einer .NET Standard-Bibliothek mit C# und .NET Core in Visual Studio 2017'
+          href: core/tutorials/library-with-visual-studio.md
+        - name: Erstellen einer .NET Standard-Bibliothek mit Visual Basic und .NET Core in Visual Studio 2017
+          href: core/tutorials/vb-library-with-visual-studio.md
+        - name: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio 2017
+          href: core/tutorials/testing-library-with-visual-studio.md
+        - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
+          href: core/tutorials/consuming-library-with-visual-studio.md
+    - name: Erforderliche Komponenten für Windows
+      href: core/windows-prerequisites.md
+    - name: Erforderliche Komponenten für macOS
+      href: core/macos-prerequisites.md
+    - name: Erforderliche Komponenten für Linux
+      href: core/linux-prerequisites.md
+    - name: Neuigkeiten in .NET Core
+      href: core/whats-new/index.md
+      items:
+        - name: Neuerungen in .NET Core 3.0
+          href: core/whats-new/dotnet-core-3-0.md
+        - name: Neuerungen in .NET Core 2.2
+          href: core/whats-new/dotnet-core-2-2.md
+        - name: Neuigkeiten in .NET Core 2.1
+          href: core/whats-new/dotnet-core-2-1.md
+        - name: Neuigkeiten in .NET Core 2.0
+          href: core/whats-new/dotnet-core-2-0.md
+    - name: Tutorials
+      href: core/tutorials/index.md
+      items:
+        - name: Erste Schritte mit .NET Core unter macOS
+          href: core/tutorials/using-on-macos.md
+        - name: Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac
+          href: core/tutorials/using-on-mac-vs.md
+        - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
+          href: core/tutorials/using-on-mac-vs-full-solution.md
+        - name: Erste Schritte mit .NET Core unter Verwendung der CLI-Tools
+          href: core/tutorials/using-with-xplat-cli.md
+        - name: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
+          href: core/tutorials/testing-with-cli.md
+        - name: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
+          href: core/tutorials/libraries.md
+        - name: Entwickeln von ASP.NET Core-Anwendungen
+          href: core/tutorials/aspnet-core.md
+        - name: Hosten von .NET Core aus nativem Code
+          href: core/tutorials/netcore-hosting.md
+        - name: Erstellen eines benutzerdefinierten Vorlagen-Assistenten
+          href: core/tutorials/create-custom-template.md
+    - name: 'Pakete, Metapakete und Frameworks'
+      href: core/packages.md
+    - name: Änderungen in CLI – Übersicht
+      href: core/tools/cli-msbuild-architecture.md
+      items:
+        - name: Abhängigkeitsverwaltung
+          href: core/tools/dependencies.md
+        - name: Erweiterungen des CSPROJ-Formats
+          href: core/tools/csproj.md
+    - name: Migration
+      items:
+        - name: .NET Core 2.0 bis 2.1
+          href: core/migration/20-21.md
+        - name: Migrieren über „project.json“
+          href: core/migration/index.md
+        - name: Die Zuordnung zwischen project.json und csproj
+          href: core/tools/project-json-to-csproj.md
+        - name: Migrieren über DNX
+          href: core/migration/from-dnx.md
+    - name: Anwendungsbereitstellung
+      href: core/deploying/index.md
+      items:
+        - name: Bereitstellen von Apps mit CLI-Tools
+          href: core/deploying/deploy-with-cli.md
+        - name: Bereitstellen von Apps mit Visual Studio
+          href: core/deploying/deploy-with-vs.md
+        - name: Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools
+          href: core/deploying/creating-nuget-packages.md
+        - name: Rollforward der eigenständigen Runtimebereitstellung
+          href: core/deploying/runtime-patch-selection.md
+        - name: Laufzeitpaketspeicher
+          href: core/deploying/runtime-store.md
+    - name: Docker
+      items:
+        - name: Einführung zu .NET und Docker
+          href: core/docker/intro-net-docker.md
+        - name: Containerisieren einer .NET Core-App
+          href: core/docker/build-container.md
+        - name: Containertools in Visual Studio
+          href: /visualstudio/containers/overview
+    - name: Unittests
+      href: core/testing/index.md
+      items:
+        - name: Bewährte Methoden für Komponententests
+          href: core/testing/unit-testing-best-practices.md
+        - name: 'Komponententests in C# mit xUnit'
+          href: core/testing/unit-testing-with-dotnet-test.md
+        - name: 'Komponententests in C# mit NUnit'
+          href: core/testing/unit-testing-with-nunit.md
+        - name: 'Komponententests in C# mit MSTest'
+          href: core/testing/unit-testing-with-mstest.md
+        - name: 'Komponententests in F# mit xUnit'
+          href: core/testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: 'Komponententests in F# mit NUnit'
+          href: core/testing/unit-testing-fsharp-with-nunit.md
+        - name: 'Komponententests in F# mit MSTest'
+          href: core/testing/unit-testing-fsharp-with-mstest.md
+        - name: Komponententests in VB mit xUnit
+          href: core/testing/unit-testing-visual-basic-with-dotnet-test.md
+        - name: Komponententests in VB mit NUnit
+          href: core/testing/unit-testing-visual-basic-with-nunit.md
+        - name: Komponententests in VB mit MSTest
+          href: core/testing/unit-testing-visual-basic-with-mstest.md
+        - name: Ausführen von selektiven Komponententests
+          href: core/testing/selective-unit-tests.md
+        - name: Veröffentlichte Ausgabe von Komponententests
+          href: core/testing/unit-testing-published-output.md
+        - name: Live-Komponententests von .NET Core-Projekten mit Visual Studio
+          href: /visualstudio/test/live-unit-testing-start
+    - name: Versionskontrolle
+      href: core/versions/index.md
+      items:
+        - name: .NET Core-Versionsauswahl
+          href: core/versions/selection.md
+        - name: Entfernen von veralteten Runtimes und SDKs
+          href: core/versions/remove-runtime-sdk-versions.md
+    - name: Runtime-ID-Katalog
+      href: core/rid-catalog.md
+    - name: .NET Core SDK – Übersicht
+      href: core/sdk.md
+    - name: .NET Core-CLI-Tools
+      href: core/tools/index.md
+      items:
+        - name: Telemetrie
+          href: core/tools/telemetry.md
+        - name: Globale Tools
+          href: core/tools/global-tools.md
+          items:
+            - name: Erstellen eines globalen Tools
+              href: core/tools/global-tools-how-to-create.md
+        - name: Erweiterbarkeitsmodell
+          href: core/tools/extensibility.md
+        - name: Continuous Integration
+          href: core/tools/using-ci-with-cli.md
+        - name: Benutzerdefinierte Vorlagen
+          href: core/tools/custom-templates.md
+        - name: Aktivieren der Vervollständigung mit der TAB-TASTE
+          href: core/tools/enable-tab-autocomplete.md
+        - name: dotnet
+          href: core/tools/dotnet.md
+        - name: dotnet build
+          href: core/tools/dotnet-build.md
+        - name: dotnet build-server
+          href: core/tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: core/tools/dotnet-clean.md
+        - name: dotnet help
+          href: core/tools/dotnet-help.md
+        - name: dotnet migrate
+          href: core/tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: core/tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: core/tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: core/tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: core/tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: core/tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: core/tools/dotnet-pack.md
+        - name: dotnet publish
+          href: core/tools/dotnet-publish.md
+        - name: dotnet restore
+          href: core/tools/dotnet-restore.md
+        - name: dotnet run
+          href: core/tools/dotnet-run.md
+        - name: dotnet sln
+          href: core/tools/dotnet-sln.md
+        - name: dotnet store
+          href: core/tools/dotnet-store.md
+        - name: dotnet test
+          href: core/tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: core/tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: core/tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: core/tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: core/tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: core/tools/dotnet-vstest.md
+        - name: Dotnet-Installationsskripts
+          href: core/tools/dotnet-install-script.md
+        - name: Befehle zur Projektänderung
+          items:
+            - name: Verweise
+              items:
+                - name: dotnet add reference
+                  href: core/tools/dotnet-add-reference.md
+                - name: dotnet list reference
+                  href: core/tools/dotnet-list-reference.md
+                - name: dotnet remove reference
+                  href: core/tools/dotnet-remove-reference.md
+            - name: Pakete
+              items:
+                - name: dotnet add package
+                  href: core/tools/dotnet-add-package.md
+                - name: dotnet list package
+                  href: core/tools/dotnet-list-package.md
+                - name: dotnet remove package
+                  href: core/tools/dotnet-remove-package.md
+        - name: global.json
+          href: core/tools/global-json.md
+    - name: Zusätzliche Tools für .NET Core
+      href: core/additional-tools/index.md
+      items:
+        - name: WCF Web Service Reference-Anbieter
+          href: core/additional-tools/wcf-web-service-reference-guide.md
+        - name: dotnet-svcutil
+          href: core/additional-tools/dotnet-svcutil-guide.md
+        - name: dotnet-svcutil.xmlserializer
+          href: core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+        - name: XML Serializer Generator
+          href: core/additional-tools/xml-serializer-generator.md
+    - name: Portieren aus .NET Framework
+      href: core/porting/index.md
+      items:
+        - name: '.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind'
+          href: core/porting/net-framework-tech-unavailable.md
+        - name: Analysieren der Abhängigkeiten von Drittanbietern
+          href: core/porting/third-party-deps.md
+        - name: Portieren von Bibliotheken
+          href: core/porting/libraries.md
+        - name: Organisieren von Projekten für .NET Core
+          href: core/porting/project-structure.md
+        - name: Tools für das Portieren zu .NET Core
+          href: core/porting/tools.md
+        - name: Verwenden von Windows Compatibility Pack
+          href: core/porting/windows-compat-pack.md
+        - name: Portieren von Windows Forms-Projekten
+          href: core/porting/winforms.md
+        - name: Portieren von WPF-Projekten
+          href: core/porting/wpf.md
+    - name: Erstellen von .NET Core aus einer Quelle
+      href: core/build/index.md
+      items:
+        - name: Verpacken einer Verteilung von .NET Core
+          href: core/build/distribution-packaging.md
+    - name: VS 2015/project.json-Dokumentation
+      href: project-json.md
+- name: .NET Framework – Leitfaden
+  href: framework/index.md
+  items:
+    - name: Neues
+      href: framework/whats-new/
+    - name: Erste Schritte
+      href: framework/get-started/
+    - name: Installationshandbuch
+      href: framework/install/
+    - name: Migrationshandbuch
+      href: framework/migration-guide/
+    - name: Entwicklungshandbuch
+      href: framework/development-guide.md
+      items:
+        - name: Anwendungsdomänen und Assemblys
+          href: framework/app-domains/
+        - name: Ressourcen in Desktop-Apps
+          href: framework/resources/
+        - name: Zugriff
+          href: framework/ui-automation/
+        - name: Daten und Modellierung
+          href: framework/data/
+        - name: Clientanwendungen
+          href: framework/develop-client-apps.md
+          items:
+            - name: Windows Presentation Foundation
+              href: framework/wpf/
+            - name: Windows Forms
+              href: framework/winforms/
+        - name: Dienstorientierte Anwendungen mit WCF
+          href: framework/wcf/
+        - name: Windows Workflow Foundation
+          href: framework/windows-workflow-foundation/
+        - name: Windows-Dienstanwendungen
+          href: framework/windows-services/
+        - name: 64-Bit-Anwendungen
+          href: framework/64-bit-apps.md
+        - name: Webanwendungen mit ASP.NET
+          href: framework/develop-web-apps-with-aspnet.md
+        - name: Netzwerkprogrammierung in .NET Framework
+          href: framework/network-programming/
+        - name: Konfigurieren von Apps
+          href: framework/configure-apps/
+        - name: Kompilieren von Anwendungen mit .NET Native
+          href: framework/net-native/
+        - name: Windows Identity Foundation
+          href: framework/security/
+        - name: 'Debuggen, Ablaufverfolgung und Profilerstellung'
+          href: framework/debug-trace-profile/
+        - name: Bereitstellung
+          href: framework/deployment/
+        - name: Leistung
+          href: framework/performance/
+        - name: Dynamische Programmierung
+          href: framework/reflection-and-codedom/
+        - name: Managed Extensibility Framework (MEF)
+          href: framework/mef/
+        - name: Interoperation mit nicht verwaltetem Code
+          href: framework/interop/
+        - name: Referenz zur nicht verwalteten API
+          href: framework/unmanaged-api/
+        - name: XAML-Dienste
+          href: framework/xaml-services/
+    - name: Tools
+      href: framework/tools/
+    - name: Zusätzliche Klassenbibliotheken und APIs
+      href: framework/additional-apis/
+- name: 'Leitfaden für C#'
+  href: csharp/index.md
+  items:
+    - name: Erste Schritte
+      href: csharp/getting-started/
+    - name: Tutorials
+      href: csharp/tutorials/index.md
+      items:
+        - name: 'Einführung in C#'
+          href: csharp/tutorials/intro-to-csharp/index.md
+          items:
+            - name: Hello World
+              href: csharp/tutorials/intro-to-csharp/hello-world.yml
+            - name: 'Zahlen in C#'
+              href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
+            - name: Verzweigungen und Schleifen
+              href: csharp/tutorials/intro-to-csharp/branches-and-loops.yml
+            - name: Listensammlungen
+              href: csharp/tutorials/intro-to-csharp/list-collection.yml
+            - name: Arbeiten in Ihrer lokalen Umgebung
+              href: csharp/tutorials/intro-to-csharp/local-environment.md
+              items:
+                - name: 'Zahlen in C#'
+                  href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
+                - name: Verzweigungen und Schleifen
+                  href: csharp/tutorials/intro-to-csharp/branches-and-loops-local.md
+                - name: Listensammlungen
+                  href: csharp/tutorials/intro-to-csharp/arrays-and-collections.md
+                - name: Einführung in Klassen
+                  href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
+        - name: 'Erkunden von C# 6'
+          href: csharp/tutorials/exploration/csharp-6.yml
+        - name: 'Erkunden von C# 7.0'
+          href: csharp/tutorials/exploration/csharp-7.yml
+        - name: Erkunden von Zeichenfolgeninterpolation – interakt
+          href: csharp/tutorials/exploration/interpolated-strings.yml
+        - name: Erkunden von Zeichenfolgeninterpolation – in Ihrer Umgebung
+          href: csharp/tutorials/exploration/interpolated-strings-local.md
+        - name: Erweiterte Szenarios für Zeichenfolgeninterpolation
+          href: csharp/tutorials/string-interpolation.md
+        - name: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmembern
+          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Erkunden von Indizes und Bereichen
+          href: csharp/tutorials/ranges-indexes.md
+        - name: 'Arbeiten mit Verweistypen, die Nullwerte zulassen'
+          href: csharp/tutorials/nullable-reference-types.md
+        - name: 'Upgrade einer App auf Verweistypen, die Nullwerte zulassen'
+          href: csharp/tutorials/upgrade-to-nullable-references.md
+        - name: Generieren und Nutzen asynchroner Streams
+          href: csharp/tutorials/generate-consume-asynchronous-stream.md
+        - name: Erweitern von Datenfunktionen mithilfe des Musterabgleichs
+          href: csharp/tutorials/pattern-matching.md
+        - name: Konsolenanwendung
+          href: csharp/tutorials/console-teleprompter.md
+        - name: REST-Client
+          href: csharp/tutorials/console-webapiclient.md
+        - name: 'Vererbung in C# und .NET'
+          href: csharp/tutorials/inheritance.md
+        - name: Arbeiten mit LINQ
+          href: csharp/tutorials/working-with-linq.md
+        - name: Verwenden von Attributen
+          href: csharp/tutorials/attributes.md
+    - name: 'Einführung in C#'
+      href: csharp/tour-of-csharp/
+    - name: 'Neues in C#'
+      items:
+        - name: 'C# 8.0: Vorschauversion 5'
+          href: csharp/whats-new/csharp-8.md
+        - name: 'C# 7.3'
+          href: csharp/whats-new/csharp-7-3.md
+        - name: 'C# 7.2'
+          href: csharp/whats-new/csharp-7-2.md
+        - name: 'C# 7.1'
+          href: csharp/whats-new/csharp-7-1.md
+        - name: 'C# 7.0'
+          href: csharp/whats-new/csharp-7.md
+        - name: 'C# 6'
+          href: csharp/whats-new/csharp-6.md
+        - name: 'C#-Versionsgeschichte'
+          href: csharp/whats-new/csharp-version-history.md
+        - name: Beziehungen zwischen Sprache und Framework
+          href: csharp/whats-new/relationships-between-language-and-library.md
+        - name: Versions- und Updateüberlegungen
+          href: csharp/whats-new/version-update-considerations.md
+    - name: 'C#-Konzepte'
+      items:
+        - name: 'C#-Typsystem'
+          href: csharp/programming-guide/types/index.md
+        - name: Namespaces
+          href: csharp/programming-guide/namespaces/index.md
+        - name: Grundlegende Typen
+          href: csharp/basic-types.md
+        - name: Klassen
+          href: csharp/programming-guide/classes-and-structs/classes.md
+        - name: Nullwerte zulassende Verweistypen
+          href: csharp/nullable-references.md
+        - name: Strukturen
+          href: csharp/structs.md
+        - name: Tupel
+          href: csharp/tuples.md
+        - name: Dekonstruieren von Tupeln und anderen Typen
+          href: csharp/deconstruct.md
+        - name: Schnittstellen
+          href: csharp/programming-guide/interfaces/index.md
+        - name: Methoden
+          href: csharp/methods.md
+        - name: Lambda-Ausdrücke
+          href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
+        - name: Eigenschaften
+          href: csharp/properties.md
+        - name: Indexer
+          href: csharp/indexers.md
+        - name: Ausschuss
+          href: csharp/discards.md
+        - name: Generics
+          href: csharp/programming-guide/generics/index.md
+        - name: Iterators
+          href: csharp/iterators.md
+        - name: Delegaten und Ereignisse
+          href: csharp/delegates-events.md
+          items:
+            - name: Einführung in Delegaten
+              href: csharp/delegates-overview.md
+            - name: System.Delegate und das delegate-Schlüsselwort
+              href: csharp/delegate-class.md
+            - name: Stark typisierte Delegate
+              href: csharp/delegates-strongly-typed.md
+            - name: Gängige Muster für Delegate
+              href: csharp/delegates-patterns.md
+            - name: Einführung in Ereignisse
+              href: csharp/events-overview.md
+            - name: Standardereignismuster in .NET
+              href: csharp/event-pattern.md
+            - name: Das aktualisierte .NET-Ereignismuster
+              href: csharp/modern-events.md
+            - name: Unterscheidung zwischen Delegaten und Ereignissen
+              href: csharp/distinguish-delegates-events.md
+        - name: 'Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)'
+          href: csharp/linq/
+        - name: Asynchrone Programmierung
+          href: csharp/async.md
+        - name: Musterabgleich
+          href: csharp/pattern-matching.md
+        - name: Schreiben von sicherem und effizientem Code
+          href: csharp/write-safe-efficient-code.md
+        - name: Ausdrucksbaumstrukturen
+          href: csharp/expression-trees.md
+          items:
+            - name: Ausdrucksbaumstrukturen mit Erläuterung
+              href: csharp/expression-trees-explained.md
+            - name: 'Framework-Typen, die Ausdrucksbaumstrukturen unterstützen'
+              href: csharp/expression-classes.md
+            - name: Ausführen von Ausdrücken
+              href: csharp/expression-trees-execution.md
+            - name: Interpretieren von Ausdrücken
+              href: csharp/expression-trees-interpreting.md
+            - name: Erstellen von Ausdrücken
+              href: csharp/expression-trees-building.md
+            - name: Übersetzen von Ausdrücken
+              href: csharp/expression-trees-translating.md
+            - name: Zusammenfassung
+              href: csharp/expression-trees-summary.md
+        - name: Native Interoperabilität
+          href: csharp/programming-guide/interop/index.md
+        - name: Dokumentieren von Code
+          href: csharp/codedoc.md
+        - name: Versionskontrolle
+          href: csharp/versioning.md
+    - name: 'Vorgehensweisen zu C#-Themen'
+      href: csharp/how-to/index.md
+      items:
+        - name: Analysieren von Zeichenfolgen über `String.Split`
+          href: csharp/how-to/parse-strings-using-split.md
+        - name: Verketten von Zeichenfolgen
+          href: csharp/how-to/concatenate-multiple-strings.md
+        - name: Konvertieren einer Zeichenfolge in einen DateTime-Wert
+          href: standard/base-types/parsing-datetime.md
+        - name: Suchzeichenfolgen
+          href: csharp/how-to/search-strings.md
+        - name: Ändern von Zeichenfolgeninhalten
+          href: csharp/how-to/modify-string-contents.md
+        - name: Vergleichen von Zeichenfolgen
+          href: csharp/how-to/compare-strings.md
+        - name: 'Sicheres Umwandeln mit Musterabgleich, Operatoren „is“ und „as“'
+          href: csharp/how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+    - name: Das .NET Compiler Platform SDK (Roslyn APIs)
+      href: csharp/roslyn-sdk/
+    - name: 'C#-Programmierhandbuch'
+      href: csharp/programming-guide/
+    - name: Sprachreferenz
+      href: csharp/language-reference/
+    - name: Exemplarische Vorgehensweisen
+      href: csharp/walkthroughs.md
+- name: 'Leitfaden für F#'
+  href: fsharp/index.md
+  items:
+    - name: Erste Schritte
+      href: fsharp/get-started/index.md
+      items:
+        - name: 'Installieren von F#'
+          href: fsharp/get-started/install-fsharp.md
+        - name: 'Erste Schritte mit F# in Visual Studio'
+          href: fsharp/get-started/get-started-visual-studio.md
+        - name: 'Erste Schritte mit F# in Visual Studio für Mac'
+          href: fsharp/get-started/get-started-with-visual-studio-for-mac.md
+        - name: 'Erste Schritte mit F# in Visual Studio Code und Ionide'
+          href: fsharp/get-started/get-started-vscode.md
+        - name: 'Erste Schritte mit F# mit der .NET Core-CLI'
+          href: fsharp/get-started/get-started-command-line.md
+    - name: 'Was ist F#?'
+      href: fsharp/what-is-fsharp.md
+    - name: 'Einführung in F#'
+      href: fsharp/tour.md
+    - name: Tutorials
+      items:
+        - name: Einführung in die funktionale Programmierung
+          href: fsharp/introduction-to-functional-programming/index.md
+          items:
+            - name: Funktionen erster Klasse
+              href: fsharp/introduction-to-functional-programming/first-class-functions.md
+        - name: Asynchrone und parallele Programmierung
+          items:
+            - name: Asynchrone Programmierung
+              href: fsharp/tutorials/asynchronous-and-concurrent-programming/async.md
+        - name: Typanbieter
+          href: fsharp/tutorials/type-providers/index.md
+          items:
+            - name: Erstellen eines Typanbieters
+              href: fsharp/tutorials/type-providers/creating-a-type-provider.md
+            - name: Sicherheit von Typanbietern
+              href: fsharp/tutorials/type-providers/type-provider-security.md
+            - name: Problembehandlung bei Typanbietern
+              href: fsharp/tutorials/type-providers/troubleshooting-type-providers.md
+        - name: 'F# Interactive'
+          href: fsharp/tutorials/fsharp-interactive/index.md
+    - name: 'F#-Sprachreferenz'
+      href: fsharp/language-reference/index.md
+      items:
+        - name: Schlüsselwortreferenz
+          href: fsharp/language-reference/keyword-reference.md
+        - name: Symbol- und Operatorenreferenz
+          href: fsharp/language-reference/symbol-and-operator-reference/index.md
+          items:
+            - name: Arithmetische Operatoren
+              href: fsharp/language-reference/symbol-and-operator-reference/arithmetic-operators.md
+            - name: Boolesche Operatoren
+              href: fsharp/language-reference/symbol-and-operator-reference/boolean-operators.md
+            - name: Bitweise Operatoren
+              href: fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md
+            - name: 'Operatoren, die NULL-Werte zulassen'
+              href: fsharp/language-reference/symbol-and-operator-reference/nullable-operators.md
+        - name: Funktionen
+          href: fsharp/language-reference/functions/index.md
+          items:
+            - name: let-Bindungen
+              href: fsharp/language-reference/functions/let-bindings.md
+            - name: do-Bindungen
+              href: fsharp/language-reference/functions/do-bindings.md
+            - name: 'Lambdaausdrücke: das fun-Schlüsselwort'
+              href: fsharp/language-reference/functions/lambda-expressions-the-fun-keyword.md
+            - name: 'Rekursive Funktionen: das rec-Schlüsselwort'
+              href: fsharp/language-reference/functions/recursive-functions-the-rec-keyword.md
+            - name: Einstiegspunkt
+              href: fsharp/language-reference/functions/entry-point.md
+            - name: Externe Funktionen
+              href: fsharp/language-reference/functions/external-functions.md
+            - name: Inlinefunktionen
+              href: fsharp/language-reference/functions/inline-functions.md
+        - name: Werte
+          href: fsharp/language-reference/values/index.md
+          items:
+            - name: NULL-Werte
+              href: fsharp/language-reference/values/null-values.md
+        - name: Literale
+          href: fsharp/language-reference/literals.md
+        - name: 'F#-Typen'
+          href: fsharp/language-reference/fsharp-types.md
+        - name: Typableitung
+          href: fsharp/language-reference/type-inference.md
+        - name: Grundlegende Typen
+          href: fsharp/language-reference/basic-types.md
+        - name: Unit-Typ
+          href: fsharp/language-reference/unit-type.md
+        - name: Zeichenfolgen
+          href: fsharp/language-reference/strings.md
+        - name: Tupel
+          href: fsharp/language-reference/tuples.md
+        - name: 'F#-Auflistungstypen'
+          href: fsharp/language-reference/fsharp-collection-types.md
+        - name: Listen
+          href: fsharp/language-reference/lists.md
+        - name: Arrays
+          href: fsharp/language-reference/arrays.md
+        - name: Sequenzen
+          href: fsharp/language-reference/sequences.md
+        - name: Slices
+          href: fsharp/language-reference/slices.md
+        - name: Optionen
+          href: fsharp/language-reference/options.md
+        - name: Wertoptionen
+          href: fsharp/language-reference/value-options.md
+        - name: Ergebnisse
+          href: fsharp/language-reference/results.md
+        - name: Generics
+          href: fsharp/language-reference/generics/index.md
+          items:
+            - name: Automatische Verallgemeinerung
+              href: fsharp/language-reference/generics/automatic-generalization.md
+            - name: Einschränkungen
+              href: fsharp/language-reference/generics/constraints.md
+            - name: Statisch aufgelöste Typparameter
+              href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
+        - name: Datensätze
+          href: fsharp/language-reference/records.md
+        - name: Unterscheidungs-Unions
+          href: fsharp/language-reference/discriminated-unions.md
+        - name: Enumerationen
+          href: fsharp/language-reference/enumerations.md
+        - name: Typabkürzungen
+          href: fsharp/language-reference/type-abbreviations.md
+        - name: Klassen
+          href: fsharp/language-reference/classes.md
+        - name: Strukturen
+          href: fsharp/language-reference/structures.md
+        - name: Vererbung
+          href: fsharp/language-reference/inheritance.md
+        - name: Schnittstellen
+          href: fsharp/language-reference/interfaces.md
+        - name: Abstrakte Klassen
+          href: fsharp/language-reference/abstract-classes.md
+        - name: Member
+          href: fsharp/language-reference/members/index.md
+          items:
+            - name: let-Bindungen in Klassen
+              href: fsharp/language-reference/members/let-bindings-in-classes.md
+            - name: do-Bindungen in Klassen
+              href: fsharp/language-reference/members/do-bindings-in-classes.md
+            - name: Eigenschaften
+              href: fsharp/language-reference/members/properties.md
+            - name: Indizierte Eigenschaften
+              href: fsharp/language-reference/members/indexed-properties.md
+            - name: Methoden
+              href: fsharp/language-reference/members/methods.md
+            - name: Konstruktoren
+              href: fsharp/language-reference/members/constructors.md
+            - name: Ereignisse
+              href: fsharp/language-reference/members/events.md
+            - name: 'Explizite Felder: Das `val`-Schlüsselwort'
+              href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
+        - name: Typerweiterungen
+          href: fsharp/language-reference/type-extensions.md
+        - name: Parameter und Argumente
+          href: fsharp/language-reference/parameters-and-arguments.md
+        - name: Operatorüberladung
+          href: fsharp/language-reference/operator-overloading.md
+        - name: Flexible Typen
+          href: fsharp/language-reference/flexible-types.md
+        - name: Delegaten
+          href: fsharp/language-reference/delegates.md
+        - name: Objektausdrücke
+          href: fsharp/language-reference/object-expressions.md
+        - name: Kopieren und Aktualisieren von Datensatzausdrücken
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
+        - name: Umwandlung und Konvertierungen
+          href: fsharp/language-reference/casting-and-conversions.md
+        - name: Zugriffssteuerung
+          href: fsharp/language-reference/access-control.md
+        - name: 'Bedingte Ausdrücke: if... then...else'
+          href: fsharp/language-reference/conditional-expressions-if-then-else.md
+        - name: Vergleichsausdrücke
+          href: fsharp/language-reference/match-expressions.md
+        - name: Musterabgleich
+          href: fsharp/language-reference/pattern-matching.md
+        - name: Aktive Muster
+          href: fsharp/language-reference/active-patterns.md
+        - name: 'Schleifen: for...to-Ausdruck'
+          href: fsharp/language-reference/loops-for-to-expression.md
+        - name: 'Schleifen: for...in-Ausdruck'
+          href: fsharp/language-reference/loops-for-in-expression.md
+        - name: 'Schleifen: while...do-Ausdruck'
+          href: fsharp/language-reference/loops-while-do-expression.md
+        - name: Assertionen
+          href: fsharp/language-reference/assertions.md
+        - name: Ausnahmebehandlung
+          href: fsharp/language-reference/exception-handling/index.md
+          items:
+            - name: Ausnahmetypen
+              href: fsharp/language-reference/exception-handling/exception-types.md
+            - name: Der try...with-Ausdruck
+              href: fsharp/language-reference/exception-handling/the-try-with-expression.md
+            - name: Der try...finally-Ausdruck
+              href: fsharp/language-reference/exception-handling/the-try-finally-expression.md
+            - name: Die raise-Funktion
+              href: fsharp/language-reference/exception-handling/the-raise-function.md
+            - name: Die failwith-Funktion
+              href: fsharp/language-reference/exception-handling/the-failwith-function.md
+            - name: Die invalidArg-Funktion
+              href: fsharp/language-reference/exception-handling/the-invalidArg-function.md
+        - name: Attribute
+          href: fsharp/language-reference/attributes.md
+        - name: 'Ressourcenverwaltung: das use-Schlüsselwort'
+          href: fsharp/language-reference/resource-management-the-use-keyword.md
+        - name: Namespaces
+          href: fsharp/language-reference/namespaces.md
+        - name: Module
+          href: fsharp/language-reference/modules.md
+        - name: 'Importdeklarationen: Das open-Schlüsselwort'
+          href: fsharp/language-reference/import-declarations-the-open-keyword.md
+        - name: Signaturdateien
+          href: fsharp/language-reference/signature-files.md
+        - name: Maßeinheiten
+          href: fsharp/language-reference/units-of-measure.md
+        - name: XML-Dokumentation
+          href: fsharp/language-reference/xml-documentation.md
+        - name: Nicht strikte Ausdrücke
+          href: fsharp/language-reference/lazy-expressions.md
+        - name: Berechnungsausdrücke
+          href: fsharp/language-reference/computation-expressions.md
+        - name: Asynchrone Workflows
+          href: fsharp/language-reference/asynchronous-workflows.md
+        - name: Abfrageausdrücke
+          href: fsharp/language-reference/query-expressions.md
+        - name: Zitieren von Code
+          href: fsharp/language-reference/code-quotations.md
+        - name: Fixed-Schlüsselwort
+          href: fsharp/language-reference/fixed.md
+        - name: Byrefs
+          href: fsharp/language-reference/byrefs.md
+        - name: Referenzzellen
+          href: fsharp/language-reference/reference-cells.md
+        - name: Compileranweisungen
+          href: fsharp/language-reference/compiler-directives.md
+        - name: Compileroptionen
+          href: fsharp/language-reference/compiler-options.md
+        - name: 'F# Interactive-Optionen'
+          href: fsharp/language-reference/fsharp-interactive-options.md
+        - name: 'Quellzeilen-, Datei- und Pfadbezeichner'
+          href: fsharp/language-reference/source-line-file-path-identifiers.md
+        - name: Aufruferinformationen
+          href: fsharp/language-reference/caller-information.md
+        - name: Ausführliche Syntax
+          href: fsharp/language-reference/verbose-syntax.md
+    - name: 'F#-Styleguide'
+      href: fsharp/style-guide/index.md
+      items:
+        - name: 'Richtlinien für das Formatieren von F#-Code'
+          href: fsharp/style-guide/formatting.md
+        - name: 'Codekonventionen für F#'
+          href: fsharp/style-guide/conventions.md
+        - name: 'Entwurfsrichtlinien für eine F#-Komponente'
+          href: fsharp/style-guide/component-design-guidelines.md
+    - name: 'Verwenden von F# in Azure'
+      href: fsharp/using-fsharp-on-azure/index.md
+      items:
+        - name: 'Erste Schritte mit Azure Blob Storage mit F#'
+          href: fsharp/using-fsharp-on-azure/blob-storage.md
+        - name: 'Erste Schritte mit Azure File Storage mit F#'
+          href: fsharp/using-fsharp-on-azure/file-storage.md
+        - name: 'Erste Schritte mit Azure Queue Storage mit F#'
+          href: fsharp/using-fsharp-on-azure/queue-storage.md
+        - name: 'Erste Schritte mit Azure Table Storage mit F#'
+          href: fsharp/using-fsharp-on-azure/table-storage.md
+        - name: 'Verwalten von Paketen für F#-Azure-Abhängigkeiten'
+          href: fsharp/using-fsharp-on-azure/package-management.md
+- name: Leitfaden für Visual Basic
+  href: visual-basic/index.md
+  items:
+    - name: Neues bei Visual Basic
+      href: visual-basic/getting-started/whats-new.md
+    - name: Erste Schritte
+      href: visual-basic/getting-started/index.md
+      items:
+        - name: Wichtige Visual Basic-Änderungen in Visual Studio
+          href: visual-basic/getting-started/breaking-changes-in-visual-studio.md
+        - name: "Zusätzliche Ressourcen für Visual\_Basic-Programmierer"
+          href: visual-basic/getting-started/additional-resources.md
+    - name: Entwickeln von Anwendungen
+      href: visual-basic/developing-apps/index.md
+      items:
+        - name: Programmieren in Visual Basic
+          href: visual-basic/developing-apps/programming/index.md
+          items:
+            - name: Zugreifen auf Computerressourcen
+              href: visual-basic/developing-apps/programming/computer-resources/index.md
+            - name: Protokollieren von Informationen aus der Anwendung
+              href: visual-basic/developing-apps/programming/log-info/index.md
+            - name: Zugreifen auf Benutzerdaten
+              href: visual-basic/developing-apps/programming/accessing-user-data.md
+            - name: Zugreifen auf Anwendungsformulare
+              href: visual-basic/developing-apps/programming/accessing-application-forms.md
+            - name: Zugreifen auf Anwendungswebdienste
+              href: visual-basic/developing-apps/programming/accessing-application-web-services.md
+              items:
+                - name: 'Vorgehensweise: Asynchrones Aufrufen eines Webdiensts'
+                  href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
+            - name: Accessing Application Settings
+              href: visual-basic/developing-apps/programming/app-settings/index.md
+            - name: 'Verarbeiten von Laufwerken, Verzeichnissen und Dateien'
+              href: visual-basic/developing-apps/programming/drives-directories-files/processing.md
+        - name: Entwicklung mit „My“
+          href: visual-basic/developing-apps/development-with-my/index.md
+          items:
+            - name: 'Ausführen von Aufgaben mit My.Application, My.Computer und My.User'
+              href: visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md
+            - name: Von My.Forms und My.WebServices bereitgestellte Standardobjektinstanzen
+              href: visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md
+            - name: Schnelle Anwendungsentwicklung mit My.Resources und My.Settings
+              href: visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md
+            - name: Übersicht über das Visual Basic-Anwendungsmodell
+              href: visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md
+            - name: Merkmale von „My“ auf Grundlage des Projekttyps
+              href: visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md
+        - name: Datenzugriff
+          href: visual-basic/developing-apps/accessing-data.md
+        - name: Erstellen und Verwenden von Komponenten
+          href: visual-basic/developing-apps/creating-and-using-components.md
+        - name: Grundlagen der Windows Forms-Anwendungen
+          href: visual-basic/developing-apps/windows-forms/index.md
+        - name: Anpassen von Projekten und Erweitern von "My" mit Visual Basic
+          href: visual-basic/developing-apps/customizing-extending-my/index.md
+          items:
+            - name: Erweitern des My-Namespaces
+              href: visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md
+            - name: Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen
+              href: visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md
+            - name: Erweitern des Visual Basic-Anwendungsmodells
+              href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
+            - name: 'Anpassen, welche Objekte in „My“ verfügbar sind'
+              href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
+    - name: Programmierkonzepte
+      href: visual-basic/programming-guide/concepts/index.md
+      items:
+        - name: Asynchrone Programmierung mit Async und Await
+          href: visual-basic/programming-guide/concepts/async/index.md
+        - name: Attribute
+          href: visual-basic/programming-guide/concepts/attributes/index.md
+        - name: Aufruferinformationen
+          href: visual-basic/programming-guide/concepts/caller-information.md
+        - name: Auflistungen
+          href: visual-basic/programming-guide/concepts/collections.md
+        - name: Kovarianz und Kontravarianz
+          href: visual-basic/programming-guide/concepts/covariance-contravariance/index.md
+        - name: Ausdrucksbaumstrukturen
+          href: visual-basic/programming-guide/concepts/expression-trees/index.md
+        - name: Iterators
+          href: visual-basic/programming-guide/concepts/iterators.md
+        - name: Language-Integrated Query (LINQ)
+          href: visual-basic/programming-guide/concepts/linq/index.md
+        - name: Objektorientierte Programmierung
+          href: visual-basic/programming-guide/concepts/object-oriented-programming.md
+        - name: Spiegelung
+          href: visual-basic/programming-guide/concepts/reflection.md
+        - name: Serialisierung
+          href: visual-basic/programming-guide/concepts/serialization/index.md
+    - name: Programmstruktur und Codekonventionen
+      href: visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md
+      items:
+        - name: Struktur eines Programms
+          href: visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md
+        - name: Main-Prozedur
+          href: visual-basic/programming-guide/program-structure/main-procedure.md
+        - name: Verweise und die Imports-Anweisung
+          href: visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md
+        - name: Namespaces
+          href: visual-basic/programming-guide/program-structure/namespaces.md
+        - name: Namenskonventionen
+          href: visual-basic/programming-guide/program-structure/naming-conventions.md
+        - name: Codierungskonventionen
+          href: visual-basic/programming-guide/program-structure/coding-conventions.md
+        - name: Bedingte Kompilierung
+          href: visual-basic/programming-guide/program-structure/conditional-compilation.md
+        - name: 'Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code'
+          href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
+        - name: 'Vorgehensweise: Reduzieren und Ausblenden von Codeabschnitten'
+          href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
+        - name: 'Vorgehensweise: Label-Anweisungen'
+          href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
+        - name: Sonderzeichen in Code
+          href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
+        - name: Kommentare in Code
+          href: visual-basic/programming-guide/program-structure/comments-in-code.md
+        - name: Schlüsselwörter als Elementnamen in Code
+          href: visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md
+        - name: 'Me, My, MyBase und MyClass'
+          href: visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md
+        - name: Einschränkungen
+          href: visual-basic/programming-guide/program-structure/limitations.md
+    - name: Sprachfunktionen
+      href: visual-basic/programming-guide/language-features/index.md
+      items:
+        - name: Arrays
+          href: visual-basic/programming-guide/language-features/arrays/index.md
+        - name: Auflistungsinitialisierer
+          href: visual-basic/programming-guide/language-features/collection-initializers/index.md
+        - name: Konstanten und Enumerationen
+          href: visual-basic/programming-guide/language-features/constants-enums/index.md
+        - name: Ablaufsteuerung
+          href: visual-basic/programming-guide/language-features/control-flow/index.md
+        - name: Datentypen
+          href: visual-basic/programming-guide/language-features/data-types/index.md
+          items:
+            - name: Typzeichen
+              href: visual-basic/programming-guide/language-features/data-types/type-characters.md
+            - name: Elementare Datentypen
+              href: visual-basic/programming-guide/language-features/data-types/elementary-data-types.md
+              items:
+                - name: Numerische Datentypen
+                  href: visual-basic/programming-guide/language-features/data-types/numeric-data-types.md
+                - name: Zeichendatentypen
+                  href: visual-basic/programming-guide/language-features/data-types/character-data-types.md
+                - name: Sonstige Datentypen
+                  href: visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md
+            - name: Zusammengesetzte Datentypen
+              href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
+              items:
+                - name: 'Vorgehensweise: Ablegen mehrerer Werte in einer Variablen'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
+            - name: Generische Typen
+              href: visual-basic/programming-guide/language-features/data-types/generic-types.md
+              items:
+                - name: 'Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
+                - name: 'Vorgehensweise: Verwenden einer generischen Klasse'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
+            - name: Generische Prozeduren
+              href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
+            - name: Auf NULL festlegbare Werttypen
+              href: visual-basic/programming-guide/language-features/data-types/nullable-value-types.md
+            - name: Wert- und Verweistypen
+              href: visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md
+            - name: Typkonvertierungen
+              href: visual-basic/programming-guide/language-features/data-types/type-conversions.md
+              items:
+                - name: Widening and Narrowing Conversions
+                  href: visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md
+                - name: Implizite und explizite Konvertierungen
+                  href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
+                - name: Konvertierungen zwischen Zeichenfolgen und anderen Typen
+                  href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
+                - name: 'Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
+                - name: Arraykonvertierungen
+                  href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
+            - name: Strukturen
+              href: visual-basic/programming-guide/language-features/data-types/structures.md
+              items:
+                - name: 'Vorgehensweise: Deklarieren einer Struktur'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
+                - name: Strukturvariablen
+                  href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
+                - name: Strukturen und andere Programmierelemente
+                  href: visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md
+                - name: Strukturen und Klassen
+                  href: visual-basic/programming-guide/language-features/data-types/structures-and-classes.md
+            - name: Tupel
+              href: visual-basic/programming-guide/language-features/data-types/tuples.md
+            - name: Effiziente Verwendung von Datentypen
+              href: visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md
+            - name: Problembehandlung bei Datentypen
+              href: visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md
+        - name: Deklarierte Elemente
+          href: visual-basic/programming-guide/language-features/declared-elements/index.md
+        - name: Delegaten
+          href: visual-basic/programming-guide/language-features/delegates/index.md
+        - name: Frühes und spätes Binden
+          href: visual-basic/programming-guide/language-features/early-late-binding/index.md
+        - name: Fehlertypen
+          href: visual-basic/programming-guide/language-features/error-types.md
+        - name: Ereignisse
+          href: visual-basic/programming-guide/language-features/events/index.md
+        - name: Schnittstellen
+          href: visual-basic/programming-guide/language-features/interfaces/index.md
+          items:
+            - name: 'Exemplarische Vorgehensweise: Erstellen und Implementieren von Schnittstellen'
+              href: visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md
+        - name: LINQ
+          href: visual-basic/programming-guide/language-features/linq/index.md
+        - name: Objekte und Klassen
+          href: visual-basic/programming-guide/language-features/objects-and-classes/index.md
+        - name: Operatoren und Ausdrücke
+          href: visual-basic/programming-guide/language-features/operators-and-expressions/index.md
+        - name: Verfahren
+          href: visual-basic/programming-guide/language-features/procedures/index.md
+        - name: Anweisungen
+          href: visual-basic/programming-guide/language-features/statements.md
+        - name: Zeichenfolgen
+          href: visual-basic/programming-guide/language-features/strings/index.md
+        - name: Variablen
+          href: visual-basic/programming-guide/language-features/variables/index.md
+        - name: XML
+          href: visual-basic/programming-guide/language-features/xml/index.md
+    - name: COM-Interop
+      href: visual-basic/programming-guide/com-interop/index.md
+      items:
+        - name: Einführung in COM-Interop
+          href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
+        - name: 'Vorgehensweise: Verweisen auf COM-Objekte'
+          href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
+        - name: 'Vorgehensweise: Arbeiten mit ActiveX-Steuerelementen'
+          href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
+        - name: 'Exemplarische Vorgehensweise: Aufrufen von Windows-APIs'
+          href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
+        - name: 'Vorgehensweise: Aufrufen von Windows-APIs'
+          href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
+        - name: 'Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
+          href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
+        - name: 'Exemplarische Vorgehensweise: Erstellen von COM-Objekten'
+          href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
+        - name: Problembehandlung bei der Interoperabilität
+          href: visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md
+        - name: COM-Interoperabilität in .NET Framework-Anwendungen
+          href: visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md
+        - name: 'Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten'
+          href: visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md
+    - name: Sprachreferenz
+      href: visual-basic/language-reference/index.md
+      items:
+        - name: Angeben der Sprachversion
+          href: visual-basic/language-reference/configure-language-version.md
+        - name: Typografische und Codekonventionen
+          href: visual-basic/language-reference/typographic-and-code-conventions.md
+        - name: Member der Visual Basic-Laufzeitbibliothek
+          href: visual-basic/language-reference/runtime-library-members.md
+        - name: Stichwörter
+          href: visual-basic/language-reference/keywords/index.md
+          items:
+            - name: 'Arrays: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/arrays-summary.md
+            - name: 'Auflistungsobjekt: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/collection-object-summary.md
+            - name: 'Ablaufsteuerung: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/control-flow-summary.md
+            - name: 'Konvertierung: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/conversion-summary.md
+            - name: Data Types Summary
+              href: visual-basic/language-reference/keywords/data-types-summary.md
+            - name: 'Datums- und Uhrzeitangaben: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/dates-and-times-summary.md
+            - name: 'Deklarationen und Konstanten: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/declarations-and-constants-summary.md
+            - name: 'Verzeichnisse und Dateien: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/directories-and-files-summary.md
+            - name: 'Fehler: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/errors-summary.md
+            - name: 'Finanzdaten: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/financial-summary.md
+            - name: 'Informationen und Interaktionen: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/information-and-interaction-summary.md
+            - name: 'Eingabe und Ausgabe: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/input-and-output-summary.md
+            - name: 'Mathematische Operationen: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/math-summary.md
+              items:
+                - name: Abgeleitete mathematische Funktionen
+                  href: visual-basic/language-reference/keywords/derived-math-functions.md
+            - name: My-Referenz
+              href: visual-basic/language-reference/keywords/my-reference.md
+            - name: 'Operatoren: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/operators-summary.md
+            - name: 'Registrierung: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/registry-summary.md
+            - name: 'Zeichenfolgenbearbeitung: Zusammenfassung'
+              href: visual-basic/language-reference/keywords/string-manipulation-summary.md
+        - name: Attribute
+          href: visual-basic/language-reference/attributes.md
+        - name: Konstanten und Enumerationen
+          href: visual-basic/language-reference/constants-and-enumerations.md
+        - name: 'Datentypen: Zusammenfassung'
+          href: visual-basic/language-reference/data-types/index.md
+          items:
+            - name: Boolean-Datentyp
+              href: visual-basic/language-reference/data-types/boolean-data-type.md
+            - name: Byte-Datentyp
+              href: visual-basic/language-reference/data-types/byte-data-type.md
+            - name: Char-Datentyp
+              href: visual-basic/language-reference/data-types/char-data-type.md
+            - name: Date-Datentyp
+              href: visual-basic/language-reference/data-types/date-data-type.md
+            - name: Decimal-Datentyp
+              href: visual-basic/language-reference/data-types/decimal-data-type.md
+            - name: Double-Datentyp
+              href: visual-basic/language-reference/data-types/double-data-type.md
+            - name: Integer-Datentyp
+              href: visual-basic/language-reference/data-types/integer-data-type.md
+            - name: Long-Datentyp
+              href: visual-basic/language-reference/data-types/long-data-type.md
+            - name: Object Data Type
+              href: visual-basic/language-reference/data-types/object-data-type.md
+            - name: SByte-Datentyp
+              href: visual-basic/language-reference/data-types/sbyte-data-type.md
+            - name: Short-Datentyp
+              href: visual-basic/language-reference/data-types/short-data-type.md
+            - name: Single-Datentyp
+              href: visual-basic/language-reference/data-types/single-data-type.md
+            - name: String-Datentyp
+              href: visual-basic/language-reference/data-types/string-data-type.md
+            - name: UInteger-Datentyp
+              href: visual-basic/language-reference/data-types/uinteger-data-type.md
+            - name: ULong-Datentyp
+              href: visual-basic/language-reference/data-types/ulong-data-type.md
+            - name: Benutzerdefinierter Datentyp
+              href: visual-basic/language-reference/data-types/user-defined-data-type.md
+            - name: UShort-Datentyp
+              href: visual-basic/language-reference/data-types/ushort-data-type.md
+        - name: Anweisungen
+          href: visual-basic/language-reference/directives/index.md
+          items:
+            - name: '#Const-Anweisung'
+              href: visual-basic/language-reference/directives/const-directive.md
+            - name: '#ExternalSource-Anweisung'
+              href: visual-basic/language-reference/directives/externalsource-directive.md
+            - name: '#If...Then...#Else-Anweisungen'
+              href: visual-basic/language-reference/directives/if-then-else-directives.md
+            - name: '#Region-Anweisung'
+              href: visual-basic/language-reference/directives/region-directive.md
+        - name: Funktionen
+          href: visual-basic/language-reference/functions/index.md
+          items:
+            - name: Konvertierungsfunktionen
+              href: visual-basic/language-reference/functions/conversion-functions.md
+            - name: Mathematische Funktionen
+              href: visual-basic/language-reference/functions/math-functions.md
+            - name: String-Funktionen
+              href: visual-basic/language-reference/functions/string-functions.md
+            - name: Type Conversion Functions
+              href: visual-basic/language-reference/functions/type-conversion-functions.md
+              items:
+                - name: Rückgabewerte für die CStr-Funktion
+                  href: visual-basic/language-reference/functions/return-values-for-the-cstr-function.md
+            - name: CType Function
+              href: visual-basic/language-reference/functions/ctype-function.md
+        - name: Modifizierer
+          href: visual-basic/language-reference/modifiers/index.md
+          items:
+            - name: Ansi
+              href: visual-basic/language-reference/modifiers/ansi.md
+            - name: Assembly
+              href: visual-basic/language-reference/modifiers/assembly.md
+            - name: Async
+              href: visual-basic/language-reference/modifiers/async.md
+            - name: Auto
+              href: visual-basic/language-reference/modifiers/auto.md
+            - name: ByRef
+              href: visual-basic/language-reference/modifiers/byref.md
+            - name: ByVal
+              href: visual-basic/language-reference/modifiers/byval.md
+            - name: Standard
+              href: visual-basic/language-reference/modifiers/default.md
+            - name: Friend
+              href: visual-basic/language-reference/modifiers/friend.md
+            - name: In (generischer Modifizierer)
+              href: visual-basic/language-reference/modifiers/in-generic-modifier.md
+            - name: Iterator
+              href: visual-basic/language-reference/modifiers/iterator.md
+            - name: Key
+              href: visual-basic/language-reference/modifiers/key.md
+            - name: Modul
+              href: visual-basic/language-reference/modifiers/module-keyword.md
+            - name: MustInherit
+              href: visual-basic/language-reference/modifiers/mustinherit.md
+            - name: MustOverride
+              href: visual-basic/language-reference/modifiers/mustoverride.md
+            - name: Narrowing
+              href: visual-basic/language-reference/modifiers/narrowing.md
+            - name: NotInheritable
+              href: visual-basic/language-reference/modifiers/notinheritable.md
+            - name: NotOverridable
+              href: visual-basic/language-reference/modifiers/notoverridable.md
+            - name: Optional
+              href: visual-basic/language-reference/modifiers/optional.md
+            - name: Out (generischer Modifizierer)
+              href: visual-basic/language-reference/modifiers/out-generic-modifier.md
+            - name: Overloads
+              href: visual-basic/language-reference/modifiers/overloads.md
+            - name: Overrides
+              href: visual-basic/language-reference/modifiers/overridable.md
+            - name: Overrides
+              href: visual-basic/language-reference/modifiers/overrides.md
+            - name: ParamArray
+              href: visual-basic/language-reference/modifiers/paramarray.md
+            - name: Partial
+              href: visual-basic/language-reference/modifiers/partial.md
+            - name: Private
+              href: visual-basic/language-reference/modifiers/private.md
+            - name: Private Protected
+              href: visual-basic/language-reference/modifiers/private-protected.md
+            - name: Protected
+              href: visual-basic/language-reference/modifiers/protected.md
+            - name: Protected Friend
+              href: visual-basic/language-reference/modifiers/protected-friend.md
+            - name: Public
+              href: visual-basic/language-reference/modifiers/public.md
+            - name: ReadOnly
+              href: visual-basic/language-reference/modifiers/readonly.md
+            - name: Shadows
+              href: visual-basic/language-reference/modifiers/shadows.md
+            - name: Shared
+              href: visual-basic/language-reference/modifiers/shared.md
+            - name: Statisch
+              href: visual-basic/language-reference/modifiers/static.md
+            - name: Unicode
+              href: visual-basic/language-reference/modifiers/unicode.md
+            - name: Widening
+              href: visual-basic/language-reference/modifiers/widening.md
+            - name: WithEvents
+              href: visual-basic/language-reference/modifiers/withevents.md
+            - name: WriteOnly
+              href: visual-basic/language-reference/modifiers/writeonly.md
+        - name: Module
+          href: visual-basic/language-reference/modules.md
+        - name: Nothing
+          href: visual-basic/language-reference/nothing.md
+        - name: erzwingen
+          href: visual-basic/language-reference/objects/index.md
+          items:
+            - name: My.Application-Objekt
+              href: visual-basic/language-reference/objects/my-application-object.md
+              items:
+                - name: My.Application.Info-Objekt
+                  href: visual-basic/language-reference/objects/my-application-info-object.md
+                - name: My.Application.Log-Objekt
+                  href: visual-basic/language-reference/objects/my-application-log-object.md
+            - name: My.Computer-Objekt
+              href: visual-basic/language-reference/objects/my-computer-object.md
+              items:
+                - name: My.Computer.Audio-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-audio-object.md
+                - name: My.Computer.Clipboard-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-clipboard-object.md
+                - name: My.Computer.Clock-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-clock-object.md
+                - name: My.Computer.FileSystem-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-filesystem-object.md
+                  items:
+                    - name: My.Computer.FileSystem.SpecialDirectories-Objekt
+                      href: visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md
+                - name: My.Computer.Info-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-info-object.md
+                - name: My.Computer.Keyboard-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-keyboard-object.md
+                - name: My.Computer.Mouse-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-mouse-object.md
+                - name: My.Computer.Network-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-network-object.md
+                - name: My.Computer.Ports-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-ports-object.md
+                - name: My.Computer.Registry-Objekt
+                  href: visual-basic/language-reference/objects/my-computer-registry-object.md
+            - name: My.Forms-Objekt
+              href: visual-basic/language-reference/objects/my-forms-object.md
+            - name: My.Log-Objekt
+              href: visual-basic/language-reference/objects/my-log-object.md
+            - name: My.Request-Objekt
+              href: visual-basic/language-reference/objects/my-request-object.md
+            - name: My.Response-Objekt
+              href: visual-basic/language-reference/objects/my-response-object.md
+            - name: My.Resources-Objekt
+              href: visual-basic/language-reference/objects/my-resources-object.md
+            - name: My.Settings-Objekt
+              href: visual-basic/language-reference/objects/my-settings-object.md
+            - name: My.User-Objekt
+              href: visual-basic/language-reference/objects/my-user-object.md
+            - name: My.WebServices-Objekt
+              href: visual-basic/language-reference/objects/my-webservices-object.md
+            - name: TextFieldParser Object
+              href: visual-basic/language-reference/objects/textfieldparser-object.md
+        - name: Operatoren
+          href: visual-basic/language-reference/operators/index.md
+          items:
+            - name: Operatorrangfolge
+              href: visual-basic/language-reference/operators/operator-precedence.md
+            - name: Datentypen von Operatorergebnissen
+              href: visual-basic/language-reference/operators/data-types-of-operator-results.md
+            - name: Nach Funktionalität sortierte Operatoren
+              href: visual-basic/language-reference/operators/operators-listed-by-functionality.md
+              items:
+                - name: Arithmetische Operatoren
+                  href: visual-basic/language-reference/operators/arithmetic-operators.md
+                - name: Zuweisungsoperatoren
+                  href: visual-basic/language-reference/operators/assignment-operators.md
+                - name: Bitschiebeoperatoren
+                  href: visual-basic/language-reference/operators/bit-shift-operators.md
+                - name: Vergleichsoperatoren
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: Verkettungsoperatoren
+                  href: visual-basic/language-reference/operators/concatenation-operators.md
+                - name: Logische bitweise Operatoren
+                  href: visual-basic/language-reference/operators/logical-bitwise-operators.md
+                - name: Verschiedene Operatoren
+                  href: visual-basic/language-reference/operators/miscellaneous-operators.md
+            - name: Liste der Visual Basic-Operatoren
+              items:
+                - name: '&-Operator'
+                  href: visual-basic/language-reference/operators/concatenation-operator.md
+                - name: '&=-Operator'
+                  href: visual-basic/language-reference/operators/and-assignment-operator.md
+                - name: '* Operator'
+                  href: visual-basic/language-reference/operators/multiplication-operator.md
+                - name: '*=-Operator'
+                  href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
+                - name: + Operator
+                  href: visual-basic/language-reference/operators/addition-operator.md
+                - name: +=-Operator
+                  href: visual-basic/language-reference/operators/addition-assignment-operator.md
+                - name: =-Operator
+                  href: visual-basic/language-reference/operators/assignment-operator.md
+                - name: '- Operator'
+                  href: visual-basic/language-reference/operators/subtraction-operator.md
+                - name: '-=-Operator'
+                  href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
+                - name: <-Operator
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: <=-Operator
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: '> Operator'
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: '>=-Operator'
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: <<-Operator
+                  href: visual-basic/language-reference/operators/left-shift-operator.md
+                - name: <<=-Operator
+                  href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
+                - name: '>> Operator'
+                  href: visual-basic/language-reference/operators/right-shift-operator.md
+                - name: '>>=-Operator'
+                  href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
+                - name: /-Operator
+                  href: visual-basic/language-reference/operators/floating-point-division-operator.md
+                - name: /=-Operator
+                  href: visual-basic/language-reference/operators/floating-point-division-assignment-operator.md
+                - name: \-Operator
+                  href: visual-basic/language-reference/operators/integer-division-operator.md
+                - name: \=-Operator
+                  href: visual-basic/language-reference/operators/integer-division-assignment-operator.md
+                - name: ^-Operator
+                  href: visual-basic/language-reference/operators/exponentiation-operator.md
+                - name: ^=-Operator
+                  href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
+                - name: '?()-Operator'
+                  href: visual-basic/language-reference/operators/null-conditional-operators.md
+                - name: '?. Operator'
+                  href: visual-basic/language-reference/operators/null-conditional-operators.md
+                - name: AddressOf-Operator
+                  href: visual-basic/language-reference/operators/addressof-operator.md
+                - name: And-Operator
+                  href: visual-basic/language-reference/operators/and-operator.md
+                - name: AndAlso-Operator
+                  href: visual-basic/language-reference/operators/andalso-operator.md
+                - name: Await-Operator
+                  href: visual-basic/language-reference/operators/await-operator.md
+                - name: DirectCast-Operator
+                  href: visual-basic/language-reference/operators/directcast-operator.md
+                - name: Function-Ausdruck
+                  href: visual-basic/language-reference/operators/function-expression.md
+                - name: GetType Operator
+                  href: visual-basic/language-reference/operators/gettype-operator.md
+                - name: GetXmlNamespace-Operator
+                  href: visual-basic/language-reference/operators/getxmlnamespace-operator.md
+                - name: If-Operator
+                  href: visual-basic/language-reference/operators/if-operator.md
+                - name: Is-Operator
+                  href: visual-basic/language-reference/operators/is-operator.md
+                - name: IsFalse-Operator
+                  href: visual-basic/language-reference/operators/isfalse-operator.md
+                - name: IsNot-Operator
+                  href: visual-basic/language-reference/operators/isnot-operator.md
+                - name: IsTrue-Operator
+                  href: visual-basic/language-reference/operators/istrue-operator.md
+                - name: Like-Operator
+                  href: visual-basic/language-reference/operators/like-operator.md
+                - name: Mod-Operator
+                  href: visual-basic/language-reference/operators/mod-operator.md
+                - name: New-Operator
+                  href: visual-basic/language-reference/operators/new-operator.md
+                - name: Not-Operator
+                  href: visual-basic/language-reference/operators/not-operator.md
+                - name: Or-Operator
+                  href: visual-basic/language-reference/operators/or-operator.md
+                - name: OrElse-Operator
+                  href: visual-basic/language-reference/operators/orelse-operator.md
+                - name: Sub-Ausdruck
+                  href: visual-basic/language-reference/operators/sub-expression.md
+                - name: TryCast-Operator
+                  href: visual-basic/language-reference/operators/trycast-operator.md
+                - name: Operator TypeOf
+                  href: visual-basic/language-reference/operators/typeof-operator.md
+                - name: Xor-Operator
+                  href: visual-basic/language-reference/operators/xor-operator.md
+        - name: Eigenschaften
+          href: visual-basic/language-reference/properties.md
+        - name: Abfragen
+          href: visual-basic/language-reference/queries/index.md
+          items:
+            - name: Aggregate Clause
+              href: visual-basic/language-reference/queries/aggregate-clause.md
+            - name: Distinct-Klausel
+              href: visual-basic/language-reference/queries/distinct-clause.md
+            - name: Equals-Klausel
+              href: visual-basic/language-reference/queries/equals-clause.md
+            - name: From-Klausel
+              href: visual-basic/language-reference/queries/from-clause.md
+            - name: Group By-Klausel
+              href: visual-basic/language-reference/queries/group-by-clause.md
+            - name: Group Join-Klausel
+              href: visual-basic/language-reference/queries/group-join-clause.md
+            - name: Join-Klausel
+              href: visual-basic/language-reference/queries/join-clause.md
+            - name: Let-Klausel
+              href: visual-basic/language-reference/queries/let-clause.md
+            - name: Order By-Klausel
+              href: visual-basic/language-reference/queries/order-by-clause.md
+            - name: Select-Klausel
+              href: visual-basic/language-reference/queries/select-clause.md
+            - name: Skip-Klausel
+              href: visual-basic/language-reference/queries/skip-clause.md
+            - name: SkipWhile-Klausel
+              href: visual-basic/language-reference/queries/skip-while-clause.md
+            - name: Take-Klausel
+              href: visual-basic/language-reference/queries/take-clause.md
+            - name: TakeWhile-Klausel
+              href: visual-basic/language-reference/queries/take-while-clause.md
+            - name: Where-Klausel
+              href: visual-basic/language-reference/queries/where-clause.md
+        - name: Anweisungen
+          href: visual-basic/language-reference/statements/index.md
+          items:
+            - name: "Anweisungen A\_–\_E"
+              href: visual-basic/language-reference/statements/a-e-statements.md
+              items:
+                - name: AddHandler-Anweisung
+                  href: visual-basic/language-reference/statements/addhandler-statement.md
+                - name: Call-Anweisung
+                  href: visual-basic/language-reference/statements/call-statement.md
+                - name: Class-Anweisung
+                  href: visual-basic/language-reference/statements/class-statement.md
+                - name: Const-Anweisung
+                  href: visual-basic/language-reference/statements/const-statement.md
+                - name: Continue-Anweisung
+                  href: visual-basic/language-reference/statements/continue-statement.md
+                - name: Declare Statement
+                  href: visual-basic/language-reference/statements/declare-statement.md
+                - name: Delegate-Anweisung
+                  href: visual-basic/language-reference/statements/delegate-statement.md
+                - name: Dim-Anweisung
+                  href: visual-basic/language-reference/statements/dim-statement.md
+                - name: Do...Loop-Anweisung
+                  href: visual-basic/language-reference/statements/do-loop-statement.md
+                - name: Else-Anweisung
+                  href: visual-basic/language-reference/statements/else-statement.md
+                - name: End Statement
+                  href: visual-basic/language-reference/statements/end-statement.md
+                - name: End <keyword>-Anweisung
+                  href: visual-basic/language-reference/statements/end-keyword-statement.md
+                - name: Enum-Anweisung
+                  href: visual-basic/language-reference/statements/enum-statement.md
+                - name: Erase-Anweisung
+                  href: visual-basic/language-reference/statements/erase-statement.md
+                - name: Error-Anweisung
+                  href: visual-basic/language-reference/statements/error-statement.md
+                - name: Event-Anweisung
+                  href: visual-basic/language-reference/statements/event-statement.md
+                - name: Exit-Anweisung
+                  href: visual-basic/language-reference/statements/exit-statement.md
+            - name: "Anweisungen F\_–\_P"
+              href: visual-basic/language-reference/statements/f-p-statements.md
+              items:
+                - name: For Each...Next-Anweisung
+                  href: visual-basic/language-reference/statements/for-each-next-statement.md
+                - name: For...Next-Anweisung
+                  href: visual-basic/language-reference/statements/for-next-statement.md
+                - name: Function-Anweisung
+                  href: visual-basic/language-reference/statements/function-statement.md
+                - name: Get-Anweisung
+                  href: visual-basic/language-reference/statements/get-statement.md
+                - name: GoTo-Anweisung
+                  href: visual-basic/language-reference/statements/goto-statement.md
+                - name: If...Then...Else-Anweisung
+                  href: visual-basic/language-reference/statements/if-then-else-statement.md
+                - name: Implements-Anweisung
+                  href: visual-basic/language-reference/statements/implements-statement.md
+                - name: Imports-Anweisung (.NET-Namespace und Typ)
+                  href: visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md
+                - name: Imports-Anweisung (XML-Namespace)
+                  href: visual-basic/language-reference/statements/imports-statement-xml-namespace.md
+                - name: Inherits Statement
+                  href: visual-basic/language-reference/statements/inherits-statement.md
+                - name: Interface-Anweisung
+                  href: visual-basic/language-reference/statements/interface-statement.md
+                - name: Mid-Anweisung
+                  href: visual-basic/language-reference/statements/mid-statement.md
+                - name: Module-Anweisung
+                  href: visual-basic/language-reference/statements/module-statement.md
+                - name: Namespace-Anweisung
+                  href: visual-basic/language-reference/statements/namespace-statement.md
+                - name: On Error-Anweisung
+                  href: visual-basic/language-reference/statements/on-error-statement.md
+                - name: Operator Statement
+                  href: visual-basic/language-reference/statements/operator-statement.md
+                - name: Option <keyword>-Anweisung
+                  href: visual-basic/language-reference/statements/option-keyword-statement.md
+                - name: Option Compare-Anweisung
+                  href: visual-basic/language-reference/statements/option-compare-statement.md
+                - name: Option Explicit-Anweisung
+                  href: visual-basic/language-reference/statements/option-explicit-statement.md
+                - name: Option Infer-Anweisung
+                  href: visual-basic/language-reference/statements/option-infer-statement.md
+                - name: Option Strict Statement
+                  href: visual-basic/language-reference/statements/option-strict-statement.md
+                - name: Property Statement
+                  href: visual-basic/language-reference/statements/property-statement.md
+            - name: "Anweisungen Q\_–\_Z"
+              href: visual-basic/language-reference/statements/q-z-statements.md
+              items:
+                - name: RaiseEvent-Anweisung
+                  href: visual-basic/language-reference/statements/raiseevent-statement.md
+                - name: ReDim-Anweisung
+                  href: visual-basic/language-reference/statements/redim-statement.md
+                - name: REM-Anweisung
+                  href: visual-basic/language-reference/statements/rem-statement.md
+                - name: RemoveHandler-Anweisung
+                  href: visual-basic/language-reference/statements/removehandler-statement.md
+                - name: Resume-Anweisung
+                  href: visual-basic/language-reference/statements/resume-statement.md
+                - name: Return-Anweisung
+                  href: visual-basic/language-reference/statements/return-statement.md
+                - name: Select...Case-Anweisung
+                  href: visual-basic/language-reference/statements/select-case-statement.md
+                - name: Set-Anweisung
+                  href: visual-basic/language-reference/statements/set-statement.md
+                - name: Stop-Anweisung
+                  href: visual-basic/language-reference/statements/stop-statement.md
+                - name: Structure Statement
+                  href: visual-basic/language-reference/statements/structure-statement.md
+                - name: Sub-Anweisung
+                  href: visual-basic/language-reference/statements/sub-statement.md
+                - name: SyncLock-Anweisung
+                  href: visual-basic/language-reference/statements/synclock-statement.md
+                - name: Then-Anweisung
+                  href: visual-basic/language-reference/statements/then-statement.md
+                - name: Throw-Anweisung
+                  href: visual-basic/language-reference/statements/throw-statement.md
+                - name: Try...Catch...Finally-Anweisung
+                  href: visual-basic/language-reference/statements/try-catch-finally-statement.md
+                - name: Using-Anweisung
+                  href: visual-basic/language-reference/statements/using-statement.md
+                - name: While...End While-Anweisung
+                  href: visual-basic/language-reference/statements/while-end-while-statement.md
+                - name: With...End With-Anweisung
+                  href: visual-basic/language-reference/statements/with-end-with-statement.md
+                - name: Yield-Anweisung
+                  href: visual-basic/language-reference/statements/yield-statement.md
+            - name: Klauseln
+              href: visual-basic/language-reference/statements/clauses.md
+              items:
+                - name: Alias-Klausel
+                  href: visual-basic/language-reference/statements/alias-clause.md
+                - name: As-Klausel
+                  href: visual-basic/language-reference/statements/as-clause.md
+                - name: Handles-Klausel
+                  href: visual-basic/language-reference/statements/handles-clause.md
+                - name: Implements-Klausel
+                  href: visual-basic/language-reference/statements/implements-clause.md
+                - name: In-Klausel
+                  href: visual-basic/language-reference/statements/in-clause.md
+                - name: Into-Klausel
+                  href: visual-basic/language-reference/statements/into-clause.md
+                - name: Of-Klausel
+                  href: visual-basic/language-reference/statements/of-clause.md
+            - name: Deklarationskontexte und Standardzugriffsebenen
+              href: visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md
+            - name: Attributliste
+              href: visual-basic/language-reference/statements/attribute-list.md
+            - name: Parameterliste
+              href: visual-basic/language-reference/statements/parameter-list.md
+            - name: Type List
+              href: visual-basic/language-reference/statements/type-list.md
+        - name: XML-Kommentartags
+          href: visual-basic/language-reference/xmldoc/index.md
+          items:
+            - name: <c>
+              href: visual-basic/language-reference/xmldoc/c.md
+            - name: <code>
+              href: visual-basic/language-reference/xmldoc/code.md
+            - name: <example>
+              href: visual-basic/language-reference/xmldoc/example.md
+            - name: <exception>
+              href: visual-basic/language-reference/xmldoc/exception.md
+            - name: <include>
+              href: visual-basic/language-reference/xmldoc/include.md
+            - name: <list>
+              href: visual-basic/language-reference/xmldoc/list.md
+            - name: <para>
+              href: visual-basic/language-reference/xmldoc/para.md
+            - name: <param>
+              href: visual-basic/language-reference/xmldoc/param.md
+            - name: <paramref>
+              href: visual-basic/language-reference/xmldoc/paramref.md
+            - name: <permission>
+              href: visual-basic/language-reference/xmldoc/permission.md
+            - name: <remarks>
+              href: visual-basic/language-reference/xmldoc/remarks.md
+            - name: <returns>
+              href: visual-basic/language-reference/xmldoc/returns.md
+            - name: <see>
+              href: visual-basic/language-reference/xmldoc/see.md
+            - name: <seealso>
+              href: visual-basic/language-reference/xmldoc/seealso.md
+            - name: <summary>
+              href: visual-basic/language-reference/xmldoc/summary.md
+            - name: <typeparam>
+              href: visual-basic/language-reference/xmldoc/typeparam.md
+            - name: <value>
+              href: visual-basic/language-reference/xmldoc/value.md
+        - name: XML-Achseneigenschaften
+          href: visual-basic/language-reference/xml-axis/index.md
+          items:
+            - name: XML Attribute Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md
+            - name: XML Child Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-child-axis-property.md
+            - name: XML Descendant Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md
+            - name: Erweiterungsindexereigenschaft
+              href: visual-basic/language-reference/xml-axis/extension-indexer-property.md
+            - name: XML-Value-Eigenschaft
+              href: visual-basic/language-reference/xml-axis/xml-value-property.md
+        - name: XML-Literale
+          href: visual-basic/language-reference/xml-literals/index.md
+          items:
+            - name: XML-Elementliteral
+              href: visual-basic/language-reference/xml-literals/xml-element-literal.md
+            - name: XML-Dokumentliteral
+              href: visual-basic/language-reference/xml-literals/xml-document-literal.md
+            - name: XML-CDATA-Literal
+              href: visual-basic/language-reference/xml-literals/xml-cdata-literal.md
+            - name: XML-Kommentarliteral
+              href: visual-basic/language-reference/xml-literals/xml-comment-literal.md
+            - name: XML-Verarbeitungsanweisungsliteral
+              href: visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md
+        - name: Fehlermeldungen
+          href: visual-basic/language-reference/error-messages/index.md
+          items:
+            - name: '"#ElseIf" muss ein entsprechendes "#If" oder "#ElseIf" voranstehen.'
+              href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
+            - name: 'Region- und #End Region-Anweisungen sind im Methodentext/in mehrzeiligen Lambda-Ausdrücken ungültig.'
+              href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
+            - name: '<attribute> kann nicht angewendet werden, da das Format von GUID "<number>" falsch ist.'
+              href: visual-basic/language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
+            - name: '<classname> ist nicht CLS-kompatibel, da die <interfacename>-Schnittstelle, von der geerbt wird, nicht CLS-kompatibel ist'
+              href: visual-basic/language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
+            - name: <elementname> ist veraltet (Visual Basic-Warnung)
+              href: visual-basic/language-reference/error-messages/elementname-is-obsolete-visual-basic-warning.md
+            - name: <eventname> ist ein Ereignis und kann nicht direkt aufgerufen werden.
+              href: visual-basic/language-reference/error-messages/eventname-is-an-event-and-cannot-be-called-directly.md
+            - name: <expression> kann nicht als Typeinschränkung verwendet werden.
+              href: visual-basic/language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md
+            - name: '"<functionname>" ist nicht deklariert (Compilerfehler für intelligente Geräte/Visual Basic)'
+              href: visual-basic/language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md
+            - name: '"<interfacename>.<membername>" wird bereits durch die <baseclassname>-Basisklssse implementiert. Die erneute Implementierung von <type> wird angenommen.'
+              href: visual-basic/language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md
+            - name: <keyword> ist nur innerhalb einer Instanzenmethode gültig.
+              href: visual-basic/language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md
+            - name: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> "<containertypename>" verfügbar machen.
+              href: visual-basic/language-reference/error-messages/membername-cannot-expose-type-typename-outside-the-project.md
+            - name: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle "<interfacename1>" als auch in "<interfacename2>" verwendet.
+              href: visual-basic/language-reference/error-messages/membername-is-ambiguous-across-the-inherited-interfaces.md
+            - name: <message> Dieser Fehler könnte auch auf das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly "<assemblyname>" zurückzuführen sein.
+              href: visual-basic/language-reference/error-messages/message-this-error-could-also-be-due-to-mixing-a-file-reference.md
+            - name: <methodname> hat mehrere Definitionen mit identischen Signaturen.
+              href: visual-basic/language-reference/error-messages/methodname-has-multiple-definitions-with-identical-signatures.md
+            - name: <name> ist im Namespace "<namespacename>" nicht eindeutig.
+              href: visual-basic/language-reference/error-messages/name-is-ambiguous-in-the-namespace-namespacename.md
+            - name: <name1> ist nicht eindeutig. Importiert aus den Namespaces oder Typen "<name2>".
+              href: visual-basic/language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md
+            - name: '<proceduresignature1> ist nicht CLS-kompatibel, da es <proceduresignature2> überlädt, das sich von ihm nur durch ein Array von Arrayparametertypen oder den Rang der Arrayparametertypen unterscheidet.'
+              href: visual-basic/language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md
+            - name: <type1> <typename> muss <membername> für die Schnittstelle <interfacename> implementieren.
+              href: visual-basic/language-reference/error-messages/type1-must-implement-membername-for-interface.md
+            - name: <type1> <typename> muss <methodname> für die Schnittstelle <interfacename> implementieren.
+              href: visual-basic/language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md
+            - name: <typename> erweitert den Zugriff der Basis-<type> außerhalb der Assembly und kann daher nicht von <basetypename> "<type>" erben.
+              href: visual-basic/language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md
+            - name: <typename> ist ein Delegattyp
+              href: visual-basic/language-reference/error-messages/typename-is-a-delegate-type.md
+            - name: <typename> ist ein Typ und kann nicht als Ausdruck verwendet werden.
+              href: visual-basic/language-reference/error-messages/typename-is-a-type-and-cannot-be-used-as-an-expression.md
+            - name: 'Doppelte Anführungszeichen sind kein gültiges Kommentartoken für Felder mit Trennzeichen, bei denen HasFieldsEnclosedInQuotes auf "True" festgelegt ist.'
+              href: visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md
+            - name: 'Ein Aufruf für eine Eigenschaft oder Methode darf keinen Verweis auf ein privates Objekt enthalten - weder als Argument, noch als Rückgabewert.'
+              href: visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md
+            - name: Es wurde ein Verweis auf die eingebettete Interopassembly '<assembly1>' aufgrund eines indirekten Verweises auf diese Assembly aus Assembly '<assembly2>' erstellt.
+              href: visual-basic/language-reference/error-messages/a-reference-was-created-to-embedded-interop-assembly-assembly1.md
+            - name: Es wurde kein Startformular angegeben.
+              href: visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md
+            - name: 'Zugriff des freigegebenen Members, konstanten Members, Enumerationsmembers oder geschachtelten Typs über eine Instanz; der qualifizierende Ausdruck wird nicht ausgewertet'
+              href: visual-basic/language-reference/error-messages/access-of-shared-member-through-an-instance-qualifying-expression.md
+            - name: Der AddressOf-Operand muss dem Namen einer Methode entsprechen (ohne Klammern).
+              href: visual-basic/language-reference/error-messages/addressof-operand-must-be-the-name-of-a-method-without-parentheses.md
+            - name: 'Unerwarteter Fehler. Eine Betriebssystemressource, die für den Start einer einzelnen Instanz benötigt wird, ist nicht verfügbar.'
+              href: visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md
+            - name: Der Membername eines anonymen Typs kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden
+              href: visual-basic/language-reference/error-messages/anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name.md
+            - name: Das Argument ist nicht optional.
+              href: visual-basic/language-reference/error-messages/argument-not-optional.md
+            - name: Arraygrenzen können nicht in Typbezeichnern stehen.
+              href: visual-basic/language-reference/error-messages/array-bounds-cannot-appear-in-type-specifiers.md
+            - name: 'Ein Array, das als For-Schleifensteuerungsvariable deklariert ist, kann nicht mit einer vorgegebenen Größe deklariert werden.'
+              href: visual-basic/language-reference/error-messages/array-declared-as-for-loop-control-variable-cannot-be-declared.md
+            - name: Fehlender Arraysubscriptausdruck
+              href: visual-basic/language-reference/error-messages/array-subscript-expression-missing.md
+            - name: 'Arrays, die als Strukturmember deklariert sind, können nicht mit einer vorgegebenen Größe definiert werden.'
+              href: visual-basic/language-reference/error-messages/arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size.md
+            - name: As Any wird in Declare-Anweisungen nicht unterstützt.
+              href: visual-basic/language-reference/error-messages/as-any-is-not-supported-in-declare-statements.md
+            - name: Das Attribut "<attributename>" kann nicht mehrmals angewendet werden.
+              href: visual-basic/language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+            - name: Automatisierungsfehler
+              href: visual-basic/language-reference/error-messages/automation-error.md
+            - name: 'Ungültiger Prüfsummenwert, keine hexadezimalen Ziffern oder ungerade Anzahl von hexadezimalen Ziffern.'
+              href: visual-basic/language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md
+            - name: Fehlerhafte DLL-Aufrufkonvention
+              href: visual-basic/language-reference/error-messages/bad-dll-calling-convention.md
+            - name: Fehlerhafter Dateimodus.
+              href: visual-basic/language-reference/error-messages/bad-file-mode.md
+            - name: Der Dateiname oder die Zahl ist ungültig.
+              href: visual-basic/language-reference/error-messages/bad-file-name-or-number.md
+            - name: Ungültige Datensatzlänge.
+              href: visual-basic/language-reference/error-messages/bad-record-length.md
+            - name: 'Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt'
+              href: visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
+            - name: 'Eine Konvertierung des anonymen Typs in eine Ausdrucksbaumstruktur ist nicht möglich, da sie ein Feld enthält, das in der Initialisierung eines anderen Feldes verwendet wird'
+              href: visual-basic/language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+            - name: ActiveX-Komponente kann nicht erstellt werden
+              href: visual-basic/language-reference/error-messages/cannot-create-activex-component.md
+            - name: 'Auf "<name>" kann nicht verwiesen werden, da es ein Member des auf Werttypen basierenden Felds "<name>" der Klasse "<classname>" ist, die "System.MarshalByRefObject" als Basisklasse hat.'
+              href: visual-basic/language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+            - name: Auf einen Instanzmember einer Klasse kann nicht ohne explizite Instanz einer Klasse von einer/m freigegebenen Methode/Member aus verwiesen werden.
+              href: visual-basic/language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+            - name: Die erforderliche temporäre Datei kann nicht erstellt werden
+              href: visual-basic/language-reference/error-messages/can-t-create-necessary-temporary-file.md
+            - name: '"<filename>" kann nicht zum Schreiben geöffnet werden'
+              href: visual-basic/language-reference/error-messages/can-t-open-filename-for-writing.md
+            - name: Die <classname>-Klasse wurde nicht gefunden.
+              href: visual-basic/language-reference/error-messages/class-classname-cannot-be-found.md
+            - name: Klasse unterstützt keine Automatisierung oder unterstützt die erwartete Schnittstelle nicht
+              href: visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
+            - name: '"Class" muss mit einem entsprechenden "End Class" abgeschlossen werden.'
+              href: visual-basic/language-reference/error-messages/class-statement-must-end-with-a-matching-end-class.md
+            - name: Das Format der Zwischenablage ist ungültig.
+              href: visual-basic/language-reference/error-messages/clipboard-format-is-not-valid.md
+            - name: Der Konstantenausdruck ist in Typ "<typename>" nicht repräsentierbar.
+              href: visual-basic/language-reference/error-messages/constant-expression-not-representable-in-type-typename.md
+            - name: 'Konstanten müssen einen systeminternen oder enumerierten Typ aufweisen, keinen Klassen-, Struktur-, Typparameter- oder Arraytyp.'
+              href: visual-basic/language-reference/error-messages/constants-must-be-of-an-intrinsic-or-enumerated-type.md
+            - name: 'Der Konstruktor "<name>" kann sich nicht selbst aufrufen:'
+              href: visual-basic/language-reference/error-messages/constructor-name-cannot-call-itself.md
+            - name: Das Zurückkopieren des ByRef-Parameters "<parametername>" in das entsprechende Argument führt zu einer Einschränkung von Typ "<typename1>" auf Typ "<typename2>".
+              href: visual-basic/language-reference/error-messages/copying-the-value-of-byref-parameter-back-to-the-matching-argument-narrows.md
+            - name: 'Der Custom-Modifizierer ist nicht gültig für Ereignisse, die ohne expliziten Delegattyp deklariert wurden.'
+              href: visual-basic/language-reference/error-messages/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types.md
+            - name: Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden
+              href: visual-basic/language-reference/error-messages/data-type-s-of-the-type-parameter-s-cannot-be-inferred-from-these-arguments.md
+            - name: Deklaration erwartet.
+              href: visual-basic/language-reference/error-messages/declaration-expected.md
+            - name: Die "<propertyname1>"-Standardeigenschaft verursacht einen Konflikt mit der "<propertyname2>"-Standardeigenschaft in "<classname>" und sollte daher als "Shadows" deklariert werden.
+              href: visual-basic/language-reference/error-messages/default-property-propertyname1-conflicts-with-default-property-propertyname2.md
+            - name: Der Standardeigenschaftenzugriff ist nicht eindeutig. Es kann sich um den geerbten Schnittstellenmember "<defaultpropertyname>" der Schnittstelle "<interfacename1>" oder "<defaultpropertyname>" der Schnittstelle "<interfacename2>" handeln.
+              href: visual-basic/language-reference/error-messages/default-property-access-is-ambiguous.md
+            - name: Die Delegatklasse "<classname>" hat keine Invoke-Methode. Ein Ausdruck dieses Typs kann daher nicht das Ziel eines Methodenaufrufs sein.
+              href: visual-basic/language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md
+            - name: Abgeleitete Klassen können keine Basisklassenereignisse auslösen.
+              href: visual-basic/language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md
+            - name: Geräte-E/A-Fehler
+              href: visual-basic/language-reference/error-messages/device-i-o-error.md
+            - name: Die 'Dir'-Funktion muss zuerst mit einem 'PathName'-Argument aufgerufen werden.
+              href: visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md
+            - name: end of-Anweisung erwartet.
+              href: visual-basic/language-reference/error-messages/end-of-statement-expected.md
+            - name: 'Fehler beim Erstellen des Assemblymanifests: <error message>'
+              href: visual-basic/language-reference/error-messages/error-creating-assembly-manifest-error-message.md
+            - name: 'Fehler beim Erstellen von Win32-Ressourcen: <error message>'
+              href: visual-basic/language-reference/error-messages/error-creating-win32-resources-error-message.md
+            - name: Fehler beim Laden der DLL
+              href: visual-basic/language-reference/error-messages/error-in-loading-dll.md
+            - name: 'Fehler beim Speichern der temporären Win32-Ressourcendatei "<filename>": <error message>'
+              href: visual-basic/language-reference/error-messages/error-saving-temporary-win32-resource-file-filename-error-message.md
+            - name: Fehler beim Kompilieren der XML-Schemas im Projekt
+              href: visual-basic/language-reference/error-messages/errors-occurred-while-compiling-the-xml-schemas-in-the-project.md
+            - name: Das Zeitlimit für die Auswertung von Ausdruck oder Anweisung wurde überschritten.
+              href: visual-basic/language-reference/error-messages/evaluation-of-expression-or-statement-timed-out.md
+            - name: 'Das "<eventname1>"-Ereignis kann das "<eventname2>"-Ereignis für die "<interface>"-Schnittstelle nicht implementieren, da die entsprechenden Delegattypen "<delegate1>" und "<delegate2>" nicht übereinstimmen.'
+              href: visual-basic/language-reference/error-messages/event-eventname1-cannot-implement-event-eventname2-on-interface.md
+            - name: 'Ereignisse können nicht mit einem Delegattypen deklariert werden, der einen Rückgabetyp hat.'
+              href: visual-basic/language-reference/error-messages/events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type.md
+            - name: Ereignisse freigegebener WithEvents-Variablen können nicht von freigegebenen Methoden behandelt werden.
+              href: visual-basic/language-reference/error-messages/events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods.md
+            - name: Der Ausdruck ergibt keinen Wert
+              href: visual-basic/language-reference/error-messages/expression-does-not-produce-a-value.md
+            - name: 'Der Ausdruck weist den Typ ''<typename>'' auf, einen eingeschränkten Typ, der nicht verwendet werden kann, um auf von ''Object'' oder ''ValueType'' geerbte Member zuzugreifen'
+              href: visual-basic/language-reference/error-messages/expression-has-the-type-typename-which-is-a-restricted-type.md
+            - name: Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden
+              href: visual-basic/language-reference/error-messages/expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment.md
+            - name: Ein Ausdruck vom Typ <type> kann nicht abgefragt werden
+              href: visual-basic/language-reference/error-messages/expression-of-type-type-is-not-queryable.md
+            - name: Der Ausdruck ruft rekursiv die enthaltende <propertyname>-Eigenschaft auf.
+              href: visual-basic/language-reference/error-messages/expression-recursively-calls-the-containing-property-propertyname.md
+            - name: Der Ausdruck ist zu komplex.
+              href: visual-basic/language-reference/error-messages/expression-too-complex.md
+            - name: 'Das Extension-Attribut darf nur in Module-, Sub- oder Function-Deklarationen verwendet werden'
+              href: visual-basic/language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md
+            - name: Die Datei ist bereits geöffnet.
+              href: visual-basic/language-reference/error-messages/file-already-open.md
+            - name: 'Die Datei ist zu groß, um in ein Bytearray geladen zu werden'
+              href: visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md
+            - name: Der Datei- oder Klassenname wurde während des Automatisierungsvorgangs nicht gefunden
+              href: visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md
+            - name: Die Datei wurde nicht gefunden (Visual Basic-Laufzeitfehler)
+              href: visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md
+            - name: 'Der erste Operand in einem binären If-Ausdruck muss ein Typ, der NULL-Werte zulässt, oder ein Referenztyp sein'
+              href: visual-basic/language-reference/error-messages/first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type.md
+            - name: Die erste Anweisung dieses "Sub New" muss ein Aufruf an "MyBase.New" oder "MyClass.New" sein (Zugriff auf Konstruktor ohne Parameter nicht möglich)
+              href: visual-basic/language-reference/error-messages/first-statement-of-this-sub-new-must-be-a-call-to-mybase-new-or-myclass-new.md
+            - name: 'Die erste Anweisung des Sub New-Blocks muss ein expliziter Aufruf an "MyBase.New" oder "MyClass.New" sein, da "<constructorname>" in der <baseclassname>-Basisklasse von "<derivedclassname>" als veraltet markiert ist: "<errormessage>"'
+              href: visual-basic/language-reference/error-messages/first-statement-of-sub-new-must-be-explicit-call-to-mybase-new-or-myclass-new.md
+            - name: '"For Each" für den <typename>-Typ ist mehrdeutig, da der Typ mehrere Instanziierungen von System.Collections.Generic.IEnumerable(Of T) implementiert.'
+              href: visual-basic/language-reference/error-messages/for-each-on-type-typename-is-ambiguous.md
+            - name: Der Friend-Assemblyverweis <reference> ist ungültig
+              href: visual-basic/language-reference/error-messages/friend-assembly-reference-reference-is-invalid.md
+            - name: Die <procedurename>-Funktion gibt nicht für alle Codepfade einen Wert zurück.
+              href: visual-basic/language-reference/error-messages/function-procedurename-doesn-t-return-a-value-on-all-code-paths.md
+            - name: 'Die Funktionsauswertung ist deaktiviert, da eine frühere Funktionsevaluierung das Zeitlimit überschritten hat.'
+              href: visual-basic/language-reference/error-messages/function-evaluation-is-disabled.md
+            - name: 'Generische Parameter, die als optionale Parametertypen verwendet werden, müssen eine Klassenbeschränkung aufweisen.'
+              href: visual-basic/language-reference/error-messages/generic-parameters-used-as-optional-parameter-types-must-be-class-constrained.md
+            - name: Auf den Get-Accessor der <propertyname>-Eigenschaft kann nicht zugegriffen werden.
+              href: visual-basic/language-reference/error-messages/get-accessor-of-property-propertyname-is-not-accessible.md
+            - name: 'Die Handles-Klausel erfordert eine WithEvents-Variable, die im enthaltenden Typ oder einem seiner Basistypen definiert wird.'
+              href: visual-basic/language-reference/error-messages/handles-clause-requires-a-withevents-variable-defined.md
+            - name: Bezeichner erwartet.
+              href: visual-basic/language-reference/error-messages/identifier-expected.md
+            - name: Der Bezeichner ist zu lang.
+              href: visual-basic/language-reference/error-messages/identifier-is-too-long.md
+            - name: Initialisierer erwartet
+              href: visual-basic/language-reference/error-messages/initializer-expected.md
+            - name: Eingabe nach dem Dateiende.
+              href: visual-basic/language-reference/error-messages/input-past-end-of-file.md
+            - name: Interner Fehler in <location>
+              href: visual-basic/language-reference/error-messages/internal-error-happened-at-location.md
+            - name: Implizite Konvertierung von "<typename1>" in "<typename2>" beim Zurückkopieren des Wertes des ByRef-Parameters "<parametername>" in das entsprechende Argument.
+              href: visual-basic/language-reference/error-messages/implicit-conversion-from-typename1-to-typename2-in-copying.md
+            - name: '"Is" erfordert Operanden, die Verweistypen haben. Dieser Operand hat jedoch den Werttyp "<typename>".'
+              href: visual-basic/language-reference/error-messages/is-requires-operands-that-have-reference-types.md
+            - name: 'Ein IsNot-Operand vom Typ „Typname“ kann nur mit „Nothing“ verglichen werden, da „Typname“ ein Typ ist, der NULL-Werte zulässt'
+              href: visual-basic/language-reference/error-messages/isnot-operand-of-type-can-only-be-compared-to-nothing.md
+            - name: 'Nach Sprungmarken, die Zahlen sind, muss ein Doppelpunkt stehen.'
+              href: visual-basic/language-reference/error-messages/labels-that-are-numbers-must-be-followed-by-colons.md
+            - name: Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt
+              href: visual-basic/language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md
+            - name: Lambda-Ausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig
+              href: visual-basic/language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md
+            - name: Spät gebundene Auflösung. Laufzeitfehler sind möglich.
+              href: visual-basic/language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md
+            - name: 'Die spät gebundene Überladungsauflösung kann nicht auf "<procedurename>" angewendet werden, da die zugreifende Instanz ein Schnittstellentyp ist.'
+              href: visual-basic/language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md
+            - name: Vorangestellte "." oder "!" können nur in einer With-Anweisung verwendet werden.
+              href: visual-basic/language-reference/error-messages/leading-period-or-exclamation-point-can-only-appear-inside-a-with-statement.md
+            - name: Die Zeile ist zu lang
+              href: visual-basic/language-reference/error-messages/line-is-too-long.md
+            - name: Line-Anweisungen werden nicht mehr unterstützt (Visual Basic-Compilerfehler)
+              href: visual-basic/language-reference/error-messages/line-statements-are-no-longer-supported-visual-basic-compiler-error.md
+            - name: Die Signatur der Methode ist nicht mit dem Delegaten kompatibel
+              href: visual-basic/language-reference/error-messages/method-does-not-have-a-signature-compatible-with-the-delegate.md
+            - name: Methoden von „System.Nullable(Of T)“ können nicht als Operanden des Operators „AddressOf“ verwendet werden
+              href: visual-basic/language-reference/error-messages/methods-of-system-nullable-of-t-cannot-be-used-as-operands-of-the-addressof.md
+            - name: Module-Anweisungen können nur auf Namespace- oder Dateiebene verwendet werden.
+              href: visual-basic/language-reference/error-messages/module-statements-can-occur-only-at-file-or-namespace-level.md
+            - name: Name "<membername>" ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/name-membername-is-not-cls-compliant.md
+            - name: Der Name "<name>" wurde nicht deklariert.
+              href: visual-basic/language-reference/error-messages/name-name-is-not-declared.md
+            - name: Der Name "<namespacename>" im Stammnamespace "<fullnamespacename>" ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant.md
+            - name: Der in Imports '<qualifiedelementname>' angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden
+              href: visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-imports-qualifiedelementname.md
+            - name: Der in Imports '<qualifiedelementname>' auf Projektebene angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden
+              href: visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname.md
+            - name: Ein Eigenschaftenarrayindex wird benötigt
+              href: visual-basic/language-reference/error-messages/need-property-array-index.md
+            - name: 'Die geschachtelte Funktion verfügt über keine Signatur, die mit dem Delegaten ''<delegatename>'' kompatibel ist'
+              href: visual-basic/language-reference/error-messages/nested-function-does-not-have-a-signature-that-is-compatible-with-delegate.md
+            - name: Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in "<name>" gefunden.
+              href: visual-basic/language-reference/error-messages/no-accessible-main-method-with-an-appropriate-signature-was-found-in-name.md
+            - name: <membername> ist nicht CLS-kompatibel und darf in einer CLS-kompatiblen Schnittstelle nicht verwendet werden.
+              href: visual-basic/language-reference/error-messages/non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface.md
+            - name: 'Der Rückschluss von Typen, die NULL-Werte zulassen, wird in diesem Kontext nicht unterstützt'
+              href: visual-basic/language-reference/error-messages/nullable-type-inference-is-not-supported-in-this-context.md
+            - name: Die Indexanzahl ist größer als die Anzahl der Dimensionen des indizierten Arrays.
+              href: visual-basic/language-reference/error-messages/number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array.md
+            - name: Das Objekt oder die Klasse unterstützt diese Gruppe von Ereignissen nicht.
+              href: visual-basic/language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md
+            - name: Objekt erforderlich
+              href: visual-basic/language-reference/error-messages/object-required.md
+            - name: Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt.
+              href: visual-basic/language-reference/error-messages/object-variable-or-with-block-variable-not-set.md
+            - name: 'Folgende Operatordeklarationen sind zulässig: +,-,*,\,/,^, &, Like, Mod, And, Or, Xor, Not, <>, =, <>, =, CType, IsTrue, IsFalse'
+              href: visual-basic/language-reference/error-messages/operator-declaration-must-be-one-of.md
+            - name: '"Optional" erwartet.'
+              href: visual-basic/language-reference/error-messages/optional-expected.md
+            - name: Optionale Parameter müssen einen Standardwert bestimmen.
+              href: visual-basic/language-reference/error-messages/optional-parameters-must-specify-a-default-value.md
+            - name: Ungültiger Ordinalwert.
+              href: visual-basic/language-reference/error-messages/ordinal-is-not-valid.md
+            - name: Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)
+              href: visual-basic/language-reference/error-messages/out-of-memory-visual-basic-compiler-error.md
+            - name: Nicht genügend Stapelspeicher
+              href: visual-basic/language-reference/error-messages/out-of-stack-space.md
+            - name: Nicht genügend Zeichenfolgenspeicher
+              href: visual-basic/language-reference/error-messages/out-of-string-space.md
+            - name: Überlauf (Visual Basic-Fehler)
+              href: visual-basic/language-reference/error-messages/overflow-visual-basic-error.md
+            - name: Überlauf (Visual Basic-Laufzeitfehler)
+              href: visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md
+            - name: Der Pfad wurde nicht gefunden
+              href: visual-basic/language-reference/error-messages/path-not-found.md
+            - name: Pfad-/Dateizugriffsfehler
+              href: visual-basic/language-reference/error-messages/path-file-access-error.md
+            - name: Berechtigung verweigert
+              href: visual-basic/language-reference/error-messages/permission-denied.md
+            - name: Der Prozeduraufruf oder das Argument ist ungültig
+              href: visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
+            - name: 'Die <propertyname>-Eigenschaft gibt nicht für alle Codepfade einen Wert zurück:'
+              href: visual-basic/language-reference/error-messages/property-propertyname-doesn-t-return-a-value-on-all-code-paths.md
+            - name: Ungültiger Eigenschaftenarrayindex.
+              href: visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md
+            - name: 'Let-Prozedur der Eigenschaft ist nicht definiert, und Get-Prozedur hat kein Objekt zurückgegeben.'
+              href: visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md
+            - name: Die Eigenschaft wurde nicht gefunden
+              href: visual-basic/language-reference/error-messages/property-not-found.md
+            - name: Die Eigenschaft oder Methode wurde nicht gefunden
+              href: visual-basic/language-reference/error-messages/property-or-method-not-found.md
+            - name: 'Die Bereichsvariable <variable> verbirgt eine Variable in einem einschließenden Block, eine zuvor definierte Bereichsvariable oder eine implizit im Abfrageausdruck deklarierte Variable'
+              href: visual-basic/language-reference/error-messages/range-variable-variable-hides-a-variable-in-an-enclosing-block.md
+            - name: Der Name einer Bereichsvariablen kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden
+              href: visual-basic/language-reference/error-messages/range-variable-name-can-be-inferred.md
+            - name: 'Es ist ein Verweis auf die Assembly ''<assemblyidentity>'' erforderlich, die den Typ ''<typename>'' enthält, aber aufgrund der Mehrdeutigkeit der Projekte ''<projectname1>'' und ''<projectname2>'' wurde kein geeigneter Verweis gefunden'
+              href: visual-basic/language-reference/error-messages/reference-required-to-assembly-containing-type-but-suitable-reference-not-found.md
+            - name: 'Es ist ein Verweis auf die Assembly "<assemblyname>" erforderlich, die die Basisklasse "<classname>" enthält.'
+              href: visual-basic/language-reference/error-messages/reference-required-to-assembly-assemblyname-containing-the-base-class-classname.md
+            - name: Der angeforderte Vorgang ist nicht verfügbar (BC35000)
+              href: visual-basic/language-reference/error-messages/bc35000.md
+            - name: Ohne Fehler fortsetzen.
+              href: visual-basic/language-reference/error-messages/resume-without-error.md
+            - name: Der Rückgabetyp der <procedurename>-Funktion ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/return-type-of-function-procedurename-is-not-cls-compliant.md
+            - name: Auf den Set-Accessor der <propertyname>-Eigenschaft kann nicht zugegriffen werden.
+              href: visual-basic/language-reference/error-messages/set-accessor-of-property-propertyname-is-not-accessible.md
+            - name: Einige Unterschlüssel können nicht gelöscht werden
+              href: visual-basic/language-reference/error-messages/some-subkeys-cannot-be-deleted.md
+            - name: Eine Anweisung kann keinen Block außerhalb einer "If"-Zeilenanweisung beenden.
+              href: visual-basic/language-reference/error-messages/statement-cannot-end-a-block-outside-of-a-line-if-statement.md
+            - name: Die Anweisung ist in einem Namespace ungültig.
+              href: visual-basic/language-reference/error-messages/statement-is-not-valid-in-a-namespace.md
+            - name: Die Anweisung ist innerhalb einer Methode oder eines mehrzeiligen Lambda-Ausdrucks nicht gültig.
+              href: visual-basic/language-reference/error-messages/statement-is-not-valid-inside-a-method-multiline-lambda.md
+            - name: Zeichenfolgenliterale müssen mit einem doppelten Anführungszeichen enden.
+              href: visual-basic/language-reference/error-messages/string-constants-must-end-with-a-double-quote.md
+            - name: 'Die Struktur "<structurename>" muss mindestens eine Instanzmembervariable oder Instanzereignisdeklaration enthalten, die nicht als "Custom" markiert ist.'
+              href: visual-basic/language-reference/error-messages/structure-structurename-must-contain.md
+            - name: '"Sub Main" wurde nicht in "<name>" gefunden'
+              href: visual-basic/language-reference/error-messages/sub-main-was-not-found-in-name.md
+            - name: '"Sub" oder "Function" ist nicht definiert'
+              href: visual-basic/language-reference/error-messages/sub-or-function-not-defined.md
+            - name: Indexoperator außerhalb des definierten Bereichs
+              href: visual-basic/language-reference/error-messages/subscript-out-of-range.md
+            - name: 'TextFieldParser kann den Lesevorgang nicht abschließen, da die maximale Puffergröße überschritten wurde.'
+              href: visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md
+            - name: 'Der Typ für die Variable ''<variablename>'' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist'
+              href: visual-basic/language-reference/error-messages/the-type-for-variable-variablename-will-not-be-inferred.md
+            - name: Das Array ist fixiert oder vorübergehend gesperrt
+              href: visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md
+            - name: Dieser Schlüssel ist bereits einem Element dieser Auflistung zugeordnet
+              href: visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md
+            - name: Zu viele Dateien
+              href: visual-basic/language-reference/error-messages/too-many-files.md
+            - name: Der Typ "<typename>" hat keinen Konstruktor.
+              href: visual-basic/language-reference/error-messages/type-typename-has-no-constructors.md
+            - name: Typ "<typename>" ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/type-typename-is-not-cls-compliant.md
+            - name: Der Typ "<typename>" ist nicht definiert.
+              href: visual-basic/language-reference/error-messages/type-typename-is-not-defined.md
+            - name: Die Typargumente konnten nicht vom Delegaten abgeleitet werden
+              href: visual-basic/language-reference/error-messages/type-arguments-could-not-be-inferred-from-the-delegate.md
+            - name: Typenkonflikt
+              href: visual-basic/language-reference/error-messages/type-mismatch.md
+            - name: 'Der Typ von ''<variablename>'' kann nicht abgeleitet werden, weil die Schleifenbegrenzungen und die step-Klausel nicht in denselben Typ konvertiert werden'
+              href: visual-basic/language-reference/error-messages/type-of-variablename-cannot-be-inferred.md
+            - name: Der Typ des Members "<membername>" ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/type-of-member-membername-is-not-cls-compliant.md
+            - name: Der Typ des optionalen Werts für den optionalen <parametername>-Parameter ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/type-of-optional-value-for-optional-parameter-is-not-cls-compliant.md
+            - name: Der Typ des <parametername>-Parameters ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/type-of-parameter-parametername-is-not-cls-compliant.md
+            - name: Typparameter können nicht als Qualifizierer verwendet werden.
+              href: visual-basic/language-reference/error-messages/type-parameters-cannot-be-used-as-qualifiers.md
+            - name: 'Aus der Schlüsseldatei "<filename>" konnte keine Assembly mit starkem Namen erstellt werden: <error>'
+              href: visual-basic/language-reference/error-messages/unable-to-create-strong-named-assembly-from-key-file-filename-error.md
+            - name: 'Ressourcendatei "<filename>" konnte nicht eingebettet werden: <error message>'
+              href: visual-basic/language-reference/error-messages/unable-to-embed-resource-file-filename-error-message.md
+            - name: 'Assembly wurde nicht generiert: <error message>'
+              href: visual-basic/language-reference/error-messages/unable-to-emit-assembly-error-message.md
+            - name: Die erforderliche Datei "<filename>" wurde nicht gefunden.
+              href: visual-basic/language-reference/error-messages/unable-to-find-required-file-filename.md
+            - name: Aufgrund eines internen Systemfehlers können die seriellen Anschlussnamen nicht abgerufen werden
+              href: visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md
+            - name: 'Ressourcendatei "<filename>" konnte nicht verknüpft werden: <error message>'
+              href: visual-basic/language-reference/error-messages/unable-to-link-to-resource-file-filename-error-message.md
+            - name: Informationen über die Klasse "<classname>" konnten nicht geladen werden.
+              href: visual-basic/language-reference/error-messages/unable-to-load-information-for-class-classname.md
+            - name: Die Ausgabe kann nicht in Arbeitsspeicher geschrieben werden.
+              href: visual-basic/language-reference/error-messages/unable-to-write-output-to-memory.md
+            - name: 'Die temporäre Datei konnte nicht geschrieben werden, da kein temporärer Pfad verfügbar ist.'
+              href: visual-basic/language-reference/error-messages/unable-to-write-temporary-file-because-temporary-path-is-not-available.md
+            - name: 'In die Ausgabedatei "<filename>" konnte nicht geschrieben werden: <error>.'
+              href: visual-basic/language-reference/error-messages/unable-to-write-to-output-file-filename-error.md
+            - name: Der zugrunde liegende <typename>-Typ der Enumeration ist nicht CLS-kompatibel.
+              href: visual-basic/language-reference/error-messages/underlying-type-typename-of-enum-is-not-cls-compliant.md
+            - name: Die Verwendung der Iterationsvariablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen
+              href: visual-basic/language-reference/error-messages/using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results.md
+            - name: Der Wert vom Typ "<typename1>" kann nicht zu "<typename2>" konvertiert werden.
+              href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md
+            - name: Der Wert vom Typ '<typename1>' kann nicht in '<typename2>' konvertiert werden (Mehrere Dateiverweise)
+              href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md
+            - name: Der Wert vom Typ "Typ1" kann nicht zu "Typ2" konvertiert werden
+              href: visual-basic/language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md
+            - name: Die Variable "<variablename>" verbirgt eine Variable in einem einschließenden Block.
+              href: visual-basic/language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md
+            - name: 'Die <variablename>-Variable wird verwendet, bevor ihr ein Wert zugewiesen wird.'
+              href: visual-basic/language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md
+            - name: "Die Variable verwendet einen Automatisierungstyp, der von Visual\_Basic nicht unterstützt wird."
+              href: visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md
+            - name: Die XML-Achseneigenschaften unterstützen keine späte Bindung
+              href: visual-basic/language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md
+            - name: Eine XML-Kommentarausnahme muss ein cref-Attribut aufweisen.
+              href: visual-basic/language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md
+            - name: XML-Entitätsverweise werden nicht unterstützt
+              href: visual-basic/language-reference/error-messages/xml-entity-references-are-not-supported.md
+            - name: XML-Literale und XML-Eigenschaften werden in eingebettetem Code in ASP.NET nicht unterstützt
+              href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
+            - name: XML-Namespace-URI ''<uri>'' kann nur an ''xmlns'' gebunden werden
+              href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
+    - name: Referenz
+      href: visual-basic/reference/index.md
+      items:
+        - name: Befehlszeilencompiler
+          href: visual-basic/reference/command-line-compiler/index.md
+          items:
+            - name: Erstellen von der Befehlszeile aus
+              href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
+              items:
+                - name: 'Vorgehensweise: Aufrufen des Befehlszeilencompilers'
+                  href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
+                - name: Beispiele für Kompilierungsbefehlszeilen
+                  href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md
+            - name: Compileroptionen alphabetisch sortiert
+              href: visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md
+              items:
+                - name: '@ (Antwortdatei festlegen)'
+                  href: visual-basic/reference/command-line-compiler/specify-response-file.md
+                - name: '-addmodule'
+                  href: visual-basic/reference/command-line-compiler/addmodule.md
+                - name: '-baseaddress'
+                  href: visual-basic/reference/command-line-compiler/baseaddress.md
+                - name: '-bugreport'
+                  href: visual-basic/reference/command-line-compiler/bugreport.md
+                - name: '-codepage'
+                  href: visual-basic/reference/command-line-compiler/codepage.md
+                - name: '-Debug'
+                  href: visual-basic/reference/command-line-compiler/debug.md
+                - name: '-define'
+                  href: visual-basic/reference/command-line-compiler/define.md
+                - name: '-delaysign'
+                  href: visual-basic/reference/command-line-compiler/delaysign.md
+                - name: '-deterministic'
+                  href: visual-basic/reference/command-line-compiler/deterministic.md
+                - name: '-doc'
+                  href: visual-basic/reference/command-line-compiler/doc.md
+                - name: '-errorreport'
+                  href: visual-basic/reference/command-line-compiler/errorreport.md
+                - name: '-filealign'
+                  href: visual-basic/reference/command-line-compiler/filealign.md
+                - name: '-help, /?'
+                  href: visual-basic/reference/command-line-compiler/help.md
+                - name: '-highentropyva'
+                  href: visual-basic/reference/command-line-compiler/highentropyva.md
+                - name: '-imports'
+                  href: visual-basic/reference/command-line-compiler/imports.md
+                - name: '-keycontainer'
+                  href: visual-basic/reference/command-line-compiler/keycontainer.md
+                - name: '-keyfile'
+                  href: visual-basic/reference/command-line-compiler/keyfile.md
+                - name: '-langversion'
+                  href: visual-basic/reference/command-line-compiler/langversion.md
+                - name: '-libpath'
+                  href: visual-basic/reference/command-line-compiler/libpath.md
+                - name: '-link'
+                  href: visual-basic/reference/command-line-compiler/link.md
+                - name: '-linkresource'
+                  href: visual-basic/reference/command-line-compiler/linkresource.md
+                - name: '-main'
+                  href: visual-basic/reference/command-line-compiler/main.md
+                - name: '-moduleassemblyname'
+                  href: visual-basic/reference/command-line-compiler/moduleassemblyname.md
+                - name: '-netcf'
+                  href: visual-basic/reference/command-line-compiler/netcf.md
+                - name: '-noconfig'
+                  href: visual-basic/reference/command-line-compiler/noconfig.md
+                - name: '-nologo'
+                  href: visual-basic/reference/command-line-compiler/nologo.md
+                - name: '-nostdlib'
+                  href: visual-basic/reference/command-line-compiler/nostdlib.md
+                - name: '-nowarn'
+                  href: visual-basic/reference/command-line-compiler/nowarn.md
+                - name: '-nowin32manifest'
+                  href: visual-basic/reference/command-line-compiler/nowin32manifest.md
+                - name: '-optimize'
+                  href: visual-basic/reference/command-line-compiler/optimize.md
+                - name: '-optioncompare'
+                  href: visual-basic/reference/command-line-compiler/optioncompare.md
+                - name: '-optionexplicit'
+                  href: visual-basic/reference/command-line-compiler/optionexplicit.md
+                - name: '-optioninfer'
+                  href: visual-basic/reference/command-line-compiler/optioninfer.md
+                - name: '-optionstrict'
+                  href: visual-basic/reference/command-line-compiler/optionstrict.md
+                - name: '-out'
+                  href: visual-basic/reference/command-line-compiler/out.md
+                - name: '-platform'
+                  href: visual-basic/reference/command-line-compiler/platform.md
+                - name: '-quiet'
+                  href: visual-basic/reference/command-line-compiler/quiet.md
+                - name: '-recurse'
+                  href: visual-basic/reference/command-line-compiler/recurse.md
+                - name: '-reference'
+                  href: visual-basic/reference/command-line-compiler/reference.md
+                - name: '-refonly'
+                  href: visual-basic/reference/command-line-compiler/refonly-compiler-option.md
+                - name: '-refout'
+                  href: visual-basic/reference/command-line-compiler/refout-compiler-option.md
+                - name: '-removeintchecks'
+                  href: visual-basic/reference/command-line-compiler/removeintchecks.md
+                - name: '-resource'
+                  href: visual-basic/reference/command-line-compiler/resource.md
+                - name: '-rootnamespace'
+                  href: visual-basic/reference/command-line-compiler/rootnamespace.md
+                - name: '-sdkpath'
+                  href: visual-basic/reference/command-line-compiler/sdkpath.md
+                - name: '-target'
+                  href: visual-basic/reference/command-line-compiler/target.md
+                - name: '-subsystemversion'
+                  href: visual-basic/reference/command-line-compiler/subsystemversion.md
+                - name: '-utf8output'
+                  href: visual-basic/reference/command-line-compiler/utf8output.md
+                - name: '-vbruntime'
+                  href: visual-basic/reference/command-line-compiler/vbruntime.md
+                - name: '-verbose'
+                  href: visual-basic/reference/command-line-compiler/verbose.md
+                - name: '-warnaserror'
+                  href: visual-basic/reference/command-line-compiler/warnaserror.md
+                - name: '-win32icon'
+                  href: visual-basic/reference/command-line-compiler/win32icon.md
+                - name: '-win32manifest'
+                  href: visual-basic/reference/command-line-compiler/win32manifest.md
+                - name: '-win32resource'
+                  href: visual-basic/reference/command-line-compiler/win32resource.md
+            - name: Compileroptionen nach Kategorien sortiert
+              href: visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md
+        - name: .NET Framework-Referenzinformationen
+          href: visual-basic/reference/net-framework-reference-information.md
+        - name: Sprachspezifikation
+          href: visual-basic/reference/language-specification/
+    - name: Beispielanwendungen
+      href: visual-basic/sample-applications.md
+    - name: Exemplarische Vorgehensweisen
+      href: visual-basic/walkthroughs.md
+- name: Leitfaden für ML.NET
+  href: machine-learning/index.yml
+- name: Leitfaden für .NET für Apache Spark
+  href: spark/index.yml
+- name: Beispiele und Lernprogramme
+  href: samples-and-tutorials/index.md
