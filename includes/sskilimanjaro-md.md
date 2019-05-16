@@ -1,1 +1,9 @@
-<span data-ttu-id="39a48-101">SQL Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="39a48-101">SQL Server 2008 R2</span></span>
+---
+ms.openlocfilehash: 108755064355b0f531c032858fcacbcfbb1a259b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670359"
+---
+<span data-ttu-id="cef24-101">SQL Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="cef24-101">SQL Server 2008 R2</span></span>

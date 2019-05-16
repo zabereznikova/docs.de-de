@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 6517856f8c3a3fda3ae28305a05d127f0e1bdb97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0d374aa0a4e5cf1736f68b8069bf85af48f11a5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796229"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636383"
 ---
-<span data-ttu-id="a1ac3-101">Windows 8</span><span class="sxs-lookup"><span data-stu-id="a1ac3-101">Windows 8</span></span>
+<span data-ttu-id="7e763-101">Windows 8</span><span class="sxs-lookup"><span data-stu-id="7e763-101">Windows 8</span></span>
