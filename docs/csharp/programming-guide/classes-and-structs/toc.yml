@@ -6,42 +6,45 @@
     - name: erzwingen
       href: objects.md
     - name: Strukturen
-      href: structs.md
       items:
+        - name: Übersicht
+          href: structs.md
         - name: Verwenden von Strukturen
           href: using-structs.md
     - name: Vererbung
       href: inheritance.md
     - name: Polymorphismus
-      href: polymorphism.md
       items:
+        - name: Übersicht
+          href: polymorphism.md
         - name: Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“
           href: versioning-with-the-override-and-new-keywords.md
         - name: Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?
           href: knowing-when-to-use-override-and-new-keywords.md
         - name: 'Vorgehensweise: Überschreiben der ToString-Methode'
           href: how-to-override-the-tostring-method.md
-    - name: Abstrakte und versiegelte Klassen und Klassenmember
-      href: abstract-and-sealed-classes-and-class-members.md
+    - name: Member
       items:
+        - name: Member (Übersicht)
+          href: members.md
+        - name: Abstrakte und versiegelte Klassen und Klassenmember
+          href: abstract-and-sealed-classes-and-class-members.md
+        - name: Statische Klassen und statische Klassenmember
+          href: static-classes-and-static-class-members.md
+        - name: Zugriffsmodifizierer
+          href: access-modifiers.md
+        - name: Felder
+          href: fields.md
+        - name: Konstanten
+          href: constants.md
         - name: 'Vorgehensweise: Definieren von abstrakten Eigenschaften'
           href: how-to-define-abstract-properties.md
-    - name: Statische Klassen und statische Klassenmember
-      href: static-classes-and-static-class-members.md
-    - name: Member
-      href: members.md
-    - name: Zugriffsmodifizierer
-      href: access-modifiers.md
-    - name: Felder
-      href: fields.md
-    - name: Konstanten
-      href: constants.md
-      items:
         - name: 'Vorgehensweise: Definieren von Konstanten in C#'
           href: how-to-define-constants.md
     - name: Eigenschaften
-      href: properties.md
       items:
+        - name: Übersicht über Eigenschaften
+          href: properties.md
         - name: Verwenden von Eigenschaften
           href: using-properties.md
         - name: Schnittstelleneigenschaften
@@ -55,15 +58,17 @@
         - name: 'Vorgehensweise: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften'
           href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
     - name: Methoden
-      href: methods.md
       items:
+        - name: Methoden (Übersicht)
+          href: methods.md
         - name: Lokale Funktionen
           href: local-functions.md
         - name: Ref-Rückgaben und lokale ref-Variablen
           href: ref-returns.md
-        - name: Übergeben von Parametern
-          href: passing-parameters.md
+        - name: Parameter
           items:
+            - name: Übergeben von Parametern
+              href: passing-parameters.md
             - name: Übergeben von Werttypparametern
               href: passing-value-type-parameters.md
             - name: Übergeben von Verweistypparametern
@@ -72,24 +77,22 @@
               href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
         - name: Implizit typisierte lokale Variablen
           href: implicitly-typed-local-variables.md
-          items:
-            - name: 'Vorgehensweise: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck'
-              href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+        - name: 'Vorgehensweise: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck'
+          href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
         - name: Erweiterungsmethoden
           href: extension-methods.md
-          items:
-            - name: 'Vorgehensweise: Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode'
-              href: how-to-implement-and-call-a-custom-extension-method.md
-            - name: 'Vorgehensweise: Erstellen einer neuen Methode für eine Enumeration'
-              href: how-to-create-a-new-method-for-an-enumeration.md
+        - name: 'Vorgehensweise: Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode'
+          href: how-to-implement-and-call-a-custom-extension-method.md
+        - name: 'Vorgehensweise: Erstellen einer neuen Methode für eine Enumeration'
+          href: how-to-create-a-new-method-for-an-enumeration.md
         - name: Benannte und optionale Argumente
           href: named-and-optional-arguments.md
-          items:
-            - name: 'Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung'
-              href: how-to-use-named-and-optional-arguments-in-office-programming.md
+        - name: 'Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung'
+          href: how-to-use-named-and-optional-arguments-in-office-programming.md
     - name: Konstruktoren
-      href: constructors.md
       items:
+        - name: Konstruktoren (Übersicht)
+          href: constructors.md
         - name: Verwenden von Konstruktoren
           href: using-constructors.md
         - name: Instanzenkonstruktoren
@@ -104,17 +107,15 @@
       href: destructors.md
     - name: Objekt- und Auflistungsinitialisierer
       href: object-and-collection-initializers.md
-      items:
-        - name: 'Vorgehensweise: Initialisieren von Objekten mithilfe eines Objektinitialisierers'
-          href: how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: 'Vorgehensweise: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer'
-          href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+    - name: 'Vorgehensweise: Initialisieren von Objekten mithilfe eines Objektinitialisierers'
+      href: how-to-initialize-objects-by-using-an-object-initializer.md
+    - name: 'Vorgehensweise: Initialisieren eines Wörterbuchs mit einem Auflistungsinitialisierer'
+      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
     - name: Geschachtelte Typen
       href: nested-types.md
     - name: Partielle Klassen und Methoden
       href: partial-classes-and-methods.md
     - name: Anonyme Typen
       href: anonymous-types.md
-      items:
-        - name: 'Vorgehensweise: Zurückgeben von Teilmengen von Elementeigenschaften in einer Abfrage'
-          href: how-to-return-subsets-of-element-properties-in-a-query.md
+    - name: 'Vorgehensweise: Zurückgeben von Teilmengen von Elementeigenschaften in einer Abfrage'
+      href: how-to-return-subsets-of-element-properties-in-a-query.md
