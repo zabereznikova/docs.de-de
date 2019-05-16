@@ -2,12 +2,12 @@
 title: Zuordnung zwischen JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 075f85887f99708dd1f3479bf0b036203886af71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918774"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636436"
 ---
 # <a name="mapping-between-json-and-xml"></a>Zuordnung zwischen JSON und XML
 Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Der Reader und Writer, die von dieser Factory erzeugten werden auch verwendet, wenn JSON-Inhalt wird gesendet oder Empfangen von Windows Communication Foundation (WCF)-Anwendungen, die mit der <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder <xref:System.ServiceModel.WebHttpBinding>.

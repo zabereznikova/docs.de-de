@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: fe50223a93a4b8a83601fc4bdb89f3271980c61c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 684e16c0a67df56d00ac578ee222d7de3b07f174
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701552"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672221"
 ---
 Language-Integrated Query (LINQ)
