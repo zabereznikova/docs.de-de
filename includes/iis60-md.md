@@ -1,1 +1,0 @@
-Internetinformationsdienste (IIS) 6.0
