@@ -3,12 +3,12 @@ title: 'global.json: Übersicht'
 description: In diesem Artikel erfahren Sie, wie Sie mit der global.json-Datei die .NET Core SDK-Version beim Ausführen eines .NET Core-CLI-Befehls festgelegen.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a3d90e39401ece8d106d89a7533b7c1e1e4433cd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170768"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632397"
 ---
 # <a name="globaljson-overview"></a>global.json: Übersicht
 

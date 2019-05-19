@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610807"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876935"
 ---
 # <a name="contributing"></a>Beitragen
 
@@ -65,14 +65,16 @@ Achten Sie darauf, die richtige Markdownsyntax einzuhalten. Weitere Informatione
 
 ### <a name="example-structure"></a>Beispielstruktur
 
-    docs
-      /about
-      /core
-        /porting
-          porting-overview.md
-          /media
-            /porting-overview
-                portability_report.png
+```
+docs
+  /about
+  /core
+    /porting
+      porting-overview.md
+      /media
+        /porting-overview
+            portability_report.png
+```
 
 **Schritt 4:** Übermitteln Sie einen Pull Request (PR) von Ihrem Branch an `dotnet/docs/master`.
 
