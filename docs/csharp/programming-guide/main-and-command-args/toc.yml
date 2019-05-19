@@ -5,7 +5,5 @@
       href: command-line-arguments.md
     - name: 'Vorgehensweise: Anzeigen von Befehlszeilenargumenten'
       href: how-to-display-command-line-arguments.md
-    - name: 'Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“'
-      href: how-to-access-command-line-arguments-using-foreach.md
     - name: Main()-Rückgabewerte
       href: main-return-values.md

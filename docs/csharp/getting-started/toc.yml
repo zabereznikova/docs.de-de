@@ -1,5 +1,6 @@
 - name: Erste Schritte
-  href: index.md
   items:
+    - name: So verwenden Sie diesen Leitfaden
+      href: index.md
     - name: 'Einführung in die Programmiersprache C# und in .NET Framework'
       href: introduction-to-the-csharp-language-and-the-net-framework.md
