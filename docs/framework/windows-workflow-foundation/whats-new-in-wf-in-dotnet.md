@@ -2,12 +2,12 @@
 title: Neues in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671417"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876665"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Neues in Windows Workflow Foundation in .NET 4.5
 
@@ -118,7 +118,7 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] konnten Vari
 
 Das folgende Bildschirmfoto zeigt das Kontextmenü des Variablen- und Argument-Designers.
 
-![Variablen und das Kontextmenü für den Argument-Designers](./media/designercontextmenu.png "DesignerContextMenu")
+![Kontextmenü des Variablen- und Argument-Designers](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> Automatische Einfassung mit Sequenz
 
@@ -126,11 +126,11 @@ Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activi
 
 Die folgende Bildschirmaufnahme zeigt eine `WriteLine`-Aktivität in `Body` von `NoPersistScope`.
 
-![Automatische&#45;umschließen Dateiablage-Speicherort](./media/autosurround1.png "AutoSurround1")
+![Eine WriteLine-Aktivität im Text der NoPersistScope-Aktivität.](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 Die folgende Bildschirmaufnahme zeigt die automatisch erstellte `Sequence`-Aktivität in `Body`, wenn eine zweite `WriteLine`-Komponente unterhalb der ersten abgelegt wird.
 
-![Automatisch erstellte Sequenzaktivität](./media/autosurround2.png "AutoSurround2")
+![Eine automatisch erstellte Sequenz im Hauptteil einer NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> Schwenkmodus
 
@@ -138,7 +138,7 @@ Um in einem umfangreichen Workflow einfacher im Designer zu navigieren, kann der
 
 Das folgende Bildschirmfoto zeigt die Schaltfläche zum Schwenken, die sich in der unteren rechten Ecke des Workflow-Designers befindet.
 
-![Schaltfläche "Schwenken" im Workflow-Designer](./media/panbutton.png "PanButton")
+![Die Schaltfläche "Schwenken" im Workflow-Designer hervorgehoben.](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 Die mittlere Maustaste oder die LEERTASTE kann ebenfalls verwendet werden, um den Workflow-Designer zu schwenken.
 
@@ -154,7 +154,7 @@ Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Kompone
 
 Das folgende Bildschirmfoto des abgeschlossenen Workflows aus der [Getting Started Tutorial](getting-started-tutorial.md) zeigt die Gliederungsansicht mit einem sequenziellen Workflow.
 
-![Gliederungsansicht im Workflow-Designer](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Screenshot der Gliederungsansicht mit einem sequenziellen Workflow in Visual Studio.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> C#-Ausdrücke
 
@@ -174,17 +174,17 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] mussten Verb
 
 Das folgende Bildschirmfoto zeigt die Anfügepunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox gezogen wird.
 
-![Flussdiagramm der Startknoten mit AutoVerbinden Punkte](./media/autoconnect1.png "Autoconnect1")
+![Flussdiagramm für Start-Knoten zum automatischen verbinden Punkte](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 Aktivitäten können auch auf Verbindungen zwischen Flussdiagrammknoten und -zuständen gezogen werden, um den Knoten automatisch zwischen zwei anderen Knoten einzufügen. Das folgende Bildschirmfoto zeigt die hervorgehobene Verbindungslinie, auf die Aktivitäten aus der Toolbox gezogen und abgelegt werden können.
 
-![Automatische&#45;Handle zum Ablegen von Aktivitäten einfügen](./media/autoinsert.png "Autoinsert")
+![AutoEinfügen-Handle zum Ablegen von Aktivitäten](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> Designer-Anmerkungen
 
 Zur einfacheren Entwicklung größerer Workflows unterstützt der Designer jetzt das Hinzufügen von Anmerkungen, um den Entwurfsprozess nachzuverfolgen. Aktivitäten, Zustände, Flussdiagrammknoten, Variablen und Argumente können mit Anmerkungen versehen werden. Das folgende Bildschirmfoto zeigt das Kontextmenü, das verwendet wird, um dem Designer Anmerkungen hinzuzufügen.
 
-![Kontextmenü der Anmerkung](./media/annotationdialog.png "Annotationdialog")
+![Screenshot, der ein Menü für das Hinzufügen von Anmerkungen anzeigt.](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>Debugzustände
 
@@ -232,7 +232,7 @@ Zustandsautomatworkflows wurden als Teil von .NET Framework 4, Version 4.0.1, im
 
 Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus der [Getting Started Tutorial](getting-started-tutorial.md) Schritt [Vorgehensweise: Erstellen ein Zustandsautomatenworkflows](how-to-create-a-state-machine-workflow.md).
 
-![Abgeschlossener Zustandsautomatenworkflow](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Abbildung der abgeschlossenen Zustandsautomatworkflow.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 Weitere Informationen zum Erstellen der Zustandsautomatworkflows finden Sie unter [Statusmechanismus-Workflows](state-machine-workflows.md).
 

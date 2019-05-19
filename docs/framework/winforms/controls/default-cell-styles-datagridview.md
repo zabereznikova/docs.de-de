@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7babc0918f5e8a7b4561d99bcfcfc9d7bdf9fb69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011371"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878781"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Angeben von standardmäßigen Zellenstilen und Datenformaten für das gesamte Steuerelement, für bestimmte Spalten, für die Zeilen- und Spaltenüberschriften und für abwechselnde Zeilen, um einen Ledger-Effekt zu erstellen von Zellen. Die Standardstile für das gesamte Steuerelement festgelegt werden standardmäßig überschrieben, die Stile für abwechselnde Zeilen und Spalten festgelegt. Stile, die Sie im Code für die einzelnen Zeilen und Zellen festlegen wird darüber hinaus die Standardstile überschreiben.  
@@ -30,7 +30,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 1. Wählen Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement im Designer.  
   
-2. In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Diese Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
   
 3. Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
   
@@ -45,7 +45,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 2. Wählen Sie eine Spalte aus der **Selected Columns** Liste.  
   
-3. In der **Spalteneigenschaften** Raster klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
+3.  In der **Spalteneigenschaften** Raster klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
   
 4. Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
   
@@ -53,7 +53,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 1. Verwenden Sie eine der vorangehenden Verfahren zum Anzeigen einer **CellStyle-Generator** Dialogfeld im Zusammenhang mit der eine standardmäßige Zelle Style-Eigenschaft.  
   
-2. In der **CellStyle-Generator** Dialogfeld klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Diese Eigenschaft. Die **Formatzeichenfolge** Dialogfeld wird angezeigt.  
+2.  In der **CellStyle-Generator** Dialogfeld klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben dem <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Eigenschaft. Die **Formatzeichenfolge** Dialogfeld wird angezeigt.  
   
 3. Wählen Sie einen Formattyp aus, und ändern Sie die Details des Typs (z. B. die Anzahl der anzuzeigenden Dezimalstellen), mit der **Beispiel** Feld, um Ihre Auswahl zu bestätigen.  
   

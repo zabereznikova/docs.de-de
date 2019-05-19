@@ -2,12 +2,12 @@
 title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669802"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876509"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführt wurden viele neue Features, einschließlich einiger Erweiterungen für die Workflow-Designer-Erfahrung. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
  Das folgende Bildschirmfoto zeigt das Kontextmenü des Variablen- und Argument-Designers.
 
- ![Variablen und das Kontextmenü für den Argument-Designers](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Kontextmenü des Variablen- und Argument-Designers](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Automatisches Umschließen mit Sequenz
  Da ein Workflow oder bestimmte Containeraktivitäten (z. B. <xref:System.Activities.Statements.NoPersistScope>) nur eine einzelne Textkörperaktivität enthalten können, musste der Entwickler zum Hinzufügen einer zweiten Aktivität die erste Aktivität löschen, eine <xref:System.Activities.Statements.Sequence>-Aktivität hinzufügen und der Sequenzaktivität dann beide Aktivitäten hinzufügen. Wenn der Designeroberfläche ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eine zweite Aktivität hinzugefügt wird, wird automatisch eine `Sequence`-Aktivität erstellt, um beide Aktivitäten zu umschließen. Diese Funktion wird im neu gehosteten Designer unterstützt.
 
  Die folgende Bildschirmaufnahme zeigt eine `WriteLine`-Aktivität in `Body` von `NoPersistScope`.
 
- ![Automatische&#45;umschließen Dateiablage-Speicherort](./media/autosurround1.png "AutoSurround1")
+ ![Eine WriteLine-Aktivität im Text der NoPersistScope-Aktivität.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  Die folgende Bildschirmaufnahme zeigt die automatisch erstellte `Sequence`-Aktivität in `Body`, wenn eine zweite `WriteLine`-Komponente unterhalb der ersten abgelegt wird.
 
- ![Automatisch erstellte Sequenzaktivität](./media/autosurround2.png "AutoSurround2")
+ ![Eine automatisch erstellte Sequenz im Hauptteil einer NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>Schwenkmodus
  Um in einem umfangreichen Workflow einfacher im Designer zu navigieren, kann der Schwenkmodus aktiviert werden, der es dem Entwickler ermöglicht, den sichtbaren Teil des Workflows durch Klicken und Ziehen zu verschieben, anstatt die Bildlaufleisten zu verwenden. Die Schaltfläche zum Aktivieren des Schwenkmodus befindet sich in der rechten unteren Ecke des Designers. Diese Funktion wird im neu gehosteten Designer unterstützt.
 
  Das folgende Bildschirmfoto zeigt die Schaltfläche zum Schwenken, die sich in der unteren rechten Ecke des Workflow-Designers befindet.
 
- ![Schaltfläche "Schwenken" im Workflow-Designer](./media/panbutton.png "PanButton")
+ ![Die Schaltfläche "Schwenken" im Workflow-Designer hervorgehoben.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  Die mittlere Maustaste oder die LEERTASTE kann ebenfalls verwendet werden, um den Workflow-Designer zu schwenken.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
  Das folgende Bildschirmfoto des abgeschlossenen Workflows aus der [Getting Started Tutorial](getting-started-tutorial.md) zeigt die Gliederungsansicht mit einem sequenziellen Workflow.
 
- ![Gliederungsansicht im Workflow-Designer](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Screenshot der Gliederungsansicht mit einem sequenziellen Workflow in Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Bessere Kontrolle über die Sichtbarkeit der Shellleiste und Headerelemente
  In einem neu gehosteten Designer sind einige standardmäßigen Benutzeroberflächen-Steuerelemente für einen bestimmten Workflow möglicherweise bedeutungslos und deaktiviert. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] wird diese Anpassung nur von der Shellleiste im unteren Bereich des Designers unterstützt. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kann die Sichtbarkeit der Shellheaderelemente am oberen Rand des Designers angepasst werden, indem <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> mit dem entsprechenden <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>-Wert festgelegt wird.
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
 
  Das folgende Bildschirmfoto zeigt die Anfügepunkte, die sichtbar werden, wenn eine Aktivität aus der Toolbox gezogen wird.
 
- ![Flussdiagramm der Startknoten mit AutoVerbinden Punkte](./media/autoconnect1.png "Autoconnect1")
+ ![Flussdiagramm für Start-Knoten zum automatischen verbinden Punkte](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Aktivitäten können auch auf Verbindungen zwischen Flussdiagrammknoten und -zuständen gezogen werden, um den Knoten automatisch zwischen zwei anderen Knoten einzufügen. Das folgende Bildschirmfoto zeigt die hervorgehobene Verbindungslinie, auf die Aktivitäten aus der Toolbox gezogen und abgelegt werden können.
 
- ![Automatische&#45;Handle zum Ablegen von Aktivitäten einfügen](./media/autoinsert.png "Autoinsert")
+ ![AutoEinfügen-Handle zum Ablegen von Aktivitäten](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  Automatisches Verbinden und automatisches Einfügen werden im neu gehosteten Designer unterstützt.
 
 ### <a name="designer-annotations"></a>Designer-Anmerkungen
  Zur einfacheren Entwicklung größerer Workflows unterstützt der Designer jetzt das Hinzufügen von Anmerkungen, um den Entwurfsprozess nachzuverfolgen. Aktivitäten, Zustände, Flussdiagrammknoten, Variablen und Argumente können mit Anmerkungen versehen werden. Das folgende Bildschirmfoto zeigt das Kontextmenü, das verwendet wird, um dem Designer Anmerkungen hinzuzufügen.
 
- ![Kontextmenü der Anmerkung](./media/annotationdialog.png "Annotationdialog")
+ ![Screenshot, der im Menü für das Hinzufügen von Notationen werden angezeigt.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Designer-Anmerkungen werden im neu gehosteten Designer unterstützt.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45
   
  Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus der [Getting Started Tutorial](getting-started-tutorial.md) Schritt [Vorgehensweise: Erstellen ein Zustandsautomatenworkflows](how-to-create-a-state-machine-workflow.md).  
   
- ![Abgeschlossener Zustandsautomatenworkflow](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Abbildung der abgeschlossenen Zustandsautomatworkflow.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Weitere Informationen zum Erstellen der Zustandsautomatworkflows finden Sie unter [Statusmechanismus-Workflows](state-machine-workflows.md). Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583804"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879897"
 ---
 # <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren
-In früheren Versionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], Überprüfungen zur Kompilierzeit für Verbindungszeichenfolgen mit verketteten Zeichenfolge, die Werte nicht stattgefunden hat, sodass zur Laufzeit ein falsches Schlüsselwort generiert eine <xref:System.ArgumentException>. Jeder von .NET Framework-Datenanbietern unterstützt andere Syntax für Schlüsselwörter in Verbindungszeichenfolgen, was die erstellen gültige Verbindungszeichenfolgen schwierig, wenn Sie manuell durchgeführt. Zur Beseitigung dieses Problems [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wurden neue Verbindungszeichenfolgen-Generatoren für jeden .NET Framework-Datenanbieter eingeführt. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die .NET Framework-Datenanbieter und ihre jeweiligen ConnectionStringBuilder-Klassen aufgelistet.  
+In früheren Versionen von ADO.NET zur Kompilierzeit für Verbindungszeichenfolgen mit erfolgte für verkettete Zeichenfolgenwerte nicht stattgefunden hat, sodass zur Laufzeit ein falsches Schlüsselwort generiert eine <xref:System.ArgumentException>. Jeder von .NET Framework-Datenanbietern unterstützt andere Syntax für Schlüsselwörter in Verbindungszeichenfolgen, was die erstellen gültige Verbindungszeichenfolgen schwierig, wenn Sie manuell durchgeführt. Um dieses Problem zu beheben, wurde in ADO.NET 2.0 neue Verbindungszeichenfolgen-Generatoren für jeden .NET Framework-Datenanbieter eingeführt. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die .NET Framework-Datenanbieter und ihre jeweiligen ConnectionStringBuilder-Klassen aufgelistet.  
   
 |Anbieter|ConnectionStringBuilder-Klasse|  
 |--------------|-----------------------------------|  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 495200b2617a1c0c299998ad5fb5276398236cca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011098"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880899"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement mithilfe des Designers
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "62011098"
   
 1. Wählen Sie das <xref:System.Windows.Forms.ToolBar>-Steuerelement.  
   
-2. In der **Eigenschaften** Fenster, klicken Sie auf die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft, um ihn auszuwählen, und klicken Sie auf die **mit den Auslassungspunkten** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) die Schaltfläche, um die **ToolBarButton Auflistungs-Editor**.  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft, um ihn auszuwählen, und klicken Sie auf die **mit den Auslassungspunkten** (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio.](./media/visual-studio-ellipsis-button.png)) die Schaltfläche, um die **ToolBarButton Auflistungs-Editor**.  
   
 3. Verwenden der **hinzufügen** und **entfernen** Schaltflächen zum Hinzufügen und entfernen Schaltflächen aus der <xref:System.Windows.Forms.ToolBar> Steuerelement.  
   

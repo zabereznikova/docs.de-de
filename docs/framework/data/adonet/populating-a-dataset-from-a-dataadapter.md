@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: c49e810b830ecb7327f400d9ef183f4db9c7d736
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 88905f0ef735aef742c0279ac86b640d8a9b9b0e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584556"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877364"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Auffüllen eines "DataSets" durch einen "DataAdapter"
-Die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> ist eine speicherresidente datendarstellung, die ein konsistentes relationales und unabhängiges Programmiermodell der Datenquelle bereitstellt. Das `DataSet` stellt eine vollständige Datengruppe einschließlich Tabellen, Einschränkungen und Beziehungen zwischen Tabellen dar. Da das `DataSet` von der Datenquelle unabhängig ist, kann ein `DataSet` sowohl lokale Daten einer Anwendung als auch Daten aus mehreren Datenquellen enthalten. Die Interaktion mit vorhandenen Datenquellen wird über den `DataAdapter`gesteuert.  
+Das ADO.NET-<xref:System.Data.DataSet> ist eine speicherresidente Datendarstellung, das ein konsistentes relationales und von der Datenquelle unabhängiges Programmiermodell bereitstellt. Das `DataSet` stellt eine vollständige Datengruppe einschließlich Tabellen, Einschränkungen und Beziehungen zwischen Tabellen dar. Da das `DataSet` von der Datenquelle unabhängig ist, kann ein `DataSet` sowohl lokale Daten einer Anwendung als auch Daten aus mehreren Datenquellen enthalten. Die Interaktion mit vorhandenen Datenquellen wird über den `DataAdapter`gesteuert.  
   
  Die `SelectCommand` -Eigenschaft des `DataAdapter` ist ein `Command` -Objekt, das Daten aus der Datenquelle abruft. Die `InsertCommand`-Eigenschaft, die `UpdateCommand`-Eigenschaft und die `DeleteCommand` -Eigenschaft des `DataAdapter` sind `Command` -Objekte, die Updates an den Daten in der Datenquelle entsprechend den Modifikationen an den Daten im `DataSet`verwalten. Diese Eigenschaften werden in ausführlicher behandelt [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
@@ -120,7 +120,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>SQL Server-Typ "decimal"  
  In der Standardeinstellung die `DataSet` speichert Daten mithilfe von .NET Framework-Datentypen. Für die meisten Anwendungen sind diese sehr gut zur Darstellung der Informationen aus der Datenquelle geeignet. Diese Darstellung kann jedoch problematisch werden, wenn es sich bei dem Datentyp in der Datenquelle um den SQL Server-Datentyp „decimal“ oder um einen numerischen Datentyp handelt. .NET Framework `decimal` Datentyp maximal 28 signifikante Ziffern zulässt, während die SQL Server `decimal` Datentyp 38 signifikante Ziffern zulässt. Wenn der `SqlDataAdapter` während eines `Fill` -Vorgangs feststellt, dass die Präzision eines SQL Server-Felds mit dem Datentyp `decimal` mehr als 28 Zeichen beträgt, wird der `DataTable`die aktuelle Zeile nicht hinzugefügt. Stattdessen tritt das `FillError` -Ereignis auf. Dadurch können Sie überprüfen, ob ein Präzisionsverlust eintritt, und Sie können entsprechend reagieren. Weitere Informationen zu den `FillError` Ereignis finden Sie unter [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md). Den SQL Server-Wert `decimal` erhalten Sie auch, indem Sie ein <xref:System.Data.SqlClient.SqlDataReader> -Objekt verwenden und die <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> -Methode aufrufen.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 enthält erweiterte Unterstützung für <xref:System.Data.SqlTypes> im `DataSet`. Weitere Informationen finden Sie unter [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
+ ADO.NET 2.0 enthält erweiterte Unterstützung für <xref:System.Data.SqlTypes> in die `DataSet`. Weitere Informationen finden Sie unter [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>OLE DB-Kapitel  
  Hierarchische Rowsets oder Kapitel (OLE DB-Typ `DBTYPE_HCHAPTER`, ADO-Typ `adChapter`) können zum Füllen des `DataSet`-Inhalts verwendet werden. Wenn das <xref:System.Data.OleDb.OleDbDataAdapter> -Objekt während eines `Fill` -Vorgangs eine in Kapitel unterteilte Spalte ermittelt, wird für diese Spalte eine `DataTable` erstellt, die mit den Spalten und Zeilen aus dem Kapitel gefüllt wird. Als Name der Tabelle, die für die in Kapitel unterteilte Spalte erstellt wird, werden der Name der übergeordneten Tabelle und der Name der in Kapitel unterteilten Spalte im folgenden Format verwendet: "*ParentTableNameChapteredColumnName*". Wenn im `DataSet` bereits eine Tabelle vorhanden ist, deren Name dem Namen der in Kapitel unterteilten Spalte entspricht, wird die aktuelle Tabelle mit den Kapiteldaten gefüllt. Wenn in einer vorhandenen Tabelle keine Spalte existiert, die einer Spalte im Kapitel entspricht, wird eine neue Spalte hinzugefügt.  

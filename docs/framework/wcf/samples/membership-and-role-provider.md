@@ -2,15 +2,15 @@
 title: Mitgliedschafts- und Rollenanbieter
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638388"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876744"
 ---
 # <a name="membership-and-role-provider"></a>Mitgliedschafts- und Rollenanbieter
-Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ein Dienst mithilfe der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschafts- und Rollenanbieter Clients authentifizieren und autorisieren kann.  
+Das Beispiel zum Mitgliedschafts- und Rollenanbieter veranschaulicht, wie ein Dienst mithilfe der ASP.NET-Mitgliedschafts- und Rollenanbieter zum Authentifizieren und Autorisieren von Clients.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
   
@@ -21,11 +21,11 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
   
 - Ein Client kann die Authentifizierung mithilfe einer Kombination aus Benutzername und Kennwort durchführen.  
   
-- Der Server kann die Clientanmeldeinformationen anhand des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieters überprüfen.  
+- Der Server kann die Clientanmeldeinformationen anhand des ASP.NET-Mitgliedschaftsanbieters überprüft.  
   
 - Der Server kann über das X.509-Zertifikat des Servers authentifiziert werden.  
   
-- Der Server kann den authentifizierten Client mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter einer Rolle zuordnen.  
+- Der Server kann den authentifizierten Client mit den ASP.NET-Rollenanbieter zu einer Rolle zuordnen.  
   
 - Der Server kann mit `PrincipalPermissionAttribute` den Zugriff auf bestimmte Methoden steuern, die vom Dienst verfügbar gemacht werden.  
   
@@ -69,7 +69,7 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
 </system.web>  
 ```  
   
- Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet. In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll. Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Konfigurationselement. Außerdem gibt das Verhalten an, dass die Authentifizierung von Benutzername/Kennwort-Paaren vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter und die Rollenzuordnung vom [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter ausgeführt werden soll, indem die für die beiden Anbieter definierten Namen angegeben werden.  
+ Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet. In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll. Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Konfigurationselement. Darüber hinaus gibt das Verhalten an, dass die Authentifizierung von Benutzername und Kennwort-Paaren des ASP.NET-Mitgliedschaftsanbieters ausgeführt wird und die rollenzuordnung von den ASP.NET-Rollenanbieter ausgeführt wird, indem Sie die für die beiden Anbieter definierten Namen angeben.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ Im Beispiel zum Mitgliedschafts- und Rollenanbieter wird veranschaulicht, wie ei
 2. Stellen Sie sicher, dass Sie konfiguriert haben die [Datenbank für ASP.NET-Anwendungsdienste](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS. Dieser Server sollte zum Konfigurieren der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Datenbank für die Anwendungsdienste sowie in der Web.config-Verbindungszeichenfolge verwendet werden.  
+    >  Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS. Dieser Server sollte verwendet werden, wenn Sie die Datenbank für ASP.NET-Anwendungsdienste auch wie in der Verbindungszeichenfolge für die Datei "Web.config" zu konfigurieren.  
   
     > [!NOTE]
-    >  Das [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Arbeitsprozesskonto muss über Berechtigungen für die in diesem Schritt erstellte Datenbank verfügen. Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.  
+    >  Das Arbeitsprozesskonto von ASP.NET müssen Berechtigungen für die Datenbank, die in diesem Schritt erstellt wird. Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.  
   
 3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend auszuführen, befolgen Sie die folgenden Anweisungen.  
   

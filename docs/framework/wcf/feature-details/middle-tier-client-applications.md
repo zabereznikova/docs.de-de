@@ -2,18 +2,18 @@
 title: Clientanwendungen mittlerer Ebene
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649446"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877473"
 ---
 # <a name="middle-tier-client-applications"></a>Clientanwendungen mittlerer Ebene
 Dieses Thema beschreibt verschiedene Probleme bezüglich Clientanwendungen mittlerer Ebene, die Windows Communication Foundation (WCF) verwenden.  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Verbessern der Leistung von Clients mittlerer Ebene  
- Im Vergleich zu früheren Kommunikationstechnologien wie Webdiensten unter Verwendung [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], die Erstellung einer Instanz der WCF-Client kann aufgrund der umfangreichen Funktionen von WCF komplexer sein. Beispiel: Beim Öffnen eines <xref:System.ServiceModel.ChannelFactory%601>-Objekts kann von diesem Objekt eine sichere Sitzung mit dem Dienst hergestellt werden, was zu einer Verlängerung der Startzeit der Clientinstanz führt. In der Regel wirken diese zusätzlichen Funktionen Clientanwendungen erheblich sich nicht, da die WCF-Client mehrere Aufrufe führt und dann schließt.  
+ Im Vergleich zu früheren Kommunikationstechnologien wie Webdiensten unter Verwendung von ASP.NET kann die Erstellung einer Instanz der WCF-Client aufgrund der umfangreichen Funktionen von WCF komplexer sein. Beispiel: Beim Öffnen eines <xref:System.ServiceModel.ChannelFactory%601>-Objekts kann von diesem Objekt eine sichere Sitzung mit dem Dienst hergestellt werden, was zu einer Verlängerung der Startzeit der Clientinstanz führt. In der Regel wirken diese zusätzlichen Funktionen Clientanwendungen erheblich sich nicht, da die WCF-Client mehrere Aufrufe führt und dann schließt.  
   
  Clientanwendungen mittlerer Ebene, jedoch können viele WCF-Clientobjekten schnell erstellen und folglich treten höhere initialisierungsanforderungen. Für die Leistungsoptimierung von Anwendungen mittlerer Ebene beim Aufrufen von Diensten haben Sie die Wahl zwischen zwei grundsätzlichen Vorgehensweisen:  
   

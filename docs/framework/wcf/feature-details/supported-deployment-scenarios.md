@@ -2,12 +2,12 @@
 title: 'Unterstützte Bereitstellungsszenarien: WCF'
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639135"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881061"
 ---
 # <a name="supported-deployment-scenarios"></a>Unterstützte Bereitstellungsszenarien
 
@@ -27,7 +27,7 @@ Weitere Informationen zu den verschiedenen Funktionen, die von diesen Berechtigu
 
 ## <a name="partial-trust-on-the-server"></a>Teilweise Vertrauenswürdigkeit auf dem server
 
-Viele kommerzielle Anbieter von Hostingdiensten für [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Webanwendungen verlangen, dass auf ihren Servern ausgeführte Anwendungen mit dem [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Berechtigungssatz für mittlere Vertrauenswürdigkeit ausgeführt werden. WCF-Dienste können in diesen Umgebungen ausführen, sofern sie verwenden die <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, oder die <xref:System.ServiceModel.WSHttpBinding> mit Sicherheit auf Transportebene.
+Viele kommerzielle Anbieter von Hostingdiensten ASP.NET-Webanwendung festlegen, dass es sich bei Anwendungen, die auf ihren Servern ausgeführt werden. Führen Sie in der [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Berechtigungssatz mittlere Vertrauenswürdigkeit. WCF-Dienste können in diesen Umgebungen ausführen, sofern sie verwenden die <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, oder die <xref:System.ServiceModel.WSHttpBinding> mit Sicherheit auf Transportebene.
 
 WCF-Dienste in der mittleren Vertrauensebene Hostingumgebungen, können auch als Dienste der mittleren Ebene fungieren, durch Senden von Nachrichten an andere Server in Reaktion auf Clientanforderungen. Szenarien der mittleren Ebene werden auf dem Server unterstützt, wenn die Hostumgebung der Anwendung die geeignete <xref:System.Net.WebPermission> gewährt hat, damit diese ausgehende Anforderungen an den gewünschten Server senden kann.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665821"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880634"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms mithilfe des Designers
 Beim Platzieren einer <xref:System.Windows.Forms.TabControl> Steuerelement in Ihrem Formular, enthält es zwei Registerkarten standardmäßig. Sie können die hinzufügen oder Entfernen von Registerkarten, die mithilfe des Designers.  
@@ -29,7 +29,7 @@ Beim Platzieren einer <xref:System.Windows.Forms.TabControl> Steuerelement in Ih
   
      - oder -   
   
-     In der **Eigenschaften** Fenster, klicken Sie auf die **Auslassungspunkte** Schaltfläche (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben die <xref:System.Windows.Forms.TabControl.TabPages%2A> Eigenschaft zum Öffnen der **TabPage-Auflistungs-Editor**. Klicken Sie auf die **hinzufügen** oder **entfernen** Schaltfläche.  
+     In der **Eigenschaften** Fenster, klicken Sie auf die **mit den Auslassungspunkten** Schaltfläche (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der <xref:System.Windows.Forms.TabControl.TabPages%2A> Eigenschaft zum Öffnen der **TabPage-Auflistungs-Editor**. Klicken Sie auf die **hinzufügen** oder **entfernen** Schaltfläche.  
   
 ## <a name="see-also"></a>Siehe auch
 

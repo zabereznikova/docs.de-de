@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648259"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881854"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Vorgehensweise: Abrufen von Schriftarteigenschaften
 Die <xref:System.Drawing.FontFamily> Klasse stellt die folgenden Methoden, die verschiedene Metriken für eine bestimmte Produktfamilie / "Style" abrufen:  
@@ -28,22 +28,22 @@ Die <xref:System.Drawing.FontFamily> Klasse stellt die folgenden Methoden, die v
   
  Die Zahlen, die von diesen Methoden zurückgegeben werden, sodass sie unabhängig von Größe und Einheiten eines bestimmten sind in Schriftentwurfseinheiten <xref:System.Drawing.Font> Objekt.  
   
- Die folgende Abbildung zeigt die verschiedenen Metriken.  
+ Die folgende Abbildung zeigt die verschiedenen Metriken:
   
- ![Schriftartentext](./media/fontstext7a.png "fontstext7A")  
+ ![Abbildung der Schriftarteigenschaften: Versalhöhe gradientenverfahren und Zeilenabstand.](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die Metriken für den Schriftschnitt der Schriftart Arial-Familie. Der Code erstellt außerdem eine <xref:System.Drawing.Font> Objekt (basierend auf der Arial-Kategorie), mit der Größe von 16 Pixel und zeigt die Metriken (in Pixel) für die jeweilige <xref:System.Drawing.Font> Objekt.  
   
- Die folgende Abbildung zeigt die Ausgabe des Beispielcodes.  
+ Die folgende Abbildung zeigt die Ausgabe des Beispielcodes:
   
- ![Schriftartentext](./media/csfontstext8.png "csFontsText8")  
+ ![Ausgabe von Beispiel der Schriftart Arial Metriken.](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  Beachten Sie die ersten beiden Zeilen der Ausgabe in der vorherigen Abbildung. Die <xref:System.Drawing.Font> -Objekt zurückgibt, eine Größe von 16, und die <xref:System.Drawing.FontFamily> Objekt eine Geviertgröße von 2.048 zurück. Diese beiden Zahlen (16 und 2.048) sind der Schlüssel zum Konvertieren zwischen Schriftentwurfseinheiten und die Einheiten (in diesem Fall Pixel), der die <xref:System.Drawing.Font> Objekt.  
   
  Beispielsweise können Sie die Versalhöhe aus Entwurfseinheiten an Pixeln wie folgt konvertieren:  
   
- ![Schriftartentext](./media/fontstext9.png "FontsText9")  
+ ![Formel, die mit die Konvertierung von Entwurfseinheiten in Pixel](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  Der folgende Code Text wird vertikal positioniert, durch Festlegen der <xref:System.Drawing.PointF.Y%2A> Datenmember einer <xref:System.Drawing.PointF> Objekt. Die y-Koordinate wird erhöht, `font.Height` für jede neue Zeile des Texts. Die <xref:System.Drawing.Font.Height%2A> Eigenschaft eine <xref:System.Drawing.Font> Objekts gibt den Zeilenabstand (in Pixel) für die jeweilige <xref:System.Drawing.Font> Objekt. In diesem Beispiel wird die Anzahl von zurückgegebenen <xref:System.Drawing.Font.Height%2A> ist 19. Beachten Sie, dass dies die Anzahl (in eine ganze Zahl aufgerundet) abgerufen, indem Sie die Metrik Zeilenabstand in Pixel konvertiert identisch ist.  
   

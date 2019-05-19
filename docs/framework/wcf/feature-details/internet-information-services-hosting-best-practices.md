@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972613"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878604"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für 
  Sie können IIS-Websitebindungen konfigurieren, indem Sie das IIS-Snap-In der Microsoft Management Console (MMC) verwenden.  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Anwendungspools, die in unterschiedlichen Benutzerkontexten ausgeführt werden, überschreiben Assemblys anderer Konten im temporären Ordner.  
- Um sicherzustellen, dass Anwendungspools, die in unterschiedlichen Benutzerkontexten ausgeführt werden, keine Assemblys anderer Konten im temporären [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Dateiordner überschreiben können, verwenden Sie unterschiedliche Identitäten und unterschiedliche Ordner für unterschiedliche Anwendungen. Wenn Sie beispielsweise zwei virtuelle Anwendungen /Application1 und /Application2 haben, können Sie zwei Anwendungspools (A und B) mit zwei unterschiedlichen Identitäten erstellen. Der Anwendungspool A kann unter einer Benutzeridentität ausgeführt werden (user1), während der Anwendungspool B unter einer anderen Benutzeridentität (user2) ausgeführt wird. Konfigurieren Sie /Application1 zur Verwendung von A und /Application2 zur Verwendung von B.  
+ Um sicherzustellen, dass Assemblys anderer Konten in den Ordner temporäre ASP.NET-Dateien Anwendungspools, die in unterschiedlichen Benutzerkontexten ausgeführt werden. nicht überschrieben werden können, verwenden Sie unterschiedliche Identitäten und temporären Ordner für unterschiedliche Anwendungen. Wenn Sie beispielsweise zwei virtuelle Anwendungen /Application1 und /Application2 haben, können Sie zwei Anwendungspools (A und B) mit zwei unterschiedlichen Identitäten erstellen. Der Anwendungspool A kann unter einer Benutzeridentität ausgeführt werden (user1), während der Anwendungspool B unter einer anderen Benutzeridentität (user2) ausgeführt wird. Konfigurieren Sie /Application1 zur Verwendung von A und /Application2 zur Verwendung von B.  
   
  In der Datei "Web.config", können Sie konfigurieren, den temporären Ordner mit \< system.web/compilation/@tempFolder>. Für/Application1 kann es "c:\tempForUser1" sein kann, und für/application2 kann es "c:\tempForUser2" sein. Gewähren Sie den beiden Identitäten die entsprechende Schreibberechtigung für diese Ordner.  
   

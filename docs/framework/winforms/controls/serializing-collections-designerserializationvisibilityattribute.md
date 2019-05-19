@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211602"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882359"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute
 
@@ -66,7 +66,7 @@ Der erste Schritt ist zum Erstellen eines Steuerelements, das eine serialisierba
 
 8. Drücken Sie **F5** zum Erstellen des Projekts, und führen Sie das Steuerelement der **UserControl-Testcontainer**.
 
-9. Suchen der `Strings` -Eigenschaft in der <xref:System.Windows.Forms.PropertyGrid> von der **UserControl-Testcontainer**. Klicken Sie auf die `Strings` -Eigenschaft, klicken Sie dann auf die Auslassungspunkte (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) die Schaltfläche, um die **Zeichenfolgen-Editor**.
+9. Suchen der `Strings` -Eigenschaft in der <xref:System.Windows.Forms.PropertyGrid> von der **UserControl-Testcontainer**. Klicken Sie auf die `Strings` -Eigenschaft, klicken Sie dann auf die Auslassungspunkte (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) die Schaltfläche, um die **Zeichenfolgen-Editor**.
 
 10. Geben Sie mehrere Zeichenfolgen in die **Zeichenfolgen-Editor**. Trennen Sie diese durch Drücken der **EINGABETASTE** Schlüssel am Ende einer Zeichenfolge. Klicken Sie auf **OK** , wenn Sie Zeichenfolgen eingegeben haben.
 
@@ -85,7 +85,7 @@ Um das Serialisierungsverhalten des Steuerelements zu testen, werden Sie ihn in 
 
 3. Stelle eine `SerializationDemoControl` in Ihrem Formular.
 
-4. Suchen der `Strings` -Eigenschaft in der **Eigenschaften** Fenster. Klicken Sie auf die `Strings` -Eigenschaft, klicken Sie dann auf die Auslassungspunkte (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) die Schaltfläche, um die **Zeichenfolgen-Editor**.
+4. Suchen der `Strings` -Eigenschaft in der **Eigenschaften** Fenster. Klicken Sie auf die `Strings` -Eigenschaft, klicken Sie dann auf die Auslassungspunkte (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) die Schaltfläche, um die **Zeichenfolgen-Editor**.
 
 5. Geben Sie mehrere Zeichenfolgen in die **Zeichenfolgen-Editor**. Trennen sie durch Drücken der EINGABETASTE am Ende einer Zeichenfolge. Klicken Sie auf **OK** , wenn Sie Zeichenfolgen eingegeben haben.
 

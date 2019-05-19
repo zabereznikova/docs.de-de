@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583826"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879966"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurieren von Parametern und Parameterdatentypen
 
@@ -96,7 +96,7 @@ Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuild
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Verwenden von Parametern mit SqlCommand und eine gespeicherte Prozedur
 
-Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendungen. Mit gespeicherten Prozeduren können Datenbankoperationen in einem einzelnen Befehl zusammengefasst, für die beste Leistung optimiert und mit zusätzlicher Sicherheit ausgestattet werden. Während eine gespeicherte Prozedur aufgerufen werden kann, übergeben Sie den Namen der gespeicherten Prozedur gefolgt von Parameterargumenten als SQL-Anweisung, mit der <xref:System.Data.Common.DbCommand.Parameters%2A> Auflistung von der [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> -Objekt ermöglicht es Ihnen genauere Definition der gespeicherten Parameter der Prozedur und zum Zugriff auf Ausgabeparameter und Rückgabewerte.
+Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendungen. Mit gespeicherten Prozeduren können Datenbankoperationen in einem einzelnen Befehl zusammengefasst, für die beste Leistung optimiert und mit zusätzlicher Sicherheit ausgestattet werden. Während eine gespeicherte Prozedur aufgerufen werden kann, übergeben Sie den Namen der gespeicherten Prozedur gefolgt von Parameterargumenten als SQL-Anweisung, mit der <xref:System.Data.Common.DbCommand.Parameters%2A> -Auflistung des ADO.NET- <xref:System.Data.Common.DbCommand> -Objekt ermöglicht es Ihnen genauere Definition der gespeicherten Prozedur Parameter, und um den Zugriff auf Ausgabeparameter und Rückgabewerte.
 
 > [!NOTE]
 > Parametrisierte Anweisungen werden auf dem Server mit `sp_executesql,` ausgeführt, sodass die Wiederverwendung von Abfrageplänen möglich ist. Lokale Cursor oder Variablen im `sp_executesql` -Batch sind für den Batch, der `sp_executesql`aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der `sp_executesql` -Anweisung gültig. Weitere Informationen finden Sie unter [Sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

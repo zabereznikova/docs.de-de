@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650006"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876083"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Vorgehensweise: Erstellen eines linearen Farbverlaufs
 GDI + enthält horizontale, vertikale und diagonale lineare Farbverläufen. Standardmäßig ändert sich die Farbe in einem linearen Farbverlauf einheitlich. Allerdings können Sie einen linearen Farbverlauf anpassen, um die Farbe auf nicht einheitliche Weise zu ändern.  
@@ -31,9 +31,9 @@ Die <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor e
   
  Die folgende Abbildung zeigt die Zeile, das die Ellipse und das Rechteck. Beachten Sie, dass der Farbverlauf wird wiederholt, wie die horizontale Koordinate 200 überschreitet.  
   
- ![Linearer Farbverlauf](./media/cslineargradient1.png "cslineargradient1")  
+ ![Eine Zeile, einer Ellipse und ein Rechteck ausgefüllt mit einem Farbverlauf.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Verwenden Sie horizontale lineare Farbverläufe  
+## <a name="to-use-horizontal-linear-gradients"></a>Verwenden Sie horizontale lineare Farbverläufe  
   
 - Übergeben Sie das nicht transparente Rot und Blau als die dritte und vierte Argument.  
   
@@ -56,9 +56,9 @@ Die <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor e
   
  Die folgende Abbildung zeigt das resultierende Ellipse und das Rechteck.  
   
- ![Linearer Farbverlauf](./media/cslineargradient2.png "cslineargradient2")  
+ ![Eine Ellipse und ein Rechteck, die mit einem horizontalen Farbverlauf gefüllt werden.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>Lineare Farbverläufe anpassen  
+## <a name="to-customize-linear-gradients"></a>Lineare Farbverläufe anpassen  
   
 - Übergeben Sie die deckend Schwarz und Rot als die dritte und vierte Argument.  
   
@@ -71,9 +71,9 @@ Die <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor e
   
  Die folgende Abbildung zeigt die Zeile und der Ellipse. Beachten Sie, dass die Farbe in der Ellipse ändert sich allmählich entlang einer auf die Linie wird parallel zu der Zeile durchläuft (0, 0) und (200, 100).  
   
- ![Linearer Farbverlauf](./media/cslineargradient3.png "cslineargradient3")  
+ ![Eine Zeile und eine Ellipse, die mit einer diagonalen Farbverlauf gefüllt werden.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Zum Erstellen der diagonaler linearer Farbverläufen  
+## <a name="to-create-diagonal-linear-gradients"></a>Zum Erstellen der diagonaler linearer Farbverläufen  
   
 - Übergeben Sie das nicht transparente Blau und Grün als die dritte und vierte Argument.  
   

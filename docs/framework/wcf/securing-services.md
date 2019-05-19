@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949863"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881363"
 ---
 # <a name="securing-services"></a>Sichern von Diensten
 Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus zwei primären Anforderungen: übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, Überwachung von Sicherheitsereignissen, finden Sie im [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Verwenden die Funktionen von WCF, die beiden primären Anforderungen problemlos implementieren.  
@@ -50,7 +50,7 @@ Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus 
  Bei der Sicherheit im Internet gelten dieselben Anforderungen wie bei der Sicherheit in einem Intranet. Ein Dienst muss zum Nachweis seiner Authentizität seine Anmeldeinformationen angeben, und Clients müssen dem Dienst ihre Identität nachweisen. Wurde die Identität eines Clients nachgewiesen, kann der Umfang des Ressourcenzugriffs für den Client vom Dienst gesteuert werden. Aufgrund des heterogenen Charakters des Internets unterscheiden sich die angegebenen Anmeldeinformationen von denen, die in einer Windows-Domäne verwendet werden. Während ein Kerberos-Controller die Authentifizierung von Benutzern in einer Domäne mit Tickets für Anmeldeinformationen verarbeitet, nutzen Dienste und Clients im Internet eine der mehreren verschiedenen Möglichkeiten zur Angabe von Anmeldeinformationen. Das Ziel dieses Themas ist jedoch weit verbreitet zu präsentieren, die es Ihnen die ermöglicht Erstellung ein WCF-Diensts, das über das Internet zugänglich ist.  
   
 ### <a name="using-iis-and-aspnet"></a>Verwenden von IIS und ASP.NET  
- Die Anforderungen der Internetsicherheit und die Mechanismen für die Problemlösung sind nicht neu. IIS wird von Microsoft stammende Webserver für das Internet und verfügt über zahlreiche Sicherheitsfunktionen, die diese Probleme zu behandeln; Darüber hinaus [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] umfasst Sicherheitsfeatures, die WCF-Dienste verwenden können. Um diese Sicherheitsfunktionen nutzen zu können, die Hosten eines WCF-Diensts in IIS aus.  
+ Die Anforderungen der Internetsicherheit und die Mechanismen für die Problemlösung sind nicht neu. IIS wird von Microsoft stammende Webserver für das Internet und verfügt über zahlreiche Sicherheitsfunktionen, die diese Probleme zu behandeln; Darüber hinaus bietet ASP.NET Sicherheitsfunktionen, die WCF-Dienste verwenden können. Um diese Sicherheitsfunktionen nutzen zu können, die Hosten eines WCF-Diensts in IIS aus.  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>Verwenden von ASP.NET-Mitgliedschaft und Rollenanbietern  
  ASP.NET beinhaltet eine Mitgliedschaft und einen Rollenanbieter. Der Anbieter ist eine Datenbank mit Benutzernamen-/Kennwortpaaren für die Authentifizierung von Aufrufenden, mit der auch die Zugriffsberechtigungen jedes Aufrufenden angegeben werden können. Mit WCF können Sie problemlos eine bereits vorhandene Mitgliedschafts- und Rollenanbieter über die Konfiguration verwenden. Eine Beispielanwendung, die dies veranschaulicht, finden Sie im Beispiel [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) .  

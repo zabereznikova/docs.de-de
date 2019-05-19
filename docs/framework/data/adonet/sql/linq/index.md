@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: ef95a7cebb527b01c15d124227664823fcbbaa23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4a44bd3f55cf6c21bb785ff70bca80e2c003cd18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582781"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878264"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist eine Komponente von .NET Framework Version 3.5, die eine Laufzeitinfrastruktur zum Verwalten relationaler Daten als Objekte bereitstellt.  
@@ -45,7 +45,7 @@ ms.locfileid: "65582781"
  Beschreibt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Technologien für die Visual Basic-Benutzer.  
   
  [LINQ und ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- Links zum [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]-Portal.  
+ Enthält Links zu Portal ADO.NET.  
   
  [LINQ to SQL Walkthroughs (Exemplarische Vorgehensweisen für LINQ to SQL)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Listet exemplarische Vorgehensweisen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf.  
@@ -54,4 +54,4 @@ ms.locfileid: "65582781"
  Beschreibt, wie die in der Dokumentation verwendeten Beispieldatenbanken heruntergeladen werden.  
   
  [Übersicht über LinqDataSource Webserver-Steuerelement](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Erläutert, wie das <xref:System.Web.UI.WebControls.LinqDataSource>-Steuerelement über die [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)]-Datenquellen-Steuerarchitektur [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] für Web-Entwickler bereitstellt.
+ Beschreibt, wie die <xref:System.Web.UI.WebControls.LinqDataSource> -Steuerelement stellt [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] für Web-Entwickler in die ASP.NET-Architektur für Datenquellen-Steuerelement.

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656012"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875994"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Angeben des Dienstlaufzeitverhaltens
 Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der Service-Anwendung finden Sie unter [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
@@ -77,7 +77,7 @@ Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../.
 ### <a name="service-behaviors"></a>Dienstverhalten  
  Die folgenden Verhalten wirken sich auf Dienste aus.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Angewendet auf einen WCF-Dienst, um anzugeben, ob dieser Dienst kann, im ausgeführt werden [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Angewendet auf einen WCF-Dienst, um anzugeben, ob dieser Dienst im ASP.NET-Kompatibilitätsmodus ausgeführt werden kann.  
   
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Steuert, wie der Dienst Clientansprüche autorisiert.  
   

@@ -2,12 +2,12 @@
 title: Datenbindung in einem ASP.NET-Client
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990625"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876992"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Datenbindung in einem ASP.NET-Client
 In diesem Beispiel wird veranschaulicht, wie zum Binden von Daten, die von einem typischen Windows Communication Foundation (WCF)-Dienst in einer Web Forms-Anwendung zurückgegeben wird.  
@@ -19,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie zum Binden von Daten, die von einem
   
  Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `IWeatherService`-Schnittstelle definiert, die einen Vorgang mit der Bezeichnung `GetWeatherData` verfügbar macht. Dieser Vorgang nimmt ein Array aus Städten an und gibt ein Array aus `WeatherData`-Objekten zurück, die die vorhergesagte Höchst- und Tiefsttemperatur für eine Stadt wiedergeben.  
   
- Auf der ASPX-Seite des [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clients wird ein DataGrid-Websteuerelement definiert, das die grafische Darstellung der vom Dienst zurückgegebenen Daten enthält. Code auf der ASPX-Seite ruft den WCF-Dienst für die Wetterdaten auf und gibt diese Daten in ein Array von `WeatherData` Objekte. Im DataGrid wird angegeben, von wo die Daten abgerufen werden sollen, indem die `DataSource`-Eigenschaft auf dieses Array festgelegt wird. Die Datenbindung erfolgt durch einen Aufruf der `DataBind`-Methode des DataGrid. All dieser Code befindet sich innerhalb der.`aspx` Seite `Page_Load` Methode, sodass jedes Mal der Benutzer die Browserseite, die Daten aktualisiert, die in das DataGrid-Steuerelement aktualisiert wird.  
+ Auf der ASP.NET Client ASPX-Seite wird ein DataGrid-Websteuerelement definiert, die grafische Darstellung der vom Dienst zurückgegebenen Daten enthält. Code auf der ASPX-Seite ruft den WCF-Dienst für die Wetterdaten auf und gibt diese Daten in ein Array von `WeatherData` Objekte. Im DataGrid wird angegeben, von wo die Daten abgerufen werden sollen, indem die `DataSource`-Eigenschaft auf dieses Array festgelegt wird. Die Datenbindung erfolgt durch einen Aufruf der `DataBind`-Methode des DataGrid. All dieser Code befindet sich innerhalb der.`aspx` Seite `Page_Load` Methode, sodass jedes Mal der Benutzer die Browserseite, die Daten aktualisiert, die in das DataGrid-Steuerelement aktualisiert wird.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

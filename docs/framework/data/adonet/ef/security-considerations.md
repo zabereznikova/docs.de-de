@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583492"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879921"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung, der Bereitstellung und der Ausführung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendungen beschrieben. Sie sollten auch Empfehlungen für das Erstellen sicherer Anwendungen für .NET Framework ausführen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Greifen Sie auf die Methoden und Eigenschaften von <xref:System.Data.Objects.ObjectContext> innerhalb eines try-catch-Blocks zu. Das Abfangen von Ausnahmen verhindert, dass nicht behandelte Ausnahmen Benutzern der Anwendung Einträge im <xref:System.Data.Objects.ObjectStateManager> oder Modellinformationen (beispielsweise Tabellennamen), verfügbar machen.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Sicherheitsaspekte für ASP.NET-Anwendungen  
- Folgendes sollte berücksichtigt werden, wenn Sie mit Pfaden in [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]-Anwendungen arbeiten.  
+
+Sie sollten die folgende, beim Arbeiten mit Pfaden in ASP.NET-Anwendungen.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Überprüfen Sie, ob der Host Pfadprüfungen ausführt.  
- Wenn die Ersatzzeichenfolge `|DataDirectory|` (eingeschlossen in Pipe-Symbole) verwendet wird, überprüft [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)], ob der aufgelöste Pfad unterstützt wird. Beispielsweise ist ".." hinter `DataDirectory` nicht zulässig. Dieselbe Überprüfung wird für die Auflösung des Stamm-Operators der Webanwendung (`~`) durch den Prozess ausgeführt, der [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] hostet. IIS führt diese Überprüfung aus. Andere Hosts als IIS können möglicherweise nicht überprüfen, ob der aufgelöste Pfad unterstützt wird. Sie sollten das Verhalten des Hosts kennen, auf dem Sie eine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung bereitstellen.  
+ Wenn die `|DataDirectory|` (zwischen pipesymbolen) verwendet wird, die ADO.NET stellt sicher, dass der aufgelöste Pfad unterstützt wird. Beispielsweise ist ".." hinter `DataDirectory` nicht zulässig. Dieselbe Überprüfung für das Auflösen von der Web Application-Stamm-Operators (`~`) erfolgt durch den Prozess, der ASP.NET hostet. IIS führt diese Überprüfung aus. Andere Hosts als IIS können möglicherweise nicht überprüfen, ob der aufgelöste Pfad unterstützt wird. Sie sollten das Verhalten des Hosts kennen, auf dem Sie eine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung bereitstellen.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Gehen Sie nicht von Annahmen über aufgelöste Pfadnamen aus.  
  Obwohl die Werte, in die der Stamm-Operator (`~`) und die `DataDirectory`-Ersatzzeichenfolge aufgelöst werden, während der Laufzeit der Anwendung konstant bleiben sollten, wird der Host durch [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nicht daran gehindert, diese Werte zu ändern.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Überprüfen Sie die Pfadlänge vor der Bereitstellung.  
- Stellen Sie vor der Bereitstellung einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung sicher, dass die Werte des Stammoperators (~) und der `DataDirectory`-Ersatzzeichenfolge nicht die Pfadlängengrenze des Betriebssystems überschreiten. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]-Datenanbieter gewährleisten nicht die gültige Pfadlänge.  
+ Stellen Sie vor der Bereitstellung einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung sicher, dass die Werte des Stammoperators (~) und der `DataDirectory`-Ersatzzeichenfolge nicht die Pfadlängengrenze des Betriebssystems überschreiten. ADO.NET-Datenanbieter gewährleisten nicht, dass die Länge des Pfads zulässigen Begrenzungen entspricht.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Sicherheitsaspekte für ADO.NET-Metadaten  
  Wenn Sie Modell- und Zuordnungsdateien erzeugen und mit ihnen arbeiten, berücksichtigen Sie Folgendes hinsichtlich der Sicherheit:  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Machen Sie vertrauliche Informationen nicht durch Protokollierung verfügbar.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]-Metadaten-Dienstkomponenten protokollieren keine privaten Informationen. Wenn Ergebnisse aufgrund von Zugriffsbeschränkungen nicht zurückgegeben werden können, sollten Datenbankmanagementsysteme und Dateisysteme Ergebnisse mit dem Wert Null zurückgeben, statt eine Ausnahme auszulösen, die vertrauliche Informationen enthalten könnte.  
+ADO.NET Metadaten-Dienstkomponenten protokollieren keine private Informationen. Wenn Ergebnisse aufgrund von Zugriffsbeschränkungen nicht zurückgegeben werden können, sollten Datenbankmanagementsysteme und Dateisysteme Ergebnisse mit dem Wert Null zurückgeben, statt eine Ausnahme auszulösen, die vertrauliche Informationen enthalten könnte.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Akzeptieren Sie keine "MetadataWorkspace"-Objekte von nicht vertrauenswürdigen Quellen.  
  Anwendungen sollten keine Instanzen der <xref:System.Data.Metadata.Edm.MetadataWorkspace>-Klasse von nicht vertrauenswürdigen Quellen akzeptieren. Stattdessen sollten Sie einen Arbeitsbereich explizit erstellen und aus so einer Quelle füllen.  

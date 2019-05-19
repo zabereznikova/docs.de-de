@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a0c8bd90c2a8f4ffc2e7a6d8831f306637915e6
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586239"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877380"
 ---
 # <a name="using-the-xmlserializer-class"></a>Verwenden der XmlSerializer-Klasse
 Windows Communication Foundation (WCF) können zwei verschiedene Serialisierungstechnologien verwenden, um die Daten in Ihrer Anwendung in XML umzuwandeln, die Übertragung zwischen Clients und-Dienste sowie ein Prozess wird als Serialisierung bezeichnet.  
@@ -35,14 +35,14 @@ Windows Communication Foundation (WCF) können zwei verschiedene Serialisierungs
  Die <xref:System.Runtime.Serialization.DataContractSerializer>, zusammen mit Daten Vertragstypen, ist die empfohlene Methode zum Schreiben von neuen WCF-Dienste. Weitere Informationen finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Verwendung der XmlSerializer-Klasse  
- WCF unterstützt auch die <xref:System.Xml.Serialization.XmlSerializer> Klasse. Die <xref:System.Xml.Serialization.XmlSerializer> Klasse ist nicht nur für WCF. Vielmehr handelt es sich hierbei um die gleiche Serialisierungs-Engine, die auch von den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdiensten verwendet wird. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse unterstützt deutlich weniger Typen als die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse, ermöglicht jedoch eine größere Kontrolle über das resultierende XML und unterstützt den XSD-Schemastandard (XML Schema definition language) stärker. Sie erfordert außerdem keine deklarativen Attribute für die serialisierbaren Typen. Weitere Informationen finden Sie unter dem Thema zur XML-Serialisierung in .NET Framework-Dokumentation. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse unterstützt keine Datenvertragstypen.  
+ WCF unterstützt auch die <xref:System.Xml.Serialization.XmlSerializer> Klasse. Die <xref:System.Xml.Serialization.XmlSerializer> Klasse ist nicht nur für WCF. Es ist das gleiche Serialisierungsmodul, mit denen ASP.NET Web Services. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse unterstützt deutlich weniger Typen als die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse, ermöglicht jedoch eine größere Kontrolle über das resultierende XML und unterstützt den XSD-Schemastandard (XML Schema definition language) stärker. Sie erfordert außerdem keine deklarativen Attribute für die serialisierbaren Typen. Weitere Informationen finden Sie unter dem Thema zur XML-Serialisierung in .NET Framework-Dokumentation. Die <xref:System.Xml.Serialization.XmlSerializer>-Klasse unterstützt keine Datenvertragstypen.  
   
  Wenn Sie Svcutil.exe oder **Hinzufügen eines Dienstverweises** -Feature in Visual Studio zum Generieren von Clientcode für einen Dienst von Drittanbietern oder auf ein Drittanbieter-Schema, ein geeignetes Serialisierungsprogramm wird automatisch für Sie ausgewählt. Wenn das Schema nicht mit <xref:System.Runtime.Serialization.DataContractSerializer> kompatibel ist, wird <xref:System.Xml.Serialization.XmlSerializer> ausgewählt.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>Manuelles Wechseln zu XmlSerializer  
  Es kann vorkommen, dass Sie manuell zu <xref:System.Xml.Serialization.XmlSerializer> wechseln müssen. Dies ist beispielsweise in den folgenden Situationen der Fall:  
   
-- Beim Migrieren einer Anwendung von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webdiensten zu WCF, Sie möglicherweise wiederverwenden möchten vorhandene <xref:System.Xml.Serialization.XmlSerializer>-kompatible Typen statt der neue Daten Datenvertragstypen.  
+- Wenn eine Anwendung von ASP.NET-Webdiensten zu WCF migrieren möchten, Sie möglicherweise wiederverwenden möchten vorhandene <xref:System.Xml.Serialization.XmlSerializer>-kompatible Typen statt der neue Daten Datenvertragstypen.  
   
 - Wenn die präzise Steuerung von in Nachrichten enthaltenen XML-Daten wichtig ist, jedoch kein WSDL (Web Services Description Language)-Dokument zur Verfügung steht, z.&amp;#160;B. beim Erstellen eines Diensts mit Typen, die einem bestimmten standardisierten, veröffentlichten Schema entsprechen müssen, das nicht mit dem DataContractSerializer kompatibel ist.  
   

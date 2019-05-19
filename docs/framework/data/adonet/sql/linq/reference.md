@@ -2,12 +2,12 @@
 title: Referenz
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877135"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881313"
 ---
 # <a name="reference"></a>Referenz
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
@@ -45,4 +45,4 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  Stellt die Portale für [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Themen.  
   
  [Übersicht über LinqDataSource Webserver-Steuerelement](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Erläutert, wie das <xref:System.Web.UI.WebControls.LinqDataSource>-Steuerelement über die [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Datenquellen-Steuerarchitektur [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] für Web-Entwickler bereitstellt.
+ Beschreibt, wie die <xref:System.Web.UI.WebControls.LinqDataSource> -Steuerelement stellt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] für Web-Entwickler in die ASP.NET-Architektur für Datenquellen-Steuerelement.

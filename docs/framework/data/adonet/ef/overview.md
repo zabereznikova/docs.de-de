@@ -2,12 +2,12 @@
 title: Übersicht über Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634274"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880034"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
@@ -49,7 +49,7 @@ Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet die
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Ein speicherunabhängiger Dialekt von SQL, die direkt mit Entitäten im konzeptionellen Modell arbeitet und unterstützt [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Konzepte. [!INCLUDE[esql](../../../../../includes/esql-md.md)] wird verwendet, sowohl mit Objektabfragen und Abfragen, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Übersicht über Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enthält den EntityClient-Datenanbieter. Dieser Anbieter verwaltet Verbindungen, übersetzt Entitätsabfragen in datenquellenspezifische Abfragen und gibt einen Datenleser zurück, mit dem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Entitätsdaten in Objekte umsetzt. Bei der Objektmaterialisierung nicht erforderlich ist, der EntityClient-Anbieter kann auch verwendet werden wie ein [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Datenanbieter Anwendungen auszuführende [!INCLUDE[esql](../../../../../includes/esql-md.md)] -Abfragen und die Verarbeitung des zurückgegebenen Daten für nur-Lese Readers. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enthält den EntityClient-Datenanbieter. Dieser Anbieter verwaltet Verbindungen, übersetzt Entitätsabfragen in datenquellenspezifische Abfragen und gibt einen Datenleser zurück, mit dem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Entitätsdaten in Objekte umsetzt. Wenn die Umsetzung in Objekte nicht erforderlich ist, kann der EntityClient-Anbieter auch wie ein ADO.NET-Standarddatenanbieter verwendet werden, indem er Anwendungen das Ausführen von [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen und die Verarbeitung des zurückgegebenen schreibgeschützten Datenlesers ermöglicht. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 Das folgende Diagramm illustriert die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Architektur für den Datenzugriff:
 
@@ -59,7 +59,7 @@ Die [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]-Tools könn
 
 ## <a name="data-providers"></a>Datenanbieter
 
-Der `EntityClient`-Anbieter erweitert das [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]-Anbietermodell, indem auf Daten im Sinne von konzeptionellen Entitäten und Beziehungen zugegriffen wird. Es führt Abfragen aus, die [!INCLUDE[esql](../../../../../includes/esql-md.md)] verwenden. [!INCLUDE[esql](../../../../../includes/esql-md.md)] stellt die zugrunde liegende Abfragesprache bereit, die `EntityClient` ermöglicht, mit der Datenbank zu kommunizieren. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+Die `EntityClient` Anbieter dem ADO.NET-Anbietermodell erweitert, durch den Zugriff auf Daten in Form von konzeptionellen Entitäten und Beziehungen. Es führt Abfragen aus, die [!INCLUDE[esql](../../../../../includes/esql-md.md)] verwenden. [!INCLUDE[esql](../../../../../includes/esql-md.md)] stellt die zugrunde liegende Abfragesprache bereit, die `EntityClient` ermöglicht, mit der Datenbank zu kommunizieren. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enthält einen aktualisierten SqlClient-Datenanbieter, der kanonische Befehlsstrukturen unterstützt. Weitere Informationen finden Sie unter [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).
 

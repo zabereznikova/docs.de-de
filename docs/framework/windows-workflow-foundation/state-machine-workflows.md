@@ -2,12 +2,12 @@
 title: Zustandsautomatworkflows
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665329"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876136"
 ---
 # <a name="state-machine-workflows"></a>Zustandsautomatworkflows
 Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. Die <xref:System.Activities.Statements.StateMachine>-Aktivität kann zusammen mit <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> und anderen Aktivitäten verwendet werden, um Zustandsautomatenworkflow-Programme zu erstellen. Dieses Thema bietet eine Übersicht über das Erstellen von Zustandsautomatenworkflows.  
@@ -23,14 +23,14 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
   
  Um einen Zustandsautomatenworkflow erstellen, werden die Zustände einer <xref:System.Activities.Statements.StateMachine>-Aktivität hinzugefügt. Übergänge werden verwendet, um den Fluss zwischen den Zuständen zu steuern. Im folgenden Screenshot aus dem [Getting Started Tutorial](getting-started-tutorial.md) Schritt [Vorgehensweise: Erstellen Sie einen Statuscomputerworkflow](how-to-create-a-state-machine-workflow.md), ein zustandsautomatenworkflow mit drei Zuständen und drei Übergängen gezeigt. **Ziel initialisieren** ist der Anfangszustand und stellt den ersten Zustand im Workflow dar. Dadurch wird festgelegt, durch die Linie aus führt der **starten** Knoten. Der Endzustand im Workflow wird mit dem Namen **FinalState**, und stellt den Punkt, an dem der Workflow abgeschlossen ist.  
   
- ![Abgeschlossener Zustandsautomatenworkflow](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Abbildung der abgeschlossenen Zustandsautomatworkflow.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  Ein Zustandsautomatenworkflow muss über genau einen Anfangszustand und mindestens einen Endzustand verfügen. Jeder Zustand, der kein Endzustand ist, muss mindestens einen Übergang enthalten. In den folgenden Abschnitten wird das Erstellen und Konfigurieren von Zuständen und Übergängen erläutert.  
   
 ## <a name="creating-and-configuring-states"></a>Erstellen und Konfigurieren von Zuständen  
  <xref:System.Activities.Statements.State> stellt einen Zustand dar, in dem sich ein Zustandsautomat befinden kann. Hinzufügen einer <xref:System.Activities.Statements.State> in einem Workflow ziehen die **Zustand** Aktivitäts-Designer aus der **State Machine** im Abschnitt der **Toolbox** und legen ihn auf eine <xref:System.Activities.Statements.StateMachine> auf der [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Oberfläche.  
   
- ![WF4 Status Machine Aktivitäten](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![Screenshot des Zustandsautomat-Abschnitt der Toolbox.](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  So konfigurieren Sie einen Zustand als das **Anfangszustand**mit der rechten Maustaste auf den Zustand, und wählen Sie **als Anfangszustand festlegen**. Darüber hinaus ist kein Anfangszustand, der anfängliche Zustand kann festgelegt werden, ziehen Sie eine Zeile aus der **starten** Knoten am oberen Rand des Workflows den gewünschten Zustand. Wenn eine <xref:System.Activities.Statements.StateMachine> Aktivität den Workflow-Designer abgelegt wird, es ist so vorkonfiguriert, mit dem Anfangszustand mit dem Namen **State1**. Ein Zustandsautomatenworkflow muss über genau einen Anfangszustand verfügen.  
   

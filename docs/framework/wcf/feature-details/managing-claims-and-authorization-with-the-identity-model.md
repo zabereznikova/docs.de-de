@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046631"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875587"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Die zweite ist ein anspruchsbasiertes Modell, bekannt als die *Identitätsmodell*. WCF verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Modellklassen für die Identität können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
@@ -90,11 +90,12 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
   
  Die folgende Abbildung zeigt ein Beispiel mit drei Sätzen von Ansprüchen, wobei ein Satz von Ansprüchen als eigener Aussteller einen Satz von Ansprüchen besitzt, der wiederum den Anspruchssatz "System" als Aussteller aufweist. Daher bilden Sätze von Ansprüchen eine Hierarchie mit einer willkürlichen Tiefe.  
   
- ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "Claimshierarchy")  
+ ![Die Sätze von Ansprüchen, innerhalb der Hierarchie.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Mehrere Sätze von Ansprüchen können über denselben ausstellenden Anspruchssatz verfügen, wie in der folgenden Abbildung dargestellt.  
+ Mehrere Sätze von Ansprüchen möglicherweise denselben ausstellenden eingabeanspruchssatz, wie in der folgenden Abbildung dargestellt:
+ 
   
- ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "Multiplesetsofclaims")  
+ ![Mehrere Sätze von Ansprüchen mit denselben ausstellenden Anspruchssatz.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Mit Ausnahme eines Anspruchssatzes, der sein eigener Aussteller ist, bietet das Identitätsmodell keine Unterstützung für Anspruchssätze zur Bildung einer Schleife. Daher kann es nie zu einer Situation kommen, in der der Anspruchssatz A vom Anspruchssatz B ausgestellt wird, der wiederum selbst von Anspruchsatz A ausgestellt wurde. Außerdem bietet das Identitätsmodell keine Unterstützung für Anspruchssätze mit mehreren Ausstellern. Wenn zwei oder mehr Aussteller einen bestimmten Satz von Ansprüchen ausstellen müssen, müssen Sie mehrere Anspruchssätze verwenden. Jeder Satz enthält dabei dieselben Ansprüche, jedoch unterschiedliche Aussteller.  
   

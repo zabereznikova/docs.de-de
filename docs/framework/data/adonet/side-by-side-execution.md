@@ -2,20 +2,20 @@
 title: Parallele Ausführung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583624"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877098"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Parallele Ausführung in ADO.NET
 Seite-an-Seite-Ausführung in .NET Framework ist die Möglichkeit, eine Anwendung auf einem Computer ausführen, die mehrere Versionen von .NET Framework installiert ist, ausschließlich mit der Version, die für die die Anwendung kompiliert wurde. Ausführliche Informationen zum Konfigurieren von Seite-an-Seite-Ausführung finden Sie unter [Seite-an-Seite-Ausführung](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
- Mit einer Version von .NET Framework kompilierte Anwendung kann auf eine andere Version von .NET Framework ausgeführt. Allerdings empfiehlt es sich, dass Sie eine Version der Anwendung für jede installierte Version von .NET Framework kompilieren und diese separat ausführen. In beiden Szenarien sind die Änderungen zwischen den verschiedenen [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Versionen zu berücksichtigen, die die Aufwärts- und Abwärtskompatibilität Ihrer Anwendung beeinträchtigen können.  
+ Mit einer Version von .NET Framework kompilierte Anwendung kann auf eine andere Version von .NET Framework ausgeführt. Allerdings empfiehlt es sich, dass Sie eine Version der Anwendung für jede installierte Version von .NET Framework kompilieren und diese separat ausführen. In beiden Szenarien sollten Sie Änderungen in ADO.NET zwischen den Versionen bekannt sein, die die Aufwärts- und Abwärtskompatibilität Ihrer Anwendung beeinträchtigen können.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Aufwärts- und Abwärtskompatibilität  
- Aufwärtskompatibilität bedeutet, dass eine Anwendung mit einer früheren Version von .NET Framework kompiliert werden kann, sondern unter einer höheren Version von .NET Framework Ausführbarkeit. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Code für .NET Framework, Version 1.1 ist aufwärtskompatibel mit höheren Versionen.  
+ Aufwärtskompatibilität bedeutet, dass eine Anwendung mit einer früheren Version von .NET Framework kompiliert werden kann, sondern unter einer höheren Version von .NET Framework Ausführbarkeit. ADO.NET-Code für .NET Framework, Version 1.1 ist aufwärtskompatibel mit höheren Versionen.  
   
  Abwärtskompatibilität bedeutet, dass eine Anwendung für eine neuere Version von .NET Framework kompiliert wird, sondern weiterhin auf früheren Versionen von .NET Framework ohne Beeinträchtigung der Funktionalität ausgeführt. Natürlich wird dies nicht der Fall für Funktionen, die in einer neuen Version von .NET Framework sein.  
   
@@ -36,7 +36,7 @@ Seite-an-Seite-Ausführung in .NET Framework ist die Möglichkeit, eine Anwendun
   
  Allerdings kann ab .NET Framework, Version 2.0, alle von .NET Framework-Datenanbietern in teilweise vertrauenswürdigen Zonen verwendet werden. Darüber hinaus wurde eine neue Sicherheitsfunktion, die .NET Framework-Datenanbieter in .NET Framework, Version 1.1 hinzugefügt. Mithilfe dieser Funktion können Sie die Verbindungszeichenfolgen einschränken, die in einer bestimmten Sicherheitszone verwendet werden dürfen. Es kann auch die Verwendung leerer Kennwörter für eine bestimmte Sicherheitszone deaktiviert werden. Weitere Informationen finden Sie unter [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
- Da jede Installation von .NET Framework eine separate Security.config-Datei hat, gibt es keine Kompatibilitätsprobleme mit Sicherheitseinstellungen. Aber wenn Ihre Anwendung, auf den zusätzlichen Sicherheitsfunktionen von abhängt [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in .NET Framework, Version 1.1 und höher enthalten, Sie ist nicht möglich, ein System mit Version 1.0 verteilen.  
+ Da jede Installation von .NET Framework eine separate Security.config-Datei hat, gibt es keine Kompatibilitätsprobleme mit Sicherheitseinstellungen. Aber wenn Ihre Anwendung auf den zusätzlichen Sicherheitsfunktionen von ADO.NET oder höher, enthalten in Version 1.1 von .NET Framework abhängig ist, werden Sie nicht es an ein System mit Version 1.0 verteilen können.  
   
 ## <a name="sqlcommand-execution"></a>"SqlCommand"-Ausführung  
  Ab .NET Framework, Version 1.1, die Möglichkeit, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> führt Befehle auf die Daten der Datenquelle wurde geändert.  

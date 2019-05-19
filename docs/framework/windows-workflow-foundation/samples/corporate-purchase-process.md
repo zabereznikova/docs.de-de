@@ -2,17 +2,17 @@
 title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665942"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876171"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.
 
- Dieses Beispiel umfasst eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, die es ermöglicht, mit dem Vorgang als verschiedene Beteiligte (als ursprünglicher Anforderer oder als ein bestimmter Anbieter) zu interagieren.
+ Dieses Beispiel enthält eine ASP.NET-Anwendung für den Client, die ermöglicht, die Interaktion mit dem Prozess als verschiedene Beteiligte (als ursprünglicher anforderer oder eines bestimmten Anbieters).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -36,7 +36,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 
 - Nachverfolgung
 
-- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendungen und WinForms-Anwendungen)
+- Hosten von [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients (Webanwendungen mit ASP.NET und WinForms-Anwendungen).
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
@@ -82,7 +82,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |-------------|-----------------|  
 |Allgemeine|Die im Vorgang verwendeten Entitätsobjekte (Ausschreibung, Anbieter und Angebot).|  
 |WfDefinition|Die Definition des Vorgangs (als [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Programm) und der Host (`PurchaseProcessHost`), die von den Clientanwendungen zum Erstellen und Verwenden von Instanzen des Einkaufsworkflows verwendet werden.|  
-|WebClient|Eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
+|WebClient|Eine ASP.NET-Clientanwendung, die Benutzern das Erstellen und die Instanzen des Einkaufsvorgangs teilnehmen kann. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
 |WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

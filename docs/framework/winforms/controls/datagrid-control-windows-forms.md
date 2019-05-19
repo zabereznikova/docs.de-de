@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011384"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878773"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das `DataGrid`-Steuerelement ersetzt und funktionell erweitert, wird das `DataGrid`-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Das Windows Forms-Steuerelement `DataGrid` stellt eine Benutzeroberfläche für [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Datasets bereit, die Daten in tabellarischer Form anzeigt sowie Aktualisierungen der Datenquelle ermöglicht.  
+ Die Windows-Formulare `DataGrid` Steuerelement bietet eine Benutzeroberfläche für ADO.NET-Datasets, Anzeigen von Tabellendaten und ermöglichen von Updates der Datenquelle.  
   
  Wenn für das `DataGrid`-Steuerelement eine zulässige Datenquelle festgelegt wurde, wird das Steuerelement automatisch gefüllt, wobei Spalten und Zeilen entsprechend der Form der Daten erstellt werden. Das `DataGrid`-Steuerelement kann dazu verwendet werden, entweder eine einzelne Tabelle oder die hierarchischen Beziehungen zwischen mehreren Tabellen anzuzeigen.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011384"
  Beschreibt das programmgesteuerte Hinzufügen von Tabellen und Spalten zum `DataGrid`-Steuerelement.  
   
  [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- Beschreibt das Binden eines [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Datasets an das `DataGrid`-Steuerelement mithilfe des Designers.  
+ Beschreibt, wie Sie ein ADO.NET-DataSet zu binden der `DataGrid` mithilfe des Designers zu steuern.  
   
  [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- Beschreibt das Binden eines [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Datasets an das `DataGrid`-Steuerelement.  
+ Beschreibt, wie Sie ein ADO.NET-DataSet zu binden der `DataGrid` Steuerelement.  
   
  [Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  Beschreibt, wie Daten im `DataGrid`-Steuerelement programmgesteuert geändert werden.  

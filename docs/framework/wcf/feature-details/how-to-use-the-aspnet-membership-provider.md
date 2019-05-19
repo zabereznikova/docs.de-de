@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61324bbc5ea07dd19e23589bfc90f9ea44a6b331
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038713"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880184"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters
-Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter ist eine Funktion für [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Entwickler zum Erstellen von Websites, mit denen die Benutzer eindeutige Kombinationen aus Benutzername und Kennwort erstellen können. Jeder Benutzer kann damit ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden. Dies steht im Gegensatz zur Windows-Sicherheit, bei der die Benutzer über Konten in einer Windows-Domäne verfügen müssen. Stattdessen kann jeder Benutzer, der seine Anmeldeinformationen (Kombination aus Benutzername und Kennwort) angibt, die Site und ihre Dienste nutzen.  
+Dem ASP.NET-Mitgliedschaftsanbieter ist ein Feature, mit der Entwickler von ASP.NET zum Erstellen von Websites, mit denen Benutzer eindeutige Benutzer Kombinationen aus Name und Kennwort erstellen können. Jeder Benutzer kann damit ein Konto auf dieser Site erstellen und sich für den exklusiven Zugriff auf diese Site und ihre Dienste anmelden. Dies steht im Gegensatz zur Windows-Sicherheit, bei der die Benutzer über Konten in einer Windows-Domäne verfügen müssen. Stattdessen kann jeder Benutzer, der seine Anmeldeinformationen (Kombination aus Benutzername und Kennwort) angibt, die Site und ihre Dienste nutzen.  
   
- Eine beispielanwendung finden Sie unter [Mitgliedschafts- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Informationen zur Verwendung der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -rollenanbieterfunktion finden Sie unter [Vorgehensweise: Verwenden des ASP.NET-Rollenanbieters mit einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Eine beispielanwendung finden Sie unter [Mitgliedschafts- und Rollenanbieter](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Weitere Informationen zur Verwendung der rollenanbieterfunktion von ASP.NET finden Sie unter [Vorgehensweise: Verwenden des ASP.NET-Rollenanbieters mit einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
  Die Mitgliedschaftsfunktion setzt die Verwendung einer SQL Server-Datenbank zum Speichern der Benutzerdaten voraus. Die Funktion schließt auch Methoden zum Anzeigen einer Frage für Benutzer ein, die ihr Kennwort vergessen haben.  
   
- Windows Communication Foundation (WCF)-Entwickler können diese Funktionen für Sicherheitszwecke nutzen. Wenn in einer WCF-Anwendung integriert wird, müssen Benutzer eine Kombination aus Benutzername und Kennwort an die WCF-Clientanwendung angeben. Verwenden Sie zur Übertragung von Daten an den WCF-Dienst eine Bindung, die Benutzer/Kennwort-Anmeldeinformationen, z. B. unterstützt die <xref:System.ServiceModel.WSHttpBinding> (in der Konfiguration der [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)), und legen Sie die Client-Anmeldeinformationstyp für das `UserName`. Für den Dienst, WCF-Sicherheit authentifiziert den Benutzer basierend auf den Benutzernamen und das Kennwort und weist die Rolle, die gemäß der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rolle.  
+ Windows Communication Foundation (WCF)-Entwickler können diese Funktionen für Sicherheitszwecke nutzen. Wenn in einer WCF-Anwendung integriert wird, müssen Benutzer eine Kombination aus Benutzername und Kennwort an die WCF-Clientanwendung angeben. Verwenden Sie zur Übertragung von Daten an den WCF-Dienst eine Bindung, die Benutzer/Kennwort-Anmeldeinformationen, z. B. unterstützt die <xref:System.ServiceModel.WSHttpBinding> (in der Konfiguration der [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)), und legen Sie die Client-Anmeldeinformationstyp für das `UserName`. Für den Dienst WCF-Sicherheit authentifiziert den Benutzer basierend auf den Benutzernamen und das Kennwort, und weist die durch die ASP.NET-Rolle angegeben.  
   
 > [!NOTE]
 >  WCF bietet keine Methoden, um die Datenbank mit Benutzer-Kennwort-Kombinationen oder anderen Benutzerdaten zu füllen.  
@@ -98,7 +98,7 @@ Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Mitgliedschaftsanb
 6. Legen Sie das `userNamePasswordValidationMode`-Attribut auf `MembershipProvider` fest.  
   
     > [!IMPORTANT]
-    >  Wenn die `userNamePasswordValidationMode` Wert nicht festgelegt ist, WCF verwendet die Windows-Authentifizierung statt der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Membership-Provider.  
+    >  Wenn die `userNamePasswordValidationMode` Wert nicht festgelegt ist, WCF verwendet Windows-Authentifizierung anstatt des ASP.NET-Mitgliedschaftsanbieters.  
   
 7. Legen Sie das `membershipProviderName`-Attribut auf den Namen des Anbieters fest (wird beim Hinzufügen des Anbieters im ersten Verfahren in diesem Thema angegeben). Im folgenden Beispiel sehen Sie das `<serviceCredentials>`-Fragment bis zu diesem Punkt:  
   

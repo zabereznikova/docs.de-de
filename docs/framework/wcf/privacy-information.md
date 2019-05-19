@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651073"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882185"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Bei der Erstellung einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer beeinträchtigen. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet nicht an Microsoft aus Ihrer Anwendung Informationen, sofern Ihnen oder dem Endbenutzer Sie uns senden möchten.  
@@ -29,7 +29,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Der WCF-Messagingebene schreibt keine persönlichen Informationen nicht auf dem lokalen Computer. Sie kann jedoch persönliche Daten auf der Netzwerkebene weitergeben, wenn ein Diensteentwickler einen Dienst erstellt hat, der solche Informationen verfügbar macht (z. B. durch das Verwenden des Namens einer Person in einem Endpunktnamen oder durch das Aufnehmen persönlicher Daten in die WSDL des Endpunkts, ohne dass Clients zum Zugriff auf die WSDL HTTPS verwenden müssen). Auch wenn ein Entwickler ausgeführt wird. die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool gegen einen Endpunkt, die persönlichen Daten, die Ausgabe des Tools verfügbar macht, kann diese Informationen enthalten, und in die Ausgabedatei geschrieben der lokale Festplatte.  
   
 ## <a name="hosting"></a>Hosting  
- Die Hostingfunktion in WCF ermöglicht Anwendungen, um bei Bedarf starten oder Aktivieren der Anschlussfreigabe zwischen mehreren Anwendungen. Kann eine WCF-Anwendung in IIS (Internetinformationsdienste), ähnlich wie gehostet werden [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Die Hostingfunktion in WCF ermöglicht Anwendungen, um bei Bedarf starten oder Aktivieren der Anschlussfreigabe zwischen mehreren Anwendungen. Eine WCF-Anwendung kann in IIS (Internetinformationsdienste), ähnlich wie ASP.NET gehostet werden.  
   
  Das Hosting macht keine spezifischen Informationen im Netzwerk verfügbar und behält keine Daten auf dem Computer bei.  
   
@@ -47,7 +47,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 |Daten|Speicher|  
 |----------|-------------|  
 |Präsentationsanmeldeinformationen, z. B. Benutzername, X.509-Zertifikate, Kerberos-Token und Verweise auf Anmeldeinformationen.|Standardmäßige Windows-Verwaltungsmechanismen für Anmeldeinformationen, z. B. der Windows-Zertifikatspeicher.|  
-|Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter.|  
+|Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|ASP.NET-Anbieter für Mitgliedschaft.|  
 |Identitätsinformationen über den Dienst zum Authentifizieren des Diensts gegenüber Clients.|Endpunktadresse des Diensts.|  
 |Aufruferdaten.|Überwachungsprotokolle.|  
   

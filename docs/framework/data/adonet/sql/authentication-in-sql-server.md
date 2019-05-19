@@ -2,12 +2,12 @@
 title: Authentifizierung in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649579"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877459"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
@@ -43,7 +43,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
   
 - Die Benutzer stellen die Verbindung von unterschiedlichen, nicht vertrauenswürdigen Domänen aus her.  
   
-- Internetanwendungen, z. B. [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Internet-Anwendungen, z. B. ASP.NET.  
   
 > [!NOTE]
 >  Das Angeben der Windows-Authentifizierung führt nicht zu einer Deaktivierung von SQL Server-Anmeldungen. Verwenden Sie die ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Anweisung, um SQL Server-Anmeldungen für hoch privilegierten zu deaktivieren.  

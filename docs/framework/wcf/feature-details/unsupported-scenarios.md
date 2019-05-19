@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637761"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878736"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WCF) einige bestimmte Sicherheitsszenarien nicht. Z. B. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht implementiert, und daher WCF unterstützt nicht das Ausführen eines Diensts mit Windows-Authentifizierung auf dieser Plattform. Andere Authentifizierungsmechanismen, wie z. B. Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung werden unterstützt, wenn WCF unter Windows XP Home Edition ausgeführt wird.  
@@ -36,7 +36,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 >  Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Sie können es daher mit der `Required`-Option unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] verwenden.  
   
 ### <a name="possible-aspnet-conflict"></a>Möglicher ASP.NET-Konflikt  
- WCF und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] können sowohl Identitätswechsel aktivieren oder deaktivieren. Wenn [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hostet eine WCF-Anwendung ist möglicherweise ein Konflikt zwischen dem WCF vorhanden und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Konfigurationseinstellungen. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn, die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> -Eigenschaftensatz auf <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, in diesem Fall die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -identitätswechseleinstellung Vorrang.  
+ WCF und ASP.NET kann sowohl Identitätswechsel aktivieren oder deaktivieren. Wenn ASP.NET eine WCF-Anwendung hostet, kann ein Konflikt zwischen der Konfigurationseinstellungen für WCF und ASP.NET vorhanden sein. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn, die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> -Eigenschaftensatz auf <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, in diesem Fall die Einstellung für ASP.NET Identitätswechsel Vorrang hat.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Assembly-Ladevorgänge können beim Identitätswechsel fehlschlagen  
  Wenn der Identitätswechselkontext keine Zugriffsberechtigungen zum Laden einer Assembly hat und es das erste Mal ist, dass die Common Language Runtime (CLR) versucht, die Assembly für diese Anwendungsdomäne zu laden, speichert die <xref:System.AppDomain> den Fehler zwischen. Nachfolgende Versuche, diese Assembly(s) zu laden, schlagen fehl, selbst nach dem Zurücksetzen des Identitätswechsels und sogar wenn der zurückgesetzte Kontext die Zugriffsberechtigungen hat, die Assembly zu laden. Die Ursache dafür ist, dass die CLR nach der Änderung des Benutzerkontextes keinen weiteren Ladeversuch unternimmt. Sie müssen die Anwendungsdomäne neu starten, um nach dem Fehler wiederhergestellt zu werden.  
@@ -75,13 +75,13 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichtensicherheit schlägt fehlt, wenn der ASP.NET-Identitätswechsel verwendet wird und die ASP.NET-Kompatibilität erforderlich ist  
  WCF unterstützt nicht die folgende Kombination von Einstellungen, da sie auftreten der Clientauthentifizierung verhindern können:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
+- ASP.NET-Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus ist aktiviert, indem die `aspNetCompatibilityEnabled` Attribut der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) zu `true`.  
+- ASP.NET-Kompatibilitätsmodus wird aktiviert, indem die `aspNetCompatibilityEnabled` Attribut der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) zu `true`.  
   
 - Die Nachrichtenmodussicherheit wird verwendet.  
   
- Sie können alternativ auch den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus deaktivieren. Oder, wenn Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Kompatibilitätsmodus erforderlich ist, deaktivieren Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Identitätswechsel feature aus, und verwenden Sie stattdessen die von WCF bereitgestellter Identitätswechsel. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Die problemumgehung ist, deaktivieren Sie den ASP.NET-Kompatibilitätsmodus. Oder wenn der ASP.NET-Kompatibilitätsmodus erforderlich ist, deaktivieren Sie die ASP.NET Identitätswechsel-Funktion, und verwenden Sie stattdessen die von WCF bereitgestellter Identitätswechsel. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6-Literal-Adressfehler  
  Bei Sicherheitsanforderungen tritt ein Fehler auf, wenn sich Client und Dienst auf dem gleichen Computer befinden und für den Dienst IPv6-Literaladressen verwendet werden.  

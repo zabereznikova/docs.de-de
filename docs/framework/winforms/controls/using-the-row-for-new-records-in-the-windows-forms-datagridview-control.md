@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651539"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882434"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms
 Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitung von Daten in Ihrer Anwendung häufig möchten geben Sie Ihren Benutzern die Möglichkeit, neue Zeilen mit Daten im Datenspeicher hinzuzufügen. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt diese Funktion durch die Bereitstellung einer Zeile für neue Datensätze, die immer als letzte Zeile angezeigt wird. Er ist mit einem Sternchen (*) im Zeilenkopf gekennzeichnet. Den folgenden Abschnitten werden einige der Dinge, die Sie berücksichtigen sollten, wenn das Programm mit der Zeile für neue Datensätze aktiviert.  
@@ -47,7 +47,7 @@ Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitu
 ## <a name="sorting"></a>Sortieren  
  In ungebundenen Modus werden neue Datensätze immer am Ende hinzugefügt werden die <xref:System.Windows.Forms.DataGridView> , selbst wenn der Benutzer den Inhalt des sortiert wurden die <xref:System.Windows.Forms.DataGridView>. Der Benutzer muss die Sortierung erneut anzuwenden, um die Zeile an die korrekte Position zu sortieren, Dieses Verhalten ist vergleichbar mit der <xref:System.Windows.Forms.ListView> Steuerelement.  
   
- Daten werden hängt von der Implementierung des Datenmodells gebunden ist, und virtuelle Modi, das Einfügeverhalten, wenn eine Sortierung angewendet wird. Für [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], die Zeile wird sofort in der richtigen Position sortiert.  
+ Daten werden hängt von der Implementierung des Datenmodells gebunden ist, und virtuelle Modi, das Einfügeverhalten, wenn eine Sortierung angewendet wird. Für ADO.NET ist die Zeile sofort in der richtigen Position sortiert.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Andere Hinweise auf die Zeile für neue Datensätze  
  Sie können nicht festgelegt werden die <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> Eigenschaft dieser Zeile um `false`. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird.  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754076"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882345"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Auf Datenbindung bezogene Schnittstellen
 
-Mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] können Sie viele verschiedene Datenstrukturen entsprechend den Bindungsanforderungen der Anwendung und der Daten erstellen, mit denen Sie arbeiten. Möglicherweise möchten Sie eigene Klassen erstellen, die Daten in Windows Forms bereitstellen oder verwenden. Diese Objekte können ein unterschiedliches Maß an Funktionalität und Komplexität bieten, von der Basisdatenbindung bis hin zur Bereitstellung der Unterstützung während der Entwurfszeit, Überprüfung von Fehlern, Benachrichtigung oder sogar Unterstützung für eine strukturierte Zurücksetzung der an den Daten selbst vorgenommenen Änderungen.
+In ADO.NET können Sie viele verschiedene Datenstrukturen entsprechend die bindungsanforderungen der Anwendung und die Daten, mit denen Sie arbeiten werden erstellen. Möglicherweise möchten Sie eigene Klassen erstellen, die Daten in Windows Forms bereitstellen oder verwenden. Diese Objekte können ein unterschiedliches Maß an Funktionalität und Komplexität bieten, von der Basisdatenbindung bis hin zur Bereitstellung der Unterstützung während der Entwurfszeit, Überprüfung von Fehlern, Benachrichtigung oder sogar Unterstützung für eine strukturierte Zurücksetzung der an den Daten selbst vorgenommenen Änderungen.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Consumer von Datenbindungsschnittstellen
 
@@ -82,7 +82,7 @@ Die folgenden Schnittstellen sollen von Windows Forms-Steuerelementen genutzt we
 
 - <xref:System.Collections.IEnumerable> Schnittstelle
 
-  Eine Klasse, implementiert die <xref:System.Collections.IEnumerable> Schnittstelle wird durch die in der Regel verbraucht [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Windows Forms-Unterstützung für diese Schnittstelle ist nur verfügbar, über die <xref:System.Windows.Forms.BindingSource> Komponente.
+  Eine Klasse, implementiert die <xref:System.Collections.IEnumerable> Schnittstelle in der Regel von ASP.NET verwendet. Windows Forms-Unterstützung für diese Schnittstelle ist nur verfügbar, über die <xref:System.Windows.Forms.BindingSource> Komponente.
 
   > [!NOTE]
   > Die <xref:System.Windows.Forms.BindingSource> -Komponente kopiert alle <xref:System.Collections.IEnumerable> Elemente in eine separate Liste für eine Bindung herangezogen.

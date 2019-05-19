@@ -2,12 +2,12 @@
 title: Abrufen und Ändern von Daten in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033916"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881431"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
 Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle, sodass Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder **DataAdapter** . Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET aktualisieren von Daten werden mithilfe der **DataAdapter** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.  
@@ -53,7 +53,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Beschreibt für `SqlClient` und `OracleClient` verfügbare Leistungsindikatoren.  
   
  [Asynchrone Programmierung](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- Beschreibt die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Unterstützung für die asynchrone Programmierung.  
+ Beschreibt die Unterstützung von ADO.NET für die asynchrone Programmierung.  
   
  [SqlClient-Streamingunterstützung](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Erläutert, wie Sie Anwendungen, Streamen von Daten aus SQL Server schreiben, ohne dass es vollständig in den Arbeitsspeicher geladen.  

@@ -2,12 +2,12 @@
 title: Hintergrundinformationen
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: dfa1d06b9df7da86fe529c69d7fb01fcc58ccc87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c64b720f893c907b0570e886f0a4d81bb19d09a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592435"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878707"
 ---
 # <a name="background-information"></a>Hintergrundinformationen
 Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die über die Grundlagen der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hinausgehen.  
@@ -22,7 +22,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ADO.NET und LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- Beschreibt die Beziehung von [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Beschreibt die Beziehung von ADO.NET und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Analysieren von LINQ to SQL-Quellcode](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Beschreibt, wie eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Zuordnung analysiert wird, indem Quellcode aus der Beispieldatenbank Northwind erzeugt und angezeigt wird.  

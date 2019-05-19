@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032754"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881157"
 ---
 # <a name="connection-strings-in-adonet"></a>Verbindungszeichenfolgen in ADO.NET
 
@@ -17,24 +17,32 @@ Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Par
 
 Eine Verbindungszeichenfolge ist eine durch Semikolons getrennte Liste von Schlüssel/Wert-Parameterpaaren:
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 Schlüsselwörter sind nicht in der Groß-/Kleinschreibung beachtet. Werte, möglicherweise jedoch Groß-/Kleinschreibung beachtet, abhängig von der Datenquelle. Sowohl Schlüsselwörtern und Werten enthalten möglicherweise [aus Whitespace bestehenden Zeichen](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Führende und nachfolgende Leerzeichen ignoriert werden, Schlüsselwörter und ohne Anführungszeichen Werte.
 
 Wenn Sie einen Wert enthält, Semikolon, [Unicode-Steuerzeichen](https://en.wikipedia.org/wiki/Unicode_control_characters), oder führende oder nachfolgende Leerzeichen, muss er in einfache oder doppelte Anführungszeichen eingeschlossen werden. Zum Beispiel:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 Die umschließende Zeichen kann nicht im Wert auftreten, die eingeschlossen. Aus diesem Grund kann ein Wert mit einfachen Anführungszeichen eingeschlossen werden, nur in doppelte Anführungszeichen (und umgekehrt):
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 Die Anführungszeichen selbst als auch das Gleichheitszeichen erfordern Escapezeichen, keine daher die folgenden Verbindungszeichenfolgen gelten:
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 Da jeder Wert bis zum nächsten Semikolon oder dem Ende der Zeichenfolge gelesen wird, wird der Wert im zweiten Beispiel `a=b=c`, und das letzte Semikolon ist optional.
 

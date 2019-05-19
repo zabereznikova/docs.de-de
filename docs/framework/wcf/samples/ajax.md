@@ -2,12 +2,12 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: ae4a39d48d9c688d14fa8cf131e8010188c2fe10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80166eaed2598f21529e81c81985d78a23bf0c9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944195"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882121"
 ---
 # <a name="ajax"></a>AJAX
 Dieser Abschnitt enthält Beispiele, in denen AJAX (Asynchronous JavaScript and XML)-Funktionalität veranschaulicht wird.  
@@ -23,7 +23,7 @@ Dieser Abschnitt enthält Beispiele, in denen AJAX (Asynchronous JavaScript and 
  Veranschaulicht, wie WCF zu verwenden, um einen grundlegenden (ASP.NET Asynchronous JavaScript and XML (AJAX)-Dienst zu erstellen.  
   
  [AJAX-Dienst mit HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
- Veranschaulicht, wie von WCF zum Erstellen einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript and XML (AJAX)-Diensts, der HTTP-POST verwendet.  
+ Veranschaulicht, wie WCF zu verwenden, um einen Dienst (ASP.NET Asynchronous JavaScript and XML (AJAX) zu erstellen, der HTTP POST verwendet.  
   
  [AJAX-Dienst ohne Konfiguration](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  Veranschaulicht, wie WCF zu verwenden, um einen grundlegenden (ASP.NET Asynchronous JavaScript and XML (AJAX)-Dienst zu erstellen.  

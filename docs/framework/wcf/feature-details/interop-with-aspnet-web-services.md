@@ -2,15 +2,15 @@
 title: Interoperabilität mit ASP.NET-Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 16e22a091b88d12abccb063d2407db82460458c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638609"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875548"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interoperabilität mit ASP.NET-Webdiensten
-Interoperabilität zwischen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Services und Windows Communication Foundation (WCF)-Webdiensten erzielt werden, indem sichergestellt wird, dass implementierte Dienste, beide Technologien entspricht-I Basic Profile 1.1-Spezifikation. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webdienste, die mit WS-I Basic Profile 1.1 sind mit WCF-Clients interoperabel, mithilfe von WCF vom System bereitgestellte Bindung, <xref:System.ServiceModel.BasicHttpBinding>.  
+Interoperabilität zwischen ASP.NET Web Services und Windows Communication Foundation (WCF)-Webdiensten erzielt werden, indem Sie sicherstellen, dass implementierte Dienste, beide Technologien entspricht-I Basic Profile 1.1-Spezifikation. ASP.NET Web Services, die mit WS-I Basic Profile 1.1 sind mit WCF-Clients interoperabel, mithilfe von WCF vom System bereitgestellte Bindung, <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Verwenden Sie wie im folgenden Beispielcode gezeigt die in [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] gebotene Möglichkeit, das <xref:System.Web.Services.WebService>-Attribut und das <xref:System.Web.Services.WebMethodAttribute>-Attribut zu einer Schnittstelle anstatt zu einer Klasse hinzuzufügen und zum Implementieren der Schnittstelle eine Klasse zu schreiben.  
   
@@ -36,13 +36,13 @@ public class Service : IEcho
   
  Verwenden Sie das <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute>-Attribut nicht, um Nachrichten basierend auf dem voll qualifizierten Namen des Textelements der SOAP-Nachricht anstatt des `SOAPAction`-HTTP-Headers an Methoden weiterzuleiten. WCF verwendet die `SOAPAction` HTTP-Header zum Weiterleiten von Nachrichten.  
   
- Die XML, in die <xref:System.Xml.Serialization.XmlSerializer> standardmäßig einen Typ serialisiert, ist semantisch identisch mit der XML, in die <xref:System.Runtime.Serialization.DataContractSerializer> einen Typ serialisiert, vorausgesetzt, der Namespace ist für die XML explizit definiert. Wenn Sie einen Datentyp für die Verwendung mit definieren [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Webdienste vor der Einführung von WCF, gehen Sie folgendermaßen vor:  
+ Die XML, in die <xref:System.Xml.Serialization.XmlSerializer> standardmäßig einen Typ serialisiert, ist semantisch identisch mit der XML, in die <xref:System.Runtime.Serialization.DataContractSerializer> einen Typ serialisiert, vorausgesetzt, der Namespace ist für die XML explizit definiert. Wenn Sie einen Datentyp für die Verwendung mit ASP.NETWeb Dienste in der Erwartung einführen WCF definieren, führen Sie folgende Schritte aus:  
   
 - Definieren Sie den Typ mit .NET Framework-Klassen und nicht mit dem XML-Schema.  
   
 - Fügen Sie der Klasse lediglich <xref:System.SerializableAttribute> und <xref:System.Xml.Serialization.XmlRootAttribute> hinzu, wobei Sie mit dem zweiten Attribut den Namespace für den Typ explizit definieren. Fügen Sie keine zusätzlichen Attribute aus dem <xref:System.Xml.Serialization>-Namespace hinzu, um die Übersetzung der .NET Framework-Klasse in XML zu steuern.  
   
-- Wenn Sie diese Vorgehensweise wählen, sollte es später kein Problem darstellen, die .NET-Klassen in Datenverträge umzuwandeln, indem Sie <xref:System.Runtime.Serialization.DataContractAttribute> und <xref:System.Runtime.Serialization.DataMemberAttribute> hinzufügen, ohne die XML erheblich zu ändern, in die die Klassen für die Übertragung serialisiert werden. Die in Nachrichten nach dem verwendeten Typen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Webdienste können von WCF-Anwendungen, die Rückgabe, neben anderen Vorteilen eine bessere Leistung für WCF-Anwendungen als Datenverträge verarbeitet werden.  
+- Wenn Sie diese Vorgehensweise wählen, sollte es später kein Problem darstellen, die .NET-Klassen in Datenverträge umzuwandeln, indem Sie <xref:System.Runtime.Serialization.DataContractAttribute> und <xref:System.Runtime.Serialization.DataMemberAttribute> hinzufügen, ohne die XML erheblich zu ändern, in die die Klassen für die Übertragung serialisiert werden. Die von ASP.NET-Webdiensten verwendeten Typen können als Datenverträge von WCF-Anwendungen verarbeitet werden zurückgegeben, neben anderen Vorteilen eine bessere Leistung für WCF-Anwendungen.  
   
  Vermeiden Sie die Verwendung der von den Internetinformationsdiensten (IIS) bereitgestellten Authentifizierungsoptionen. WCF-Clients unterstützen sie nicht. Wenn ein Dienst geschützt werden muss, verwenden Sie die Optionen, WCF, bereitgestellt werden, da diese Optionen robuster sind und auf Standardprotokollen basieren.  
   
