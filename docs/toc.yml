@@ -496,11 +496,13 @@
     - name: Erste Schritte
       href: csharp/getting-started/
     - name: Tutorials
-      href: csharp/tutorials/index.md
       items:
-        - name: 'Einführung in C#'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: Übersicht
+          href: csharp/tutorials/index.md
+        - name: 'Einführung in das Programmieren mit C#'
           items:
+            - name: Auswählen der ersten Lektion
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: Hello World
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Zahlen in C#'
@@ -510,8 +512,9 @@
             - name: Listensammlungen
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: Arbeiten in Ihrer lokalen Umgebung
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: Einrichten der Umgebung
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'Zahlen in C#'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: Verzweigungen und Schleifen
@@ -609,7 +612,6 @@
         - name: Iterators
           href: csharp/iterators.md
         - name: Delegaten und Ereignisse
-          href: csharp/delegates-events.md
           items:
             - name: Einführung in Delegaten
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: Schreiben von sicherem und effizientem Code
           href: csharp/write-safe-efficient-code.md
         - name: Ausdrucksbaumstrukturen
-          href: csharp/expression-trees.md
           items:
+            - name: Einführung in Ausdrucksbaumstrukturen
+              href: csharp/expression-trees.md
             - name: Ausdrucksbaumstrukturen mit Erläuterung
               href: csharp/expression-trees-explained.md
             - name: 'Framework-Typen, die Ausdrucksbaumstrukturen unterstützen'
@@ -659,8 +662,9 @@
         - name: Versionskontrolle
           href: csharp/versioning.md
     - name: 'Vorgehensweisen zu C#-Themen'
-      href: csharp/how-to/index.md
       items:
+        - name: Themenindex
+          href: csharp/how-to/index.md
         - name: Analysieren von Zeichenfolgen über `String.Split`
           href: csharp/how-to/parse-strings-using-split.md
         - name: Verketten von Zeichenfolgen

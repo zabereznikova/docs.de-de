@@ -9,15 +9,15 @@
   items:
     - name: Übersicht
       href: tutorials/index.md
-    - name: Standpunktanalyse (binäre Klassifikation)
+    - name: Analysieren der Stimmung (binäre Klassifikation)
       href: tutorials/sentiment-analysis.md
-    - name: Fehlerklassifizierung (Multiklassenklassifizierung)
+    - name: Kategorisieren von Supportproblemen (Multiklassenklassifizierung)
       href: tutorials/github-issue-classification.md
-    - name: Preisvorhersage (Regression)
+    - name: Vorhersagen von Preisen (Regression)
       href: tutorials/taxi-fare.md
-    - name: Iris (Clustering)
+    - name: Kategorisieren von Schwertlilien (k-Means-Algorithmus)
       href: tutorials/iris-clustering.md
-    - name: Filmempfehlung (Empfehlung)
+    - name: Filmempfehlung (Matrixfaktorisierung)
       href: tutorials/movie-recommmendation.md
     - name: Bildklassifizierung (induktive Übertragung)
       href: tutorials/image-classification.md
