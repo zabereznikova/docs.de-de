@@ -2,20 +2,20 @@
 title: 'Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328815"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585737"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="97ceb-102">Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="97ceb-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="9494b-102">Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9494b-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="97ceb-103">In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="97ceb-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="97ceb-104">Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten.</span><span class="sxs-lookup"><span data-stu-id="97ceb-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="97ceb-105">Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.</span><span class="sxs-lookup"><span data-stu-id="97ceb-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="9494b-103">In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen getrennten Dateien mit gemeinsamem Wert, der als übereinstimmender Schlüssel verwendet wird, verknüpft werden.</span><span class="sxs-lookup"><span data-stu-id="9494b-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="9494b-104">Diese Technik kann hilfreich sein, wenn Sie Daten aus zwei Arbeitsblättern oder aus einem Arbeitsblatt und einer Datei, die ein anderes Format aufweist, in einer neuen Datei kombinieren möchten.</span><span class="sxs-lookup"><span data-stu-id="9494b-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="9494b-105">Sie können das Beispiel auch abändern, damit es mit jeder Art von strukturiertem Text funktioniert.</span><span class="sxs-lookup"><span data-stu-id="9494b-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="97ceb-106">So erstellen Sie die Datendateien</span><span class="sxs-lookup"><span data-stu-id="97ceb-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="9494b-106">So erstellen Sie die Datendateien</span><span class="sxs-lookup"><span data-stu-id="9494b-106">To create the data files</span></span>
   
-1. <span data-ttu-id="97ceb-107">Kopieren Sie die folgenden Zeilen in eine Datei namens *scores.csv*, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="97ceb-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="97ceb-108">Diese Datei stellt das Arbeitsblatt dar.</span><span class="sxs-lookup"><span data-stu-id="97ceb-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="97ceb-109">Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.</span><span class="sxs-lookup"><span data-stu-id="97ceb-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="9494b-107">Kopieren Sie die folgenden Zeilen in eine Datei namens *scores.csv*, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="9494b-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="9494b-108">Diese Datei stellt das Arbeitsblatt dar.</span><span class="sxs-lookup"><span data-stu-id="9494b-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="9494b-109">Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.</span><span class="sxs-lookup"><span data-stu-id="9494b-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "59328815"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="97ceb-110">Kopieren Sie die folgenden Zeilen in eine Datei namens *names.csv*, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="97ceb-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="97ceb-111">Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.</span><span class="sxs-lookup"><span data-stu-id="97ceb-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="9494b-110">Kopieren Sie die folgenden Zeilen in eine Datei namens *names.csv*, und speichern Sie sie in Ihrem Projektordner.</span><span class="sxs-lookup"><span data-stu-id="9494b-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="9494b-111">Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.</span><span class="sxs-lookup"><span data-stu-id="9494b-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "59328815"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="97ceb-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="97ceb-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9494b-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9494b-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -124,15 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="97ceb-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="97ceb-113">Compiling the code</span></span>
+## <a name="see-also"></a><span data-ttu-id="9494b-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9494b-113">See also</span></span>
 
-<span data-ttu-id="97ceb-114">Erstellen und kompilieren Sie ein Projekt, das eine der folgenden Optionen als Ziel verwendet:</span><span class="sxs-lookup"><span data-stu-id="97ceb-114">Create and compile a project that targets one of the following options:</span></span>
-
-- <span data-ttu-id="97ceb-115">.NET Framework-Version 3.5 mit einem Verweis auf „System.Core.dll“.</span><span class="sxs-lookup"><span data-stu-id="97ceb-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="97ceb-116">.NET Framework-Version 4.0 oder höher.</span><span class="sxs-lookup"><span data-stu-id="97ceb-116">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="97ceb-117">.NET Core-Version 1.0 oder höher.</span><span class="sxs-lookup"><span data-stu-id="97ceb-117">.NET Core version 1.0 or higher.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="97ceb-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97ceb-118">See also</span></span>
-
-- [<span data-ttu-id="97ceb-119">LINQ und Zeichenfolgen (C#)</span><span class="sxs-lookup"><span data-stu-id="97ceb-119">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="97ceb-120">LINQ und Dateiverzeichnisse (C#)</span><span class="sxs-lookup"><span data-stu-id="97ceb-120">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="9494b-114">LINQ und Zeichenfolgen (C#)</span><span class="sxs-lookup"><span data-stu-id="9494b-114">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="9494b-115">LINQ und Dateiverzeichnisse (C#)</span><span class="sxs-lookup"><span data-stu-id="9494b-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

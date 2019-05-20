@@ -1,1 +1,9 @@
-<span data-ttu-id="81194-101">.NET Framework 4.5.2</span><span class="sxs-lookup"><span data-stu-id="81194-101">.NET Framework 4.5.2</span></span>
+---
+ms.openlocfilehash: 33d3e3f77441e5c31a894fe2bac4a07bf481e827
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672249"
+---
+<span data-ttu-id="21e74-101">.NET Framework 4.5.2</span><span class="sxs-lookup"><span data-stu-id="21e74-101">.NET Framework 4.5.2</span></span>
