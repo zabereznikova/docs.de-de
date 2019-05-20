@@ -1,15 +1,13 @@
 ---
 title: Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
 description: Erfahren Sie, wie Sie widerstandsfähige Entity Framework Core-SQL-Verbindungen implementieren. Diese Technik ist besonders wichtig, wenn Sie Azure SQL-Datenbank in der Cloud verwenden.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: b056df033a584bc51fed5ccd52a58a6331298aa6
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3bf5c1827cee1da69aeccdc9f15573c301fc9363
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612250"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639893"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
 

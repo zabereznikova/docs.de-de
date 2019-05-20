@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323810"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584263"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei (C#-Programmierhandbuch)
 In folgendem C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum Abspielen einer Audiodatei im Waveformat im Windows-Betriebssystem veranschaulicht.  
@@ -29,8 +29,6 @@ In folgendem C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
-### <a name="to-compile-the-code"></a>Kompilieren des Codes  
-  
 1. Erstellen Sie in Visual Studio ein neuen Windows-Anwendungsprojekt mit C# und nennen Sie es **WinSound**.  
   
 2. Kopieren Sie den oben stehenden Code, und fügen Sie diesen über dem Inhalt der `Form1.cs`-Datei ein.  
@@ -40,9 +38,6 @@ In folgendem C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. Kompilieren Sie den Code, und führen Sie diesen aus.  
-  
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Weitere Informationen finden Sie unter [Sicherheit in .NET](../../../standard/security/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

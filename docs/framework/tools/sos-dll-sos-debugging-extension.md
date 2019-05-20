@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356896"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631829"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS-Debugerweiterung)
 
@@ -44,7 +44,7 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 |**DumpMT** [**-MD**] \<*MethodTable-Adresse*>|Zeigt Informationen zu einer Methodentabelle bei der angegebenen Adresse an. Durch Angabe der Option **-MD** wird eine Liste aller mit dem Objekt definierten Methoden angezeigt.<br /><br /> Jedes verwaltete Objekt enthält einen Methodentabellenzeiger.|
 |**DumpMethodSig** \<*Signaturadresse*> <*Moduladresse*`r`>|Zeigt Informationen zu einer `MethodSig`-Struktur bei der angegebenen Adresse an.|
 |**DumpModule** [**-mt**] \<*Moduladresse*>|Zeigt Informationen zu einem Modul bei der angegebenen Adresse an. Mit der Option **-mt** werden sowohl die in einem Modul definierten und als auch die Typen angezeigt, auf die vom Modul verwiesen wird.<br /><br /> Die Adresse eines Moduls kann mithilfe des **DumpDomain**-Befehls oder **DumpAssembly**-Befehls abgerufen werden.|
-|**DumpObj** [**-nofields**] \<*Objektadresse*><br /><br /> - oder -<br /><br /> **DO** \<*Objektadresse*>|Zeigt Informationen zu einem Objekt bei der angegebenen Adresse an. Durch den Befehl **DumpObj** werden die Felder, die `EEClass`-Strukturinformationen, die Methodentabelle und die Größe des Objekts angezeigt.<br /><br /> Die Adresse eines Objekts kann mithilfe des Befehls **DumpStackObjects** abgerufen werden.<br /><br /> Beachten Sie, dass der Befehl **DumpObj** für Felder vom Typ `CLASS` ausgeführt werden kann, da es sich bei diesen ebenfalls um Objekte handelt.<br /><br /> Mit der Option `-`**nofields** kann die Anzeige von Feldern des Objekts verhindert werden. Dies ist beispielsweise bei Objekten wie „String“ nützlich.|
+|**DumpObj** [**-nofields**] \<*Objektadresse*><br /><br /> - oder - <br /><br /> **DO** \<*Objektadresse*>|Zeigt Informationen zu einem Objekt bei der angegebenen Adresse an. Durch den Befehl **DumpObj** werden die Felder, die `EEClass`-Strukturinformationen, die Methodentabelle und die Größe des Objekts angezeigt.<br /><br /> Die Adresse eines Objekts kann mithilfe des Befehls **DumpStackObjects** abgerufen werden.<br /><br /> Beachten Sie, dass der Befehl **DumpObj** für Felder vom Typ `CLASS` ausgeführt werden kann, da es sich bei diesen ebenfalls um Objekte handelt.<br /><br /> Mit der Option `-`**nofields** kann die Anzeige von Feldern des Objekts verhindert werden. Dies ist beispielsweise bei Objekten wie „String“ nützlich.|
 |**DumpRuntimeTypes**|Zeigt die Laufzeittypobjekte im Garbage Collector-Heap an und listet die zugehörigen Typnamen sowie Methodentabellen auf.|
 |**DumpStack** [**-EE**] [**-n**] [`top`-*Stapel* [`bottom`-*Stapel*`k`]]|Zeigt eine Stapelüberwachung an.<br /><br /> Mit der Option **-EE** werden durch den Befehl **DumpStack** nur verwaltete Funktionen angezeigt. Verwenden Sie den `top`-Parameter und den `bottom`-Parameter, um die auf x86-Plattformen angezeigten Stapelrahmen einzuschränken.<br /><br /> Durch die Option **-n** wird die Anzeige von Quelldateinamen und Zeilennummern deaktiviert. Wenn für den Debugger die SYMOPT_LOAD_LINES-Option angegeben wird, sucht SOS die Symbole aller verwalteten Frames und zeigt ggf. den entsprechenden Quelldateinamen und die Zeilennummer an. Der Parameter **-n** (keine Zeilennummern) kann angegeben werden, um dieses Verhalten zu deaktivieren.<br /><br /> Auf x86- und x64-Plattformen wird durch den Befehl **DumpStack** eine ausführliche Stapelüberwachung erstellt.<br /><br /> Auf IA-64-basierten Plattformen wird durch Befehl **DumpStack** der Befehl **K** des Debuggers imitiert. Der `top`- Parameter und der `bottom`-Parameter werden auf IA-64-basierten Plattformen ignoriert.|
 |**DumpSig** \<*Signaturadresse*> \<*Moduladresse*>|Zeigt Informationen zu einer `Sig`-Struktur bei der angegebenen Adresse an.|

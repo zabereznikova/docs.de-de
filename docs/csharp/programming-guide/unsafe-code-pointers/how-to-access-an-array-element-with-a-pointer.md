@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 7b2991776ca032aa53111187a061835725cfe223
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b1538068f3ba37a7637e7dc3913e9511d4380daf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965604"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635190"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Gewusst wie: Zugreifen auf ein Arrayelement mit einem Zeiger (C#-Programmierhandbuch)
 
@@ -44,8 +44,6 @@ Beachten Sie, dass der Ausdruck `charPointer[i]` und der Ausdruck `*(charPointer
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
-- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Typen](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
 - [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)

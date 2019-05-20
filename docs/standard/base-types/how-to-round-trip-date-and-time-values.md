@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8f56fcad74287e260c2989534e6bd4931ad646a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633833"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590020"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Vorgehensweise: Roundtrip-Datums- und -Uhrzeitwerte
 In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. In diesem Thema wird gezeigt, wie ein <xref:System.DateTime>-Wert, ein <xref:System.DateTimeOffset>-Wert sowie ein Datums- und Uhrzeitwert mit Zeitzoneninformationen so gespeichert und wiederhergestellt werden, dass der wiederhergestellte Wert denselben Zeitpunkt bezeichnet wie der gespeicherte Wert.  
@@ -94,8 +94,6 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
     - <xref:System.Runtime.Serialization?displayProperty=nameWithType>  
   
     - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
-  
-- Ein Verweis auf „System.Core.dll“  
   
 - Jedes Codebeispiel, ausgenommen der `DateInTimeZone`-Klasse, sollte in eine Klasse oder ein Visual Basic-Modul eingefügt, in Methoden umschlossen und über die `Main`-Methode aufgerufen werden.  
   

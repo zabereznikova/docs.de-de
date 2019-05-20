@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 332fd7499a9948bb9ab418a3ab8b6c40ad0bcb85
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971363"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634814"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref-Attribut (C#-Programmierhandbuch)
 Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft. Dokumentationstools wie [DocFX](https://dotnet.github.io/docfx/) und [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die `cref`-Attribute zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.  
@@ -121,5 +121,5 @@ Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“. E
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML-Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/index.md)
 - [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

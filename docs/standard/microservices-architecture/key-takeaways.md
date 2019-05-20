@@ -1,15 +1,13 @@
 ---
 title: Wichtige Erkenntnisse
 description: Entnehmen Sie wichtige Erkenntnisse dem Handbuch/E-Buch „.NET Microservices Architecture for Containerized .NET Applications“ (.NET Microservices-Architektur für .NET-Containeranwendungen), um einen schnellen Einblick in die allgemeinen Fragen bei der Verwendung einer Microservices-Architektur zu bekommen wie Vor- und Nachteile, DDD-Muster für Entwurf und Entwicklung sowie Stabilität, Sicherheit und die Verwendung von Orchestratoren.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362118"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639700"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
 

@@ -3,12 +3,12 @@ title: C#-Attribute – Überblick über C#
 description: Informationen zur deklarativen Programmierung mithilfe von Attributen in C#
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: a8ee40e5d4956667dd54cf25cc7993d041cba6e7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 79bd14ebd3b25eabc0b9f7ed8f9e9585a050805f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151082"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634642"
 ---
 # <a name="attributes"></a>Attribute
 

@@ -1,15 +1,13 @@
 ---
 title: Adressierbarkeit von Microservices und die Dienstregistrierung
 description: Übersicht über die Rollen von Containerimageregistrierungen in der Microservicearchitektur
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ea25612417f5b0c23eca2a36b52db6f303a4bb45
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612562"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639966"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adressierbarkeit von Microservices und die Dienstregistrierung
 

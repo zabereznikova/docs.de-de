@@ -1,15 +1,13 @@
 ---
 title: Verwenden eines Datenbankservers, der als Container ausgeführt wird
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden eines als Container ausgeführten Datenbankservers nur für die Entwickelung Erfahren Sie den Grund.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611275"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639732"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Verwenden eines Datenbankservers, der als Container ausgeführt wird
 

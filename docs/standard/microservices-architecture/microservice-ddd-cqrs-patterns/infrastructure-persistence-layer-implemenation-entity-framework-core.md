@@ -1,15 +1,13 @@
 ---
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a84c5057b7a35c837f2c597cd3e60cd293a70009
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611652"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639526"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591730"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586150"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe
 Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode mit zwei Typparametern erstellt wird und wie auf die Typparameter Klasseneinschränkungen, Schnittstelleneinschränkungen und besonderen Einschränkungen angewendet werden.  
@@ -161,14 +161,6 @@ Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode m
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
-  
-- Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
-  
-- Er werden keine weiteren Assemblyverweise benötigt.  
-  
-- Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

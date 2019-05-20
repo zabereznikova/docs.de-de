@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211206"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882316"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt
 
@@ -59,7 +59,7 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 Wenn Sie fertig sind, wird das benutzerdefinierte Steuerelement etwa wie folgt aussehen:
 
-![Mögliche Anordnung eines MarqueeControl](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![Die app einen Auswahlbereich sagen, Text und ein Start- und Stop-Schaltflächen angezeigt.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Die vollständige codeauflistung finden Sie unter [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -178,7 +178,7 @@ Wenn Sie eine benutzerdefinierte während der Entwurfszeit-Benutzeroberfläche e
 
 2. Wählen Sie in das Dialogfeld "MarqueeControlLibrary-Eigenschaftenseiten" die **Debuggen** Seite.
 
-3. In der **Startaktion** wählen Sie im Abschnitt **externes Startprogramm**. Sie Debuggen eine separate Instanz von Visual Studio, klicken Sie auf die Auslassungspunkte (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) Schaltfläche, um für die Visual Studio-IDE navigieren. Der Name der ausführbaren Datei lautet devenv.exe aus, und wenn Sie am Standardspeicherort installiert haben, wird der Pfad ist %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+3. In der **Startaktion** wählen Sie im Abschnitt **externes Startprogramm**. Sie Debuggen eine separate Instanz von Visual Studio, klicken Sie auf die Auslassungspunkte (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) Schaltfläche, um für die Visual Studio-IDE navigieren. Der Name der ausführbaren Datei lautet devenv.exe aus, und wenn Sie am Standardspeicherort installiert haben, wird der Pfad ist %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
 
 4. Klicken Sie auf OK, um das Dialogfeld zu schließen.
 

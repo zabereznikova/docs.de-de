@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599867"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586034"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (C#)
 Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  Um das Programm auszuführen, geben Sie so den Namen der EXE-Datei gefolgt von zwei Zahlen ein:  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um die Datei `MathLibrary.DLL` zu erstellen, kompilieren Sie die beiden Dateien `Add` und `Mult` mithilfe der folgenden Befehlszeile.  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- Die Compileroption [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) weist den Compiler an, eine DLL- statt einer EXE-Datei auszugeben. Die Compileroption [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) wird gefolgt von einem Dateinamen verwendet, um den Namen der DLL-Datei anzugeben. Andernfalls verwendet der Compiler die erste Datei (`Add.cs`) als Name der DLL.  
-  
- Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- Die Compileroption **/out** weist den Compiler an, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`) an. Diese Compileroption ist optional. Die Compileroption [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) gibt die von diesem Programm verwendeten DLL-Dateien an. Weitere Informationen finden Sie unter [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
-  
- Weitere Informationen zum Erstellen über die Befehlszeile finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

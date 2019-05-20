@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7a2b61e7b699319bc57ff3fddcb712ef8e3c30fd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611216"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632855"
 ---
 # <a name="value-types-table-c-reference"></a>Tabelle der Werttypen (C#-Referenz)
 
@@ -36,7 +36,7 @@ In der folgenden Tabelle sind die Werttypen in C# angegeben:
 |[ulong](ulong.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|
 |[ushort](ushort.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Sie verwenden ein Typsuffix zum Angeben eines numerischen Literaltyps. Beispiel:
 

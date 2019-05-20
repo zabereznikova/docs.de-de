@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40c19dc21bb2262ca1f23573cb89f764e4cd2627
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221322"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636108"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher
 

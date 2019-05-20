@@ -1,15 +1,13 @@
 ---
 title: Entwerfen eines DDD-orientierten Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Design DDD-orientierter Microservices für Bestellungen und die entsprechenden Anwendungsschichten
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611483"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639673"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Erstellen eines DDD-orientierten Microservices
 

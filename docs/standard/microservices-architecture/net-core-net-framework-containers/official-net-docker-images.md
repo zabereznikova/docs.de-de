@@ -1,15 +1,13 @@
 ---
 title: Offizielle .NET-Docker-Images
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Offizielle .NET-Docker-Images
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8babdfa91eeb903faac06af8b15e3f09aad98f2e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920752"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644328"
 ---
 # <a name="official-net-docker-images"></a>Offizielle .NET-Docker-Images
 

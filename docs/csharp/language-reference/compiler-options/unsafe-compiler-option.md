@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337330"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877995"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C#-Compileroptionen)
-Die Compileroption **-unsafe** ermöglicht das Kompilieren von Code, der das [unsafe](../../../csharp/language-reference/keywords/unsafe.md)-Schlüsselwort verwendet.  
+
+Die Compileroption **-unsafe** ermöglicht das Kompilieren von Code, der das [unsafe](../keywords/unsafe.md)-Schlüsselwort verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -23,8 +24,9 @@ Die Compileroption **-unsafe** ermöglicht das Kompilieren von Code, der das [un
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Anmerkungen  
- Weitere Informationen zu unsicherem Code finden Sie unter [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+## <a name="remarks"></a>Anmerkungen
+
+Weitere Informationen zu unsicherem Code finden Sie unter [Unsicherer Code und Zeiger](../../programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -46,8 +48,9 @@ Die Compileroption **-unsafe** ermöglicht das Kompilieren von Code, der das [un
 
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
-## <a name="example"></a>Beispiel  
- Kompilieren Sie `in.cs` für den unsicheren Modus:  
+## <a name="example"></a>Beispiel
+
+Kompilieren Sie `in.cs` für den unsicheren Modus:  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen](index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

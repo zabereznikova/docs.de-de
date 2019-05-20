@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 034a391a21e685a6ceb8342bb1738ff34381cebb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf841194ef0990d2eb00481454c89088f4616c8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598045"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586138"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)
 In diesem Thema erfahren Sie, wie eine Ausdrucksbaumstruktur ausgeführt wird. Die Ausführung einer Ausdrucksbaumstruktur gibt möglicherweise einen Wert zurück. Es kann jedoch auch nur eine Aktion ausgeführt werden, z.B. das Aufrufen einer Methode.  
@@ -43,8 +43,6 @@ Console.WriteLine(result);
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
-  
-- Fügen Sie einen Projektverweis auf „System.Core.dll“ hinzu, wenn nicht bereits darauf verwiesen wird.  
   
 - Binden Sie den System.Linq.Expressions-Namespace ein.  
   

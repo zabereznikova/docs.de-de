@@ -1,15 +1,13 @@
 ---
 title: Implementieren von Wiederholungen mit exponentiellem Backoff
 description: Erfahren Sie, wie Sie Wiederholungen mit exponentiellem Backoff implementieren.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 421a4535888f432974c764b238c06b5b323aefb3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 1b948e399495eeb12016006442ac08d2b04f2e69
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362079"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644231"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implementieren von Wiederholungen mit exponentiellem Backoff
 

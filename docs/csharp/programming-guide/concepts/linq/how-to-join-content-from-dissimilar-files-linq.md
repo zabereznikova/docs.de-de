@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328815"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585737"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Kompilieren des Codes
-
-Erstellen und kompilieren Sie ein Projekt, das eine der folgenden Optionen als Ziel verwendet:
-
-- .NET Framework-Version 3.5 mit einem Verweis auf „System.Core.dll“.
-- .NET Framework-Version 4.0 oder höher.
-- .NET Core-Version 1.0 oder höher.
-  
 ## <a name="see-also"></a>Siehe auch
 
 - [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

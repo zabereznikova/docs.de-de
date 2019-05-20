@@ -1,15 +1,13 @@
 ---
 title: Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über wichtige Konzepte für clientseitige Validierungen
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ddf53456f9356817d28cd0bfa75df3296fb5d722
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612614"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644838"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 

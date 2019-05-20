@@ -4,16 +4,16 @@ description: Untersuchen Sie die in ML.NET unterstützten herausragenden technis
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636548"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558014"
 ---
 # <a name="data-transformations"></a>Datentransformationen
 
-Datentransformationen dienen zur Vorbereitung von Daten für das Trainieren des Modells. Die Transformationen in diesem Handbuch geben Klassen zurück, die die [IEstimator](xref:Microsoft.ML.IEstimator`1)-Schnittstelle implementieren. Datentransformationen können miteinander verkettet werden. Jede Transformation erwartet und erzeugt Daten bestimmter Typen und Formate, die in der verknüpften Referenzdokumentation angegeben werden.
+Datentransformationen dienen zur Vorbereitung von Daten für das Trainieren des Modells. Die Transformationen in diesem Handbuch geben Klassen zurück, die die [IEstimator](xref:Microsoft.ML.IEstimator%601)-Schnittstelle implementieren. Datentransformationen können miteinander verkettet werden. Jede Transformation erwartet und erzeugt Daten bestimmter Typen und Formate, die in der verknüpften Referenzdokumentation angegeben werden.
 
 Einige Datentransformationen erfordern Trainingsdaten, um ihre Parameter zu berechnen. Beispiel: Der <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A>-Transformator berechnet den Mittelwert und die Varianz der Trainingsdaten während des `Fit()`-Vorgangs und verwendet diese Parameter im `Transform()`-Vorgang. 
 

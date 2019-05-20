@@ -1,15 +1,13 @@
 ---
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612042"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875937"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -347,7 +345,7 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Greg Young. What is a Domain Event? (Was ist ein Domänenereignis?)** \
-  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Jan Stenberg. Domain Events and Eventual Consistency (Domänenereignisse und letztliche Konsistenz)** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>

@@ -1,15 +1,13 @@
 ---
 title: SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden des SeedWork-Konzepts als Ausgangspunkt zum Implementieren eines DDD-orientierten Domänenmodells
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: bea2dbbc926f351179d11eaacd0dbb89fe036b12
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611067"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639491"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 

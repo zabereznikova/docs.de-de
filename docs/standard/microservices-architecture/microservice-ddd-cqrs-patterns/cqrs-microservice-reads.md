@@ -1,15 +1,13 @@
 ---
 title: Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung der Abfrageseite von CQRS im Microservice für Bestellungen in eShopOnContainers mit Dapper
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360419"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639722"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 

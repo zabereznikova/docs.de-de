@@ -8,18 +8,18 @@ helpviewer_keywords:
 - '- operator [C#]'
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8cf6e8871a88e2b37b9531ecbd616289523473c7
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 920981addd5c779c9ad1c666ef45e1de5cd23408
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333758"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633004"
 ---
 # <a name="--operator-c-reference"></a>-Operator (C#-Referenz)
 
 Der `-`-Operator kann entweder als unärer oder als binärer Operator funktionieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Unäre `-`-Operatoren sind für alle numerischen Typen vordefiniert. Das Ergebnis einer unären `-`-Operation für einen numerischen Typ ist die numerische Negation des Operanden.
 
