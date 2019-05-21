@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583597"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959492"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Datendienst-Versionskontrolle (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht es Ihnen, Datendienste zu erstellen, sodass Clients Daten als Ressourcen mit URIs zugreifen können, die auf einem Datenmodell basieren. OData unterstützt auch die Definition von Dienstvorgängen. Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen diese Datendienste eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z. B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Wenn Sie Änderungen an einem vorhandenen Datendienst vornehmen, müssen Sie berücksichtigen, ob eine neue Version des Datendiensts definiert wird und wie die Auswirkungen auf vorhandene Clientanwendungen am besten minimiert werden. Dieses Thema enthält einen Leitfaden, wann und wie eine neue Version eines Datendiensts erstellt wird. Es wird beschrieben, wie WCF Data Services verarbeitet einen Austausch zwischen Clients und Datendiensten, die verschiedene Versionen des OData-Protokolls unterstützen.
@@ -60,12 +60,12 @@ Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht 
 
  Wenn eine Anwendung die WCF Data Services-Clientbibliotheken verwendet, um einen Datendienst zugreifen, diese Header automatisch von die Bibliotheken auf die richtigen Werte, je nach Version OData und die Funktionen, die in Ihrer Anwendung verwendet werden festgelegt. WCF Data Services verwendet standardmäßig die niedrigste Protokollversion, die den angeforderten Vorgang unterstützt.
 
- In der folgende Tabelle werden die Versionen von .NET Framework und [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] enthalten, die die WCF Data Services-Unterstützung für bestimmte Versionen des OData-Protokolls.
+ Die folgende Tabelle zeigt die Details werden die Versionen von .NET Framework und Silverlight, die WCF Data Services enthalten für bestimmte Versionen des OData-Protokolls unterstützen.
 
 |OData-Protokollversion|Unterstützt seit...|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Version 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Servicepack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] Version 3|
-|Version 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Ein Update für [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Sie können auch herunterladen und installieren Sie das Update aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] Version 4|
+|Version 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Servicepack 1 (SP1)<br />-Silverlight, Version 3|
+|Version 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Ein Update für [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Sie können auch herunterladen und installieren Sie das Update aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight Version 4|
 |Version 3|– Sie können auch herunterladen und installieren Sie eine Vorabversion, die OData Version 3 unterstützt die [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Metadatenversionen

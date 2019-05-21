@@ -2,15 +2,15 @@
 title: Sichern von Peerkanalanwendungen
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603322"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959889"
 ---
 # <a name="securing-peer-channel-applications"></a>Sichern von Peerkanalanwendungen
-Wie für andere Bindungen unter [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] wurde für `NetPeerTcpBinding` Sicherheit standardmäßig aktiviert, und es wird transport- und nachrichtenbasierte Sicherheit (oder beides) unterstützt. In diesem Thema werden diese beiden Typen von Sicherheit erläutert. Der Typ der Sicherheit wird vom Sicherheitsmodus-Tag in der Bindungsspezifikation (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) angegeben.  
+Wie für andere Bindungen unter den WinFX `NetPeerTcpBinding` Sicherheit standardmäßig aktiviert, und bietet sowohl Transport und nachrichtenbasierte Sicherheit (oder beides). In diesem Thema werden diese beiden Typen von Sicherheit erläutert. Der Typ der Sicherheit wird vom Sicherheitsmodus-Tag in der Bindungsspezifikation (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) angegeben.  
   
 ## <a name="transport-based-security"></a>Transportbasierte Sicherheit  
  Peerkanal unterstützt zwei Arten von Authentifizierungs-Anmeldeinformationen für die Transportsicherung, die beide das Festlegen der `ClientCredentialSettings.Peer`-Eigenschaft auf die zugeordnete `ChannelFactory` erfordern:  

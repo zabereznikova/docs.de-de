@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878736"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959965"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WCF) einige bestimmte Sicherheitsszenarien nicht. Z. B. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht implementiert, und daher WCF unterstützt nicht das Ausführen eines Diensts mit Windows-Authentifizierung auf dieser Plattform. Andere Authentifizierungsmechanismen, wie z. B. Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung werden unterstützt, wenn WCF unter Windows XP Home Edition ausgeführt wird.  
@@ -50,7 +50,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="cryptography"></a>Kryptografie  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>Unterstützt HA-256 nur für den Einsatz mit symmetrischen Schlüsseln  
- WCF unterstützt eine Vielzahl von Verschlüsselung und Signatur Digest-erstellungsalgorithmen, die Sie angeben können, mit der algorithmussuite in den vom System bereitgestellten Bindungen. Zur Verbesserung der Sicherheit unterstützt WCF Secure Hash Algorithm (SHA) 2-Algorithmen, insbesondere SHA-256, für die Erstellung von Signatur-Hashwert-Hashes. Dieses Release unterstützt SHA-256 nur für Einsätze mit symmetrischen Schlüsseln, z. B. Kerberos-Schlüssel und wenn kein X.509-Zertifikat zum Signieren der Nachricht verwendet wird. WCF unterstützt keine RSA-Signaturen (in x. 509-Zertifikaten) mit SHA-256-Hash aufgrund der derzeitigen fehlenden Supports für RSA-SHA256, in der [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF unterstützt eine Vielzahl von Verschlüsselung und Signatur Digest-erstellungsalgorithmen, die Sie angeben können, mit der algorithmussuite in den vom System bereitgestellten Bindungen. Zur Verbesserung der Sicherheit unterstützt WCF Secure Hash Algorithm (SHA) 2-Algorithmen, insbesondere SHA-256, für die Erstellung von Signatur-Hashwert-Hashes. Dieses Release unterstützt SHA-256 nur für Einsätze mit symmetrischen Schlüsseln, z. B. Kerberos-Schlüssel und wenn kein X.509-Zertifikat zum Signieren der Nachricht verwendet wird. WCF unterstützt keine RSA-Signaturen (in x. 509-Zertifikaten) mit SHA-256-Hash aufgrund der derzeitigen fehlenden Supports für RSA-SHA256 in der "WinFX".  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS-kompatible SHA-256-Hashes werden nicht unterstützt  
  WCF unterstützt keine SHA-256-FIPS-kompatiblen Hashes, sodass algorithmussuites, die SHA-256 Verwenden von WCF auf Systemen nicht unterstützt werden, wenn für die Verwendung von FIPS-konformen Algorithmus erforderlich ist.  
