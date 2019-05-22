@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469466"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960296"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -63,7 +63,7 @@ Diese Beispielserie veranschaulicht viele der Funktionen von Language Integrated
 
 **Beispiel für einen verwalteten COM-Server**
 
-Das [COM-Server](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)-Beispiel veranschaulicht, wie ein verwalteter COM-Server erstellt wird und global registriert werden kann.
+Das [COM-Server](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)-Beispiel veranschaulicht, wie ein verwalteter COM-Server erstellt wird und über eine registrierungsfreie COM-Instanz global registriert oder genutzt werden kann.
 
 **Beispiel zu Microsoft Office-PIAs**
 

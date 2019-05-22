@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: Zeigerkonvertierungen
           href: pointer-conversions.md
-        - name: Zeigerausdrücke
-          items:
-            - name: 'Vorgehensweise: Abrufen des Werts einer Zeigervariablen'
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: 'Vorgehensweise: Abrufen der Adresse einer Variablen'
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: 'Vorgehensweise: Zugreifen auf ein Element mit einem Zeiger'
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: 'Vorgehensweise: Zugreifen auf ein Arrayelement mit einem Zeiger'
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: Bearbeiten von Zeigern
-              items:
-                - name: 'Vorgehensweise: Inkrementieren und Dekrementieren von Zeigern'
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: Arithmetische Operationen für Zeiger
-                  href: arithmetic-operations-on-pointers.md
-                - name: Zeigervergleich
-                  href: pointer-comparison.md
-        - name: 'Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays'
+        - name: 'Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays (C#-Programmierhandbuch)'
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

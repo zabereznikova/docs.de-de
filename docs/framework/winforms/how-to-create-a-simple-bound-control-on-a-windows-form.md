@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008953"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003762"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einer Windows Forms-Instanz
 Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spaltenwert aus einem Dataset-Tabelle in einem Steuerelement anzeigen. Sie können einfach eine Eigenschaft eines Steuerelements an einen Datenwert binden.  
@@ -28,7 +28,7 @@ Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spalte
   
      Die am häufigsten gebundenen Eigenschaften werden angezeigt, darunter die **(DataBindings)** Eigenschaft. In den meisten Steuerelementen, z. B. die **Text** -Eigenschaft wird am häufigsten gebunden.  
   
-4. Die Eigenschaft gewünscht Bindung gehört nicht zu den häufig gebundenen Eigenschaften, klicken Sie auf die **Auslassungspunkte** Schaltfläche (![VisualStudioEllipsesButton-bildschirmabbildung](./media/vbellipsesbutton.png "VbEllipsesButton") ) in der **(Erweitert)** anzuzeigen die **Formatierung und erweiterte Bindung** Dialogfeld mit einer vollständigen Liste der Eigenschaften, die für dieses Steuerelement.  
+4.  Wunsch die Eigenschaft binden gehört nicht zu den häufig gebundenen Eigenschaften, klicken Sie auf die **mit den Auslassungspunkten** Schaltfläche (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) in der **() "Erweitert")** anzuzeigen die **Formatierung und erweiterte Bindung** Dialogfeld mit einer vollständigen Liste der Eigenschaften, die für dieses Steuerelement.  
   
 5. Wählen Sie die Eigenschaft, die Sie binden möchten und klicken Sie auf den Dropdownpfeil unter **Bindung**.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008966"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003733"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Vorgehensweise: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
 Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem datengebundenen Steuerelement angezeigt wird, indem die **Formatierung und erweiterte Bindung** Dialogfeld.  
@@ -27,7 +27,7 @@ Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem daten
   
 2. Wählen Sie im Formular das Steuerelement aus, und öffnen Sie dann das Eigenschaftenfenster.  
   
-3. Erweitern Sie die **(DataBindings)** -Eigenschaft, und klicken Sie dann in der **(Erweitert)** klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](./media/vbellipsesbutton.png " VbEllipsesButton")) zum Anzeigen der **Formatierung und erweiterte Bindung** dieses Dialogfeld wird eine vollständige Liste der Eigenschaften dieses Steuerelements ist.  
+3.  Erweitern Sie die **(DataBindings)** -Eigenschaft, und klicken Sie dann in der **(Erweitert)** klicken Sie auf die Schaltfläche (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio.](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) zum Anzeigen der **Formatierung und erweiterte Bindung** dieses Dialogfeld wird eine vollständige Liste der Eigenschaften dieses Steuerelements ist.  
   
 4. Wählen Sie die Eigenschaft, die Sie binden möchten, und klicken Sie dann auf die **Bindung** Pfeil.  
   
