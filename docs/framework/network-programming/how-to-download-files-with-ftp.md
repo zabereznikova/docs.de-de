@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-ms.openlocfilehash: 4e000aa149a9a02e6f12e9b184d9c43a065b673f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028304"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632994"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="dacdd-103">Vorgehensweise: Herunterladen von Dateien über FTP</span><span class="sxs-lookup"><span data-stu-id="dacdd-103">How to: Download files with FTP</span></span>
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="c78ce-103">Vorgehensweise: Herunterladen von Dateien über FTP</span><span class="sxs-lookup"><span data-stu-id="c78ce-103">How to: Download files with FTP</span></span>
 
-<span data-ttu-id="dacdd-104">Dieses Beispiel zeigt, wie eine Datei von einem FTP-Server heruntergeladen werden kann.</span><span class="sxs-lookup"><span data-stu-id="dacdd-104">This sample shows how to download a file from an FTP server.</span></span>
+<span data-ttu-id="c78ce-104">Dieses Beispiel zeigt, wie eine Datei von einem FTP-Server heruntergeladen werden kann.</span><span class="sxs-lookup"><span data-stu-id="c78ce-104">This sample shows how to download a file from an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="dacdd-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="dacdd-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c78ce-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c78ce-105">Example</span></span>
 
 ```csharp
 using System;
