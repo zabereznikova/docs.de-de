@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633871"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882490"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Vorgehensweise: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
@@ -98,7 +98,7 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
  Ihr Code kann entweder die <xref:System.DateTime.Parse%2A>- oder <xref:System.DateTime.TryParse%2A>-Methode zum Konvertieren der Zeichenfolgendarstellung eines Datums und einer Uhrzeit des Benutzers in einen <xref:System.DateTime>-Wert aufrufen. Wiederholte an eine Analysemethode gerichtete Aufrufe können für einen einzelnen Analysevorgang erforderlich sein. Daher ist die <xref:System.DateTime.TryParse%2A>-Methode besser, weil sie `false` zurückgibt, wenn bei einem Analysevorgang ein Fehler auftritt. Im Gegensatz dazu kann das Behandeln wiederholter Ausnahmen, die ggf. von der <xref:System.DateTime.Parse%2A>-Methode ausgelöst werden, ein sehr ressourcenintensiver Vorgang in einer Webanwendung sein.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um den Code zu kompilieren, erstellen Sie eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite ohne CodeBehind. Anschließend kopieren Sie das Beispiel in die Webseite, damit es den vorhandenen Code ersetzt. Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite sollte folgende Steuerelemente enthalten:  
+ Um den Code zu kompilieren, erstellen Sie eine ASP.NET-Webseite ohne CodeBehind. Anschließend kopieren Sie das Beispiel in die Webseite, damit es den vorhandenen Code ersetzt. Die ASP.NET-Webseite sollte folgende Steuerelemente enthalten:  
   
 - Ein <xref:System.Web.UI.WebControls.Label>-Steuerelement, auf das nicht im Code verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A>-Eigenschaft auf „Geben Sie eine Zahl ein:“ fest.  
   

@@ -1,15 +1,13 @@
 ---
 title: Verwenden von Azure Service Fabric
 description: Erfahren Sie, welche Azure Service Fabric-Anwendungsmodelle Sie neben der einfachen Nutzung zum Orchestrieren von Containern verwenden können.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126964"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644528"
 ---
 # <a name="using-azure-service-fabric"></a>Verwenden von Azure Service Fabric
 
@@ -27,7 +25,7 @@ Service Fabric ist im Hinblick auf die Erstellung von Diensten unabhängig, soda
 
 Wie in Abbildung 4-27 veranschaulicht, können Sie Microservices in Service Fabric als einfache Prozesse oder als Docker-Container erstellen und ausführen. Sie können auch containerbasierte Microservices mit prozessbasierten Microservices in einem Service Fabric-Cluster kombinieren.
 
-![Vergleich der Azure Service Fabric-Cluster: Microservices als Prozesse, bei denen jeder Knoten einen Prozess für jeden Microservice ausführt; Microservices als Container, bei denen jeder Knoten Docker mit mehreren Containern ausführt, einen Container pro Microservice.](./media/image30.png)
+![Vergleich von Azure Service Fabric-Clustern: Microservices als Prozesse, bei denen jeder Knoten einen Prozess für jeden Microservice ausführt; Microservices als Container, bei denen jeder Knoten Docker mit mehreren Containern ausführt (einen Container pro Microservice).](./media/image30.png)
 
 **Abbildung 4-27.** Bereitstellen von Microservices als Prozesse oder Container in Azure Service Fabric
 

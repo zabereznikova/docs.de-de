@@ -1,15 +1,15 @@
 ---
-title: F#Codierungskonventionen
+title: Codekonventionen für F#
 description: Erfahren Sie, allgemeine Richtlinien und Idiome, beim Schreiben von F# Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052800"
 ---
-# <a name="f-coding-conventions"></a>F#Codierungskonventionen
+# <a name="f-coding-conventions"></a>Codekonventionen für F#
 
 Die folgenden Konventionen aus Erfahrung, die Arbeit mit großen F# formuliert werden Codebasen. Die [fünf Prinzipien guten F# Code](index.md#five-principles-of-good-f-code) bilden die Grundlage jeder Empfehlung. Sie beziehen sich auf die [ F# Richtlinien zum Entwerfen der Komponente](component-design-guidelines.md), jedoch gelten für alle F# code, nicht nur Komponenten wie Bibliotheken.
 
@@ -611,7 +611,7 @@ Da bei der Interaktion mit der Visual Studio Code-API, keine Notwendigkeit für 
 
 ## <a name="type-abbreviations"></a>Typabkürzungen
 
-[Typabkürzungen](../language-reference/type-abbreviations.md) sind eine einfache Möglichkeit zum Zuweisen einer Bezeichnung in einen anderen Typ, z. B. einer Funktionssignatur oder einen komplexen Typ. Der folgende Alias weist z. B. eine Bezeichnung, was erforderlich ist, definieren Sie eine Berechnung mit [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), ein Deep learning-Bibliothek:
+[Typabkürzungen](../language-reference/type-abbreviations.md) sind eine einfache Möglichkeit zum Zuweisen einer Bezeichnung in einen anderen Typ, z. B. einer Funktionssignatur oder einen komplexen Typ. Der folgende Alias weist z. B. eine Bezeichnung, was erforderlich ist, definieren Sie eine Berechnung mit [CNTK](https://docs.microsoft.com/cognitive-toolkit/), ein Deep learning-Bibliothek:
 
 ```fsharp
 open CNTK

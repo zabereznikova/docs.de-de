@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052832"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Vorgehensweise: Erstellen von untergeordneten MDI-Formularen
 
@@ -34,7 +34,7 @@ Im folgenden Verfahren verwenden Sie Visual Studio ein untergeordnetes MDI-Formu
 
 4. In **Projektmappen-Explorer**, mit der rechten Maustaste in des Projekts, zeigen Sie auf **hinzufügen**, und wählen Sie dann **neues Element hinzufügen**.
 
-5. In der **neues Element hinzufügen** wählen Sie im Dialogfeld **Windows Form** (in Visual Basic oder Visual c#) oder **Windows Forms-Anwendung (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) aus der  **Vorlagen** Bereich. In der **Namen** benennen Sie das Formular **Form2**. Klicken Sie auf die **öffnen** , um das Formular zum Projekt hinzuzufügen.
+5. In der **neues Element hinzufügen** wählen Sie im Dialogfeld **Windows Form** (in Visual Basic oder Visual C#) oder **Windows Forms-Anwendung (.NET)** (in Visual C++) aus der **Vorlagen** Bereich. In der **Namen** benennen Sie das Formular **Form2**. Klicken Sie auf die **öffnen** , um das Formular zum Projekt hinzuzufügen.
 
     > [!NOTE]
     > Das untergeordnete MDI-Formular, das Sie in diesem Schritt erstellten haben, ist ein Standard-Windows Form. Als solches besitzt es eine Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A>, mit der Sie die Transparenz des Formulars steuern können. Allerdings wurde die Eigenschaft <xref:System.Windows.Forms.Form.Opacity%2A> für Fenster der obersten Ebene entwickelt. Verwenden Sie sie nicht mit untergeordneten MDI-Formularen, da Darstellungsprobleme auftreten können.

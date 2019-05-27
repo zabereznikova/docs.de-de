@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026483"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053242"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -141,7 +141,7 @@ Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Allerdings die <x
 >  Der Zeitraum Reiwa, eine neue Ära in der <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, beginnt am 1. Mai 2019. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Finden Sie unter den folgenden Artikeln Weitere Informationen:
 > - [Behandeln eine neue Ära im japanischen Kalender in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), Kalender mit mehreren Zeiträumen und erläutert bewährte Verfahren zu verwenden, bei der Verarbeitung mit mehreren Zeitraum Kalender in der dokumentiert sind Funktionen hinzugefügt, die zu .NET unterstützen.
 > - [Vorbereiten Ihrer Anwendung auf die japanischen Zeitraum Änderung](/windows/uwp/design/globalizing/japanese-era-change), die Informationen bereitstellt, auf das Testen von Anwendungen auf Windows, um sicherzustellen, dass deren Bereitschaft für den Zeitraum ändern.
-> - [Zusammenfassung der neuen japanischen Ära aktualisiert für .NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), dem .NET Framework-Updates für einzelne Windows-Versionen aufgeführt, die im Zusammenhang mit der neuen Ära der japanischen Kalender, Anmerkungen zu dieser neuen Features von .NET Framework für die Unterstützung von mehreren Zeiträumen und enthält die Dinge, die beim Testen Ihrer Anwendungen gesucht.
+> - [Zusammenfassung der neuen japanischen Ära aktualisiert für .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), dem .NET Framework-Updates für einzelne Windows-Versionen aufgeführt, die im Zusammenhang mit der neuen Ära der japanischen Kalender, Anmerkungen zu dieser neuen Features von .NET Framework für die Unterstützung von mehreren Zeiträumen und enthält die Dinge, die beim Testen Ihrer Anwendungen gesucht.
 
 Ein Zeitraum, in den meisten Kalendern gibt einen extrem langen Zeitraum an. Im gregorianischen Kalender umfasst mehr als zwei Jahrtausenden z. B. der aktuelle Zeitraum. Für die <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, die beiden Kalender, die mehrere Zeiträume unterstützen, ist dies nicht der Fall. Ein Zeitraum entspricht dem Zeitraum des ein Kaisers. Unterstützung für mehrere Zeiträume, insbesondere dann, wenn die Obergrenze des aktuellen Zeitraums unbekannt ist, beträgt besondere Herausforderungen verbunden ist. 
 

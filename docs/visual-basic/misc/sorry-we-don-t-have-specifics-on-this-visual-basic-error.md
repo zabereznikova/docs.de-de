@@ -3044,26 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594775"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053321"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Leider haben wir keine Einzelheiten zu diesem Visual Basic-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler, die eines der folgenden Foren nutzen, Fragen stellen:  
   
- [Visual Basic-Sprache](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
+ [Visual Basic-Sprache](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Sprache Visual Basic-Syntax und des Compilers.  
   
- [Visual Basic-Interop und -Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
+ [Visual Basic-Interop und -Upgrade](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
  Bietet ein Forum für Fragen und Probleme mit einem Upgrade auf Visual Basic und die Arbeit mit Interoperabilitätsfunktionen.  
   
- [Visual Basic-IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
+ [Visual Basic-IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  Bietet ein Forum für Fragen dazu, wie Sie in Visual Studio-Umgebung arbeiten.  
   
- [Allgemeines zu Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
+ [Allgemeines zu Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
  Bietet ein Forum für Fragen und Probleme mit Visual Basic, der in anderen Foren nicht erläutert werden.  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  

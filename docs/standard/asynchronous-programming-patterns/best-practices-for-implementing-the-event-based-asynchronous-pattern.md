@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628843"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882514"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um asynchrones Verhalten in Klassen mit einer vertrauten Ereignis- und Delegatsemantik verfügbar zu machen. Für eine Implementierung des ereignisbasierten asynchronen Musters müssen Sie einige spezielle Verhaltensanforderungen befolgen. In den folgenden Abschnitten sind Anforderungen und Richtlinien beschrieben, die Sie bei der Implementierung einer Klasse berücksichtigen sollten, die dem ereignisbasierten asynchronen Muster folgt.  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - Fangen Sie alle Ausnahmen ab, die im asynchronen Vorgang auftreten, und legen Sie den Wert der <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType>-Eigenschaft auf diese Ausnahme fest.  
   
 ### <a name="threading-and-contexts"></a>Threading und Kontexte  
- Für einen korrekten Vorgang Ihrer Klasse ist es wichtig, dass die Ereignishandler des Clients in richtigen Thread oder Kontext des entsprechenden Anwendungsmodells aufgerufen werden, einschließlich [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]- und Windows Forms-Anwendungen. Es werden zwei wichtige Hilfsklassen bereitgestellt, um sicherzustellen, dass sich Ihre asynchrone Klasse unter jedem Anwendungsmodell korrekt verhält: <xref:System.ComponentModel.AsyncOperation> und <xref:System.ComponentModel.AsyncOperationManager>.  
+ Für die korrekte Funktionsweise Ihrer Klasse ist es wichtig, dass die Ereignishandler des Clients im richtigen Thread oder Kontext des entsprechenden Anwendungsmodells aufgerufen werden, einschließlich ASP.NET- und Windows Forms-Anwendungen. Es werden zwei wichtige Hilfsklassen bereitgestellt, um sicherzustellen, dass sich Ihre asynchrone Klasse unter jedem Anwendungsmodell korrekt verhält: <xref:System.ComponentModel.AsyncOperation> und <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> stellt eine Methode bereit, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, die <xref:System.ComponentModel.AsyncOperation> zurückgibt. Ihre <em>MethodName</em>**Async**-Methode ruft <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> auf, und Ihre Klasse verwendet den zurückgegebenen <xref:System.ComponentModel.AsyncOperation>, um die Lebensdauer des asynchronen Tasks nachzuverfolgen.  
   

@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b466b27925b41823ce3f6537782f3bd6201d5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868514"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052626"
 ---
 # <a name="getting-started-with-net-native"></a>Erste Schritte mit .NET Native
 
-Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder eine vorhandene Windows Store-App migrieren, können Sie dieselben Verfahren verwenden. Um eine [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App zu erstellen, gehen Sie wie folgt vor:
+Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder eine vorhandene Windows Store-App migrieren, können Sie dieselben Verfahren verwenden. Um eine .NET Native-app zu erstellen, gehen Sie folgendermaßen vor:
 
 1. [Entwickeln Sie eine UWP-App (Universelle Windows-Plattform), die auf Windows 10 ausgerichtet ist](#Step1), und testen Sie die Debugbuilds der App, um sicherzustellen, dass sie ordnungsgemäß funktioniert.
 
@@ -21,10 +21,10 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
 
 3. [Deploy and test the release builds of your app (Stellen Sie die Releasebuilds Ihrer App bereit, und testen Sie sie)](#Step3).
 
-4. [Beheben Sie fehlende Metadaten manuell](#Step4), und wiederholen Sie [Schritt 3](#Step3) , bis alle Probleme gelöst sind.
+4. [Manually resolve missing metadata (Beheben Sie fehlende Metadaten manuell)](#Step4), und wiederholen Sie [Schritt 3](#Step3), bis alle Probleme gelöst sind.
 
 > [!NOTE]
-> Wenn Sie eine vorhandene Windows Store-App zu [!INCLUDE[net_native](../../../includes/net-native-md.md)]migrieren, lesen Sie unbedingt auch [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> Wenn Sie eine vorhandene Windows Store-app auf .NET Native migrieren, müssen Sie unbedingt überprüfen [Migrieren Ihrer Windows Store-App auf .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
 
 <a name="Step1"></a>
 
@@ -36,12 +36,12 @@ Egal, ob Sie eine neue App entwickeln oder eine vorhandene migrieren, Sie verwen
 
 2. Beachten Sie, dass es einige bekannte Kompatibilitätsprobleme zwischen dem Kompilieren von UWP-App-Projekten mit und ohne .NET Native-Toolkette gibt. Weitere Informationen finden Sie im [Migrationshandbuch](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) .
 
-Sie können jetzt C#- oder Visual Basic-Code auf dem [!INCLUDE[net_native](../../../includes/net-native-md.md)] -Oberflächenbereich schreiben, der auf einem lokalen System (oder im Simulator) ausgeführt wird.
+Sie können nun C# oder Visual Basic-Code für die .NET Native-Oberfläche, die auf dem lokalen System (oder im Simulator) ausgeführt wird.
 
 > [!IMPORTANT]
 > Beachten Sie bei der Entwicklung Ihrer App jede Verwendung von Serialisierung oder Reflektion im Code.
 
-Standardmäßig werden Debugversionen mit JIT kompiliert, um eine schnelle F5-Bereitstellung zu ermöglichen, während endgültige Versionen mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)] -Vorkompilierungstechnologie kompiliert werden. Das bedeutet, dass Sie die Debugbuilds Ihrer App erstellen und testen sollten, um sicherzustellen, dass sie ordnungsgemäß funktionieren, bevor sie mit der .NET Native-Toolkette kompiliert werden.
+Standardmäßig sind die Debug-Builds JIT kompiliert, um eine schnelle F5-Bereitstellung zu ermöglichen, während Releasebuilds mit der .NET Native-vorkompilierungstechnologie kompiliert werden. Das bedeutet, dass Sie die Debugbuilds Ihrer App erstellen und testen sollten, um sicherzustellen, dass sie ordnungsgemäß funktionieren, bevor sie mit der .NET Native-Toolkette kompiliert werden.
 
 <a name="Step2"></a>
 
@@ -85,13 +85,13 @@ Nachdem Sie die Laufzeitdirektivendatei aktualisiert haben, können Sie erneut R
 
 Wenn Ihre app nicht ordnungsgemäß funktioniert (insbesondere in Fällen, in denen es [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) oder [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) Ausnahmen zur Laufzeit), befolgen Sie die Anweisungen in den nächsten Abschnitt [Schritt 4: Manuelles Beheben fehlender Metadaten](#Step4). Das Aktivieren von Ausnahmen der ersten Chance kann hilfreich sein, um diese Fehler zu finden.
 
-Wenn Sie die Debugversionen der App getestet und debuggt haben und sicher sind, dass Sie die Ausnahmen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) und [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) beseitigt haben, sollten Sie die App als optimierte [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App testen. Zu diesem Zweck ändern Sie die aktive Projektkonfiguration von **Debug** in **Release**.
+Wenn Sie getestet haben, und Debuggen das Debuggen Ihrer App-builds und sicher sind, dass Sie entfernt haben, haben die [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) und [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) Ausnahmen, sollten Sie testen Ihre app als optimierte .NET Native-app. Zu diesem Zweck ändern Sie die aktive Projektkonfiguration von **Debug** in **Release**.
 
 <a name="Step4"></a>
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>Schritt 4: Manuelles Beheben fehlender Metadaten
 
-Der häufigste Fehler, der mit [!INCLUDE[net_native](../../../includes/net-native-md.md)] auftritt und auf dem Desktop nicht, ist eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-, [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)- oder [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) -Laufzeitausnahme. In einigen Fällen kann das Fehlen von Metadaten zu unvorhersehbarem Verhalten oder sogar zu App-Fehlern führen. Dieser Abschnitt beschreibt, wie Sie diese Ausnahmen debuggen und beheben können, indem Sie Direktiven zur Laufzeitdirektivendatei hinzufügen. Informationen zu Laufzeitanweisungen finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei von Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Nach dem Hinzufügen von Laufzeitanweisungen sollten Sie [die App erneut bereitstellen und testen](#Step3) und ggf. alle neuen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-, [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)- und [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)-Ausnahmen auflösen, bis keine Ausnahmen mehr auftreten.
+Der häufigste Fehler, die mit .NET-Native, die auf dem Desktop auftreten nicht auftritt, ist eine Laufzeit [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), oder [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) Ausnahme. In einigen Fällen kann das Fehlen von Metadaten zu unvorhersehbarem Verhalten oder sogar zu App-Fehlern führen. Dieser Abschnitt beschreibt, wie Sie diese Ausnahmen debuggen und beheben können, indem Sie Direktiven zur Laufzeitdirektivendatei hinzufügen. Informationen zu Laufzeitanweisungen finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei von Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Nach dem Hinzufügen von Laufzeitanweisungen sollten Sie [die App erneut bereitstellen und testen](#Step3) und ggf. alle neuen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-, [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)- und [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)-Ausnahmen auflösen, bis keine Ausnahmen mehr auftreten.
 
 > [!TIP]
 > Geben Sie die Laufzeitdirektiven auf einer hohen Ebene an, um Ihre App flexibel in Bezug auf Codeänderungen zu machen.  Es wird empfohlen, Laufzeitdirektiven auf Namespace- und Typebene statt auf Memberebene hinzufügen. Beachten Sie, dass möglicherweise ein Kompromiss zwischen Flexibilität und größeren Binärdateien mit längeren Kompilierungszeiten gefunden werden muss.
@@ -113,7 +113,7 @@ Beim Behandeln einer Ausnahme wegen fehlender Metadaten sollten Sie Folgendes be
   - Ruft der Code eine Methode auf, die von Reflektion abhängt, wenn eine bessere Alternative zur Verfügung steht?
 
 > [!NOTE]
-> Weitere Informationen zur Behandlung von Problemen, die sich aus Unterschieden in der Reflektion und der Verfügbarkeit von Metadaten in Desktop-Apps und [!INCLUDE[net_native](../../../includes/net-native-md.md)]ergeben, finden Sie unter [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> Weitere Informationen zur Behandlung von Problemen, die sich aus Unterschieden in der Reflektion und der Verfügbarkeit von Metadaten in desktop-apps und .NET Native ergeben, finden Sie [APIs, die Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
 Einige spezifische Beispiele für das Behandeln von Ausnahmen und anderen Problemen beim Testen der App finden Sie unter:
 

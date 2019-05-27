@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724043"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880333"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -73,30 +73,28 @@ Die Übergabe von Zeigern zwischen Methoden kann zu nicht definiertem Verhalten 
 
 In der folgenden Tabelle werden die Operatoren und Anweisungen aufgelistet, die in einem unsicheren Kontext auf Zeiger angewendet werden können.
 
-|Operator/Anweisung|Mit|
+|Operator/Anweisung|Verwendung|
 |-------------------------|---------|
-|*|Führt eine Zeigerdereferenzierung aus.|
-|->|Greift über einen Zeiger auf einen Member einer Struktur zu.|
-|[]|Indiziert einen Zeiger.|
+|`*`|Führt eine Zeigerdereferenzierung aus.|
+|`->`|Greift über einen Zeiger auf einen Member einer Struktur zu.|
+|`[]`|Indiziert einen Zeiger.|
 |`&`|Ruft die Adresse einer Variablen ab.|
-|++ und --|Inkrementiert und dekrementiert Zeiger.|
-|+ und -|Führt Zeigerarithmetik aus.|
-|==, !=, \<, >, \<=, und >=|Vergleicht Zeiger.|
-|`stackalloc`|Belegt Speicher für den Stapel.|
-|`fixed`-Anweisung|Fixiert eine Variable vorübergehend, damit ihre Adresse gefunden werden kann.|
+|`++` und `--`|Inkrementiert und dekrementiert Zeiger.|
+|`+` und `-`|Führt Zeigerarithmetik aus.|
+|`==`, `!=`, `<`, `>`, `<=` und `>=`|Vergleicht Zeiger.|
+|[`stackalloc`-Operator](../../language-reference/keywords/stackalloc.md)|Belegt Speicher für den Stapel.|
+|[`fixed`-Anweisung](../../language-reference/keywords/fixed-statement.md)|Fixiert eine Variable vorübergehend, damit ihre Adresse gefunden werden kann.|
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+Weitere Informationen zu Zeigeroperatoren finden Sie unter [Operatoren im Zusammenhang mit Zeigern](../../language-reference/operators/pointer-related-operators.md).
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Zeigertypen](~/_csharplang/spec/unsafe-code.md#pointer-types) der [Spezifikation für die Sprache C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Unsicherer Code und Zeiger](index.md)
 - [Zeigerkonvertierungen](pointer-conversions.md)
-- [Zeigerausdrücke](pointer-expressions.md)
 - [Typen](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed-Anweisung](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Boxing und Unboxing](../types/boxing-and-unboxing.md)

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628917"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882504"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Vorgehensweise: Implementieren von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen
 Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- Diese exemplarische Vorgehensweise veranschaulicht das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert. Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=nameWithType>-Namespace implementiert, was eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet, z.B. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], Konsolenanwendungen und Windows Forms-Anwendungen. Diese Komponente kann auch mit einem <xref:System.Windows.Forms.PropertyGrid>-Steuerelement und Ihren eigenen Designern gestaltet werden.  
+ Diese exemplarische Vorgehensweise veranschaulicht das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert. Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=nameWithType>-Namespace implementiert, wodurch eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet wird, z. B. ASP.NET, Konsolenanwendungen und Windows Forms-Anwendungen. Diese Komponente kann auch mit einem <xref:System.Windows.Forms.PropertyGrid>-Steuerelement und Ihren eigenen Designern gestaltet werden.  
   
  Wenn Sie diese exemplarische Vorgehensweise abgeschlossen haben, verfügen Sie über eine Anwendung, die Primzahlen asynchron berechnet. Ihre Anwendung wird einen Thread für die Hauptbenutzeroberfläche und einen Thread für jede Primzahlenberechnung haben. Obwohl das Testen, ob eine große Zahl eine Primzahl ist, merklich Zeit in Anspruch nimmt, wird der Thread der Hauptbenutzeroberfläche nicht durch diese Verzögerung unterbrochen, und das Formular behält während der Berechnung seine Reaktionsfähigkeit. Sie können beliebig viele Berechnungen gleichzeitig ausführen und ausstehende Berechnungen selektiv abbrechen.  
   

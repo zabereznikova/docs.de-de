@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 81a293a6922a71f7428167c50aed064d7387a099
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236621"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875872"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C#-Referenz)
 
@@ -34,7 +34,7 @@ Der unsichere Kontext erstreckt sich von der Parameterliste bis zum Ende der Met
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-Sie können auch einen unsafe-Block verwenden, um die Verwendung von unsicherem Code in diesem Block zu aktivieren. Zum Beispiel:
+Sie können auch einen unsafe-Block verwenden, um die Verwendung von unsicherem Code in diesem Block zu aktivieren. Beispiel:
 
 ```csharp
 unsafe
@@ -43,7 +43,7 @@ unsafe
 }
 ```
 
-Um unsicheren Code kompilieren zu können, müssen Sie die Compileroption [/unsafe](../compiler-options/unsafe-compiler-option.md) angeben. Unsicherer Code kann nicht von der Common Language Runtime überprüft werden.
+Um unsicheren Code kompilieren zu können, müssen Sie die Compileroption [`-unsafe`](../compiler-options/unsafe-compiler-option.md) angeben. Unsicherer Code kann nicht von der Common Language Runtime überprüft werden.
 
 ## <a name="example"></a>Beispiel
 

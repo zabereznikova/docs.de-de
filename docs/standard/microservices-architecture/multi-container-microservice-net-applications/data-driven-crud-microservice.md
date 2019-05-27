@@ -2,12 +2,12 @@
 title: Erstellen eines einfachen datengesteuerten CRUD-Microservice
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Grundlagen der Erstellung eines einfachen CRUD-Microservice (datengesteuert) im Kontext einer Microserviceanwendung.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644425"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053567"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -294,13 +294,13 @@ Dieser Mechanismus für die Versionsverwaltung ist einfach und richtet sich nach
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Versionsverwaltung von RESTful-Web-APIs in ASP.NET Core leicht gemacht)** \
+- **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Versionsverwaltung von RESTful-Web-APIs in ASP.NET Core leicht gemacht)**  \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Versionsverwaltung einer RESTful-Web-API** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Versioning, Hypermedia, and REST (Versionsverwaltung, Hypermedia und REST)** \
+- **Roy Fielding. Versioning, Hypermedia, and REST (Versionsverwaltung, Hypermedia und REST)**  \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generieren von Swagger-Beschreibungsmetadaten aus Ihrer ASP.NET Core-Web-API
@@ -321,7 +321,7 @@ Im Folgenden werden die wichtigsten Gründe für das Generieren von Swagger-Meta
 
 - [AutoRest](https://github.com/Azure/AutoRest). Sie können automatisch .NET-Clientklassen für den Aufruf von Swagger generieren. Dieses Tool kann von der CLI verwendet werden und integriert auch Visual Studio für eine benutzerfreundliche Verwendung über die GUI.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). Ermöglicht die automatische [Verwendung und Integration Ihrer API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) in einen allgemeinen Workflow von Microsoft Flow, ohne dass hierzu Programmierkenntnisse erforderlich sind.
+- [Microsoft Flow](https://flow.microsoft.com/). Ermöglicht die automatische [Verwendung und Integration Ihrer API](https://flow.microsoft.com/blog/integrating-custom-api/) in einen allgemeinen Workflow von Microsoft Flow, ohne dass hierzu Programmierkenntnisse erforderlich sind.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). Sie können automatisch Ihre API aus [mobilen PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) nutzen, die mit [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/) erstellt wurden, ohne dass hierzu Programmierkenntnisse erforderlich sind.
 

@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672367"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881982"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -23,8 +23,8 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
     * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`
     * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`
     * Unicode-Zeichen: `char`
-    * IEEE-Gleitkomma: `float`, `double`
-    * Dezimalwert mit hoher Genauigkeit: `decimal`
+    * Binäres Gleitkomma (IEEE): `float`, `double`
+    * Dezimale Gleitkommazahl mit hoher Genauigkeit: `decimal`
     * Boolesch: `bool`
   - [Enumerationstypen][EnumTypes]
     * Benutzerdefinierte Typen der Form `enum E {...}`
@@ -55,33 +55,11 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Die acht Ganzzahltypen unterstützen 8-Bit-, 16-Bit, 32-Bit- und 64-Bit-Werte mit oder ohne Vorzeichen.
-
-Die zwei Gleitkommatypen `float` und `double` werden jeweils im 32-Bit-IEC-60559-Format mit einfacher Genauigkeit und 64-Bit-IEC-60559-Format mit doppelter Genauigkeit dargestellt.
-
-Der `decimal`-Typ ist ein für Finanz-und Währungsberechnungen geeigneter 128-Bit-Datentyp.
+Weitere Informationen zu numerischen Typen finden Sie unter [Tabelle ganzzahliger Typen](../language-reference/keywords/integral-types-table.md) und [Tabelle für Gleitkommatypen](../language-reference/keywords/floating-point-types-table.md).
 
 Der `bool`-Typ von C# dient zur Darstellung boolescher Werte – Werte, die entweder `true` oder `false` sind.
 
 Zur Zeichen- und Zeichenfolgenverarbeitung in C# wird die Unicode-Codierung verwendet. Der `char`-Typ stellt eine UTF-16-Codeeinheit dar und der `string`-Typ eine Folge von UTF-16-Codeeinheiten.
-
-Hier sind die numerischen Typen von C# zusammengefasst.
-
-* Ganzzahlig mit Vorzeichen
-  - `sbyte`:  8 Bit, Bereich von -128 bis 127
-  - `short`: 16 Bit, Bereich von -32.768 bis 32.767
-  - `int`: 32 Bit, Bereich von -2.147.483.648 bis 2.147.483.647
-  - `long` : 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
-* Ganzzahlig ohne Vorzeichen
-  - `byte`:  8 Bit, Bereich von -0 bis 255
-  - `ushort` : 16 Bit, Bereich von 0 bis 65.535
-  - `uint`: 32 Bit, Bereich von 0 bis 4.294.967.295
-  - `ulong`: 64 Bit, Bereich von 0 bis 18.446.744.073.709.551.615
-* Gleitkomma
-  - `float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> bis 3,4 x 10<sup>38</sup>, Genauigkeit von 7 Stellen
-  - `double` : 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> bis 1,7 x 10<sup>308</sup>, Genauigkeit von 15 Stellen
-* Decimal
-  - `decimal` : 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> bis 7,9 x 10<sup>28</sup>, mit einer Genauigkeit von mindestens 28 Stellen
 
 C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.
 

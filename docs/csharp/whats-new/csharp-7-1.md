@@ -2,12 +2,12 @@
 title: Neues in C# 7.1
 description: Eine Übersicht der neuen Features in C# 7.1
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480962"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881552"
 ---
 # <a name="whats-new-in-c-71"></a>Neues in C# 7.1
 
@@ -26,7 +26,7 @@ Die neuen Sprachfeatures in diesem Release umfassen:
 * [Musterabgleich für generische Typparameter](#pattern-matching-on-generic-type-parameters)
   - Sie können Musterabgleichsausdrücke für Variablen verwenden, deren Typ ein generischer Typparameter ist.
 
-Außerdem verfügt der Compiler über die zwei Optionen `/refout` und `/refonly`, mit denen die [Generierung der Referenzassembly](#reference-assembly-generation) gesteuert wird.
+Außerdem verfügt der Compiler über die zwei Optionen `-refout` und `-refonly`, mit denen die [Generierung der Referenzassembly](#reference-assembly-generation) gesteuert wird.
 
 Sie müssen [die Sprachversion des Compilers konfigurieren](../language-reference/configure-language-version.md) und die Version auswählen, um die neuesten Features in einer Punktversion zu verwenden.
 
@@ -109,5 +109,5 @@ Ab C# 7.1 kann der Musterausdruck für `is` und das `switch`-Typmuster den Typ e
 
 ## <a name="reference-assembly-generation"></a>Generierung der Referenzassembly
 
-Es gibt zwei neue Compileroptionen, die *Assemblys nur für Referenzen* generieren: [/refout](../language-reference/compiler-options/refout-compiler-option.md) und [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Es gibt zwei neue Compileroptionen, die *Assemblys nur für Referenzen* generieren: [-refout](../language-reference/compiler-options/refout-compiler-option.md) und [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 In den verlinkten Artikeln werden diese Optionen und Referenzassemblys ausführlich beschrieben.

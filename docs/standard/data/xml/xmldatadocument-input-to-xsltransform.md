@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a917c0f64a8e61df1521d361ed0c8821fee295b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508605"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592768"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XmlDataDocument-Eingaben in "XslTransform"
 > [!NOTE]
 >  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] von Microsoft implementiert XML-DOMs (Document Object Models), um Zugriff auf Daten in XML-Dokumenten und zusätzliche Klassen zum Lesen und Schreiben von sowie zum Navigieren in XML-Dokumenten bereitzustellen. Das <xref:System.Xml.XmlDataDocument> im <xref:System.Xml>-Namespace bietet durch die Möglichkeit zur Synchronisierung mit relationalen Daten im <xref:System.Data.DataSet> relationalen Zugriff auf Daten. Sie können strukturiertes XML durch die relationale Darstellung des <xref:System.Data.DataSet> gleichzeitig anzeigen und bearbeiten, oder Sie können teilstrukturiertes XML durch die DOM-Darstellung des <xref:System.Xml.XmlDataDocument> bearbeiten. Das <xref:System.Xml.XmlDataDocument> überschreitet daher die Grenzen von XML und relationalen Darstellungen.  
+ Microsoft .NET Framework implementiert das XML-Dokumentobjektmodell (DOM), um Zugriff auf Daten in XML-Dokumenten und zusätzliche Klassen für Lese-, Schreib- und Navigationsvorgänge in XML-Dokumenten bereitzustellen. Das <xref:System.Xml.XmlDataDocument> im <xref:System.Xml>-Namespace bietet durch die Möglichkeit zur Synchronisierung mit relationalen Daten im <xref:System.Data.DataSet> relationalen Zugriff auf Daten. Sie können strukturiertes XML durch die relationale Darstellung des <xref:System.Data.DataSet> gleichzeitig anzeigen und bearbeiten, oder Sie können teilstrukturiertes XML durch die DOM-Darstellung des <xref:System.Xml.XmlDataDocument> bearbeiten. Das <xref:System.Xml.XmlDataDocument> überschreitet daher die Grenzen von XML und relationalen Darstellungen.  
   
  Wenn Daten in einer relationalen Struktur gespeichert sind, und Sie diese Daten als Eingabe für eine XSLT-Transformation verwenden möchten, können Sie die relationalen Daten in ein <xref:System.Data.DataSet> laden und dem <xref:System.Xml.XmlDataDocument> zuordnen. Der <xref:System.Xml.XPath.XPathNavigator>, die Eingabe für <xref:System.Xml.Xsl.XslTransform>, wird durch die <xref:System.Xml.XmlDataDocument>-Schnittstelle für das <xref:System.Xml.XPath.IXPathNavigable> implementiert. Durch Annahme der relationalen Daten, das Laden in ein <xref:System.Data.DataSet> und die Synchronisierung im <xref:System.Xml.XmlDataDocument> können für relationale Daten XSLT-Transformationen ausgeführt werden.  
   

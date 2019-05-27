@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053153"
 ---
 # <a name="wpf-community-feedback"></a>WPF-Communityfeedback
 
@@ -24,7 +24,7 @@ Microsoft stellt eine Vielzahl von Communityressourcen für Sie erfahren, diskut
 
 ## <a name="forums"></a>Foren
 
-Die [WPF-Forum](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf) ist die primäre Communityressource zur Diskussion und Behebung von Problemen. Foren vereinfachen die Diskussion und Problemlösung, indem sie ein umfassendes Angebot unterstützender Features bereitstellen, die Folgendes umfassen:
+Die [WPF-Forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) ist die primäre Communityressource zur Diskussion und Behebung von Problemen. Foren vereinfachen die Diskussion und Problemlösung, indem sie ein umfassendes Angebot unterstützender Features bereitstellen, die Folgendes umfassen:
 
 - Suchfunktionen
 - Verfolgung von Diskussionen

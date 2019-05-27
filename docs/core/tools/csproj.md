@@ -2,12 +2,12 @@
 title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611093"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631804"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -125,11 +125,13 @@ Wenn das Projekt mehrere Zielframeworks umfasst, sollten nur Ergebnisse für ein
 
 ### <a name="sdk-attribute"></a>SDK-Attribut
 
-Das `<Project>`-Stammelement der *CSPROJ*-Datei hat ein neues Attribut namens `Sdk`. `Sdk` gibt an, welches SDK vom Projekt verwendet wird. Das SDK ist, wie das [Schichtendokument](cli-msbuild-architecture.md) beschreibt, ein Satz von MSBuild-[Aufgaben](/visualstudio/msbuild/msbuild-tasks) und -[Zielen](/visualstudio/msbuild/msbuild-targets), die .NET Core-Code erstellen können. Wir liefern drei Haupt-SDKs mit .NET Core-Tools:
+Das `<Project>`-Stammelement der *CSPROJ*-Datei hat ein neues Attribut namens `Sdk`. `Sdk` gibt an, welches SDK vom Projekt verwendet wird. Das SDK ist, wie das [Schichtendokument](cli-msbuild-architecture.md) beschreibt, ein Satz von MSBuild-[Aufgaben](/visualstudio/msbuild/msbuild-tasks) und -[Zielen](/visualstudio/msbuild/msbuild-targets), die .NET Core-Code erstellen können. Mit den .NET Core-Tools werden drei Haupt-SDKs und zusätzlich zwei SDKs bei Verwendung von .NET Core 3.0 (Vorschauversion) bereitgestellt:
 
 1. Das .NET Core SDK mit der `Microsoft.NET.Sdk`-ID
 2. Das .NET Core Web-SDK mit der `Microsoft.NET.Sdk.Web`-ID
 3. Das .NET Core Razor-Klassenbibliothek SDK mit der ID von `Microsoft.NET.Sdk.Razor`
+4. Der .NET Core-Workerdienst mit der ID `Microsoft.NET.Sdk.Worker` (.NET Core 3.0 (Vorschauversion))
+5. .NET Core WinForms und WPF mit der ID `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3.0 (Vorschauversion))
 
 Das `Sdk`-Attribut muss auf eine dieser IDs auf dem `<Project>`-Element festgelegt werden, um die .NET Core-Tools nutzen und Codes erstellen zu können.
 

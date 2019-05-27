@@ -2,12 +2,12 @@
 title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die "äußere"Schleife des DevOps-Workflows
 ms.date: 02/15/2019
-ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641057"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195611"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 
@@ -152,7 +152,7 @@ Sehen wir uns zunächst an, das weniger komplizierten-Szenario: um einfache Dock
 
 **Abbildung 5-6**. Bereitstellen von anwendungscontainern in einfachen Docker-Host-Umgebungen-Registrierung
 
-Abbildung 5-7 hebt hervor, wie Sie Ihre Build-CI zu QA-/Test-Umgebungen über das Azure DevOps-Dienste verbinden können, indem Sie auf der Docker Compose im Dialogfeld Task hinzufügen. Allerdings bei der Bereitstellung in Staging-oder produktionsumgebung Sie würde in der Regel verwenden Release Management-Funktionen, die Verarbeitung mehrerer Umgebungen (z. B. QA, Staging und Produktion). Wenn Sie zu einzelnen Docker-Hosts bereitstellen, verwendet es die Azure DevOps-Dienste "Docker-Compose" Task (das ist das Aufrufen der `docker-compose up` Befehl im Hintergrund). Wenn Sie in Azure Container Service bereitstellen, wird die Docker-Bereitstellungsaufgabe verwendet wie im Abschnitt erläutert die folgende.
+Abbildung 5-7 hebt hervor, wie Sie Ihre Build-CI zu QA-/Test-Umgebungen über das Azure DevOps-Dienste verbinden können, indem Sie auf der Docker Compose im Dialogfeld Task hinzufügen. Allerdings bei der Bereitstellung in Staging-oder produktionsumgebung Sie würde in der Regel verwenden Release Management-Funktionen, die Verarbeitung mehrerer Umgebungen (z. B. QA, Staging und Produktion). Wenn Sie zu einzelnen Docker-Hosts bereitstellen, verwendet es die Azure DevOps-Dienste "Docker-Compose" Task (das ist das Aufrufen der `docker-compose up` Befehl im Hintergrund). Wenn Sie zum Azure Kubernetes Service (AKS) bereitstellen, wird die Docker-Bereitstellungsaufgabe verwendet wie im Abschnitt erläutert wird, die folgt.
 
 ![Browseransicht eine Docker Compose-Aufgabe hinzufügen.](./media/image7.png)
 
@@ -186,15 +186,15 @@ Aus Sicht einer CD und Azure DevOps-Dienste können insbesondere speziell vorgen
 
 Zunächst bei der Bereitstellung in bestimmten Cluster oder orchestratoren verwenden üblicherweise bestimmte Bereitstellungsskripts und Mechanismen pro jeden Orchestrator (d.h. Kubernetes und Service Fabric haben verschiedene Mechanismen) anstelle der einfacheren Sie und leicht zu bedienende `docker-compose` Tool basierend auf den `docker-compose.yml` -Definitionsdatei. Dank der in Abbildung 5-10 dargestellt, die Bereitstellung von Azure DevOps-Dienste Docker-Aufgabe Sie jedoch jetzt auch können bereitstellen, die unterstützten orchestratoren einfach mit Ihrer bevorzugten `docker-compose.yml` -Datei, da das Tool diese "Übersetzung" führt für Sie (über Ihre `docker-compose.yml`Datei in das Format, die vom Orchestrator erforderlich).
 
-![Bereitstellungstask für den Browseransicht der aufgabenkatalog in Azure DevOps mit Docker.](./media/image10.png)
+![Der Browseransicht der aufgabenkatalog in Azure DevOps mit der Bereitstellung in Kubernetes-Aufgabe.](./media/add-deploy-to-kubernetes-task.png)
 
-**Abbildung 5-10**. Hinzufügen der Docker-Deploy-Task, der Ressourcen-Manager-Umgebung
+**Abbildung 5-10**. Für das Bereitstellen hinzufügen, die Kubernetes-Vorgang in Ihrer Umgebung
 
-Abbildung 5-11 zeigt, wie Sie bearbeite die Aufgabe mit Docker bereitstellen können, und geben Sie den Zieltyp (Azure Container Service-DC/OS, in diesem Fall), Ihre Docker-Compose-Datei und die Docker-registrierungsverbindung (z.B. Azure Container Registry oder Docker Hub). Dies ist die Aufgabe, die Ihre bereit zu verwendenden benutzerdefinierten Docker-Images als Container im Cluster bereitgestellt werden, abgerufen werden.
+Abbildung 5-11 wird veranschaulicht, wie Sie die Bereitstellung in Kubernetes-Aufgabe mit den Abschnitten zur Konfiguration bearbeiten können. Dies ist die Aufgabe, die Ihre bereit zu verwendenden benutzerdefinierten Docker-Images als Container im Cluster bereitgestellt werden, abgerufen werden.
 
-![Browseransicht der Azure DevOps, stellen Sie in Orchestrator Aufgabendefinition.](./media/image11.png)
+![Browseransicht der Azure DevOps, stellen Sie in Kubernetes-Aufgabendefinition.](./media/edit-deploy-to-kubernetes-task.png)
 
-**Abbildung 5-11**. Docker bereitstellen Aufgabe Definition bereitstellen, Azure Container Service DC/OS
+**Abbildung 5-11**. Docker bereitstellen Aufgabe Definition Bereitstellen von ACS-DC/OS
 
 > [! Informationen] Weitere Informationen finden Sie Informationen zu den CD-Pipeline mit Azure DevOps-Dienste und Docker auf <https://azure.microsoft.com/services/devops/pipelines>
 

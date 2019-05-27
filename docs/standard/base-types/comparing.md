@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053590"
 ---
 # <a name="comparing-strings-in-net"></a>Vergleichen von Zeichenfolgen in .NET
 .NET stellt mehrere Methoden bereit, um Werte von Zeichenfolgen zu vergleichen. In der folgenden Tabelle werden die Methoden zum Vergleichen von Werten aufgeführt und beschrieben.  
   
-|Methodenname|Mit|  
+|Methodenname|Verwendung|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Vergleicht die Werte zweier Zeichenfolgen. Gibt einen Ganzzahlwert zurück.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Vergleicht zwei Zeichenfolgen, ohne die Einstellungen der lokalen Kultur zu berücksichtigen. Gibt einen Ganzzahlwert zurück.|  
@@ -47,8 +47,8 @@ ms.locfileid: "54688895"
 |Rückgabewert|Bedingung|  
 |------------------|---------------|  
 |Eine negative ganze Zahl|Die erste Zeichenfolge steht in der Sortierreihenfolge vor der zweiten Zeichenfolge.<br /><br /> - oder - <br /><br /> Die erste Zeichenfolge ist `null`.|  
-|0|Die erste Zeichenfolge und die zweite Zeichenfolge sind gleich.<br /><br /> - oder -<br /><br /> Beide Zeichenfolgen sind `null`.|  
-|Eine positive ganze Zahl<br /><br /> - oder -<br /><br /> 1|Die erste Zeichenfolge steht in der Sortierreihenfolge hinter der zweiten Zeichenfolge.<br /><br /> - oder -<br /><br /> Die zweite Zeichenfolge ist `null`.|  
+|0|Die erste Zeichenfolge und die zweite Zeichenfolge sind gleich.<br /><br /> - oder - <br /><br /> Beide Zeichenfolgen sind `null`.|  
+|Eine positive ganze Zahl<br /><br /> - oder - <br /><br /> 1|Die erste Zeichenfolge steht in der Sortierreihenfolge hinter der zweiten Zeichenfolge.<br /><br /> - oder - <br /><br /> Die zweite Zeichenfolge ist `null`.|  
   
 > [!IMPORTANT]
 >  Die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode ist hauptsächlich für die Anordnung oder Sortierung von Zeichenfolgen bestimmt. Sie sollten die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode nicht verwenden, um einen Übereinstimmungstest auszuführen (also um explizit nach dem Rückgabewert 0 zu suchen, ohne dass dabei berücksichtigt wird, ob eine Zeichenfolge kleiner oder größer als die andere ist). Um festzustellen, ob zwei Zeichenfolgen gleich sind, verwenden Sie stattdessen die <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> -Methode.  
@@ -154,5 +154,5 @@ ms.locfileid: "54688895"
 
 - [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)
 - [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Sortiergewichtungstabellen (für .NET unter Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Sortiergewichtungstabellen (für .NET unter Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Default Unicode Collation Element Table (für .NET Core unter Linux und macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609576"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591504"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse
 
@@ -19,7 +19,7 @@ ms.locfileid: "54609576"
 
 Freigegebene Verhaltensweisen sind die in der [World Wide Web Consortium (W3C) XSL Transformations (XSLT) Version 1.0 Recommendation](https://www.w3.org/TR/1999/REC-xslt-19991116), aufgelisteten Verhaltensweisen, bei denen der Implementierungsanbieter eine von mehreren Optionen zur Behandlung einer bestimmten Situation auswählt. Laut W3C-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen nennt das W3C auch Maßnahmen für den Fall, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.
 
-Daher enthält die folgende Tabelle alle freigegebenen Verhaltensweisen, die vom W3C zugelassen sind und die für die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Implementierung der <xref:System.Xml.Xsl.XslTransform>-Klasse implementiert sind, sowie jeweils den Abschnitt der W3C-Empfehlung zu XSLT 1.0, in der das entsprechende Problem behandelt wird.
+Daher enthält die folgende Tabelle alle freigegebenen Verhaltensweisen, die vom W3C zugelassen sind und für die .NET Framework-Implementierung der <xref:System.Xml.Xsl.XslTransform>-Klasse implementiert sind – sowie jeweils den Abschnitt der W3C-Empfehlung zu XSLT 1.0, in der das entsprechende Problem behandelt wird.
 
 |Problem|Verhalten|Bereich|
 |-------------|--------------|-------------|

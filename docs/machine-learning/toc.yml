@@ -14,7 +14,7 @@
     - name: Kategorisieren von Supportproblemen (Multiklassenklassifizierung)
       href: tutorials/github-issue-classification.md
     - name: Vorhersagen von Preisen (Regression)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: Kategorisieren von Schwertlilien (k-Means-Algorithmus)
       href: tutorials/iris-clustering.md
     - name: Filmempfehlung (Matrixfaktorisierung)

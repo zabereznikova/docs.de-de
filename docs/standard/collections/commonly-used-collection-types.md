@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835745"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589888"
 ---
 # <a name="commonly-used-collection-types"></a>Häufig verwendete Auflistungstypen
 Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. Hashtabellen, Warteschlangen, Stapel, Sammlungen, Wörterbücher und Listen.  
@@ -36,10 +36,10 @@ Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. H
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Sammlungen und Datenstrukturen](../../../docs/standard/collections/index.md)|Erläutert die unterschiedlichen Auflistungstypen, die in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] verfügbar sind, z. B. Stapel, Warteschlangen, Listen, Arrays und Wörterbücher.|  
+|[Sammlungen und Datenstrukturen](../../../docs/standard/collections/index.md)|Erläutert die unterschiedlichen Auflistungstypen, die in .NET Framework verfügbar sind, z.B. Stapel, Warteschlangen, Listen, Arrays und Wörterbücher.|  
 |[Hashtable-Auflistungstyp und Dictionary-Auflistungstyp](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Beschreibt die Funktionen von generischen und nicht generischen hashbasierten Wörterbuchtypen.|  
 |[Sortierte Auflistungstypen](../../../docs/standard/collections/sorted-collection-types.md)|Beschreibt Klassen, die Sortierfunktionen für Listen und Sätze bereitstellen.|  
-|[Generics](../../../docs/standard/generics/index.md)|Beschreibt das Genericsfeature, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bereitgestellt werden. Enthält Links zur Featuredokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.|  
+|[Generics](../../../docs/standard/generics/index.md)|Beschreibt das Generics-Feature, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von .NET Framework bereitgestellt werden. Enthält Links zur Featuredokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.|  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Collections?displayProperty=nameWithType>  

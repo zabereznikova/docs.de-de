@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052453"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 
@@ -405,7 +405,7 @@ Die Anwendung der `Serialize`-Richtlinie auf ein Feld bewirkt die folgenden Rich
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Die Auswirkungen der Richtlinien XmlSerializer, DataContractSerializer und DataContractJsonSerializer
 
-Im Gegensatz zur `Serialize`-Richtlinie, die für reflektionsbasierte Serialisierungsprogramme gedacht ist, werden die Richtlinien <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> verwendet, um eine Reihe von Serialisierungsprogrammen zu aktivieren, die der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.
+Im Gegensatz zu den `Serialize` Richtlinie, die für reflektionsbasierte Serialisierungsprogramme gedacht ist, die <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Richtlinien werden verwendet, um eine Reihe von Serialisierungsprogrammen zu aktivieren, die die .NET Native-toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.
 
 Die Anwendung einer dieser Richtlinien auf einen Typ ermöglicht die Serialisierung des Typs mit dem entsprechenden Serialisierungsprogramm. Außerdem können alle Typen, von denen das Serialisierungsmodul statisch bestimmen kann, dass für sie Serialisierung erforderlich ist, serialisierbar sein.
 

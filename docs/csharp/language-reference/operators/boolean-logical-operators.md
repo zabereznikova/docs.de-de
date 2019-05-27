@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427317"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880580"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren – C#-Referenz
 
@@ -47,7 +47,7 @@ Die folgenden Operatoren führen logische Vorgänge mit den [bool](../keywords/b
 - Binäre [`&` (logisch AND)](#logical-and-operator-), [`|` (logisch OR)](#logical-or-operator-) und [`^` (logisch exklusiv OR)](#logical-exclusive-or-operator-) Operatoren. Diese Operatoren werten immer beide Operanden aus.
 - Binäre [ `&&` (bedingt logisch AND)](#conditional-logical-and-operator-) und [ `||` (bedingt logisch OR)](#conditional-logical-or-operator-) Operatoren. Diese Operatoren werten den zweiten Operanden nur dann aus, wenn es notwendig ist.
 
-Für die Operanden der [ganzzahligen](../keywords/integral-types-table.md) Typen führen die Operatoren `&`, `|` und `^` bitweise logische Operationen durch.
+Für die Operanden der [integralen](../keywords/integral-types-table.md) Typen führen die Operatoren `&`, `|` und `^` bitweise logische Operationen durch. Weitere Informationen finden Sie unter [Bitweise und Schiebeoperatoren](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Logischer Negationsoperator: !
 
@@ -67,7 +67,7 @@ Im folgenden Beispiel ist der zweite Operand des `&`-Operators ein Methodenaufru
 
 Der [bedingte logische AND-Operator](#conditional-logical-and-operator-) `&&` berechnet auch die logische AND-Operation der Operanden, wertet den zweiten Operanden aber nicht aus, wenn der erste Operand `false` ergibt.
 
-Für die Operanden von ganzzahligen Typen berechnet der `&`-Operator [bitweise logische AND](and-operator.md#integer-logical-bitwise-and-operator)-Operationen seiner Operanden. Der unäre `&`-Operator ist der [address-of-Operator](and-operator.md#unary-address-of-operator).
+Für die Operanden der integralen Typen berechnet der Operator `&` [bitweises logisches UND](bitwise-and-shift-operators.md#logical-and-operator-) für seine Operanden. Der unäre `&`-Operator ist der [address-of-Operator](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Logischer exklusiver OR-Operator: ^
 
@@ -75,7 +75,7 @@ Die `^`-Operator berechnet das logische exklusive OR, auch als logischer XOR bez
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-Für die Operanden von ganzzahligen Typen berechnet der `^`-Operator [bitweise logische exklusive OR](xor-operator.md)-Operationen seiner Operanden.
+Für die Operanden der integralen Typen berechnet der Operator `^` [bitweises logisches exklusives ODER](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) für seine Operanden.
 
 ## <a name="logical-or-operator-"></a>Logischer OR-Operator: |
 
@@ -89,7 +89,7 @@ Im folgenden Beispiel ist der zweite Operand des `|`-Operators ein Methodenaufru
 
 Der [bedingte logische OR-Operator](#conditional-logical-or-operator-) `||` berechnet auch die logische OR-Operation der Operanden, wertet den zweiten Operanden aber nicht aus, wenn der erste Operand `true` ergibt.
 
-Für die Operanden von ganzzahligen Typen berechnet der `|`-Operator [bitweise logische OR](or-operator.md)-Operationen seiner Operanden.
+Für die Operanden der integralen Typen berechnet der Operator `|` [bitweises logisches ODER](bitwise-and-shift-operators.md#logical-or-operator-) für seine Operanden.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>Bedingter logischer AND-Operator &amp;&amp;
 
@@ -178,18 +178,20 @@ Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden
 
 Ein benutzerdefinierter Typ kann die Operatoren `!`, `&`, `|` und `^` [überladen](../keywords/operator.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
 
-Ein benutzerdefinierter Typ kann die bedingten logischen Operatoren `&&` und `||` nicht überladen. Wenn jedoch ein benutzerdefinierter Typ die [„true“ und „false“-Operatoren](../keywords/true-false-operators.md) und den `&`- oder `|`-Operator in einer bestimmten Weise überlädt, kann die `&&`- bzw. `||`-Operation für die Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Programmiersprachenspezifikation](~/_csharplang/spec/introduction.md).
+Ein benutzerdefinierter Typ kann die bedingten logischen Operatoren `&&` und `||` nicht überladen. Wenn jedoch ein benutzerdefinierter Typ die [„true“ und „false“-Operatoren](../keywords/true-false-operators.md) und den `&`- oder `|`-Operator in einer bestimmten Weise überlädt, kann die `&&`- bzw. `||`-Operation für die Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Programmiersprachenspezifikation](~/_csharplang/spec/introduction.md):
+Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):
 
 - [Logischer Negationsoperator](~/_csharplang/spec/expressions.md#logical-negation-operator)
-- [Logische Operatoren](~/_csharplang/spec/expressions.md#logical-operators)
-- [Bedingte logische Operatoren](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [Logical operators (Logische Operatoren)](~/_csharplang/spec/expressions.md#logical-operators)
+- [Conditional logical operators (Bedingte logische Operatoren)](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [Verbundzuweisung](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
+- [Bitweise und Schiebeoperatoren](bitwise-and-shift-operators.md)

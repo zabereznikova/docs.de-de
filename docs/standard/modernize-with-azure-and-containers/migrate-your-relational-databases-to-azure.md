@@ -2,12 +2,12 @@
 title: Migrieren von relationalen Datenbanken in azure
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Migrieren von relationalen Datenbanken in azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051925"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrieren von relationalen Datenbanken in azure
 
@@ -81,7 +81,7 @@ Der standard-Azure SQL-Datenbank ist näher an PaaS als Azure verwaltete SQL-Dat
 
 Eines der Migrationsoptionen wird zum Verschieben des ursprünglichen relationalen Datenbankverwaltungssystems (RDBMS), einschließlich Oracle, IBM DB2, MySQL, PostgreSQL oder SQL Server, auf einem ähnlich wie Server, der auf einer Azure-VM ausgeführt wird. Wenn Sie vorhandene Anwendungen, die die schnellste Migration zur Cloud mit minimalen Änderungen oder keine Änderungen erforderlich verfügen, kann eine direkte Migration zu IaaS in der Cloud eine faire Option sein. Es ist möglicherweise nicht die beste Möglichkeit, alle Cloud Vorteile nutzen, aber es ist wahrscheinlich die schnellste Methode anfängliche.
 
-Microsoft Azure unterstützt derzeit bis zu [331 unterschiedlicher Datenbankserver](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) als IaaS-VMs bereitgestellt. Dazu gehören beliebte RDBMS wie SQL Server, Oracle, MySQL, PostgreSQL und IBM DB2 und viele andere NoSQL-Datenbanken wie Cassandra, MongoDB, DataStax, MariaDB und Cloudera.
+Microsoft Azure unterstützt derzeit bis zu [331 unterschiedlicher Datenbankserver](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all) als IaaS-VMs bereitgestellt. Dazu gehören beliebte RDBMS wie SQL Server, Oracle, MySQL, PostgreSQL und IBM DB2 und viele andere NoSQL-Datenbanken wie Cassandra, MongoDB, DataStax, MariaDB und Cloudera.
 
 > [!NOTE]
 > Obwohl Sie mit Ihrem RDBMS zu einer Azure-VM ist möglicherweise die schnellste Möglichkeit, Ihre Daten in die Cloud zu migrieren (weil es IaaS ist), die dieser Ansatz erfordert eine erhebliche Investition in Ihre IT-Teams (Datenbankadministratoren und IT-Experten). Enterprise-Teams müssen in der Lage, einrichten und Verwalten von hochverfügbarkeit, notfallwiederherstellung und Patchen für SQL Server. Dieser Kontext benötigt auch eine angepasste Umgebung mit uneingeschränkten Administratorrechten.

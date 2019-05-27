@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592442"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585888"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
@@ -77,12 +77,12 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     Mit dem letzten Parameter der <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>-Methodenüberladung können Sie anstelle des Berechtigungssatzes der Anwendungsdomäne eine Gruppe von Assemblys angeben, denen volle Vertrauenswürdigkeit erteilt werden soll. Die von der Anwendung verwendeten [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys müssen Sie nicht angeben, da diese Assemblys im globalen Assemblycache enthalten sind. Assemblys im globalen Assemblycache sind immer voll vertrauenswürdig. Sie können diesen Parameter verwenden, um Assemblys mit starkem Namen anzugeben, die nicht im globalen Assemblycache enthalten sind.  
+     Mit dem letzten Parameter der <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>-Methodenüberladung können Sie anstelle des Berechtigungssatzes der Anwendungsdomäne eine Gruppe von Assemblys angeben, denen volle Vertrauenswürdigkeit erteilt werden soll. Die von der Anwendung verwendeten .NET Framework-Assemblys müssen Sie nicht angeben, da diese Assemblys im globalen Assemblycache enthalten sind. Assemblys im globalen Assemblycache sind immer voll vertrauenswürdig. Sie können diesen Parameter verwenden, um Assemblys mit starkem Namen anzugeben, die nicht im globalen Assemblycache enthalten sind.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Hinzufügen von eingeschränktem Memberzugriff auf Sandboxdomänen  
  Hostanwendungen können anonym gehosteten dynamischen Methoden Zugriff auf private Daten in Assemblys ermöglichen, die die gleiche oder eine geringere Vertrauensebene als die Assembly aufweisen, die den Code ausgibt. Um diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen zu ermöglichen, fügt die Hostanwendung dem Berechtigungssatz ein <xref:System.Security.Permissions.ReflectionPermission>-Objekt mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag hinzu.  
   
- Beispielsweise kann ein Host Internetanwendungen sowohl Internetberechtigungen als auch eingeschränkten Memberzugriff (RestrictedMemberAccess, RMA) erteilen, sodass eine Internetanwendung Code ausgeben kann, der auf private Daten in den eigenen Assemblys zugreift. Da der Zugriff auf Assemblys mit gleicher oder geringerer Vertrauenswürdigkeit beschränkt ist, kann eine Internetanwendung nicht auf Member voll vertrauenswürdiger Assemblys zugreifen, z. B. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys.  
+ Beispielsweise kann ein Host Internetanwendungen sowohl Internetberechtigungen als auch eingeschränkten Memberzugriff (RestrictedMemberAccess, RMA) erteilen, sodass eine Internetanwendung Code ausgeben kann, der auf private Daten in den eigenen Assemblys zugreift. Da der Zugriff auf Assemblys mit gleicher oder geringerer Vertrauenswürdigkeit beschränkt ist, kann eine Internetanwendung nicht auf Member voll vertrauenswürdiger Assemblys zugreifen, z. B. .NET Framework-Assemblys.  
   
 > [!NOTE]
 >  Um Rechteerweiterungen zu verhindern, werden beim Erstellen anonym gehosteter dynamischer Methoden Stapelinformationen für die ausgebende Assembly einbezogen. Wenn die Methode aufgerufen wird, werden die Stapelinformationen überprüft. Daher ist eine anonym gehostete dynamische Methode, die über voll vertrauenswürdigen Code aufgerufen wird, auf die Vertrauensebene der ausgebenden Assembly beschränkt.  
@@ -169,7 +169,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Die Einschränkung besteht darin, dass die anonym gehostete dynamische Methode nur auf private Daten in Assemblys zugreifen kann, die die gleiche oder eine geringere Vertrauensebene als die ausgebende Assembly aufweisen. Wenn die dynamische Methode z. B. mit Internetvertrauenswürdigkeit ausgeführt wird, kann sie auf private Daten in Assemblys zugreifen, die ebenfalls mit Internetvertrauenswürdigkeit ausgeführt werden, jedoch nicht auf private Daten in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys werden im globalen Assemblycache installiert und sind immer voll vertrauenswürdig.  
+     Die Einschränkung besteht darin, dass die anonym gehostete dynamische Methode nur auf private Daten in Assemblys zugreifen kann, die die gleiche oder eine geringere Vertrauensebene als die ausgebende Assembly aufweisen. Wenn die dynamische Methode z. B. mit Internet-Vertrauenswürdigkeit ausgeführt wird, kann sie auf private Daten in Assemblys zugreifen, die ebenfalls mit Internet-Vertrauenswürdigkeit ausgeführt werden, aber nicht auf private Daten in .NET Framework-Assemblys. .NET Framework-Assemblys werden im globalen Assemblycache installiert und sind immer voll vertrauenswürdig.  
   
      Anonym gehostete dynamische Methoden können diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen nur verwenden, wenn die Hostanwendung <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag erteilt. Diese Berechtigung wird angefordert, wenn die Methode aufgerufen wird.  
   

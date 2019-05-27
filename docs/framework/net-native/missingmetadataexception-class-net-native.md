@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866975"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052507"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException-Klasse (.NET Native)
 
-**.NET für Windows-Apps für Windows 10, nur [!INCLUDE[net_native](../../../includes/net-native-md.md)]**
+**.NET für Windows-apps für Windows 10, nur .NET Native**
 
 Die Ausnahme, die ausgelöst wird, wenn Reflektion verwendet wird, um Metadaten abzurufen, die nicht vorhanden sind.
 
 **Namespace:** System.Reflection
 
 > [!IMPORTANT]
-> Die `MissingMetadataException`-Klasse ist nur zur internen Verwendung durch die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bestimmt. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+> Die `MissingMetadataException` Klasse dient nur zur internen Verwendung durch die .NET Native-toolkette. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,8 +34,8 @@ Die `MissingMetadataException`-Klasse verfügt über die folgenden Member:
 
 |Konstruktor|Beschreibung|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.<br /><br /> Dieser Konstruktor ist nur zur internen Verwendung durch die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bestimmt.|
-|`public MissingMetadataException(String message)`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer angegebenen Fehlermeldung.<br /><br /> Dieser Konstruktor ist nur zur internen Verwendung durch die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bestimmt.|
+|`public MissingMetadataException()`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.<br /><br /> Dieser Konstruktor ist zur internen Verwendung durch die .NET Native-toolkette nur.|
+|`public MissingMetadataException(String message)`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer angegebenen Fehlermeldung.<br /><br /> Dieser Konstruktor ist zur internen Verwendung durch die .NET Native-toolkette nur.|
 
 ## <a name="properties"></a>Eigenschaften
 

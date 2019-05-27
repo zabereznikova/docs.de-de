@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634176"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882470"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Vorgehensweise: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
 Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werden kann, können Benutzer numerische Daten in einer nahezu unbegrenzten Anzahl von Formaten in ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement einfügen. Daher ist es von entscheidender Bedeutung, das Gebietsschema und die Kultur des Webseitenbenutzers zu ermitteln. Bei der Analyse von Benutzereingaben können Sie dann die vom Gebietsschema und der Kultur des Benutzers definierten Formatierungskonventionen anwenden.  
@@ -58,7 +58,7 @@ Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werde
  Ihr Code kann entweder die `Parse`- oder `TryParse`-Methode des numerischen Typs aufrufen, in den die Benutzereingabe konvertiert wird. Wiederholte an eine Analysemethode gerichtete Aufrufe können für einen einzelnen Analysevorgang erforderlich sein. Daher ist die `TryParse`-Methode besser, weil sie `false` zurückgibt, wenn bei einem Analysevorgang ein Fehler auftritt. Im Gegensatz dazu kann das Behandeln wiederholter Ausnahmen, die ggf. von der `Parse`-Methode ausgelöst werden, ein sehr ressourcenintensiver Vorgang in einer Webanwendung sein.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um den Code zu kompilieren, kopieren Sie ihn in eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-CodeBehind-Seite, damit diese sie den vorhandenen Code ersetzt. Die [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Webseite sollte folgende Steuerelemente enthalten:  
+ Um den Code zu kompilieren, kopieren Sie ihn in eine ASP.NET-CodeBehind-Seite, damit diese den gesamten vorhandenen Code ersetzt. Die ASP.NET-Webseite sollte folgende Steuerelemente enthalten:  
   
 - Ein <xref:System.Web.UI.WebControls.Label>-Steuerelement, auf das nicht im Code verwiesen wird. Legen Sie seine <xref:System.Web.UI.WebControls.TextBox.Text%2A>-Eigenschaft auf „Geben Sie eine Zahl ein:“ fest.  
   
@@ -66,7 +66,7 @@ Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werde
   
 - Ein <xref:System.Web.UI.WebControls.Button>-Steuerelement namens `OKButton`. Legen Sie seine <xref:System.Web.UI.WebControls.Button.Text%2A>-Eigenschaft auf „OK“ fest.  
   
- Ändern Sie den Namen der Klasse von `NumericUserInput` in den Namen der Klasse, die vom Attribut `Inherits` der `Page`-Richtlinie der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Seite definiert wird. Ändern Sie den Namen des `NumericInput`-Objektverweises in den vom Attribut `id` des Tags `form` der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Seite definierten Namen.  
+ Ändern Sie den Namen der Klasse von `NumericUserInput` in den Namen der Klasse, die vom `Inherits`-Attribut der `Page`-Anweisung der ASP.NET-Seite definiert wird. Ändern Sie den Namen des `NumericInput`-Objektverweises in den Namen, der mit dem `id`-Attribut des `form`-Tags der ASP.NET-Seite definiert wird.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Um zu verhindern, dass ein Benutzer ein Skript in den HTML-Stream einfügt, sollte eine Benutzereingabe nie direkt in der Antwort des Servers wiederholt werden. Sie sollte stattdessen mithilfe der <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>-Methode codiert werden.  

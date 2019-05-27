@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675601"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052785"
 ---
 # <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -39,7 +39,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 
 |Begriff|Definition|
 |----------|----------------|
-|[Visual Basic-Foren](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|Hier werden allgemeine Visual Basic-Probleme besprochen.|
+|[Visual Basic-Foren](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Hier werden allgemeine Visual Basic-Probleme besprochen.|
 
 ### <a name="videos-and-webcasts"></a>Videos und Webcasts
 
@@ -47,7 +47,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Bietet eine dauerhafte Community anhand von Videos, Wikis und Foren.|
 
-### <a name="support"></a>Unterstützung
+### <a name="support"></a>Support
 
 |Begriff|Definition|
 |----------|----------------|
