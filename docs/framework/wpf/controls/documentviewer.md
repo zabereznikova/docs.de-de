@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f27b07b77fc05c548b724aaf2c905c6a9f5d420
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911897"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378274"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="79458-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="79458-102">DocumentViewer</span></span>
-<span data-ttu-id="79458-103">Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Dokumente) in einem paginierten Format.</span><span class="sxs-lookup"><span data-stu-id="79458-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="060ba-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="060ba-102">DocumentViewer</span></span>
+<span data-ttu-id="060ba-103">Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. XML Paper Specification (XPS)-Dokumente) in einem paginierten Format.</span><span class="sxs-lookup"><span data-stu-id="060ba-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as XML Paper Specification (XPS) documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="79458-104">Referenz</span><span class="sxs-lookup"><span data-stu-id="79458-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="060ba-104">Referenz</span><span class="sxs-lookup"><span data-stu-id="060ba-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="79458-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="79458-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="060ba-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="060ba-105">See also</span></span>
 
-- [<span data-ttu-id="79458-106">Dokumente</span><span class="sxs-lookup"><span data-stu-id="79458-106">Documents</span></span>](../advanced/documents.md)
-- [<span data-ttu-id="79458-107">Serialisierung und Speicherung von Dokumenten</span><span class="sxs-lookup"><span data-stu-id="79458-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
-- [<span data-ttu-id="79458-108">Übersicht über das Drucken</span><span class="sxs-lookup"><span data-stu-id="79458-108">Printing Overview</span></span>](../advanced/printing-overview.md)
+- [<span data-ttu-id="060ba-106">Dokumente</span><span class="sxs-lookup"><span data-stu-id="060ba-106">Documents</span></span>](../advanced/documents.md)
+- [<span data-ttu-id="060ba-107">Serialisierung und Speicherung von Dokumenten</span><span class="sxs-lookup"><span data-stu-id="060ba-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="060ba-108">Übersicht über das Drucken</span><span class="sxs-lookup"><span data-stu-id="060ba-108">Printing Overview</span></span>](../advanced/printing-overview.md)
