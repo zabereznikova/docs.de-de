@@ -2,15 +2,15 @@
 title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251169"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380009"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
-In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] eingeführte) SqlClient-Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung erörtert, die in Form von AlwaysOn-Verfügbarkeitsgruppen bereitgestellt wird.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
+Dieses Thema beschreibt die SqlClient-Unterstützung (in .NET Framework 4.5 hinzugefügt) für die hohe Verfügbarkeit und notfallwiederherstellung – Always On-Verfügbarkeitsgruppen.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
   
  Sie können jetzt angeben, die Verfügbarkeitsgruppen-Listener eine (hohe Verfügbarkeit und notfallwiederherstellung) verfügbarkeitsgruppe (AG) oder SQL Server 2012-Failoverclusterinstanz in der Verbindungseigenschaft. Wenn eine SqlClient-Anwendung mit einer AlwaysOn-Datenbank verbunden ist, die einen Failover ausführt, ist die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, um die Arbeit nach dem Failover fortzusetzen.  
   
@@ -19,7 +19,7 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
 > [!NOTE]
 >  Ein höheres Verbindungstimeout und das Implementieren einer Logik für die Verbindungswiederholung erhöht die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung mit einer Verfügbarkeitsgruppe herstellt. Da eine Verbindung aufgrund eines Failovers fehlschlagen kann, sollte auch eine Logik für Verbindungswiederholungen implementiert werden, die bis zur erfolgreichen Verbindung Verbindungswiederholungen durchführt.  
   
- Die folgenden Verbindungseigenschaften wurden SqlClient in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] hinzugefügt:  
+ Die folgenden Verbindungseigenschaften wurden SqlClient in .NET Framework 4.5 hinzugefügt:  
   
 - `ApplicationIntent`  
   
