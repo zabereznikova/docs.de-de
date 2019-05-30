@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664338"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378297"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] unterstützt mehrere Softwareentwicklungsszenarien mit [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Diese Szenarien werden in drei Kategorien eingeteilt:
+.NET Framework 4.5 unterstützt mehrere softwareentwicklungsszenarien mit der [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Diese Szenarien werden in drei Kategorien eingeteilt:
 
 - Entwickeln von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -apps mit XAML-Steuerelemente, wie in beschrieben [Roadmap für Windows Store-apps mit c# oder Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [wie Anleitungen (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), und [.NET für Windows Store-apps – Übersicht ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664338"
 - Die Typen in der Komponente können von [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Typen abgeleitet werden. Steuerelemente können von primitiven Steuerelementtypen im Ableiten der <xref:Windows.UI.Xaml.Controls.Primitives> Namespace oder von mehreren Steuerelementen wie z. B. <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  Ab [!INCLUDE[win8](../../../includes/win8-md.md)] und [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] müssen alle öffentlichen Typen in einer verwalteten [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponente versiegelt werden. Ein Typ in einer anderen [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponente kann nicht von ihnen abgeleitet werden. Wenn Sie polymorphes Verhalten in der Komponente ermöglichen möchten, können Sie eine Schnittstelle erstellen und sie in polymorphen Typen implementieren.
+    >  Beginnend mit [!INCLUDE[win8](../../../includes/win8-md.md)] und .NET Framework 4.5, alle öffentlichen Typen in einer verwalteten [!INCLUDE[wrt](../../../includes/wrt-md.md)] -Komponente versiegelt werden. Ein Typ in einer anderen [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponente kann nicht von ihnen abgeleitet werden. Wenn Sie polymorphes Verhalten in der Komponente ermöglichen möchten, können Sie eine Schnittstelle erstellen und sie in polymorphen Typen implementieren.
 
 - Alle Parameter und Rückgabetypen für die öffentlichen Typen in der Komponente müssen [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Typen sein (einschließlich der [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Typen, die durch die Komponente definiert werden).
 
