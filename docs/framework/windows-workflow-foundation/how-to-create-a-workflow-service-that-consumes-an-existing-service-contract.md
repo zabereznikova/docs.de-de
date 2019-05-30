@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945573"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378132"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Funktionen verbessern die Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox.  
+.NET Framework 4.5-Features verbessern die Integration zwischen Webdiensten und Workflows in Form von Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox.  
   
 > [!NOTE]
 >  Dieses Thema enthält eine schrittweise Anleitung zum Erstellen eines Vertrag zuerst-Workflowdiensts. Weitere Informationen zum Entwickeln von Vertrag zuerst-Workflowdiensten finden Sie unter [Workflow Entwickeln von Vertrag zuerst](contract-first-workflow-service-development.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "61945573"
   
 ### <a name="importing-the-service-contract"></a>Importieren des Dienstvertrags  
   
-1. Mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer** , und wählen Sie **Dienstvertrag importieren**. Klicken Sie unter  **\<aktuelles Projekt >**, öffnen Sie alle untergeordneten Knoten, und wählen Sie **IBookService**. Klicken Sie auf **OK**.  
+1. Mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer** , und wählen Sie **Dienstvertrag importieren**. Klicken Sie unter  **\<aktuelles Projekt >** , öffnen Sie alle untergeordneten Knoten, und wählen Sie **IBookService**. Klicken Sie auf **OK**.  
   
 2. Es wird ein Dialogfeld mit dem Hinweis geöffnet, dass der Vorgang erfolgreich abgeschlossen wurde und dass die generierten Aktivitäten in der Toolbox angezeigt werden, nachdem Sie das Projekt erstellt haben. Klicken Sie auf **OK**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61945573"
   
 4. In **Projektmappen-Explorer**, Service1.xamlx zu öffnen. Der Workflowdienst wird im Designer angezeigt.  
   
-5. Wählen Sie die **Sequenz** Aktivität. Klicken Sie im Eigenschaftenfenster auf die **...** Schaltfläche der **ImplementedContract** Eigenschaft. In der **Typauflistungs-Editor** Fenster, das angezeigt wird, klicken Sie auf die **Typ** Dropdown-Liste, und wählen Sie die **nach Typen suchen...** Eintrag. In der **durchsuchen, und wählen Sie einen .NET-Typ** Dialogfeld unter  **\<aktuelles Projekt >**, öffnen Sie alle untergeordneten Knoten, und wählen Sie **IBookService**. Klicken Sie auf **OK**. In der **Typauflistungs-Editor** Dialogfeld klicken Sie auf **OK**.  
+5. Wählen Sie die **Sequenz** Aktivität. Klicken Sie im Eigenschaftenfenster auf die **...** Schaltfläche der **ImplementedContract** Eigenschaft. In der **Typauflistungs-Editor** Fenster, das angezeigt wird, klicken Sie auf die **Typ** Dropdown-Liste, und wählen Sie die **nach Typen suchen...** Eintrag. In der **durchsuchen, und wählen Sie einen .NET-Typ** Dialogfeld unter  **\<aktuelles Projekt >** , öffnen Sie alle untergeordneten Knoten, und wählen Sie **IBookService**. Klicken Sie auf **OK**. In der **Typauflistungs-Editor** Dialogfeld klicken Sie auf **OK**.  
   
 6. Wählen Sie aus, und löschen Sie die **ReceiveRequest** und **SendResponse** Aktivitäten.  
   

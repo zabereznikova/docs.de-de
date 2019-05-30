@@ -5,20 +5,20 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880113"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380103"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung
 
-Beim Kompilieren von apps in Visual Studio, die auf die [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] und höhere Versionen werden bindungsumleitungen werden automatisch hinzugefügt, um die app-Konfigurationsdatei für die Assemblyvereinheitlichung zu überschreiben. Bindungsumleitungen werden hinzugefügt, wenn die App oder ihre Komponenten auf mehr als eine Version der gleichen Assembly verweisen, auch wenn Sie manuell Bindungsumleitungen in der Konfigurationsdatei für Ihre App angeben. Die automatische bindungsumleitung wirkt sich auf desktop-apps und Web-apps, die auf die [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] oder eine höhere Version, obwohl das Verhalten für eine Web-app etwas anders ist. Sie können die automatische bindungsumleitung aktivieren, wenn Sie vorhandene apps, die frühere Versionen von .NET Framework abzielen, oder Sie diese Funktion deaktivieren können, wenn Sie manuell bindungsumleitungen erstellen möchten.
+Beim Kompilieren von apps in Visual Studio mit der Zielversion .NET Framework 4.5.1 und höheren Versionen können bindungsumleitungen automatisch Assemblyvereinheitlichung überschrieben app-Konfigurationsdatei hinzugefügt werden. Bindungsumleitungen werden hinzugefügt, wenn die App oder ihre Komponenten auf mehr als eine Version der gleichen Assembly verweisen, auch wenn Sie manuell Bindungsumleitungen in der Konfigurationsdatei für Ihre App angeben. Die automatische bindungsumleitung wirkt sich auf desktop-apps und Web-apps für .NET Framework 4.5.1 oder höher, obwohl das Verhalten für eine Web-app etwas anders ist. Sie können die automatische bindungsumleitung aktivieren, wenn Sie vorhandene apps, die frühere Versionen von .NET Framework abzielen, oder Sie diese Funktion deaktivieren können, wenn Sie manuell bindungsumleitungen erstellen möchten.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Deaktivieren Sie automatische bindungsumleitungen in desktop-apps
 
-Automatische bindungsumleitungen sind standardmäßig aktiviert, für Windows desktop-apps, die als Ziel der [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] und höhere Versionen. Die bindungsumleitungen werden hinzugefügt, um die Ausgabekonfigurationsdatei (**"App.config"**)-Datei, wenn die app kompiliert wurde, und überschreiben Sie die Assemblyvereinheitlichung, die sonst erfolgen würde. Die Quelle **"App.config"** Datei wird nicht geändert. Sie können dieses Feature deaktivieren, indem die Projektdatei für die app ändern oder deaktivieren ein Kontrollkästchen in den Eigenschaften des Projekts in Visual Studio.
+Automatische bindungsumleitungen sind standardmäßig für Windows desktop-apps aktiviert, die auf .NET Framework 4.5.1 und höheren Versionen abzielen. Die bindungsumleitungen werden hinzugefügt, um die Ausgabekonfigurationsdatei ( **"App.config"** )-Datei, wenn die app kompiliert wurde, und überschreiben Sie die Assemblyvereinheitlichung, die sonst erfolgen würde. Die Quelle **"App.config"** Datei wird nicht geändert. Sie können dieses Feature deaktivieren, indem die Projektdatei für die app ändern oder deaktivieren ein Kontrollkästchen in den Eigenschaften des Projekts in Visual Studio.
 
 ### <a name="disable-through-project-properties"></a>Deaktivieren Sie über Projekteigenschaften
 
@@ -35,7 +35,7 @@ Wenn Sie Visual Studio 2017 Version 15.7 oder höher verfügen, können Sie ganz
 1. Öffnen Sie die Projektdatei für die Bearbeitung mit einem der folgenden Methoden:
 
    - Wählen Sie in Visual Studio das Projekt im **Projektmappen-Explorer**, und wählen Sie dann **Ordner in Datei-Explorer öffnen** aus dem Kontextmenü. Klicken Sie im Datei-Explorer finden Sie die Projektdatei (CSPROJ oder VBPROJ), und öffnen sie im Editor.
-   - In Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**. Mit der rechten Maustaste erneut auf des entladen Projekts, und wählen Sie dann **bearbeiten [Projektname.csproj]**.
+   - In Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**. Mit der rechten Maustaste erneut auf des entladen Projekts, und wählen Sie dann **bearbeiten [Projektname.csproj]** .
 
 2. Suchen Sie in der Projektdatei den folgende Eigenschafteneintrag:
 
@@ -56,7 +56,7 @@ Sie können automatische bindungsumleitungen in vorhandenen apps ermöglichen di
 1. Öffnen Sie die Projektdatei für die Bearbeitung mit einem der folgenden Methoden:
 
    - Wählen Sie in Visual Studio das Projekt im **Projektmappen-Explorer**, und wählen Sie dann **Ordner in Datei-Explorer öffnen** aus dem Kontextmenü. Klicken Sie im Datei-Explorer finden Sie die Projektdatei (CSPROJ oder VBPROJ), und öffnen sie im Editor.
-   - In Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**. Mit der rechten Maustaste erneut auf des entladen Projekts, und wählen Sie dann **bearbeiten [Projektname.csproj]**.
+   - In Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**. Mit der rechten Maustaste erneut auf des entladen Projekts, und wählen Sie dann **bearbeiten [Projektname.csproj]** .
 
 2. Das folgende Element hinzufügen, um den ersten konfigurationseigenschaftengruppe (unter der \<PropertyGroup > Tag):
 
@@ -85,7 +85,7 @@ Sie können automatische bindungsumleitungen in vorhandenen apps ermöglichen di
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Aktivieren Sie automatische bindungsumleitungen in Web-apps
 
-Bei Web-Apps werden automatische Bindungsumleitungen auf andere Weise implementiert. Da der Quellkonfiguration (**"Web.config"**) Datei muss geändert werden, für die Web-apps, bindungsumleitungen werden nicht automatisch hinzugefügt, die Konfigurationsdatei. Allerdings benachrichtigt Visual Studio Sie bei Bindungskonflikten, und Sie können Bindungsumleitungen hinzufügen, um die Konflikte zu lösen. Da Sie immer zum Hinzufügen bindungsumleitungen aufgefordert werden, müssen Sie nicht explizit deaktivieren Sie dieses Feature für eine Web-app.
+Bei Web-Apps werden automatische Bindungsumleitungen auf andere Weise implementiert. Da der Quellkonfiguration ( **"Web.config"** ) Datei muss geändert werden, für die Web-apps, bindungsumleitungen werden nicht automatisch hinzugefügt, die Konfigurationsdatei. Allerdings benachrichtigt Visual Studio Sie bei Bindungskonflikten, und Sie können Bindungsumleitungen hinzufügen, um die Konflikte zu lösen. Da Sie immer zum Hinzufügen bindungsumleitungen aufgefordert werden, müssen Sie nicht explizit deaktivieren Sie dieses Feature für eine Web-app.
 
 Zum Hinzufügen bindungsumleitungen zu einer **"Web.config"** Datei:
 

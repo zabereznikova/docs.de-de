@@ -2,16 +2,16 @@
 title: SqlClient-Streamingunterstützung
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698446"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379991"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient-Streamingunterstützung
 
-Die Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) unterstützt unstrukturierte Daten auf dem Server (Dokumente, Bilder und Medien-Dateien). SQL Server-Datenbank kann binary large Object (BLOBs) speichern, aber beim Abrufen von BLOBS kann viel Arbeitsspeicher verwenden.
+Die Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in .NET Framework 4.5) unterstützt unstrukturierte Daten, auf dem Server (Dokumente, Bilder und Medien-Dateien). SQL Server-Datenbank kann binary large Object (BLOBs) speichern, aber beim Abrufen von BLOBS kann viel Arbeitsspeicher verwenden.
 
 Streaming-Unterstützung in und aus SQL Server vereinfacht das Schreiben von Anwendungen, Übertragen von Daten, ohne die Daten vollständig in den Arbeitsspeicher, was zu weniger Ausnahmefehlern aufgrund arbeitsspeicherüberlaufs laden zu müssen.
 
@@ -101,9 +101,9 @@ Das Beispiel erläutert die folgenden Aufgaben:
 
 - Vermeiden, dass ein Benutzeroberflächenthread blockiert wird, indem eine asynchrone Methode zum Abrufen großer Dateien bereitgestellt wird.
 
-- Übertragen eine großen Textdatei von SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen einer großen Textdatei von SQL Server in .NET Framework 4.5.
 
-- Übertragen eine große XML-Datei von SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen einer großen XML-Datei von SQL Server in .NET Framework 4.5.
 
 - Abrufen von Daten aus SQL Server.
 
@@ -323,9 +323,9 @@ GO
 
 Das Beispiel erläutert die folgenden Aufgaben:
 
-- Übertragen eines großen BLOBs und SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen eines großen BLOBs und SQL Server in .NET Framework 4.5.
 
-- Übertragen einer großen Textdatei in SQL Server im [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen einer großen Textdatei in SQL Server im .NET Framework 4.5.
 
 - Verwenden der neuen asynchronen Funktion zur Übertragung eines großen BLOBs.
 

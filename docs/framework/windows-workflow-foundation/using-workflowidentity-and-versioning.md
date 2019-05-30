@@ -2,12 +2,12 @@
 title: Verwenden von WorkflowIdentity und Versionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 77f5663665d56209cbb1ebc5999d44d411189f04
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603298"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380131"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Verwenden von WorkflowIdentity und Versionsverwaltung
 <xref:System.Activities.WorkflowIdentity> bietet Entwicklern von Workflowanwendungen die Möglichkeit, einer Workflowdefinition einen Namen und eine <xref:System.Version> zuzuweisen und diese Informationen einer persistenten Workflowinstanz zuzuordnen. Entwickler von Workflowanwendungen können diese Identitätsinformationen verwenden, um Szenarien wie die parallele Ausführung mehrerer Versionen einer Workflowdefinition umzusetzen. Darüber hinaus bilden sie die Grundlage für andere Funktionen wie dynamische Updates. Dieses Thema bietet eine Übersicht über die Verwendung von <xref:System.Activities.WorkflowIdentity> mit <xref:System.Activities.WorkflowApplication>-Hosting. Weitere Informationen zur Seite-an-Seite-Ausführung von workflowdefinitionen in einem Workflowdienst, finden Sie unter [parallele Versionsverwaltung in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Weitere Informationen zu dynamischen Updates finden Sie unter [dynamische Updates](dynamic-update.md).  
@@ -139,9 +139,9 @@ wfApp.Load(instance);
 ```  
   
 ## <a name="UpdatingWF4PersistenceDatabases"></a> Aktualisieren von .NET Framework 4-Persistenzdatenbanken zur Unterstützung der Workflowversionsverwaltung  
- Ein SqlWorkflowInstanceStoreSchemaUpgrade.sql-Datenbankskript wird bereitgestellt, um ein Upgrade für Persistenzdatenbanken auszuführen, die mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Datenbankskripts erstellt wurden. Durch dieses Skript werden die Datenbanken aktualisiert, um die neuen mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführten Versionsverwaltungsfunktionen zu unterstützen. Den persistenten Workflowinstanzen in den Datenbanken werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein.  
+ Ein SqlWorkflowInstanceStoreSchemaUpgrade.sql-Datenbankskript wird bereitgestellt, um ein Upgrade für Persistenzdatenbanken auszuführen, die mit [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Datenbankskripts erstellt wurden. Dieses Skript aktualisiert die Datenbanken aus, um die neuen versionsverwaltungsfunktionen eingeführt, die in .NET Framework 4.5 zu unterstützen. Den persistenten Workflowinstanzen in den Datenbanken werden Standardversionswerte zugeordnet, und sie können an einer parallelen Ausführung und an dynamischen Updates beteiligt sein.  
   
- Wenn eine [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Workflowanwendung versucht, einen beliebigen Persistenzvorgang auszuführen, der die neuen Versionsverwaltungsfunktionen für eine Persistenzdatenbank verwendet, die nicht mithilfe des bereitgestellten Skripts aktualisiert wurde, wird eine <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> mit etwa folgender Meldung ausgelöst.  
+ Wenn eine .NET Framework 4.5-Workflow-Anwendung auf einen beliebigen persistenzvorgang auszuführen versucht, die die neuen versionsverwaltungsfunktionen für eine Persistenzdatenbank verwenden, die nicht mithilfe der bereitgestellten Skripts aktualisiert wurde ein <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> ausgelöst und eine Meldung ähnlich der folgende Meldung.  
   
  **Der SqlWorkflowInstanceStore weist die Datenbankversion "'4.0.0.0". InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' kann nicht für diese Datenbankversion ausgeführt werden.  Aktualisieren Sie die Datenbank auf "4.5.0.0".**  
 ### <a name="ToUpgrade"></a> Das Datenbankschema aktualisieren.  

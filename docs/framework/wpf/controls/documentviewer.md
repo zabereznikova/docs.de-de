@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f27b07b77fc05c548b724aaf2c905c6a9f5d420
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911897"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378274"
 ---
 # <a name="documentviewer"></a>DocumentViewer
-Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Dokumente) in einem paginierten Format.  
+Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FixedDocument> Inhalt (z. B. XML Paper Specification (XPS)-Dokumente) in einem paginierten Format.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.DocumentViewer>  

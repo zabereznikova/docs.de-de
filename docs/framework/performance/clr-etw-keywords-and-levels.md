@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a9061503ae4bf68903f35eb7624deed2f34c9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 519429da275c852ea193e95fe651cc73efc0736a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616612"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378688"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
 <a name="top"></a> ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereignisse können nach Kategorie und Ebene gefiltert werden. Ereignis- [CLR-ETW-Schlüsselwörter](#keywords) ermöglichen das Filtern von Ereignissen nach Kategorie. Sie werden in Kombination für die Runtime- und die Rundownanbieter verwendet. Die [Ereignisebenen](#levels) werden durch Flags gekennzeichnet.  
@@ -52,7 +52,7 @@ ms.locfileid: "64616612"
 |`ContentionKeyword`|0x00004000|Ermöglicht das Sammeln von [Konfliktereignissen](../../../docs/framework/performance/contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Ermöglicht das Sammeln von [Ausnahmeereignissen](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Ermöglicht das Sammeln von [Threadpoolereignissen](../../../docs/framework/performance/thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]sollten Profilerstellungstools `OverrideAndSuppressNGenEventsKeyword` und `NGenKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsKeyword` und verarbeitet `NGenKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Verfügbar in .NET Framework 4.5 und höher). Unterdrückt das aufwendige `NGenKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab .NET Framework 4.5, Profilerstellungstools verwenden sollten `OverrideAndSuppressNGenEventsKeyword` und `NGenKeyword` zusammen, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsKeyword` und verarbeitet `NGenKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleLoad` - und `ModuleRange` -Ereignissen.|  
 |`StackKeyword`|0x40000000|Ermöglicht das Sammeln von CLR- [Stapelüberwachungsereignissen](../../../docs/framework/performance/stack-etw-event.md).|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64616612"
 |`EndRundownKeyword`|0x00000100|Ermöglicht die Enumeration des Systemzustands während eines Endrundowns.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Ermöglicht das Sammeln von Ereignissen für die Ressourcenüberwachung auf einer <xref:System.AppDomain> -Ebene bei Verwendung mit `StartRundownKeyword` oder `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Ermöglicht das Sammeln von Threadpoolereignissen.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenRundownKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]sollten Profilerstellungstools `OverrideAndSuppressNGenEventsRundownKeyword` und `NGenRundownKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsRundownKeyword` und verarbeitet `NGenRundownKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Verfügbar in .NET Framework 4.5 und höher). Unterdrückt das aufwendige `NGenRundownKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab .NET Framework 4.5, Profilerstellungstools verwenden sollten `OverrideAndSuppressNGenEventsRundownKeyword` und `NGenRundownKeyword` zusammen, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsRundownKeyword` und verarbeitet `NGenRundownKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleDCStart`-, `ModuleDCEnd`-, `ModuleRangeDCStart`- und `ModuleRangeDCEnd` -Ereignissen.|  
   
  [Zurück nach oben](#top)  

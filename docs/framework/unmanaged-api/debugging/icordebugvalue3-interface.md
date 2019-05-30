@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 300d2263c076c9028340863e2f7a3fa27a36ef9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4bf3605331e6900fd890e49bb3f71f4ca4409c7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993727"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377599"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3-Schnittstelle
 Erweitert die Schnittstellen "ICorDebugValue" und "ICorDebugValue2", um Unterstützung für Arrays bereitzustellen, die größer als 2 GB sind.  
@@ -33,7 +33,7 @@ Erweitert die Schnittstellen "ICorDebugValue" und "ICorDebugValue2", um Unterst�
 |[GetSize64-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Ruft die Größe in Bytes, davon `ICorDebugValue3` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) Methode gibt eine Größe des Objekts, die reicht von 0 auf 2.147.483.647 Bytes. In der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], die Größe des Arrays kann maximal 2 GB. Die `ICorDebugValue3` Schnittstelle können Sie die Größe dieser Arrays zu bestimmen.  
+ Die [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) Methode gibt eine Größe des Objekts, die reicht von 0 auf 2.147.483.647 Bytes. In .NET Framework 4.5 kann die Größe des Arrays 2 GB überschreiten. Die `ICorDebugValue3` Schnittstelle können Sie die Größe dieser Arrays zu bestimmen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

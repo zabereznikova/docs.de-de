@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655490"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380182"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Übersicht über bidirektionale Features in WPF
 Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über viele Features, die eine schnelle Entwicklung von bidirektionalem Inhalt unterstützen, z. B. Links gemischte links nach rechts und von rechts, um Daten im selben Dokument. Zur gleichen Zeit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erstellt eine hervorragende Erfahrung für Benutzer, die bidirektionale Funktionen wie z.B. Arabisch oder Hebräisch sprechende Benutzer benötigen.  
@@ -178,11 +178,11 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
   
  **Ersetzung**:  
   
- Diese Eigenschaft gibt den Typ der zu ersetzenden Zahl an. Es akzeptiert einen der folgenden <xref:System.Windows.Media.NumberSubstitutionMethod> -Enumerationswerte fest.  
+ Diese Eigenschaft gibt den Typ der zu ersetzenden Zahl an. Es akzeptiert einen der folgenden <xref:System.Windows.Media.NumberSubstitutionMethod> -Enumerationswerte fest:  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Die Ersetzungsmethode wird basierend auf der Zahlenkultur bestimmt <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> Eigenschaft. Dies ist die Standardeinstellung.  
   
-- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Bei einer arabischen oder persischen Zahlenkultur wird angegeben, dass die Ziffern vom Kontext abhängig sind.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Wenn die Kultur eine Kultur Arabisch oder Persian ist, gibt an, aus, dass die Ziffern vom Kontext abhängen.  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Zahlen werden immer als europäische Ziffern gerendert.  
   
