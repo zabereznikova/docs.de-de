@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965552"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452684"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Verwenden von Namespaces (C#-Programmierhandbuch)
 Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwendet. Erstens: Die .NET Framework-Klassen verwenden Namespaces, um ihre zahlreichen Klassen zu organisieren. Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.  
@@ -39,7 +39,7 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Verwenden von Namespaces zur Steuerung des Gültigkeitsbereichs  
- Mit dem Schlüsselwort `namespace` wird ein Bereich deklariert. Die Möglichkeit zum Erstellen von Bereichen innerhalb des Projekts, hilft Ihnen den Code zu organisieren und ermöglicht Ihnen die Erstellung von global eindeutigen Typen. Im folgenden Beispiel, wird eine Klasse mit dem Titel `SampleClass` in zwei ineinander geschachtelten Namespaces definiert. Die [. Operator](../../../csharp/language-reference/operators/member-access-operator.md) wird verwendet, um zu unterscheiden, welche Methode aufgerufen wird.  
+ Mit dem Schlüsselwort `namespace` wird ein Bereich deklariert. Die Möglichkeit zum Erstellen von Bereichen innerhalb des Projekts, hilft Ihnen den Code zu organisieren und ermöglicht Ihnen die Erstellung von global eindeutigen Typen. Im folgenden Beispiel, wird eine Klasse mit dem Titel `SampleClass` in zwei ineinander geschachtelten Namespaces definiert. Der [Operator `.` für den Memberzugriff](../../language-reference/operators/member-access-operators.md#member-access-operator-) wird verwendet, um zu unterscheiden, welche Methode aufgerufen wird.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
   
  Das vorherige Codesegment weist Folgendes auf:  
   
--   Der Namespace `N1` ist ein Mitglied des globalen Namespaces. Sein vollqualifizierter Name lautet `N1`.  
+- Der Namespace `N1` ist ein Mitglied des globalen Namespaces. Sein vollqualifizierter Name lautet `N1`.  
   
--   Der Namespace `N2` ist ein Mitglied von `N1`. Sein vollqualifizierter Name lautet `N1.N2`.  
+- Der Namespace `N2` ist ein Mitglied von `N1`. Sein vollqualifizierter Name lautet `N1.N2`.  
   
--   Die Klasse `C1` ist ein Mitglied von `N1`. Sein vollqualifizierter Name lautet `N1.C1`.  
+- Die Klasse `C1` ist ein Mitglied von `N1`. Sein vollqualifizierter Name lautet `N1.C1`.  
   
--   Der Klassenname `C2` wird zweimal in diesem Code verwendet. Die vollqualifizierten Namen sind jedoch eindeutig. Die erste Instanz von `C2` wird in `C1` deklariert; daher lautet der vollqualifizierte Name: `N1.C1.C2`. Die zweite Instanz von `C2` wird in einem Namespace `N2` deklariert; daher lautet der vollqualifizierte Name: `N1.N2.C2`.  
+- Der Klassenname `C2` wird zweimal in diesem Code verwendet. Die vollqualifizierten Namen sind jedoch eindeutig. Die erste Instanz von `C2` wird in `C1` deklariert; daher lautet der vollqualifizierte Name: `N1.C1.C2`. Die zweite Instanz von `C2` wird in einem Namespace `N2` deklariert; daher lautet der vollqualifizierte Name: `N1.N2.C2`.  
   
  Mithilfe des vorhergehenden Codesegments können Sie dem Namespace `N1.N2` ein neues Klassenmitglied `C3` wie folgt hinzufügen:  
   
@@ -93,6 +93,6 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
 - [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)
+- [. Operator](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -3,12 +3,12 @@ title: Schreiben von sicherem und effizientem C#-Code
 description: Durch Verbesserungen, die kürzlich an C# vorgenommen wurden, können Sie nun überprüfbaren sicheren Code schreiben, dessen Leistung vorher nur mit unsicherem Code zu erzielen war.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753891"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Schreiben von sicherem und effizientem C#-Code
 
@@ -180,6 +180,8 @@ Wenn stattdessen zur Abstandsberechnung die unveränderliche Struktur `ReadonlyP
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Der Compiler generiert effizienteren Code, wenn Member vom Typ `readonly struct` aufgerufen werden: Im Gegensatz zur Kopie des Empfängers ist der `this`-Verweis immer ein `in`-Parameter, der als Verweis der Membermethode übergeben wird. Durch diese Optimierung werden Kopien vermieden, wenn Sie `readonly struct` als `in`-Argument verwenden.
+
+Übergeben Sie keinen Nullwerte zulassenden Typ als `in`-Argument. Der <xref:System.Nullable%601>-Typ wird nicht als schreibgeschützte Struktur deklariert. Dies bedeutet, dass der Compiler defensive Kopien für jedes Nullwerte zulassende Typargument generieren muss, das einer Methode mit dem `in`-Modifizierer in der Parameterdeklaration übergeben wird.
 
 In einem Beispielprogramm, das sich im entsprechenden [GitHub-Repository](https://www.nuget.org/packages/BenchmarkDotNet/) befindet, können Sie sich die Leistungsunterschiede ansehen, die mit [BenchmarkDotNet](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) erfasst werden. Dabei wird die Übergabe einer veränderlichen Struktur als Wert und Verweis mit der Übergabe einer unveränderlichen Struktur als Wert und Verweis verglichen. Am schnellsten ist die Übergabe einer unveränderlichen Struktur als Verweis.
 

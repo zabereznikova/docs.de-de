@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59335016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755203"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -27,9 +27,9 @@ Die verschiedenen .NET-Implementierungen verwenden spezifische Versionen von .NE
 
 ## <a name="net-implementation-support"></a>Unterstützung der .NET-Implementierung
 
-In der folgenden Tabelle sind die mindestens erforderlichen Versionen von Plattformen aufgeführt, die sämtliche .NET Standard-Versionen unterstützten.
+In der folgenden Tabelle sind die **mindestens** erforderlichen Versionen von Plattformen aufgeführt, die sämtliche .NET Standard-Versionen unterstützen. Dies bedeutet, dass höhere Versionen einer aufgelisteten Plattform auch die entsprechende Version von .NET Standard unterstützen. .NET Core 2.2 unterstützt z.B. .NET Standard 2.0 und frühere Versionen.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 Führen Sie die folgenden Schritte aus, um die höchste Version von .NET Standard zu ermitteln, die Sie als Ziel verwenden können:
 
@@ -142,7 +142,7 @@ Unterschiede:
 
 Die Kompatibilität profilbasierter PCLs wird über das NuGet-Paket [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) gewährleistet. Diese Abhängigkeit ist erforderlich, wenn Sie auf NuGet-Pakete verweisen, die profilbasierte PCLs enthalten.
 
-Profilbasierte PCLs, die als `netstandard` paketiert wurden, sind einfacher zu verwenden als normal paketierte profilbasierte PCLs. `netstandard` -Paketerstellung ist mit vorhandenen Benutzern kompatibel.
+Profilbasierte PCLs, die als `netstandard` paketiert wurden, sind einfacher zu verwenden als normal paketierte profilbasierte PCLs. `netstandard`-Verpackung ist mit vorhandenen Benutzern kompatibel.
 
 Sehen Sie sich den Satz von PCL-Profilen an, die mit dem .NET-Standard kompatibel sind:
 

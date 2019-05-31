@@ -3,12 +3,12 @@ title: Klassen und Objekte in C# – Überblick über C#
 description: Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921246"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750390"
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -33,42 +33,42 @@ Die Member einer Klasse sind entweder statische Member oder Instanzmember. Stati
 Nachfolgend finden Sie einen Überblick über die Memberarten, die eine Klasse enthalten kann.
 
 * Konstanten
-    - Konstante Werte, die der Klasse zugeordnet sind
+  - Konstante Werte, die der Klasse zugeordnet sind
 * Felder
-    - Variablen der Klasse
+  - Variablen der Klasse
 * Methoden
-    - Berechnungen und Aktionen, die von der Klasse ausgeführt werden
+  - Berechnungen und Aktionen, die von der Klasse ausgeführt werden
 * Eigenschaften
-    - Aktionen im Zusammenhang mit dem Lesen und Schreiben von benannten Eigenschaften der Klasse
+  - Aktionen im Zusammenhang mit dem Lesen und Schreiben von benannten Eigenschaften der Klasse
 * Indexer
-    - Aktionen im Zusammenhang mit dem Indizieren von Instanzen der Klasse, z.B. einem Array
+  - Aktionen im Zusammenhang mit dem Indizieren von Instanzen der Klasse, z.B. einem Array
 * Ereignisse
-    - Benachrichtigungen, die von der Klasse generiert werden können
+  - Benachrichtigungen, die von der Klasse generiert werden können
 * Operatoren
-    - Operatoren für Konvertierungen und Ausdrücke, die von der Klasse unterstützt werden
+  - Operatoren für Konvertierungen und Ausdrücke, die von der Klasse unterstützt werden
 * Konstruktoren
-    - Aktionen, die zum Initialisieren von Instanzen der Klasse oder der Klasse selbst benötigt werden
+  - Aktionen, die zum Initialisieren von Instanzen der Klasse oder der Klasse selbst benötigt werden
 * Finalizer
-    - Aktionen, die ausgeführt werden, bevor Instanzen der Klasse dauerhaft verworfen werden
+  - Aktionen, die ausgeführt werden, bevor Instanzen der Klasse dauerhaft verworfen werden
 * Typen
-    - Geschachtelte Typen, die von der Klasse deklariert werden
+  - Geschachtelte Typen, die von der Klasse deklariert werden
 
 ## <a name="accessibility"></a>Zugriff
 
 Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt sechs mögliche Formen des Zugriffs. Diese werden nachfolgend zusammengefasst.
 
 * `public`
-    - Der Zugriff ist nicht eingeschränkt.
+  - Der Zugriff ist nicht eingeschränkt.
 * `protected`
-    - Der Zugriff ist auf diese Klasse oder auf von dieser Klasse abgeleitete Klassen beschränkt.
+  - Der Zugriff ist auf diese Klasse oder auf von dieser Klasse abgeleitete Klassen beschränkt.
 * `internal`
-    - Der Zugriff ist auf die aktuelle Assembly beschränkt (.exe, .dll, usw.)
+  - Der Zugriff ist auf die aktuelle Assembly beschränkt (.exe, .dll, usw.)
 * `protected internal`
-    - Der Zugriff ist auf die enthaltende Klasse, auf Klassen, die von der enthaltenden Klasse abgeleitet sind, oder auf Klassen innerhalb der gleichen Assembly beschränkt.
+  - Der Zugriff ist auf die enthaltende Klasse, auf Klassen, die von der enthaltenden Klasse abgeleitet sind, oder auf Klassen innerhalb der gleichen Assembly beschränkt.
 * `private`
-    - Der Zugriff ist auf diese Klasse beschränkt.
+  - Der Zugriff ist auf diese Klasse beschränkt.
 * `private protected`
-    - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die vom enthaltenden Typ in der gleichen Assembly abgeleitet werden.
+  - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die vom enthaltenden Typ in der gleichen Assembly abgeleitet werden.
 
 ## <a name="type-parameters"></a>Typparameter
 
@@ -230,7 +230,7 @@ C# unterstützt sowohl Instanzkonstruktoren als auch statische Konstruktoren. Ei
 
 Ein Konstruktor wird wie eine Methode ohne Rückgabetyp und mit demselben Namen wie die enthaltende Klasse deklariert. Wenn eine Konstruktordeklaration einen static-Modifizierer enthält, deklariert sie einen statischen Konstruktor. Andernfalls wird ein Instanzkonstruktor deklariert.
 
-Instanzkonstruktoren können überladen werden und optionale Parameter verwenden. Beispielsweise deklariert die `MyList<T>`-Klasse zwei Instanzkonstruktoren, einen ohne Parameter und einen weiteren mit einem `int`-Parameter. Instanzkonstruktoren werden über den `new`-Operator aufgerufen. Die folgenden Anweisungen weisen zwei Instanzen von `MyList<string>` unter Verwendung des Konstruktors der `MyList`-Klasse zu, mit dem optionalen Argument und ohne das optionale Argument.
+Instanzkonstruktoren können überladen werden und optionale Parameter verwenden. Die `MyList<T>`-Klasse deklariert z.B. einen Instanzkonstruktor mit einem einzelnen optionalen `int`-Parameter. Instanzkonstruktoren werden über den `new`-Operator aufgerufen. Die folgenden Anweisungen weisen zwei Instanzen von `MyList<string>` unter Verwendung des Konstruktors der `MyList`-Klasse zu, mit dem optionalen Argument und ohne das optionale Argument.
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 

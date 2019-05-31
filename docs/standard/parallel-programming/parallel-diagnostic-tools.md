@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2f34170c5a79c302158707fa96c60aef15e4cb1e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123110"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622449"
 ---
 # <a name="parallel-diagnostic-tools"></a>Diagnosetools für die parallele Ausführung
 Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profilerstellung in Multithreadanwendungen.  
@@ -20,11 +20,11 @@ Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profi
 ## <a name="debugging"></a>Debuggen  
  Visual Studio-Debugger fügt neue Fenster für das Debuggen paralleler Anwendungen ein. Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [Verwenden des Fensters "Parallele Stapel"](/visualstudio/debugger/using-the-parallel-stacks-window)  
+- [Verwenden des Fensters "Parallele Stapel"](/visualstudio/debugger/using-the-parallel-stacks-window)  
   
--   [Verwenden des Fensters „Aufgaben“](/visualstudio/debugger/using-the-tasks-window)  
+- [Verwenden des Fensters „Aufgaben“](/visualstudio/debugger/using-the-tasks-window)  
   
--   [Exemplarische Vorgehensweise: Debuggen einer parallelen Anwendung](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)  
+- [Exemplarische Vorgehensweise: Debuggen einer parallelen Anwendung](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
   
 ## <a name="profiling"></a>Profilerstellung  
  Mit den Berichtsansichten der Parallelitätsschnellansicht können Sie visuell darstellen, wie die Threads in einem parallelen Programm miteinander und mit Threads von anderen Prozessen auf dem System interagieren. Weitere Informationen finden Sie unter [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer).  

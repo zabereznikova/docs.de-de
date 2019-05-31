@@ -8,18 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 07563d32b176832966ab50942cda2b0b26b80e44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137968"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633807"
 ---
 # <a name="using-c-reference"></a>using (C#-Referenz)
 
 Das Schlüsselwort `using` hat drei Hauptverwendungen:
-- Die [Using-Anweisung](using-statement.md) definiert einen Bereich, an dessen Ende ein Objekt verworfen wird. 
-- Die Using-[Anweisung](using-directive.md) erstellt einen Alias für einen Namespace oder importiert Typen, die in anderen Namespaces definiert sind. 
+
+- Die [Using-Anweisung](using-statement.md) definiert einen Bereich, an dessen Ende ein Objekt verworfen wird.
+- Die [Using-Anweisung](using-directive.md) erstellt einen Alias für einen Namespace oder importiert Typen, die in anderen Namespaces definiert sind.
 - Die [statische Using-Anweisung](using-static.md) importiert die Elemente einer einzelnen Klasse.
 
 ## <a name="see-also"></a>Siehe auch

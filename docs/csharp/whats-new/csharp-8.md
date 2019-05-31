@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427278"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754378"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -321,7 +321,7 @@ Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Ver
 
 Bereiche und Indizes bieten eine prägnante Syntax zur Angabe von Teilbereichen in einem Array, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>.
 
-Sie können einen Index  **from the end** aus angeben. Sie geben **from the end** mithilfe des `^`-Operators an. Sie kennen `array[2]`. Damit wird das Element „2 from the start“ bezeichnet. Jetzt bezeichnet `array[^2]` das Element „2 from the end“. Der Index `^0` bedeutet „das Ende“ oder der Index, der dem letzten Element folgt.
+Sie können mit Verwendung des `^`-Zeichens vor dem Index einen Index **vom Ende aus** angeben. Die Indizierung vom Ende aus beginnt mit der Regel, dass `0..^0` den gesamten Bereich angibt. Starten Sie zum Auflisten eines vollständigen Arrays *beim ersten Element*, und fahren Sie fort bis *hinter das letzte Element*. Stellen Sie sich das Verhalten der `MoveNext`-Methode auf einem Enumerator vor: Sie gibt „false“ zurück, wenn die Enumeration das letzte Element passiert. Der Index `^0` bedeutet „das Ende“, `array[array.Length]`, oder der Index, der dem letzten Element folgt. Sie kennen `array[2]`. Damit wird das Element „2 from the start“ bezeichnet. Jetzt bezeichnet `array[^2]` das Element „2 from the end“. 
 
 Sie können einen **Bereich** mit dem **Bereichsoperator** angeben: `..`. So gibt beispielsweise `0..^0` den gesamten Bereich des Arrays an: 0 vom Anfang bis zum Ende, aber nicht einschließlich 0 vom Ende. Jeder der beiden Operanden kann „from the start“ oder „from the end“ verwenden. Darüber hinaus kann jeder der beiden Operanden weggelassen werden. Die Standardeinstellungen sind `0` für den Startindex und `^0` für den Endindex.
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 Der Index jedes Elements verstärkt das Konzept von „from the start“ und „from the end“, und dass Bereiche das Ende des Bereichs ausschließen. Der „start“ des gesamten Arrays ist das erste Element. Das „end“ des gesamten Arrays liegt *hinter* dem letzten Element.
@@ -383,3 +383,5 @@ Der Bereich kann dann innerhalb der Zeichen `[` und `]` verwendet werden:
 ```csharp
 var text = words[phrase];
 ```
+
+Weitere Informationen zu Indizes und Bereichen finden Sie im Tutorial zu [Indizes und Bereichen](../tutorials/ranges-indexes.md).

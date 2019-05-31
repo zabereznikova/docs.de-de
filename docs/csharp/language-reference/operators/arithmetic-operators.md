@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753816"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Arithmetische Operatoren (C#-Referenz)
 
@@ -51,13 +51,13 @@ Der Inkrementoperator wird in zwei Formen unterstützt: als Postfix-Inkrementope
 
 ### <a name="postfix-increment-operator"></a>Postfix-Operator für Inkrement
 
-Das Ergebnis von `x++` ist der Wert von `x`  *vor* dem Vorgang, wie das folgende Beispiel zeigt:
+Das Ergebnis von `x++` ist der Wert von `x` *vor* dem Vorgang, wie das folgende Beispiel zeigt:
 
 [!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>Präfixinkrement-Operator
 
-Das Ergebnis von `++x` ist der Wert von `x`  *nach* dem Vorgang, wie das folgende Beispiel zeigt:
+Das Ergebnis von `++x` ist der Wert von `x` *nach* dem Vorgang, wie das folgende Beispiel zeigt:
 
 [!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ Der Dekrementoperator wird in zwei Formen unterstützt: als Postfix-Dekrementope
 
 ### <a name="postfix-decrement-operator"></a>Postfix-Operator für Dekrement
 
-Das Ergebnis von `x--` ist der Wert von `x`  *vor* dem Vorgang, wie das folgende Beispiel zeigt:
+Das Ergebnis von `x--` ist der Wert von `x` *vor* dem Vorgang, wie das folgende Beispiel zeigt:
 
 [!code-csharp-interactive[postfix decrement](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>Präfix-Dekrementoperator
 
-Das Ergebnis von `--x` ist der Wert von `x`  *nach* dem Vorgang, wie das folgende Beispiel zeigt:
+Das Ergebnis von `--x` ist der Wert von `x` *nach* dem Vorgang, wie das folgende Beispiel zeigt:
 
 [!code-csharp-interactive[prefix decrement](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -163,23 +163,6 @@ Der Subtraktionsoperator `-` subtrahiert den zweiten Operanden vom ersten:
 
 Der `-`-Operator kann auch für die Delegatentfernung verwendet werden. Weitere Informationen finden Sie im Artikel zum [`-`-Operator](subtraction-operator.md).
 
-## <a name="operator-precedence-and-associativity"></a>Operatorrangfolge und Assoziativität
-
-In der folgenden Liste sind die arithmetischen Operatoren beginnend mit dem höchsten Rangfolgenoperator absteigend sortiert:
-
-- Postfix-Inkrementoperator `x++` und Postfix-Dekrementoperator `x--`
-- Präfix-Inkrementoperator `++x` und Präfix-Dekrementoperator `--x` sowie unäre Operatoren `+` und `-`
-- Multiplikative Operatoren `*`, `/` und `%`
-- Additive Operatoren `+` und `-`
-
-Binäre arithmetische Operatoren sind linksassoziativ. Das bedeutet, dass Operatoren mit der gleichen Rangfolgenebene von links nach rechts ausgewertet werden.
-
-Verwenden Sie Klammern `()`, wenn Sie die Reihenfolge der Auswertung ändern möchten, die durch Operatorrangfolge und Assoziativität festgelegt wird.
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie unter [C#-Operatoren](index.md).
-
 ## <a name="compound-assignment"></a>Verbundzuweisung
 
 Bei einem binären Operator `op` entspricht ein Verbundzuweisungsausdruck der Form
@@ -200,7 +183,28 @@ Im folgenden Beispiel wird die Verwendung von Verbundzuweisungen mit arithmetisc
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+Aufgrund von [numerischen Höherstufungen](~/_csharplang/spec/expressions.md#numeric-promotions) kann das Ergebnis der Operation `op` ggf. nicht implizit in den Typ `T` von `x` konvertiert werden. In diesem Fall gilt Folgendes: Wenn `op` ein vordefinierter Operator ist und das Ergebnis der Operation explizit in den Typ `T` von `x` konvertiert werden kann, entspricht ein Verbundzuweisungsausdruck der Form `x op= y` dem Ausdruck `x = (T)(x op y)`. Der einzige Unterschied ist, dass `x` nur einmal ausgewertet wird. Das folgende Beispiel veranschaulicht dieses Verhalten:
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 Die Operatoren `+=` und `-=` können auch zum Abonnieren von Ereignissen und zum Kündigen von [Ereignisabonnements](../keywords/event.md) verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abonnieren von Ereignissen und Kündigen von Ereignisabonnements](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>Operatorrangfolge und Assoziativität
+
+In der folgenden Liste sind die arithmetischen Operatoren beginnend mit dem höchsten Rangfolgenoperator absteigend sortiert:
+
+- Postfixinkrementoperator `x++` und Postfixdekrementoperator `x--`
+- Präfixinkrementoperator `++x` und Präfixdekrementoperator `--x` sowie unäre `+`- und `-`-Operatoren
+- Multiplikative Operatoren `*`, `/` und `%`
+- Additive Operatoren `+` und `-`
+
+Binäre arithmetische Operatoren sind linksassoziativ. Das bedeutet, dass Operatoren mit der gleichen Rangfolgenebene von links nach rechts ausgewertet werden.
+
+Verwenden Sie Klammern `()`, wenn Sie die Reihenfolge der Auswertung ändern möchten, die durch Operatorrangfolge und Assoziativität festgelegt wird.
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie unter [C#-Operatoren](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Arithmetischer Überlauf und Division durch 0 (null)
 
@@ -256,6 +260,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Subtraktionsoperator](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Verbundzuweisung](~/_csharplang/spec/expressions.md#compound-assignment)
 - [The checked and unchecked operators (Checked- und Unchecked-Operatoren)](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Numerische Heraufstufungen](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672393"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452397"
 ---
 # <a name="-operator-c-reference"></a>?: Operator (C#-Referenz)
 
@@ -37,16 +37,18 @@ Der bedingte Operator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 a ? b : c ? d : e
 ```
 
-wird wie folgt ausgewertet
+wird als ausgewertet,
 
 ```csharp
 a ? b : (c ? d : e)
 ```
 
-Eine praktische Gedächtnisstütze für die Auswertung des Operators ist die folgende Frage: 
-```
+Eine Gedächtnisstütze für die Auswertung des Operators ist die folgende Frage:
+
+```text
 is this condition true ? yes : no
 ```
+
 Dabei fungiert das ? im Operatorausdruck als Fragezeichen für die vorherige Anweisung und die daraus folgende Handlung als logische Antwort auf diese Frage.
 
 Im folgenden Beispiel wird die Verwendung des bedingten Operators veranschaulicht:
@@ -83,9 +85,9 @@ Die Verwendung des bedingten Operators über einer [if-else](../keywords/if-else
 
 Der bedingte Operator kann nicht überladen werden.
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang/spec/expressions.md#conditional-operator) der [C#-Programmiersprachenspezifikation](../language-specification/index.md).
+Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang/spec/expressions.md#conditional-operator) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -93,6 +95,6 @@ Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [if-else-Anweisung](../keywords/if-else.md)
-- [?.- und ?[]-Operatoren](null-conditional-operators.md)
+- [?.- und ?[]-Operatoren](member-access-operators.md#null-conditional-operators--and-)
 - [?? Operator](null-coalescing-operator.md)
 - [ref (C#-Referenz)](../keywords/ref.md)

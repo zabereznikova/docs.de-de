@@ -3,14 +3,14 @@ title: .NET API-Analysetool
 description: Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs und Kompatibilitätsprobleme bei Plattformen erkennen können.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680268"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063349"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -23,7 +23,7 @@ Das API-Analysetool ist als NuGet-Paket [Microsoft.DotNet.Analyzers.Compatibilit
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* Visual Studio 2017 oder Visual Studio für Mac (alle Versionen)
+* Visual Studio 2017 und höhere Versionen oder Visual Studio für Mac (alle Versionen).
 
 ## <a name="discovering-deprecated-apis"></a>Ermittlung von veralteten APIs
 
@@ -55,11 +55,11 @@ Warnungen können unterdrückt werden, indem Sie mit der rechten Maustaste auf d
 
 ### <a name="suppressing-warnings-locally"></a>Lokales Unterdrücken von Warnungen
 
-Um Warnungen lokal zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** > ***Diagnose-ID* unterdrücken\<Diagnose-ID >** > **in Quelle**. Die Warnungspräprozessoranweisung [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) wird Ihrem Quellcode im definierten Bereich hinzugefügt: ![„Screenshot von Code, eingeschlossen durch #pragma warning disable“](media/api-analyzer/suppress-in-source.jpg)
+Um Warnungen lokal zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** >  ***Diagnose-ID* unterdrücken\<Diagnose-ID >**  > **in Quelle**. Die Warnungspräprozessoranweisung [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) wird Ihrem Quellcode im definierten Bereich hinzugefügt: ![„Screenshot von Code, eingeschlossen durch #pragma warning disable“](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Globales Unterdrücken von Warnungen
 
-Um Warnungen global zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** > ***Diagnose-ID* unterdrücken\<Diagnose-ID >** > **in Unterdrückungsdatei**.
+Um Warnungen global zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** >  ***Diagnose-ID* unterdrücken\<Diagnose-ID >**  > **in Unterdrückungsdatei**.
 
 ![„Screenshot der WebClient-API mit grüner Wellenlinie und Glühbirne auf der linken Seite“](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -98,6 +98,7 @@ Zurzeit verarbeitet das Analysetool die folgenden Fälle:
 * Nutzung einer .NET Standard-API, die die Ausnahme <xref:System.PlatformNotSupportedException> (PC001) auslöst.
 * Nutzung einer .NET Standard-API, die im .NET Framework 4.6.1 (PC002) nicht verfügbar ist.
 * Nutzung einer nativen API, die nicht in UWP (PC003) vorhanden ist.
+* Die Verwendung von Delegate.BeginInvoke und EndInvoke-APIs (PC004).
 * Nutzung einer API, die als veraltet (DEXXXX) gekennzeichnet ist.
 
 ## <a name="ci-machine"></a>CI-Computer

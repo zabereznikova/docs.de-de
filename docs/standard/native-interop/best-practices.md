@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196657"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063066"
 ---
 # <a name="native-interoperability-best-practices"></a>Bewährte Methoden für native Interoperabilität
 
@@ -33,7 +33,7 @@ Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarie
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Behalten Sie den Standardwert bei.  | Wenn diese Einstellung explizit auf „false“ festgelegt wird, werden fehlerhafte HRESULT-Rückgabewerte zu Ausnahmen umgewandelt (und der Rückgabewert in der Definition wird dadurch NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Hängt von der API ab.  | Legen Sie diese Einstellung auf „true“ fest, wenn die API „GetLastError“ verwendet, und verwenden Sie „Marshal.GetLastWin32Error“, um den Wert abzurufen. Wenn die API eine Bedingung festlegt, die besagt, dass ein Fehler vorliegt, rufen Sie den Fehler ab, bevor Sie weitere Aufrufe senden, um ein versehentliches Überschreiben zu verhindern.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`mit Fallback auf das Verhalten `CharSet.Ansi`  | Verwenden Sie explizit `CharSet.Unicode` oder `CharSet.Ansi`, wenn in der Definition Zeichenfolgen oder Zeichen vorhanden sind. | Damit wird das Marshallingverhalten von Zeichenfolgen angegeben und festgelegt, was `ExactSpelling` bei `false` ausführt. Beachten Sie, dass `CharSet.Ansi` tatsächlich UTF8 oder Unix ist. _In den meisten Fällen_ verwendet Windows Unicode, Unix verwendet UTF8. Weitere Informationen finden Sie in der [Dokumentation zu Zeichensätzen](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` – Fallback auf das Verhalten `CharSet.Ansi`.  | Verwenden Sie explizit `CharSet.Unicode` oder `CharSet.Ansi`, wenn in der Definition Zeichenfolgen oder Zeichen vorhanden sind. | Damit wird das Marshallingverhalten von Zeichenfolgen angegeben und festgelegt, was `ExactSpelling` bei `false` ausführt. Beachten Sie, dass `CharSet.Ansi` tatsächlich UTF8 oder Unix ist. _In den meisten Fällen_ verwendet Windows Unicode, Unix verwendet UTF8. Weitere Informationen finden Sie in der [Dokumentation zu Zeichensätzen](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Legen Sie diesen Wert auf „true“ fest, um einen leichten Leistungsvorteil zu erzielen, da die Runtime nicht nach alternativen Funktionsnamen mit dem Suffix „A“ oder „W“ sucht, je nach Wert der Einstellung von `CharSet` („A“ für `CharSet.Ansi` und „W“ für `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Zeichenfolgenparameter
@@ -44,7 +44,7 @@ Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei de
 
 **❌ VERWENDEN SIE KEINE** `[Out] string`-Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ VERMEIDEN** Sie `StringBuilder`-Parameter. `StringBuilder` -Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
+**❌ VERMEIDEN** Sie `StringBuilder`-Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
 
 1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
 2. Aufrufen
@@ -57,15 +57,15 @@ Damit haben wir *{4}* Zuordnungen, um eine Zeichenfolge aus dem nativen Code abz
 
 Ein weiteres Problem bei `StringBuilder` ist, dass immer der Rückgabepuffer bis zum ersten NULL-Zeichen zurückkopiert wird. Wenn die zurückgegebene Zeichenfolge nicht beendet oder mit einem doppelten NULL-Zeichen beendet wird, ist „P/Invoke“ bestenfalls falsch.
 
-Wenn Sie `StringBuilder` *tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshallen von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
+Wenn Sie `StringBuilder` *tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
 
 **✔️ ERWÄGEN** Sie die Verwendung von `char[]`s aus einem `ArrayPool`.
 
-Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standardmäßiges Marshalling für Zeichenfolgen](../../framework/interop/default-marshaling-for-strings.md) und [Anpassen des Zeichenfolgenmarshallings](customize-parameter-marshalling.md#customizing-string-parameters).
+Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standardmäßiges Marshalling für Zeichenfolgen](../../framework/interop/default-marshaling-for-strings.md) und [Anpassen des Zeichenfolgenmarshallings](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Windows-spezifisch__  
 > Bei `[Out]`-Zeichenfolgen verwendet die CLR (Common Language Runtime) standardmäßig `CoTaskMemFree`, um Zeichenfolgen freizugeben, oder `SysStringFree` bei Zeichenfolgen, die als `UnmanagedType.BSTR` gekennzeichnet sind.  
-**Bei den meisten APIs mit Puffer für Ausgabezeichenfolgen gilt Folgendes:**  
+**Bei den meisten APIs mit Puffer für Ausgabezeichenfolgen gilt Folgendes**:  
 > Die übergebene Zeichenanzahl muss das NULL-Zeichen enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.  
 > - 5 übergeben, 4 abrufen: Die Zeichenfolge ist 4 Zeichen lang und umfasst ein nachgestelltes NULL-Zeichen.
 > - 5 übergeben, 6 abrufen: Die Zeichenfolge ist 5 Zeichen lang und erfordert einen Puffer mit 6 Zeichen für das NULL-Zeichen.  
@@ -73,7 +73,7 @@ Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standa
 
 ## <a name="boolean-parameters-and-fields"></a>Boolesche Parameter und Felder
 
-Bei booleschen Werten passieren leicht Fehler. Standardmäßig erfolgt für einen `bool`-Wert von .NET ein Marshalling in einen `BOOL`-Wert in Windows. Dort handelt es sich um einen 4 Byte langen Wert. Die Typen `_Bool` und `bool` in C und C++ sind jedoch *Einzelbytewerte*. Dies kann zu Bugs führen, die sich nur sehr schwer auffinden lassen, da der halbe Rückgabewert verworfen wird, sich das Ergebnis aber nur *möglicherweise* ändert. Weitere Informationen zum Marshallen von `bool`-Werten aus .NET in `bool`-Typen in C oder C++ finden Sie in der Dokumentation zum [Anpassen des Marshallings von booleschen Feldern](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+Bei booleschen Werten passieren leicht Fehler. Standardmäßig erfolgt für einen `bool`-Wert von .NET ein Marshalling in einen `BOOL`-Wert in Windows. Dort handelt es sich um einen 4 Byte langen Wert. Die Typen `_Bool` und `bool` in C und C++ sind jedoch *Einzelbytewerte*. Dies kann zu Bugs führen, die sich nur sehr schwer auffinden lassen, da der halbe Rückgabewert verworfen wird, sich das Ergebnis aber nur *möglicherweise* ändert. Weitere Informationen zum Marshalling von `bool`-Werten aus .NET in `bool`-Typen in C oder C++ finden Sie in der Dokumentation zum [Anpassen des Marshallings von booleschen Feldern](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUIDs
 
@@ -89,7 +89,7 @@ GUIDs können direkt in Signaturen verwendet werden. Viele Windows-APIs akzeptie
 
 Für Blitting geeignete Typen sind Typen, die in verwaltetem und nativem Code die gleiche Darstellung auf Bitebene aufweisen. Als solche müssen sie nicht in ein anderes Format konvertiert werden, um ein Marshalling in den und aus dem nativen Code zu ermöglichen. Da dies die Leistung verbessert, sind diese Typen zu bevorzugen.
 
-**Für Blitting geeignete Typen:**
+**Für Blitting geeignete Typen**:
 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
 - Nicht geschachtelte eindimensionale Arrays aus für Blitting geeigneten Typen (z.B. `int[]`)
@@ -97,11 +97,11 @@ Für Blitting geeignete Typen sind Typen, die in verwaltetem und nativem Code di
   - Ein festes Layout erfordert `[StructLayout(LayoutKind.Sequential)]` oder `[StructLayout(LayoutKind.Explicit)]`
   - Strukturen sind standardmäßig `LayoutKind.Sequential`, Klassen sind `LayoutKind.Auto`
 
-**NICHT für Blitting geeignet:**
+**NICHT für Blitting geeignet**:
 
 - `bool`
 
-**MANCHMAL für Blitting geeignet:**
+**MANCHMAL für Blitting geeignet**:
 
 - `char`, `string`
 
@@ -117,7 +117,7 @@ public struct UnicodeCharStruct
 }
 ```
 
-`string` ist für Blitting geeignet, wenn es nicht in einem anderen Typen enthalten ist und als Argument übergeben wird, das mit `[MarshalAs(UnmanagedType.LPWStr)]` gekennzeichnet ist oder in dem `[DllImport]` für `CharSet = CharSet.Unicode` festgelegt ist.
+`string` ist für Blitting geeignet, wenn es nicht in einem anderen Typen enthalten ist und als Argument übergeben wird, das mit `[MarshalAs(UnmanagedType.LPWStr)]` gekennzeichnet ist oder in dem `CharSet = CharSet.Unicode` für `[DllImport]` festgelegt ist.
 
 Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuchen, ein angeheftetes `GCHandle` zu erstellen. Wenn der Typ keine Zeichenfolge ist oder nicht als für Blitting geeignet betrachtet wird, löst `GCHandle.Alloc` eine `ArgumentException` aus.
 
@@ -126,7 +126,7 @@ Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuc
 Weitere Informationen finden Sie unter:
 
 - [Blitfähige und nicht blitfähige Typen](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Marshallen von Typen](type-marshalling.md)
+- [Marshalling von Typen](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Beibehalten von verwalteten Objekten
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Es gibt jedoch einige Besonderheiten bei festen Puffern. Bei festen Puffer aus nicht für Blitting geeigneten Typen wird das Marshalling nicht ordnungsgemäß ausgeführt, daher muss das vorhandene Array auf mehrere einzelne Felder erweitert werden. Darüber hinaus gilt für .NET Framework und .NET Core vor Version 3.0: Wenn eine Struktur, die ein festes Pufferfeld enthält, in einer nicht für Blitting geeigneten Struktur geschachtelt wird, erfolgt kein ordnungsgemäßes Marshalling des festen Pufferfelds zum nativen Code.
+Es gibt jedoch einige Besonderheiten bei festen Puffern. Bei festen Puffern aus nicht für Blitting geeigneten Typen wird das Marshalling nicht ordnungsgemäß ausgeführt, daher muss das vorhandene Array auf mehrere einzelne Felder erweitert werden. Darüber hinaus gilt für .NET Framework und .NET Core vor Version 3.0: Wenn eine Struktur, die ein festes Pufferfeld enthält, in einer nicht für Blitting geeigneten Struktur geschachtelt wird, erfolgt kein ordnungsgemäßes Marshalling des festen Pufferfelds zum nativen Code.

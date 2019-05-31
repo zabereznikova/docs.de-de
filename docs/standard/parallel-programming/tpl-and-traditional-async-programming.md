@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653924"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL und herkömmliche asynchrone .NET Framework-Programmierung
 .NET Framework stellt die folgenden zwei Standardmuster zum Ausführen von E/A-gebundenen und rechnergebundenen asynchronen Vorgängen bereit:  
   
--   Das asynchrone Programmiermodell (APM), in dem asynchrone Vorgänge durch ein Paar von Begin/End-Methoden dargestellt werden, z. B. <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+- Das asynchrone Programmiermodell (APM), in dem asynchrone Vorgänge durch ein Paar von Begin/End-Methoden dargestellt werden, z. B. <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Das ereignisbasierte asynchrone Muster (EAP), in dem asynchrone Vorgänge durch ein Methoden-/Ereignispaar mit den Namen *OperationName*Async und *OperationName*Completed dargestellt werden, z. B. <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> und <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP wurde in .NET Framework 2.0 eingeführt.)  
+- Das ereignisbasierte asynchrone Muster (EAP), in dem asynchrone Vorgänge durch ein Methoden-/Ereignispaar mit den Namen *OperationName*Async und *OperationName*Completed dargestellt werden, z. B. <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> und <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP wurde in .NET Framework 2.0 eingeführt.)  
   
- Die Task Parallel Library (TPL) kann mit beiden asynchronen Mustern auf unterschiedlichste Weise verwendet werden. Sie können sowohl APM-, als auch EAP-Vorgänge als Aufgaben für Bibliotheksconsumer verfügbar machen, oder Sie machen die APM-Muster verfügbar, implementieren diese aber intern mithilfe von Aufgabenobjekten. In beiden Fällen können Sie den Code mithilfe von Aufgabenobjekten vereinfachen und profitieren von der folgenden nützlichen Funktionalität:  
+ Die Task Parallel Library (TPL) kann mit beiden asynchronen Mustern auf unterschiedlichste Weise verwendet werden. Sie können sowohl APM-, als auch EAP-Vorgänge als Aufgaben für Bibliotheksconsumer verfügbar machen, oder Sie machen die APM-Muster verfügbar, implementieren diese aber intern mithilfe von Task-Objekten. In beiden Fällen können Sie den Code mithilfe von Aufgabenobjekten vereinfachen und profitieren von der folgenden nützlichen Funktionalität:  
   
--   Sie können jederzeit nach dem Start der Aufgabe Rückrufe in der Form von Aufgabenfortsetzungen registrieren.  
+- Sie können jederzeit nach dem Start der Aufgabe Rückrufe in der Form von Aufgabenfortsetzungen registrieren.  
   
--   Sie können mehrere Vorgänge, die als Reaktion auf eine `Begin_`-Methode ausgeführt werden, mit den Methoden <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> und <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A> oder <xref:System.Threading.Tasks.Task.WaitAny%2A> koordinieren.  
+- Sie können mehrere Vorgänge, die als Reaktion auf eine `Begin_`-Methode ausgeführt werden, mit den Methoden <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> und <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A> oder <xref:System.Threading.Tasks.Task.WaitAny%2A> koordinieren.  
   
--   Sie können asynchrone E/A-gebundenen und rechnergebundene Vorgänge im gleichen Aufgabenobjekt kapseln.  
+- Sie können asynchrone E/A-gebundenen und rechnergebundene Vorgänge im gleichen Task-Objekt kapseln.  
   
--   Sie können den Status des Aufgabenobjekts überwachen.  
+- Sie können den Status des Task-Objekts überwachen.  
   
--   Sie können den Status eines Vorgangs mittels <xref:System.Threading.Tasks.TaskCompletionSource%601> an ein Task-Objekt marshallen.  
+- Sie können den Status eines Vorgangs mittels <xref:System.Threading.Tasks.TaskCompletionSource%601> an ein Task-Objekt marshallen.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>Einschließen von APM-Vorgängen in eine Aufgabe  
  Sowohl die <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>-Klasse als auch die <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>-Klasse stellen mehrere Überladungen der <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType>-Methode und der <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType>-Methode bereit, mit denen Sie ein APM Begin/End-Methodenpaar in einer <xref:System.Threading.Tasks.Task>-oder <xref:System.Threading.Tasks.Task%601>-Instanz kapseln können. Die verschiedenen Überladungen unterstützen beliebige Begin/End-Methodenpaare mit null bis drei Eingabeparametern.  
@@ -50,13 +50,13 @@ ms.locfileid: "46702945"
   
  Der erste Parameter ist ein <xref:System.Func%606>-Delegat, der mit der Signatur der <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>-Methode übereinstimmt. Der zweite Parameter ist ein <xref:System.Func%602>-Delegat, der <xref:System.IAsyncResult> als Eingabe verwendet und `TResult` zurückgibt. Da <xref:System.IO.FileStream.EndRead%2A> eine ganze Zahl zurückgibt, leitet der Compiler den Typ von `TResult` als <xref:System.Int32> und den Typ der Aufgabe als <xref:System.Threading.Tasks.Task> ab. Die letzten vier Parameter sind mit denen in der <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>-Methode identisch:  
   
--   Der Puffer, in dem die Dateidaten gespeichert werden sollen.  
+- Der Puffer, in dem die Dateidaten gespeichert werden sollen.  
   
--   Der Offset im Puffer, ab dem die Daten geschrieben werden sollen.  
+- Der Offset im Puffer, ab dem die Daten geschrieben werden sollen.  
   
--   Die maximale Datenmenge, die aus der Datei gelesen werden soll.  
+- Die maximale Datenmenge, die aus der Datei gelesen werden soll.  
   
--   Ein optionales Objekt, in dem benutzerdefinierte Zustandsdaten speichert werden, die an den Rückruf übergeben werden sollen.  
+- Ein optionales Objekt, in dem benutzerdefinierte Zustandsdaten speichert werden, die an den Rückruf übergeben werden sollen.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Verwenden von ContinueWith für die Rückruffunktionalität  
  Wenn Sie nicht nur die Anzahl der Byte in der Datei ermitteln möchten, sondern Zugriff auf die Daten in der Datei benötigen, reicht die <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>-Methode nicht aus. Verwenden Sie stattdessen <xref:System.Threading.Tasks.Task>, deren `Result`-Eigenschaft die Dateidaten enthält. Fügen Sie hierzu eine Fortsetzung zu der ursprünglichen Aufgabe hinzu. Die Fortsetzung führt die Aufgaben aus, die normalerweise vom <xref:System.AsyncCallback>-Delegaten ausgeführt würde. Sie wird aufgerufen, wenn der Vorgänger abgeschlossen und der Datenpuffer gefüllt wurde. (Das <xref:System.IO.FileStream>-Objekt sollte vor der Rückkehr geschlossen werden.)  
@@ -104,7 +104,7 @@ ms.locfileid: "46702945"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben werden, finden Sie unter [Gewusst wie: Umschließen von ereignisbasierten APM-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben wird, finden Sie unter [Vorgehensweise: Umschließen von EAP-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Beachten Sie, dass alle durch <xref:System.Threading.Tasks.TaskCompletionSource%601> erstellten Aufgaben von dieser TaskCompletionSource gestartet werden. Der Benutzercode sollte daher für diese Aufgaben nicht die Start-Methode aufrufen.  
   

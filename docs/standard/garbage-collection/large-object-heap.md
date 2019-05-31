@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753955"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -154,9 +154,9 @@ Diese Speicherleistungsindikatoren sind in der Regel ein guter erster Schritt be
 
    Zeigt die aktuelle Größe des großen Objektheaps in Byte (einschließlich des freien Speicherplatzes) an. Dieser Indikator wird nicht bei jeder Zuordnung, sondern nur am Ende einer Garbage Collection aktualisiert.
 
-Eine allgemeine Möglichkeit zum Anzeigen von Leistungsindikatoren ist die Verwendung des Systemmonitors (perfmon.exe). Fügen Sie den entsprechenden Indikator für Prozesse, die für Sie wichtig sind, mithilfe von „Leistungsindikatoren hinzufügen“ hinzu. Sie können die Leistungsindikatordaten im Systemmonitor wie in Abbildung 4 dargestellt in einer Protokolldatei speichern.
+Eine allgemeine Möglichkeit zum Anzeigen von Leistungsindikatoren ist die Verwendung des Systemmonitors (perfmon.exe). Fügen Sie den entsprechenden Indikator für Prozesse, die für Sie wichtig sind, mithilfe von „Leistungsindikatoren hinzufügen“ hinzu. Sie können die Leistungsindikatordaten im Systemmonitor wie in Abbildung 4 dargestellt in einer Protokolldatei speichern:
 
-![Abbildung 4: Hinzufügen von Leistungsindikatoren.](media/loh/perfcounter.png)\
+![Screenshot zeigt Hinzufügen von Leistungsindikatoren.](media/large-object-heap/add-performance-counter.png)
 Abbildung 4: Der große Objektheap nach einer Garbage Collection für Generation 2
 
 Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benutzer sammeln die Leistungsdaten auf diese Weise im Rahmen ihrer alltäglichen Testprozesse. Wenn Indikatoren mit ungewöhnlichen Werten angezeigt werden, können dann mithilfe anderer Methoden detailliertere Daten abgerufen werden, um die Untersuchung zu erleichtern.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Das Ergebnis ähnelt Folgendem:
 
-![Abbildung 5: Überprüfen von ETW-Ereignissen mithilfe von PerfView](media/loh/perfview.png) Abbildung 5: Mithilfe von PerfView angezeigte ETW-Ereignisse
+![Screenshot mit ETW-Ereignissen in PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
+Abbildung 5: Mithilfe von PerfView angezeigte ETW-Ereignisse
 
 Sie werden feststellen, dass alle Garbage Collections für Generation 2 durchgeführt und von AllocLarge ausgelöst wurden. Das bedeutet, dass die Zuordnung eines großen Objekts diese Garbage Collection ausgelöst hat. Es ist bekannt, dass es sich um temporäre Zuordnungen handelt, da die Spalte **LOH Survival Rate** (Beibehaltungsrate des großen Objektheaps) „1 %“ anzeigt.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 Dadurch wird ein AllocationTick-Ereignis erfasst, das etwa alle 100.000 Zuordnungen ausgelöst wird. Das bedeutet, dass immer dann ein Ereignis ausgelöst wird, wenn ein großes Objekt zugeordnet wird. Sie können dann eine der Ansichten für die Heapzuordnung der Garbage Collection betrachten, in denen die Aufruflisten angezeigt werden, die große Objekte zugeordnet haben:
 
-![Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection](media/loh/perfview2.png)\
+![Screenshot mit Garbage Collector Heap-Ansicht.](media/large-object-heap/garbage-collector-heap.png)
 Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection
 
 Wie Sie sehen können, handelt es sich hierbei um einen einfachen Test, der nur große Objekte aus seiner `Main`-Methode zuordnet.

@@ -3,12 +3,12 @@ title: Zeichenfolgeninterpolation in C#
 description: Informationen zum Hinzufügen von formatierten Ausdrucksergebnissen in einer Ergebniszeichenfolge in C# mithilfe von Zeichenfolgeninterpolation
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920713"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063215"
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C\#
 
@@ -30,9 +30,7 @@ Wie in dem Beispiel dargestellt, fügen Sie einen Ausdruck zu einer interpoliert
 {<interpolatedExpression>}
 ```
 
-Zur Kompilierzeit werden interpolierte Zeichenfolgen in der Regel in einen <xref:System.String.Format%2A?displayProperty=nameWithType>-Methodenaufruf transformiert. Dadurch können Sie sämtliche Funktionen des Features [string composite formatting](../../standard/base-types/composite-formatting.md) (zusammengesetzte Formatierung von Zeichenfolgen) auch für interpolierte Zeichenfolgen verwenden.
-
-Der Compiler ersetzt <xref:System.String.Concat%2A?displayProperty=nameWithType> möglicherweise mit einem <xref:System.String.Format%2A?displayProperty=nameWithType>, wenn das analysierte Verhalten mit der Verkettung übereinstimmt.
+Interpolierte Zeichenfolgen unterstützen sämtliche Funktionen des Features [kombinierte Formatierung von Zeichenfolgen](../../standard/base-types/composite-formatting.md). Damit stellen sie eine lesbarere Alternative zur Verwendung der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode dar.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Angeben einer Formatierungszeichenfolge für einen interpolierten Ausdruck
 
