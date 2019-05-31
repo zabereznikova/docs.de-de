@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a342c0aaf6a1b0c9959c9b79e3e3e92134693bf1
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876952"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250767"
 ---
 # <a name="c-operators"></a>C#-Operatoren
 
@@ -197,9 +197,9 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 [x = y](assignment-operator.md) – Zuweisung.
 
-[x += y](addition-assignment-operator.md) – Inkrement. Fügen Sie dem Wert `x` den Wert `y` hinzu. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück. Wenn `x` ein `event` festlegt, muss `y` eine entsprechende Funktion sein, die C# als ein Eventhandler hinzufügt.
+[x += y](arithmetic-operators.md#compound-assignment) – Inkrement. Fügen Sie dem Wert `x` den Wert `y` hinzu. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück. Wenn `x` ein [Ereignis](../keywords/event.md) festlegt, muss `y` eine entsprechende Methode sein, die C# als Ereignishandler hinzufügt.
 
-[x -= y](subtraction-assignment-operator.md) – Dekrement. Subtrahieren Sie vom Wert `x` den Wert `y`. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück. Wenn `x` ein `event` festlegt, muss `y` eine entsprechende Funktion sein, die C# als ein Eventhandler entfernt.
+[x -= y](subtraction-assignment-operator.md) – Dekrement. Subtrahieren Sie vom Wert `x` den Wert `y`. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück. Wenn `x` ein [Ereignis](../keywords/event.md) festlegt, muss `y` eine entsprechende Methode sein, die C# als Ereignishandler entfernt.
 
 [x *= y](arithmetic-operators.md#compound-assignment) – Multiplikationszuweisung. Multiplizieren Sie den Wert `y` mit dem Wert `x`. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück.
 

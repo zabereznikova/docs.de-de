@@ -1,6 +1,7 @@
 - name: Kovarianz und Kontravarianz
-  href: index.md
   items:
+    - name: Übersicht
+      href: index.md
     - name: Varianz in generischen Schnittstellen
       href: variance-in-generic-interfaces.md
       items:

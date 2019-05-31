@@ -1,10 +1,6 @@
 - name: Generics
   href: index.md
   items:
-    - name: Einführung in Generics
-      href: introduction-to-generics.md
-    - name: Vorteile von Generics
-      href: benefits-of-generics.md
     - name: Generische Typparameter
       href: generic-type-parameters.md
     - name: Einschränkungen für Typparameter
