@@ -3,9 +3,8 @@
   items:
     - name: Erstellen benutzerdefinierter Attribute
       href: creating-custom-attributes.md
-      items:
-        - name: AttributeUsage
-          href: attributeusage.md
+    - name: AttributeUsage
+      href: attributeusage.md
     - name: Zugriff auf Attribute mit Reflektion
       href: accessing-attributes-by-using-reflection.md
     - name: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen'
