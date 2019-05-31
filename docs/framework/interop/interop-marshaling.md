@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677213"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469719"
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 <a name="top"></a> Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677213"
   
  Diese Übersicht enthält folgende Abschnitte:  
   
--   [Plattformaufruf und COM-Interop-Modelle](#platform_invoke_and_com_interop_models)  
+- [Plattformaufruf und COM-Interop-Modelle](#platform_invoke_and_com_interop_models)  
   
--   [Marshalling und COM-Apartments](#marshaling_and_com_apartments)  
+- [Marshalling und COM-Apartments](#marshaling_and_com_apartments)  
   
--   [Marshalling von Remoteaufrufen](#marshaling_remote_calls)  
+- [Marshalling von Remoteaufrufen](#marshaling_remote_calls)  
   
--   [Verwandte Themen](#related_topics)  
+- [Verwandte Themen](#related_topics)  
   
--   [Verweis](#reference)  
+- [Verweis](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Plattformaufruf und COM-Interop-Modelle  
  Die Common Language Runtime stellt zwei Mechanismen für die Interoperation mit nicht verwaltetem Code bereit:  
   
--   Plattformaufruf, wodurch verwalteter Code Funktionen aufrufen kann, die aus einer nicht verwalteten Bibliothek exportiert wurden.  
+- Plattformaufruf, wodurch verwalteter Code Funktionen aufrufen kann, die aus einer nicht verwalteten Bibliothek exportiert wurden.  
   
--   COM-Interop, wodurch verwalteter Code über Schnittstellen mit COM-Objekten (Component Object Model) interagieren kann.  
+- COM-Interop, wodurch verwalteter Code über Schnittstellen mit COM-Objekten (Component Object Model) interagieren kann.  
   
  Sowohl Plattformaufruf als auch COM-Interop verwenden Interop-Marshalling, um, falls erforderlich, Methodenargumente präzise zwischen Aufrufer und Aufgerufenem und umgekehrt zu verschieben. Wie die folgende Abbildung zeigt, fließt ein Methodenaufruf eines Plattformaufrufs vom verwalteten zum nicht verwalteten Code und niemals umgekehrt, es sei denn, dass [Rückruffunktionen](callback-functions.md) beteiligt sind. Obwohl Plattformaufrufe nur vom verwalteten zum nicht verwalteten Code fließen können, können Daten als Ein-oder Ausgabeparameter in beide Richtungen fließen. COM-Interop-Methodenaufrufe können in beide Richtungen fließen.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677213"
  Wenn Sie planen, einen verwalteten Server zu exportieren, sollten Sie daran denken, dass der COM-Client das Apartment des Servers bestimmt. Ein von einem COM-Client aufgerufener und in einem MTA initialisierter verwalteter Server muss Threadsicherheit sicherstellen.  
   
 ### <a name="managed-clients-and-com-servers"></a>Verwaltete Clients und COM-Server  
- Die Standardeinstellung für verwaltete Clientapartments ist MTA. Der Anwendungstyp des .NET-Clients kann jedoch die Standardeinstellung ändern. Angenommen, eine [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]-Clientapartmenteinstellung ist STA. Sie können eine der Eigenschaften <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> oder die Eigenschaft <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> verwenden, um die Apartmenteinstellung eines verwalteten Clients zu untersuchen und zu ändern.  
+ Die Standardeinstellung für verwaltete Clientapartments ist MTA. Der Anwendungstyp des .NET-Clients kann jedoch die Standardeinstellung ändern. Angenommen, eine Visual Basic-Clientapartmenteinstellung ist STA. Sie können eine der Eigenschaften <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> oder die Eigenschaft <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> verwenden, um die Apartmenteinstellung eines verwalteten Clients zu untersuchen und zu ändern.  
   
  Der Autor der Komponente legt die Threadaffinität eines COM-Servers fest. Die folgende Tabelle zeigt die Kombinationen von Apartmenteinstellungen für .NET-Clients und COM-Server. Sie zeigt außerdem die resultierenden Marshallinganforderungen für die Kombinationen.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677213"
   
  Für apartmentübergreifendes Marshalling können Sie Folgendes tun:  
   
--   Akzeptieren Sie den Mehraufwand für das apartmentübergreifende Marshalling, der sich nur bemerkbar macht, wenn viele Aufrufe vorhanden sind, die die Apartmentgrenze überschreiten. Sie müssen die Typbibliothek der COM-Komponente registrieren, damit Aufrufe erfolgreich die Apartmentgrenze überschreiten können.  
+- Akzeptieren Sie den Mehraufwand für das apartmentübergreifende Marshalling, der sich nur bemerkbar macht, wenn viele Aufrufe vorhanden sind, die die Apartmentgrenze überschreiten. Sie müssen die Typbibliothek der COM-Komponente registrieren, damit Aufrufe erfolgreich die Apartmentgrenze überschreiten können.  
   
--   Ändern Sie den Hauptthread, indem den Clientthread auf STA oder MTA festlegen. Wenn z. B. Ihr C#-Client viele STA-COM-Komponenten aufruft, können Sie apartmentübergreifendes Marshalling vermeiden, indem Sie den Hauptthread auf STA festlegen.  
+- Ändern Sie den Hauptthread, indem den Clientthread auf STA oder MTA festlegen. Wenn z. B. Ihr C#-Client viele STA-COM-Komponenten aufruft, können Sie apartmentübergreifendes Marshalling vermeiden, indem Sie den Hauptthread auf STA festlegen.  
   
     > [!NOTE]
     >  Sobald der Thread eines C#-Clients auf STA festgelegt ist, erfordern Aufrufe von MTA-COM-Komponenten apartmentübergreifendes Marshalling.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677213"
 ## <a name="marshaling-remote-calls"></a>Marshalling von Remoteaufrufen  
  Wie bei apartmentübergreifendem Marshalling ist bei jedem Aufruf zwischen verwaltetem und nicht verwaltetem Code COM-Marshalling beteiligt, wenn sich die Objekte in verschiedenen Prozessen befinden. Beispiel:  
   
--   Ein COM-Client, der einen verwalteten Server auf einem Remotehost aufruft, verwendet verteiltes COM (DCOM).  
+- Ein COM-Client, der einen verwalteten Server auf einem Remotehost aufruft, verwendet verteiltes COM (DCOM).  
   
--   Ein verwalteter Client, der einen COM-Server auf einem Remotehost aufruft, verwendet DCOM.  
+- Ein verwalteter Client, der einen COM-Server auf einem Remotehost aufruft, verwendet DCOM.  
   
  Die folgende Abbildung zeigt, wie Interop-Marshalling und COM-Marshalling Kommunikationskanäle über Prozess- und Hostgrenzen hinweg bereitstellen.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677213"
   
  In dieser Abbildung:  
   
--   Ein nicht verwalteter Client ruft einen Verweis auf ein COM-Objekt von einem verwalteten Objekt ab, das diesen Verweis von einem Remotehost abruft. Der Remotingmechanismus ist DCOM.  
+- Ein nicht verwalteter Client ruft einen Verweis auf ein COM-Objekt von einem verwalteten Objekt ab, das diesen Verweis von einem Remotehost abruft. Der Remotingmechanismus ist DCOM.  
   
--   Ein verwalteter Client ruft einen Verweis auf ein verwaltetes Objekt von einem COM-Objekt ab, das diesen Verweis von einem Remotehost abruft. Der Remotingmechanismus ist DCOM.  
+- Ein verwalteter Client ruft einen Verweis auf ein verwaltetes Objekt von einem COM-Objekt ab, das diesen Verweis von einem Remotehost abruft. Der Remotingmechanismus ist DCOM.  
   
     > [!NOTE]
     >  Die exportierte Typbibliothek des verwalteten Servers muss registriert sein.  

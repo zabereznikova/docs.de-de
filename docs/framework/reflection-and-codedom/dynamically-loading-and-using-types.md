@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145118"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469675"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamisches Laden und Verwenden von Typen
-Reflektion stellt Infrastruktur bereit, die von Sprachcompilern wie [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] und JScript für die Implementierung impliziter später Bindungen verwendet wird. Unter Binden versteht man das Auffinden der Deklaration (d.h. der Implementierung), die einem eindeutig festgelegten Typ entspricht. Wenn dieser Prozess zur Runtime und nicht zum Zeitpunkt der Kompilierung stattfindet, wird von einer späten Bindung gesprochen. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ermöglicht Ihnen, die implizite späte Bindung in Ihrem Code zu verwenden. Der Visual Basic-Compiler ruft eine Hilfsmethode auf, die mithilfe von Reflektion den Objekttyp abruft. Aufgrund der an die Hilfsmethode übergebenen Argumente wird die entsprechende Methode zur Runtime aufgerufen. Diese Argumente sind die Instanz (ein Objekt), auf der die Methode aufgerufen werden muss, der Namen der aufgerufenen Methode (eine Zeichenfolge) und die Argumente, die an die aufgerufene Methode übergeben werden (ein Array von Objekten).  
+Reflektion stellt Infrastruktur bereit, die von Sprachcompilern für die Implementierung impliziter später Bindungen verwendet wird. Unter Binden versteht man das Auffinden der Deklaration (d.h. der Implementierung), die einem eindeutig festgelegten Typ entspricht. Wenn dieser Prozess zur Runtime und nicht zum Zeitpunkt der Kompilierung stattfindet, wird von einer späten Bindung gesprochen. Visual Basic ermöglicht Ihnen, die implizite späte Bindung in Ihrem Code zu verwenden. Der Visual Basic-Compiler ruft eine Hilfsmethode auf, die mithilfe von Reflektion den Objekttyp abruft. Aufgrund der an die Hilfsmethode übergebenen Argumente wird die entsprechende Methode zur Runtime aufgerufen. Diese Argumente sind die Instanz (ein Objekt), auf der die Methode aufgerufen werden muss, der Namen der aufgerufenen Methode (eine Zeichenfolge) und die Argumente, die an die aufgerufene Methode übergeben werden (ein Array von Objekten).  
   
  Im folgenden Beispiel verwendet der Visual Basic-Compiler Reflektion implizit, um eine Methode für ein Objekt aufzurufen, dessen Typ zur Kompilierzeit nicht bekannt ist. Ein **HelloWorld**-Klasse verfügt über eine **PrintHello**-Methode, die „Hello World“ zusammen mit anderem Text ausgibt, der an die **PrintHello**-Methode übergeben wurde. Die in diesem Beispiel aufgerufene **PrintHello**-Methode ist eigentlich eine <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>-Methode. Im Visual Basic-Code kann die **PrintHello**-Methode aufgerufen werden, als ob der Typ des Objekts (helloObj) schon zur Kompilierzeit bekannt wäre (frühe Bindung) statt erst zur Runtime (späte Bindung).  
   
@@ -97,7 +97,7 @@ End Module
 |Single|Double|  
 |Nichtverweistyp|Verweistyp|  
   
- Die <xref:System.Type>-Klasse verfügt über **Get**-Methoden, die Parameter des Typs **Binder** nutzen, um Verweise auf einen bestimmten Member aufzulösen. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> und <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> suchen nach einem bestimmten Member des aktuellen Typs, indem sie die Signaturinformationen für diesen Member zur Verfügung stellen. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> und <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> werden wieder aufgerufen, um die jeweiligen Signaturinformationen der geeigneten Methoden auszuwählen.  
+ Die <xref:System.Type>-Klasse verfügt über **Get**-Methoden, die Parameter des Typs **Binder** nutzen, um Verweise auf einen bestimmten Member aufzulösen. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, und <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> suchen nach einem bestimmten Member des aktuellen Typs, indem sie die Signaturinformationen für diesen Member zur Verfügung stellen. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> und <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> werden wieder aufgerufen, um die jeweiligen Signaturinformationen der geeigneten Methoden auszuwählen.  
   
 ## <a name="see-also"></a>Siehe auch
 

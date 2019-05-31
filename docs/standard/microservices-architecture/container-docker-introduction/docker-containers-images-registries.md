@@ -1,15 +1,13 @@
 ---
 title: Docker-Container, -Images und -Registrierungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Docker-Container, -Images und -Registrierungen
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ab5f2f4172caf799b9a63c1ae881a66f8805e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659657"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639905"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker-Container, -Images und -Registrierungen
 
