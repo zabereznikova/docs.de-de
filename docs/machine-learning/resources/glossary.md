@@ -2,20 +2,17 @@
 title: Maschinelles Lernen – Glossar
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063672"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557980"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
 Die folgende Liste ist eine Zusammenstellung wichtiger Begriffe aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle in ML.NET unterstützen.
-
-> [!NOTE]
-> Diese Dokumentation bezieht sich auf ML.NET, das sich zurzeit in der Vorschau befindet. Änderungen am Material vorbehalten. Weitere Informationen finden Sie in der [ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>Genauigkeit
 
@@ -33,7 +30,7 @@ Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) n
 
 Die Kalibrierung ist der Prozess der Zuordnung einer unformatierten Bewertung zu einer Klassenzugehörigkeit für die binäre und Multiklassenklassifizierung. Einige ML.NE-Trainer haben ein `NonCalibrated`-Suffix. Diese Algorithmen erzeugen eine unformatierte Bewertung, die dann einer Klassenwahrscheinlichkeit zugeordnet werden muss. 
 
-## <a name="catalog"></a>Katalog 
+## <a name="catalog"></a>Catalog 
 
 In ML.NET ist ein Katalog eine Sammlung von Erweiterungsfunktionen, die nach einem gemeinsamen Zweck gruppiert sind.
 
@@ -45,7 +42,7 @@ Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überw
 
 ## <a name="coefficient-of-determination"></a>Bestimmtheitsmaß
 
-Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten in ein Modell passen. Die Werte liegen zwischen 0 und 1. Ein Wert von 0 bedeutet, dass die Daten zufällig sind oder nicht an das Modell angepasst werden können. Ein Wert von 1 bedeutet, dass das Modell exakt mit den Daten übereinstimmt. Dies wird oft als r<sup>2</sup>, R<sup>2</sup> oder Bestimmtheitsmaß bezeichnet.
+Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten in ein Modell passen. Die Werte liegen zwischen 0 und 1. Ein Wert von 0 bedeutet, dass die Daten zufällig sind oder nicht an das Modell angepasst werden können. Ein Wert von 1 bedeutet, dass das Modell exakt mit den Daten übereinstimmt. Dies wird oft als r<sup>2</sup>, R<sup>2</sup> oder R-Quadrat bezeichnet.
 
 ## <a name="data"></a>Daten
 
@@ -56,7 +53,7 @@ Daten sind für alle Machine Learning-Anwendungen von zentraler Bedeutung. In ML
 
 ## <a name="estimator"></a>Estimator
 
-Eine Klasse in ML.NET, die die <xref:Microsoft.ML.IEstimator`1>-Schnittstelle implementiert.
+Eine Klasse in ML.NET, die die <xref:Microsoft.ML.IEstimator%601>-Schnittstelle implementiert.
 
 Ein Estimator ist eine Spezifikation einer Transformation (sowohl Transformation der Datenaufbereitung als auch Transformation des Machine Learning-Modells). Estimators können zu einer Pipeline von Transformationen verkettet werden. Die Parameter eines Estimators oder einer Estimatorpipeline werden gelernt, wenn <xref:Microsoft.ML.IEstimator`1.Fit*> aufgerufen wird. Das Ergebnis des <xref:Microsoft.ML.IEstimator`1.Fit*> ist ein [Transformator](#transformer).
 

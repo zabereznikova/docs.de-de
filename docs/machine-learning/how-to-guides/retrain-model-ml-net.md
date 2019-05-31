@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 552698c02a7846db588822fa68d094dece160ea0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2f8f8c035166612aabede8a512485bdf296c5655
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063570"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557918"
 ---
 # <a name="re-train-a-model"></a>Erneutes Trainieren eines Modells
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Extrahieren von vorab trainierten Modellparametern
 
-Sobald das Modell geladen ist, extrahieren Sie die erlernten Modellparameter, indem Sie auf die [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*)-Eigenschaft des vorab trainierten Modells zugreifen. Das vorab trainierte Modell wurde mit dem linearen Regressionsmodell [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) trainiert, das einen [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer`1) erstellt, der [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) ausgibt. Diese Parameter des linearen Regressionsmodells enthalten den erlernten Trend und die Gewichtung oder die Koeffizienten des Modells. Diese Werte werden als Ausgangspunkt für das neue, erneut trainierte Modell verwendet.
+Sobald das Modell geladen ist, extrahieren Sie die erlernten Modellparameter, indem Sie auf die [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*)-Eigenschaft des vorab trainierten Modells zugreifen. Das vorab trainierte Modell wurde mit dem linearen Regressionsmodell [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) trainiert, das einen [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) erstellt, der [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) ausgibt. Diese Parameter des linearen Regressionsmodells enthalten den erlernten Trend und die Gewichtung oder die Koeffizienten des Modells. Diese Werte werden als Ausgangspunkt für das neue, erneut trainierte Modell verwendet.
 
 ```csharp
 // Extract trained model parameters
@@ -121,7 +121,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 
 In der folgenden Tabelle sehen Sie, wie eine Ausgabe aussehen könnte. 
 
-|Original | Erneut trainiert | Unterschied |
+|Ursprünglich | Erneut trainiert | Unterschied |
 |---|---|---|
 | 33039,86 | 56293,76 | -23253,9 |
 | 29099,14 | 49586,03 | -20486,89 |

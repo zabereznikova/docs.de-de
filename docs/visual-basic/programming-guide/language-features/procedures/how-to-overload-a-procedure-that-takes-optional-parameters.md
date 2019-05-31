@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863648"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424056"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern (Visual Basic)
 Weist eine Prozedur, eine oder mehrere [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) Parameter können nicht Sie eine überladene Version, die die implizite Überladungen übereinstimmende definieren. Weitere Informationen finden Sie unter "Implizite Überladungen für optionale Parameter" in [Überlegungen zu überladen von Prozeduren](./considerations-in-overloading-procedures.md).  
@@ -51,7 +51,7 @@ Weist eine Prozedur, eine oder mehrere [Optional](../../../../visual-basic/langu
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Um eine Prozedur zu überladen, die mehr als einen optionalen Parameter akzeptiert.  
   
-1. Bestimmen Sie, welche Kombinationen der bereitgestellten optionalen Argumente an die Logik der Prozedur zulässig sind. Eine unannehmbare Kombination kann auftreten, wenn Sie einen Optionaler Parameter von einer anderen abhängt. Beispielsweise ist, wenn Sie einen Parameter akzeptiert, Name des Partners, und eine andere akzeptiert die Spouse Alter, eine Kombination von Argumenten, die das Alter angeben, aber wenn den Namen nicht zulässig.  
+1. Bestimmen Sie, welche Kombinationen der bereitgestellten optionalen Argumente an die Logik der Prozedur zulässig sind. Eine unannehmbare Kombination kann auftreten, wenn Sie einen Optionaler Parameter von einer anderen abhängt. Beispielsweise ist, wenn ein Parameter den Namen einer Person akzeptiert und eine andere Alter der Person akzeptiert, eine Kombination von Argumenten, die das Alter angeben, aber wenn den Namen nicht zulässig.  
   
 2. Schreiben Sie für jede zulässige Kombination bereitgestellte optionale Argumente, eine `Sub` oder `Function` -deklarationsanweisung in Verbindung, die die entsprechenden Parameterliste definiert. Verwenden Sie nicht die `Optional` Schlüsselwort.  
   

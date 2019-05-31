@@ -2,12 +2,12 @@
 title: Neues in Windows Workflow Foundation in .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380139"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423981"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Neues in Windows Workflow Foundation in .NET 4.5
 
@@ -200,7 +200,7 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] galten Workf
 
 ### <a name="BKMK_DesignTimeValidation"></a> Hintergrundvalidierung zur Entwurfszeit
 
-In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] wurde die Workflowvalidierung als Vordergrundprozess ausgeführt, was bei komplexen oder zeitaufwändigen Validierungsprozessen dazu führen konnte, dass die Benutzeroberfläche hängen blieb. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.
+In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], wurde die workflowvalidierung als Vordergrundprozess ausgeführt, die möglicherweise die Benutzeroberfläche bei komplexen oder zeitaufwändigen blockiert werden kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.
 
 ### <a name="BKMK_ViewState"></a> Ansichtszustand befindet sich in einem separaten Ort in XAML-Dateien
 

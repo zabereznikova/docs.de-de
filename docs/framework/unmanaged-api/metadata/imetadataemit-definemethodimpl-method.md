@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05b2530bde2f4532e94610a683e7bbc2f59540aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184ae0aee6947aa686e80541ab3ba36e0f4e1647
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044043"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424007"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl-Methode
 Erstellt eine Definition für die Implementierung einer Methode, die von einer Schnittstelle geerbt, und ein Token an dieser Definition der Implementierung der Methode zurück.  
@@ -42,10 +42,10 @@ HRESULT DefineMethodImpl (
  [in] Die `mdTypedef` token von der implementierenden Klasse.  
   
  `tkBody`  
- [in] Die `mdMethodDef` oder `mdMethodRef` des Codetexts token.  
+ [in] Die `mdMethodDef` oder `mdMemberRef` des Codetexts token.  
   
  `tkDecl`  
- [in] Die `mdMethodDef` oder `mdMethodRef` token der Schnittstellenmethode implementiert wird.  
+ [in] Die `mdMethodDef` oder `mdMemberRef` token der Schnittstellenmethode implementiert wird.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

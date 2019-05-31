@@ -2,12 +2,12 @@
 title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380146"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423966"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 Viele neue Features, einschließlich einiger Erweiterungen der Workflow-Designer-Umgebung, Windows Workflow Foundation (WF) in .NET Framework 4.5 eingeführt. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.
@@ -106,7 +106,7 @@ Viele neue Features, einschließlich einiger Erweiterungen der Workflow-Designer
 >  Die Validierung zur Buildzeit wird im neu gehosteten Designer nicht unterstützt.  
   
 ### <a name="design-time-background-validation"></a>Hintergrundvalidierung zur Entwurfszeit  
- In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] wurde die Workflowvalidierung als Vordergrundprozess ausgeführt, was bei komplexen oder zeitaufwändigen Validierungsprozessen dazu führen konnte, dass die Benutzeroberfläche hängen blieb. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.  
+ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], wurde die workflowvalidierung als Vordergrundprozess ausgeführt, die möglicherweise die Benutzeroberfläche bei komplexen oder zeitaufwändigen blockiert werden kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.  
   
  Die Hintergrundvalidierung zur Entwurfszeit wird im neu gehosteten Designer unterstützt.  
   

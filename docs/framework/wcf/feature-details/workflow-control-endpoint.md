@@ -2,18 +2,18 @@
 title: Workflowsteuerungsendpunkt
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929713"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424021"
 ---
 # <a name="workflow-control-endpoint"></a>Workflowsteuerungsendpunkt
 Der Workflowsteuerungsendpunkt ermöglicht Entwicklern das Aufrufen von Steuerungsvorgängen, um mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostete Workflowinstanzen remote zu steuern. Diese Funktion kann verwendet werden, um Steuerungsvorgänge wie das Anhalten, Fortsetzen und Beenden programmgesteuert auszuführen.  
   
 > [!WARNING]
->  Wenn der Workflowsteuerungsendpunkt innerhalb einer Transaktion verwendet wird und der gesteuerte Workflow eine <xref:System.Activities.Statements.Persist>-Aktivität enthält, bleibt die Workflowinstanz bis zum Timeout der Transaktion hängen.  
+>  Wenn mithilfe der workflowsteuerungsendpunkt innerhalb einer Transaktion und den gesteuerten Workflow enthält eine <xref:System.Activities.Statements.Persist> -Aktivität, die Workflowinstanz blockiert, bis das Timeout der Transaktion.  
   
 ## <a name="workflow-instance-management"></a>Workflowinstanzverwaltung  
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] definiert einen neuen Vertrag mit dem Namen <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Dieser Vertrag definiert eine Reihe von Steuerungsvorgängen, mit denen Sie von <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostete Workflowinstanzen remote steuern können. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> ist ein Standardendpunkt, der eine Implementierung des <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>-Vertrags bereitstellt. <xref:System.ServiceModel.Activities.WorkflowControlClient> ist eine Klasse, über die Steuerungsvorgänge an den <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> gesendet werden.  
