@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920301"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456102"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 Die .NET Framework-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  
@@ -63,10 +63,10 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  Erfasst eine portierbare ausführbare Datei (PE-Datei), die Intermediate Language (IL)-Code enthält, und erstellt eine Textdatei, die in das IL Assembler-Tool (Ilasm.exe) eingegeben werden kann.  
   
  [Installutil.exe (Installer-Tool)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installerkomponenten in einer bestimmten Assembly. (Kann mit Klassen im <xref:System.Configuration.Install>-Namespace verwendet werden.) Ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installerkomponenten in einer bestimmten Assembly. (Kann mit Klassen im <xref:System.Configuration.Install>-Namespace verwendet werden.)  
+ Ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installerkomponenten in einer bestimmten Assembly. (Kann mit Klassen im <xref:System.Configuration.Install>-Namespace verwendet werden.) 
   
  [Lc.exe (License Compiler-Tool)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Liest Textdateien mit Informationen über die Lizenzierung und erstellt eine LICENSES-Datei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann. Liest Textdateien mit Informationen über die Lizenzierung und erstellt eine LICENSES-Datei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
+ Liest Textdateien mit Informationen über die Lizenzierung und erstellt eine LICENSES-Datei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann. 
   
  [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  Ermöglicht das Erstellen, Bearbeiten und Signieren von Anwendungs- und Bereitstellungsmanifesten. Als Befehlszeilentool kann Mage.exe von Batchskripten und anderen Windows-basierten Anwendungen ausgeführt werden, beispielsweise ASP.NET-Anwendungen.  
