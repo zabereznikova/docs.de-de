@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592866"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456654"
 ---
 # <a name="code-access-security"></a>Codezugriffssicherheit
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ Sicherheits-Stackwalk
 |Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md)|Beschreibt die Codezugriffssicherheit und die häufigsten Anwendungsbereiche.|  
-|[Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Beschreibt das Sicherheitstransparenzmodell in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
+|[Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Beschreibt das Sicherheitstransparenzmodell in .NET Framework 4.|  
 |[Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Beschreibt das Aktivieren von Bibliotheken zur Verwendung mit nicht verwaltetem Code und das Verwenden von Bibliotheken aus nicht verwaltetem Code.|  
 |[Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md)|Bietet eine Übersicht über viele Schlüsselbegriffe und -konzepte, die im Sicherheitssystem von .NET Framework verwendet werden.|  
 |[Rollenbasierte Sicherheit](../../../docs/standard/security/role-based-security.md)|Beschreibt die Integration von Sicherheit basierend auf Rollen.|  

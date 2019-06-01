@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954101"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457357"
 ---
 # <a name="generics-in-xaml"></a>Generics in XAML
 Der .NET Framework-XAML-Dienste gemäß der Implementierung in "System.xaml" bietet Unterstützung für die Verwendung von generischen CLR-Typen. Diese Unterstützung umfasst, die Einschränkungen von Generika als Typargument angeben und die Durchsetzung der Einschränkung durch Aufrufen der entsprechenden `Add` Methode für die generische Auflistung von Fällen. In diesem Thema werden Aspekte der Verwendung von und verweisen auf generische Typen in XAML beschrieben.  
@@ -38,7 +38,7 @@ Der .NET Framework-XAML-Dienste gemäß der Implementierung in "System.xaml" bie
   
  Mögliche problemumgehungen für allgemeine Verwendungen zu unterstützen sind, definieren eine benutzerdefinierte Markuperweiterung, die generische Typen zurückgeben kann, oder einen Vorschub bereitstellen Definition, die aus einem generischen Typ abgeleitet ist, aber vereinfacht die generische Einschränkung in ihrer eigenen Klassendefinition der Klasse.  
   
- In WPF und Zielgruppenadressierung [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments`, jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.  
+ In WPF- und .NET Framework 4 abzielen, können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments`, jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.  
   
  Benutzerdefinierte Workflows in Windows Workflow Foundation für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] generischen XAML-Verwendung nicht unterstützt.  
   

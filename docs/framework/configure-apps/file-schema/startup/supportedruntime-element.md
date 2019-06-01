@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634233"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456216"
 ---
 # <a name="supportedruntime-element"></a>\<< SupportedRuntime >-Element
 
@@ -22,7 +22,7 @@ Gibt an, welche Version der common Language Runtime und, optional, .NET Framewor
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Bei Apps, die Versionen der Laufzeit aus .NET Framework 1.1 bis 3.5 unterstütze
 Wenn die  **\<SupportedRuntime >** -Element mit dem `sku` Attribut in der Konfigurationsdatei vorhanden ist und die installierte .NET Framework-Version wird unten und klicken Sie dann die angegebenen unterstützte Version der Anwendung nicht ausgeführt werden, sondern zeigt stattdessen eine Meldung gefragt werden, um die unterstützte Version zu installieren. Andernfalls wird die Anwendung versucht, die auf alle installierten Version ausgeführt werden, aber es kann unerwartet Verhalten, wenn er nicht vollständig kompatibel mit dieser Version ist. (Kompatibilitätsunterschiede zwischen Versionen von .NET Framework, finden Sie unter [der Anwendungskompatibilität in .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Aus diesem Grund empfehlen wir, dass Sie dieses Element in der Konfigurationsdatei der Anwendung für die Fehlerdiagnose von einfacher enthalten. (Die Konfigurationsdatei von Visual Studio automatisch generiert, wenn es bereits ein neues Projekt erstellen enthält.)
   
 > [!NOTE]
-> Wenn Ihre Anwendung legacy-Aktivierungspfade, z. B. verwendet die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren, oder wenn Ihre Anwendung, mit der erstelltwird[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]aber eine Abhängigkeit auf eine Assembly im gemischten Modus mit einer früheren Version von .NET Framework erstellt es genügt nicht an die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in der Liste der unterstützten Laufzeiten. Darüber hinaus werden in der [ \<Startup > Element](../startup/startup-element.md) in der Konfigurationsdatei müssen Sie festlegen der `useLegacyV2RuntimeActivationPolicy` Attribut `true`. Wenn jedoch dieses Attribut auf `true` festgelegt ist, werden alle Komponenten, die mit früheren Versionen von .NET Framework erstellt wurden, mit [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ausgeführt statt den Laufzeiten, mit denen sie erstellt wurden.
+> Wenn Ihre Anwendung legacy-Aktivierungspfade, z. B. verwendet die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren, oder wenn Ihre Anwendung mit .NET Framework erstellt wurde 4 verfügt jedoch über eine Abhängigkeit auf eine Assembly im gemischten Modus mit einer früheren Version von .NET Framework erstellt ist es nicht ausreichend, um .NET Framework 4 in der Liste der unterstützten Laufzeiten angeben. Darüber hinaus werden in der [ \<Startup > Element](../startup/startup-element.md) in der Konfigurationsdatei müssen Sie festlegen der `useLegacyV2RuntimeActivationPolicy` Attribut `true`. Wenn Sie dieses Attribut jedoch auf `true` bedeutet, die alle Komponenten, die mit früheren Versionen von .NET Framework ausgeführt werden, mithilfe von .NET Framework 4 statt den Laufzeiten, mit denen sie erstellt wurden.
 
 Es wird empfohlen, dass Sie die Anwendungen mit allen .NET Framework-Versionen testen, in denen sie ausgeführt werden können.
 

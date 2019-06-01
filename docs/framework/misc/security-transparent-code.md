@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868744"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456498"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 
@@ -59,14 +59,14 @@ Das <xref:System.Security.SecurityRulesAttribute>-Attribut auf Assemblyebene wä
 
 Die Ebenen lauten folgendermaßen:
 
-- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Transparenzregeln.
+- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die .NET Framework 4-Transparenzregeln.
 
 - Ebene 1 (<xref:System.Security.SecurityRuleSet.Level1>) – die .NET Framework 2.0-Transparenzregeln.
 
 Der primäre Unterschied zwischen den zwei Transparenzebenen besteht darin, dass auf Ebene 1 keine Transparenzregeln für Aufrufe von außerhalb der Assembly erzwungen werden und dass diese Ebene nur für Kompatibilität vorgesehen ist.
 
 > [!IMPORTANT]
-> Geben Sie Transparenz der Ebene 1 nur für Kompatibilität an, das heißt, geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den das <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] entwickelt wurde, immer Transparenz der Ebene 2.
+> Geben Sie Transparenz der Ebene 1 nur für Kompatibilität an, das heißt, geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den das <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wird, immer Transparenz der Ebene 2 an.
 
 ### <a name="level-2-transparency"></a>Transparenz der Ebene 2
 
@@ -114,7 +114,7 @@ Für das Transparenzmodell der Ebene 1 gelten die folgenden Einschränkungen:
 
 ## <a name="transparency-enforcement"></a>Transparenzerzwingung
 
-Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu diesem Zeitpunkt wird eine <xref:System.InvalidOperationException> ausgelöst, wenn gegen eine Transparenzregel verstoßen wird. Die Zeit zur Berechnung der Transparenz hängt von mehreren Faktoren ab und kann nicht vorhergesagt werden. Sie wird so spät wie möglich berechnet. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erfolgt die Berechnung der Transparenz auf Assemblyebene früher als in .NET Framework 2.0. Es ist nur garantiert, dass die Transparenzberechnung ausgeführt wird, wenn sie benötigt wird. Dies ist vergleichbar mit der Änderung des Punkts durch den Just-In-Time-Compiler, an dem eine Methode kompiliert wird und Fehler in dieser Methode erkannt werden. Die Transparenzberechnung ist unsichtbar, wenn der Code keine Transparenzfehler enthält.
+Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu diesem Zeitpunkt wird eine <xref:System.InvalidOperationException> ausgelöst, wenn gegen eine Transparenzregel verstoßen wird. Die Zeit zur Berechnung der Transparenz hängt von mehreren Faktoren ab und kann nicht vorhergesagt werden. Sie wird so spät wie möglich berechnet. In .NET Framework 4 tritt ein, auf Assemblyebene transparenzberechnung schneller als in .NET Framework 2.0. Es ist nur garantiert, dass die Transparenzberechnung ausgeführt wird, wenn sie benötigt wird. Dies ist vergleichbar mit der Änderung des Punkts durch den Just-In-Time-Compiler, an dem eine Methode kompiliert wird und Fehler in dieser Methode erkannt werden. Die Transparenzberechnung ist unsichtbar, wenn der Code keine Transparenzfehler enthält.
 
 ## <a name="see-also"></a>Siehe auch
 

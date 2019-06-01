@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789661"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456883"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR-Hostingschnittstellen
 In diesem Abschnitt wird beschrieben, die Schnittstellen, die nicht verwaltete Hosts können die common Language Runtime (CLR) in ihre Anwendungen integrieren. Die Informationen bezieht sich auf die Version von .NET Framework 2.0 und höheren Versionen. Diese Schnittstellen aktivieren Sie den Host zu steuern, zahlreiche weitere Aspekte der Laufzeit als in den Versionen 1.0 und 1.1 möglich war, und geben eine engere Integration zwischen der CLR und Ausführungsmodell des Hosts.  
@@ -191,4 +191,4 @@ In diesem Abschnitt wird beschrieben, die Schnittstellen, die nicht verwaltete H
  Enthält Themen, die in .NET Framework, Version 1.0 und 1.1 bereitgestellten Hostingschnittstellen beschrieben.  
   
  [In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Enthält Themen, die beschreiben, die im bereitgestellten Hostingschnittstellen der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+ Enthält Themen, die in .NET Framework 4 bereitgestellten Hostingschnittstellen beschrieben.

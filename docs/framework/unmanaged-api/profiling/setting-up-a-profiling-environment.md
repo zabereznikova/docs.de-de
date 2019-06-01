@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666050"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457227"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Einrichten einer Profilerstellungsumgebung
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666050"
  Zur Profilerstellung für eine CLR-Anwendung müssen die Umgebungsvariablen COR_ENABLE_PROFILING und COR_PROFILER festgelegt werden, bevor Sie die Anwendung ausführen. Außerdem müssen Sie sicherstellen, dass die Profiler-DLL registriert ist.  
   
 > [!NOTE]
->  Ab [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] müssen Profiler nicht registriert werden.  
+>  Ab .NET Framework 4, müssen Profiler nicht registriert werden.  
   
 > [!NOTE]
->  Verwenden von .NET Framework-Versionen 2.0, 3.0 und 3.5 Profiler in den [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] und höheren Versionen müssen Sie die COMPLUS_ProfAPI_ProfilerCompatibilitySetting-Umgebungsvariable festlegen.  
+>  Um .NET Framework-Versionen 2.0, 3.0 und 3.5-Profiler im .NET Framework 4 und höhere Versionen verwenden zu können, müssen Sie die COMPLUS_ProfAPI_ProfilerCompatibilitySetting-Umgebungsvariable festlegen.  
   
 ## <a name="environment-variable-scope"></a>Umgebungsvariablenbereich  
  Die Werte, die Sie für die Umgebungsvariablen COR_ENABLE_PROFILING und COR_PROFILER festlegen, bestimmen den Einflussbereich dieser Variablen. Sie haben folgende Möglichkeiten, diese Variablen festzulegen:  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674180"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456472"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy >-Element
 Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) verwendet.  
@@ -57,7 +57,7 @@ Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) ver
 ## <a name="remarks"></a>Hinweise  
  CAS-Richtlinie ist in der .NET Framework, Version 3.5 und früheren Versionen immer wirksam. In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS-Richtlinie muss aktiviert sein.  
   
- CAS-Richtlinie ist versionsspezifisch. Benutzerdefinierte CAS-Richtlinien, die in früheren Versionen von .NET Framework vorhanden sein müssen erneut angegeben werden, der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ CAS-Richtlinie ist versionsspezifisch. Benutzerdefinierte CAS-Richtlinien, die in früheren Versionen von .NET Framework vorhanden sind, müssen in .NET Framework 4 erneut angegeben werden.  
   
  Anwenden der `<NetFx40_LegacySecurityPolicy>` Element eine [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] Assembly hat keine Auswirkungen auf [Sicherheitstransparenter Code](../../../../../docs/framework/misc/security-transparent-code.md); die Transparenzregeln gelten weiterhin.  
   
@@ -65,7 +65,7 @@ Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) ver
 >  Anwenden der `<NetFx40_LegacySecurityPolicy>` Elements kann dazu führen, Leistungseinbußen für Assemblys systemeigener Abbilder, die erstellt werden, indem der [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) nicht im installierten der [globalen Assemblycache ](../../../../../docs/framework/app-domains/gac.md). Die Leistungsminderung wird verursacht, wenn die Unmöglichkeit der Runtime, die die Assemblys als native Bilder geladen werden, wenn das Attribut angewendet wird, und ihre wird als just-in-Time-Assemblys geladen.  
   
 > [!NOTE]
->  Wenn Sie eine .NET Framework-Zielversion angeben, die älter als die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in den projekteinstellungen für Visual Studio-Projekt, die CAS-Richtlinie aktiviert, einschließlich jeder benutzerdefinierten CAS-Richtlinien, die Sie für diese Version angegeben haben. Aber Sie ist nicht möglich, "new" verwenden [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Typen und Member. Sie können auch eine frühere Version von .NET Framework angeben, indem die [ \<SupportedRuntime >-Element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in das Schema für starteinstellungen in Ihrer [Konfigurationsdatei der Anwendung](../../../../../docs/framework/configure-apps/index.md).  
+>  Wenn Sie eine .NET Framework-Zielversion, die älter als .NET Framework 4 in den projekteinstellungen für Visual Studio-Projekt ist angeben, wird die CAS-Richtlinie aktiviert werden, einschließlich benutzerdefinierten CAS-Richtlinien, die Sie für diese Version angegeben. Allerdings werden Sie nicht neue .NET Framework 4-Typen und Member verwenden können. Sie können auch eine frühere Version von .NET Framework angeben, indem die [ \<SupportedRuntime >-Element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in das Schema für starteinstellungen in Ihrer [Konfigurationsdatei der Anwendung](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
 >  Syntax von Konfigurationsdateien wird Groß-/Kleinschreibung beachtet. Sie sollten die Syntax verwenden, wie in den Abschnitten zu Syntax und Beispiel bereitgestellt.  

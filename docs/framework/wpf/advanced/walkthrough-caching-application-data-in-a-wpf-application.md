@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591204"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457514"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
@@ -22,7 +22,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
  .NET Framework bietet Klassen, die Sie zur Verwendung von caching in .NET Framework-Anwendungen zu ermöglichen. Diese Klassen befinden sich in der <xref:System.Runtime.Caching> Namespace.
 
 > [!NOTE]
->  Die <xref:System.Runtime.Caching> Namespace ist neu in der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Dieser Namespace stellt Zwischenspeichern für alle .NET Framework-Anwendungen verfügbar ist. In früheren Versionen von .NET Framework war die Zwischenspeicherung verfügbar nur in der <xref:System.Web> Namespace und erforderte daher eine Abhängigkeit der ASP.NET-Klassen.
+>  Die <xref:System.Runtime.Caching> Namespace ist neu in .NET Framework 4. Dieser Namespace stellt Zwischenspeichern für alle .NET Framework-Anwendungen verfügbar ist. In früheren Versionen von .NET Framework war die Zwischenspeicherung verfügbar nur in der <xref:System.Web> Namespace und erforderte daher eine Abhängigkeit der ASP.NET-Klassen.
 
  In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Funktionen zum Zwischenspeichern verwenden, verfügbar in .NET Framework als Teil einer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung. In der exemplarischen Vorgehensweise Zwischenspeichern Sie den Inhalt einer Textdatei.
 
@@ -30,7 +30,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 - Erstellen ein WPF-Anwendungsprojekt.
 
-- Hinzufügen eines Verweises auf die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Hinzufügen eines Verweises auf .NET Framework 4.
 
 - Initialisieren einen Cache.
 
@@ -62,14 +62,14 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3. Klicken Sie unter **installierte Vorlagen**, wählen Sie die Programmiersprache, die Sie verwenden möchten (**Visual Basic** oder **Visual C#-**).
+3. Klicken Sie unter **installierte Vorlagen**, wählen Sie die Programmiersprache, die Sie verwenden möchten (**Visual Basic** oder **Visual C#-** ).
 
 4. In der **neues Projekt** wählen Sie im Dialogfeld **WPF-Anwendung**.
 
     > [!NOTE]
-    >  Wenn Sie nicht sehen die **WPF-Anwendung** Vorlage stellen Sie sicher, dass Sie eine Version von .NET Framework Anzielen, die WPF unterstützt. In der **neues Projekt** wählen Sie im Dialogfeld [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] aus der Liste.
+    >  Wenn Sie nicht sehen die **WPF-Anwendung** Vorlage stellen Sie sicher, dass Sie eine Version von .NET Framework Anzielen, die WPF unterstützt. In der **neues Projekt** klicken Sie im Dialogfeld auf .NET Framework 4 aus der Liste.
 
-5. In der **Namen** Text Geben Sie einen Namen für Ihr Projekt. Sie können z. B. eingeben **"WPFCaching"**.
+5. In der **Namen** Text Geben Sie einen Namen für Ihr Projekt. Sie können z. B. eingeben **"WPFCaching"** .
 
 6. Aktivieren Sie das Kontrollkästchen **Verzeichnis für Projektmappe erstellen**.
 
@@ -78,7 +78,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
      Der WPF-Designer wird geöffnet, **Entwurf** anzeigen und die Datei "MainWindow.xaml" angezeigt. Visual Studio erstellt die **Mein Projekt** Ordner, die Datei "Application.xaml" und die Datei "MainWindow.xaml".
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Das .NET Framework und Hinzufügen eines Verweises auf die Zwischenspeicherung Assemblys
- Standardmäßig werden in WPF-Anwendungen Ziel der [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Verwenden der <xref:System.Runtime.Caching> -Namespace in einer WPF-Anwendung, die Anwendung muss Ziel der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (nicht die [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) und einen Verweis auf den Namespace enthalten.
+ Standardmäßig werden in WPF-Anwendungen Ziel der [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Verwenden der <xref:System.Runtime.Caching> -Namespace in einer WPF-Anwendung, die Anwendung muss .NET Framework 4 ausgerichtet sein (nicht die [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) und einen Verweis auf den Namespace enthalten.
 
  Daher der nächste Schritt ist die .NET Framework-Zielversion ändern, und fügen einen Verweis auf die <xref:System.Runtime.Caching> Namespace.
 
@@ -97,7 +97,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Die **erweiterte Compilereinstellungen** Dialogfeld wird angezeigt.
 
-4. In der **Zielframework (alle Konfigurationen)** Liste [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Wählen Sie nicht [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. In der **Zielframework (alle Konfigurationen)** wählen Sie .NET Framework 4. (Wählen Sie nicht [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
 5. Klicken Sie auf **OK**.
 
@@ -121,7 +121,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 2. Klicken Sie auf die Registerkarte **Anwendung** .
 
-3. In der **Zielframework** Liste [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Wählen Sie nicht **.NET Framework 4 Client Profile**.)
+3. In der **Zielframework** wählen Sie .NET Framework 4. (Wählen Sie nicht **.NET Framework 4 Client Profile**.)
 
 4. Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
 

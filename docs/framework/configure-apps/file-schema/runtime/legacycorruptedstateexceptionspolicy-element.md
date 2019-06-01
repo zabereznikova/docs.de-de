@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78b670d8b23b5ecf274432d3758d07dae34dcfcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607175"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456413"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Element
 Gibt an, ob die common Language Runtime verwalteten Code zum Abfangen von zugriffsverletzungen und anderen Beschädigungen hervorgerufenen Ausnahmen zulässt.  
@@ -60,14 +60,14 @@ Gibt an, ob die common Language Runtime verwalteten Code zum Abfangen von zugrif
   
 - Legen Sie die `<legacyCorruptedStateExceptionsPolicy>` des Elements `enabled` Attribut `true`. Diese Konfigurationseinstellung wird angewendeten Processwide und wirkt sich auf alle Methoden.  
   
- - oder -   
+ - oder -  
   
 - Anwenden der <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> -Attribut auf die Methode, die die Ausnahmen enthält `catch` Block.  
   
- Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] und höher.  
+ Dieses Element ist nur in .NET Framework 4 und höher verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie angegeben, dass die Anwendung das Verhalten vor zurückkehren soll die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], und alle Beschädigung Fehler abgefangen.  
+ Das folgende Beispiel zeigt, wie Sie angeben, dass die Anwendung sollte auf das Verhalten vor .NET Framework 4 zurückgesetzt und alle Beschädigung Fehler abgefangen wird.  
   
 ```xml  
 <configuration>  

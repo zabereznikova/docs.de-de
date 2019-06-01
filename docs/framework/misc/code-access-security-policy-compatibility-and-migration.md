@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868913"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456649"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
 
@@ -22,7 +22,7 @@ Der Richtlinienteil für Codezugriffssicherheit (CAS) ist seit [!INCLUDE[net_v40
 
 Sie können die Warnungen und Fehler folgendermaßen vermeiden:
 
-- [Migrieren von](#migration) auf die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ersetzungen für die veralteten Aufrufe.
+- [Migrieren von](#migration) , die .NET Framework 4-Ersetzungen für die veralteten Aufrufe.
 
    \- oder –
 
@@ -114,7 +114,7 @@ Laufzeitausnahme:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Bestimmen der Vertrauensebene einer Assembly
 
-Die CAS-Richtlinie wird häufig verwendet, um den Berechtigungssatz einer Assembly oder Anwendungsdomäne oder die Vertrauensebene zu bestimmen. Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] stellt die folgenden nützlichen Eigenschaften bereit, die keine Sicherheitsrichtlinie auflösen müssen:
+Die CAS-Richtlinie wird häufig verwendet, um den Berechtigungssatz einer Assembly oder Anwendungsdomäne oder die Vertrauensebene zu bestimmen. .NET Framework 4 stellt die folgenden nützlichen Eigenschaften, die keine Sicherheitsrichtlinie auflösen müssen:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ Die CAS-Richtlinie wird häufig verwendet, um den Berechtigungssatz einer Assemb
 
 ### <a name="application-domain-sandboxing"></a>Sandkasten für Anwendungsdomänen
 
-Die Methode <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> wird in der Regel verwendet, um Assemblys in einer Anwendungsdomäne in einem Sandkasten auszuführen. Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] macht die Elemente, die keine verwenden <xref:System.Security.Policy.PolicyLevel> für diesen Zweck. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
+Die Methode <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> wird in der Regel verwendet, um Assemblys in einer Anwendungsdomäne in einem Sandkasten auszuführen. .NET Framework 4 verfügbar macht, Elemente, die keine verwenden <xref:System.Security.Policy.PolicyLevel> für diesen Zweck. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Bestimmen eines sicheren oder geeigneten Berechtigungssatzes für teilweise vertrauenswürdigen Code
 
-Hosts müssen häufig die Berechtigungen ermitteln, die für das Ausführen von gehostetem Code in einem Sandkasten geeignet sind. Vor der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], CAS-Richtlinie stellte eine Option bei der <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> Methode. Als Ersatz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] bietet die <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> -Methode, die einen sicheren Standardberechtigungssatz für die bereitgestellten Beweisinformationen zurückgibt.
+Hosts müssen häufig die Berechtigungen ermitteln, die für das Ausführen von gehostetem Code in einem Sandkasten geeignet sind. Vor .NET Framework 4 bereitgestellt CAS-Richtlinie eine Möglichkeit dazu mit der <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> Methode. Als Ersatz, .NET Framework 4 enthält die <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> -Methode, die einen sicheren Standardberechtigungssatz für die bereitgestellten Beweisinformationen zurückgibt.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Szenarien ohne Sandkasten: Überladungen für Laden von Assemblys
 
-Der Grund für die Verwendung einer Überladung für das Laden einer Assembly kann die Verwendung von Parametern sein, die andernfalls nicht verfügbar sind, anstatt die Assembly in einem Sandkastens auszuführen. Ab der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Assembly-Load-Überladungen, die nicht erfordern eine <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> -Objekt als Parameter, z. B. <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, dieses Szenario ermöglichen.
+Der Grund für die Verwendung einer Überladung für das Laden einer Assembly kann die Verwendung von Parametern sein, die andernfalls nicht verfügbar sind, anstatt die Assembly in einem Sandkastens auszuführen. Ab .NET Framework 4, Laden der Assembly Überladungen, die keine erfordern eine <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> -Objekt als Parameter, z. B. <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, dieses Szenario ermöglichen.
 
 Wenn Sie einen Sandkasten für eine Assembly verwenden möchten, verwenden Sie die <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>-Überladung.
 

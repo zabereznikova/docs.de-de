@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583646"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456201"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
@@ -54,7 +54,7 @@ ms.locfileid: "64583646"
 ## <a name="machine-configuration-files"></a>Computerkonfigurationsdateien  
  Die Computerkonfigurationsdatei Machine.config enthält Einstellungen, die für den gesamten Computer gelten. Diese Datei befindet sich im Verzeichnis "%*runtime install path*%\Config". Machine.config enthält Konfigurationseinstellungen für die computerweite Assemblybindung, für integrierte [Remotingkanäle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) und für ASP.NET.  
   
- Das Konfigurationssystem durchsucht zuerst die Computerkonfigurationsdatei nach dem [**\<appSettings>**-Element](~/docs/framework/configure-apps/file-schema/appsettings/index.md) und anderen Konfigurationsabschnitten, die von einem Entwickler möglicherweise definiert wurden. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
+ Das Konfigurationssystem durchsucht zuerst die Computerkonfigurationsdatei nach dem [ **\<appSettings>** -Element](~/docs/framework/configure-apps/file-schema/appsettings/index.md) und anderen Konfigurationsabschnitten, die von einem Entwickler möglicherweise definiert wurden. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
   
 > [!NOTE]
 >  Wenn Sie eine Anwendung mithilfe von XCOPY bereitstellen, werden die Einstellungen nicht in die Computerkonfigurationsdatei kopiert.  
@@ -90,7 +90,7 @@ ms.locfileid: "64583646"
  Sicherheitskonfigurationsdateien enthalten Informationen zur Codegruppenhierarchie und zu Berechtigungen, die einer Richtlinienebene zugeordnet sind. Es wird dringend empfohlen, mithilfe des [Sicherheitsrichtlinientools für den Codezugriff (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) die Sicherheitsrichtlinie dahingehend zu ändern, dass Richtlinienänderungen keinesfalls zur Beschädigung der Sicherheitskonfigurationsdateien führen können.  
   
 > [!NOTE]
->  Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] sind die Sicherheitskonfigurationsdateien nur vorhanden, wenn die Sicherheitsrichtlinien geändert wurden.  
+>  Ab .NET Framework 4 sind die Sicherheitskonfigurationsdateien nur vorhanden, wenn Sicherheitsrichtlinie geändert wurde.  
   
  Die Sicherheitskonfigurationsdateien sind an folgenden Speicherorten abgelegt:  
   

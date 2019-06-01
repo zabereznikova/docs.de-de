@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c50132be2755119b19e38d94919eb4b0ab28d994
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614318"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457257"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Leistungsindikatoren und prozessinterne parallele Anwendungen
 Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro Laufzeit unterschieden werden. Dieses Thema beschreibt die erforderlichen Registrierungsänderungen zur Aktivierung dieser Funktion.  
@@ -29,7 +29,7 @@ Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro L
   
 - Wenn eine Anwendung mehrere Instanzen der Common Language Runtime verwendet. Die [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] unterstützt prozessinterne parallele Hostingszenarios; d.h. ein einzelner Prozess oder eine Anwendung kann mehrere Instanzen der Common Language Runtime laden. Wenn eine einzelne Anwendung namens myapp.exe standardmäßig zwei Laufzeitinstanzen lädt, werden sie in der **Instanz**-Spalte als **MyApp** und **MyApp#1** festgelegt werden. In diesem Fall ist es nicht klar, ob **MyApp** und **MyApp#1** auf zwei Anwendungen mit dem gleichen Namen oder auf dieselbe Anwendung mit zwei Laufzeiten verweisen. Wenn mehrere Anwendungen mit dem gleichen Namen mehrere Laufzeiten laden, wird die Mehrdeutigkeit noch größer.  
   
- Sie können einen Registrierungsschlüssel festlegen, um diese Mehrdeutigkeit zu vermeiden. Für Anwendungen, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] entwickelt werden, fügt diese Registrierungsänderung einen Prozessbezeichner, gefolgt von einem Instanzbezeichner der Laufzeit, zum Anwendungsnamen in der **Instanz**-Spalte hinzu. Anstelle von *Anwendung* oder *Anwendung*#1 kann die Anwendung jetzt als *Anwendung*_`p`*ProcessID*\_`r`*RuntimeID* in der **Instanz**-Spalte identifiziert werden. Wenn eine Anwendung mit einer früheren Version der Common Language Runtime entwickelt wurde, wird diese Instanz als *Anwendung\_*`p`*ProcessID* dargestellt, vorausgesetzt, dass die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] installiert ist.  
+ Sie können einen Registrierungsschlüssel festlegen, um diese Mehrdeutigkeit zu vermeiden. Für Anwendungen mit .NET Framework 4 entwickelt wurden, fügt diese registrierungsänderung einen Prozessbezeichner, gefolgt von einer Runtime-Instanz-ID und Namen der Anwendung in der **Instanz** Spalte. Anstelle von *Anwendung* oder *Anwendung*#1 kann die Anwendung jetzt als *Anwendung*_`p`*ProcessID*\_`r`*RuntimeID* in der **Instanz**-Spalte identifiziert werden. Wenn eine Anwendung mit einer früheren Version der common Language Runtime entwickelt wurde, wird diese Instanz als dargestellt *Anwendung\_* `p`*ProcessID* vorausgesetzt, dass die. .NET Framework 4 installiert ist.  
   
 ## <a name="performance-counters-for-in-process-side-by-side-applications"></a>Leistungsindikatoren für prozessinterne parallele Anwendungen  
  Um die Leistungsindikatoren für mehrere Versionen der Common Language Runtime zu behandeln, die in einer einzigen Anwendung gehostet werden, müssen Sie die Einstellungen eines einzelnen Registrierungsschlüssels ändern, wie in der folgenden Tabelle gezeigt.  
@@ -50,11 +50,11 @@ Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro L
  [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
  [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
- Wenn Sie diese Registrierungsänderung vornehmen, zeigt Perfmon.exe die Namen der Anwendungen an, die auf die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] als *Anwendung*_`p`*ProcessID*\_`r`*RuntimeID* abzielen, wobei *Anwendung* der Name der Anwendung, *ProcessID* der Prozess-ID für die Anwendung, und  *RuntimeID* ein Common Language Runtime-Bezeichner ist. Wenn beispielsweise eine Anwendung namens myapp.exe zwei Instanzen der Common Language Runtime lädt, wird Perfmon.exe möglicherweise eine Instanz als myapp_p1416_r10 und eine zweite als myapp_p3160_r10 identifizieren. Der Laufzeitbezeichner unterscheidet nur zwischen den Laufzeiten innerhalb eines Prozesses; er stellt keine andere Informationen über die Common Language Runtime bereit. (Die Common Language Runtime-ID hat beispielsweise keine Beziehung mit der Version oder der SKU der Laufzeit.)  
+ Wenn Sie diese registrierungsänderung vornehmen, zeigt Perfmon.exe die Namen von Anwendungen, die .NET Framework 4 als Ziel *Anwendung*_`p`*ProcessID* \_ `r` *RuntimeID*, wobei *Anwendung* ist der Name der Anwendung, *ProcessID* ist der Prozess-ID der Anwendung, und  *RuntimeID* eine common Language Runtime-ID ist. Wenn beispielsweise eine Anwendung namens myapp.exe zwei Instanzen der Common Language Runtime lädt, wird Perfmon.exe möglicherweise eine Instanz als myapp_p1416_r10 und eine zweite als myapp_p3160_r10 identifizieren. Der Laufzeitbezeichner unterscheidet nur zwischen den Laufzeiten innerhalb eines Prozesses; er stellt keine andere Informationen über die Common Language Runtime bereit. (Die Common Language Runtime-ID hat beispielsweise keine Beziehung mit der Version oder der SKU der Laufzeit.)  
   
- Wenn die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] installiert ist, wirkt sich die Registrierungsänderung auch auf Anwendungen aus, die mit früheren Versionen von .NET Framework entwickelt wurden. Diese werden in Perfmon.exe als *Application_*`p`*ProcessID* angezeigt, wobei *Anwendung* der Anwendungsname und *ProcessID* die Prozess-ID ist. Wenn die Leistungsindikatoren von zwei Anwendungen namens myapp.exe überwacht werden, wird eine möglicherweise als myapp_p23900 und die andere als myapp_p24908 angezeigt werden.  
+ Wenn .NET Framework 4 installiert ist, betrifft die registrierungsänderung auch Anwendungen, die mit früheren Versionen von .NET Framework entwickelt wurden. Diese werden in Perfmon.exe als *Application_* `p`*ProcessID* angezeigt, wobei *Anwendung* der Anwendungsname und *ProcessID* die Prozess-ID ist. Wenn die Leistungsindikatoren von zwei Anwendungen namens myapp.exe überwacht werden, wird eine möglicherweise als myapp_p23900 und die andere als myapp_p24908 angezeigt werden.  
   
 > [!NOTE]
 >  Die Prozess-ID beseitigt die Mehrdeutigkeit der Auflösung von zwei Anwendungen mit dem gleichen Namen, die frühere Versionen der Laufzeit verwenden. Ein Laufzeitbezeichner ist nicht für frühere Versionen erforderlich, da frühere Versionen der Common Language Runtime keine parallelen Szenarios unterstützen.  
   
- Wenn die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nicht vorhanden ist oder deinstalliert wurde, hat die Einstellung des Registrierungsschlüssels keine Auswirkungen. Dies bedeutet, dass zwei Anwendungen mit dem gleichen Namen in Perfmon.exe weiterhin als *Anwendung* und *Anwendung#1* angezeigt werden (z.B. **MyApp** und **MyApp#1**).
+ Wenn .NET Framework 4 nicht vorhanden ist oder deinstalliert wurde, hat das Festlegen des Registrierungsschlüssels keine Auswirkungen. Dies bedeutet, dass zwei Anwendungen mit dem gleichen Namen in Perfmon.exe weiterhin als *Anwendung* und *Anwendung#1* angezeigt werden (z.B. **MyApp** und **MyApp#1**).

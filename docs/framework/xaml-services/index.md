@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663234"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457397"
 ---
 # <a name="xaml-services"></a>XAML-Dienste
-Dieses Thema beschreibt die Funktionen einer Technologie-Gruppe, die .NET Framework XAML Services genannt. Die meisten Dienste und APIs beschrieben befinden sich in der Assembly "System.xaml" enthalten, die eine Assembly wird eingeführt, mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Satz von .NET Core-Assemblys. Dienste umfassen, Reader und Writer, Schemaklassen und schemaunterstützung, Factorys, Attributieren von Klassen, systeminternen XAML-sprachunterstützung und andere Funktionen der XAML-Sprache.  
+Dieses Thema beschreibt die Funktionen einer Technologie-Gruppe, die .NET Framework XAML Services genannt. Die meisten Dienste und beschriebenen APIs befinden sich in der Assembly "System.xaml" enthalten, die eine Assembly, die .NET Core-Assemblys mit dem .NET Framework 4 eingeführt wird. Dienste umfassen, Reader und Writer, Schemaklassen und schemaunterstützung, Factorys, Attributieren von Klassen, systeminternen XAML-sprachunterstützung und andere Funktionen der XAML-Sprache.  
   
 ## <a name="about-this-documentation"></a>Informationen zu dieser Dokumentation  
  Dokumentation für .NET Framework-XAML-Dienste wird vorausgesetzt, dass Sie bereits Erfahrung mit der XAML-Sprache und wie es für ein bestimmtes Framework, z. B. gelten möglicherweise [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] oder Windows Workflow Foundation oder eine bestimmte Technologie-Funktion Bereich, z. B. die Buildanpassung-Funktionen in <xref:Microsoft.Build.Framework.XamlTypes>. In dieser Dokumentation versucht nicht, Erläutern Sie die Grundlagen von XAML als eine Markupsprache, Terminologie der XAML-Syntax oder andere einführendes Material. Stattdessen diese Dokumentation konzentriert sich auf die Verwendung der .NET Framework-XAML-Dienste, die aktiviert sind in der System.Xaml-Assembly-Bibliothek. Die meisten dieser APIs sind für Szenarien, die XAML-Sprache-Integration und Erweiterbarkeit. Dies kann Folgendes umfassen:  
