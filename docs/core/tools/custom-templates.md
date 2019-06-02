@@ -1,14 +1,14 @@
 ---
 title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
-author: guardrex
+author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679059"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299922"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -78,14 +78,14 @@ dotnet new -l
 
 Aktuell wird eine benutzerdefinierte Vorlage unter Windows mit der Datei [nuget.exe](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe) verpackt (und nicht mit [dotnet pack](dotnet-pack.md)). Ziehen Sie für das plattformübergreifende Verpacken [NuGetizer 3000](https://github.com/NuGet/Home/wiki/NuGetizer-3000) in Betracht.
 
-Der Inhalt des Projektordners wird gemeinsam mit seiner Datei *.template.config/template.json* in den Ordner *content* eingefügt. Fügen Sie neben dem *content*-Ordner eine [*NUSPEC*-Datei](/nuget/create-packages/creating-a-package) hinzu, die eine XML-Manifestdatei ist, die den Inhalt eines Paktes beschreibt und den Erstellungsprozess des NuGet-Pakets vorantreibt. Fügen Sie im **\<packageTypes>**-Element einer *NUSPEC*-Datei ein **\<packageType>** mit einem `name`-Attributwert von `Template` ein. Der Ordner *content* und die Datei *NUSPEC* sollten sich im gleichen Verzeichnis befinden. In der Tabelle werden die *NUSPEC*-Dateielemente gezeigt, die mindestens erforderlich sind, um eine Vorlage als NuGet-Paket zu erstellen.
+Der Inhalt des Projektordners wird gemeinsam mit seiner Datei *.template.config/template.json* in den Ordner *content* eingefügt. Fügen Sie neben dem *content*-Ordner eine [*NUSPEC*-Datei](/nuget/create-packages/creating-a-package) hinzu, die eine XML-Manifestdatei ist, die den Inhalt eines Paktes beschreibt und den Erstellungsprozess des NuGet-Pakets vorantreibt. Fügen Sie im **\<packageTypes>** -Element einer *NUSPEC*-Datei ein **\<packageType>** mit einem `name`-Attributwert von `Template` ein. Der Ordner *content* und die Datei *NUSPEC* sollten sich im gleichen Verzeichnis befinden. In der Tabelle werden die *NUSPEC*-Dateielemente gezeigt, die mindestens erforderlich sind, um eine Vorlage als NuGet-Paket zu erstellen.
 
 | Element            | Typ   | Beschreibung |
 | ------------------ | ------ | ----------- |
 | **\<authors>**     | string | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
 | **\<description>** | string | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
 | **\<id>**          | string | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
-| **\<packageType>** | string | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
+| **\<packageType>** | string | Fügen Sie dieses Element in ein **\<packageTypes>** -Element bei den **\<metadata>** -Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>** -Elements auf `Template` fest. |
 | **\<version>**     | string | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
 
 Das vollständige *NUSPEC*-Dateischema finden Sie in der [.nuspec-Referenz](/nuget/schema/nuspec). Eine *NUSPEC*-Beispieldatei für eine Vorlage wird im Tutorial [Create a custom template for dotnet new (Erstellen einer benutzerdefinierten Vorlage für dotnet new)](~/docs/core/tutorials/create-custom-template.md) verwendet.
