@@ -1,5 +1,4 @@
 - name: 'C#-Operatoren'
-  href: index.md
   items:
     - name: Arithmetische operatoren
       href: arithmetic-operators.md
@@ -24,21 +23,21 @@
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
     - name: ()-Operator
       href: invocation-operator.md
-    - name: '::- Operator'
+    - name: '::-Operator'
       href: namespace-alias-qualifer.md
-    - name: + Operator
+    - name: + +=-Operatoren
       href: addition-operator.md
-    - name: '- Operator'
+      displayName: 'string concatenation, delegate combination, event subscription'
+    - name: '- -=-Operatoren'
       href: subtraction-operator.md
+      displayName: 'delegate removal, event unsubscription'
     - name: =-Operator
       href: assignment-operator.md
-    - name: '?: Operator'
+    - name: '?:-Operator'
       href: conditional-operator.md
-    - name: +=-Operator
-      href: addition-assignment-operator.md
-    - name: '-=-Operator'
-      href: subtraction-assignment-operator.md
-    - name: '?? Operator'
+    - name: '?? operator'
       href: null-coalescing-operator.md
     - name: =>-Operator
       href: lambda-operator.md
+    - name: true- und false-Operatoren
+      href: true-false-operators.md
