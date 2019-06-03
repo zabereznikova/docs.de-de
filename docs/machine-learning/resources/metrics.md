@@ -3,12 +3,12 @@ title: ML.NET-Metriken
 description: Verstehen Sie die Metriken, die verwendet werden, um die Leistung eines ML.NET-Modells auszuwerten.
 ms.date: 04/29/2019
 author: ''
-ms.openlocfilehash: d76cab0b56085ebf2ee69f4d9d12c9685c3cb021
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 802f0a8fd32c492c8d9f89933b183802cb178cb3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053042"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Metriken für die Modellauswertung in ML.NET
 
@@ -24,17 +24,17 @@ ms.locfileid: "65452692"
 Weitere Informationen zu binären Klassifizierungsmetriken finden Sie in den folgenden Artikeln:
 
 - [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9) (Genauigkeit, Präzision, Wiedererkennung oder F1?)
-- [Binary Classification Metrics class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.binaryclassificationmetrics?view=ml-dotnet) (Metrikklassen für die binäre Klassifizierung)
+- [Binary Classification Metrics class](xref:Microsoft.ML.Data.BinaryClassificationMetrics) (Metrikklassen für die binäre Klassifizierung)
 - [The Relationship Between Precision-Recall and ROC Curves](http://pages.cs.wisc.edu/~jdavis/davisgoadrichcamera2.pdf) (Das Verhältnis zwischen Precision-Recall- und ROC-Kurven)
 
 ## <a name="metrics-for-multi-class-classification"></a>Metriken für Multiklassen-Klassifizierungsmodelle
 
 | Metriken   |      Beschreibung      |  Suche nach |
 |-----------|-----------------------|-----------|
-| **Micro-Accuracy** |  Die [durchschnittliche Mikrogenauigkeit](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.multiclassclassificationmetrics.microaccuracy?view=ml-dotnet) aggregiert die Beiträge aller Klassen zur Berechnung der durchschnittlichen Metrik. Es ist der Anteil der korrekt vorhergesagten Instanzen. Der Mikrodurchschnitt berücksichtigt nicht die Klassenzugehörigkeit. Jedes Beispiel/Klasse-Paar trägt grundsätzlich zu gleichen Teilen zur Genauigkeitsmetrik bei. | **Je näher der Wert an 1,00 liegt, desto besser**. In einer Aufgabe für die Multiklassenklassifizierung ist die Mikrogenauigkeit der Makrogenauigkeit vorzuziehen, wenn Sie vermuten, dass es ein Klassenungleichgewicht geben könnte (d.h. Sie haben viel mehr Beispiele für eine Klasse als für andere Klassen).|
-| **Macro-Accuracy** | Die [durchschnittliche Makrogenauigkeit](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.multiclassclassificationmetrics.macroaccuracy?view=ml-dotnet) ist die durchschnittliche Genauigkeit auf Klassenebene. Die Genauigkeit für jede Klasse wird berechnet, und die Makrogenauigkeit ist der Durchschnitt dieser Genauigkeiten. Grundsätzlich trägt jede Klasse zu gleichen Teilen zur Genauigkeitsmetrik bei. Minderheitsklassen werden gleich wie größere Klassen gewichtet. Die Metrik gibt jeder Klasse die gleiche Gewichtung, unabhängig davon, wie viele Instanzen aus dieser Klasse das Dataset enthält. |  **Je näher der Wert an 1,00 liegt, desto besser**.  Sie berechnet die Metrik unabhängig für jede Klasse und ermittelt dann den Durchschnitt (daher werden alle Klassen gleich behandelt). |
+| **Micro-Accuracy** |  Die [durchschnittliche Mikrogenauigkeit](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) aggregiert die Beiträge aller Klassen zur Berechnung der durchschnittlichen Metrik. Es ist der Anteil der korrekt vorhergesagten Instanzen. Der Mikrodurchschnitt berücksichtigt nicht die Klassenzugehörigkeit. Jedes Beispiel/Klasse-Paar trägt grundsätzlich zu gleichen Teilen zur Genauigkeitsmetrik bei. | **Je näher der Wert an 1,00 liegt, desto besser**. In einer Aufgabe für die Multiklassenklassifizierung ist die Mikrogenauigkeit der Makrogenauigkeit vorzuziehen, wenn Sie vermuten, dass es ein Klassenungleichgewicht geben könnte (d.h. Sie haben viel mehr Beispiele für eine Klasse als für andere Klassen).|
+| **Macro-Accuracy** | Die [durchschnittliche Makrogenauigkeit](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) ist die durchschnittliche Genauigkeit auf Klassenebene. Die Genauigkeit für jede Klasse wird berechnet, und die Makrogenauigkeit ist der Durchschnitt dieser Genauigkeiten. Grundsätzlich trägt jede Klasse zu gleichen Teilen zur Genauigkeitsmetrik bei. Minderheitsklassen werden gleich wie größere Klassen gewichtet. Die Metrik gibt jeder Klasse die gleiche Gewichtung, unabhängig davon, wie viele Instanzen aus dieser Klasse das Dataset enthält. |  **Je näher der Wert an 1,00 liegt, desto besser**.  Sie berechnet die Metrik unabhängig für jede Klasse und ermittelt dann den Durchschnitt (daher werden alle Klassen gleich behandelt). |
 | **Log-loss**| Der [logarithmische Verlust](http://wiki.fast.ai/index.php/Log_Loss) misst die Leistung eines Klassifizierungsmodells, wobei die Vorhersageeingabe ein Wahrscheinlichkeitswert zwischen 0,00 und 1,00 ist. Der Wert steigt, wenn die vorhergesagte Wahrscheinlichkeit von der tatsächlichen Bezeichnung abweicht. | **Je näher der Wert an 0,00 liegt, desto besser**. Bei einem perfekten Modell liegt der Wert bei 0,00. Ziel unserer Machine Learning-Modelle ist es, diesen Wert zu minimieren.|
-| **Log-Loss Reduction** | Die [logarithmische Verlustreduzierung](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.multiclassclassificationmetrics.loglossreduction?view=ml-dotnet) kann als Vorteil des Klassifizierers gegenüber einer Zufallsvorhersage interpretiert werden.| **Liegt zwischen [-inf, 1.00], wobei „1.00“ perfekte Vorhersagen und „0.00“ durchschnittliche Vorhersagen bedeutet.** Wenn der Wert beispielsweise 0,20 beträgt, kann er als „die Wahrscheinlichkeit einer korrekten Vorhersage ist 20 % besser als eine zufällige Schätzung“ interpretiert werden.|
+| **Log-Loss Reduction** | Die [logarithmische Verlustreduzierung](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.LogLossReduction) kann als Vorteil des Klassifizierers gegenüber einer Zufallsvorhersage interpretiert werden.| **Liegt zwischen [-inf, 1.00], wobei „1.00“ perfekte Vorhersagen und „0.00“ durchschnittliche Vorhersagen bedeutet.** Wenn der Wert beispielsweise 0,20 beträgt, kann er als „die Wahrscheinlichkeit einer korrekten Vorhersage ist 20 % besser als eine zufällige Schätzung“ interpretiert werden.|
 
 Die Mikrogenauigkeit ist im Allgemeinen besser auf die Geschäftsanforderungen der ML-Vorhersagen ausgerichtet. Wenn Sie eine einzelne Metrik für die Auswahl der Qualität einer Aufgabe für die Multiklassenklassifizierung auswählen, sollte dies in der Regel die Mikrogenauigkeit sein.
 
