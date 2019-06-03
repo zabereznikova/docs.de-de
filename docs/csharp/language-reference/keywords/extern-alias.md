@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 8a33b466bbe75b84d6cd28ebd6f4fc57695aa420
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452437"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422052"
 ---
 # <a name="extern-alias-c-reference"></a>extern-Alias (C#-Referenz)
 Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die denselben vollqualifizierten Namen besitzen. Beispielsweise müssen Sie möglicherweise zwei oder mehr Versionen einer Assembly in derselben Anwendung verwenden. Indem Sie einen externen Assemblyalias verwenden, können die Namespaces jeder Assembly in Namespaces auf Stammebene, benannt durch den Alias, umschlossen werden, was es ihnen ermöglicht, von derselben Datei verwendet zu werden.  
@@ -46,6 +46,5 @@ Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die dens
 - [C#-Referenz](../../../csharp/language-reference/index.md)
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)
 - [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/reference (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

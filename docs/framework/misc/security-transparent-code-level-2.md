@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868900"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456570"
 ---
 # <a name="security-transparent-code-level-2"></a>Sicherheitstransparenter Code, Ebene 2
 
@@ -58,7 +58,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="usage-examples-and-behaviors"></a>Verwendungsbeispiele und Verhalten
 
-Verwenden Sie die folgende Anmerkung für eine Assembly, um [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Regeln festzulegen:
+Um .NET Framework 4-Regeln (Transparenz der Ebene 2) anzugeben, verwenden Sie die folgende Anmerkung für eine Assembly aus:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ Um die .NET Framework 2.0-Regeln (Transparenz der Ebene 1) festzulegen, verwende
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Wenn Sie eine Assembly nicht mit einer Anmerkung versehen, werden standardmäßig die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]-Regeln verwendet. Die empfohlene bewährte Methode ist jedoch mit der <xref:System.Security.SecurityRulesAttribute> -Attribut anstelle von abhängig von der Standardwert.
+Wenn Sie eine Assembly nicht kommentieren, werden die Regeln für die .NET Framework 4 standardmäßig verwendet. Die empfohlene bewährte Methode ist jedoch mit der <xref:System.Security.SecurityRulesAttribute> -Attribut anstelle von abhängig von der Standardwert.
 
 ### <a name="assembly-wide-annotation"></a>Assemblyweite Anmerkung
 
@@ -91,7 +91,7 @@ Die folgende Tabelle vergleicht das Verhalten des Assembly für Ebene 2 mit Eben
 |Kein Attribut in einer teilweise vertrauenswürdigen Assembly|Typen und Member sind standardmäßig transparent, aber können sicherheitskritisch oder sicherheitsgeschützt sein.|Alle Typen und Member sind transparent.|
 |Kein Attribut|Wenn kein Attribut angegeben wird, bestimmt die Common Language Runtime die Transparenzregeln. Alle Typen und Member sind sicherheitskritisch, es sei denn, die Einstufung als sicherheitskritisch verletzt eine Vererbungsregel.|In einer voll vertrauenswürdigen Assembly (im globalen Assemblycache oder als voll vertrauenswürdig in der `AppDomain` identifiziert) sind alle Typen transparent, und alle Member sind sicherheitsgeschützt.|
 |`SecurityTransparent`|Alle Typen und Member sind transparent.|Alle Typen und Member sind transparent.|
-|`SecurityCritical(SecurityCriticalScope.Everything)`|Nicht zutreffend.| Alle Typen und Member sind sicherheitskritisch.|
+|`SecurityCritical(SecurityCriticalScope.Everything)`|Nicht zutreffend.|Alle Typen und Member sind sicherheitskritisch.|
 |`SecurityCritical`|Der gesamte Code, der von Typen in dieser Assembly eingeführt wird, ist wichtig, und der gesamte andere Code ist transparent. Wenn Sie eine virtuelle oder abstrakte Methode überschreiben oder eine Schnittstellenmethode implementieren, müssen Sie diese Methode explizit per Anmerkung als `SecurityCritical` oder `SecuritySafeCritical` kennzeichnen.|Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.|
 
 ### <a name="type-and-member-annotation"></a>Typ- und Memberanmerkung

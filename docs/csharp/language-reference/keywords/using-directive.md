@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029501"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421746"
 ---
 # <a name="using-directive-c-reference"></a>using-Anweisung (C#-Referenz)
 
@@ -54,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Der Bereich einer `using`-Direktive ist auf die Datei beschränkt, in der er enthalten ist.
 
@@ -102,6 +102,5 @@ Weitere Informationen finden Sie unter [using-Direktiven](~/_csharplang/spec/nam
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [Using-Namespaces](../../programming-guide/namespaces/using-namespaces.md)
 - [C#-Schlüsselwörter](index.md)
-- [Namespaceschlüsselwörter](namespace-keywords.md)
 - [Namespaces](../../programming-guide/namespaces/index.md)
 - [Using-Anweisung](using-statement.md)

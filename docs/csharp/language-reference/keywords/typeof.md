@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: f218414bf60a86b95461d747fb6c557f03bcfcb3
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7962a3d0a5885e64701cb9d9a4d689cd982b9830
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846115"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422553"
 ---
 # <a name="typeof-c-reference"></a>typeof (C#-Referenz)
 
@@ -65,4 +65,3 @@ Weitere Informationen finden Sie unter [Der typeof-Operator](~/_csharplang/spec/
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
 - [is](../../../csharp/language-reference/keywords/is.md)
-- [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)

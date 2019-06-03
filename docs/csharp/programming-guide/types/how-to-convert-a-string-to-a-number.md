@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1ff8db25fd76be6eb77355322d497d61096400aa
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219333"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301370"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)
 
@@ -21,7 +21,7 @@ Sie können eine [Zeichenfolge](../../../csharp/language-reference/keywords/stri
   
  Bei einer Zeichenfolge ist es etwas effizienter und einfacher, eine `TryParse`-Methode (beispielsweise [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) oder eine `Parse`-Methode (beispielsweise [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) aufzurufen.  Die Verwendung einer <xref:System.Convert>-Methode eignet sich eher für allgemeine Objekte, die <xref:System.IConvertible> implementieren.  
   
- Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Die `Parse`-Methode gibt die konvertierte Zahl zurück, und die `TryParse`-Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die Konvertierung erfolgreich war. Anschließend wird die konvertierte Zahl in einem [`out`-Parameter](../../../csharp/language-reference/keywords/out.md) zurückgegeben. Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse` [false](../../../csharp/language-reference/keywords/false.md) zurückgibt. Beim Aufrufen einer `Parse`-Methode sollten Sie grundsätzlich die Ausnahmebehandlung zum Abfangen einer <xref:System.FormatException> verwenden, falls beim Analysevorgang ein Fehler auftritt.  
+ Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Die `Parse`-Methode gibt die konvertierte Zahl zurück, und die `TryParse`-Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die Konvertierung erfolgreich war. Anschließend wird die konvertierte Zahl in einem [`out`-Parameter](../../../csharp/language-reference/keywords/out.md) zurückgegeben. Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse` [false](../../../csharp/language-reference/keywords/false-literal.md) zurückgibt. Beim Aufrufen einer `Parse`-Methode sollten Sie grundsätzlich die Ausnahmebehandlung zum Abfangen einer <xref:System.FormatException> verwenden, falls beim Analysevorgang ein Fehler auftritt.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Aufrufen der Methoden „Parse“ und „TryParse“
 

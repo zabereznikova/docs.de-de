@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396785"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421731"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabelle ganzzahliger Typen (C#-Referenz)
 
@@ -32,7 +32,7 @@ Die folgende Tabelle enthält Größe und Bereich der integralen Typen, die eine
 |[long](long.md)|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|64-Bit-Ganzzahl mit Vorzeichen|  
 |[ulong](ulong.md)|0 bis 18.446.744.073.709.551.615|64-Bit-Ganzzahl ohne Vorzeichen|  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
   
 Wenn der von einem Integer-Literal dargestellte Wert <xref:System.UInt64.MaxValue?displayProperty=nameWithType> überschreitet, tritt der Compilerfehler [CS1021](../../misc/cs1021.md) auf.
 
@@ -43,7 +43,6 @@ Mit der <xref:System.Numerics.BigInteger?displayProperty=nameWithType>-Struktur 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Referenztabellen für Typen](reference-tables-for-types.md)
 - [Tabelle für Gleitkommatypen](floating-point-types-table.md)
 - [Tabelle für Standardwerte](default-values-table.md)
 - [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md)
