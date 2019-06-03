@@ -1,21 +1,21 @@
 ---
-title: Verwenden von ML.NET in einem Filmempfehlungsszenario
-description: Erfahren Sie, wie Sie ML.NET in einem Szenario verwenden, in dem Benutzern Filme empfohlen werden.
+title: 'Tutorial: Erstellen eines Filmempfehlungssystems'
+description: Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von ML.NET in einer .NET Core-Konsolenanwendung ein Filmempfehlungssystem erstellen. Für die Schritte verwenden Sie C# und Visual Studio 2019.
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612276"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063372"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutorial: Erstellen eines Filmempfehlungssystems mit ML.NET
 
-Dieses Beispieltutorial veranschaulicht das Verwenden von ML.NET zum Erstellen eines Filmempfehlungssystems über eine .NET Core-Konsolenanwendung mithilfe von C# in Visual Studio 2017.
+Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von ML.NET in einer .NET Core-Konsolenanwendung ein Filmempfehlungssystem erstellen. Für die Schritte verwenden Sie C# und Visual Studio 2019.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Erstellen und Trainieren eines Modells
 > * Auswerten eines Modells
 > * Bereitstellen und Nutzen eines Modells
-
-> [!NOTE]
-> Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Dieses Tutorial und das zugehörige Beispiel verwenden zurzeit **ML.NET Version 0.11**. Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
 
@@ -53,7 +48,7 @@ Es gibt mehrere Möglichkeiten, ein Empfehlungssystem umzusetzen. Beispielsweise
 
 ### <a name="create-a-project"></a>Erstellen eines Projekts
 
-1. Öffnen Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Wählen Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#** und anschließend den Knoten **.NET Core** aus. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)**. Geben Sie im Textfeld **Name** „MovieRecommender“ ein, und klicken Sie anschließend auf die Schaltfläche **OK**.
+1. Öffnen Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Wählen Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C#** und anschließend den Knoten **.NET Core** aus. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)** . Geben Sie im Textfeld **Name** „MovieRecommender“ ein, und klicken Sie anschließend auf die Schaltfläche **OK**.
 
 2. Erstellen Sie ein Verzeichnis mit dem Namen *Data* in Ihrem Projekt, um das Dataset zu speichern:
 
@@ -61,10 +56,7 @@ Es gibt mehrere Möglichkeiten, ein Empfehlungssystem umzusetzen. Beispielsweise
 
 3. Installieren Sie die NuGet-Pakete **Microsoft.ML** und **Microsoft.ML.Recommender**:
 
-    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach **Microsoft.ML**, wählen Sie das Paket in der Liste aus, und klicken Sie anschließend auf die Schaltfläche **Installieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.Recommender**.
-
-    > [!NOTE]
-    > Für dieses Tutorial wird **Microsoft.ML v0.11.0** und **Microsoft.ML.Recommender v0.11.0** verwendet.
+    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach **Microsoft.ML**, und wählen Sie das **1.0.0**-Paket in der Liste und anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.Recommender v0.12.0**.
 
 4. Fügen Sie am Anfang der Datei *Program.cs* die folgenden `using`-Anweisungen hinzu:
 
@@ -175,7 +167,7 @@ Fügen Sie den unten aufgeführten Code als die nächsten beiden Codezeilen in d
 
 ## <a name="build-and-train-your-model"></a>Erstellen und Trainieren des Modells
 
-In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../basic-concepts-model-training-in-mldotnet.md#data), [Transformatoren](../basic-concepts-model-training-in-mldotnet.md#transformer) (Transformers) und [Schätzer](../basic-concepts-model-training-in-mldotnet.md#estimator) (Estimators).
+In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../resources/glossary.md#data), [Transformatoren](../resources/glossary.md#transformer) (Transformers) und [Schätzer](../resources/glossary.md#estimator) (Estimators).
 
 Für Machine Learning-Trainingsalgorithmen sind Daten in einem bestimmten Format erforderlich. `Transformers` werden verwendet, um Tabellendaten in ein kompatibles Format zu transformieren.
 
