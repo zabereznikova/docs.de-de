@@ -1,6 +1,8 @@
 - name: Das .NET Compiler Platform SDK (Roslyn APIs)
   href: index.md
   items:
+    - name: Übersicht
+      href: index.md
     - name: Grundlegendes zum API-Modell von Compilern
       href: compiler-api-model.md
     - name: Arbeiten mit der Syntax

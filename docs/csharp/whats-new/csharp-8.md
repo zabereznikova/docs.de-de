@@ -1,18 +1,20 @@
 ---
 title: Neues in C# 8.0 – C#-Leitfaden
-description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 2.
+description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754378"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557149"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
-Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits mit Vorschau 2 ausprobieren können. Diese neuen Funktionen wurde in Vorschauversion 2 hinzugefügt:
+Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits ausprobieren können. 
 
+- [Readonly-Member](#readonly-members)
+- [Standardschnittstellenmember](#default-interface-members)
 - [Verbesserungen am Musterabgleich](#more-patterns-in-more-places):
   * [switch-Ausdrücke](#switch-expressions)
   * [Eigenschaftsmuster](#property-patterns)
@@ -21,17 +23,67 @@ Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits mi
 - [using-Deklarationen](#using-declarations)
 - [Statische lokale Funktionen](#static-local-functions)
 - [Verwerfbare Referenzstrukturen](#disposable-ref-structs)
-
-Die folgenden Sprachfunktionen sind erstmals in der Vorschauversion 1 von C# 8.0 erschienen:
-
 - [Nullwerte zulassende Verweistypen](#nullable-reference-types)
 - [Asynchrone Streams](#asynchronous-streams)
 - [Indizes und Bereiche](#indices-and-ranges)
 
 > [!NOTE]
-> Dieser Artikel wurde zuletzt für Vorschauversion 2 von C# 8.0 aktualisiert.
+> Dieser Artikel wurde zuletzt für Vorschauversion 5 von C# 8.0 aktualisiert.
 
 Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Artikel verfügbar sind, werden Links zu diesen Tutorials und Übersichten bereitgestellt.
+
+## <a name="readonly-members"></a>Readonly-Member
+
+Sie können den `readonly`-Modifikator auf jedes Member einer Struktur anwenden. Damit wird angezeigt, dass das Element den Zustand nicht ändert. Dies ist granularer als das Anwenden des `readonly`-Modifikators auf eine `struct`-Deklaration.  Betrachten Sie folgende veränderliche Struktur:
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Wie die meisten Strukturen ändert die `ToString()`-Methode den Zustand nicht. Sie könnten dies durch Hinzufügen des `readonly`-Modifikators zur Deklaration von `ToString()` angeben:
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+Die vorhergehende Änderung generiert eine Compilerwarnung, weil `ToString` auf die `Distance`-Eigenschaft zugreift, die nicht als `readonly` markiert ist:
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+Der Compiler warnt Sie, wenn er eine Defensivkopie erstellen muss.  Die `Distance`-Eigenschaft ändert den Zustand nicht, sodass Sie diese Warnung beheben können, indem Sie den `readonly`-Modifikator zur Deklaration hinzufügen:
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Beachten Sie, dass der `readonly`-Modifikator bei einer schreibgeschützten Eigenschaft notwendig ist. Der Compiler geht nicht davon aus, dass `get`-Zugriffsmethoden den Zustand nicht ändern; Sie müssen `readonly` explizit deklarieren. Der Compiler erzwingt die Regel, dass `readonly`-Member den Zustand nicht ändern. Die folgende Methode wird nicht kompiliert, es sei denn, Sie entfernen den `readonly`-Modifikator:
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Mit diesem Feature können Sie Ihre Designabsicht angeben, damit der Compiler sie erzwingen und Optimierungen basierend auf dieser Absicht vornehmen kann.
+
+## <a name="default-interface-members"></a>Standardschnittstellenmember
+
+Sie können nun Member zu Schnittstellen hinzufügen und eine Implementierung für diese Member bereitstellen. Dieses Sprachfeature ermöglicht es API-Autoren, in späteren Versionen Methoden zu einer Schnittstelle hinzuzufügen, ohne die Quell- oder Binärkompatibilität mit bestehenden Implementierungen dieser Schnittstelle zu beeinträchtigen. Bestehende Implementierungen *erben* die Standardimplementierung. Dieses Feature ermöglicht zudem die Interaktion zwischen C# und APIs, die auf Android oder Swift abzielen und ähnliche Funktionen unterstützen. Standardschnittstellenmember ermöglichen auch Szenarien, die einem „Traits“-Sprachfeature ähneln.
+
+Standardschnittstellenmember wirken sich auf viele Szenarien und Sprachelemente aus. Unser erstes Tutorial behandelt [die Aktualisierung einer Schnittstelle mit Standardimplementierungen](../tutorials/default-interface-members-versions.md). Weitere Tutorials und Referenzaktualisierungen folgen rechtzeitig zur allgemeinen Veröffentlichung.
 
 ## <a name="more-patterns-in-more-places"></a>Weitere Muster an mehr Orten
 
@@ -321,9 +373,15 @@ Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Ver
 
 Bereiche und Indizes bieten eine prägnante Syntax zur Angabe von Teilbereichen in einem Array, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>.
 
-Sie können mit Verwendung des `^`-Zeichens vor dem Index einen Index **vom Ende aus** angeben. Die Indizierung vom Ende aus beginnt mit der Regel, dass `0..^0` den gesamten Bereich angibt. Starten Sie zum Auflisten eines vollständigen Arrays *beim ersten Element*, und fahren Sie fort bis *hinter das letzte Element*. Stellen Sie sich das Verhalten der `MoveNext`-Methode auf einem Enumerator vor: Sie gibt „false“ zurück, wenn die Enumeration das letzte Element passiert. Der Index `^0` bedeutet „das Ende“, `array[array.Length]`, oder der Index, der dem letzten Element folgt. Sie kennen `array[2]`. Damit wird das Element „2 from the start“ bezeichnet. Jetzt bezeichnet `array[^2]` das Element „2 from the end“. 
+Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren.
+- <xref:System.Index?displayProperty=nameWithType>: Stellt einen Index in einer Sequenz dar.
+- Der `^`-Operator, der angibt, dass ein Index relativ zum Ende der Sequenz ist.
+- <xref:System.Range?displayProperty=nameWithType>: Stellt einen Unterbereich einer Sequenz dar.
+- Der Bereichsoperator (`..`), die den Beginn und das Ende eines Bereichs als Operanden angibt.
 
-Sie können einen **Bereich** mit dem **Bereichsoperator** angeben: `..`. So gibt beispielsweise `0..^0` den gesamten Bereich des Arrays an: 0 vom Anfang bis zum Ende, aber nicht einschließlich 0 vom Ende. Jeder der beiden Operanden kann „from the start“ oder „from the end“ verwenden. Darüber hinaus kann jeder der beiden Operanden weggelassen werden. Die Standardeinstellungen sind `0` für den Startindex und `^0` für den Endindex.
+Beginnen wir mit den Regeln für Indizes. Betrachten Sie einen Array `sequence`. Der `0`-Index entspricht `sequence[0]`. Der `^0`-Index entspricht `sequence[sequence.Length]`. Beachten Sie, dass `sequence[^0]` genau wie `sequence[sequence.Length]` eine Ausnahme auslöst. Für eine beliebige Zahl `n` ist der Index `^n` identisch mit `sequence.Length - n`.
+
+Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Bereiche sind exklusiv, d.h. das *Ende* ist nicht im Bereich enthalten. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar. 
 
 Schauen wir uns einige Beispiele an. Betrachten Sie das folgende Array, kommentiert mit seinem Index „from the start“ und „from the end“:
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-Der Index jedes Elements verstärkt das Konzept von „from the start“ und „from the end“, und dass Bereiche das Ende des Bereichs ausschließen. Der „start“ des gesamten Arrays ist das erste Element. Das „end“ des gesamten Arrays liegt *hinter* dem letzten Element.
 
 Sie können das letzte Wort mit dem `^1`-Index abrufen:
 

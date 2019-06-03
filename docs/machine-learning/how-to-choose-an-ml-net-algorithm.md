@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie einen ML.NET-Algorithmus für Ihr Machine Lea
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065633"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557782"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Gewusst wie: Auswählen eines ML.NET-Algorithmus
 
@@ -81,8 +81,8 @@ Diese Trainer erstellen einen Multiklassentrainer aus einem binären Trainer. Ve
 
 |Algorithmus|Eigenschaften|Trainer|
 |---------|----------|--------|
-|Einer gegen alle|Dieser Multiklassenklassifizierer trainiert einen binären Klassifizierer für jede Klasse, der diese Klasse von allen anderen Klassen unterscheidet. Ist in der Skalierung durch die Anzahl der zu kategorisierenden Klassen beschränkt|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Paarweise Kopplung|Dieser Multiklassenklassifizierer trainiert einen binären Klassifizierungsalgorithmus g für jedes Paar von Klassen. Ist in der Skalierung durch die Anzahl der zu kategorisierenden Klassen begrenzt, da jede Kombination von zwei Klassen trainiert werden muss.|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Einer gegen alle|Dieser Multiklassenklassifizierer trainiert einen binären Klassifizierer für jede Klasse, der diese Klasse von allen anderen Klassen unterscheidet. Ist in der Skalierung durch die Anzahl der zu kategorisierenden Klassen beschränkt|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Paarweise Kopplung|Dieser Multiklassenklassifizierer trainiert einen binären Klassifizierungsalgorithmus g für jedes Paar von Klassen. Ist in der Skalierung durch die Anzahl der zu kategorisierenden Klassen begrenzt, da jede Kombination von zwei Klassen trainiert werden muss.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ Diese Trainer erstellen einen Multiklassentrainer aus einem binären Trainer. Ve
 |Eigenschaften|Trainer|
 |----------|--------|
 |Verwenden Sie diesen Binärklassifizierungstrainer, um eine Basis zum Messen der Leistung anderer Trainer zu erhalten. Um effektiv zu sein, sollten die Metriken der anderen Trainer besser sein als der vorherige Trainer. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

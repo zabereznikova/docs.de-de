@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die die Telemetriefeatures der ML.NET-CLI, 
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065543"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053574"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Erfassen von Telemetriedaten durch die ML.NET-CLI
 
@@ -42,15 +42,17 @@ Deaktivieren Sie die Telemetriefeature, indem Sie die Umgebungsvariable `DOTNET_
 
 Die Funktion sammelt die folgenden Daten:
 
-- Welche Befehle aufgerufen werden, z.B. `auto-train`
+- Welcher Befehl aufgerufen wurde, z.B. `auto-train`
+- Verwendete Befehlszeilen-Parameternamen (z.B. „dataset-name“, „label-column-name“, „ml-task“, „output-path“, „max-exploration-time“, „verbosity“)
 - MAC-Adresse mit Hash: eine kryptografisch (SHA256) anonyme und eindeutige ID für einen Computer
 - Zeitstempel eines Aufrufs
-- Die aus drei Oktetten bestehende IP-Adresse, die nur zur Bestimmung des geografischen Standorts verwendet wird
+- Die aus drei Oktetten bestehende IP-Adresse (nicht die vollständige IP-Adresse), die nur zur Bestimmung des geografischen Standorts verwendet wird
 - Die Namen aller verwendeter Argumente/Parameter Nicht die Kundenwerte, z.B. Zeichenfolgen
+- Hash-Datasetdateiname
+- Datasetdateigrößen-Bucket
 - Betriebssystem und Version
-- Wert des ml-Task-Parameters: Kategoriewerte, z. B. `regression`, `binary-classification` und `multiclass-classification`
-- Größe der [logarithmisch gerundeten](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) Datasetdatei (nächste Potenz von 2)
-- `ExitCode` des Befehls
+- Wert des --Taskparameters: Kategoriewerte, z. B. `regression`, `binary-classification` und `multiclass-classification`
+- ML.NET-CLI-Version (d.h. 0.3.27703.4)
 
 Die Daten werden mithilfe der Technologie [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) sicher an die Microsoft-Server gesendet, unter eingeschränktem Zugriff gespeichert und unter strikter Sicherheitskontrolle durch die Systeme von [Azure Storage](https://azure.microsoft.com/services/storage/) verwendet.
 
@@ -73,5 +75,5 @@ Wenn Sie zum ersten Mal einen [ML.NET-CLI-Befehl](../reference/ml-net-cli-refere
 ## <a name="see-also"></a>Siehe auch
 - [ML.NET-CLI-Referenz](../reference/ml-net-cli-reference.md)
 - [Microsoft-Software-Lizenzbedingungen: Microsoft .NET-Bibliothek](https://aka.ms/dotnet-core-eula)
-- [Datenschutz bei Microsoft](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Datenschutzerklärung von Microsoft](https://privacy.microsoft.com/en-us/privacystatement)
+- [Datenschutz bei Microsoft](https://www.microsoft.com/trustcenter/privacy/)
+- [Datenschutzerklärung von Microsoft](https://privacy.microsoft.com/privacystatement)

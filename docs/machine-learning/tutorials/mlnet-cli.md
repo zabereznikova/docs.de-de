@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: d7c4c774667e87fee2f71046aa0f91bfad7c6f3e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065943"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053647"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Automatisches Generieren eines binären Klassifizierers mit der CLI
 
@@ -142,12 +142,12 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
 
     ![Von der CLI generierte VS-Projektmappe](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - Die generierte **Klassenbibliothek**, die das serialisierte ML-Modell und die Datenklassen enthält, können Sie direkt in Ihrer Endbenutzeranwendung verwenden, auch wenn Sie direkt auf diese Klassenbibliothek verweisen (oder den Code verschieben, ganz wie Sie möchten).
+    - Die generierte **Klassenbibliothek**, die das serialisierte ML-Modell (ZIP-Datei) und die Datenklassen (Datenmodelle) enthält, können Sie direkt in Ihrer Endbenutzeranwendung verwenden, auch wenn Sie direkt auf diese Klassenbibliothek verweisen (oder den Code verschieben, ganz wie Sie möchten).
     - Die generierte **Konsolen-App** enthält Ausführungscode, den Sie überprüfen müssen. Dann wird der „Bewertungscode“ (Code, der das ML-Modell ausführt, um Vorhersagen zu treffen) in der Regel wiederverwendet, indem Sie diesen einfachen Code (nur ein paar Zeilen) in Ihre Endbenutzeranwendung verschieben, wo Sie die Vorhersagen machen möchten. 
 
-1. Öffnen Sie die Klassendateien **Observation.cs** und **Prediction.cs** im Klassenbibliotheksprojekt. Sie sehen, dass diese Klassen „Datenklassen“ oder POCO-Klassen sind, die zum Speichern von Daten verwendet werden. Es handelt sich um einen "Textbausteincode", dessen Generierung jedoch sinnvoll ist, wenn Ihr Dataset Dutzende oder sogar Hunderte von Spalten enthält. 
-    - Die `SampleObservation`-Klasse wird beim Auslesen von Daten aus dem Dataset verwendet. 
-    - Die `SamplePrediction`-Klasse oder wenn
+1. Öffnen Sie die Klassendateien **ModelInput.cs** und **ModelOutput.cs** im Klassenbibliotheksprojekt. Sie sehen, dass diese Klassen „Datenklassen“ oder POCO-Klassen sind, die zum Speichern von Daten verwendet werden. Es handelt sich um einen "Textbausteincode", dessen Generierung jedoch sinnvoll ist, wenn Ihr Dataset Dutzende oder sogar Hunderte von Spalten enthält. 
+    - Die `ModelInput`-Klasse wird beim Auslesen von Daten aus dem Dataset verwendet. 
+    - Die `ModelOutput`-Klasse wird verwendet, um das Vorhersageergebnis (Vorhersagedaten) abzurufen.
 
 1. Öffnen Sie die Datei „Program.cs“, und untersuchen Sie den Code. Mit nur wenigen Zeilen können Sie das Modell ausführen und eine Beispielvorhersage treffen.
 
@@ -160,13 +160,13 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
 
 - In der dritten Zeile des Codes laden Sie das Modell mit der `mlContext.Model.Load()`-API aus der serialisierten ZIP-Datei des Modells, indem Sie den Pfad zu dieser Datei angeben.
 
-- In der vierten Codezeile, die Sie laden, erstellen Sie das `PredictionEngine`-Objekt mit der `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()`-API. Sie benötigen das `PredictionEngine`-Objekt, wenn Sie eine Vorhersage für ein einzelnes Datenbeispiel erstellen möchten (in diesem Fall ein einzelnes Textstück, um dessen Standpunkt vorherzusagen).
+- In der vierten Codezeile, die Sie laden, erstellen Sie das `PredictionEngine`-Objekt mit der `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`-API. Sie benötigen das `PredictionEngine`-Objekt, wenn Sie eine Vorhersage für ein einzelnes Datenbeispiel erstellen möchten (in diesem Fall ein einzelnes Textstück, um dessen Standpunkt vorherzusagen).
 
 - In der fünften Zeile des Codes erstellen Sie die *einzelnen Beispieldaten*, die für die Vorhersage verwendet werden sollen, indem Sie die Funktion `CreateSingleDataSample()` aufrufen. Da das CLI-Tool nicht weiß, welche Art von Beispieldaten verwendet werden sollen, lädt es innerhalb dieser Funktion die erste Zeile des Datasets. Für diesen Fall können Sie jedoch auch eigene „hartcodierten“ Daten anstelle der aktuellen Implementierung der Funktion `CreateSingleDataSample()` erstellen, indem Sie diesen einfacheren Code aktualisieren, der diese Funktion implementiert:
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
 
 Sie können einen ähnlichen „Bewertungscode für das ML-Modell“ verwenden, um das Modell in Ihrer Endbenutzeranwendung auszuführen und Vorhersagen zu treffen. 
 
-Beispielsweise können Sie diesen Code direkt in eine beliebige Windows-Desktop-Anwendung wie **WPP** und **WinForms** verschieben und das Modell auf die gleiche Weise ausführen wie in der Konsolen-App.
+Beispielsweise können Sie diesen Code direkt in eine beliebige Windows-Desktop-Anwendung wie **WPF** und **WinForms** verschieben und das Modell auf die gleiche Weise ausführen wie in der Konsolen-App.
 
 Die Art und Weise, wie Sie diese Codezeilen zur Ausführung des ML-Modells implementieren, sollte jedoch optimiert werden (d.h. die ZIP-Datei des Modells zwischenspeichern und einmal laden) und Sie sollten Singleton-Objekte verwenden, anstatt sie bei jeder Anforderung zu erstellen, insbesondere wenn Ihre Anwendung skalierbar sein muss, wie beispielsweise eine Webanwendung oder ein verteilter Dienst, wie im folgenden Abschnitt erläutert.
 
@@ -242,7 +242,7 @@ Dieser „Code des Trainingsmodells“ wird derzeit in der generierten benutzerd
 
 Noch wichtiger ist, dass Sie diesen generierten Trainingscode in diesem speziellen Szenario (Modell zur Standpunktanalyse) auch mit dem im folgenden Tutorial beschriebenen Code vergleichen können:
 
-- Vergleich: [Tutorial: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis).
+- Vergleich: [Tutorial: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung](sentiment-analysis.md).
 
 Es ist interessant, den gewählten Algorithmus und die Pipelinekonfiguration im Tutorial mit dem vom CLI-Tool generierten Code zu vergleichen. Je nachdem, wie viel Zeit Sie mit der Iteration und der Suche nach besseren Modellen verbringen, können der ausgewählte Algorithmus, die jeweiligen Hyperparametern und die Pipelinekonfiguration jeweils unterschiedlich sein.
 

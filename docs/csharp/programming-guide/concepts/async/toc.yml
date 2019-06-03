@@ -13,9 +13,10 @@
       href: async-return-types.md
     - name: Ablaufsteuerung in asynchronen Programmen
       href: control-flow-in-async-programs.md
-    - name: Feinabstimmung der Async-Anwendung
-      href: fine-tuning-your-async-application.md
+    - name: Abbrechen von Tasks und Verarbeiten abgeschlossener Tasks
       items:
+        - name: Übersicht
+          href: fine-tuning-your-async-application.md
         - name: Abbrechen einer asynchronen Aufgabe oder Aufgabenliste
           href: cancel-an-async-task-or-a-list-of-tasks.md
         - name: Asynchrone Aufgaben nach einer Zeitperiode abbrechen

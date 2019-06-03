@@ -2,12 +2,12 @@
 title: Befehl „dotnet build“
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 04/24/2019
-ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df264fe830259832e5c75db9fd71230ba70a9f18
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755219"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959194"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -144,7 +144,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
   dotnet build --source c:\packages\mypackages
   ```
 
-* Erstellen Sie das Projekt, und legen Sie die 1.2.3.4-Version als Buildparameter fest:
+* Erstellen Sie das Projekt, und legen Sie Version 1.2.3.4 als Buildparameter mithilfe der `-p` [MSBuild-Option](#msbuild) fest:
 
   ```console
   dotnet build -p:Version=1.2.3.4

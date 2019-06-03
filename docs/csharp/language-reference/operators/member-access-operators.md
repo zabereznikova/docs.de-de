@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452892"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195779"
 ---
-# <a name="member-access-operators"></a>Operatoren für den Memberzugriff
+# <a name="member-access-operators-c-reference"></a>Operatoren für den Memberzugriff (C#-Referenz)
 
 Sie können die folgenden Operatoren zum Zugriff auf einen Typmember verwenden:
 
@@ -88,7 +89,7 @@ Weitere Informationen über Indexer finden Sie unter [Indexer](../../programming
 
 ### <a name="other-usages-of-"></a>Andere Verwendungen von „[]“
 
-Informationen zum Zeigerelementzugriff finden Sie unter [Zugreifen auf ein Arrayelement mit einem Zeiger (C#-Programmierhandbuch)](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+Weitere Informationen zum Zeigerelementzugriff finden Sie im Abschnitt [Zeigerelementzugriff-Operator []](pointer-related-operators.md#pointer-element-access-operator-) im Artikel [Operatoren im Zusammenhang mit Zeigern](pointer-related-operators.md).
 
 Sie verwenden eckige Klammern auch, um [Attribute](../../programming-guide/concepts/attributes/index.md) anzugeben:
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>NULL-bedingte Operatoren „?.“ und „?[]“
 
-Ein in C# 6 und höher verfügbarer NULL-bedingter Operator wendet nur dann einen Memberzugriffsvorgang (`?.`) oder Elementzugriffsvorgang (`?[]`) auf seinen Operanden an, wenn dieser Operand als ungleich NULL ausgewertet wird. Wenn der Operand als `null` ausgewertet wird, ist das Ergebnis der Anwendung des Operators `null`.
+Ein in C# 6 und höher verfügbarer NULL-bedingter Operator wendet nur dann einen Memberzugriffsvorgang (`?.`) oder Elementzugriffsvorgang (`?[]`) auf seinen Operanden an, wenn dieser Operand als ungleich NULL ausgewertet wird. Wenn der Operand als `null` ausgewertet wird, ist das Ergebnis der Anwendung des Operators `null`. Der NULL-bedingte Memberzugriffsoperator `?.` wird auch als Elvis-Operator bezeichnet.
 
 Die NULL-bedingten Operatoren sind Kurzschlussoperatoren. D.h., wenn ein Vorgang in einer Kette von bedingten Member- oder Elementzugriffsvorgängen `null` zurückgibt, wird der Rest der Kette nicht ausgeführt. Im folgenden Beispiel wird `B` nicht ausgewertet, wenn `A` als `null` ausgewertet wird, und `C` wird nicht ausgewertet, wenn `A` oder `B` als `null` ausgewertet wird:
 

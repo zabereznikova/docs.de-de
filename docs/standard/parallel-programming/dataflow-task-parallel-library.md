@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629036"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589658"
 ---
 # <a name="dataflow-task-parallel-library"></a>Datenfluss (Task Parallel Library)
 <a name="top"></a> Die Task Parallel Library (TPL) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. Diese Datenflusskomponenten werden zusammen als *TPL-Datenflussbibliothek* bezeichnet. Dieses Datenflussmodell begünstigt die akteurbasierte Programmierung durch eine prozessinterne Nachrichtenübergabe für simple Datenfluss- und Pipelineaufgaben. Die Datenflusskomponenten basieren auf den Typen und der Planungsinfrastruktur der TPL und sind in die C#-, Visual Basic- und F#-Sprachunterstützung für asynchrone Programmierung integriert. Diese Datenflusskomponenten sind hilfreich, wenn mehrere Vorgänge vorliegen, die asynchron miteinander kommunizieren müssen, oder wenn Sie Daten verarbeiten möchten, die gerade verfügbar werden. Denken Sie beispielsweise an eine Anwendung, die Bilddaten von einer Webcam verarbeitet. Durch das Datenflussmodell kann die Anwendung Bildframes verarbeiten, sobald diese verfügbar sind. Wenn die Anwendung Bildframes beispielsweise durch Lichtkorrektur oder Rote-Augen-Reduktion aufbessert, können Sie eine *Pipeline* von Datenflusskomponenten erstellen. Jede Phase der Pipeline kann grober strukturierte Parallelitätsfunktionen verwenden, wie z. B. die von der TPL bereitgestellten Funktionen zum Transformieren des Bilds.  
@@ -282,4 +282,4 @@ ms.locfileid: "64629036"
 |[Vorgehensweise: Angeben eines Taskplaners in einem Datenflussblock](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|Veranschaulicht, wie ein bestimmter Aufgabenplaner zugeordnet wird, wenn Sie Datenfluss in Ihrer Anwendung verwenden.|  
 |[Exemplarische Vorgehensweise: Effizienzverbesserung durch Verwendung von BatchBlock und BatchedJoinBlock](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Beschreibt, wie mit der <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>-Klasse die Effizienz von Datenbankeinfügevorgängen verbessert wird und wie mit der <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>-Klasse sowohl die Ergebnisse als auch Ausnahmen erfasst werden, die auftreten, während das Programm aus einer Datenbank liest.|  
 |[Exemplarische Vorgehensweise: Erstellen eines Datenflussblocktyps](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|Veranschaulicht zwei Möglichkeiten, einen Datenflussblocktyp zu erstellen, der benutzerdefiniertes Verhalten implementiert.|  
-|[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Stellt die TPL vor, eine Bibliothek, die die parallele Programmierung in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen vereinfacht.|
+|[Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Stellt die TPL vor, eine Bibliothek, die die parallele Programmierung in .NET Framework-Anwendungen vereinfacht.|

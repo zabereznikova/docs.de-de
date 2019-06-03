@@ -3,16 +3,16 @@ title: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmembe
 description: In diesem fortgeschrittenen Tutorial wird erläutert, wie Sie vorhandenen Schnittstellendefinitionen problemlos neue Funktionen hinzufügen können, ohne alle Klassen und Strukturen zu brechen, die diese Schnittstelle implementieren.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452912"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877914"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmembern in C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmembern in C# 8.0
 
-Ab C# 8 können Sie in .NET Core 3.0 eine Implementierung definieren, wenn Sie einen Member einer Schnittstelle deklarieren. Das häufigste Szenario ist das sichere Hinzufügen von Membern zu einer Schnittstelle, die bereits veröffentlicht ist und von unzähligen Clients verwendet wird.
+Ab C# 8.0 können Sie in .NET Core 3.0 eine Implementierung definieren, wenn Sie einen Member einer Schnittstelle deklarieren. Das häufigste Szenario ist das sichere Hinzufügen von Membern zu einer Schnittstelle, die bereits veröffentlicht ist und von unzähligen Clients verwendet wird.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -23,7 +23,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Vorschaucompilers. Der C# 8-Vorschaucompiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder dem neuesten [.NET Core 3.0 SDK – Vorschauversion](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar. Standardschnittstellenmember sind ab .NET Core 3.0 Vorschauversion 4 verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Vorschaucompilers. Der C# 8.0-Vorschaucompiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder dem neuesten [.NET Core 3.0 SDK – Vorschauversion](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar. Standardschnittstellenmember sind ab .NET Core 3.0 Vorschauversion 4 verfügbar.
 
 ## <a name="scenario-overview"></a>Übersicht über das Szenario
 
