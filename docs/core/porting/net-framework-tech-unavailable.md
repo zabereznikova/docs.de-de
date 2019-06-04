@@ -3,13 +3,13 @@ title: .NET Framework-Technologien, die auf .NET Core nicht verfügbar sind
 description: Erfahren Sie mehr über .NET Framework-Technologien, die in .NET Core nicht verfügbar sind
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185804"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456083"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind
 
@@ -42,6 +42,10 @@ Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtual
 Ähnlich wie CAS trennt die Sicherheitstransparenz den Sandboxcode von sicherheitsrelevantem Code in einer deklarativen Weise, aber sie wird [nicht mehr als Sicherheitsgrenze unterstützt](~/docs/framework/misc/security-transparent-code.md). Diese Funktion wird oft von Silverlight verwendet. 
 
 Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtualisierung, Container oder Benutzerkonten zum Ausführen von Prozessen mit den geringsten Rechten.
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+System.EnterpiseServices (COM+) wird von .NET Core nicht unterstützt.
 
 >[!div class="step-by-step"]
 >[Nächste](third-party-deps.md)

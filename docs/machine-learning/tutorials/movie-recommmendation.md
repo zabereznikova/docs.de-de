@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Erstellen eines Filmempfehlungssystems'
+title: 'Tutorial: Erstellen eines Programms zur Filmempfehlung (Matrixfaktorisierung)'
 description: Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von ML.NET in einer .NET Core-Konsolenanwendung ein Filmempfehlungssystem erstellen. Für die Schritte verwenden Sie C# und Visual Studio 2019.
 author: briacht
 ms.author: johalex
 ms.date: 05/06/2019
-ms.custom: mvc
+ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063372"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882265"
 ---
-# <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutorial: Erstellen eines Filmempfehlungssystems mit ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Erstellen eines Programms zur Filmempfehlung mithilfe der Matrixfaktorisierung mit ML.NET
 
 Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von ML.NET in einer .NET Core-Konsolenanwendung ein Filmempfehlungssystem erstellen. Für die Schritte verwenden Sie C# und Visual Studio 2019.
 

@@ -4,12 +4,12 @@ description: Entdecken Sie die Telemetriefunktionen des .NET Core SDK, die Nutzu
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751680"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377502"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK-Telemetrie
 
@@ -79,7 +79,7 @@ Veröffentlichte Daten sind vierteljährlich verfügbar und werden unter [.NET C
 
 Die Spalte *Occurences* zeigt die Gesamtanzahl der Verwendung dieses Befehls für die Metriken dieser Reihe an diesem Tag an.
 
-Die Spalte *Geography* zeigt normalerweise den Namen eines Landes an. In einigen Fällen wird der Kontinent Antarktis in dieser Spalte angezeigt. Dies geschieht entweder, weil Experten .NET Core in der Antarktis verwenden oder wegen falschen Standortdaten.
+&#8225;Die Spalte *Geography* zeigt normalerweise den Namen eines Landes oder einer Region an. In einigen Fällen wird der Kontinent Antarktis in dieser Spalte angezeigt. Dies geschieht entweder, weil Experten .NET Core in der Antarktis verwenden oder wegen falschen Standortdaten.
 
 ### <a name="example"></a>Beispiel
 
