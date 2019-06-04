@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592734"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490953"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592734"
 
 In .NET Framework werden viele Aspekte der Kryptografie von den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwaltet. Einige davon sind Wrapper für die nicht verwaltete Microsoft Cryptography API (CryptoAPI), bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.
 
-Diese Übersicht enthält eine Zusammenfassung der von .NET Framework unterstützten Verschlüsselungsmethoden und -verfahren wie ClickOnce-Manifeste, Suite B und die Unterstützung von Cryptography Next Generation (CNG), die in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]eingeführt wurde.
+Diese Übersicht bietet eine Zusammenfassung der Verschlüsselungsmethoden und Methoden, die von .NET Framework, einschließlich der ClickOnce-Manifeste, Suite B und Cryptography Next Generation (CNG) unterstützt, die seit .NET Framework 3.5 unterstützt.
 
 Diese Übersicht enthält folgende Abschnitte:
 
@@ -114,7 +114,7 @@ Vorausgesetzt, dass Alice und Bob um zwei Teilnehmer, die über einen unsicheren
 
 .NET Framework bietet die folgenden Klassen, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
 
-- <xref:System.Security.Cryptography.AesManaged> (eingeführt in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
+- <xref:System.Security.Cryptography.AesManaged> (eingeführt in .NET Framework 3.5).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 

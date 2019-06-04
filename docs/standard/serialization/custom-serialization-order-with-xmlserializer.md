@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Serialisierungsreihenfolge mit "XmlSerializer"
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5934fd0cab03f754784c8515094ff4ec5e78ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776076"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490932"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>Benutzerdefinierte Serialisierungsreihenfolge mit "XmlSerializer"
 [Beispiel herunterladen](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
@@ -24,7 +24,7 @@ ms.locfileid: "61776076"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio  
   
-1. Öffnen Sie [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
+1. Öffnen Sie Datei-Explorer, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
   
 2. Doppelklicken Sie auf das Symbol für CustomOrder.sln, um die Datei in Visual Studio zu öffnen.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 4e4ad69d-9343-4f6a-aed8-fe0335a3b979
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd0bdee6127aca259ae5ca1fe1aa8ecc574662b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10e01dfd70d40ecfe6b1c9c36da8923734fb9220
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775218"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490290"
 ---
 # <a name="hosting-global-static-functions"></a>Hosting – Globale statische Funktionen
 In diesem Abschnitt sind die nicht verwalteten Hostingfunktionen beschrieben, die von APIs verwendet werden, die .NET Framework hosten.  
@@ -23,7 +23,7 @@ In diesem Abschnitt sind die nicht verwalteten Hostingfunktionen beschrieben, di
  Beschreibt die in .NET Framework 4 eingeführten Funktionen.  
   
  [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
- Beschreibt die Funktionen, die in .NET Framework 1.1 und 2.0 eingeführt wurden und in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet sind.  
+ Beschreibt die Funktionen, eingeführt in .NET Framework 1.1 und 2.0, die in .NET Framework 4 veraltet sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

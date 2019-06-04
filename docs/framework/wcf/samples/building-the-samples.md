@@ -20,7 +20,7 @@ Die Beispiele für Windows Communication Foundation (WCF) erstellt werden könne
 
 1. Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, und navigieren Sie zu dem sprachspezifischen Unterverzeichnis unterhalb des Verzeichnisses, in dem Sie das Beispiel installiert.
 
-2. Typ `msbuild` an der Befehlszeile eingeben. Die Clientprogrammdateien werden erstellt, um *Client\bin* und die Dienstprogrammdateien werden erstellt, um *"\service\bin"*. Wenn der Dienst von IIS (Internetinformationsdienste) gehostet wird, werden die Dienstprogrammdateien auch in kopiert die *Servicemodelsamples* Verzeichnis und dessen *\bin* Unterverzeichnis.
+2. Typ `msbuild` an der Befehlszeile eingeben. Die Clientprogrammdateien werden erstellt, um *Client\bin* und die Dienstprogrammdateien werden erstellt, um *"\service\bin"* . Wenn der Dienst von IIS (Internetinformationsdienste) gehostet wird, werden die Dienstprogrammdateien auch in kopiert die *Servicemodelsamples* Verzeichnis und dessen *\bin* Unterverzeichnis.
 
 > [!NOTE]
 > Sie müssen die ACLs für festlegen *%systemdrive%\inetpub\wwwroot* gewähren Ändern von Berechtigungen für das Dienstkonto, unter dem Sie ausgeführt werden. Andernfalls führen einige Postbuildereignisse zu Fehlern. Sie können aber auch die ACLs unverändert lassen und die SDK-Eingabeaufforderung als Administrator ausführen.

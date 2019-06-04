@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456381"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489412"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience >-Element
 Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automatisch korrigiert. Dies führt zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code.  
@@ -40,7 +40,7 @@ Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automa
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`0`|Die Common Language Runtime verwendet schneller Interop-Marshalling-Architektur eingeführt, die der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], die nicht erkannt und Korrektur falsche Plattformaufrufdeklarationen. Dies ist die Standardeinstellung.|  
+|`0`|Die Common Language Runtime verwendet schneller Interop-Marshalling-Architektur eingeführt, die in .NET Framework 4, die nicht erkannt wurde, und beheben falsche Plattformaufrufdeklarationen. Dies ist die Standardeinstellung.|  
 |`1`|Die Common Language Runtime verwendet langsameren Übergängen, die Erkennung und Behebung fehlerhafter Plattformaufrufdeklarationen.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc3f9c9c61afd4c231846adffc4b304a01d59281
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: dd3501bc74da2c9a812f9c4816b5a081b3780cd0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457257"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490033"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Leistungsindikatoren und prozessinterne parallele Anwendungen
 Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro Laufzeit unterschieden werden. Dieses Thema beschreibt die erforderlichen Registrierungsänderungen zur Aktivierung dieser Funktion.  
@@ -27,7 +27,7 @@ Mithilfe des Systemmonitors (Perfmon.exe) können die Leistungsindikatoren pro L
   
 - Wenn Sie zwei Anwendungen überwachen, die den gleichen Namen haben. Wenn beispielsweise beide Anwendungen myapp.exe heißen, wird eine als **MyApp** und die andere als **MyApp#1** in der **Instanz**-Spalte angezeigt. In diesem Fall ist es schwierig, einen Leistungsindikator einer bestimmten Anwendung zuzuordnen. Es ist nicht klar, ob sich die Datensammlung für **MyApp#1** auf die erste oder zweite myapp.exe bezieht.  
   
-- Wenn eine Anwendung mehrere Instanzen der Common Language Runtime verwendet. Die [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] unterstützt prozessinterne parallele Hostingszenarios; d.h. ein einzelner Prozess oder eine Anwendung kann mehrere Instanzen der Common Language Runtime laden. Wenn eine einzelne Anwendung namens myapp.exe standardmäßig zwei Laufzeitinstanzen lädt, werden sie in der **Instanz**-Spalte als **MyApp** und **MyApp#1** festgelegt werden. In diesem Fall ist es nicht klar, ob **MyApp** und **MyApp#1** auf zwei Anwendungen mit dem gleichen Namen oder auf dieselbe Anwendung mit zwei Laufzeiten verweisen. Wenn mehrere Anwendungen mit dem gleichen Namen mehrere Laufzeiten laden, wird die Mehrdeutigkeit noch größer.  
+- Wenn eine Anwendung mehrere Instanzen der Common Language Runtime verwendet. .NET Framework 4 unterstützt in-Process Side-by-Side-Hostingszenarios; d. h. kann ein einzelner Prozess oder eine Anwendung mehrere Instanzen von der common Language Runtime geladen werden. Wenn eine einzelne Anwendung namens myapp.exe standardmäßig zwei Laufzeitinstanzen lädt, werden sie in der **Instanz**-Spalte als **MyApp** und **MyApp#1** festgelegt werden. In diesem Fall ist es nicht klar, ob **MyApp** und **MyApp#1** auf zwei Anwendungen mit dem gleichen Namen oder auf dieselbe Anwendung mit zwei Laufzeiten verweisen. Wenn mehrere Anwendungen mit dem gleichen Namen mehrere Laufzeiten laden, wird die Mehrdeutigkeit noch größer.  
   
  Sie können einen Registrierungsschlüssel festlegen, um diese Mehrdeutigkeit zu vermeiden. Für Anwendungen mit .NET Framework 4 entwickelt wurden, fügt diese registrierungsänderung einen Prozessbezeichner, gefolgt von einer Runtime-Instanz-ID und Namen der Anwendung in der **Instanz** Spalte. Anstelle von *Anwendung* oder *Anwendung*#1 kann die Anwendung jetzt als *Anwendung*_`p`*ProcessID*\_`r`*RuntimeID* in der **Instanz**-Spalte identifiziert werden. Wenn eine Anwendung mit einer früheren Version der common Language Runtime entwickelt wurde, wird diese Instanz als dargestellt *Anwendung\_* `p`*ProcessID* vorausgesetzt, dass die. .NET Framework 4 installiert ist.  
   

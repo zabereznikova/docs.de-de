@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456216"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489303"
 ---
 # <a name="supportedruntime-element"></a>\<< SupportedRuntime >-Element
 
@@ -34,7 +34,7 @@ Gibt an, welche Version der common Language Runtime und, optional, .NET Framewor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|**version**|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der die Version der Common Language Runtime (CLR) angibt, die diese Anwendung unterstützt. Für gültige Werte für die `version` Attribut, finden Sie unter den ["RuntimeVersion"-Werte](#version) Abschnitt. **Hinweis**:  Über die .NET Framework 3.5 die "*Laufzeitversion*" Wert hat das Format *wichtigen*. *kleinere*. *Erstellen Sie*. Beginnend mit [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] sind nur die Haupt- und Nebenversionsnummern erforderlich (d. h. "v4.0" anstelle von "v4.0.30319"). Die kürzere Zeichenfolge wird empfohlen.|
+|**version**|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der die Version der Common Language Runtime (CLR) angibt, die diese Anwendung unterstützt. Für gültige Werte für die `version` Attribut, finden Sie unter den ["RuntimeVersion"-Werte](#version) Abschnitt. **Hinweis**:  Über die .NET Framework 3.5 die "*Laufzeitversion*" Wert hat das Format *wichtigen*. *kleinere*. *Erstellen Sie*. Ab .NET Framework 4, nur die Nummern für Haupt-und Nebenversionsnummern erforderlich (d. h. "v4. 0" anstatt "v4.0.30319"). Die kürzere Zeichenfolge wird empfohlen.|
 |**sku**|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der die SKU (Stock Keeping Unit) angibt, die wiederum angibt, welches .NET Framework-Release von dieser Anwendung unterstützt wird.<br /><br /> Beginnend mit .NET Framework 4.0 wird die Verwendung des `sku`-Attributs empfohlen.  Wenn vorhanden, gibt es die Version des .NET Frameworks an, auf die die App aufgerichtet ist.<br /><br /> Gültige Werte des Sku-Attributs finden Sie in der ["Sku Id"-Werte](#sku) Abschnitt.|
 
 ## <a name="remarks"></a>Hinweise

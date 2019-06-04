@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456117"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489328"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks >-Element
 Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden, indem Sie explizite Stapelgrößen angeben, wenn es sich um bestimmte Threads, die sie intern verwendet erstellt, statt die standardmäßige Stapelgröße für diese Threads.  
@@ -41,7 +41,7 @@ Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |true|Fordern Sie explizite Stapelgrößen an.|  
-|False|Verwenden Sie die standardmäßige Stapelgröße. Dies ist die Standardeinstellung für die [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|False|Verwenden Sie die standardmäßige Stapelgröße. Dies ist die Standardeinstellung für .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

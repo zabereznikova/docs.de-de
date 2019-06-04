@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457397"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491108"
 ---
 # <a name="xaml-services"></a>XAML-Dienste
 Dieses Thema beschreibt die Funktionen einer Technologie-Gruppe, die .NET Framework XAML Services genannt. Die meisten Dienste und beschriebenen APIs befinden sich in der Assembly "System.xaml" enthalten, die eine Assembly, die .NET Core-Assemblys mit dem .NET Framework 4 eingeführt wird. Dienste umfassen, Reader und Writer, Schemaklassen und schemaunterstützung, Factorys, Attributieren von Klassen, systeminternen XAML-sprachunterstützung und andere Funktionen der XAML-Sprache.  
@@ -38,7 +38,7 @@ Dieses Thema beschreibt die Funktionen einer Technologie-Gruppe, die .NET Framew
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET Framework-XAML-Dienste und "System.xaml" enthalten, in der Architektur von .NET  
  In früheren Versionen von Microsoft .NET Framework, die Unterstützung für Funktionen der XAML-Sprache wurde implementiert, Frameworks, die auf Microsoft .NET Framework aufbauen ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation und Windows Communication Foundation (WCF)), und daher Je nach den spezifischen Framework Sie verwenden ihr Verhalten und der verwendeten API unterscheiden. Diese enthalten den XAML-Parser und der Objektdiagramm Erstellungsmechanismus, XAML-Sprache systeminternen Funktionen, Serialisierungsunterstützung und So weiter.  
   
- In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework-XAML-Dienste und der System.Xaml-Assembly zu definieren Großteil, was benötigt wird, für die Unterstützung von XAML-Sprachfunktionen. Dies umfasst die Basisklassen für XAML-Reader und XAML-Writer. Die wichtigste Funktion hinzugefügt, die auf .NET Framework XAML-Dienste, die nicht in den von der Framework-spezifischen XAML-Implementierungen ist eine System-Typ-Darstellung für XAML. Die Darstellung des Typs System stellt XAML auf objektorientierte Weise, die für XAML-Funktionen zu stehen, ohne Abhängigkeiten auf bestimmte Funktionen des Frameworks.  
+ Definieren Sie Großteil, was benötigt wird, für die Unterstützung von Funktionen der XAML-Sprache, in .NET Framework 4, .NET Framework-XAML-Dienste und der System.Xaml-Assembly. Dies umfasst die Basisklassen für XAML-Reader und XAML-Writer. Die wichtigste Funktion hinzugefügt, die auf .NET Framework XAML-Dienste, die nicht in den von der Framework-spezifischen XAML-Implementierungen ist eine System-Typ-Darstellung für XAML. Die Darstellung des Typs System stellt XAML auf objektorientierte Weise, die für XAML-Funktionen zu stehen, ohne Abhängigkeiten auf bestimmte Funktionen des Frameworks.  
   
  Das XAML-Typsystem ist durch die markupformular oder Laufzeit Besonderheiten der XAML-Ursprung nicht eingeschränkt. noch ist es von jedem bestimmten unterstützenden Typsystem beschränkt. Das XAML-Typsystem enthält objektdarstellungen für Typen, Member, XAML-Schema-Kontexten, auf XML-Ebene-Konzepte und anderen XAML-Sprachkonzepte oder XAML-systeminterne Funktionen. Verwenden oder Erweitern der XAML-Typsystem ermöglicht Klassen wie XAML-Readern und XAML-Writern abgeleitet, und erweitern die Funktionalität von XAML-Darstellungen in bestimmte Funktionen aktiviert, indem ein Framework, eine Technologie oder eine Anwendung, die verbraucht oder Gibt XAML. Das Konzept von einem XAML-Schemakontext ermöglicht praktische Objekt Graph Schreibvorgänge von der Kombination aus einer XAML-Objekt-Writer-Implementierung, einer Technologie Unterstützungstypsystem wie kommuniziert über Assemblyinformationen in den Kontext und den XAML-Knoten Quelle. Weitere Informationen auf dem Konzept des XAML-Schema. finden Sie unter [standardmäßig XAML-Schemakontext und WPF-XAML-Schemakontext](default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
   

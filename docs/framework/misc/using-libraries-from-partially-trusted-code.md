@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586984"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487821"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  In diesem Thema behandelt das Verhalten von Assemblys mit starkem Namen und gilt nur für [auf Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md) Assemblys. [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md) Assemblys in der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher sind von starken Namen nicht betroffen. Weitere Informationen zu Änderungen am Sicherheitssystem finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+>  In diesem Thema behandelt das Verhalten von Assemblys mit starkem Namen und gilt nur für [auf Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md) Assemblys. [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md) Assemblys in .NET Framework 4 oder höher sind von starken Namen nicht betroffen. Weitere Informationen zu Änderungen am Sicherheitssystem finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
   
  Anwendungen, die vom Host oder Sandkasten keine vollständige Vertrauenswürdigkeit erhalten, dürfen keine gemeinsam verwendeten verwalteten Bibliotheken aufrufen, es sei denn, der Entwickler der Bibliothek hat dies ausdrücklich durch Verwenden des <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attributs zugelassen. Anwendungsentwickler müssen daher beachten, dass ihnen aus einem teilweise vertrauenswürdigen Kontext einige Bibliotheken nicht zur Verfügung stehen. In der Standardeinstellung alle, die codeausführung in einer teilweise vertrauenswürdigen [Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) und nicht in die Liste der vollständig vertrauenswürdigen Assemblys teilweise vertrauenswürdig ist. Wenn Sie nicht erwarten, dass Ihr Code aus einem teilweise vertrauenswürdigen Kontext heraus ausgeführt oder aus teilweise vertrauenswürdigem Code aufgerufen wird, müssen Sie die Informationen in diesem Abschnitt nicht beachten. Wenn Sie jedoch Code schreiben, der mit teilweise vertrauenswürdigem Code zusammenwirken oder aus einem teilweise vertrauenswürdigen Kontext ausgeführt werden muss, sollten Sie folgende Faktoren berücksichtigen:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64586984"
   
  Bibliotheken, die für eine bestimmte Anwendung privat sind, erfordern keine starken Namen oder die **AllowPartiallyTrustedCallersAttribute** Attribut, und kann nicht durch potenziell bösartigen Code außerhalb der Anwendung verwiesen werden. Solcher Code ist gegen beabsichtigten oder unbeabsichtigten Missbrauch durch teilweise vertrauenswürdigen mobilen Code geschützt, ohne dass Entwickler zusätzlich aktiv werden müssen.  
   
- Bei folgenden Codetypen sollten Sie in Betracht ziehen, die Verwendung durch teilweise vertrauenswürdigen Code explizit zuzulassen:   
+ Bei folgenden Codetypen sollten Sie in Betracht ziehen, die Verwendung durch teilweise vertrauenswürdigen Code explizit zuzulassen:  
   
 - Code, der sorgfältig auf Sicherheitsrisiken getestet wurde und wird in Übereinstimmung mit den Richtlinien unter [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md).  
   

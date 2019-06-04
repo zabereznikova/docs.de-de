@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877449"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490104"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise mehrere zeitaufwändige Schritte ausgeführt werden. Es muss u. a. ein physischer Channel (z. B. ein Socket oder eine benannte Pipe) erstellt, der anfängliche Handshake durchgeführt, die Informationen der Verbindungszeichenfolge analysiert, die Verbindung vom Server authentifiziert und Überprüfungen zum Eintragen in die aktuelle Transaktion ausgeführt werden.  
@@ -99,7 +99,7 @@ Weitere Informationen zu Ereignissen im Zusammenhang mit öffnen und Schließen 
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Poolfragmentierung aufgrund vieler Datenbanken  
  Viele Internetdienstanbieter hosten mehrere Websites auf einem einzigen Server. Sie verwenden u. U. eine einzige Datenbank, um eine Anmeldung mit Forms-Authentifizierung zu bestätigen, und stellen anschließend für diesen Benutzer oder diese Gruppe von Benutzern eine Verbindung mit einer bestimmten Datenbank her. Die Verbindung mit der Authentifizierungsdatenbank wird zu einem Pool zusammengefasst und kann von allen Benutzern verwendet werden. Es besteht jedoch für jede Datenbank ein eigener Verbindungspool, wodurch die Anzahl von Verbindungen mit dem Server erhöht wird.  
   
- Dies ist auch ein Nebeneffekt des Anwendungsentwurfs. Dieser Nebeneffekt kann relativ einfach vermieden werden, ohne dabei die Sicherheit beim Herstellen einer Verbindung mit SQL Server zu beeinträchtigen. Stellen Sie keine Verbindung mit einer separaten Datenbank für jeden Benutzer oder jede Gruppe her, sondern stellen Sie eine Verbindung mit derselben Datenbank auf dem Server her, und führen Sie anschließend die [!INCLUDE[tsql](../../../../includes/tsql-md.md)]-Anweisung USE aus, um zur gewünschten Datenbank zu wechseln. Im folgenden Codefragment wird das Herstellen einer Anfangsverbindung mit der `master`-Datenbank und der anschließende Wechsel zur gewünschten Datenbank in der `databaseName`-Zeichenfolgenvariable veranschaulicht.  
+ Dies ist auch ein Nebeneffekt des Anwendungsentwurfs. Dieser Nebeneffekt kann relativ einfach vermieden werden, ohne dabei die Sicherheit beim Herstellen einer Verbindung mit SQL Server zu beeinträchtigen. Stellen Sie keine Verbindung mit einer separaten Datenbank für jeden Benutzer oder jede Gruppe her, sondern stellen Sie eine Verbindung mit derselben Datenbank auf dem Server her, und führen Sie anschließend die Transact-SQL-Anweisung USE aus, um zur gewünschten Datenbank zu wechseln. Im folgenden Codefragment wird das Herstellen einer Anfangsverbindung mit der `master`-Datenbank und der anschließende Wechsel zur gewünschten Datenbank in der `databaseName`-Zeichenfolgenvariable veranschaulicht.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

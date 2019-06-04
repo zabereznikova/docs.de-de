@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456649"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487973"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Der Richtlinienteil für Codezugriffssicherheit (CAS) ist seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] veraltet. Daher treten ggf. compilerwarnungen und Runtime-Ausnahmen, wenn Sie die veralteten Richtlinientypen und Elemente aufrufen [explizit](#explicit_use) oder [implizit](#implicit_use) (über andere Typen und Member).
+Die Richtlinie Teil der Codezugriffssicherheit (CAS) wurde in .NET Framework 4 veraltet vorgenommen. Daher treten ggf. compilerwarnungen und Runtime-Ausnahmen, wenn Sie die veralteten Richtlinientypen und Elemente aufrufen [explizit](#explicit_use) oder [implizit](#implicit_use) (über andere Typen und Member).
 
 Sie können die Warnungen und Fehler folgendermaßen vermeiden:
 

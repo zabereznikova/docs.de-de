@@ -2,12 +2,12 @@
 title: Literale
 description: Erfahren Sie, bis die Literaltypen in der Programmiersprache F#.
 ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904565"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490978"
 ---
 # <a name="literals"></a>Literale
 
@@ -28,6 +28,7 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |uint16|16-Bit-natürliche-Zahl ohne Vorzeichen|mehreren|`86us`|
 |int<br /><br />int32|32-Bit-Ganzzahl mit Vorzeichen|l oder none|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|32-Bit-natürliche-Zahl ohne Vorzeichen|u oder ul|`86u`<br /><br />`86ul`|
+|nativeint|systemeigene Zeiger auf eine natürliche Zahl mit Vorzeichen|n|`123n`|
 |unativeint|systemeigener Zeiger als natürliche Zahl ohne Vorzeichen|un|`0x00002D3Fun`|
 |int64|64-Bit-Ganzzahl mit Vorzeichen|L|`86L`|
 |uint64|64-Bit-natürliche-Zahl ohne Vorzeichen|UL|`86UL`|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456498"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487846"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456498"
 Sicherheit schließt drei interagierende Elemente ein: Sandkasten, Berechtigungen und Erzwingung. Unter einem Sandkasten versteht man das Erstellen isolierter Domänen, in denen bestimmter Code als vollständig vertrauenswürdig und sonstiger Code auf die Berechtigungen im Berechtigungssatz für den Sandkasten beschränkt ist. Der Anwendungscode, der innerhalb des Berechtigungssatzes des Sandkastens ausgeführt wird, wird als transparent betrachtet, das heißt, es können keine Vorgänge ausgeführt werden, die sich auf die Sicherheit auswirken können. Der Berechtigungssatz für den Sandkasten wird durch Beweis bestimmt (<xref:System.Security.Policy.Evidence>-Klasse). Beweise geben Aufschluss darüber, welche bestimmten Berechtigungen von Sandkästen benötigt werden, und welche Arten von Sandkästen erstellt werden. Erzwingung bedeutet, dass transparenter Code nur innerhalb seines Berechtigungssatzes ausgeführt werden darf.
 
 > [!IMPORTANT]
-> Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Sicherheitsrichtlinie ist veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Weitere Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Code Access Security Policy Kompatibilität und Migration von](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Ab .NET Framework 4, ist die Sicherheitsrichtlinie veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Weitere Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Code Access Security Policy Kompatibilität und Migration von](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
 
 In diesem Thema wird das Transparenzmodell genauer beschrieben. Es enthält die folgenden Abschnitte:
 
@@ -70,7 +70,7 @@ Der primäre Unterschied zwischen den zwei Transparenzebenen besteht darin, dass
 
 ### <a name="level-2-transparency"></a>Transparenz der Ebene 2
 
-Transparenz der Ebene 2 wurde in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.
+Transparenz der Ebene 2 wurde in .NET Framework 4 eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.
 
 - Transparenter Code kann unabhängig von den Berechtigungen, die er erhält (einschließlich vollständiger Vertrauenswürdigkeit), nur anderen transparenten Code oder sicherheitsgeschützten Code aufrufen. Wenn der Code teilweise vertrauenswürdig ist, können nur Aktionen ausgeführt werden, die gemäß dem Berechtigungssatz der Domäne zulässig sind. Transparenter Code ist nicht für die folgenden Vorgänge vorgesehen:
 

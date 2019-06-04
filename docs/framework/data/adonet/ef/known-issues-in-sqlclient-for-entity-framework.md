@@ -2,12 +2,12 @@
 title: Bekannte Probleme in SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0a6fec7e2d129523e5f68955e51ac50154cb58df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631731"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489536"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
@@ -43,9 +43,9 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Verwenden der richtigen SQL Server-Version  
- Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Ziele der [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Abfrage auf Grundlage von SQL Server-Version, die im angegebenen die `ProviderManifestToken` Attribut des Schemaelements in der Speichermodelldatei (SSDL). Diese Version unterscheidet sich möglicherweise von der tatsächlichen SQL Server-Version, mit der Sie verbunden sind. Wenn Sie beispielsweise SQL Server 2005 verwenden, aber das `ProviderManifestToken`-Attribut auf 2008 festgelegt ist, wird die generierte [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Abfrage möglicherweise nicht auf dem Server ausgeführt. Beispielsweise wird eine Abfrage, in der die in SQL Server 2008 eingeführten neuen Datums-/Zeittypen verwendet werden, nicht auf früheren Versionen von SQL Server ausgeführt. Bei Verwendung von SQL Server 2005, aber das `ProviderManifestToken` -Attributsatz auf 2000, die generierte [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Abfrage möglicherweise weniger optimiert ist, oder erhalten Sie möglicherweise eine Ausnahme, die besagt, dass die Abfrage nicht unterstützt wird. Weitere Informationen finden Sie oben im Abschnitt über die CROSS- und OUTER APPLY-Operatoren.  
+ Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ausgerichtet ist die Transact-SQL-Abfrage basierend auf der SQL Server-Version, die im angegebenen die `ProviderManifestToken` Attribut des Schemaelements in der Speichermodelldatei (SSDL). Diese Version unterscheidet sich möglicherweise von der tatsächlichen SQL Server-Version, mit der Sie verbunden sind. Beispielsweise wird bei Verwendung von SQL Server 2005, aber das `ProviderManifestToken` -Attribut auf 2008 festgelegt ist, die generierte Transact-SQL-Abfrage möglicherweise nicht auf dem Server ausgeführt. Beispielsweise wird eine Abfrage, in der die in SQL Server 2008 eingeführten neuen Datums-/Zeittypen verwendet werden, nicht auf früheren Versionen von SQL Server ausgeführt. Bei Verwendung von SQL Server 2005, aber das `ProviderManifestToken` Attribut auf 2000 festgelegt ist, die generierte Transact-SQL-Abfrage möglicherweise weniger optimiert werden und erhalten Sie möglicherweise eine Ausnahme, die besagt, dass die Abfrage nicht unterstützt wird. Weitere Informationen finden Sie oben im Abschnitt über die CROSS- und OUTER APPLY-Operatoren.  
   
- Bestimmte Datenbankverhaltensweisen hängen vom festgelegten Kompatibilitätsgrad der Datenbank ab. Wenn das `ProviderManifestToken`-Attribut auf 2005 festgelegt ist und Sie über die SQL Server-Version 2005 verfügen, der Kompatibilitätsgrad einer Datenbank jedoch auf "80" (SQL Server 2000) festgelegt ist, zielt das erzeugte [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] zwar auf SQL Server 2005 ab, wird aber aufgrund der Einstellung für den Kompatibilitätsgrad möglicherweise nicht wie erwartet ausgeführt. Zum Beispiel geht möglicherweise die Sortierung verloren, wenn ein Spaltenname in der ORDER BY-Liste einem Spaltennamen im Selektor entspricht.  
+ Bestimmte Datenbankverhaltensweisen hängen vom festgelegten Kompatibilitätsgrad der Datenbank ab. Wenn Ihre `ProviderManifestToken` -Attribut auf 2005 festgelegt ist und Ihre Version von SQL Server 2005, aber der Kompatibilitätsgrad einer Datenbank auf "80" (SQL Server 2000) festgelegt ist, das generierte Transact-SQL wird SQL Server 2005 zielt, aber möglicherweise nicht erwartungsgemäß ausgeführt werden aufgrund von der Einstellung des Kompatibilitätsgrades. Zum Beispiel geht möglicherweise die Sortierung verloren, wenn ein Spaltenname in der ORDER BY-Liste einem Spaltennamen im Selektor entspricht.  
   
 ## <a name="nested-queries-in-projection"></a>Geschachtelte Abfragen in Projektion  
  Geschachtelte Abfragen in einer Projektionsklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Dies kann auf einigen Back-End-Servern, einschließlich SLQ Server der sehr großen TempDB-Tabelle führen. Dies kann die Serverleistung beeinträchtigen.  
