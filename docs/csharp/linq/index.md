@@ -3,12 +3,12 @@ title: Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) in C#
 description: Einführung in die Language Integrated Query (LINQ) in C#
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 5a5c33f41a668835e7b83f1f717fa5605e53e010
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe408210b30b5f6118dc66b4c8f7057fb6654881
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633897"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482981"
 ---
 # <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
@@ -42,7 +42,7 @@ Das folgende Beispiel zeigt den vollständigen Abfragevorgang. Der vollständige
 
 Um mehr zu LINQ zu erfahren, machen Sie sich zunächst unter [Grundlagen zu Abfrageausdrücken](query-expression-basics.md) mit einigen grundlegenden Konzepten vertraut, und lesen Sie dann die Dokumentation für die LINQ-Technologie, die Sie interessiert:
 
-- XML-Dokumente: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
+- XML-Dokumente: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml-overview.md)
 
 - ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 
