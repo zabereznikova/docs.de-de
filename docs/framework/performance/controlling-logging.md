@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e14fa2d739a6fdabda7b64e7e765e51da19701a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6f6744451bf3436e58a3ff9efcdb16ceee08c9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616452"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489741"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Language Runtime (CLR)-Ereignisse aufzeichnen. Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabeaufforderungsverzeichnis in den Ordner [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET-Version>\ ). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:  
+ Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabeaufforderungsverzeichnis in den .NET Framework 4-Ordner (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<. NET-Version > \). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:  
   
  `wevtutil im CLR-ETW.man`  
   
