@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868770"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488031"
 ---
 # <a name="code-access-security-basics"></a>Grundlagen der Codezugriffssicherheit
 
@@ -32,7 +32,7 @@ Sie müssen mit den folgenden Konzepten der Codezugriffssicherheit vertraut sein
 
 - **Sichere Klassenbibliotheken**: Eine sichere Klassenbibliothek mithilfe von sicherheitsforderungen sicher, dass die Aufrufer der Bibliothek über die Berechtigung zum Zugriff auf die Ressourcen, die der Bibliothek verfügbar gemacht. Eine sichere Klassenbibliothek kann z. B. eine Methode zum Erstellen von Dateien haben, in der gefordert wird, dass ihre Aufrufer Berechtigungen zum Erstellen von Dateien haben. .NET Framework besteht aus sicheren Klassenbibliotheken. Sie müssen die Berechtigungen berücksichtigen, die für Zugriffe auf jede Bibliothek erforderlich sind, die in Ihrem Code verwendet wird. Weitere Informationen finden Sie unter den [mithilfe von sicheren Klassenbibliotheken](#secure_library) weiter unten in diesem Thema.
 
-- **Transparenter Code**: Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], zusätzlich zum Identifizieren bestimmter Berechtigungen an, Sie müssen auch bestimmen, ob Ihr Code als Sicherheitstransparenter ausgeführt werden soll. Aus sicherheitstransparentem Code können weder Typen oder Member aufgerufen werden, die als sicherheitskritisch gekennzeichnet sind. Diese Regel gilt sowohl für voll vertrauenswürdige Anwendungen als auch für teilweise vertrauenswürdige Anwendungen. Weitere Informationen finden Sie unter [Sicherheitstransparenter Code](../../../docs/framework/misc/security-transparent-code.md).
+- **Transparenter Code**: Ab .NET Framework 4, zusätzlich zur Identifizierung der bestimmte Berechtigungen, müssen Sie auch bestimmen, ob Ihr Code als Sicherheitstransparenter ausgeführt werden soll. Aus sicherheitstransparentem Code können weder Typen oder Member aufgerufen werden, die als sicherheitskritisch gekennzeichnet sind. Diese Regel gilt sowohl für voll vertrauenswürdige Anwendungen als auch für teilweise vertrauenswürdige Anwendungen. Weitere Informationen finden Sie unter [Sicherheitstransparenter Code](../../../docs/framework/misc/security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ Codezugriffssicherheit verhindert nicht, dass Sie möglicherweise fehlerhaften C
 Deklarative Sicherheitssyntax verwendet [Attribute](../../../docs/standard/attributes/index.md) , platzieren die Sicherheitsinformationen in die [Metadaten](../../../docs/standard/metadata-and-self-describing-components.md) Ihres Codes. Attribute können auf Assembly-, Klassen- oder Memberebene platziert werden, um den Typ der Anforderung, Forderung oder Überschreibung zu kennzeichnen, die Sie verwenden möchten. Anforderungen werden in Anwendungen für die Common Language Runtime verwendet, um das Runtime-Sicherheitssystem über die Berechtigungen zu informieren, die Ihre Anwendung benötigt bzw. nicht wünscht. Forderungen und Überschreibungen werden in Bibliotheken verwendet, um Ressourcen vor Aufrufern zu schützen oder Standardsicherheitsverhalten zu überschreiben.
 
 > [!NOTE]
-> In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]wurden wichtige Änderungen am Sicherheitsmodell und an der Terminologie von .NET Framework vorgenommen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).
+> In .NET Framework 4 wurden wichtige Änderungen an die .NET Framework-Sicherheitsmodell und die Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).
 
 Damit Sie Aufrufe für deklarative Sicherheit verwenden können, müssen Sie die Zustandsdaten des Berechtigungsobjekts so initialisieren, dass sie der bestimmten Form von Berechtigung entsprechen, die Sie benötigen. Jede integrierte Berechtigung hat ein Attribut, das als eine <xref:System.Security.Permissions.SecurityAction>-Enumeration übergeben wird, um den Typ des Sicherheitsvorgangs zu beschreiben, den Sie ausführen möchten. Berechtigungen akzeptieren auch ihre eigenen Parameter, die ihnen exklusiv zugewiesen sind.
 

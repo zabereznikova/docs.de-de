@@ -2,12 +2,12 @@
 title: Datenablaufverfolgung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583780"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489523"
 ---
 # <a name="data-tracing-in-adonet"></a>Datenablaufverfolgung in ADO.NET
 
@@ -41,7 +41,7 @@ Sie können die Clientverbindungs-ID programmgesteuert abrufen, indem Sie die `S
 
 ADO.NET sendet zudem eine threadspezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse erfasst, wenn die Sitzungen mit aktivierter TRACK_CAUSALITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Datenzugriffs-Ablaufverfolgung des Clients (`ActivityID`-Feld) abrufen und die Aktivitäts-ID in der Ausgabe der erweiterten Ereignisse suchen. Die Aktivitäts-ID in den erweiterten Ereignissen ist eine 16-Byte-GUID (nicht identisch mit der GUID für die Clientverbindungs-ID), an die eine 4-Byte-Sequenznummer angefügt wurde. Die Sequenznummer stellt die Reihenfolge einer Anforderung innerhalb eines Threads dar und gibt die relative Reihenfolge der Batch- und RPC-Anweisungen für den Thread an. `ActivityID` wird derzeit optional für SQL-Batchanweisungen und RPC-Anforderungen gesendet, wenn die Ablaufverfolgung für den Datenzugriff aktiviert ist und das 18. Bit im Konfigurationswort der Datenzugriffs-Ablaufverfolgung ON lautet.
 
-Im folgenden Beispiel wird [!INCLUDE[tsql](../../../../includes/tsql-md.md)] verwendet, um eine Sitzung für erweiterte Ereignisse zu starten, die in einem Ringpuffer gespeichert wird und die von einem Client für RPC- und Batchvorgänge gesendete Aktivitäts-ID aufzeichnet.
+Im folgenden finden ein Beispiel, Transact-SQL verwendet, um eine Sitzung für erweiterte Ereignisse, die in einem Ringpuffer gespeichert wird und von einem Client bei RPC- und Stapelvorgängen gesendete Aktivitäts-ID zu starten.
 
 ```sql
 create event session MySession on server
