@@ -1,6 +1,9 @@
 ---
 title: 'Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt'
 ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
 - add-ins [WPF], UI
@@ -9,12 +12,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b0213ddfd8197ffabcbeb1cd5fc78e517920b8fe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592664"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690445"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) ist der von der eine eigenständige WPF-Anwendung gehostet wird.  
@@ -33,57 +36,79 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
  Um ein Add-in zu erstellen, die eine WPF-UI ist spezieller Code für die einzelnen Pipelinesegmente, das Add-in und die hostanwendung erforderlich.  
 
 <a name="Contract"></a>   
-## <a name="implementing-the-contract-pipeline-segment"></a>Implementieren des Vertragspipelinesegments  
- Wenn ein Add-in eine Benutzeroberfläche ist, muss der Vertrag für das Add-in implementieren <xref:System.AddIn.Contract.INativeHandleContract>. Im Beispiel `IWPFAddInContract` implementiert <xref:System.AddIn.Contract.INativeHandleContract>, wie im folgenden Code gezeigt.  
+## <a name="implementing-the-contract-pipeline-segment"></a>Implementieren des Vertragspipelinesegments
+
+Wenn ein Add-in eine Benutzeroberfläche ist, muss der Vertrag für das Add-in implementieren <xref:System.AddIn.Contract.INativeHandleContract>. Im Beispiel `IWPFAddInContract` implementiert <xref:System.AddIn.Contract.INativeHandleContract>, wie im folgenden Code gezeigt.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
-  
+[!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
+[!code-vb[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]
+
 <a name="AddInViewPipeline"></a>   
-## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementieren des Add-In-Ansichtspipelinesegments  
- Da das Add-in, als eine Unterklasse von implementiert wird der <xref:System.Windows.FrameworkElement> Typ, der Add-In-Ansicht muss auch als Unterklasse <xref:System.Windows.FrameworkElement>. Der folgende Code zeigt die Add-In-Ansicht des Vertrags, als implementiert die `WPFAddInView` Klasse.  
+## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementieren des Add-In-Ansichtspipelinesegments
+
+Da das Add-in, als eine Unterklasse von implementiert wird der <xref:System.Windows.FrameworkElement> Typ, der Add-In-Ansicht muss auch als Unterklasse <xref:System.Windows.FrameworkElement>. Der folgende Code zeigt die Add-In-Ansicht des Vertrags, als implementiert die `WPFAddInView` Klasse.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+[!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+[!code-vb[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInViews/WPFAddInView.vb#AddInViewCode)]  
   
- Hier wird die Add-In-Ansicht von abgeleitet <xref:System.Windows.Controls.UserControl>. Die Benutzeroberflächen-Add-in sollte daher auch leiten Sie von <xref:System.Windows.Controls.UserControl>.  
+Hier wird die Add-In-Ansicht von abgeleitet <xref:System.Windows.Controls.UserControl>. Die Benutzeroberflächen-Add-in sollte daher auch leiten Sie von <xref:System.Windows.Controls.UserControl>.  
   
-<a name="AddInSideAdapter"></a>   
-## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementieren des Add-In-seitigen Adapterpipelinesegments  
- Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, ist das Add-in eine <xref:System.Windows.FrameworkElement> (wie durch die Add-In-Ansichtspipelinesegment angegeben). Aus diesem Grund die <xref:System.Windows.FrameworkElement> konvertiert werden muss, um eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze. Dieser Vorgang wird ausgeführt, durch den Add-In-seitigen Adapter durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, wie im folgenden Code gezeigt.  
+<a name="AddInSideAdapter"></a>
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementieren des Add-In-seitigen Adapterpipelinesegments
+
+Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, ist das Add-in eine <xref:System.Windows.FrameworkElement> (wie durch die Add-In-Ansichtspipelinesegment angegeben). Aus diesem Grund die <xref:System.Windows.FrameworkElement> konvertiert werden muss, um eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze. Dieser Vorgang wird ausgeführt, durch den Add-In-seitigen Adapter durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, wie im folgenden Code gezeigt.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
-  
- In der Add-In-Modell gibt, in dem ein Add-in eine Benutzeroberfläche zurück (finden Sie unter [Erstellen einer Add-In, dass eine Benutzeroberfläche zurückgibt](how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in Adapter die <xref:System.Windows.FrameworkElement> auf ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> muss auch in diesem Modell aufgerufen werden, obwohl Sie implementieren eine Methode, von dem Sie den Code für den Aufruf schreiben müssen. Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und Implementieren des aufrufende Codes <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der aufgerufen wird <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet eine <xref:System.AddIn.Contract.INativeHandleContract>. In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.  
+[!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+[!code-vb[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]
+
+In der Add-In-Modell gibt, in dem ein Add-in eine Benutzeroberfläche zurück (finden Sie unter [Erstellen einer Add-In, dass eine Benutzeroberfläche zurückgibt](how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in Adapter die <xref:System.Windows.FrameworkElement> auf ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> muss auch in diesem Modell aufgerufen werden, obwohl Sie implementieren eine Methode, von dem Sie den Code für den Aufruf schreiben müssen. Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und Implementieren des aufrufende Codes <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der aufgerufen wird <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet eine <xref:System.AddIn.Contract.INativeHandleContract>. In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.  
   
 > [!NOTE]
 >  Sie müssen auch überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in diesem Modell, aktivieren die TAB-Taste zwischen der Benutzeroberfläche der hostanwendung und Add-in-Benutzeroberfläche. Weitere Informationen finden Sie unter "WPF-Add-In-Einschränkungen" in [Übersicht über WPF-Add-Ins](wpf-add-ins-overview.md).  
   
- Da der Add-In-seitige Adapter eine Schnittstelle, die implementiert von abgeleitet <xref:System.AddIn.Contract.INativeHandleContract>, müssen Sie auch implementieren <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, obwohl dies ignoriert beim <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> überschrieben wird.  
+Da der Add-In-seitige Adapter eine Schnittstelle, die implementiert von abgeleitet <xref:System.AddIn.Contract.INativeHandleContract>, müssen Sie auch implementieren <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, obwohl dies ignoriert beim <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> überschrieben wird.  
   
 <a name="HostViewPipeline"></a>   
-## <a name="implementing-the-host-view-pipeline-segment"></a>Implementieren des Host-Ansichtspipelinesegments  
- In diesem Modell wird die hostanwendung erwartet in der Regel werden die Hostansicht eine <xref:System.Windows.FrameworkElement> Unterklasse. Der hostseitige Adapter muss konvertieren die <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach der <xref:System.AddIn.Contract.INativeHandleContract> überschreitet die Isolationsgrenze hinweg. Da von der hostanwendung zum Abrufen eine Methode aufgerufen wird die <xref:System.Windows.FrameworkElement>, der die Hostansicht muss vom Typ "return" die <xref:System.Windows.FrameworkElement> indem es darin enthalten. Daher muss die hostanwendung die Hostansicht abgeleitet, von einer Unterklasse von <xref:System.Windows.FrameworkElement> enthalten können andere [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], z. B. <xref:System.Windows.Controls.UserControl>. Der folgende Code zeigt die hostanwendung die Hostansicht des Vertrags, als implementiert die `WPFAddInHostView` Klasse.  
+## <a name="implementing-the-host-view-pipeline-segment"></a>Implementieren des Host-Ansichtspipelinesegments
+
+In diesem Modell wird die hostanwendung erwartet in der Regel werden die Hostansicht eine <xref:System.Windows.FrameworkElement> Unterklasse. Der hostseitige Adapter muss konvertieren die <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach der <xref:System.AddIn.Contract.INativeHandleContract> überschreitet die Isolationsgrenze hinweg. Da von der hostanwendung zum Abrufen eine Methode aufgerufen wird die <xref:System.Windows.FrameworkElement>, der die Hostansicht muss vom Typ "return" die <xref:System.Windows.FrameworkElement> indem es darin enthalten. Daher muss die hostanwendung die Hostansicht abgeleitet, von einer Unterklasse von <xref:System.Windows.FrameworkElement> enthalten können andere Benutzeroberflächen, wie z. B. <xref:System.Windows.Controls.UserControl>. Der folgende Code zeigt die hostanwendung die Hostansicht des Vertrags, als implementiert die `WPFAddInHostView` Klasse.  
+
+[!code-csharp[WPFAddInHostView class](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostViews/WPFAddInHostView.cs#HostViewCode)]
+[!code-vb[WPFAddInHostView class](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostViews/WPFAddInHostView.vb#HostViewCode)]
 
 <a name="HostSideAdapter"></a>   
-## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementieren des hostseitigen Adapterpipelinesegments  
- Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, die hostanwendung erwartet eine <xref:System.Windows.Controls.UserControl> (wie durch die Hostansicht festgelegt). Daher die <xref:System.AddIn.Contract.INativeHandleContract> konvertiert werden muss, um eine <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze, bevor er als Inhalt der Hostansicht festgelegt (die sich daraus ableitet <xref:System.Windows.Controls.UserControl>).  
-  
- Dieser Vorgang wird vom hostseitigen Adapter ausgeführt, wie im folgenden Code gezeigt.  
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementieren des hostseitigen Adapterpipelinesegments
 
- Wie Sie sehen, ruft der hostseitige Adapter die <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen des Add-In-seitigen Adapters <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> Methode (Dies ist der Punkt, in denen die <xref:System.AddIn.Contract.INativeHandleContract> überschreitet die Isolationsgrenze hinweg).  
+Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, die hostanwendung erwartet eine <xref:System.Windows.Controls.UserControl> (wie durch die Hostansicht festgelegt). Daher die <xref:System.AddIn.Contract.INativeHandleContract> konvertiert werden muss, um eine <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze, bevor er als Inhalt der Hostansicht festgelegt (die sich daraus ableitet <xref:System.Windows.Controls.UserControl>).  
   
- Der hostseitige Adapter anschließend konvertiert der <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Zum Schluss die <xref:System.Windows.FrameworkElement> als Inhalt der Hostansicht festgelegt ist.  
+Dieser Vorgang wird vom hostseitigen Adapter ausgeführt, wie im folgenden Code gezeigt.  
+
+[!code-csharp[Host-side adapter](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#HostSideAdapterCode)]
+[!code-vb[Host-side adapter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#HostSideAdapterCode)]
+
+Wie Sie sehen, ruft der hostseitige Adapter die <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen des Add-In-seitigen Adapters <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> Methode (Dies ist der Punkt, in denen die <xref:System.AddIn.Contract.INativeHandleContract> überschreitet die Isolationsgrenze hinweg).  
+  
+Der hostseitige Adapter anschließend konvertiert der <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Zum Schluss die <xref:System.Windows.FrameworkElement> als Inhalt der Hostansicht festgelegt ist.  
   
 <a name="AddIn"></a>   
-## <a name="implementing-the-add-in"></a>Implementieren des Add-Ins  
- Sind der Add-In-seitige Adapter und die Add-In-Ansicht eingerichtet, kann das Add-In durch Ableiten von der Add-In-Ansicht implementiert werden, wie in folgendem Code gezeigt.  
+## <a name="implementing-the-add-in"></a>Implementieren des Add-Ins
 
- In diesem Beispiel sehen Sie einen interessanten Vorteil dieses Modells: Add-In-Entwickler müssen nur das Add-in (da es auch die Benutzeroberfläche ist), anstatt eine Add-in-Klasse sowohl eine Add-in-Benutzeroberfläche zu implementieren.  
+Sind der Add-In-seitige Adapter und die Add-In-Ansicht eingerichtet, kann das Add-In durch Ableiten von der Add-In-Ansicht implementiert werden, wie in folgendem Code gezeigt.  
+
+[!code-csharp[Add-in implementation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#AddInCodeBehind)]
+[!code-vb[Add-in implementation](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#AddInCodeBehind)]
+
+In diesem Beispiel sehen Sie einen interessanten Vorteil dieses Modells: Add-In-Entwickler müssen nur das Add-in (da es auch die Benutzeroberfläche ist), anstatt eine Add-in-Klasse sowohl eine Add-in-Benutzeroberfläche zu implementieren.  
   
-<a name="HostApp"></a>   
-## <a name="implementing-the-host-application"></a>Implementieren der Hostanwendung  
- Der hostseitige Adapter und die Hostansicht erstellt wurden kann die hostanwendung das Add-In-Modell von .NET Framework verwenden, öffnen Sie die Pipeline und eine Hostansicht des Add-Ins abzurufen. Diese Schritte werden im folgenden Code gezeigt.  
+<a name="HostApp"></a>
+## <a name="implementing-the-host-application"></a>Implementieren der Hostanwendung
 
- Die hostanwendung verwendet typischen Code von .NET Framework-Add-in-Modell, aktivieren Sie das Add-in, das die hostanwendung die Hostansicht implizit an die hostanwendung zurückgibt. Die hostanwendung zeigt anschließend die Hostansicht (d.h. eine <xref:System.Windows.Controls.UserControl>) aus einer <xref:System.Windows.Controls.Grid>.  
+Der hostseitige Adapter und die Hostansicht erstellt wurden kann die hostanwendung das Add-In-Modell von .NET Framework verwenden, öffnen Sie die Pipeline und eine Hostansicht des Add-Ins abzurufen. Diese Schritte werden im folgenden Code gezeigt.  
+
+[!code-csharp[Acquiring a host view of the add-in](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Host/MainWindow.xaml.cs#GetUICode)]
+[!code-vb[Acquiring a host view of the add-in](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInIsAUISample/VisualBasic/Host/MainWindow.xaml.vb#GetUICode)]
+
+Die hostanwendung verwendet typischen Code von .NET Framework-Add-in-Modell, aktivieren Sie das Add-in, das die hostanwendung die Hostansicht implizit an die hostanwendung zurückgibt. Die hostanwendung zeigt anschließend die Hostansicht (d.h. eine <xref:System.Windows.Controls.UserControl>) aus einer <xref:System.Windows.Controls.Grid>.  
   
  Der Code zum Verarbeiten von Interaktionen mit der Add-in-Benutzeroberfläche, die in das Add-in der Anwendungsdomäne ausgeführt werden. Diese Interaktionen umfassen Folgendes:  
   

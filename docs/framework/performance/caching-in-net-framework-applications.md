@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 54e0c8f8153780e5a5d45b91b1aea391dec19933
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586195"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689380"
 ---
 # <a name="caching-in-net-framework-applications"></a>Caching in .NET Framework-Anwendungen
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.  
@@ -19,7 +19,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
  .NET Framework bietet Funktionen zum Zwischenspeichern, die Sie verwenden können, um die Leistung und Skalierbarkeit von Windows Client- und Serveranwendungen, einschließlich ASP.NET, zu verbessern.  
   
 > [!NOTE]
->  In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und früheren Versionen stellte ASP.NET eine speicherinterne Cache-Implementierung im <xref:System.Web.Caching>-Namespace zur Verfügung. In früheren Versionen von .NET Framework war die Zwischenspeicherung verfügbar nur in der <xref:System.Web> Namespace und erforderte daher eine Abhängigkeit der ASP.NET-Klassen. In .NET Framework 4 enthält der <xref:System.Runtime.Caching>-Namespace APIs, die für Web- und nicht-Webanwendungen konzipiert sind.  
+>  In der .NET Framework 3.5 und früheren Versionen stellte ASP.NET eine in-Memory-Cache-Implementierung in der <xref:System.Web.Caching> Namespace. In früheren Versionen von .NET Framework war die Zwischenspeicherung verfügbar nur in der <xref:System.Web> Namespace und erforderte daher eine Abhängigkeit der ASP.NET-Klassen. In .NET Framework 4 enthält der <xref:System.Runtime.Caching>-Namespace APIs, die für Web- und nicht-Webanwendungen konzipiert sind.  
   
 ## <a name="caching-data"></a>Zwischenspeichern von Daten  
  Sie können Informationen mithilfe von Klassen im <xref:System.Runtime.Caching>-Namespace zwischenspeichern. Die zwischenspeichernden Klassen in diesem Namespace stellen die folgenden Features zur Verfügung:  
@@ -47,7 +47,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
  Die zwischenspeichernden Klassen im <xref:System.Runtime.Caching>-Namespace bieten Funktionen zum Zwischenspeichern von Daten in ASP.NET.  
   
 > [!NOTE]
->  Wenn die Anwendung auf [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] oder früher abzielt, müssen Sie die Cachingklassen verwenden, die im <xref:System.Web.Caching>-Namespace definiert sind. Weitere Informationen finden Sie unter [Übersicht über die ASP.NET-Zwischenspeicherung](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
+>  Wenn Ihre Anwendung auf .NET Framework 3.5 ausgerichtet ist, oder früher verwenden Sie die zwischenspeichernden Klassen, die definiert sind die <xref:System.Web.Caching> Namespace. Weitere Informationen finden Sie unter [Übersicht über die ASP.NET-Zwischenspeicherung](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 > [!NOTE]
 >  Wenn Sie neue Anwendungen entwickeln, empfehlen wir die Verwendung der <xref:System.Runtime.Caching.MemoryCache>-Klasse. Die API, die im <xref:System.Runtime.Caching>-Namespace bereitgestellt wird, ist wie die API, die im <xref:System.Web.Caching.Cache>-Namespace bereitgestellt wird. Aus diesem Grund wird Ihnen die API vertraut sein, wenn Sie den Zwischenspeicher bereits in früheren Versionen von ASP.NET verwendet haben. Ein Beispiel zum Verwenden der Zwischenspeicherung in ASP.NET-Anwendungen finden Sie unter [Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  

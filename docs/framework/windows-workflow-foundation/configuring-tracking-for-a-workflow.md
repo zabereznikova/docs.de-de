@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052767"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690567"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -199,7 +199,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
     </system.serviceModel>
     ```
 
-2. Kopieren Sie die Manifestdatei aus %windir%\Microsoft.NET\Framework\\< neueste Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie sie in "Microsoft.Windows.ApplicationServer.applications_provider1.man" um
+2. Kopieren Sie die Manifestdatei aus %windir%\Microsoft.NET\Framework\\\<neueste Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie sie in "Microsoft.Windows.ApplicationServer.applications_provider1.man" um
 
 3. Ändern Sie die GUID in der Manifestdatei in die neue GUID.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487973"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690283"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
 
@@ -26,7 +26,7 @@ Sie können die Warnungen und Fehler folgendermaßen vermeiden:
 
    \- oder –
 
-- Mithilfe der [< NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) in die legacy-CAS-Richtlinienverhalten deaktivieren.
+- Mithilfe der [ \<NetFx40_LegacySecurityPolicy > Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) in die legacy-CAS-Richtlinienverhalten deaktivieren.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -142,7 +142,7 @@ Wenn Sie einen Sandkasten für eine Assembly verwenden möchten, verwenden Sie d
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Kompatibilität: Verwenden der CAS-Legacyrichtlinienoption
 
-Die [< NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) können Sie angeben, dass ein Prozess oder eine Bibliothek mit CAS-legacyrichtlinie verwendet. Wenn Sie dieses Element aktivieren, funktionieren die Richtlinien- und Beweisüberladungen wie in früheren Versionen des Frameworks.
+Die [ \<NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) können Sie angeben, dass ein Prozess oder eine Bibliothek mit CAS-legacyrichtlinie verwendet. Wenn Sie dieses Element aktivieren, funktionieren die Richtlinien- und Beweisüberladungen wie in früheren Versionen des Frameworks.
 
 > [!NOTE]
 > Das CAS-Richtlinienverhalten wird auf der Grundlage einer Laufzeitversion angegeben. Das Ändern der CAS-Richtlinie für eine Laufzeitversion besitzt daher keine Auswirkungen auf die CAS-Richtlinie einer anderen Version.
