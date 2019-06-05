@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777129"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689327"
 ---
 # <a name="application-startup-time"></a>Startzeit der Anwendung
 Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheblich variieren. Dieses Thema beschreibt verschiedene Verfahren zur Reduzierung der wahrgenommenen und tatsächlichen Startzeit für eine WPF-Anwendung (Windows Presentation Foundation).  
@@ -81,7 +81,7 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
   
  Installieren Sie das Zertifikat der Zertifizierungsstelle auf dem Clientcomputer oder verwenden Sie Authenticode wenn möglich nicht. Wenn Sie wissen, dass für Ihre Anwendung kein Herausgeberbeweis erforderlich ist, müssen Sie nicht die Kosten für die Überprüfung der Signatur tragen.  
   
- Ab [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] gibt es eine Konfigurationsoption, mit der die Authenticode-Überprüfung umgangen werden kann. Fügen Sie hierzu die folgende Einstellung zur Datei „app.exe.config“ hinzu:  
+ Ist ab .NET Framework 3.5 ist es eine Konfigurationsoption, die die Authenticode-Überprüfung umgangen werden kann. Fügen Sie hierzu die folgende Einstellung zur Datei „app.exe.config“ hinzu:  
   
 ```xml  
 <configuration>  

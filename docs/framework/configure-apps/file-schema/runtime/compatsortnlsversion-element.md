@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456448"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689913"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion >-Element
 Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleichen von Zeichenfolgen verwenden soll.  
@@ -44,7 +44,7 @@ Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleic
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|4096|Die Gebietsschema-ID, die eine andere Sortierreihenfolge darstellt. In diesem Fall stellt 4096 die Sortierreihenfolge von [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] und früheren Versionen dar.|  
+|4096|Die Gebietsschema-ID, die eine andere Sortierreihenfolge darstellt. In diesem Fall stellt 4096 die Sortierreihenfolge der .NET Framework 3.5 und früheren Versionen dar.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -57,7 +57,7 @@ Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleic
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Da Zeichenfolge vergleichen, Sortieren und Schreibweise Vorgänge, durch ausgeführt die <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> Klasse in .NET Framework 4 entsprechen dem Unicode 5.1-standard, die Ergebnisse der Methoden zum Zeichenfolgenvergleich wie z. B. <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> und <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> weicht möglicherweise von frühere Versionen von .NET Framework. Wenn Ihre Anwendung von Legacyverhalten abhängig ist, können Sie die Regeln für den Vergleich und die Sortierung von Zeichenfolgen aus [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] und früheren Versionen wiederherstellen, indem Sie das `<CompatSortNLSVersion>`-Element in der Konfigurationsdatei der Anwendung angeben.  
+ Da Zeichenfolge vergleichen, Sortieren und Schreibweise Vorgänge, durch ausgeführt die <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> Klasse in .NET Framework 4 entsprechen dem Unicode 5.1-standard, die Ergebnisse der Methoden zum Zeichenfolgenvergleich wie z. B. <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> und <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> weicht möglicherweise von frühere Versionen von .NET Framework. Wenn Ihre Anwendung von Legacyverhalten abhängig ist, können Sie wiederherstellen, der Zeichenfolgenvergleich und-Sortierung Regeln, die in der .NET Framework 3.5 und früheren Versionen verwendet werden, durch Einschließen der `<CompatSortNLSVersion>` Element in der Konfigurationsdatei Ihrer Anwendung.  
   
 > [!IMPORTANT]
 >  Zum Wiederherstellen von Zeichenfolgenvergleichs- und Zeichenfolgensortierregeln von Legacyversionen muss auch die sort00001000.dll-Dynamic Link Library auf dem lokalen System verfügbar sein.  
@@ -76,13 +76,13 @@ Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleic
 sta follows a in the sort order.  
 ```  
   
- Diese unterscheidet sich vollkommen von der Ausgabe, die bei Ausführung des Beispiels unter [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] angezeigt wird.  
+ Dies unterscheidet sich vollständig von der Ausgabe, die angezeigt wird, wenn Sie das Beispiel für .NET Framework 3.5 ausführen.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Wenn Sie die folgende Konfigurationsdatei im Verzeichnis des Beispiels hinzufügen und dann das Beispiel, auf .NET Framework 4 ausführen, die Ausgabe ist jedoch identisch, die durch das Beispiel erstellt wird, wenn er ausgeführt wird, die [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Wenn Sie die folgende Konfigurationsdatei im Verzeichnis des Beispiels hinzufügen und dann auf die .NET Framework 4 das Beispiel ausführen, ist jedoch die Ausgabe identisch, die durch das Beispiel erstellt wird, wenn es auf .NET Framework 3.5 ausgeführt wird.  
   
 ```xml  
 <?xml version ="1.0"?>  
