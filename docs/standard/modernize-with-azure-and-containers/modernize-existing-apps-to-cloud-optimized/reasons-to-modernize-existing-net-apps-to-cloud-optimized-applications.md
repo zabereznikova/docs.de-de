@@ -2,12 +2,12 @@
 title: Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639057"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758746"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
 
@@ -27,7 +27,7 @@ Ihre Anwendung ist Cloud optimiert sein, wenn Sie kann in einem flexiblen Weise 
 
 Der Schlüssel ist *Agilität*. Sie können nicht mit Agilität liefern, es sei denn, Sie jede Bereitstellung bis zur Produktion auf ein absolutes Minimum reduzieren sowie Dev/Test-Umgebungsprobleme. Container (insbesondere Docker, als ein de-facto-Standard) und verwalteten Diensten wurden speziell für diesen Zweck entwickelt.
 
-Um Flexibilität zu erzielen, benötigen Sie außerdem automatisierte DevOps-Prozesse, die auf CI/CD-Pipelines basieren, die skalierbare Plattformen in der Cloud freigegeben. CI-/CD-Plattformen (z.B. Azure DevOps-Services oder Jenkins), die für eine skalierbare und zuverlässige Cloud-Plattform (z.B. Azure App Service, Azure Service Fabric oder Azure Kubernetes Service) bereitstellen, sind wichtige Technologien für Flexibilität in der Cloud zu erreichen.
+Um Flexibilität zu erzielen, benötigen Sie außerdem automatisierte DevOps-Prozesse, die auf CI/CD-Pipelines basieren, die skalierbare Plattformen in der Cloud freigegeben. CI-/CD-Plattformen (z.B. Azure DevOps-Services oder Jenkins), die für eine skalierbare und zuverlässige Cloud-Plattform (z.B. Azure App Service oder Azure Kubernetes Service) bereitstellen, sind wichtige Technologien für Flexibilität in der Cloud zu erreichen.
 
 Die folgende Liste beschreibt die wichtigsten Grundsätze oder Methoden für Cloudoptimierte Anwendungen. Beachten Sie, dass Sie alle oder nur einige dieser Prinzipien, einen schrittweisen oder inkrementellen Ansatz einführen können:
 

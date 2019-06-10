@@ -2,12 +2,12 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Bereitstellen Sie vorhandener .NET-Apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643754"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758842"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -153,7 +153,6 @@ Die Produkte in Azure unterstützen Container, die zur gleichen Zeit mehr in der
 
 - **Azure App Service**
 - **Azure Kubernetes Service (AKS und ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 Dann ist Azure Container Registry-Instanz eine hoch skalierbare containerregistrierung gehostet in Azure, die Sie über alle vorherigen Produkte bei Registrierung und Bereitstellen Ihrer benutzerdefinierten containerimages verwenden können.

@@ -2,12 +2,12 @@
 title: Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 ms.date: 04/28/2018
-ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638968"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758785"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -30,8 +30,6 @@ Jede der folgenden exemplarischen Vorgehensweisen verwendet die neue Beispiel eS
 - **Bereitstellen Sie Ihrer Windows-Containern basierenden-app für Azure-VMs**
 
 - **Bereitstellen Sie die Windows-Containern basierende apps in Kubernetes in Azure Container Service**
-
-- **Bereitstellen Sie Windows-Containern basierenden apps in Azure Service Fabric**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Exemplarische Vorgehensweise 1: Überblick über die Shopping-legacy-apps
 
@@ -119,7 +117,7 @@ Es gibt Vorteile zum Ausführen der monolithischen Anwendung in einem Container.
 
 Ein weiterer Vorteil ist, dass Entwickler die Anwendung in den konsistenten Umgebung ausführen können, die von Windows-Containern bereitgestellt wird. Probleme, die nur in bestimmten Versionen angezeigt werden können sofort in einer Staging- oder produktionsumgebung Umgebung behebt, anstatt entdeckt werden. Unterschiede in entwicklungsumgebungen verwendet, die von Mitgliedern des Entwicklungsteams sind weniger wichtig, wenn Anwendungen in Containern ausgeführt werden.
 
-Containerbasierte Anwendungen müssen auch eine flachere horizontale skalierungskurve. Container-apps können Sie mehrere Anwendungs- und Dienstinstanzen, die (auf der Grundlage der Container) verfügen, in einem virtuellen Computer oder physischen Computer, die im Vergleich zu regulären anwendungsbereitstellungen pro Computer. Dies führt zu höhere Dichte und weniger erforderliche Ressourcen, insbesondere wenn Sie orchestratoren wie Kubernetes oder Service Fabric verwenden.
+Containerbasierte Anwendungen müssen auch eine flachere horizontale skalierungskurve. Container-apps können Sie mehrere Anwendungs- und Dienstinstanzen, die (auf der Grundlage der Container) verfügen, in einem virtuellen Computer oder physischen Computer, die im Vergleich zu regulären anwendungsbereitstellungen pro Computer. Dies führt zu höhere Dichte und weniger erforderliche Ressourcen, insbesondere bei der Verwendung von orchestratoren wie Kubernetes.
 
 Containerisierung, im Idealfall erfordert keine Änderungen an den Anwendungscode (C\#). In den meisten Fällen benötigen Sie nur die Docker-Bereitstellung-Metadatendateien (dockerfile-Dateien und Docker Compose-Dateien).
 
@@ -210,7 +208,7 @@ Mit Azure Container Instances erleichtert das Erstellen und Verwalten von Docker
 
 ### <a name="considerations"></a>Weitere Überlegungen
 
-Bereitstellen von Windows-Containern mit entweder vollständige .NET Framework / ASP.NET oder SQL Server in Azure Container Instances (ACI) ist nicht ganz so schnell wie die Bereitstellung auf eine reguläre Docker-Host (z. B. Windows Server 2016 mit Containern für Windows), da das Docker-Image muss herunterladen (Pull aus der Docker-Registrierung) jedes Mal, und die Größe der SQL-Container-Abbild (15.1 GB) und das containerimage für ASP.NET (13.9 GB) sind sehr groß ist, jedoch sehr viel kostengünstiger als die Beibehaltung von Ihren eigenen Docker-Host (dauerhaft Online ist WindowsServer 2016 mit Windows-Container-VM in Azure) ganz zu schweigen davon eine gesamte Orchestrator wie Kubernetes in Azure (AKS/ACS) oder Azure Service Fabric, die auf der anderen Seite das sind gute Optionen für Bereitstellungen in der Produktion.
+Bereitstellen von Windows-Containern mit entweder vollständige .NET Framework / ASP.NET oder SQL Server in Azure Container Instances (ACI) ist nicht ganz so schnell wie die Bereitstellung auf eine reguläre Docker-Host (z. B. Windows Server 2016 mit Containern für Windows), da das Docker-Image muss herunterladen (Pull aus der Docker-Registrierung) jedes Mal, und die Größe der SQL-Container-Abbild (15.1 GB) und das containerimage für ASP.NET (13.9 GB) sind sehr groß ist, jedoch sehr viel kostengünstiger als die Beibehaltung von Ihren eigenen Docker-Host (dauerhaft Online ist WindowsServer 2016 mit Windows-Container-VM in Azure) nicht auf eine gesamte Orchestrator wie Kubernetes in Azure (AKS) zu erwähnen, die auf der anderen Seite eine hervorragende Wahl für Bereitstellungen in der Produktion ist.
 
 Als wichtigsten Schlussfolgerung: ist mit Azure Container Instances eine sehr bestechende Option für Entwicklungs-/Testszenarios vorgesehen und für CI/CD-Pipelines aus.
 
@@ -279,80 +277,6 @@ Mit Kubernetes können Entwickler Gedanken über physische und virtuelle Compute
 ## <a name="next-steps"></a>Nächste Schritte
 
 Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
-
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Exemplarische Vorgehensweise 6: Bereitstellen Sie Windows-Containern basierenden apps in Azure Service Fabric
-
-### <a name="technical-walkthrough-availability"></a>Technische Anleitung Verfügbarkeit
-
-Die vollständige technische Exemplarische Vorgehensweise ist im eShopModernizing GitHub Repo Wiki verfügbar:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
-
-### <a name="overview"></a>Übersicht
-
-Eine Anwendung schnell auf Windows-Containern basierenden muss Plattformen Umzug entfernt noch einen Schritt weiter von IaaS-VMs verwenden. Dies ist erforderlich, um hohe Skalierbarkeit nur schwer erzielen besser automatisierte Skalierbarkeit und für eine erhebliche Verbesserung in automatisierten Bereitstellungen und der versionsverwaltung. Sie können diese Ziele erreichen, mit der Orchestrator-Azure Service Fabric, die in der Azure-Cloud verfügbar, aber auch lokalen Verwendung verfügbar ist, oder sogar in eine andere öffentlichen Cloud.
-
-### <a name="goals"></a>Ziele
-
-Das Ziel dieser exemplarischen Vorgehensweise ist, wie Sie eine Windows-Container-basierte Anwendung auf einem Service Fabric-Cluster in Azure bereitzustellen. In Service Fabric bereitstellen, von Grund auf neu ist ein zweistufiger Prozess:
-
-1. Bereitstellen von Service Fabric-Cluster in Azure (oder zu einer anderen Umgebung).
-
-2. Stellen Sie die Anwendung und die zugehörigen Ressourcen mit dem Service Fabric-Cluster bereit.
-
-### <a name="scenarios"></a>Szenarien
-
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Szenario A: Direkt in Service Fabric-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung
-
-![Direkt in Service Fabric-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung](./media/image5-9.png)
-
-> **Abbildung 5-9.** Direkt in Service Fabric-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung
-
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Szenario B: Bereitstellen Sie in Service Fabric-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste
-
-![Bereitstellen Sie in Service Fabric-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste](./media/image5-10.png)
-
-**Abbildung 5-10.** Bereitstellen Sie in Service Fabric-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste
-
-## <a name="benefits"></a>Vorteile
-
-Die Vorteile einer Bereitstellung in einem Service Fabric-Cluster sind die Vorteile der Verwendung von Kubernetes mit. Ein Unterschied, allerdings besteht darin, dass Service Fabric ist eine ausgereiftere produktionsumgebung für Windows-Anwendungen, die im Vergleich zu Kubernetes in der eine Betaphase für Windows-Container in Kubernetes-Version 1.9 (Dezember 2017). Kubernetes ist eine ausgereiftere Umgebung für Linux.
-
-Der Hauptvorteil der Verwendung von Azure Service Fabric ist, erhalten Sie in der Sie die Anwendung basierend auf der Anzahl von containerinstanzen, die Sie (Inner-Skalierbarkeit in den vorhandenen Knoten) verwenden möchten, die und basierend auf der Anzahl der, horizontal skalieren können eine produktionsbereiten Umgebung Knoten oder virtuellen Computern im Cluster (globale Skalierbarkeit des Clusters).
-
-Azure Service Fabric bietet die Portabilität für Ihre Container sowohl für die Anwendungskonfiguration. Sie können ein Service Fabric-cluster in Azure, oder installieren Sie sie lokal in Ihrem eigenen Datencenter verwenden. Sie können Service Fabric-Cluster in einer anderen Cloud auch wie installieren [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
-
-Bei Service Fabric können Entwickler Gedanken über physische und virtuelle Computer fortgesetzt, zum Planen einer Container ausgerichtete Infrastruktur, die die folgenden Funktionen, unter anderem ermöglicht:
-
-- Auf mehreren Containern basierenden Anwendungen.
-
-- Replizieren von Container Instances und automatische horizontale Skalierung.
-
-- Benennen und ermitteln (z. B. interne DNS).
-
-- Ausgleichen von lädt.
-
-- Parallele Updates an.
-
-- Verteilen von Geheimnissen aus.
-
-- Integrität der Anwendung überprüft.
-
-Die folgenden Funktionen sind exklusiv in Service Fabric (im Vergleich zu anderen orchestratoren):
-
-- Zustandsbehaftete Dienste die Möglichkeit, über das Reliable Services-Anwendungsmodell.
-
-- Actors-Muster, über das Reliable Actors-Anwendungsmodell.
-
-- Bereitstellen von bare-Knochenarbeit Prozesse, zusätzlich zu Windows oder Linux-Container.
-
-- Erweiterte Rollierende Updates und integritätsprüfungen beobachtet werden.
-
-### <a name="next-steps"></a>Nächste Schritte
-
-Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki:
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [Zurück](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

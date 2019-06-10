@@ -2,12 +2,12 @@
 title: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
 ms.date: 05/04/2018
-ms.openlocfilehash: 28e103c67f47d63582384c9ab468a5f631b5ce9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638973"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758832"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 
@@ -16,9 +16,9 @@ Wie Sie nach dem Lesen in den vorherigen Abschnitten bemerkt haben, ist Azure ei
 Als eine *standardmäßig* Empfehlungen zu erstellen, die folgenden ist das Hauptkriterium, die in diesem Handbuch empfohlen:
 
 - **Einzelne monolithischen app:** Wählen Sie Azure App Service
-- **N-schichtigen Anwendung:** Wählen Sie orchestratoren wie z. B. Azure Kubernetes Service (AKS), Service Fabric (AE) oder App Service aus, wenn Sie eine einzelne oder einige Back-End-Dienste verfügen
+- **N-schichtigen Anwendung:** Wählen Sie orchestratoren wie z. B. Azure Kubernetes Service (AKS) oder einen App Service aus, wenn Sie eine einzelne oder einige Back-End-Dienste verfügen
 - **Microservices für Linux:** Wählen Sie ACS/Kubernetes
-- **Windows-Microservices:** Wählen Sie Service Fabric
+- **Windows-Microservices:** Wählen Sie die Azure-Web-Apps für Container
 - **Serverlose Funktionen & Ereignishandler:** Wählen Sie die Azure-Funktionen
 - **Umfangreiche Batch:** Wählen Sie mit Azure Batch
 
@@ -26,13 +26,9 @@ Allerdings sollten diese Empfehlung mit Salt-Wert, eine Prise ausgeführt werden
 
 Nach der eine detailliertere Analyse der die Anforderungen der Anwendung konnte das ausgewählte Produkt unterscheiden. Allerdings als Ausgangspunkt, es ist ratsam, steht eine erste Anleitung aus, in dem Sie Ihre Evaluierung von starten können, und Tests basierend auf bestimmten Priorität.
 
-In der nächsten Abbildung können Sie einen umfassenderen beim ausführliche Entscheidungstabelle analysieren.
+In der nächsten Abbildung sehen Sie eine Aufschlüsselung der verschiedenen Arten von apps und die ideale Azure Hostingszenarien.
 
 ![](./media/image8.5.png)
-
-Beachten Sie, dass die zugrunde liegende Betriebssystem (im Vergleich zu Windows. Linux) kann auch ein Entscheidungsfaktor sein, da einige orchestratoren ausgereifte auf Linux-Container und andere auf Windows-Container sind. Beispielsweise sind die Linux-Container in Kubernetes (AKS in Azure) sehr ausgereiften aber ausgereifter als unter Service Fabric. Sind auf der anderen Seite Windows-Container auf, umso reifer in Service Fabric (veröffentlicht im Mai 2017) und ausgereifter als unter AKS.
-
-Jedoch diese Unterschiede im Betriebssystem Maturity in der Zukunft eingeblendet werden und mehrere Plattformen vergleichbar OS Reife und die Entscheidung wird mehr über Einstellungen, die basierend auf bestimmten Features, die Ihre Anwendung möglicherweise oder basierend auf jeder Plattform Ökosystem anordnen Gründe.
 
 > [!div class="step-by-step"]
 > [Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

@@ -2,12 +2,12 @@
 title: Lift & shift von vorhandenen .NET apps zu Azure IaaS (bereit für Cloudinfrastruktur)
 description: Modernisieren Sie vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643705"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758864"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift & shift von vorhandenen .NET apps zu Azure IaaS (bereit für Cloudinfrastruktur)
 
@@ -39,7 +39,7 @@ In den nächsten Abschnitten erläutern Cloudoptimierte Anwendungen, die haupts�
 
 Wenn das Ziel ist es einfach vorhandene Anwendungen in die Cloud verschieben, ermitteln Sie zuerst vorhandene Anwendungen, die erfordern keine wesentliche Änderungen in Azure App Service ausgeführt werden. Diese apps sollten die ersten Kandidaten für die Cloud optimiert. 
 
-Anschließend kann nicht für die apps, die immer noch auf Windows-Container und PaaS verschieben, z. B. App Service oder orchestratoren wie Azure Service Fabric, migrieren diese einfachen einfachen virtuellen Computern (IaaS). 
+Anschließend kann nicht für die apps, die immer noch auf Windows-Container und PaaS verschieben, z. B. Migrieren App Service oder orchestratoren wie Azure Kubernetes Service diese einfache einfachen virtuellen Computern (IaaS). 
 
 Allerdings sollten Sie bedenken, dass ordnungsgemäß konfigurieren, Sichern und Verwalten von VMs wesentlich mehr Zeit und IT-Kenntnisse, die im Vergleich zur Verwendung von PaaS-Dienste in Azure erforderlich sind. Wenn Sie Azure Virtual Machines in Betracht ziehen, stellen Sie sicher, dass Sie zu den Ständigen Wartungsaufwand zu patchen, aktualisieren und verwalten Ihre Umgebung mit virtuellen Computern berücksichtigen. Azure Virtual Machines ist IaaS.
 

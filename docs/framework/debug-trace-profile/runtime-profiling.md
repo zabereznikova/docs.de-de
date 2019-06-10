@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f97892ecf7d891113cc7524dd8c1423e144583f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b0c56018c61e5566043fb2b9ba8bbee042093f12
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758150"
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
@@ -54,7 +54,7 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
  Wenn Sie für eine Assembly ein Profil erstellen möchten, die sich in einer Zone oder auf einer Remotefreigabe befindet, stellen Sie sicher, dass die Remoteassembly auf dem Computer über volle Vertrauenswürdigkeit verfügt, auf dem die Leistungsindikatoren ausgeführt werden. Ist die Vertrauenswürdigkeit der Assembly zu gering bemessen, funktionieren die Leistungsindikatoren nicht. Informationen zum Gewähren von Vertrauenswürdigkeit für verschiedene Zonen finden Sie unter [Caspol.exe (Code Access Security Policy-Tool)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  Auf Systemen, die auf dem .NET Framework 4 installiert ist, zeigt der Systemmonitor möglicherweise keine Daten für Leistungsindikatoren in einigen Kategorien, z. B. **Data .NET CLR** und **.NET CLR-Netzwerk**, für die Anwendungen, die entwickelt wurden, mit der [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
+>  Auf Systemen, die auf dem .NET Framework 4 installiert ist, zeigt der Systemmonitor möglicherweise keine Daten für Leistungsindikatoren in einigen Kategorien, z. B. **Data .NET CLR** und **.NET CLR-Netzwerk**, für die Anwendungen, die mithilfe von .NET Framework 1.1 entwickelt wurden. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programmgesteuertes Lesen und Erstellen von Leistungsindikatoren  
  .NET Framework bietet Klassen, die Sie verwenden können, um programmgesteuert auf dieselben Leistungsdaten zugreifen, die in der Leistungskonsole verfügbar ist. Mithilfe dieser Klassen können Sie auch benutzerdefinierte Leistungsindikatoren erstellen. Die folgende Tabelle beschreibt einige der systemmonitorklassen, die in .NET Framework bereitgestellt werden.  
