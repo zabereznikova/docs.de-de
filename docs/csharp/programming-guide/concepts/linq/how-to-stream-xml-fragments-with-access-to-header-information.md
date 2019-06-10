@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ecf20134c0d5897418c7667908f80511a962871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655568"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484844"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)
 Es kann vorkommen, dass Sie willkürlich große XML-Dateien lesen und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  
@@ -166,6 +166,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
-
-- [Advanced LINQ to XML Programming (C#) (Erweiterte LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -2,12 +2,12 @@
 title: Refactoring mithilfe einer reinen Funktion (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: be0b0d0778fea459701153b1c629f9ce797db1aa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608911"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483998"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
 Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Extension Method (Refactoring mit einer Erweiterungsmethode (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) so um, dass es eine reine Funktion verwendet. In diesem Beispiel wird der Code, der den Text eines Absatzes ermitteln soll, in die reine statische Methode `ParagraphText` verschoben.  
@@ -181,6 +181,6 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [Refactoring mit einer Erweiterungsmethode (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

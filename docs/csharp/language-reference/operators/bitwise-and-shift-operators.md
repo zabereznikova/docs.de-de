@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 65f7e2db176b408c9768ce73e297008c4b4c83d8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880615"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758369"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren (C#-Referenz)
 
@@ -54,7 +54,7 @@ Bitweise und Schiebeoperationen verursachen niemals Überläufe und führen sowo
 
 Mit dem Operator `~` wird ein bitweises Komplement seines Operanden erzeugt, indem jedes Bit umgekehrt wird:
 
-[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
+[!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
 Sie können das Symbol `~` auch verwenden, um Finalizers zu deklarieren. Weitere Informationen finden Sie unter [Finalizer](../../programming-guide/classes-and-structs/destructors.md).
 
@@ -64,11 +64,11 @@ Mit dem Operator `<<` wird der erste Operand um die Anzahl von Bits nach links v
 
 Bei der Operation zum Verschieben nach links werden die hohen Bits, die außerhalb des Bereichs des Ergebnistyps liegen, verworfen, und die niedrigen leeren Bitpositionen werden auf null festgelegt. Dies ist im folgenden Beispiel dargestellt:
 
-[!code-csharp-interactive[left shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
+[!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
 Da die Verschiebeoperatoren nur für die Typen `int`, `uint`, `long` und `ulong` definiert werden, enthält das Ergebnis einer Operation immer mindestens 32 Bit. Wenn der erste Operand einen abweichenden integralen Typ aufweist (`sbyte`, `byte`, `short`, `ushort` oder `char`), wird sein Wert in den Typ `int` konvertiert. Dies ist im folgenden Beispiel dargestellt:
 
-[!code-csharp-interactive[left shift with promotion](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
+[!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
 Informationen dazu, wie der zweite Operand des Operators `<<` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
 
@@ -78,17 +78,17 @@ Mit dem Operator `>>` wird der erste Operand um die Anzahl von Bits nach rechts 
 
 Bei der Operation zum Verschieben nach rechts werden die niedrigen Bits verworfen. Dies ist im folgenden Beispiel dargestellt:
 
-[!code-csharp-interactive[right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
+[!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
 Die höheren leeren Bitpositionen werden basierend auf dem Typ des ersten Operanden wie folgt festgelegt:
 
 - Wenn der erste Operand vom Typ [int](../keywords/int.md) oder [long](../keywords/long.md) ist, führt der Operator zur Rechtsverschiebung eine *arithmetische* Verschiebung durch: Der Wert des Bits mit dem höchsten Stellenwert (MSB, „most significant bit“) des ersten Operanden wird auf die hohen leeren Bitpositionen übertragen. Die hohen leeren Bitpositionen werden daher auf 0 festgelegt, wenn der erste Operand nicht negativ ist, bzw. auf 1, wenn der erste Operand negativ ist.
 
-  [!code-csharp-interactive[arithmetic right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
+  [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
 - Wenn der erste Operand vom Typ [uint](../keywords/uint.md) oder [ulong](../keywords/ulong.md) ist, führt der Operator zur Rechtsverschiebung eine *logische* Verschiebung durch: Die hohen leeren Bitpositionen werden immer auf 0 (null) festgelegt.
 
-  [!code-csharp-interactive[logical right shift](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
+  [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 Informationen dazu, wie der zweite Operand des Operators `>>` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
 
@@ -96,7 +96,7 @@ Informationen dazu, wie der zweite Operand des Operators `>>` die Anzahl für di
 
 Mit dem Operator `&` wird „bitweises logisches UND“ für die Operanden berechnet:
 
-[!code-csharp-interactive[bitwise AND](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
+[!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
 Für die Operanden vom Typ `bool` berechnet der Operator `&` [logisches UND](boolean-logical-operators.md#logical-and-operator-) für die Operanden. Der unäre `&`-Operator ist der [address-of-Operator](pointer-related-operators.md#address-of-operator-).
 
@@ -104,7 +104,7 @@ Für die Operanden vom Typ `bool` berechnet der Operator `&` [logisches UND](boo
 
 Mit dem Operator `^` wird „bitweises logisches exklusives ODER“, auch als „bitweises logisches XOR“ bezeichnet, seiner Operanden berechnet:
 
-[!code-csharp-interactive[bitwise XOR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
+[!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
 Für die Operanden vom Typ `bool` berechnet der Operator `^` [logisches exklusives ODER](boolean-logical-operators.md#logical-exclusive-or-operator-) für die Operanden.
 
@@ -112,7 +112,7 @@ Für die Operanden vom Typ `bool` berechnet der Operator `^` [logisches exklusiv
 
 Mit dem Operator `|` wird „bitweises logisches ODER“ der Operanden berechnet:
 
-[!code-csharp-interactive[bitwise OR](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
+[!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
 Für die Operanden vom Typ `bool` berechnet der Operator `|` [logisches ODER](boolean-logical-operators.md#logical-or-operator-) für die Operanden.
 
@@ -134,11 +134,11 @@ außer dass `x` nur einmal überprüft wird.
 
 Im folgenden Beispiel wird die Verwendung von Verbundzuweisungen mit bitweisen und Schiebeoperatoren veranschaulicht:
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
 Aufgrund von [numerischen Höherstufungen](~/_csharplang/spec/expressions.md#numeric-promotions) kann das Ergebnis der Operation `op` ggf. nicht implizit in den Typ `T` von `x` konvertiert werden. In diesem Fall gilt Folgendes: Wenn `op` ein vordefinierter Operator ist und das Ergebnis der Operation explizit in den Typ `T` von `x` konvertiert werden kann, entspricht ein Verbundzuweisungsausdruck der Form `x op= y` dem Ausdruck `x = (T)(x op y)`. Der einzige Unterschied ist, dass `x` nur einmal ausgewertet wird. Das folgende Beispiel veranschaulicht dieses Verhalten:
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>Operatorrangfolge
 
@@ -152,7 +152,7 @@ In der folgenden Liste sind die bitweisen und Schiebeoperatoren absteigend nach 
 
 Verwenden Sie Klammern `()`, wenn Sie die Reihenfolge der Auswertung ändern möchten, die durch Operatorrangfolge festgelegt wird:
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
 Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden Sie unter [C#-Operatoren](index.md).
 
@@ -168,7 +168,7 @@ Für die Ausdrücke `x << count` und `x >> count` hängt die tatsächliche Versc
 
 Das folgende Beispiel veranschaulicht dieses Verhalten:
 
-[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+[!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 ## <a name="enumeration-logical-operators"></a>Logische Enumerationsoperatoren
 

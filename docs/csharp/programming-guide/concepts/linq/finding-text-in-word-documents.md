@@ -2,12 +2,12 @@
 title: Suchen von Text in Word-Dokumenten (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f81795c00c29da34bb5f229afb557eb89af6509
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596633"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487494"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Suchen von Text in Word-Dokumenten (C#)
 In diesem Thema werden die vorherigen Abfragen so erweitert, dass sie etwas Sinnvolles tun, nämlich alle Stellen im Dokument zu finden, an denen eine bestimmte Zeichenfolge vorkommt.  
@@ -325,10 +325,10 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Nächste Schritte  
  Der nächste Abschnitt enthält ausführlichere Informationen zu WordprocessingML-Dokumenten:  
   
-- [Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open-XML-WordprocessingML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open-XML-WordprocessingML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [Refactoring mit einer reinen Funktion (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [Deferred Execution and Lazy Evaluation in LINQ to XML (C#) (Verzögerte Ausführung und Auswertung in LINQ to XML (C#))](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

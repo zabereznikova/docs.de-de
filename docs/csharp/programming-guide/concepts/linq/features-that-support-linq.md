@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186025"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722536"
 ---
 # <a name="c-features-that-support-linq"></a>C#-Funktionen mit LINQ-Unterstützung
 
@@ -49,7 +49,7 @@ Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](..
 Objekt- und Auflistungsinitialisierer ermöglichen das Initialisieren von Objekten ohne expliziten Aufruf eines Konstruktors für das Objekt. Initialisierer werden in der Regel in Abfrageausdrücken verwendet, wenn sie die Quelldaten in einen neuen Datentyp projizieren. In einer Klasse namens `Customer` mit öffentlichen `Name`- und `Phone`-Eigenschaften können Objektinitialisierer wie im folgenden Code verwendet werden:
 
 ```csharp
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
 Wenn Sie mit der `Customer`-Klasse fortfahren, gehen Sie davon aus, dass eine Datenquelle namens `IncomingOrders` vorhanden ist, und dass für jede Bestellung mit einem großen `OrderSize`-Wert ein neues `Customer`-Element basierend auf dieser Bestellung erstellt werden soll. Eine LINQ-Abfrage kann auf dieser Datenquelle ausgeführt werden und verwendet die Objektinitialisierung, um eine Auflistung zu füllen:

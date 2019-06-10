@@ -2,12 +2,12 @@
 title: Übersicht der LINQ to XML-Klassen (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: f93e3a791bfd56095df12ebf070f72540a8b21dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e7e25a0faa659dc362cf1184951c9e5fa49ca18
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597057"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484452"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Übersicht der LINQ to XML-Klassen (C#)
 In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen im <xref:System.Xml.Linq>-Namespace sowie jeweils eine kurze Beschreibung.  
@@ -88,4 +88,4 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

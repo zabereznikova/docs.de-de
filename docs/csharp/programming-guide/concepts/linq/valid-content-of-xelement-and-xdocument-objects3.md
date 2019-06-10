@@ -2,12 +2,12 @@
 title: Gültiger Inhalt von XElement- und XDocument-Objekten
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: cf8e1f1aab576fa7cccab83fb2194ae2a4e33288
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595259"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483273"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
 In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.  
@@ -90,4 +90,4 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

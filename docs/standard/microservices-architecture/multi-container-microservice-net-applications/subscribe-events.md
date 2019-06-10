@@ -2,12 +2,12 @@
 title: Abonnieren von Ereignissen
 description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639705"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722667"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -322,16 +322,16 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Forked eShopOnContainers using NServiceBus (Particular Software) (Forken von eShopOnContainers mit NServiceBus (Bestimmte Software))** \
+- **Forked eShopOnContainers using NServiceBus (Particular Software) (Forken von eShopOnContainers mit NServiceBus (Bestimmte Software))**  \
     <https://go.particular.net/eShopOnContainers>
 
-- **Event Driven Messaging (Ereignisgesteuertes Messaging)** \
+- **Event Driven Messaging (Ereignisgesteuertes Messaging)**  \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Publish-Subscribe channel (Kanal zum Veröffentlichen/Abonnieren)** \
+- **Publish-Subscribe channel (Kanal zum Veröffentlichen/Abonnieren)**  \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Kommunizieren zwischen gebundenen Kontexten** \
@@ -340,25 +340,25 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 - **Letztliche Konsistenz** \
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)** \
+- **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)**  \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Entwickeln von Transaktionsmicroservices mit Aggregaten, Event Sourcing und CQRS: Teil 2)** \
+- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Entwickeln von Transaktionsmicroservices mit Aggregaten, Event Sourcing und CQRS: Teil 2)**  \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Event Sourcing pattern (Muster: Event Sourcing)** \
+- **Chris Richardson. Event Sourcing pattern (Muster: Event Sourcing)**  \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **Introducing Event Sourcing (Einführung in Event Sourcing)** \
+- **Introducing Event Sourcing (Einführung in Event Sourcing)**  \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Event Store-Datenbank**. Offizielle Website. \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen. Event-Driven Data Management for Microservices (Ereignisgesteuerte Datenverwaltung für Microservices)** \
+- **Patrick Nommensen. Event-Driven Data Management for Microservices (Ereignisgesteuerte Datenverwaltung für Microservices)**  \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
-- **The CAP Theorem (Das CAP-Theorem)** \
+- **The CAP Theorem (Das CAP-Theorem)**  \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **What is CAP Theorem? (Was ist das CAP-Theorem?)** \
@@ -367,23 +367,17 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 - **Einführung in die Datenkonsistenz** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)** \
+- **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)**  \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)** \
+- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)**  \
+- **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)**   \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Zurück](rabbitmq-event-bus-development-test-environment.md)

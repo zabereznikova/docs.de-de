@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063197"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486986"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -340,9 +340,9 @@ Abgesehen von LINQ haben Sie ein wenig über die Verfahren gelernt, die Zauberer
 
 Weitere Informationen zu LINQ finden Sie unter:
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-  - [Einführung in LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-  - [Erste Schritte mit LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-    - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-    - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-    - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-    - [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Einführung in LINQ](../programming-guide/concepts/linq/index.md)
+  - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+  - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+  - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+  - [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)
+    

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d94a6c517a76e8ed91f20a17e798ad3806a34a70
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524649"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486815"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)
 Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  
@@ -94,7 +94,3 @@ Console.WriteLine(newTree);
   </aw:PurchaseOrder>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>Siehe auch
-
-- [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
