@@ -1,15 +1,15 @@
 ---
-title: F#Richtlinien für die codeformatierung
+title: Richtlinien für das Formatieren von F#-Code
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063606"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816178"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
+# <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
 Dieser Artikel bietet Richtlinien für Ihren Code zu formatieren, damit Ihre F# Code ist:
 
@@ -155,7 +155,7 @@ Inlinekommentare sollte der erste Buchstabe groß geschrieben.
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a>Namenskonventionen 
+## <a name="naming-conventions"></a>Namenskonventionen
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Verwenden Sie CamelCase für die Klasse, ausdrucksgebundenen als auch Muster – gebunden Werte und Funktionen
 
@@ -836,14 +836,14 @@ Wenn für einen Parameter angewendet wird, sie muss in der gleichen Zeile und ge
 
 ## <a name="formatting-literals"></a>Formatieren von literalen
 
-[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte das Attribut in einer eigenen Zeile platzieren, und benennen CamelCase:
+[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte das Attribut in einer eigenen Zeile platzieren, und Benennen von PascalCase:
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 Verhindert, dass das Attribut auf derselben Zeile wie der Wert platziert.

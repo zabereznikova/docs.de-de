@@ -1,13 +1,13 @@
 ---
 title: Literale
 description: Erfahren Sie, bis die Literaltypen in der Programmiersprache F#.
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490978"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816231"
 ---
 # <a name="literals"></a>Literale
 
@@ -44,13 +44,16 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |byte[]|ASCII-Zeichenfolge|B|`"text"B`|
 |String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Hinweise
+## <a name="named-literals"></a>Benannte Literale
 
-Unicode-Zeichenfolgen können explizite Codierungen, die Sie angeben können, indem Sie mithilfe von enthalten `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, die Sie angeben können, indem Sie mithilfe von `\U` gefolgt von eine hexadezimale 32-Bit-Code, der eine Unicode-darstellt das Ersatzzeichenpaar.
+Werte, die Konstanten sein sollen können gekennzeichnet werden, mit der [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) Attribut. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
 
-Ab F# 3.1, können Sie die `+` melden Sie beim Kombinieren von Zeichenfolgenliteralen. Sie können auch das bitweise verwenden oder (`|||`) Operator, um Enumerationsflags zu kombinieren. In F# 3.1 ist beispielsweise der folgende Code zulässig:
+In Musterabgleichsausdrücken werden Bezeichner, die mit Kleinbuchstaben beginnen, immer als zu bindende Variablen statt als Literale behandelt. Verwenden Sie daher im Allgemeinen Großbuchstaben am Wortanfang, wenn Sie Literale definieren.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,15 +67,13 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Die Verwendung anderer bitweiser Operatoren ist nicht zulässig.
+## <a name="remarks"></a>Hinweise
 
-## <a name="named-literals"></a>Benannte Literale
+Unicode-Zeichenfolgen können explizite Codierungen, die Sie angeben können, indem Sie mithilfe von enthalten `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, die Sie angeben können, indem Sie mithilfe von `\U` gefolgt von eine hexadezimale 32-Bit-Code, der eine Unicode-darstellt das Ersatzzeichenpaar.
 
-Werte, die Konstanten sein sollen können gekennzeichnet werden, mit der [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) Attribut. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
+Die Verwendung anderer bitweiser Operatoren außer `|||` ist nicht zulässig.
 
-In Musterabgleichsausdrücken werden Bezeichner, die mit Kleinbuchstaben beginnen, immer als zu bindende Variablen statt als Literale behandelt. Verwenden Sie daher im Allgemeinen Großbuchstaben am Wortanfang, wenn Sie Literale definieren.
-
-## <a name="integers-in-other-bases"></a>Ganze Zahlen In andere Basiszahlen
+## <a name="integers-in-other-bases"></a>Ganze Zahlen in andere Basiszahlen
 
 32-Bit-Ganzzahlen mit Vorzeichen können auch angegeben werden, mithilfe von hexadezimalen, Oktal- oder binäre eine `0x`, `0o` oder `0b` bzw. voranstellen.
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Unterstriche in numerischen Literalen
 
-Ab F# 4.1, können Sie Ziffern mit einem Unterstrich trennen (`_`).
+Sie können die Ziffern mit einem Unterstrich trennen (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF

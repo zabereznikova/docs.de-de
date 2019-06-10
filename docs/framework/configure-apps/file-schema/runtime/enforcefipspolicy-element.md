@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c13dd2f00e08539d2ba502058c74aa4a1525e3ff
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704962"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816121"
 ---
 # <a name="enforcefipspolicy-element"></a>\<EnforceFIPSPolicy >-Element
 Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass kryptografische Algorithmen den Federal Information Processing Standards (FIPS) entsprechen müssen.  
@@ -58,7 +58,7 @@ Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass krypto
 ## <a name="remarks"></a>Hinweise  
  Ab .NET Framework 2.0, wird die Erstellung von Klassen, die Kryptografiealgorithmen implementieren von der Konfiguration des Computers gesteuert. Wenn der Computer so konfiguriert ist, dass die Algorithmen mit FIPS kompatibel sein müssen und eine Klasse implementiert einen Algorithmus, der nicht mit FIPS kompatibel ist, löst jeder Versuch, eine Instanz dieser Klasse erstellt eine Ausnahme aus. Auslösen von Konstruktoren eine <xref:System.InvalidOperationException> Ausnahme und `Create` Methoden lösen eine <xref:System.Reflection.TargetInvocationException> Ausnahme mit einer internen <xref:System.InvalidOperationException> Ausnahme.  
   
- Wenn Ihre Anwendung ausgeführt, auf Computern wird, deren Konfigurationen erfordern, dass die Kompatibilität mit FIPS, und die Anwendung verwendet einen Algorithmus, der nicht mit FIPS kompatibel ist, können Sie dieses Element in der Konfigurationsdatei verwenden, um zu verhindern, dass die common Language Runtime (CLR) aus FIPS-Kompatibilität zu erzwingen. Dieses Element wurde in eingeführt, die [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].  
+ Wenn Ihre Anwendung ausgeführt, auf Computern wird, deren Konfigurationen erfordern, dass die Kompatibilität mit FIPS, und die Anwendung verwendet einen Algorithmus, der nicht mit FIPS kompatibel ist, können Sie dieses Element in der Konfigurationsdatei verwenden, um zu verhindern, dass die common Language Runtime (CLR) aus FIPS-Kompatibilität zu erzwingen. Dieses Element wurde in .NET Framework 2.0 Service Pack 1 eingeführt.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie verhindern, dass die CLR FIPS-Kompatibilität zu erzwingen.  
