@@ -1,13 +1,13 @@
 ---
 title: Varianz in generischen Schnittstellen (C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480780"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815960"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianz in generischen Schnittstellen (C#)
 
@@ -31,9 +31,9 @@ Ab .NET Framework 4 sind die folgenden Schnittstellen Varianten:
 
 Ab .NET Framework 4.5 sind die folgenden Schnittstellen Varianten:
 
-- <xref:System.Collections.Generic.IReadOnlyList%601> (T ist kontravariant)
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T ist kovariant)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T ist kontravariant)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T ist kovariant)
 
 Kovarianz ermöglicht einer Methode, stärker abgeleitete Rückgabetypen zu verwenden, als durch die generischen Typparameter der Schnittstelle definiert sind. Betrachten Sie diese generischen Schnittstellen zur Veranschaulichung der Kovarianzfunktionen: `IEnumerable<Object>` und `IEnumerable<String>`. Die Schnittstelle `IEnumerable<Object>` wird nicht von der Schnittstelle `IEnumerable<String>` geerbt. Allerdings erbt der Typ `String` den Typ `Object`. In einigen Fällen können Sie vielleicht auch die Objekte dieser Schnittstellen einander zuweisen. Dies wird im folgenden Codebeispiel gezeigt.
 
