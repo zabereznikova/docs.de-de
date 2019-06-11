@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 5490176d91a6ed900471e33af6adce1fa3e62d8f
-  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
+  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/04/2019
-  ms.locfileid: "58921380"
+  ms.lasthandoff: 05/24/2019
+  ms.locfileid: "66195953"
 items:
 - durationInMinutes: 2
   content: >
@@ -34,16 +34,16 @@ items:
     ```
 
 
-    Wenn Sie den Code ausführen, zeigt die **Ausgabe** eine Zeichenfolge an, die Ihren Namen in der Begrüßung enthält. Das Zeichenfolgenargument des Methodenaufrufs <xref:System.Console.WriteLine%2A> ist eine *interpolierte Zeichenfolge*. Dabei handelt es sich um eine Vorlage, durch die Sie eine einzelne Zeichenfolge (als *Ergebniszeichenfolge* bezeichnet) aus einer Zeichenfolge erstellen können, die eingebetteten Code enthält. Interpolierte Zeichenfolgen sind besonders nützlich für das Einfügen von Werten in eine Zeichenfolge oder zum Verketten (bzw. Verknüpfen) von mehreren Zeichenfolgen.
+    Wenn Sie den Code ausführen, zeigt die **Ausgabe** eine Zeichenfolge an, die Ihren Namen in der Begrüßung enthält. Das Zeichenfolgenargument des Methodenaufrufs <xref:System.Console.WriteLine%2A> ist ein *interpolierter Zeichenfolgenausdruck*. Dabei handelt es sich um eine Vorlage, durch die Sie eine einzelne Zeichenfolge (als *Ergebniszeichenfolge* bezeichnet) aus einer Zeichenfolge erstellen können, die eingebetteten Code enthält. Interpolierte Zeichenfolgenausdrücke sind besonders nützlich zum Einfügen von Werten in eine Zeichenfolge oder zum Verketten (bzw. Verknüpfen) von mehreren Zeichenfolgen.
 
 
-    Das obige Beispiel enthält die zwei Elemente, über die jede interpolierte Zeichenfolge verfügen muss:
+    Das oben stehende Beispiel enthält die beiden Elemente, die in jedem interpolierten Zeichenfolgenausdruck enthalten sein müssen:
 
 
     - Ein Zeichenfolgenliteral, das ein `$`-Zeichen vor dem öffnenden Anführungszeichen enthält. Zwischen dem `$`-Symbol und dem Anführungszeichen darf kein Leerraum vorhanden sein. (Wenn Sie sehen möchten, was geschieht, wenn Sie einen Leerzeichen einfügen, fügen Sie nach dem `$`-Zeichen im interaktiven Fenster eins ein, und führen Sie dann den Code aus. Dann gibt der C#-Compiler den Fehler „Unerwartetes Zeichen ‚$‘“ zurück.)
 
 
-    - Mindestens ein *interpolierter Ausdruck*. Ein interpolierter Ausdruck wird durch eine öffnende und eine schließende Klammer (`{` und `}`) angegeben. Sie können jeden C#-Ausdruck in die Klammern einfügen, der einen Wert (einschließlich `null`) zurückgibt.
+    - Mindestens ein *Interpolationsausdruck*. Ein Interpolationsausdruck wird durch eine öffnende und eine schließende geschweifte Klammer (`{` und `}`) angegeben. Sie können jeden C#-Ausdruck in die Klammern einfügen, der einen Wert (einschließlich `null`) zurückgibt.
 
 
     Im Folgenden finden Sie weitere Beispiele für die Zeichenfolgeninterpolation mit einigen anderen Datentypen.
@@ -54,58 +54,8 @@ items:
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Einschließen verschiedener Datentypen
   durationInMinutes: 5
-  content: >
-    Im vorherigen Schritt haben Sie die Zeichenfolgeninterpolation verwendet, um eine Zeichenfolge in eine andere einzufügen. Das Ergebnis eines interpolierten Ausdrucks kann jedoch jeden Datentyp aufweisen. Im Folgenden werden mehrere Datentypen in eine interpolierte Zeichenfolge einbezogen.
-
-
-    Im folgenden Beispiel wird zunächst ein [Klassen](../../programming-guide/classes-and-structs/classes.md)-Datentyp `Vegetable` definiert, der über die [Eigenschaft](../../properties.md) `Name` und die [Methode](../../methods.md) `ToString` verfügt. Diese Methode [überschreibt](../../language-reference/keywords/override.md) das Verhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode. Der [`public`-Zugriffsmodifizierer](../../language-reference/keywords/public.md) stellt diese Methode jedem Clientcode zur Verfügung, um die Zeichenfolgendarstellung einer `Vegetable`-Instanz abzurufen. Im Beispiel gibt die Methode `Vegetable.ToString` den Wert der Eigenschaft `Name` zurück, die beim [Konstruktor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable` initialisiert wird: `Vegetable(string name) => Name = name;`. Dann erstellen wir eine Instanz der Klasse `Vegetable` namens `item`, indem wir das [`new`-Schlüsselwort](../../language-reference/keywords/new-operator.md) verwenden und einen Namen für den Konstruktor `Vegetable` angeben. Letztendlich wird diese Instanz in einer interpolierten Zeichenfolge enthalten, die auch einen <xref:System.DateTime>-Wert, <xref:System.Decimal>-Wert und einen [Enumerationswert](../../programming-guide/enumeration-types.md) `Unit` enthält. Führen Sie den folgenden Code im interaktiven Fenster aus:
-
-
-    ```csharp
-
-    public class Vegetable
-
-    {
-       public Vegetable(string name) => Name = name;
-
-       public string Name { get; }
-
-       public override string ToString() => Name;
-    }
-
-
-    public enum Unit { item, kilogram, gram, dozen };
-
-
-    var item = new Vegetable("eggplant");
-
-    var date = DateTime.Now;
-
-    var price = 1.99m;
-
-    var unit = Unit.item;
-
-    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
-
-    ```
-
-
-    Beachten Sie, dass der interpolierte Ausdruck `item` in der interpolierten Zeichenfolge zu dem Text „eggplant“ in der Ergebniszeichenfolge aufgelöst wird. Dies liegt daran, dass der Ausdruckergebnistyp keine Zeichenfolge ist. Daher wird das Ergebnis auf folgende Weise zu einer Zeichenfolge aufgelöst:
-
-
-    - Wenn der interpolierte Ausdruck `null` ergibt, wird eine leere Zeichenfolge („“ oder <xref:System.String.Empty?displayProperty=nameWithType>) verwendet.
-
-
-    - Wenn der interpolierte Ausdruck nicht `null` ergibt, wird in der Regel die Methode `ToString` des Ergebnistyps aufgerufen. Sie können dies testen, indem Sie die Implementierung der Methode `Vegetable.ToString` aktualisieren. Sie müssen die Methode `ToString` nicht einmal implementieren, da jeder Typ auf die eine oder andere Art über eine Implementierung dieser Methode verfügt. Sie können dies testen, indem Sie die Definition der Methode `Vegetable.ToString` im Beispiel auskommentieren (fügen Sie hierzu davor ein Kommentarsymbol `//` ein). In der Ausgabe wird die Zeichenfolge „eggplant“ durch den vollqualifizierten Typnamen (der neben dem Typnamen von der C#-REPL definierte Namespace) ersetzt. Dabei handelt es sich um das Standardverhalten der <xref:System.Object.ToString?displayProperty=nameWithType>-Methode. Das Standardverhalten der Methode `ToString` für einen Enumerationswert besteht darin, die Zeichenfolgendarstellung eines Werts zurückzugeben.
-
-
-    Bei der Ausgabe dieses Beispielcodes ist das Datum zu genau angegeben (der Preis von Auberginen ändert sich nicht sekündlich), und der Wert der Variablen „price“ gibt keine Währungsinformation an. Im nächsten Schritt erfahren Sie, wie Sie diese Probleme beheben, indem Sie das Format der Zeichenfolgendarstellung der Ergebnisse des Ausdrucks steuern.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Steuern der Formatierung von interpolierten Ausdrücken
+  content: "Im vorherigen Schritt haben Sie die Zeichenfolgeninterpolation verwendet, um eine Zeichenfolge in eine andere einzufügen. Jeder Interpolationsausdruck, der Teil eines interpolierten Zeichenfolgenausdrucks ist, kann jedoch jeden beliebigen Datentyp aufweisen. Jetzt fügen wir Werte für Ausdrücke mit verschiedenen Datentypen in eine interpolierte Zeichenfolge ein.\n\nIm folgenden Beispiel definieren wir zuerst ein [Tupel](../../tuples.md), das die Member `Name`, `Price` und `perPackage` enthält. Führen Sie den folgenden Code im interaktiven Fenster aus:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nBeachten Sie, dass der Interpolationsausdruck `item.Price` der interpolierten Zeichenfolge in der Ergebniszeichenfolge zu dem Text „1.99“ aufgelöst wird. Dies liegt daran, dass der Ausdruckergebnistyp keine Zeichenfolge ist. Daher wird das Ergebnis auf folgende Weise zu einer Zeichenfolge aufgelöst:\n\n- Wenn der Interpolationsausdruck zu `null` ausgewertet wird, wird eine leere Zeichenfolge („“ oder <xref:System.String.Empty?displayProperty=nameWithType>) verwendet.\n\n- Wenn der Interpolationsausdruck nicht zu `null` ausgewertet wird, wird in der Regel die Methode `ToString` des Ergebnisausdrucks aufgerufen. \n\nBei der Ausgabe dieses Beispielcodes ist das Datum zu genau angegeben (der Preis von Auberginen ändert sich nicht sekündlich), und der Wert der Variablen „price“ gibt keine Währungsinformation an. Im nächsten Schritt erfahren Sie, wie Sie diese Probleme beheben, indem Sie das Format der Zeichenfolgendarstellung der Ergebnisse des Ausdrucks steuern.\n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"
+- title: Steuern der Formatierung von Interpolationsausdrücken
   durationInMinutes: 5
   content: >
     Im vorherigen Schritt wurden zwei fehlerhaft formatierte Zeichenfolgen in die Ergebniszeichenfolge eingefügt. Bei einer davon handelte es sich um einen Datums- und Uhrzeitwert, bei dem nur das Datum relevant war. Bei der zweiten handelte es sich um einen Preis, bei dem keine Währungseinheit angegeben wurde. Beide Probleme sind einfach zu beheben. Mithilfe der Zeichenfolgeninterpolation können Sie *Formatzeichenfolgen* angeben, die die Formatierung bestimmter Typen steuern. Ändern Sie den Aufruf von `Console.WriteLine` im vorherigen Beispiel, damit die Formatzeichenfolgen für die Ausdrücke „date“ und „price,“ wie in der folgenden Zeile dargestellt, enthalten sind:
@@ -113,12 +63,12 @@ items:
 
     ```csharp
 
-    Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
+    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price} per {item.perPackage} items");
 
     ```
 
 
-    Sie können eine Formatzeichenfolge angeben, indem Sie dem interpolierten Ausdruck einen Doppelpunkt („:“) und die Formatzeichenfolge anfügen. Bei „d“ handelt es sich um eine [Zeichenfolge für das Standardformat für Datum und Uhrzeit](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier), die das kurze Datumsformat darstellt. Bei „C2“ handelt es sich um eine [Zeichenfolge für das numerische Standardformat](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier), die eine Zahl als Währungswert mit zwei Ziffern nach dem Dezimaltrennzeichen darstellt.
+    Sie können eine Formatzeichenfolge angeben, indem Sie dem Interpolationsausdruck einen Doppelpunkt („:“) und die Formatzeichenfolge anfügen. Bei „d“ handelt es sich um eine [Zeichenfolge für das Standardformat für Datum und Uhrzeit](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier), die das kurze Datumsformat darstellt. Bei „C2“ handelt es sich um eine [Zeichenfolge für das numerische Standardformat](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier), die eine Zahl als Währungswert mit zwei Ziffern nach dem Dezimaltrennzeichen darstellt.
 
 
     Einige Typen in den .NET-Bibliotheken unterstützen einen vordefinierten Satz von Formatzeichenfolgen. Darin sind alle numerischen Typen sowie alle Datums- und Uhrzeittypen enthalten. Eine vollständige Liste der Typen, die Formatzeichenfolgen unterstützen, finden Sie im Artikel [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md) unter [Format Strings and .NET Class Library Types (Formatzeichenfolgen und .NET-Klassenbibliothekstypen)](../../../standard/base-types/formatting-types.md#stringRef).
@@ -133,10 +83,10 @@ items:
     > [!NOTE]
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Steuern der Feldbreite und der Ausrichtung von interpolierten Ausdrücken
+- title: Steuern der Feldbreite und der Ausrichtung von Interpolationsausdrücken
   durationInMinutes: 6
   content: >
-    Wenn das Ergebnis eines interpolierten Ausdrucks als Zeichenfolge formatiert wird, wird diese Zeichenfolge normalerweise in eine Ergebniszeichenfolge ohne führende oder nachgestellte Leerzeichen einbezogen. Die Feldbreite und Ausrichtung des Texts steuern zu können, ist insbesondere bei der Arbeit mit Daten hilfreich, um eine besser lesbare Ausgabe zu erzeugen. Wenn Ihnen dies angezeigt werden soll, führen Sie den folgenden Code aus:
+    Wenn das Ergebnis eines interpolierten Zeichenfolgenausdrucks als Zeichenfolge formatiert wird, wird diese Zeichenfolge normalerweise in eine Ergebniszeichenfolge ohne führende oder nachgestellte Leerzeichen einbezogen. Die Feldbreite und Ausrichtung des Texts steuern zu können, ist insbesondere bei der Arbeit mit Daten hilfreich, um eine besser lesbare Ausgabe zu erzeugen. Wenn Ihnen dies angezeigt werden soll, führen Sie den folgenden Code aus:
 
 
     ```csharp
@@ -155,13 +105,13 @@ items:
     ```
 
 
-    Die Elementnamen sind linksbündig ausgerichtet. Die Mengen sind rechtsbündig ausgerichtet. Sie können die Ausrichtung festlegen, indem Sie einem interpolierten Ausdruck ein Komma („,“) anfügen und die *minimale* Feldbreite angeben. Wenn der angegebene Wert eine positive Zahl ist, wird das Feld rechtsbündig ausgerichtet. Wenn er eine negative Zahl ist, wird das Feld linksbündig ausgerichtet.
+    Die Elementnamen sind linksbündig ausgerichtet. Die Mengen sind rechtsbündig ausgerichtet. Sie können die Ausrichtung festlegen, indem Sie einem Interpolationsausdruck ein Komma („,“) anfügen und die *minimale* Feldbreite angeben. Wenn der angegebene Wert eine positive Zahl ist, wird das Feld rechtsbündig ausgerichtet. Wenn er eine negative Zahl ist, wird das Feld linksbündig ausgerichtet.
 
 
     Versuchen Sie die negativen Vorzeichen aus dem Code `{"Item",-25}` und `{item.Key,-25}` zu entfernen, und führen Sie das Beispiel erneut aus. In diesem Fall sind die Elementnamen rechtsbündig ausgerichtet.
 
 
-    Sie können einen Ausrichtungsspezifizierer und eine Formatzeichenfolge für einen einzigen interpolierten Ausdruck kombinieren. Geben Sie dazu zunächst die Ausrichtung gefolgt von einem Doppelpunkt und der Formatzeichenfolge an. Testen Sie den folgenden Code, der drei formatierte Zeichenfolgen mit definierten Feldbreiten darstellt:
+    Sie können einen Ausrichtungsspezifizierer und eine Formatzeichenfolge für einen einzigen Interpolationsausdruck kombinieren. Geben Sie dazu zunächst die Ausrichtung gefolgt von einem Doppelpunkt und der Formatzeichenfolge an. Testen Sie den folgenden Code, der drei formatierte Zeichenfolgen mit definierten Feldbreiten darstellt:
 
 
     ```csharp

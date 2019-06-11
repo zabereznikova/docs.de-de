@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634681"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960329"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  
@@ -78,8 +78,8 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Diese Codierungen ermöglichen Ihnen die Verwendung von Unicode-Zeichen und von Codierungen, die in älteren Anwendungen am häufigsten verwendet werden. Außerdem können Sie eine benutzerdefinierte Codierung erstellen, indem Sie eine von <xref:System.Text.Encoding> erbende Klasse definieren und deren Member überschreiben.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Anmerkungen zur Plattform: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- Standardmäßig stellt [!INCLUDE[net_core](../../../includes/net-core-md.md)] keine anderen Codepagecodierungen als Codepage 28591 und Unicode-Codierungen (z. B. UTF-8 und UTF-16) bereit. Allerdings können Sie Ihrer App die Codepagecodierungen hinzufügen, die in Standard-Windows-Apps verwendet werden, die .NET als Ziel nutzen. Vollständige Informationen finden Sie im Thema <xref:System.Text.CodePagesEncodingProvider> .  
+### <a name="platform-notes-net-core"></a>Hinweise zur Plattform: .NET Core  
+ Standardmäßig stellt .NET Core keine anderen Codepagecodierungen als Codepage 28591 und Unicode-Codierungen (z.B. UTF-8 und UTF-16) bereit. Allerdings können Sie Ihrer App die Codepagecodierungen hinzufügen, die in Standard-Windows-Apps verwendet werden, die .NET als Ziel nutzen. Vollständige Informationen finden Sie im Thema <xref:System.Text.CodePagesEncodingProvider> .  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>Auswählen einer Encoding-Klasse  

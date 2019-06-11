@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612679"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959270"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit dem .NET Core SDK in Visual Studio 2017
 
@@ -28,7 +28,7 @@ Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erfo
 
 Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstellen. Führen Sie folgende Schritte aus:
 
-1. Starten Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Klicken Sie im Dialogfeld *Neues Projekt** auf den Knoten **Visual Basic** und anschließend auf den Knoten **.NET Core**. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)**. Geben Sie im Textfeld **Name** „HelloWorld“ ein. Klicken Sie auf die Schaltfläche **OK**.
+1. Starten Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Klicken Sie im Dialogfeld *Neues Projekt** auf den Knoten **Visual Basic** und anschließend auf den Knoten **.NET Core**. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)** . Geben Sie im Textfeld **Name** „HelloWorld“ ein. Klicken Sie auf die Schaltfläche **OK**.
 
    ![Dialogfeld „Neues Projekt“, in dem die Konsolen-App ausgewählt ist](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
@@ -63,7 +63,7 @@ Erweitern Sie Ihre Anwendung, um die Benutzer aufzufordern, seinen oder ihren Na
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   Dieser Code ersetzt die bestehenden Anweisungen <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> und <xref:System.Console.ReadKey%2A?displayProperty=nameWithType>.
+   Dieser Code ersetzt den Inhalt der `Main`-Methode.
 
    ![Visual Studio-Programmdatei mit aktualisierter Main-Methode](./media/vb-with-visual-studio/visual-basic-code-window.png)
 

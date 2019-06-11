@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583532"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052736"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und Bereitstellen von .NET Framework-Apps beschrieben. Der Abschnitt enthält auch Informationen über Technologiebereiche, wie dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
@@ -48,7 +48,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  Erläutert die Verwendung von Konfigurationsdateien zum Ändern von Einstellungen, ohne die .NET Framework-Apps neu kompilieren zu müssen.  
   
  [Kompilieren von Apps mit .NET Native](../../docs/framework/net-native/index.md)  
- Erläutert, wie Sie die [!INCLUDE[net_native](../../includes/net-native-md.md)]-Vorkompilierungstechnologie verwenden können, um Windows Store-Apps zu erstellen und bereitzustellen. [!INCLUDE[net_native](../../includes/net-native-md.md)]kompiliert Apps, die in verwaltetem Code (C#) geschrieben sind und deren Ziel .NET Framework und dann die Umwandlung zu systemeigenem Code ist.  
+ Erläutert, wie Sie die .NET Native-Vorkompilierungstechnologie verwenden können, um Windows Store-Apps zu erstellen und bereitzustellen. .NET Native kompiliert Apps zu nativem Code, die in verwaltetem Code (C#) für .NET Framework geschrieben wurden.  
   
  [Sicherheit](../../docs/standard/security/index.md)  
  Enthält Informationen über die Klassen und Dienste in .NET Framework, die die sichere Appentwicklung erleichtern.  

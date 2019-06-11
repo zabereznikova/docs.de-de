@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337551"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052398"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
 Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwischen von C#-verwaltetem und nicht verwaltetem Code.  
@@ -28,7 +28,7 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
 >  Die [Common Language Runtime](../../../standard/clr.md) (CLR) verwaltet den Zugriff auf Systemressourcen. Das Aufrufen von nicht verwaltetem Code, der sich außerhalb der CLR befindet, umgeht diesen Sicherheitsmechanismus; deshalb stellt er ein Sicherheitsrisiko dar. Nicht verwalteter Code kann z.B. Ressourcen in nicht verwaltetem Code direkt aufrufen und umgeht damit die Sicherheitsmechanismen der CLR. Weitere Informationen finden Sie unter [Sicherheit in .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>C++ Interop  
- Sie können C++ Interop – auch als It Just Works (IJW) bezeichnet – verwenden, um ein native C++-Klasse zu umschließen, sodass diese von in C# oder in einer anderen .NET Framework-Programmiersprache geschriebenem Code genutzt werden kann. Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann. Im Gegensatz zu anderen .NET-Programmiersprachen verfügt [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] über eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden können. Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen. Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.  
+ Sie können C++ Interop – auch als It Just Works (IJW) bezeichnet – verwenden, um ein native C++-Klasse zu umschließen, sodass diese von in C# oder in einer anderen .NET Framework-Programmiersprache geschriebenem Code genutzt werden kann. Dafür schreiben Sie C++-Code, der eine native DLL- oder COM-Komponente umschließen kann. Im Gegensatz zu anderen .NET Framework-Sprachen bietet Visual C++ eine Interoperabilitätsunterstützung, dank der verwalteter und nicht verwalteter Code in derselben Anwendung und sogar in derselben Datei verwendet werden kann. Anschließend erstellen Sie den C++-Code mithilfe des **/clr**-Compilerschalters, um eine verwaltete Assembly zu erzeugen. Zuletzt fügen Sie der Assembly in Ihrem C#-Projekt einen Verweis hinzu und verwenden das umschlossene Objekt genauso wie eine andere verwaltete Klasse.  
   
 ## <a name="exposing-com-components-to-c"></a>Verfügbarmachen von COM-Komponenten in C\#
  Sie können eine COM-Komponente aus einem C#-Projekt nutzen. Dies sind die Hauptschritte:  

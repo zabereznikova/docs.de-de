@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: af30095c18a333d5ac3089fe3bf201c32739d9cf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846349"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195799"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C#-Compileroptionen)
 
@@ -80,7 +80,8 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Mindestens erforderliche Compilerversion, die Sie benötigen, um alle Sprachfeatures zu unterstützen
 
-[↩](#TCS80)<a name="FCS80">CS80</a>: Microsoft Visual Studio/Build Tools 2019, Version 16, oder .NET Core 3.0 SDK [↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.7  
+[↩](#TCS80)<a name="FCS80">CS80</a>: Microsoft Visual Studio/Build Tools 2019, Version 16, oder .NET Core 3.0 SDK  
+[↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.7  
 [↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.5  
 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.3  
 [↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017  

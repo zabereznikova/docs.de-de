@@ -2,12 +2,12 @@
 title: Adressierbarkeit von Microservices und die Dienstregistrierung
 description: Übersicht über die Rollen von Containerimageregistrierungen in der Microservicearchitektur
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d72ba399f3da730f0e57c44c5ec01c1cc9f5fc05
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639966"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690461"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adressierbarkeit von Microservices und die Dienstregistrierung
 
@@ -15,9 +15,7 @@ Jeder Microservice hat einen eindeutigen Namen (URL), der zum Auflösen des Spei
 
 Das [Muster der Dienstregistrierung](https://microservices.io/patterns/service-registry.html) ist ein Schlüsselteil der Diensterkennung. Die Registrierung ist eine Datenbank, die Netzwerkadressen und Dienstinstanzen enthält. Eine Dienstregistrierung muss hochverfügbar und auf dem neuesten Stand sein. Clients könnten Netzwerkadressen zwischenspeichern, die sie von der Dienstregistrierung erhalten. Allerdings veralten diese Informationen, und Clients können die Dienstinstanzen nicht mehr ermitteln. Folglich besteht eine Dienstregistrierung aus einem Cluster von Servern, die ein Replikationsprotokoll verwenden, um die Konsistenz zu gewährleisten.
 
-In manchen Bereitstellungsumgebungen für Microservices (auch Clusters genannt, wie in einem späteren Abschnitt erklärt wird) ist die Diensterkennung integriert. So kann beispielsweise eine Azure Kubernetes Service-Umgebung (AKS) die Registrierung und die Registrierungsaufhebung von Dienstinstanzen ausführen. Die Umgebung führt außerdem einen Proxy auf jedem Clusterhost aus, der die Rolle eines serverseitigen Suchrouters übernimmt. Ein weiteres Beispiel ist Azure Service Fabric, was ebenfalls eine Dienstregistrierung über einen integrierten Namensdienst bereitstellt.
-
-Beachten Sie, dass es eine gewisse Überschneidung zwischen der Dienstregistrierung und dem API-Gatewaymuster gibt, die ebenfalls zur Lösung dieses Problems beiträgt. Zum Beispiel ist der [Service Fabric-Reverseproxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) eine Art der Implementierung eines API-Gateways, die auf Naming Service von Service Fabric basiert und dabei hilft, die Adressauflösung in interne Dienste aufzulösen.
+In manchen Bereitstellungsumgebungen für Microservices (auch Clusters genannt, wie in einem späteren Abschnitt erklärt wird) ist die Diensterkennung integriert. So kann beispielsweise eine Azure Kubernetes Service-Umgebung (AKS) die Registrierung und die Registrierungsaufhebung von Dienstinstanzen ausführen. Die Umgebung führt außerdem einen Proxy auf jedem Clusterhost aus, der die Rolle eines serverseitigen Suchrouters übernimmt.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

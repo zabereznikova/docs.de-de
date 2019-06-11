@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427291"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195846"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
@@ -49,8 +49,11 @@ Beim Aktualisieren der Sprachversion wird C# 8.0 ausgewählt, aber dies aktivier
 Ein guter nächster Schritt ist, den NULL-Werte zulassenden Anmerkungskontext zu aktivieren und zu sehen, wie viele Warnungen generiert werden. Fügen Sie das folgende Element beiden CSPROJ-Dateien in der Projektmappe hinzu, direkt unterhalb des `LangVersion`-Elements:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> Das `Nullable`-Element hieß früher `NullableContextOptions`. Die Umbenennung erfolgt in Visual Studio 2019, 16.2-p1. Das .NET Core SDK 3.0.100-preview5-011568 umfasst diese Änderung nicht. Wenn Sie die .NET Core-CLI verwenden, müssen Sie `NullableContextOptions`weiter verwenden, bis die nächste Vorschauversion verfügbar ist.
 
 Führen Sie einen Testbuild durch, und beachten Sie die Liste der Warnungen. In dieser kleinen Anwendung generiert der Compiler fünf Warnungen, daher sollten Sie den NULL-Werte zulassenden Anmerkungskontext aktiviert lassen und beginnen, Warnungen für das gesamte Projekt zu beheben.
 
@@ -58,7 +61,7 @@ Diese Strategie funktioniert nur bei kleineren Projekten. Bei größeren Projekt
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Warnungen tragen dazu bei, die ursprüngliche Entwurfsabsicht zu ermitteln
 
-Es gibt zwei Klassen, die mehrere Warnungen generieren. Beginnen Sie mit der `NewsStoryViewModel`-Klasse. Entfernen Sie das `NullableContextOptions`-Element aus beiden CSPROJ-Dateien, damit Sie den Bereich der Warnungen auf die Abschnitte des Codes beschränken können, mit denen Sie arbeiten. Öffnen Sie die *NewsStoryViewModel.cs*-Datei, und fügen Sie die folgenden Anweisungen zum Aktivieren des NULL-Werte zulassenden Anmerkungskontexts für das `NewsStoryViewModel` hinzu, und stellen Sie es nach dieser Klassendefinition wieder her:
+Es gibt zwei Klassen, die mehrere Warnungen generieren. Beginnen Sie mit der `NewsStoryViewModel`-Klasse. Entfernen Sie das `Nullable`-Element aus beiden CSPROJ-Dateien, damit Sie den Bereich der Warnungen auf die Abschnitte des Codes beschränken können, mit denen Sie arbeiten. Öffnen Sie die *NewsStoryViewModel.cs*-Datei, und fügen Sie die folgenden Anweisungen zum Aktivieren des NULL-Werte zulassenden Anmerkungskontexts für das `NewsStoryViewModel` hinzu, und stellen Sie es nach dieser Klassendefinition wieder her:
 
 ```csharp
 #nullable enable
