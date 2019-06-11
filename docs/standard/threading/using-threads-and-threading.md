@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690617"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960379"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -32,7 +32,7 @@ Sie können einen neuen Thread erstellen, indem Sie eine neue Instanz der <xref:
 
 Verwenden Sie die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode, um die Ausführung eines Threads zu beenden. Diese Methode löst eine <xref:System.Threading.ThreadAbortException> im Thread aus, in dem sie aufgerufen wird. Weitere Informationen finden Sie unter [Zerstören von Threads](destroying-threads.md).
 
-Ab .NET Framework 4 können Sie die <xref:System.Threading.CancellationToken?displayProperty=nameWithType> verwenden, um einen Thread kooperativ abzubrechen. Weitere Informationen finden Sie unter [Kooperatives Abbrechen von Threads](canceling-threads-cooperatively.md).
+Ab .NET Framework 4 können Sie die <xref:System.Threading.CancellationToken?displayProperty=nameWithType> verwenden, um einen Thread kooperativ abzubrechen. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](cancellation-in-managed-threads.md).
 
 Verwenden Sie die <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>-Methode, damit der aufrufende Thread auf das Beenden des Threads wartet, in dem die Methode aufgerufen wurde.
 
