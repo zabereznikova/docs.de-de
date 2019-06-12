@@ -1,5 +1,5 @@
 ---
-title: Das "<eventname1>"-Ereignis kann das "<eventname2>"-Ereignis für die "<interface>"-Schnittstelle nicht implementieren, da die entsprechenden Delegattypen "<delegate1>" und "<delegate2>" nicht übereinstimmen.
+title: Das '<eventname1>'-Ereignis kann das '<eventname2>'-Ereignis für die '<interface>'-Schnittstelle nicht implementieren, da die entsprechenden Delegattypen '<delegate1>' und '<delegate2>' nicht übereinstimmen.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31423

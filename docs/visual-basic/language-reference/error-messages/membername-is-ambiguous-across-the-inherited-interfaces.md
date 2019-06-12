@@ -1,5 +1,5 @@
 ---
-title: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle "<interfacename1>" als auch in "<interfacename2>" verwendet.
+title: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle '<interfacename1>' als auch in '<interfacename2>' verwendet.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685

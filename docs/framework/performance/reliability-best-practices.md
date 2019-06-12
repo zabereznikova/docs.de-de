@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949226"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833799"
 ---
 # <a name="reliability-best-practices"></a>Empfohlene Vorgehensweisen für die Zuverlässigkeit
 
@@ -265,7 +265,7 @@ In Finalizern dürfen keine Synchronisierungsprobleme auftreten. Verwenden Sie k
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Vermeiden Sie nach Möglichkeit nicht verwalteten Speicher
 
-Nicht verwalteter Speicher kann ebenso wie ein Betriebssystemhandle verloren gehen.  Verwenden Sie daher falls möglich Arbeitsspeicher auf dem Stapel mit [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) oder ein fixiertes verwaltetes Objekt wie die [fixed-Anweisung](~/docs/csharp/language-reference/keywords/fixed-statement.md) oder einen <xref:System.Runtime.InteropServices.GCHandle> mithilfe von „byte[]“.  Der <xref:System.GC> gibt diese Ressourcen abschließend frei.  Wenn Sie jedoch nicht verwalteten Speicher zuordnen müssen, sollten Sie eine Klasse verwenden, die von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitet wird, um den Code für die Speicherbelegung zu umschließen.
+Nicht verwalteter Speicher kann ebenso wie ein Betriebssystemhandle verloren gehen. Verwenden Sie daher falls möglich Arbeitsspeicher auf dem Stapel mit [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) oder ein fixiertes verwaltetes Objekt wie die [fixed-Anweisung](~/docs/csharp/language-reference/keywords/fixed-statement.md) oder einen <xref:System.Runtime.InteropServices.GCHandle> mithilfe von „byte[]“. Der <xref:System.GC> gibt diese Ressourcen abschließend frei. Wenn Sie jedoch nicht verwalteten Speicher zuordnen müssen, sollten Sie eine Klasse verwenden, die von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitet wird, um den Code für die Speicherbelegung zu umschließen.
 
 Beachten Sie, dass <xref:System.Runtime.InteropServices.SafeHandle> in mindestens einem Fall nicht verwendet werden sollte.  Bei COM-Methodenaufrufen, die Speicher belegen oder freigeben, ist es üblich, dass eine DLL zunächst Speicher über `CoTaskMemAlloc` belegt und eine andere DLL anschließend diesen Speicher mit `CoTaskMemFree` freigibt.  Die Verwendung eines <xref:System.Runtime.InteropServices.SafeHandle>-Objekts wäre hier nicht sinnvoll, da dieses versuchen würde, die Lebensdauer des nicht verwalteten Speichers mit der Lebensdauer von <xref:System.Runtime.InteropServices.SafeHandle> zu verknüpfen, anstatt zuzulassen, dass die andere DLL die Lebensdauer des Arbeitsspeichers verwaltet.
 

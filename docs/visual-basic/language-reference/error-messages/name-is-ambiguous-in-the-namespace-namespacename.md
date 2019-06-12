@@ -1,5 +1,5 @@
 ---
-title: <name> ist im Namespace "<namespacename>" nicht eindeutig.
+title: <name> ist im Namespace '<namespacename>' nicht eindeutig.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30560

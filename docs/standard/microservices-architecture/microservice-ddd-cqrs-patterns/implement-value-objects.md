@@ -2,12 +2,12 @@
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644292"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423737"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -21,7 +21,7 @@ In Abbildung 7-13 wird das Wertobjekt „Address“ im Aggregat „Order“ ange
 
 **Abbildung 7-13**. Wertobjekt „Address“ im Aggregat „Order“
 
-Wie in Abbildung 7-13 dargestellt besteht eine Entität in der Regel aus mehreren Attributen. Beispielsweise kann die `Order`-Entität als Entität mit einer Identität modelliert sein und intern aus mehreren Attributen wie OrderId, OrderDate oder OrderItems bestehen. Der Wert „Address“, bei dem es sich nur um einen komplexen Wert handelt, der aus Attributen wie dem Land, der Straße oder der Stadt besteht und in dieser Domäne nicht über eine Identität verfügt, muss hingegen als Wertobjekt modelliert und behandelt werden.
+Wie in Abbildung 7-13 dargestellt besteht eine Entität in der Regel aus mehreren Attributen. Beispielsweise kann die `Order`-Entität als Entität mit einer Identität modelliert sein und intern aus mehreren Attributen wie OrderId, OrderDate oder OrderItems bestehen. Die Adresse, bei der es sich lediglich um einen komplexen Wert handelt, der aus Attributen wie Land/Region, Straße, Ort usw. besteht und in dieser Domäne nicht über eine Identität verfügt, muss hingegen als Wertobjekt modelliert und behandelt werden.
 
 ## <a name="important-characteristics-of-value-objects"></a>Wichtige Merkmale von Wertobjekten
 
@@ -307,7 +307,7 @@ public class Address
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Martin Fowler. ValueObject pattern (ValueObject-Muster)** \
+- **Martin Fowler. ValueObject pattern (ValueObject-Muster)**  \
   <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software. (Domänengesteuertes Design (DDD): Umgang mit Komplexität im Kern einer Software.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
@@ -316,10 +316,10 @@ public class Address
 - **Vaughn Vernon. Implementing Domain-Driven Design (Implementieren des domänengesteuerten Designs.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Shadow Properties (Schatteneigenschaften)** \
+- **Shadow Properties (Schatteneigenschaften)**  \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)**. Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
+- **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)** . Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
 - **ValueObject.cs.** Basisklasse der Wertobjekte in eShopOnContainers. \

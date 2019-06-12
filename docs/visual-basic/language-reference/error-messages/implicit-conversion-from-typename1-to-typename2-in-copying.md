@@ -1,5 +1,5 @@
 ---
-title: Implizite Konvertierung von "<typename1>" in "<typename2>" beim Zurückkopieren des Wertes des ByRef-Parameters "<parametername>" in das entsprechende Argument.
+title: Implizite Konvertierung von '<typename1>' in '<typename2>' beim Zurückkopieren des Wertes des ByRef-Parameters '<parametername>' in das entsprechende Argument.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999

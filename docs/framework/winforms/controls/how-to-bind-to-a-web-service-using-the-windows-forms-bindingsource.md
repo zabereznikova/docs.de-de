@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: a8fb10fef8e4b5624d8066a15d12d6efd1e62dee
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590505"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833994"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Vorgehensweise: Binden an einen Webdienst mithilfe der BindingSource in Windows Forms
 Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML-Webdiensts binden möchten, können Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente verwenden. Dieses Verfahren ähnelt der Bindung einer <xref:System.Windows.Forms.BindingSource>-Komponente an einen Typ. Sie müssen einen clientseitigen Proxy erstellen, der die Methoden und Typen enthält, die vom Webdienst bereitgestellt werden. Sie generieren einen clientseitigen Proxy über den Webdienst (.asmx) selbst oder über seine WSDL-Datei (Web Services Description Language). Darüber hinaus muss der clientseitige Proxy die Felder von komplexen Typen verfügbar machen, die vom Webdienst als öffentliche Eigenschaften verwendet werden. Anschließend binden Sie <xref:System.Windows.Forms.BindingSource> an einen der im Webdienstproxy bereitgestellten Typen.  
@@ -28,7 +28,7 @@ Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML
   
 2. Fügen Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente zum Formular hinzu.  
   
-3. Öffnen Sie die [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)]-Eingabeaufforderung, und navigieren Sie zu demselben Verzeichnis, in dem sich Ihr Formular befindet.  
+3. Öffnen Sie die Eingabeaufforderung von Windows Software Development Kit (SDK), und navigieren Sie zu, dem das Formular sich im befindet gleichen Verzeichnis.  
   
 4. Geben Sie mithilfe des WSDL-Tools `wsdl` und die URL für die ASMX- oder WSDL-Datei für den Webdienst gefolgt vom Namespace der Anwendung und wahlweise der verwendeten Programmiersprache ein.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7970ba4431161a1da8e0d509ee3d00c19b17c6e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 882b1de4b1fd3b013b6b2825aec5e607a387531b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607716"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377993"
 ---
 # <a name="enhanced-strong-naming"></a>Verbesserte starke Namen
 Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum Identifizieren von Assemblys. In der Regel wird eine digitale Signatur mit öffentlichem Schlüssel verwendet, um die Integrität von Daten sicherzustellen, die von einem Absender (Signaturgeber) an einen Empfänger (Überprüfer) übergeben werden. Diese Signatur wird als eindeutige Identität für eine Assembly verwendet und gewährleistet, dass Verweise auf die Assembly nicht mehrdeutig sind. Die Assembly wird als Teil des Buildprozesses signiert und anschließend überprüft, wenn sie geladen wird.  
@@ -20,9 +20,9 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
  Starke Namenssignaturen helfen, bösartige Parteien daran zu hindern, eine Assembly zu manipulieren und sie anschließend mit dem Schlüssel des ursprünglichen Signaturgebers neu zu signieren. Allerdings enthalten Schlüssel mit starkem Namen weder zuverlässige Informationen zum Herausgeber, noch enthalten sie eine Zertifikatshierarchie. Eine starke Namenssignatur garantiert nicht die Vertrauenswürdigkeit der Person, die die Assembly signiert hat, und gibt auch nicht an, ob diese Person ein legitimer Besitzer des Schlüssels war. Sie gibt nur an, dass der Besitzer des Schlüssels die Assembly signiert hat. Daher empfiehlt es sich nicht, eine starke Namenssignatur als Sicherheitsbestätigung für Code von Drittanbietern zu verwenden. Zur Authentifizierung von Code wird Microsoft Authenticode empfohlen.  
   
 ## <a name="limitations-of-conventional-strong-names"></a>Beschränkungen der konventionellen starken Namen  
- Die starke Benennungstechnologie, die in Versionen vor [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] verwendet wird, hat folgende Nachteile:  
+ Die starke Benennungstechnologie aus den Vorgängerversionen von .NET Framework 4.5 hat folgende Nachteile:  
   
-- Die Schlüssel werden ständig attackiert, und durch verbesserte Techniken und Hardware ist es einfacher, einen privaten Schlüssel von einem öffentlichen abzuleiten. Zum Schutz gegen Angriffe sind größere Schlüssel erforderlich. .NET Framework-Versionen vor [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] bieten die Möglichkeit, mit einem beliebigen Größenschlüssel zu signieren (die Standardgröße ist 1024 Bit), das Signieren einer Assembly mit einem neuen Schlüssel bricht jedoch alle Binärdateien, die auf die ältere Identität der Assembly verweisen. Daher ist es extrem schwierig, die Größe eines Signaturschlüssels zu aktualisieren, wenn Sie Kompatibilität beibehalten möchten.  
+- Die Schlüssel werden ständig attackiert, und durch verbesserte Techniken und Hardware ist es einfacher, einen privaten Schlüssel von einem öffentlichen abzuleiten. Zum Schutz gegen Angriffe sind größere Schlüssel erforderlich. In .NET Framework-Versionen vor .NET Framework 4.5 können Signaturen mit einer beliebigen Schlüsselgröße (Standardgröße: 1.024 Bits) verwendet werden. Beim Signieren einer Assembly mit einem neuen Schlüssel werden jedoch alle Binärdateien beschädigt, die auf die ältere Identität der Assembly verweisen. Daher ist es extrem schwierig, die Größe eines Signaturschlüssels zu aktualisieren, wenn Sie Kompatibilität beibehalten möchten.  
   
 - Signierung mit starken Namen unterstützt nur den SHA-1-Algorithmus. Es wurde kürzlich festgestellt, dass SHA-1 für die Sicherung von Hashing-Anwendungen unzureichend ist. Daher ist ein stärkerer Algorithmus (SHA-256 oder höher) erforderlich. Es ist möglich, dass SHA-1 die FIPS-kompatible Position verliert, was zu Problemen für diejenigen führen würde, die sich entscheiden, nur FIPS-kompatible Software und Algorithmen zu verwenden.  
   
@@ -34,7 +34,7 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
 - Entwickler, die neue Assemblys erstellen und sich nicht mit vorhandenen starken Namenssignaturen befassen müssen, können die sichereren SHA-2-Algorithmen und die Assemblys wie gewohnt signieren.  
   
 ## <a name="using-enhanced-strong-names"></a>Verwenden von verbesserten starken Namen  
- Schlüssel mit starkem Namen bestehen aus einem Signaturschlüssel und einem Identitätsschlüssel. Die Assembly wird mit dem Signaturschlüssel signiert und durch den Identitätsschlüssel identifiziert. Vor [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] waren diese beiden Schlüssel identisch. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] bleibt der Identitätsschlüssel gleich wie in früheren .NET Framework-Versionen, der Signaturschlüssel wird jedoch durch einen stärkeren Hashalgorithmus verbessert. Außerdem wird der Signaturschlüssel mit dem Identitätsschlüssels signiert, um eine Gegensignatur zu erstellen.  
+ Schlüssel mit starkem Namen bestehen aus einem Signaturschlüssel und einem Identitätsschlüssel. Die Assembly wird mit dem Signaturschlüssel signiert und durch den Identitätsschlüssel identifiziert. Vor .NET Framework 4.5 waren diese beiden Schlüssel identisch. Ab .NET Framework 4.5 wird der gleiche Identitätsschlüssel wie in früheren .NET Framework-Versionen verwendet, der Signaturschlüssel wird jedoch durch einen stärkeren Hashalgorithmus verbessert. Außerdem wird der Signaturschlüssel mit dem Identitätsschlüssels signiert, um eine Gegensignatur zu erstellen.  
   
  Mithilfe des <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attributs können die Assemblymetadaten den bereits vorhandenen öffentlichen Schlüssel für die Assemblyidentität verwenden, wodurch alte Assemblyverweise weiterhin funktionieren.  Das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut verwendet die Gegensignatur, um sicherzustellen, dass der Besitzer des neuen Signaturschlüssels auch der Besitzer des alten Identitätsschlüssels ist.  
   

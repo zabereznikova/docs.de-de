@@ -1,5 +1,5 @@
 ---
-title: Der Standardeigenschaftenzugriff ist nicht eindeutig. Es kann sich um den geerbten Schnittstellenmember "<defaultpropertyname>" der Schnittstelle "<interfacename1>" oder "<defaultpropertyname>" der Schnittstelle "<interfacename2>" handeln.
+title: Der Standardeigenschaftenzugriff ist nicht eindeutig. Es kann sich um den geerbten Schnittstellenmember '<defaultpropertyname>' der Schnittstelle '<interfacename1>' oder '<defaultpropertyname>' der Schnittstelle '<interfacename2>' handeln.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64651417"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Zugriff auf die Standardeigenschaft ist mehrdeutig zwischen den geerbten Schnittstellenmember\<Defaultpropertyname > "der Schnittstelle"\<schnittstellenname1 >' und '\<Defaultpropertyname > "der Schnittstelle"\< schnittstellenname2 >'
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Zugriff auf die Standardeigenschaft ist mehrdeutig zwischen den geerbten Schnittstellenmember\<Defaultpropertyname > 'der Schnittstelle'\<schnittstellenname1 >' und '\<Defaultpropertyname > 'der Schnittstelle'\< schnittstellenname2 >'
 Eine Schnittstelle erbt von zwei Schnittstellen, von die jede eine Standardeigenschaft mit demselben Namen deklariert. Der Compiler kann keinen Zugriff auf diese Eigenschaft standardmäßig ohne Qualifikation aufgelöst werden. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```  
@@ -47,7 +47,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     - oder -   
+     - oder -  
   
 - Implementieren Sie die erbende Schnittstelle in einer Klasse. Anschließend können Sie die geerbten Eigenschaften mit unterschiedlichen Namen implementieren. Allerdings kann nur eine von ihnen die Standardeigenschaft der implementierenden Klasse sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   

@@ -1,5 +1,5 @@
 ---
-title: <attribute> kann nicht angewendet werden, da das Format von GUID "<number>" falsch ist.
+title: <attribute> kann nicht angewendet werden, da das Format von GUID '<number>' falsch ist.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32500
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62054379"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>"\<Attribut >' kann nicht angewendet werden, da das Format der GUID '\<Anzahl >' ist nicht richtig
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<Attribut >' kann nicht angewendet werden, da das Format der GUID '\<Anzahl >' ist nicht richtig
 Ein `COMClassAttribute` -Attributblock gibt einen global eindeutigen Bezeichner (GUID), die nicht das richtige Format für eine GUID entspricht. `COMClassAttribute` verwendet GUIDs zur eindeutigen Identifizierung der Klasse, die Schnittstelle und das Erstellungsereignis an.  
   
  Eine GUID besteht aus 16 Bytes, von denen die ersten acht numerisch und die letzten acht binär sind. Er ist wird vom Microsoft-Hilfsprogrammen wie uuidgen.exe generiert und zeitlich und größenmäßig eindeutig sein.  

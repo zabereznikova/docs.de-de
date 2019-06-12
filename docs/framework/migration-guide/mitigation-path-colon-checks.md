@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6799e36ec312bf857a12293dc0be15e9cc21f55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e41a51dcdf243091d3962278f1a59a85a2722894
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648456"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251134"
 ---
 # <a name="mitigation-path-colon-checks"></a>Entschärfung: Überprüfen von Pfaden auf Doppelpunkte
-Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an wurde eine Reihe von Änderungen vorgenommen, um zuvor nicht unterstützte Pfade zu unterstützen (im Hinblick auf Länge und Format). Insbesondere wurden Prüfungen auf ordnungsgemäße Syntax von Laufwerkstrennzeichen (den Doppelpunkt) strenger definiert.  
+Für Apps, die gezielt .NET Framework 4.6.2 und höhere Versionen verwenden, wurde eine Reihe von Änderungen vorgenommen, um zuvor nicht unterstützte Pfade zu unterstützen (im Hinblick auf Länge und Format). Insbesondere wurden Prüfungen auf ordnungsgemäße Syntax von Laufwerkstrennzeichen (den Doppelpunkt) strenger definiert.  
   
 ## <a name="impact"></a>Auswirkungen  
  Durch diese Änderungen werden einige URI-Pfade blockiert, die von den Methoden <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> und <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> zuvor unterstützt wurden.  

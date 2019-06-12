@@ -3,12 +3,12 @@ title: Zeichenfolgeninterpolation in C#
 description: Informationen zum Hinzufügen von formatierten Ausdrucksergebnissen in einer Ergebniszeichenfolge in C# mithilfe von Zeichenfolgeninterpolation
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063215"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251028"
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C\#
 
@@ -27,17 +27,17 @@ Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möch
 Wie in dem Beispiel dargestellt, fügen Sie einen Ausdruck zu einer interpolierten Zeichenfolge hinzu, indem Sie diesen in Klammern setzen:
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 Interpolierte Zeichenfolgen unterstützen sämtliche Funktionen des Features [kombinierte Formatierung von Zeichenfolgen](../../standard/base-types/composite-formatting.md). Damit stellen sie eine lesbarere Alternative zur Verwendung der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode dar.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Angeben einer Formatierungszeichenfolge für einen interpolierten Ausdruck
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Angeben einer Formatierungszeichenfolge für einen Interpolationsausdruck
 
-Sie können eine Formatzeichenfolge angeben, die von dem Typ des Ausdrucksergebnisses unterstützt wird, indem Sie dem interpolierten Ausdruck einen Doppelpunkt („:“) und die Formatzeichenfolge anfügen:
+Sie können eine Formatzeichenfolge angeben, die von der Art des Ausdrucksergebnisses unterstützt wird, indem Sie den Interpolationsausdruck mit einem Doppelpunkt (:) und der Formatzeichenfolge versehen:
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 Im folgenden Beispiel wird veranschaulicht, wie Sie Standardformatzeichenfolgen und benutzerdefinierte Formatzeichenfolgen für Ausdrücke angeben, die Datums- oder Uhrzeitergebnisse bzw. numerische Ergebnisse ausgeben:
@@ -46,12 +46,12 @@ Im folgenden Beispiel wird veranschaulicht, wie Sie Standardformatzeichenfolgen 
 
 Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../standard/base-types/composite-formatting.md) im Abschnitt [Formatzeichenfolgenkomponente](../../standard/base-types/composite-formatting.md#format-string-component). In diesem Abschnitt finden Sie Links zu den Artikeln, in denen Standardzeichenfolgenkomponenten und benutzerdefinierte Zeichenfolgenkomponenten erläutert werden, die von den .NET-Basistypen unterstützt werden.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Steuern der Feldbreite und -ausrichtung des formatierten interpolierten Ausdrucks
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>Steuern der Feldbreite und -ausrichtung des formatierten Interpolationsausdrucks
 
-Geben Sie die Mindestbreite und die Ausrichtung für das formatierte Ausdrucksergebnis an, indem Sie dem interpolierten Ausdruck ein Komma („,“) und den konstanten Ausdruck anschließen:
+Sie können die Mindestbreite und die Ausrichtung für das formatierte Ausdrucksergebnis angeben, indem Sie den Interpolationsausdruck mit einem Komma (,) und dem konstanten Ausdruck versehen:
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 Wenn der Wert der *Ausrichtung* positiv ist, wird das formatierte Ausdrucksergebnis rechtsbündig ausgerichtet. Ist der Wert negativ, wird das Ergebnis linksbündig ausgerichtet.
@@ -59,7 +59,7 @@ Wenn der Wert der *Ausrichtung* positiv ist, wird das formatierte Ausdrucksergeb
 Wenn Sie sowohl die Ausrichtung als auch die Formatzeichenfolge angeben müssen, beginnen Sie mit der Ausrichtungskomponente:
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 Im folgenden Beispiel sehen Sie, wie Sie die Ausrichtung angeben. Es werden senkrechte Striche („|“) verwendet, um Textfelder zu begrenzen:
@@ -82,9 +82,9 @@ Im folgenden Beispiel wird dargestellt, wie Sie Klammern zu einer Ergebniszeiche
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Verwenden eines ternären bedingten `?:`-Operators in einem interpolierten Ausdruck
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Verwenden eines ternären bedingten `?:`-Operators in einem Interpolationsausdruck
 
-Da der Doppelpunkt („:“) in einem Element mit einem interpolierten Ausdruck eine besondere Funktion einnimmt, müssen Sie zur Verwendung eines [Bedingungsoperators](../language-reference/operators/conditional-operator.md) in einem interpolierten Ausdruck diesen Ausdruck wie folgt in runde Klammern einschließen:
+Da der Doppelpunkt (:) in einem Element mit einem Interpolationsausdruck eine besondere Funktion einnimmt, müssen Sie diesen Ausdruck wie folgt in runde Klammern einschließen, um einen [Bedingungsoperator](../language-reference/operators/conditional-operator.md) verwenden zu können:
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

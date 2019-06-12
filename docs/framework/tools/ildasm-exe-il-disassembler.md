@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517537"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378567"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -53,7 +53,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgen
 |**/linenum**|Enthält Verweise auf die ursprünglichen Quellzeilen.|
 |**/nobar**|Unterdrückt die Anzeige des Popupfensters mit der Statusanzeige für die Disassembly.|
 |**/noca**|Unterdrückt die Ausgabe von benutzerdefinierten Attributen.|
-|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in systemeigenen [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Wenn `PEfilename` keine Windows-Metadatendatei (*.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in systemeigenen [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Disassembliert ausschließlich öffentliche Typen und Member. Entspricht **/visibility:PUB**.|
 |**/quoteallnames**|Schließt alle Namen in einfache Anführungszeichen ein.|
 |**/raweh**|Zeigt Klauseln für die Ausnahmebehandlung in unformatierter Form an.|
@@ -69,7 +69,7 @@ Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.d
 |**/classlist**|Umfasst eine Liste der im Modul definierten Klassen.|
 |**/forward**|Verwendet die Vorwärtsklassendeklaration.|
 |**/headers**|Schließt Informationen über den Dateiheader in der Ausgabe ein.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Disassembliert Folgendes in Abhängigkeit vom angegebenen Argument:<br /><br /> – Disassembliert die angegebene `class`.<br />– Disassembliert den angegebenen `member` der `class`.<br />– Disassembliert den `member` der `class` mit der angegebenen Signatur `sig`. Das Format von `sig` lautet wie folgt:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Hinweis:** In .NET Framework, Versionen 1.0 und 1.1, muss auf `sig` eine schließende Klammer folgen: `(sig)`. Ab .NET Framework 2.0 muss die schließende Klammer weggelassen werden: `(sig`.|
+|**/item:** `class`[ **::** `member`[`(sig`]]|Disassembliert Folgendes in Abhängigkeit vom angegebenen Argument:<br /><br /> – Disassembliert die angegebene `class`.<br />– Disassembliert den angegebenen `member` der `class`.<br />– Disassembliert den `member` der `class` mit der angegebenen Signatur `sig`. Das Format von `sig` lautet wie folgt:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Hinweis:** In .NET Framework, Versionen 1.0 und 1.1, muss auf `sig` eine schließende Klammer folgen: `(sig)`. Ab .NET Framework 2.0 muss die schließende Klammer weggelassen werden: `(sig`.|
 |**/noil**|Unterdrückt die Ausgabe von IL-Assemblycode.|
 |**/stats**|Schließt Statistiken zum Abbild ein.|
 |**/typelist**|Erzeugt die vollständige Liste mit Typen, um die Reihenfolge von Typen bei Roundtrips beizubehalten.|
@@ -111,7 +111,7 @@ Sie können *Ildasm.exe* für eine EXE- oder *DLL*-Datei ausführen, um festzust
 
 ## <a name="version-information"></a>Versionsinformationen
 
-Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] verarbeitet *Ildasm.exe* ein unbekanntes Marshall-BLOB (Binary Large Object), indem der unformatierte binäre Inhalt angezeigt wird. Beispielsweise wird im folgenden Code veranschaulicht, wie ein BLOB-Marshall, der von einem C#-Programm generiert wird, angezeigt wird:
+Ab .NET Framework 4.5 verarbeitet *Ildasm.exe* ein unbekanntes Marshall-BLOB (Binary Large Object), indem der unformatierte binäre Inhalt angezeigt wird. Beispielsweise wird im folgenden Code veranschaulicht, wie ein BLOB-Marshall, der von einem C#-Programm generiert wird, angezeigt wird:
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-Mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zeigt *Ildasm.exe* Attribute an, die auf Schnittstellenimplementierungen angewendet werden. Dies ist aus folgendem Auszug aus *Ildasm.exe* ersichtlich:
+Ab .NET Framework 4.5 zeigt *Ildasm.exe* Attribute an, die auf Schnittstellenimplementierungen angewendet werden, wie im folgenden Auszug der Ausgabe von *Ildasm.exe* zu sehen:
 
 ```
 .class public auto ansi beforefieldinit MyClass

@@ -1,5 +1,5 @@
 ---
-title: Die Variable "<variablename>" verbirgt eine Variable in einem einschließenden Block.
+title: Die Variable '<variablename>' verbirgt eine Variable in einem einschließenden Block.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30616
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662665"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variable "\<Variablenname >' verbirgt eine Variable in einem einschließenden Block
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variable '\<Variablenname >' verbirgt eine Variable in einem einschließenden Block
 Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine andere lokale Variable.  
   
  **Fehler-ID:** BC30616  

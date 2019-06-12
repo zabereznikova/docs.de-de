@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456290"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832719"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<ApplicationPool >-Element (Webeinstellungen)
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.  
@@ -70,7 +70,7 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozes
   
 - [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] im integrierten Modus ausgeführt wird.  
   
-- Die Anwendung verwendet die [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] oder eine höhere Version.  
+- Die Anwendung ist .NET Framework 3.5 SP1 oder höher verwenden.  
   
  Die Werte im Beispiel werden die Standardwerte.  
   

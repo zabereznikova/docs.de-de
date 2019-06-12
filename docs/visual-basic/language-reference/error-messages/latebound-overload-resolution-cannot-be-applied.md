@@ -1,5 +1,5 @@
 ---
-title: Die spät gebundene Überladungsauflösung kann nicht auf "<procedurename>" angewendet werden, da die zugreifende Instanz ein Schnittstellentyp ist.
+title: Die spät gebundene Überladungsauflösung kann nicht auf '<procedurename>' angewendet werden, da die zugreifende Instanz ein Schnittstellentyp ist.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -15,7 +15,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64661971"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Spät gebundene überladungsauflösung kann nicht angewendet werden, um "\<Prozedurname >', da die Zugreifende Instanz ein Schnittstellentyp ist.
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Spät gebundene überladungsauflösung kann nicht angewendet werden, um '\<Prozedurname >', da die Zugreifende Instanz ein Schnittstellentyp ist.
 Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, aber der Verweis schlägt fehl, weil ein Argument des Typs `Object` und das verweisende Objekt weist den Datentyp einer Schnittstelle. Die `Object` Argument erzwingt, dass der Compiler zum Auflösen des Verweises als spät gebunden.  
   
  Unter diesen Umständen löst der Compiler die Überladung durch die implementierende Klasse statt über die zugrunde liegenden Schnittstelle. Wenn die Klasse eine der überladenen Versionen umbenennt, berücksichtigt der Compiler nicht diese Version mit einer Überladung, da Sie einen anderen Namen aufweist. Dies bewirkt wiederum, dass den Compiler die umbenannte Version ignoriert, wenn sie die richtige Wahl zum Auflösen des Verweises gegangen sein könnte.  

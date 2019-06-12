@@ -1,5 +1,5 @@
 ---
-title: Die erforderliche Datei "<filename>" wurde nicht gefunden.
+title: Die erforderliche Datei '<filename>' wurde nicht gefunden.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30655
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64622632"
 ---
-# <a name="unable-to-find-required-file-filename"></a>Erforderliche Datei kann nicht gefunden "\<Dateiname >"
+# <a name="unable-to-find-required-file-filename"></a>Erforderliche Datei kann nicht gefunden '\<Dateiname >'
 Eine Datei, die für Visual Studio erforderlich ist, fehlt oder ist beschädigt.  
   
  **Fehler-ID:** BC30655  

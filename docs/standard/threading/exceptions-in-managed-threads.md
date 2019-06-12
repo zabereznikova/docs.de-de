@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645009"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377464"
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
 Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads deren ordnungsgemäße Fortsetzung. Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.  
@@ -39,7 +39,7 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
 >  Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann. Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Aufdecken von Threadingproblemen bei der Entwicklung  
- Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen. Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden. Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt. Die Anwendungsleistung kann beeinträchtigt werden, oder es kann soweit kommen, dass die Anwendung gar nicht mehr reagiert.  
+ Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen. Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden. Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt. Dadurch kann sich die Anwendungsleistung verschlechtern, und es kann passieren, dass die Anwendung nicht mehr reagiert.  
   
  Wenn Sie die normale Fortsetzung von unbehandelten Ausnahmen in Threads zulassen, bis das Programm vom Betriebssystem beendet wird, werden derartige Probleme bei der Entwicklung und beim Testen entdeckt. Fehlerberichte über Beendigungen des Programms unterstützen das Debuggen.  
   

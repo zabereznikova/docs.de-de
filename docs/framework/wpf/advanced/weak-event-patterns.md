@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 92d0a61c2bbf9cc668b969c3e1420914b9f9f150
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650767"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833933"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt sind, nicht in Koordination mit dem Listenerobjekt zerstört werden, die die Quelle der Handler zugeordnet. Diese Situation kann zu Arbeitsspeicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, indem Sie eine dedizierte Manager-Klasse für bestimmte Ereignisse bereitstellen und Implementieren einer Schnittstelle zum Listener für das betreffende Ereignis. Dieses Entwurfsmuster wird als bezeichnet die *Muster für schwache Ereignisse*.  
@@ -71,7 +71,7 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
      Auf ähnliche Weise, wenn im Code das folgende Muster verwendet, um ein Ereignisabonnement zu kündigen:  
   
     ```  
-    source.SomeEvent -= new SomeEventEventHandler(OnSome);  
+    source.SomeEvent -= new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
      Ändern Sie ihn an, in dem folgenden Muster:  

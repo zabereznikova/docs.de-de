@@ -1,5 +1,5 @@
 ---
-title: Typ "<typename>" ist nicht CLS-kompatibel.
+title: Typ '<typename>' ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - bc40041

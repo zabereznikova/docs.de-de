@@ -1,5 +1,5 @@
 ---
-title: Das Attribut "<attributename>" kann nicht mehrmals angewendet werden.
+title: Das Attribut '<attributename>' kann nicht mehrmals angewendet werden.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30663
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61935316"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Attribut "\<Attributname >' kann nicht mehrmals angewendet werden
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Attribut '\<Attributname >' kann nicht mehrmals angewendet werden
 Das Attribut kann nur einmal angewendet werden. Die `AttributeUsage` Attribut bestimmt, ob ein Attribut mehr als einmal angewendet werden kann.  
   
  **Fehler-ID:** BC30663  

@@ -1,5 +1,5 @@
 ---
-title: "\"Is\" erfordert Operanden, die Verweistypen haben. Dieser Operand hat jedoch den Werttyp \"<typename>\"."
+title: "'Is' erfordert Operanden, die Verweistypen haben. Dieser Operand hat jedoch den Werttyp '<typename>'."
 ms.date: 07/20/2015
 f1_keywords:
 - bc30020
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64625960"
 ---
-# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is"erfordert Operanden mit Referenztypen, aber dieser Operand hat den Werttyp"\<Typname >'
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is'erfordert Operanden mit Referenztypen, aber dieser Operand hat den Werttyp'\<Typname >'
 Die `Is` Vergleichsoperator bestimmt, ob zwei Objektvariablen auf dieselbe Instanz verweisen. Dieser Vergleich ist für Werttypen nicht definiert.  
   
  **Fehler-ID:** BC30020  

@@ -2,12 +2,12 @@
 title: Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Modernisieren des Lebenszyklus Ihrer app mit CI-/CD-Pipelines und DevOps-Tools in der cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: cc991bba5df3a9cd972d9a172c1a8f1035ce8c58
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: fb4bfab4a891e9c8a73867f18cb8249775f9b7b9
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758650"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833957"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 
@@ -17,7 +17,7 @@ Obwohl continuous Integration und Continuous Deployment-Verfahren etabliert sind
 
 Azure DevOps-Services unterstützt continuous Integration und Bereitstellung von Anwendungen mit mehreren Containern mit einer Vielzahl von Umgebungen über die offiziellen Azure DevOps-Dienste-Bereitstellungsaufgaben:
 
-- [Für eigenständige Docker-Host-VM bereitstellen](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux oder WindowsServer 2016 oder höher)
+- [Bereitstellen Sie für eine Azure-Web-App für Container](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?view=azure-devops)
 
 - [Bereitstellen von Azure Container Service – Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 

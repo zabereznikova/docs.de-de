@@ -2,12 +2,12 @@
 title: Zusammenfassung
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Schlussfolgerungen
 ms.date: 10/26/2017
-ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758876"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833937"
 ---
 # <a name="conclusions"></a>Zusammenfassung
 
@@ -15,7 +15,7 @@ ms.locfileid: "66758876"
 
 - Ein Docker-Container wird zur Standardeinheit für jede serverbasierte Anwendung oder jeden serverbasierten Dienst.
 
-- Für produktionsumgebungen sollten Sie einen Orchestrator (wie Kubernetes) zum Hosten von skalierbaren Windows-Containern basierenden Anwendungen verwenden.
+- Für produktionsumgebungen sollten Sie einen Orchestrator (wie Kubernetes) für das Hosten skalierbarer Containern basierenden Anwendungen verwenden.
 
 - Azure Virtual Machines-Container hostet, sind eine schnelle und einfache Möglichkeit zum Erstellen von kleinen Entwicklungs-/testumgebungen in der Cloud.
 

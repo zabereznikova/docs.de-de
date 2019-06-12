@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcendatei "<filename>" konnte nicht verknüpft werden: <error message>'
+title: "Ressourcendatei '<filename>' konnte nicht verknüpft werden: <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30144

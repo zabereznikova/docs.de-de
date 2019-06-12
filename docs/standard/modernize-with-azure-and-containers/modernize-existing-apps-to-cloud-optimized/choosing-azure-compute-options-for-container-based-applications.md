@@ -2,12 +2,12 @@
 title: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
 ms.date: 05/04/2018
-ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758832"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833858"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 
@@ -17,8 +17,7 @@ Als eine *standardmäßig* Empfehlungen zu erstellen, die folgenden ist das Haup
 
 - **Einzelne monolithischen app:** Wählen Sie Azure App Service
 - **N-schichtigen Anwendung:** Wählen Sie orchestratoren wie z. B. Azure Kubernetes Service (AKS) oder einen App Service aus, wenn Sie eine einzelne oder einige Back-End-Dienste verfügen
-- **Microservices für Linux:** Wählen Sie ACS/Kubernetes
-- **Windows-Microservices:** Wählen Sie die Azure-Web-Apps für Container
+- **Microservices:** Wählen Sie AKS oder Azure-Web-Apps für Container
 - **Serverlose Funktionen & Ereignishandler:** Wählen Sie die Azure-Funktionen
 - **Umfangreiche Batch:** Wählen Sie mit Azure Batch
 

@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237037"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422029"
 ---
 # <a name="default-values-table-c-reference"></a>Tabelle für Standardwerte (C#-Referenz)
 
@@ -41,7 +41,7 @@ In der folgenden Tabelle werden die Standardwerte von [Werttypen](value-types.md
 |[ulong](ulong.md)|0|
 |[ushort](ushort.md)|0|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Sie können keine nicht initialisierten Variablen in C# verwenden. Sie können eine Variable mit dem Standardwert des Typs initialisieren. Sie können den Standardwert eines Typs verwenden, um den Standardwert des [optionalen Arguments](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) einer Methode festzulegen.
 
@@ -57,7 +57,7 @@ Ab C# 7.1 können Sie das [`default`-Literal](../../programming-guide/statements
 int a = default;
 ```
 
-Sie können auch den Standardkonstruktor oder den impliziten Standardkonstruktor verwenden, um den Standardwert eines Werttyps zu erzeugen. Dies wird im folgenden Beispiel veranschaulicht. Weitere Informationen zu Konstruktoren finden Sie im Artikel [Konstruktoren](../../programming-guide/classes-and-structs/constructors.md).
+Sie können auch den parameterlosen Konstruktor oder den impliziten parameterlosen Konstruktor verwenden, um den Standardwert eines Werttyps zu erzeugen. Dies wird im folgenden Beispiel veranschaulicht. Weitere Informationen zu Konstruktoren finden Sie im Artikel [Konstruktoren](../../programming-guide/classes-and-structs/constructors.md).
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ Der Standardwert eines beliebigen [Verweistyps](reference-types.md) ist `null`. 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Referenztabellen für Typen](reference-tables-for-types.md)
 - [Werttypen](value-types.md)
 - [Tabelle der Werttypen](value-types-table.md)
 - [Tabelle integrierter Typen](built-in-types-table.md)

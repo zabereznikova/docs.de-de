@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623315"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834068"
 ---
 # <a name="application-management-overview"></a>Übersicht über die Anwendungsverwaltung
 Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der für die Implementierung und Verwaltung der Anwendung gilt. Dieses Thema enthält eine Übersicht über die Funktionen in der <xref:System.Windows.Application> Klasse zum Erstellen und Verwalten von Anwendungen.  
@@ -127,7 +127,7 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Begrüßungsbildschirm  
- Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], Sie können angeben, ein Image aus, in einem Startfenster oder *Begrüßungsbildschirm*. Die <xref:System.Windows.SplashScreen> -Klasse macht es einfach, ein Startfenster anzuzeigen, während die Anwendung geladen wird. Die <xref:System.Windows.SplashScreen> Fenster erstellt und angezeigt werden, bevor Sie <xref:System.Windows.Application.Run%2A> aufgerufen wird. Weitere Informationen finden Sie unter [Anwendungsstartzeit](../advanced/application-startup-time.md) und [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Ab .NET Framework 3.5 SP1, können Sie angeben, ein Bild in einem Startfenster verwendet werden oder *Begrüßungsbildschirm*. Die <xref:System.Windows.SplashScreen> -Klasse macht es einfach, ein Startfenster anzuzeigen, während die Anwendung geladen wird. Die <xref:System.Windows.SplashScreen> Fenster erstellt und angezeigt werden, bevor Sie <xref:System.Windows.Application.Run%2A> aufgerufen wird. Weitere Informationen finden Sie unter [Anwendungsstartzeit](../advanced/application-startup-time.md) und [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Starten einer Anwendung  

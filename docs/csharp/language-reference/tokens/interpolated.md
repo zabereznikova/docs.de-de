@@ -13,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210430"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250998"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
-Das Sonderzeichen `$` kennzeichnet ein Zeichenfolgenliteral als *interpolierte Zeichenfolge*. Eine interpolierte Zeichenfolge ist ein Zeichenfolgenliteral, das möglicherweise *interpolierte Ausdrücke* enthält. Wenn eine interpolierte Zeichenfolge in eine Ergebniszeichenfolge aufgelöst wird, werden Elemente mit interpolierten Ausdrücken durch die Zeichenfolgendarstellungen der Ausdrucksergebnisse ersetzt. Dieses Feature ist in C# 6 und höher verfügbar.
+Das Sonderzeichen `$` kennzeichnet ein Zeichenfolgenliteral als *interpolierte Zeichenfolge*. Eine interpolierte Zeichenfolge ist ein Zeichenfolgenliteral, das möglicherweise *Interpolationsausdrücke* enthält. Wenn eine interpolierte Zeichenfolge in eine Ergebniszeichenfolge aufgelöst wird, werden Elemente mit Interpolationsausdrücken durch die Zeichenfolgendarstellungen der Ausdrucksergebnisse ersetzt. Dieses Feature ist in C# 6 und höher verfügbar.
 
 Die Zeichenfolgeninterpolation bietet eine Syntax, die besser lesbar und praktischer beim Erstellen formatierter Zeichenfolgen ist als ein Feature für die [kombinierte Formatierung von Zeichenfolgen](../../../standard/base-types/composite-formatting.md). Im folgenden Beispiel wird mit beiden Features die gleiche Ausgabe erzeugt:
 
@@ -32,18 +32,18 @@ Die Zeichenfolgeninterpolation bietet eine Syntax, die besser lesbar und praktis
 
 Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Zwischen `$` und `"` am Anfang des Zeichenfolgenliterals dürfen sich keine Leerzeichen befinden. Dies würde zu einem Kompilierzeitfehler führen.
 
-Die Struktur eines Elements mit einem interpolierten Ausdruck sieht wie folgt aus:
+Die Struktur eines Elements mit einem Interpolationsausdruck sieht wie folgt aus:
 
 ```
-{<interpolatedExpression>[,<alignment>][:<formatString>]}
+{<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Elemente in eckigen Klammern sind optional. In der folgenden Tabelle wird jedes Element beschrieben:
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|`interpolatedExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung des `null`-Ergebnisses ist <xref:System.String.Empty?displayProperty=nameWithType>.|
-|`alignment`|Der konstante Ausdruck, dessen Wert die minimale Anzahl von Zeichen in einer Zeichenfolgendarstellung des Ergebnisses des interpolierten Ausdrucks definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`interpolationExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung des `null`-Ergebnisses ist <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|Der konstante Ausdruck, dessen Wert die minimale Anzahl von Zeichen in einer Zeichenfolgendarstellung des Ergebnisses des Interpolationsausdrucks definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Eine Formatierungszeichenfolge oder benutzerdefinierte Formatierungszeichenfolge, die durch den Typ des Ausdrucksergebnisses unterstützt wird. Weitere Informationen finden Sie unter [Formatzeichenfolgen-Komponente](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
 Im folgenden Beispiel werden die oben beschriebenen Formatierungskomponenten verwendet:
@@ -54,9 +54,9 @@ Im folgenden Beispiel werden die oben beschriebenen Formatierungskomponenten ver
 
 Wenn eine geschweifte Klammer („{“ oder „}“) im Text angezeigt werden soll, der durch die interpolierte Zeichenfolge erstellt wird, müssen Sie zwei geschweifte Klammern verwenden, also „{{“ oder „}}“. Weitere Informationen finden Sie unter [Versehen von geschweiften Klammern mit Escapezeichen](../../../standard/base-types/composite-formatting.md#escaping-braces).
 
-Da der Doppelpunkt („:“) im Element eines interpolierten Ausdrucks eine besondere Funktion einnimmt, müssen Sie zur Verwendung eines [Bedingungsoperators](../operators/conditional-operator.md) in einem interpolierten Ausdruck diesen Ausdruck in runde Klammern einschließen.
+Da der Doppelpunkt („:“) im Element eines Interpolationsausdrucks eine besondere Funktion einnimmt, müssen Sie zur Verwendung eines [Bedingungsoperators](../operators/conditional-operator.md) in einem Interpolationsausdruck diesen Ausdruck in runde Klammern einschließen.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine geschweifte Klammer in eine Ergebniszeichenfolge einschließen und einen Bedingungsoperator in einem interpolierten Ausdruck verwenden:
+Im folgenden Beispiel wird gezeigt, wie Sie eine geschweifte Klammer in eine Ergebniszeichenfolge einschließen und einen Bedingungsoperator in einem Interpolationsausdruck verwenden:
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -69,7 +69,7 @@ In ausführlichen interpolierten Zeichenfolgen folgt auf das `$`-Zeichen ein `@`
 
 Es gibt drei implizite Konvertierungen aus einer interpolierten Zeichenfolge:
 
-1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.String>-Instanz, die das Ergebnis der Auflösung einer interpolierten Zeichenfolge ist, wobei Elemente der interpolierten Zeichenfolge durch die formatierten Zeichenfolgendarstellungen der Ergebnisse ersetzt werden. Für diese Konvertierung wird die aktuelle Kultur verwendet.
+1. Konvertierung einer interpolierten Zeichenfolge in eine Instanz vom Typ <xref:System.String>, die das Ergebnis der Auflösung einer interpolierten Zeichenfolge ist, wobei Elemente des Interpolationsausdrucks durch die ordnungsgemäß formatierten Zeichenfolgendarstellungen ihrer Ergebnisse ersetzt werden. Für diese Konvertierung wird die aktuelle Kultur verwendet.
 
 1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Instanz, die eine zusammengesetzte Formatzeichenfolge mit den zu formatierenden Ausdrucksergebnissen darstellt. Dadurch können Sie aus einer einzigen <xref:System.FormattableString>-Instanz mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt erstellen. Hierzu können Sie eine der folgenden Methoden aufrufen:
 

@@ -1,5 +1,5 @@
 ---
-title: "\"Sub Main\" wurde nicht in \"<name>\" gefunden"
+title: "'Sub Main' wurde nicht in '<name>' gefunden"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30420
@@ -15,7 +15,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62013685"
 ---
-# <a name="sub-main-was-not-found-in-name"></a>'Sub Main"wurde nicht gefunden"\<Name >'
+# <a name="sub-main-was-not-found-in-name"></a>'Sub Main'wurde nicht gefunden'\<Name >'
 `Sub Main` fehlt, oder es wurde die falsche Position dafür angegeben.  
   
  **Fehler-ID:** BC30420  

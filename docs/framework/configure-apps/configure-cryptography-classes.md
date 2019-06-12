@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: b5c1178519601d7dcb7c5b3014f413b6436746fb
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 23bf831a4374add55258f5fb41c17a5d4a8f14c3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816170"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832815"
 ---
 # <a name="configuring-cryptography-classes"></a>Konfigurieren kryptografischer Klassen
-Die [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Computeradministratoren so konfigurieren Sie die standardmäßigen kryptoalgorithmen und algorithmusimplementierungen, die .NET Framework und entsprechend geschriebene Anwendungen verwenden, können.  Beispielsweise kann eine Organisation, die eine eigene Implementierung des ein kryptografischer Algorithmus verfügt, diese Implementierung die Standardeinstellung anstelle der Implementierung versendet im Windows SDK. Obwohl es sich bei verwaltete Anwendungen, mit denen Kryptografie immer explizit an eine bestimmte Implementierung gebunden auswählen können, empfiehlt es sich, dass sie kryptografische Objekte mithilfe von kryptografischen Konfigurationssystem erstellen.  
+Das Windows Software Development Kit (SDK) ermöglicht Administratoren des Computers so konfigurieren Sie die standardmäßigen kryptoalgorithmen und algorithmusimplementierungen, die .NET Framework und entsprechend geschriebene Anwendungen zu verwenden.  Beispielsweise kann eine Organisation, die eine eigene Implementierung des ein kryptografischer Algorithmus verfügt, diese Implementierung die Standardeinstellung anstelle der Implementierung versendet im Windows SDK. Obwohl es sich bei verwaltete Anwendungen, mit denen Kryptografie immer explizit an eine bestimmte Implementierung gebunden auswählen können, empfiehlt es sich, dass sie kryptografische Objekte mithilfe von kryptografischen Konfigurationssystem erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Zuordnen von Algorithmennamen zu kryptografischen Klassen](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  

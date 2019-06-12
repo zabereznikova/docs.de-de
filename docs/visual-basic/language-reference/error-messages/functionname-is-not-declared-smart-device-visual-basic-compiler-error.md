@@ -1,5 +1,5 @@
 ---
-title: "\"<functionname>' ist nicht deklariert (Compilerfehler für intelligente Geräte / Visual Basic)"
+title: "'<functionname>' ist nicht deklariert (Compilerfehler für intelligente Geräte / Visual Basic)"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30766
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662085"
 ---
-# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>"\<Funktionsname >' ist nicht deklariert (Compilerfehler für intelligente Geräte/Visual Basic)
+# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<Funktionsname>' ist nicht deklariert (Compilerfehler für intelligente Geräte/Visual Basic)
 <`functionname`> ist nicht deklariert. Die Datei-E/A-Funktionalität ist gewöhnlich im `Microsoft.VisualBasic` -Namespace verfügbar, allerdings wird sie von der Zielversion von .NET Compact Framework nicht unterstützt.  
   
  **Fehler-ID:** BC30766  

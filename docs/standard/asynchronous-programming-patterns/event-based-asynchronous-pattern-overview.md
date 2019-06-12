@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629012"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423866"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
@@ -32,13 +32,13 @@ Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin a
   
 - Führen Sie mehrere Vorgänge gleichzeitig aus, und erhalten Sie Benachrichtigungen, wenn jede abgeschlossen ist.  
   
-- Warten Sie, bis Ressourcen verfügbar werden, ohne Ihre Anwendung anzuhalten („hängen“).  
+- Warten Sie, bis Ressourcen verfügbar werden, ohne Ihre Anwendung anzuhalten („blockieren“).  
   
 - Kommunizieren Sie mit ausstehenden asynchronen Vorgängen über das vertraute Modell mit Ereignissen und Delegaten. Weitere Informationen zum Verwenden von Ereignishandlern und Delegaten finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
   
  Eine Klasse, die das ereignisbasierte asynchrone Muster unterstützt, verfügt über mindesten eine Methode namens _MethodName_**Async**. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein _MethodName_**Completed**-Ereignis und eine _MethodName_**AsyncCancel**-Methode (kurz **CancelAsync**) verfügen.  
   
- <xref:System.Windows.Forms.PictureBox> ist eine typische Komponente, die das ereignisbasierte asynchrone Muster unterstützt. Sie können ein Image synchron herunterladen, indem Sie seine <xref:System.Windows.Forms.PictureBox.Load%2A>-Methode aufrufen, aber wenn das Image groß oder die Netzwerkverbindung langsam ist, wird Ihre Anwendung angehalten („hängen“), bis der Downloadvorgang abgeschlossen ist und der Aufruf an <xref:System.Windows.Forms.PictureBox.Load%2A> zurückgegeben wird.  
+ <xref:System.Windows.Forms.PictureBox> ist eine typische Komponente, die das ereignisbasierte asynchrone Muster unterstützt. Sie können ein Image synchron herunterladen, indem Sie seine <xref:System.Windows.Forms.PictureBox.Load%2A>-Methode aufrufen, aber wenn das Image groß oder die Netzwerkverbindung langsam ist, reagiert Ihre Anwendung nicht mehr, bis der Downloadvorgang abgeschlossen ist und der Aufruf an <xref:System.Windows.Forms.PictureBox.Load%2A> zurückgegeben wird.  
   
  Wenn Sie möchten, dass Ihre Anwendung während des Ladens des Images weiter ausgeführt wird, können Sie die <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>-Methode aufrufen und das <xref:System.Windows.Forms.PictureBox.LoadCompleted>-Ereignis verarbeiten, wie Sie jedes andere Ereignis verarbeiten würden. Wenn Sie die <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>-Methode aufrufen, wird Ihre Anwendung weiterhin ausgeführt, während der Download in einem separaten Thread („im Hintergrund“) fortgesetzt wird. Ihr Ereignishandler wird aufgerufen, wenn der Ladevorgang für das Image abgeschlossen ist, und Ihr Ereignishandler kann den Parameter <xref:System.ComponentModel.AsyncCompletedEventArgs> untersuchen, um festzustellen, ob der Download erfolgreich abgeschlossen wurde.  
   

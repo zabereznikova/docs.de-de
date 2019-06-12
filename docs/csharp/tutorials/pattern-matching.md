@@ -3,12 +3,12 @@ title: Verwenden von Features für den Musterabgleich, um Datentypen zu erweiter
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769241"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378069"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
 

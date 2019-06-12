@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623299"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378469"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Der Resource File Generator (Resgen.exe) konvertiert Textdateien (TXT- oder RESTEXT-Dateien) und Dateien im XML-basierten Ressourcenformat (RESX-Dateien) in binäre Common Language Runtime-Dateien (RESOURCES-Dateien), die in ausführbare Laufzeit-Binärdateien oder Satellitenassemblys eingebettet werden können. (Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |Parameter oder Schalter|Beschreibung|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> Bei Verwendung mit Nicht-Textdateien wird `/define` ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
+|`/define:` *symbol1*[, *symbol2*,...]|Ab .NET Framework 4.5 wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> Bei Verwendung mit Nicht-Textdateien wird `/define` ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
 |`useSourcePath`|Gibt an, dass das aktuelle Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll.|  
 |`/compile`|Ermöglicht Ihnen die Angabe mehrerer RESX- oder Textdateien, die von einem einzelnen Massenvorgang in RESOURCES-Dateien konvertiert werden sollen. Wenn Sie diese Option nicht festlegen, kann für die Eingabedatei nur ein Argument angegeben werden. Ausgabedateien werden als *dateiname*.resources benannt.<br /><br /> Diese Option kann nicht mit der `/str:`-Option verwendet werden.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Kompilieren oder Konvertieren mehrerer Dateien](#Multiple).|  
 |`/r:` `assembly`|Verweist auf Metadaten aus der angegebenen Assembly. Wird beim Konvertieren von RESX-Dateien verwendet und ermöglicht Resgen.exe das Serialisieren oder Deserialisieren von Objektressourcen. Ähnelt der `/reference:`-Option oder `/r:`-Option für den C#- und den Visual Basic-Compiler.|  
@@ -244,7 +244,7 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>Bedingte Kompilierung von Ressourcen  
- Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird von Resgen.exe die bedingte Kompilierung von Zeichenfolgenressourcen in Textdateien (".txt" und ".restext") unterstütz. Hierdurch kann eine einzige textbasierte Ressourcendatei in mehreren Buildkonfigurationen verwendet werden.  
+ Ab .NET Framework 4.5 wird von „Resgen.exe“ die bedingte Kompilierung von Zeichenfolgenressourcen in Textdateien („.txt“ und „.restext“) unterstützt. Hierdurch kann eine einzige textbasierte Ressourcendatei in mehreren Buildkonfigurationen verwendet werden.  
   
  In einer TXT- oder RESTEXT-Datei verwenden Sie das Konstrukt `#ifdef`...`#endif`, um eine Ressource in die binäre RESOURCES-Datei einzubeziehen. Verwenden Sie das Konstrukt `#if !`...`#endif`, um eine Ressource einzubeziehen, wenn ein Symbol nicht definiert ist. Zur Kompilierzeit definieren Sie anschließend Symbole mithilfe der `/define:`-Option, gefolgt von einer durch Kommas getrennten Liste von Symbolen. Beim Vergleich wird die Klein-/Großschreibung berücksichtigt. Die Groß-/Kleinschreibung der durch `/define` definierten Symbole muss derjenigen in den zu kompilierenden Textdateien entsprechen.  
   

@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 63101fb127c84de21d165994bba85a2753e97344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5df5afec17d400ed14fe9b4c03c2f754895f0dd7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59236592"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378767"
 ---
-### <a name="resizing-a-grid-can-hang"></a>Die Änderung der Größe eines Rasters kann zu einem Absturz führen
+### <a name="resizing-a-grid-can-cause-an-application-to-become-unresponsive"></a>Das Ändern der Rastergröße kann dazu führen, dass eine Anwendung nicht mehr reagiert.
 
 |   |   |
 |---|---|

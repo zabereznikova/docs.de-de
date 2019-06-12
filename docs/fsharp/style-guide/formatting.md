@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816178"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833907"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Verwenden Sie Generika Präfix-Syntax (`Foo<T>`) statt Postfix-Syntax (`T Foo`)
 
-F#erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von vier bestimmte Typen:
+F#erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von fünf bestimmten Typen:
 
 1. Für F#-Listen, verwenden Sie die Postfix-Form: `int list` statt `list<int>`.
 2. Für F# ausprobiert haben, verwenden die Postfix-Form: `int option` statt `option<int>`.
-3. Für F# Arrays, verwenden Sie den syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
-4. Verwenden Sie für Referenzzellen, `int ref` statt `ref<int>` oder `Ref<int>`.
+3. Für F# Wertoptionen, verwenden Sie die Postfix-Form: `int voption` statt `voption<int>`.
+4. Für F# Arrays, verwenden Sie den syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
+5. Verwenden Sie für Referenzzellen, `int ref` statt `ref<int>` oder `Ref<int>`.
 
 Verwenden Sie für alle anderen Dateitypen die Präfix-Form.
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583730"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832687"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Zuordnen von Algorithmennamen zu kryptografischen Klassen
-Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie mithilfe erstellen kann der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografieobjekts, verwenden das Windows Software Development Kit (SDK) erstellen kann:  
   
 - Erstellen Sie ein Objekt mithilfe der **neue** Operator.  
   
@@ -34,7 +34,7 @@ Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie mithilfe erstel
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Zuordnen von Algorithmennamen in Konfigurationsdateien  
  Standardmäßig gibt die Runtime eine <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> -Objekt für alle vier Szenarien. Ein Computeradministrator kann jedoch den Typ des Objekts ändern, die die Methoden in den letzten beiden Szenarien zurückgeben. Zu diesem Zweck müssen Sie einen Namen für die Anzeigenamen von Algorithmen für die Klasse zuordnen, die Sie in der Computerkonfigurationsdatei (Machine.config) verwenden möchten.  
   
- Das folgende Beispiel zeigt, wie die Laufzeit so konfiguriert, damit **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, und  **System.Security.Cryptography.HashAlgorithm.Create** Zurückgeben einer `MySHA1HashClass` Objekt.  
+ Das folgende Beispiel zeigt, wie die Laufzeit so konfiguriert, damit **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , und  **System.Security.Cryptography.HashAlgorithm.Create** Zurückgeben einer `MySHA1HashClass` Objekt.  
   
 ```xml  
 <configuration>  

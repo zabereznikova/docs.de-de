@@ -1,5 +1,5 @@
 ---
-title: Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in "<name>" gefunden.
+title: Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in '<name>' gefunden.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30737
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64591976"
 ---
-# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in gefunden "\<Name >'
+# <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in gefunden '\<Name >'
 Befehlszeile-Anwendungen benötigen eine `Sub Main` definiert. `Main` muss deklariert werden, als `Public Shared` ggf. in einer Klasse oder als definierten `Public` Wenn in einem Modul definiert.  
   
  **Fehler-ID:** BC30737  

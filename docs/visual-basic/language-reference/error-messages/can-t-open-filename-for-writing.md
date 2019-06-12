@@ -1,5 +1,5 @@
 ---
-title: "\"<filename>\" kann nicht zum Schreiben geöffnet werden"
+title: "'<filename>' kann nicht zum Schreiben geöffnet werden"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc2012
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61649971"
 ---
-# <a name="cant-open-filename-for-writing"></a>Kann nicht geöffnet werden "\<Dateiname >' zum Schreiben
+# <a name="cant-open-filename-for-writing"></a>Kann nicht geöffnet werden '\<Dateiname >' zum Schreiben
 Die angegebene Datei kann nicht geöffnet werden, für das Schreiben, vielleicht weil es bereits geöffnet wurde.  
   
  **Fehler-ID:** BC2012  

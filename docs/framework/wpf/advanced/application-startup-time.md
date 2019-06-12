@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689327"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832698"
 ---
 # <a name="application-startup-time"></a>Startzeit der Anwendung
 Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheblich variieren. Dieses Thema beschreibt verschiedene Verfahren zur Reduzierung der wahrgenommenen und tatsächlichen Startzeit für eine WPF-Anwendung (Windows Presentation Foundation).  
@@ -24,7 +24,7 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
  Warmstarts treten auf, wenn die meisten Seiten für die Hauptkomponenten der Common Language Runtime (CLR) bereits im Arbeitsspeicher geladen sind. Dies spart wertvolle Festplattenzugriffszeit. Dadurch startet eine verwaltete Anwendung schneller, wenn sie ein zweites Mal ausgeführt wird.  
   
 ## <a name="implement-a-splash-screen"></a>Implementieren eines Begrüßungsbildschirms  
- In Fällen, in denen eine erhebliche unvermeidliche Verzögerung zwischen dem Starten einer Anwendung und dem Anzeigen der ersten Benutzeroberfläche besteht, können Sie die wahrgenommene Startzeit optimieren, indem Sie einen *Begrüßungsbildschirm* verwenden. Dieser Ansatz zeigt ein Bild fast unmittelbar nachdem der Benutzer die Anwendung startet. Wenn die Anwendung zum Anzeigen der ersten Benutzeroberfläche bereit ist, wird der Begrüßungsbildschirm ausgeblendet. Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], können Sie die <xref:System.Windows.SplashScreen> Klasse zum Implementieren eines Begrüßungsbildschirms. Weitere Informationen finden Sie unter [Add a Splash Screen to a WPF Application (Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung)](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ In Fällen, in denen eine erhebliche unvermeidliche Verzögerung zwischen dem Starten einer Anwendung und dem Anzeigen der ersten Benutzeroberfläche besteht, können Sie die wahrgenommene Startzeit optimieren, indem Sie einen *Begrüßungsbildschirm* verwenden. Dieser Ansatz zeigt ein Bild fast unmittelbar nachdem der Benutzer die Anwendung startet. Wenn die Anwendung zum Anzeigen der ersten Benutzeroberfläche bereit ist, wird der Begrüßungsbildschirm ausgeblendet. Ab .NET Framework 3.5 SP1, können Sie die <xref:System.Windows.SplashScreen> Klasse zum Implementieren eines Begrüßungsbildschirms. Weitere Informationen finden Sie unter [Add a Splash Screen to a WPF Application (Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung)](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Sie können auch einen eigenen Begrüßungsbildschirm mit nativen Win32-Grafiken implementieren. Zeigen Sie die Implementierung vor der <xref:System.Windows.Application.Run%2A> Methode wird aufgerufen.  
   

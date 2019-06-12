@@ -1,5 +1,5 @@
 ---
-title: Der Name "<namespacename>" im Stammnamespace "<fullnamespacename>" ist nicht CLS-kompatibel.
+title: Der Name '<namespacename>' im Stammnamespace '<fullnamespacename>' ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40039

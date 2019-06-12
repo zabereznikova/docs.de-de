@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634731"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378165"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -130,7 +130,7 @@ ms.locfileid: "64634731"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>Definieren eines Timeoutintervalls  
- Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan> -Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> -Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und die Engine für reguläre Ausdrücke gibt kein Timeout zurück.  
+ Ab .NET Framework 4.5 können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine Ausnahme vom Typ <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan> -Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> -Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und die Engine für reguläre Ausdrücke gibt kein Timeout zurück.  
   
 > [!IMPORTANT]
 >  Es wird empfohlen, immer ein Timeoutintervall festzulegen, wenn ein regulärer Ausdruck auf Rückverfolgung angewiesen ist.  

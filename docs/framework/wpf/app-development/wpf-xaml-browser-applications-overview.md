@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591406"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833986"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -182,7 +182,7 @@ ms.locfileid: "64591406"
 ## <a name="xbap-start-time-performance-considerations"></a>Überlegungen zur XBAP-Startzeitleistung  
  Ein wichtiger Aspekt der XBAP-Leistung ist ihre Startzeit. Falls eine XPAB die erste zu ladende WPF-Anwendung darstellt, kann die *Kaltstartzeit* zehn Sekunden oder mehr betragen. Dies ist darauf zurückzuführen, dass die Statusseite von WPF gerendert wird und sowohl die CLR als auch WPF für die Anzeige der Anwendung kaltgestartet werden müssen.  
   
- Wenn Sie in [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] starten, wird die XBAP-Kaltstartzeit reduziert, indem eine nicht verwaltete Statusseite in einer frühen Phase im Bereitstellungszyklus angezeigt wird. Die Statusseite wird fast unmittelbar nach dem Start der Anwendung angezeigt, da sie mit nativen Hostingcode angezeigt und in HTML gerendert wird.  
+ Ab .NET Framework 3.5 SP1, XBAP-Kaltstartzeit wird verringert, indem Sie eine nicht verwaltete Statusseite in einem frühen Zeitpunkt im Bereitstellungszyklus angezeigt wird. Die Statusseite wird fast unmittelbar nach dem Start der Anwendung angezeigt, da sie mit nativen Hostingcode angezeigt und in HTML gerendert wird.  
   
  Darüber hinaus wird die verbesserte Parallelität von der ClickOnce-Download-Sequenz Startzeit um bis zu zehn Prozent verbessert. Nachdem ClickOnce heruntergeladen und überprüft wird Manifeste, beginnt der Anwendungsdownload und die Statusanzeige aktualisiert.  
   

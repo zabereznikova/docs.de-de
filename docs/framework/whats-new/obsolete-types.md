@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959933"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457057"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Veraltete Typen in .NET Framework
-<a name="introduction"></a> In den Tabellen dieses Artikels sind die Typen aufgeführt, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] veraltet sind, geordnet nach Assembly. Über die nachfolgenden Links finden Sie eine Liste der veralteten Typen und empfohlenen Alternativen in den jeweiligen Assemblys. Da diese Typen veraltet sind, sind alle ihrer Member ebenfalls veraltet. Eine Liste weiterer veralteter Member in der .NET Framework-Klassenbibliothek finden Sie unter [Veraltete Member](obsolete-members.md).
+<a name="introduction"></a> In den Tabellen in diesem Artikel werden die Typen aufgeführt, die in .NET Framework 4.5 und .NET Framework 4.6 veraltet sind (sortiert nach Assembly). Über die nachfolgenden Links finden Sie eine Liste der veralteten Typen und empfohlenen Alternativen in den jeweiligen Assemblys. Da diese Typen veraltet sind, sind alle ihrer Member ebenfalls veraltet. Eine Liste weiterer veralteter Member in der .NET Framework-Klassenbibliothek finden Sie unter [Veraltete Member](obsolete-members.md).
 
 - [Veraltete Typen in Systemassemblys](#obsolete_types_in_system_assemblies)
 
@@ -588,7 +588,7 @@ ms.locfileid: "65959933"
 
 <a name="IEHost"></a>
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>Assembly: IEHost.dll und IEExec.exe
- Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework entfernt. Alle ihrer Typen und Member sind veraltet und werden ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] nicht mehr unterstützt. Diese Assemblys wurden verwendet, um Windows Forms-Steuerelemente zu hosten und ausführbare Dateien in Internet Explorer auszuführen. Empfohlene Alternativen schließen ClickOnce, XAML-Browseranwendungen (XBAP) und Microsoft Silverlight ein.
+ Die IEHost.dll-Assembly und die IEExec.exe-Assembly wurden aus .NET Framework entfernt. Alle zugehörigen Typen und Member sind veraltet und werden ab .NET Framework 4 nicht mehr unterstützt. Diese Assemblys wurden verwendet, um Windows Forms-Steuerelemente zu hosten und ausführbare Dateien in Internet Explorer auszuführen. Empfohlene Alternativen schließen ClickOnce, XAML-Browseranwendungen (XBAP) und Microsoft Silverlight ein.
 
  [Zurück nach oben](#introduction)
 

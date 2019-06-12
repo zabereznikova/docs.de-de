@@ -1,5 +1,5 @@
 ---
-title: Es ist ein Verweis auf die Assembly "<assemblyname>" erforderlich, die die Basisklasse "<classname>" enthält.
+title: Es ist ein Verweis auf die Assembly '<assemblyname>' erforderlich, die die Basisklasse '<classname>' enthält.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30007
@@ -14,8 +14,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64661705"
 ---
-# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>Ein Verweis auf Assembly erforderlich "\<Assemblyname >' mit der Basisklasse\<Klassenname >'
-Ein Verweis auf Assembly erforderlich "\<Assemblyname >' mit der Basisklasse\<Klassenname >'. Fügen Sie dem Projekt einen Verweis hinzu.  
+# <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>Ein Verweis auf Assembly erforderlich '\<Assemblyname >' mit der Basisklasse\<Klassenname >'
+Ein Verweis auf Assembly erforderlich '\<Assemblyname >' mit der Basisklasse\<Klassenname >'. Fügen Sie dem Projekt einen Verweis hinzu.  
   
  Die Klasse ist in einer Dynamic Link Library (DLL) oder Assembly definiert, auf die in Ihrem Projekt nicht direkt verwiesen wird. Visual Basic-Compiler erfordert einen Verweis auf die Mehrdeutigkeit zu vermeiden, falls die Klasse in mehreren DLLs oder Assemblys definiert ist.  
   

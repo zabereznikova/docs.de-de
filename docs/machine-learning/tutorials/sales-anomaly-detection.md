@@ -1,15 +1,15 @@
 ---
 title: Verwenden von ML.NET in einem Szenario für die Erkennung von Vertriebsanomalien
 description: Erfahren Sie, wie Sie ML.NET in einem Szenario zur Erkennung von Vertriebsanomalien einsetzen können, um zu verstehen, wie Sie die Daten im Hinblick auf Anomaliespitzen und Änderungspunkte analysieren können, um die entsprechenden Maßnahmen zu ergreifen.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641150"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758798"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Tutorial: Verwenden von ML.NET für die Erkennung von Vertriebsanomalien 
 
@@ -173,7 +173,7 @@ Verwenden Sie [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpi
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Fügen Sie den unten aufgeführten Code als nächste Codezeilen in die `DetectSpike()`-Methode ein, um das Modell an die `productSales`-Daten anzupassen und das trainierte Modell zurückzugeben:
+Fügen Sie den folgenden Code als nächste Codezeile in die Methode `DetectSpike()` ein, um das Modell auf die `productSales`-Daten abzustimmen:
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Fügen Sie wie bereits zuvor den unten aufgeführten Code als nächste Codezeilen in die `DetectChangePoint()`-Methode ein, um das Modell an die `productSales`-Daten anzupassen und das trainierte Modell zurückzugeben:
+Fügen Sie wie zuvor den folgenden Code als nächste Codezeile in die Methode `DetectChangePoint()` ein, um das Modell auf die `productSales`-Daten abzustimmen:
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 
@@ -373,4 +373,4 @@ In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt wer
 
 Durchsuchen Sie das GitHub-Repository für Machine Learning-Beispiele nach einem Beispiel für die Erkennung von Stromverbrauchsanomalien, damit Sie es untersuchen können.
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples-GitHub-Repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/TimeSeries_PowerAnomalyDetection)
+> [dotnet/machinelearning-samples-GitHub-Repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

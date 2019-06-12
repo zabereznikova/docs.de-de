@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620700"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423781"
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effiziente Methode zur Verarbeitung von Text dar. Durch die umfangreiche Notation regulärer Ausdrücke für den Mustervergleich können folgende Tasks ausgeführt werden: schnelle Analyse großer Textmengen zur Suche nach speziellen Zeichenmustern; Validieren von Text, um sicherzustellen, dass er einem vordefinierten Muster entspricht (z. B. eine E-Mail-Adresse); Extrahieren, Bearbeiten, Ersetzen oder Löschen von Textzeichenfolgen; Hinzufügen der extrahierten Zeichenfolgen zu einer Auflistung, um einen Bericht zu erstellen. Für viele Anwendungen, die mit Zeichenfolgen arbeiten oder große Textblöcke analysieren, sind reguläre Ausdrücke ein unverzichtbares Tool.  
@@ -97,7 +97,7 @@ Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effi
   
 |||  
 |-|-|  
-|`\$`|Suche nach einem einzelnen Vorkommen des Dollarsymbols ($) in der Eingabezeichenfolge. Die Musterzeichenfolge des regulären Ausdrucks schließt einen umgekehrten Schrägstrich ein, der angibt, dass das Dollarsymbol nicht als Anchor des regulären Ausdrucks, sondern wörtlich interpretiert werden soll. (Das $-Symbol allein würde angeben, dass die Engine für reguläre Ausdrücke versuchen soll, mit der Suche nach Übereinstimmungen am Ende einer Zeichenfolge zu beginnen.) Um sicherzustellen, dass das Währungssymbol der aktuellen Kultur nicht als reguläres Ausdruckssymbol fehlinterpretiert wird, wird im Beispiel die <xref:System.Text.RegularExpressions.Regex.Escape%2A>-Methode aufgerufen, um das Zeichen mit Escapezeichen zu versehen.|  
+|`\$`|Suche nach einem einzelnen Vorkommen des Dollarsymbols (`$`) in der Eingabezeichenfolge. Die Musterzeichenfolge des regulären Ausdrucks schließt einen umgekehrten Schrägstrich ein, der angibt, dass das Dollarsymbol nicht als Anchor des regulären Ausdrucks, sondern wörtlich interpretiert werden soll. (Das `$`-Symbol allein würde angeben, dass die Engine für reguläre Ausdrücke versuchen soll, mit der Suche nach Übereinstimmungen am Ende einer Zeichenfolge zu beginnen.) Um sicherzustellen, dass das Währungssymbol der aktuellen Kultur nicht als reguläres Ausdruckssymbol fehlinterpretiert wird, wird im Beispiel die <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType>-Methode aufgerufen, um das Zeichen mit Escapezeichen zu versehen.|  
 |`\s*`|Suche nach 0 (null) oder mehr Vorkommen eines Leerstellenzeichens.|  
 |`[-+]?`|Suche nach 0 (null) oder einem Vorkommen entweder eines positiven oder eines negativen Vorzeichens.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Die äußeren Klammern um diesen Ausdruck definieren ihn als Erfassungsgruppe oder Teilausdruck. Wenn eine Übereinstimmung gefunden wird, können Informationen über diesen Teil der übereinstimmenden Zeichenfolge aus dem zweiten <xref:System.Text.RegularExpressions.Group>-Objekt in dem <xref:System.Text.RegularExpressions.GroupCollection>-Objekt abgerufen werden, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. (Das erste Element in der Auflistung stellt die gesamte Übereinstimmung dar.)|  

@@ -1,5 +1,5 @@
 ---
-title: 'Der Konstruktor "<name>" kann sich nicht selbst aufrufen:'
+title: "Der Konstruktor '<name>' kann sich nicht selbst aufrufen:"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298

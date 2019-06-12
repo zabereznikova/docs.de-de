@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882504"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423878"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Vorgehensweise: Implementieren von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen
 Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -176,7 +176,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
  Die `CalculateWorker`-Methode wird von einem Delegaten umschlossen und mit einem Aufruf von `BeginInvoke` asynchron aufgerufen.  
   
 > [!NOTE]
->  Die Fortschrittsmeldung wird in der `BuildPrimeNumberList`-Methode implementiert. Auf schnellen Computern können `ProgressChanged`-Ereignisse in rascher Folge ausgelöst werden. Der Clientthread, für den diese Ereignisse ausgelöst werden, muss diese Situation verarbeiten können. Der Code der Benutzeroberfläche erhält möglicherweise eine Flut an Meldungen, die nicht bewältigt werden können, wodurch dieser nicht mehr reagiert. Eine Beispiel-Benutzeroberfläche, die diese Situation behandelt, finden Sie unter [Vorgehensweise: Implementieren eines Clients des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  Die Fortschrittsmeldung wird in der `BuildPrimeNumberList`-Methode implementiert. Auf schnellen Computern können `ProgressChanged`-Ereignisse in rascher Folge ausgelöst werden. Der Clientthread, für den diese Ereignisse ausgelöst werden, muss diese Situation verarbeiten können. Der Code der Benutzeroberfläche erhält möglicherweise eine Flut von Meldungen, die er nicht bewältigen kann, sodass keine Reaktion mehr erfolgt. Eine Beispiel-Benutzeroberfläche, die diese Situation behandelt, finden Sie unter [Vorgehensweise: Implementieren eines Clients des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>So führen Sie die asynchrone Berechnung der Primzahl aus  
   

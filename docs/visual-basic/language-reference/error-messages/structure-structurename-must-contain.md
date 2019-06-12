@@ -1,5 +1,5 @@
 ---
-title: Die Struktur "<structurename>" muss mindestens eine Instanzmembervariable oder Instanzereignisdeklaration enthalten, die nicht als "Custom" markiert ist.
+title: Die Struktur '<structurename>' muss mindestens eine Instanzmembervariable oder Instanzereignisdeklaration enthalten, die nicht als 'Custom' markiert ist.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30941
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64593205"
 ---
-# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Struktur '\<Strukturname > "muss mindestens eine Instanzmembervariable oder mindestens eine Instanz Event-Deklaration, die nicht als"Custom"enthalten
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Struktur '\<Strukturname > 'muss mindestens eine Instanzmembervariable oder mindestens eine Instanz Event-Deklaration, die nicht als'Custom'enthalten
 Eine Strukturdefinition umfasst keine nicht freigegebene Variablen oder nicht freigegebene nicht benutzerdefinierte Ereignisse.  
   
  Jede Struktur müssen entweder eine Variable oder ein Ereignis, das auf jede spezifische Instanz (nicht freigegeben) anstelle von allen Instanzen gemeinsam gilt ([Shared](../../../visual-basic/language-reference/modifiers/shared.md)). Nicht freigegebene Konstanten, Eigenschaften und Prozeduren erfüllen diese Anforderung nicht. Darüber hinaus, wenn keine nicht freigegebenen Variablen und nur ein nicht freigegebenes Ereignis vorhanden sind, dieses Ereignis keine `Custom` Ereignis.  

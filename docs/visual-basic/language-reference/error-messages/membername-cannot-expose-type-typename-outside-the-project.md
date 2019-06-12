@@ -1,5 +1,5 @@
 ---
-title: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> "<containertypename>" verfügbar machen.
+title: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> '<containertypename>' verfügbar machen.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30909
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64661918"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<Membername >' kann nicht verfügbar machen "\<Typname >' außerhalb des Projekts durch \<Hiermit > '\<Containertypename >'
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<Membername >' kann nicht verfügbar machen '\<Typname >' außerhalb des Projekts durch \<Hiermit > '\<Containertypename >'
 Eine Variable, Parameter der Prozedur oder Funktion zurückgegeben wird außerhalb des Containers verfügbar gemacht, aber sie wird deklariert, als Typ, der außerhalb des Containers nicht verfügbar gemacht werden muss.  
   
  Das folgende Codegerüst zeigt eine Situation, die diesen Fehler generiert.  

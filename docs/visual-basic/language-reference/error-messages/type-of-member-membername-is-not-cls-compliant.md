@@ -1,5 +1,5 @@
 ---
-title: Der Typ des Members "<membername>" ist nicht CLS-kompatibel.
+title: Der Typ des Members '<membername>' ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025

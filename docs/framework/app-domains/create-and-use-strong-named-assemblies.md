@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607686"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377882"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 
@@ -71,7 +71,7 @@ Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert we
 |-----------|-----------------|
 |[Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Beschreibt das Erstellen eines kryptografischen Schlüsselpaars zum Signieren einer Assembly.|
 |[Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Beschreibt das Erstellen einer Assembly mit starkem Namen.|
-|[Verbesserte starke Namen](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Beschreibt Erweiterungen der starken Namen in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Verbesserte starke Namen](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Beschreibt Erweiterungen der starken Namen in .NET Framework 4.5.|
 |[Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Beschreibt, wie auf Typen oder Ressourcen in einer Assembly mit starkem Namen zur Kompilier- oder Laufzeit verwiesen wird.|
 |[Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Beschreibt, wie die Funktion, die die Validierung von Signaturen mit starkem Namen umgeht, deaktiviert wird. Diese Funktion kann für alle oder bestimmte Anwendungen deaktiviert werden.|
 |[Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)|Bietet eine Übersicht über Einfach- und Mehrfachdateiassemblys.|

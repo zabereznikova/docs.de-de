@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5503d8a474d7f19348b9342bc02e216bd987223
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103011"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378611"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflektion in .NET Framework für Windows Store-Apps
-Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework eine Reihe von Reflektionstypen und -membern für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps zur Verfügung. Diese Typen und Member sind im vollständigen .NET Framework sowie im [.NET für Windows Store-Apps](https://go.microsoft.com/fwlink/?LinkID=225700) verfügbar. In diesem Dokument werden die Hauptunterschiede zwischen ihnen und ihren Entsprechungen in .NET Framework 4 und früheren Versionen erklärt.  
+Ab .NET Framework 4.5 stellt .NET Framework eine Reihe von Reflektionstypen und -membern für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps zur Verfügung. Diese Typen und Member sind im vollständigen .NET Framework sowie im [.NET für Windows Store-Apps](https://go.microsoft.com/fwlink/?LinkID=225700) verfügbar. In diesem Dokument werden die Hauptunterschiede zwischen ihnen und ihren Entsprechungen in .NET Framework 4 und früheren Versionen erklärt.  
   
  Wenn Sie eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App erstellen, müssen Sie die Reflektionstypen und -member im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] verwenden. Diese Typen und Member sind ebenfalls für die Verwendung in Desktop-Apps verfügbar, jedoch nicht erforderlich, sodass Sie denselben Code für beide Typen von Apps verwenden können.  
   
 ## <a name="typeinfo-and-assembly-loading"></a>TypeInfo und Laden von Assemblys  
  In [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] enthält die <xref:System.Reflection.TypeInfo>-Klasse einen Teil der Funktionen der <xref:System.Type>-Klasse von .NET Framework 4. Ein <xref:System.Type>-Objekt stellt einen Verweis auf eine Typdefinition dar, während ein <xref:System.Reflection.TypeInfo>-Objekt die Typdefinition selbst darstellt. Dadurch können Sie <xref:System.Type>-Objekte ändern, ohne dass die Laufzeit unbedingt die Assembly laden muss, auf die sie verweisen. Das Abrufen des zugeordneten <xref:System.Reflection.TypeInfo>-Objekts erzwingt das Laden der Assembly.  
   
- <xref:System.Reflection.TypeInfo> enthält viele der Member, die in <xref:System.Type> verfügbar sind, und viele der Reflektionseigenschaften in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] geben Sammlungen von <xref:System.Reflection.TypeInfo>-Objekten zurück. Um ein <xref:System.Reflection.TypeInfo>-Objekt aus einem <xref:System.Type>-Objekt abzurufen, verwenden Sie die <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>-Methode.  
+ <xref:System.Reflection.TypeInfo> enthält viele der Member, die in <xref:System.Type> verfügbar sind, und viele der Reflektionseigenschaften in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] geben Auflistungen von <xref:System.Reflection.TypeInfo>-Objekten zurück. Um ein <xref:System.Reflection.TypeInfo>-Objekt aus einem <xref:System.Type>-Objekt abzurufen, verwenden Sie die <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>-Methode.  
   
 ## <a name="query-methods"></a>Abfragemethoden  
  Verwenden Sie in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] die Reflektionseigenschaften, die <xref:System.Collections.Generic.IEnumerable%601>-Auflistungen zurückgeben, anstelle von Methoden, die Arrays zurückgeben. Reflektionskontexte können einen verzögerten Durchlauf dieser Auflistungen für große Assemblys oder Typen implementieren.  
@@ -43,5 +43,5 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework e
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Spiegelung](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Reflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [.NET für Windows Store-Apps – unterstützte APIs](https://go.microsoft.com/fwlink/?LinkID=225700)

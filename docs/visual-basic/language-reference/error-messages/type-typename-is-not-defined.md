@@ -1,5 +1,5 @@
 ---
-title: Der Typ "<typename>" ist nicht definiert.
+title: Der Typ '<typename>' ist nicht definiert.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30002
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64664244"
 ---
-# <a name="type-typename-is-not-defined"></a>Typ "\<Typname >' ist nicht definiert.
+# <a name="type-typename-is-not-defined"></a>Typ '\<Typname >' ist nicht definiert.
 Die Anweisung hat auf einen Typ verwiesen, die nicht definiert wurde. Sie können einen Typ wie z. B. in einer deklarationsanweisung definieren `Enum`, `Structure`, `Class`, oder `Interface`.  
   
  **Fehler-ID:** BC30002  
