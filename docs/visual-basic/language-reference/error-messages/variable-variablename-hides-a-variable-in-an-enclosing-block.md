@@ -1,5 +1,5 @@
 ---
-title: Die Variable "<variablename>" verbirgt eine Variable in einem einschließenden Block.
+title: Die Variable '<variablename>' verbirgt eine Variable in einem einschließenden Block.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30616
@@ -14,14 +14,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662665"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="faf9f-102">Variable "\<Variablenname >' verbirgt eine Variable in einem einschließenden Block</span><span class="sxs-lookup"><span data-stu-id="faf9f-102">Variable '\<variablename>' hides a variable in an enclosing block</span></span>
-<span data-ttu-id="faf9f-103">Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine andere lokale Variable.</span><span class="sxs-lookup"><span data-stu-id="faf9f-103">A variable enclosed in a block has the same name as another local variable.</span></span>  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="09cb4-102">Variable '\<Variablenname >' verbirgt eine Variable in einem einschließenden Block</span><span class="sxs-lookup"><span data-stu-id="09cb4-102">Variable '\<variablename>' hides a variable in an enclosing block</span></span>
+<span data-ttu-id="09cb4-103">Eine Variable in einem Block eingeschlossen hat den gleichen Namen wie eine andere lokale Variable.</span><span class="sxs-lookup"><span data-stu-id="09cb4-103">A variable enclosed in a block has the same name as another local variable.</span></span>  
   
- <span data-ttu-id="faf9f-104">**Fehler-ID:** BC30616</span><span class="sxs-lookup"><span data-stu-id="faf9f-104">**Error ID:** BC30616</span></span>  
+ <span data-ttu-id="09cb4-104">**Fehler-ID:** BC30616</span><span class="sxs-lookup"><span data-stu-id="09cb4-104">**Error ID:** BC30616</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="faf9f-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="faf9f-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="09cb4-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="09cb4-105">To correct this error</span></span>  
   
-- <span data-ttu-id="faf9f-106">Benennen Sie die Variable im-Block eingeschlossen, sodass sie nicht identisch mit anderen lokalen Variablen ist.</span><span class="sxs-lookup"><span data-stu-id="faf9f-106">Rename the variable in the enclosed block so that it is not the same as any other local variables.</span></span> <span data-ttu-id="faf9f-107">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="faf9f-107">For example:</span></span>  
+- <span data-ttu-id="09cb4-106">Benennen Sie die Variable im-Block eingeschlossen, sodass sie nicht identisch mit anderen lokalen Variablen ist.</span><span class="sxs-lookup"><span data-stu-id="09cb4-106">Rename the variable in the enclosed block so that it is not the same as any other local variables.</span></span> <span data-ttu-id="09cb4-107">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="09cb4-107">For example:</span></span>  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,11 +30,11 @@ ms.locfileid: "64662665"
     End If  
     ```  
   
-- <span data-ttu-id="faf9f-108">Eine häufige Ursache für diesen Fehler ist die Verwendung von `Catch e As Exception` innerhalb eines ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="faf9f-108">A common cause for this error is the use of `Catch e As Exception` inside an event handler.</span></span> <span data-ttu-id="faf9f-109">Wenn dies der Fall ist, den Namen der `Catch` Blockvariable `ex` statt `e`.</span><span class="sxs-lookup"><span data-stu-id="faf9f-109">If this is the case, name the `Catch` block variable `ex` rather than `e`.</span></span>  
+- <span data-ttu-id="09cb4-108">Eine häufige Ursache für diesen Fehler ist die Verwendung von `Catch e As Exception` innerhalb eines ereignishandlers.</span><span class="sxs-lookup"><span data-stu-id="09cb4-108">A common cause for this error is the use of `Catch e As Exception` inside an event handler.</span></span> <span data-ttu-id="09cb4-109">Wenn dies der Fall ist, den Namen der `Catch` Blockvariable `ex` statt `e`.</span><span class="sxs-lookup"><span data-stu-id="09cb4-109">If this is the case, name the `Catch` block variable `ex` rather than `e`.</span></span>  
   
-- <span data-ttu-id="faf9f-110">Eine andere übliche Quelle für diesen Fehler ist ein Zugriffsversuch auf eine lokale Variable deklariert, die innerhalb einer `Try` -block in einem separaten `Catch` Block.</span><span class="sxs-lookup"><span data-stu-id="faf9f-110">Another common source of this error is an attempt to access a local variable declared within a `Try` block in a separate `Catch` block.</span></span> <span data-ttu-id="faf9f-111">Um dies zu korrigieren, deklarieren Sie die Variable außerhalb der `Try...Catch...Finally` Struktur.</span><span class="sxs-lookup"><span data-stu-id="faf9f-111">To correct this, declare the variable outside the `Try...Catch...Finally` structure.</span></span>  
+- <span data-ttu-id="09cb4-110">Eine andere übliche Quelle für diesen Fehler ist ein Zugriffsversuch auf eine lokale Variable deklariert, die innerhalb einer `Try` -block in einem separaten `Catch` Block.</span><span class="sxs-lookup"><span data-stu-id="09cb4-110">Another common source of this error is an attempt to access a local variable declared within a `Try` block in a separate `Catch` block.</span></span> <span data-ttu-id="09cb4-111">Um dies zu korrigieren, deklarieren Sie die Variable außerhalb der `Try...Catch...Finally` Struktur.</span><span class="sxs-lookup"><span data-stu-id="09cb4-111">To correct this, declare the variable outside the `Try...Catch...Finally` structure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="faf9f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="faf9f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09cb4-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="09cb4-112">See also</span></span>
 
-- [<span data-ttu-id="faf9f-113">Try...Catch...Finally-Anweisung</span><span class="sxs-lookup"><span data-stu-id="faf9f-113">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="faf9f-114">Variablendeklaration</span><span class="sxs-lookup"><span data-stu-id="faf9f-114">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="09cb4-113">Try...Catch...Finally-Anweisung</span><span class="sxs-lookup"><span data-stu-id="09cb4-113">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="09cb4-114">Variablendeklaration</span><span class="sxs-lookup"><span data-stu-id="09cb4-114">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

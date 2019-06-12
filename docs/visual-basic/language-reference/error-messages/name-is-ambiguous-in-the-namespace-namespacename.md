@@ -1,5 +1,5 @@
 ---
-title: <name> ist im Namespace "<namespacename>" nicht eindeutig.
+title: <name> ist im Namespace '<namespacename>' nicht eindeutig.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30560
@@ -14,16 +14,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64665715"
 ---
-# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a><span data-ttu-id="fe84c-102">'\<Name >' ist mehrdeutig im Namespace '\<Namespacename >'</span><span class="sxs-lookup"><span data-stu-id="fe84c-102">'\<name>' is ambiguous in the namespace '\<namespacename>'</span></span>
-<span data-ttu-id="fe84c-103">Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflikt mit einem anderen Namen verursacht.</span><span class="sxs-lookup"><span data-stu-id="fe84c-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="fe84c-104">Visual Basic-Compiler keine Regeln zur konfliktlösung; Sie müssen Namen selbst eindeutig machen.</span><span class="sxs-lookup"><span data-stu-id="fe84c-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
+# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a><span data-ttu-id="5a700-102">'\<Name >' ist mehrdeutig im Namespace '\<Namespacename >'</span><span class="sxs-lookup"><span data-stu-id="5a700-102">'\<name>' is ambiguous in the namespace '\<namespacename>'</span></span>
+<span data-ttu-id="5a700-103">Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflikt mit einem anderen Namen verursacht.</span><span class="sxs-lookup"><span data-stu-id="5a700-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="5a700-104">Visual Basic-Compiler keine Regeln zur konfliktlösung; Sie müssen Namen selbst eindeutig machen.</span><span class="sxs-lookup"><span data-stu-id="5a700-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- <span data-ttu-id="fe84c-105">**Fehler-ID:** BC30560</span><span class="sxs-lookup"><span data-stu-id="fe84c-105">**Error ID:** BC30560</span></span>  
+ <span data-ttu-id="5a700-105">**Fehler-ID:** BC30560</span><span class="sxs-lookup"><span data-stu-id="5a700-105">**Error ID:** BC30560</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="fe84c-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="fe84c-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5a700-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="5a700-106">To correct this error</span></span>  
   
-- <span data-ttu-id="fe84c-107">Geben Sie einen vollqualifizierten Namen an.</span><span class="sxs-lookup"><span data-stu-id="fe84c-107">Fully qualify the name.</span></span>  
+- <span data-ttu-id="5a700-107">Geben Sie einen vollqualifizierten Namen an.</span><span class="sxs-lookup"><span data-stu-id="5a700-107">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe84c-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe84c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a700-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a700-108">See also</span></span>
 
-- [<span data-ttu-id="fe84c-109">Namespaces in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fe84c-109">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [<span data-ttu-id="fe84c-110">Namespace-Anweisung</span><span class="sxs-lookup"><span data-stu-id="fe84c-110">Namespace Statement</span></span>](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [<span data-ttu-id="5a700-109">Namespaces in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5a700-109">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="5a700-110">Namespace-Anweisung</span><span class="sxs-lookup"><span data-stu-id="5a700-110">Namespace Statement</span></span>](../../../visual-basic/language-reference/statements/namespace-statement.md)

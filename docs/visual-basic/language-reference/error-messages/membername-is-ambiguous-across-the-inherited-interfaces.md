@@ -1,5 +1,5 @@
 ---
-title: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle "<interfacename1>" als auch in "<interfacename2>" verwendet.
+title: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle '<interfacename1>' als auch in '<interfacename2>' verwendet.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -14,14 +14,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64622655"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="8b2cd-102">'\<Membername >' ist mehrdeutig, in der geerbten Schnittstelle\<schnittstellenname1 >' und '\<schnittstellenname2 >'</span><span class="sxs-lookup"><span data-stu-id="8b2cd-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
-<span data-ttu-id="8b2cd-103">Die Schnittstelle erbt mindestens zwei Elemente mit dem gleichen Namen von mehreren Schnittstellen.</span><span class="sxs-lookup"><span data-stu-id="8b2cd-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="986db-102">'\<Membername >' ist mehrdeutig, in der geerbten Schnittstelle\<schnittstellenname1 >' und '\<schnittstellenname2 >'</span><span class="sxs-lookup"><span data-stu-id="986db-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="986db-103">Die Schnittstelle erbt mindestens zwei Elemente mit dem gleichen Namen von mehreren Schnittstellen.</span><span class="sxs-lookup"><span data-stu-id="986db-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="8b2cd-104">**Fehler-ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="8b2cd-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="986db-104">**Fehler-ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="986db-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8b2cd-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="8b2cd-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="986db-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="986db-105">To correct this error</span></span>  
   
-- <span data-ttu-id="8b2cd-106">Wandeln Sie den Wert für die Basisschnittstelle, die Sie verwenden möchten; Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="8b2cd-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+- <span data-ttu-id="986db-106">Wandeln Sie den Wert für die Basisschnittstelle, die Sie verwenden möchten; Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="986db-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,6 +46,6 @@ ms.locfileid: "64622655"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8b2cd-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8b2cd-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="986db-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="986db-107">See also</span></span>
 
-- [<span data-ttu-id="8b2cd-108">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="8b2cd-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="986db-108">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="986db-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
