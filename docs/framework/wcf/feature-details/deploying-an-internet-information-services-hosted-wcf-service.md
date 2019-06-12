@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858317"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025733"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -41,7 +41,7 @@ Der Installationsvorgang für .NET Framework wird WCF automatisch mit IIS regist
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Erstellen einer neuen IIS-Anwendung oder Wiederverwenden einer vorhandenen ASP.NET-Anwendung
 
-IIS-gehosteten WCF-Dienste müssen innerhalb einer IIS‑Anwendung befinden. Sie können eine neue IIS‑Anwendung zum Hosten von WCF-Diensten ausschließlich erstellen. Alternativ können Sie einen WCF-Dienst bereitstellen, in eine vorhandene Anwendung, die bereits hostet [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Inhalt (z. B. aspx-Seiten und ASP.NET-Webdienste [ASMX]). Weitere Informationen zu diesen Optionen finden Sie unter der "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" Abschnitten [WCF-Dienste und ASP.NET](wcf-services-and-aspnet.md).
+IIS-gehosteten WCF-Dienste müssen innerhalb einer IIS‑Anwendung befinden. Sie können eine neue IIS‑Anwendung zum Hosten von WCF-Diensten ausschließlich erstellen. Alternativ können Sie einen WCF-Dienst in eine vorhandene Anwendung bereitstellen, die bereits mit ASP.NET 2.0-Inhalt (z. B. aspx-Seiten und ASP.NET-Webdienste [ASMX]) dient. Weitere Informationen zu diesen Optionen finden Sie unter der "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" Abschnitten [WCF-Dienste und ASP.NET](wcf-services-and-aspnet.md).
 
 Beachten Sie, dass [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und höhere Versionen in regelmäßigen Abständen eine isolierte objektorientierte Programmierungsanwendung neu starten. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter den [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
@@ -65,7 +65,7 @@ Weitere Informationen über die Syntax für SVC-Dateien finden Sie unter [ \@Ser
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Bereitstellen der Dienstimplementierung für die IIS-Anwendung
 
-In IIS gehosteten WCF-Dienste verwenden das gleiche dynamische Kompilierungsmodell wie [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Genau wie bei ASP.NET können Sie den Implementierungscode für IIS-gehosteten WCF-Dienste auf verschiedene Weise an verschiedenen Speicherorten folgendermaßen bereitstellen:
+In IIS gehosteten WCF-Dienste verwenden das gleiche dynamische Kompilierungsmodell wie ASP.NET 2.0. Genau wie bei ASP.NET können Sie den Implementierungscode für IIS-gehosteten WCF-Dienste auf verschiedene Weise an verschiedenen Speicherorten folgendermaßen bereitstellen:
 
 - Als vorkompilierte DLL im globalen Assemblycache (GAC) oder im \bin-Verzeichnis der Anwendung. Vorkompilierte Binärdateien werden erst aktualisiert, wenn eine neue Version der Klassenbibliothek bereitgestellt wird.
 
@@ -73,7 +73,7 @@ In IIS gehosteten WCF-Dienste verwenden das gleiche dynamische Kompilierungsmode
 
 - Wie nicht kompilierten Code direkt in der SVC-Datei eingefügt werden soll. Code zur Implementierung kann sich Inline in der SVC Datei, auch sein, nach der \@ServiceHost-Direktive. Änderungen an Inlinecode führen dazu, dass die Anwendung wiederverwendet und neu kompiliert wird, wenn die nächste Anforderung empfangen wird.
 
-Weitere Informationen zu den [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Kompilierungsmodell finden Sie unter [Übersicht über die ASP.NET-Kompilierung](https://go.microsoft.com/fwlink/?LinkId=94773).
+Weitere Informationen über das Kompilierungsmodell von ASP.NET 2.0 finden Sie unter [Übersicht über die ASP.NET-Kompilierung](https://go.microsoft.com/fwlink/?LinkId=94773).
 
 ## <a name="configure-the-wcf-service"></a>Konfigurieren des WCF-Diensts
 

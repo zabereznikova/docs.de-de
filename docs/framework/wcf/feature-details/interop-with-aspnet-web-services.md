@@ -2,17 +2,17 @@
 title: Interoperabilität mit ASP.NET-Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875548"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026017"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interoperabilität mit ASP.NET-Webdiensten
 Interoperabilität zwischen ASP.NET Web Services und Windows Communication Foundation (WCF)-Webdiensten erzielt werden, indem Sie sicherstellen, dass implementierte Dienste, beide Technologien entspricht-I Basic Profile 1.1-Spezifikation. ASP.NET Web Services, die mit WS-I Basic Profile 1.1 sind mit WCF-Clients interoperabel, mithilfe von WCF vom System bereitgestellte Bindung, <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Verwenden Sie wie im folgenden Beispielcode gezeigt die in [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] gebotene Möglichkeit, das <xref:System.Web.Services.WebService>-Attribut und das <xref:System.Web.Services.WebMethodAttribute>-Attribut zu einer Schnittstelle anstatt zu einer Klasse hinzuzufügen und zum Implementieren der Schnittstelle eine Klasse zu schreiben.  
+ Verwenden Sie ASP.NET 2.0-Option hinzufügen, die <xref:System.Web.Services.WebService> und <xref:System.Web.Services.WebMethodAttribute> Attribute zu einer Schnittstelle anstatt zu einer Klasse, und schreiben eine Klasse zum Implementieren der Schnittstelle, wie im folgenden Beispielcode gezeigt.  
   
 ```  
 [WebService]  
@@ -47,7 +47,7 @@ public class Service : IEcho
  Vermeiden Sie die Verwendung der von den Internetinformationsdiensten (IIS) bereitgestellten Authentifizierungsoptionen. WCF-Clients unterstützen sie nicht. Wenn ein Dienst geschützt werden muss, verwenden Sie die Optionen, WCF, bereitgestellt werden, da diese Optionen robuster sind und auf Standardprotokollen basieren.  
   
 ## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>Durch das Laden von ServiceModel HttpModule verursachte Leistungsbeeinträchtigungen  
- In .NET Framework&amp;#160;3.0 wurde das WCF-`HttpModule`-Element in der Stammdatei Web.config installiert, sodass jede ASP.NET-Anwendung WCF unterstützte. Dies kann die Leistung beeinträchtigen. Sie können daher `ServiceModel` für die Datei Web.config entfernen, wie im folgenden Bespiel gezeigt.  
+ In .NET Framework&#160;3.0 wurde das WCF-`HttpModule`-Element in der Stammdatei Web.config installiert, sodass jede ASP.NET-Anwendung WCF unterstützte. Dies kann die Leistung beeinträchtigen. Sie können daher `ServiceModel` für die Datei Web.config entfernen, wie im folgenden Bespiel gezeigt.  
   
 ```xml  
 <httpModules>  

@@ -16,25 +16,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c141ca9a8e1c74015883f45cb2eaa9183bb3d89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 256fd900fa73948b4ca42ac6b6f21f145effc461
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922290"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025892"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3-Schnittstelle
-Stellt Methoden zum Abrufen von Informationen über die verwaltete Darstellung der [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen, die derzeit in einer Anwendungsdomäne geladen. Diese Schnittstelle ist eine Erweiterung der ICorDebugAppDomain und ICorDebugAppDomain2-Schnittstellen.  
+Stellt Methoden zum Abrufen von Informationen über die verwaltete Darstellung der Windows-Runtime-Typen, die derzeit in einer Anwendungsdomäne geladen. Diese Schnittstelle ist eine Erweiterung der ICorDebugAppDomain und ICorDebugAppDomain2-Schnittstellen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Ruft einen Enumerator für alle zwischengespeicherten [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen.|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Ruft einen Enumerator ab, für die Zwischenspeicherung [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen in einer Anwendungsdomäne auf der Grundlage von deren Schnittstellenbezeichner.|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Ruft einen Enumerator für alle zwischengespeicherten Windows-Runtime-Typen ab.|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Ruft einen Enumerator für zwischengespeicherte Windows-Runtime-Typen in einer Anwendungsdomäne, basierend auf ihren Schnittstellenbezeichner ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle soll von einem Debugger in Verbindung mit einem Funktionsaufruf für die Auswertung zu verwendende `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Wenn die Methode ruft die Schnittstelle-IDs, die von unterstützt ab einem [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Server-Objekt, der Debugger können Sie die in der Schnittstelle definierten Methoden sie verwaltete Typen zuzuordnen, die diese Schnittstellen entsprechen.  
+ Diese Schnittstelle soll von einem Debugger in Verbindung mit einem Funktionsaufruf für die Auswertung zu verwendende `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Wenn die Methode die Schnittstelle-IDs, die von einem Windows-Runtime-Server-Objekt unterstützt abruft, kann der Debugger die in der Schnittstelle definierten Methoden verwenden, sie verwaltete Typen zuzuordnen, die diese Schnittstellen entsprechen.  
   
  Führen Sie zum Abrufen einer Instanz dieser Schnittstelle `QueryInterface` auf einer Instanz der ICorDebugAppDomain oder ICorDebugAppDomain2-Schnittstelle.  
   
@@ -42,7 +42,7 @@ Stellt Methoden zum Abrufen von Informationen über die verwaltete Darstellung d
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Plattformen:** Windows-Runtime  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

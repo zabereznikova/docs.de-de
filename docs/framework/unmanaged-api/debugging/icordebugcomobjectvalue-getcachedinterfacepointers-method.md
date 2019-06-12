@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da0e62250dbef9be93ccee7020e23c3f83e85592
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a77e7f20aba1908a63d77b4ccada7fabacf55f7
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749903"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025846"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers-Methode
 Ruft den unformatierten Schnittstellenzeiger auf den aktuellen Runtime callable Wrapper (RCW) zwischengespeichert.  
@@ -37,7 +37,7 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Parameter  
  `bIInspectableOnly`  
- [in] Ein Wert, der angibt, ob nur die Methode zurückkehrt, [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Schnittstellen (`IInspectable` Schnittstellen) oder alle COM-Schnittstellen, die von den Runtime callable Wrapper (RCW) zwischengespeichert werden.  
+ [in] Ein Wert, der angibt, ob die Methode nur Windows-Runtime-Schnittstellen zurückgibt (`IInspectable` Schnittstellen) oder alle COM-Schnittstellen, die von den Runtime callable Wrapper (RCW) zwischengespeichert werden.  
   
  `celt`  
  [in] Die Anzahl der Objekte, deren Adressen sind, abgerufen werden sollen.  

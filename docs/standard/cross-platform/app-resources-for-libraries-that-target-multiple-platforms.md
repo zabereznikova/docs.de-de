@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055016"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025576"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
 Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Projekttyp, um sicherzustellen, dass Ressourcen in den Klassenbibliotheken, die von mehreren Plattformen zugegriffen werden kann. Dieser Projekttyp ist in Visual Studio 2012 verfügbar und ist die portable Teilmenge der .NET Framework-Klassenbibliothek vorgesehen. Durch die Verwendung von [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird sichergestellt, dass von Desktop-Apps, Silverlight-Apps, Windows Phone-Apps und [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps auf die Bibliothek zugegriffen werden kann.
@@ -47,9 +47,9 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>Die [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] und Windows Store-Apps
  In [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekten werden Ressourcen in RESX-Dateien gespeichert, die dann als RESOURCES-Dateien kompiliert und zur Kompilierzeit in die Hauptassembly oder in Satellitenassemblys eingebettet werden. Für Apps im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] hingegen müssen Ressourcen in RESW-Dateien gespeichert werden, die dann als einzelne PRI (Package Resource Index)-Datei kompiliert werden. [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird jedoch trotz der nicht kompatiblen Dateiformate in einer App im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ausgeführt.
 
- Um die Klassenbibliothek in einer App im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] zu verwenden, fügen Sie im Projekt für die App im Windows Store einen Verweis auf die Klassenbibliothek hinzu. Visual Studio extrahiert die Ressourcen transparent aus der Assembly in eine RESW-Datei und verwendet sie zum Generieren einer PRI-Datei, aus der [!INCLUDE[wrt](../../../includes/wrt-md.md)] Ressourcen extrahieren kann. [!INCLUDE[wrt](../../../includes/wrt-md.md)] führt zur Laufzeit den Code in [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] aus, ruft jedoch die Ressourcen der portablen Klassenbibliothek aus der PRI-Datei ab.
+ Um die Klassenbibliothek in einer App im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] zu verwenden, fügen Sie im Projekt für die App im Windows Store einen Verweis auf die Klassenbibliothek hinzu. Visual Studio wird transparent die Ressourcen aus der Assembly in eine resw-Datei zu extrahieren und verwenden sie zum Generieren einer PRI-Datei, von der die Windows-Runtime Ressourcen extrahieren kann. Zur Laufzeit führt der Windows-Runtime den Code auf Ihre [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], aber Ihre Portable Class Library-Ressourcen aus der PRI-Datei abgerufen.
 
- Wenn das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt lokalisierte Ressourcen enthält, stellen Sie diese auf die gleiche Weise wie für eine Bibliothek in einer Desktop-App mithilfe des Hub-and-Spoke-Modells bereit. Um in der App im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] die Hauptressourcendatei und ggf. lokalisierte Ressourcendateien zu verwenden, fügen Sie einen Verweis auf die Hauptassembly hinzu. Zur Kompilierzeit extrahiert Visual Studio die Ressource aus der Hauptressourcendatei und lokalisiert die Ressourcendateien in separate RESW-Dateien. Anschließend werden die RESW-Dateien in eine einzelne PRI-Datei kompiliert, auf die [!INCLUDE[wrt](../../../includes/wrt-md.md)] zur Laufzeit zugreift.
+ Wenn das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt lokalisierte Ressourcen enthält, stellen Sie diese auf die gleiche Weise wie für eine Bibliothek in einer Desktop-App mithilfe des Hub-and-Spoke-Modells bereit. Um in der App im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] die Hauptressourcendatei und ggf. lokalisierte Ressourcendateien zu verwenden, fügen Sie einen Verweis auf die Hauptassembly hinzu. Zur Kompilierzeit extrahiert Visual Studio die Ressource aus der Hauptressourcendatei und lokalisiert die Ressourcendateien in separate RESW-Dateien. Dann wird die resw-Dateien kompiliert, in einer einzelnen PRI-Datei, die die Windows-Runtime zur Laufzeit zugreift.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Beispiel: Nicht lokalisierte [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
