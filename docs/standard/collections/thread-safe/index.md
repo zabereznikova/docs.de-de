@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457070"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816209"
 ---
 # <a name="thread-safe-collections"></a>Threadsichere Auflistungen
 Das .NET Framework 4 führt den <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace ein, der mehrere Auflistungsklassen einschließt, die sowohl threadsicher als auch skalierbar sind. Mehrere Threads können diesen Auflistungen sicher und effizient Elemente hinzufügen bzw. daraus entfernen, ohne dass zusätzliche Synchronisierung in Benutzercode erforderlich ist. Wenn Sie neuen Code schreiben, verwenden Sie immer dann die Klassen für parallele Auflistungsvorgänge, wenn mehrere Threads gleichzeitig Schreibvorgänge in der Auflistung ausführen. Wenn Sie nur von einer freigegebenen Auflistung lesen, können Sie die Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Es wird empfohlen, keine 1.0-Auflistungsklassen zu verwenden, sofern als Zielversion nicht .NET Framework 1.1 oder eine frühere Laufzeit festgelegt wird.  
@@ -22,7 +22,7 @@ Das .NET Framework 4 führt den <xref:System.Collections.Concurrent?displayPrope
   
  Die in .NET Framework 2.0 eingeführten Auflistungsklassen befinden sich im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace. Dazu gehören <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> usw. Diese Klassen bieten verbesserte Typsicherheit und Leistung im Vergleich zu den .NET Framework 1.0-Klassen. Die .NET Framework 2.0-Auflistungsklassen stellen jedoch keine Threadsynchronisierung bereit; Benutzercode muss die gesamte Synchronisierung bereitstellen, wenn Elemente gleichzeitig in mehreren Threads hinzugefügt oder entfernt werden.  
   
- Es wird empfohlen, die gleichzeitigen Auflistungsklassen im .NET Framework 4 zu verwenden, da sie nicht nur die Typsicherheit der .NET Framework 2.0-Auflistungsklassen, sondern auch effizientere und vollständigere Threadsicherheit als die [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)]-Auflistungen bieten.  
+ Wir empfehlen die gleichzeitigen Auflistungsklassen in .NET Framework 4, da sie nicht nur die typsicherheit der .NET Framework 2.0-Auflistungsklassen, sondern auch effizientere und vollständigere Threadsicherheit als die .NET Framework 1.0-Sammlungen bieten Geben Sie.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Differenzierte Sperre und sperrenfreie Mechanismen  
  Einige der gleichzeitigen Auflistungstypen verwenden einfache Synchronisierungsmechanismen, z. B. <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim>, und <xref:System.Threading.CountdownEvent>, die neu im .NET Framework 4 sind. Diese Synchronisierungstypen verwenden normalerweise *andauernde Spinvorgänge* für die kurzen Zeiträume, bevor der Thread in einen echten Wartezustand versetzt wird. Wenn Wartezeiten als sehr kurz eingeschätzt werden, sind Spinvorgänge weitaus weniger rechenintensiv als Wartezustände, die einen aufwändigen Kernel-Übergang umfassen. Für Auflistungsklassen, für die Spinvorgänge verwendet werden, bedeutet diese Effizienz, dass mehrere Threads Elemente mit einer sehr hohen Rate hinzufügen und entfernen können. Weitere Informationen zu Spinvorgängen im Vergleich zu Blockierungen finden Sie unter [SpinLock](../../../../docs/standard/threading/spinlock.md) und [SpinWait](../../../../docs/standard/threading/spinwait.md).  

@@ -2,12 +2,12 @@
 title: Containerisieren monolithischer Anwendungen
 description: Das Containerisieren monolithischer Anwendungen bietet zwar nicht alle Vorteile der Microservicearchitektur, dafür jedoch wichtige Vorteile beim Bereitstellen, von denen Sie direkt profitieren können.
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640813"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690543"
 ---
 # <a name="containerizing-monolithic-applications"></a>Containerisieren monolithischer Anwendungen
 
@@ -63,9 +63,9 @@ Ob Sie einen in Azure bereitgestellten Container überprüfen möchten, oder wen
 
 **Abbildung 4-4**. Veröffentlichen einer einzelnen Containeranwendung in Azure App Service aus Visual Studio
 
-Wenn Sie ohne Docker andere Funktionen, Frameworks oder Abhängigkeiten benötigten, die in Azure App Service nicht unterstützt werden, mussten Sie warten, bis das Azure-Team diese Abhängigkeiten im Anwendungsdienst aktualisiert. Oder Sie mussten zu anderen Diensten wie Azure Service Fabric, Azure Cloud Services oder sogar VMs wechseln. Dort hatten Sie mehr Kontrolle und konnten eine erforderliche Komponente oder ein Framework für Ihre Anwendung installieren.
+Wenn Sie ohne Docker andere Funktionen, Frameworks oder Abhängigkeiten benötigten, die in Azure App Service nicht unterstützt werden, mussten Sie warten, bis das Azure-Team diese Abhängigkeiten im Anwendungsdienst aktualisiert. Oder Sie mussten, wechseln Sie zu anderen Diensten wie Azure Cloud Services oder virtuelle Computer, wobei hatten Sie mehr Kontrolle und könnten Sie eine erforderliche Komponente oder ein Framework für Ihre Anwendung installieren.
 
-Die Containerunterstützung in Visual Studio 2017 bietet Ihnen, wie in Abbildung 4-4 dargestellt, die Möglichkeit, beliebige Dinge in Ihre Anwendungsumgebung einzuschließen. Da Sie sie in einem Container ausführen, können Sie die Abhängigkeit in Ihrem Dockerfile oder Ihrem Docker-Image einschließen, wenn Sie Ihrer Anwendung eine Abhängigkeit hinzufügen.
+Containerunterstützung in Visual Studio 2017 und höher bietet Ihnen die Möglichkeit um beliebig in Ihrer anwendungsumgebung einzuschließen, wie in Abbildung 4-4 dargestellt. Da Sie sie in einem Container ausführen, können Sie die Abhängigkeit in Ihrem Dockerfile oder Ihrem Docker-Image einschließen, wenn Sie Ihrer Anwendung eine Abhängigkeit hinzufügen.
 
 Abbildung 4-4 zeigt auch, wie der Veröffentlichungsfluss ein Image über eine Containerregistrierung überträgt. Hierbei handelt es sich um eine Azure-Containerregistrierung (eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure, die von Azure Active Directory-Gruppen und -Konten gesichert wird) oder andere Docker-Registrierungen wie Docker-Hub oder eine lokale Registrierung.
 

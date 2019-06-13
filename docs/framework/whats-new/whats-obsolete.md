@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ca7bf5ad4b4d145f484f46ee46220a58f326333
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635600"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690474"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 
@@ -43,7 +43,7 @@ Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres 
 
 - Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.
 
-Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Beispiel: Angenommen, Sie besitzen eine Anwendung mit dem Namen "app1.exe", die für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] kompiliert wurde, doch Sie möchten, dass die Anwendung für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ausgeführt wird. Gehen Sie dazu folgendermaßen vor:
+Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Nehmen wir beispielsweise an, dass Sie eine Anwendung namens app1.exe, die mit .NET Framework 3.5 kompiliert wurde, aber die Anwendung für .NET Framework 4.5 ausgeführt werden sollen. Gehen Sie dazu folgendermaßen vor:
 
 1. Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.
 

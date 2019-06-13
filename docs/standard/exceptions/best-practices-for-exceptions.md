@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633750"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690662"
 ---
 # <a name="best-practices-for-exceptions"></a>Best Practices für Ausnahmen
 
@@ -54,7 +54,9 @@ Eine Klasse kann Methoden oder Eigenschaften bereitstellen, mit deren Hilfe ein 
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-Eine andere Möglichkeit zum Vermeiden von Ausnahmen besteht darin, für sehr häufig auftretende Fehler `null` zurückzugeben, statt eine Ausnahme auszulösen. Ein sehr häufig auftretender Fehler kann durchaus als normale Ablaufsteuerung betrachtet werden. Indem Sie in diesen Fällen `null` zurückgeben, minimieren Sie die Auswirkungen auf die Leistung einer App.
+Eine andere Möglichkeit zum Vermeiden von Ausnahmen besteht darin, bei sehr häufig auftretenden Fehlern NULL (oder einen Standardwert) zurückzugeben, statt eine Ausnahme auszulösen. Ein sehr häufig auftretender Fehler kann durchaus als normale Ablaufsteuerung betrachtet werden. Indem Sie in diesen Fällen NULL (oder einen Standardwert) zurückgeben, minimieren Sie die Auswirkungen auf die Leistung einer App.
+
+Bei Werttypen an, ob verwendet `Nullable<T>` oder Standard, wie Ihre Fehlerindikator für Ihre spezielle app berücksichtigt wird. Durch Verwendung von `Nullable<Guid>` wird `default` zu `null` statt zu `Guid.Empty`. Manchmal wird durch Hinzufügen von `Nullable<T>` klarer, ob ein Wert vorhanden oder nicht vorhanden ist. Andererseits kann das Hinzufügen von `Nullable<T>` dazu führen, dass zusätzliche Fälle geprüft werden müssen, die eigentlich nicht notwendig sind und nur zu potenzielle Fehlerquellen führen. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Auslösen von Ausnahmen statt Zurückgeben eines Fehlercodes
 

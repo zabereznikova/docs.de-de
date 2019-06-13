@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586122"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816139"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  
@@ -36,7 +36,7 @@ ms.locfileid: "65586122"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Dynamische Assemblys  
- Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
+ Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode sind in .NET Framework 4, durch die Beseitigung der computerweite Sicherheitsrichtlinie veraltet. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
   
 > [!NOTE]
 >  Attribute, die Sie mithilfe von <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf die dynamische Assembly nach deren Erstellung anwenden, werden erst wirksam, nachdem die Assembly auf dem Datenträger gespeichert und wieder in den Arbeitsspeicher geladen wurde.  
@@ -78,7 +78,7 @@ ms.locfileid: "65586122"
   
  Wie bei jedem anderen ausgegebenen Code auch, erfordert die Ausführung der dynamischen Methode alle Berechtigungen, die von den Methoden angefordert werden, die die dynamische Methode verwendet.  
   
- Die Systemassembly, die anonym gehostete dynamische Methoden hostet, verwendet das <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>-Transparenzmodell, bei dem es sich um das Transparenzmodell handelt, das in .NET Framework vor [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] verwendet wurde.  
+ Die Systemassembly, die anonym gehostete dynamische Methoden hostet, verwendet das Transparenzmodell <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>. Hierbei handelt es sich um das Transparenzmodell, das in .NET Framework vor .NET Framework 4 verwendet wurde.  
   
  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Reflection.Emit.DynamicMethod>-Klasse.  
   
@@ -139,16 +139,16 @@ ms.locfileid: "65586122"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Versionsinformationen  
- Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ist die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+ Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
   
- Ab [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag beim Ausgeben von dynamischen Assemblys und dynamischen Methoden nicht mehr erforderlich. In allen früheren Versionen von .NET Framework ist dieses Flag erforderlich.  
+ Ab .NET Framework 2.0 Service Pack 1 <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> Flag ist beim Ausgeben von dynamischen Assemblys und dynamischen Methoden nicht mehr erforderlich. In allen früheren Versionen von .NET Framework ist dieses Flag erforderlich.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag ist standardmäßig in den benannten Berechtigungsätzen `FullTrust` und `LocalIntranet` enthalten, aber nicht im `Internet`-Berechtigungssatz. Aus diesem Grund kann in früheren Versionen von .NET Framework eine Bibliothek mit Internetberechtigungen nur dann verwendet werden, wenn dafür ein <xref:System.Security.PermissionSet.Assert%2A>-Element für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt wird. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. In [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] ist es möglich, Code in teilweise vertrauenswürdigen Szenarios ohne Sicherheitsanforderungen auszugeben, da das Generieren von Code an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Dies ermöglicht es, dass Bibliotheken, die Code ausgeben, sicherheitstransparent sein können, und beseitigt die Notwendigkeit der Assertion von <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, was das Schreiben einer sicheren Bibliothek vereinfacht.  
+>  <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag ist standardmäßig in den benannten Berechtigungsätzen `FullTrust` und `LocalIntranet` enthalten, aber nicht im `Internet`-Berechtigungssatz. Aus diesem Grund kann in früheren Versionen von .NET Framework eine Bibliothek mit Internetberechtigungen nur dann verwendet werden, wenn dafür ein <xref:System.Security.PermissionSet.Assert%2A>-Element für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt wird. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. .NET Framework 2.0 SP1 können Code an in teilweise vertrauenswürdigen Szenarien ohne sicherheitsanforderungen auszugeben, da das Generieren von Code nicht an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Dies ermöglicht es, dass Bibliotheken, die Code ausgeben, sicherheitstransparent sein können, und beseitigt die Notwendigkeit der Assertion von <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, was das Schreiben einer sicheren Bibliothek vereinfacht.  
   
- Darüber hinaus führt [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] den <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag für den Zugriff auf nicht öffentliche Typen und Member aus teilweise vertrauenswürdigen dynamischen Methoden ein. Frühere Versionen von .NET Framework erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag für dynamische Methoden, die auf nicht öffentliche Typen und Member zugreifen. Diese Berechtigung sollte niemals teilweise vertrauenswürdigem Code erteilt werden.  
+ Darüber hinaus führt der .NET Framework 2.0 SP1 die <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Flag für den Zugriff auf nicht öffentliche Typen und Member aus teilweise vertrauenswürdigen dynamischen Methoden. Frühere Versionen von .NET Framework erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag für dynamische Methoden, die auf nicht öffentliche Typen und Member zugreifen. Diese Berechtigung sollte niemals teilweise vertrauenswürdigem Code erteilt werden.  
   
- Schließlich führt [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] noch anonym gehostete Methoden ein.  
+ Schließlich führt die .NET Framework 2.0 SP1 anonym gehostete Methoden ein.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Abrufen von Informationen zu Typen und Member  
  Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um Informationen über nicht öffentliche Typen und Member abzurufen. Reflektion wird verwendet, um Informationen abzurufen, die zum Ausgeben dynamischer Methoden erforderlich sind. Beispielsweise werden <xref:System.Reflection.MethodInfo>-Objekte verwendet, um Methodenaufrufe auszugeben. Frühere Versionen von .NET Framework erfordern <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Reflektion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607516"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486522"
 ---
 # <a name="shadow-copying-assemblies"></a>Erstellen von Schattenkopien von Assemblys
 Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne verwendet werden, aktualisiert werden können, ohne die Anwendungsdomäne zu entladen. Dies ist besonders hilfreich für Anwendungen, die permanent verfügbar sein müssen, wie ASP.NET-Websites.  
@@ -32,7 +32,7 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
   
 - [Aktivieren und Verwenden der Schattenkopiefunktion](#EnablingAndUsing) beschreibt die grundlegende Verwendung sowie die Optionen in Verbindung mit Schattenkopien.  
   
-- [Startleistung](#StartupPerformance) beschreibt die Änderungen, die an der Schattenkopiefunktion in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] vorgenommen werden, um die Startleistung zu verbessern. Außerdem wird erläutert, wie das Verhalten vorheriger Versionen wiederhergestellt werden kann.  
+- [Startleistung](#StartupPerformance) wird beschrieben, die Änderungen, die an der Schattenkopiefunktion in .NET Framework 4 zur Verbesserung der Leistung beim Start, und wie das Verhalten vorheriger Versionen wiederhergestellt werden.  
   
 - [Veraltete Methoden](#ObsoleteMethods) beschreibt die Änderungen, die an den Eigenschaften und Methoden vorgenommen wurden, die die Schattenkopiefunktion in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] steuern.  
   
@@ -67,9 +67,9 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Startleistung  
- Wenn eine Anwendungsdomäne, in der die Schattenkopiefunktion verwendet wird, gestartet wird, kommt es zu einer Verzögerung, während die Assemblys im Anwendungsverzeichnis in das Verzeichnis für Schattenkopien kopiert oder während überprüft wird, ob sie sich bereits an diesem Speicherort befinden. Vor [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] wurden alle Assemblys in ein temporäres Verzeichnis kopiert. Jede Assembly wurde geöffnet, um den Assemblynamen zu überprüfen, und der starke Name wurde validiert. Jede Assembly wurde überprüft, um zu sehen, ob sie aktueller als die Kopie im Schattenkopieverzeichnis ist. Falls ja, wurde sie in das Schattenkopieverzeichnis kopiert. Abschließend wurden die temporären Kopien verworfen.  
+ Wenn eine Anwendungsdomäne, in der die Schattenkopiefunktion verwendet wird, gestartet wird, kommt es zu einer Verzögerung, während die Assemblys im Anwendungsverzeichnis in das Verzeichnis für Schattenkopien kopiert oder während überprüft wird, ob sie sich bereits an diesem Speicherort befinden. Vor .NET Framework 4.0 wurden alle Assemblys in ein temporäres Verzeichnis kopiert. Jede Assembly wurde geöffnet, um den Assemblynamen zu überprüfen, und der starke Name wurde validiert. Jede Assembly wurde überprüft, um zu sehen, ob sie aktueller als die Kopie im Schattenkopieverzeichnis ist. Falls ja, wurde sie in das Schattenkopieverzeichnis kopiert. Abschließend wurden die temporären Kopien verworfen.  
   
- Beginnend mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] besteht das standardmäßige Startverhalten darin, Datum und Uhrzeit jeder Assembly im Anwendungsverzeichnis direkt mit dem Datum und der Uhrzeit der Kopie im Schattenkopieverzeichnis zu vergleichen. Wenn die Assembly aktualisiert wurde, wird sie mit der gleichen Prozedur wie in älteren Versionen von .NET Framework kopiert; andernfalls wird die Schattenkopie im Schattenkopieverzeichnis geladen.  
+ Ab .NET Framework 4 besteht das standardmäßige Startverhalten darin, Datum und Uhrzeit jeder Assembly im Anwendungsverzeichnis direkt mit dem Datum und der Uhrzeit der Kopie im Schattenkopieverzeichnis zu vergleichen. Wenn die Assembly aktualisiert wurde, wird sie mit der gleichen Prozedur wie in älteren Versionen von .NET Framework kopiert; andernfalls wird die Schattenkopie im Schattenkopieverzeichnis geladen.  
   
  Die sich hieraus ergebende Leistungsverbesserung ist enorm für Anwendungen, in denen Assemblys nicht häufig geändert werden und Änderungen in der Regel nur an einer kleinen Teilmenge von Assemblys vorgenommen werden. Wenn ein Großteil der Assemblys in einer Anwendung häufig geändert wird, kann das neue Standardverhalten zu einem Leistungsverlust führen. Sie können das Startverhalten vorheriger Versionen von .NET Framework wiederherstellen, indem Sie das [\<<shadowCopyVerifyByTimestamp>-Element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) mit `enabled="false"` zur Konfigurationsdatei hinzufügen.  
   

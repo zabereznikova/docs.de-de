@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644046"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690189"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -53,7 +53,7 @@ Im Allgemeinen sollten Sie keine der .NET Framework-Versionen deinstallieren, di
 
 - Wenn eine App, die Sie verwenden, von einer bestimmten Version von .NET Framework abhängt, können Fehler in dieser App entstehen, wenn diese Version entfernt wird.
 
-- Einige Versionen von .NET Framework sind direkte Updates früherer Versionen. So ist z.B. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ein direktes Update für Version 2.0 und .NET Framework 4.8 ein direktes Update für die Versionen 4 bis 4.7.2. Weitere Informationen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
+- Einige Versionen von .NET Framework sind direkte Updates früherer Versionen. Z. B. .NET Framework 3.5 ist ein direktes Update zu Version 2.0, und die .NET Framework-4.8 ist ein direktes Update zu den Versionen 4 bis 4.7.2. Weitere Informationen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
 
 Wenn Sie auf Windows-Versionen vor Windows 8 .NET Framework entfernen möchten, verwenden Sie immer **Programme und Funktionen** in der Systemsteuerung, um es zu deinstallieren. Entfernen Sie .NET Framework-Versionen nie manuell. Unter Windows 8 und höher ist .NET Framework eine Komponente des Betriebssystems und kann nicht separat deinstalliert werden.
 

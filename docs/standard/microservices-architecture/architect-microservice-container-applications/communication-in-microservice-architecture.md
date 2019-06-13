@@ -2,12 +2,12 @@
 title: Kommunikation in einer Microservicearchitektur
 description: Erkunden Sie verschiedene Kommunikationsmöglichkeiten zwischen Microservices, und lernen Sie die Auswirkungen synchroner und asynchroner Optionen kennen.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7f7a65ef53d401a8533f82168db5a412d5ac9756
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644355"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690554"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -67,9 +67,9 @@ In den folgenden Abschnitten werden die verschiedenen Kommunikationsstile erläu
 
 ## <a name="communication-styles"></a>Kommunikationsstile
 
-Abhängig von dem zu verwendenden Kommunikationstyp können Sie zwischen vielen Protokollen und Optionen auswählen, die für die Kommunikation verwendet werden können. Wenn Sie einen synchronen, auf Anforderungen/Antworten basierenden Kommunikationsmechanismus verwenden, kommen am häufigsten HTTP- und REST-Protokolle zum Einsatz, insbesondere dann, wenn Sie Ihre Dienste außerhalb des Docker-Hosts oder des Microserviceclusters veröffentlichen. Bei der internen Kommunikation zwischen Diensten (innerhalb Ihres Docker-Hosts oder des Microserviceclusters) sollten Sie auch Kommunikationsmechanismen im Binärformat verwenden (z.B. Service Fabric-Remoting oder WCF über TCP und das Binärformat). Alternativ können Sie auch asynchrone, nachrichtenbasierte Kommunikationsmechanismen wie AMQP verwenden.
+Abhängig von dem zu verwendenden Kommunikationstyp können Sie zwischen vielen Protokollen und Optionen auswählen, die für die Kommunikation verwendet werden können. Wenn Sie einen synchronen, auf Anforderungen/Antworten basierenden Kommunikationsmechanismus verwenden, kommen am häufigsten HTTP- und REST-Protokolle zum Einsatz, insbesondere dann, wenn Sie Ihre Dienste außerhalb des Docker-Hosts oder des Microserviceclusters veröffentlichen. Wenn Sie die Kommunikation zwischen Diensten, intern (innerhalb Ihres Docker-Host oder Microservices-Clusters) sind, können Sie auch Binärformat Kommunikationsmechanismen (z. B. WCF über TCP und das binäre Format) verwenden möchten. Alternativ können Sie auch asynchrone, nachrichtenbasierte Kommunikationsmechanismen wie AMQP verwenden.
 
-Es gibt auch mehrere Nachrichtenformate wie JSON, XML oder sogar Binärformate, die effizienter sein können. Wenn es sich bei dem von Ihnen ausgewählten Binärformat um keinen Standard handelt, sollten Sie Ihre Dienste nicht mit diesem Format öffentlich veröffentlichen. Sie könnten für die interne Kommunikation zwischen Ihren Microservices ein nicht standardmäßiges Format verwenden. Dies wäre bei der Kommunikation zwischen Microservices innerhalb Ihres Docker-Hosts oder Ihres Microservice-Clusters (Docker-Orchestratoren oder Azure Service Fabric) oder bei proprietären Clientanwendungen möglich, die mit den Microservices kommunizieren.
+Es gibt auch mehrere Nachrichtenformate wie JSON, XML oder sogar Binärformate, die effizienter sein können. Wenn es sich bei dem von Ihnen ausgewählten Binärformat um keinen Standard handelt, sollten Sie Ihre Dienste nicht mit diesem Format öffentlich veröffentlichen. Sie könnten für die interne Kommunikation zwischen Ihren Microservices ein nicht standardmäßiges Format verwenden. Dies empfiehlt sich bei der Kommunikation zwischen Microservices innerhalb Ihres Docker-Host oder -Microservice-Clusters (z. B. Docker-orchestratoren) oder bei proprietären Clientanwendungen, die mit den Microservices kommunizieren.
 
 ### <a name="requestresponse-communication-with-http-and-rest"></a>Kommunikation über Anforderungen/Antworten mit HTTP und REST
 

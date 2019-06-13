@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622873"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489586"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 <a name="top"></a> In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen. Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können. Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  
@@ -44,7 +44,7 @@ ms.locfileid: "64622873"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse  
- Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] erfassen [ETW-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:  
+ Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab .NET Framework 4, [Garbage Collection-ETW-Ereignisse](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für die Analyse des verwalteten Heaps aus Sicht einer statistischen zu erfassen. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:  
   
 - Welche Generation von Objekten wird erfasst.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "64622873"
  Profiler können umfassende Informationen bereitstellen. Allerdings können komplexe Profiler das Verhalten der Anwendung beeinflussen.  
   
 ### <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen  
- Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+ Ab .NET Framework 4 können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (Application domain Resource Monitoring, ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
  [Zurück nach oben](#top)  
   
@@ -323,7 +323,7 @@ ms.locfileid: "64622873"
   
      In diesem Beispiel ist die Größe des größten freien Bereichs ungefähr 24.000 KB (3A980 als Hexadezimalwert). Dieser Bereich ist wesentlich kleiner als der Bereich, den die Garbage Collection für ein Segment benötigt.  
   
-     - oder -   
+     - oder -  
   
 - Verwenden Sie den Befehl **vmstat**:  
   

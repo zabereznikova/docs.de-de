@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631829"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690165"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS-Debugerweiterung)
 
@@ -68,11 +68,11 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|Zeigt die Generierungsgrößen für jeden Heap und den gesamten freien Speicherplatz in jeder Generierung der einzelnen Heaps an. Bei Angabe der Option -**inclUnrooted** enthält der Bericht Informationen zu den verwalteten Objekten aus dem Garbage Collection-Heap, der keinen Stamm mehr aufweist.|
 |**HistClear**|Gibt alle von der Familie der `Hist`-Befehle verwendeten Ressourcen frei.<br /><br /> In der Regel muss `HistClear` nicht explizit aufgerufen werden, da jeder Aufruf von `HistInit` die vorherigen Ressourcen bereinigt.|
 |**HistInit**|Initialisiert die SOS-Strukturen aus dem Belastungsprotokoll, die in der zu debuggenden Komponente gespeichert sind.|
-|**HistObj** *<obj_address>*|Untersucht alle Aufzeichnungen von Belastungsprotokollumsetzungen und zeigt die Kette von Garbage Collection-Umsetzungen an, die möglicherweise zu der als Argument übergebenen Adresse geführt haben.|
-|**HistObjFind** *<obj_address>*|Zeigt alle Protokolleinträge an, die auf ein Objekt bei der angegebenen Adresse verweisen.|
+|**HistObj** *\<obj_address>*|Untersucht alle Aufzeichnungen von Belastungsprotokollumsetzungen und zeigt die Kette von Garbage Collection-Umsetzungen an, die möglicherweise zu der als Argument übergebenen Adresse geführt haben.|
+|**HistObjFind**  *\<obj_address>*|Zeigt alle Protokolleinträge an, die auf ein Objekt bei der angegebenen Adresse verweisen.|
 |**HistRoot** *\<root>*|Zeigt Informationen zu sowohl Heraufstufungen als auch Umsetzungen des angegebenen Stamms an.<br /><br /> Anhand des Stammwerts kann die Bewegung eines Objekts durch die Garbage Collections verfolgt werden.|
 |**IP2MD** \<*Codeadresse*>|Zeigt die `MethodDesc`-Struktur bei der angegebenen Adresse in JIT (Just-In-Time)-kompiliertem Code an.|
-|`ListNearObj` (`lno`) *<obj_address>*|Zeigt die Objekte an, die der angegebenen Adresse vorausgehen und darauf folgen. Der Befehl sucht im Garbage Collection-Heap nach der Adresse, die wie ein gültiger Anfang eines verwalteten Objekts aussieht (auf Grundlage einer gültigen Methodentabelle), und nach dem Objekt, das der Argumentadresse folgt.|
+|`ListNearObj` (`lno`) *\<obj_address>*|Zeigt die Objekte an, die der angegebenen Adresse vorausgehen und darauf folgen. Der Befehl sucht im Garbage Collection-Heap nach der Adresse, die wie ein gültiger Anfang eines verwalteten Objekts aussieht (auf Grundlage einer gültigen Methodentabelle), und nach dem Objekt, das der Argumentadresse folgt.|
 |**MinidumpMode** [**0**] [**1**]|Verhindert die Ausführung von unsicheren Befehlen bei einem Minidump.<br /><br /> Durch Übergabe von **0** wird diese Funktion deaktiviert und durch **1** aktiviert. In der Standardeinstellung ist der Wert **MinidumpMode** auf **0** festgelegt.<br /><br /> Minidumps, die mit dem Befehl **.dump /m** oder dem Befehl **.dump** erstellt wurden, weisen eingeschränkte CLR-spezifische Daten auf. Daher können nur einige der SOS-Befehle ordnungsgemäß ausgeführt werden. Bei einigen Befehlen können unerwartete Fehlern auftreten, da erforderliche Speicherbereiche nicht oder nur teilweise zugeordnet sind. Mit dieser Option wird die Ausführung unsicherer Befehle bei Minidumps verhindert.|
 |**Name2EE** \<*Modulname*> \<*Typ- oder Methodenname*><br /><br /> - oder -<br /><br /> **Name2EE** \<*Modulname*> **!** \<*Typ- oder Methodenname*>|Zeigt die `MethodTable`-Struktur und die `EEClass`-Struktur für den angegebenen Typ oder die angegebene Methode im angegebenen Modul an.<br /><br /> Das angegebene Modul muss im Prozess geladen werden.<br /><br /> Durchsuchen Sie das Modul mit dem [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md), um den richtigen Typnamen abzurufen. Sie können auch `*` als Modulnamensparameter übergeben, um alle geladenen verwalteten Module zu durchsuchen. Beim Parameter *Modulname* kann es sich auch um den Namen des Debuggers für ein Modul handeln, z.B. `mscorlib` oder `image00400000`.<br /><br /> Von diesem Befehl wird die Windows-Debuggersyntax <`module`>`!`<`type`> unterstützt. Der Typ muss vollqualifiziert sein.|
 |**ObjSize** [\<*Objektadresse*>] &#124; [ **-aggregate**] [ **-stat**]|Zeigt die Größe des angegebenen Objekts an. Ohne Angabe von Parametern werden durch den Befehl **ObjSize** die Größe aller in verwalteten Threads gefundenen Objekte, alle Garbage Collector-Handles im Prozess sowie die Gesamtgröße aller Objekte angezeigt, auf die diese Handles verweisen. Der Befehl **ObjSize** enthält neben der Größe des übergeordneten Elements auch die Größe aller untergeordneten Objekte.<br /><br /> In Verbindung mit dem Argument **-stat** kann mithilfe der Option **-aggregate** eine ausführliche Ansicht der Typen abgerufen werden, die immer noch über Stamm verfügen. Mithilfe von **!dumpheap -stat** und **!objsize -aggregate -stat** können Objekte ohne Stamm ermittelt und verschiedene Arbeitsspeicherprobleme diagnostiziert werden.|

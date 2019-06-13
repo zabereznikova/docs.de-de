@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: 8d6ff6bc55384281119600f2323212441c1815e9
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452482"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689252"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 5)
 
@@ -364,7 +364,7 @@ Windows stellt eine umfassende native API mit grundlegenden C-APIs (ohne C++-Fea
 
 Der <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>-Typ unterstützt das HTTP/2-Protokoll. Die Unterstützung ist derzeit deaktiviert, Sie können sie jedoch durch den Aufruf `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` vor der Verwendung von <xref:System.Net.Http.HttpClient> aktivieren. Sie können HTTP/2-Unterstützung auch durch Festlegen der `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT`-Umgebungsvariablen auf `true`, bevor Sie Ihre App ausführen, aktivieren.
 
-Wenn HTTP/2 aktiviert ist, wird die HTTP-Protokollversion über TLS/ALPN ausgehandelt, und HTTP/2 wird nur bei Auswahl durch den Server verwendet.
+Wenn die HTTP/2 aktiviert ist, HTTP-Protokollversion wird Sie ausgehandelt über TLS/er die ALPN und HTTP/2 wird nur verwendet werden, wenn der Server wählt verwenden.
 
 ## <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & OpenSSL 1.1.1 auf Linux
 

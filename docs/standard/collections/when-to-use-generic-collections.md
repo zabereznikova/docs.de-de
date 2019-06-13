@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664532"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491008"
 ---
 # <a name="when-to-use-generic-collections"></a>Verwenden von generischen Auflistungen
 Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei Generics keine Notwendigkeit zum Einschließen der Elemente besteht.  
   
- Für Programme, die auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher abzielen, sollten Sie die generischen Auflistungsklassen im <xref:System.Collections.Concurrent> -Namespace verwenden, wenn mehrere Threads möglicherweise Elemente gleichzeitig der Auflistung hinzufügen oder daraus entfernen.  
+ Für Programme, die auf .NET Framework 4 oder höher abzielen, sollten Sie die generischen Auflistungsklassen im Verwenden der <xref:System.Collections.Concurrent> Namespace verwenden, wenn mehrere Threads möglicherweise hinzufügen oder Entfernen von Elementen aus der Auflistung gleichzeitig.  
   
  Die folgenden generischen Typen entsprechen vorhandenen Auflistungstypen:  
   

@@ -1,5 +1,5 @@
 ---
-title: C#-Operatoren
+title: C#Operatoren – C# Verweis
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833273"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025134"
 ---
-# <a name="c-operators"></a>C#-Operatoren
+# <a name="c-operators-c-reference"></a>C#Operatoren (C# Verweis)
 
 C# bietet eine Reihe vordefinierter Operatoren, die von den integrierten Typen unterstützt werden. Beispielsweise führen [arithmetische Operatoren](arithmetic-operators.md) arithmetische Vorgänge mit Operanden von integrierten numerischen Typen durch, und [boolesche logische Operatoren](boolean-logical-operators.md) führen logische Vorgänge mit den [bool](../keywords/bool.md)-Operanden aus.
 
@@ -222,7 +222,5 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [C#](../../index.md)
+- [Operatoren](../../programming-guide/statements-expressions-operators/operators.md)
 - [Überladbare Operatoren](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [C#-Schlüsselwörter](../keywords/index.md)

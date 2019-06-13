@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834126"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491098"
 ---
 # <a name="standard-timespan-format-strings"></a>TimeSpan-Standardformatzeichenfolgen
 <a name="Top"></a> Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "58834126"
 |*ss*|Die Anzahl von Sekunden zwischen "0" und "59".|  
 |*fffffff*|Der optionale Bruchteil einer Sekunde.  Der Wert kann zwischen "0000001" (ein Tick oder ein Zehnmillionstel einer Sekunde) und "9999999" (9.999.999 Zehnmillionstel einer Sekunde oder eine Sekunde minus ein Tick) liegen.|  
   
- Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Er erzeugt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts, der unveränderlich ist und für alle früheren Versionen von .NET Framework vor [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet wird. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
+ Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Es erzeugt die Zeichenfolgendarstellung einer <xref:System.TimeSpan> Werts, der unveränderlich ist und für alle früheren Versionen von .NET Framework vor .NET Framework 4. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> unterstützt auch die standardmäßigen "t"- und "T"-Formatzeichenfolgen, die im Verhalten identisch mit der Standardformatzeichenfolge "c" sind.  

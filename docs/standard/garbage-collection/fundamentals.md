@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d3ac6acf756a0ac468eb4483432467429ed91ca
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615155"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483289"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 <a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager. Der Garbage Collector bietet folgende Vorteile:  
@@ -149,7 +149,7 @@ ms.locfileid: "64615155"
   
      Da Auflistungen der Generation 2 mehrere Segmente belegen können, können Objekte, die auf Generation 2 höher gestuft werden, in ein älteres Segment verschoben werden. Objekte, die sowohl Generation 1 als auch Generation 2 überlebt haben, können in ein anderes Segment verschoben werden, da sie auf Generation 2 höher gestuft werden.  
   
-     Normalerweise wird der große Objektheap nicht komprimiert, da das Kopieren großer Objekte Leistungseinbußen zur Folge hat. Ab [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]können Sie jedoch die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> -Eigenschaft verwenden, um bei Bedarf einen großen Objektheap zu komprimieren.  
+     Normalerweise wird der große Objektheap nicht komprimiert, da das Kopieren großer Objekte Leistungseinbußen zur Folge hat. Ab .NET Framework 4.5.1 können Sie jedoch die Eigenschaft <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> verwenden, um bei Bedarf einen großen Objektheap zu komprimieren.  
   
  Der Garbage Collector bestimmt anhand folgender Informationen, ob Objekte aktiv sind:  
   
@@ -186,7 +186,7 @@ Ein Thread, der eine Garbage Collection auslöst
   
      Die Garbage Collection für die Arbeitsstation kann gleichzeitig oder nicht gleichzeitig erfolgen. Die gleichzeitige Garbage Collection ermöglicht, dass verwaltete Threads während einer Garbage Collection Vorgänge fortgesetzt werden können.  
   
-     Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]wird die gleichzeitige Garbage Collection durch die Garbage Collection im Hintergrund ersetzt.  
+     Ab .NET Framework 4, ersetzt die Garbagecollection im Hintergrund die gleichzeitige Garbagecollection.  
   
 - Garbage Collection für Server, die für Serveranwendungen vorgesehen ist, die einen hohen Durchsatz und eine hohe Skalierbarkeit erfordern. Garbage Collection auf dem Server kann nicht-gleichzeitig oder im Hintergrund durchgeführt werden.  
   
@@ -253,7 +253,7 @@ Concurrent garbage collection
  Bei der Garbage Collection im Hintergrund werden kurzlebige Generationen (0 und 1) bei Bedarf bereinigt, während die Garbage Collection von Generation 2 ausgeführt wird. Es gibt keine Einstellung für die Garbage Collection im Hintergrund. Sie wird automatisch mit der gleichzeitigen Garbage Collection aktiviert. Die Garbage Collection im Hintergrund ist ein Ersatz für die gleichzeitige Garbage Collection. Wie auch die gleichzeitige Garbage Collection wird die Garbage Collection im Hintergrund auf einem dedizierten Thread ausgeführt und ist nur für Garbage Collections der Generation 2 zulässig.  
   
 > [!NOTE]
->  Die Garbage Collection im Hintergrund ist nur in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und höheren Versionen verfügbar. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]wird sie nur für die Garbage Collection auf Arbeitsstationen unterstützt. Ab .NET Framework 4.5 ist die Garbage Collection im Hintergrund für Arbeitsstation und Server verfügbar.  
+>  Die Garbage Collection im Hintergrund ist erst ab .NET Framework 4 verfügbar. In .NET Framework 4 wird sie nur für die Garbage Collection auf Arbeitsstationen unterstützt. Ab .NET Framework 4.5 ist die Garbage Collection im Hintergrund für Arbeitsstation und Server verfügbar.  
   
  Eine Garbage Collection für kurzlebige Generationen, die während der Garbage Collection im Hintergrund stattfindet, wird als Garbage Collection im Vordergrund bezeichnet. Wenn Garbage Collections im Vordergrund stattfinden, werden alle verwalteten Threads angehalten.  
   

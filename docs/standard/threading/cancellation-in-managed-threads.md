@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586351"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490789"
 ---
 # <a name="cancellation-in-managed-threads"></a>Abbruch in verwalteten Threads
-Seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet das .NET Framework ein einheitliches Modell für den kooperativen Abbruch von asynchronen oder lang andauernden synchronen Vorgängen. Dieses Modell basiert auf einem einfachen Objekt, dem sogenannten "Abbruchtoken". Das Objekt, das einen oder mehrere abbrechbare Vorgänge aufruft, z. B. durch Erstellen neuer Threads oder Aufgaben, übergibt das Token an jeden Vorgang. Einzelne Vorgänge können wiederum Kopien des Tokens an andere Vorgänge übergeben. Zu einem späteren Zeitpunkt kann das Objekt, das das Token erstellt hat, damit anfordern, dass die Vorgänge ihre aktuelle Aktivität einstellen. Nur das anfordernde Objekt kann die Abbruchanforderung ausgeben, und jeder Listener ist dafür verantwortlich, die Anforderung zu bemerken und angemessen und rechtzeitig darauf zu reagieren.  
+Ab .NET Framework 4 verwendet .NET Framework ein einheitliches Modell für den kooperativen Abbruch von asynchronen oder lang andauernde synchrone Vorgänge an. Dieses Modell basiert auf einem einfachen Objekt, dem sogenannten "Abbruchtoken". Das Objekt, das einen oder mehrere abbrechbare Vorgänge aufruft, z. B. durch Erstellen neuer Threads oder Aufgaben, übergibt das Token an jeden Vorgang. Einzelne Vorgänge können wiederum Kopien des Tokens an andere Vorgänge übergeben. Zu einem späteren Zeitpunkt kann das Objekt, das das Token erstellt hat, damit anfordern, dass die Vorgänge ihre aktuelle Aktivität einstellen. Nur das anfordernde Objekt kann die Abbruchanforderung ausgeben, und jeder Listener ist dafür verantwortlich, die Anforderung zu bemerken und angemessen und rechtzeitig darauf zu reagieren.  
   
  Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells lautet:  
   
@@ -122,7 +122,7 @@ Seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet da
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- Im neuen Code, der auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> und <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> ausgerichtet ist, unterstützen beide das neue Abbruchframework in ihren `Wait`-Methoden. Sie können das <xref:System.Threading.CancellationToken> an die Methode übergeben und bei der Abbruchanforderung wird das Ereignis reaktiviert, das ein <xref:System.OperationCanceledException> auslöst.  
+ In neuem Code, der auf .NET Framework 4, abzielt <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> und <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> beide unterstützen das neue Abbruchframework in ihren `Wait` Methoden. Sie können das <xref:System.Threading.CancellationToken> an die Methode übergeben und bei der Abbruchanforderung wird das Ereignis reaktiviert, das ein <xref:System.OperationCanceledException> auslöst.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

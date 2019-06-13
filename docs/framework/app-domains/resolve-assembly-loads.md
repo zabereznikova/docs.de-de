@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607667"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486977"
 ---
 # <a name="resolving-assembly-loads"></a>Auflösen beim Laden von Assemblys
 .NET Framework stellt das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> für Anwendungen bereit, die eine erhöhte Steuerung des Ladens von Assemblys erfordern. Durch das Behandeln dieses Ereignisses kann Ihre Anwendung eine Assembly außerhalb der Prüfpfade in einen Kontext laden, vor dem Laden zwischen verschiedenen Assemblyversionen wählen, eine dynamische Assembly ausgeben und diese zurückgeben und so weiter. In diesem Thema erhalten Sie eine Anleitung zum Behandeln des Ereignisses <xref:System.AppDomain.AssemblyResolve>.  
@@ -52,7 +52,7 @@ ms.locfileid: "64607667"
 > [!NOTE]
 >  Der Handler muss die Assembly entweder in den load-from-Kontext, den load-Kontext oder ohne Kontext laden. Wenn der Handler die Assembly mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> in den reflektionsbezogenen Kontext lädt, schlägt der Ladeversuch, der das Ereignis <xref:System.AppDomain.AssemblyResolve> ausgelöst hat, fehl.  
   
- Der Ereignishandler ist dafür verantwortlich, eine passende Assembly zurückzugeben. Der Handler kann den Anzeigename der angeforderten Assembly analysieren, indem er den Wert der <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>-Eigenschaft an den <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>-Konstruktor übergibt. Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] kann der Handler die <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>-Eigenschaft verwenden, um zu bestimmen, ob die aktuelle Anforderung von einer anderen Assembly abhängt. Diese Information kann dabei helfen, eine Assembly zu identifizieren die die Abhängigkeit erfüllt.  
+ Der Ereignishandler ist dafür verantwortlich, eine passende Assembly zurückzugeben. Der Handler kann den Anzeigename der angeforderten Assembly analysieren, indem er den Wert der <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>-Eigenschaft an den <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>-Konstruktor übergibt. Ab .NET Framework 4, der Handler verwenden, die <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> Eigenschaft, um zu bestimmen, ob die aktuelle Anforderung eine Abhängigkeit von einer anderen Assembly befindet. Diese Information kann dabei helfen, eine Assembly zu identifizieren die die Abhängigkeit erfüllt.  
   
  Der Ereignishandler kann eine Version der Assembly zurückgeben, die sich von der angeforderten Version unterscheidet.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64607667"
  Die erste Regeln beim Behandeln des Ereignis <xref:System.AppDomain.AssemblyResolve> ist, dass Sie nie versuchen sollten, eine Assembly zurückzugeben, die Sie nicht erkennen. Wenn Sie den Handler schreiben, sollten Sie wissen, welche Assemblys das Ereignis auslösen können. Ihr Handler sollte für andere Assemblys NULL zurückgeben.  
   
 > [!IMPORTANT]
->  Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] wird das Ereignis <xref:System.AppDomain.AssemblyResolve> für Satellitenassemblys ausgelöst. Diese Änderung betrifft Ereignishandler, die für eine frühere Version von .NET Framework geschrieben wurden, wenn diese versuchen, alle Ladeanforderungen von Assemblys aufzulösen. Ereignishandler, die nicht erkannte Assemblys ignorieren, sind von dieser Änderung nicht betroffen: Sie geben NULL zurück. Danach wird auf die üblichen Fallbackmechanismen zurückgegriffen.  
+>  Ab .NET Framework 4 wird das Ereignis <xref:System.AppDomain.AssemblyResolve> für Satellitenassemblys ausgelöst. Diese Änderung betrifft Ereignishandler, die für eine frühere Version von .NET Framework geschrieben wurden, wenn diese versuchen, alle Ladeanforderungen von Assemblys aufzulösen. Ereignishandler, die nicht erkannte Assemblys ignorieren, sind von dieser Änderung nicht betroffen: Sie geben NULL zurück. Danach wird auf die üblichen Fallbackmechanismen zurückgegriffen.  
   
  Beim Laden einer Assembly darf der Ereignishandler nicht die Methodenüberladungen <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> verwendet, die dazu führen können, dass das Ereignis <xref:System.AppDomain.AssemblyResolve> rekursiv ausgelöst wird, da dies zu einem Stapelüberlauf führen kann. (Weitere Informationen finden Sie in der weiter oben in diesem Thema angegebenen Liste.) Dies geschieht auch, wenn Sie eine Ausnahmebehandlung für die Ladeanforderung bereitstellen, da keine Ausnahme ausgelöst wird, bis alle Ereignishandler etwas zurückgegeben haben. Deshalb führt der folgende Code zu einem Stapelüberlauf, wenn `MyAssembly` nicht gefunden werden kann:  
   

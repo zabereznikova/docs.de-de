@@ -3,12 +3,12 @@ title: Der Befehl „auto-train“ im ML.NET-CLI-Tool
 description: Übersicht, Beispiele und Verweise für den Befehl „auto-train“ im ML.NET-CLI-Tool
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557940"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722604"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Der Befehl „auto-train“ in der ML.NET-CLI
 
@@ -228,7 +228,7 @@ Um das `--label-column-name`-Argument zu verwenden, benötigen Sie in der Datase
 
 `--max-exploration-time | -x` (Zeichenfolge)
 
-Die maximale Explorationszeit beträgt standardmäßig 10 Sekunden.
+Standardmäßig ist die Zeit für die maximale Durchsuchen von 30 Minuten.
 
 Dieses Argument legt die maximale Zeit (in Sekunden) für den Prozess fest, um mehrere Trainer und Konfigurationen zu untersuchen. Die konfigurierte Zeit kann überschritten werden, wenn die angegebene Zeit für eine einzelne Iteration zu kurz ist (z.B. 2 Sekunden). In diesem Fall ist die tatsächliche Zeit die erforderliche Zeit, um eine Modellkonfiguration in einer einzigen Iteration zu erstellen.
 

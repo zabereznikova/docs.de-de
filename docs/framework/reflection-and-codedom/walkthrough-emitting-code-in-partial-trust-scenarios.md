@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585888"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690310"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
   
 > [!NOTE]
->  Vor [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] war zur Ausgabe von Code <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag erforderlich. Diese Berechtigung ist standardmäßig im benannten `FullTrust`- und `Intranet`-Berechtigungssatz enthalten, jedoch nicht im `Internet`-Berechtigungssatz. Daher kann eine Bibliothek nur mit teilweiser Vertrauenswürdigkeit verwendet werden, wenn sie über das <xref:System.Security.SecurityCriticalAttribute>-Attribut verfügt und eine <xref:System.Security.PermissionSet.Assert%2A>-Methode für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt hat. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ist es möglich, Code in teilweise vertrauenswürdigen Szenarios ohne Sicherheitsanforderungen auszugeben, da das Generieren von Code an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Bibliotheken, die Code ausgeben, können somit sicherheitstransparent sein und setzen keine <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>-Assertion voraus, sodass zum Schreiben einer sicheren Bibliothek keine genaue Sicherheitsüberprüfung erforderlich ist.  
+>  Vor dem Ausgeben von Code erforderlich, .NET Framework 3.5 <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> Flag. Diese Berechtigung ist standardmäßig im benannten `FullTrust`- und `Intranet`-Berechtigungssatz enthalten, jedoch nicht im `Internet`-Berechtigungssatz. Daher kann eine Bibliothek nur mit teilweiser Vertrauenswürdigkeit verwendet werden, wenn sie über das <xref:System.Security.SecurityCriticalAttribute>-Attribut verfügt und eine <xref:System.Security.PermissionSet.Assert%2A>-Methode für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt hat. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. .NET Framework 3.5 können Code an in teilweise vertrauenswürdigen Szenarien ohne sicherheitsanforderungen auszugeben, da das Generieren von Code nicht an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Bibliotheken, die Code ausgeben, können somit sicherheitstransparent sein und setzen keine <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>-Assertion voraus, sodass zum Schreiben einer sicheren Bibliothek keine genaue Sicherheitsüberprüfung erforderlich ist.  
   
  In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
   
