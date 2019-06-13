@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634709"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490874"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
-<a name="Top"></a> Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
+
+Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
   
 - Positive Zeichengruppen. Ein Zeichen in der Eingabezeichenfolge muss mit einem Zeichen in einem angegebenen Zeichensatz übereinstimmen. Weitere Informationen finden Sie unter [Positive Zeichengruppe](#PositiveGroup).  
   
@@ -50,16 +51,18 @@ ms.locfileid: "64634709"
  .NET unterstützt Zeichenklassensubtraktions-Ausdrücke. Hierdurch können Sie einen Zeichensatz definieren, der das Ergebnis des Ausschlusses einer Zeichenklasse von einer anderen darstellt. Weitere Informationen finden Sie unter [Zeichenklassensubtraktion](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen.  Ab [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] basieren Zeichenkategorien auf dem [Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] bis [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] basieren sie auf dem [Unicode-Standard, Version 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen.  Ab .NET Framework 4.6.2 können basieren Zeichenkategorien auf [Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4 über das .NET Framework 4.6.1, basieren sie auf [Unicode Standard, Version 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Positive Zeichengruppe: [ ]  
  In einer positiven Zeichengruppe wird eine Liste von Zeichen festgelegt. Wenn eine Eingabezeichenfolge eines dieser Zeichen aufweist, liegt eine Übereinstimmung vor. Diese Zeichenliste kann einzeln, als Bereich oder beides angegeben werden.  
   
  Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:  
-  
- [*Zeichen_Gruppe*]  
-  
+
+```  
+[*character_group*]  
+```
+
  wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
   
  Die Syntax zum Angeben eines Zeichenbereichs lautet wie folgt:  
@@ -68,9 +71,12 @@ ms.locfileid: "64634709"
 [firstCharacter-lastCharacter]  
 ```  
   
- wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen.  
-  
- In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit positiven Zeichenklassen aufgeführt.  
+ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *FirstCharacter* muss das Zeichen, mit der niedrigeren Codepunkt und *LastCharacter* muss das Zeichen mit der höheren Codepunkt.
+
+> [!NOTE]
+> Da es sich bei eine positiven Zeichengruppe sowohl eine Gruppe von Zeichen und einem Bereich von Zeichen, ein Bindestrich enthalten kann (`-`) wird immer als bereichstrennzeichen für den interpretiert, es sei denn, es der ersten oder letzten Zeichen der Gruppe ist.
+
+In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit positiven Zeichenklassen aufgeführt.  
   
 |Muster|Beschreibung|  
 |-------------|-----------------|  
@@ -107,23 +113,28 @@ ms.locfileid: "64634709"
 |`\w*`|Übereinstimmung mit keinem oder mehreren Wortzeichen.|  
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="NegativeGroup"></a>   
 ## <a name="negative-character-group-"></a>Negative Zeichengruppe: [^]  
  In einer negativen Zeichengruppe wird eine Liste von Zeichen festgelegt. Eine Eingabezeichenfolge darf keines dieser Zeichen aufweisen, damit eine Übereinstimmung vorliegt. Die Zeichenliste kann einzeln, als Bereich oder beides angegeben werden.  
   
- Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:  
-  
- [*^Zeichen_Gruppe*]  
-  
+Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:  
+
+```
+[*^character_group*]  
+```
+
  wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge nicht vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
   
  Die Syntax zum Angeben eines Zeichenbereichs lautet wie folgt:  
-  
- [^*erstesZeichen*-*letztesZeichen*]  
-  
- wobei *erstesZeichen* das Zeichen ist, mit dem der Bereich beginnt, und *letztesZeichen* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen.  
+
+```
+[^*firstCharacter*-*lastCharacter*]  
+```
+
+wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *FirstCharacter* muss das Zeichen, mit der niedrigeren Codepunkt und *LastCharacter* muss das Zeichen mit der höheren Codepunkt.
+
+> [!NOTE]
+> Da es sich bei eine negativen Zeichengruppe sowohl eine Gruppe von Zeichen und einem Bereich von Zeichen, ein Bindestrich enthalten kann (`-`) wird immer als bereichstrennzeichen für den interpretiert, es sei denn, es der ersten oder letzten Zeichen der Gruppe ist.
   
  Mindestens zwei Zeichenbereiche können miteinander verkettet werden. Beispiel: Verwenden Sie zum Angeben des Dezimalzeichenbereichs von "0" bis "9", des Kleinbuchstabenbereichs von "a" bis "f" und des Großbuchstabenbereichs von "A" bis "F" den Ausdruck `[0-9a-fA-F]`.  
   
@@ -154,8 +165,6 @@ ms.locfileid: "64634709"
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`\b`|An einer Wortgrenze beenden.|  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>Alle Zeichen: .  
  Das Punktzeichen (.) stimmt mit Ausnahme von `\n` (dem Zeichen für einen Zeilenumbruch, "\u000A") mit allen Zeichen überein. Hierfür gelten die folgenden beiden Qualifikationen:  
@@ -177,8 +186,6 @@ ms.locfileid: "64634709"
   
 > [!NOTE]
 >  Aufgrund der Übereinstimmung des `.`-Sprachelements mit jedem Zeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines bestimmten Zeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
-  
- [Zurück zum Anfang](#Top)  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode-Kategorie oder Unicode-Block: \p{}  
@@ -209,8 +216,6 @@ ms.locfileid: "64634709"
 |`(\s)?`|Übereinstimmung mit keinem oder einem Leerzeichen.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|Übereinstimmung mit dem Muster mindestens eines grundlegenden lateinischen Zeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Negative Unicode-Kategorie oder negativer Unicode-Block: \P{}  
  Jedem Zeichen wird im Unicode-Standard eine allgemeine Kategorie zugewiesen. Beispiel: Bei einem bestimmten Zeichen kann es sich um einen Großbuchstaben (dargestellt durch die `Lu`-Kategorie), ein Dezimalzeichen (die `Nd`-Kategorie), ein mathematisches Symbol (die `Sm`-Kategorie) oder einen Absatzseparator (die `Zl`-Kategorie) handeln. Bestimmte Zeichensätze im Unicode-Standard nehmen auch einen bestimmten Bereich oder einen Block aufeinander folgender Codepunkte ein. Beispielsweise befindet sich der grundlegende lateinische Zeichensatz im Bereich von "\u0000" bis "\u007F", während der arabische Zeichensatz zwischen "\u0600" und "\u06FF" liegt.  
@@ -227,8 +232,6 @@ ms.locfileid: "64634709"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
  Das Muster für den regulären `(\P{Sc})+`-Ausdruck stimmt mit mindestens einem Zeichen überein, bei dem es sich nicht um ein Währungssymbol handelt. Tatsächlich werden alle Währungssymbole aus der Ergebniszeichenfolge entfernt.  
-  
- [Zurück zum Anfang](#Top)  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>Wortzeichen: \w  
@@ -259,8 +262,6 @@ ms.locfileid: "64634709"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
-  
- [Zurück zum Anfang](#Top)  
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>Nicht-Wortzeichen: \W  
@@ -301,11 +302,9 @@ ms.locfileid: "64634709"
   
  Da das <xref:System.Text.RegularExpressions.Group>-Objekt für die zweite Erfassungsgruppe nur ein einzelnes erfasstes Nicht-Wortzeichen aufweist, werden im Beispiel alle erfassten Nicht-Wortzeichen aus dem von der <xref:System.Text.RegularExpressions.CaptureCollection>-Eigenschaft zurückgegebenen <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Objekt abgerufen.  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>Leerzeichen: \s  
- `\s` stimmt mit jedem Leerzeichen überein. Dies ist zu den in der folgenden Tabelle aufgeführten Escapesequenzen und Unicode-Kategorien äquivalent.  
+## <a name="whitespace-character-s"></a>Leerraumzeichen: \s  
+ `\s` entspricht einem beliebigen Zeichen für Leerraum. Dies ist zu den in der folgenden Tabelle aufgeführten Escapesequenzen und Unicode-Kategorien äquivalent.  
   
 |Kategorie|Beschreibung|  
 |--------------|-----------------|  
@@ -332,10 +331,8 @@ ms.locfileid: "64634709"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>Nicht-Leerzeichen: \S  
+## <a name="non-whitespace-character-s"></a>Nicht-Leerraumzeichen: \S  
  `\S` entspricht einem beliebigen Nichtleerraumzeichen. Dies ist äquivalent zum Muster für den regulären `[^\f\n\r\t\v\x85\p{Z}]`-Ausdruck bzw. das Gegenteil des Musters für den regulären Ausdruck, der `\s` entspricht und daher mit Leerzeichen übereinstimmt. Weitere Informationen finden Sie unter [Leerzeichen: \s](#WhitespaceCharacter).  
   
  Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\S` dem `[^ \f\n\r\t\v]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -350,8 +347,6 @@ ms.locfileid: "64634709"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
-  
- [Zurück zum Anfang](#Top)  
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>Dezimalzahl: \d  
@@ -375,8 +370,6 @@ ms.locfileid: "64634709"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>Nicht-Zahlen: \D  
  `\D` stimmt mit jedem Zeichen außer Zahlen überein. Dies entspricht dem Muster des regulären Ausdrucks `\P{Nd}`.  
@@ -395,8 +388,6 @@ ms.locfileid: "64634709"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
-  
- [Zurück zum Anfang](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Unterstützte allgemeine Unicode-Kategorien  
@@ -447,11 +438,10 @@ ms.locfileid: "64634709"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [Zurück zum Anfang](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>Unterstützte benannte Blöcke  
- In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke aufgelistet. Der Satz von unterstützten benannten Blöcke basiert auf Unicode 4.0 und Perl 5.6.  
+## <a name="supported-named-blocks"></a>Unterstützte benannte Blöcke
+
+In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke aufgelistet. Der Satz von unterstützten benannten Blöcke basiert auf Unicode 4.0 und Perl 5.6. Einen regulären Ausdruck, der benannte Blöcke verwendet, finden Sie im Abschnitt [Unicode-Kategorie oder Unicode-Block: \\p{}](#unicode-category-or-unicode-block-p).  
   
 |Codepunktbereich|Blockname|  
 |----------------------|----------------|  
@@ -462,7 +452,7 @@ ms.locfileid: "64634709"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - oder - <br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> - oder -<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -506,7 +496,7 @@ ms.locfileid: "64634709"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - oder - <br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - oder -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -560,8 +550,6 @@ ms.locfileid: "64634709"
 |FE70 - FEFF|`IsArabicPresentationForms-B`|  
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
-  
- [Zurück zum Anfang](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
 ## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Zeichenklassensubtraktion: [base_group - [excluded_group]]  

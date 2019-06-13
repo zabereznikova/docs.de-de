@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641397"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690360"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -146,7 +146,7 @@ In diesem Leitfaden und in der Referenzbeispielanwendung (eShopOnContainers) ist
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) ist ein einfaches API-Gateway, das sich für weniger komplexe Anforderungen empfiehlt. Ocelot ist ein .NET Core-basiertes Open Source-API-Gateway, das speziell für Microservicearchitekturen entwickelt wurde, für die einheitliche Eintrittspunkte in das System benötigt werden. Das Gateway ist schlank, schnell und skalierbar und bietet Routing und Authentifizierung sowie viele weitere Funktionen.
 
-Der Hauptgrund, aus dem Ocelot für die [eShopOnContainers-Referenzanwendung](https://github.com/dotnet-architecture/eShopOnContainers) ausgewählt wurde, liegt darin, dass Ocelot ein schlankes .NET Core-API-Gateway ist, das Sie in der gleichen Anwendungsbereitstellungsumgebung bereitstellen können, in der Sie auch Ihre Microservices/Container bereitstellen, z.B. Docker-Host, Kubernetes, Service Fabric usw. Und da es auf .NET Core basiert, funktioniert es plattformübergreifend, sodass Sie Ihre Anwendung sowohl unter Linux als auch unter Windows bereitstellen können.
+Der Hauptgrund Ocelot für Auswählen der [referenzanwendung eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) ist, da Ocelot eine einfache API-Gateway von .NET Core, die Sie in der gleichen Anwendung bereitstellungsumgebung bereitstellen können ist, in denen Sie bereitstellen, Ihre Microservices /-Container, z. B. ein Docker-Host, Kubernetes usw. Und da es auf .NET Core basiert, funktioniert es plattformübergreifend, sodass Sie Ihre Anwendung sowohl unter Linux als auch unter Windows bereitstellen können.
 
 Die Diagramme oben zeigen benutzerdefinierte API-Gateways, die in Containern ausgeführt werden – genau so können Sie auch Ocelot in einer container- und microservicebasierten Anwendung ausführen.
 
@@ -170,22 +170,22 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Charles Richardson. Pattern: API Gateway / Backend for Frontend (Muster: API-Gateway/Back-End für Front-End)** \
+- **Charles Richardson. Pattern: API Gateway / Backend for Frontend (Muster: API-Gateway/Back-End für Front-End)**  \
   <https://microservices.io/patterns/apigateway.html>
 
 - **API-Gatewaymuster** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Aggregation and composition pattern (Aggregations- und Kompositionsmuster)** \
+- **Aggregation and composition pattern (Aggregations- und Kompositionsmuster)**  \
   <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API Management** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. Service Oriented Composition (Dienstorientierte Komposition)** \
+- **Udi Dahan. Service Oriented Composition (Dienstorientierte Komposition)**  \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video) (Messaging und Microservices auf der GOTO 2016)** \
+- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video) (Messaging und Microservices auf der GOTO 2016)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API Gateway in a Nutshell (API-Gateway in aller Kürze)** (ASP.net Core API Gateway Tutorial Series (ASP.net Core API-Gateway-Tutorial-Reihe))
