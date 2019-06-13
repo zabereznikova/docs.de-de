@@ -5,7 +5,7 @@
       href: lift-and-shift-existing-apps-azure-iaas.md
     - name: Migrieren von relationalen Datenbanken zu Azure
       href: migrate-your-relational-databases-to-azure.md
-    - name: Modernisieren vorhandener .NET-Apps in cloudoptimierte Apps
+    - name: Modernisieren von vorhandenen .NET apps auf die Cloud optimierte
       href: ./modernize-existing-apps-to-cloud-optimized/index.md
       items:
         - name: Gründe für die Modernisierung vorhandener .NET-Apps in cloudoptimierte Apps
@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: 'Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Instances (ACI) erfolgen sollte'
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: 'Umstände, unter denen eine Bereitstellung von Windows-Containern in Service Fabric erfolgen sollte'
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: 'Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (ACS Kubernetes) erfolgen sollte'
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen

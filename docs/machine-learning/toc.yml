@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: Kategorisieren von Schwertlilien (k-Means-Algorithmus)
       href: tutorials/iris-clustering.md
-    - name: Filmempfehlung (Matrixfaktorisierung)
-      href: tutorials/movie-recommmendation.md
+    - name: Empfehlen Sie Filme (matrixfaktorisierung)
+      href: tutorials/movie-recommendation.md
     - name: Bildklassifizierung (induktive Übertragung)
       href: tutorials/image-classification.md
     - name: Produktvertriebsanalyse (Anomalieerkennung)
