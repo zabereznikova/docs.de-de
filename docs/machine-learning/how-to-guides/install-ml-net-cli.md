@@ -3,12 +3,12 @@ title: Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 description: Übersicht und Installation des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557856"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832930"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 
@@ -34,7 +34,7 @@ Die ML.NET-CLI wird wie jedes andere globale .NET-Tool installiert. Sie verwende
 Im folgenden Beispiel wird gezeigt, wie eine ML.NET-CLI im standardmäßigen NuGet-Feedspeicherort installiert wird:
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 Wenn das Tool nicht installiert werden kann (d.h. wenn es im standardmäßigen NuGet-Feed nicht verfügbar ist), werden Fehlermeldungen angezeigt. Stellen Sie sicher, dass die erwarteten Feeds überprüft werden.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Sie können bestätigen, dass die Installation erfolgreich war, indem Sie den folgenden Befehl eingeben:
 
 ```console
-> mlnet
+mlnet
 ```
 
 Es sollte die Hilfe zu den verfügbaren Befehlen für das mlnet-Tool angezeigt werden, wie z.B. den Befehl „auto-train“.
@@ -59,13 +59,13 @@ Es sollte die Hilfe zu den verfügbaren Befehlen für das mlnet-Tool angezeigt w
 Wenn Sie versuchen, eine Vorabversion oder eine spezifische Version des Tools zu installieren, können Sie das [Framework](../../standard/frameworks.md) im folgenden Format angeben:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Sie können auch überprüfen, ob das Paket ordnungsgemäß installiert ist, indem Sie den folgenden Befehl eingeben:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>Deinstallieren des CLI-Pakets
@@ -73,7 +73,7 @@ Sie können auch überprüfen, ob das Paket ordnungsgemäß installiert ist, ind
 Geben Sie den folgenden Befehl ein, um das Paket über Ihren lokalen Computer zu deinstallieren:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>Aktualisieren des CLI-Pakets
@@ -81,7 +81,7 @@ Geben Sie den folgenden Befehl ein, um das Paket über Ihren lokalen Computer zu
 Geben Sie den folgenden Befehl ein, um das Paket über Ihren lokalen Computer zu aktualisieren:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Einrichten der CLI-Empfehlungen (tabellarische automatische Vervollständigung)
@@ -101,7 +101,7 @@ Auf dem Computer, auf dem Sie die Vervollständigung aktivieren möchten, müsse
 1. Installieren Sie das globale `dotnet-suggest`-Tool, indem Sie den folgenden Befehl ausführen:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Fügen Sie das entsprechende Shim-Skript zu Ihrem Shell-Profil hinzu. Möglicherweise müssen Sie eine Shell-Profildatei erstellen. Das Shim-Skript leitet Vervollständigungsanforderungen von Ihrer Shell an das `dotnet-suggest`-Tool weiter, das an die entsprechende `System.CommandLine`-basierte Anwendung delegiert.
@@ -111,7 +111,7 @@ Auf dem Computer, auf dem Sie die Vervollständigung aktivieren möchten, müsse
     * Fügen Sie für PowerShell den Inhalt von [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) zu Ihrem PowerShell-Profil hinzu. Den erwarteten Pfad zu Ihrem PowerShell-Profil finden Sie, indem Sie den folgenden Befehl in Ihrer Konsole ausführen:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (Für die anderen Shells können Sie nach einem [Problem](https://github.com/dotnet/System.CommandLine/issues) [suchen](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) oder ein neues erstellen.)
