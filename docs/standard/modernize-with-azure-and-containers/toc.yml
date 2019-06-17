@@ -5,7 +5,7 @@
       href: lift-and-shift-existing-apps-azure-iaas.md
     - name: Migrieren von relationalen Datenbanken zu Azure
       href: migrate-your-relational-databases-to-azure.md
-    - name: Modernisieren von vorhandenen .NET apps auf die Cloud optimierte
+    - name: Modernisieren vorhandener .NET-Apps in cloudoptimierte Apps
       href: ./modernize-existing-apps-to-cloud-optimized/index.md
       items:
         - name: Gründe für die Modernisierung vorhandener .NET-Apps in cloudoptimierte Apps

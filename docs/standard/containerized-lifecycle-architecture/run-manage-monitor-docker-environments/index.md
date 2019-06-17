@@ -3,23 +3,23 @@ title: Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 ms.date: 02/15/2019
 ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644877"
 ---
-# <a name="run-manage-and-monitor-docker-production-environments"></a><span data-ttu-id="f187d-103">Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen</span><span class="sxs-lookup"><span data-stu-id="f187d-103">Run, manage, and monitor Docker production environments</span></span>
+# <a name="run-manage-and-monitor-docker-production-environments"></a><span data-ttu-id="0a63f-103">Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen</span><span class="sxs-lookup"><span data-stu-id="0a63f-103">Run, manage, and monitor Docker production environments</span></span>
 
-<span data-ttu-id="f187d-104">Vision: In Unternehmen eingesetzten Anwendungen müssen mit hoher Verfügbarkeit und hoher Skalierbarkeit ausführen, Operative IT muss in der Lage, verwalten und überwachen die Umgebungen und die Anwendungen selbst.</span><span class="sxs-lookup"><span data-stu-id="f187d-104">Vision: Enterprise applications need to run with high availability and high scalability; IT operations need to be able to manage and monitor the environments and the applications themselves.</span></span>
+<span data-ttu-id="0a63f-104">Vision: Unternehmensanwendungen müssen hochverfügbar und hochgradig skalierbar sein, und die operative IT muss in der Lage sein, die Umgebungen und Anwendungen selbst zu verwalten und zu überwachen.</span><span class="sxs-lookup"><span data-stu-id="0a63f-104">Vision: Enterprise applications need to run with high availability and high scalability; IT operations need to be able to manage and monitor the environments and the applications themselves.</span></span>
 
-<span data-ttu-id="f187d-105">Dieser letzte Eckpfeiler im Lebenszyklus der containerisierten Docker-Anwendungen ist darauf ausgerichtet, wie Sie Ihre Anwendungen in skalierbaren, hochverfügbaren Produktionsumgebungen (HA) betreiben, verwalten und überwachen können.</span><span class="sxs-lookup"><span data-stu-id="f187d-105">This last pillar in the containerized Docker applications life cycle is centered on how you can run, manage, and monitor your applications in scalable, high availability (HA) production environments.</span></span>
+<span data-ttu-id="0a63f-105">Dieser letzte Eckpfeiler im Lebenszyklus der containerisierten Docker-Anwendungen ist darauf ausgerichtet, wie Sie Ihre Anwendungen in skalierbaren, hochverfügbaren Produktionsumgebungen (HA) betreiben, verwalten und überwachen können.</span><span class="sxs-lookup"><span data-stu-id="0a63f-105">This last pillar in the containerized Docker applications life cycle is centered on how you can run, manage, and monitor your applications in scalable, high availability (HA) production environments.</span></span>
 
-<span data-ttu-id="f187d-106">Die Möglichkeit, das Ausführen Ihrer containeranwendungen in der Produktion (Infrastruktur und plattformtechnologien) ist sehr viel beziehen und basierend auf den gewählten Architektur- und Plattformen, die in Kapitel 1 dieses e-Book beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="f187d-106">The way you run your containerized applications in production (infrastructure architecture and platform technologies) is very much related and based on the chosen architecture and development platforms discussed in Chapter 1 of this e-book.</span></span>
+<span data-ttu-id="0a63f-106">Die Weise, in der Sie Ihre containerisierten Anwendungen in der Produktion ausführen (Infrastrukturarchitektur und Plattformtechnologien), besitzt ebenfalls einen starken Bezug zu und basiert auf den gewählten Architektur- und Entwicklungsplattformen, die in Kapitel 1 dieses E-Books erörtert wurden.</span><span class="sxs-lookup"><span data-stu-id="0a63f-106">The way you run your containerized applications in production (infrastructure architecture and platform technologies) is very much related and based on the chosen architecture and development platforms discussed in Chapter 1 of this e-book.</span></span>
 
-<span data-ttu-id="f187d-107">In diesem Kapitel werden spezifische Produkte und Technologien von Microsoft und anderen Herstellern, die Sie verwenden können, um effektiv skalierbar, ausgeführt werden, HA-verteilte Anwendungen wie Sie verwalten und überwachen Sie sie aus der IT-Perspektive.</span><span class="sxs-lookup"><span data-stu-id="f187d-107">This chapter examines specific products and technologies from Microsoft and other vendors that you can use to effectively run scalable, HA distributed applications plus how you can manage and monitor them from the IT perspective.</span></span>
+<span data-ttu-id="0a63f-107">In diesem Kapitel werden spezifische Produkte und Technologien von Microsoft und anderen Anbietern, mit denen Sie skalierbare, hoch verfügbare verteilte Anwendungen effektiv ausführen können, und deren Verwaltung und Überwachung aus der IT-Perspektive untersucht.</span><span class="sxs-lookup"><span data-stu-id="0a63f-107">This chapter examines specific products and technologies from Microsoft and other vendors that you can use to effectively run scalable, HA distributed applications plus how you can manage and monitor them from the IT perspective.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="f187d-108">[Zurück](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
->[Weiter](run-microservices-based-applications-in-production.md)</span><span class="sxs-lookup"><span data-stu-id="f187d-108">[Previous](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+><span data-ttu-id="0a63f-108">[Zurück](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[Weiter](run-microservices-based-applications-in-production.md)</span><span class="sxs-lookup"><span data-stu-id="0a63f-108">[Previous](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
 [Next](run-microservices-based-applications-in-production.md)</span></span>
