@@ -23,7 +23,7 @@ Die API für starke Namen ermöglicht es einem Client, die starke Namenssignieru
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 > [!NOTE]
->  Alle diese Funktionen sind veraltet ab .NET Framework 4. Empfohlene Alternativen finden Sie in der [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)-Schnittstelle.  
+>  All diese Funktionen sind ab .NET Framework 4 als veraltet markiert. Empfohlene Alternativen finden Sie in der [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)-Schnittstelle.  
   
  [GetHashFromAssemblyFile-Funktion](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen Hashalgorithmus ab. Ab .NET Framework 4 veraltet.  

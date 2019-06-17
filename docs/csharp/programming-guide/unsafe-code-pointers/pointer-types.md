@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880333"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833436"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -45,7 +45,7 @@ Ein Zeiger kann nicht auf einen Verweis oder eine [Struktur](../../language-refe
 
 Der Wert der Zeigervariablen vom Typ `myType*` ist die Adresse einer Variablen vom Typ `myType`. Im Folgenden finden Sie Beispiele für Zeigertypdeklarationen:
 
-|Beispiel|Beschreibung|
+|Beispiel|BESCHREIBUNG|
 |-------------|-----------------|
 |`int* p`|`p` ist ein Zeiger auf einen ganzzahligen Wert.|
 |`int** p`|`p` ist ein Zeiger auf einen Zeiger auf einen ganzzahligen Wert.|
@@ -82,7 +82,7 @@ In der folgenden Tabelle werden die Operatoren und Anweisungen aufgelistet, die 
 |`++` und `--`|Inkrementiert und dekrementiert Zeiger.|
 |`+` und `-`|Führt Zeigerarithmetik aus.|
 |`==`, `!=`, `<`, `>`, `<=` und `>=`|Vergleicht Zeiger.|
-|[`stackalloc`-Operator](../../language-reference/keywords/stackalloc.md)|Belegt Speicher für den Stapel.|
+|[`stackalloc`-Operator](../../language-reference/operators/stackalloc.md)|Belegt Speicher für den Stapel.|
 |[`fixed`-Anweisung](../../language-reference/keywords/fixed-statement.md)|Fixiert eine Variable vorübergehend, damit ihre Adresse gefunden werden kann.|
 
 Weitere Informationen zu Zeigeroperatoren finden Sie unter [Operatoren im Zusammenhang mit Zeigern](../../language-reference/operators/pointer-related-operators.md).

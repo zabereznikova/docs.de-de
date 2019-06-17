@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3c34dc33d99ea2852baeb9c3b4758c94224d573
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949421"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041691"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log-Objekt
 Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis- und Ausnahmeinformationen in die Protokolllistener der Anwendung bereit.  
@@ -27,7 +27,7 @@ Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis- und Ausnahmeinf
   
  **Klasse:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
 

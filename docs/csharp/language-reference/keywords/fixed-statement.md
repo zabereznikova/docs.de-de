@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 88e2b93fda786db15b3a3a693bdb9293ed31df4c
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959365"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833220"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed-Anweisung (C#-Referenz)
 
@@ -63,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-Sie können dem Stapel Arbeitsspeicher zuordnen, der nicht automatisch bereinigt wird und daher nicht fixiert werden muss. Verwenden Sie zu diesem Zweck den [`stackalloc`-Operator](stackalloc.md).
+Sie können dem Stapel Arbeitsspeicher zuordnen, der nicht automatisch bereinigt wird und daher nicht fixiert werden muss. Verwenden Sie zu diesem Zweck den [`stackalloc`-Operator](../operators/stackalloc.md).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

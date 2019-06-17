@@ -53,7 +53,7 @@ Im Allgemeinen sollten Sie keine der .NET Framework-Versionen deinstallieren, di
 
 - Wenn eine App, die Sie verwenden, von einer bestimmten Version von .NET Framework abhängt, können Fehler in dieser App entstehen, wenn diese Version entfernt wird.
 
-- Einige Versionen von .NET Framework sind direkte Updates früherer Versionen. Z. B. .NET Framework 3.5 ist ein direktes Update zu Version 2.0, und die .NET Framework-4.8 ist ein direktes Update zu den Versionen 4 bis 4.7.2. Weitere Informationen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
+- Einige Versionen von .NET Framework sind direkte Updates früherer Versionen. So ist z.B. .NET Framework 3.5 ein direktes Update für Version 2.0 und .NET Framework 4.8 ein direktes Update für die Versionen 4 bis 4.7.2. Weitere Informationen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
 
 Wenn Sie auf Windows-Versionen vor Windows 8 .NET Framework entfernen möchten, verwenden Sie immer **Programme und Funktionen** in der Systemsteuerung, um es zu deinstallieren. Entfernen Sie .NET Framework-Versionen nie manuell. Unter Windows 8 und höher ist .NET Framework eine Komponente des Betriebssystems und kann nicht separat deinstalliert werden.
 

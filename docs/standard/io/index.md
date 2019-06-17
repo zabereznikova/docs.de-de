@@ -147,7 +147,7 @@ Das [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] enth�
 
 Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden:
 
-- Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen in der <xref:Windows.Storage?displayProperty=nameWithType> Namespace, der die Windows-Runtime, z. B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.
+- Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace der Windows-Runtime, wie z.B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.
 
 - Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

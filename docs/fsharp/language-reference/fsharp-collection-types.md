@@ -2,12 +2,12 @@
 title: F#-Auflistungstypen
 description: Erfahren Sie mehr über F# Auflistungstypen und deren Unterschiede zu Auflistungstypen in .NET Framework.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996813"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041728"
 ---
 # <a name="f-collection-types"></a>F#-Auflistungstypen
 
@@ -83,6 +83,7 @@ In diesem Abschnitt vergleicht die Funktionen, die auf verfügbaren F# Auflistun
 |iteri|O(N)|O(N)|O(N)|-|-|Wendet die angegebene Funktion auf jedes Element der Auflistung an. Die ganze Zahl, die an die Funktion übergeben wird, gibt den Index des Elements an.|
 |iteri2|O(N)|O(N)|-|-|-|Wendet die angegebene Funktion auf einem Paar von Elementen, die von übereinstimmenden Indizes in zwei Arrays gezeichnet werden. Die ganze Zahl, die an die Funktion übergeben wird, gibt den Index der Elemente an. Die beiden Arrays müssen dieselbe Länge haben.|
 |iter2|O(N)|O(N)|O(N)|-|-|Wendet die angegebene Funktion auf einem Paar von Elementen, die von übereinstimmenden Indizes in zwei Arrays gezeichnet werden. Die beiden Arrays müssen dieselbe Länge haben.|
+|last|O(1)|O(N)|O(N)|-|-|Gibt das letzte Element in der entsprechenden Auflistung zurück.|
 |Länge|O(1)|O(N)|O(N)|-|-|Gibt die Anzahl der Elemente in der Auflistung zurück.|
 |Zuordnung|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der wendet die angegebene Funktion auf jedes Element des Arrays sind.|
 |map2|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, dessen Elemente die Ergebnisse der die angegebene Funktion paarweise auf die entsprechenden Elemente der beiden Auflistungen angewendet werden. Beide Eingabearrays müssen dieselbe Länge haben.|
@@ -140,7 +141,7 @@ In diesem Abschnitt vergleicht die Funktionen, die auf verfügbaren F# Auflistun
 |unzip|O(N)|O(N)|O(N)|-|-|Teilt eine Liste von Paaren in zwei Listen.|
 |unzip3|O(N)|O(N)|O(N)|-|-|Teilt eine Liste von Tripeln in drei Listen.|
 |im Fenstermodus|-|-|O(N)|-|-|Gibt eine Sequenz, die ergibt, gleitende Fenster enthaltender Elementen, die aus der Eingabesequenz gezeichnet werden. Jedes Fenster wird als neues Array zurückgegeben.|
-|ZIP|O(N)|O(N)|O(N)|-|-|Kombiniert die beiden Auflistungen in einer Liste von Paaren. Die beiden Listen müssen gleichlang sein.|
+|zip|O(N)|O(N)|O(N)|-|-|Kombiniert die beiden Auflistungen in einer Liste von Paaren. Die beiden Listen müssen gleichlang sein.|
 |zip3|O(N)|O(N)|O(N)|-|-|Kombiniert die drei Auflistungen in einer Liste von Tripeln. Die Listen müssen gleichlang sein.|
 
 ## <a name="see-also"></a>Siehe auch

@@ -807,6 +807,10 @@
               href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
         - name: Datensätze
           href: fsharp/language-reference/records.md
+        - name: Anonyme Datensätze
+          href: fsharp/language-reference/anonymous-records.md
+        - name: Kopieren und Aktualisieren von Datensatzausdrücken
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Unterscheidungs-Unions
           href: fsharp/language-reference/discriminated-unions.md
         - name: Enumerationen
@@ -854,8 +858,6 @@
           href: fsharp/language-reference/delegates.md
         - name: Objektausdrücke
           href: fsharp/language-reference/object-expressions.md
-        - name: Kopieren und Aktualisieren von Datensatzausdrücken
-          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: Umwandlung und Konvertierungen
           href: fsharp/language-reference/casting-and-conversions.md
         - name: Zugriffssteuerung

@@ -62,7 +62,7 @@
           href: linq-to-objects.md
         - name: LINQ und Zeichenfolgen
           href: linq-and-strings.md
-        - name: Artikel mit Anleitungen
+        - name: Artikeln zu Vorgehensweisen
           items:
             - name: 'Vorgehensweise: Zählen der Vorkommen eines Worts in einer Zeichenfolge (LINQ)'
               href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
