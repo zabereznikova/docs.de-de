@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b22336221c7bdda3c9dd7adf23308a2b0bad450
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777155"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169919"
 ---
 # <a name="using-double-buffering"></a>Verwenden der doppelten Pufferung
 Sie können doppelt gepufferte Grafiken verwenden, um Flimmern in Ihren Anwendungen zu verringern, die komplexe Zeichenoperationen enthalten. Das .NET Framework enthält integrierten Unterstützung für die doppelte Pufferung oder können Sie verwalten und Rendern von Grafiken manuell.  
@@ -31,11 +31,9 @@ Sie können doppelt gepufferte Grafiken verwenden, um Flimmern in Ihren Anwendun
  Doppelt gepufferte Grafiken zu rendern veranschaulicht.  
   
 ## <a name="reference"></a>Referenz  
- <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- Steuerelementmethode, die doppelte Pufferung ermöglicht.  
+ <xref:System.Windows.Forms.Control.SetStyle%2A> Steuerelementmethode, die doppelte Pufferung ermöglicht.  
   
- <xref:System.Drawing.BufferedGraphicsContext> ,  
- Stellt Methoden zum Erstellen von Grafikpuffern bereit.  
+ <xref:System.Drawing.BufferedGraphicsContext> Stellt Methoden zum Erstellen von Grafikpuffern bereit.  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
  Bietet Zugriff auf den Kontext von gepufferten Grafiken für eine Anwendungsdomäne.

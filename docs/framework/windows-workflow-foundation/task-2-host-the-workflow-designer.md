@@ -2,17 +2,17 @@
 title: 'Aufgabe 2: Hosten des Workflow-Designers'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665284"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169995"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Aufgabe 2: Hosten des Workflow-Designers
 Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in einer Windows Presentation Foundation (WPF)-Anwendung.  
   
- Die Prozedur konfiguriert das **Raster** -Steuerelement, das den Designer enthält erstellt programmgesteuert eine Instanz des der <xref:System.Activities.Presentation.WorkflowDesigner> , die einen Standardbefehl enthält <xref:System.Activities.Statements.Sequence> -Aktivität, registriert die Designermetadaten bereitstellen designerunterstützung für alle integrierten Aktivitäten und -Hosts die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in die [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] Anwendung.  
+ Die Prozedur konfiguriert das **Raster** -Steuerelement, das den Designer enthält erstellt programmgesteuert eine Instanz des der <xref:System.Activities.Presentation.WorkflowDesigner> , die einen Standardbefehl enthält <xref:System.Activities.Statements.Sequence> -Aktivität, registriert die Designermetadaten bereitstellen designerunterstützung für alle integrierten Aktivitäten und -Hosts die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in der WPF-Anwendung.  
   
 ### <a name="to-host-the-workflow-designer"></a>So hosten Sie den Workflow-Designer  
   
@@ -22,7 +22,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
   
 3. Legen Sie den rasternamen durch Auswahl der **Raster** Bereich im Designer (klicken Sie auf das Feld innerhalb der **MainWindow**) und Einstellung der **Namen** Eigenschaft am oberen Rand der  **Eigenschaften** Fenster auf "grid1".  
   
-4. In der **Eigenschaften** Fenster, klicken Sie auf die Auslassungspunkte (**...** ) neben der `ColumnDefinitions` Eigenschaft zum Öffnen der **Auflistungs-Editor** Dialogfeld.  
+4. In der **Eigenschaften** Fenster, klicken Sie auf die Auslassungspunkte ( **...** ) neben der `ColumnDefinitions` Eigenschaft zum Öffnen der **Auflistungs-Editor** Dialogfeld.  
   
 5. In der **Auflistungs-Editor** Dialogfeld klicken Sie auf die **hinzufügen** Schaltfläche dreimal, um drei Spalten in das Layout einzufügen. Die erste Spalte enthält die **Toolbox**, die zweite Spalte die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], und die dritte Spalte für die Eigenschaftenanalyse verwendet werden.  
   

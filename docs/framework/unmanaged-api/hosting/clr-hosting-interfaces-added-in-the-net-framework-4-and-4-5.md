@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490653"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170441"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen
 In diesem Abschnitt wird beschrieben, Schnittstellen, die nicht verwaltete Hosts können in der .NET Framework 4, .NET Framework 4.5 und höher in ihre Anwendungen integrieren die common Language Runtime (CLR) verwenden. Diese Schnittstellen bieten Methoden, die für einen Host zu konfigurieren und die Runtime in einen Prozess geladen.  
@@ -22,7 +22,7 @@ In diesem Abschnitt wird beschrieben, Schnittstellen, die nicht verwaltete Hosts
   
 - Sie verwenden die Prozesslebensdauer-Verwaltung (`AddRef` und `Release`), Kapselung (implizite Context) und `QueryInterface` von COM.  
   
-- Gibt es keine nicht-COM-Typen wie `BSTR`, `SAFEARRAY`, oder `VARIANT`.  
+- Diese ZS keine COM-Typen verwenden, z. B. `BSTR`, `SAFEARRAY`, oder `VARIANT`.  
   
 - Es gibt keine Apartmentmodells, Aggregation oder Registrierung, Aktivierung, mit denen die [CoCreateInstance-Funktion](https://go.microsoft.com/fwlink/?LinkId=142894).  
   

@@ -2,12 +2,12 @@
 title: Erweiterbarkeit des Eigenschaftenrasters - WF-Beispiel
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637688"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170354"
 ---
 # <a name="property-grid-extensibility"></a>Erweiterbarkeit des Eigenschaftenrasters
 
@@ -69,7 +69,7 @@ Das Beispiel zum Dialog-Editor veranschaulicht Folgendes:
 
 1. Ein von <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor> abgeleiteter Typ wird erstellt.
 
-2. Der <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>-Wert im Konstruktor wird mit einer [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]-Datenvorlage festgelegt. Diese kann in XAML erstellt werden, in diesem Beispiel wird jedoch Code verwendet.
+2. Legt die <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> Wert im Konstruktor wird mit einer Datenvorlage WPF. Diese kann in XAML erstellt werden, in diesem Beispiel wird jedoch Code verwendet.
 
 3. Die Datenvorlage weist einen Datenkontext für den <xref:System.Activities.Presentation.PropertyEditing.PropertyValue>-Wert des im Eigenschaftenraster gerenderten Elements auf. Im folgenden Code wird dieser dann an die `Value`-Eigenschaft gebunden. Es muss auch ein <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton>-Element eingebunden werden, um die Schaltfläche bereitzustellen, mit der das Dialogfeld in "FilePickerEditor.cs" ausgelöst wird.
 

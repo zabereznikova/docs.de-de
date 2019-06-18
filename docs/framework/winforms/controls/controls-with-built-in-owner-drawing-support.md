@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648245"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170603"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Steuerelemente mit integrierter Ownerdrawing-Unterstützung
 Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeichnet, ist ein Verfahren zum Ändern der Darstellung bestimmter Steuerelemente.  
@@ -46,7 +46,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 - <xref:System.Windows.Forms.TabControl>  
   
- Die folgenden Steuerelemente unterstützen Ownerdrawing nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ Die folgenden Steuerelemente unterstützen Ownerdrawing nur in .NET Framework 2.0:  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 - <xref:System.Windows.Forms.TreeView>  
   
- Die folgenden Steuerelemente unterstützen Ownerdrawing und sind in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] neu:  
+ Die folgenden Steuerelemente unterstützen Ownerdrawing und sind neu in .NET Framework 2.0:  
   
 - <xref:System.Windows.Forms.DataGridView>  
   

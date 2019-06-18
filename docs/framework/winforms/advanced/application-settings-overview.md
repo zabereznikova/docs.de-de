@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583556"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169984"
 ---
 # <a name="application-settings-overview"></a>Übersicht über Anwendungseinstellungen
 In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und deren Benutzer erstellt und gespeichert werden.  
   
  Die Funktion „Anwendungseinstellungen“ von Windows Forms erleichtert das Erstellen, Speichern und Verwalten von benutzerdefinierten Einstellungen für Anwendungen und Benutzer auf dem Clientcomputer. Mit Windows Forms-Anwendungseinstellungen können Sie nicht nur Anwendungsdaten wie Datenbankverbindungszeichenfolgen, sondern auch benutzerspezifische Daten, etwa Anwendungseinstellungen, speichern. Mithilfe von Visual Studio oder benutzerdefiniertem verwaltetem Code können Sie neue Einstellungen erstellen, diese vom Datenträger lesen bzw. sie darauf schreiben, sie an Eigenschaften in Ihren Formularen binden und Einstellungsdaten vor dem Laden und Speichern überprüfen.  
   
- Anwendungseinstellungen ermöglicht Entwicklern das Speichern des Zustands Ihrer jeweiligen Anwendung mit sehr wenig benutzerdefiniertem Code und ist ein Ersatz für dynamische Eigenschaften in früheren Versionen von .NET Framework. Anwendungseinstellungen enthalten zahlreiche Verbesserungen gegenüber dynamischen Eigenschaften, die schreibgeschützt und spät gebunden sind sowie mehr benutzerdefinierte Programmierung erfordern. Die dynamischen Eigenschaftenklassen wurden in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]beibehalten, sind aber nur noch Shell-Klassen, die nur einen schwachen Wrapper für die Anwendungseinstellungen-Klassen darstellen.  
+ Anwendungseinstellungen ermöglicht Entwicklern das Speichern des Zustands Ihrer jeweiligen Anwendung mit sehr wenig benutzerdefiniertem Code und ist ein Ersatz für dynamische Eigenschaften in früheren Versionen von .NET Framework. Anwendungseinstellungen enthalten zahlreiche Verbesserungen gegenüber dynamischen Eigenschaften, die schreibgeschützt und spät gebunden sind sowie mehr benutzerdefinierte Programmierung erfordern. Die dynamischen Eigenschaftenklassen wurden in .NET Framework 2.0 beibehalten, aber sie sind nur noch Shell-Klassen, die die Anwendungseinstellungen-Klassen mit schlanker speicherzuweisung zu umschließen.  
   
 ## <a name="what-are-application-settings"></a>Was sind Anwendungseinstellungen?  
  Ihr Windows Forms-Anwendungen benötigen häufig Daten, die für die Ausführung der Anwendung von entscheidender Bedeutung sind, die Sie aber nicht direkt in den Anwendungscode einschließen möchten. Wenn Ihre Anwendung einen Webdienst oder einen Datenbankserver verwendet, sollten Sie diese Informationen in einer separaten Datei speichern, damit Sie sie später ändern können, ohne sie neu kompilieren zu müssen. Auf ähnliche Weise können Ihre Anwendungen die Speicherung von Daten erfordern, die für den aktuellen Benutzer spezifisch sind. Die meisten Anwendungen verfügen beispielsweise über Benutzereinstellungen, die das Aussehen und Verhalten der Anwendung anpassen.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004470"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169949"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Vorgehensweise: Hinzufügen von Daten zur Zwischenablage
 Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für die Interaktion mit der Windows-Betriebssystem-Zwischenablage-Funktion verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise werden die Zwischenablage von Textverarbeitungsprogrammen während Ausschneiden und Einfügen-Vorgänge verwenden. Die Zwischenablage eignet sich auch zum Übertragen von Daten aus einer Anwendung in eine andere.  
@@ -24,7 +24,7 @@ Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für 
   
  Verwenden Sie zum Hinzufügen von Daten in einem oder mehreren Formaten in die Zwischenablage die <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> Methode. Sie können jedes beliebige Objekt an diese Methode übergeben, aber um die Daten in mehreren Formaten hinzufügen, müssen Sie zunächst die Daten hinzufügen, um ein separates Objekt mit mehreren Formaten funktionieren. In der Regel fügen Sie Ihre Daten in eine <xref:System.Windows.Forms.DataObject>, aber Sie können alle Typen, implementieren die <xref:System.Windows.Forms.IDataObject> Schnittstelle.  
   
- In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], Sie können Daten direkt in die Zwischenablage hinzufügen, mit der neuen Methoden entwickelt, um grundlegende Aufgaben der Zwischenablage zu vereinfachen. Verwenden Sie diese Methoden, bei der Arbeit mit Daten in einem einzelnen, gemeinsamen Format z. B. Text.  
+ In .NET Framework 2.0 können Sie Daten direkt in die Zwischenablage hinzufügen, mit der neuen Methoden entwickelt, um grundlegende Aufgaben der Zwischenablage zu vereinfachen. Verwenden Sie diese Methoden, bei der Arbeit mit Daten in einem einzelnen, gemeinsamen Format z. B. Text.  
   
 > [!NOTE]
 >  Alle Teilen Windows-basierten Anwendungen sich die Zwischenablage. Aus diesem Grund werden die Inhalte können geändert werden, wenn Sie in einer anderen Anwendung wechseln.  
@@ -35,14 +35,14 @@ Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für 
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Zum Hinzufügen von Daten in einem einzelnen, gemeinsamen Format in die Zwischenablage  
   
-1. Verwenden der <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, oder <xref:System.Windows.Forms.Clipboard.SetText%2A> Methode. Diese Methoden stehen nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Verwenden der <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, oder <xref:System.Windows.Forms.Clipboard.SetText%2A> Methode. Diese Methoden sind nur in .NET Framework 2.0 verfügbar.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Zum Hinzufügen von Daten in einem benutzerdefinierten Format in die Zwischenablage  
   
-1. Verwenden der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode mit einem benutzerdefinierten Format-Namen. Diese Methode ist nur in verfügbar [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Verwenden der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode mit einem benutzerdefinierten Format-Namen. Diese Methode ist nur in .NET Framework 2.0 verfügbar.  
   
      Sie können auch die Namen von vordefinierten Format mit der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.  
   

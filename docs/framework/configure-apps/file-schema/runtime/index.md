@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e830c3d77b9e112d94d74e255aff6add54433ca8
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d22046393b22683b961f5da7a5623f5dfa6a702e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689894"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170033"
 ---
 # <a name="runtime-settings-schema"></a>Schema für Laufzeiteinstellungen
 
@@ -95,7 +95,7 @@ Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwen
 |[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Gibt an, dass die Runtime beim Vergleichen von Zeichenfolgen die Legacysortierung verwenden soll.|
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly.|
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.|
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Gibt an, ob das Zwischenspeichern von Bindungsfehlern deaktiviert wird. Dies ist das Standardverhalten in [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)].|
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Gibt an, ob das Zwischenspeichern von Bindungsfehlern, das das Standardverhalten in .NET Framework 2.0 ist, deaktiviert ist.|
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Gibt an, ob beim Starten eines Threads ein Commit für den vollständigen Threadstapel ausgeführt wird.|
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.|
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Legt fest, ob Analysemethoden für Datum und Uhrzeit einen angepassten Satz von Regeln zum Analysieren von Datumszeichenfolgen verwenden, die nur eine Angabe für Tag, Monat, Stunde und AM/PM-Kennzeichner enthalten.|
