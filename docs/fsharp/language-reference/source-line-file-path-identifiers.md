@@ -2,12 +2,12 @@
 title: Quellzeilen-, Datei- und Pfadbezeichner
 description: Erfahren Sie, wie integrierte F# -ID-Werte, mit denen Sie Zugriff auf die Quelle Zeile, das Verzeichnis, und die Dateinamen in Ihrem Code.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663621"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152052"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Quellzeilen-, Datei- und Pfadbezeichner
 
@@ -31,7 +31,7 @@ Die Quellzeile, Datei, und Pfadbezeichner, die in F# verfügbar sind, werden in 
 |---------------------|-----------|
 |`__LINE__`|Ergibt die aktuelle Zeilennummer, in Betracht ziehen `#line` Anweisungen.|
 |`__SOURCE_DIRECTORY__`|Ergibt den aktuellen, vollständigen Pfad des Quellverzeichnisses, in Betracht ziehen `#line` Anweisungen.|
-|`__SOURCE_FILE__`|Ergibt den aktuellen Dateinamen für die Quelle und des Pfads, in Betracht ziehen `#line` Anweisungen.|
+|`__SOURCE_FILE__`|Ergibt den aktuellen Source-Dateinamen ohne Pfad, in Betracht ziehen `#line` Anweisungen.|
 
 Weitere Informationen zu den `#line` -Anweisung finden Sie unter [Compilerdirektiven](compiler-directives.md).
 
@@ -46,7 +46,7 @@ Ausgabe:
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>Siehe auch
