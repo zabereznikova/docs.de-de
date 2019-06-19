@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>Abbrechen eines asynchronen Vorgangs
- Ab .NET Framework 4, TAP-Methoden, die Abbruch unterstützen. Geben Sie mindestens eine Überladung, die ein Abbruchtoken akzeptiert (<xref:System.Threading.CancellationToken> Objekt).
+ Ab .NET Framework 4 stellen TAP-Methoden, die das Abbrechen unterstützen, mindestens eine Überladung bereit, die ein Abbruchtoken akzeptiert (<xref:System.Threading.CancellationToken>-Objekt).
 
  Ein Abbruchtoken wird durch eine Abbruchtokenquelle erstellt (<xref:System.Threading.CancellationTokenSource>-Objekt).  Die <xref:System.Threading.CancellationTokenSource.Token%2A>-Eigenschaft der Quelle gibt das Abbruchtoken zurück, das beim Aufrufen der <xref:System.Threading.CancellationTokenSource.Cancel%2A>-Methode der Quelle signalisiert wird.  Wenn Sie beispielsweise eine einzelne Webseite herunterladen und in der Lage sein möchten, den Vorgang abzubrechen, erstellen Sie ein <xref:System.Threading.CancellationTokenSource>-Objekt, übergeben Sie dessen Token an die TAP-Methode, und rufen Sie dann die <xref:System.Threading.CancellationTokenSource.Cancel%2A>-Methode der Quelle auf, sobald Sie für den Abbruch des Vorgangs bereit sind:
 

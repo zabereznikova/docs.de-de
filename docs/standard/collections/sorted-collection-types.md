@@ -46,7 +46,7 @@ Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, di
 > [!NOTE]
 >  Für Werte, die ihre eigenen Schlüssel enthalten (z.B. Mitarbeiterdatensätze mit einer Mitarbeiter-ID), können Sie durch Ableiten von der generischen Klasse <xref:System.Collections.ObjectModel.KeyedCollection%602> eine schlüsselgebundene Sammlung erstellen, die einige Merkmale einer Liste und einige Merkmale eines Wörterbuchs aufweist.  
   
- Ab .NET Framework 4, die <xref:System.Collections.Generic.SortedSet%601> -Klasse stellt eine selbstausgleichende Struktur, die Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.  
+ Ab .NET Framework 4 stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -24,7 +24,7 @@ Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgem
  Generische Schnittstellen bieten typsichere Entsprechungen zu nicht generischen Schnittstellen für Reihenfolgen- und Übereinstimmungsvergleiche sowie für Funktionen, die von generischen Auflistungstypen gemeinsam verwendet werden.  
   
 > [!NOTE]
->  Beginnend mit .NET Framework 4, der Typ, für die Parameter, der mehrere generische Schnittstellen kovariant gekennzeichnet sind oder die kontravariant bietet mehr Flexibilität beim Zuweisen und Verwenden von Typen, die diese Schnittstellen implementieren. Siehe [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  Ab .NET Framework 4 sind die Typparameter mehrerer generischer Schnittstellen als kovariant oder kontravariant gekennzeichnet. Dies bietet mehr Flexibilität beim Zuweisen und Verwenden von Typen, die diese Schnittstellen implementieren. Siehe [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Übereinstimmungs- und Reihenfolgenvergleiche  
  Im <xref:System>-Namespace definieren die generische <xref:System.IComparable%601?displayProperty=nameWithType>-Schnittstelle und die generische <xref:System.IEquatable%601?displayProperty=nameWithType>-Schnittstelle (wie ihre nicht generischen Entsprechungen) Methoden für Reihenfolgen- bzw. Übereinstimmungsvergleiche. Typen implementieren diese Schnittstellen, um die Durchführungsfähigkeit für solche Vergleiche zu bieten.  

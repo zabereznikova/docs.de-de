@@ -24,7 +24,7 @@ COM-Interop-Projekte, die auf eine oder mehrere Assemblys mit importierten COM-T
 
  Es gibt zwei Möglichkeiten zur Verweisung auf Interop-Assemblys:
 
-- Eingebettete Interoptypen: Ab .NET Framework 4 und Visual Studio 2010, können Sie den Compiler zum Einbetten von Typinformationen aus einer Interop-Assembly in der ausführbaren Datei anweisen. Dies ist das empfohlene Verfahren.
+- Eingebettete Interoptypen: Ab .NET Framework 4 und Visual Studio 2010 können Sie den Compiler anweisen, die Typinformationen aus einer Interopassembly in die ausführbare Datei einzubetten. Dies ist das empfohlene Verfahren.
 
 - Bereitstellen von Interopassemblys: Sie können einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden.
 

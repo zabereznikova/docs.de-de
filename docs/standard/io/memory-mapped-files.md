@@ -19,7 +19,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66487055"
 ---
 # <a name="memory-mapped-files"></a>Speicherabbilddateien
-Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Ab .NET Framework 4, Sie können verwalteten Code in die gleiche Weise wie native Windows-Funktionen auf Speicherabbilddateien, Zugriff auf Speicherabbilddateien zugreifen, wie in beschrieben [Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
+Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Ab .NET Framework 4 können Sie verwalteten Code verwenden, um auf die gleiche Weise auf Speicherabbilddateien zuzugreifen wie native Windows-Funktionen. Dies wird unter [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Verwalten von im Speicher abgebildeten Dateien) beschrieben.  
   
  Es gibt zwei Arten von Speicherabbilddateien:  
   

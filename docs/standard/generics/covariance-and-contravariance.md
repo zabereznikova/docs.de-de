@@ -59,7 +59,7 @@ ms.locfileid: "66490748"
   
  Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Ein generischer Typparameter, der nicht als kovariant oder kontravariant markiert ist, wird als *invariant*bezeichnet. Im Folgenden sehen Sie eine kurze Zusammenfassung der Fakten zur Varianz in der Common Language Runtime:  
   
-- In .NET Framework 4 sind Variante Typparameter auf generische Schnittstellen und generische Delegattypen beschränkt.  
+- In .NET Framework 4 sind variante Typparameter auf generische Schnittstellen und generische Delegattypen beschränkt.  
   
 - Eine generische Schnittstelle oder ein generischer Delegattyp kann sowohl kovariante, als auch kontravariante Typparameter haben.  
   

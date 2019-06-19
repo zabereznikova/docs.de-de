@@ -228,7 +228,7 @@ Um das `--label-column-name`-Argument zu verwenden, benötigen Sie in der Datase
 
 `--max-exploration-time | -x` (Zeichenfolge)
 
-Standardmäßig ist die Zeit für die maximale Durchsuchen von 30 Minuten.
+Die maximale Untersuchungszeit beträgt standardmäßig 30 Minuten.
 
 Dieses Argument legt die maximale Zeit (in Sekunden) für den Prozess fest, um mehrere Trainer und Konfigurationen zu untersuchen. Die konfigurierte Zeit kann überschritten werden, wenn die angegebene Zeit für eine einzelne Iteration zu kurz ist (z.B. 2 Sekunden). In diesem Fall ist die tatsächliche Zeit die erforderliche Zeit, um eine Modellkonfiguration in einer einzigen Iteration zu erstellen.
 

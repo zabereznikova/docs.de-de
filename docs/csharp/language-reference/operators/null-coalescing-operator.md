@@ -17,9 +17,9 @@ ms.locfileid: "66816012"
 ---
 # <a name="-operator-c-reference"></a>?? operator (C#-Referenz)
 
-Der Null-Sammeloperator `??` Wert des linken Operanden zurückgegeben, falls dies nicht der Fall `null`ist, andernfalls es der Rechte Operand ausgewertet wird und das Ergebnis zurückgibt. Die `??` Operator nicht seines rechtsseitigen Operanden ausgewertet, wenn der linke Operand ungleich Null ergibt.
+Der NULL-Zusammenfügungsoperator `??` gibt den Wert des linken Operanden zurück, wenn dieser nicht `null` ist. Andernfalls wertet der Operator den rechten Operanden aus und gibt dessen Ergebnis zurück. Der `??`-Operator wertet seinen rechten Operanden nicht aus, wenn der linke Operand auf einen Wert ungleich NULL ausgewertet wird.
 
-Der Null-Sammeloperator ist rechtsassoziativ, d. h. ein Ausdruck der Form
+Der NULL-Zusammenfügungsoperator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 
 ```csharp
 a ?? b ?? c
@@ -31,31 +31,31 @@ wird als ausgewertet,
 a ?? (b ?? c)
 ```
 
-Die `??` Operator kann in den folgenden Szenarien nützlich sein:
+Der `??`-Operator kann in den folgenden Szenarien nützlich sein:
 
-- In Ausdrücken, mit der [nullbedingten Operatoren?. und?] ](member-access-operators.md#null-conditional-operators--and-), können Sie die Null-Sammeloperator, geben Sie einen alternativen Ausdruck zum Auswerten der Fall, dass das Ergebnis des Ausdrucks mit Null-bedingten Vorgängen `null`:
+- In Ausdrücken mit den [NULL-bedingten Operatoren „?.“ und „?[]“](member-access-operators.md#null-conditional-operators--and-) können Sie den NULL-Zusammenfügungsoperator verwenden, um einen alternativen Ausdruck zum Auswerten für den Fall bereitzustellen, dass das Ergebnis des NULL-bedingten Vorgangs `null` ist:
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- Beim Arbeiten mit [auf NULL festlegbare Werttypen](../../programming-guide/nullable-types/index.md) und müssen einen Wert, der eine zugrunde liegende Werttyp Geben Sie mithilfe der Null-Sammeloperator Geben Sie den Wert aus, um anzugeben, falls ein nullable-Typ-Wert ist `null`:
+- Wenn Sie mit [Nullable-Werttypen](../../programming-guide/nullable-types/index.md) arbeiten und den Wert eines zugrunde liegenden Werttyps bereitstellen müssen, verwenden Sie den NULL-Zusammenfügungsoperator, um den Wert für den Fall anzugeben, dass der Wert eines Nullable-Typs `null` ist:
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
-  Verwenden der <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> Methode Wenn der Wert, der verwendet werden, wenn ein nullable-Typ-Wert ist `null` sollte der Standardwert der zugrunde liegende Werttyp sein.
+  Verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>-Methode, wenn der Wert, der verwenden werden soll, falls der Wert des Nullable-Typs `null` lautet, der Standardwert des zugrunde liegenden Werttyps sein soll.
 
-- Beginnend mit C# 7.0 können Sie eine [ `throw` Ausdruck](../keywords/throw.md#the-throw-expression) als der Rechte Operand des Operators, der die Argument-Überprüfen von Code präziser werden, Null-Sammeloperator:
+- Ab C# 7.0 können Sie einen [`throw`Ausdruck](../keywords/throw.md#the-throw-expression) als rechten Operanden des NULL-Zusammenfügungsoperators verwenden, um den Code für die Überprüfung der Argumente präziser zu fassen:
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
-  Im vorherigen Beispiel wird auch veranschaulicht, wie [ausdruckskörpermember](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) eine Eigenschaft definieren.
+  Das oben stehende Beispiel veranschaulicht auch, wie Sie [Ausdruckskörpermember](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) verwenden, um eine Eigenschaft zu definieren.
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Der Null-Sammeloperator werden nicht überladen.
+Der NULL-Zusammenfügungsoperator kann nicht überladen werden.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie unter [der null-Sammeloperator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) Teil der [ C# Sprachspezifikation](~/_csharplang/spec/introduction.md).
+Weitere Informationen finden Sie unter [NULL-Zusammenfügungsoperator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 

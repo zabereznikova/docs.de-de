@@ -4,12 +4,12 @@ description: Erfahren Sie, wie .NET Ihre Strukturen in eine native Darstellung m
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065963"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041783"
 ---
 # <a name="type-marshaling"></a>Marshalling von Typen
 
@@ -79,6 +79,20 @@ Für einige Typen ist das Marshalling nur als Parameter möglich, nicht als Feld
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 Wenn diese Standardwerte nicht exakt Ihren Vorstellungen entsprechen, können Sie angeben, auf welche Weise das Marshalling von Parametern durchgeführt werden soll. Im Artikel [Marshallen von Parametern](customize-parameter-marshaling.md) erfahren Sie, wie Sie das Marshalling verschiedener Parametertypen anpassen.
+
+## <a name="default-marshaling-in-com-scenarios"></a>Standardmarshalling in COM-Szenarien
+
+Wenn Sie Methoden in COM-Objekten in .NET aufrufen, ändert die .NET-Runtime die standardmäßigen Marshallingregeln, um der allgemeinen COM-Semantik zu entsprechen. In der folgenden Tabelle werden die Regeln aufgeführt, die die .NET-Runtime in COM-Szenarien verwendet:
+
+| .NET-Typ | Nativer Typ (COM-Methodenaufrufe) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Delegattypen | `_Delegate*` in .NET Framework. In .NET Core nicht zulässig. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| .NET-Array | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` aus `BSTR`s        |
 
 ## <a name="marshaling-classes-and-structs"></a>Marshallen von Klassen und Strukturen
 

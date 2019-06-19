@@ -186,7 +186,7 @@ Ein Thread, der eine Garbage Collection auslöst
   
      Die Garbage Collection für die Arbeitsstation kann gleichzeitig oder nicht gleichzeitig erfolgen. Die gleichzeitige Garbage Collection ermöglicht, dass verwaltete Threads während einer Garbage Collection Vorgänge fortgesetzt werden können.  
   
-     Ab .NET Framework 4, ersetzt die Garbagecollection im Hintergrund die gleichzeitige Garbagecollection.  
+     Ab .NET Framework 4 wird die gleichzeitige Garbage Collection durch die Garbage Collection im Hintergrund ersetzt.  
   
 - Garbage Collection für Server, die für Serveranwendungen vorgesehen ist, die einen hohen Durchsatz und eine hohe Skalierbarkeit erfordern. Garbage Collection auf dem Server kann nicht-gleichzeitig oder im Hintergrund durchgeführt werden.  
   

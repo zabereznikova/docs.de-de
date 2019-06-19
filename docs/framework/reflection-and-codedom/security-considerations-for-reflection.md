@@ -26,7 +26,7 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
 - Auflisten und Prüfen von Assemblys und Modulen.  
   
- Das Verwenden von Reflektion, um auf Member zuzugreifen, ist dagegen Einschränkungen unterworfen. Ab .NET Framework 4, kann nur vertrauenswürdiger Code Reflektion verwenden, auf sicherheitskritische Member zugreifen. Darüber hinaus kann nur vertrauenswürdiger Code Reflektion verwenden, um auf nicht öffentliche Member zuzugreifen, die in kompiliertem Code nicht direkt zugänglich sind. Schließlich muss Code, der über Reflektion auf einen sicherheitskritischen Member zugreift, jegliche Berechtigungen haben, die der sicherheitskritische Member erfordert, genauso wie bei kompiliertem Code.  
+ Das Verwenden von Reflektion, um auf Member zuzugreifen, ist dagegen Einschränkungen unterworfen. Ab .NET Framework 4 kann nur vertrauenswürdiger Code Reflektion für den Zugriff auf sicherheitskritische Member verwenden. Darüber hinaus kann nur vertrauenswürdiger Code Reflektion verwenden, um auf nicht öffentliche Member zuzugreifen, die in kompiliertem Code nicht direkt zugänglich sind. Schließlich muss Code, der über Reflektion auf einen sicherheitskritischen Member zugreift, jegliche Berechtigungen haben, die der sicherheitskritische Member erfordert, genauso wie bei kompiliertem Code.  
   
  Sofern die notwendigen Berechtigungen vorliegen, kann Code mithilfe von Reflektion die folgenden Zugriffsarten ausführen:  
   
@@ -42,13 +42,13 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
  Zum Beispiel ist Code, der in einer Sandkastenanwendungsdomäne ausgeführt wird, auf den in dieser Liste beschriebenen Zugriff beschränkt, es sei denn, die Anwendungsdomäne gewährt zusätzliche Berechtigungen.  
   
- Ab .NET Framework 2.0 Service Pack 1, es wird versucht, Member zuzugreifen, die normalerweise nicht zugegriffen werden eine Forderung nach dem Berechtigungssatz des Zielobjekts plus <xref:System.Security.Permissions.ReflectionPermission> mit der <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> Flag. Code, der mit voller Vertrauenswürdigkeit ausgeführt wird (z.B. Code in einer Anwendung, die über die Befehlszeile gestartet wird), kann diese Berechtigungen immer erfüllen. (Dies unterliegt Einschränkungen beim Zugriff auf sicherheitskritische Member, wie dies in diesem Artikel weiter unten beschrieben ist.)  
+ Ab .NET Framework 2.0 Service Pack 1 wird bei einem Zugriffsversuch auf Member, auf die normalerweise nicht zugegriffen werden kann, eine Anforderung nach dem Berechtigungssatz des Zielobjekts plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag erstellt. Code, der mit voller Vertrauenswürdigkeit ausgeführt wird (z.B. Code in einer Anwendung, die über die Befehlszeile gestartet wird), kann diese Berechtigungen immer erfüllen. (Dies unterliegt Einschränkungen beim Zugriff auf sicherheitskritische Member, wie dies in diesem Artikel weiter unten beschrieben ist.)  
   
  Optional kann eine Sandkastenanwendungsdomäne <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag gewähren, wie dies weiter unten in diesem Artikel im Abschnitt [Zugreifen auf Member, auf die normalerweise nicht zugegriffen werden kann](#accessingNormallyInaccessible) beschrieben ist.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Zugreifen auf sicherheitskritische Member  
- Ein Member ist sicherheitskritisch, wenn er das <xref:System.Security.SecurityCriticalAttribute>, wenn er zu einem Typ gehört, der das <xref:System.Security.SecurityCriticalAttribute> hat, oder wenn er sich in einer sicherheitskritischen Assembly befindet. Ab .NET Framework 4 sind wie folgt die Regeln für den Zugriff auf sicherheitskritische Member:  
+ Ein Member ist sicherheitskritisch, wenn er das <xref:System.Security.SecurityCriticalAttribute>, wenn er zu einem Typ gehört, der das <xref:System.Security.SecurityCriticalAttribute> hat, oder wenn er sich in einer sicherheitskritischen Assembly befindet. Ab .NET Framework 4 gelten folgende Regeln für den Zugriff auf sicherheitskritische Member:  
   
 - Transparenter Code kann nicht über Reflektion auf sicherheitskritische Member zugreifen, selbst wenn der Code vollständig vertrauenswürdig ist. Es wird eine <xref:System.MethodAccessException>, <xref:System.FieldAccessException> oder <xref:System.TypeAccessException> ausgelöst.  
   
@@ -98,9 +98,9 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
 ## <a name="version-information"></a>Versionsinformationen  
   
-- Ab .NET Framework 4, kann nicht transparenter Code Reflektion verwenden, auf sicherheitskritische Member zugreifen.  
+- Ab .NET Framework 4 kann transparenter Code Reflektion nicht für den Zugriff auf sicherheitskritische Member verwenden.  
   
-- Die <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> -Flag wird in der .NET Framework 2.0 Service Pack 1 eingeführt. Frühere Versionen von .NET Framework erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag für Code, in dem Reflektion verwendet wird, um auf nicht öffentliche Member zuzugreifen. Diese Berechtigung sollte in keinem Fall teilweise vertrauenswürdigem Code erteilt werden.  
+- Das <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag wurde in .NET Framework 2.0 Service Pack 1 eingeführt. Frühere Versionen von .NET Framework erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag für Code, in dem Reflektion verwendet wird, um auf nicht öffentliche Member zuzugreifen. Diese Berechtigung sollte in keinem Fall teilweise vertrauenswürdigem Code erteilt werden.  
   
 - Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um über Reflektion Informationen über nicht öffentliche Typen und Member abzurufen. In früheren Versionen ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag erforderlich.  
   

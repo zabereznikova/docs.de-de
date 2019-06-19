@@ -15,7 +15,7 @@ ms.lasthandoff: 06/10/2019
 ms.locfileid: "66816050"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
-Ab .NET Framework 4, können Sie in-Process-Seite-an-Seite hosting mehrere Versionen der common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
+Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzigen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
   
 ## <a name="background"></a>Hintergrund  
  .NET Framework bot schon immer paralleles Hosting für verwaltete Codeanwendungen. Vor .NET Framework 4 stand diese Funktion jedoch nicht für verwaltete COM-Komponenten zur Verfügung. In der Vergangenheit wurden verwaltete COM-Komponenten, die in einen Prozess geladen wurden, entweder mit der Version der bereits geladenen Runtime oder mit der neuesten installierten Version von .NET Framework ausgeführt. Wenn diese Version nicht mit der COM-Komponente kompatibel war, ist die Komponente fehlgeschlagen.  
@@ -56,7 +56,7 @@ Ab .NET Framework 4, können Sie in-Process-Seite-an-Seite hosting mehrere Versi
   
      Vorgehensweise: In diesem Szenario unternehmen Sie nichts. Die COM-Komponenten werden mit der Version des .NET Framework ausgeführt, mit der sie registriert wurden.  
   
-- **Szenario 2:** Verwaltete Anwendung, die mit .NET Framework 2.0 SP1, die Sie lieber mit ausführen erstellt die [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], aber Sie sind bereit, die auf .NET Framework 4 ausgeführt werden soll, wenn Version 2.0 nicht vorhanden ist.  
+- **Szenario 2:** Mit .NET Framework 2.0 SP1 erstellte verwaltete Anwendung, die bevorzugt mit [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] ausgeführt werden soll, jedoch auch unter .NET Framework 4 ausgeführt werden kann, falls Version 2.0 nicht verfügbar ist.  
   
      Installierte .NET Framework-Versionen: Eine frühere Version von .NET Framework sowie .NET Framework 4.  
   
@@ -88,7 +88,7 @@ Ab .NET Framework 4, können Sie in-Process-Seite-an-Seite hosting mehrere Versi
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel stellt einen nicht verwalteten COM-Host dar, der eine verwaltete COM-Komponente mithilfe der Version von .NET Framework ausführt, für deren Verwendung die Komponente kompiliert wurde.  
   
- Führen Sie das folgende Beispiel kompilieren Sie, und registrieren Sie die folgende verwaltete COM-Komponente, die mit .NET Framework 3.5. Um die Komponente zu registrieren, klicken Sie im **Projekt**-Menü auf **Eigenschaften**, auf die Registerkarte **Erstellen**, und aktivieren Sie dann das Kontrollkästchen **Für COM-Interop registrieren**.  
+ Um das folgende Beispiel auszuführen, kompilieren und registrieren Sie die folgende verwaltete COM-Komponente mithilfe von .NET Framework 3.5. Um die Komponente zu registrieren, klicken Sie im **Projekt**-Menü auf **Eigenschaften**, auf die Registerkarte **Erstellen**, und aktivieren Sie dann das Kontrollkästchen **Für COM-Interop registrieren**.  
   
 ```csharp
 using System;  

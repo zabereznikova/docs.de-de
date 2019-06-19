@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751112"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026028"
 ---
 # <a name="formatting-types-in-net"></a>Formatieren von Typen in .NET
 
@@ -123,7 +123,7 @@ Jeder von <xref:System.Object?displayProperty=nameWithType> abgeleitete Typ erbt
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> Ab [!INCLUDE[win81](../../../includes/win81-md.md)] enthält [!INCLUDE[wrt](../../../includes/wrt-md.md)] eine <xref:Windows.Foundation.IStringable>-Schnittstelle mit einer einzelnen Methode, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), die eine Standardformatierungsunterstützung bereitstellt. Es wird jedoch empfohlen, dass verwaltete Typen die `IStringable` -Schnittstelle nicht implementieren. Weitere Informationen finden Sie im Abschnitt " [!INCLUDE[wrt](../../../includes/wrt-md.md)] und die `IStringable` -Schnittstelle" auf der <xref:System.Object.ToString%2A?displayProperty=nameWithType> -Referenzseite.
+> Ab [!INCLUDE[win81](../../../includes/win81-md.md)] enthält die Windows-Runtime eine <xref:Windows.Foundation.IStringable>-Schnittstelle mit einer einzelnen Methode, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), die eine standardmäßige Formatierungsunterstützung bereitstellt. Es wird jedoch empfohlen, dass verwaltete Typen die `IStringable` -Schnittstelle nicht implementieren. Weitere Informationen finden Sie im Abschnitt „Die Windows-Runtime und die `IStringable`-Schnittstelle“ auf der <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Referenzseite.
 
 Da alle anderen Typen außer Schnittstellen von <xref:System.Object>abgeleitet werden, wird diese Funktionalität automatisch für die benutzerdefinierten Klassen oder Strukturen bereitgestellt. Aber die von der standardmäßigen `ToString`-Methode gebotene Funktionalität ist beschränkt: Zwar identifiziert sie den Typ, liefert jedoch keine Informationen zu einer Instanz des Typs. Um eine Zeichenfolgendarstellung eines Objekts bereitzustellen, die Informationen zum Objekt enthält, müssen Sie die `ToString` -Methode überschreiben.
 

@@ -26,7 +26,7 @@ Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum S
   
  Ordnen Sie Slots in nicht verwaltetem C++ mit `TlsAlloc` dynamisch zu, und deklarieren Sie mit `__declspec(thread)`, dass eine Variable in threadbezogenem Speicher zugewiesen werden soll. Threadbezogene statische Felder und Datenslots stellen die verwaltete Version dieses Verhaltens bereit.  
   
- In .NET Framework 4 können Sie mithilfe der <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> -Klasse threadlokale Objekte erstellen, die verzögert initialisiert werden, wenn das Objekt zuerst genutzt wird. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md).  
+ In .NET Framework 4 können Sie mit der <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse threadlokale Objekte erstellen, die verzögert initialisiert werden, wenn das Objekt zuerst genutzt wird. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Eindeutigkeit der Daten im verwalteten TLS  
  Ob Sie threadbezogene statische Felder oder Datenslots verwenden, Daten in verwaltetem TLS sind für die Kombination von Thread und Anwendungsdomäne eindeutig.  

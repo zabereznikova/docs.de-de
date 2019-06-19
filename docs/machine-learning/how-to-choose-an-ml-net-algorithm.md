@@ -21,7 +21,7 @@ Algorithmen arbeiten mit **Features**. Features sind numerische Werte, die aus I
 
 Ein Algorithmus ist die Berechnung, die ausgeführt wird, um ein **Modell** zu erzeugen. Verschiedene Algorithmen schaffen Modelle mit unterschiedlichen Eigenschaften. 
 
-Mit ML.NET kann der gleiche Algorithmus für verschiedene Aufgaben angewendet werden. Beispielsweise können stochastischen Dual koordinierte Versalhöhe für Binärklassifizierung, Mehrklassige Klassifizierung und Regression verwendet werden. Der Unterschied besteht darin, wie die Ausgabe des Algorithmus interpretiert wird, um der Aufgabe zu entsprechen. 
+Mit ML.NET kann der gleiche Algorithmus für verschiedene Aufgaben angewendet werden. Beispielsweise kann ein stochastischer dualer koordinierter Anstieg für Binärklassifizierung, Multiklassenklassifizierung und Regression verwendet werden. Der Unterschied besteht darin, wie die Ausgabe des Algorithmus interpretiert wird, um der Aufgabe zu entsprechen. 
 
 Für jede Kombination von Algorithmus und Aufgabe bietet ML.NET eine Komponente, die den Trainingsalgorithmus und die Interpretation ausführt. Diese Komponenten werden als Trainer bezeichnet. <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> verwendet z.B. den **StochasticDualCoordinatedAscent**-Algorithmus, der auf die **Regression**-Aufgabe angewendet wird.
 
@@ -42,7 +42,7 @@ Lineare Algorithmen führen mehrere Durchläufe über die Trainingsdaten aus. We
 |Algorithmus|Eigenschaften|Trainer|
 |---------|----------|--------|
 |Gemitteltes Perzeptron|Am besten geeignet zur Textklassifizierung|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Stochastischen dual koordinierte Versalhöhe|Optimieren für gute Standardleistung nicht erforderlich|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|Stochastischer dualer koordinierter Anstieg|Optimieren für gute Standardleistung nicht erforderlich|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|Wird verwendet, wenn die Anzahl der Features groß ist. Erstellt Trainingsstatistiken für die logistische Regression, aber skaliert nicht so gut wie der AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Symbolischer stochastischer Gradientenabfall|Schneller und zuverlässiger präziser linearer Binärklassifizierungstrainer. Skaliert gut nach Anzahl der Prozessoren|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

@@ -32,7 +32,7 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
   
 - [Aktivieren und Verwenden der Schattenkopiefunktion](#EnablingAndUsing) beschreibt die grundlegende Verwendung sowie die Optionen in Verbindung mit Schattenkopien.  
   
-- [Startleistung](#StartupPerformance) wird beschrieben, die Änderungen, die an der Schattenkopiefunktion in .NET Framework 4 zur Verbesserung der Leistung beim Start, und wie das Verhalten vorheriger Versionen wiederhergestellt werden.  
+- [Startleistung](#StartupPerformance) beschreibt die Änderungen, die an der Schattenkopiefunktion in .NET Framework 4 vorgenommen werden, um die Startleistung zu verbessern. Außerdem wird erläutert, wie das Verhalten vorheriger Versionen wiederhergestellt werden kann.  
   
 - [Veraltete Methoden](#ObsoleteMethods) beschreibt die Änderungen, die an den Eigenschaften und Methoden vorgenommen wurden, die die Schattenkopiefunktion in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] steuern.  
   

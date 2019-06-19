@@ -28,7 +28,7 @@ ms.locfileid: "66489680"
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
   
 > [!IMPORTANT]
->  Ab .NET Framework 4, Caspol.exe hat keine Auswirkungen auf die CAS-Richtlinie, sofern die [ \<LegacyCasPolicy >-Element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) nastaven NA hodnotu `true`. Alle von CasPol.exe angezeigten oder geänderten Einstellungen gelten nur für Anwendungen, die die Verwendung der CAS-Richtlinie abonnieren. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+>  Ab .NET Framework 4 wirkt sich „Caspol.exe“ nur dann auf CAS-Richtlinien (Code Access Security, Codezugriffssicherheit) aus, wenn das [\<legacyCasPolicy](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)-Element auf `true` festgelegt ist. Alle von CasPol.exe angezeigten oder geänderten Einstellungen gelten nur für Anwendungen, die die Verwendung der CAS-Richtlinie abonnieren. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
 >  64-Bit-Computer enthalten 64-Bit- und 32-Bit-Versionen der Sicherheitsrichtlinie. Um sicherzustellen, dass die Richtlinienänderungen sowohl für 32-Bit- als auch für 64-Bit-Anwendungen gelten, führen Sie die 32- und die 64-Bit-Version von Caspol.exe aus.  

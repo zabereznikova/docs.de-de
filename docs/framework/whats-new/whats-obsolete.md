@@ -43,7 +43,7 @@ Wenn Sie vorhandenen Code aktualisieren und neu kompilieren, kann ohne weiteres 
 
 - Lesen Sie die Dokumentation für diesen Technologiebereich, um zu bestimmen, wie darauf reagiert werden soll, dass die Komponente veraltet ist.
 
-Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Nehmen wir beispielsweise an, dass Sie eine Anwendung namens app1.exe, die mit .NET Framework 3.5 kompiliert wurde, aber die Anwendung für .NET Framework 4.5 ausgeführt werden sollen. Gehen Sie dazu folgendermaßen vor:
+Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Ein Beispiel: Angenommen, Sie besitzen eine für .NET Framework 3.5 kompilierte Anwendung mit dem Namen „app1.exe“ und möchten, dass diese Anwendung für .NET Framework 4.5 ausgeführt wird. Gehen Sie dazu folgendermaßen vor:
 
 1. Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.
 

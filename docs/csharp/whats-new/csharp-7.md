@@ -222,7 +222,7 @@ Das Ändern einer Methode in ein Ausdruckskörpermember ist eine [binärkompatib
 
 ## <a name="throw-expressions"></a>Throw-Ausdrücke
 
-In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese Anweisung nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können C# 7.0 führt [ *throw-Ausdrücke*](../language-reference/keywords/throw.md#the-throw-expression).
+In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese Anweisung nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können, wurden in C# 7.0 [*Throw-Ausdrücke*](../language-reference/keywords/throw.md#the-throw-expression) eingeführt.
 
 Diese Ergänzung erleichtert das Schreiben ausdrucksbasierteren Codes. Sie benötigen zur Fehlerüberprüfung keine weiteren Anweisungen.
 

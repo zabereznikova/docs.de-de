@@ -69,7 +69,7 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 |**HistClear**|Gibt alle von der Familie der `Hist`-Befehle verwendeten Ressourcen frei.<br /><br /> In der Regel muss `HistClear` nicht explizit aufgerufen werden, da jeder Aufruf von `HistInit` die vorherigen Ressourcen bereinigt.|
 |**HistInit**|Initialisiert die SOS-Strukturen aus dem Belastungsprotokoll, die in der zu debuggenden Komponente gespeichert sind.|
 |**HistObj** *\<obj_address>*|Untersucht alle Aufzeichnungen von Belastungsprotokollumsetzungen und zeigt die Kette von Garbage Collection-Umsetzungen an, die möglicherweise zu der als Argument übergebenen Adresse geführt haben.|
-|**HistObjFind**  *\<obj_address>*|Zeigt alle Protokolleinträge an, die auf ein Objekt bei der angegebenen Adresse verweisen.|
+|**HistObjFind** *\<obj_address>*|Zeigt alle Protokolleinträge an, die auf ein Objekt bei der angegebenen Adresse verweisen.|
 |**HistRoot** *\<root>*|Zeigt Informationen zu sowohl Heraufstufungen als auch Umsetzungen des angegebenen Stamms an.<br /><br /> Anhand des Stammwerts kann die Bewegung eines Objekts durch die Garbage Collections verfolgt werden.|
 |**IP2MD** \<*Codeadresse*>|Zeigt die `MethodDesc`-Struktur bei der angegebenen Adresse in JIT (Just-In-Time)-kompiliertem Code an.|
 |`ListNearObj` (`lno`) *\<obj_address>*|Zeigt die Objekte an, die der angegebenen Adresse vorausgehen und darauf folgen. Der Befehl sucht im Garbage Collection-Heap nach der Adresse, die wie ein gültiger Anfang eines verwalteten Objekts aussieht (auf Grundlage einer gültigen Methodentabelle), und nach dem Objekt, das der Argumentadresse folgt.|

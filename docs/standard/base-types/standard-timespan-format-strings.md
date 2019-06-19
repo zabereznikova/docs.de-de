@@ -64,7 +64,7 @@ ms.locfileid: "66491098"
 |*ss*|Die Anzahl von Sekunden zwischen "0" und "59".|  
 |*fffffff*|Der optionale Bruchteil einer Sekunde.  Der Wert kann zwischen "0000001" (ein Tick oder ein Zehnmillionstel einer Sekunde) und "9999999" (9.999.999 Zehnmillionstel einer Sekunde oder eine Sekunde minus ein Tick) liegen.|  
   
- Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Es erzeugt die Zeichenfolgendarstellung einer <xref:System.TimeSpan> Werts, der unveränderlich ist und für alle früheren Versionen von .NET Framework vor .NET Framework 4. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
+ Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Er erzeugt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts, der unveränderlich ist und für alle früheren .NET Framework-Versionen vor .NET Framework 4 verwendet wird. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> unterstützt auch die standardmäßigen "t"- und "T"-Formatzeichenfolgen, die im Verhalten identisch mit der Standardformatzeichenfolge "c" sind.  

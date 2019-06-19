@@ -186,7 +186,7 @@ Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die gee
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Stellen Sie sicher, dass alle COM-Ereignisbenachrichtigungen spät gebunden sind.
 
-Standardmäßig werden COM-Typinformationen direkt in verwaltete Assemblys eingebettet, sodass primäre Interopassemblys (PIAs) überflüssig sind. Eine der Einschränkungen von eingebetteten Typinformationen ist jedoch, dass die Übermittlung von ereignisbenachrichtigungen COM durch früh gebundene Vtable-Aufrufe nicht unterstützt, sondern unterstützt nur die spät gebundene `IDispatch::Invoke` aufrufen.
+Standardmäßig werden COM-Typinformationen direkt in verwaltete Assemblys eingebettet, sodass primäre Interopassemblys (PIAs) überflüssig sind. Eine der Einschränkungen von eingebetteten Typinformationen ist jedoch, dass sie nicht die Bereitstellung von COM-Ereignisbenachrichtigungen durch früh gebundene vtable-Aufrufe unterstützen, sondern nur spät gebundene `IDispatch::Invoke`-Aufrufe.
 
 Wenn Ihre Anwendung früh gebundene Aufrufe von COM-Ereignisschnittstellenmethoden erfordert, können Sie für die Eigenschaft **Interoptypen einbetten** in Visual Studio `true` festlegen, oder schließen Sie das folgende Element in Ihre Projektdatei ein:
 

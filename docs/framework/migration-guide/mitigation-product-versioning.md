@@ -23,7 +23,7 @@ In .NET Framework 4.6 und höheren Versionen wurde die Produktversionsverwaltu
   
 - Die Attribute <xref:System.Reflection.AssemblyFileVersionAttribute> und <xref:System.Reflection.AssemblyInformationalVersionAttribute> für verwaltete Assemblys verfügen über <xref:System.Version>-Werte im Format `4.6.X.0` für .NET Framework 4.6 und die zugehörigen Punktversionen sowie `4.7.X.0` für .NET Framework 4.7.  
   
-- Ab .NET Framework 4.6, die <xref:System.Environment.Version%2A?displayProperty=nameWithType> Eigenschaft gibt die korrigierte Versionszeichenfolge `4.0.30319.42000`. In der .NET Framework 4, 4.5, 4.5.1 und 4.5.2 gibt Versionszeichenfolgen im Format `4.0.30319.xxxxx` , in denen `xxxxx` ist kleiner als 42000 (z. B. "4.0.30319.18010"). Es wird nicht empfohlen, eine neue Abhängigkeit von der <xref:System.Environment.Version%2A?displayProperty=nameWithType>-Eigenschaft in Anwendungscode zu verwenden.
+- Ab .NET Framework 4.6 gibt die Eigenschaft <xref:System.Environment.Version%2A?displayProperty=nameWithType> die korrigierte Versionszeichenfolge `4.0.30319.42000` zurück. In .NET Framework 4, 4.5, 4.5.1 und 4.5.2 gibt die Eigenschaft Versionszeichenfolgen im Format `4.0.30319.xxxxx` zurück, wobei `xxxxx` kleiner als 42000 ist (z.B. „4.0.30319.18010“). Es wird nicht empfohlen, eine neue Abhängigkeit von der <xref:System.Environment.Version%2A?displayProperty=nameWithType>-Eigenschaft in Anwendungscode zu verwenden.
   
 ### <a name="handling-the-product-versioning-changes"></a>Behandeln der Änderungen hinsichtlich der Produktversionsverwaltung  
  Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen solcher Faktoren, wie beispielsweise die Laufzeitversion von .NET Framework und das Installationsverzeichnis, abhängen:  

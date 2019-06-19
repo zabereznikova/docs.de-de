@@ -44,7 +44,7 @@ ms.locfileid: "66489586"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse  
- Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab .NET Framework 4, [Garbage Collection-ETW-Ereignisse](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für die Analyse des verwalteten Heaps aus Sicht einer statistischen zu erfassen. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:  
+ Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab .NET Framework 4 erfassen [ETW-Ereignisse der Garbage Collection](../../../docs/framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:  
   
 - Welche Generation von Objekten wird erfasst.  
   

@@ -1,5 +1,5 @@
 ---
-title: + +=-Operatoren - und C# Verweis
+title: + und +=-Operatoren – C#-Referenz
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67025319"
 ---
-# <a name="-and--operators-c-reference"></a>+ und -Operatoren += (C# Verweis)
+# <a name="-and--operators-c-reference"></a>Operatoren „+“ und „+=“ (C#-Referenz)
 
 Der Operator `+` wird von den integrierten numerischen Typen, vom Typ [Zeichenfolge](../keywords/string.md) sowie von [Delegattypen](../keywords/delegate.md) unterstützt.
 
@@ -43,7 +43,7 @@ Für Operanden des gleichen [Delegattyps](../keywords/delegate.md) gibt der Oper
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
-Um delegatentfernung auszuführen, verwenden die [ `-` Operator](subtraction-operator.md#delegate-removal).
+Um eine Delegatentfernung auszuführen, verwenden Sie den [`-`-Operator](subtraction-operator.md#delegate-removal).
 
 Weitere Informationen zu Delegattypen finden Sie unter [Delegaten](../../programming-guide/delegates/index.md).
 

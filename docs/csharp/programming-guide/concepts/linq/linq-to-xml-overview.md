@@ -11,7 +11,7 @@ ms.locfileid: "66484346"
 ---
 # <a name="linq-to-xml-overview-c"></a>Übersicht über LINQ to XML (C#)
 
-LINQ to XML stellt eine XML-Programmierschnittstelle im Arbeitsspeicher bereit, die das .NET Language-Integrated Query-Framework (LINQ) nutzt. LINQ to XML verwendet .NET Funktionen und ist vergleichbar mit einer aktualisierten und umgestalteten (DOM = Document Object Model)-XML-Programmierschnittstelle. 
+LINQ to XML stellt eine XML-Programmierschnittstelle im Arbeitsspeicher bereit, die das .NET Language-Integrated Query-Framework (LINQ) nutzt. LINQ to XML verwendet die neuesten .NET-Funktionen und ist mit einer aktualisierten und neu gestalteten DOM-XML-Programmierschnittstelle vergleichbar. 
  
 XML hat sich mittlerweile als hervorragende Möglichkeit durchgesetzt, Daten in einer Vielzahl von Kontexten zu formatieren. Sie finden XML beispielsweise im Internet, in Konfigurationsdateien, in Microsoft Office Word-Dateien und in Datenbanken.
 

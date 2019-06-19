@@ -56,7 +56,7 @@ Eine Klasse kann Methoden oder Eigenschaften bereitstellen, mit deren Hilfe ein 
 
 Eine andere Möglichkeit zum Vermeiden von Ausnahmen besteht darin, bei sehr häufig auftretenden Fehlern NULL (oder einen Standardwert) zurückzugeben, statt eine Ausnahme auszulösen. Ein sehr häufig auftretender Fehler kann durchaus als normale Ablaufsteuerung betrachtet werden. Indem Sie in diesen Fällen NULL (oder einen Standardwert) zurückgeben, minimieren Sie die Auswirkungen auf die Leistung einer App.
 
-Bei Werttypen an, ob verwendet `Nullable<T>` oder Standard, wie Ihre Fehlerindikator für Ihre spezielle app berücksichtigt wird. Durch Verwendung von `Nullable<Guid>` wird `default` zu `null` statt zu `Guid.Empty`. Manchmal wird durch Hinzufügen von `Nullable<T>` klarer, ob ein Wert vorhanden oder nicht vorhanden ist. Andererseits kann das Hinzufügen von `Nullable<T>` dazu führen, dass zusätzliche Fälle geprüft werden müssen, die eigentlich nicht notwendig sind und nur zu potenzielle Fehlerquellen führen. 
+Ob Sie bei Werttypen `Nullable<T>` oder einen Standardwert als Fehlerindikator verwenden, richtet sich nach Ihrer speziellen App. Durch Verwendung von `Nullable<Guid>` wird `default` zu `null` statt zu `Guid.Empty`. Manchmal wird durch Hinzufügen von `Nullable<T>` klarer, ob ein Wert vorhanden oder nicht vorhanden ist. Andererseits kann das Hinzufügen von `Nullable<T>` dazu führen, dass zusätzliche Fälle geprüft werden müssen, die eigentlich nicht notwendig sind und nur zu potenzielle Fehlerquellen führen. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Auslösen von Ausnahmen statt Zurückgeben eines Fehlercodes
 
