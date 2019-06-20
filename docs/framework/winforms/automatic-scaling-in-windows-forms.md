@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636972"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268082"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 
@@ -48,7 +48,7 @@ Während dieser Mechanismus für die meisten Zwecke ausreichend war, brachte er 
 
 - Es ist nicht kompatibel mit neueren Layout-Managern, die mit .NET Framework, Version 2.0, eingeführt wurde, z. B. <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Der Mechanismus unterstützte keine Skalierung, die direkt auf der Bildschirmauflösung basiert, aber für Kompatibilität mit [!INCLUDE[compact](../../../includes/compact-md.md)] erforderlich ist.
+- Unterstützte keine Skalierung direkt auf die Bildschirmauflösung, die für Kompatibilität mit .NET Compact Framework erforderlich ist.
 
 Obwohl dieser Mechanismus in .NET Framework, Version 2.0 Abwärtskompatibilität beibehalten wird, wurde es durch den robusteren Skalierungsmechanismus beschrieben abgelöst. Als Folge davon sind <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> und bestimmte <xref:System.Windows.Forms.Control.Scale%2A>-Überladungen als veraltet gekennzeichnet.
 
@@ -63,7 +63,7 @@ Obwohl dieser Mechanismus in .NET Framework, Version 2.0 Abwärtskompatibilität
 
 - Die <xref:System.Windows.Forms.Control>-Klasse hat außerdem mehrere neue Member, die ihre Mitwirkung an der Skalierung und die Unterstützung der gemischten Skalierung im selben Formular ermöglichen. Insbesondere die Member <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> und <xref:System.Windows.Forms.Control.GetScaledBounds%2A> unterstützen die Skalierung.
 
-- Unterstützung für Skalierung auf Basis der Bildschirmauflösung wurde hinzugefügt, um die Unterstützung der Systemschriftarten zu ergänzen, wie dies durch die <xref:System.Windows.Forms.AutoScaleMode>-Enumeration definiert ist. Dieser Modus ist mit der automatischen Skalierung kompatibel, die von [!INCLUDE[compact](../../../includes/compact-md.md)] unterstützt wird, wodurch eine einfachere Anwendungsmigration ermöglicht wird.
+- Unterstützung für Skalierung auf Basis der Bildschirmauflösung wurde hinzugefügt, um die Unterstützung der Systemschriftarten zu ergänzen, wie dies durch die <xref:System.Windows.Forms.AutoScaleMode>-Enumeration definiert ist. Dieser Modus ist kompatibel mit der automatischen Skalierung von .NET Compact Framework ermöglichen die einfachere Anwendungsmigration unterstützt werden.
 
 - Kompatibilität mit Layout-Managern wie <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel> wurde der Implementierung der automatischen Skalierung hinzugefügt.
 

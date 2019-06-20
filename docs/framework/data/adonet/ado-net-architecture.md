@@ -2,18 +2,18 @@
 title: ADO.NET-Architektur
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877250"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267967"
 ---
 # <a name="adonet-architecture"></a>ADO.NET-Architektur
 Die traditionelle Datenverarbeitung basierte primär auf einem verbindungsbasierten Modell mit zwei Ebenen. Da für die Datenverarbeitung immer mehr auf Architekturen mit mehreren Ebenen zurückgegriffen wird, wird verstärkt mit nicht verbundenen Lösungen gearbeitet, um eine bessere Skalierbarkeit der Anwendungen zu erzielen.  
   
 ## <a name="adonet-components"></a>ADO.NET-Komponenten  
- Die beiden Hauptkomponenten von [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] für den Zugriff auf und Bearbeiten von Daten die .NET Framework-Datenanbieter sind und die <xref:System.Data.DataSet>.  
+ Die beiden Hauptkomponenten von ADO.NET zum Zugreifen auf und Bearbeiten von Daten sind die .NET Framework-Datenanbieter und die <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter  
  Die .NET Framework-Datenanbieter sind Komponenten, die explizit für die Datenbearbeitung und den schnellen, vorwärts gerichteten, schreibgeschützten Zugriff auf Daten entworfen wurden. Das `Connection`-Objekt sorgt für die Verbindung mit einer Datenquelle. Mit dem `Command`-Objekt können Sie auf Datenbankbefehle zugreifen, um Daten zurückzugeben oder zu ändern, gespeicherte Prozeduren auszuführen und Parameterinformationen zu senden oder abzurufen. Der `DataReader` sorgt dafür, dass die Daten mit maximaler Geschwindigkeit per Stream bereitgestellt werden. Der `DataAdapter` fungiert als Brücke zwischen dem `DataSet`-Objekt und der Datenquelle. Der `DataAdapter` verwendet zum Ausführen von SQL-Befehlen an der Datenquelle `Command`-Objekte, um damit sowohl Daten in das `DataSet` zu laden als auch um die Datenquelle mit den an den Daten im `DataSet` vorgenommenen Änderungen zu aktualisieren. Weitere Informationen finden Sie unter [.NET Framework-Datenanbieter](../../../../docs/framework/data/adonet/data-providers.md) und [abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
