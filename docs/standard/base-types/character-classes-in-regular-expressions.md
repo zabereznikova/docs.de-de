@@ -51,7 +51,7 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
  .NET unterstützt Zeichenklassensubtraktions-Ausdrücke. Hierdurch können Sie einen Zeichensatz definieren, der das Ergebnis des Ausschlusses einer Zeichenklasse von einer anderen darstellt. Weitere Informationen finden Sie unter [Zeichenklassensubtraktion](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen.  Ab .NET Framework 4.6.2 können basieren Zeichenkategorien auf [Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4 über das .NET Framework 4.6.1, basieren sie auf [Unicode Standard, Version 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen.  Ab .NET Framework 4.6.2 basieren Zeichenkategorien auf dem [Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4 bis .NET Framework 4.6.1 basieren sie auf dem [Unicode-Standard, Version 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Positive Zeichengruppe: [ ]  
@@ -71,10 +71,10 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
 [firstCharacter-lastCharacter]  
 ```  
   
- wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *FirstCharacter* muss das Zeichen, mit der niedrigeren Codepunkt und *LastCharacter* muss das Zeichen mit der höheren Codepunkt.
+ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *firstCharacter* muss das Zeichen mit dem niedrigeren Codepunkt sein, *lastCharacter* muss das Zeichen mit dem höheren Codepunkt sein.
 
 > [!NOTE]
-> Da es sich bei eine positiven Zeichengruppe sowohl eine Gruppe von Zeichen und einem Bereich von Zeichen, ein Bindestrich enthalten kann (`-`) wird immer als bereichstrennzeichen für den interpretiert, es sei denn, es der ersten oder letzten Zeichen der Gruppe ist.
+> Da eine positive Zeichengruppe sowohl einen Zeichensatz als auch einen Zeichenbereich umfassen kann, wird ein Bindestrichzeichen (`-`) immer als Bereichstrennzeichen interpretiert, sofern es nicht das erste oder das letzte Zeichen der Gruppe ist.
 
 In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit positiven Zeichenklassen aufgeführt.  
   
@@ -131,10 +131,10 @@ Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:
 [^*firstCharacter*-*lastCharacter*]  
 ```
 
-wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *FirstCharacter* muss das Zeichen, mit der niedrigeren Codepunkt und *LastCharacter* muss das Zeichen mit der höheren Codepunkt.
+wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *firstCharacter* muss das Zeichen mit dem niedrigeren Codepunkt sein, *lastCharacter* muss das Zeichen mit dem höheren Codepunkt sein.
 
 > [!NOTE]
-> Da es sich bei eine negativen Zeichengruppe sowohl eine Gruppe von Zeichen und einem Bereich von Zeichen, ein Bindestrich enthalten kann (`-`) wird immer als bereichstrennzeichen für den interpretiert, es sei denn, es der ersten oder letzten Zeichen der Gruppe ist.
+> Da eine negative Zeichengruppe sowohl einen Zeichensatz als auch einen Zeichenbereich umfassen kann, wird ein Bindestrichzeichen (`-`) immer als Bereichstrennzeichen interpretiert, sofern es nicht das erste oder das letzte Zeichen der Gruppe ist.
   
  Mindestens zwei Zeichenbereiche können miteinander verkettet werden. Beispiel: Verwenden Sie zum Angeben des Dezimalzeichenbereichs von "0" bis "9", des Kleinbuchstabenbereichs von "a" bis "f" und des Großbuchstabenbereichs von "A" bis "F" den Ausdruck `[0-9a-fA-F]`.  
   
