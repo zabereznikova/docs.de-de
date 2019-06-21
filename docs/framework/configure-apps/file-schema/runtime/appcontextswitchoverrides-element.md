@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210446"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307088"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides >-Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
@@ -68,7 +68,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Steuert, ob der Standardalgorithmus zum Signieren von paketbestandteilen verwendet werden, indem PackageDigitalSignatureManager SHA1- oder SHA-256 ist.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Bei Festlegung auf `false`, ermöglicht das Debuggen von XAML-basierten Workflow-Projekte mit Visual Studio, wenn FIPS aktiviert ist. Ohne diese einem <xref:System.NullReferenceException> in Aufrufen von Methoden in der Assembly System.Activities ausgelöst.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Steuert, ob die Prüfsumme für eine Workflowinstanz im Debugger MD5 oder SHA1 verwendet. | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Steuert, ob SHA1-Algorithmus als Standard in .NET Framework 4.7 eingeführt Workflow Prüfsumme hashing verwendet werden. (`true`), oder ob er verwendet den der Standardwert SHA256-Algorithmus als Standard in .NET Framework 4.8 eingeführt (`false`).<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|Steuert, ob SHA1-Algorithmus als Standard in .NET Framework 4.7 eingeführt Workflow Prüfsumme hashing verwendet werden. (`true`), oder ob er den Standardwert SHA256-Algorithmus eingeführt wurden, als der Standardwert in .NET Framework 4.8 verwendet (`false`).<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Steuert, ob stapelüberwachungen abrufen, bei Verwendung portabler PDBs Quelldatei- und Zeileninformationen Quellinformationen enthalten können. `false` Um Quelldatei- und Zeileninformationen Quellinformationen sind: andernfalls `true`.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Steuerelemente, ob die <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> Methode löst eine Ausnahme aus, wenn ein <xref:System.Drawing.Icon> -Objekt PNG-Bilder aufweist. Weitere Informationen finden Sie unter [Entschärfung: PNG-Bilder in Symbolobjekten](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Bestimmt, ob <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> Objekte freigegeben werden ordnungsgemäß, beim Hinzufügen der Sammlung nach der <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> Methode. `true` Das Legacyverhalten beibehalten; `false` aller privaten Schriftart Objekte freizugeben. |.NET Framework 4.7.2|
@@ -134,7 +134,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.UseLegacyAccessibilityFeatures`|Steuerelemente werden, ob der Zugriff auf Funktionen verfügbar ab .NET Framework 4.7.1 aktiviert oder deaktiviert. | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|Gibt an, ob für die Barrierefreiheit in .NET Framework 4.7.2 verfügbar features aktiviert sind Steuerelemente (`false`) oder deaktiviert (`true`). Wenn `true`, `Switch.UseLegacyAccessibilityFeatures` zudem muss `true` Barrierefreiheitsfunktionen für die .NET Framework 4.7.1 aktivieren.|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|Steuerelemente, die aktiviert sind, ob Funktionen zur Barrierefreiheit in .NET Framework 4.8 eingeführt (`false`) oder deaktiviert (`true`). Wenn `true`, `Switch.UseLegacyAccessibilityFeatures` und `Switch.UseLegacyAccessibilityFeatures.2` zudem muss `true`.|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|Steuerelemente, ob QuickInfos Displaed, wenn ein Benutzer sind bewegt den Cursor auf ein WPF-Steuerelement (`true`), oder gibt an, ob sie auf den Tastaturfokus und über die Tastenkombination angezeigt werden (`false`, das Standardverhalten). Für Anwendungen, die auf .NET Framework 4.8 ausgeführt, aber als Ziel von früheren Versionen von .NET Framework, aktivieren beide den Fokus der Tastatur und Shortcut Key-Unterstützung, dass erfordert `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, und `Switch.UseLegacyAccessibilityFeatures.3` alle `false`.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|Steuerelemente, ob QuickInfos angezeigt werden, wenn ein Benutzer den Mauszeiger auf zeigen ein WPF-Steuerelement (`true`), oder gibt an, ob sie auf den Tastaturfokus und über die Tastenkombination angezeigt werden (`false`, das Standardverhalten). Für Anwendungen, die auf .NET Framework 4.8 ausgeführt, aber als Ziel von früheren Versionen von .NET Framework, aktivieren beide den Fokus der Tastatur und Shortcut Key-Unterstützung, dass erfordert `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, und `Switch.UseLegacyAccessibilityFeatures.3` alle `false`.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Steuert, ob leere schlüsselsequenzen in zusammengesetzten Schlüsseln von XSD-schemavalidierung ignoriert werden. Weitere Informationen finden Sie unter [Entschärfung: XML-Schemaüberprüfung](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]

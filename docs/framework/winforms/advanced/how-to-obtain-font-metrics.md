@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881854"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307427"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Vorgehensweise: Abrufen von Schriftarteigenschaften
 Die <xref:System.Drawing.FontFamily> Klasse stellt die folgenden Methoden, die verschiedene Metriken für eine bestimmte Produktfamilie / "Style" abrufen:  
@@ -26,7 +26,7 @@ Die <xref:System.Drawing.FontFamily> Klasse stellt die folgenden Methoden, die v
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- Die Zahlen, die von diesen Methoden zurückgegeben werden, sodass sie unabhängig von Größe und Einheiten eines bestimmten sind in Schriftentwurfseinheiten <xref:System.Drawing.Font> Objekt.  
+ Die von diesen Methoden zurückgegebene Werte sind in Schriftentwurfseinheiten, sodass sie unabhängig von Größe und Einheiten eines bestimmten sind <xref:System.Drawing.Font> Objekt.  
   
  Die folgende Abbildung zeigt die verschiedenen Metriken:
   

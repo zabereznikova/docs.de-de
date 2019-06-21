@@ -2,12 +2,12 @@
 title: Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613760"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307182"
 ---
 # <a name="troubleshooting"></a>Problembehandlung
 Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen auftreten können, und enthalten Vorschläge dazu, wie diese Probleme vermieden bzw. deren Auswirkungen auf andere Weise verringert werden können.  
@@ -42,7 +42,7 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
 ## <a name="expression-not-queryable"></a>Ausdruck kann nicht abgefragt werden  
  Falls der Fehler "Der Ausdruck [Ausdruck] kann nicht abgefragt werden. Möglicherweise fehlt ein Assemblyverweis" auftritt, stellen Sie Folgendes sicher:  
   
-- Die Anwendung muss auf [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] abzielen.  
+- Ihre Anwendung abzielt .NET Compact Framework 3.5.  
   
 - Sie müssen über einen Verweis auf `System.Core.dll` und `System.Data.Linq.dll` verfügen.  
   

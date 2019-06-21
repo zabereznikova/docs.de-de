@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489839"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307299"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung, der Bereitstellung und der Ausführung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendungen beschrieben. Sie sollten auch Empfehlungen für das Erstellen sicherer Anwendungen für .NET Framework ausführen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -86,7 +86,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Der invariante Name des Anbieters kann in app.config geändert werden. Die Clientanwendung ist für den Zugriff auf den zugrunde liegenden Anbieter über das Anbieterfactory-Standardmodell unter Verwendung eines starken Namens zuständig.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Schränken Sie die Zugriffsberechtigungen auf die Modell- und Zuordnungsdateien ein.  
- Ein Administrator muss den Schreibzugriff auf die Modell- und Zuordnungsdateien (EDMX-, CSDL-, SSDL- und MSL-Dateien) auf die Benutzer beschränken, die das Modell oder die Zuordnungen ändern. Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] muss über Lesezugriff auf diese Dateien nur zur Laufzeit. Ein Administrator sollte außerdem den Zugriff auf Quellcodedateien der Objektebene und vorkompilierter Sichten, die durch die [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]-Tools erzeugt werden, einschränken.  
+ Ein Administrator muss den Schreibzugriff auf die Modell- und Zuordnungsdateien (EDMX-, CSDL-, SSDL- und MSL-Dateien) auf die Benutzer beschränken, die das Modell oder die Zuordnungen ändern. Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] muss über Lesezugriff auf diese Dateien nur zur Laufzeit. Ein Administrator sollten auch den Zugriff auf Objektebene und vorkompilierter Sichten-Quellcodedateien, die von den Entity Data Model-Tools generiert werden.  
   
 ## <a name="security-considerations-for-queries"></a>Sicherheitsaspekte bei Abfragen  
  Folgende Sicherheitsaspekte sollten beim Abfragen eines konzeptionellen Modells beachtet werden. Diese Aspekte gelten für [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen, die EntityClient verwenden, und für Objektabfragen mithilfe von LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] und Abfrage-Generator-Methoden.  
