@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634521"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268211"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
@@ -36,7 +36,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
   
 <a name="table"></a> Die folgenden Tabelle beschreibt die benutzerdefinierten Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von benutzerdefinierten numerischen Formatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesCustomFormatting) . Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.  
   
-|Formatbezeichner|name|Beschreibung|Beispiele|  
+|Formatbezeichner|name|BESCHREIBUNG|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|0-Platzhalter|Ersetzt die Ziffer 0 ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird die Ziffer 0 in der Ergebniszeichenfolge angezeigt.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Spezifizierer „0“](#Specifier0)|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Ziffernplatzhalter|Ersetzt das "#"-Symbol ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird keine Ziffer in der Ergebniszeichenfolge angezeigt.<br /><br /> Beachten Sie, dass keine Ziffer in der Ergebniszeichenfolge angezeigt wird, wenn die entsprechende Ziffer in der Eingabezeichenfolge eine nicht signifikante 0 ist. Zum Beispiel: 0003 ("####") -> 3.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Spezifizierer „#“](#SpecifierD)|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -85,7 +85,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Verwenden Sie das Feature für die [zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md) , und geben Sie eine Feldbreite an, wie im folgenden Beispiel veranschaulicht, um eine Ergebniszeichenfolge zurückzugeben, in der fehlende Ziffern oder führende Nullen durch Leerzeichen ersetzt werden.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Zurück zur Tabelle](#table)  
@@ -189,7 +189,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 ## <a name="the--section-separator"></a>Das Abschnittstrennzeichen „;“  
  Das Semikolon (;) ist ein bedingter Formatbezeichner, der Zahlen unterschiedlich formatiert, je nachdem, ob sein Wert positiv, negativ oder 0 (null) ist. Dafür kann eine benutzerdefinierte Formatzeichenfolge bis zu drei durch Semikolons getrennte Abschnitte enthalten. Diese Abschnitte werden in der folgenden Tabelle beschrieben.  
   
-|Anzahl der Abschnitte|Beschreibung|  
+|Anzahl der Abschnitte|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |Ein Abschnitt|Die Formatzeichenfolge gilt für alle Werte.|  
 |Zwei Abschnitte|Der erste Abschnitt gilt für positive Werte und Nullen, der zweite Abschnitt für negative Werte.<br /><br /> Wenn die zu formatierende Zahl negativ ist, aber nach dem Runden entsprechend dem Format im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem ersten Abschnitt formatiert.|  

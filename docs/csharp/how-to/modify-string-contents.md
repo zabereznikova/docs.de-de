@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten (C#-Leitfaden)'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664016"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267757"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
@@ -67,7 +67,7 @@ In folgendem Beispiel wird gezeigt, wie Sie mehrere Zeichen in einer Zeichenfolg
 Mit **unsicherem Code** können Sie eine Zeichenfolge „direkt“ modifizieren, nachdem sie erstellt wurde. Unsicherer Code umgeht viele der Features von .NET, die dazu gedacht sind, bestimmte Fehler in Code zu minimieren. Sie müssen unsicheren Code verwenden, um eine Zeichenfolge direkt zu modifizieren, weil die Zeichenfolgenklasse als **unveränderlicher** Typ konzipiert ist. Sobald Sie erstellt wurde, kann ihr Wert nicht verändert werden. Unsicherer Code umgeht diese Eigenschaft, indem er auf den Speicher zugreift und diesen modifiziert, der von einer `string` verwendet wird, ohne normale `string`-Methoden zu verwenden.
 Das folgende Beispiel können Sie verwenden, falls Sie eine Zeichenfolge direkt mit unsicherem Code modifizieren möchte. Dies kommt jedoch sehr selten vor. Im folgenden Beispiel wird die Verwendung des Schlüsselworts `fixed` veranschaulicht. Das Schlüsselwort `fixed` verhindert, dass der Garbage Collector (GC) das Zeichenfolgenobjekt im Speicher verschiebt, während der Code mit einem unsicheren Zeiger auf den Speicher zugreift. Darüber hinaus wird ein möglicher Nebeneffekt unsicherer Vorgänge auf Zeichenfolgen gezeigt, die daraus entstehen, dass der C#-Compiler Zeichenfolgen intern speichert (hält). Im Allgemeinen sollten Sie dieses Verfahren nicht verwenden, es sei denn, es ist unbedingt notwendig. Weitere Informationen erhalten Sie in den Artikeln zu [unsafe](../language-reference/keywords/unsafe.md) und [fixed](../language-reference/keywords/fixed-statement.md). Die API-Referenz für <xref:System.String.Intern%2A> enthält Informationen zum Internalisieren von Zeichenfolgen.
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) herunterladen.
 

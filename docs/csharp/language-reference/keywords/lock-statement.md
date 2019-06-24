@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633452"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306652"
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
 
@@ -54,7 +54,7 @@ Sie können das Schlüsselwort [await](await.md) nicht im Text einer `lock`-Anwe
 Wenn Sie den Threadzugriff auf eine freigegebene Ressource synchronisieren, sperren Sie eine dedizierte Objektinstanz (z.B. `private readonly object balanceLock = new object();`) oder eine andere Instanz, die wahrscheinlich nicht von anderen Teilen des Codes als lock-Objekt verwendet wird. Vermeiden Sie, die gleiche lock-Objektinstanz für verschiedene freigegebene Ressourcen zu verwenden, da dies zu einem Deadlock oder Sperrkonflikt führen kann. Vermeiden Sie insbesondere die Verwendung der folgenden Objekte als Sperre:
 
 - `this` – kann von den Aufrufern als Sperre verwendet werden.
-- <xref:System.Type>-Instanzen – können vom [typeof](typeof.md)-Operator oder der Reflektion abgerufen werden.
+- <xref:System.Type>-Instanzen – können vom [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)-Operator oder der Reflektion abgerufen werden.
 - Zeichenfolgeninstanzen, einschließlich Zeichenfolgenliteralen – können [internalisiert](/dotnet/api/system.string.intern#remarks) sein.
 
 ## <a name="example"></a>Beispiel
