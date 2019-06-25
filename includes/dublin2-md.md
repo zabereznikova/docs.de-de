@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f81dc1bdc8439b3823635e56bd436f5a060e0558
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8839cdd33f72dcbb1d660758042fa0150505afc6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904545"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "67348319"
 ---
-<span data-ttu-id="187d7-101">Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="187d7-101">hosting features</span></span>
+<span data-ttu-id="b002c-101">Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="b002c-101">hosting features</span></span>
