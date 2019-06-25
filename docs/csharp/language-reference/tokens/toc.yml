@@ -1,7 +1,0 @@
-- name: 'C#-Sonderzeichen'
-  href: index.md
-  items:
-    - name: $ -- Zeichenfolgeninterpolation
-      href: interpolated.md
-    - name: '@ -- ausführlicher Bezeichner'
-      href: verbatim.md
