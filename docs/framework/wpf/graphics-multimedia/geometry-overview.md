@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615388"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348066"
 ---
 # <a name="geometry-overview"></a>Übersicht über die Geometrie
 Diese Übersicht beschreibt, wie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> Klassen, um Formen zu beschreiben. In diesem Thema sind auch die Unterschiede zwischen <xref:System.Windows.Media.Geometry> Objekte und <xref:System.Windows.Shapes.Shape> Elemente.  
@@ -105,7 +105,7 @@ Eine EllipseGeometry zum Beschneiden eines Image-Steuerelements
   
 <a name="wcpsdk_graphics_geometry_pathgeometry"></a>   
 ## <a name="path-geometries"></a>Path-Geometrien  
- Die <xref:System.Windows.Media.PathGeometry> -Klasse und deren Lightweight-Entsprechung, die <xref:System.Windows.Media.StreamGeometry> Klasse, bieten die Möglichkeit, mehrere komplexe Figuren bestehend aus Bögen, Kurven und Linien.  
+ Die <xref:System.Windows.Media.PathGeometry> -Klasse und deren lightweight-Entsprechung, die <xref:System.Windows.Media.StreamGeometry> Klasse, bieten die Möglichkeit, mehrere komplexe Figuren bestehend aus Bögen, Kurven und Linien.  
   
  Das Kernstück einer <xref:System.Windows.Media.PathGeometry> ist eine Sammlung von <xref:System.Windows.Media.PathFigure> Objekte, die so genannt, da jede Figur eine diskrete Form in beschreibt die <xref:System.Windows.Media.PathGeometry>. Jede <xref:System.Windows.Media.PathFigure> selbst besteht aus einer oder mehreren <xref:System.Windows.Media.PathSegment> -Objekt, von denen jeder ein Segment der Figur beschreibt.  
   

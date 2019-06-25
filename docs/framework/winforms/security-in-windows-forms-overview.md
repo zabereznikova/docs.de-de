@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586650"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348467"
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 
@@ -52,7 +52,7 @@ Beim Entwickeln einer Anwendung, die mit teilweiser Vertrauenswürdigkeit ausgef
 
 Wenn Sie optionale Berechtigungen anfordern, müssen Sie Sicherheitsausnahmen behandeln, die generiert werden, wenn Ihre Anwendung eine Aktion durchführt, die Berechtigungen erfordert, die ihr nicht erteilt wurden. Durch ordnungsgemäße Behandlung der <xref:System.Security.SecurityException>-Instanz wird sichergestellt, dass Ihre Anwendung weiter ausgeführt werden kann. Ihre Anwendung kann die Ausnahme verwenden, um zu bestimmen, ob eine Funktion für den Benutzer deaktiviert werden sollte. Beispielsweise kann eine Anwendung die Menüoption **Speichern** deaktivieren, wenn die erforderliche Dateiberechtigung nicht gewährt wurde.
 
-Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen bedacht haben. Ein Methodenaufruf, der in der Oberfläche harmlos aussieht, kann z. B. irgendwann während seiner Ausführung auf das Dateisystem zugreifen. Wenn Sie Ihre Anwendung nicht mit allen erforderlichen Berechtigungen bereitstellen, kann es passieren, dass sie in Tests beim Debuggen auf Ihrem Desktop einwandfrei ausgeführt wird, aber fehlschlägt, wenn sie bereitgestellt ist. Sowohl die [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK und Visual Studio 2005 enthalten Tools für die Berechtigungen eine Anwendung benötigt: der MT.exe Befehl Tools "Linie" und das Feature "Berechtigungen berechnen" von Visual Studio.
+Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen bedacht haben. Ein Methodenaufruf, der in der Oberfläche harmlos aussieht, kann z. B. irgendwann während seiner Ausführung auf das Dateisystem zugreifen. Wenn Sie Ihre Anwendung nicht mit allen erforderlichen Berechtigungen bereitstellen, kann es passieren, dass sie in Tests beim Debuggen auf Ihrem Desktop einwandfrei ausgeführt wird, aber fehlschlägt, wenn sie bereitgestellt ist. Die .NET Framework 2.0 SDK und die Visual Studio 2005 enthalten Tools für die Berechtigungen eine Anwendung benötigt: der MT.exe Befehl Tools "Linie" und das Feature "Berechtigungen berechnen" von Visual Studio.
 
 In den folgenden Themen sind zusätzliche Sicherheitsfeatures von Windows Forms beschrieben.
 
@@ -77,7 +77,7 @@ In der folgenden Liste sind diese Technologien beschrieben.
 
 Welche Technologie Sie wählen, hängt von Ihrer Bereitstellungsumgebung ab. Weitere Informationen finden Sie unter [Auswählen einer Strategie für die ClickOnce-Bereitstellung](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-In der Standardeinstellung [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Anwendungen, die mit Visual Studio bereitgestellt oder die [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK-Tools (Mage.exe und MageUI.exe) sind so konfiguriert, dass auf einem Clientcomputer ausführen, die über volle Vertrauenswürdigkeit verfügt. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Hierzu können Sie mit Visual Studio oder der [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von MageUI.exe finden Sie in der exemplarischen Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung über die Befehlszeile an.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+In der Standardeinstellung [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] -Anwendung mit Visual Studio oder über die .NET Framework SDK-Tools (Mage.exe und MageUI.exe) bereitgestellt sind so konfiguriert, dass auf einem Clientcomputer ausführen, die über volle Vertrauenswürdigkeit verfügt. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Sie können dazu entweder mit Visual Studio oder dem .NET Framework SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von MageUI.exe finden Sie in der exemplarischen Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung über die Befehlszeile an.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Weitere Informationen zu den Sicherheitsaspekten von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] und der Berechtigungserweiterung finden Sie unter [ClickOnce-Bereitstellung und -Sicherheit](/visualstudio/deployment/securing-clickonce-applications). Weitere Informationen zur Bereitstellung vertrauenswürdiger Anwendungen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).
 

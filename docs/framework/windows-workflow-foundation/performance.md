@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592547"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348538"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592547"
 ### <a name="wf-runtime"></a>WF-Laufzeit
  Die zentrale Komponente der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit ist ein asynchroner Planer, der die Ausführung der Aktivitäten in einem Workflow steuert. Er stellt eine leistungsstarke, vorhersagbare Ausführungsumgebung für Aktivitäten zur Verfügung. Die Umgebung weist einen gut definierten Vertrag für Ausführung, Fortsetzung, Abschluss, Abbruch, Ausnahmen und ein vorhersagbares Threadingmodell auf.
 
- Im Vergleich zu WF3 ist der Planer der WF4-Laufzeit effizienter. Es nutzt den gleichen e/a-Threadpool für die verwendeten WCF, dies ist sehr effizient auf die Ausführung im Batchmodus Arbeitsaufgaben. Die interne Warteschlange des Arbeitsaufgabenplaners ist für die gängigsten Verwendungsmuster optimiert. Die WF4-Laufzeit verwaltet auch die Ausführungszustände auf sehr ressourcenschonende Weise mit minimaler Synchronisierung und Ereignisbehandlungslogik. Für WF3 sind hingegen intelligente Ereignisregistrierungen und Aufrufe erforderlich, um die komplexe Synchronisierung für Zustandsübergänge auszuführen.
+ Im Vergleich zu WF3 ist der Planer der WF4-Laufzeit effizienter. Es nutzt den gleichen e/a-Threadpool für die verwendeten WCF, dies ist sehr effizient auf die Ausführung im Batchmodus Arbeitsaufgaben. Die interne Warteschlange des Arbeitsaufgabenplaners ist für die gängigsten Verwendungsmuster optimiert. Die WF4-Laufzeit verwaltet auch die Ausführungszustände auf sehr einfache Weise mit minimaler Synchronisierung und ereignisbehandlungslogik, hängt von WF3 unter Heavyweight--ereignisregistrierungen und Aufrufe, die komplexe Synchronisierung für Zustandsübergänge auszuführen.
 
 ### <a name="data-storage-and-flow"></a>Datenspeicherung und -fluss
  In WF3 werden einer Aktivität zugeordnete Daten durch Abhängigkeitseigenschaften modelliert, die vom Typ <xref:System.Windows.DependencyProperty> implementiert werden. Das abhängigkeitseigenschaftenmuster wurde in Windows Presentation Foundation (WPF) eingeführt. Im Allgemeinen ist dieses Muster sehr flexibel, sodass eine einfache Datenbindung und andere Benutzeroberflächenfunktionen unterstützt werden. Für das Muster müssen jedoch die Eigenschaften als statische Felder in der Workflowdefinition definiert sein. Jedes Mal, wenn die [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit die Eigenschaftswerte festlegt oder abruft, wird eine komplexe Suchlogik angewendet.
@@ -43,7 +43,7 @@ ms.locfileid: "65592547"
 ### <a name="control-flow"></a>Ablaufsteuerung
  Wie andere Programmiersprachen auch unterstützt [!INCLUDE[wf1](../../../includes/wf1-md.md)] Ablaufsteuerungen für Workflowdefinitionen. Hierzu wurde ein Satz von Ablaufsteuerungsaktivitäten für die Sequenzierung, die Ausführung als Schleife, das Verzweigen und andere Muster eingeführt. Wenn in WF3 dieselbe Aktivität erneut ausgeführt werden muss, wird ein neuer <xref:System.Workflow.ComponentModel.ActivityExecutionContext> erstellt und die Aktivität durch eine komplexe Serialisierungs- und eine Deserialisierungslogik auf Grundlage von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> geklont. Normalerweise ist die Leistung bei iterativen Ablaufsteuerungen viel geringer als beim Ausführen einer Sequenz von Aktivitäten.
 
- WF4 behandelt diesen Vorgang anders. Es nimmt die Aktivitätsvorlage, erstellt ein neues ActivityInstance-Objekt und fügt es der Planerwarteschlange hinzu. Dieser ganze Prozess umfasst nur die explizite Objekterstellung und ist sehr einfach.
+ WF4 behandelt diesen Vorgang anders. Es nimmt die Aktivitätsvorlage, erstellt ein neues ActivityInstance-Objekt und fügt es der Planerwarteschlange hinzu. Dieser gesamte Prozess nur umfasst die explizite objekterstellung und ist sehr einfach.
 
 ### <a name="asynchronous-programming"></a>Asynchrone Programmierung
  Anwendungen weisen in der Regel bessere Leistung und Skalierbarkeit mit asynchroner Programmierung für lang ausgeführte blockierende Vorgänge auf, wie z. B. E/A oder verteilte Computervorgänge. WF4 stellt asynchrone Unterstützung durch die Basisaktivitätstypen <xref:System.Activities.AsyncCodeActivity> und <xref:System.Activities.AsyncCodeActivity%601> bereit. Die Laufzeit versteht asynchrone Aktivitäten systemintern und kann daher die Instanz automatisch in eine Zone ohne Persistenz verschieben, während die asynchrone Arbeit aussteht. Benutzerdefinierte Aktivitäten können von diesen Typen abgeleitet werden, um asynchrone Aufgaben auszuführen, ohne dass der Workflowplanerthread angehalten und Aktivitäten, die möglicherweise parallel ausgeführt werden, blockiert werden.
@@ -67,7 +67,7 @@ ms.locfileid: "65592547"
 ### <a name="environment-setup"></a>Umgebungssetup
  ![Einrichten der Umgebung für die Messung der Workflow-Leistung](./media/performance/performance-test-environment.gif)
 
- Die oben erwähnte Abbildung zeigt die zur Leistungsmessung auf Komponentenebene verwendete Computerkonfiguration. Ein einzelner Server und fünf Clients sind über eine 1-GBit/s-Ethernet-Netzwerkschnittstelle verbunden. Zur einfacheren Messung ist der Server so konfiguriert, dass ein einzelner Kern eines Dual-Proc/Quad-Core-Servers verwendet wird, der unter Windows Server 2008 x86 ausgeführt wird. Die CPU-Auslastung des Systems wird bei annähernd 100&amp;#160;% gehalten.
+ Die oben erwähnte Abbildung zeigt die zur Leistungsmessung auf Komponentenebene verwendete Computerkonfiguration. Ein einzelner Server und fünf Clients sind über eine 1-GBit/s-Ethernet-Netzwerkschnittstelle verbunden. Zur einfacheren Messung ist der Server so konfiguriert, dass ein einzelner Kern eines Dual-Proc/Quad-Core-Servers verwendet wird, der unter Windows Server 2008 x86 ausgeführt wird. Die CPU-Auslastung des Systems wird bei annähernd 100&#160;% gehalten.
 
 ### <a name="test-details"></a>Testdetails
  Die WF3-<xref:System.Workflow.Activities.CodeActivity> ist wahrscheinlich die einfachste Aktivität, die in einem WF3-Workflow verwendet werden kann.  Die Aktivität ruft eine Methode im Code-Behind auf, in die der Workflowprogrammierer benutzerdefinierten Code einfügen kann.  In WF4 gibt es kein direktes Pendant zur WF3-<xref:System.Workflow.Activities.CodeActivity>, die dieselbe Funktionalität bietet.  Beachten Sie, dass es eine <xref:System.Activities.CodeActivity>-Basisklasse in WF4 gibt, die nicht mit der WF3-<xref:System.Workflow.Activities.CodeActivity> im Zusammenhang steht.  Workflowautoren werden ermutigt, benutzerdefinierte Aktivitäten und Nur-XAML-Workflows zu erstellen.  Unten in den Tests wird eine Aktivität mit der Bezeichnung `Comment` anstelle einer leeren <xref:System.Workflow.Activities.CodeActivity> in WF4-Workflows verwendet.  Der Code in der `Comment`-Aktivität lautet folgendermaßen:

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611851"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348445"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimieren der Leistung: 2D-Grafiken und Bildverarbeitung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zahlreiche Funktionen für 2D-Grafiken und Bildverarbeitung zur Verfügung, die den Anforderungen Ihrer Anwendung entsprechend optimiert werden können. Dieses Thema enthält Informationen über die Leistungsoptimierung in diesen Bereichen.  
@@ -52,7 +52,7 @@ ms.locfileid: "64611851"
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry-Objekte  
- Die <xref:System.Windows.Media.StreamGeometry> Objekt ist eine einfache Alternative zu <xref:System.Windows.Media.PathGeometry> zum Erstellen geometrischer Formen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> Wenn Sie eine komplexe Geometrie beschreiben müssen. <xref:System.Windows.Media.StreamGeometry> ist optimiert für die Behandlung vieler <xref:System.Windows.Media.PathGeometry> Objekten und bietet eine bessere Leistung im Vergleich zur Verwendung mehrerer einzelner <xref:System.Windows.Media.PathGeometry> Objekte.  
+ Die <xref:System.Windows.Media.StreamGeometry> Objekt ist eine einfache Alternative zur <xref:System.Windows.Media.PathGeometry> zum Erstellen geometrischer Formen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> Wenn Sie eine komplexe Geometrie beschreiben müssen. <xref:System.Windows.Media.StreamGeometry> ist optimiert für die Behandlung vieler <xref:System.Windows.Media.PathGeometry> Objekten und bietet eine bessere Leistung im Vergleich zur Verwendung mehrerer einzelner <xref:System.Windows.Media.PathGeometry> Objekte.  
   
  Im folgenden Beispiel wird eine Attributsyntax eine dreieckige erstellen <xref:System.Windows.Media.StreamGeometry> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   

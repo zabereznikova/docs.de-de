@@ -89,7 +89,7 @@ Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version
   
 1. Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
   
-     **Gacutil/i***PublisherPolicyAssemblyFile*  
+     **Gacutil/i** *PublisherPolicyAssemblyFile*  
   
      Der folgende Befehl fügt `policy.1.0.myAssembly.dll` im globalen Assemblycache.  
   

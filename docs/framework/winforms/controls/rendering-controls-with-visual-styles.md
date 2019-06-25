@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592608"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348483"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendering von Steuerelementen mit visuellen Stilen
 .NET Framework bietet Unterstützung für das Rendern von Steuerelementen und anderen Windows-Benutzer Elemente der Benutzeroberfläche (UI), die mithilfe visueller Stile in Betriebssystemen, die sie unterstützen. In diesem Thema erläutert die verschiedenen Arten der Unterstützung in .NET Framework für das Rendern von Steuerelementen und anderen UI-Elementen mit dem aktuellen visuellen Stil des Betriebssystems.  
@@ -23,7 +23,7 @@ ms.locfileid: "65592608"
 ## <a name="rendering-classes-for-common-controls"></a>Rendern von Klassen für allgemeine Steuerelemente  
  Unter dem Rendern eine Steuerelements versteht man das Zeichnen der Benutzeroberfläche eines Steuerelements. Der <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace stellt die <xref:System.Windows.Forms.ControlPaint> -Klasse zum Rendern einiger allgemeiner Windows Forms-Steuerelemente bereit. Allerdings zeichnet diese Klasse die Steuerelemente im klassischen Windows-Stil. Dies kann eine einheitliche Gestaltung der Benutzeroberfläche erschweren, wenn das Zeichnen benutzerdefinierter Steuerelemente in Anwendungen mit visuellen Stilen aktiviert ist.  
   
- Das [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] beinhaltet Klassen im <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace, die Teile und Zustände von allgemeinen Steuerelementen mit visuellen Stilen rendern. Jede dieser Klassen enthält `static` -Methoden für das Zeichnen des Steuerelements oder Teile des Steuerelements in einem bestimmten Zustand mit dem aktuellen visuellen Stil des Betriebssystems.  
+ .NET Framework 2.0 enthält die Klassen in der <xref:System.Windows.Forms?displayProperty=nameWithType> Namespace, der die Teile und Zustände von allgemeinen Steuerelementen mit visuellen Stilen rendern. Jede dieser Klassen enthält `static` -Methoden für das Zeichnen des Steuerelements oder Teile des Steuerelements in einem bestimmten Zustand mit dem aktuellen visuellen Stil des Betriebssystems.  
   
  Einige dieser Klassen dienen dem Zeichnen des zugehörigen Steuerelements, unabhängig davon, ob visuelle Stile verfügbar sind. Wenn visuelle Stile aktiviert sind, werden die Klassenelemente das zugehörige Steuerelement mit visuellen Stilen gezeichnet. Wenn visuelle Stile deaktiviert sind, zeichnen die Klassenelemente das Steuerelement im klassischen Windows-Stil. Diese Klassen umfassen:  
   
