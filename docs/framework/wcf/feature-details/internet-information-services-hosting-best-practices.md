@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878604"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402437"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für Windows Communication Foundation (WCF).  
@@ -16,7 +16,7 @@ Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für 
  Implementieren eines WCFS ermöglicht Service als DLL, die in das Verzeichnis "\bin" von einer Webanwendung bereitgestellt wird, dass Sie den Dienst außerhalb des webanwendungsmodells, z. B. in einer testumgebung wiederverwenden, die möglicherweise nicht über Internet Information Services (IIS) bereitgestellt haben.  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>Diensthosts in IIS-gehosteten Anwendungen  
- Verwenden Sie keine imperativen Selbsthosting-APIs zur Erstellung neuer Diensthosts, die bei Netzwerktransporten lauschen, die nicht systemseitig von der IIS-Hostumgebung unterstützt werden (z. B. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] zum Hosten von TCP-Diensten, da die TCP-Kommunikation nicht systemseitig von [!INCLUDE[iis601](../../../../includes/iis601-md.md)] unterstützt wird). Diese Vorgehensweise ist nicht empfehlenswert. Imperativ erstellte Diensthosts sind innerhalb der IIS-Hostumgebung nicht bekannt. Die Schwierigkeit liegt darin, dass Verarbeitungen, die von imperativ erstellten Diensten ausgeführt werden, von IIS bei der Ermittlung, ob der Hostanwendungspool im Leerlauf ist, nicht berücksichtigt werden. Das Ergebnis ist, dass Anwendungen, die über solche imperativ erstellten Diensthosts verfügen, sich in einer IIS-Hostumgebung befinden, die IIS-Hostprozesse aggressiv freigibt.  
+ Verwenden Sie nicht den imperativen Selbsthosting-APIs zum neuer Diensthosts, warten auf Netzwerktransporte, die keine systemeigene Unterstützung durch die IIS-hostumgebung erstellen (z. B. IIS 6.0 für die Host-TCP-Diensten, da TCP-Kommunikation auf IIS 6.0 nicht systemintern unterstützt wird). Diese Vorgehensweise ist nicht empfehlenswert. Imperativ erstellte Diensthosts sind innerhalb der IIS-Hostumgebung nicht bekannt. Die Schwierigkeit liegt darin, dass Verarbeitungen, die von imperativ erstellten Diensten ausgeführt werden, von IIS bei der Ermittlung, ob der Hostanwendungspool im Leerlauf ist, nicht berücksichtigt werden. Das Ergebnis ist, dass Anwendungen, die über solche imperativ erstellten Diensthosts verfügen, sich in einer IIS-Hostumgebung befinden, die IIS-Hostprozesse aggressiv freigibt.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URIs und IIS-gehostete Endpunkte  
  Endpunkte für einen IIS-gehosteten Dienst sollten mit relativen URIs (Uniform Resource Identifier) statt mit absoluten Adressen konfiguriert werden. Dadurch wird sichergestellt, dass die Endpunktadresse innerhalb des Satzes von URI-Adressen liegt, die zur Hostanwendung gehören und dafür sorgen, dass die nachrichtenbasierte Aktivierung wie erwartet ausgeführt wird.  

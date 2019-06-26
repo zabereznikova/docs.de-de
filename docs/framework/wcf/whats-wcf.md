@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348302"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402428"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
 Windows Communication Foundation (WCF) ist ein Framework zum Erstellen dienstorientierter Anwendungen. Verwenden von WCF, können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt zu einem anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:
@@ -92,7 +92,7 @@ Microsoft BizTalk Server R2 nutzt auch die WCF als kommunikationstechnologie. Bi
 
 Microsoft Silverlight ist eine Plattform für die Entwicklung interoperabler und leistungsfähiger Webanwendungen, mit denen Entwickler multimediale Websites (z. B. mit Videostreams) erstellen können. Ab Version 2 können hat Silverlight WCF als kommunikationstechnologie Verbindung Silverlight-Anwendungen auf Endpunkte von WCF integriert.
 
-Die hosting-Features von Windows Server AppFabric-Anwendungsserver wurden speziell entwickelt, für die Bereitstellung und Verwaltung von Anwendungen, die WCF für die Kommunikation zu verwenden. Die [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] enthält umfassende bearbeitungs- und Konfigurationsoptionen, die speziell für WCF-fähigen Anwendungen.
+Die hosting-Features von Windows Server AppFabric-Anwendungsserver wurden speziell entwickelt, für die Bereitstellung und Verwaltung von Anwendungen, die WCF für die Kommunikation zu verwenden. Die hostingfeatures enthalten umfangreiche bearbeitungs- und Konfigurationsoptionen, die speziell für WCF-fähigen Anwendungen.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: HTTP-Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587670"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402304"
 ---
 # <a name="http-transport-security"></a>HTTP-Transportsicherheit
 Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird erläutert, wie SSL funktioniert und wie es in Windows Communication Foundation (WCF) implementiert wird.  
@@ -43,9 +43,9 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
  Konfigurieren von Zertifikaten für die Verwendung mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren von Serverzertifikaten in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 #### <a name="iis-60"></a>IIS 6.0  
- Einrichten [!INCLUDE[iis601](../../../../includes/iis601-md.md)] als sicheren Host (mit SSL), finden Sie unter [Konfigurieren von Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  
+ Zum Einrichten von IIS 6.0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  
   
- Konfigurieren von Zertifikaten für die Verwendung mit [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
+ Um Zertifikate für die Verwendung mit IIS 6.0 konfigurieren zu können, finden Sie unter [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Verwenden von HttpCfg für SSL  
  Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, laden Sie das HttpCfg.exe-Tool, das unter der [Windows XP Service Pack 2-Supporttools Site](https://go.microsoft.com/fwlink/?LinkId=29002).  

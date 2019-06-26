@@ -2,12 +2,12 @@
 title: Codekonventionen für F#
 description: Erfahren Sie, allgemeine Richtlinien und Idiome, beim Schreiben von F# Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052800"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402364"
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen für F#
 
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-Komponententests `Transactions.doTransaction` in `ImplementationLogic.Tests.fspoj` ist einfach:
+Komponententests `Transactions.doTransaction` in `ImplementationLogic.Tests.fsproj` ist einfach:
 
 ```fsharp
 namespace TransactionsTestingUtil

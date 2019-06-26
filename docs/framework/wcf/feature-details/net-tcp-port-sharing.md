@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960034"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402464"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkprotokoll (net.tcp://) für hochleistungskommunikation. WCF stellt auch eine neue Systemkomponente, die Net.TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
@@ -18,11 +18,11 @@ Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkpro
 ## <a name="background-and-motivation"></a>Hintergrund und Motivation  
  Als das TCP/IP-Protokoll erstmals eingeführt wurde, wurde es nur von einer geringen Anzahl von Anwendungsprotokollen verwendet. TCP/IP verwendete Anschlussnummern, um zwischen Anwendungen zu unterscheiden, indem es jedem Anwendungsprotokoll eine eindeutige 16-bit-Anschlussnummer zuwies. HTTP-Verkehr verwendet heute beispielsweise standardmäßig den TCP-Anschluss 80, SMTP verwendet den TCP-Anschluss 25, und FTP verwendet die TCP-Anschlüsse 20 und 21. Andere Anwendungen, die TCP als Transport verwenden, können eine weitere verfügbare Anschlussnummer wählen, entweder durch Konventionen oder durch formale Standardisierung.  
   
- Die Verwendung von Anschlussnummern zur Unterscheidung zwischen Anwendungen barg Sicherheitsprobleme. Firewalls sind in der Regel so konfiguriert, dass Sie TCP-Verkehr an allen Anschlüssen außer den wenigen wohlbekannten Eingangspunkten blockieren, sodass die Bereitstellung einer Anwendung, die einen Nicht-Standardanschluss verwendet, durch das Vorhandensein firmenspezifischer oder persönlicher Firewalls oft kompliziert oder sogar unmöglich ist. Anwendungen, die über bekannten, bereits zugelassene Standardanschlüsse kommunizieren können, verringern die Angriffsfläche für externe Angriffe. Viele Netzwerkanwendungen verwenden das HTTP-Protokoll, da die meisten Firewalls standardmäßig so konfiguriert sind, dass sie Verkehr am TCP-Anschluss&amp;#160;80 zulassen.  
+ Die Verwendung von Anschlussnummern zur Unterscheidung zwischen Anwendungen barg Sicherheitsprobleme. Firewalls sind in der Regel so konfiguriert, dass Sie TCP-Verkehr an allen Anschlüssen außer den wenigen wohlbekannten Eingangspunkten blockieren, sodass die Bereitstellung einer Anwendung, die einen Nicht-Standardanschluss verwendet, durch das Vorhandensein firmenspezifischer oder persönlicher Firewalls oft kompliziert oder sogar unmöglich ist. Anwendungen, die über bekannten, bereits zugelassene Standardanschlüsse kommunizieren können, verringern die Angriffsfläche für externe Angriffe. Viele Netzwerkanwendungen verwenden das HTTP-Protokoll, da die meisten Firewalls standardmäßig so konfiguriert sind, dass sie Verkehr am TCP-Anschluss&#160;80 zulassen.  
   
  Das HTTP.SYS-Modell, in dem der Verkehr für viele verschiedene HTTP-Anwendungen als Multiplex über einen einzelnen TCP-Anschluss geleitet wird, ist heute Standard auf der Windows-Plattform. Dies bietet Firewalladministratoren einen gemeinsamen Steuerungspunkt, und bietet zugleich Anwendungsentwicklern die Möglichkeit, die Bereitstellungskosten beim Erstellen neuer Anwendungen, die das Netzwerk verwenden können, zu minimieren.  
   
- Die Möglichkeit, Anschlüsse für mehrere HTTP-Anwendungen freizugeben ist schon lange eine Funktion von Internetinformationsdiensten (Internet Information Services, IIS). Jedoch wurde diese Infrastruktur erst mit der Einführung von HTTP.SYS (dem Kernelmoduslistener des HTTP-Protokolls) durch [!INCLUDE[iis601](../../../../includes/iis601-md.md)] vollständig generalisiert. Tatsächlich ermöglicht HTTP.SYS es beliebigen Benutzerprozessen, die für HTTP-Verkehr vorgesehen TCP-Anschlüsse gemeinsam zu verwenden. Durch diese Fähigkeit können zahlreiche HTTP-Anwendungen auf dem selben physischen Gerät in getrennten, isolierten Prozessen koexistieren und dabei die zum Senden und Empfangen von Verkehr über den TCP-Anschluss 80 erforderliche Netzwerkinfrastruktur gemeinsam verwenden. Der Net.TCP-Portfreigabedienst ermöglicht die gleiche Art der Anschlussfreigabe für net.tcp-Anwendungen.  
+ Die Möglichkeit, Anschlüsse für mehrere HTTP-Anwendungen freizugeben ist schon lange eine Funktion von Internetinformationsdiensten (Internet Information Services, IIS). Es war jedoch nur mit der Einführung von HTTP. SYS (der im Kernelmodus-HTTP-Protokolllistener) mit IIS 6.0, dass diese Infrastruktur vollständig generalisiert wurde. Tatsächlich ermöglicht HTTP.SYS es beliebigen Benutzerprozessen, die für HTTP-Verkehr vorgesehen TCP-Anschlüsse gemeinsam zu verwenden. Durch diese Fähigkeit können zahlreiche HTTP-Anwendungen auf dem selben physischen Gerät in getrennten, isolierten Prozessen koexistieren und dabei die zum Senden und Empfangen von Verkehr über den TCP-Anschluss 80 erforderliche Netzwerkinfrastruktur gemeinsam verwenden. Der Net.TCP-Portfreigabedienst ermöglicht die gleiche Art der Anschlussfreigabe für net.tcp-Anwendungen.  
   
 ## <a name="port-sharing-architecture"></a>Architektur der Anschlussfreigabe  
  Die anschlussfreigabearchitektur in WCF umfasst drei Hauptkomponenten:  

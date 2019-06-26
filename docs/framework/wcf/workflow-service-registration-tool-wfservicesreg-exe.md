@@ -2,12 +2,12 @@
 title: Registrierungstool für Workflow Services (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: da377e865258169bdca16cfb0db3f8612d4e0f0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 211af75c04dfe971228bc1710fbe1fc4d7aaee60
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613059"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402472"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Registrierungstool für Workflow Services (WFServicesReg.exe)
 Beim Registrierungstool für Workflow Services (WFServicesReg.exe) handelt es sich um ein eigenständiges Tool zum Hinzufügen, Entfernen oder Reparieren der Konfigurationselemente für Windows Workflow Foundation (WF)-Dienste.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Auch XOML und RULES-Skriptzuordnungen und -Handler werden in der IIS-Metabasis registriert.  
   
- Auf Computern unter [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS&amp;#160;5.1 oder [!INCLUDE[iis601](../../../includes/iis601-md.md)]) wird ein XOML- und RULES-Skriptzuordnungssatz registriert.  
+ Auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../includes/wxp-md.md)] Computer (IIS 5.1 und IIS 6.0), einen Satz von xoml- und Rules-Skriptzuordnungen registriert sind.  
   
  Auf 64-Bit-Computern werden bei aktiviertem `Enable32BitAppOnWin64`-Schalter WOW-Modus-Skriptzuordnungen registriert, bei aktiviertem `Enable32BitAppOnWin64`-Schalter werden systemeigene 64-Bit-Skriptzuordnungen registriert.  
   
@@ -69,7 +69,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
 ## <a name="usage-scenarios"></a>Verwendungsszenarien  
   
-### <a name="installing-iis-after-net-framework-35-is-installed"></a>Installieren von IIS, nachdem .NET Framework&amp;#160;3.5 installiert wurde  
+### <a name="installing-iis-after-net-framework-35-is-installed"></a>Installieren von IIS, nachdem .NET Framework&#160;3.5 installiert wurde  
  Auf einem Computer unter [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] wird [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] vor IIS installiert. Da die IIS-Metabasis nicht verfügbar ist, ist die Installation von [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ohne Installation von XOML- und RULES-Skriptzuordnungen erfolgreich.  
   
  Verwenden Sie nach der Installation von IIS das Tool WFServicesReg.exe mit dem `/c`-Schalter, um diese Skriptzuordnungen zu installieren.  

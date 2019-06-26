@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025733"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402298"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -43,7 +43,7 @@ Der Installationsvorgang für .NET Framework wird WCF automatisch mit IIS regist
 
 IIS-gehosteten WCF-Dienste müssen innerhalb einer IIS‑Anwendung befinden. Sie können eine neue IIS‑Anwendung zum Hosten von WCF-Diensten ausschließlich erstellen. Alternativ können Sie einen WCF-Dienst in eine vorhandene Anwendung bereitstellen, die bereits mit ASP.NET 2.0-Inhalt (z. B. aspx-Seiten und ASP.NET-Webdienste [ASMX]) dient. Weitere Informationen zu diesen Optionen finden Sie unter der "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" Abschnitten [WCF-Dienste und ASP.NET](wcf-services-and-aspnet.md).
 
-Beachten Sie, dass [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und höhere Versionen in regelmäßigen Abständen eine isolierte objektorientierte Programmierungsanwendung neu starten. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter den [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Beachten Sie, dass IIS 6.0 und spätere Versionen in regelmäßigen Abständen eine isolierte objektorientierte Programmierung-Anwendung neu gestartet. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter den [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Erstellen einer SVC-Datei für den WCF-Dienst
 
@@ -103,7 +103,7 @@ Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte v
 
 ### <a name="available-transports"></a>Verfügbare Transporte
 
-WCF-Diensten in IIS 5.1 und [!INCLUDE[iis601](../../../../includes/iis601-md.md)] auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.
+WCF-Dienste in IIS gehostet 5.1 und IIS 6.0 auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.
 
 ### <a name="http-transport-security"></a>HTTP-Transportsicherheit
 

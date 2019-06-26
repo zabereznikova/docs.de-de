@@ -2,12 +2,12 @@
 title: Hosten in einer Windows-Dienstanwendung
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc95634745aa0c0246cf139d19e0777fde7e1aba
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613309"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402167"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosten in einer Windows-Dienstanwendung
 Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das besonders für Anwendungen geeignet ist, die sich in ausführbaren Dateien mit langer Laufzeit befinden müssen und keinerlei Benutzeroberfläche anzeigen. Die Prozesslebensdauer einer Windows-Dienstanwendung wird vom Dienststeuerungs-Manager (Service Control Manager, SCM) verwaltet, mit dem Sie Windows-Dienstanwendungen starten, beenden und anhalten können. Sie können eine Windows-Dienstprozess für den automatischen start beim Starten des Computers eine angemessene Hostingumgebung für "immer aktiviert"-Anwendungen erleichtert, konfigurieren. Weitere Informationen zu Windows-dienstanwendungen, finden Sie unter [Windows-Dienstanwendungen](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -20,7 +20,7 @@ Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das beson
   
 - Der Prozess, der die Anwendung hostet, muss nach dem Start weiterhin ausgeführt werden. Nach dem Start wird ein Windows-Dienstprozess solange ausgeführt, bis er explizit von einem Serveradministrator über den Dienststeuerungs-Manager beendet wird. In IIS oder WAS gehostete Anwendungen können dynamisch gestartet und beendet werden, um die Systemressourcen optimal zu nutzen. Anwendungen, die explizite Steuerung während der gesamten Lebensdauer ihres Hostingprozesses erfordern, sollten Windows-Dienste anstelle von IIS oder WAS verwenden.  
   
-- Der WCF-Dienst muss unter Windows Server 2003 ausführen und andere Transportoptionen als HTTP verwenden. Auf Windows&amp;#160;Server&amp;#160;2003 ist die [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Hostumgebung auf HTTP-Kommunikation beschränkt. Windows-dienstanwendungen können werden nicht in diese Einschränkung und alle Transport WCF unterstützt werden, einschließlich net.tcp, net.pipe und net.msmq.  
+- Der WCF-Dienst muss unter Windows Server 2003 ausführen und andere Transportoptionen als HTTP verwenden. Unter Windows Server 2003 ist die IIS 6.0-hostumgebung auf HTTP-Kommunikation beschränkt. Windows-dienstanwendungen können werden nicht in diese Einschränkung und alle Transport WCF unterstützt werden, einschließlich net.tcp, net.pipe und net.msmq.  
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>So hosten Sie WCF innerhalb einer Windows-Dienstanwendung  
   
