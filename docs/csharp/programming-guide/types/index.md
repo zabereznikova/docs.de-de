@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423403"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398097"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -126,7 +126,7 @@ Alle Enumerationen erben von <xref:System.Enum?displayProperty=nameWithType>, wa
 
 ### <a name="reference-types"></a>Verweistypen
 
-Ein Typ, der als [Klasse](../../../csharp/language-reference/keywords/class.md), [Delegat](../../../csharp/language-reference/keywords/delegate.md), Array oder [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../../csharp/language-reference/keywords/null.md), bis Sie explizit ein Objekt mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) erstellen oder ihr ein Objekt zuweisen, das, wie im folgenden Beispiel gezeigt wird, an anderer Stelle mithilfe des Operators `new` erstellt wurde:
+Ein Typ, der als [Klasse](../../../csharp/language-reference/keywords/class.md), [Delegat](../../../csharp/language-reference/keywords/delegate.md), Array oder [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../../csharp/language-reference/keywords/null.md), bis Sie explizit ein Objekt mithilfe des Operators [new](../../../csharp/language-reference/operators/new-operator.md) erstellen oder ihr ein Objekt zuweisen, das, wie im folgenden Beispiel gezeigt wird, an anderer Stelle mithilfe des Operators `new` erstellt wurde:
 
 ```csharp
 MyClass mc = new MyClass();

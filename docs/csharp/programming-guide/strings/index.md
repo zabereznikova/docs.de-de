@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678503"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398122"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -24,7 +24,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Beachten Sie, dass Sie nicht den [neuen](../../../csharp/language-reference/keywords/new-operator.md) Operator zum Erstellen eines Zeichenfolgenobjekts verwenden, außer wenn Sie die Zeichenfolge mit einem Array von Chars initialisieren.  
+ Beachten Sie, dass Sie nicht den [neuen](../../../csharp/language-reference/operators/new-operator.md) Operator zum Erstellen eines Zeichenfolgenobjekts verwenden, außer wenn Sie die Zeichenfolge mit einem Array von Chars initialisieren.  
   
  Initialisieren Sie eine Zeichenfolge mit dem konstanten Wert <xref:System.String.Empty>, um ein neues <xref:System.String>-Objekt zu erstellen, dessen Zeichenfolge eine Länge von 0 hat. Die Darstellung des Zeichenfolgenliterals einer Zeichenfolge mit einer Länge von 0 ist "". Indem Zeichenfolgen mit dem Wert <xref:System.String.Empty> anstatt [NULL](../../../csharp/language-reference/keywords/null.md) initialisiert werden, können Sie die Chancen einer auftretenden <xref:System.NullReferenceException> reduzieren. Verwenden Sie die statische Methode <xref:System.String.IsNullOrEmpty%28System.String%29>, um den Wert einer Zeichenfolge zu überprüfen, bevor Sie versuchen, auf sie zuzugreifen.  
   
@@ -126,7 +126,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
 |[Vorgehensweise: Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  
