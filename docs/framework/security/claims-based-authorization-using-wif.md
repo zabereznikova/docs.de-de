@@ -3,12 +3,12 @@ title: Anspruchsbasierte Autorisierung mit WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650452"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422372"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
 In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche Ressourcen eine authentifizierte Identität zugreifen und welche Vorgänge sie mit diesen Ressourcen ausführen darf. Eine falsche oder schwache Autorisierung führt zu Offenlegung von Informationen und Datenmanipulation. In diesem Thema werden die verfügbaren Methoden zum Implementieren der Autorisierung für Ansprüche unterstützende ASP.NET-Webanwendungen und -Dienste mit Windows Identity Foundation (WIF) und einem Sicherheitstokendienst (STS) wie Microsoft Azure-Zugriffssteuerungsdienst (ACS) beschrieben.  
@@ -23,18 +23,18 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
  RBAC ist ein Autorisierungsansatz, in dem eine Anwendung Benutzerberechtigungen anhand von Benutzerrollen verwaltet und erzwingt. Wenn ein Benutzer über eine Rolle verfügt, die zum Ausführen einer Aktion erforderlich ist, wird der Zugriff erteilt. Andernfalls wird der Zugriff verweigert.  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole-Methode  
- Um den RBAC-Ansatz in Ansprüche unterstützende Anwendungen zu implementieren, verwenden Sie die **IsInRole()**-Methode in der **IPrinicpal**-Schnittstelle auf die gleiche Weise wie für Anwendungen, die keine Ansprüche unterstützen. Es gibt mehrere Möglichkeiten für den Einsatz der **IsInRole()**-Methode:  
+ Verwenden Sie zum Implementieren des RBAC-Ansatzes in Ansprüche unterstützenden Anwendungen die **IsInRole()** -Methode in der die **IPrincipal** Schnittstelle, wie in nicht-Ansprüche unterstützende Anwendungen. Es gibt mehrere Möglichkeiten für den Einsatz der **IsInRole()** -Methode:  
   
-- Explizites Aufrufen von **IPrincipal.IsInRole("Administrator")**. Das Ergebnis dieser Methode ist ein boolescher Wert. Verwenden Sie diese Methode in Bedingungsanweisungen. Sie kann an einer beliebigen Stelle im Code verwendet werden.  
+- Explizites Aufrufen von **IPrincipal.IsInRole("Administrator")** . Das Ergebnis dieser Methode ist ein boolescher Wert. Verwenden Sie diese Methode in Bedingungsanweisungen. Sie kann an einer beliebigen Stelle im Code verwendet werden.  
   
-- Verwenden der Sicherheitsforderung **PrincipalPermission.Demand()**. In diesem Ansatz ist das Ergebnis eine Ausnahme, falls die Anforderung nicht erfüllt wird. Der Ansatz sollte zu Ihrer Ausnahmebehandlungsstrategie passen. Das Auslösen von Ausnahmen ist bezogen auf die Leistung im Vergleich zur Deaktivierung des booleschen Werts wesentlich nachteiliger. Dieser Ansatz kann an jeder beliebigen Stelle im Code verwendet werden.  
+- Verwenden der Sicherheitsforderung **PrincipalPermission.Demand()** . In diesem Ansatz ist das Ergebnis eine Ausnahme, falls die Anforderung nicht erfüllt wird. Der Ansatz sollte zu Ihrer Ausnahmebehandlungsstrategie passen. Das Auslösen von Ausnahmen ist bezogen auf die Leistung im Vergleich zur Deaktivierung des booleschen Werts wesentlich nachteiliger. Dieser Ansatz kann an jeder beliebigen Stelle im Code verwendet werden.  
   
-- Verwenden deklarativer Attribute **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Dieser Ansatz wird als deklarativ bezeichnet, da er verwendet wird, um Methoden zu ergänzen. Er kann nicht in den Codeblöcken innerhalb der Implementierungen der Methode verwendet werden. Das Ergebnis ist eine Ausnahme, falls die Anforderung nicht erfüllt wird. Sie sollten überprüfen, ob dieser Ansatz Ihrer Ausnahmebehandlungsstrategie entspricht.  
+- Verwenden deklarativer Attribute **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** . Dieser Ansatz wird als deklarativ bezeichnet, da er verwendet wird, um Methoden zu ergänzen. Er kann nicht in den Codeblöcken innerhalb der Implementierungen der Methode verwendet werden. Das Ergebnis ist eine Ausnahme, falls die Anforderung nicht erfüllt wird. Sie sollten überprüfen, ob dieser Ansatz Ihrer Ausnahmebehandlungsstrategie entspricht.  
   
-- Verwenden der URL-Autorisierung mithilfe des **\<Autorisierung>**-Abschnitts in **web.config**. Dieser Ansatz ist geeignet, wenn Sie die Autorisierung auf URL-Ebene verwalten. Dies ist von allen bisher erwähnten Ebenen die gröbste Ebene. Der Vorteil dieser Methode ist, dass Änderungen in der Konfigurationsdatei vorgenommen werden, d. h., dass der Code nicht kompiliert werden sollte, um von der Änderung zu profitieren.  
+- Verwenden der URL-Autorisierung mithilfe des **\<Autorisierung>** -Abschnitts in **web.config**. Dieser Ansatz ist geeignet, wenn Sie die Autorisierung auf URL-Ebene verwalten. Dies ist von allen bisher erwähnten Ebenen die gröbste Ebene. Der Vorteil dieser Methode ist, dass Änderungen in der Konfigurationsdatei vorgenommen werden, d. h., dass der Code nicht kompiliert werden sollte, um von der Änderung zu profitieren.  
   
 ### <a name="expressing-roles-as-claims"></a>Ausdrücken von Rollen als Ansprüche  
- Wenn die **IsInRole()**-Methode aufgerufen wird, wird eine Prüfung durchgeführt, um festzustellen, ob der aktuelle Benutzer diese Rolle besitzt. In den Ansprüche unterstützenden Anwendungen wird die Rolle durch einen Rollenanspruchstyp ausgedrückt, der im Token verfügbar sein soll. Der Rollenanspruchstyp wird mithilfe des folgenden URI ausgedrückt:  
+ Wenn die **IsInRole()** -Methode aufgerufen wird, wird eine Prüfung durchgeführt, um festzustellen, ob der aktuelle Benutzer diese Rolle besitzt. In den Ansprüche unterstützenden Anwendungen wird die Rolle durch einen Rollenanspruchstyp ausgedrückt, der im Token verfügbar sein soll. Der Rollenanspruchstyp wird mithilfe des folgenden URI ausgedrückt:  
   
  `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   

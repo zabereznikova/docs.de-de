@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 8b3ed5447441622d800cff6147f81fcd9a59c88f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650129"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425481"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -156,7 +156,7 @@ class Client
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)
 {
-    Console.WriteLine("Submitting purchase order did not succed ", po);
+    Console.WriteLine("Submitting purchase order did not succeed ", po);
     MsmqMessageProperty mqProp =
                   OperationContext.Current.IncomingMessageProperties[
                   MsmqMessageProperty.Name] as MsmqMessageProperty;

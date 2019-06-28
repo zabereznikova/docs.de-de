@@ -2,19 +2,20 @@
 title: X.509-Zertifikats-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: b5ad4b4e75a66be1b8708474fd65c421de978b07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 628e4e12e1eafb6101503a59e3393777f9c30989
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606059"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424623"
 ---
 # <a name="x509-certificate-validator"></a>X.509-Zertifikats-Validierungssteuerelement
+
 In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zertifikats-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten X.509-Zertifikats-Validierungsmodi den Anforderungen der Anwendung entspricht. Dieses Beispiel zeigt einen Dienst, der über ein benutzerdefiniertes Validierungssteuerelement verfügt, das selbst herausgegebene Zertifikate akzeptiert. Der Client verwendet solch ein Zertifikat, um den Dienst zu authentifizieren.
 
- Hinweis: Wie jeder ein selbst ausgestelltes Zertifikat erstellen kann ist das benutzerdefinierte Validierungssteuerelement, das vom Dienst verwendete weniger sicher als das Standardverhalten von den ChainTrust X509CertificateValidationMode. Die daraus resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor diese Validierungslogik im Produktionscode verwendet wird.
+Hinweis: Wie jeder ein selbst ausgestelltes Zertifikat erstellen kann ist das benutzerdefinierte Validierungssteuerelement, das vom Dienst verwendete weniger sicher als das Standardverhalten von den ChainTrust X509CertificateValidationMode. Die daraus resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor diese Validierungslogik im Produktionscode verwendet wird.
 
- Insgesamt zeigt dieses Beispiel Folgendes:
+Insgesamt zeigt dieses Beispiel Folgendes:
 
 - Der Client kann mit einem X.509-Zertifikat authentifiziert werden.
 
@@ -22,7 +23,7 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zerti
 
 - Der Server wird mit dem X.509-Zertifikat des Servers authentifiziert.
 
- Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der Konfigurationsdatei "App.conf" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung konfiguriert ist, mit einer normalen `wsHttpBinding` , die standardmäßig `WSSecurity` und Clientzertifikatauthentifizierung verwendet. Das Dienstverhalten gibt den benutzerdefinierten Modus zur Prüfung von X.509-Clientzertifikaten zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem serviceCertificate-Element an. Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` in die [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der Konfigurationsdatei "App.conf" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung konfiguriert ist, mit einer normalen `wsHttpBinding` , die standardmäßig `WSSecurity` und Clientzertifikatauthentifizierung verwendet. Das Dienstverhalten gibt den benutzerdefinierten Modus zur Prüfung von X.509-Clientzertifikaten zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem serviceCertificate-Element an. Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` in die [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
   <system.serviceModel>
@@ -94,7 +95,7 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zerti
       </system.serviceModel>
 ```
 
- Die Clientendpunktkonfiguration besteht aus einem Konfigurationsnamen, einer absoluten Adresse für den Dienstendpunkt, der Bindung und dem Vertrag. Die Clientbindung wird mit dem entsprechenden Modus und der `clientCredentialType`-Nachricht konfiguriert.
+Die Clientendpunktkonfiguration besteht aus einem Konfigurationsnamen, einer absoluten Adresse für den Dienstendpunkt, der Bindung und dem Vertrag. Die Clientbindung wird mit dem entsprechenden Modus und der `clientCredentialType`-Nachricht konfiguriert.
 
 ```xml
 <system.serviceModel>
@@ -147,7 +148,7 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zerti
   </system.serviceModel>
 ```
 
- Die Clientimplementierung legt das zu verwendende Clientzertifikat fest.
+Die Clientimplementierung legt das zu verwendende Clientzertifikat fest.
 
 ```csharp
 // Create a client with Certificate endpoint configuration
@@ -198,7 +199,7 @@ catch (Exception e)
 }
 ```
 
- In diesem Beispiel wird ein benutzerdefinierter X509CertificateValidator verwendet, um Zertifikate zu überprüfen. Das Beispiel implementiert CustomX509CertificateValidator, das von <xref:System.IdentityModel.Selectors.X509CertificateValidator> abgeleitet ist. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.IdentityModel.Selectors.X509CertificateValidator>. In diesem speziellen Beispiel zu einem benutzerdefinierten Validierungssteuerelement ist die Validate-Methode so implementiert, dass sie jedes selbst herausgegebene X.509-Zertifikat akzeptiert, wie im folgenden Code gezeigt.
+In diesem Beispiel wird ein benutzerdefinierter X509CertificateValidator verwendet, um Zertifikate zu überprüfen. Das Beispiel implementiert CustomX509CertificateValidator, das von <xref:System.IdentityModel.Selectors.X509CertificateValidator> abgeleitet ist. Weitere Informationen finden Sie in der Dokumentation zu <xref:System.IdentityModel.Selectors.X509CertificateValidator>. In diesem speziellen Beispiel zu einem benutzerdefinierten Validierungssteuerelement ist die Validate-Methode so implementiert, dass sie jedes selbst herausgegebene X.509-Zertifikat akzeptiert, wie im folgenden Code gezeigt.
 
 ```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator
@@ -247,12 +248,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 </behaviors>
 ```
 
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Der Client sollte alle Methoden erfolgreich aufrufen. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
+Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Der Client sollte alle Methoden erfolgreich aufrufen. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
 ## <a name="setup-batch-file"></a>Setupbatchdatei
- Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.
 
- Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:
+Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.
+
+Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:
 
 - Erstellen des Serverzertifikats
 
@@ -311,47 +313,47 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1. Führen Sie Setup.bat aus dem beispielinstallationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!IMPORTANT]
-    >  Die Batchdatei "Setup.bat" wird aus einer Visual Studio 2012-Eingabeaufforderung ausgeführt werden soll. Die PATH-Umgebungsvariable festgelegt in der Visual Studio 2012-Eingabeaufforderung verweist auf das Verzeichnis mit ausführbaren Dateien, die durch das Skript Setup.bat erforderlich sind.  
-  
-2. Starten Sie Service.exe aus dem Ordner \service\bin.  
-  
-3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
-  
-4. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-#### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
-  
-1. Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.  
-  
-2. Kopieren Sie die Dienstprogrammdateien aus \service\bin in das virtuelle Verzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat, Cleanup.bat, GetComputerName.vbs und ImportClientCert.bat auf den Dienstcomputer.  
-  
-3. Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.  
-  
-4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
-  
-5. Führen Sie auf dem Server `setup.bat service` in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Ausführung `setup.bat` mit der `service` Argument erstellt ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und Exporte das Dienstzertifikat in eine Datei "Service.cer" exportiert.  
-  
-6. Bearbeiten Sie Service.exe.config so, dass Sie den neuen Zertifikatnamen (im der `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) die ist identisch mit den vollständig qualifizierten Domänennamen des Computers. Ändern Sie auch den Computernamen in die \<Service > /\<BaseAddresses >-Element von "localhost" den vollqualifizierten Namen Ihres dienstcomputers.  
-  
-7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
-  
-8. Führen Sie auf dem Client `setup.bat client` in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Durch Ausführen von `setup.bat` mit dem Argument `client` wird ein Clientzertifikat mit dem Namen client.com erstellt und in die Datei Client.cer exportiert.  
-  
-9. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers.  
-  
-10. Kopieren Sie die Datei Client.cer aus dem Clientverzeichnis in das Dienstverzeichnis auf dem Server.  
-  
-11. Führen Sie auf dem Client importservicecert.bat aus in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
-  
-12. Führen Sie auf dem Server ImportClientCert.bat im Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Dadurch wird das Clientzertifikat aus der Datei Client.cer in den Speicher LocalMachine – TrustedPeople importiert.  
-  
-13. Starten Sie auf dem Servercomputer Service.exe in einem Eingabeaufforderungsfenster.  
-  
-14. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-#### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
-  
-1. Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben. Dadurch werden die Server- und Clientzertifikate aus dem Zertifikatspeicher entfernt.  
-  
+    > Die Batchdatei "Setup.bat" wird aus einer Visual Studio 2012-Eingabeaufforderung ausgeführt werden soll. Die PATH-Umgebungsvariable festgelegt in der Visual Studio 2012-Eingabeaufforderung verweist auf das Verzeichnis mit ausführbaren Dateien, die durch das Skript Setup.bat erforderlich sind.
+
+2. Starten Sie Service.exe aus dem Ordner \service\bin.
+
+3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.
+
+4. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+
+#### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus
+
+1. Erstellen Sie auf dem Dienstcomputer ein Verzeichnis.
+
+2. Kopieren Sie die Dienstprogrammdateien aus \service\bin in das virtuelle Verzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat, Cleanup.bat, GetComputerName.vbs und ImportClientCert.bat auf den Dienstcomputer.
+
+3. Erstellen Sie auf dem Clientcomputer ein Verzeichnis für die Clientbinärdateien.
+
+4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.
+
+5. Führen Sie auf dem Server `setup.bat service` in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Ausführung `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in die Datei Service.cer exportiert.
+
+6. Bearbeiten Sie Service.exe.config so, dass Sie den neuen Zertifikatnamen (im der `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) die ist identisch mit den vollständig qualifizierten Domänennamen des Computers. Ändern Sie auch den Computernamen in die \<Service > /\<BaseAddresses >-Element von "localhost" den vollqualifizierten Namen Ihres dienstcomputers.
+
+7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.
+
+8. Führen Sie auf dem Client `setup.bat client` in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Durch Ausführen von `setup.bat` mit dem Argument `client` wird ein Clientzertifikat mit dem Namen client.com erstellt und in die Datei Client.cer exportiert.
+
+9. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers.
+
+10. Kopieren Sie die Datei Client.cer aus dem Clientverzeichnis in das Dienstverzeichnis auf dem Server.
+
+11. Führen Sie auf dem Client importservicecert.bat aus in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.
+
+12. Führen Sie auf dem Server ImportClientCert.bat im Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Dadurch wird das Clientzertifikat aus der Datei Client.cer in den Speicher LocalMachine – TrustedPeople importiert.
+
+13. Starten Sie auf dem Servercomputer Service.exe in einem Eingabeaufforderungsfenster.
+
+14. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+
+#### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her
+
+1. Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben. Dadurch werden die Server- und Clientzertifikate aus dem Zertifikatspeicher entfernt.
+
 > [!NOTE]
->  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

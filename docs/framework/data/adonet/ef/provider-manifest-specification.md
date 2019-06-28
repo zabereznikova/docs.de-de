@@ -2,12 +2,12 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641164"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422720"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -83,9 +83,9 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
  Das Anbietermanifest wird vom Speichermetadaten-Ladeprogramm (StoreItemCollection) entweder über eine Datenspeicherverbindung oder mit einem Anbietermanifesttoken geladen.  
   
 #### <a name="using-a-data-store-connection"></a>Verwenden einer Datenspeicherverbindung  
- Wenn die Datenspeicherverbindung verfügbar ist, rufen Sie DbProviderServices.GetProviderManifestToken auf, um das Token zurückzugeben, das an die GetProviderManifest-Methode übergeben wird, die DbProviderManifest zurückgibt. Diese Methode delegiert zur Implementierung von GetDbProviderManifestToken des Anbieters.  
+ Wenn die datenspeicherverbindung verfügbar ist, rufen Sie <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> um das Token zurückzugeben, die an der <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> Methode, die zurückgibt <xref:System.Data.Common.DbProviderManifest>. Diese Methode delegiert zur Implementierung des Anbieters `GetDbProviderManifestToken`.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619164"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425401"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients
 Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web Services Enhancements 3.0 für Microsoft .NET (WSE)-Clients kompatibel, wenn WCF-Dienste konfiguriert sind, mit der Version vom August 2004 von WS-Addressing-Spezifikation.  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web 
   
     3. Geben Sie einen Authentifizierungsmodus und die Version der WS-Security-Spezifikationen, die verwendet werden, um Nachrichten zu sichern, die mit WSE 3.0 kompatibel sind, indem Sie ein untergeordnetes Element hinzufügen [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) auf die [ \<binding >](../../../../docs/framework/misc/binding.md).  
   
-         Legen Sie zum Festlegen des Authentifizierungsmodus der `authenicationMode` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Ein Authentifizierungsmodus ist mit einer sofort verwendbaren WSE 3.0-Sicherheitsassertion vergleichbar. In der folgende Tabelle werden Authentifizierungsmodi in WCF Sicherheitsassertionen in WSE 3.0 zugeordnet.  
+         Legen Sie zum Festlegen des Authentifizierungsmodus der `authenticationMode` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Ein Authentifizierungsmodus ist mit einer sofort verwendbaren WSE 3.0-Sicherheitsassertion vergleichbar. In der folgende Tabelle werden Authentifizierungsmodi in WCF Sicherheitsassertionen in WSE 3.0 zugeordnet.  
   
         |WCF-Authentifizierungsmodus|Sofort verwendbare WSE 3.0-Sicherheitsassertion|  
         |-----------------------------|----------------------------------------|  

@@ -2,12 +2,12 @@
 title: Einführung in das Routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912491"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425365"
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
 Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit, der Nachrichten basierend auf dem Nachrichteninhalts weiterleiten kann. Mit dem Routingdienst können Sie eine komplexe Routinglogik erstellen, mit der Sie Szenarios wie Dienstaggregation, Dienstversionsverwaltung, Prioritätsrouting und Multicastrouting implementieren können. Außerdem stellt der Routingdienst eine Fehlerbehandlung bereit. Damit können Sie Listen von Sicherungsendpunkten einrichten, an die Nachrichten gesendet werden, falls beim Senden an den primären Zielendpunkt ein Fehler auftritt.  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>Dynamische Konfiguration  
  Wenn Sie zusätzliche Clientendpunkte hinzufügen oder die Filter zum Weiterleiten von Nachrichten ändern, müssen Sie eine Möglichkeit schaffen, die Konfiguration zur Laufzeit dynamisch zu aktualisieren. Auf diese Weise verhindern Sie die Unterbrechung des Diensts zu den Endpunkten, die momentan Nachrichten über den Routingdienst empfangen. Das Ändern einer Konfigurationsdatei oder des Codes der Hostanwendung ist nicht immer ausreichend, weil bei beiden Verfahren die Wiederverwendung der Anwendung erforderlich ist. Dies kann zum Verlust aller Nachrichten führen, die gerade übertragen werden, und es kann beim Warten auf den Neustart des Diensts zu einer Ausfallzeit kommen.  
   
- Sie können nur die **RoutingConfiguration** programmgesteuert. Während Sie den Dienst zunächst mithilfe einer Konfigurationsdatei konfigurieren können, können Sie die Konfiguration zur Laufzeit nur ändern, indem eine neue **Routingconfiguration** und übergeben es als Parameter an die <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Methode verfügbar gemacht werden, indem die <xref:System.ServiceModel.Routing.RoutingExtension> -diensterweiterung. Nachrichten, die derzeit in der Übertragung mithilfe von Nachrichten nach dem Aufruf von der vorherigen Konfiguration weitergeleitet werden weiterhin **ApplyConfiguration** verwenden Sie die neue Konfiguration. Im folgenden Beispiel wird das Erstellen einer Instanz des Routingdiensts und anschließend das Ändern der Konfiguration veranschaulicht.  
+ Sie können nur die **RoutingConfiguration** programmgesteuert. Während Sie den Dienst zunächst mithilfe einer Konfigurationsdatei konfigurieren können, können Sie die Konfiguration zur Laufzeit nur ändern, indem eine neue **RoutingConfiguration** und übergeben es als Parameter an die <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Methode verfügbar gemacht werden, indem die <xref:System.ServiceModel.Routing.RoutingExtension> -diensterweiterung. Nachrichten, die derzeit in der Übertragung mithilfe von Nachrichten nach dem Aufruf von der vorherigen Konfiguration weitergeleitet werden weiterhin **ApplyConfiguration** verwenden Sie die neue Konfiguration. Im folgenden Beispiel wird das Erstellen einer Instanz des Routingdiensts und anschließend das Ändern der Konfiguration veranschaulicht.  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  

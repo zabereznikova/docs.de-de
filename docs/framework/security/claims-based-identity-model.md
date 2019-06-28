@@ -3,12 +3,12 @@ title: Anspruchsbasiertes Identitätsmodell
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650463"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422407"
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers, eine andere e-Mail-Adresse sein. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
@@ -58,7 +58,7 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
  Wenn Sie eine Anwendung erstellen, die auf Ansprüche basiert ist, erstellen Sie eine Anwendung der vertrauenden Seite. Synonyme für eine Anwendung der vertrauenden Seite sind „Ansprüche unterstützende Anwendung“ und „anspruchsbasierte Anwendung“. Webanwendungen und Webdienste können Anwendungen der vertrauenden Seite sein. Eine Anwendung der vertrauenden Seite nutzt die Token, die von einem STS ausgegeben werden, und extrahiert die Ansprüche der Token, um sie für identitätsbezogene Aufgaben zu verwenden. WIF bietet Funktionen, die Sie beim Erstellen von Anwendungen der vertrauenden Seite unterstützen.  
   
 ### <a name="standards"></a>Standards  
- Aus Gründen der Interoperabilität werden im vorherigen Szenario einige WS-*Standards verwendet. Die Richtlinie wird mithilfe von WS-MetadataExchange abgerufen, und die Richtlinie selbst wird entsprechend der WS-Policy-Spezifikation strukturiert. Der STS macht Endpunkte verfügbar, mit denen die WS-Trust-Spezifikation implementiert wird. Diese beschreibt, wie Sicherheitstoken angefordert und abgerufen werden. Die meisten modernen STS-Dienste geben Token aus, die mit Security Assertion Markup Language (SAML) formatiert werden. SAML ist ein in der Branche anerkanntes XML-Vokabular, das verwendet werden kann, um Ansprüche interoperabel darzustellen. Wenn Sie über mehrere Plattformen verfügen, können Sie mithilfe von SAML mit einem STS auf einer anderen Plattform kommunizieren und einmaliges Anmelden für alle Anwendungen, unabhängig von der jeweiligen Plattform, implementieren.  
+ Aus Gründen der Interoperabilität werden im vorherigen Szenario einige WS-*Standards verwendet. Die Richtlinie wird mithilfe von WS-MetadataExchange abgerufen, und die Richtlinie selbst wird entsprechend der WS-Policy-Spezifikation strukturiert. Der STS macht Endpunkte verfügbar, mit denen die WS-Trust-Spezifikation implementiert wird. Diese beschreibt, wie Sicherheitstoken angefordert und abgerufen werden. Die meisten Sicherheitstokendienste (STS) geben Token, die mit Security Assertion Markup Language (SAML) formatiert. SAML ist ein in der Branche anerkanntes XML-Vokabular, das verwendet werden kann, um Ansprüche interoperabel darzustellen. Wenn Sie über mehrere Plattformen verfügen, können Sie mithilfe von SAML mit einem STS auf einer anderen Plattform kommunizieren und einmaliges Anmelden für alle Anwendungen, unabhängig von der jeweiligen Plattform, implementieren.  
   
 ### <a name="browser-based-applications"></a>Browserbasierte Anwendungen  
  Das anspruchsbasierte Identitätsmodell wird nicht nur von intelligenten Clients verwendet. Das Modell ist auch bei browserbasierten Anwendungen (auch als passive Clients bezeichnet) einsetzbar. Im folgenden Szenario wird beschrieben, wie dies funktioniert.  

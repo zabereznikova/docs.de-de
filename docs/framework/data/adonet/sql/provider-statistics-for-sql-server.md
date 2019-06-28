@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646011"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422637"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Anbieterstatistiken für SQL Server
 Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen die Statistik aktivieren, indem Sie nach dem Erstellen eines gültigen Verbindungsobjekts die <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>-Eigenschaft des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen. Nach dem Aktivieren der Statistik können Sie sie als "Momentaufnahme" betrachten, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Blättern Sie durch die Liste wie durch Wörterbucheinträge mit Name-Wert-Paaren. Diese Name-Wert-Paare sind nicht sortiert. Sie können jederzeit die <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts aufrufen, um die Zähler zurückzusetzen. Wenn das Erfassen der Statistik nicht aktiviert wurde, wird keine Ausnahme ausgelöst. Wenn <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne vorher <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufzurufen, stellen die abgerufenen Werte die Anfangswerte für die einzelnen Einträge dar. Wenn Sie die Statistik aktivieren, die Anwendung für eine gewisse Zeit ausführen und dann die Statistik wieder deaktivieren, entsprechen die abgerufenen Werte den Werten, die bis zu dem Zeitpunkt erfasst wurden, an dem die Statistik deaktiviert wurde. Alle statistischen Werte werden auf der Basis einzelner Verbindungen erfasst.  
@@ -31,7 +31,7 @@ Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter fü
 |`BytesSent`|Gibt die Anzahl der Bytes der Daten zurück, die in TDS-Paketen an SQL Server gesendet wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
 |`ConnectionTime`|Die Zeitspanne (in Millisekunden), die die Verbindung nach dem Aktivieren der Statistik geöffnet war (die Gesamtverbindungszeit, wenn die Statistik vor dem Öffnen der Verbindung aktiviert wurde).|  
 |`CursorOpens`|Gibt zurück, wie oft während der Verbindung ein Cursor geöffnet war, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.<br /><br /> Beachten Sie, dass schreibgeschützte Vorwärtsergebnisse, die von SELECT-Anweisungen zurückgegeben wurden, nicht als Cursor betrachtet werden und deshalb diesen Zähler nicht beeinflussen.|  
-|`ExecutionTime`|Gibt die Gesamtzeitspanne (in Millisekunden) zurück, die der Anbieter seit dem Aktivieren der Statistik mit der Verarbeitung verbracht hat, einschließlich der Zeit zum Warten auf Antworten vom Server und zum Ausführen von Code im Anbieter selbst.<br /><br /> Folgende Klassen enthalten Zeiterfassungscode:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Um leistungswichtige Member so klein wie möglich zu halten, erfolgt für die folgenden Member keine Zeiterfassung:<br /><br /> SqlDataReader<br /><br /> this[]-Operator (alle Überladungen)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean <br /><br /> GetSqlByte <br /><br /> GetSqlDateTime <br /><br /> GetSqlDecimal <br /><br /> GetSqlDouble <br /><br /> GetSqlGuid <br /><br /> GetSqlInt16 <br /><br /> GetSqlInt32 <br /><br /> GetSqlInt64 <br /><br /> GetSqlMoney <br /><br /> GetSqlSingle <br /><br /> GetSqlString <br /><br /> GetString<br /><br /> IsDBNull|  
+|`ExecutionTime`|Gibt die Gesamtzeitspanne (in Millisekunden) zurück, die der Anbieter seit dem Aktivieren der Statistik mit der Verarbeitung verbracht hat, einschließlich der Zeit zum Warten auf Antworten vom Server und zum Ausführen von Code im Anbieter selbst.<br /><br /> Folgende Klassen enthalten Zeiterfassungscode:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Um leistungswichtige Member so klein wie möglich zu halten, erfolgt für die folgenden Member keine Zeiterfassung:<br /><br /> SqlDataReader<br /><br /> this[]-Operator (alle Überladungen)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
 |`IduCount`|Gibt die gesamte Anzahl der über die Verbindung ausgeführten INSERT-, DELETE- und UPDATE-Anweisungen zurück, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
 |`IduRows`|Gibt die gesamte Anzahl der Zeilen zurück, die von über die Verbindung ausgeführten INSERT-, DELETE- und UPDATE-Anweisungen beeinflusst wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
 |`NetworkServerTime`|Gibt die Gesamtzeitspanne (in Millisekunden) zurück, die der Anbieter zum Warten auf Antworten vom Server aufgewendet hat, seit die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
@@ -114,7 +114,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -192,7 +192,7 @@ namespace CS_Stats_Console_GetValue
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  
@@ -261,7 +261,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=localhost;Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks"  
   End Function  
@@ -330,7 +330,7 @@ namespace CS_Stats_Console_GetAll
     private static string GetConnectionString()  
     {  
       // To avoid storing the connection string in your code,  
-      // you can retrive it from a configuration file.  
+      // you can retrieve it from a configuration file.  
       return "Data Source=localhost;Integrated Security=SSPI;" +   
         "Initial Catalog=AdventureWorks";  
     }  

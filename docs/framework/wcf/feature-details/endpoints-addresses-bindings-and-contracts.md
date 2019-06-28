@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665963"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424844"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpunkte: Adressen, Bindungen und Verträge
 Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die von einem WCF-Dienst bereitgestellten Funktionen.  
@@ -41,11 +41,11 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
 - Bindung: Die Bindung gibt an, wie eine Kommunikation mit dem Endpunkt stattfindet. Dies umfasst Folgendes:  
   
-    - Das Transportprotokoll, das verwendet werden soll (z.&amp;#160;B. TCP oder HTTP).  
+    - Das Transportprotokoll, das verwendet werden soll (z.&#160;B. TCP oder HTTP).  
   
-    - Die Codierung, die für die Nachrichten verwendet werden soll (z.&amp;#160;B. Text oder binär).  
+    - Die Codierung, die für die Nachrichten verwendet werden soll (z.&#160;B. Text oder binär).  
   
-    - Die erforderlichen Sicherheitsanforderungen (z.&amp;#160;B. SSL- oder SOAP-Nachrichtensicherheit).  
+    - Die erforderlichen Sicherheitsanforderungen (z.&#160;B. SSL- oder SOAP-Nachrichtensicherheit).  
   
      Weitere Informationen finden Sie unter [WCF-Bindungsübersicht](../../../../docs/framework/wcf/bindings-overview.md). Eine Bindung wird durch die abstrakte Basisklasse im WCF-Objektmodell dargestellt <xref:System.ServiceModel.Channels.Binding>. Für die meisten Szenarien können Benutzer eine der vom System bereitgestellten Bindungen verwenden. Weitere Informationen finden Sie unter [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -61,7 +61,7 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
      Weitere Informationen zum Definieren eines Vertrags finden Sie unter [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-- Verhaltensweisen: Sie können die Endpunktverhalten verwenden, um das lokale Verhalten des Dienstendpunkts anzupassen. Endpunktverhaltensweisen erreichen dies, indem Sie im Prozess der Erstellung einer WCFruntime an. Ein Beispiel für ein Endpunktverhalten ist die <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft, mit der Sie eine andere Listeningadresse als die SOAP- oder die WSDL-Adresse (WSDL = Web Services Description Language) angeben können. Weitere Informationen finden Sie unter ["ClientViaBehavior"](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+- Verhaltensweisen: Sie können die Endpunktverhalten verwenden, um das lokale Verhalten des Dienstendpunkts anzupassen. Endpunktverhaltensweisen erreichen dies, indem Sie im Prozess der Erstellung einer WCF-Laufzeit an. Ein Beispiel für ein Endpunktverhalten ist die <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft, mit der Sie eine andere Listeningadresse als die SOAP- oder die WSDL-Adresse (WSDL = Web Services Description Language) angeben können. Weitere Informationen finden Sie unter ["ClientViaBehavior"](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definieren von Endpunkten  
  Sie können den Endpunkt für einen Dienst entweder verbindlich durch Verwenden von Code oder deklarativ durch Konfiguration angeben. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) und [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  

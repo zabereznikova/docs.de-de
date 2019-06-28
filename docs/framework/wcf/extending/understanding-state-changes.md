@@ -2,18 +2,18 @@
 title: Grundlegendes zu Zustandsänderungen
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771593"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424777"
 ---
 # <a name="understanding-state-changes"></a>Grundlegendes zu Zustandsänderungen
 In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum Strukturieren von Kanalzuständen und deren Implementierung erläutert.  
   
 ## <a name="state-machines-and-channels"></a>Zustandsautomaten und Kanäle  
- Objekte, die die Kommunikation behandeln, wie z.&amp;#160;B. Sockets, weisen in der Regel einen Zustandsautomaten auf, dessen Zustandsübergänge sich auf das Zuordnen von Netzwerkressourcen, Herstellen oder Annehmen von Verbindungen oder das Schließen und Beenden einer Kommunikation beziehen. Der Kanalzustandsautomat stellt ein einheitliches Modell der Zustände eines Kommunikationsobjekt bereit, das die zugrunde liegende Implementierung dieses Objekts abstrahiert. Die <xref:System.ServiceModel.ICommunicationObject>-Schnittstelle umfasst eine Reihe von Zuständen, Zustandsübergangsmethoden und Zustandsübergangsereignisse. Alle Kanäle, Kanalfactorys und Kanallistener implementieren den Kanalzustandsautomaten.  
+ Objekte, die die Kommunikation behandeln, wie z.&#160;B. Sockets, weisen in der Regel einen Zustandsautomaten auf, dessen Zustandsübergänge sich auf das Zuordnen von Netzwerkressourcen, Herstellen oder Annehmen von Verbindungen oder das Schließen und Beenden einer Kommunikation beziehen. Der Kanalzustandsautomat stellt ein einheitliches Modell der Zustände eines Kommunikationsobjekt bereit, das die zugrunde liegende Implementierung dieses Objekts abstrahiert. Die <xref:System.ServiceModel.ICommunicationObject>-Schnittstelle umfasst eine Reihe von Zuständen, Zustandsübergangsmethoden und Zustandsübergangsereignisse. Alle Kanäle, Kanalfactorys und Kanallistener implementieren den Kanalzustandsautomaten.  
   
  Die Ereignisse Closed, Closing, Faulted, Opened und Opening informieren einen externen Beobachter über einen stattgefundenen Zustandsübergang.  
   
@@ -28,7 +28,7 @@ In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum 
   
  Jedes <xref:System.ServiceModel.ICommunicationObject> beginnt im Created-Zustand. In diesem Zustand kann eine Anwendung das Objekt konfigurieren, indem dessen Eigenschaften festgelegt werden. Sobald sich ein Objekt in einen anderen Zustand als Created befindet, gilt es als unveränderlich.  
   
- ![Kanal-Status Transitition](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Statusübergang Channel](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Abbildung 1. Der ICommunicationObject-Zustandsautomat.  
   
  Windows Communication Foundation (WCF) stellt eine abstrakte Basisklasse, die mit dem Namen <xref:System.ServiceModel.Channels.CommunicationObject> implementiert <xref:System.ServiceModel.ICommunicationObject> und den kanalzustandsautomaten. In der folgenden Grafik wird ein Diagramm mit Zustandsänderungen dargestellt, das sich auf <xref:System.ServiceModel.Channels.CommunicationObject> bezieht. Neben dem <xref:System.ServiceModel.ICommunicationObject>-Zustandsautomaten zeigt es die zeitliche Steuerung, nach der weitere <xref:System.ServiceModel.Channels.CommunicationObject>-Methoden aufgerufen werden.  
@@ -91,7 +91,7 @@ Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zu
  Anschließend legt sie den Zustand auf Opening fest und ruft OnOpening() (wodurch das Opening-Ereignis ausgelöst wird), OnOpen() und OnOpened() in dieser Reihenfolge auf. OnOpened() legt den Zustand auf Opened fest und löst das Opened-Ereignis aus. Wenn währenddessen eine Ausnahme ausgelöst wird, ruft Open() Fault() auf und übergibt die Ausnahme. Das folgende Diagramm zeigt den Open-Prozess im Detail.  
   
  ![-Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "Wcfc_WCFChannelsigureCOOpenFlowChartf")  
-Überschreiben Sie die OnOpen-Methode, und implementieren Sie eine benutzerdefinierte Open-Logik, z.&amp;#160;B. das Öffnen eines inneren Kommunikationsobjekts.  
+Überschreiben Sie die OnOpen-Methode, und implementieren Sie eine benutzerdefinierte Open-Logik, z.&#160;B. das Öffnen eines inneren Kommunikationsobjekts.  
   
  Close-Methode  
   
@@ -102,17 +102,17 @@ Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zu
  Die Close()-Methode kann bei jedem Zustand aufgerufen werden. Sie versucht, das Objekt ordnungsgemäß zu schließen. Bei einem Fehler beendet sie das Objekt. Die Methode bewirkt nichts, wenn der aktuelle Zustand Closing oder Closed lautet. Andernfalls legt sie den Zustand auf Closing fest. Wenn der ursprüngliche Zustand Created, Opening oder Faulted lautete, ruft sie Abort() auf (siehe folgendes Diagramm). Wenn der ursprüngliche Zustand Opened lautete, ruft sie OnClosing (wodurch das Opening-Ereignis ausgelöst wird), OnOpen() und OnOpened() in dieser Reihenfolge auf. Wenn währenddessen eine Ausnahme ausgelöst wird, ruft Close() Abort() auf und übergibt die Ausnahme. OnClosed() legt den Zustand auf Closed fest und löst das Closed-Ereignis aus. Das folgende Diagramm zeigt den Close-Prozess im Detail.  
   
  ![-Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
-Überschreiben Sie die OnClose-Methode und implementieren Sie eine benutzerdefinierte Close-Logik, z.&amp;#160;B. das Schließen eines inneren Kommunikationsobjekts. Jede ordnungsgemäß schließende Logik, die eine längere Blockierung mit sich bringt (z.&amp;#160;B. das Warten auf eine Antwort) sollte in OnClose() implementiert werden, da diese Methode einen Timeoutparameter akzeptiert und nicht als Teil von Abort() aufgerufen wird.  
+Überschreiben Sie die OnClose-Methode und implementieren Sie eine benutzerdefinierte Close-Logik, z.&#160;B. das Schließen eines inneren Kommunikationsobjekts. Jede ordnungsgemäß schließende Logik, die eine längere Blockierung mit sich bringt (z.&#160;B. das Warten auf eine Antwort) sollte in OnClose() implementiert werden, da diese Methode einen Timeoutparameter akzeptiert und nicht als Teil von Abort() aufgerufen wird.  
   
  Abbrechen  
   
  Vorbedingung: Keine  
 Nachbedingung: Zustand ist Closed. Möglicherweise wird eine Ausnahme ausgelöst.  
   
- Die Abort()-Methode bewirkt nichts, wenn der aktuelle Zustand Closed lautet oder wenn das Objekt zuvor beendet worden ist (z.&amp;#160;B. indem Abort() für einen anderen Thread ausgeführt wird). Andernfalls legt sie den Zustand auf Closing fest und ruft OnClosing() (wodurch das Closing-Ereignis ausgelöst wird), OnAbort() und OnClosed() in dieser Reihenfolge auf. (OnClose wird nicht aufgerufen, da das Objekt beendet, nicht geschlossen wird.) OnClosed() legt den Zustand auf Closed fest und löst das Closed-Ereignis aus. Wenn währenddessen eine Ausnahme ausgelöst wird, wird sie erneut für den Aufrufer von Abort ausgelöst. Implementierungen von OnClosing(), OnClosed() und OnAbort() sollten keine Blockierung hervorrufen (z.&amp;#160;B. bei Ein-/Ausgaben). Das folgende Diagramm zeigt den Abort-Prozess im Detail.  
+ Die Abort()-Methode bewirkt nichts, wenn der aktuelle Zustand Closed lautet oder wenn das Objekt zuvor beendet worden ist (z.&#160;B. indem Abort() für einen anderen Thread ausgeführt wird). Andernfalls legt sie den Zustand auf Closing fest und ruft OnClosing() (wodurch das Closing-Ereignis ausgelöst wird), OnAbort() und OnClosed() in dieser Reihenfolge auf. (OnClose wird nicht aufgerufen, da das Objekt beendet, nicht geschlossen wird.) OnClosed() legt den Zustand auf Closed fest und löst das Closed-Ereignis aus. Wenn währenddessen eine Ausnahme ausgelöst wird, wird sie erneut für den Aufrufer von Abort ausgelöst. Implementierungen von OnClosing(), OnClosed() und OnAbort() sollten keine Blockierung hervorrufen (z.&#160;B. bei Ein-/Ausgaben). Das folgende Diagramm zeigt den Abort-Prozess im Detail.  
   
  ![-Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
-Überschreiben Sie die OnAbort-Methode, und implementieren Sie eine benutzerdefinierte Terminate-Logik, z.&amp;#160;B. das Beenden eines inneren Kommunikationsobjekts.  
+Überschreiben Sie die OnAbort-Methode, und implementieren Sie eine benutzerdefinierte Terminate-Logik, z.&#160;B. das Beenden eines inneren Kommunikationsobjekts.  
   
  Fault  
   
@@ -147,7 +147,7 @@ Nachbedingung: Zustand ist Closed. Möglicherweise wird eine Ausnahme ausgelöst
 |Faulted|Nicht zutreffend|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>Timeouts  
- Mehrere der besprochenen Methoden akzeptieren Timeoutparameter. Dazu gehören Close, Open (bestimmte Überladungen und asynchrone Versionen), OnClose und OnOpen. Diese Methoden wurden für langwierige Vorgänge entwickelt (z.&amp;#160;B. das Blockieren bei Ein-/Ausgaben beim ordnungsgemäßen Schließen einer Verbindung)), damit mit dem Timeoutparameter angegeben werden kann, wie lange dieser Vorgang dauern darf, bevor er unterbrochen wird. Implementierungen dieser Methoden sollten den bereitgestellten Timeoutwert verwenden, um sicherzustellen, dass die Rückgabe an den Aufrufer innerhalb dieses Timeouts erfolgt. Implementierungen anderer Methoden, die keinen Timeoutwert akzeptieren, sind nicht für langwierige Vorgänge bestimmt und sollten bei Ein-/Ausgaben keine Blockierung verursachen.  
+ Mehrere der besprochenen Methoden akzeptieren Timeoutparameter. Dazu gehören Close, Open (bestimmte Überladungen und asynchrone Versionen), OnClose und OnOpen. Diese Methoden wurden für langwierige Vorgänge entwickelt (z.&#160;B. das Blockieren bei Ein-/Ausgaben beim ordnungsgemäßen Schließen einer Verbindung)), damit mit dem Timeoutparameter angegeben werden kann, wie lange dieser Vorgang dauern darf, bevor er unterbrochen wird. Implementierungen dieser Methoden sollten den bereitgestellten Timeoutwert verwenden, um sicherzustellen, dass die Rückgabe an den Aufrufer innerhalb dieses Timeouts erfolgt. Implementierungen anderer Methoden, die keinen Timeoutwert akzeptieren, sind nicht für langwierige Vorgänge bestimmt und sollten bei Ein-/Ausgaben keine Blockierung verursachen.  
   
  Zu den Ausnahmen zählen die Überladungen Open() und Close(), die keinen Timeout akzeptieren. Diese Überladungen verwenden einen Timeoutwert, der von der abgeleiteten Klasse bereitgestellt wird. <xref:System.ServiceModel.Channels.CommunicationObject> macht zwei geschützte abstrakte Eigenschaften mit der Bezeichnung <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> und <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> verfügbar, die wie folgt definiert werden:  
   

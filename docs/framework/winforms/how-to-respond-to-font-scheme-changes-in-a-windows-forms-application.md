@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801854"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425331"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Vorgehensweise: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung
 In der Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteinstellungen, um die Standardschriftart angezeigt werden, vergrößert oder verkleinert werden ändern. Ändern der schriftarteinstellungen ist wichtig für Benutzer, die sehbehinderte und größeren Typ zum Lesen des Texts auf ihren Bildschirmen erfordern. Sie können Ihre Windows Forms-Anwendung, um diese Änderungen zu reagieren durch erhöhen oder verringern die Größe des Formulars und alle darin enthaltenen Text ein, wenn des Schriftartenschemas Änderungen anpassen. Wenn Sie das Formular aus, um Änderungen in Schriftgrade Ihren Bedürfnissen entsprechend dynamisch zu berücksichtigen möchten, können Sie Code zum Formular hinzufügen.  
@@ -62,7 +62,7 @@ In der Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteins
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Der Konstruktor in diesem Codebeispiel enthält einen Aufruf von `InitializeComponent`, die definiert, wenn Sie ein neues Windows Forms-Projekt in Visual Studio erstellen. Entfernen Sie diese Codezeile aus, wenn Sie Ihre Anwendung in der Befehlszeile erstellen.  
+ Der Konstruktor in diesem Codebeispiel enthält einen Aufruf an `InitializeComponent`, die definiert, wenn Sie ein neues Windows Forms-Projekt in Visual Studio erstellen. Entfernen Sie diese Codezeile aus, wenn Sie Ihre Anwendung in der Befehlszeile erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
 

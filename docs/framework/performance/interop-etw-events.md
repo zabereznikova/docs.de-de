@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616408"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422422"
 ---
 # <a name="interop-etw-events"></a>Interop-ETW-Ereignisse
 <a name="top"></a> Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
@@ -43,7 +43,7 @@ ms.locfileid: "64616408"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Der Modulbezeichner.|  
 |StubMethodID|win:UInt64|Der Bezeichner für die Stubmethode.|  
-|StubFlags|win:UInt64|Die Flags für den Stub:<br /><br /> 0x1 – Reverse-Interop.<br /><br /> 0x2 – COM-Interop.<br /><br /> 0x4 – Von „NGen.exe“ generierter Stub.<br /><br /> 0x8 – Delegat.<br /><br /> 0x10 – Variables Argument.<br /><br /> 0x20 – Nicht verwalteter Aufgerufener.|  
+|StubFlags|win:UInt64|Die Flags für den Stub:<br /><br /> 0x1 – Reverse-Interop.<br /><br /> 0x2 – COM-Interop.<br /><br /> 0x4 – Von „NGen.exe“ generierter Stub.<br /><br /> 0x8 – Delegat.<br /><br /> 0 x 10 – Variables Argument.<br /><br /> 0x20 – Nicht verwalteter Aufgerufener.|  
 |ManagedInteropMethodToken|win:UInt32|Das Token für die verwaltete Interop-Methode.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Der Namespace für die verwaltete Interop-Methode.|  
 |ManagedInteropMethodName|win:UnicodeString|Der Name der verwalteten Interop-Methode.|  
