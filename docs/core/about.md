@@ -3,12 +3,12 @@ title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003760"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421884"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -30,7 +30,7 @@ C#, Visual Basic und F# können verwendet werden, um Anwendungen und Bibliotheke
 
 .NET Core stellt vielseitige APIs bereit, u.a. die folgenden:
 
-- Primitive Typen, z.B. [bool](../csharp/language-reference/keywords/bool.md) und [int](../csharp/language-reference/keywords/int.md).
+- Primitive Typen, z.B. [bool](../csharp/language-reference/keywords/bool.md) und [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
 - Sammlungen, z.B. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Hilfstypen, z.B. <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> und <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Datentypen, z.B. <xref:System.Data.DataSet?displayProperty=nameWithType> und [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
