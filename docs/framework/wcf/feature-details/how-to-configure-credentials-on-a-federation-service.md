@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624515"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487087"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst
 In Windows Communication Foundation (WCF), besteht beim Erstellen eines Verbunddiensts folgenden Hauptschritten:  
@@ -28,7 +28,7 @@ In Windows Communication Foundation (WCF), besteht beim Erstellen eines Verbundd
   
 1. Verwenden Sie die <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>-Eigenschaft der <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse, um einen Verweis an eine <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Instanz zurückzugeben. Der Zugriff auf die Eigenschaft erfolgt über die <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft der <xref:System.ServiceModel.ServiceHostBase>-Klasse.  
   
-2. Legen Sie die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>-Eigenschaft auf `true` fest, wenn selbst ausgestellte Token wie [!INCLUDE[infocard](../../../../includes/infocard-md.md)]-Karten authentifiziert werden sollen. Die Standardeinstellung ist `false`.  
+2. Legen Sie die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> Eigenschaft `true` Wenn selbst ausgestellte Token, z. B. CardSpace-Karten authentifiziert werden. Die Standardeinstellung ist `false`.  
   
 3. Füllen Sie die von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft zurückgegebene Sammlung mit Instanzen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klasse auf. Jede Instanz stellt einen Aussteller dar, von dem der Dienst Token authentifiziert.  
   
@@ -47,7 +47,7 @@ In Windows Communication Foundation (WCF), besteht beim Erstellen eines Verbundd
   
 1. Erstellen Sie eine `<issuedTokenAuthentication>` Element als untergeordnetes Element eine <`serviceCredentials`> Element.  
   
-2. Legen Sie das `allowUntrustedRsaIssuers`-Attribut des `<issuedTokenAuthentication>`-Elements auf `true` fest, wenn die Authentifizierung ein selbst ausgestelltes Token ist, wie z. B. eine [!INCLUDE[infocard](../../../../includes/infocard-md.md)]-Karte.  
+2. Legen Sie die `allowUntrustedRsaIssuers` Attribut der `<issuedTokenAuthentication>` Element `true` wenn Authentifizierung ein selbst ausgestelltes Token, z. B. einer CardSpace-Karte.  
   
 3. Erstellen Sie ein `<knownCertificates>`-Element als untergeordnetes Element des `<issuedTokenAuthentication>`-Elements.  
   

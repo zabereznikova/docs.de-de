@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402298"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486926"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -103,7 +103,7 @@ Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte v
 
 ### <a name="available-transports"></a>Verfügbare Transporte
 
-WCF-Dienste in IIS gehostet 5.1 und IIS 6.0 auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.
+WCF-Dienste in IIS gehostet 5.1 und IIS 6.0 auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Für IIS 7.0 enthalten die unterstützten Transporte HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für Abwärtskompatibilität Kompatibilität mit vorhandenen MSMQ-Anwendungen.
 
 ### <a name="http-transport-security"></a>HTTP-Transportsicherheit
 

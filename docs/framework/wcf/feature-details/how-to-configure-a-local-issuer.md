@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779300"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487138"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Vorgehensweise: Konfigurieren eines lokalen Ausstellers
 In diesem Thema wird beschrieben, wie Sie einen Client für die Verwendung eines lokalen Ausstellers für ausgestellte Token konfigurieren.  
@@ -23,7 +23,7 @@ In diesem Thema wird beschrieben, wie Sie einen Client für die Verwendung eines
  Windows Communication Foundation (WCF) verwendet einen lokalen Aussteller in Fällen, in denen die Ausstelleradresse einer verbundbindung `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` oder `null`. In diesem Fall müssen Sie <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfigurieren.  
   
 > [!NOTE]
->  Wenn die <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> Eigenschaft der `ClientCredentials` -Klasse festgelegt, dass `true`keine lokale Ausstelleradresse angegeben ist und die Ausstelleradresse angegeben wird, durch die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder andere verbundbindung `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, oder `null`, klicken Sie dann die Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Aussteller verwendet wird.  
+>  Wenn die <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> Eigenschaft der `ClientCredentials` -Klasse festgelegt, dass `true`keine lokale Ausstelleradresse angegeben ist und die Ausstelleradresse angegeben wird, durch die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder andere verbundbindung `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, oder `null`, und klicken Sie dann die Windows CardSpace-Aussteller verwendet wird.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>So konfigurieren Sie den lokalen Aussteller im Code  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348467"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487263"
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 
@@ -21,7 +21,7 @@ Vor der Veröffentlichung von .NET Framework mussten alle Code auf dem Computer 
 
 .NET Framework stellt eine Infrastruktur als Code Access Security, mit dem Sie die Berechtigungen zu unterscheiden oder Rechte, die Code über die Rechte verfügt, die der Benutzer hat. Standardmäßig kann Code, der aus dem Internet oder dem Intranet stammt, nur in der Umgebung ausgeführt werden, die als teilweise vertrauenswürdige Umgebung bezeichnet wird. Teilweise Vertrauenswürdigkeit bedingt für eine Anwendung eine Reihe von Beschränkungen: Neben anderen Aspekten kann eine Anwendung weder auf die lokale Festplatte zugreifen noch nicht verwalteten Code ausführen. .NET Framework steuert die Ressourcen, die Code zugelassen wird, Zugriff auf Grundlage der Identität des Codes: Woher stammt, er hat einen [Assemblys mit starken Namen](../app-domains/strong-named-assemblies.md), signiert es mit einem Zertifikat, und So weiter.
 
-Die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Technologie, mit der Sie Windows Forms-Anwendungen bereitstellen, erleichtert Ihnen das Entwickeln von Anwendungen, die mit teilweiser Vertrauenswürdigkeit, voller Vertrauenswürdigkeit oder teilweiser Vertrauenswürdigkeit mit erweiterten Berechtigungen ausgeführt werden. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bietet Funktionalität wie Berechtigungserweiterung und Bereitstellung vertrauenswürdiger Anwendungen, sodass Ihre Anwendung bei Bedarf volle Vertrauenswürdigkeit bzw. erweiterte Berechtigungen vom lokalen Benutzer anfordern kann.
+ClickOnce-Technologie, die Sie zum Bereitstellen von Windows Forms-Anwendungen verwenden, erleichtert Ihnen zum Entwickeln von Anwendungen, die bei teilweiser Vertrauenswürdigkeit, voller Vertrauenswürdigkeit oder teilweiser Vertrauenswürdigkeit mit erweiterten Berechtigungen ausgeführt. ClickOnce bietet Features wie Berechtigungserweiterung und Bereitstellung einer vertrauenswürdigen Anwendung, damit Ihre Anwendung volle Vertrauenswürdigkeit bzw. erweiterte Berechtigungen vom lokalen Benutzer Bedarf anfordern kann.
 
 ## <a name="understanding-security-in-the-net-framework"></a>Grundlegendes zur Sicherheit in .NET Framework
 
@@ -34,7 +34,7 @@ Wenn der Benutzer eine ausführbare Windows Forms-Datei direkt aus einem Webserv
 >
 > Die Standardberechtigungen, die in jedem dieser Berechtigungssätze gewährt werden, werden im Thema [Standardmäßige Sicherheitsrichtlinie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)) aufgeführt. Abhängig von den Berechtigungen, die eine Anwendung erhält, wird sie ordnungsgemäß ausgeführt oder wird eine Sicherheitsausnahme ausgelöst.
 >
-> Viele Windows Forms-Anwendungen werden mit [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bereitgestellt. Für die Tools, die zum Generieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellung verwendet werden, gelten andere Sicherheitsstandardwerte als die bereits erläuterten. Weitere Informationen finden Sie im folgenden Abschnitt.
+> Viele Windows Forms-Anwendungen werden mithilfe von ClickOnce bereitgestellt werden. Die Tools zum Generieren einer ClickOnce-Bereitstellung verwendet haben, andere Sicherheitsstandardwerte als die bereits erläuterten. Weitere Informationen finden Sie im folgenden Abschnitt.
 
 Die tatsächlichen Berechtigungen, die Ihrer Anwendung gewährt werden, können sich von den Standardwerten unterscheiden, weil die Sicherheitsrichtlinie geändert werden kann. Dies kann dazu führen, dass Ihre Anwendung auf einem Computer Berechtigung hat, auf einem anderen jedoch nicht.
 
@@ -64,9 +64,9 @@ In den folgenden Themen sind zusätzliche Sicherheitsfeatures von Windows Forms 
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Bereitstellen einer Anwendung mit den entsprechenden Berechtigungen
 
-Die häufigste Methode der Bereitstellung einer Windows Forms-Anwendung für einen Clientcomputer ist [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Bereitstellungstechnologie, mit der alle Komponenten beschrieben werden, die Ihre Anwendung zur Ausführung benötigt. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwendet XML-Dateien, die als Manifeste bezeichnet werden. In diesen XML-Dateien sind die Assemblys und Dateien, aus denen Ihre Anwendung besteht, sowie die Berechtigungen beschrieben, die für die Anwendung erforderlich sind.
+Die häufigste Methode der Bereitstellung einer Windows Forms-Anwendung auf einen Clientcomputer ist mit ClickOnce sowie eine bereitstellungstechnologie, die alle Komponenten beschreibt, die Ihre Anwendung zur Ausführung benötigt. ClickOnce verwendet XML-Dateien, die als Manifeste bezeichnet, um die Assemblys und Dateien, aus denen Ihre Anwendung zu beschreiben, und auch die Berechtigungen für Ihre Anwendung erfordert.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwendet zwei Technologien zum Anfordern von erweiterten Berechtigungen auf einem Clientcomputer. Beide Technologien basieren auf der Verwendung von Authenticode-Zertifikaten. Die Zertifikate können den Benutzern ein gewisses Maß an Sicherheit geben, dass die Anwendung von einer vertrauenswürdigen Quelle stammt.
+ClickOnce verfügt über zwei Technologien zum Anfordern von erhöhten Berechtigungen auf einem Clientcomputer. Beide Technologien basieren auf der Verwendung von Authenticode-Zertifikaten. Die Zertifikate können den Benutzern ein gewisses Maß an Sicherheit geben, dass die Anwendung von einer vertrauenswürdigen Quelle stammt.
 
 In der folgenden Liste sind diese Technologien beschrieben.
 
@@ -77,9 +77,9 @@ In der folgenden Liste sind diese Technologien beschrieben.
 
 Welche Technologie Sie wählen, hängt von Ihrer Bereitstellungsumgebung ab. Weitere Informationen finden Sie unter [Auswählen einer Strategie für die ClickOnce-Bereitstellung](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-In der Standardeinstellung [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] -Anwendung mit Visual Studio oder über die .NET Framework SDK-Tools (Mage.exe und MageUI.exe) bereitgestellt sind so konfiguriert, dass auf einem Clientcomputer ausführen, die über volle Vertrauenswürdigkeit verfügt. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Sie können dazu entweder mit Visual Studio oder dem .NET Framework SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von MageUI.exe finden Sie in der exemplarischen Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung über die Befehlszeile an.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Standardmäßig werden ClickOnce-Anwendungen mithilfe von Visual Studio oder über die .NET Framework SDK-Tools (Mage.exe und MageUI.exe) bereitgestellt konfiguriert, führen Sie auf einem Clientcomputer, die über volle Vertrauenswürdigkeit verfügt. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Sie können dazu entweder mit Visual Studio oder dem .NET Framework SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von MageUI.exe finden Sie in der exemplarischen Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung über die Befehlszeile an.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
-Weitere Informationen zu den Sicherheitsaspekten von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] und der Berechtigungserweiterung finden Sie unter [ClickOnce-Bereitstellung und -Sicherheit](/visualstudio/deployment/securing-clickonce-applications). Weitere Informationen zur Bereitstellung vertrauenswürdiger Anwendungen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).
+Weitere Informationen zu den Sicherheitsaspekten von ClickOnce und Berechtigungserweiterung finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications). Weitere Informationen zur Bereitstellung vertrauenswürdiger Anwendungen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Testen der Anwendung
 

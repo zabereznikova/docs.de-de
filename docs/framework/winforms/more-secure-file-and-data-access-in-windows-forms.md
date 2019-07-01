@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: c804a0a751969377c292613fdae8cc19b266ffa9
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8ad64ddcb25aa7037e30ad0618d16d654d9855d6
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834063"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487252"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
 .NET Framework verwendet Berechtigungen zum Schutz von Ressourcen und Daten. In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden. Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
@@ -26,7 +26,7 @@ ms.locfileid: "66834063"
  Wenn eine Sicherheitseinschränkung auftritt, haben Sie zwei Möglichkeiten: Sie können die Berechtigung bestätigen (in der Annahme, dass diese der Anwendung gewährt wurde), oder Sie verwenden eine Version des Features, die für die Ausführung mit teilweiser Vertrauenswürdigkeit geschrieben wurde. In den folgenden Abschnitten wird der Zugriff auf Dateien, Datenbanken und die Registrierung aus Anwendungen erläutert, die in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden.  
   
 > [!NOTE]
->  Standardmäßig werden [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellungen von den entsprechenden Tools so generiert, dass diese auf den Computern , auf denen sie ausgeführt werden, volle Vertrauenswürdigkeit anfordern. Wenn Sie sich, dass Sie die Vorteile der Erhöhung der Sicherheit bei teilweiser Vertrauenswürdigkeit ausführen möchten entscheiden, müssen Sie diese Standardeinstellung in Visual Studio oder über eines der Windows Software Development Kit (SDK)-Tools (Mage.exe oder MageUI.exe) ändern. Weitere Informationen zur Sicherheit in Windows Forms und festlegen, um zu bestimmen, für Ihre Anwendung geeigneten Vertrauensebene finden Sie unter [Sicherheit in Windows Forms Overview](security-in-windows-forms-overview.md).  
+>  Standardmäßig standardmäßig Tools, die zum Generieren von ClickOnce-Bereitstellungen für diese Bereitstellungen für volle Vertrauenswürdigkeit anfordern, auf den Computern, auf denen sie ausgeführt. Wenn Sie sich, dass Sie die Vorteile der Erhöhung der Sicherheit bei teilweiser Vertrauenswürdigkeit ausführen möchten entscheiden, müssen Sie diese Standardeinstellung in Visual Studio oder über eines der Windows Software Development Kit (SDK)-Tools (Mage.exe oder MageUI.exe) ändern. Weitere Informationen zur Sicherheit in Windows Forms und festlegen, um zu bestimmen, für Ihre Anwendung geeigneten Vertrauensebene finden Sie unter [Sicherheit in Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dateizugriff  
  Die <xref:System.Security.Permissions.FileIOPermission> -Klasse steuert den Datei- und Zugriff in .NET Framework. Standardmäßig gewährt das Sicherheitssystem teilweise vertrauenswürdigen Umgebungen wie der lokalen Intranetzone oder der Internetzone keine <xref:System.Security.Permissions.FileIOPermission>. Eine Anwendung, die Dateizugriff erfordert, kann in diesen Umgebungen dennoch ausgeführt werden, wenn Sie sie ändern oder andere Methoden für den Zugriff auf Dateien verwenden. Standardmäßig wird der lokalen Intranetzone die Berechtigung gewährt, auf dieselbe Site und dasselbe Verzeichnis zuzugreifen, die Verbindung mit der Ursprungssite wiederherzustellen und Daten im Installationsverzeichnis zu lesen. Der Internetzone wird in der Standardeinstellung nur die Berechtigung gewährt, die Verbindung mit der Ursprungssite wiederherzustellen.  

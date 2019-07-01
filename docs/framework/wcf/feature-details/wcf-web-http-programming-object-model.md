@@ -2,12 +2,12 @@
 title: Objektmodell für WCF-Web-HTTP-Programmierung
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648408"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487690"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Objektmodell für WCF-Web-HTTP-Programmierung
 Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Communication Foundation (WCF)-Webdienste durch grundlegende HTTP-Anforderungen, die ohne SOAP verfügbar machen. Der WCF-HTTP-Webprogrammierungsmodell basiert auf der vorhandenen WCF-Erweiterbarkeitsmodell. Mit diesem Modell werden folgende Klassen definiert:  
@@ -97,7 +97,7 @@ Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Commun
  Der WCF-HTTP-Webprogrammierungsmodell verwendet keine SOAP-basierten Nachrichten und unterstützt daher nicht die WS-* Protokolle. Sie können jedoch denselben Vertrag durch zwei verschiedene Endpunkte verfügbar machen, von denen einer im Gegensatz zum anderen SOAP verwendet. Weitere Informationen finden Sie unter [How to: Verfügbarmachen eines Vertrags für SOAP- und Webclients](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) verdeutlicht.  
   
 ## <a name="security"></a>Sicherheit  
- Da die WCF-HTTP-Webprogrammierungsmodell nicht der WS - unterstützt * Protokolle, die einzige Möglichkeit zum Sichern eines Webdiensts basiert auf der WCF-HTTP-Webprogrammierungsmodell Verfügbarmachen des Diensts mithilfe von SSL ist. Weitere Informationen zum Einrichten von SSL mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Da die WCF-HTTP-Webprogrammierungsmodell nicht der WS - unterstützt * Protokolle, die einzige Möglichkeit zum Sichern eines Webdiensts basiert auf der WCF-HTTP-Webprogrammierungsmodell Verfügbarmachen des Diensts mithilfe von SSL ist. Weitere Informationen zum Einrichten von SSL in IIS 7.0 finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Siehe auch
 

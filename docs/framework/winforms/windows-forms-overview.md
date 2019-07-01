@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875887"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487208"
 ---
 # <a name="windows-forms-overview"></a>Übersicht über Windows Forms
 
@@ -72,21 +72,21 @@ Ausführliche Informationen zur Verwendung dieser Features finden Sie in den fol
 
 ### <a name="deploy-apps-to-client-computers"></a>Bereitstellen von apps auf Client-Computern
 
-Nach dem Erstellen müssen Sie die Anwendung an Ihre Benutzer senden, damit diese die Anwendung auf dem eigenen Clientcomputer installieren und ausführen können. Bei Verwendung der [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] -Technologie, Sie können Ihre Anwendungen innerhalb von Visual Studio mithilfe von ein paar Mausklicks bereitstellen und Ihren Benutzern eine URL verweist auf die Anwendung im Web bereitstellen. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwaltet alle Elemente und Abhängigkeiten in der Anwendung und stellt sicher, dass die Anwendung auf dem Clientcomputer ordnungsgemäß installiert ist.
+Nach dem Erstellen müssen Sie die Anwendung an Ihre Benutzer senden, damit diese die Anwendung auf dem eigenen Clientcomputer installieren und ausführen können. Wenn Sie die ClickOnce-Technologie verwenden, können Sie Ihre Anwendungen innerhalb von Visual Studio mit nur wenigen Klicks bereitstellen und Ihren Benutzern eine URL verweist auf die Anwendung im Web bereitstellen. ClickOnce verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Clientcomputer installiert ist.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendungen können so konfiguriert werden, dass sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist, oder dass sie sowohl online als auch offline ausgeführt werden können. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll, fügt [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] im Menü **Start** des Benutzers einen Link zur Anwendung hinzu. Der Benutzer kann die Anwendung dann auch ohne die URL öffnen.
+ClickOnce-Anwendungen können nur ausgeführt, wenn der Benutzer mit dem Netzwerk verbunden ist oder beide online ausführen, konfiguriert und offline sein. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll, fügt ClickOnce eine Verknüpfung zur Anwendung des Benutzers **starten** Menü. Der Benutzer kann die Anwendung dann auch ohne die URL öffnen.
 
-Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] erkennt, dass ein Update verfügbar ist, und aktualisiert die Installation des Benutzers. Zum Aktualisieren von alten Assemblys ist keine benutzerdefinierte Programmierung erforderlich.
+Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. ClickOnce erkennt, dass es ein Update verfügbar ist, und aktualisieren die Installation des Benutzers. Es ist keine benutzerdefinierte Programmierung erforderlich, zum Aktualisieren von alten Assemblys.
 
 #### <a name="deploy-clickonce-apps"></a>Bereitstellen von ClickOnce-apps
 
-Eine umfassende Einführung in [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] finden Sie unter [ClickOnce-Sicherheit und -Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den folgenden Hilfethemen.
+Eine vollständige Einführung zu ClickOnce finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den folgenden Hilfethemen.
 
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
-|Bereitstellung einer Anwendung mithilfe von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Vorgehensweise: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Aktualisieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellung|[Vorgehensweise: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Verwalten der Sicherheit mithilfe von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Vorgehensweise: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Bereitstellen einer Anwendung mithilfe von ClickOnce|[Vorgehensweise: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Aktualisiert eine ClickOnce-Bereitstellung|[Vorgehensweise: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Verwalten der Sicherheit mit ClickOnce|[Vorgehensweise: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>Andere Steuerelemente und features
 

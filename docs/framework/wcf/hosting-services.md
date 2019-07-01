@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402395"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487702"
 ---
 # <a name="hosting-services"></a>Hosting-Dienste
 Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die ihn erstellt und seinen Kontext sowie seine Lebensdauer steuert. Windows Communication Foundation (WCF)-Dienste können in jedem Windows-Prozess ausgeführt werden soll, Code unterstützt verwalteten.  
@@ -34,7 +34,7 @@ Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die i
  Beachten Sie, dass von IIS gehostete Dienste nur den HTTP-Transport verwenden können. Mit der Implementierung in IIS&#160;5.1 wurden einige Einschränkungen in [!INCLUDE[wxp](../../../includes/wxp-md.md)]eingeführt. Die Nachrichtenbasierte Aktivierung für einen WCF-Dienst von IIS 5.1 auf bereitgestellten [!INCLUDE[wxp](../../../includes/wxp-md.md)] jeden anderen selbst gehosteten WCF-Dienst auf demselben Computer über Port 80 für die Kommunikation blockiert. WCF-Dienste können in der gleichen AppDomain/Application Pool/Worker Process wie andere Anwendungen, wenn Sie auf IIS 6.0 gehostet ausgeführt [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Aber da WCF und IIS 6.0 die Kernelmodus-HTTP-Protokollstapel (HTTP.sys) verwenden, können IIS 6.0 mit anderen selbst gehosteten WCF-Diensten auf demselben Computer, im Gegensatz zu IIS 5.1 Port 80 freigeben.  
   
 #### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)  
- Windows Process Activation Service (WAS) ist der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../includes/lserver-md.md)] , der auch unter [!INCLUDE[wv](../../../includes/wv-md.md)]verfügbar ist. Er behält das vertraute IIS 6.0-Prozessmodell (Anwendungspools und nachrichtenbasierte prozessaktivierung) und die Abhängigkeit von HTTP-hosting-Funktionen (wie rascher Ausfallschutz, Systemüberwachung und Wiederverwendung), aber es entfernt werden, aus der Aktivierung Architektur. [!INCLUDE[iisver](../../../includes/iisver-md.md)] nutzt WAS zur nachrichtenbasierten Aktivierung über HTTP. Weitere WCF-Komponenten stecken Sie auch in WAS-Aktivierung bereit, über die anderen Protokolle, die von WCF unterstützt, z. B. TCP, MSMQ und named Pipes. Dies ermöglicht es Anwendungen, die mit Kommunikationsprotokollen arbeiten, die IIS-Features zu nutzen, die nur für HTTP-basierte Anwendungen verfügbar waren, beispielsweise die Prozesswiederverwendung, den schnellen Fehlerschutz und das gemeinsame Konfigurationssystem.  
+ Windows Process Activation Service (WAS) ist der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../includes/lserver-md.md)] , der auch unter [!INCLUDE[wv](../../../includes/wv-md.md)]verfügbar ist. Er behält das vertraute IIS 6.0-Prozessmodell (Anwendungspools und nachrichtenbasierte prozessaktivierung) und die Abhängigkeit von HTTP-hosting-Funktionen (wie rascher Ausfallschutz, Systemüberwachung und Wiederverwendung), aber es entfernt werden, aus der Aktivierung Architektur. IIS 7.0 nutzt WAS zur nachrichtenbasierten Aktivierung über HTTP. Weitere WCF-Komponenten stecken Sie auch in WAS-Aktivierung bereit, über die anderen Protokolle, die von WCF unterstützt, z. B. TCP, MSMQ und named Pipes. Dies ermöglicht es Anwendungen, die mit Kommunikationsprotokollen arbeiten, die IIS-Features zu nutzen, die nur für HTTP-basierte Anwendungen verfügbar waren, beispielsweise die Prozesswiederverwendung, den schnellen Fehlerschutz und das gemeinsame Konfigurationssystem.  
   
  Diese Hostingoption erfordert, dass WAS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Konfigurieren hostet, finden Sie unter [Vorgehensweise: Hosten eines WCF-Diensts in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   

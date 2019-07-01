@@ -2,12 +2,12 @@
 title: WCF-Testclient (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ee40ca7a07729cac284ef8c634d63d673be3fbd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9044dc2479e8e0a31a6152321231ee1936b74351
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613087"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487460"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
 Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GUI-Tool, das kann Benutzer Testparameter eingeben, die Eingabe an den Dienst senden, und zeigen die Antwort, die der Dienst zurücksendet. Es bietet eine nahtlose diensttest mit WCF-Diensthost kombiniert.  
@@ -154,14 +154,14 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
   
 - Transaktion  
   
-- Sicherheit: [!INCLUDE[infocard](../../../includes/infocard-md.md)], Zertifikat und Benutzername/Kennwort.  
+- Sicherheit: CardSpace, Zertifikat und Benutzername/Kennwort.  
   
 - Bindungen: WSFederationbinding, beliebige kontextbindungen und Https-Bindung, WebHttpbinding (Unterstützung für Json-Antwort-Nachrichten).  
   
 ## <a name="closing-wcf-test-client"></a>Schließen des WCF-Testclients  
  Sie können WCF-Testclient schließen, es gibt folgende Möglichkeiten:  
   
-- Auf der **Datei** Menü klicken Sie auf **beenden**. Klicken Sie alternativ im Hauptfenster von WCF-Testclient auf **schließen**. Sowohl der folgenden Aktionen auch WCF-Dienst-Auto-Host heruntergefahren und der Visual Studio-Debug-Vorgang zu beenden, wenn WCF-Testclient von Visual Studio gestartet wurde.  
+- Klicken Sie im Menü **Datei** auf **Beenden**. Klicken Sie alternativ im Hauptfenster von WCF-Testclient auf **schließen**. Sowohl der folgenden Aktionen auch WCF-Dienst-Auto-Host heruntergefahren und der Visual Studio-Debug-Vorgang zu beenden, wenn WCF-Testclient von Visual Studio gestartet wurde.  
   
 - Mit der rechten Maustaste die **WCF-Diensthost** Symbol im Infobereich der Taskleiste, und klicken Sie dann auf **beenden.** Dies sowohl die WCF-Dienst-Auto-Host als auch die WCF-Testclient heruntergefahren und der Visual Studio-debuggenvorgang beendet.  
   

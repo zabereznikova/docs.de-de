@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624164"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487272"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Vorgehensweise: Zugreifen auf das verwaltete HTML-Dokumentobjektmodell
 Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendungsarten aus zugreifen:  
@@ -43,7 +43,7 @@ Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendun
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
   
-1. Die Anwendung oder das <xref:System.Windows.Forms.UserControl> setzen volle Vertrauenswürdigkeit voraus, um auf das verwaltete HTML-DOM zuzugreifen. Wenn Sie eine Windows Forms-Anwendung mit [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] bereitstellen, können Sie volle Vertrauenswürdigkeit entweder über erweiterte Berechtigungen oder die Bereitstellung vertrauenswürdiger Anwendungen anfordern; ausführliche Informationen finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications).  
+1. Die Anwendung oder das <xref:System.Windows.Forms.UserControl> setzen volle Vertrauenswürdigkeit voraus, um auf das verwaltete HTML-DOM zuzugreifen. Wenn Sie eine Windows Forms-Anwendung, die mithilfe von ClickOnce bereitstellen, können Sie volle Vertrauenswürdigkeit entweder über erweiterte Berechtigungen oder Bereitstellung vertrauenswürdiger Anwendungen anfordern; finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications) Details.  
   
 ## <a name="see-also"></a>Siehe auch
 

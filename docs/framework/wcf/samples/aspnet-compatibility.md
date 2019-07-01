@@ -2,12 +2,12 @@
 title: ASP.NET-Kompatibilität
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002663"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487668"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET-Kompatibilität
 Dieses Beispiel veranschaulicht, wie ASP.NET Kompatibilitätsmodus in Windows Communication Foundation (WCF) zu aktivieren. Dienste, die unter ASP.NET-Kompatibilität Modus nehmen uneingeschränkt an der ASP.NET-Pipeline für die Anwendung und können ASP.NET-Funktionen wie z. B. Datei-/URL-Autorisierung, Sitzungsstatus, verwenden und die <xref:System.Web.HttpContext> Klasse. Die <xref:System.Web.HttpContext> Klasse ermöglicht den Zugriff auf Cookies, Sitzungen und andere ASP.NET-Funktionen. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.  
@@ -123,7 +123,7 @@ Press <ENTER> to terminate client.
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Nachdem die Projektmappe erstellt wurde, führen Sie Setup.bat aus, um die ServiceModelSamples-Anwendung in [!INCLUDE[iisver](../../../../includes/iisver-md.md)] einzurichten. Das Verzeichnis ServiceModelSamples sollte jetzt als [!INCLUDE[iisver](../../../../includes/iisver-md.md)]-Anwendung angezeigt werden.  
+3. Nachdem die Lösung erstellt wurde, führen Sie Setup.bat aus, um die ServiceModelSamples-Anwendung in IIS 7.0 einzurichten. Das Verzeichnis ServiceModelSamples sollte jetzt als IIS 7.0-Anwendung angezeigt werden.  
   
 4. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

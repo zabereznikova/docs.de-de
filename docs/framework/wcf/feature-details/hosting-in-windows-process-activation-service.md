@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402350"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486638"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
 Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Die WAS-Prozessmodell generalisiert das IIS 6.0-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird ein WCF-Diensten für die Verwendung von HTTP- und nicht-HTTP-Protokolle, z. B. Net.TCP, in einer hostumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem bestimmten Computer hosten.  
@@ -25,10 +25,7 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
 - Zentralisierte Anwendungskonfiguration und -verwaltung.  
   
 - Ermöglicht Anwendungen, die Vorteile des IIS-Prozessmodells zu nutzen, ohne dass der Bereitstellungsaufwand einer vollständigen IIS-Installation erforderlich wäre.  
-  
- Weitere Informationen zu WAS-Funktionen, finden Sie unter [IIS 7.0 Beta: IIS 7.0 Web Administration](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
-  
- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) arbeitet mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] und Windows Process Activation Service (WAS) eine vielseitige anwendungshostingumgebung für NET4 WCF- und WF-Dienste bereitstellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=196494) und [AppFabric-Hostingkonzepte](https://go.microsoft.com/fwlink/?LinkId=196495).  
+[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) arbeitet mit IIS 7.0 und Windows Process Activation Service (WAS), um eine vielseitige anwendungshostingumgebung für NET4 WCF- und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=196494) und [AppFabric-Hostingkonzepte](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elemente des WAS-Adressierungsmodells  
  Anwendungen besitzen Uniform Resource Identifier (URI)-Adressen. Diese stellen die Codeeinheiten dar, deren Lebensdauer und Ausführungsumgebung vom Server verwaltet werden. Eine einzelne WAS-Serverinstanz kann viele verschiedene Anwendungen beherbergen. Server organisieren, Anwendungen in Gruppen, genannt *Websites*. Innerhalb einer Site sind die Anwendungen entsprechend der Struktur der URIs, die als ihre externen Adressen dienen, hierarchisch angeordnet.  

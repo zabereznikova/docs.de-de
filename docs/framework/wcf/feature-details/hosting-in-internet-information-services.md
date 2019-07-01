@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3940d8436ba5441d4e884879213a7a782214cb05
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402187"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486751"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hosten in Internetinformationsdiensten
 Eine Möglichkeit zum Hosten von Windows Communication Foundation (WCF)-Diensten ist innerhalb einer Anwendung (Internet Information Services, IIS). Dieses Hostmodell ist ähnlich dem Modell, die von ASP.NET und Webdienste für ASP.NET Web Services (ASMX) verwendet.  
@@ -23,7 +23,7 @@ Eine Möglichkeit zum Hosten von Windows Communication Foundation (WCF)-Diensten
   
 - IIS&#160;7.0 unter [!INCLUDE[wv](../../../../includes/wv-md.md)] und [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0 bietet dasselbe erweiterte Prozessmodell wie IIS 6.0, verwendet jedoch den Windows Process Activation Service (WAS) zum Aktivieren und die Netzwerkkommunikation über andere Protokolle als HTTP zu ermöglichen. Diese Umgebung ist geeignet für die Entwicklung von WCF-Dienste, die über eines der von WCF (einschließlich HTTP-, net.tcp, net.pipe und net.msmq) unterstützten Netzwerkprotokolle kommunizieren. Weitere Informationen zu WAS, finden Sie unter [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) arbeitet mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] und Windows Process Activation Service (WAS) eine vielseitige anwendungshostingumgebung für NET4 WCF- und WF-Dienste bereitstellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=196494) und [AppFabric-Hostingkonzepte](https://go.microsoft.com/fwlink/?LinkId=196495).  
+- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) arbeitet mit IIS 7.0 und Windows Process Activation Service (WAS), um eine vielseitige anwendungshostingumgebung für NET4 WCF- und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=196494) und [AppFabric-Hostingkonzepte](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
 ## <a name="benefits-of-iis-hosting"></a>Vorteile des IIS-Hosting  
  WCF-Dienste in IIS-Hosting hat mehrere Vorteile:  
