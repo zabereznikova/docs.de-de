@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583127"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398085"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csharp/language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../../csharp/language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
@@ -20,7 +20,7 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
   
 - Die Basisklasse muss als [virtual](../../../csharp/language-reference/keywords/virtual.md) definiert werden.  
   
-- Wenn der Methode in der abgeleiteten Klasse nicht die Schlüsselwörter [new](../../../csharp/language-reference/keywords/new.md) oder [override](../../../csharp/language-reference/keywords/override.md) vorangestellt sind, gibt der Compiler eine Warnung aus, und die Methode verhält sich, als ob das Schlüsselwort `new` vorhanden wäre.  
+- Wenn der Methode in der abgeleiteten Klasse nicht die Schlüsselwörter [new](../../../csharp/language-reference/keywords/new-modifier.md) oder [override](../../../csharp/language-reference/keywords/override.md) vorangestellt sind, gibt der Compiler eine Warnung aus, und die Methode verhält sich, als ob das Schlüsselwort `new` vorhanden wäre.  
   
 - Wenn der Methode in der abgeleiteten Klasse das Schlüsselwort `new` vorangestellt ist, wird die Methode als unabhängig von der Methode in der Basisklasse definiert.  
   

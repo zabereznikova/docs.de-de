@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0139f2000c1bc2c5a13a3a542164201e73f0fb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514129"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424213"
 ---
 # <a name="float-c-reference"></a>float (C#-Referenz)
 
@@ -56,7 +56,7 @@ Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre 
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel werden ein [int](int.md)-, ein [short](short.md) und ein `float`-Datentyp in einem mathematischen Ausdruck verwendet, der ein `float`-Ergebnis aufweist. (Beachten Sie, dass `float` ein Alias für den Typ <xref:System.Single?displayProperty=nameWithType> ist.) Beachten Sie auch, dass es in diesem Ausdruck keine [Double-Datentypen](double.md) gibt.
+Im folgenden Beispiel werden ein [int](../builtin-types/integral-numeric-types.md)-, ein [short](../builtin-types/integral-numeric-types.md) und ein `float`-Datentyp in einem mathematischen Ausdruck verwendet, der ein `float`-Ergebnis aufweist. (Beachten Sie, dass `float` ein Alias für den Typ <xref:System.Single?displayProperty=nameWithType> ist.) Beachten Sie auch, dass es in diesem Ausdruck keine [Double-Datentypen](double.md) gibt.
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
@@ -71,7 +71,7 @@ Im folgenden Beispiel werden ein [int](int.md)-, ein [short](short.md) und ein `
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)
 - [C#-Schlüsselwörter](index.md)
-- [Tabelle ganzzahliger Typen](integral-types-table.md)
+- [Integrale Typen](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabelle integrierter Typen](built-in-types-table.md)
 - [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)
 - [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)

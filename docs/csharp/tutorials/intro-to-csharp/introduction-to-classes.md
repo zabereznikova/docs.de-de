@@ -3,12 +3,12 @@ title: Klassen und Objekte – Tutorial zur Einführung in C#
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204781"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397827"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Erkunden der objektorientierten Programmierung mit Klassen und Objekten
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/keywords/new.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in ***program.cs*** mit der folgenden Zeile (ersetzen Sie `<name>` durch Ihren Namen):
+Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in ***program.cs*** mit der folgenden Zeile (ersetzen Sie `<name>` durch Ihren Namen):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);

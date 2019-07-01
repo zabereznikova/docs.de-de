@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1b2aae49fbea138646b5f325919246238b2401ae
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674080"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398358"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Übergeben von Verweistypparametern (C#-Programmierhandbuch)
 Eine Variable eines [Verweistyps](../../../csharp/language-reference/keywords/reference-types.md) enthält direkt keine Daten. Sie enthält einen Verweis auf die Daten. Wenn Sie einen Verweistypparameter nach Wert übergeben, ist es möglich, die Daten zu ändern, die zu dem Objekt gehören, auf das verwiesen wird, z.B. den Wert eines Klassenmembers. Sie können jedoch nicht den Wert des Verweises selbst ändern.Zum Beispiel. können Sie nicht mit dem gleichen Verweis eines neuen Objekts Arbeitsspeicher zuweisen und ihn außerhalb der Methode beibehalten. Dazu müssen Sie den Parameter mit den Schlüsselwörtern [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) übergeben. Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.  
@@ -21,7 +21,7 @@ Eine Variable eines [Verweistyps](../../../csharp/language-reference/keywords/re
   
  [!code-csharp[csProgGuideParameters#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#7)]  
   
- Im vorherigen Beispiel, wurde das Verweistyp-Array `arr` ohne den `ref`-Parameter an die Methode übergeben. In diesem Fall wird eine Kopie des Verweises, die auf `arr` zeigt, an die Methode übergeben. Die Ausgabe zeigt, dass die Methode den Inhalt eines Arrayelements ändern kann, in diesem Fall von `1` in `888`. Durch das Zuweisen eines neuen Teils des Arbeitsspeichers mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) innerhalb der `Change`-Methode verweist die Variable `pArray` jedoch auf ein neues Array. Alle nachfolgenden Änderungen wirken sich daher nicht auf das ursprüngliche Array `arr` aus, das in `Main` erstellt wird. Tatsächlich werden in diesem Beispiel zwei Arrays erstellt, eines in der `Main`, und das andere in der `Change`-Methode.  
+ Im vorherigen Beispiel, wurde das Verweistyp-Array `arr` ohne den `ref`-Parameter an die Methode übergeben. In diesem Fall wird eine Kopie des Verweises, die auf `arr` zeigt, an die Methode übergeben. Die Ausgabe zeigt, dass die Methode den Inhalt eines Arrayelements ändern kann, in diesem Fall von `1` in `888`. Durch das Zuweisen eines neuen Teils des Arbeitsspeichers mithilfe des Operators [new](../../../csharp/language-reference/operators/new-operator.md) innerhalb der `Change`-Methode verweist die Variable `pArray` jedoch auf ein neues Array. Alle nachfolgenden Änderungen wirken sich daher nicht auf das ursprüngliche Array `arr` aus, das in `Main` erstellt wird. Tatsächlich werden in diesem Beispiel zwei Arrays erstellt, eines in der `Main`, und das andere in der `Change`-Methode.  
   
 ## <a name="passing-reference-types-by-reference"></a>Übergeben von Verweistypen nach Verweis  
  Das folgende Beispiel entspricht dem vorherigen, mit dem Unterschied, dass dem Methodenheader und -aufruf das `ref`-Schlüsselwort hinzugefügt wird. Alle Änderungen in der Methode haben Auswirkungen auf die ursprüngliche Variable im aufrufenden Programm.  

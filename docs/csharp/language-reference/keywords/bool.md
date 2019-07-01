@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a6aae34433ee6f5d141d95f0c434af1825e9bf4b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334171"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424437"
 ---
 # <a name="bool-c-reference"></a>bool (C#-Referenz)
 
@@ -55,7 +55,7 @@ In diesem Beispiel geben Sie ein Zeichen über die Tastatur ein, und das Program
 - [C#-Referenz](../../../csharp/language-reference/index.md)
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Integrale Typen](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)
 - [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

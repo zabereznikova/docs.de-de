@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: e34350e8f431b6ece95186147762d1954b5dd10f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601694"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423669"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
 
@@ -21,7 +21,7 @@ Ein Enumerationstyp (auch Enumeration oder enum genannt) bietet eine effiziente 
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-Standardmäßig ist [int](../../csharp/language-reference/keywords/int.md) der zugrunde liegende Typ jedes Elements in enum. Sie können mithilfe eines Doppelpunktes einen anderen ganzzahligen numerischen Typ angeben, wie im vorherigen Beispiel gezeigt. Eine vollständige Liste der möglichen Typen finden Sie unter [enum (C#-Referenz)](../../csharp/language-reference/keywords/enum.md).
+Standardmäßig ist [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md) der zugrunde liegende Typ jedes Elements in enum. Sie können mithilfe eines Doppelpunktes einen anderen ganzzahligen numerischen Typ angeben, wie im vorherigen Beispiel gezeigt. Eine vollständige Liste der möglichen Typen finden Sie unter [enum (C#-Referenz)](../../csharp/language-reference/keywords/enum.md).
 
 Sie können die zugrunde liegenden numerischen Werte durch Umwandeln in den zugrunde liegenden Typ, wie im folgenden Beispiel gezeigt, überprüfen.
 

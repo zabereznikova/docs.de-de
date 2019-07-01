@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583063"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398370"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -54,7 +54,7 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
  Mithilfe virtueller Methoden und Eigenschaften können abgeleitete Klassen eine Basisklasse erweitern, ohne die Basisklassenimplementierung einer Methode verwenden zu müssen. Weitere Informationen finden Sie unter [Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Eine Schnittstelle bietet eine weitere Möglichkeit zur Definition einer Methode bzw. einer Gruppe von Methoden, deren Implementierung von abgeleiteten Klassen übernommen wird. Weitere Informationen finden Sie unter [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Ausblenden von Basisklassenmembern für neue Member  
- Wenn Sie möchten, dass der abgeleitete Member denselben Namen wie ein Member in einer Basisklasse aufweist, jedoch nicht möchten, dass dieser an dem virtuellen Aufruf beteiligt ist, können Sie das [new](../../../csharp/language-reference/keywords/new.md)-Schlüsselwort verwenden. Das `new`-Schlüsselwort wird dem Rückgabetyp eines Klassenmembers vorangestellt, der ersetzt wird. Der folgende Code veranschaulicht dies:  
+ Wenn Sie möchten, dass der abgeleitete Member denselben Namen wie ein Member in einer Basisklasse aufweist, jedoch nicht möchten, dass dieser an dem virtuellen Aufruf beteiligt ist, können Sie das [new](../../../csharp/language-reference/keywords/new-modifier.md)-Schlüsselwort verwenden. Das `new`-Schlüsselwort wird dem Rückgabetyp eines Klassenmembers vorangestellt, der ersetzt wird. Der folgende Code veranschaulicht dies:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   

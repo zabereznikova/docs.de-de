@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422118"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424029"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
@@ -40,11 +40,11 @@ Jeder Werttyp hat einen impliziten parameterlosen Konstruktor, der den Standardw
 
 Die *einfachen Typen* sind eine Reihe von vordefinierten Strukturtypen, die von C# bereitgestellt werden, und umfassen die folgenden Typen:
 
-- [Ganzzahltypen](integral-types-table.md): ganzzahlige numerische Typen und der [char](char.md)-Typ
+- [Ganzzahltypen](../builtin-types/integral-numeric-types.md): ganzzahlige numerische Typen und der [char](char.md)-Typ
 - [Gleitkommatypen](floating-point-types-table.md)
 - [bool](bool.md)
 
-Die einfachen Typen werden durch Schlüsselwörter identifiziert, aber diese Schlüsselwörter sind einfach Aliase für vordefinierte Strukturtypen im Namespace <xref:System>. [int](int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](built-in-types-table.md).
+Die einfachen Typen werden durch Schlüsselwörter identifiziert, aber diese Schlüsselwörter sind einfach Aliase für vordefinierte Strukturtypen im Namespace <xref:System>. [int](../builtin-types/integral-numeric-types.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](built-in-types-table.md).
 
 Die einfachen Typen unterscheiden sich von anderen Strukturtypen dadurch, dass sie bestimmte zusätzliche Vorgänge ermöglichen:
 
@@ -88,9 +88,9 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Durch die Verwendung des Operators [new](new.md) wird der parameterlose Konstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der parameterlose Konstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
+Durch die Verwendung des Operators [new](../operators/new-operator.md) wird der parameterlose Konstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der parameterlose Konstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
 
-Verwenden Sie bei benutzerdefinierten Typen [new](new.md) zum Aufrufen des parameterlosen Konstruktors. Die folgende Anweisung ruft beispielsweise den parameterlosen Konstruktor der `Point`-Struktur auf:
+Verwenden Sie bei benutzerdefinierten Typen [new](../operators/new-operator.md) zum Aufrufen des parameterlosen Konstruktors. Die folgende Anweisung ruft beispielsweise den parameterlosen Konstruktor der `Point`-Struktur auf:
 
 ```csharp
 Point p = new Point(); // Invoke parameterless constructor for the struct.
@@ -98,7 +98,7 @@ Point p = new Point(); // Invoke parameterless constructor for the struct.
 
 Nach diesem Aufruf gilt die Struktur als definitiv zugewiesen. Das bedeutet, dass alle ihre Member mit ihren Standardwerten initialisiert werden.
 
-Weitere Informationen zum `new`-Operator finden Sie unter [neu](new.md).
+Weitere Informationen zum `new`-Operator finden Sie unter [neu](../operators/new-operator.md).
 
 Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md).
 

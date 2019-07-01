@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615181"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425539"
 ---
 # <a name="framework-libraries"></a>Frameworkbibliotheken
 
@@ -28,11 +28,11 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 .NET umfasst eine Reihe primitiver Typen, die (in unterschiedlichem Maß) in allen Programmen verwendet werden. Diese Typen enthalten Daten, beispielsweise Zahlen, Zeichenfolgen, Bytes und beliebige Objekte. Die Sprache C# enthält Schlüsselwörter für diese Typen. Unten finden Sie einen Beispielsatz dieser Typen, zusammen mit den entsprechenden C#-Schlüsselwörtern.
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): Die ultimative Basisklasse im CLR-Typsystem. Sie bildet den Stamm der Typhierarchie.
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen <xref:System.UInt16>-Typ ohne Vorzeichen.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): Ein 32-Bit-Ganzzahltyp mit Vorzeichen Es gibt auch einen [UInt32](../csharp/language-reference/keywords/uint.md)-Typ ohne Vorzeichen.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): Ein ganzzahliger 16-Bit-Typ mit Vorzeichen. Es gibt auch einen <xref:System.UInt16>-Typ ohne Vorzeichen.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): Ein 32-Bit-Ganzzahltyp mit Vorzeichen Es gibt auch einen [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md)-Typ ohne Vorzeichen.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): Ein 32-Bit-Gleitkommatyp
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): Ein 128-Bit-Dezimaltyp
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte des Arbeitsspeichers darstellt
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): Ein 8-Bit-Ganzzahltyp ohne Vorzeichen, der ein Byte des Arbeitsspeichers darstellt
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): Ein boolescher Typ, der `true` oder `false` darstellt
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): Ein numerischer 16-Bit-Typ, der ein Unicodezeichen darstellt
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): Stellt eine Reihe von Zeichen dar. Unterscheidet sich von `char[]`, ermöglicht aber die Indizierung für jedes einzelne `char` in der `string`.

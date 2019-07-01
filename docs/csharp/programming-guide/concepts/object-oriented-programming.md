@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2adb1ac24aa625c89fcafe074fe65189aa3767c7
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8bf02cbfca30d6dfc29c4e5e6c30a5013931e71b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880709"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398065"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -270,7 +270,7 @@ SampleClass sampleObject = new SampleClass
 
 Weitere Informationen finden Sie unter:
 
-- [new-Operator](../../../csharp/language-reference/keywords/new-operator.md)
+- [new-Operator](../../../csharp/language-reference/operators/new-operator.md)
 
 - [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 

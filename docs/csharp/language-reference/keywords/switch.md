@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481456"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424127"
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
 
@@ -46,7 +46,7 @@ In C# 6 und früher muss der Vergleichsausdruck ein Ausdruck sein, der einen Wer
 - Ein [char](char.md)
 - Eine [Zeichenfolge](string.md)
 - Ein [bool](bool.md)
-- Ein ganzzahliger Wert wie [int](int.md) oder [long](long.md)
+- Ein ganzzahliger Wert wie [int](../builtin-types/integral-numeric-types.md) oder [long](../builtin-types/integral-numeric-types.md)
 - Ein [Enumerations](enum.md)wert
 
 Ab C# 7.0 kann der Vergleichsausdruck jeder Ausdruck sein, der nicht NULL ist.
@@ -121,7 +121,7 @@ Das Konstantenmuster testet, ob der Vergleichsausdruck einer festgelegten Konsta
 wobei *constant* der zu testende Wert ist. *constant* kann eine der folgenden konstanten Ausdrücke sein:
 
 - Ein [bool](bool.md)-Literal, entweder `true` oder `false`
-- Alle ganzzahligen Konstanten, z.B. [int](int.md), [lang](long.md) oder ein [Byte](byte.md)
+- Alle ganzzahligen Konstanten, z.B. [int](../builtin-types/integral-numeric-types.md), [lang](../builtin-types/integral-numeric-types.md) oder ein [Byte](../builtin-types/integral-numeric-types.md)
 - Der Name einer deklarierten `const`-Variablen
 - Eine Enumerationskonstante.
 - Ein [char](char.md)-Literal

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0d54101badab297457e8d8ecf277898fc6908779
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481054"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398384"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 
@@ -105,7 +105,7 @@ Es sind mehrere Regeln zu beachten, wenn Sie partielle Klassendefinitionen verwe
 
   - Basisklasse
 
-  - [new](../../../csharp/language-reference/keywords/new.md)-Modifizierer (geschachtelte Teile)
+  - [new](../../../csharp/language-reference/keywords/new-modifier.md)-Modifizierer (geschachtelte Teile)
 
   - Generische Einschränkungen
 
@@ -113,7 +113,7 @@ Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](../.
 
 ## <a name="example-1"></a>Beispiel 1
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
 Im folgenden Beispiel werden die Felder und der Konstruktor der Klasse (`Coords`) in einer partiellen Klassendefinition deklariert, und der Member (`PrintCoords`) wird in einer anderen partiellen Klassendefinition deklariert.
 
@@ -123,7 +123,7 @@ Im folgenden Beispiel werden die Felder und der Konstruktor der Klasse (`Coords`
 
 ## <a name="example-2"></a>Beispiel 2
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
 Im folgenden Beispiel wird gezeigt, dass Sie auch partielle Strukturen und Schnittstellen entwickeln können.
 
