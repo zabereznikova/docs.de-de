@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025134"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401468"
 ---
 # <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
 
@@ -51,9 +51,9 @@ Hierbei handelt es sich um die höchsten Rangfolgenoperatoren.
 
 [x--](arithmetic-operators.md#decrement-operator---) – Postfixdekrement. Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins kleiner ist (für gewöhnlich wird die Ganzzahl 1 subtrahiert).
 
-[new](../keywords/new-operator.md) – Typinstanziierung.
+[new](new-operator.md) – Typinstanziierung.
 
-[typeof](../keywords/typeof.md): Gibt das den Operanden repräsentierende Objekt <xref:System.Type> zurück.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator): Gibt das den Operanden repräsentierende Objekt <xref:System.Type> zurück.
 
 [checked](../keywords/checked.md) – Aktiviert die Überlaufprüfung für Ganzzahloperationen.
 
@@ -87,7 +87,7 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 [--x](arithmetic-operators.md#decrement-operator---) – Präfixdekrement. Gibt den Wert von x nach dem Aktualisieren des Speicherorts mit dem Wert von x zurück, der eins kleiner ist (für gewöhnlich wird die ganze Zahl 1 subtrahiert).
 
-[(T)x](invocation-operator.md) – Typumwandlung.
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – Typumwandlung.
 
 [await](../keywords/await.md) – Wartet auf `Task`.
 
@@ -137,9 +137,9 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-) – Ist größer gleich.
 
-[is](../keywords/is.md) – Typkompatibilität. Gibt TRUE zurück, wenn der ausgewertete linke Operand in den im rechten Operanden (ein statischer Typ) angegebenen Typ umgewandelt werden kann.
+[is](type-testing-and-conversion-operators.md#is-operator) – Typkompatibilität. Gibt `true` zurück, wenn der ausgewertete linke Operand in den im rechten Operanden angegebenen Typ umgewandelt werden kann.
 
-[as](../keywords/as.md) – Typkonvertierung. Gibt die Umwandlung des linken Operanden zum durch den rechten Operanden (ein statischer Typ) angegebenen Typ zurück, `as` gibt jedoch `null` zurück, wobei `(T)x` eine Auslösung ausgeben würde.
+[as](type-testing-and-conversion-operators.md#as-operator) – Typkonvertierung. Gibt die Umwandlung des linken Operanden zum durch den rechten Operanden angegebenen Typ zurück, `as` gibt jedoch `null` zurück, wobei `(T)x` eine Auslösung ausgeben würde.
 
 ## <a name="equality-operators"></a>Gleichheitsoperatoren
 
@@ -171,13 +171,13 @@ Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine g
 
 Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – logisches AND. Wenn der erste Operand FALSE ist, wertet C# den zweiten Operand nicht aus.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – logisches AND. Wenn `x` als `false` ausgewertet wird, wird `y` nicht ausgewertet.
 
 ## <a name="conditional-or-operator"></a>Bedingter OR-Operator
 
 Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – Logisches OR. Wenn der erste Operand TRUE ist, wertet C# den zweiten Operand nicht aus.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – Logisches OR. Wenn `x` als `true` ausgewertet wird, wird `y` nicht ausgewertet.
 
 ## <a name="null-coalescing-operator"></a>Nullzusammensetzungsoperator
 
