@@ -2,12 +2,12 @@
 title: IdentityModel-Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998516"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486665"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel-Ausnahmen
 In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generiert werden.  
@@ -26,7 +26,7 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |SAMLUnableToLoadAdvice|Fehler beim Laden der \<SAML: Advice > Element.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|Das für eine SamlAuthenticationStatement gelesene Attribut "AuthenticationMethod" fehlt oder hat die Länge 0 (null).|  
 |UnsupportedTransformAlgorithm|Nicht unterstützter Transformieren- oder Kanonisierungsalgorithmus.|  
-|SAMLAudienceRestrictionShouldHaveOneAudience| SamlAudienceRestrictionCondition muss wenigstens eine Zielgruppe (URI) enthalten.|  
+|SAMLAudienceRestrictionShouldHaveOneAudience|SamlAudienceRestrictionCondition muss wenigstens eine Zielgruppe (URI) enthalten.|  
 |SAMLEvidenceShouldHaveOneAssertion|SamlEvidence muss entweder durch ID oder Verweis auf wenigstens eine SamlAssertion verweisen.|  
 |SAMLAudienceRestrictionInvalidAudienceValueOnRead|Der gelesenen SamlAudienceRestrictionCondition fehlt ein Wert im Element "Audience".|  
 |X509ChainBuildFail|Die Kettenerstellung dieses bestimmten X.509-Zertifikats ist fehlgeschlagen. Das Zertifikat, das verwendet wurde, besitzt eine Vertrauenswürdigkeitskette, die nicht überprüft werden kann. Ersetzen Sie das Zertifikat, oder ändern Sie certificateValidationMode.|  
@@ -100,11 +100,11 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die vom IdentityModel generie
 |SAMLAssertionMissingMajorVersionAttributeOnRead|Die für das SamlAssertion gelesene "MajorVersion" fehlt oder hat die Länge 0 (null).|  
 |SamlAttributeClaimRightShouldBePossessProperty|Für diesen SamlAttribute-Konstruktor ist es erforderlich, dass "Right of the Claim" über den Wert System.IdentityModel.Claims.Rights.PossessProperty verfügt.|  
 |AuthorizationPolicyEvaluated|Die Richtlinie mit dieser bestimmten ID wurde ausgewertet.|  
-|SAMLUnableToLoadConditions|Die \<SAML: Conditions > Element konnte nicht geladen.|  
+|SAMLUnableToLoadConditions<!-- the misspelling here is deliberate. -->|Die \<SAML: Conditions > Element konnte nicht geladen.|  
 |AESKeyLengthNotSupported|Dieser bestimmte Bitschlüssel wird nicht unterstützt. Nur 128, 192 und 256 Bitschlüssel werden unterstützt.|  
 |UserNameCannotBeEmpty|Der Benutzername darf nicht leer sein.|  
 |AlgorithmAndPublicKeyMisMatch|Der angegebene Algorithmus und der öffentliche Schlüssel passen nicht zusammen.|  
-|SAMLUnableToLoadCondition|Die \<SAML: Conditions > Element konnte nicht geladen.|  
+|SAMLUnableToLoadCondition<!-- the misspelling here is deliberate. -->|Die \<SAML: Conditions > Element konnte nicht geladen.|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials wurde nicht auf SamlAssertion festgelegt. SamlAssertions müssen signiert werden; legen Sie gültige SigningCredentials auf SamlAssertion fest, um fortzufahren.|  
 |SspiPayloadNotEncrypted|Die Binärdaten wurden nicht mit dem SSPI-Sicherheitskontext verschlüsselt.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|Das SamlAuthorizationDecisionStatement, das gelesen wird, enthält keine SamlAction.|  
