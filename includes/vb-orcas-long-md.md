@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 18029d8f7a35dc87a5cab0c80d28995131445d65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 228178e8a8218a3778cb3acc2b14c6e962a802d8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61837278"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "67504712"
 ---
-<span data-ttu-id="092ad-101">Visual Basic 2008</span><span class="sxs-lookup"><span data-stu-id="092ad-101">Visual Basic 2008</span></span>
+<span data-ttu-id="35a94-101">Visual Basic 2008</span><span class="sxs-lookup"><span data-stu-id="35a94-101">Visual Basic 2008</span></span>
