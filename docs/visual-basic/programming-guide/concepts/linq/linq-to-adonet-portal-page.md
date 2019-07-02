@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET (Portalseite)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: HT
+ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487813"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506004"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Portalseite)
 LINQ to ADO.NET können Sie jedes aufzählbare Objekt in ADO.NET mithilfe von Abfragen die [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Programmiermodell.  
@@ -15,12 +15,12 @@ LINQ to ADO.NET können Sie jedes aufzählbare Objekt in ADO.NET mithilfe von Ab
 > [!NOTE]
 >  Die LINQ to ADO.NET-Dokumentation befindet sich im Abschnitt ADO.NET .NET Framework SDK: [LINQ und ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
- Es gibt drei separate ADO.NET-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]-Technologien: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] und [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] ermöglicht umfangreichere, optimierte Abfragen der <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ermöglicht es Ihnen, SQL Server-Datenbankschemas direkt abzufragen und [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] können Sie Abfragen eines Entity Data Model.  
+ Es gibt drei separate ADO.NET- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Technologien: LINQ to DataSet [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], und [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. LINQ to DataSet bietet umfangreichere, optimierte Abfragen der <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ermöglicht es Ihnen, SQL Server-Datenbankschemas direkt abzufragen und [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] können Sie Abfragen eines Entity Data Model.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> ist eine der am häufigsten verwendeten Komponenten in ADO.NET und ein Schlüsselelement des getrennten Programmiermodells, auf dem ADO.NET aufgebaut ist. Trotz seiner Bedeutung sind die Abfragefunktionen des <xref:System.Data.DataSet> begrenzt.  
   
- Mit [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] können Sie umfangreichere Abfragefunktionen in <xref:System.Data.DataSet> integrieren, indem Sie die gleiche Abfragefunktionalität verwenden, die für viele andere Datenquellen verfügbar ist.  
+ LINQ to DataSet können Sie umfangreichere Abfragefunktionen in <xref:System.Data.DataSet> mit die gleiche Abfragefunktionalität, die für viele andere Datenquellen verfügbar ist.  
   
  Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).  
   

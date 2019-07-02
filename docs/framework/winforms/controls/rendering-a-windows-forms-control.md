@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614674"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506182"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Wiedergeben eines Windows Forms-Steuerelements
-Rendering bezieht sich auf den Prozess der Erstellung einer visuellen Darstellung auf dem Bildschirm des Benutzers. Windows Forms verwendet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (die neue Windows-Grafikbibliothek) für das Rendering. Die verwalteten Klassen, die Zugriff auf ermöglichen [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] befinden sich in der <xref:System.Drawing?displayProperty=nameWithType> Namespace und dessen untergeordneten Namespaces.  
+Rendering bezieht sich auf den Prozess der Erstellung einer visuellen Darstellung auf dem Bildschirm des Benutzers. Windows Forms verwendet GDI (die neue Windows-Grafikbibliothek) für das Rendern. Die verwalteten Klassen, die Zugriff auf das GDI befinden sich in der <xref:System.Drawing?displayProperty=nameWithType> Namespace und dessen untergeordneten Namespaces.  
   
  Die folgenden Elemente sind beim Rendern von Steuerelementen beteiligt:  
   
 - Zeichnen von der Basisklasse bereitgestellte Funktionalität <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
-- Die Hauptkomponenten der [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Grafikbibliothek.  
+- Die wichtigsten Elemente die GDI-Grafikbibliothek.  
   
 - Die Geometrie den Zeichnungsbereich.  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> ist eine verwaltete Klasse, die Zeichnen-Funktionalität kapselt, wie beschrieben in der Diskussion [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] weiter unten in diesem Thema. Der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ist eine Instanz der <xref:System.Drawing.Rectangle> Struktur und definiert den verfügbaren Bereich, in dem ein Steuerelement zeichnen kann. Der Entwickler eines Steuerelements kann berechnen, die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> mithilfe der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaft eines Steuerelements, wie bei der Erläuterung der Geometry-Instanz weiter unten in diesem Thema beschrieben.  
+ <xref:System.Drawing.Graphics> ist eine verwaltete Klasse, die Zeichnen-Funktionalität kapselt, wie bei der Erläuterung der GDI weiter unten in diesem Thema beschrieben. Der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> ist eine Instanz der <xref:System.Drawing.Rectangle> Struktur und definiert den verfügbaren Bereich, in dem ein Steuerelement zeichnen kann. Der Entwickler eines Steuerelements kann berechnen, die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> mithilfe der <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaft eines Steuerelements, wie bei der Erläuterung der Geometry-Instanz weiter unten in diesem Thema beschrieben.  
   
  Ein Steuerelement muss Renderinglogik bereitstellen, durch Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, die es erbt <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> erhält Zugriff auf ein Graphics-Objekt und ein Rechteck für über das Zeichnen der <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> und <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaften der <xref:System.Windows.Forms.PaintEventArgs> -Instanz übergeben wird.  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  Während <xref:System.Windows.Forms.Control.OnPaintBackground%2A> verfügt über ein ereignisähnliches Terminologie und nimmt des gleichen Arguments wie die `OnPaint` Methode <xref:System.Windows.Forms.Control.OnPaintBackground%2A> ist keine Ereignismethode "true"-. Es gibt keine `PaintBackground` Ereignis und <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Ereignisdelegaten nicht aufgerufen. Beim Überschreiben der <xref:System.Windows.Forms.Control.OnPaintBackground%2A> -Methode eine abgeleitete Klasse ist nicht erforderlich, zum Aufrufen der <xref:System.Windows.Forms.Control.OnPaintBackground%2A> Methode ihrer Basisklasse.  
   
 ## <a name="gdi-basics"></a>Grundlagen von GDI +  
- Die <xref:System.Drawing.Graphics> Klasse enthält Methoden zum Zeichnen verschiedener Formen wie z. B. Kreise, Dreiecke, Ellipsen und Bögen sowie Methoden zum Anzeigen von Text. Die <xref:System.Drawing?displayProperty=nameWithType> und dessen untergeordnete Namespaces enthalten Klassen, die Grafikelemente wie z. B. Formen (Kreise, Rechtecke, Bögen und andere), Farben, Schriftarten, Pinseln und So weiter zu kapseln. Weitere Informationen zu [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], finden Sie unter [mithilfe von verwalteten Grafikklassen](../advanced/using-managed-graphics-classes.md). Die Grundlagen der [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Außerdem wird beschrieben, der [Vorgehensweise: Erstellen ein Windows Forms-Steuerelements, die Status anzeigt](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Die <xref:System.Drawing.Graphics> Klasse enthält Methoden zum Zeichnen verschiedener Formen wie z. B. Kreise, Dreiecke, Ellipsen und Bögen sowie Methoden zum Anzeigen von Text. Die <xref:System.Drawing?displayProperty=nameWithType> und dessen untergeordnete Namespaces enthalten Klassen, die Grafikelemente wie z. B. Formen (Kreise, Rechtecke, Bögen und andere), Farben, Schriftarten, Pinseln und So weiter zu kapseln. Weitere Informationen über GDI finden Sie unter [mithilfe von verwalteten Grafikklassen](../advanced/using-managed-graphics-classes.md). Die Grundlagen von GDI Außerdem wird beschrieben, der [Vorgehensweise: Erstellen ein Windows Forms-Steuerelements, die Status anzeigt](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="geometry-of-the-drawing-region"></a>Die Geometrie des Zeichenbereichs  
  Die <xref:System.Windows.Forms.Control.ClientRectangle%2A> Eigenschaft eines Steuerelements gibt an, der rechteckige Bereich, der für das Steuerelement auf dem Bildschirm des Benutzers, während die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaft <xref:System.Windows.Forms.PaintEventArgs> gibt an, der Bereich, der tatsächlich gezeichnet wird. (Denken Sie daran, dass zeichnen, in durchgeführt wird der <xref:System.Windows.Forms.Control.Paint> Ereignismethode, die akzeptiert eine <xref:System.Windows.Forms.PaintEventArgs> Instanz als Argument). Ein Steuerelement müssen möglicherweise nur einen Teil der verfügbare Bereich, gezeichnet werden soll, wie die Groß-/Kleinschreibung bei der ein kleiner Abschnitt der Steuerelements geändert wird. In diesen Fällen erhalten Entwickler eines Steuerelements muss das aktuelle Rechteck aus, um das Zeichnen und übergibt diese an berechnen <xref:System.Windows.Forms.Control.Invalidate%2A>. Die überladenen Version von <xref:System.Windows.Forms.Control.Invalidate%2A> , nehmen eine <xref:System.Drawing.Rectangle> oder <xref:System.Drawing.Region> als Argument verwenden, generieren die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Eigenschaft <xref:System.Windows.Forms.PaintEventArgs>.  

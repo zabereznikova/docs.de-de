@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583868"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504716"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formate hinweg. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  
   
  Eine [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrageoperation besteht aus drei Aktionen: Abrufen der Datenquelle(n), Erstellen der Abfrage und Ausführen der Abfrage.  
   
- Datenquellen, die die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren, können über [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] abgefragt werden. Aufrufen von <xref:System.Data.DataTableExtensions.AsEnumerable%2A> auf eine <xref:System.Data.DataTable> gibt ein Objekt, das die generische implementiert <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle, die als Datenquelle für dient [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfragen.  
+ Datenquellen, die die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren, können über [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] abgefragt werden. Aufrufen von <xref:System.Data.DataTableExtensions.AsEnumerable%2A> auf eine <xref:System.Data.DataTable> gibt ein Objekt, das die generische implementiert <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle, die als Datenquelle für LINQ to DataSet-Abfragen dient.  
   
  In der Abfrage geben Sie genau die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. In [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wird eine Abfrage in einer Variablen gespeichert. Wenn die Abfrage so eingerichtet ist, dass sie eine Sequenz von Werten zurückgibt, muss die Abfragevariable selbst ein aufzählbarer Typ sein. Diese Abfragevariable führt keine Aktion aus und gibt keine Daten zurück. Sie dient lediglich zur Speicherung der Abfrageinformationen. Nachdem Sie eine Abfrage erstellt haben, müssen Sie sie ausführen, damit Daten abgerufen werden.  
   
@@ -26,7 +26,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  Im Gegensatz zu zurückgestellten Abfragen, die eine Sequenz von Werten zurückgeben, werden Abfragen, die nur einen einzigen Wert zurückgeben (SINGLETON-Abfragen), sofort ausgeführt. Einige Beispiele für SINGLETON-Abfragen sind <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> und <xref:System.Linq.Enumerable.First%2A>. Die Ausführung dieser Abfragen erfolgt sofort, weil die Abfrageergebnisse für die Berechnung des SINGLETON-Ergebnisses benötigt werden. Um z. B. den Durchschnittswert der Abfrageergebnisse zu ermitteln, muss die Abfrage so ausgeführt werden, dass die Durchschnittsberechnungsfunktion über Eingabedaten verfügt, mit denen sie arbeiten kann. Zur Erzwingung der sofortigen Ausführung einer Abfrage, die keinen SINGLETON-Wert zurückgibt, können Sie die <xref:System.Linq.Enumerable.ToList%2A>-Methode oder die <xref:System.Linq.Enumerable.ToArray%2A>-Methode verwenden. Dieses Verfahren zur Erzwingung der sofortigen Abfrageausführung kann sinnvoll sein, wenn Sie die Ergebnisse einer Abfrage zwischenspeichern möchten.
   
 ## <a name="queries"></a>Abfragen  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfragen können in zwei verschiedenen Syntaxarten formuliert werden: Abfrageausdrucksyntax und mit der methodenbasierten Abfragesyntax.  
+ LINQ to DataSet-abfragen kann in zwei verschiedenen Syntaxarten formuliert werden: Abfrageausdrucksyntax und mit der methodenbasierten Abfragesyntax.  
   
 ### <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
  Abfrageausdrücke sind eine deklarative Abfragesyntax. Mit dieser Syntax kann der Entwickler Abfragen in einem SQL-ähnlichen Format in C# oder Visual Basic schreiben. Die Abfrageausdruckssyntax ermöglicht die Ausführung komplexer Filter-, Sortier- und Gruppiervorgänge mit minimalem Codeeinsatz. Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../csharp/linq/index.md#query-expression-overview) und [Grundlegende Abfrageoperationen (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
@@ -39,7 +39,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Methodenbasierte Abfragesyntax  
- Statt mit der Abfrageausdruckssyntax können [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfragen auch mit der methodenbasierten Abfragesyntax formuliert werden. Dabei handelt es sich um eine Abfolge direkter Methodenaufrufe der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatormethoden, wobei als Parameter Lambdaausdrücke übergeben werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Eine andere Möglichkeit, LINQ to DataSet-Abfragen formulieren, ist die Verwendung von methodenbasierten Abfragen. Dabei handelt es sich um eine Abfolge direkter Methodenaufrufe der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Operatormethoden, wobei als Parameter Lambdaausdrücke übergeben werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  In diesem Beispiel wird <xref:System.Linq.Enumerable.Select%2A> verwendet, um alle Zeilen aus der `Product`-Tabelle zurückzugeben und die Produktnamen anzuzeigen.  
   

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747458"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504893"
 ---
 # <a name="why-transformation-order-is-significant"></a>Bedeutung der Transformationsreihenfolge
 Ein einzelnes <xref:System.Drawing.Drawing2D.Matrix> Objekt kann eine einzelne Transformation oder eine Sequenz von Transformationen zu speichern. Letzteres ist eine zusammengesetzte Transformation aufgerufen. Die Matrix eine zusammengesetzte Transformation wird durch Multiplikation der Matrizen der einzelnen Transformationen abgerufen.  
   
 ## <a name="composite-transform-examples"></a>Beispiele für zusammengesetzte Transformationen  
- In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst zu drehen, skalieren und dann zu übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst übersetzen, drehen und anschließend skalieren. In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], zusammengesetzte Transformationen werden von links nach rechts erstellt. Wenn S, R und T Skalierung, Drehung und Übersetzung-Matrizen sind, klicken Sie dann das Produkt SRT (in dieser Reihenfolge) wird die Matrix der zusammengesetzten Transformation mit ersten Skalierung, klicken Sie dann dreht, und übersetzt. Die Matrix, die das Produkt unterscheidet SRT der Matrix, die das Produkt TRS.  
+ In eine zusammengesetzte Transformation ist die Reihenfolge der einzelnen Transformationen wichtig. Z. B. Wenn Sie zuerst zu drehen, skalieren und dann zu übersetzen, erhalten Sie ein anderes Ergebnis als wenn Sie zuerst übersetzen, drehen und anschließend skalieren. In GDI + werden zusammengesetzte Transformationen von links nach rechts erstellt. Wenn S, R und T Skalierung, Drehung und Übersetzung-Matrizen sind, klicken Sie dann das Produkt SRT (in dieser Reihenfolge) wird die Matrix der zusammengesetzten Transformation mit ersten Skalierung, klicken Sie dann dreht, und übersetzt. Die Matrix, die das Produkt unterscheidet SRT der Matrix, die das Produkt TRS.  
   
  Ein Grund, die Reihenfolge von Bedeutung ist besteht darin, dass Transformationen wie Drehung und Skalierung in Bezug auf den Ursprung des Koordinatensystems sind. Die Skalierung eines Objekts, das am ursprünglichen Speicherort zentriert ist, ergibt ein anderes Ergebnis als die Skalierung eines Objekts, das vom Ursprung weg verschoben wurde. Ebenso erstellt das Drehen eines Objekts, das am ursprünglichen Speicherort zentriert ist ein anderes Ergebnis als Drehen eines Objekts, das vom Ursprung weg verschoben wurde.  
   

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910701"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505992"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen von Visual Basic verwenden können, schreiben [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Abfrageausdrücken. Die exemplarische Vorgehensweise veranschaulicht das Erstellen von Abfragen in der Liste der Student-Objekten, wie Sie die Abfragen ausführen und zum Ändern. Die Abfragen enthalten mehrere Funktionen, einschließlich lokaler Typrückschluss, Objektinitialisierer und anonyme Typen.  
   
- Nach Abschluss dieser exemplarischen Vorgehensweise werden Sie bereit für die Beispiele und Dokumentation der jeweiligen auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Anbieter, die Sie interessiert sind. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] die folgenden Anbieter: [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Nach Abschluss dieser exemplarischen Vorgehensweise werden Sie bereit für die Beispiele und Dokumentation der jeweiligen auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Anbieter, die Sie interessiert sind. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] die folgenden Anbieter: [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet, und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Erstellen eines Projekts  
   

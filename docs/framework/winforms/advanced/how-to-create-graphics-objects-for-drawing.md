@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643362"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505504"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen
-Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und Bearbeiten von Bildern mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], müssen Sie erstellen eine <xref:System.Drawing.Graphics> Objekt. Die <xref:System.Drawing.Graphics> -Objekt stellt eine [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zeichenoberfläche und ist das Objekt, das zum Erstellen von Grafiken verwendet wird.  
+Bevor Sie Linien und Formen zeichnen, Rendern von Text oder anzeigen und Bearbeiten von Bildern mit GDI +, müssen Sie zum Erstellen einer <xref:System.Drawing.Graphics> Objekt. Die <xref:System.Drawing.Graphics> -Objekt stellt eine GDI + Zeichenoberfläche und ist das Objekt, das zum Erstellen von Grafiken verwendet wird.  
   
  Es gibt zwei Schritte bei der Arbeit mit Grafiken:  
   
@@ -33,11 +33,11 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
   
 - Erhalten Sie einen Verweis auf ein Graphics-Objekt als Teil der <xref:System.Windows.Forms.PaintEventArgs> in die <xref:System.Windows.Forms.Control.Paint> Ereignis eines Formulars oder Steuerelements. Dies ist in der Regel an, wie Sie einen Verweis auf ein Graphics-Objekt abrufen, beim von Zeichnungscode für ein Steuerelement zu erstellen. Auf ähnliche Weise können Sie ein Grafikobjekt auch abrufen, als Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs> bei der Verarbeitung der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignis für eine <xref:System.Drawing.Printing.PrintDocument>.  
   
-     - oder -   
+     - oder -  
   
 - Rufen Sie die <xref:System.Windows.Forms.Control.CreateGraphics%2A> Methode des Steuerelements oder Formulars zum Abrufen eines Verweises auf eine <xref:System.Drawing.Graphics> Objekt, das die Zeichenoberfläche des betreffenden Steuerelements oder Formulars darstellt. Verwenden Sie diese Methode, wenn Sie auf einem Formular oder Steuerelement, das bereits zeichnen möchten.  
   
-     - oder -   
+     - oder -  
   
 - Erstellen Sie eine <xref:System.Drawing.Graphics> Objekt aus einem beliebigen Objekt, das von erbt <xref:System.Drawing.Image>. Dieser Ansatz ist hilfreich, wenn Sie ein bereits vorhandenes Bild ändern möchten.  
   

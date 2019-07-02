@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961100"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506138"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Antialiasing bei Linien und Kurven
-Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zu zeichnen, Sie geben Sie den Startpunkt und Endpunkt der Linie, aber Sie müssen keine Informationen zu den einzelnen Pixel in der Zeile zu bieten. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile in der jeweiligen Ausgabegeräts angezeigt.  
+Wenn Sie GDI + verwenden, um eine Linie zu zeichnen, Sie geben Sie den Startpunkt und Endpunkt der Linie, aber Sie müssen keine Informationen zu den einzelnen Pixel in der Zeile zu bieten. GDI + funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile in der jeweiligen Ausgabegeräts angezeigt.  
   
 ## <a name="aliasing"></a>Aliasing  
  Erwägen Sie die gerade rote Linie, die ab dem Punkt ("4", "2") gesendet wird, zu dem Punkt ("16", "10"). Angenommen Sie das Koordinatensystem seinen Ursprung in der oberen linken Ecke hat und die Maßeinheit ist Pixel. Darüber hinaus vorausgesetzt, dass die x-Achse nach rechts und die Punkte für die y-Achse nach unten zeigt. Die folgende Abbildung zeigt eine vergrößerte Ansicht der roten Linie vor einem Hintergrund mehrfarbige.  

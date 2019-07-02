@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003937"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505698"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Bilder, Bitmaps und Metadateien
 Die `Image`-Klasse ist eine abstrakte Basisklasse, die Methoden für das Arbeiten mit Rasterbildern (Bitmaps) und Vektorbildern (Metadateien) bereitstellt. Die `Bitmap`-Klasse und die <xref:System.Drawing.Imaging.Metafile>-Klasse erben beide von der `Image`-Klasse. Die `Bitmap`-Klasse erweitert die Funktionen der `Image`-Klasse durch zusätzliche Methoden für das Laden, Speichern und Bearbeiten von Rasterbildern. Die <xref:System.Drawing.Imaging.Metafile>-Klasse erweitert die Funktionen der `Image`-Klasse durch zusätzliche Methoden für das Aufzeichnen und Überprüfen von Rasterbildern.  
@@ -22,7 +22,7 @@ Die `Image`-Klasse ist eine abstrakte Basisklasse, die Methoden für das Arbeite
  Erläutert die verschiedenen Bildformate.  
   
  [Metadateien in GDI+](metafiles-in-gdi.md)  
- Erläutert die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Unterstützung für Metadateien.  
+ Beschreibt die GDI +-Unterstützung für Metadateien.  
   
  [Zeichnen, Positionieren und Klonen von Bildern in GDI+](drawing-positioning-and-cloning-images-in-gdi.md)  
  Erläutert Methoden für das Zeichnen von Vektor- und Rasterbildern mit verwaltetem Code.  

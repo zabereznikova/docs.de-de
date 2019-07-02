@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011483"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506096"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen
 Benutzerdefinierte Zeichnen von Steuerelementen ist einer der zahlreichen komplizierteren Aufgaben, die leicht gemacht, die von .NET Framework. Wenn Sie ein benutzerdefiniertes Steuerelement erstellen zu können, stehen Ihnen viele Optionen in Bezug auf die grafische Darstellung des Steuerelements. Wenn Sie ein Steuerelement erstellen, die von erbt die `Control`, müssen Sie Code, der das Steuerelement zum Rendern der grafischen Darstellung ermöglicht angeben. Wenn Sie ein Benutzersteuerelement erstellen durch Erben von der `UserControl`, oder werden erben von einer Windows Forms-Steuerelemente, können Sie außer Kraft setzen die standardmäßige grafische Darstellung und bieten Sie Ihren eigenen Grafikcode. Wenn Sie benutzerdefiniertes Rendering für die konstituierenden Steuerelemente bereitstellen möchten eine `UserControl` Sie erstellen, die Optionen stärker eingeschränkt werden, aber immer noch eine Vielzahl von grafischen Möglichkeiten für Ihre Steuerelemente und Anwendungen.  
@@ -47,7 +47,7 @@ Benutzerdefinierte Zeichnen von Steuerelementen ist einer der zahlreichen kompli
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- Führt [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Grafikfunktionen von Visual Studio Perspektive und bietet Links zu weiteren Informationen.  
+ Stellt die GDI +-Grafikfunktionen aus einer Visual Studio-Perspektive, und enthält Links zu weiteren Informationen.  
   
  [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)  
  Beschreibt die Arten von benutzerdefinierten Steuerelementen, die Sie erstellen können.

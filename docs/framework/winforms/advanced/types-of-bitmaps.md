@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663915"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505291"
 ---
 # <a name="types-of-bitmaps"></a>Bitmaptypen
 Eine Bitmap ist ein Array von Bits, die die Farbe jedes Pixels in einem rechteckigen Array von Pixeln an. Die Anzahl der Bits, die für ein einzelnes Pixel bestimmt die Anzahl der Farben, die dieses Pixel zugewiesen werden kann. Z. B., wenn jedes Pixel von 4 Bits dargestellt wird, klicken Sie dann ein angegebenes Pixel kann zugewiesen werden eines 16 unterschiedlichen Farben (2 ^ 4 = 16). Die folgende Tabelle zeigt einige Beispiele für die Anzahl der Farben, die einem Pixel, dargestellt durch eine angegebene Anzahl von Bits zugewiesen werden kann.  
@@ -53,7 +53,7 @@ Eine Bitmap ist ein Array von Bits, die die Farbe jedes Pixels in einem rechteck
  ![Beispiel für Bitmap](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Grafik-Dateiformate  
- Es gibt viele standard-Formate für das Speichern von Bitmaps in Dateien auf Datenträgern. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] unterstützt die Dateiformate der Grafik in den folgenden Abschnitten beschrieben.  
+ Es gibt viele standard-Formate für das Speichern von Bitmaps in Dateien auf Datenträgern. GDI + unterstützt die Dateiformate der Grafik in den folgenden Abschnitten beschrieben.  
   
 ### <a name="bmp"></a>BMP  
  BMP ist ein Standardformat, das von Windows verwendet werden, um geräteunabhängige und anwendungsunabhängig Images zu speichern. Die Anzahl der Bits pro Pixel (1, 4, 8, 15, 24, 32 oder 64) für eine bestimmte BMP‑Datei wird in einer Datei-Kopfzeile angegeben werden. BMP-Dateien mit 24 Bit pro Pixel gelten. BMP-Dateien werden in der Regel nicht komprimiert und sind daher nicht über das Internet eignet sich gut für die Übertragung.  

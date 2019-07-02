@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487263"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506164"
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 
@@ -77,7 +77,7 @@ In der folgenden Liste sind diese Technologien beschrieben.
 
 Welche Technologie Sie wählen, hängt von Ihrer Bereitstellungsumgebung ab. Weitere Informationen finden Sie unter [Auswählen einer Strategie für die ClickOnce-Bereitstellung](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Standardmäßig werden ClickOnce-Anwendungen mithilfe von Visual Studio oder über die .NET Framework SDK-Tools (Mage.exe und MageUI.exe) bereitgestellt konfiguriert, führen Sie auf einem Clientcomputer, die über volle Vertrauenswürdigkeit verfügt. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Sie können dazu entweder mit Visual Studio oder dem .NET Framework SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von MageUI.exe finden Sie in der exemplarischen Vorgehensweise: Bereitstellen einer ClickOnce-Anwendung über die Befehlszeile an.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+Standardmäßig werden ClickOnce-Anwendungen mithilfe von Visual Studio oder über die .NET Framework SDK-Tools (Mage.exe und MageUI.exe) bereitgestellt konfiguriert, führen Sie auf einem Clientcomputer, die über volle Vertrauenswürdigkeit verfügt. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Sie können dazu entweder mit Visual Studio oder dem .NET Framework SDK-Tool MageUI.exe, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von MageUI.exe finden Sie unter [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Weitere Informationen zu den Sicherheitsaspekten von ClickOnce und Berechtigungserweiterung finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications). Weitere Informationen zur Bereitstellung vertrauenswürdiger Anwendungen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).
 

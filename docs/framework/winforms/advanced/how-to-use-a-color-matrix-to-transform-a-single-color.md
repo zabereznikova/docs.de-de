@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063724"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505809"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Vorgehensweise: Verwenden einer Farbmatrix zum Transformieren einer Farbe
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Objekte speichern die Farbe jedes Pixels als 32-Bit-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha. Jede der vier Komponenten ist es sich um eine Zahl zwischen 0 und 255, wobei 0 für keine Intensität und 255, die vollständigen Intensität darstellt. Die alpha-Komponente gibt die Transparenz der Farbe an: 0 vollständig transparent ist, und 255 vollständig deckend ist.  
+GDI + bietet die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Objekte speichern die Farbe jedes Pixels als 32-Bit-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha. Jede der vier Komponenten ist es sich um eine Zahl zwischen 0 und 255, wobei 0 für keine Intensität und 255, die vollständigen Intensität darstellt. Die alpha-Komponente gibt die Transparenz der Farbe an: 0 vollständig transparent ist, und 255 vollständig deckend ist.  
   
  Ein Vektor Farbe ist ein 4-Tupel der Form (Rot, Grün, Blau, Alpha). Beispielsweise steht der Color-Vektor (0, 255, 0, 255) eine nicht transparente Farbe, die ohne Rot oder Blau, jedoch mit vollständigen Intensität.  
   
- Eine andere Konvention für die Darstellung von Farben verwendet die Zahl 1 für vollständigen Intensität. Verwenden diese Konvention, würde die Farbe, die im vorherigen Absatz beschriebene um den Vektor (0, 1, 0, 1) dargestellt werden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] die Konvention von 1 als vollständigen Intensität bei verwendet Farbe Transformationen wird.  
+ Eine andere Konvention für die Darstellung von Farben verwendet die Zahl 1 für vollständigen Intensität. Verwenden diese Konvention, würde die Farbe, die im vorherigen Absatz beschriebene um den Vektor (0, 1, 0, 1) dargestellt werden. GDI + und verwendet bei Farbe Transformationen die Konvention von 1 als vollständigen Intensität.  
   
  Sie können Farbe Vektoren vorhersagestunden wird die Farbe Vektoren mit einer 4 × 4-Matrix lineare Transformationen (Drehung, Skalierung und ähnliches) zuweisen. Eine 4 x 4-Matrix können Sie jedoch eine Übersetzung (nicht lineare) ausführen. Wenn Sie eine dummy fünfte Koordinate (z. B. die Nummer 1) aller die Vektoren Farbe hinzufügen, können Sie eine 5 x 5-Matrix, um eine beliebige Kombination von linearen Transformationen und Konvertierungen anzuwenden. Eine Transformation, bestehend aus eine lineare Umformung gefolgt von einer Übersetzung wird eine affine Transformation aufgerufen.  
   

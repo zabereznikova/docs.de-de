@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645687"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504840"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtern mit DataView (LINQ to DataSet)
 Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Neben den zeichenfolgenbasierten Filterfunktionen <xref:System.Data.DataView> bietet außerdem die Möglichkeit, [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Ausdrücke für den Filterkriterien. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filteroperationen als die zeichenfolgenbasierte Filterung.  
   
  Es gibt zwei Möglichkeiten, Daten mit einer <xref:System.Data.DataView> zu filtern:  
   
-- durch Erstellen einer <xref:System.Data.DataView> mittels einer WHERE-Klausel aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage  
+- Erstellen Sie eine <xref:System.Data.DataView> aus einer LINQ to DataSet-Abfrage mit einer Where Klausel.  
   
 - mittels der vorhandenen Funktionen für das zeichenfolgenbasierte Filtern von <xref:System.Data.DataView>  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Erstellen einer "DataView" auf der Grundlage einer Abfrage mit Filterinformationen  
- Ein <xref:System.Data.DataView>-Objekt kann auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt werden. Wenn die Abfrage eine `Where`-Klausel enthält, wird die <xref:System.Data.DataView> mit den Filterinformationen aus der Abfrage erstellt. Der Ausdruck in der `Where`-Klausel wird verwendet, um zu bestimmen, welche Datenzeilen in die <xref:System.Data.DataView> aufgenommen werden. Er bildet gleichzeitig die Basis für den Filter.  
+ Ein <xref:System.Data.DataView> -Objekt kann aus einer LINQ to DataSet-Abfrage erstellt werden. Wenn die Abfrage eine `Where`-Klausel enthält, wird die <xref:System.Data.DataView> mit den Filterinformationen aus der Abfrage erstellt. Der Ausdruck in der `Where`-Klausel wird verwendet, um zu bestimmen, welche Datenzeilen in die <xref:System.Data.DataView> aufgenommen werden. Er bildet gleichzeitig die Basis für den Filter.  
   
  Ausdrucksbasierte Filter bieten leistungsfähigere und komplexere Filterfunktionen als die einfacheren zeichenfolgenbasierten Filter. Die zeichenfolgenbasierten und ausdrucksbasierten Filter schließen sich gegenseitig aus. Wenn der zeichenfolgenbasierte <xref:System.Data.DataView.RowFilter%2A> festgelegt wird, nachdem eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt wurde, wird der ausdrucksbasierte Filter, der aus der Abfrage abgeleitet wurde, gelöscht.  
   
@@ -59,14 +59,14 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>Verwenden der "RowFilter"-Eigenschaft  
- Die bisherige zeichenfolgenbasierte Filterfunktionalität von <xref:System.Data.DataView> funktioniert auch im [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Kontext noch. Weitere Informationen zur zeichenfolgenbasierten <xref:System.Data.DataView.RowFilter%2A> filtern, finden Sie [sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Die vorhandenen zeichenfolgenbasierte Filterfunktionalität von <xref:System.Data.DataView> funktioniert weiterhin in der LINQ to DataSet-Kontext. Weitere Informationen zur zeichenfolgenbasierten <xref:System.Data.DataView.RowFilter%2A> filtern, finden Sie [sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der &lt;legacyBold&gt;Contact&lt;/legacyBold&gt;-Tabelle erstellt und dann die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft so eingerichtet, dass alle Zeilen zurückgegeben werden, bei denen der Nachname des Kontakts "Zhu" lautet:  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- Nachdem eine <xref:System.Data.DataView> aus einer <xref:System.Data.DataTable> oder [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt wurde, können Sie die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft verwenden, um auf der Grundlage der jeweiligen Spaltenwerte Teilmengen von Zeilen anzugeben. Die zeichenfolgenbasierten und ausdrucksbasierten Filter schließen sich gegenseitig aus. Festlegen der <xref:System.Data.DataView.RowFilter%2A> Eigenschaft wird löschen Sie den Filterausdruck, der per Rückschluss von dem [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage und Filter-Ausdruck kann nicht zurückgesetzt werden.  
+ Nach ein <xref:System.Data.DataView> erstellt wurde eine <xref:System.Data.DataTable> oder LINQ to DataSet-Abfrage, können Sie die <xref:System.Data.DataView.RowFilter%2A> -Eigenschaft an die Teilmengen von Zeilen basierend auf ihren Spaltenwerten. Die zeichenfolgenbasierten und ausdrucksbasierten Filter schließen sich gegenseitig aus. Festlegen der <xref:System.Data.DataView.RowFilter%2A> Eigenschaft wird der Filter-Ausdruck, abgeleitet von der LINQ to DataSet-Abfrage gelöscht, und der Filter-Ausdruck kann nicht zurückgesetzt werden.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766295"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505045"
 ---
 # <a name="using-nested-graphics-containers"></a>Verwenden geschachtelter Grafikcontainer
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält der Container, die Sie verwenden können, um vorübergehend zu ersetzen oder erweitern Teil des Zustands in einer <xref:System.Drawing.Graphics> Objekt. Sie erstellen einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode eine <xref:System.Drawing.Graphics> Objekt. Rufen Sie <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu erstellen. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von kombiniert werden <xref:System.Drawing.Graphics.EndContainer%2A>.  
+GDI + stellt Container, die Sie verwenden können, um vorübergehend zu ersetzen oder erweitern Teil des Zustands in einer <xref:System.Drawing.Graphics> Objekt. Sie erstellen einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode eine <xref:System.Drawing.Graphics> Objekt. Rufen Sie <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu erstellen. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von kombiniert werden <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
 ## <a name="transformations-in-nested-containers"></a>Transformationen in geschachtelten Containern  
  Das folgende Beispiel erstellt eine <xref:System.Drawing.Graphics> Objekt und einen Container innerhalb der <xref:System.Drawing.Graphics> Objekt. Die globale Transformation für das <xref:System.Drawing.Graphics> Objekt ist ein Übersetzungseinheiten 100 in X-Richtung und 80 Einheiten in der y-Richtung. Die globale Transformation des Containers ist eine 30-Grad-Drehung. Der Code führt den Aufruf `DrawRectangle(pen, -60, -30, 120, 60)` zweimal. Der erste Aufruf <xref:System.Drawing.Graphics.DrawRectangle%2A> innerhalb des Containers; ist der Aufruf wird zwischen den Aufrufen <xref:System.Drawing.Graphics.BeginContainer%2A> und <xref:System.Drawing.Graphics.EndContainer%2A>. Der zweite Aufruf von <xref:System.Drawing.Graphics.DrawRectangle%2A> wird nach dem Aufruf von <xref:System.Drawing.Graphics.EndContainer%2A>.  

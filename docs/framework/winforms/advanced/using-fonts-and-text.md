@@ -8,37 +8,37 @@ helpviewer_keywords:
 - fonts [Windows Forms], using in Windows Forms
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
-ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73a4af5fe7367e777fcb83af8c84c09be91e5b1e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769421"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505121"
 ---
 # <a name="using-fonts-and-text"></a>Verwenden von Schriftarten und Text
-Es gibt mehrere Klassen von angebotenen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zum Zeichnen von Text in Windows Forms. Die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> -Klasse verfügt über mehrere <xref:System.Drawing.Graphics.DrawString%2A> Methoden, die Ihnen ermöglichen, verschiedene Funktionen des Texts an, wie Standort, umschließendes Rechteck, Schriftart und Format anzugeben. Darüber hinaus können Sie zeichnen und messen Sie Text mit [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] mit der statischen <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden bereitgestellt werden, indem die `TextRenderer` Klasse. Die [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Methoden auch ermöglichen es Ihnen an der Position, Schriftart und Format. Wählen Sie entweder [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] oder [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zum Rendern von Text; allerdings [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] bietet im Allgemeinen besser, Leistung und genauere Text messen. Andere Klassen, die zum Rendern von Text beitragen sind `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, und `TextFormatFlags`.  
+Es gibt mehrere Klassen, die zum Zeichnen von Text in Windows Forms von GDI + und GDI angeboten. Die GDI + <xref:System.Drawing.Graphics> -Klasse verfügt über mehrere <xref:System.Drawing.Graphics.DrawString%2A> Methoden, die Ihnen ermöglichen, verschiedene Funktionen des Texts an, wie Standort, umschließendes Rechteck, Schriftart und Format anzugeben. Darüber hinaus können Sie zeichnen und messen Sie Text mit GDI, die mit der statischen <xref:System.Windows.Forms.TextRenderer.DrawText%2A> und <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> Methoden bereitgestellt werden, indem die `TextRenderer` Klasse. Die GDI-Methoden ermöglichen auch Sie Format, Schriftart und Speicherort angeben. Sie können zum Rendern von Text GDI oder GDI + auswählen; GDI bietet jedoch im Allgemeinen eine bessere Leistung und genauere Text messen. Andere Klassen, die zum Rendern von Text beitragen sind `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, und `TextFormatFlags`.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Erstellen von Schriftartfamilien und Schriftarten](how-to-construct-font-families-and-fonts.md)  
  Veranschaulicht das Erstellen `Font` und `FontFamily` Objekte.  
   
  [Vorgehensweise: Zeichnen von Text an einer angegebenen Position](how-to-draw-text-at-a-specified-location.md)  
- Beschreibt die zum Zeichnen von Text in einem bestimmten Speicherort mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ Beschreibt, wie Text in einem bestimmten Speicherort mit GDI + und GDI gezeichnet werden soll.  
   
  [Vorgehensweise: Zeichnen von umbrochenem Text in einem Rechteck](how-to-draw-wrapped-text-in-a-rectangle.md)  
- Erläutert das Zeichnen von Text in einem Rechteck mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ Erläutert, wie Text in einem Rechteck mit GDI + und GDI gezeichnet werden soll.  
   
  [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md)  
- Veranschaulicht, wie [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zum Zeichnen von Text.  
+ Veranschaulicht, wie GDI zum Zeichnen von Text.  
   
  [Vorgehensweise: Ausrichten von gezeichnetem Text](how-to-align-drawn-text.md)  
- Veranschaulicht das Formatieren von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Text.  
+ Veranschaulicht, wie GDI + und GDI-Text zu formatieren.  
   
  [Vorgehensweise: Erstellen von vertikalem Text](how-to-create-vertical-text.md)  
- Beschreibt, wie Sie vertikal ausgerichteten Text mit zeichnen [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Beschreibt, wie vertikal ausgerichteten Text mit GDI + gezeichnet werden soll.  
   
  [Vorgehensweise: Festlegen von Tabstopps in gezeichnetem Text](how-to-set-tab-stops-in-drawn-text.md)  
- Veranschaulicht das Zeichnen von Text mit Tabstopps mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Veranschaulicht das Zeichnen von Text mit Tabstopps mit GDI +.  
   
  [Vorgehensweise: Auflisten installierter Schriftarten](how-to-enumerate-installed-fonts.md)  
  Es wird erläutert, wie die Namen der installierten Schriftarten aufzulisten.  

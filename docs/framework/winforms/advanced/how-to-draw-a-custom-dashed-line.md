@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004370"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506035"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Vorgehensweise: Zeichnen einer benutzerdefinierten gestrichelten Linie
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet verschiedene Stile für gestrichelte Linie, die in aufgeführt sind die <xref:System.Drawing.Drawing2D.DashStyle> Enumeration. Wenn die standard-Dash-Stile nicht Ihren Anforderungen entsprechen, können Sie eine benutzerdefinierte Strichmusters erstellen.  
+GDI + bietet verschiedene Stile für gestrichelte Linie, die in aufgeführt sind die <xref:System.Drawing.Drawing2D.DashStyle> Enumeration. Wenn die standard-Dash-Stile nicht Ihren Anforderungen entsprechen, können Sie eine benutzerdefinierte Strichmusters erstellen.  
   
 ## <a name="example"></a>Beispiel  
  Um einer benutzerdefinierten gestrichelten Linie zu zeichnen, ordnen Sie die Striche und Zwischenräume in einem Array aus, und weisen Sie das Array als Wert für die <xref:System.Drawing.Pen.DashPattern%2A> Eigenschaft eine <xref:System.Drawing.Pen> Objekt. Das folgende Beispiel zeichnet eine benutzerdefinierte gestrichelte Linie, die auf Grundlage des Arrays `{5, 2, 15, 4}`. Wenn Sie die Elemente des Arrays mit der Stiftbreite 5 multiplizieren, erhalten Sie `{25, 10, 75, 20}`. Der angezeigte Bindestriche alternative lang zwischen 25 und 75, und die Leerzeichen alternative lang zwischen 10 und 20.  
