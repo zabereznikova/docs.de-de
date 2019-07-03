@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306621"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424198"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabelle für explizite numerische Konvertierungen (C#-Referenz)
 
@@ -23,14 +23,14 @@ Folgende Tabelle veranschaulicht vordefinierte explizite Konvertierungen zwische
 
 |Von|Beschreibung|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong` oder `char`|  
-|[byte](byte.md)|`sbyte` oder `char`|  
-|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` oder `char`|  
-|[ushort](ushort.md)|`sbyte`, `byte`, `short` oder `char`|  
-|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` oder `char`|  
-|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` oder `char`|  
-|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` oder `char`|  
-|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` oder `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`, `ushort`, `uint`, `ulong` oder `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` oder `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` oder `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short` oder `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` oder `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int` oder `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` oder `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` oder `char`|  
 |[char](char.md)|`sbyte`, `byte`oder `short`|  
 |[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`. `char` oder `decimal`|  
 |[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` oder `decimal`|  
@@ -69,7 +69,7 @@ Folgende Tabelle veranschaulicht vordefinierte explizite Konvertierungen zwische
 - [C#-Referenz](../index.md)
 - [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)
 - [()-Operator](../operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [Tabelle ganzzahliger Typen](integral-types-table.md)
+- [Integrale Typen](../builtin-types/integral-numeric-types.md)
 - [Tabelle für Gleitkommatypen](floating-point-types-table.md)
 - [Tabelle integrierter Typen](built-in-types-table.md)
 - [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)
