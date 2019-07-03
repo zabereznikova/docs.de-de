@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307299"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539839"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung, der Bereitstellung und der Ausführung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendungen beschrieben. Sie sollten auch Empfehlungen für das Erstellen sicherer Anwendungen für .NET Framework ausführen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -100,9 +100,9 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen akzeptieren Parameter an allen Stellen, an denen Literale akzeptiert werden. Sie sollten parametrisierte Abfragen verwenden, anstatt Literale von einem externen Agenten direkt in die Abfrage einzufügen. Sie sollten auch berücksichtigen, mit [Abfrage-Generator-Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) zur sicheren Erstellung von Entity SQL.  
   
-- Angriffe durch Einschleusen von [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
+- LINQ Entitäten Angriffe durch Einschleusen von:  
   
-     Obwohl das Zusammensetzen von Abfragen in [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] möglich ist, wird dieser Vorgang über die Objektmodell-API ausgeführt. Im Gegensatz zu [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen werden [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]-Abfragen nicht durch Zeichenfolgenbearbeitung oder -verkettung erstellt und sind nicht anfällig gegenüber herkömmlichen Angriffen durch Einschleusung von SQL-Befehlen.  
+     Obwohl die Komposition von Abfragen in LINQ to Entities möglich ist, wird es über die Objektmodell-API ausgeführt. Im Gegensatz zu [!INCLUDE[esql](../../../../../includes/esql-md.md)] Abfragen, die LINQ to Entities-Abfragen werden nicht durch zeichenfolgenbearbeitung oder-Verkettung erstellt und sind nicht anfällig gegenüber herkömmlichen SQL-Injection-Angriffe.  
   
 #### <a name="prevent-very-large-result-sets"></a>Verhindern Sie sehr umfangreiche Resultsets.  
  Ein sehr umfangreiches Resultset kann dazu führen, dass das Clientsystem heruntergefahren wird, wenn der Client Vorgänge ausführt, die Ressourcen proportional zum Umfang des Resultsets ausführt. Unerwartet große Resultsets können unter den folgenden Bedingungen auftreten:  
@@ -113,7 +113,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
   
 - In geschachtelten [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen.  
   
- Wenn Sie Benutzereingaben akzeptieren, müssen Sie sicherstellen, dass die Eingaben keine Resultsets verursachen können, die umfangreicher sind als die Datenmengen, die das System verarbeiten kann. Können Sie auch die <xref:System.Linq.Queryable.Take%2A> -Methode in der [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] oder [Grenzwert](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) -Operator in [!INCLUDE[esql](../../../../../includes/esql-md.md)] auf die Größe des Resultsets zu begrenzen.  
+ Wenn Sie Benutzereingaben akzeptieren, müssen Sie sicherstellen, dass die Eingaben keine Resultsets verursachen können, die umfangreicher sind als die Datenmengen, die das System verarbeiten kann. Können Sie auch die <xref:System.Linq.Queryable.Take%2A> -Methode in der LINQ to Entities oder [Grenzwert](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) -Operator in [!INCLUDE[esql](../../../../../includes/esql-md.md)] auf die Größe des Resultsets zu begrenzen.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Vermeiden Sie es, IQueryable-Ergebnisse zurückzugeben, wenn Sie Methoden für potenziell nicht vertrauenswürdige Aufrufer verfügbar machen.  
  Vermeiden Sie es aus den folgenden Gründen, <xref:System.Linq.IQueryable%601>-Typen von Methoden zurückzugeben, die für potenziell nicht vertrauenswürdige Aufrufer verfügbar gemacht wurden:  

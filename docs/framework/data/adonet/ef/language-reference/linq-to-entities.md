@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630739"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539771"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
@@ -47,7 +47,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
   
  Informationen, wie CLR-Methodenaufrufe kanonischen Funktionen in der Datenquelle zugeordnet werden, finden Sie unter [CLR-Methoden zu kanonischen Funktionszuordnung](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Informationen zu Datenbank zum Aufrufen von kanonischen und benutzerdefinierten Funktionen aus [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen finden Sie [aufrufende Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Weitere Informationen über das Aufrufen von kanonischen, Datenbank und benutzerdefinierte Funktionen aus in LINQ to Entities-Abfragen finden Sie unter [aufrufende Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Abfrageausführung  
  Nachdem der Benutzer die LINQ-Abfrage erstellt hat, wird sie in eine Darstellung konvertiert, die mit dem Entity Framework kompatibel ist (in Form von Befehlsstrukturen). Diese wird anschließend für die Datenquelle ausgeführt. Bei der Abfrageausführung werden alle Abfrageausdrücke (oder Abfragekomponenten) auf dem Client oder dem Server ausgewertet. Dazu gehören Ausdrücke, die zur Materialisierung der Ergebnisse oder zur Entitätsprojektion verwendet werden. Weitere Informationen finden Sie unter [Abfrageausführung](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Weitere Informationen zur Verbesserung der Leistung durch eine Abfrage einmal kompiliert, und klicken Sie dann mehrfach mit verschiedenen Parametern ausgeführt wird, finden Sie unter [kompilierte Abfragen (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

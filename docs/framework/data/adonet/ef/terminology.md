@@ -2,12 +2,12 @@
 title: Entity Framework-Terminologie
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306337"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539876"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework-Terminologie
 In diesem Thema werden Begriffe, die häufig verwiesen wird, definiert [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Dokumentation. Zu relevanten Themen stehen Links zu weiteren Informationen zur Verfügung.  
@@ -44,7 +44,7 @@ In diesem Thema werden Begriffe, die häufig verwiesen wird, definiert [!INCLUDE
 |unabhängige Zuordnung|Eine Zuordnung zwischen Entitäten, die von einem unabhängigen Objekt dargestellt und nachverfolgt wird.|  
 |Key|Das Attribut eines Entitätstyps, das festlegt, mit welcher Eigenschaft oder welchem Eigenschaftensatz eindeutige Instanzen des Entitätstyps identifiziert werden. Auf der Objektebene durch die <xref:System.Data.EntityKey>-Klasse dargestellt.<br /><br /> Weitere Informationen finden Sie unter [Key-Element (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) und [Entitätsschlüssel](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |Träges Laden|Wenn eine Abfrage Objekte zurückgibt, werden verknüpfte Objekte nicht zur gleichen Zeit geladen. Sie werden stattdessen automatisch geladen, sobald auf die Navigationseigenschaft zugegriffen wird.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Eine Abfragesyntax, die eine Reihe von Abfrageoperatoren definiert, mit denen Vorgänge durchlaufen, Filter- und projektionsvorgänge in Visual c# und Visual Basic so direkt und deklarativ ausgedrückt werden können.<br /><br /> Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|LINQ to Entities|Eine Abfragesyntax, die eine Reihe von Abfrageoperatoren definiert, mit denen Vorgänge durchlaufen, Filter- und projektionsvorgänge in Visual c# und Visual Basic so direkt und deklarativ ausgedrückt werden können.<br /><br /> Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |Zuordnen|Eine Spezifikation der Entsprechungen zwischen Elementen in einem konzeptionellen Modell und Elementen in einem Speichermodell.<br /><br /> Weitere Informationen finden Sie unter [MSL-Spezifikation](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |MSL-Datei|Eine XML-Datei, die die in MSL ausgedrückte Zuordnung des konzeptionellen Modells zu dem Speichermodell enthält.|  
 |MSL (Mapping Specification Language)|Eine XML-basierte Sprache, die zum Zuordnen von in einem Konzeptmodell definierten Elementen zu Elementen in einem Speichermodell verwendet wird.<br /><br /> Weitere Informationen finden Sie unter [MSL-Spezifikation](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  

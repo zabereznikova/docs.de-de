@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641431"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539742"
 ---
 # <a name="query-results"></a>Abfrageergebnisse
-Nachdem eine [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfrage in eine Befehlsstruktur konvertiert und ausgeführt wurde, werden die Abfrageergebnisse im Allgemeinen in einer der folgenden Formen zurückgegeben:  
+Nachdem eine LINQ to Entities-Abfrage wird in Befehlsstrukturen konvertiert und ausgeführt wurde, werden die Ergebnisse der Abfrage in der Regel als eine der folgenden zurückgegeben:  
   
 - Eine Auflistung von 0 (null) oder mehr typisierten Entitätsobjekten oder eine Projektion komplexer Typen im konzeptionellen Modell.  
   

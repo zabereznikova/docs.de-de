@@ -2,24 +2,24 @@
 title: Abfragen in LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: e8a3ce26c25bf8350460844110470d3a167c70ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 268906f8b79c8baf1ac6e29012b0ae7194b17084
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584613"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539416"
 ---
 # <a name="queries-in-linq-to-entities"></a>Abfragen in LINQ to Entities
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. Language-Integrated Query (LINQ) bietet ein einfacheres, konsistenteres Modell zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Programmierobjekten.  
   
  Eine LINQ-Abfrageoperation besteht aus drei Aktionen: Abrufen der Datenquelle(n), Erstellen der Abfrage und Ausführen der Abfrage.  
   
- Datenquellen, die die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die generische <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren, können durch LINQ abgefragt werden. Instanzen der generischen <xref:System.Data.Objects.ObjectQuery%601> Klasse, die implementiert die generische <xref:System.Linq.IQueryable%601> Schnittstelle, dienen als Datenquelle für [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen. Die generische Klasse <xref:System.Data.Objects.ObjectQuery%601> stellt eine Abfrage dar, die eine Auflistung von null oder mehr typisierten Entitätsobjekten zurückgibt. Ferner können Sie, dass den Compiler den Typ einer Entität ableiten, mit dem C#-Schlüsselwort `var` (Dim in Visual Basic).  
+ Datenquellen, die die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die generische <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren, können durch LINQ abgefragt werden. Instanzen der generischen <xref:System.Data.Objects.ObjectQuery%601> Klasse, die implementiert die generische <xref:System.Linq.IQueryable%601> Schnittstelle, dienen als Datenquelle für LINQ to Entities-Abfragen. Die generische Klasse <xref:System.Data.Objects.ObjectQuery%601> stellt eine Abfrage dar, die eine Auflistung von null oder mehr typisierten Entitätsobjekten zurückgibt. Ferner können Sie, dass den Compiler den Typ einer Entität ableiten, mit dem C#-Schlüsselwort `var` (Dim in Visual Basic).  
   
  In der Abfrage geben Sie genau die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. In LINQ wird eine Abfrage in einer Variablen gespeichert. Wenn die Abfrage eine Sequenz von Werten zurückgibt, muss die Abfragevariable selbst ein abfragbarer Typ sein. Diese Abfragevariable führt keine Aktion aus und gibt keine Daten zurück. Sie dient lediglich zur Speicherung der Abfrageinformationen. Nachdem Sie eine Abfrage erstellt haben, müssen Sie sie ausführen, damit Daten abgerufen werden.  
   
 ## <a name="query-syntax"></a>Abfragesyntax  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen können in zwei verschiedenen Syntaxarten verfasst werden: Abfrageausdrucksyntax und mit der methodenbasierten Abfragesyntax. Die Abfrageausdruckssyntax ist neu in c# 3.0 und Visual Basic 9.0, und es besteht aus einer Reihe von Klauseln, die in einer deklarativen Syntax ähnlich wie Transact-SQL oder XQuery geschrieben. Allerdings kann nicht die .NET Framework common Language Runtime (CLR) die Abfrageausdruckssyntax selbst nicht lesen. Daher werden die Abfrageausdrücke beim Kompilieren in etwas übersetzt, was die CLR versteht: Methodenaufrufe. Diese Methoden werden als bezeichnet die *Standardabfrageoperatoren*. Als Entwickler können Sie entscheiden, ob Sie die Methoden mittels Methodensyntax direkt aufrufen möchten oder ob dafür die Abfragesyntax verwendet werden soll. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+ LINQ to Entities-Abfragen können in zwei verschiedenen Syntaxarten verfasst werden: in der Abfrageausdrucksyntax und in der methodenbasierten Abfragesyntax. Die Abfrageausdruckssyntax ist neu in c# 3.0 und Visual Basic 9.0, und es besteht aus einer Reihe von Klauseln, die in einer deklarativen Syntax ähnlich wie Transact-SQL oder XQuery geschrieben. Allerdings kann nicht die .NET Framework common Language Runtime (CLR) die Abfrageausdruckssyntax selbst nicht lesen. Daher werden die Abfrageausdrücke beim Kompilieren in etwas übersetzt, was die CLR versteht: Methodenaufrufe. Diese Methoden werden als bezeichnet die *Standardabfrageoperatoren*. Als Entwickler können Sie entscheiden, ob Sie die Methoden mittels Methodensyntax direkt aufrufen möchten oder ob dafür die Abfragesyntax verwendet werden soll. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ### <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
  Abfrageausdrücke sind eine deklarative Abfragesyntax. Mit dieser Syntax kann ein Entwickler Abfragen in einer allgemeinen Programmiersprache in einem Format ähnlich dem von Transact-SQL schreiben. Die Abfrageausdruckssyntax ermöglicht die Ausführung komplexer Filter-, Sortier- und Gruppiervorgänge mit minimalem Codeeinsatz. Weitere Informationen [Grundlegende Abfrageoperationen (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Beispiele, die veranschaulichen, wie die Abfrageausdrucksyntax verwendet wird, finden Sie in den folgenden Themen:  
@@ -43,7 +43,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
 - [Beispiele für die Abfrageausdruckssyntax: Navigieren in Beziehungen](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Methodenbasierte Abfragesyntax  
- Eine weitere Möglichkeit [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen zu erstellen, besteht im Verwenden von methodenbasierten Abfragen. Die mit der methodenbasierten Abfragesyntax ist eine Sequenz von Aufrufen der direkten Methode zu LINQ-Standardabfrageoperator-Methoden, Lambda-Ausdrücke als Parameter übergeben. Weitere Informationen finden Sie unter [Lambdaausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Beispiele, die veranschaulichen, wie die methodenbasierte Syntax verwendet wird, finden Sie in den folgenden Themen:  
+ Eine weitere Möglichkeit zum Verfassen von LINQ to Entities-Abfragen ist die Verwendung von methodenbasierten Abfragen. Die mit der methodenbasierten Abfragesyntax ist eine Sequenz von Aufrufen der direkten Methode zu LINQ-Standardabfrageoperator-Methoden, Lambda-Ausdrücke als Parameter übergeben. Weitere Informationen finden Sie unter [Lambdaausdrücke](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Beispiele, die veranschaulichen, wie die methodenbasierte Syntax verwendet wird, finden Sie in den folgenden Themen:  
   
 - [Beispiele für die methodenbasierte Abfragesyntax: Projektion](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
