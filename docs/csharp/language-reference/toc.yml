@@ -8,7 +8,7 @@
       items:
         - name: Übersicht
           href: keywords/index.md
-        - name: Typen
+        - name: Integrierte Typen
           items:
             - name: Werttypen
               items:
@@ -16,8 +16,9 @@
                   href: keywords/value-types.md
                 - name: bool
                   href: keywords/bool.md
-                - name: byte
-                  href: keywords/byte.md
+                - name: Integrale numerische Typen
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
                 - name: char
                   href: keywords/char.md
                 - name: decimal
@@ -28,22 +29,8 @@
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
-                - name: int
-                  href: keywords/int.md
-                - name: long
-                  href: keywords/long.md
-                - name: sbyte
-                  href: keywords/sbyte.md
-                - name: short
-                  href: keywords/short.md
                 - name: struct
                   href: keywords/struct.md
-                - name: uint
-                  href: keywords/uint.md
-                - name: ulong
-                  href: keywords/ulong.md
-                - name: ushort
-                  href: keywords/ushort.md
             - name: Verweistypen
               items:
                 - name: Funktionen von Verweistypen
@@ -68,8 +55,6 @@
               items:
                 - name: Tabelle integrierter Typen
                   href: keywords/built-in-types-table.md
-                - name: Tabelle ganzzahliger Typen
-                  href: keywords/integral-types-table.md
                 - name: Tabelle für Gleitkommatypen
                   href: keywords/floating-point-types-table.md
                 - name: Tabelle der Werttypen
@@ -116,8 +101,10 @@
               href: keywords/event.md
             - name: extern
               href: keywords/extern.md
-            - name: in (generischer Modifizierer)
+            - name: In (generischer Modifizierer)
               href: keywords/in-generic-modifier.md
+            - name: new (Membermodifizierer)
+              href: keywords/new-modifier.md
             - name: out (generischer Modifizierer)
               href: keywords/out-generic-modifier.md
             - name: override
@@ -218,20 +205,16 @@
           items:
             - name: echt
               href: keywords/is.md
+        - name: Generische Schlüsselwörter für die Typeinschränkung
+          items:
+            - name: new-Einschränkung
+              href: keywords/new-constraint.md
+            - name: wo
+              href: keywords/where-generic-type-constraint.md
         - name: Operatorschlüsselwörter
           items:
             - name: await
               href: keywords/await.md
-            - name: neu
-              items:
-                - name: 'new-Operator, -Modifizierer und -Einschränkung'
-                  href: keywords/new.md
-                - name: new-Operator
-                  href: keywords/new-operator.md
-                - name: new-Modifizierer
-                  href: keywords/new-modifier.md
-                - name: new-Einschränkung
-                  href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
             - name: nameof
@@ -280,8 +263,6 @@
               href: keywords/set.md
             - name: when (Filterbedingung)
               href: keywords/when.md
-            - name: where (Einschränkung eines generischen Typs)
-              href: keywords/where-generic-type-constraint.md
             - name: Wert
               href: keywords/value.md
             - name: yield
@@ -367,6 +348,8 @@
         - name: '::-Operator'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: new-Operator
+          href: operators/new-operator.md
         - name: stackalloc-Operator
           href: operators/stackalloc.md
         - name: true- und false-Operatoren
