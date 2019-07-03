@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 05/03/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 461a00c6ecc1d9a8b9caaca79f9d7905d2bb7528
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063462"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268246"
 ---
 # <a name="prepare-data"></a>Vorbereiten von Daten
 
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalisieren Sie die Daten mit der Min-Max-Normalisierung unter Verwendung der [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)-Methode.
+Auf Spalten mit einzelnen numerischen Werten sowie auf Vektoren kann Normalisierung angewendet werden. Verwenden Sie die Min-Max-Normalisierung mit der [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)-Methode, um die Daten in der Spalte `Price` zu normalisieren.
 
 ```csharp
 // Define min-max estimator
@@ -294,7 +294,7 @@ Im Folgenden finden Sie am Beispiel des ersten Eintrags eine detaillierte Beschr
 
 **Ursprünglicher Text: Das ist ein gutes Produkt**
 
-|Transformation | Beschreibung | Ergebnis
+|Transformation | BESCHREIBUNG | Ergebnis
 |--|--|--|
 |1. NormalizeText | Konvertiert standardmäßig alle Buchstaben in Kleinbuchstaben | das ist ein gutes produkt
 |2. TokenizeWords | Teilt die Zeichenfolge in einzelne Wörter auf | [„das“, „ist“, „ein“, „gutes“, „produkt“]

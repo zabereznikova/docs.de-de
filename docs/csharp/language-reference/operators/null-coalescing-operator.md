@@ -1,5 +1,5 @@
 ---
-title: ?? -Operator – C#-Referenz
+title: '?? Operator „-“: C#-Referenz'
 ms.custom: seodec18
 ms.date: 06/07/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816012"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024987"
 ---
-# <a name="-operator-c-reference"></a>?? operator (C#-Referenz)
+# <a name="-operator-c-reference"></a>?? Operator (C#-Referenz)
 
 Der NULL-Zusammenfügungsoperator `??` gibt den Wert des linken Operanden zurück, wenn dieser nicht `null` ist. Andernfalls wertet der Operator den rechten Operanden aus und gibt dessen Ergebnis zurück. Der `??`-Operator wertet seinen rechten Operanden nicht aus, wenn der linke Operand auf einen Wert ungleich NULL ausgewertet wird.
 
@@ -60,7 +60,6 @@ Weitere Informationen finden Sie unter [NULL-Zusammenfügungsoperator](~/_csharp
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [?.- und ?[]-Operatoren](member-access-operators.md#null-conditional-operators--and-)
 - [?:-Operator](conditional-operator.md)

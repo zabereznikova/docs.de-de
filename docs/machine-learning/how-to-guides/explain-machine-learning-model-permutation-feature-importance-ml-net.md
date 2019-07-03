@@ -5,12 +5,12 @@ ms.date: 05/02/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 51ef4b55b1518381881e57d83fd43f8ec7f786c6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645064"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307368"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Erläutern von Modellvorhersagen mit Permutation Feature Importance
 
@@ -26,7 +26,7 @@ Darüber hinaus können sich Modellersteller durch die Hervorhebung der wichtigs
 
 Die Features im Dataset, das für dieses Beispiel verwendet wird, befinden sich in den Spalten 1-12. Das Ziel ist die Vorhersage von `Price`. 
 
-| Spalte | Feature | Beschreibung 
+| Spalte | Feature | BESCHREIBUNG 
 | --- | --- | --- |
 | 1 | CrimeRate | Pro-Kopf-Kriminalitätsrate
 | 2 | ResidentialZones | Wohngebiete in der Stadt
@@ -175,4 +175,4 @@ NearWater           |   0,000203
 PercentPopulationLivingBelowPoverty|    0,000031
 ToxicWasteLevels    |   -0,000019
 
-Wenn Sie sich die fünf wichtigsten Features dieses Datensets ansehen, wird der Preis eines Hauses, der von diesem Modell vorhergesagt wird, durch die Nähe zu Autobahnen, das Verhältnis zwischen Schülern/Studenten und Lehrkräften in der Region, die Nähe zu den wichtigsten Beschäftigungszentren, den Grundsteuersatz und die durchschnittliche Anzahl der Räume im Haus beeinflusst.
+Wenn Sie sich die fünf wichtigsten Features dieses Datasets ansehen, wird der Preis eines Hauses, der von diesem Modell vorhergesagt wird, durch die Nähe zu Autobahnen, das Verhältnis zwischen Schülern/Studenten und Lehrkräften in der Region, die Nähe zu den wichtigsten Beschäftigungszentren, den Grundsteuersatz und die durchschnittliche Anzahl der Räume im Haus beeinflusst.

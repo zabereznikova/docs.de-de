@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816050"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170515"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzigen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -56,7 +56,7 @@ Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere V
   
      Vorgehensweise: In diesem Szenario unternehmen Sie nichts. Die COM-Komponenten werden mit der Version des .NET Framework ausgeführt, mit der sie registriert wurden.  
   
-- **Szenario 2:** Mit .NET Framework 2.0 SP1 erstellte verwaltete Anwendung, die bevorzugt mit [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] ausgeführt werden soll, jedoch auch unter .NET Framework 4 ausgeführt werden kann, falls Version 2.0 nicht verfügbar ist.  
+- **Szenario 2:** Mit .NET Framework 2.0 SP1 erstellte verwaltete Anwendung, die bevorzugt mit .NET Framework 2.0 ausgeführt werden soll, jedoch auch mit .NET Framework 4 ausgeführt werden kann, falls Version 2.0 nicht vorhanden ist.  
   
      Installierte .NET Framework-Versionen: Eine frühere Version von .NET Framework sowie .NET Framework 4.  
   

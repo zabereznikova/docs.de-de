@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377882"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832879"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 
@@ -51,7 +51,7 @@ Im folgenden Szenario wird kurz umrissen, wie eine Assembly mit einem starken Na
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Umgehen der Signaturüberprüfung für vertrauenswürdige Assemblys
 
-Ab [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in eine vollständig vertrauenswürdige Anwendungsdomäne geladen wird, wie etwa die Standardanwendungsdomäne für die Zone `MyComputer`. Dies wird Strong-Name-Bypass-Feature genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Das Strong-Name-Bypass-Feature vermeidet in dieser Situation den Aufwand der Überprüfung der Signatur mit starkem Namen für vollständig vertrauenswürdige Assemblys. Dies ermöglicht ein schnelleres Laden der Assemblys.
+Ab NET Framework 3.5 Service Pack 1 werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in eine vollständig vertrauenswürdige Anwendungsdomäne geladen wird, wie etwa die Standardanwendungsdomäne für die Zone `MyComputer`. Dies wird Strong-Name-Bypass-Feature genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Das Strong-Name-Bypass-Feature vermeidet in dieser Situation den Aufwand der Überprüfung der Signatur mit starkem Namen für vollständig vertrauenswürdige Assemblys. Dies ermöglicht ein schnelleres Laden der Assemblys.
 
 Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert ist und die folgenden Eigenschaften aufweist:
 
@@ -67,7 +67,7 @@ Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert we
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Beschreibt das Erstellen eines kryptografischen Schlüsselpaars zum Signieren einer Assembly.|
 |[Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Beschreibt das Erstellen einer Assembly mit starkem Namen.|

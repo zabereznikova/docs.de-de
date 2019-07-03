@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689252"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169787"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 5)
 
@@ -20,10 +20,11 @@ In diesem Artikel werden Neuerungen in .NET Core 3.0 (durch Vorschauversion 5) b
 
 .NET Core 3.0 bietet Unterstützung für C# 8.0. Verwenden Sie unbedingt die neueste Version von Visual Studio 2019 Update 1 Preview oder VSCode mit der OmniSharp-Erweiterung.
 
-[Sie können .NET Core 3.0 Preview 5 jetzt für Windows, Mac und Linux herunterladen und sofort starten.](https://aka.ms/netcore3download)
+[Sie können .NET Core 3.0 Vorschauversion 6 jetzt für Windows, Mac und Linux herunterladen und sofort starten.](https://aka.ms/netcore3download)
 
 Weitere Informationen zu den einzelnen Vorschauversionen finden Sie in den folgenden Ankündigungen:
 
+- [Ankündigung von .NET Core 3.0 Vorschauversion 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Ankündigung von .NET Core 3.0 Vorschauversion 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [Ankündigung von .NET Core 3.0 Vorschauversion 4](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [Ankündigung von .NET Core 3.0 Vorschauversion 3](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 Weitere Informationen zum Veröffentlichen einzelner Dateien finden Sie im [Einzeldatei-Bundler-Entwurfsdokument](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md).
 
+## <a name="assembly-linking"></a>Verknüpfen von Assemblys
+
+Das.NET Core 3.0 SDK bietet ein Tool, das die Größe von Apps reduzieren kann, indem es IL analysiert und ungenutzte Assemblys trimmt.
+
+Eigenständige Apps enthalten alles, was zum Ausführen Ihres Codes benötigt wird, ohne dass .NET auf dem Hostcomputer installiert sein muss. Allerdings benötigt die App oft nur eine kleine Teilmenge des Frameworks, um zu funktionieren, sodass andere ungenutzte Bibliotheken entfernt werden können.
+
+.NET Core bietet nun eine Einstellung, die das Tool [IL linker](https://github.com/mono/linker) verwendet, um die IL Ihrer App zu untersuchen. Dieses Tool erkennt, welcher Code benötigt wird, und trimmt dann ungenutzte Bibliotheken. Es kann die Bereitstellungsgröße einiger Apps deutlich reduzieren.
+
+Um dieses Tool zu aktivieren, legen Sie die Einstellung `<PublishTrimmed>` in Ihrem Projekt fest, und veröffentlichen Sie eine eigenständige App:
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+Als Beispiel erreicht die inbegriffene Standardvorlage für neue Konsolenprojekte „hello world“ bei ihrer Veröffentlichung eine Größe von ca.70 MB. Mithilfe von `<PublishTrimmed>` wird diese Größe auf ca. 30 MB reduziert.
+
+Wichtig ist die Tatsache, dass Anwendungen oder Frameworks (einschließlich ASP.NET Core und WPF), die Reflektion oder verwandte dynamische Funktionen verwenden, nach dem Trimmen oft nicht mehr funktionieren. Dies ist der Fall, weil der Linker von diesem dynamischen Verhalten nichts weiß und nicht bestimmen kann, welche Frameworktypen für die Reflektion benötigt werden. Das Tool IL Linker kann so konfiguriert werden, dass es sich dieses Szenarios bewusst ist.
+
+Nach dem Trimmen müssen Sie Ihre App unbedingt testen.
+
+Weitere Informationen zum Tool IL Linker finden Sie in der [Dokumentation](https://aka.ms/dotnet-illink), oder besuchen Sie das Repository [mono/linker]( https://github.com/mono/linker).
+
 ## <a name="tiered-compilation"></a>Mehrstufig Kompilierung
 
 Die [mehrstufige Kompilierung](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (Tiered Compilation, TC) ist bei .NET Core 3.0 standardmäßig aktiviert. Dieses Feature ermöglicht der Runtime, den Just-In-Time-Compiler (JIT) adaptiver zu nutzen, um eine bessere Leistung zu erzielen.
@@ -131,6 +160,38 @@ Um TC vollständig zu deaktivieren, verwenden Sie diese Einstellung in Ihrer Pro
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>ReadyToRun-Images
+
+Sie können die Startzeit Ihrer.NET Core-Anwendung beschleunigen, indem Sie Ihre Anwendungsassemblys im R2R-Format (ReadyToRun) kompilieren. R2R ist eine Form der AOT-Kompilierung (Ahead-Of-Time).
+
+R2R-Binärdateien verbessern die Startleistung, indem sie den Arbeitsaufwand des JIT-Compilers (Just-in-time) reduzieren, der anfällt, wenn Ihre Anwendung geladen wird. Die Binärdateien enthalten ähnlichen nativen Code im Vergleich zu dem, was der JIT-Compiler produzieren würde.
+
+R2R-Binärdateien sind größer, da sie sowohl IL-Code (Intermediate Language, Zwischensprache), der für einige Szenarien noch benötigt wird, als auch die native Version des gleichen Codes enthalten. R2R ist nur verfügbar, wenn Sie eine eigenständige Anwendung veröffentlichen, die eine bestimmte Laufzeitumgebung (RID) wie Linux x64 oder Windows x64 als Ziel hat.
+
+Um Ihre App als R2R zu kompilieren, fügen Sie die Einstellung `<PublishReadyToRun>` hinzu:
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+Veröffentlichen Sie eine eigenständige App. Dieser Befehl erstellt beispielsweise eine eigenständige App für die 64-Bit-Version von Windows:
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>Plattformübergreifende bzw. architekturbezogene Einschränkungen
+
+Der ReadyToRun-Compiler unterstützt derzeit nicht die versionsübergreifende Angabe von Zielen. Die Kompilierung muss für ein bestimmtes Ziel erfolgen. Wenn Sie beispielsweise R2R-Images für Windows x64 benötigen, müssen Sie den Veröffentlichungsbefehl in dieser Umgebung ausführen.
+
+Ausnahmen für die versionsübergreifende Angabe von Zielen:
+
+- Windows x64 kann verwendet werden, um Windows ARM32-, ARM64- und x86-Images zu kompilieren.
+- Windows x86 kann verwendet werden, um Windows ARM32-Images zu kompilieren.
+- Linux X64 kann verwendet werden, um Linux ARM32- und -ARM64-Images zu kompilieren.
 
 ## <a name="build-copies-dependencies"></a>Build kopiert Abhängigkeiten
 
@@ -179,7 +240,7 @@ Kein Rollforward. Nur Binden an angegebene Version. Diese Richtlinie wird nicht 
 
 Abgesehen von der **Disable**-Einstellung verwenden alle Einstellungen die höchste verfügbare Patchversion.
 
-## <a name="windows-desktop"></a>Windows-Desktop
+## <a name="windows-desktop"></a>Windows Desktop
 
 .NET Core 3.0 unterstützt die Windows-Desktopanwendungen mit Windows Presentation Foundation (WPF) und Windows Forms. Diese Frameworks unterstützt auch die Verwendung moderner Steuerelemente und des Fluent-Stils aus der Windows-UI-XAML-Bibliothek (WinUI) über [XAML-Inseln](/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -352,7 +413,7 @@ Hier ist ein Beispiel für die Deserialisierung einer JSON-Zeichenfolge in ein O
 
 .NET Core 3.0 verbessert natives API-Interop.
 
-### <a name="type-nativelibrary"></a>Typ: NativeLibrary
+### <a name="type-nativelibrary"></a>Geben Sie Folgendes ein:  NativeLibrary
 
 <xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> bietet eine Kapselung zum Laden einer nativen Bibliothek (mit derselben Lastlogik wie .NET Core P/Invoke) und Bereitstellen der relevanten Hilfsfunktionen wie z.B. `getSymbol`. Ein Codebeispiel finden Sie in der [DLLMap-Demo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).
 
@@ -362,9 +423,19 @@ Windows stellt eine umfassende native API mit grundlegenden C-APIs (ohne C++-Fea
 
 ## <a name="http2-support"></a>HTTP/2-Unterstützung
 
-Der <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>-Typ unterstützt das HTTP/2-Protokoll. Die Unterstützung ist derzeit deaktiviert, Sie können sie jedoch durch den Aufruf `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` vor der Verwendung von <xref:System.Net.Http.HttpClient> aktivieren. Sie können HTTP/2-Unterstützung auch durch Festlegen der `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT`-Umgebungsvariablen auf `true`, bevor Sie Ihre App ausführen, aktivieren.
+Der <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>-Typ unterstützt das HTTP/2-Protokoll. Wenn HTTP/2 aktiviert ist, wird die HTTP-Protokollversion über TLS/ALPN ausgehandelt, und HTTP/2 wird bei Auswahl durch den Server verwendet.
 
-Wenn HTTP/2 aktiviert ist, wird die HTTP-Protokollversion über TLS/ALPN ausgehandelt, und HTTP/2 wird nur bei Auswahl durch den Server verwendet.
+Das Standardprotokoll bleibt HTTP/1.1, aber HTTP/2 kann auf zwei verschiedene Arten aktiviert werden. Erstens können Sie die HTTP-Anforderungsnachricht so festlegen, dass HTTP/2 verwendet wird:
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+Zweitens können Sie <xref:System.Net.Http.HttpClient> so ändern, dass HTTP/2 standardmäßig verwendet wird:
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+Oftmals möchten Sie bei der Entwicklung einer Anwendung eine unverschlüsselte Verbindung verwenden. Wenn Sie wissen, dass der Zielendpunkt HTTP/2 verwendet, können Sie unverschlüsselte Verbindungen für HTTP/2 aktivieren. Sie können sie aktivieren, indem Sie die Umgebungsvariable `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` auf `1` festlegen oder sie im App-Kontext aktivieren:
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>TLS 1.3 & OpenSSL 1.1.1 auf Linux
 

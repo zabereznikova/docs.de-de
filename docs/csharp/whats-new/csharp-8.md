@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557149"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151983"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -381,7 +381,7 @@ Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatore
 
 Beginnen wir mit den Regeln für Indizes. Betrachten Sie einen Array `sequence`. Der `0`-Index entspricht `sequence[0]`. Der `^0`-Index entspricht `sequence[sequence.Length]`. Beachten Sie, dass `sequence[^0]` genau wie `sequence[sequence.Length]` eine Ausnahme auslöst. Für eine beliebige Zahl `n` ist der Index `^n` identisch mit `sequence.Length - n`.
 
-Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Bereiche sind exklusiv, d.h. das *Ende* ist nicht im Bereich enthalten. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar. 
+Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Der Beginn des Bereichs ist inklusiv, das Ende des Bereichs ist jedoch exklusiv. Das bedeutet dass der *Beginn* im Bereich enthalten ist, das *Ende* aber nicht. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar. 
 
 Schauen wir uns einige Beispiele an. Betrachten Sie das folgende Array, kommentiert mit seinem Index „from the start“ und „from the end“:
 

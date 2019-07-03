@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593646"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832867"
 ---
 # <a name="delay-signing-an-assembly"></a>Verzögertes Signieren einer Assembly
 Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, auf das Entwickler nicht täglich zugreifen können. Der öffentliche Schlüssel stünde zur Verfügung, während der Zugriff auf den privaten Schlüssel nur einigen Wenigen erlaubt wäre. Beim Entwickeln von Assemblys mit starken Namen enthält jede Assembly, die auf die Zielassembly mit dem starken Namen verweist, das Token des öffentlichen Schlüssels, mit dem der starke Name der Zielassembly erzeugt wird. Aus diesem Grund muss der öffentliche Schlüssel während des Entwicklungsprozesses verfügbar sein.  
@@ -28,7 +28,7 @@ Organisationen können ein streng geheim gehaltenes Schlüsselpaar verwenden, au
   
  Die folgenden Schritte beschreiben das verzögerte Signieren einer Assembly:  
   
-1. Bringen Sie den öffentlichen Schlüssel des Schlüsselpaars von der Organisation in Erfahrung, die letztendlich signieren wird. In der Regel liegt dieser Schlüssel in Form einer SNK-Datei vor, die mit dem vom [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bereitgestellten [Strong Name-Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) erstellt werden kann.  
+1. Bringen Sie den öffentlichen Schlüssel des Schlüsselpaars von der Organisation in Erfahrung, die letztendlich signieren wird. In der Regel liegt dieser Schlüssel in Form einer SNK-Datei vor, die mit dem vom Windows Software Development Kit (SDK) bereitgestellten [Strong Name-Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) erstellt werden kann.  
   
 2. Kommentieren Sie den Quellcode für die Assembly mit den zwei benutzerdefinierten Attribute aus <xref:System.Reflection>:  
   

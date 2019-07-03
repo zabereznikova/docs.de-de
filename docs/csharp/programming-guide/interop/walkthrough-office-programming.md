@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608273"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169852"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 Visual Studio bietet Funktionen in C# und Visual Basic, die die Microsoft Office-Programmierung verbessern. Zu nützlichen C#-Funktionen gehören benannte und optionale Argumente und Rückgabewerte des Typs `dynamic`. Bei der COM-Programmierung können Sie das `ref`-Schlüsselwort weglassen und Zugriff auf indizierte Eigenschaften erhalten. Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambdaausdrücken sowie Auflistungsinitialisierer.
@@ -37,7 +37,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 2. Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-3. Erweitern Sie im Bereich **Installierte Vorlagen** die Option **Visual Basic** oder **Visual C#**, erweitern Sie dann **Office**, und klicken Sie auf die Jahreszahl der Version des Office-Produkts.  
+3. Erweitern Sie im Bereich **Installierte Vorlagen** die Option **Visual Basic** oder **Visual C#** , erweitern Sie dann **Office**, und klicken Sie auf die Jahreszahl der Version des Office-Produkts.  
   
 4. Klicken Sie im Bereich **Vorlagen** auf **Excel\<version > Add-in**.  
   
@@ -93,7 +93,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
      Bei dieser Methode werden zwei neue C#-Funktionen verwendet. Beide Funktionen existieren bereits in Visual Basic.  
   
-    - Die Methode [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) hat einen *optionalen Parameter* zum Angeben einer bestimmten Vorlage. Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten. Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe. Die entsprechende Anweisung in früheren Versionen von C# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - Die Methode [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) hat einen *optionalen Parameter* zum Angeben einer bestimmten Vorlage. Optionale Parameter – neu in C# 4 – ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten. Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe. Die entsprechende Anweisung in früheren Versionen von C# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Weitere Informationen finden Sie unter [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   

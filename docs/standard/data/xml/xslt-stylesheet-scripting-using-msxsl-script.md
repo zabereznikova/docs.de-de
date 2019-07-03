@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 617f1da8f9b5b26ddfb2910ac0c06a6898d8ab6e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835251"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170925"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Skripterstellung für ein XSLT-Stylesheet mit \<msxsl:script>
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
   
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element. Wenn das Stylesheet geladen wird, werden alle definierten Funktionen durch Wrapping in eine Klassendefinition in die Microsoft Intermediate Language (MSIL) kompiliert, sodass kein Leistungsverlust auftritt.  
   
@@ -49,7 +49,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. In der folgenden Tabelle werden die Namespaces angezeigt, die standardmäßig unterstützt werden. Sie können Klassen außerhalb der aufgeführten Namespaces verwenden. Diese Klassen müssen jedoch voll qualifiziert sein.  
   
-|Standardnamespaces|Beschreibung|  
+|Standardnamespaces|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |System|Systemklasse.|  
 |System.Collection|Auflistungsklassen.|  
@@ -60,7 +60,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |System.Xml.XPath|XPath-Klassen (XML Path Language).|  
 |Microsoft.VisualBasic|Klassen für Microsoft Visual Basic-Skripts|  
   
- Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
+ Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
   
  Die bereitgestellten, durch die Skriptfunktionen definierten Argumente und Rückgabewerte müssen zu einem der XPath- oder XSLT-Typen des W3C (World Wide Web Consortium) gehören. In der folgenden Tabelle werden die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typen) samt der Informationen aufgeführt, ob es sich bei einem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   

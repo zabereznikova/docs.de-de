@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 441a65f9a72dd0fcffb062710df74bb529767cef
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816061"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833520"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migrieren von .NET Framework 1.1
 
@@ -60,9 +60,9 @@ In einigen Fällen müssen Sie jedoch möglicherweise den Quellcode ändern und 
 
 - Unter [Breaking Changes in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263) werden Änderungen in .NET Framework 2.0 SP1 erläutert, die Auswirkungen auf eine auf .NET Framework 1.1 ausgerichtet Anwendung haben können.
 
-- Unter [Änderungen in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) werden Änderungen zwischen .NET Framework 3.5 und [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] dokumentiert.
+- Unter [Änderungen in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) werden Änderungen zwischen .NET Framework 3.5 und .NET Framework 3.5 SP1 dokumentiert.
 
-- Unter[Migrationsprobleme in .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) werden Änderungen zwischen [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] und .NET Framework 4 dokumentiert.
+- Unter[Migrationsprobleme in .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) werden Änderungen zwischen .NET Framework 3.5 SP1 und .NET Framework 4 dokumentiert.
 
 ## <a name="obsolete-types-and-members"></a>Veraltete Typen und Member
 

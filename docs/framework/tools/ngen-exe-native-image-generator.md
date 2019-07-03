@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489662"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832825"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
 
@@ -74,20 +74,20 @@ ngen /? | /help
 
 In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt. Beschreibungen der einzelnen Teile einer `action` finden Sie in den Tabellen [Argumente](#ArgumentTable), [Prioritätsebenen](#PriorityTable), [Szenarien](#ScenarioTable) und [Konfigurationen](#ConfigTable). In der Tabelle [Optionen](#OptionTable) werden die `options` und die Hilfeschalter beschrieben.
 
-|Aktion|Beschreibung|
+|Aktion|BESCHREIBUNG|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generiert systemeigene Images für eine Assembly und ihre Abhängigkeiten und installiert die Images im Cache für systemeigene Images.<br /><br /> Wenn `/queue` angegeben wird, wird die Aktion in die Warteschlange des Diensts für systemeigene Images gestellt. Die Standardpriorität ist 3. Informationen hierzu finden Sie in der Tabelle [Prioritätsebenen](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Löscht die systemeigenen Images einer Assembly und ihre Abhängigkeiten aus dem Cache für systemeigene Images.<br /><br /> Verwenden Sie zum Deinstallieren eines einzelnen Images und seiner Abhängigkeiten dieselben Befehlszeilenargumente wie beim Installieren des Images. **Hinweis**:  Ab .NET Framework 4 wird die Aktion `uninstall` * nicht mehr unterstützt.|
 |`update` [`/queue`]|Aktualisiert systemeigene Images, die ungültig geworden sind.<br /><br /> Wenn `/queue` angegeben wird, werden die Aktualisierungen in die Warteschlange des Diensts für systemeigene Images gestellt. Aktualisierungen werden immer mit Priorität 3 geplant, sodass sie zu Leerlaufzeiten des Computers ausgeführt werden.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Zeigt den Zustand der systemeigenen Images für eine Assembly und ihre Abhängigkeiten an.<br /><br /> Wenn kein Argument angegeben wird, wird der gesamte Inhalt des Caches für native Images angezeigt.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - oder - <br /><br /> `eqi` [1&#124;2&#124;3]|Führt die in der Warteschlange enthaltenen Kompilierungsaufträge aus.<br /><br /> Wenn eine Priorität angegeben wird, werden Kompilierungsaufträge mit höherer oder gleicher Priorität ausgeführt. Wenn keine Priorität angegeben wird, werden alle in die Warteschlange gestellten Kompilierungsaufträge ausgeführt.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> Oder<br /><br /> `eqi` [1&#124;2&#124;3]|Führt die in der Warteschlange enthaltenen Kompilierungsaufträge aus.<br /><br /> Wenn eine Priorität angegeben wird, werden Kompilierungsaufträge mit höherer oder gleicher Priorität ausgeführt. Wenn keine Priorität angegeben wird, werden alle in die Warteschlange gestellten Kompilierungsaufträge ausgeführt.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Hält den Dienst für systemeigene Images an, setzt den angehaltenen Dienst fort bzw. fragt den Dienststatus ab.|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>Argumente
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`assemblyName`|Der vollständige Anzeigename der Assembly. Beispielsweise `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Hinweis**:  Sie können einen partiellen Assemblynamen wie `myAssembly` für die `display`-Aktion und die `uninstall`-Aktion angeben. <br /><br /> In jeder Befehlszeile von "Ngen.exe" kann nur eine Assembly angegeben werden.|
 |`assemblyPath`|Der explizite Pfad der Assembly. Sie können einen vollständigen oder einen relativen Pfad angeben.<br /><br /> Wenn Sie einen Dateinamen ohne Pfad angeben, muss sich die Assembly im aktuellen Verzeichnis befinden.<br /><br /> In jeder Befehlszeile von "Ngen.exe" kann nur eine Assembly angegeben werden.|
@@ -96,7 +96,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="priority-levels"></a>Prioritätsebenen
 
-|Priorität|Beschreibung|
+|Priorität|BESCHREIBUNG|
 |--------------|-----------------|
 |`1`|Systemeigene Images werden sofort generiert und installiert, ohne dass auf Leerlaufzeit gewartet wird.|
 |`2`|Systemeigene Images werden ohne Warten auf Leerlaufzeit generiert und installiert, aber nachdem alle Aktionen mit Priorität 1 (und ihre Abhängigkeiten) abgeschlossen wurden.|
@@ -106,7 +106,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="scenarios"></a>Szenarien
 
-|Szenario|Beschreibung|
+|Szenario|BESCHREIBUNG|
 |--------------|-----------------|
 |`/Debug`|Generiert systemeigene Images, die unter einem Debugger verwendet werden können.|
 |`/Profile`|Generiert systemeigene Images, die unter einem Profiler verwendet werden können.|
@@ -116,7 +116,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="config"></a>Konfigurationen
 
-|Konfiguration|Beschreibung|
+|Konfiguration|BESCHREIBUNG|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Verwendet die Konfiguration der angegebenen ausführbaren Assembly.<br /><br /> "Ngen.exe" muss beim Binden an Abhängigkeiten die gleichen Entscheidungen wie das Ladeprogramm treffen. Wenn eine freigegebene Komponente zur Laufzeit mit der <xref:System.Reflection.Assembly.Load%2A>-Methode geladen wird, bestimmt die Konfigurationsdatei der Anwendung die Abhängigkeiten, die für die freigegebene Komponente geladen werden, beispielsweise die Version einer zu ladenden Abhängigkeit. Über den Schalter `/ExeConfig` erhält "Ngen.exe" Anweisungen dazu, welche Abhängigkeiten zur Laufzeit geladen werden.|
 |`/AppBase:` `directoryPath`|Verwendet das angegebene Verzeichnis beim Suchen nach Abhängigkeiten als Anwendungsbasis.|
@@ -125,7 +125,7 @@ In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt
 
 ## <a name="options"></a>Optionen
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|
@@ -233,7 +233,7 @@ Durch das Vorkompilieren von Assemblys mit Ngen.exe kann die Startzeit einiger A
 Die feste Bindung kann die Startzeit verlangsamen, da alle Images, die eine feste Bindung an die Hauptassembly der Anwendung aufweisen, gleichzeitig geladen werden müssen.
 
 > [!NOTE]
-> Vor [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] sollten Sie freigegebene, mit starken Bezeichnungen benannte Komponenten in den globalen Assemblycache einschließen, da das Ladeprogramm für Assemblys mit starkem Namen, die nicht im globalen Assemblycache enthalten sind, eine zusätzliche Überprüfung ausführt. Dadurch wird jegliche Beschleunigung der Startzeit aufgrund der Verwendung systemeigener Images wieder zunichte gemacht. Aufgrund von Optimierungen, die in [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] eingeführt wurden, wurden zusätzliche Überprüfungen überflüssig.
+> Vor .NET Framework 3.5 Service Pack 1 müssen Sie freigegebene, mit starken Bezeichnungen benannte Komponenten in den globalen Assemblycache einschließen, da das Ladeprogramm für Assemblys mit starkem Namen, die nicht im globalen Assemblycache enthalten sind, eine zusätzliche Überprüfung ausführt. Dadurch wird jegliche Beschleunigung der Startzeit aufgrund der Verwendung systemeigener Images wieder zunichte gemacht. Aufgrund von Optimierungen, die in .NET Framework 3.5 SP 1 eingeführt wurden, wurden zusätzliche Überprüfungen überflüssig.
 
 <a name="UsageSummary"></a>
 

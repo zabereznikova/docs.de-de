@@ -1,16 +1,16 @@
 ---
 title: Treffen von Vorhersagen mit einem trainierten Modell
 description: Erfahren Sie, wie Sie mit einem trainierten Modell Vorhersagen treffen
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065603"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307400"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Treffen von Vorhersagen mit einem trainierten Modell
 
@@ -92,7 +92,7 @@ Wenn Sie auf die `Score`-Eigenschaft des `prediction`-Objekts zugreifen, sollten
 
 ## <a name="batch-prediction"></a>Batchvorhersage
 
-Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
+Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). In diesem Fall ist `inputData` der Name von [`IDataView`](xref:Microsoft.ML.IDataView). Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
 
 ```csharp
 // Actual data

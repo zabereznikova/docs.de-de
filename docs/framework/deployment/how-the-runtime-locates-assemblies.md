@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613979"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833720"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen Sie mit dem Verfahren vertraut sein, mit dem die Common Language Runtime die Assemblys sucht und bindet, aus denen Ihre Anwendung zusammengesetzt ist. Standardmäßig versucht die Common Language Runtime, die genaue Version einer Assembly einzubinden, mit der die Anwendung erstellt wurde. Dieses Standardverhalten kann durch Einstellungen in der Konfigurationsdatei überschrieben werden.  
@@ -24,7 +24,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
  Die Common Language Runtime führt eine Reihe von Schritten aus, um eine Assembly zu finden und einen Assemblyverweis aufzulösen. Die einzelnen Schritte werden in den folgenden Abschnitten erläutert. Der Begriff "Überprüfung" wird häufig verwendet, um zu beschreiben, wie die Common Language Runtime nach Assemblys sucht. Er bezieht sich auf die Heuristiken, mit denen die Assembly auf Basis ihres Namens und ihrer Kultur gesucht wird.  
   
 > [!NOTE]
->  Bindungsinformationen in der Protokolldatei können mit dem [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)angezeigt werden, der in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]enthalten ist.  
+>  Bindungsinformationen in der Protokolldatei können mit dem [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) angezeigt werden, der im Windows Software Development Kit (SDK) enthalten ist.  
   
 ## <a name="initiating-the-bind"></a>Initiieren der Bindung  
  Das Auffinden einer und Binden an eine Assembly beginnt mit dem Versuch der Common Language Runtime, einen Verweis auf eine andere Assembly aufzulösen. Dieser Verweis kann statisch oder dynamisch sein. Der Compiler zeichnet statische Verweise in den Metadaten des Assemblymanifests während der Erstellungszeit auf. Dynamische Verweise werden dynamisch erstellt und resultieren aus dem Aufruf verschiedener Methoden, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -78,7 +78,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
 ### <a name="application-configuration-file"></a>Anwendungskonfigurationsdatei  
  Im ersten Schritt durchsucht die Common Language Runtime die Anwendungskonfigurationsdatei nach Informationen, die die im Manifest der aufrufenden Assembly gespeicherten Versionsinformationen überschreiben. Die Anwendungskonfigurationsdatei kann mit einer Anwendung bereitgestellt werden, wird aber nicht für die Ausführung der Anwendung benötigt. In der Regel erfolgt der Abruf dieser Datei fast unmittelbar, aber in Fällen, in denen sich die Anwendungsbasis auf einem Remotecomputer befindet, wie z. B. in einem webbasierten Szenario mit Internet Explorer, muss die Konfigurationsdatei heruntergeladen werden.  
   
- Im Fall von ausführbaren Clientdateien befindet sich die Anwendungskonfigurationsdatei im selben Verzeichnis wie die ausführbare Datei der Anwendung und verfügt über denselben Basisnamen wie diese sowie über die Dateierweiterung ".config". Die Konfigurationsdatei für "C:\Programme\Myapp\Myapp.exe" ist beispielsweise "C:\Programme\Myapp\Myapp.exe.config". In einem browserbasierten Szenario muss die HTML-Datei das **\<link>**-Element verwenden, um explizit auf die Konfigurationsdatei zu verweisen.  
+ Im Fall von ausführbaren Clientdateien befindet sich die Anwendungskonfigurationsdatei im selben Verzeichnis wie die ausführbare Datei der Anwendung und verfügt über denselben Basisnamen wie diese sowie über die Dateierweiterung ".config". Die Konfigurationsdatei für "C:\Programme\Myapp\Myapp.exe" ist beispielsweise "C:\Programme\Myapp\Myapp.exe.config". In einem browserbasierten Szenario muss die HTML-Datei das **\<link>** -Element verwenden, um explizit auf die Konfigurationsdatei zu verweisen.  
   
  Der folgende Code bietet ein einfaches Beispiel für eine Anwendungskonfigurationsdatei. In diesem Beispiel wird der <xref:System.Diagnostics.TextWriterTraceListener> -Auflistung ein <xref:System.Diagnostics.Debug.Listeners%2A> hinzugefügt, um das Aufzeichnen von Debuginformationen in einer Datei zu aktivieren.  
   

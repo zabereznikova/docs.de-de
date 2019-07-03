@@ -1,6 +1,6 @@
 ---
 title: Formate von Dateipfaden unter Windows-Systemen
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835823"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170730"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -30,7 +30,7 @@ Ein standardmäßiger DOS-Pfad kann aus drei Komponenten bestehen:
 - Ein Verzeichnisname. Das [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) trennt Unterverzeichnisse innerhalb der geschachtelten Verzeichnishierarchie.
 - Ein optionaler Dateiname. Das [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) trennt den Dateipfad und den Dateinamen.
 
-Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volume oder Laufwerkbuchstabe angegeben ist, und der Name des Verzeichnisses mit dem [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) beginnt, ist der Pfad relativ zum Stamm des aktuellen Laufwerks. Andernfalls ist der Pfad relativ zum aktuellen Verzeichnis. In der folgenden Tabelle werden mögliche Verzeichnis- und Dateipfade veranschaulicht.
+Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volume oder Laufwerkbuchstabe angegeben ist und der Name des Verzeichnisses mit dem [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) beginnt, ist der Pfad relativ zum Stamm des aktuellen Laufwerks. Andernfalls ist der Pfad relativ zum aktuellen Verzeichnis. In der folgenden Tabelle werden mögliche Verzeichnis- und Dateipfade veranschaulicht.
 
 |Pfad  |Beschreibung  |
 | -- | -- |
@@ -76,6 +76,11 @@ Das Windows-Betriebssystem verfügt über ein einheitliches Objektmodell, das au
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+Zusätzlich zum Identifizieren eines Laufwerks anhand des Laufwerkbuchstabens können Sie ein Volume mithilfe des Volume-GUID identifizieren. Dieser weist folgendes Format auf:
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > Die DOS-Gerätepfadsyntax wird beginnend mit .NET Core 1.1 und .NET Framework 4.6.2 von .NET-Implementierungen unterstützt, die unter Windows ausgeführt werden.
 
@@ -85,8 +90,8 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 
    > [!NOTE]
    > `\\?\` wird in allen Versionen von .NET Core und ab Version 4.6.2 von .NET Framework unterstützt.
-   
-- Eine symbolische Verknüpfung zum „echten“ Geräteobjekt (in diesem Fall „C:“).
+
+- Ein symbolischer Link zum „echten“ Geräteobjekt (im Fall eines Laufwerknamens „C:“, im Fall eines Volume-GUID „Volume{b75e2c83-0000-0000-0000-602f00000000}“).
 
    Das erste Segment des DOS-Gerätepfads, nachdem der Gerätepfadbezeichner das Volume oder Laufwerk identifiziert. (Zum Beispiel `\\?\C:\` und `\\.\BootPartition\`.)
 
@@ -95,7 +100,7 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Für UNC-Pfade für Geräte bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ bei `\\?\server1\e:\utilities\\filecomparer\` „server1\utilities“. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren. 
+    Bei Geräte-UNCs bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ bei `\\?\server1\e:\utilities\\filecomparer\` „server1\utilities“. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren. 
 
 DOS-Gerätepfade sind definitionsgemäß absolut. Die relativen Verzeichnissegmente (`.` und `..`) sind nicht zulässig. Aktuelle Verzeichnisse haben bei Verwendung von UNC-Pfaden keine Relevanz.
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 18e737ec1f6c6f76ff882d48ad311a45ba7b756b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a9e1f1fafcee4723c4aed37a0473c0f75512e11a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456741"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169858"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Verwenden des Typs „dynamic“ (C#-Programmierhandbuch)
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] führt einen neuen Typ ein, `dynamic`. Bei diesem Typ handelt es sich um einen statischen Typ. Ein Objekt des Typs `dynamic` umgeht aber die Überprüfung statischer Typen. In den meisten Fällen entspricht es der Funktionsweise des Typs `object`. Bei einem Element, das zur Kompilierzeit als `dynamic` typisiert wird, wird davon ausgegangen, dass es alle Vorgänge unterstützt. Daher müssen Sie sich keine Gedanken darüber machen, ob das Objekt seinen Wert von einer COM-API, einer dynamischen Sprache wie IronPython, vom HTML-DOM (Document Object Model), aus der Reflektion oder von einer anderen Quelle im Programm erhält. Wenn der Code jedoch nicht gültig ist, werden Fehler zur Laufzeit abgefangen.
+C# 4 führt einen neuen Typ ein: `dynamic`. Bei diesem Typ handelt es sich um einen statischen Typ. Ein Objekt des Typs `dynamic` umgeht aber die Überprüfung statischer Typen. In den meisten Fällen entspricht es der Funktionsweise des Typs `object`. Bei einem Element, das zur Kompilierzeit als `dynamic` typisiert wird, wird davon ausgegangen, dass es alle Vorgänge unterstützt. Daher müssen Sie sich keine Gedanken darüber machen, ob das Objekt seinen Wert von einer COM-API, einer dynamischen Sprache wie IronPython, vom HTML-DOM (Document Object Model), aus der Reflektion oder von einer anderen Quelle im Programm erhält. Wenn der Code jedoch nicht gültig ist, werden Fehler zur Laufzeit abgefangen.
 
 Wenn z.B. die Instanzmethode `exampleMethod1` im folgenden Code nur einen Parameter hat, erkennt der Compiler, dass der erste Aufruf der Methode, `ec.exampleMethod1(10, 4)`, nicht gültig ist, da er zwei Argumente enthält. Dieser Aufruf löst einen Compilerfehler aus. Der zweite Aufruf der Methode, `dynamic_ec.exampleMethod1(10, 4)`, wird vom Compiler nicht überprüft, da der Typ von `dynamic_ec` `dynamic` ist. Daher wird kein Compilerfehler gemeldet. Allerdings bleibt der Fehler nicht unbegrenzt unbemerkt. Er wird zur Laufzeit abgefangen und führt zu einer Laufzeitausnahme.
 
@@ -64,7 +64,7 @@ Die Dynamic Language Runtime (DLR) ist eine neue API in .NET Framework 4. Sie 
 
 ## <a name="com-interop"></a>COM-Interop
 
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] enthält mehrere Funktionen, die die Benutzerfreundlichkeit bei Interoperationen mit COM-APIs wie den Automatisierungs-APIs in Microsoft Office verbessern. Zu diesen Verbesserungen gehören die Verwendung des Typs `dynamic` und von [benannten und optionalen Argumenten](../classes-and-structs/named-and-optional-arguments.md).
+C# 4 enthält mehrere Features, die die Interoperabilität mit COM-APIs wie den Automatisierungs-APIs in Office verbessern. Zu diesen Verbesserungen gehören die Verwendung des Typs `dynamic` und von [benannten und optionalen Argumenten](../classes-and-structs/named-and-optional-arguments.md).
 
 Viele COM-Methoden ermöglichen die Variation von Argument- und Rückgabetypen durch Festlegen der Typen als `object`. Dadurch wird das explizite Umwandeln der Werte für die Koordination mit stark typisierten Variablen in C# notwendig. Wenn Sie mit der Option [/link (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) kompilieren, ermöglicht es Ihnen die Einführung des Typs `dynamic`, das Vorkommen von `object` in COM-Signaturen so zu behandeln, als wäre es vom Typ `dynamic`. Dadurch können Sie einen Großteil der Umwandlung umgehen. Die folgenden Anweisungen unterscheiden z.B., wie Sie auf eine Zelle in einem Arbeitsblatt von Microsoft Office Excel mit dem Typ `dynamic` und ohne den Typ `dynamic` zugreifen.
 
@@ -74,7 +74,7 @@ Viele COM-Methoden ermöglichen die Variation von Argument- und Rückgabetypen d
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[dynamic](../../language-reference/keywords/dynamic.md)|Beschreibt die Verwendung des Schlüsselworts `dynamic`.|
 |[Übersicht über die Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Bietet eine Übersicht über die Dynamic Language Runtime (DLR), eine Laufzeitumgebung, die der Common Language Runtime (CLR) eine Reihe von Diensten für dynamische Sprachen hinzufügt.|

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378580"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833886"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parameter
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 | -------- | ----------- |
 |`filename`|Der Name der IL-Quelldatei. Diese Datei besteht aus Direktiven für die Deklaration von Metadaten und symbolischen IL-Anweisungen. Zum Erstellen einer einzelnen PE-Datei mithilfe von *Ilasm.exe* können mehrere Quelldateiargumente angegeben werden. **Hinweis**: Vergewissern Sie sich, dass die letzte Codezeile in der IL-Quelldatei entweder ein nachgestelltes Leerzeichen oder ein Zeilenendezeichen besitzt.|
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/32bitpreferred**|Erstellt ein Abbild im PE32-Format (vorzugweise 32 Bit).|
 |**/alignment:** `integer`|Legt FileAlignment auf den Wert fest, der im NT Optional-Header per `integer` angegeben ist. Wenn die .alignment-IL-Direktive in der Datei angegeben ist, wird sie durch diese Option überschrieben.|
@@ -104,7 +104,7 @@ Damit dieses Zusammenspiel von *Ildasm.exe* und *Ilasm.exe* so exakt wie möglic
 > [!NOTE]
 > *Ildasm.exe* kann nur für Dateien auf der Festplatte verwendet werden. Bei Dateien, die im globalen Assemblycache installiert sind, funktioniert dieses Tool nicht.
 
-Weitere Informationen zur Grammatik von IL finden Sie in der Datei "asmparse.grammar" im [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows Software Development Kit (SDK).
 
 ## <a name="version-information"></a>Versionsinformationen
 
@@ -137,7 +137,7 @@ Ab .NET Framework 4.5 können Sie ein beliebiges Marshall-BLOB (Binary Large O
         Test(object A_1) cil managed
 ```
 
-Weitere Informationen zur Grammatik von IL finden Sie in der Datei "asmparse.grammar" im [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows Software Development Kit (SDK).
 
 ## <a name="examples"></a>Beispiele
 

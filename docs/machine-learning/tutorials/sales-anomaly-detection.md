@@ -1,19 +1,19 @@
 ---
-title: Verwenden von ML.NET in einem Szenario für die Erkennung von Vertriebsanomalien
-description: Erfahren Sie, wie Sie ML.NET in einem Szenario zur Erkennung von Vertriebsanomalien einsetzen können, um zu verstehen, wie Sie die Daten im Hinblick auf Anomaliespitzen und Änderungspunkte analysieren können, um die entsprechenden Maßnahmen zu ergreifen.
-ms.date: 05/29/2019
+title: 'Tutorial: Erkennen von Anomalien bei Produktverkäufen'
+description: Erfahren Sie, wie Sie eine Anwendung zur Anomalieerkennung bei Produktvertriebsdaten erstellen. Dieses Tutorial erstellt mithilfe von C# in Visual Studio 2019 eine .NET Core-Konsolenanwendung.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758798"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306225"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Tutorial: Verwenden von ML.NET für die Erkennung von Vertriebsanomalien 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Erkennen von Anomalien in Produktverkäufen mit ML.NET
 
-Dieses Beispieltutorial veranschaulicht die Verwendung von ML.NET zur Erkennung von Anomalien in Produktvertriebsdaten, um über eine .NET Core-Konsolenanwendung mit C# in Visual Studio 2019 die entsprechenden Maßnahmen zu ergreifen. 
+Erfahren Sie, wie Sie eine Anwendung zur Anomalieerkennung bei Produktvertriebsdaten erstellen. Dieses Tutorial erstellt mithilfe von C# in Visual Studio eine .NET Core-Konsolenanwendung.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]

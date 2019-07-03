@@ -1,21 +1,19 @@
 ---
-title: 'Tutorial: Erstellen einer benutzerdefinierten ML.NET-Bildklassifizierung mit TensorFlow'
-description: Erfahren Sie, wie Sie eine benutzerdefinierte ML.NET-Bildklassifizierung in einem TensorFlow-Übertragungslernszenario erstellen, um Bilder durch Wiederverwendung eines vortrainierten TensorFlow-Modells zu klassifizieren.
-ms.date: 05/06/2019
+title: 'Tutorial: Erneutes Trainieren der TensorFlow-Bildklassifizierung: Übertragungslernen'
+description: Erfahren Sie, wie ein TensorFlow-Modell für die Bildklassifizierung mit Übertragungslernen und ML.NET neu trainieren. Das ursprüngliche Modell war so trainiert, dass es einzelne Bilder klassifizieren konnte. Nach dem erneuten Training ordnet das neue Modell die Bilder in allgemeine Kategorien ein.
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 62a926795ce34a8c1639f1d42ebbb34b53dc67ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593425"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401738"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Tutorial: Erstellen einer benutzerdefinierten ML.NET-Bildklassifizierung mit TensorFlow
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Erneutes Trainieren einer TensorFlow-Bildklassifizierung mit Übertragungslernen und ML.NET
 
-In diesem Beispieltutorial wird veranschaulicht, wie Sie ein bereits trainiertes Bildklassifizierungs-`TensorFlow`-Modell zum Erstellen eines neuen benutzerdefinierten Modells zum Klassifizieren von Bildern in verschiedenen Kategorien verwenden.
-
-Was wäre, wenn Sie ein zum Lösen eines ähnlichen Problems bereits vortrainiertes Modell wiederverwenden und entweder alle oder einige Ebenen dieses Modells neu trainieren könnten, damit es Ihr Problem löst? Dieses Verfahren der erneuten Nutzung eines Teils eines bereits trainierten Modells zum Erstellen eines neuen Modells wird als [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning) (Übertragungslernen) bezeichnet.
+Erfahren Sie, wie ein TensorFlow-Modell für die Bildklassifizierung mit Übertragungslernen und ML.NET neu trainieren. Das ursprüngliche Modell war so trainiert, dass es einzelne Bilder klassifizieren konnte. Nach dem erneuten Training ordnet das neue Modell die Bilder in allgemeine Kategorien ein. 
 
 Das von Grund auf neue Trainieren eines Modells zur [Bildklassifizierung](https://en.wikipedia.org/wiki/Outline_of_object_recognition) erfordert das Einstellen von Millionen von Parametern, zahlreiche bezeichnete Trainingsdaten und eine große Menge an Computeressourcen (Hunderte von GPU-Stunden). Transfer Learning ist zwar nicht so effektiv wie das von Grund auf neue Trainieren eines benutzerdefinierten Modells, doch damit können Sie diesen Prozess durch die Arbeit mit Tausenden von Bildern im Vergleich zur Arbeit mit Millionen bezeichneter Bilder abkürzen und relativ schnell ein benutzerdefiniertes Modell erstellen (innerhalb einer Stunde auf einem Computer ohne eine GPU).
 
@@ -24,6 +22,10 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Das Problem verstehen
 > * Wiederverwenden und Optimieren des vortrainierten Modells
 > * Klassifizieren von Bildern
+
+## <a name="what-is-transfer-learning"></a>Was ist Übertragungslernen?
+
+Was wäre, wenn Sie ein zum Lösen eines ähnlichen Problems bereits vortrainiertes Modell wiederverwenden und entweder alle oder einige Ebenen dieses Modells neu trainieren könnten, damit es Ihr Problem löst? Dieses Verfahren der erneuten Nutzung eines Teils eines bereits trainierten Modells zum Erstellen eines neuen Modells wird als [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning) (Übertragungslernen) bezeichnet.
 
 ## <a name="image-classification-sample-overview"></a>Übersicht über das Bildklassifizierungsbeispiel
 

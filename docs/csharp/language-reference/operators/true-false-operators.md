@@ -1,17 +1,17 @@
 ---
-title: Operatoren „true“ und „false“ – C#-Referenz
+title: 'Operatoren „true“ und „false“: C#-Referenz'
 ms.custom: seodec18
 ms.date: 12/10/2018
 helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: f4391e73b17c3700dc04240e1289b523c4bdc596
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758137"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025031"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatoren „true“ und „false“ (C#-Referenz)
 
@@ -38,7 +38,6 @@ Wait!
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
-- [`true` Literal](../keywords/true-literal.md)
-- [`false` Literal](../keywords/false-literal.md)
+- [true-Literal](../keywords/true-literal.md)
+- [false-Literal](../keywords/false-literal.md)

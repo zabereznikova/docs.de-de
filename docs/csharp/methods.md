@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186077"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025096"
 ---
 # <a name="methods"></a>Methoden
 
@@ -144,9 +144,9 @@ Ein Aufrufer kann anschließend die Methode auf drei verschiedene Arten aufrufen
 - Durch das Übergeben einer mit Komma getrennten Liste eines einzelnen Arguments des entsprechenden Typs der Methode
 - Durch keine Bereitstellung eines Arguments für das Parameterarray
 
-Im folgenden Beispiel wird eine Methode mit dem Namen `DoStringOperation` definiert, die den Zeichenfolgevorgang ausführt, der von dessen erstem Parameter – einem `StringOperation`-Enumerationsmember – angegeben wurde. Die Zeichenfolge, von der der Vorgang ausgeführt wird, wird durch ein Parameterarray definiert. Die `Main`-Methode zeigt alle drei Möglichkeiten, um die Methode aufzurufen. Beachten Sie, dass die mit Schlüsselwort `params` gekennzeichnete Methode auf den Fall vorbereitet werden muss, in dem kein Argument für das Parameterarray bereitgestellt wird, sodass sein Wert `null` entspricht.
+Das folgende Beispiel definiert eine Methode namens `GetVowels`, die alle Vokale aus einem Parameterarray zurückgibt. Die `Main`-Methode zeigt alle drei Möglichkeiten, um die Methode aufzurufen. Aufrufer müssen keine Argumente für Parameter angeben, die den Modifizierer `params` enthalten. In diesem Fall ist der Parameter `null`.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ Eine Methodendefinition kann angeben, dass seine Parameter erforderlich oder opt
 Der Standardwert des Parameters muss von einer der folgenden Ausdrucksarten zugewiesen werden:
 
 - Eine Konstante, z.B. eine Zeichenfolgenliteral oder eine Zahl
-- Ein Ausdruck in Form von `new ValType`, wobei `ValType` ein Werttyp ist. Beachten Sie, dass dies den impliziten Standardkonstruktor des Werttyps aufruft, der eigentlich kein Member des Typs ist.
+- Ein Ausdruck in Form von `new ValType`, wobei `ValType` ein Werttyp ist Beachten Sie, dass dies den impliziten parameterlosen Konstruktor des Werttyps aufruft, der eigentlich kein Member des Typs ist.
 - Ein Ausdruck in Form von `default(ValType)`, wobei `ValType` ein Werttyp ist
 
 Wenn eine Methode erforderliche und optionale Parameter enthält, werden optionale Parameter nach allen benötigten Parametern am Ende der Parameterliste definiert.

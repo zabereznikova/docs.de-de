@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378567"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025970"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* stehen die folgenden Optionen zur Verfügung.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/out=** `filename`|Erstellt eine Ausgabedatei mit dem angegebenen `filename`, anstatt die Ergebnisse in einer grafischen Benutzeroberfläche anzuzeigen.|
 |**/rtf**|Erzeugt die Ausgabe im RTF-Format. Ungültig mit der Option **/text**.|
@@ -46,14 +46,14 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* s
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgenden zusätzlichen Optionen zur Verfügung.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/bytes**|Zeigt die Bytes selbst im Hexadezimalformat als Kommentare zu Anweisungen an.|
 |**/caverbal**|Erzeugt BLOBs des benutzerdefinierten Attributs im verbalen Format. Der Standard entspricht dem binären Format.|
 |**/linenum**|Enthält Verweise auf die ursprünglichen Quellzeilen.|
 |**/nobar**|Unterdrückt die Anzeige des Popupfensters mit der Statusanzeige für die Disassembly.|
 |**/noca**|Unterdrückt die Ausgabe von benutzerdefinierten Attributen.|
-|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in systemeigenen [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in der nativen Windows-Runtime. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Disassembliert ausschließlich öffentliche Typen und Member. Entspricht **/visibility:PUB**.|
 |**/quoteallnames**|Schließt alle Namen in einfache Anführungszeichen ein.|
 |**/raweh**|Zeigt Klauseln für die Ausnahmebehandlung in unformatierter Form an.|
@@ -63,7 +63,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgen
 
 Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* bei der Ausgabe in einer Datei oder der Konsole.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/all**|Gibt eine Kombination der Optionen **/header**, **/bytes**, **/stats**, **/classlist** und **/tokens** an.|
 |**/classlist**|Umfasst eine Liste der im Modul definierten Klassen.|
@@ -78,13 +78,13 @@ Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.d
 
 Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* bei der Ausgabe in einer Datei oder der Konsole.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Zeigt Metadaten an. Dabei entspricht `specifier` Folgendem:<br /><br /> **MDHEADER**: Zeigt die Headerinformationen und -größen der Metadaten an.<br /><br /> **HEX**: Zeigt Informationen im Hexadezimalformat sowie in Wörtern an.<br /><br /> **CSV**: Zeigt die Anzahl von Datensätzen und die Heapgrößen an.<br /><br /> **UNREX**: Zeigt nicht aufgelöste Externe an.<br /><br /> **SCHEMA**: Zeigt den Metadatenheader und Schemainformationen an.<br /><br /> **RAW**: Zeigt die nicht formatierten Metadatentabellen an.<br /><br /> **HEAPS**: zeigt die unformatierten Heaps an.<br /><br /> **VALIDATE**: Überprüft die Konsistenz der Metadaten.<br /><br /> Sie können **/metadata** mehrmals angeben und unterschiedliche Werte für `specifier` verwenden.|
 
 Die folgenden Optionen gelten nur für *LIB*-Dateien bei der Ausgabe in eine Datei oder auf der Konsole.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Zeigt die Metadaten einer einzelnen Objektdatei in der angegebenen Bibliothek an.|
 
@@ -100,7 +100,7 @@ Die von *Ildasm.exe* erstellte Textdatei kann als Eingabe für den IL-Assembler 
 > [!NOTE]
 > Für PE-Dateien, die eingebetteten systemeigenen Code enthalten (z. B. von Visual C++ erstellte PE-Dateien), ist dieses Verfahren gegenwärtig jedoch nicht geeignet.  
 
-In der als Standard festgelegten grafischen Benutzeroberfläche des IL-Disassemblers können Sie sich die Metadaten und den disassemblierten Code aller vorhandenen PE-Dateien als hierarchische Struktur anzeigen lassen. Geben Sie zum Aufrufen der Benutzeroberfläche an der Befehlszeile **ildasm** ein, ohne dabei das *PEfilename*-Argument oder Optionen anzugeben. Im Menü **Datei** können Sie zu der PE-Datei navigieren, die Sie in *Ildasm.exe* laden möchten. Um die Metadaten und den disassemblierten Code zu speichern, die für die ausgewählte PE angezeigt werden, wählen Sie im Menü **Datei** den Befehl **Sichern** aus. Wenn Sie nur die angezeigte hierarchische Struktur speichern möchten, wählen Sie im Menü **Datei** den Befehl **Strukturansicht sichern** aus. Ausführliche Anleitungen zum Laden einer Datei in *Ildasm.exe* und zum Interpretieren der Ausgabe finden Sie im Tutorial für *Ildasm.exe*. Dies ist im Lieferumfang von [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] enthalten und befindet sich im Ordner „Samples“.
+In der als Standard festgelegten grafischen Benutzeroberfläche des IL-Disassemblers können Sie sich die Metadaten und den disassemblierten Code aller vorhandenen PE-Dateien als hierarchische Struktur anzeigen lassen. Geben Sie zum Aufrufen der Benutzeroberfläche an der Befehlszeile **ildasm** ein, ohne dabei das *PEfilename*-Argument oder Optionen anzugeben. Im Menü **Datei** können Sie zu der PE-Datei navigieren, die Sie in *Ildasm.exe* laden möchten. Um die Metadaten und den disassemblierten Code zu speichern, die für die ausgewählte PE angezeigt werden, wählen Sie im Menü **Datei** den Befehl **Sichern** aus. Wenn Sie nur die angezeigte hierarchische Struktur speichern möchten, wählen Sie im Menü **Datei** den Befehl **Strukturansicht sichern** aus. Ausführliche Anleitungen zum Laden einer Datei in *Ildasm.exe* und zum Interpretieren der Ausgabe finden Sie im Tutorial für *Ildasm.exe*. Dies ist im Funktionsumfang des Windows Software Development Kit (SDK) enthalten und befindet sich im Ordner „Samples“.
 
 Wenn Sie *Ildasm.exe* mit dem *PEfilename*-Argument angeben, das eingebettete Ressourcen enthält, erstellt das Tool mehrere Ausgabedateien: eine Textdatei mit IL-Code und für jede eingebettete verwaltete Ressource eine RESOURCES-Datei, die unter Verwendung des Ressourcennamens aus Metadaten erstellt wird. Wenn in *PEfilename* eine nicht verwaltete Ressource eingebettet ist, wird eine RES-Datei unter Verwendung des Dateinamens erstellt, der durch die Option **/output** für die IL-Ausgabe angegeben wird.
 

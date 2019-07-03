@@ -1,5 +1,5 @@
 ---
-title: 'Operatoren für den Memberzugriff: C#-Referenz'
+title: Operatoren für den Memberzugriff – C#-Referenz
 description: Enthält Informationen zu C#-Operatoren, die Sie für den Zugriff auf Typmember verwenden können.
 ms.date: 05/09/2019
 author: pkulikov
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: de0715a2ac946fa47f0d83ac8569595e622f0b97
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758081"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306537"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatoren für den Memberzugriff (C#-Referenz)
 
@@ -147,7 +147,7 @@ Klammern verwenden Sie auch beim Aufrufen eines [Konstruktors](../../programming
 
 Mit Klammern geben Sie auch die Reihenfolge an, in der Vorgänge in einem Ausdruck ausgewertet werden sollen. Weitere Informationen finden Sie im Abschnitt [Hinzufügen von Klammern](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) des Artikels [Operatoren (C#-Programmierhandbuch)](../../programming-guide/statements-expressions-operators/operators.md). Die Liste der Operatoren ist nach der Rangfolge sortiert, siehe [C#-Operatoren](index.md).
 
-[Umwandlungsausdrücke](invocation-operator.md#cast-expression), die einen Konvertierungsoperator aufrufen, verwenden auch Klammern.
+[Cast-Ausdrücke](type-testing-and-conversion-operators.md#cast-operator-), die explizite Typkonvertierungen ausführen, verwenden ebenfalls Klammern.
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
@@ -165,6 +165,5 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [?? (NULL-Sammeloperator)](null-coalescing-operator.md)

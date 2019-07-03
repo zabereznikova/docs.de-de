@@ -1,5 +1,5 @@
 ---
-title: ::-Operator – C#-Referenz
+title: 'Operator „::“: C#-Referenz'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422525"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025076"
 ---
-# <a name="-operator-c-reference"></a>::-Operator (C#-Referenz)
+# <a name="-operator-c-reference"></a>Operator „::“ (C#-Referenz)
 
 Der Namespacealias-Qualifizierer (`::`) wird verwendet, um nach Bezeichnern zu suchen. Er befindet sich immer zwischen zwei Bezeichnern, wie im folgenden Beispiel:
 
@@ -46,7 +46,6 @@ Ein Beispiel zur Verwendung des `::`-Operators finden Sie im folgenden Abschnitt
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [.-Operator](member-access-operators.md#member-access-operator-)
 - [extern alias](../keywords/extern-alias.md)

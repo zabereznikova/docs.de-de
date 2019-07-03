@@ -8,18 +8,27 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204664"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348011"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
 Das Schlüsselwort `readonly` ist ein Modifizierer, der in drei Kontexten verwendet werden kann:
 
-- In einer [Felddeklaration](#readonly-field-example) gibt `readonly` an, dass die Zuweisung zum Feld nur als Teil der Deklaration oder in einem Konstruktor derselben Klasse erfolgen kann.
+- In einer [Felddeklaration](#readonly-field-example) gibt `readonly` an, dass die Zuweisung zum Feld nur als Teil der Deklaration oder in einem Konstruktor derselben Klasse erfolgen kann. Ein readonly-Feld kann innerhalb der Felddeklaration und des Konstruktors mehrmals zugewiesen und neu zugewiesen werden. 
+  
+  Ein `readonly`-Feld kann nicht zugewiesen werden, sobald der Konstruktor vorhanden ist. Dies hat verschiedene Auswirkungen auf Wert- und Verweistypen:
+  
+  - Da Werttypen ihre Daten direkt enthalten, ist ein Feld des Werttyps `readonly` unveränderlich. 
+  - Da Verweistypen einen Verweis auf ihre Daten enthalten, muss ein Feld des Verweistyps `readonly` immer auf das gleiche Objekt verweisen. Dieses Objekt ist nicht unveränderlich. Der `readonly`-Modifizierer verhindert, dass das Feld durch eine andere Instanz des Verweistyps ersetzt wird. Der Modifizierer verhindert jedoch nicht, dass die Instanzdaten des Felds durch das schreibgeschützte Feld geändert werden.
+
+  > [!WARNING]
+  > Ein extern sichtbarer Typ, der ein extern sichtbares schreibgeschütztes Feld enthält, bei dem es sich um einen änderbaren Verweistyp handelt, kann ein Sicherheitsrisiko darstellen und die folgende Warnung auslösen: [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types): „Schreibgeschützte änderbare Verweistypen nicht deklarieren.“
+
 - In einer [`readonly struct`-Definition](#readonly-struct-example) gibt `readonly` an, dass `struct` unveränderlich ist.
 - In einer [`ref readonly`-Methodenrückgabe](#ref-readonly-return-example) gibt der `readonly`-Modifizierer an, dass die Methode eine Referenz zurückgibt, und Schreibvorgänge für diese Referenz nicht zulässig sind.
 
@@ -35,9 +44,9 @@ Sie können einem `readonly`-Feld nur in den folgenden Kontexten einen Wert zuwe
 
 - Wenn die Variable in der Deklaration initialisiert ist, z.B.:
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - In einem Instanzenkonstruktor der Klasse, die die Deklaration des Instanzfelds enthält.
 - Im statischen Konstruktor der Klasse, die die Deklaration des statischen Felds enthält.
@@ -55,7 +64,9 @@ Diese Konstruktorkontexte sind auch die einzigen Kontexte, in denen es gültig i
 
 Wenn Sie im vorherigen Beispiel eine Anweisung wie die folgende verwenden:
 
-`p2.y = 66;        // Error`
+```csharp
+p2.y = 66;        // Error
+```
 
 erhalten Sie die Compilerfehlermeldung:
 

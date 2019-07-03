@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758102"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025109"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatoren im Zusammenhang mit Zeigern (C#-Referenz)
 
@@ -40,7 +40,7 @@ Sie können die folgenden Operatoren für Zeiger verwenden:
 Informationen zu Zeigertypen finden Sie unter [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> Für alle Operationen mit Zeigern ist der Kontext [unsafe](../keywords/unsafe.md) erforderlich. Code, in dem unsafe-Blöcke enthalten sind, muss mit der Compileroption [`-unsafe`](../compiler-options/unsafe-compiler-option.md) kompiliert werden.
+> Für alle Operationen mit Zeigern ist ein Kontext des Typs [unsafe](../keywords/unsafe.md) erforderlich. Code, in dem unsafe-Blöcke enthalten sind, muss mit der Compileroption [`-unsafe`](../compiler-options/unsafe-compiler-option.md) kompiliert werden.
 
 ## <a name="address-of-operator-amp"></a>„Adresse von“-Operator &amp;
 
@@ -96,7 +96,7 @@ Im folgenden Beispiel wird veranschaulicht, wie Sie mit einem Zeiger und dem Ope
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-Im Beispiel wird der Operator [`stackalloc`](../keywords/stackalloc.md) verwendet, um im Stapel einen Block mit Speicher zuzuordnen.
+Im Beispiel wird der Operator [`stackalloc`](stackalloc.md) verwendet, um im Stapel einen Block mit Speicher zuzuordnen.
 
 > [!NOTE]
 > Der Zeigerelementzugriff-Operator führt keine Überprüfung auf Fehler vom Typ „Außerhalb des gültigen Bereichs“ durch.
@@ -188,10 +188,9 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe`Schlüsselwort](../keywords/unsafe.md)
-- [`fixed`Schlüsselwort](../keywords/fixed-statement.md)
-- [`stackalloc`-Operator](../keywords/stackalloc.md)
-- [`sizeof`-Operator](../keywords/sizeof.md)
+- [unsafe (Schlüsselwort)](../keywords/unsafe.md)
+- [fixed (Schlüsselwort)](../keywords/fixed-statement.md)
+- [stackalloc (Operator)](stackalloc.md)
+- [sizeof (Operator)](../keywords/sizeof.md)

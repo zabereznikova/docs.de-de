@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 308725ecc139d3c95ddff6bdf2d75746750673ce
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592768"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170852"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XmlDataDocument-Eingaben in "XslTransform"
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Microsoft .NET Framework implementiert das XML-Dokumentobjektmodell (DOM), um Zugriff auf Daten in XML-Dokumenten und zusätzliche Klassen für Lese-, Schreib- und Navigationsvorgänge in XML-Dokumenten bereitzustellen. Das <xref:System.Xml.XmlDataDocument> im <xref:System.Xml>-Namespace bietet durch die Möglichkeit zur Synchronisierung mit relationalen Daten im <xref:System.Data.DataSet> relationalen Zugriff auf Daten. Sie können strukturiertes XML durch die relationale Darstellung des <xref:System.Data.DataSet> gleichzeitig anzeigen und bearbeiten, oder Sie können teilstrukturiertes XML durch die DOM-Darstellung des <xref:System.Xml.XmlDataDocument> bearbeiten. Das <xref:System.Xml.XmlDataDocument> überschreitet daher die Grenzen von XML und relationalen Darstellungen.  
   

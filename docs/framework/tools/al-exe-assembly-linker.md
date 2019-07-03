@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816151"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832775"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
@@ -37,7 +37,7 @@ al sources options
 
 Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
-| Quelle | Beschreibung |
+| Quelle | BESCHREIBUNG |
 | ------ | ----------- |
 |`file`[,`target`]|Kopiert den Inhalt von `file` (ein Modul) in die als `target` angegebene Datei. Nach dem Kopieren wird `target` von *Al.exe* in eine Assembly kompiliert.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Bettet die durch `file` angegebene Ressource in das Image ein, das das Assemblymanifest enthält. Der Inhalt von `file` wird von *Al.exe* in das portierbare ausführbare Image (PE, Portable Executable) kopiert.<br /><br /> Der `name`-Parameter ist ein interner Bezeichner für die Ressource. Standardmäßig sind Ressourcen in der Assembly öffentlich (d. h. für andere Assemblys sichtbar). Durch Angeben von `private` können Sie verhindern, dass die Ressource für andere Assemblys sichtbar ist.<br /><br /> Wenn es sich bei `file` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise durch den [Resource File Generator (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern in <xref:System.Resources> möglich. Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>. Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`*-Methoden in <xref:System.Reflection.Assembly>, um zur Laufzeit auf die Ressource zuzugreifen.<br /><br /> Wenn nur Ressourcendateien an *Al.exe* übergeben werden, handelt es sich bei der Ausgabedatei um eine Satellitenressourcenassembly.|
@@ -45,7 +45,7 @@ Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
 Sie können die folgenden Optionen (`options`) angeben. Die Angabe von **/out** ist obligatorisch.
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/algid:** `id`|Legt einen Algorithmus zum Hashen aller Dateien in einer Mehrfachdateiassembly mit Ausnahme der Datei, die das Assemblymanifest enthält, fest. Standardmäßig wird der Algorithmus "CALG_SHA1" verwendet. Informationen zu anderen Algorithmen finden Sie unter "ALG_ID" in der Platform SDK-Dokumentation. Für das erste Release von .NET Framework sind nur "CALG_SHA1" und "CALG_MD5" gültig.<br /><br /> Die Hashwerte werden in der Dateitabelle des Assemblymanifests gespeichert. Bei der Installation und beim Laden werden die Dateien der Assembly anhand ihrer Hashwerte überprüft.<br /><br /> Sie können diese Option auch als benutzerdefiniertes Attribut (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) im Quellcode für ein beliebiges Modul angeben.|
 |**/base[address]:** `addr`|Legt die Adresse fest, an der eine DLL zur Laufzeit auf dem Computer des Benutzers geladen wird. Das Laden von Anwendungen kann beschleunigt werden, wenn nicht das Betriebssystem die DLLs im Prozessbereich verschiebt, sondern die Basisadresse der DLLs angegeben wird.|
@@ -89,7 +89,7 @@ Verwenden Sie das [Global Assembly Cache-Tool (*Gacutil.exe*)](../../../docs/fra
 
 In der folgende Tabelle werden die durch *Al.exe* generierten Fehler aufgelistet.
 
-| Fehler | Beschreibung |
+| Fehler | BESCHREIBUNG |
 | ----- | ----------- |
 |al1001|Interner Compilerfehler.<br /><br /> Versuchen Sie festzustellen, ob *Al.exe* einen Fehler verursacht, weil unerwartete Syntax nicht analysiert werden kann. Wenden Sie sich dann an Produktsupport von Microsoft.|
 |al1002|Nicht genügend Arbeitsspeicher<br /><br /> *Al.exe* steht nicht genügend Arbeitsspeicher zur Verfügung. Die Anwendung wurde beendet. Vergrößern Sie den verfügbaren Arbeitsspeicher.|
@@ -108,7 +108,7 @@ In der folgende Tabelle werden die durch *Al.exe* generierten Fehler aufgelistet
 |al1015|Die Nachrichtendatei "alinkui.dll" wurde nicht gefunden.<br /><br /> *Al.exe* erfordert *Alinkui.dll*. Stellen Sie sicher, dass sich diese Datei in Ihrem Pfad befindet. Falls erforderlich, kopieren Sie sie von der Produkt-CD.|
 |al1016|Es wurden keine gültigen Eingabedateien angegeben.<br /><br /> *Al.exe* benötigt mindestens eine Eingabedatei, die keine Assemblyinformationen enthält.|
 |al1017|Es wurde kein Zieldateiname angegeben.<br /><br /> Die erforderliche Option **/out**, die den Zieldateinamen angibt, fehlte.|
-|al1018|Die erforderliche Datei "file" konnte nicht geladen werden.<br /><br /> Bestimmte DLL-Dateien können nicht geladen werden. Installieren Sie Visual Studio oder das [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] erneut.|
+|al1018|Die erforderliche Datei "file" konnte nicht geladen werden.<br /><br /> Bestimmte DLL-Dateien können nicht geladen werden. Installieren Sie Visual Studio oder das Windows Software Development Kit (SDK) neu.|
 |al1019|Metadatenfehler beim Erstellen der Assembly - Ursache<br /><br /> Die Generierung der Assembly wurde aufgrund der angegebenen Ursache unterbrochen. Dieser Fehler tritt z.B. auf, wenn eine Datei, die Sie mit der Option **/win32res** angeben, nicht gefunden wurde.|
 |al1020|Die enthaltene Assembly "file" wird ignoriert.<br /><br /> Eine Eingabedatei, die eine Assembly enthält, wurde angegeben. *Al.exe*-Eingabedateien dürfen keine Assemblys enthalten.|
 |al1021|"setting": Überschreiben der vorherigen Einstellung.<br /><br /> Ein Modul weist einen Wert für eine bestimmte Einstellung auf, der ggf. über benutzerdefinierte Attribute zugewiesen und mit einem Wert überschrieben wurde, der mithilfe einer *Al.exe*-Befehlszeilenoption übergeben wurde.|
