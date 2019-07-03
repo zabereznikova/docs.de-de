@@ -1,5 +1,5 @@
 ---
-title: Vergleichsoperatoren – C#-Referenz
+title: 'Vergleichsoperatoren: C#-Referenz'
 description: Erfahren Sie mehr über C#-Vergleichsoperatoren, mit denen Sie die Reihenfolge numerischer Werte überprüfen können.
 ms.date: 04/25/2019
 author: pkulikov
@@ -19,62 +19,61 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758197"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025209"
 ---
-# <a name="comparison-operators-c-reference"></a><span data-ttu-id="0416c-103">Vergleichsoperatoren (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="0416c-103">Comparison operators (C# Reference)</span></span>
+# <a name="comparison-operators-c-reference"></a><span data-ttu-id="be6a7-103">Vergleichsoperatoren (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="be6a7-103">Comparison operators (C# reference)</span></span>
 
-<span data-ttu-id="0416c-104">Die Vergleichsoperatoren [`<` (kleiner als)](#less-than-operator-), [`>` (größer als)](#greater-than-operator-), [`<=` (kleiner als oder gleich)](#less-than-or-equal-operator-) und [`>=` (größer als oder gleich)](#greater-than-or-equal-operator-) – auch bekannt als relationale Operatoren – vergleichen ihre Operanden.</span><span class="sxs-lookup"><span data-stu-id="0416c-104">The [`<` (less than)](#less-than-operator-), [`>` (greater than)](#greater-than-operator-), [`<=` (less than or equal)](#less-than-or-equal-operator-), and [`>=` (greater than or equal)](#greater-than-or-equal-operator-) comparison, also known as relational, operators compare their operands.</span></span> <span data-ttu-id="0416c-105">Diese Operatoren unterstützen alle numerischen [Ganzzahl](../keywords/integral-types-table.md)- und [Gleitkomma](../keywords/floating-point-types-table.md)-Typen.</span><span class="sxs-lookup"><span data-stu-id="0416c-105">Those operators support all [integral](../keywords/integral-types-table.md) and [floating-point](../keywords/floating-point-types-table.md) numeric types.</span></span>
+<span data-ttu-id="be6a7-104">Die Vergleichsoperatoren [`<` (kleiner als)](#less-than-operator-), [`>` (größer als)](#greater-than-operator-), [`<=` (kleiner als oder gleich)](#less-than-or-equal-operator-) und [`>=` (größer als oder gleich)](#greater-than-or-equal-operator-) – auch bekannt als relationale Operatoren – vergleichen ihre Operanden.</span><span class="sxs-lookup"><span data-stu-id="be6a7-104">The [`<` (less than)](#less-than-operator-), [`>` (greater than)](#greater-than-operator-), [`<=` (less than or equal)](#less-than-or-equal-operator-), and [`>=` (greater than or equal)](#greater-than-or-equal-operator-) comparison, also known as relational, operators compare their operands.</span></span> <span data-ttu-id="be6a7-105">Diese Operatoren unterstützen alle numerischen [Ganzzahl](../keywords/integral-types-table.md)- und [Gleitkomma](../keywords/floating-point-types-table.md)-Typen.</span><span class="sxs-lookup"><span data-stu-id="be6a7-105">Those operators support all [integral](../keywords/integral-types-table.md) and [floating-point](../keywords/floating-point-types-table.md) numeric types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0416c-106">Bei den Operatoren `==`, `<`, `>`, `<=` und `>=` ist das Ergebnis eines Vorgangs gleich `false`, wenn einer der Operanden keine Zahl ist (<xref:System.Double.NaN?displayProperty=nameWithType> oder <xref:System.Single.NaN?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="0416c-106">For the `==`, `<`, `>`, `<=`, and `>=` operators, if any of the operands is not a number (<xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType>), the result of operation is `false`.</span></span> <span data-ttu-id="0416c-107">Das bedeutet, dass der `NaN`-Wert weder größer als noch kleiner als noch gleich einem anderen `double`-Wert (oder `float`-Wert) ist, einschließlich `NaN`.</span><span class="sxs-lookup"><span data-stu-id="0416c-107">That means that the `NaN` value is neither greater than, less than, nor equal to any other `double` (or `float`) value, including `NaN`.</span></span> <span data-ttu-id="0416c-108">Weitere Informationen und Beispiele finden Sie im <xref:System.Double.NaN?displayProperty=nameWithType>- oder <xref:System.Single.NaN?displayProperty=nameWithType>-Referenzartikel.</span><span class="sxs-lookup"><span data-stu-id="0416c-108">For more information and examples, see the <xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType> reference article.</span></span>
+> <span data-ttu-id="be6a7-106">Bei den Operatoren `==`, `<`, `>`, `<=` und `>=` ist das Ergebnis eines Vorgangs gleich `false`, wenn einer der Operanden keine Zahl ist (<xref:System.Double.NaN?displayProperty=nameWithType> oder <xref:System.Single.NaN?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="be6a7-106">For the `==`, `<`, `>`, `<=`, and `>=` operators, if any of the operands is not a number (<xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType>), the result of operation is `false`.</span></span> <span data-ttu-id="be6a7-107">Das bedeutet, dass der `NaN`-Wert weder größer als noch kleiner als noch gleich einem anderen `double`-Wert (oder `float`-Wert) ist, einschließlich `NaN`.</span><span class="sxs-lookup"><span data-stu-id="be6a7-107">That means that the `NaN` value is neither greater than, less than, nor equal to any other `double` (or `float`) value, including `NaN`.</span></span> <span data-ttu-id="be6a7-108">Weitere Informationen und Beispiele finden Sie im <xref:System.Double.NaN?displayProperty=nameWithType>- oder <xref:System.Single.NaN?displayProperty=nameWithType>-Referenzartikel.</span><span class="sxs-lookup"><span data-stu-id="be6a7-108">For more information and examples, see the <xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType> reference article.</span></span>
 
-<span data-ttu-id="0416c-109">Enumerationstypen unterstützen auch Vergleichsoperatoren.</span><span class="sxs-lookup"><span data-stu-id="0416c-109">Enumeration types also support comparison operators.</span></span> <span data-ttu-id="0416c-110">Für Operanden desselben [enum](../keywords/enum.md)-Typs werden die entsprechenden Werte des zugrunde liegenden integralen Typs verglichen.</span><span class="sxs-lookup"><span data-stu-id="0416c-110">For operands of the same [enum](../keywords/enum.md) type, the corresponding values of the underlying integral type are compared.</span></span>
+<span data-ttu-id="be6a7-109">Enumerationstypen unterstützen auch Vergleichsoperatoren.</span><span class="sxs-lookup"><span data-stu-id="be6a7-109">Enumeration types also support comparison operators.</span></span> <span data-ttu-id="be6a7-110">Für Operanden desselben [enum](../keywords/enum.md)-Typs werden die entsprechenden Werte des zugrunde liegenden integralen Typs verglichen.</span><span class="sxs-lookup"><span data-stu-id="be6a7-110">For operands of the same [enum](../keywords/enum.md) type, the corresponding values of the underlying integral type are compared.</span></span>
 
-<span data-ttu-id="0416c-111">Die Operatoren [`==` und `!=`](equality-operators.md) überprüfen, ob die Operanden gleich sind oder nicht.</span><span class="sxs-lookup"><span data-stu-id="0416c-111">The [`==` and `!=` operators](equality-operators.md) check if their operands are equal or not.</span></span>
+<span data-ttu-id="be6a7-111">Die Operatoren [`==` und `!=`](equality-operators.md) überprüfen, ob die Operanden gleich sind oder nicht.</span><span class="sxs-lookup"><span data-stu-id="be6a7-111">The [`==` and `!=` operators](equality-operators.md) check if their operands are equal or not.</span></span>
 
-## <a name="less-than-operator-"></a><span data-ttu-id="0416c-112">„Kleiner als“-Operator \<</span><span class="sxs-lookup"><span data-stu-id="0416c-112">Less than operator \<</span></span>
+## <a name="less-than-operator-"></a><span data-ttu-id="be6a7-112">„Kleiner als“-Operator \<</span><span class="sxs-lookup"><span data-stu-id="be6a7-112">Less than operator \<</span></span>
 
-<span data-ttu-id="0416c-113">Der `<`-Operator gibt `true` zurück, wenn sein erster Operand kleiner ist als sein zweiter Operand, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="0416c-113">The `<` operator returns `true` if its first operand is less than its second operand, `false` otherwise:</span></span>
+<span data-ttu-id="be6a7-113">Der `<`-Operator gibt `true` zurück, wenn sein erster Operand kleiner ist als sein zweiter Operand, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="be6a7-113">The `<` operator returns `true` if its first operand is less than its second operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
-## <a name="greater-than-operator-"></a><span data-ttu-id="0416c-114">„Größer als“-Operator ></span><span class="sxs-lookup"><span data-stu-id="0416c-114">Greater than operator ></span></span>
+## <a name="greater-than-operator-"></a><span data-ttu-id="be6a7-114">„Größer als“-Operator ></span><span class="sxs-lookup"><span data-stu-id="be6a7-114">Greater than operator ></span></span>
 
-<span data-ttu-id="0416c-115">Der `>`-Operator gibt `true` zurück, wenn sein erster Operand größer ist als sein zweiter Operand, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="0416c-115">The `>` operator returns `true` if its first operand is greater than its second operand, `false` otherwise:</span></span>
+<span data-ttu-id="be6a7-115">Der `>`-Operator gibt `true` zurück, wenn sein erster Operand größer ist als sein zweiter Operand, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="be6a7-115">The `>` operator returns `true` if its first operand is greater than its second operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
-## <a name="less-than-or-equal-operator-"></a><span data-ttu-id="0416c-116">„Kleiner oder gleich“-Operator \<=</span><span class="sxs-lookup"><span data-stu-id="0416c-116">Less than or equal operator \<=</span></span>
+## <a name="less-than-or-equal-operator-"></a><span data-ttu-id="be6a7-116">„Kleiner oder gleich“-Operator \<=</span><span class="sxs-lookup"><span data-stu-id="be6a7-116">Less than or equal operator \<=</span></span>
 
-<span data-ttu-id="0416c-117">Der `<=`-Operator gibt `true` zurück, wenn sein erster Operand kleiner als sein zweiter Operand oder gleich ist, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="0416c-117">The `<=` operator returns `true` if its first operand is less than or equal to its second operand, `false` otherwise:</span></span>
+<span data-ttu-id="be6a7-117">Der `<=`-Operator gibt `true` zurück, wenn sein erster Operand kleiner als sein zweiter Operand oder gleich ist, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="be6a7-117">The `<=` operator returns `true` if its first operand is less than or equal to its second operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
-## <a name="greater-than-or-equal-operator-"></a><span data-ttu-id="0416c-118">„Größer oder gleich“-Operator >=</span><span class="sxs-lookup"><span data-stu-id="0416c-118">Greater than or equal operator >=</span></span>
+## <a name="greater-than-or-equal-operator-"></a><span data-ttu-id="be6a7-118">„Größer oder gleich“-Operator >=</span><span class="sxs-lookup"><span data-stu-id="be6a7-118">Greater than or equal operator >=</span></span>
 
-<span data-ttu-id="0416c-119">Der `>=`-Operator gibt `true` zurück, wenn sein erster Operand größer als sein zweiter Operand oder gleich ist, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="0416c-119">The `>=` operator returns `true` if its first operand is greater than or equal to its second operand, `false` otherwise:</span></span>
+<span data-ttu-id="be6a7-119">Der `>=`-Operator gibt `true` zurück, wenn sein erster Operand größer als sein zweiter Operand oder gleich ist, andernfalls `false`:</span><span class="sxs-lookup"><span data-stu-id="be6a7-119">The `>=` operator returns `true` if its first operand is greater than or equal to its second operand, `false` otherwise:</span></span>
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
-## <a name="operator-overloadability"></a><span data-ttu-id="0416c-120">Operatorüberladbarkeit</span><span class="sxs-lookup"><span data-stu-id="0416c-120">Operator overloadability</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="be6a7-120">Operatorüberladbarkeit</span><span class="sxs-lookup"><span data-stu-id="be6a7-120">Operator overloadability</span></span>
 
-<span data-ttu-id="0416c-121">Ein benutzerdefinierter Typ kann die Operatoren `<`, `>`, `<=` und `>=` [überladen](../keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="0416c-121">A user-defined type can [overload](../keywords/operator.md) the `<`, `>`, `<=`, and `>=` operators.</span></span>
+<span data-ttu-id="be6a7-121">Ein benutzerdefinierter Typ kann die Operatoren `<`, `>`, `<=` und `>=` [überladen](../keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="be6a7-121">A user-defined type can [overload](../keywords/operator.md) the `<`, `>`, `<=`, and `>=` operators.</span></span>
 
-<span data-ttu-id="0416c-122">Wenn ein Typ einen der `<`- oder `>`-Operatoren überlädt, muss er sowohl `<` als auch `>` überladen.</span><span class="sxs-lookup"><span data-stu-id="0416c-122">If a type overloads one of the `<` or `>` operators, it must overload both `<` and `>`.</span></span> <span data-ttu-id="0416c-123">Wenn ein Typ einen der `<=`- oder `>=`-Operatoren überlädt, muss er sowohl `<=` als auch `>=` überladen.</span><span class="sxs-lookup"><span data-stu-id="0416c-123">If a type overloads one of the `<=` or `>=` operators, it must overload both `<=` and `>=`.</span></span>
+<span data-ttu-id="be6a7-122">Wenn ein Typ einen der `<`- oder `>`-Operatoren überlädt, muss er sowohl `<` als auch `>` überladen.</span><span class="sxs-lookup"><span data-stu-id="be6a7-122">If a type overloads one of the `<` or `>` operators, it must overload both `<` and `>`.</span></span> <span data-ttu-id="be6a7-123">Wenn ein Typ einen der `<=`- oder `>=`-Operatoren überlädt, muss er sowohl `<=` als auch `>=` überladen.</span><span class="sxs-lookup"><span data-stu-id="be6a7-123">If a type overloads one of the `<=` or `>=` operators, it must overload both `<=` and `>=`.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="0416c-124">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="0416c-124">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="be6a7-124">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="be6a7-124">C# language specification</span></span>
 
-<span data-ttu-id="0416c-125">Weitere Informationen finden Sie im Abschnitt [Relationale und Typtestoperatoren](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="0416c-125">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="be6a7-125">Weitere Informationen finden Sie im Abschnitt [Relationale und Typtestoperatoren](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="be6a7-125">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0416c-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0416c-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be6a7-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="be6a7-126">See also</span></span>
 
-- [<span data-ttu-id="0416c-127">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="0416c-127">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="0416c-128">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="0416c-128">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="0416c-129">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="0416c-129">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="be6a7-127">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="be6a7-127">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="be6a7-128">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="be6a7-128">C# operators</span></span>](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
-- [<span data-ttu-id="0416c-130">Gleichheitsoperatoren</span><span class="sxs-lookup"><span data-stu-id="0416c-130">Equality operators</span></span>](equality-operators.md)
+- [<span data-ttu-id="be6a7-129">Gleichheitsoperatoren</span><span class="sxs-lookup"><span data-stu-id="be6a7-129">Equality operators</span></span>](equality-operators.md)
