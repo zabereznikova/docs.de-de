@@ -1,17 +1,17 @@
 ---
 title: Zeichenfolgen – C#-Programmierhandbuch
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398122"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504003"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -62,13 +62,16 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 |\n|Zeilenwechsel|0x000A|  
 |\r|Wagenrücklauf|0x000D|  
 |\t|Horizontaler Tabulator|0x0009|  
-|\U|Unicode-Escapesequenz für Ersatzzeichenpaare|\Unnnnnnnn|  
-|\u|Unicode-Escapesequenz|\u0041 = "A"|  
+|\U|Unicode-Escapesequenz (UTF-32)|`\U00nnnnnn` (z. B. `\U0001F47D` = "&#x1F47D;")|  
+|\u|Unicode-Escapesequenz (UTF-16)|`\unnnn` (z. B. `\u0041` = "A")|  
 |\v|Vertikaler Tabulator|0x000B|  
-|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|\x0041 oder \x41 = "A"|  
+|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|`\x0041` oder `\x41` = "A"|  
+  
+> [!WARNING]
+>  Wenn Sie die Escapesequenz `\x` verwenden, weniger als vier Hexadezimalziffern angeben und es sich bei den Zeichen, die der Escapesequenz unmittelbar folgen, um gültige Hexadezimalziffern handelt (z. B. 0–9, A–F und a–f), werden diese als Teil der Escapesequenz interpretiert. Die Angabe `\xA1` erzeugt beispielsweise den Wert "&#161;", der dem Codepunkt U+00A1 entspricht. Wenn das nächste Zeichen jedoch „A“ oder „a“ ist, wird die Escapesequenz stattdessen als `\xA1A` interpretiert und erzeugt den Wert "&#x0A1A;", der dem Codepunkt U+0A1A entspricht. In solchen Fällen können Fehlinterpretationen vermieden werden, indem Sie alle vier Hexadezimalziffern (z. B. `\x00A1`) angeben.  
   
 > [!NOTE]
->  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge @"C:\files.txt" wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  
+>  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge `@"C:\files.txt"` wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  
   
 ## <a name="format-strings"></a>Formatzeichenfolgen  
  Eine Formatzeichenfolge ist eine Zeichenfolge, deren Inhalt zur Laufzeit dynamisch bestimmt wird. Formatzeichenfolgen werden erstellt, indem *interpolierte Ausdrücke* oder Platzhalter in geschweifte Klammern innerhalb einer Zeichenfolge eingebettet werden. Der in den Klammern (`{...}`) eingeschlossene Inhalt wird in einen Wert aufgelöst und zur Laufzeit als formatierte Zeichenfolge ausgegeben. Es gibt zwei Methoden zum Erstellen von Formatzeichenfolgen: Zeichenfolgeninterpolation und kombinierte Formatierung.
