@@ -3,12 +3,12 @@ title: Verwenden von Features für den Musterabgleich, um Datentypen zu erweiter
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378069"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397832"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
 
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-Die Mautbehörde interessiert sich nicht für die Anzahl der Fahrgäste in Lieferwagen. Stattdessen berücksichtigt sie beim Berechnen der Maut die Gewichtsklasse der Lieferwagen. Lieferwagen über 2,3 t wird ein Aufschlag von 5,00 US-Dollar berechnet. Leichte Lieferwagen unter 1,35 t (3.000 Pfund) erhalten einen Rabatt von 2,00 USD. Diese Regel wird mit folgendem Code implementiert:
+Die Mautbehörde interessiert sich nicht für die Anzahl der Fahrgäste in Lieferwagen. Stattdessen passt sie die Mauthöhe basierend auf der Gewichtsklasse der Lieferwagen wie folgt an:
+
+- Lieferwagen über 2,3 t wird ein Aufschlag von 5,00 US-Dollar berechnet.
+- Leichte Lieferwagen unter 1,35 t (3.000 Pfund) erhalten einen Rabatt von 2,00 USD.
+
+Diese Regel wird mit folgendem Code implementiert:
 
 ```csharp
 vehicle switch

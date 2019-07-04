@@ -1,18 +1,18 @@
 ---
-title: Laden von Daten
-description: Laden der Datendatei der Streamingdaten in ML.NET
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: Laden von Daten aus Dateien und anderen Quellen
+description: Diese Anleitung zeigt Ihnen, wie Sie Daten für die Verarbeitung und das Training in ML.NET laden. Die Daten werden ursprünglich in Dateien oder anderen Datenquellen wie Datenbanken, JSON, XML oder In-Memory-Sammlungen gespeichert.
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063646"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397749"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>Laden von Daten aus der Datei und In-Memory-Quellen
+# <a name="load-data-from-files-and-other-sources"></a>Laden von Daten aus Dateien und anderen Quellen
 
-Diese Anleitung zeigt Ihnen, wie Sie Daten für die Verarbeitung und das Training in ML.NET laden. Die Daten werden ursprünglich in Dateien oder Echtzeit-/Streamingdatenquellen gespeichert.
+Diese Anleitung zeigt Ihnen, wie Sie Daten für die Verarbeitung und das Training in ML.NET laden. Die Daten werden ursprünglich in Dateien oder anderen Datenquellen wie Datenbanken, JSON, XML oder In-Memory-Sammlungen gespeichert.
 
 ## <a name="create-the-data-model"></a>Erstellen des Datenmodells
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>Laden von Daten aus einer Streamingquelle
+## <a name="load-data-from-other-sources"></a>Laden von Daten aus anderen Quellen
 
-Zusätzlich zum Laden von Daten, die auf dem Datenträger gespeichert sind, unterstützt ML.NET das Laden von Daten aus verschiedenen Streamingquellen, wie zum Beispiel:
+Zusätzlich zum Laden von Daten, die in Dateien gespeichert sind, unterstützt ML.NET das Laden von Daten aus verschiedenen Quellen, wie zum Beispiel:
 
 - In-Memory-Sammlungen
 - JSON/XML
-- Datenbanken
+- Databases
 
-> [!IMPORTANT]
-> Beachten Sie, dass ML.NET bei der Arbeit mit Streamingquellen erwartet, dass die Eingabe in Form einer In-Memory-Sammlung erfolgt. Achten Sie daher bei der Arbeit mit Quellen wie JSON/XML darauf, die Daten in eine In-Memory-Sammlung zu formatieren.
+Beachten Sie, dass ML.NET bei der Arbeit mit Streamingquellen erwartet, dass die Eingabe in Form einer In-Memory-Sammlung erfolgt. Achten Sie daher bei der Arbeit mit Quellen wie JSON/XML darauf, die Daten in eine In-Memory-Sammlung zu formatieren.
 
 Schauen Sie sich die folgende in-Memory-Sammlung an:
 

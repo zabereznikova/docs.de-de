@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727637"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424241"
 ---
 # <a name="enum-c-reference"></a>enum (C#-Referenz)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 In dieser Enumeration wird erzwungen, dass die Abfolge von Elementen mit `1` und nicht mit `0`beginnt. Allerdings wird das Einfügen einer Konstanten mit dem Wert 0 empfohlen. Weitere Informationen finden Sie unter [Enumerationstypen](../../programming-guide/enumeration-types.md).
 
-Jeder Enumerationstyp hat einen zugrunde liegenden Typ, bei dem es sich um jeden ganzzahligen Typ außer [char](char.md) handeln kann. Der zugrunde liegende Standardtyp von Enumerationselementen ist [int](int.md). Um eine Enumeration eines anderen ganzzahligen Typs, z. B. [byte](byte.md)zu deklarieren, setzen Sie einen Doppelpunkt hinter dem Bezeichner, auf den der Typ folgt, wie im folgenden Beispiel gezeigt.
+Jeder Enumerationstyp hat einen zugrunde liegenden Typ, bei dem es sich um jeden [integralen numerischen Typ](../builtin-types/integral-numeric-types.md) handeln kann. Eine Ausnahme bildet [char](char.md). Der zugrunde liegende Standardtyp von Enumerationselementen ist [int](../builtin-types/integral-numeric-types.md). Um eine Enumeration eines anderen ganzzahligen Typs, z. B. [byte](../builtin-types/integral-numeric-types.md)zu deklarieren, setzen Sie einen Doppelpunkt hinter dem Bezeichner, auf den der Typ folgt, wie im folgenden Beispiel gezeigt.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Die zulässigen Typen für eine Enumeration sind [byte](byte.md), [sbyte](sbyte.md), [short](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [long](long.md) und [ulong](ulong.md).
 
 Der Variablen eines Enumerationstyps kann jeder Wert im Bereich des zugrunde liegenden Typs zugewiesen werden. Die Werte sind nicht auf benannte Konstanten beschränkt.
 
@@ -50,7 +49,7 @@ Der Standardwert von `enum E` ist der Wert, der vom Ausdruck `(E)0`erzeugt wird.
 > [!NOTE]
 > Namen von Enumeratoren dürfen keine Leerzeichen enthalten.
 
-Der zugrunde liegende Typ gibt an, wie viel Speicher für jeden Enumerator reserviert wird. Eine explizite Typumwandlung ist jedoch erforderlich, um einen `enum` -Typ in einen ganzzahligen Typ zu konvertieren. Durch die folgende Anweisung wird der `Sun` -Enumerator beispielsweise einer Variablen des Typs [int](int.md) zugewiesen. Dabei erfolgt für die Konvertierung von `enum` in `int`eine Typumwandlung.
+Der zugrunde liegende Typ gibt an, wie viel Speicher für jeden Enumerator reserviert wird. Eine explizite Typumwandlung ist jedoch erforderlich, um einen `enum` -Typ in einen ganzzahligen Typ zu konvertieren. Durch die folgende Anweisung wird der `Sun` -Enumerator beispielsweise einer Variablen des Typs [int](../builtin-types/integral-numeric-types.md) zugewiesen. Dabei erfolgt für die Konvertierung von `enum` in `int`eine Typumwandlung.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ Wenn Sie `Flags`entfernen, werden im Beispiel die folgenden Werte angezeigt:
 - [C#-Referenz](../index.md)
 - [Enumerationstypen](../../programming-guide/enumeration-types.md)
 - [C#-Schlüsselwörter](index.md)
-- [Tabelle ganzzahliger Typen](integral-types-table.md)
+- [Integrale Typen](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabelle integrierter Typen](built-in-types-table.md)
 - [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)
 - [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)

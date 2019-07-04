@@ -2,12 +2,12 @@
 title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
-ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185349"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347413"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
@@ -30,6 +30,13 @@ Die neuen Sprachfeatures in diesem Release umfassen:
   - Der `private protected`-Zugriffsmodifizierer ermöglicht den Zugriff für abgeleitete Klassen innerhalb der gleichen Assembly.
 * [Bedingte`ref` Ausdrücke](#conditional-ref-expressions)
   - Das Ergebnis eines bedingten Ausdrucks (`?:`) kann jetzt ein Verweis sein.
+
+Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktionen. Sie werden die Hintergründe jeder einzelnen Funktion erfahren. Sie werden die Syntax erlernen. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
+
+1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
+1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
+1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="safe-efficient-code-enhancements"></a>Erweiterungen von sicherem, effizientem Code
 

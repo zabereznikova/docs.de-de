@@ -1,20 +1,20 @@
 ---
-title: Trainieren und Evaluieren eines Machine Learning-Modells mit der Kreuzvalidierung
-description: Erfahren Sie, wie Sie ein Machine Learning-Modell mit der Kreuzvalidierung trainieren und evaluieren.
-ms.date: 05/03/2019
+title: Trainieren eines Machine Learning-Modells mit der Kreuzvalidierung
+description: Erfahren Sie, wie Sie mit der Kreuzvalidierung stabilere Machine Learning-Modelle in ML.NET erstellen. Die Kreuzvalidierung ist eine Trainings- und Modellevaluierungstechnik, die die Daten in mehrere Partitionen unterteilt und mehrere Algorithmen auf diesen Partitionen trainiert.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557838"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397648"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Trainieren und Evaluieren eines Machine Learning-Modells mit der Kreuzvalidierung
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Trainieren eines Machine Learning-Modells mit der Kreuzvalidierung
 
-Erfahren Sie, wie Sie mit der Kreuzvalidierung stabilere Machine Learning-Modelle in ML.NET erstellen. 
+Erfahren Sie, wie Sie mit der Kreuzvalidierung stabilere Machine Learning-Modelle in ML.NET trainieren. 
 
 Die Kreuzvalidierung ist eine Trainings- und Modellevaluierungstechnik, die die Daten in mehrere Partitionen unterteilt und mehrere Algorithmen auf diesen Partitionen trainiert. Dieses Verfahren verbessert die Stabilität des Modells, indem Daten aus dem Trainingsprozess bereitgehalten werden. Abgesehen vom Verbessern der Leistung bei nicht angezeigten Beobachtungen kann es in Umgebungen mit Dateneinschränkungen ein effektives Tool sein, um Modelle mit einem kleineren Dataset zu trainieren.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 Das in `cvResults` gespeicherte Ergebnis ist eine Sammlung von [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601)-Objekten. Dieses Objekt enthält das trainierte Modell sowie Metriken, und auf beides kann über die [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model)- bzw. [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics)-Eigenschaft zugegriffen werden. In diesem Beispiel ist die `Model`-Eigenschaft vom Typ [`ITransformer`](xref:Microsoft.ML.ITransformer) und die `Metrics`-Eigenschaft vom Typ [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Extrahieren von Metriken
+## <a name="evaluate-the-model"></a>Evaluieren des Modells
 
 Auf Metriken für die verschiedenen trainierten Modelle kann über die `Metrics`-Eigenschaft des einzelnen [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601)-Objekts zugegriffen werden. In diesem Fall wird auf die [Determinationskoeffizientenmetrik](https://en.wikipedia.org/wiki/Coefficient_of_determination) zugegriffen, und sie wird in der Variablen `rSquared` gespeichert. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Wenn Sie den Inhalt der `rSquared`-Variablen untersuchen, sollte die Ausgabe fünf Werte im Bereich von 0-1 umfassen, wobei der Wert besser ist, je näher er an 1 liegt.
-
-## <a name="select-the-best-performing-model"></a>Auswählen des Modells mit der besten Leistung
-
-Wählen Sie mit Metriken wie der Determinationskoeffizientenmetrik die Modelle aus, von dem mit der besten bis zu dem mit der schlechtesten Leistung. Wählen Sie dann das oberste Modell aus, um Vorhersagen zu treffen oder zusätzliche Vorgänge damit auszuführen.
+Wenn Sie den Inhalt der `rSquared`-Variablen untersuchen, sollte die Ausgabe fünf Werte im Bereich von 0-1 umfassen, wobei der Wert besser ist, je näher er an 1 liegt. Wählen Sie mit Metriken wie der Determinationskoeffizientenmetrik die Modelle aus, von dem mit der besten bis zu dem mit der schlechtesten Leistung. Wählen Sie dann das oberste Modell aus, um Vorhersagen zu treffen oder zusätzliche Vorgänge damit auszuführen.
 
 ```csharp
 // Select all models

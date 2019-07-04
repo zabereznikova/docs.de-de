@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1cc4b691763c1aff4bacc2935a0a6cf32c880180
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210131"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422618"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper (RCW)
 Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper, Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
@@ -39,20 +39,20 @@ Die folgende Abbildung veranschaulicht, wie über den RCW auf COM-Objekte zugegr
   
  ![Screenshot des RCW mit Schnittstellen](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
- Ein RCW, der als früh gebundenes Objekt erstellt wurde, stellt einen bestimmten Typ dar. Dieser implementiert die Schnittstellen für das COM-Objekt und macht die Methoden, Eigenschaften und Ereignisse der Schnittstellen des Objekts verfügbar. In der Abbildung macht der RCW die Schnittstelle „INew“ verfügbar, beansprucht jedoch die Schnittstellen **IUnknown** und **IDispatch**. Darüber hinaus macht der RCW dem .NET-Client alle Member der Schnittstelle "INew" verfügbar.   
+ Ein RCW, der als früh gebundenes Objekt erstellt wurde, stellt einen bestimmten Typ dar. Dieser implementiert die Schnittstellen für das COM-Objekt und macht die Methoden, Eigenschaften und Ereignisse der Schnittstellen des Objekts verfügbar. In der Abbildung macht der RCW die Schnittstelle „INew“ verfügbar, beansprucht jedoch die Schnittstellen **IUnknown** und **IDispatch**. Darüber hinaus macht der RCW dem .NET-Client alle Member der Schnittstelle "INew" verfügbar.  
   
  Der RCW beansprucht die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.  
   
-|Interface|Beschreibung|  
+|Interface|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**IDispatch**|Regelt späte Bindung an COM-Objekte durch Reflektion.|  
 |**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|  
 |**IProvideClassInfo**|Wenn das COM-Objekt, das umschlossen wird, **IProvideClassInfo** implementiert, extrahiert der RCW die Typinformationen über diese Schnittstelle, um eine bessere Typidentität bereitzustellen.|  
 |**IUnknown**|Wird für Objektidentität, Typkoersion und Verwaltung der Lebensdauer verwendet:<br /><br /> – Objektidentität<br />     Die Common Language Runtime unterscheidet zwischen COM-Objekten, indem der Wert der Schnittstelle **IUnknown** für jedes Objekt verglichen wird.<br />– Typkoersion<br />     Der RCW erkennt die dynamische Typermittlung durch die Methode **QueryInterface**.<br />– Verwaltung der Lebensdauer<br />     Mithilfe der Methode **QueryInterface** erhält der RCW einen Verweis auf ein nicht verwaltetes Objekt und hält diesen aufrecht, bis die Common Language Runtime eine Garbage Collection auf den Wrapper durchführt. Dadurch wird das nicht verwaltete Objekt freigegeben.|  
   
- Der RCW beansprucht optional die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.   
+ Der RCW beansprucht optional die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.  
   
-|Interface|Beschreibung|  
+|Interface|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**IConnectionPoint** und **IConnectionPointContainer**|Der RCW konvertiert Objekte, die Ereignisformate für Verbindungspunkte gegenüber delegatbasierten Ereignissen verfügbar machen.|  
 |**IDispatchEx**|Wenn die Klasse **IDispatchEx** implementiert, implementiert der RCW **IExpando**. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|  
@@ -61,6 +61,6 @@ Die folgende Abbildung veranschaulicht, wie über den RCW auf COM-Objekte zugegr
 ## <a name="see-also"></a>Siehe auch
 
 - [COM-Wrapper](com-wrappers.md)
-- [COM Callable Wrapper (CCW)](com-callable-wrapper.md)
+- [COM Callable Wrapper](com-callable-wrapper.md)
 - [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)

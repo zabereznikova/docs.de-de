@@ -1,22 +1,22 @@
 ---
-title: Untersuchen von Zwischendatenwerten bei der ML.NET-Verarbeitung
-description: Lernen Sie, wie Sie die tatsächlichen Zwischendatenwerte bei der Verarbeitung der Pipeline für maschinelles Lernen mit ML.NET untersuchen können.
-ms.date: 04/29/2019
+title: Untersuchen von Zwischendaten bei der ML.NET-Verarbeitung
+description: Erfahren Sie, wie Sie Zwischendaten während des Ladens der ML.NET Machine Learning-Pipline, des Verarbeitens und Trainings des Modells in ML.NET überprüfen können.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063516"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402389"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>Untersuchen von Zwischendatenwerten bei der Verarbeitung
+# <a name="inspect-intermediate-data-during-processing"></a>Untersuchen von Zwischendaten bei der Verarbeitung
 
-Erfahren Sie, wie Sie Werte während des Ladens, Verarbeitens und Trainings in ML.NET überprüfen können.
+Erfahren Sie, wie Sie Zwischendaten während des Ladens, Verarbeitens und Trainings des Modells in ML.NET überprüfen können. Zwischendaten werden in den einzelnen Phasen in der Machine learning-Pipeline ausgegeben.
 
-Daten wie die unten dargestellten, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden, können in ML.NET auf verschiedene Weise überprüft werden.
+Zwischendaten, wie die unten dargestellten, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden, können in ML.NET auf verschiedene Weise überprüft werden.
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Konvertieren von IDataView in IEnumerable
 
-Eine der schnellsten Möglichkeiten, die Werte einer [`IDataView`](xref:Microsoft.ML.IDataView) zu überprüfen, ist die Konvertierung in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Zum Konvertieren einer [`IDataView`](xref:Microsoft.ML.IDataView) in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) verwenden Sie die [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)-Methode. 
+Eine der schnellsten Möglichkeiten, eine [`IDataView`](xref:Microsoft.ML.IDataView) zu überprüfen, ist die Konvertierung in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Zum Konvertieren einer [`IDataView`](xref:Microsoft.ML.IDataView) in [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) verwenden Sie die [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)-Methode. 
 
 Um die Leistung zu optimieren, legen Sie den Wert von `reuseRowObject` auf `true` fest. Dadurch wird das gleiche Objekt bei der Auswertung verzögert mit den Daten der aktuellen Zeile ausgefüllt, anstatt für jede Zeile im Dataset ein neues Objekt zu erstellen.
 
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>Zugreifen auf bestimmte Indizes mit IEnumerable
 
 Wenn Sie nur Zugriff auf einen Teil der Daten oder bestimmte Indizes benötigen, verwenden Sie [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) und setzen Sie den Parameterwert `reuseRowObject` auf `false`, damit für jede der angeforderten Zeilen im Dataset ein neues Objekt erstellt wird. Konvertieren Sie [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) anschließend in ein Array oder eine Liste.
 

@@ -2,19 +2,19 @@
 title: ML.NET-Metriken
 description: Verstehen Sie die Metriken, die verwendet werden, um die Leistung eines ML.NET-Modells auszuwerten.
 ms.date: 04/29/2019
-author: ''
-ms.openlocfilehash: 802f0a8fd32c492c8d9f89933b183802cb178cb3
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+author: natke
+ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053042"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410532"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Metriken für die Modellauswertung in ML.NET
 
 ## <a name="metrics-for-binary-classification"></a>Metriken für die binäre Klassifizierung
 
-| Metriken   |      Beschreibung      |  Suche nach |
+| Metriken   |      BESCHREIBUNG      |  Suche nach |
 |-----------|-----------------------|-----------|
 | **Accuracy** |  [Accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) Dies ist der Anteil der korrekten Vorhersagen mit einem Testdataset. Es ist das Verhältnis zwischen der Anzahl der korrekten Vorhersagen und der Gesamtzahl der Eingangsstichproben. Es funktioniert nur dann gut, wenn es zu jeder Klasse eine ähnliche Anzahl von Stichproben gibt.| **Je näher der Wert an 1,00 liegt, desto besser**. Aber ein Wert von genau 1,00 zeigt ein Problem an (häufig: Bezeichnung-Ziel-Verlust, Überanpassung oder Test mit Trainingsdaten). Wenn die Testdaten unausgewogen sind (wobei die meisten Instanzen zu einer der Klassen gehören), der Datensatz sehr klein ist oder die Werte auf 0,00 oder 1,00 ansteigen, dann wird die Effektivität eines Klassifikators nicht wirklich erfasst, und Sie müssen zusätzliche Metriken überprüfen. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) oder *Area under the curve* (Fläche unter der Kurve): Dies ist die Messung der Fläche unter der Kurve, die durch das Aufräumen der richtigen Positivfälle gegenüber den falsch Positivfällen erzeugt wird.  |   **Je näher der Wert an 1,00 liegt, desto besser**. Der Wert sollte größer als 0,50 sein, damit ein Modell akzeptabel ist; ein Modell mit einem AUC-Wert von 0,50 oder weniger ist wertlos. |
@@ -29,7 +29,7 @@ Weitere Informationen zu binären Klassifizierungsmetriken finden Sie in den fol
 
 ## <a name="metrics-for-multi-class-classification"></a>Metriken für Multiklassen-Klassifizierungsmodelle
 
-| Metriken   |      Beschreibung      |  Suche nach |
+| Metriken   |      BESCHREIBUNG      |  Suche nach |
 |-----------|-----------------------|-----------|
 | **Micro-Accuracy** |  Die [durchschnittliche Mikrogenauigkeit](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) aggregiert die Beiträge aller Klassen zur Berechnung der durchschnittlichen Metrik. Es ist der Anteil der korrekt vorhergesagten Instanzen. Der Mikrodurchschnitt berücksichtigt nicht die Klassenzugehörigkeit. Jedes Beispiel/Klasse-Paar trägt grundsätzlich zu gleichen Teilen zur Genauigkeitsmetrik bei. | **Je näher der Wert an 1,00 liegt, desto besser**. In einer Aufgabe für die Multiklassenklassifizierung ist die Mikrogenauigkeit der Makrogenauigkeit vorzuziehen, wenn Sie vermuten, dass es ein Klassenungleichgewicht geben könnte (d.h. Sie haben viel mehr Beispiele für eine Klasse als für andere Klassen).|
 | **Macro-Accuracy** | Die [durchschnittliche Makrogenauigkeit](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) ist die durchschnittliche Genauigkeit auf Klassenebene. Die Genauigkeit für jede Klasse wird berechnet, und die Makrogenauigkeit ist der Durchschnitt dieser Genauigkeiten. Grundsätzlich trägt jede Klasse zu gleichen Teilen zur Genauigkeitsmetrik bei. Minderheitsklassen werden gleich wie größere Klassen gewichtet. Die Metrik gibt jeder Klasse die gleiche Gewichtung, unabhängig davon, wie viele Instanzen aus dieser Klasse das Dataset enthält. |  **Je näher der Wert an 1,00 liegt, desto besser**.  Sie berechnet die Metrik unabhängig für jede Klasse und ermittelt dann den Durchschnitt (daher werden alle Klassen gleich behandelt). |
@@ -52,7 +52,7 @@ Weitere Informationen zu Metriken für die Multiklassenklassifizierung finden Si
 
 ## <a name="metrics-for-regression"></a>Metriken für Regression
 
-| Metriken   |      Beschreibung      |  Suche nach |
+| Metriken   |      BESCHREIBUNG      |  Suche nach |
 |-----------|-----------------------|-----------|
 | **R-squared** |  [R-squared (R2)](https://en.wikipedia.org/wiki/Coefficient_of_determination) oder *Bestimmtheitsmaß* stellt die Vorhersageleistung des Modells als Wert zwischen -inf und 1,00 dar. 1,00 bedeutet, dass das Modell perfekt geeignet ist. Die Eignung kann aber auch willkürlich schlecht sein, sodass die Werte negativ sein können. Ein Score von 0,00 bedeutet, dass das Modell den erwarteten Wert für die Bezeichnung schätzt. R2 misst, wie nah die tatsächlichen Testdatenwerte an den vorhergesagten Werten liegen. | **Je näher der Wert an 1,00 liegt, desto besser ist die Qualität des Modells**. Manchmal können jedoch niedrige R-squared-Werte (z.B. 0,50) ganz normal oder gut genug für Ihr Szenario sein, und hohe R-squared-Werte sind nicht immer gut und möglicherweise verdächtig. |
 | **Absolute-loss** |  [Absolute-loss](https://en.wikipedia.org/wiki/Mean_absolute_error) oder *Mittlerer absoluter Fehler (MAE)* misst, wie nah die Vorhersagen an den tatsächlichen Ergebnissen liegen. Damit wird der Durchschnitt aller Modellfehler angegeben, wobei ein Modellfehler die Differenz zwischen dem vorhergesagten Wert für die Bezeichnung und dem korrekten Wert für die Bezeichnung ist. Dieser Vorhersagefehler wird für jeden Datensatz des Testdatasets berechnet. Abschließend wird der Mittelwert für alle erfassten absoluten Fehler berechnet.| **Je näher der Wert an 0,00 liegt, desto besser ist die Qualität des Modells**. Beachten Sie, dass der mittlere absolute Fehler die gleiche Staffelung wie die zu messenden Daten verwendet (ist nicht auf einen bestimmten Bereich normiert). „Absolute-loss“, „Squared-loss“ und „RMS-loss“ können nur zum Vergleich von Modellen für dasselbe Dataset oder Datasets mit einer ähnlichen Bezeichnung-Wert-Verteilung verwendet werden. |
