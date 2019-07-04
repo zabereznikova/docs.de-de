@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169787"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401956"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 5)
+# <a name="whats-new-in-net-core-30-preview-6"></a>Neuerungen in .NET Core 3.0 (Preview 6)
 
-In diesem Artikel werden Neuerungen in .NET Core 3.0 (durch Vorschauversion 5) beschrieben. Eine der wichtigsten Verbesserungen ist die Unterstützung für Windows-Desktopanwendungen (nur Windows). Mit der .NET Core 3.0 SDK-Komponente Windows Desktop können Sie Ihre Windows Forms- und WPF-Anwendungen (Windows Presentation Foundation) portieren. Die Windows Desktop-Komponente wird ausdrücklich nur für Windows unterstützt und ist nur unter Windows enthalten. Weitere Informationen finden Sie im Abschnitt [Windows-Desktop](#windows-desktop) weiter unten in diesem Artikel.
+In diesem Artikel werden Neuerungen in .NET Core 3.0 (in Preview 6) beschrieben. Eine der wichtigsten Verbesserungen ist die Unterstützung für Windows-Desktopanwendungen (nur Windows). Mit der .NET Core 3.0 SDK-Komponente Windows Desktop können Sie Ihre Windows Forms- und WPF-Anwendungen (Windows Presentation Foundation) portieren. Die Windows Desktop-Komponente wird ausdrücklich nur für Windows unterstützt und ist nur unter Windows enthalten. Weitere Informationen finden Sie im Abschnitt [Windows-Desktop](#windows-desktop) weiter unten in diesem Artikel.
 
-.NET Core 3.0 bietet Unterstützung für C# 8.0. Verwenden Sie unbedingt die neueste Version von Visual Studio 2019 Update 1 Preview oder VSCode mit der OmniSharp-Erweiterung.
+.NET Core 3.0 bietet Unterstützung für C# 8.0. Verwenden Sie unbedingt die [neueste Vorschauversion von Visual Studio](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) oder Visual Studio Code mit der OmniSharp-Erweiterung.
 
 [Sie können .NET Core 3.0 Vorschauversion 6 jetzt für Windows, Mac und Linux herunterladen und sofort starten.](https://aka.ms/netcore3download)
 
@@ -55,7 +55,7 @@ Obwohl .NET Core 3.0 **.NET Standard 2.1** unterstützt, generiert die Standardv
 </Project>
 ```
 
-Wenn Sie Visual Studio verwenden, benötigen Sie Visual Studio 2019, da Visual Studio 2017 **.NET Standard 2.1** oder **.NET Core 3.0** nicht unterstützt. Sie sollten unbedingt [Visual Studio 2019 Update 1 Vorschauversion](https://visualstudio.microsoft.com/vs/preview/) verwenden.
+Wenn Sie Visual Studio verwenden, benötigen Sie [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), da Visual Studio 2017 **.NET Standard 2.1** und **.NET Core 3.0** nicht unterstützt.
 
 ## <a name="improved-net-core-version-apis"></a>Verbesserte .NET Core-Versions-APIs
 
@@ -240,7 +240,7 @@ Kein Rollforward. Nur Binden an angegebene Version. Diese Richtlinie wird nicht 
 
 Abgesehen von der **Disable**-Einstellung verwenden alle Einstellungen die höchste verfügbare Patchversion.
 
-## <a name="windows-desktop"></a>Windows Desktop
+## <a name="windows-desktop"></a>Windows-Desktop
 
 .NET Core 3.0 unterstützt die Windows-Desktopanwendungen mit Windows Presentation Foundation (WPF) und Windows Forms. Diese Frameworks unterstützt auch die Verwendung moderner Steuerelemente und des Fluent-Stils aus der Windows-UI-XAML-Bibliothek (WinUI) über [XAML-Inseln](/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -413,7 +413,7 @@ Hier ist ein Beispiel für die Deserialisierung einer JSON-Zeichenfolge in ein O
 
 .NET Core 3.0 verbessert natives API-Interop.
 
-### <a name="type-nativelibrary"></a>Geben Sie Folgendes ein:  NativeLibrary
+### <a name="type-nativelibrary"></a>Typ: NativeLibrary
 
 <xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> bietet eine Kapselung zum Laden einer nativen Bibliothek (mit derselben Lastlogik wie .NET Core P/Invoke) und Bereitstellen der relevanten Hilfsfunktionen wie z.B. `getSymbol`. Ein Codebeispiel finden Sie in der [DLLMap-Demo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).
 
