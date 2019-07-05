@@ -1,18 +1,18 @@
 ---
-title: Vorbereiten von Daten
+title: Vorbereiten von Daten für die Modellerstellung
 description: Erfahren Sie, wie Sie Transformationen in ML.NET verwenden können, um Daten für die weitere Verarbeitung oder die Modellerstellung zu manipulieren und vorzubereiten.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268246"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397718"
 ---
-# <a name="prepare-data"></a>Vorbereiten von Daten
+# <a name="prepare-data-for-building-a-model"></a>Vorbereiten von Daten für die Modellerstellung
 
 Erfahren Sie, wie Sie ML.NET verwenden können, um Daten für die weitere Verarbeitung oder die Erstellung eines Modells aufzubereiten.
 

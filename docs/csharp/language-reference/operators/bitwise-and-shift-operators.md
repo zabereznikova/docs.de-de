@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025237"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423999"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren: C#-Referenz
 
-Mit den folgenden Operatoren werden bitweise oder Schiebeoperationen mit Operanden durchgeführt, die [integrale Typen](../keywords/integral-types-table.md) aufweisen:
+Mit den folgenden Operatoren werden bitweise oder Schiebeoperationen mit Operanden durchgeführt, die [integrale Typen](../builtin-types/integral-numeric-types.md) aufweisen:
 
 - Unärer Operator [`~` (bitweises Komplement)](#bitwise-complement-operator-)
 - Binäre Schiebeoperatoren [`<<` (Linksverschiebung)](#left-shift-operator-) und [`>>` (Rechtsverschiebung)](#right-shift-operator-)
@@ -60,39 +60,39 @@ Sie können das Symbol `~` auch verwenden, um Finalizers zu deklarieren. Weitere
 
 ## <a name="left-shift-operator-"></a>Operator für Linksverschiebung \<\<
 
-Mit dem Operator `<<` wird der erste Operand um die Anzahl von Bits nach links verschoben, die durch den zweiten Operanden angegeben wird.
+Mit dem Operator `<<` wird der linke Operand um die Anzahl von Bits nach links verschoben, die durch den rechten Operanden angegeben wird.
 
 Bei der Operation zum Verschieben nach links werden die hohen Bits, die außerhalb des Bereichs des Ergebnistyps liegen, verworfen, und die niedrigen leeren Bitpositionen werden auf null festgelegt. Dies ist im folgenden Beispiel dargestellt:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-Da die Verschiebeoperatoren nur für die Typen `int`, `uint`, `long` und `ulong` definiert werden, enthält das Ergebnis einer Operation immer mindestens 32 Bit. Wenn der erste Operand einen abweichenden integralen Typ aufweist (`sbyte`, `byte`, `short`, `ushort` oder `char`), wird sein Wert in den Typ `int` konvertiert. Dies ist im folgenden Beispiel dargestellt:
+Da die Verschiebeoperatoren nur für die Typen `int`, `uint`, `long` und `ulong` definiert werden, enthält das Ergebnis einer Operation immer mindestens 32 Bit. Wenn der linke Operand einen abweichenden integralen Typ aufweist (`sbyte`, `byte`, `short`, `ushort` oder `char`), wird sein Wert in den Typ `int` konvertiert. Dies ist im folgenden Beispiel dargestellt:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-Informationen dazu, wie der zweite Operand des Operators `<<` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
+Informationen dazu, wie der rechte Operand des Operators `<<` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
 
 ## <a name="right-shift-operator-"></a>Operator für Rechtsverschiebung >>
 
-Mit dem Operator `>>` wird der erste Operand um die Anzahl von Bits nach rechts verschoben, die durch den zweiten Operanden angegeben wird.
+Mit dem Operator `>>` wird der linke Operand um die Anzahl von Bits nach rechts verschoben, die durch den rechten Operanden angegeben wird.
 
 Bei der Operation zum Verschieben nach rechts werden die niedrigen Bits verworfen. Dies ist im folgenden Beispiel dargestellt:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Die höheren leeren Bitpositionen werden basierend auf dem Typ des ersten Operanden wie folgt festgelegt:
+Die höheren leeren Bitpositionen werden basierend auf dem Typ des linken Operanden wie folgt festgelegt:
 
-- Wenn der erste Operand vom Typ [int](../keywords/int.md) oder [long](../keywords/long.md) ist, führt der Operator zur Rechtsverschiebung eine *arithmetische* Verschiebung durch: Der Wert des Bits mit dem höchsten Stellenwert (MSB, „most significant bit“) des ersten Operanden wird auf die hohen leeren Bitpositionen übertragen. Die hohen leeren Bitpositionen werden daher auf 0 festgelegt, wenn der erste Operand nicht negativ ist, bzw. auf 1, wenn der erste Operand negativ ist.
+- Wenn der linke Operand vom Typ [int](../builtin-types/integral-numeric-types.md) oder [long](../builtin-types/integral-numeric-types.md) ist, führt der Operator zur Rechtsverschiebung eine *arithmetische* Verschiebung durch: Der Wert des Bits mit dem höchsten Stellenwert (MSB, „most significant bit“) des linken Operanden wird auf die hohen leeren Bitpositionen übertragen. Die hohen leeren Bitpositionen werden daher auf 0 festgelegt, wenn der linke Operand nicht negativ ist, bzw. auf 1, wenn der linke Operand negativ ist.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Wenn der erste Operand vom Typ [uint](../keywords/uint.md) oder [ulong](../keywords/ulong.md) ist, führt der Operator zur Rechtsverschiebung eine *logische* Verschiebung durch: Die hohen leeren Bitpositionen werden immer auf 0 (null) festgelegt.
+- Wenn der linke Operand vom Typ [uint](../builtin-types/integral-numeric-types.md) oder [ulong](../builtin-types/integral-numeric-types.md) ist, führt der Operator zur Rechtsverschiebung eine *logische* Verschiebung durch: Die hohen leeren Bitpositionen werden immer auf 0 (null) festgelegt.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-Informationen dazu, wie der zweite Operand des Operators `>>` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
+Informationen dazu, wie der rechte Operand des Operators `>>` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
 
-## <a name="logical-and-operator-amp"></a>Logischer AND-Operator &amp;
+## <a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 
 Mit dem Operator `&` wird „bitweises logisches UND“ für die Operanden berechnet:
 
@@ -158,13 +158,13 @@ Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden
 
 ## <a name="shift-count-of-the-shift-operators"></a>Anzahl für die Verschiebung durch Schiebeoperatoren
 
-Für die Schiebeoperatoren `<<` und `>>` muss der Typ des zweiten Operanden [int](../keywords/int.md) lauten oder ein Typ sein, der eine [vordefinierte implizite numerische Konvertierung](../keywords/implicit-numeric-conversions-table.md) in `int` aufweist.
+Für die Schiebeoperatoren `<<` und `>>` muss der Typ des rechten Operanden [int](../builtin-types/integral-numeric-types.md) lauten oder ein Typ sein, der eine [vordefinierte implizite numerische Konvertierung](../keywords/implicit-numeric-conversions-table.md) in `int` aufweist.
 
 Für die Ausdrücke `x << count` und `x >> count` hängt die tatsächliche Verschiebungsanzahl wie folgt vom Typ von `x` ab:
 
-- Lautet der Typ von `x` [int](../keywords/int.md) oder [uint](../keywords/uint.md), wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des zweiten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
+- Lautet der Typ von `x` [int](../builtin-types/integral-numeric-types.md) oder [uint](../builtin-types/integral-numeric-types.md), wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
 
-- Lautet der Typ von `x` [long](../keywords/long.md) oder [ulong](../keywords/ulong.md), wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des zweiten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
+- Lautet der Typ von `x` [long](../builtin-types/integral-numeric-types.md) oder [ulong](../builtin-types/integral-numeric-types.md), wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des rechten Operanden definiert. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
 
 Das folgende Beispiel veranschaulicht dieses Verhalten:
 
@@ -180,7 +180,7 @@ Normalerweise verwenden Sie bitweise logische Operatoren mit einem Enumerationst
 
 Ein benutzerdefinierter Typ kann die Operatoren `~`, `<<`, `>>`, `&`, `|` und `^` [überladen](../keywords/operator.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
 
-Wenn ein benutzerdefinierter Typ `T` den Operator `<<` oder `>>` überlädt, muss der Typ des ersten Operanden `T` und der Typ des zweiten Operanden `int` lauten.
+Wenn ein benutzerdefinierter Typ `T` den Operator `<<` oder `>>` überlädt, muss der Typ des linken Operanden `T` und der Typ des rechten Operanden `int` lauten.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

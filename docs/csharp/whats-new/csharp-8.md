@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151983"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397771"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -30,7 +30,12 @@ Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits au
 > [!NOTE]
 > Dieser Artikel wurde zuletzt für Vorschauversion 5 von C# 8.0 aktualisiert.
 
-Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Artikel verfügbar sind, werden Links zu diesen Tutorials und Übersichten bereitgestellt.
+Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Artikel verfügbar sind, werden Links zu diesen Tutorials und Übersichten bereitgestellt. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
+
+1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
+1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
+1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp8* für das *try-samples*-Repository fest.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="readonly-members"></a>Readonly-Member
 
@@ -425,7 +430,7 @@ Die folgenden Beispiele erstellen Bereiche, die am Anfang, am Ende und auf beide
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 Sie können Bereiche auch als Variablen deklarieren:

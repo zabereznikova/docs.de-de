@@ -19,16 +19,16 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025209"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423966"
 ---
 # <a name="comparison-operators-c-reference"></a>Vergleichsoperatoren (C#-Referenz)
 
-Die Vergleichsoperatoren [`<` (kleiner als)](#less-than-operator-), [`>` (größer als)](#greater-than-operator-), [`<=` (kleiner als oder gleich)](#less-than-or-equal-operator-) und [`>=` (größer als oder gleich)](#greater-than-or-equal-operator-) – auch bekannt als relationale Operatoren – vergleichen ihre Operanden. Diese Operatoren unterstützen alle numerischen [Ganzzahl](../keywords/integral-types-table.md)- und [Gleitkomma](../keywords/floating-point-types-table.md)-Typen.
+Die Vergleichsoperatoren [`<` (kleiner als)](#less-than-operator-), [`>` (größer als)](#greater-than-operator-), [`<=` (kleiner als oder gleich)](#less-than-or-equal-operator-) und [`>=` (größer als oder gleich)](#greater-than-or-equal-operator-) – auch bekannt als relationale Operatoren – vergleichen ihre Operanden. Diese Operatoren unterstützen alle numerischen [Ganzzahl](../builtin-types/integral-numeric-types.md)- und [Gleitkomma](../keywords/floating-point-types-table.md)-Typen.
 
 > [!NOTE]
 > Bei den Operatoren `==`, `<`, `>`, `<=` und `>=` ist das Ergebnis eines Vorgangs gleich `false`, wenn einer der Operanden keine Zahl ist (<xref:System.Double.NaN?displayProperty=nameWithType> oder <xref:System.Single.NaN?displayProperty=nameWithType>). Das bedeutet, dass der `NaN`-Wert weder größer als noch kleiner als noch gleich einem anderen `double`-Wert (oder `float`-Wert) ist, einschließlich `NaN`. Weitere Informationen und Beispiele finden Sie im <xref:System.Double.NaN?displayProperty=nameWithType>- oder <xref:System.Single.NaN?displayProperty=nameWithType>-Referenzartikel.
@@ -39,25 +39,25 @@ Die Operatoren [`==` und `!=`](equality-operators.md) überprüfen, ob die Opera
 
 ## <a name="less-than-operator-"></a>„Kleiner als“-Operator \<
 
-Der `<`-Operator gibt `true` zurück, wenn sein erster Operand kleiner ist als sein zweiter Operand, andernfalls `false`:
+Der `<`-Operator gibt `true` zurück, wenn sein linker Operand kleiner ist als sein rechter Operand, andernfalls `false`:
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>„Größer als“-Operator >
 
-Der `>`-Operator gibt `true` zurück, wenn sein erster Operand größer ist als sein zweiter Operand, andernfalls `false`:
+Der `>`-Operator gibt `true` zurück, wenn sein linker Operand größer ist als sein rechter Operand, andernfalls `false`:
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>„Kleiner oder gleich“-Operator \<=
 
-Der `<=`-Operator gibt `true` zurück, wenn sein erster Operand kleiner als sein zweiter Operand oder gleich ist, andernfalls `false`:
+Der `<=`-Operator gibt `true` zurück, wenn sein linker Operand kleiner ist als der rechte Operand oder diesem entspricht, andernfalls `false`:
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>„Größer oder gleich“-Operator >=
 
-Der `>=`-Operator gibt `true` zurück, wenn sein erster Operand größer als sein zweiter Operand oder gleich ist, andernfalls `false`:
+Der `>=`-Operator gibt `true` zurück, wenn sein linker Operand größer ist als der rechte Operand oder diesem entspricht, andernfalls `false`:
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 

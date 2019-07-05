@@ -1,20 +1,20 @@
 ---
 title: Trainieren und Auswerten eines Modells
-description: Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, erlernte Parameter extrahieren und die Leistung messen können. Obwohl dieses Beispiel ein Regressionsmodell trainiert, sind die Konzepte für einen Großteil der anderen Algorithmen anwendbar.
-ms.date: 06/11/2019
+description: Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, Metriken erfassen und die Leistung messen können. Ein Machine Learning-Modell identifiziert Muster innerhalb von Trainingsdaten, um anhand von neuen Daten Vorhersagen zu treffen.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307445"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397643"
 ---
 # <a name="train-and-evaluate-a-model"></a>Trainieren und Auswerten eines Modells
 
-Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, erlernte Parameter extrahieren und die Leistung messen können. Obwohl dieses Beispiel ein Regressionsmodell trainiert, sind die Konzepte für einen Großteil der anderen Algorithmen anwendbar.
+Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, Metriken erfassen und die Leistung messen können. Obwohl dieses Beispiel ein Regressionsmodell trainiert, sind die Konzepte für einen Großteil der anderen Algorithmen anwendbar.
 
 ## <a name="split-data-for-training-and-testing"></a>Aufteilen von Daten für Training und Tests
 

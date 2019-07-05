@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 60907eb1bbfeb1daa9d9a74733387c4771accb45
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025228"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423979"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren (C#-Referenz)
 
@@ -45,9 +45,9 @@ Die folgenden Operatoren führen logische Vorgänge mit den [bool](../keywords/b
 
 - Unärer [`!` (logische Negation)](#logical-negation-operator-) Operator.
 - Binäre [`&` (logisch AND)](#logical-and-operator-), [`|` (logisch OR)](#logical-or-operator-) und [`^` (logisch exklusiv OR)](#logical-exclusive-or-operator-) Operatoren. Diese Operatoren werten immer beide Operanden aus.
-- Binäre [ `&&` (bedingt logisch AND)](#conditional-logical-and-operator-) und [ `||` (bedingt logisch OR)](#conditional-logical-or-operator-) Operatoren. Diese Operatoren werten den zweiten Operanden nur dann aus, wenn es notwendig ist.
+- Binäre [ `&&` (bedingt logisch AND)](#conditional-logical-and-operator-) und [ `||` (bedingt logisch OR)](#conditional-logical-or-operator-) Operatoren. Diese Operatoren werten den rechten Operanden nur dann aus, wenn es notwendig ist.
 
-Für die Operanden der [integralen](../keywords/integral-types-table.md) Typen führen die Operatoren `&`, `|` und `^` bitweise logische Operationen durch. Weitere Informationen finden Sie unter [Bitweise und Schiebeoperatoren](bitwise-and-shift-operators.md).
+Für die Operanden der [integralen](../builtin-types/integral-numeric-types.md) Typen führen die Operatoren `&`, `|` und `^` bitweise logische Operationen durch. Weitere Informationen finden Sie unter [Bitweise und Schiebeoperatoren](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Logischer Negationsoperator: !
 
@@ -55,17 +55,17 @@ Der `!`-Operator berechnet die logische Negation des Operanden. Das heißt., er 
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>Logischer AND-Operator &amp;
+## <a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 
 Der `&`-Operator berechnet die logische AND-Operation des Operanden. Das Ergebnis von `x & y` ist `true`, wenn sowohl `x` als auch `y` zu `true` ausgewertet werden. Andernfalls ist das Ergebnis `false`.
 
-Der `&`-Operator wertet beide Operanden aus, selbst wenn der erste Operand als `false` ausgewertet wird, sodass das Ergebnis unabhängig vom Wert des zweiten Operanden `false` sein muss.
+Der `&`-Operator wertet beide Operanden aus, selbst wenn der linke Operand als `false` ausgewertet wird, sodass das Ergebnis unabhängig vom Wert des rechten Operanden `false` sein muss.
 
-Im folgenden Beispiel ist der zweite Operand des `&`-Operators ein Methodenaufruf, der unabhängig vom Wert des ersten Operanden durchgeführt wird:
+Im folgenden Beispiel ist der rechte Operand des `&`-Operators ein Methodenaufruf, der unabhängig vom Wert des linken Operanden ausgeführt wird:
 
 [!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-Der [bedingte logische AND-Operator](#conditional-logical-and-operator-) `&&` berechnet auch die logische AND-Operation der Operanden, wertet den zweiten Operanden aber nicht aus, wenn der erste Operand `false` ergibt.
+Der [bedingte logische AND-Operator](#conditional-logical-and-operator-) `&&` berechnet auch die logische AND-Operation der Operanden, wertet den rechten Operanden aber nicht aus, wenn der linke Operand `false` ergibt.
 
 Für die Operanden der integralen Typen berechnet der Operator `&` [bitweises logisches UND](bitwise-and-shift-operators.md#logical-and-operator-) für seine Operanden. Der unäre `&`-Operator ist der [address-of-Operator](pointer-related-operators.md#address-of-operator-).
 
@@ -81,21 +81,21 @@ Für die Operanden der integralen Typen berechnet der Operator `^` [bitweises lo
 
 Der `|`-Operator berechnet die logische OR-Operation des Operanden. Das Ergebnis von `x | y` ist `true`, wenn entweder `x` oder `y` `true` ergibt. Andernfalls ist das Ergebnis `false`.
 
-Der `|`-Operator wertet beide Operanden aus, selbst wenn der erste Operand als `true` ausgewertet wird, sodass das Ergebnis unabhängig vom Wert des zweiten Operanden `true` sein muss.
+Der `|`-Operator wertet beide Operanden aus, selbst wenn der linke Operand als `true` ausgewertet wird, sodass das Ergebnis unabhängig vom Wert des rechten Operanden `true` sein muss.
 
-Im folgenden Beispiel ist der zweite Operand des `|`-Operators ein Methodenaufruf, der unabhängig vom Wert des ersten Operanden durchgeführt wird:
+Im folgenden Beispiel ist der rechte Operand des `|`-Operators ein Methodenaufruf, der unabhängig vom Wert des linken Operanden ausgeführt wird:
 
 [!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-Der [bedingte logische OR-Operator](#conditional-logical-or-operator-) `||` berechnet auch die logische OR-Operation der Operanden, wertet den zweiten Operanden aber nicht aus, wenn der erste Operand `true` ergibt.
+Der [bedingte logische OR-Operator](#conditional-logical-or-operator-) `||` berechnet auch die logische OR-Operation der Operanden, wertet den rechten Operanden aber nicht aus, wenn der linke Operand `true` ergibt.
 
 Für die Operanden der integralen Typen berechnet der Operator `|` [bitweises logisches ODER](bitwise-and-shift-operators.md#logical-or-operator-) für seine Operanden.
 
-## <a name="conditional-logical-and-operator-ampamp"></a>Bedingter logischer AND-Operator &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> Bedingter logischer AND-Operator &amp;&amp;
 
-Der bedingte logische AND-Operator `&&`, auch bekannt als der "kurzschließender" logischer AND-Operator bezeichnet, berechnet die logische AND-Operation der Operanden. Das Ergebnis von `x && y` ist `true`, wenn sowohl `x` als auch `y` zu `true` ausgewertet werden. Andernfalls ist das Ergebnis `false`. Wenn der erste Operand als `false` ausgewertet wird, wird der zweite Operand nicht ausgewertet.
+Der bedingte logische AND-Operator `&&`, auch bekannt als der "kurzschließender" logischer AND-Operator bezeichnet, berechnet die logische AND-Operation der Operanden. Das Ergebnis von `x && y` ist `true`, wenn sowohl `x` als auch `y` zu `true` ausgewertet werden. Andernfalls ist das Ergebnis `false`. Wenn `x` als `false` ausgewertet wird, wird `y` nicht ausgewertet.
 
-Im folgenden Beispiel ist der zweite Operand des `&&`-Operators ein Methodenaufruf, der nicht durchgeführt wird, wenn der erste Operand `false` ergibt:
+Im folgenden Beispiel ist der rechte Operand des `&&`-Operators ein Methodenaufruf, der nicht ausgeführt wird, wenn der linke Operand `false` ergibt:
 
 [!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
@@ -103,9 +103,9 @@ Der [logische AND-Operator](#logical-and-operator-) `&` berechnet auch die logis
 
 ## <a name="conditional-logical-or-operator-"></a>Bedingter logischer OR-Operator ||
 
-Der bedingte logische OR-Operator `||`, auch bekannt als der "kurzschließender" logischer OR-Operator bezeichnet, berechnet die logische OR-Operation der Operanden. Das Ergebnis von `x || y` ist `true`, wenn entweder `x` oder `y` `true` ergibt. Andernfalls ist das Ergebnis `false`. Wenn der erste Operand als `true` ausgewertet wird, wird der zweite Operand nicht ausgewertet.
+Der bedingte logische OR-Operator `||`, auch bekannt als der "kurzschließender" logischer OR-Operator bezeichnet, berechnet die logische OR-Operation der Operanden. Das Ergebnis von `x || y` ist `true`, wenn entweder `x` oder `y` `true` ergibt. Andernfalls ist das Ergebnis `false`. Wenn `x` als `true` ausgewertet wird, wird `y` nicht ausgewertet.
 
-Im folgenden Beispiel ist der zweite Operand des `||`-Operators ein Methodenaufruf, der nicht durchgeführt wird, wenn der erste Operand `true` ergibt:
+Im folgenden Beispiel ist der rechte Operand des `||`-Operators ein Methodenaufruf, der nicht ausgeführt wird, wenn der linke Operand `true` ergibt:
 
 [!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 

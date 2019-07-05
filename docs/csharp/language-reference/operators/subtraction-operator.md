@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024916"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347913"
 ---
 # <a name="--and---operators-c-reference"></a>Operatoren „-“ und -=“ (C#-Referenz)
 
@@ -30,17 +30,17 @@ Informationen zum arithmetischen Operator `-` finden Sie in den Abschnitten [Un�
 
 Für Operanden des gleichen [Delegattyps](../keywords/delegate.md) gibt der Operator `-` eine wie folgt berechnete Delegatinstanz zurück:
 
-- Wenn beide Operanden nicht NULL sind und es sich bei der Aufrufliste des zweiten Operanden um eine ordnungsgemäße zusammenhängende Unterliste der Aufrufliste des ersten Operanden handelt, entsteht durch den Vorgang eine neue Aufrufliste, bei der die Einträge des zweiten Operanden aus der Aufrufliste des ersten Operanden entfernt wurden. Wenn die Liste des zweiten Operanden mehreren zusammenhängenden Unterlisten aus der Liste des ersten Operanden entspricht, wird nur die äußerst rechte übereinstimmende Unterliste entfernt. Sollte durch die Entfernung eine leere Liste entstehen, ist das Ergebnis `null`.
+- Wenn beide Operanden nicht NULL sind und es sich bei der Aufrufliste des rechten Operanden um eine ordnungsgemäße zusammenhängende Unterliste der Aufrufliste des linken Operanden handelt, entsteht durch den Vorgang eine neue Aufrufliste, bei der die Einträge des rechten Operanden aus der Aufrufliste des linken Operanden entfernt wurden. Wenn die Liste des rechten Operanden mehreren zusammenhängenden Unterlisten aus der Liste des linken Operanden entspricht, wird nur die äußerst rechte übereinstimmende Unterliste entfernt. Sollte durch die Entfernung eine leere Liste entstehen, ist das Ergebnis `null`.
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Wenn es sich bei der Aufrufliste des zweiten Operanden nicht um eine ordnungsgemäße zusammenhängende Unterliste der Aufrufliste des ersten Operanden handelt, ist das Ergebnis des Vorgangs der erste Operand. Beim Entfernen eines Delegaten, der nicht Teil des Multicastdelegaten ist, passiert nichts, und der Multicastdelegat bleibt unverändert.
+- Wenn es sich bei der Aufrufliste des rechten Operanden nicht um eine ordnungsgemäße zusammenhängende Unterliste der Aufrufliste des linken Operanden handelt, ist das Ergebnis des Vorgangs der linke Operand. Beim Entfernen eines Delegaten, der nicht Teil des Multicastdelegaten ist, passiert nichts, und der Multicastdelegat bleibt unverändert.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   Das vorherige Beispiel veranschaulicht auch, dass Delegatinstanzen beim Entfernen von Delegaten verglichen werden. Delegaten, die durch die Auswertung identischer [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md) erzeugt werden, sind beispielsweise nicht gleich. Weitere Informationen über die Delegatgleichheit finden Sie in der [C#-Sprachspezifikation](../language-specification/index.md) unter [Delegieren von Gleichheitsoperatoren](~/_csharplang/spec/expressions.md#delegate-equality-operators).
 
-- Ist der erste Operand `null`, ist das Ergebnis des Vorgangs `null`. Ist der zweite Operand `null`, ist das Ergebnis des Vorgangs der erste Operand.
+- Ist der linke Operand `null`, ist das Ergebnis des Vorgangs `null`. Ist der rechte Operand `null`, ist das Ergebnis des Vorgangs der linke Operand.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
