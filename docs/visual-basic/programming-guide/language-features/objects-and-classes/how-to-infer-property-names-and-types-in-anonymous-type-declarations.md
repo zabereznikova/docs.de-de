@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 2f923bd7069e29eeb20cbc77cef02c8378917d4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aba8c37059cfc58fdffda55bcf1c485b61c3d249
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665399"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569496"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)
 Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von Eigenschaften bereit. Die Typen aller Eigenschaften werden abgeleitet. Im folgenden Beispiel werden die Typen von `Name` und `Price` direkt aus den Werten abgeleitet, mit denen sie initialisiert werden.  
@@ -43,10 +43,11 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
      Der resultierende Typ für `anon` hätte eine Eigenschaft, `Book`, des Typs <xref:System.Collections.IEnumerable>(Of XElement).  
   
 - Aus einer Funktion, die keine Parameter hat, z. B. `SomeFunction` im folgenden Beispiel.  
-  
-     `Dim sc As New SomeClass`  
-  
-     `Dim anon1 = New With {Key sc.SomeFunction()}`  
+
+  ```vb
+     Dim sc As New SomeClass
+     Dim anon1 = New With {Key sc.SomeFunction()}
+  ```
   
      Die Variable `anon2` im folgenden Code ist ein anonymer Typ, der eine Eigenschaft hat: ein Zeichen namens `First`. Dieser Code zeigt den Buchstaben "E" an, der von der Funktion <xref:System.Linq.Enumerable.First%2A>zurückgegeben wird.  
   
@@ -57,20 +58,22 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Die Ableitung von Namen schlägt in vielen Fällen fehl, etwa in den folgenden:  
   
 - Die Ableitung erfolgt über den Aufruf einer Methode, eines Konstruktors oder einer parametrisierten Eigenschaft, die Argumente erfordert. Die vorherige Deklaration von `anon1` schlägt fehl, wenn `someFunction` ein oder mehrere Argumente hat.  
-  
-     `' Not valid.`  
-  
-     `' Dim anon3 = New With {Key sc.someFunction(someArg)}`  
-  
+
+    ```vb
+    ' Not valid.
+    ' Dim anon3 = New With {Key sc.someFunction(someArg)}
+    ```
+    
      Durch Zuweisung zu einem neuen Eigenschaftennamen kann das Problem gelöst werden.  
-  
-     `' Valid.`  
-  
-     `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
-  
+
+    ```vb
+    ' Valid.
+    Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}
+    ```
+
 - Die Ableitung erfolgt aus einem komplexen Ausdruck.  
   
-    ```  
+    ```vb  
     Dim aString As String = "Act "  
     ' Not valid.  
     ' Dim label = New With {Key aString & "IV"}  
@@ -81,41 +84,43 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
 - Die Ableitung für mehrere Eigenschaften führt zu zwei oder mehr Eigenschaften mit demselben Namen. Ein Rückblick auf die Deklarationen in früheren Beispielen zeigt, dass es nicht möglich ist, sowohl `product.Name` als auch `car1.Name` als Eigenschaften desselben anonymen Typs aufzulisten. Dies liegt daran, dass der abgeleitete Bezeichner für beide Eigenschaften gleich `Name`wäre.  
-  
-     `' Not valid.`  
-  
-     `' Dim anon5 = New With {Key product.Name, Key car1.Name}`  
-  
+
+     ```vb
+     ' Not valid.
+     ' Dim anon5 = New With {Key product.Name, Key car1.Name}
+     ```
+     
      Das Problem kann gelöst werden, indem die Werte unterschiedlichen Eigenschaftennamen zugewiesen werden.  
   
      [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]  
   
      Beachten Sie, dass eine unterschiedliche Schreibweise (Unterschiede in der Groß- und Kleinschreibung) nicht dazu führt, dass zwei Namen unterschiedlich sind.  
-  
-     `Dim price = 0`  
-  
-     `' Not valid, because Price and price are the same name.`  
-  
-     `' Dim anon7 = New With {Key product.Price, Key price}`  
+
+     ```vb
+     Dim price = 0
+     ' Not valid, because Price and price are the same name.
+     ' Dim anon7 = New With {Key product.Price, Key price}
+     ```
   
 - Der ursprüngliche Typ und Wert einer Eigenschaft sind von einer anderen Eigenschaft abhängig, die noch nicht festgelegt wurde. Zum Beispiel ist `.IDName = .LastName` in der Deklaration eines anonymen Typs nicht zulässig, wenn `.LastName` noch nicht initialisiert wurde.  
-  
-     `' Not valid.`  
-  
-     `' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}`  
-  
+
+     ```vb
+     ' Not valid.
+     ' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}
+     ```
+     
      In diesem Beispiel kann das Problem behoben werden, indem die Reihenfolge, in der die Eigenschaften deklariert werden, umgekehrt wird.  
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
 - Ein Eigenschaftennamen eines anonymen Typs ist mit dem Namen eines Members von <xref:System.Object>identisch. Zum Beispiel schlägt die folgende Deklaration fehl, weil `Equals` eine Methode von <xref:System.Object>ist.  
   
-     `' Not valid.`  
-  
-     `' Dim relationsLabels1 = New With {Key .Equals = "equals", Key .Greater = _`  
-  
-     `'                       "greater than", Key .Less = "less than"}`  
-  
+     ```vb
+     ' Not valid.
+     ' Dim relationsLabels1 = New With {Key .Equals = "equals", Key .Greater = _
+     '                       "greater than", Key .Less = "less than"}
+     ```
+     
      Sie können das Problem beheben, indem Sie den Eigenschaftennamen ändern:  
   
      [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483031"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569556"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
@@ -85,8 +85,8 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
  Wenn Sie eine benutzerdefinierte Authentifizierung erstellen, müssen Sie auf jeden Fall die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>-Methode überschreiben. Ein Beispiel zur benutzerdefinierten Authentifizierung finden Sie im Beispiel zum [Validierungssteuerelement des X.509-Zertifikats](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Weitere Informationen finden Sie unter [Custom Credential and Credential Validation (Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen)](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Verwendung des neuen Powershell-SelfSignedCertificate-Cmdlets zum Erstellen einer Zertifikatkette  
- Das New-SelfSignedCertificate des Powershell-Cmdlet erstellt x. 509-Zertifikaten und privaten und öffentlichen Schlüsselpaaren. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Das Cmdlet dient lediglich als Hilfe beim Entwickeln von services und sollte nie zum Erstellen von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst zu entwickeln, gehen Sie folgendermaßen vor, um eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate" zu erstellen.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Verwendung des neuen PowerShell-SelfSignedCertificate-Cmdlets zum Erstellen einer Zertifikatkette  
+ Das New-SelfSignedCertificate des PowerShell-Cmdlet erstellt x. 509-Zertifikaten und privaten und öffentlichen Schlüsselpaaren. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Das Cmdlet dient lediglich als Hilfe beim Entwickeln von services und sollte nie zum Erstellen von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst zu entwickeln, gehen Sie folgendermaßen vor, um eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate" zu erstellen.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Erstellen Sie eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate"  
   
