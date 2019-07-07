@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 1b0bc360c4c04457e71115dc5caf935841a2bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619639"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610518"
 ---
 # <a name="freezable-objects-overview"></a>Übersicht über Freezable-Objekte
 In diesem Thema wird beschrieben, wie effektiv verwenden und erstellen Sie <xref:System.Windows.Freezable> -Objekte, die spezielle Funktionen bereitstellen, die Leistung der Anwendung verbessern können. Beispiele für freezable-Objekte sind Pinsel, Stifte, Transformationen, Geometrien und Animationen.  
@@ -150,7 +150,7 @@ mc:Ignorable="PresentationOptions"
   
 - Am Anfang jeder [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , ohne Abhängigkeitseigenschaft die Datenmember liest, rufen Sie die <xref:System.Windows.Freezable.ReadPreamble%2A> Methode.  
   
-- Rufen Sie am Anfang jeder API, die nicht als Abhängigkeitseigenschaft Datenmember schreibt, die <xref:System.Windows.Freezable.WritePreamble%2A> Methode. (Nachdem Sie aufgerufen haben <xref:System.Windows.Freezable.WritePreamble%2A> in einer [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], nicht müssen Sie einen zusätzlichen Aufruf <xref:System.Windows.Freezable.ReadPreamble%2A> , wenn Sie auch ohne Abhängigkeiten eigenschaftsdatenmember lesen.)  
+- Rufen Sie am Anfang jeder API, die nicht als Abhängigkeitseigenschaft Datenmember schreibt, die <xref:System.Windows.Freezable.WritePreamble%2A> Methode. (Nachdem Sie aufgerufen haben <xref:System.Windows.Freezable.WritePreamble%2A> in einer API müssen Sie keine stellen einen zusätzlichen Aufruf <xref:System.Windows.Freezable.ReadPreamble%2A> , wenn Sie auch ohne Abhängigkeiten eigenschaftsdatenmember lesen.)  
   
 - Rufen Sie die <xref:System.Windows.Freezable.WritePostscript%2A> Methode vor dem Beenden der Methoden, die auf nicht-Abhängigkeitseigenschaft Datenmember zu schreiben.  
   

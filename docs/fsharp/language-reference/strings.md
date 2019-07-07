@@ -1,13 +1,13 @@
 ---
 title: Zeichenfolgen
 description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
-ms.date: 06/28/2019
-ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.date: 07/05/2019
+ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487772"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610162"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
@@ -22,14 +22,26 @@ Trennzeichen für Zeichenfolgenliterale dient das Anführungszeichen ("). Der um
 
 |Zeichen|Escapesequenz|
 |---------|---------------|
+|Warnung|`\a`|
 |Rückschritt|`\b`|
+|Seitenvorschub|`\f`|
 |Zeilenumbruch|`\n`|
 |Wagenrücklauf|`\r`|
 |Registerkarte|`\t`|
+|Vertikaler Tabulator|`\v`|
 |Umgekehrter Schrägstrich|`\\`|
 |Anführungszeichen|`\"`|
 |Apostrophe|`\'`|
-|Unicodezeichen|`\uXXXX` (UTF-16) oder `\U00XXXXXX` (UTF-32) (wobei `X` eine hexadezimale Ziffer angibt)|
+|Unicodezeichen|`\DDD` (, in denen `D` gibt einen Dezimalwert Ziffer; Wertebereich 000 - 255, z. B. `\231` = "Ç")|
+|Unicodezeichen|`\xHH` (wobei `H` gibt an, eine hexadezimale Ziffer, Bereich von 00: FF, z. B. `\xE7` = "Ç")|
+|Unicodezeichen|`\uHHHH` (UTF-16) (wobei `H` gibt an, eine hexadezimale Ziffer; Bereich 0000 - FFFF;  z. B. `\u00E7` = "Ç")|
+|Unicodezeichen|`\U00HHHHHH` (UTF-32) (wobei `H` gibt an, eine hexadezimale Ziffer; Bereich 000000 - 10FFFF;  z. B. `\U0001F47D` = "👽")|
+
+> [!IMPORTANT]
+> Die `\DDD` -Escapesequenz ist die Dezimalschreibweise, die nicht oktale Schreibweise wie in den meisten anderen Sprachen. Aus diesem Grund Ziffern `8` und `9` gültig sind, und einer Folge von `\032` stellt ein Leerzeichen (U + 0020), es wäre, gleiche Codepunkt in der Oktalnotation `\040`.
+
+> [!NOTE]
+> Eingeschränkt auf einen Bereich von 0 – 255 (0xFF) die `\DDD` und `\x` Escapesequenzen sind gewissermaßen die [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) Zeichensatz, da die ersten 256 Unicode-Codepunkte entspricht.
 
 Wenn Sie mit der @-Zeichen, das Literal ist eine ausführliche Zeichenfolge. Dies bedeutet, dass alle Escapesequenzen ignoriert werden, mit dem Unterschied, dass zwei Anführungszeichen als ein Anführungszeichen interpretiert werden.
 

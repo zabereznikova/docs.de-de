@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662257"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610399"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Übersicht über WPF-Globalisierung und -Lokalisierung
 
@@ -90,7 +90,7 @@ Bei der Entwicklung einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 
 Der Lokalisierungsprozess beginnt nach der nicht lokalisierte `MyDialog.resources.dll` -Datei erstellt wird. Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elemente und Eigenschaften in Ihrem ursprünglichen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] werden mithilfe von BAML-Form von XAML in Schlüssel-Wert-Paare extrahiert die [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] unter <xref:System.Windows.Markup.Localizer>. Lokalisierer verwenden die Schlüssel-Wert-Paare, um die Anwendung zu lokalisieren. Sie können nach Abschluss der Lokalisierung aus den neuen Werten eine neue .resource.dll-Datei generieren.
   
- Die Schlüssel des Schlüssel-Wert-Paare sind `x:Uid` Werte, die vom Entwickler in der ursprünglichen platziert werden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Diese `x:Uid` Werte ermöglichen die [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] nachverfolgen und Änderungen, die zwischen dem Entwickler und der Lokalisierer, bei der Lokalisierung auftreten zusammenführen. Wenn der Entwickler ändert z. B. die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , nachdem der Lokalisierer hat begonnen, können Sie die Änderung der Entwicklung mit der Arbeit bereits abgeschlossenen Lokalisierung zusammenführen, so, dass Arbeit verloren geht.  
+ Die Schlüssel des Schlüssel-Wert-Paare sind `x:Uid` Werte, die vom Entwickler in der ursprünglichen platziert werden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Diese `x:Uid` Werte ermöglichen es die API zum Nachverfolgen und Änderungen, die zwischen dem Entwickler und der Lokalisierer, bei der Lokalisierung auftreten zusammenführen. Wenn der Entwickler ändert z. B. die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , nachdem der Lokalisierer hat begonnen, können Sie die Änderung der Entwicklung mit der Arbeit bereits abgeschlossenen Lokalisierung zusammenführen, so, dass Arbeit verloren geht.  
   
  Die folgende Abbildung zeigt einen typischen auf der BAML-Form von XAML-basierenden Lokalisierungsworkflow. In diesem Diagramm wird davon ausgegangen, dass der Entwickler die Anwendung schreibt, in englischer Sprache. Der Entwickler erstellt und globalisiert die WPF-Anwendung. Im Projekt die Datei der Entwickler legt `<UICulture>en-US</UICulture>` , damit beim Buildvorgang eine sprachneutrale Hauptassembly generiert wird, eine. resources.dll, die alle lokalisierbare Ressourcen enthält. Alternativ dazu können Sie auch Ihre Quellsprache in der Hauptassembly belassen, da unsere Lokalisierungs-APIs eine Extraktion aus der Hauptassembly unterstützen. Nach dem Buildprozess wird XAML in BAML kompiliert. Die kulturneutrale Datei „MyDialog.exe.resources.dll” wird an den englischsprachigen Kunden ausgeliefert.  
   

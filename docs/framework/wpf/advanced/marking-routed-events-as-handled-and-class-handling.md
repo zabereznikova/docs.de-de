@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598659"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610374"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Markieren von Routingereignissen als behandelt und Klassenbehandlung
 Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdaten als behandelt markieren. Das Behandeln des Ereignisses verkürzt die Route. Die Klassenbehandlung ist ein Programmierkonzept, das von Routingereignissen unterstützt wird. Ein Klassenhandler hat die Möglichkeit, ein bestimmtes Routingereignis auf Klassenebene mit einem Ereignishandler zu verarbeiten, der vor jedem Instanzenhandler auf jeder Instanz der Klasse aufgerufen wird.  
@@ -49,7 +49,7 @@ Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdate
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Klassenhandler und Instanzhandler  
- Rountingereignisse sollten Sie zwei verschiedene Arten von Ereignislistenern beachten: Klassenlistener und Instanzlistener. Klassenlistener vorhanden sind, da die Typen mit eine bestimmten aufgerufen haben <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, in ihrem statischen Konstruktor oder haben eine Handler für die virtuelle Methode von einer Element-Basisklasse überschreiben. Instanzlistener sind bestimmte Klasseninstanzen/Elemente, in dem ein oder mehrere Handler für dieses Routingereignis durch einen Aufruf von angefügt haben wurde <xref:System.Windows.UIElement.AddHandler%2A>. Vorhandene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Routingereignisse Aufrufe an <xref:System.Windows.UIElement.AddHandler%2A> als Teil der [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] -Ereigniswrapper hinzufügen{} und Entfernen von{} Implementierungen des Ereignisses, handelt es sich auch wie die einfache [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Mechanismus zum Anfügen Ereignishandler über eine Attributsyntax aktiviert ist. Daher auch die einfache [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Nutzung letztlich entspricht einer <xref:System.Windows.UIElement.AddHandler%2A> aufrufen.  
+ Rountingereignisse sollten Sie zwei verschiedene Arten von Ereignislistenern beachten: Klassenlistener und Instanzlistener. Klassenlistener vorhanden sind, da die Typen mit eine bestimmten aufgerufen haben <xref:System.Windows.EventManager> -API,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, in ihrem statischen Konstruktor oder haben eine Handler für die virtuelle Methode von einer Element-Basisklasse überschreiben. Instanzlistener sind bestimmte Klasseninstanzen/Elemente, in dem ein oder mehrere Handler für dieses Routingereignis durch einen Aufruf von angefügt haben wurde <xref:System.Windows.UIElement.AddHandler%2A>. Vorhandene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Routingereignisse Aufrufe an <xref:System.Windows.UIElement.AddHandler%2A> als Teil der [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] -Ereigniswrapper hinzufügen{} und Entfernen von{} Implementierungen des Ereignisses, handelt es sich auch wie die einfache [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Mechanismus zum Anfügen Ereignishandler über eine Attributsyntax aktiviert ist. Daher auch die einfache [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Nutzung letztlich entspricht einer <xref:System.Windows.UIElement.AddHandler%2A> aufrufen.  
   
  Elemente innerhalb der visuellen Struktur werden auf registrierte Handlerimplementierungen überprüft. Handler werden möglicherweise in der gesamten Route aufgerufen, und zwar in der Reihenfolge, die im Typ der Routingstrategie für das Routingereignis inhärent ist. Bubbling-Routingereignisse rufen z.B. zuerst die Handler auf, die dem gleichen Element zugeordnet sind, das das Routingereignis ausgelöst hat. Das Routingereignis bubblet dann zu dem nächsten übergeordneten Element und so weiter, bis das Stammelement der Anwendung erreicht ist.  
   

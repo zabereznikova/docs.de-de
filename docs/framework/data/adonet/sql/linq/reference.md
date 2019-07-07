@@ -2,12 +2,12 @@
 title: Referenz
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 659bd64fe06e2de7bd9dd8e929faa5d0353a5b58
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881313"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610566"
 ---
 # <a name="reference"></a>Referenz
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
@@ -31,7 +31,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  Bietet Antworten auf gängige Fragen zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [SQL Server Compact und LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- Beschreibt, wie [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] unterscheidet sich von SQL Server auf [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen.  
+ Beschreibt, wie SQL Server auf SQL Server Compact 3.5 unterscheidet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen.  
   
  [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Standardabfrageoperatoren in SQL-Befehle.  

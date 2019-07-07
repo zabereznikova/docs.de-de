@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876881"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610554"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 
@@ -198,7 +198,7 @@ Weitere Informationen über das Mapping zu diesen Datums- und Uhrzeittypen von S
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000-Unterstützung
 
-Die folgenden [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]-Einschränkungen (im Vergleich zu [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) betreffen die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Unterstützung.
+Die folgenden [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] Einschränkungen (verglichen mit Microsoft SQL Server 2005) Auswirkungen auf [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply-Operator und Outer Apply-Operator
 
@@ -208,7 +208,7 @@ Diese Operatoren sind in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]
 
 ### <a name="text--ntext"></a>text / ntext
 
-Datentypen `text`  /  `ntext` kann nicht verwendet werden, in bestimmten Abfrageoperationen für `varchar(max)`  /  `nvarchar(max)`, die von unterstützt [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].
+Datentypen `text`  /  `ntext` kann nicht verwendet werden, in bestimmten Abfrageoperationen für `varchar(max)`  /  `nvarchar(max)`, die von Microsoft SQL Server 2005 unterstützt.
 
 Für diese Einschränkung ist keine Lösung verfügbar. Sie können insbesondere `Distinct()` nicht für Ergebnisse verwenden, die Member enthalten, die der `text`-Spalte oder der `ntext`-Spalte zugeordnet sind.
 

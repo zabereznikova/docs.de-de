@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063895"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610444"
 ---
 # <a name="routed-events-overview"></a>Übersicht über Routingereignisse
 Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Das Thema definiert die Terminologie von Routingereignissen, beschreibt, wie Routingereignisse anhand einer Struktur von Elementen weitergeleitet werden und führt Sie in das Erstellen Ihrer eigenen, benutzerdefinierten Routingereignisse ein.
@@ -98,7 +98,7 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Routingereignisse erweisen sich besonders dort als sehr nützlich, wo Sie eines der folgenden Szenarios verwenden: beim Definieren von gängigen Handlern am gängigen Stamm, beim Zusammensetzen eines eigenen Steuerelements oder beim Definieren Ihrer eigenen, benutzerdefinierten Steuerelementklasse.  
   
- Routingereignislistener und Routingereignisquellen müssen kein gemeinsames Ereignis in ihrer Hierarchie aufweisen. Alle <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> kann ein Ereignislistener für jedes beliebige Routingereignis sein. Daher können Sie den kompletten Satz an Routingereignissen, die durch die Arbeits-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] zur Verfügung stehen, als konzeptionelle „Schnittstelle“ verwenden, über die unterschiedliche Elemente in der Anwendung Ereignisinformationen austauschen können. Dieses „Schnittstellen“-Konzept für Routingereignisse kann besonders auf Eingabeereignisse angewendet werden.  
+ Routingereignislistener und Routingereignisquellen müssen kein gemeinsames Ereignis in ihrer Hierarchie aufweisen. Alle <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> kann ein Ereignislistener für jedes beliebige Routingereignis sein. Aus diesem Grund können Sie den vollständigen Satz an Routingereignissen, die durchgängig in der API arbeiten als konzeptionelle "Schnittstelle", die unterschiedliche Elemente in der Anwendung Ereignisinformationen austauschen können. Dieses „Schnittstellen“-Konzept für Routingereignisse kann besonders auf Eingabeereignisse angewendet werden.  
   
  Routingereignisse können auch für die Kommunikation durch die Elementstruktur verwendet werden, da die Ereignisdaten für jedes Element auf der Route aufrechterhalten werden. Ein Element könnte die Ereignisdaten ändern, und diese Änderung wäre für das nächste Element auf der Route verfügbar.  
   

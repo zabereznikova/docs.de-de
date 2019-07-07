@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878255"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610585"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
@@ -132,9 +132,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>Fehler bei der Verwendung von SQL Compact 3.5  
- F. Beim Ziehen von Tabellen aus einer [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]-Datenbank wird ein Fehler ausgegeben.  
+ F. Ziehen von Tabellen aus einer SQL Server Compact 3.5-Datenbank wird eine Fehlermeldung angezeigt.  
   
- A. Obwohl [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] von der [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]-Laufzeit unterstützt wird, bietet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine entsprechende Unterstützung. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.  
+ A. Die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact 3.5, werden nicht unterstützt werden, aber die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Runtime tut. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Fehler in Vererbungsbeziehungen  
  F. Wenn die Vererbungsform aus der Toolbox in [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Verbinden von zwei Entitäten verwendet wird, treten Fehler auf.  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Anbietermodell  
  F. Ist ein öffentliches Anbietermodell verfügbar?  
   
- A. Es ist kein öffentliches Anbietermodell verfügbar. Zu diesem Zeitpunkt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt SQL Server und [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] nur.  
+ A. Es ist kein öffentliches Anbietermodell verfügbar. Zu diesem Zeitpunkt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nur SQL Server und SQL Server Compact 3.5.  
   
 ## <a name="sql-injection-attacks"></a>SQL-Injection-Angriffe  
  F. Wie wird [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vor SQL-Injection-Angriffen geschützt?  

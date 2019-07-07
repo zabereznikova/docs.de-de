@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762970"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610284"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Erweitern von Glasframe in eine WPF-Anwendung
 
@@ -30,7 +30,7 @@ Die folgende Abbildung zeigt den in der Adressleiste von Internet Explorer 7 erw
 
 ![Screenshot mit Glasframe hinter die Adressleiste IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Um ein Glasframe auf einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung zu erweitern, benötige Sie Zugriff auf nicht verwaltete [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Das folgende Codebeispiel führt einen Plattformaufruf (Pinvoke) für die beiden [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] durch, der erforderlich ist, um den Frame in den Clientbereich zu erweitern. Jede dieser [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] werden in einer Klasse namens **NonClientRegionAPI** deklariert.
+Um ein Glasframe auf einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung zu erweitern, benötige Sie Zugriff auf nicht verwaltete [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Das folgende Codebeispiel führt einen Plattformaufruf (Pinvoke), für die zwei-API erforderlich, um den Frame in den Clientbereich zu erweitern. Jede dieser APIs werden in einer Klasse namens deklariert **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
