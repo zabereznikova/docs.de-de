@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: implicit
               href: keywords/implicit.md
-            - name: operator
-              href: keywords/operator.md
         - name: Zugriffsschlüsselwörter
           items:
             - name: Basis
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: true- und false-Operatoren
           href: operators/true-false-operators.md
+        - name: Überladen von Operatoren
+          href: operators/operator-overloading.md
     - name: 'C#-Sonderzeichen'
       items:
         - name: Übersicht
