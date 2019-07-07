@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879011"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609259"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -21,7 +21,7 @@ Es gibt einige Tipps und Tricks, die allgemeine C#-Entwicklungsmethoden sind.
 - [Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Verwenden von Lambdaausdrücken](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Lösen von Namenstypkonflikten durch das Verwenden des globalen Namespacealias](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Verwenden der Operatorüberladung](../language-reference/keywords/operator.md).
+- [Verwenden der Operatorüberladung](../language-reference/operators/operator-overloading.md).
 - [Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Auch C#-Programmierer sehen einen Nutzen im [Verwenden des `My`-Namespaces aus VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Erstellen einer neuen Methode für einen `enum`-Typ mithilfe von Erweiterungsmethoden](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
