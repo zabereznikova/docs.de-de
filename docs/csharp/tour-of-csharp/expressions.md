@@ -3,12 +3,12 @@ title: C#-Ausdrücke – Überblick über C#
 description: Ausdrücke, Operanden und Operatoren sind Bausteine der Sprache C#.
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753651"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609317"
 ---
 # <a name="expressions"></a>Ausdrücke
 
@@ -23,7 +23,7 @@ Tritt ein Operand zwischen zwei Operatoren mit gleicher Rangfolge auf, steuert d
 
 Rangfolge und Assoziativität können mit Klammern gesteuert werden. In `x + y * z` wird beispielsweise zuerst `y` mit `z` multipliziert und dann das Ergebnis zu `x` addiert, aber in `(x + y) * z` werden zunächst `x` und `y` addiert, und dann wird das Ergebnis mit `z` multipliziert.
 
-Die meisten Operatoren können [*überladen*](../language-reference/keywords/operator.md) werden. Das Überladen von Operatoren ermöglicht die Angabe benutzerdefinierter Operatorimplementierungen für Vorgänge, in denen einer der Operanden oder beide einer benutzerdefinierten Klasse oder einem benutzerdefinierten Strukturtyp angehören.
+Die meisten Operatoren können [*überladen*](../language-reference/operators/operator-overloading.md) werden. Das Überladen von Operatoren ermöglicht die Angabe benutzerdefinierter Operatorimplementierungen für Vorgänge, in denen einer der Operanden oder beide einer benutzerdefinierten Klasse oder einem benutzerdefinierten Strukturtyp angehören.
 
 C# bietet eine Reihe von Operatoren für [arithmetische](../language-reference/operators/arithmetic-operators.md), [logische](../language-reference/operators/boolean-logical-operators.md), [bitweise und Verschiebungsvorgänge](../language-reference/operators/bitwise-and-shift-operators.md) sowie Vergleiche von [Gleichheit](../language-reference/operators/equality-operators.md) und [Reihenfolge](../language-reference/operators/comparison-operators.md).
 

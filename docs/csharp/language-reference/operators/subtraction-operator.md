@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347913"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609860"
 ---
 # <a name="--and---operators-c-reference"></a>Operatoren „-“ und -=“ (C#-Referenz)
 
@@ -72,7 +72,7 @@ Mit dem Operator `-=` können Sie auch eine Ereignishandlermethode zum Entfernen
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Ein benutzerdefinierter Typ kann den Operator `-` [überladen](../keywords/operator.md). Wenn ein binärer Operator vom Typ `-` überladen wird, wird der Operator `-=` implizit ebenfalls überladen. Ein benutzerdefinierter Typ kann den Operator `-=` nicht explizit überladen.
+Ein benutzerdefinierter Typ kann den Operator `-` [überladen](operator-overloading.md). Wenn ein binärer Operator vom Typ `-` überladen wird, wird der Operator `-=` implizit ebenfalls überladen. Ein benutzerdefinierter Typ kann den Operator `-=` nicht explizit überladen.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

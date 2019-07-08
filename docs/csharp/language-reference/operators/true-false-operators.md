@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: cb5cde6be16ecf8898c5976e8db23d5ef70d1a47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 7cbfca932b5f9f8a6f658e84204da5005da5ffb8
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401311"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609836"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatoren „true“ und „false“ (C#-Referenz)
 
@@ -26,7 +26,7 @@ Ein Typ mit dem definierten `true`-Operator kann der Typ des Ergebnisses eines s
 
 ## <a name="user-defined-conditional-logical-operators"></a>Benutzerdefinierte bedingte logische Operatoren
 
-Wenn ein Typ mit den definierten Operatoren `true` und `false` den [logischen OR-Operator](boolean-logical-operators.md#logical-or-operator-) `|` oder den [logischen AND-Operator](boolean-logical-operators.md#logical-and-operator-) `&` in einer bestimmten Weise [überlädt](../keywords/operator.md), kann der [bedingte logische OR-Operator](boolean-logical-operators.md#conditional-logical-or-operator-) `||` bzw. der [bedingte logische AND-Operator](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` für Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
+Wenn ein Typ mit den definierten Operatoren `true` und `false` den [logischen OR-Operator](boolean-logical-operators.md#logical-or-operator-) `|` oder den [logischen AND-Operator](boolean-logical-operators.md#logical-and-operator-) `&` in einer bestimmten Weise [überlädt](operator-overloading.md), kann der [bedingte logische OR-Operator](boolean-logical-operators.md#conditional-logical-or-operator-) `||` bzw. der [bedingte logische AND-Operator](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` für Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="example"></a>Beispiel
 

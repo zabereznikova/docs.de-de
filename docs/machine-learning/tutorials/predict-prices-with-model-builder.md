@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db9788e3065a0f2f21d712b2d4826efea2d8a829
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410578"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539622"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Vorhersagen von Preisen per Regression mit dem Modell-Generator
 
@@ -51,7 +51,7 @@ Eine Liste der Voraussetzungen und Installationsanweisungen finden Sie in der [I
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei *taxi-fare-train.csv*, und wählen Sie **Eigenschaften** aus. Ändern Sie unter **Erweitert** den Wert von **In Ausgabeverzeichnis kopieren** in **Kopieren, wenn neuer**.
 
-Jede Zeile im Dataset `taxi-fare-train.csv` enthält Details zu den Fahrten eines Taxis. 
+Jede Zeile im Dataset `taxi-fare-train.csv` enthält Details zu den Fahrten eines Taxis.
 
 1. Öffnen Sie das Dataset **taxi-fare-train.csv**.
 
@@ -102,7 +102,7 @@ Die Zeit, die für das Trainieren des Modells benötigt wird, ist proportional z
 Während des gesamten Trainingsprozesses werden die Fortschrittsdaten im Abschnitt `Progress` des Schritts „Trainieren“ angezeigt.
 
 - „Status“ zeigt den Abschlussstatus des Trainingsprozesses an.
-- „Beste Genauigkeit“ zeigt die Genauigkeit des leistungsfähigsten Modells, das bisher vom Modell-Generator gefunden wurde. Eine höhere Genauigkeit bedeutet, dass die Vorhersage des Modells anhand der Testdaten präziser ist. 
+- „Beste Genauigkeit“ zeigt die Genauigkeit des leistungsfähigsten Modells, das bisher vom Modell-Generator gefunden wurde. Eine höhere Genauigkeit bedeutet, dass die Vorhersage des Modells anhand der Testdaten präziser ist.
 - „Bester Algorithmus“ zeigt den Namen des leistungsfähigsten Algorithmus an, der bisher vom Modell-Generator gefunden wurde.
 - „Letzter Algorithmus“ zeigt den Namen des Algorithmus an, der zuletzt vom Modell-Generator zum Trainieren des Modells verwendet wurde.
 
@@ -122,8 +122,8 @@ Das Ergebnis des Trainings sind zwei Projekte.
 - TaxiFarePredictionML.Model: Eine .NET-Standardklassenbibliothek, die die Datenmodelle enthält, die das Schema der Eingabe- und Ausgabemodelldaten sowie die persistente Version des leistungsfähigsten Modells während des Trainings definieren.
 
 1. Wählen Sie im Abschnitt „Code“ des Modell-Generator-Tools die Option **Hinzugefügte Projekte**, um die Projekte zur Projektmappe hinzuzufügen.
-1. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt *TaxiFarePrediction*. Wählen Sie dann **Hinzufügen > Vorhandenes Element** aus. Wählen Sie dann in der Dropdownliste „Dateityp“ `All Files` aus, navigieren Sie zum Projektverzeichnis *TaxiFarePredictionML.Model*, und wählen Sie die Datei `MLModel.zip` aus. Klicken Sie dann mit der rechten Maustaste auf die zuletzt hinzugefügte Datei `MLModel.zip`, und wählen Sie *Eigenschaften* aus. Wählen Sie für die Option „In Ausgabeverzeichnis kopieren“ in der Dropdownliste *Kopieren, wenn neuer* aus.
-1. Klicken Sie mit der rechten Maustaste auf das Projekt *TaxiFarePrediction*. Klicken Sie dann auf **Hinzufügen > Verweis**. Wählen Sie den Knoten **Projekte > Projektmappe** aus der Liste, aktivieren Sie das Kontrollkästchen für das Projekt *TaxiFarePredictionML.Model*, und wählen Sie „OK“ aus.
+2. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt *TaxiFarePrediction*. Wählen Sie dann **Hinzufügen > Vorhandenes Element** aus. Wählen Sie dann in der Dropdownliste „Dateityp“ `All Files` aus, navigieren Sie zum Projektverzeichnis *TaxiFarePredictionML.Model*, und wählen Sie die Datei `MLModel.zip` aus. Klicken Sie dann mit der rechten Maustaste auf die zuletzt hinzugefügte Datei `MLModel.zip`, und wählen Sie *Eigenschaften* aus. Wählen Sie für die Option „In Ausgabeverzeichnis kopieren“ in der Dropdownliste *Kopieren, wenn neuer* aus.
+3. Klicken Sie mit der rechten Maustaste auf das Projekt *TaxiFarePrediction*. Klicken Sie dann auf **Hinzufügen > Verweis**. Wählen Sie den Knoten **Projekte > Projektmappe** aus der Liste, aktivieren Sie das Kontrollkästchen für das Projekt *TaxiFarePredictionML.Model*, und wählen Sie „OK“ aus.
 
 4. Öffnen Sie die Datei *Program.cs* im Projekt *TaxiFarePrediction*.
 5. Fügen Sie die folgenden using-Anweisungen hinzu:

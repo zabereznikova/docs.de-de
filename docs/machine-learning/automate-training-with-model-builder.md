@@ -4,16 +4,16 @@ description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators
 author: natke
 ms.date: 06/26/2019
 ms.custom: overview
-ms.openlocfilehash: 6f5bbe3c389e3ca42550a48ef3e6edbc963ac2e9
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410588"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539814"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
-Der ML.NET-Modell-Generator ist eine leicht verständliche grafische Visual Studio-Erweiterung zum Erstellen, Trainieren und Bereitstellen von benutzerdefinierten Machine Learning-Modellen. 
+Der ML.NET-Modell-Generator ist eine leicht verständliche grafische Visual Studio-Erweiterung zum Erstellen, Trainieren und Bereitstellen von benutzerdefinierten Machine Learning-Modellen.
 
 Der Modell-Generator verwendet automatisiertes maschinelles Lernen (AutoML), um verschiedene Machine Learning-Algorithmen und Einstellungen zu untersuchen, damit Sie die optimalen Einstellungen für Ihr Szenario ermitteln können.
 
@@ -40,7 +40,7 @@ Im Modell-Generator müssen Sie Ihr Szenario einer [ML.NET-Aufgabe](resources/ta
 
 Der Modell-Generator enthält Vorlagen für die Standpunktanalyse, die Klassifizierung von Problemen, die Preisvorhersage und benutzerdefinierte Szenarien. Diese Vorlagen können als Ausgangspunkt für Ihr spezifisches ML.NET-Szenario verwendet werden.
 
-#### <a name="sentiment-analysis-binary-classification"></a>Standpunktanalyse (binäre Klassifizierung)
+#### <a name="sentiment-analysis-binary-classification"></a>Standpunktanalyse (binäre Klassifikation)
 
 Die Standpunktanalyse kann verwendet werden, um positive oder negative Stimmungen im Kundenfeedback vorherzusagen. Es ist ein Beispiel für die binäre Klassifizierungsaufgabe.
 
@@ -52,7 +52,7 @@ Die binäre Klassifizierung wird verwendet, um Daten in zwei Klassen zu kategori
 - Ist diese Kreditkartentransaktion betrügerisch? (Betrugserkennung)
 
 Wenn Ihr Szenario eine Klassifizierung in zwei Kategorien erfordert, können Sie diese Vorlage mit einem eigenen Dataset verwenden.
- 
+
 #### <a name="issue-classification-multiclass-classification"></a>Fehlerklassifizierung (Multiklassenklassifizierung)
 
 Die Fehlerklassifizierung kann verwendet werden, um Kundenfeedback (z.B. zu GitHub) anhand des Problemtitels und der Beschreibung zu kategorisieren. Es ist ein Beispiel für die Multiklassen-Klassifizierungsaufgabe.
@@ -142,10 +142,10 @@ Sie können eine Trainingszeit angeben. Wenn Sie das Modell über einen längere
 Datasetgröße  | Datasettyp       | Durchschn. Trainingszeit
 ------------- | ------------------ | --------------
 0 bis 10 MB     | Numerisch und Text   | 10 Sek.
-10 bis 100 MB   | Numerisch und Text   | 10 Min. 
-100 bis 500 MB  | Numerisch und Text   | 30 Min. 
-500 MB bis 1 GB    | Numerisch und Text   | 60 Min. 
-1 GB+         | Numerisch und Text   | 3 Stunden + 
+10 bis 100 MB   | Numerisch und Text   | 10 Min.
+100 bis 500 MB  | Numerisch und Text   | 30 Min.
+500 MB bis 1 GB    | Numerisch und Text   | 60 Min.
+1 GB+         | Numerisch und Text   | 3 Stunden +
 
 Die genaue Trainingszeit hängt auch ab von:
 
@@ -156,17 +156,17 @@ Die genaue Trainingszeit hängt auch ab von:
 
 Der Modell-Generator wurde im Maßstab mit einem 1-TB-Dataset getestet, aber die Erstellung eines hochwertigen Modells für diese Datasetgröße kann bis zu vier Tage dauern!
 
-## <a name="evaluate"></a>Evaluieren
+## <a name="evaluate"></a>Auswerten
 
 Unter Evaluierung versteht man den Prozess, bei dem mit dem trainierten Modell Vorhersagen mit neuen Testdaten getroffen werden und anschließend gemessen wird, wie gut die Vorhersagen sind.
 
-Der Modell-Generator unterteilt die Trainingsdaten in einen Trainingssatz und einen Testsatz. Die Trainingsdaten (80 %) werden zum Trainieren Ihres Modells verwendet, und die Testdaten (20 %) zur Evaluierung Ihres Modells zurückgehalten.  Die für die Evaluierung verwendeten Metriken hängen von der ML-Aufgabe ab. Weitere Informationen finden Sie unter [Metriken für die Modellevaluierung](resources/metrics.md).  
+Der Modell-Generator unterteilt die Trainingsdaten in einen Trainingssatz und einen Testsatz. Die Trainingsdaten (80 %) werden zum Trainieren Ihres Modells verwendet, und die Testdaten (20 %) zur Evaluierung Ihres Modells zurückgehalten.  Die für die Evaluierung verwendeten Metriken hängen von der ML-Aufgabe ab. Weitere Informationen finden Sie unter [Metriken für die Modellevaluierung](resources/metrics.md).
 
-### <a name="sentiment-analysis-binary-classification"></a>Standpunktanalyse (binäre Klassifizierung)
+### <a name="sentiment-analysis-binary-classification"></a>Standpunktanalyse (binäre Klassifikation)
 
 Die Standardmetrik für binäre Klassifizierungsprobleme ist **accuracy**. Sie definiert den Anteil an genauen Vorhersagen, die Ihr Modell anhand des Testdatasets trifft. Je **näher der Wert an 100 % liegt, desto besser ist das Modell**.
 
-Andere gemeldete Metriken wie AUC (Area under the curve, Fläche unter der Kurve), die den Anteil der tatsächlich positiven Ergebnisse mit dem Anteil der falsch positiven Ergebnisse abgleicht, sollten größer als 0,50 sein, damit Modelle akzeptabel sind. 
+Andere gemeldete Metriken wie AUC (Area under the curve, Fläche unter der Kurve), die den Anteil der tatsächlich positiven Ergebnisse mit dem Anteil der falsch positiven Ergebnisse abgleicht, sollten größer als 0,50 sein, damit Modelle akzeptabel sind.
 
 Zusätzliche Metriken wie der F1-score können verwendet werden, um das Verhältnis zwischen „Precision“ (Genauigkeit) (Verhältnis der korrekten Vorhersagen zu den Gesamtvorhersagen dieser Klasse) und „Recall“ (Wiedererkennung) (Verhältnis der korrekten Vorhersagen zu den gesamten tatsächlichen Membern dieser Klasse) zu steuern.
 
@@ -176,15 +176,14 @@ Die Standardmetrik für Multiklassen-Klassifizierungsprobleme ist **micro accura
 
 Bei Problemen, bei denen Daten in mehrere Klassen eingeteilt werden, gibt es zwei Arten von Genauigkeit:
 
-- Micro-accuracy: der Anteil an Vorhersagen, die für alle Instanzen korrekt waren. Im Szenario der Problemklassifizierung ist die „micro-accuracy“ der Anteil der eingehenden Probleme, die der richtigen Kategorie zugeordnet werden. 
+- Micro-accuracy: der Anteil an Vorhersagen, die für alle Instanzen korrekt waren. Im Szenario der Problemklassifizierung ist die „micro-accuracy“ der Anteil der eingehenden Probleme, die der richtigen Kategorie zugeordnet werden.
 - Macro-accuracy: die durchschnittliche Genauigkeit auf Klassenebene. Im Szenario der Problemklassifizierung wird die Genauigkeit für jede Kategorie gemessen, und anschließend werden die Genauigkeiten der Kategorie gemittelt. Für diese Metrik erhalten alle Klassen die gleiche Gewichtung. Für perfekt ausgewogene Datensätze (bei denen es in jeder Kategorie die gleiche Anzahl von Beispielen gibt), sind „micro-accuracy“ and „macro-accuracy“ gleich.
-
 
 ### <a name="price-prediction-regression"></a>Preisvorhersage (Regression)
 
 Ist die Standardmetrik für Regressionsprobleme ist **R-squared**. 1 ist der beste mögliche Wert. Je näher R-squared an 1 liegt, umso besser ist das Modell.
 
-Andere gemeldete Metriken wie „Absolute-loss“, „Squared-loss“ und „RMS-loss“ können verwendet werden, um Ihr Modell zu verstehen und es mit anderen Regressionsmodellen zu vergleichen. 
+Andere gemeldete Metriken wie „Absolute-loss“, „Squared-loss“ und „RMS-loss“ können verwendet werden, um Ihr Modell zu verstehen und es mit anderen Regressionsmodellen zu vergleichen.
 
 ## <a name="improve"></a>Verbessern
 
@@ -192,7 +191,7 @@ Wenn Ihr Modellleistungswert nicht so gut ist, wie Sie es sich wünschen, haben 
 
 * Längeres Trainieren. Mit mehr Zeit kann die automatisierte Machine Learning-Engine mehrere Algorithmen und Einstellungen auszuprobieren.
 
-* Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren. 
+* Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren.
 
 * Ihre Daten ausgleichen. Achten Sie bei Klassifizierungsaufgaben darauf, dass der Trainingssatz über die Kategorien hinweg gleichmäßig verteilt ist. Wenn Sie beispielsweise vier Klassen für 100 Trainingsbeispiele haben und die beiden ersten Klassen (tag1 und tag2) für 90 Datensätze verwendet werden, die anderen beiden (tag3 und tag4) aber nur für die restlichen 10 Datensätze, kann das dazu führen, dass Ihr Modell Schwierigkeiten hat, tag3 oder tag4 korrekt vorherzusagen, da die Daten nicht gleichmäßig verteilt sind.
 
