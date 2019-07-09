@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116255"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610064"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -138,7 +138,7 @@ Das Ziel, einen `ref struct`-Typ als im Stapel zugewiesene Variable zu behalten,
 
 - Sie können für `ref struct` kein Boxing durchführen. Sie können einen `ref struct`-Typ nicht einer Variablen vom Typ `object`, `dynamic` oder einem Schnittstellentyp zuweisen.
 - `ref struct`-Typen können keine Schnittstellen implementieren.
-- Sie können `ref struct` nicht als Member einer Klasse oder einer normalen Struktur deklarieren.
+- Sie können `ref struct` nicht als Feldmember einer Klasse oder einer normalen Struktur deklarieren. Dies betrifft auch das Deklarieren einer automatisch implementierten Eigenschaft, die ein vom Compiler generiertes Unterstützungsfeld erstellt. 
 - Sie können keine lokalen Variablen deklarieren, bei denen es sich um `ref struct`-Typen in asynchronen Methoden handelt. Sie können sie in synchronen Methoden deklarieren, die <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `Task`-ähnliche Typen zurückgeben.
 - Sie können lokale `ref struct`-Variablen nicht in Iteratoren deklarieren.
 - Sie können `ref struct`-Variablen nicht in Lambda-Ausdrücken oder lokalen Funktionen erfassen.

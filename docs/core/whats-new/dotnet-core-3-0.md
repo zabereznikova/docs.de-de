@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401956"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539273"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>Neuerungen in .NET Core 3.0 (Preview 6)
 
@@ -107,6 +107,15 @@ Der `dotnet publish`-Befehl unterstützt das Verpacken der App in einer plattfor
 
 Legen Sie zum Veröffentlichen einer einzelnen ausführbaren Datei `PublishSingleFile` in Ihrem Projekt oder in der Befehlszeile mit dem `dotnet publish`-Befehl fest:
 
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+Oder
+
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
@@ -121,7 +130,7 @@ Eigenständige Apps enthalten alles, was zum Ausführen Ihres Codes benötigt wi
 
 .NET Core bietet nun eine Einstellung, die das Tool [IL linker](https://github.com/mono/linker) verwendet, um die IL Ihrer App zu untersuchen. Dieses Tool erkennt, welcher Code benötigt wird, und trimmt dann ungenutzte Bibliotheken. Es kann die Bereitstellungsgröße einiger Apps deutlich reduzieren.
 
-Um dieses Tool zu aktivieren, legen Sie die Einstellung `<PublishTrimmed>` in Ihrem Projekt fest, und veröffentlichen Sie eine eigenständige App:
+Fügen Sie die Einstellung `<PublishTrimmed>` zu Ihrem Projekt hinzu, und veröffentlichen Sie eine eigenständige App, um dieses Tool zu aktivieren:
 
 ```xml
 <PropertyGroup>

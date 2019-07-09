@@ -1,20 +1,18 @@
 ---
 title: Auswählen der zu verwendenden .NET Core-Version
 description: In diesem Artikel erfahren Sie, wie .NET Core automatisch Laufzeitversionen für Ihr Programm sucht und auswählt. Außerdem erfahren Sie in diesem Artikel, wie Sie eine bestimmte Version erzwingen.
-author: billwagner
-ms.author: wiwagn
-ms.date: 06/27/2018
+author: thraka
+ms.author: adegeo
+ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127237"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539303"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
-
-[!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
 Dieser Artikel beschreibt die Richtlinien, die .NET Core-Tools, .NET Core SDK und die Laufzeit für die Versionsauswahl verwenden. Durch diese Richtlinien wird ein Gleichgewicht zwischen der Ausführung von Anwendungen mit den angegebenen Versionen und der Ermöglichung eines einfachen Upgrades von Entwickler- und Endbenutzercomputern hergestellt. Mit diesen Richtlinien werden die folgenden Aktionen ausgeführt:
 
@@ -87,19 +85,20 @@ Der Host wählt die neueste Patchversion aus, die auf dem Computer installiert i
 
 Wenn keine gültige `2.0.*`-Version gefunden wird, wird eine neue `2.*`-Version verwendet. Wenn Sie beispielsweise `netcoreapp2.0` angegeben haben und nur `2.1.0` installiert ist, wird die Anwendung mit der Laufzeit `2.1.0` ausgeführt. Dieses Verhalten wird als „Rollforward einer Nebenversion“ bezeichnet. Frühere Versionen werden ebenfalls nicht berücksichtigt. Wenn keine gültige Laufzeit installiert ist, wird die Anwendung nicht ausgeführt.
 
-Einige Verwendungsbeispiele veranschaulichen das Verhalten:
+Einige Verwendungsbeispiele veranschaulichen das Verhalten, wenn Sie für Version 2.0 programmieren:
 
-- 2.0.4 ist erforderlich. 2.0.5 ist die höchste installierte Patchversion. 2.0.5 wird verwendet.
-- 2.0.4 ist erforderlich. Es sind keine 2.0.*-Versionen installiert. 1.1.1 ist die höchste installierte Laufzeit. Eine Fehlermeldung wird angezeigt.
-- 2.0.4 ist erforderlich. 2.0.0 ist die höchste installierte Version. Eine Fehlermeldung wird angezeigt.
-- 2.0.4 ist erforderlich. Es sind keine 2.0.*-Versionen installiert. 2.2.2 ist die höchste installierte 2.x-Laufzeitversion. 2.2.2 wird verwendet.
-- 2.0.4 ist erforderlich. Es sind keine 2.x-Versionen installiert. 3.0.0 (keine derzeit verfügbare Version) ist installiert. Eine Fehlermeldung wird angezeigt.
+- Version 2.0 ist angegeben. 2.0.5 ist die höchste installierte Patchversion. 2.0.5 wird verwendet.
+- Version 2.0 ist angegeben. Es sind keine 2.0.*-Versionen installiert. 1.1.1 ist die höchste installierte Laufzeit. Eine Fehlermeldung wird angezeigt.
+- Version 2.0 ist angegeben. Es sind keine 2.0.*-Versionen installiert. 2.2.2 ist die höchste installierte 2.x-Laufzeitversion. 2.2.2 wird verwendet.
+- Version 2.0 ist angegeben. Es sind keine 2.x-Versionen installiert. Version 3.0.0 ist installiert. Eine Fehlermeldung wird angezeigt.
 
 Der Rollforward einer Nebenversion hat einen Nebeneffekt, der sich auf Endbenutzer auswirken kann. Betrachten Sie das folgende Szenario:
 
-- 2.0.4 ist erforderlich. Es sind keine 2.0.*-Versionen installiert. 2.2.2 ist installiert. 2.2.2 wird verwendet.
-- 2.0.5 wird später installiert. Für nachfolgende Anwendungsstarts wird 2.0.5 verwendet – nicht 2.2.2. Der neueste Patch der erforderlichen Nebenversion wird einer höheren Nebenversion vorgezogen.
-- Möglicherweise verhalten sich 2.0.5 und 2.2.2 unterschiedlich, insbesondere in Szenarien wie der Serialisierung von Binärdaten.
+1. Die Anwendung gibt an, dass die Version 2.0 erforderlich ist.
+2. Bei der Ausführung der Anwendung ist zwar nicht die Version 2.0.* installiert, dafür aber Version 2.2.2. Dann wird Version 2.2.2 verwendet.
+3. Wenn der Benutzer später die Version 2.0.5 installiert und die Anwendung erneut ausführt, wird Version 2.0.5 verwendet.
+
+Möglicherweise verhalten sich 2.0.5 und 2.2.2 unterschiedlich, insbesondere in Szenarien wie der Serialisierung von Binärdaten.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Eigenständige Bereitstellungen umfassen die ausgewählte Laufzeit
 

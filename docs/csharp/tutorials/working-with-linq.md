@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486986"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609306"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -268,6 +268,14 @@ Geben Sie die folgende Methode in Ihre `Extensions.cs`-Datei ein, bzw. kopieren 
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+Dann werden unter `File` rote Wellenlinien angezeigt. Das bedeutet, dass dieses Element nicht vorhanden ist. Es erfolgt keine Kompilierung, da der Compiler nicht weiß, worum es sich bei `File` handelt. Sie können dieses Problem lösen, indem Sie die folgende Codezeile unter die erste Zeile der Datei `Extensions.cs` einfügen:
+
+```csharp
+using System.IO;
+```
+
+Dadurch sollten das Problem behoben und die roten Wellenlinien entfernt werden.
+
 Als Nächstes instrumentieren Sie die Definition jeder Abfrage mit einer Protokollmeldung:
 
 ```csharp
@@ -345,4 +353,3 @@ Weitere Informationen zu LINQ finden Sie unter:
   - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

@@ -2,14 +2,14 @@
 title: Portieren von Code von .NET Framework auf .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663224"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609249"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Portieren Ihres Codes von .NET Framework auf .NET Core
 
@@ -39,13 +39,13 @@ Dies ist die Vorgehensweise, die wir zur Portierung Ihres Projekts auf .NET Core
 
 Die folgende Liste enthält Tools, die während der Portierung nützlich sein könnten:
 
-* .NET Portability Analyzer: [Befehlszeilentool](https://github.com/Microsoft/dotnet-apiport/releases) oder [Visual Studio-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Mit dieser Toolkette kann ein Bericht generiert werden, der Aufschluss über die Portierbarkeit Ihres Codes von .NET Framework auf .NET Core gibt. Vorhandene Probleme werden nach Assembly aufgeschlüsselt. Weitere Informationen finden Sie unter [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
-* .NET API-Analysetool: Hierbei handelt es sich um ein Roslyn-Analysetool, das potenzielle Kompatibilitätsrisiken für C#-APIs auf verschiedenen Plattformen erkennt und Aufrufe an veraltete APIs ermittelt. Weitere Informationen finden Sie unter [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md).
+* .NET Portability Analyzer: [Befehlszeilentool](https://github.com/Microsoft/dotnet-apiport/releases) oder [Visual Studio-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Mit diesem Tool kann ein Bericht generiert werden, der Aufschluss über die Portierbarkeit Ihres Codes von .NET Framework auf Ihre .NET Core-Zielplattform gibt. In diesem Bericht werden der Typ und die APIs, die auf der .NET Core-Zielplattform fehlen, nach Assembly aufgeschlüsselt. Weitere Informationen finden Sie unter [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md). Es wird empfohlen, .NET Portability Analyzer vor dem Portieren auszuführen, um eventuelle Lücken bei den fehlenden APIs zu finden.
+* .NET API-Analysetool: Hierbei handelt es sich um ein Roslyn-Analysetool, das die .NET Standard-API, die auf einigen Plattformen <xref:System.PlatformNotSupportedException> auslöst, Aufrufe von veralteten APIs und potenzielle Kompatibilitätsrisiken für C#-APIs auf verschiedenen Plattformen erkennt. Weitere Informationen finden Sie unter [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md). Dieses Analysetool ist hilfreich, um Unterschiede beim Laufzeitverhalten auf den verschiedenen Plattformen zu ermitteln, nachdem Sie bereits Ihr .NET Core-Projekt erstellt haben.
 * Reverse Package Search – ein [nützlicher Webdienst](https://packagesearch.azurewebsites.net), mit dem Sie einen Typ suchen können und Pakete finden können, die diesen Typ enthalten.
 
 Darüber hinaus können Sie mit dem Tool [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) versuchen, kleinere Lösungen oder einzelne Projekte auf das .NET Core-Projektdateiformat zu portieren.
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 ist ein Drittanbietertool. Es kann nicht garantiert werden, dass das Tool für all Ihre Projekte funktioniert, und es kann zu subtilen Änderungen bei Verhalten kommen, von dem Sie abhängig sind. CsprojToVs2017 sollte als _Ausgangspunkt_ verwendet werden, um grundlegende Elemente zu automatisieren. Es handelt sich nicht um ein garantierte Lösung zum Migrieren von Projektdateiformaten.
 
 >[!div class="step-by-step"]
