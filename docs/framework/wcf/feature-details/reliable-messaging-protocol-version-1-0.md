@@ -2,406 +2,438 @@
 title: Zuverlässiges Messaging-Protokoll, Version 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 6fceb49d107e4268a4b9fad6197335ff9e2af9ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959951"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662796"
 ---
-# <a name="reliable-messaging-protocol-version-10"></a><span data-ttu-id="17f9b-102">Zuverlässiges Messaging-Protokoll, Version 1.0</span><span class="sxs-lookup"><span data-stu-id="17f9b-102">Reliable Messaging Protocol version 1.0</span></span>
-<span data-ttu-id="17f9b-103">Dieses Thema enthält Details zur Implementierung von Windows Communication Foundation (WCF) für die WS-Reliable Messaging Februar-2005 (Version 1.0)-Protokoll für die Interoperation mithilfe des HTTP-Transports erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="17f9b-103">This topic covers Windows Communication Foundation (WCF) implementation details for the WS-Reliable Messaging February 2005 (version 1.0) protocol necessary for interoperation using the HTTP transport.</span></span> <span data-ttu-id="17f9b-104">WCF folgt die WS-ReliableMessaging-Spezifikation mit den Einschränkungen und klarstellungen, die in diesem Thema erläutert.</span><span class="sxs-lookup"><span data-stu-id="17f9b-104">WCF follows the WS-Reliable Messaging specification with the constraints and clarifications explained in this topic.</span></span> <span data-ttu-id="17f9b-105">Beachten Sie, dass das Protokoll, Version 1.0 WS-ReliableMessaging beginnend mit dem WinFX implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="17f9b-105">Note that the WS-ReliableMessaging version 1.0 protocol is implemented starting with the WinFX.</span></span>  
-  
- <span data-ttu-id="17f9b-106">Die WS-Reliable Messaging Februar 2005 Protokoll wird in WCF von implementiert die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="17f9b-106">The WS-Reliable Messaging February 2005 protocol is implemented in WCF by the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.</span></span>  
-  
- <span data-ttu-id="17f9b-107">Der Einfachheit halber verwendet dieses Thema die folgenden Rollen:</span><span class="sxs-lookup"><span data-stu-id="17f9b-107">For convenience, the topic uses the following roles:</span></span>  
-  
-- <span data-ttu-id="17f9b-108">Initiator: der Client, der die Erstellung der zuverlässigen WS-Messaging-Sequenz initiiert</span><span class="sxs-lookup"><span data-stu-id="17f9b-108">Initiator: the client that initiates WS-Reliable Message sequence creation</span></span>  
-  
-- <span data-ttu-id="17f9b-109">Beantworter: der Dienst, der die Anforderungen des Initiators empfängt</span><span class="sxs-lookup"><span data-stu-id="17f9b-109">Responder: the service that receives the initiator's requests</span></span>  
-  
- <span data-ttu-id="17f9b-110">In diesem Dokument werden die in der folgenden Tabelle aufgeführten Präfixe und Namespaces verwendet.</span><span class="sxs-lookup"><span data-stu-id="17f9b-110">This document uses the prefixes and namespaces in the following table.</span></span>  
-  
-|<span data-ttu-id="17f9b-111">Präfix</span><span class="sxs-lookup"><span data-stu-id="17f9b-111">Prefix</span></span>|<span data-ttu-id="17f9b-112">Namespace</span><span class="sxs-lookup"><span data-stu-id="17f9b-112">Namespace</span></span>|  
-|------------|---------------|  
-|<span data-ttu-id="17f9b-113">wsrm</span><span class="sxs-lookup"><span data-stu-id="17f9b-113">wsrm</span></span>|http://schemas.xmlsoap.org/ws/2005/02/rm|  
-|<span data-ttu-id="17f9b-114">netrm</span><span class="sxs-lookup"><span data-stu-id="17f9b-114">netrm</span></span>|http://schemas.microsoft.com/ws/2006/05/rm|  
-|<span data-ttu-id="17f9b-115">s</span><span class="sxs-lookup"><span data-stu-id="17f9b-115">s</span></span>|http://www.w3.org/2003/05/soap-envelope|  
-|<span data-ttu-id="17f9b-116">wsa</span><span class="sxs-lookup"><span data-stu-id="17f9b-116">wsa</span></span>|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
-|<span data-ttu-id="17f9b-117">wsse</span><span class="sxs-lookup"><span data-stu-id="17f9b-117">wsse</span></span>|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
-  
-## <a name="messaging"></a><span data-ttu-id="17f9b-118">Messaging</span><span class="sxs-lookup"><span data-stu-id="17f9b-118">Messaging</span></span>  
-  
-### <a name="sequence-establishment-messages"></a><span data-ttu-id="17f9b-119">Sequenzeinrichtungsnachrichten</span><span class="sxs-lookup"><span data-stu-id="17f9b-119">Sequence Establishment Messages</span></span>  
- <span data-ttu-id="17f9b-120">WCF implementiert `CreateSequence` und `CreateSequenceResponse` Nachrichten an eine zuverlässige nachrichtensequenz einzurichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-120">WCF implements `CreateSequence` and `CreateSequenceResponse` messages to establish a reliable message sequence.</span></span> <span data-ttu-id="17f9b-121">Es gelten die folgenden Einschränkungen:</span><span class="sxs-lookup"><span data-stu-id="17f9b-121">The following constraints apply:</span></span>  
-  
-- <span data-ttu-id="17f9b-122">B1101: Der WCF--Initiator generiert nicht das optionale Expires-Element in der `CreateSequence` Nachricht oder, in den Fällen bei der `CreateSequence` Nachricht enthält ein `Offer` -Element, das optionale `Expires` Element in der `Offer` Element.</span><span class="sxs-lookup"><span data-stu-id="17f9b-122">B1101: The WCF Initiator does not generate the optional Expires element in the `CreateSequence` message or, in the cases when the `CreateSequence` message contains an `Offer` element, the optional `Expires` element in the `Offer` element.</span></span>  
-  
-- <span data-ttu-id="17f9b-123">B1102: Beim Zugriff auf die `CreateSequence` Nachricht, die WCF`Responder` sendet und empfängt sowohl `Expires` Elementen, wenn sie vorhanden sind, jedoch nicht deren Werte verwendet.</span><span class="sxs-lookup"><span data-stu-id="17f9b-123">B1102: When accessing the `CreateSequence` message, the WCF`Responder` sends and receives both `Expires` elements if they exist, but does not use their values.</span></span>  
-  
- <span data-ttu-id="17f9b-124">Zuverlässiges WS-Messaging führt den `Offer`-Mechanismus ein, um zwei umgekehrt korrelierende Sequenzen einzurichten, die eine Sitzung bilden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-124">WS-Reliable Messaging introduces the `Offer` mechanism to establish the two converse correlated sequences that form a session.</span></span>  
-  
-- <span data-ttu-id="17f9b-125">R1103: Wenn `CreateSequence` enthält ein `Offer` -Element, das zuverlässige Messaging-Beantworter muss entweder die Sequenz akzeptieren und reagieren Sie mit `CreateSequenceResponse` , enthält eine `wsrm:Accept` -Element, erstellen zwei umgekehrte Sequenzen oder Ablehnen der `CreateSequence`Anforderung.</span><span class="sxs-lookup"><span data-stu-id="17f9b-125">R1103: If `CreateSequence` contains an `Offer` element, the Reliable Messaging Responder must either accept the sequence and respond with `CreateSequenceResponse` that contains a `wsrm:Accept` element, forming two correlated converse sequences or reject the `CreateSequence` request.</span></span>  
-  
-- <span data-ttu-id="17f9b-126">R1104: `SequenceAcknowledgement` und die in umgekehrter Sequenz fließenden Anwendungsnachrichten müssen an den `ReplyTo`-Endpunktverweis der `CreateSequence` gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-126">R1104: `SequenceAcknowledgement` and application messages flowing on converse sequence must be sent to the `ReplyTo` endpoint reference of the `CreateSequence`.</span></span>  
-  
-- <span data-ttu-id="17f9b-127">R1105: `AcksTo`- und `ReplyTo`-Endpunktverweise in der `CreateSequence` müssen Adresswerte aufweisen, die sich oktettweise entsprechen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-127">R1105: `AcksTo` and `ReplyTo` endpoint references in the `CreateSequence` must have address values that match the octet-wise.</span></span>  
-  
-     <span data-ttu-id="17f9b-128">Der WCF-Beantworter überprüft, ob die URI-Teil der `AcksTo` und `ReplyTo` EPRs identisch sind, bevor die Sequenz.</span><span class="sxs-lookup"><span data-stu-id="17f9b-128">The WCF Responder verifies that the URI portion of the `AcksTo` and `ReplyTo` EPRs are identical before creating a sequence.</span></span>  
-  
-- <span data-ttu-id="17f9b-129">R1106: `AcksTo`- und `ReplyTo`-Endpunktverweise in der `CreateSequence` sollten den gleichen Satz von Verweisparametern aufweisen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-129">R1106: `AcksTo` and `ReplyTo` Endpoint References in the `CreateSequence` should have the same set of reference parameters.</span></span>  
-  
-     <span data-ttu-id="17f9b-130">WCF wird nicht erzwungen, sondern setzt voraus, [Verweisparameter] `AcksTo` und `ReplyTo` auf `CreateSequence` identisch sind und verwendet [Verweisparameter] aus `ReplyTo` -Endpunktverweis für Bestätigungen und Nachrichten umgekehrter Sequenz.</span><span class="sxs-lookup"><span data-stu-id="17f9b-130">WCF does not enforce but assumes that [reference parameters] of `AcksTo` and `ReplyTo` on `CreateSequence` are identical and uses [reference parameters] from `ReplyTo` endpoint reference for acknowledgements and converse sequence messages.</span></span>  
-  
-- <span data-ttu-id="17f9b-131">R1107: Bei zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus `SequenceAcknowledgement` und in umgekehrter fließenden Anwendungsnachrichten müssen an der `ReplyTo` -Endpunktverweis der `CreateSequence`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-131">R1107: When two converse sequences are established using the `Offer` mechanism, `SequenceAcknowledgement` and application messages flowing on converse sequences must be sent to the `ReplyTo` endpoint reference of the `CreateSequence`.</span></span>  
-  
-- <span data-ttu-id="17f9b-132">R1108: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe des Offer-Mechanismus, der `[address]` Eigenschaft der `wsrm:AcksTo` Endpunktverweis untergeordnetes Element des der `wsrm:Accept` Element der `CreateSequenceResponse` müssen byteweise das Ziel-URI von der übereinstimmen`CreateSequence`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-132">R1108: When two converse sequences are established using the Offer mechanism, the `[address]` property of the `wsrm:AcksTo` Endpoint Reference child element of the `wsrm:Accept` element of the `CreateSequenceResponse` must match byte-wise the destination URI of the `CreateSequence`.</span></span>  
-  
-- <span data-ttu-id="17f9b-133">R1109: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus, der vom Initiator und Bestätigungen der Nachrichten vom Beantworter gesendeten Nachrichten müssen an den gleichen Endpunktverweis gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-133">R1109: When two converse sequences are established using the `Offer` mechanism, messages sent by initiator and acknowledgements to messages by responder must be sent to the same Endpoint Reference.</span></span>  
-  
-     <span data-ttu-id="17f9b-134">WCF verwendet WS-Reliable Messaging, um zuverlässige Sitzungen zwischen dem Initiator und Beantworter einzurichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-134">WCF uses WS-Reliable Messaging to establish reliable sessions between the Initiator and Responder.</span></span> <span data-ttu-id="17f9b-135">WS-Reliable Messaging von WCF-Implementierung bietet zuverlässige Sitzungen für unidirektionale, Anforderung-Antwort- und Vollduplex-Nachrichtenmuster.</span><span class="sxs-lookup"><span data-stu-id="17f9b-135">WCF's WS-Reliable Messaging implementation provides reliable session for one-way, request-reply and full duplex messaging patterns.</span></span> <span data-ttu-id="17f9b-136">Das WS-Reliable Messaging `Offer` Mechanismus auf `CreateSequence` / `CreateSequenceResponse` können Sie die zwei korrelierter umgekehrter Sequenzen einzurichten, und bietet ein, die für alle nachrichtenendpunkte geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-136">The WS-Reliable Messaging `Offer` mechanism on `CreateSequence`/`CreateSequenceResponse` lets you establish two correlated converse sequences, and provides a session protocol that is suitable for all message endpoints.</span></span> <span data-ttu-id="17f9b-137">Da WCF eine Sicherheitsgarantie für solcher Sitzungen sowie End-to-End-Schutz bietet, ist es ratsam, um sicherzustellen, dass Nachrichten, die den gleichen Teilnehmer sollen auf dem gleichen Ziel eintreffen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-137">Because WCF provides a security guarantee for such a session including end-to-end protection for session integrity, it is practical to ensure messages intended to the same party are arriving at the same destination.</span></span> <span data-ttu-id="17f9b-138">Dies lässt auch Piggyback-Übertragung von Sequenzbestätigungen auf Anwendungsnachrichten zu.</span><span class="sxs-lookup"><span data-stu-id="17f9b-138">This also allows piggy-backing of sequence acknowledgements on application messages.</span></span> <span data-ttu-id="17f9b-139">Daher gelten die Einschränkungen R1104, R1105 und R1108 für WCF.</span><span class="sxs-lookup"><span data-stu-id="17f9b-139">Therefore, constraints R1104, R1105, and R1108 apply to WCF.</span></span>  
-  
- <span data-ttu-id="17f9b-140">Ein Beispiel für eine `CreateSequence`-Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-140">An example of a `CreateSequence` message.</span></span>  
-  
-```xml  
-<s:Envelope>  
-  <s:Header>  
-    <a:Action s:mustUnderstand="1">  
-      http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequence  
-    </a:Action>  
-    <a:ReplyTo>  
-      <a:Address>          
-         http://Business456.com/clientA        
-      </a:Address>  
-    </a:ReplyTo>  
-    <a:MessageID>  
-      urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36  
-    </a:MessageID>  
-    <a:To s:mustUnderstand="1">  
-      http://Business456.com/clientA  
-    </a:To>  
-  </s:Header>  
-  <s:Body>  
-    <wsrm:CreateSequence>  
-      <wsrm:AcksTo>  
-       <wsa:Address>  
-         http://Business456.com/clientA  
-       </wsa:Address>  
-     </wsrm:AcksTo>  
-     <wsrm:Offer>  
-      <wsrm:Identifier>  
-        urn:uuid:0afb8d36-bf26-4776-b8cf-8c91fddb5496  
-      </wsrm:Identifier>  
-     </wsrm:Offer>  
-   </wsrm:CreateSequence>  
-  </s:Body>  
-</s:Envelope>  
-```  
-  
- <span data-ttu-id="17f9b-141">Ein Beispiel für eine `CreateSequenceResponse`-Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-141">An example of a `CreateSequenceResponse` message.</span></span>  
-  
-```xml  
-<s:Envelope>  
-  <s:Header>  
-    <a:Action s:mustUnderstand="1">  
-      http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequenceResponse  
-    </a:Action>  
-    <a:RelatesTo>  
-      urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36  
-    </a:RelatesTo>  
-    <a:To s:mustUnderstand="1">  
-      http://Business456.com/clientA  
-    </a:To>  
-  </s:Header>  
-  <s:Body>  
-   <wsrm:CreateSequenceResponse>  
-    <Identifier>  
-     urn:uuid:eea0a36c-b38a-43e8-8c76-2fabe2d76386  
-    </Identifier>  
-    <Accept>  
-    <AcksTo>  
-      <a:Address>  
-        http://BusinessABC.com/serviceA  
-      </a:Address>  
-    </AcksTo>  
-    </Accept>  
-   </wsrm:CreateSequenceResponse>  
-  </s:Body>  
-</s:Envelope>  
-```  
-  
-### <a name="sequence"></a><span data-ttu-id="17f9b-142">Sequenz</span><span class="sxs-lookup"><span data-stu-id="17f9b-142">Sequence</span></span>  
- <span data-ttu-id="17f9b-143">Die folgende Liste enthält die Einschränkungen, die für Sequenzen gelten:</span><span class="sxs-lookup"><span data-stu-id="17f9b-143">The following is a list of constraints that apply to sequences:</span></span>  
-  
-- <span data-ttu-id="17f9b-144">B1201:WCF generiert und Zugriffe Sequenznummern nicht höher als `xs:long`des inklusive Maximalwert 9223372036854775807.</span><span class="sxs-lookup"><span data-stu-id="17f9b-144">B1201:WCF generates and accesses sequence numbers no higher than `xs:long`’s maximum inclusive value, 9223372036854775807.</span></span>  
-  
-- <span data-ttu-id="17f9b-145">B1202:WCF generiert immer eine leere letzte Nachricht mit der Aktions-URI des `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-145">B1202:WCF always generates an empty-bodied last message with the action URI of `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span></span>  
-  
-- <span data-ttu-id="17f9b-146">B1203: WCF empfängt und sendet eine Nachricht mit einem sequenzheader, der enthält eine `LastMessage` Element, sofern der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-146">B1203: WCF receives and delivers a message with a Sequence header that contains a `LastMessage` element as long as the action URI is not `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span></span>  
-  
- <span data-ttu-id="17f9b-147">Ein Beispiel für einen Sequenzheader.</span><span class="sxs-lookup"><span data-stu-id="17f9b-147">An example of a Sequence Header.</span></span>  
-  
-```xml  
-<wsrm:Sequence>  
-  <wsrm:Identifier>  
-    urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36  
-  </wsrm:Identifier>  
-  <wsrm:MessageNumber>  
-    10  
-  </wsrm:MessageNumber>  
-  <wsrm:LastMessage/>  
- </wsrm:Sequence>  
-```  
-  
-### <a name="ackrequested-header"></a><span data-ttu-id="17f9b-148">AckRequested-Header</span><span class="sxs-lookup"><span data-stu-id="17f9b-148">AckRequested Header</span></span>  
- <span data-ttu-id="17f9b-149">WCF verwendet `AckRequested` -Header als Keep-alive-Mechanismus.</span><span class="sxs-lookup"><span data-stu-id="17f9b-149">WCF uses `AckRequested` Header as a keep-alive mechanism.</span></span> <span data-ttu-id="17f9b-150">WCF generiert nicht das optionale `MessageNumber` Element.</span><span class="sxs-lookup"><span data-stu-id="17f9b-150">WCF does not generate the optional `MessageNumber` element.</span></span> <span data-ttu-id="17f9b-151">Nach Erhalt einer Nachricht mit einer `AckRequested` Header, enthält die `MessageNumber` -Element WCF ignoriert den `MessageNumber` der Wert des Elements, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-151">Upon receiving a message with an `AckRequested` header that contains the `MessageNumber` element, WCF ignores the `MessageNumber` element’s value, as shown in the following example.</span></span>  
-  
-```xml  
-<wsrm:AckRequested>  
-  <wsrm:Identifier>  
-    urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36  
-  </wsrm:Identifier>  
-</wsrm:AckRequested>  
-```  
-  
-### <a name="sequenceacknowledgement-header"></a><span data-ttu-id="17f9b-152">SequenceAcknowledgement-Header</span><span class="sxs-lookup"><span data-stu-id="17f9b-152">SequenceAcknowledgement Header</span></span>  
- <span data-ttu-id="17f9b-153">WCF verwendet den Piggyback-Mechanismus für die im zuverlässigen WS-Messaging bereitgestellten sequenzbestätigungen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-153">WCF uses piggy-back mechanism for sequence acknowledgements provided in WS-Reliable Messaging.</span></span>  
-  
-- <span data-ttu-id="17f9b-154">R1401: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus, der `SequenceAcknowledgement` Header kann in jede Anwendungsnachricht mit dem beabsichtigten Empfänger enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="17f9b-154">R1401: When two converse sequences are established using the `Offer` mechanism, the `SequenceAcknowledgement` header may be included in any application message transmitted to the intended recipient.</span></span>  
-  
-- <span data-ttu-id="17f9b-155">B1402: Wenn WCF eine Bestätigung empfangen von sequenznachrichten generieren muss (beispielsweise erfüllt ein `AckRequested` Nachricht), WCF generiert eine `SequenceAcknowledgement` Header, der den Bereich 0-0, enthält, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-155">B1402: When WCF must generate an acknowledgement prior to receiving any sequence messages (for example, to satisfy an `AckRequested` message), WCF generates a `SequenceAcknowledgement` header that contains the range 0-0, as shown in the following example.</span></span>  
-  
-    ```xml  
-    <wsrm:SequenceAcknowledgement>  
-      <wsrm:Identifier>  
-        urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36  
-      </wsrm:Identifier>  
-      <wsrm:AcknowledgementRange Upper="0" Lower="0"/>  
-    </wsrm:SequenceAcknowledgement>  
-    ```  
-  
-- <span data-ttu-id="17f9b-156">B1403: WCF generiert keine `SequenceAcknowledgement` -Header mit einem `Nack` unterstützt jedoch Element `Nack` Elemente.</span><span class="sxs-lookup"><span data-stu-id="17f9b-156">B1403: WCF does not generate `SequenceAcknowledgement` headers that contain a `Nack` element but supports `Nack` elements.</span></span>  
-  
-### <a name="ws-reliablemessaging-faults"></a><span data-ttu-id="17f9b-157">WS-ReliableMessaging-Fehler</span><span class="sxs-lookup"><span data-stu-id="17f9b-157">WS-ReliableMessaging Faults</span></span>  
- <span data-ttu-id="17f9b-158">Im folgenden finden eine Liste der Einschränkungen, die für die WCF-Implementierung des WS-ReliableMessaging-Fehler gelten:</span><span class="sxs-lookup"><span data-stu-id="17f9b-158">The following is a list of constraints that apply to the WCF implementation of WS-Reliable Messaging faults:</span></span>  
-  
-- <span data-ttu-id="17f9b-159">B1501: WCF generiert keine `MessageNumberRollover` Fehler.</span><span class="sxs-lookup"><span data-stu-id="17f9b-159">B1501: WCF does not generate `MessageNumberRollover` faults.</span></span>  
-  
-- <span data-ttu-id="17f9b-160">B1502:WCF-Endpunkt generiert möglicherweise `CreateSequenceRefused` wie in der Spezifikation beschrieben.</span><span class="sxs-lookup"><span data-stu-id="17f9b-160">B1502:WCF endpoint may generate `CreateSequenceRefused` faults as described in the specification.</span></span>  
-  
-- <span data-ttu-id="17f9b-161">B1503:when der Dienstendpunkt seine Verbindungsgrenze erreicht und keine weiteren Verbindungen verarbeiten, WCF generiert einen zusätzlichen `CreateSequenceRefused` -Fehlersubcode `netrm:ConnectionLimitReached`, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-161">B1503:When the service endpoint reaches its connection limit and cannot process new connections, WCF generates an additional `CreateSequenceRefused` fault subcode, `netrm:ConnectionLimitReached`, as shown in the following example.</span></span>  
-  
-    ```xml  
-    <s:Envelope>  
-      <s:Header>  
-        <wsa:Action>  
-          http://schemas.xmlsoap.org/ws/2005/08/addressing/fault  
-        </wsa:Action>  
-      </s:Header>  
-      <s:Body>  
-        <s:Fault>  
-          <s:Code>  
-            <s:Value>  
-              s:Receiver  
-            </s:Value>  
-            <s:Subcode>  
-              <s:Value>  
-                wsrm:CreateSequenceRefused  
-              </s:Value>  
-              <s:Subcode>  
-                <s:Value>  
-                  netrm:ConnectionLimitReached  
-                </s:Value>  
-              </s:Subcode>  
-            </s:Subcode>  
-          </s:Code>  
-          <s:Reason>  
-            <s:Text xml:lang="en">  
-              [Reason]  
-            </s:Text>  
-          </s:Reason>  
-        </s:Fault>  
-      </s:Body>  
-    </s:Envelope>  
-    ```  
-  
-### <a name="ws-addressing-faults"></a><span data-ttu-id="17f9b-162">WS-Adressierungsfehler</span><span class="sxs-lookup"><span data-stu-id="17f9b-162">WS-Addressing Faults</span></span>  
- <span data-ttu-id="17f9b-163">Da zuverlässiges WS-Messaging WS-Adressierung verwendet, kann WCF WS-Reliable-Messaging-Implementierung mit WS-Adressierungsfehler generieren.</span><span class="sxs-lookup"><span data-stu-id="17f9b-163">Because WS-Reliable Messaging uses WS-Addressing, WCF WS-Reliable Messaging implementation may generate WS-Addressing faults.</span></span> <span data-ttu-id="17f9b-164">Dieser Abschnitt behandelt die WS-Adressierungsfehler, die von WCF explizit auf der WS-Reliable Messaging-Schicht generiert:</span><span class="sxs-lookup"><span data-stu-id="17f9b-164">This section covers the WS-Addressing faults that WCF explicitly generates at the WS-Reliable Messaging layer:</span></span>  
-  
-- <span data-ttu-id="17f9b-165">B1601:WCF generiert den Fehler, die Nachrichtenadressierungs-Header erforderlich, wenn eine der folgenden Bedingungen zutrifft:</span><span class="sxs-lookup"><span data-stu-id="17f9b-165">B1601:WCF generates the fault Message Addressing Header Required when one of the following is true:</span></span>  
-  
-    - <span data-ttu-id="17f9b-166">Eine Nachricht hat keinen `Sequence`-Header und keinen `Action`-Header.</span><span class="sxs-lookup"><span data-stu-id="17f9b-166">A message is missing a `Sequence` header and an `Action` header.</span></span>  
-  
-    - <span data-ttu-id="17f9b-167">Eine `CreateSequence`-Nachricht hat keinen `MessageId`-Header.</span><span class="sxs-lookup"><span data-stu-id="17f9b-167">A `CreateSequence` message is missing a `MessageId` header.</span></span>  
-  
-    - <span data-ttu-id="17f9b-168">Eine `CreateSequence`-Nachricht hat keinen `ReplyTo`-Header.</span><span class="sxs-lookup"><span data-stu-id="17f9b-168">A `CreateSequence` message is missing a `ReplyTo` header.</span></span>  
-  
-- <span data-ttu-id="17f9b-169">B1602:WCF generiert den Fehler, die Aktion nicht unterstützt, als Antwort auf eine Nachricht, die nicht vorhanden ist eine `Sequence` Header und verfügt über eine `Action` Header, der nicht erkannten in der WS-ReliableMessaging-Spezifikation ist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-169">B1602:WCF generates the fault Action Not Supported in reply to a message that is missing a `Sequence` header and has an `Action` header that is not a recognized in the WS-Reliable Messaging specification.</span></span>  
-  
-- <span data-ttu-id="17f9b-170">B1603:WCF generiert den Fehler, der Endpunkt nicht verfügbar, um anzugeben, dass der Endpunkt die Sequenz basierend auf einer Untersuchung der keine verarbeitet die `CreateSequence` Nachricht Adressheader.</span><span class="sxs-lookup"><span data-stu-id="17f9b-170">B1603:WCF generates the fault Endpoint Unavailable to indicate that the endpoint does not process the sequence based upon examination of the `CreateSequence` message’s addressing headers.</span></span>  
-  
-## <a name="protocol-composition"></a><span data-ttu-id="17f9b-171">Protokollkomposition</span><span class="sxs-lookup"><span data-stu-id="17f9b-171">Protocol Composition</span></span>  
-  
-### <a name="composition-with-ws-addressing"></a><span data-ttu-id="17f9b-172">Komposition mit WS-Adressierung</span><span class="sxs-lookup"><span data-stu-id="17f9b-172">Composition with WS-Addressing</span></span>  
- <span data-ttu-id="17f9b-173">WCF unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung 2004/08 [WS-ADDR] und W3C WS-Adressierung 1.0 Empfehlungen [WS-ADDR-CORE] und [WS-ADDR-SOAP].</span><span class="sxs-lookup"><span data-stu-id="17f9b-173">WCF supports two versions of WS-Addressing: WS-Addressing 2004/08 [WS-ADDR] and W3C WS-Addressing 1.0 Recommendations [WS-ADDR-CORE] and [WS-ADDR-SOAP].</span></span>  
-  
- <span data-ttu-id="17f9b-174">Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&amp;#160;2004/08, schränkt jedoch die verwendete Version der WS-Adressierung nicht ein.</span><span class="sxs-lookup"><span data-stu-id="17f9b-174">While the WS-Reliable Messaging specification mentions only WS-Addressing 2004/08, it does not restrict the WS-Addressing version to be used.</span></span> <span data-ttu-id="17f9b-175">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="17f9b-175">The following is a list of constraints that apply to WCF:</span></span>  
-  
-- <span data-ttu-id="17f9b-176">R2101: sowohl WS-Adressierung 2004/08 und WS-Adressierung 1.0 können mit zuverlässigem WS-Messaging verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-176">R2101:Both WS-Addressing 2004/08 and WS-Addressing 1.0 can be used with WS-Reliable Messaging.</span></span>  
-  
-- <span data-ttu-id="17f9b-177">Einzelne R2102:A-Version der WS-Adressierung muss verwendet werden, während des gesamten eine gegebene WS-ReliableMessaging-Sequenz oder ein Paar umgekehrter Sequenzen korreliert mit der `wsrm:Offer` Mechanismus.</span><span class="sxs-lookup"><span data-stu-id="17f9b-177">R2102:A single version of WS-Addressing must be used throughout a given WS-Reliable Messaging sequence or a pair of converse sequences correlated by using the `wsrm:Offer` mechanism.</span></span>  
-  
-### <a name="composition-with-soap"></a><span data-ttu-id="17f9b-178">Komposition mit SOAP</span><span class="sxs-lookup"><span data-stu-id="17f9b-178">Composition with SOAP</span></span>  
- <span data-ttu-id="17f9b-179">WCF unterstützt die Verwendung von SOAP 1.1 und SOAP 1.2 mit zuverlässigem WS-Messaging.</span><span class="sxs-lookup"><span data-stu-id="17f9b-179">WCF supports use of both SOAP 1.1 and SOAP 1.2 with WS-Reliable Messaging.</span></span>  
-  
-### <a name="composition-with-ws-security-and-ws-secureconversation"></a><span data-ttu-id="17f9b-180">Komposition mit WS-Sicherheit und WS-SecureConversation</span><span class="sxs-lookup"><span data-stu-id="17f9b-180">Composition with WS-Security and WS-SecureConversation</span></span>  
- <span data-ttu-id="17f9b-181">WCF bietet Schutz für die WS-ReliableMessaging-Sequenzen unter Verwendung von sicheren Transportmethode (HTTPS), Komposition mit WS-Security und Komposition mit WS-Secure Conversation.</span><span class="sxs-lookup"><span data-stu-id="17f9b-181">WCF provides protection for WS-Reliable Messaging sequences by using secure Transport (HTTPS), composition with WS-Security, and composition with WS-Secure Conversation.</span></span> <span data-ttu-id="17f9b-182">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="17f9b-182">The following is a list of constraints that apply to WCF:</span></span>  
-  
-- <span data-ttu-id="17f9b-183">R2301: um die Integrität einer WS-ReliableMessaging-Sequenz sowie die Integrität und Vertraulichkeit einzelner Nachrichten zu schützen, WCF erfordert, dass WS-Secure Conversation verwendet werden muss.</span><span class="sxs-lookup"><span data-stu-id="17f9b-183">R2301:To protect the integrity of a WS-Reliable Messaging sequence in addition to the integrity and confidentiality of individual messages, WCF requires that WS-Secure Conversation must be used.</span></span>  
-  
-- <span data-ttu-id="17f9b-184">R2302:AWS-Secure Conversation-Sitzung muss vor der Erstellung von WS-ReliableMessaging-Sequenzen eingerichtet werden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-184">R2302:AWS-Secure Conversation session must be established prior to establishing WS-Reliable Messaging sequence(s).</span></span>  
-  
-- <span data-ttu-id="17f9b-185">R2303: Wenn die WS-Reliable Messaging-Sequenz-Lebensdauer der WS-Secure Conversation Sitzung überschreitet die `SecurityContextToken` hergestellt, indem Sie mithilfe von WS-Secure Conversation muss mithilfe der entsprechenden WS-Secure Conversation Renewal-Bindung erneuert werden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-185">R2303: If the WS-Reliable Messaging sequence lifetime exceeds the WS-Secure Conversation session’s lifetime, the `SecurityContextToken` established by using WS-Secure Conversation must be renewed by using the corresponding WS-Secure Conversation Renewal binding.</span></span>  
-  
-- <span data-ttu-id="17f9b-186">B2304:WS-Reliable Messaging-Sequenz bzw. das Paar korrelierter umgekehrter Sequenzen ist immer an eine einzelne WS-SecureConversation-Sitzung gebunden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-186">B2304:WS-Reliable Messaging sequence or a pair of correlated converse sequences are always bound to a single WS-SecureConversation session.</span></span>  
-  
-     <span data-ttu-id="17f9b-187">Die WCF-Quelle generiert die `wsse:SecurityTokenReference` Element im Abschnitt elementerweiterbarkeit der der `CreateSequence` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-187">The WCF source generates the `wsse:SecurityTokenReference` element in the element extensibility section of the `CreateSequence` message.</span></span>  
-  
-- <span data-ttu-id="17f9b-188">R2305:when mit WS-Secure Conversation verfasst eine `CreateSequence` Nachricht darf die `wsse:SecurityTokenReference` Element.</span><span class="sxs-lookup"><span data-stu-id="17f9b-188">R2305:When composed with WS-Secure Conversation, a `CreateSequence` message must contain the `wsse:SecurityTokenReference` element.</span></span>  
-  
-## <a name="ws-reliable-messaging-ws-policy-assertion"></a><span data-ttu-id="17f9b-189">Zuverlässige WS-Messaging WS-Richtlinienassertion</span><span class="sxs-lookup"><span data-stu-id="17f9b-189">WS-Reliable Messaging WS-Policy Assertion</span></span>  
- <span data-ttu-id="17f9b-190">WCF verwendet die WS-Reliable-Messaging WS-Richtlinienassertion `wsrm:RMAssertion` Fähigkeiten von Endpunkten zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="17f9b-190">WCF uses WS-Reliable Messaging WS-Policy Assertion `wsrm:RMAssertion` to describe endpoints capabilities.</span></span> <span data-ttu-id="17f9b-191">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="17f9b-191">The following is a list of constraints that apply to WCF:</span></span>  
-  
-- <span data-ttu-id="17f9b-192">B3001: Fügt WCF `wsrm:RMAssertion` WS-Richtlinienassertion `wsdl:binding` Elemente.</span><span class="sxs-lookup"><span data-stu-id="17f9b-192">B3001: WCF attaches `wsrm:RMAssertion` WS-Policy Assertion to `wsdl:binding` elements.</span></span> <span data-ttu-id="17f9b-193">WCF unterstützt sowohl Anlagen in `wsdl:binding` und `wsdl:port` Elemente.</span><span class="sxs-lookup"><span data-stu-id="17f9b-193">WCF supports both attachments to `wsdl:binding` and `wsdl:port` elements.</span></span>  
-  
-- <span data-ttu-id="17f9b-194">B3002: WCF unterstützt die folgenden optionalen Eigenschaften der WS-ReliableMessaging-Assertion und unter der Kontrolle bietet, auf die WCF`ReliableMessagingBindingElement`:</span><span class="sxs-lookup"><span data-stu-id="17f9b-194">B3002: WCF supports the following optional properties of WS-Reliable Messaging assertion and provides control over them on the WCF`ReliableMessagingBindingElement`:</span></span>  
-  
-    - `wsrm:InactivityTimeout`  
-  
-    - `wsrm:AcknowledgementInterval`  
-  
-     <span data-ttu-id="17f9b-195">Nachfolgend finden Sie ein Beispiel:</span><span class="sxs-lookup"><span data-stu-id="17f9b-195">The following is an example.</span></span>  
-  
-    ```xml  
-    <wsrm:RMAssertion>  
-      <wsrm:InactivityTimeout Milliseconds="600000" />  
-      <wsrm:AcknowledgementInterval Milliseconds="200" />  
-    </wsrm:RMAssertion>  
-    ```  
-  
-## <a name="flow-control-ws-reliable-messaging-extension"></a><span data-ttu-id="17f9b-196">Zuverlässige WS-Messaging-Erweiterung zur Ablaufsteuerung</span><span class="sxs-lookup"><span data-stu-id="17f9b-196">Flow Control WS-Reliable Messaging Extension</span></span>  
- <span data-ttu-id="17f9b-197">WCF verwendet die WS-ReliableMessaging-Erweiterbarkeit optionales Steuerung des sequenznachrichtenflusses Nachrichtenfluss Sequenz bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-197">WCF uses WS-Reliable Messaging extensibility to provide optional additional tighter control over sequence message flow.</span></span>  
-  
- <span data-ttu-id="17f9b-198">Flusssteuerung aktiviert ist, durch Festlegen der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> Eigenschaft `true`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-198">Flow control is enabled by setting the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="17f9b-199">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="17f9b-199">The following is a list of constraints that apply to WCF:</span></span>  
-  
-- <span data-ttu-id="17f9b-200">B4001: WCF wird generiert, wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, eine `netrm:BufferRemaining` Element in der elementerweiterbarkeit des der `SequenceAcknowledgement` Header.</span><span class="sxs-lookup"><span data-stu-id="17f9b-200">B4001: When Reliable Messaging Flow Control is enabled, WCF generates a `netrm:BufferRemaining` element in the element extensibility of the `SequenceAcknowledgement` header.</span></span>  
-  
-- <span data-ttu-id="17f9b-201">B4002: Wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, WCF erfordert keine `netrm:BufferRemaining` Element vorhanden sein `SequenceAcknowledgement` -Header, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-201">B4002: When Reliable Messaging Flow Control is enabled, WCF does not require a `netrm:BufferRemaining` element to be present in `SequenceAcknowledgement` header, as shown in the following example.</span></span>  
-  
-    ```xml  
-    <wsrm:SequenceAcknowledgement>  
-      <wsrm:Identifier>  
-        http://fabrikam123.com/abc  
-      </wsrm:Identifier>  
-      <wsrm:AcknowledgementRange Upper="1" Lower="1"/>             
-      <netrm:BufferRemaining>  
-        8  
-      </netrm:BufferRemaining>  
-    </wsrm:SequenceAcknowledgement>  
-    ```  
-  
-- <span data-ttu-id="17f9b-202">B4003: WCF verwendet `netrm:BufferRemaining` um anzugeben, wie viele der neue Nachrichten das zuverlässige Messaging-Ziel Puffern kann.</span><span class="sxs-lookup"><span data-stu-id="17f9b-202">B4003: WCF uses `netrm:BufferRemaining` to indicate how many new messages the Reliable Messaging Destination can buffer.</span></span>  
-  
-- <span data-ttu-id="17f9b-203">B4004: WCF Reliable Messaging-Dienst drosselt die Anzahl der Nachrichten, die übertragen werden, wenn die zuverlässige Messaging-Zielanwendung schnell keine Nachrichten empfangen kann.</span><span class="sxs-lookup"><span data-stu-id="17f9b-203">B4004:The WCF Reliable Messaging Service throttles the number of messages transmitted when the Reliable Messaging destination application cannot receive messages quickly.</span></span> <span data-ttu-id="17f9b-204">Das zuverlässige Messaging-Ziel puffert Nachrichten, und der Wert des Elements sinkt auf&amp;#160;0.</span><span class="sxs-lookup"><span data-stu-id="17f9b-204">The Reliable Messaging destination buffers messages and the element’s value drops to 0.</span></span>  
-  
-- <span data-ttu-id="17f9b-205">B4005: WCF generiert `netrm:BufferRemaining` ganzzahlige Werte zwischen 0 und 4096 einschließlich und liest Ganzzahlwerte zwischen 0 und `xs:int`des `maxInclusive` Wert (214748364) einschließlich.</span><span class="sxs-lookup"><span data-stu-id="17f9b-205">B4005: WCF generates `netrm:BufferRemaining` integer values between 0 and 4096 inclusive, and reads integer values between 0 and `xs:int`’s `maxInclusive` value 214748364 inclusive.</span></span>  
-  
-## <a name="message-exchange-patterns"></a><span data-ttu-id="17f9b-206">Nachrichtenaustauschmuster</span><span class="sxs-lookup"><span data-stu-id="17f9b-206">Message Exchange Patterns</span></span>  
- <span data-ttu-id="17f9b-207">Dieser Abschnitt beschreibt WCFs-Verhalten, wenn WS-Reliable Messaging für verschiedene Nachrichtenaustauschmuster verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="17f9b-207">This section describes WCF's behavior when WS-Reliable Messaging is used for different Message Exchange Patterns.</span></span> <span data-ttu-id="17f9b-208">Für jedes Nachrichtenaustauschmuster werden die folgenden zwei Bereitstellungsszenarios erläutert:</span><span class="sxs-lookup"><span data-stu-id="17f9b-208">For each Message Exchange Pattern the following two deployments scenarios are considered:</span></span>  
-  
-- <span data-ttu-id="17f9b-209">Nicht Adressierbarer Initiator: Initiator befindet sich hinter der Firewall; Beantworter kann Nachrichten an den Initiator nur über HTTP-Antworten zustellen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-209">Non-Addressable Initiator: Initiator is behind firewall; Responder can deliver messages to Initiator only on HTTP responses.</span></span>  
-  
-- <span data-ttu-id="17f9b-210">Adressierbarer Initiator: Initiator und Beantworter können HTTP-Anforderungen gesendet werden. Anders gesagt können zwei entgegengesetzte HTTP-Verbindungen hergestellt werden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-210">Addressable Initiator: Initiator and Responder both can be sent HTTP requests; in other words, two converse HTTP connections can be established.</span></span>  
-  
-### <a name="one-way-non-addressable-initiator"></a><span data-ttu-id="17f9b-211">Unidirektionaler, nicht adressierbarer Initiator</span><span class="sxs-lookup"><span data-stu-id="17f9b-211">One-way, Non-addressable Initiator</span></span>  
-  
-#### <a name="binding"></a><span data-ttu-id="17f9b-212">Bindung</span><span class="sxs-lookup"><span data-stu-id="17f9b-212">Binding</span></span>  
- <span data-ttu-id="17f9b-213">WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="17f9b-213">WCF provides a one-way message exchange pattern using one sequence over one HTTP channel.</span></span> <span data-ttu-id="17f9b-214">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten vom RMS zum RMD und die HTTP-Antwort zur Übertragung aller Nachrichten vom RMD zum RMS.</span><span class="sxs-lookup"><span data-stu-id="17f9b-214">WCF uses the HTTP requests to transmit all messages from the RMS to the RMD and the HTTP response to transmit all messages from the RMD to the RMS.</span></span>  
-  
-#### <a name="createsequence-exchange"></a><span data-ttu-id="17f9b-215">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-215">CreateSequence Exchange</span></span>  
- <span data-ttu-id="17f9b-216">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht ohne Angebot.</span><span class="sxs-lookup"><span data-stu-id="17f9b-216">The WCF Initiator generates a `CreateSequence` message with no offer.</span></span> <span data-ttu-id="17f9b-217">Der WCF-Beantworter stellt sicher die `CreateSequence` kein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-217">The WCF Responder ensures the `CreateSequence` has no offer before creating a sequence.</span></span> <span data-ttu-id="17f9b-218">Der WCF-Beantworter reagiert auf die `CreateSequence` Anforderungen, bei denen eine `CreateSequenceResponse` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-218">The WCF Responder replies to the `CreateSequence` request with a `CreateSequenceResponse` message.</span></span>  
-  
-#### <a name="sequenceacknowledgement"></a><span data-ttu-id="17f9b-219">SequenceAcknowledgement</span><span class="sxs-lookup"><span data-stu-id="17f9b-219">SequenceAcknowledgement</span></span>  
- <span data-ttu-id="17f9b-220">Der WCF-Initiator erstellt Bestätigungen als Antwort alle Nachrichten mit Ausnahme der `CreateSequence` -Nachrichten und Fehlernachrichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-220">The WCF Initiator processes acknowledgements on the reply of all messages except the `CreateSequence` message and fault messages.</span></span> <span data-ttu-id="17f9b-221">Der WCF-Beantworter generiert eine eigenständige Bestätigung in der Antwort auf Sequenzen und `AckRequested` Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-221">The WCF Responder always generates a stand-alone acknowledgement in the response to both sequence and `AckRequested` messages.</span></span>  
-  
-#### <a name="terminatesequence-message"></a><span data-ttu-id="17f9b-222">TerminateSequence-Nachricht</span><span class="sxs-lookup"><span data-stu-id="17f9b-222">TerminateSequence message</span></span>  
- <span data-ttu-id="17f9b-223">WCF behandelt `TerminateSequence` als einen unidirektionalen Vorgang, was bedeutet der HTTP-Antwort hat, leerem Textbereich und dem HTTP 202-Statuscode.</span><span class="sxs-lookup"><span data-stu-id="17f9b-223">WCF treats `TerminateSequence` as a one-way operation, meaning the HTTP response has an empty body and HTTP 202 status code.</span></span>  
-  
-### <a name="one-way-addressable-initiator"></a><span data-ttu-id="17f9b-224">Unidirektionaler, adressierbarer Initiator</span><span class="sxs-lookup"><span data-stu-id="17f9b-224">One Way, Addressable Initiator</span></span>  
-  
-#### <a name="binding"></a><span data-ttu-id="17f9b-225">Bindung</span><span class="sxs-lookup"><span data-stu-id="17f9b-225">Binding</span></span>  
- <span data-ttu-id="17f9b-226">WCF bietet ein unidirektionales Nachrichtenaustauschmuster, die mit einer einzigen Sequenz über einen eingehenden und einen ausgehenden Http-Kanal.</span><span class="sxs-lookup"><span data-stu-id="17f9b-226">WCF provides a one-way message exchange pattern using one sequence over an inbound and an outbound Http channel.</span></span> <span data-ttu-id="17f9b-227">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-227">WCF uses the HTTP requests to transmit all messages.</span></span> <span data-ttu-id="17f9b-228">Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&amp;#160;202.</span><span class="sxs-lookup"><span data-stu-id="17f9b-228">All HTTP responses have an empty body and HTTP 202 status code.</span></span>  
-  
-#### <a name="createsequence-exchange"></a><span data-ttu-id="17f9b-229">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-229">CreateSequence Exchange</span></span>  
- <span data-ttu-id="17f9b-230">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht ohne Angebot.</span><span class="sxs-lookup"><span data-stu-id="17f9b-230">The WCF Initiator generates a `CreateSequence` message with no offer.</span></span> <span data-ttu-id="17f9b-231">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` kein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-231">The WCF Responder ensures that the `CreateSequence` has no offer before creating a sequence.</span></span> <span data-ttu-id="17f9b-232">Der WCF-Beantworter überträgt die `CreateSequenceResponse` Nachricht in einer HTTP-Anforderung adressiert wird, mit der `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="17f9b-232">The WCF Responder transmits the `CreateSequenceResponse` message on an HTTP request addressed with the `ReplyTo` endpoint reference.</span></span>  
-  
-### <a name="duplex-addressable-initiator"></a><span data-ttu-id="17f9b-233">Adressierbarer Duplex-Initiator</span><span class="sxs-lookup"><span data-stu-id="17f9b-233">Duplex, Addressable Initiator</span></span>  
-  
-#### <a name="binding"></a><span data-ttu-id="17f9b-234">Bindung</span><span class="sxs-lookup"><span data-stu-id="17f9b-234">Binding</span></span>  
- <span data-ttu-id="17f9b-235">WCF bietet ein vollständig asynchrones bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="17f9b-235">WCF provides a fully asynchronous two-way message exchange pattern using two sequences over an inbound and an outbound HTTP channel.</span></span> <span data-ttu-id="17f9b-236">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-236">WCF uses the HTTP requests to transmit all messages.</span></span> <span data-ttu-id="17f9b-237">Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&amp;#160;202.</span><span class="sxs-lookup"><span data-stu-id="17f9b-237">All HTTP responses have an empty body and HTTP 202 status code.</span></span>  
-  
-#### <a name="createsequence-exchange"></a><span data-ttu-id="17f9b-238">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-238">CreateSequence Exchange</span></span>  
- <span data-ttu-id="17f9b-239">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot.</span><span class="sxs-lookup"><span data-stu-id="17f9b-239">The WCF Initiator generates a `CreateSequence` message with an offer.</span></span> <span data-ttu-id="17f9b-240">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-240">The WCF Responder ensures that the `CreateSequence` has an offer before creating a sequence.</span></span> <span data-ttu-id="17f9b-241">WCF sendet die `CreateSequenceResponse` behoben die HTTP-Anforderung die `CreateSequence`des `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="17f9b-241">WCF sends the `CreateSequenceResponse` on the HTTP request addressed to the `CreateSequence`’s `ReplyTo` endpoint reference.</span></span>  
-  
-#### <a name="sequence-lifetime"></a><span data-ttu-id="17f9b-242">Sequenzlebensdauer</span><span class="sxs-lookup"><span data-stu-id="17f9b-242">Sequence Lifetime</span></span>  
- <span data-ttu-id="17f9b-243">WCF behandelt die beiden Sequenzen als eine vollduplexsitzung.</span><span class="sxs-lookup"><span data-stu-id="17f9b-243">WCF treats the two sequences as one fully duplex session.</span></span>  
-  
- <span data-ttu-id="17f9b-244">Nach dem Generieren eines Fehlers, der eine Sequenz einen Fehler an, erwartet, dass WCF den Remoteendpunkt für beide Sequenzen auslöst.</span><span class="sxs-lookup"><span data-stu-id="17f9b-244">Upon generating a fault that faults one sequence, WCF expects the remote endpoint to fault both sequences.</span></span> <span data-ttu-id="17f9b-245">Nach dem Lesen eines Fehlers, der eine Sequenz einen Fehler, Fehler WCF für beide Sequenzen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-245">Upon reading a fault that faults one sequence, WCF faults both sequences.</span></span>  
-  
- <span data-ttu-id="17f9b-246">WCF kann seine ausgehende Sequenz schließen und zum Verarbeiten von Nachrichten in seiner eingehenden Sequenz fortsetzen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-246">WCF can close its outbound sequence and continue to process messages on its inbound sequence.</span></span> <span data-ttu-id="17f9b-247">Im Gegensatz dazu kann WCF das Schließen der eingehenden Sequenz und weiter Nachrichten in seiner ausgehenden Sequenz senden.</span><span class="sxs-lookup"><span data-stu-id="17f9b-247">Conversely, WCF can process the close of the inbound sequence and continue to send messages on its outbound sequence.</span></span>  
-  
-### <a name="request-reply-non-addressable-initiator"></a><span data-ttu-id="17f9b-248">Nicht adressierbarer Anforderung-Antwort-Initiator</span><span class="sxs-lookup"><span data-stu-id="17f9b-248">Request-Reply, Non-Addressable Initiator</span></span>  
-  
-#### <a name="binding"></a><span data-ttu-id="17f9b-249">Bindung</span><span class="sxs-lookup"><span data-stu-id="17f9b-249">Binding</span></span>  
- <span data-ttu-id="17f9b-250">WCF stellt einen unidirektionalen und Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="17f9b-250">WCF provides a one-way and request-reply message exchange pattern using two sequences over one HTTP channel.</span></span> <span data-ttu-id="17f9b-251">WCF HTTP-Anforderungen verwendet, um die anforderungssequenznachrichten zu übertragen und die HTTP-Antworten verwendet, um die Antwortsequenznachrichten zu übertragen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-251">WCF uses the HTTP requests to transmit the request sequence’s messages and uses the HTTP responses to transmit the reply sequence’s messages.</span></span>  
-  
-#### <a name="createsequence-exchange"></a><span data-ttu-id="17f9b-252">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-252">CreateSequence Exchange</span></span>  
- <span data-ttu-id="17f9b-253">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot.</span><span class="sxs-lookup"><span data-stu-id="17f9b-253">The WCF Initiator generates a `CreateSequence` message with an offer.</span></span> <span data-ttu-id="17f9b-254">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-254">The WCF Responder ensures that the `CreateSequence` has an offer before creating a sequence.</span></span> <span data-ttu-id="17f9b-255">Der WCF-Beantworter reagiert auf die `CreateSequence` Anforderungen, bei denen eine `CreateSequenceResponse` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-255">The WCF Responder replies to the `CreateSequence` request with a `CreateSequenceResponse` message.</span></span>  
-  
-#### <a name="one-way-message"></a><span data-ttu-id="17f9b-256">Unidirektionale Nachricht</span><span class="sxs-lookup"><span data-stu-id="17f9b-256">One-way Message</span></span>  
- <span data-ttu-id="17f9b-257">Um ein unidirektionales Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine eigenständige `SequenceAcknowledgement` -Nachricht in der HTTP-Antwort.</span><span class="sxs-lookup"><span data-stu-id="17f9b-257">To complete a one-way message exchange protocol successfully, the WCF Initiator transmits a request sequence message on the HTTP request and receives a standalone `SequenceAcknowledgement` message on the HTTP response.</span></span> <span data-ttu-id="17f9b-258">Die `SequenceAcknowledgement`-Nachricht muss die Nachrichtenübertragung bestätigen.</span><span class="sxs-lookup"><span data-stu-id="17f9b-258">The `SequenceAcknowledgement` must acknowledge the message transmitted.</span></span>  
-  
- <span data-ttu-id="17f9b-259">Der WCF-Beantworter kann mit einer Bestätigung, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP 202-Statuscode auf die Anforderung antworten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-259">The WCF Responder can reply to the request with an acknowledgement, a fault, or a response with an empty body and HTTP 202 status code.</span></span>  
-  
-#### <a name="two-way-messages"></a><span data-ttu-id="17f9b-260">Bidirektionale Nachrichten</span><span class="sxs-lookup"><span data-stu-id="17f9b-260">Two Way Messages</span></span>  
- <span data-ttu-id="17f9b-261">Um eine zwei-Wege-Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine antwortsequenznachricht in der HTTP-Antwort.</span><span class="sxs-lookup"><span data-stu-id="17f9b-261">To complete a two way message exchange protocol successfully, the WCF Initiator transmits a request sequence message on the HTTP request and receives a reply sequence message on the HTTP response.</span></span> <span data-ttu-id="17f9b-262">Die Antwort muss eine `SequenceAcknowledgement` enthalten, die die Übertragung der Anforderungssequenznachricht bestätigt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-262">The response must carry a `SequenceAcknowledgement` acknowledging the request sequence message transmitted.</span></span>  
-  
- <span data-ttu-id="17f9b-263">Der WCF-Beantworter kann mit einer Anwendungsantwort, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP 202-Statuscode auf die Anforderung antworten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-263">The WCF Responder can reply to the request with an application reply, a fault or a response with an empty body and HTTP 202 status code.</span></span>  
-  
- <span data-ttu-id="17f9b-264">Aufgrund des Vorhandenseins unidirektionaler Nachrichten und des zeitlichen Ablaufs von Anwendungsantworten verfügen die Sequenznummern der Anforderungssequenznachricht und der Antwortsequenznachricht über keine Korrelation.</span><span class="sxs-lookup"><span data-stu-id="17f9b-264">Because of the presence of one-way messages and the timing of application replies, the request sequence message’s sequence number and the response message’s sequence number have no correlation.</span></span>  
-  
-#### <a name="retrying-replies"></a><span data-ttu-id="17f9b-265">Wiederholen von Antworten</span><span class="sxs-lookup"><span data-stu-id="17f9b-265">Retrying Replies</span></span>  
- <span data-ttu-id="17f9b-266">WCF basiert auf HTTP-Anforderung-Antwort-Korrelation für bidirektionale Nachrichtenaustauschprotokoll.</span><span class="sxs-lookup"><span data-stu-id="17f9b-266">WCF relies on HTTP request-reply correlation for two-way message exchange protocol correlation.</span></span> <span data-ttu-id="17f9b-267">Aus diesem Grund wird der WCF-Initiator nicht beendet eine anforderungssequenznachricht wiederholen, wenn die anforderungssequenznachricht bestätigt wird, sondern wenn die HTTP-Antwort eine Bestätigung, die Meldung für den Benutzer oder den Fehler enthält.</span><span class="sxs-lookup"><span data-stu-id="17f9b-267">Because of this, the WCF Initiator does not stop retrying a request sequence message when the request sequence message is acknowledged but rather when the HTTP response carries an acknowledgement, user message, or fault.</span></span> <span data-ttu-id="17f9b-268">Der WCF-Beantworter wiederholt die Antworten auf den HTTP-Anforderungsabschnitt der Anforderung mit der die Antwort korreliert ist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-268">The WCF Responder retries replies on the HTTP request leg of the request to which the reply is correlated.</span></span>  
-  
-#### <a name="lastmessage-exchange"></a><span data-ttu-id="17f9b-269">LastMessage-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-269">LastMessage Exchange</span></span>  
- <span data-ttu-id="17f9b-270">Der WCF-Initiator generiert und überträgt eine letzte Nachricht ohne Text auf den HTTP-Anforderungsabschnitt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-270">The WCF Initiator generates and transmits an empty bodied last message on the HTTP request leg.</span></span> <span data-ttu-id="17f9b-271">WCF erfordert eine Antwort ignoriert jedoch diese Antwortnachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-271">WCF requires a response but ignores the actual response message.</span></span> <span data-ttu-id="17f9b-272">Der WCF-Beantworter reagiert auf die anforderungssequenz leere letzte Nachricht mit der Antwortsequenz leere letzte Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-272">The WCF Responder replies to the request sequence’s empty-bodied last message with the reply sequence’s empty-bodied last message.</span></span>  
-  
- <span data-ttu-id="17f9b-273">Wenn der WCF-Beantworter eine letzte Nachricht empfängt, in dem der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`, WCF-Antworten mit einer letzten Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-273">If the WCF Responder receives a last message in which the action URI is not `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`, WCF replies with a last message.</span></span> <span data-ttu-id="17f9b-274">Im Fall eines bidirektionalen Nachrichtenaustauschprotokolls enthält die letzte Nachricht die Anwendungsnachricht, im Falle eines unidirektionalen Nachrichtenaustauschprotokolls ist die letzte Nachricht leer.</span><span class="sxs-lookup"><span data-stu-id="17f9b-274">In the case of a two-way message exchange protocol, the last message carries the application message; in the case of a one-way message exchange protocol, the last message is empty.</span></span>  
-  
- <span data-ttu-id="17f9b-275">Der WCF-Beantworter erfordert keine Bestätigung für die Antwortsequenz leere letzte Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-275">The WCF Responder does not require an acknowledgement for the reply sequence’s empty-bodied last message.</span></span>  
-  
-#### <a name="terminatesequence-exchange"></a><span data-ttu-id="17f9b-276">TerminateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-276">TerminateSequence Exchange</span></span>  
- <span data-ttu-id="17f9b-277">Wenn alle Anforderungen eine gültige Antwort erhalten haben, wird der WCF-Initiator generiert und überträgt der anforderungssequenz `TerminateSequence` Nachricht auf den HTTP-Anforderungsabschnitt.</span><span class="sxs-lookup"><span data-stu-id="17f9b-277">When all requests have received a valid reply, the WCF Initiator generates and transmits the request sequence’s `TerminateSequence` message on the HTTP request leg.</span></span> <span data-ttu-id="17f9b-278">WCF erfordert eine Antwort ignoriert jedoch diese Antwortnachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-278">WCF requires a response but ignores the actual response message.</span></span> <span data-ttu-id="17f9b-279">Der WCF-Beantworter reagiert auf der anforderungssequenz `TerminateSequence` Nachricht mit der Antwortsequenz `TerminateSequence` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="17f9b-279">The WCF Responder replies to the request sequence’s `TerminateSequence` message with the reply sequence’s `TerminateSequence` message.</span></span>  
-  
- <span data-ttu-id="17f9b-280">In einer normalen Abschlusssequenz enthalten beide `TerminateSequence`-Nachrichten einen vollständigen Bereich von `SequenceAcknowledgement`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-280">In a normal shutdown sequence, both `TerminateSequence` messages carry a full range `SequenceAcknowledgement`.</span></span>  
-  
-### <a name="requestreply-addressable-initiator"></a><span data-ttu-id="17f9b-281">Adressierbarer Anforderung/Antwort-Initiator</span><span class="sxs-lookup"><span data-stu-id="17f9b-281">Request/Reply, Addressable Initiator</span></span>  
-  
-#### <a name="binding"></a><span data-ttu-id="17f9b-282">Bindung</span><span class="sxs-lookup"><span data-stu-id="17f9b-282">Binding</span></span>  
- <span data-ttu-id="17f9b-283">WCF bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster, die Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="17f9b-283">WCF provides a request-reply message exchange pattern using two sequences over an inbound and an outbound HTTP channel.</span></span> <span data-ttu-id="17f9b-284">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="17f9b-284">WCF uses the HTTP requests to transmit all messages.</span></span> <span data-ttu-id="17f9b-285">Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&amp;#160;202.</span><span class="sxs-lookup"><span data-stu-id="17f9b-285">All HTTP responses have an empty body and HTTP 202 status code.</span></span>  
-  
-#### <a name="createsequence-exchange"></a><span data-ttu-id="17f9b-286">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="17f9b-286">CreateSequence Exchange</span></span>  
- <span data-ttu-id="17f9b-287">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot.</span><span class="sxs-lookup"><span data-stu-id="17f9b-287">The WCF Initiator generates a `CreateSequence` message with an offer.</span></span> <span data-ttu-id="17f9b-288">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="17f9b-288">The WCF Responder ensures that the `CreateSequence` has an offer before creating a sequence.</span></span> <span data-ttu-id="17f9b-289">WCF sendet die `CreateSequenceResponse` behoben die HTTP-Anforderung die `CreateSequence`des `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="17f9b-289">WCF sends the `CreateSequenceResponse` on the HTTP request addressed to the `CreateSequence`’s `ReplyTo` endpoint reference.</span></span>  
-  
-#### <a name="requestreply-correlation"></a><span data-ttu-id="17f9b-290">Anforderung/Antwort-Korrelation</span><span class="sxs-lookup"><span data-stu-id="17f9b-290">Request/Reply Correlation</span></span>  
- <span data-ttu-id="17f9b-291">Der WCF-Initiator wird sichergestellt, alle anwendungsanforderungsnachrichten eine `MessageId` und `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="17f9b-291">The WCF Initiator ensures all application request messages bear a `MessageId` and a `ReplyTo` endpoint reference.</span></span> <span data-ttu-id="17f9b-292">Der WCF--Initiator wendet den `CreateSequence` Nachricht `ReplyTo` Endpunktverweis für jede anwendungsanforderungsnachricht an.</span><span class="sxs-lookup"><span data-stu-id="17f9b-292">The WCF Initiator applies the `CreateSequence` message’s `ReplyTo` endpoint reference on each application request message.</span></span> <span data-ttu-id="17f9b-293">Der WCF-Beantworter erfordert, dass eingehende Anforderungsnachrichten beachten einer `MessageId` und `ReplyTo`.</span><span class="sxs-lookup"><span data-stu-id="17f9b-293">The WCF Responder requires that incoming request messages bear a `MessageId` and a `ReplyTo`.</span></span> <span data-ttu-id="17f9b-294">Der WCF-Beantworter stellt sicher, dass der Endpunktverweis-URIS der Endpunktverweise der `CreateSequence` und aller anwendungsanforderungsnachrichten identisch sind.</span><span class="sxs-lookup"><span data-stu-id="17f9b-294">The WCF Responder ensures that the endpoint reference’s URI of both the `CreateSequence` and all application request messages are identical.</span></span>
+# <a name="reliable-messaging-protocol-version-10"></a><span data-ttu-id="cfa17-102">Zuverlässiges Messaging-Protokoll, Version 1.0</span><span class="sxs-lookup"><span data-stu-id="cfa17-102">Reliable Messaging Protocol version 1.0</span></span>
+
+<span data-ttu-id="cfa17-103">Dieses Thema enthält Details zur Implementierung von Windows Communication Foundation (WCF) für die WS-Reliable Messaging Februar-2005 (Version 1.0)-Protokoll für die Interoperation mithilfe des HTTP-Transports erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="cfa17-103">This topic covers Windows Communication Foundation (WCF) implementation details for the WS-Reliable Messaging February 2005 (version 1.0) protocol necessary for interoperation using the HTTP transport.</span></span> <span data-ttu-id="cfa17-104">WCF folgt die WS-ReliableMessaging-Spezifikation mit den Einschränkungen und klarstellungen, die in diesem Thema erläutert.</span><span class="sxs-lookup"><span data-stu-id="cfa17-104">WCF follows the WS-Reliable Messaging specification with the constraints and clarifications explained in this topic.</span></span> <span data-ttu-id="cfa17-105">Beachten Sie, dass das Protokoll, Version 1.0 WS-ReliableMessaging beginnend mit dem WinFX implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="cfa17-105">Note that the WS-ReliableMessaging version 1.0 protocol is implemented starting with the WinFX.</span></span>
+
+<span data-ttu-id="cfa17-106">Die WS-Reliable Messaging Februar 2005 Protokoll wird in WCF von implementiert die <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="cfa17-106">The WS-Reliable Messaging February 2005 protocol is implemented in WCF by the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.</span></span>
+
+<span data-ttu-id="cfa17-107">Der Einfachheit halber verwendet dieses Thema die folgenden Rollen:</span><span class="sxs-lookup"><span data-stu-id="cfa17-107">For convenience, the topic uses the following roles:</span></span>
+
+- <span data-ttu-id="cfa17-108">Initiator: der Client, der die Erstellung der zuverlässigen WS-Messaging-Sequenz initiiert</span><span class="sxs-lookup"><span data-stu-id="cfa17-108">Initiator: the client that initiates WS-Reliable Message sequence creation</span></span>
+
+- <span data-ttu-id="cfa17-109">Beantworter: der Dienst, der die Anforderungen des Initiators empfängt</span><span class="sxs-lookup"><span data-stu-id="cfa17-109">Responder: the service that receives the initiator's requests</span></span>
+
+<span data-ttu-id="cfa17-110">In diesem Dokument werden die in der folgenden Tabelle aufgeführten Präfixe und Namespaces verwendet.</span><span class="sxs-lookup"><span data-stu-id="cfa17-110">This document uses the prefixes and namespaces in the following table.</span></span>
+
+|<span data-ttu-id="cfa17-111">Präfix</span><span class="sxs-lookup"><span data-stu-id="cfa17-111">Prefix</span></span>|<span data-ttu-id="cfa17-112">Namespace</span><span class="sxs-lookup"><span data-stu-id="cfa17-112">Namespace</span></span>|
+|------------|---------------|
+|<span data-ttu-id="cfa17-113">wsrm</span><span class="sxs-lookup"><span data-stu-id="cfa17-113">wsrm</span></span>|http://schemas.xmlsoap.org/ws/2005/02/rm|
+|<span data-ttu-id="cfa17-114">netrm</span><span class="sxs-lookup"><span data-stu-id="cfa17-114">netrm</span></span>|http://schemas.microsoft.com/ws/2006/05/rm|
+|<span data-ttu-id="cfa17-115">s</span><span class="sxs-lookup"><span data-stu-id="cfa17-115">s</span></span>|http://www.w3.org/2003/05/soap-envelope|
+|<span data-ttu-id="cfa17-116">wsa</span><span class="sxs-lookup"><span data-stu-id="cfa17-116">wsa</span></span>|http://schemas.xmlsoap.org/ws/2005/08/addressing|
+|<span data-ttu-id="cfa17-117">wsse</span><span class="sxs-lookup"><span data-stu-id="cfa17-117">wsse</span></span>|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|
+
+## <a name="messaging"></a><span data-ttu-id="cfa17-118">Messaging</span><span class="sxs-lookup"><span data-stu-id="cfa17-118">Messaging</span></span>
+
+### <a name="sequence-establishment-messages"></a><span data-ttu-id="cfa17-119">Sequenzeinrichtungsnachrichten</span><span class="sxs-lookup"><span data-stu-id="cfa17-119">Sequence Establishment Messages</span></span>
+
+<span data-ttu-id="cfa17-120">WCF implementiert `CreateSequence` und `CreateSequenceResponse` Nachrichten an eine zuverlässige nachrichtensequenz einzurichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-120">WCF implements `CreateSequence` and `CreateSequenceResponse` messages to establish a reliable message sequence.</span></span> <span data-ttu-id="cfa17-121">Es gelten die folgenden Einschränkungen:</span><span class="sxs-lookup"><span data-stu-id="cfa17-121">The following constraints apply:</span></span>
+
+- <span data-ttu-id="cfa17-122">B1101: Der WCF--Initiator generiert nicht das optionale Expires-Element in der `CreateSequence` Nachricht oder, in den Fällen bei der `CreateSequence` Nachricht enthält ein `Offer` -Element, das optionale `Expires` Element in der `Offer` Element.</span><span class="sxs-lookup"><span data-stu-id="cfa17-122">B1101: The WCF Initiator does not generate the optional Expires element in the `CreateSequence` message or, in the cases when the `CreateSequence` message contains an `Offer` element, the optional `Expires` element in the `Offer` element.</span></span>
+
+- <span data-ttu-id="cfa17-123">B1102: Beim Zugriff auf die `CreateSequence` Nachricht, die WCF`Responder` sendet und empfängt sowohl `Expires` Elementen, wenn sie vorhanden sind, jedoch nicht deren Werte verwendet.</span><span class="sxs-lookup"><span data-stu-id="cfa17-123">B1102: When accessing the `CreateSequence` message, the WCF`Responder` sends and receives both `Expires` elements if they exist, but does not use their values.</span></span>
+
+<span data-ttu-id="cfa17-124">Zuverlässiges WS-Messaging führt den `Offer`-Mechanismus ein, um zwei umgekehrt korrelierende Sequenzen einzurichten, die eine Sitzung bilden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-124">WS-Reliable Messaging introduces the `Offer` mechanism to establish the two converse correlated sequences that form a session.</span></span>
+
+- <span data-ttu-id="cfa17-125">R1103: Wenn `CreateSequence` enthält ein `Offer` -Element, das zuverlässige Messaging-Beantworter muss entweder die Sequenz akzeptieren und reagieren Sie mit `CreateSequenceResponse` , enthält eine `wsrm:Accept` -Element, erstellen zwei umgekehrte Sequenzen oder Ablehnen der `CreateSequence`Anforderung.</span><span class="sxs-lookup"><span data-stu-id="cfa17-125">R1103: If `CreateSequence` contains an `Offer` element, the Reliable Messaging Responder must either accept the sequence and respond with `CreateSequenceResponse` that contains a `wsrm:Accept` element, forming two correlated converse sequences or reject the `CreateSequence` request.</span></span>
+
+- <span data-ttu-id="cfa17-126">R1104: `SequenceAcknowledgement` und die in umgekehrter Sequenz fließenden Anwendungsnachrichten müssen an den `ReplyTo`-Endpunktverweis der `CreateSequence` gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-126">R1104: `SequenceAcknowledgement` and application messages flowing on converse sequence must be sent to the `ReplyTo` endpoint reference of the `CreateSequence`.</span></span>
+
+- <span data-ttu-id="cfa17-127">R1105: `AcksTo`- und `ReplyTo`-Endpunktverweise in der `CreateSequence` müssen Adresswerte aufweisen, die sich oktettweise entsprechen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-127">R1105: `AcksTo` and `ReplyTo` endpoint references in the `CreateSequence` must have address values that match the octet-wise.</span></span>
+
+  <span data-ttu-id="cfa17-128">Der WCF-Beantworter überprüft, ob die URI-Teil der `AcksTo` und `ReplyTo` EPRs identisch sind, bevor die Sequenz.</span><span class="sxs-lookup"><span data-stu-id="cfa17-128">The WCF Responder verifies that the URI portion of the `AcksTo` and `ReplyTo` EPRs are identical before creating a sequence.</span></span>
+
+- <span data-ttu-id="cfa17-129">R1106: `AcksTo`- und `ReplyTo`-Endpunktverweise in der `CreateSequence` sollten den gleichen Satz von Verweisparametern aufweisen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-129">R1106: `AcksTo` and `ReplyTo` Endpoint References in the `CreateSequence` should have the same set of reference parameters.</span></span>
+
+  <span data-ttu-id="cfa17-130">WCF wird nicht erzwungen, sondern setzt voraus, [Verweisparameter] `AcksTo` und `ReplyTo` auf `CreateSequence` identisch sind und verwendet [Verweisparameter] aus `ReplyTo` -Endpunktverweis für Bestätigungen und Nachrichten umgekehrter Sequenz.</span><span class="sxs-lookup"><span data-stu-id="cfa17-130">WCF does not enforce but assumes that [reference parameters] of `AcksTo` and `ReplyTo` on `CreateSequence` are identical and uses [reference parameters] from `ReplyTo` endpoint reference for acknowledgements and converse sequence messages.</span></span>
+
+- <span data-ttu-id="cfa17-131">R1107: Bei zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus `SequenceAcknowledgement` und in umgekehrter fließenden Anwendungsnachrichten müssen an der `ReplyTo` -Endpunktverweis der `CreateSequence`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-131">R1107: When two converse sequences are established using the `Offer` mechanism, `SequenceAcknowledgement` and application messages flowing on converse sequences must be sent to the `ReplyTo` endpoint reference of the `CreateSequence`.</span></span>
+
+- <span data-ttu-id="cfa17-132">R1108: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe des Offer-Mechanismus, der `[address]` Eigenschaft der `wsrm:AcksTo` Endpunktverweis untergeordnetes Element des der `wsrm:Accept` Element der `CreateSequenceResponse` müssen byteweise das Ziel-URI von der übereinstimmen`CreateSequence`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-132">R1108: When two converse sequences are established using the Offer mechanism, the `[address]` property of the `wsrm:AcksTo` Endpoint Reference child element of the `wsrm:Accept` element of the `CreateSequenceResponse` must match byte-wise the destination URI of the `CreateSequence`.</span></span>
+
+- <span data-ttu-id="cfa17-133">R1109: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus, der vom Initiator und Bestätigungen der Nachrichten vom Beantworter gesendeten Nachrichten müssen an den gleichen Endpunktverweis gesendet werden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-133">R1109: When two converse sequences are established using the `Offer` mechanism, messages sent by initiator and acknowledgements to messages by responder must be sent to the same Endpoint Reference.</span></span>
+
+  <span data-ttu-id="cfa17-134">WCF verwendet WS-Reliable Messaging, um zuverlässige Sitzungen zwischen dem Initiator und Beantworter einzurichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-134">WCF uses WS-Reliable Messaging to establish reliable sessions between the Initiator and Responder.</span></span> <span data-ttu-id="cfa17-135">WS-Reliable Messaging von WCF-Implementierung bietet zuverlässige Sitzungen für unidirektionale, Anforderung-Antwort- und Vollduplex-Nachrichtenmuster.</span><span class="sxs-lookup"><span data-stu-id="cfa17-135">WCF's WS-Reliable Messaging implementation provides reliable session for one-way, request-reply and full duplex messaging patterns.</span></span> <span data-ttu-id="cfa17-136">Das WS-Reliable Messaging `Offer` Mechanismus auf `CreateSequence` / `CreateSequenceResponse` können Sie die zwei korrelierter umgekehrter Sequenzen einzurichten, und bietet ein, die für alle nachrichtenendpunkte geeignet ist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-136">The WS-Reliable Messaging `Offer` mechanism on `CreateSequence`/`CreateSequenceResponse` lets you establish two correlated converse sequences, and provides a session protocol that is suitable for all message endpoints.</span></span> <span data-ttu-id="cfa17-137">Da WCF eine Sicherheitsgarantie für solcher Sitzungen sowie End-to-End-Schutz bietet, ist es ratsam, um sicherzustellen, dass Nachrichten, die den gleichen Teilnehmer sollen auf dem gleichen Ziel eintreffen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-137">Because WCF provides a security guarantee for such a session including end-to-end protection for session integrity, it is practical to ensure messages intended to the same party are arriving at the same destination.</span></span> <span data-ttu-id="cfa17-138">Dies lässt auch Piggyback-Übertragung von Sequenzbestätigungen auf Anwendungsnachrichten zu.</span><span class="sxs-lookup"><span data-stu-id="cfa17-138">This also allows piggy-backing of sequence acknowledgements on application messages.</span></span> <span data-ttu-id="cfa17-139">Daher gelten die Einschränkungen R1104, R1105 und R1108 für WCF.</span><span class="sxs-lookup"><span data-stu-id="cfa17-139">Therefore, constraints R1104, R1105, and R1108 apply to WCF.</span></span>
+
+<span data-ttu-id="cfa17-140">Ein Beispiel für eine `CreateSequence`-Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-140">An example of a `CreateSequence` message.</span></span>
+
+```xml
+<s:Envelope>
+  <s:Header>
+    <a:Action s:mustUnderstand="1">
+      http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequence
+    </a:Action>
+    <a:ReplyTo>
+      <a:Address>
+         http://Business456.com/clientA
+      </a:Address>
+    </a:ReplyTo>
+    <a:MessageID>
+      urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36
+    </a:MessageID>
+    <a:To s:mustUnderstand="1">
+      http://Business456.com/clientA
+    </a:To>
+  </s:Header>
+  <s:Body>
+    <wsrm:CreateSequence>
+      <wsrm:AcksTo>
+       <wsa:Address>
+         http://Business456.com/clientA
+       </wsa:Address>
+     </wsrm:AcksTo>
+     <wsrm:Offer>
+      <wsrm:Identifier>
+        urn:uuid:0afb8d36-bf26-4776-b8cf-8c91fddb5496
+      </wsrm:Identifier>
+     </wsrm:Offer>
+   </wsrm:CreateSequence>
+  </s:Body>
+</s:Envelope>
+```
+
+ <span data-ttu-id="cfa17-141">Ein Beispiel für eine `CreateSequenceResponse`-Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-141">An example of a `CreateSequenceResponse` message.</span></span>
+
+```xml
+<s:Envelope>
+  <s:Header>
+    <a:Action s:mustUnderstand="1">
+      http://schemas.xmlsoap.org/ws/2005/02/rm/CreateSequenceResponse
+    </a:Action>
+    <a:RelatesTo>
+      urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36
+    </a:RelatesTo>
+    <a:To s:mustUnderstand="1">
+      http://Business456.com/clientA
+    </a:To>
+  </s:Header>
+  <s:Body>
+   <wsrm:CreateSequenceResponse>
+    <Identifier>
+     urn:uuid:eea0a36c-b38a-43e8-8c76-2fabe2d76386
+    </Identifier>
+    <Accept>
+    <AcksTo>
+      <a:Address>
+        http://BusinessABC.com/serviceA
+      </a:Address>
+    </AcksTo>
+    </Accept>
+   </wsrm:CreateSequenceResponse>
+  </s:Body>
+</s:Envelope>
+```
+
+### <a name="sequence"></a><span data-ttu-id="cfa17-142">Sequenz</span><span class="sxs-lookup"><span data-stu-id="cfa17-142">Sequence</span></span>
+
+<span data-ttu-id="cfa17-143">Die folgende Liste enthält die Einschränkungen, die für Sequenzen gelten:</span><span class="sxs-lookup"><span data-stu-id="cfa17-143">The following is a list of constraints that apply to sequences:</span></span>
+
+- <span data-ttu-id="cfa17-144">B1201:WCF generiert und Zugriffe Sequenznummern nicht höher als `xs:long`des inklusive Maximalwert 9223372036854775807.</span><span class="sxs-lookup"><span data-stu-id="cfa17-144">B1201:WCF generates and accesses sequence numbers no higher than `xs:long`’s maximum inclusive value, 9223372036854775807.</span></span>
+
+- <span data-ttu-id="cfa17-145">B1202:WCF generiert immer eine leere letzte Nachricht mit der Aktions-URI des `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-145">B1202:WCF always generates an empty-bodied last message with the action URI of `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span></span>
+
+- <span data-ttu-id="cfa17-146">B1203: WCF empfängt und sendet eine Nachricht mit einem sequenzheader, der enthält eine `LastMessage` Element, sofern der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-146">B1203: WCF receives and delivers a message with a Sequence header that contains a `LastMessage` element as long as the action URI is not `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`.</span></span>
+
+<span data-ttu-id="cfa17-147">Ein Beispiel für einen Sequenzheader.</span><span class="sxs-lookup"><span data-stu-id="cfa17-147">An example of a Sequence Header.</span></span>
+
+```xml
+<wsrm:Sequence>
+  <wsrm:Identifier>
+    urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36
+  </wsrm:Identifier>
+  <wsrm:MessageNumber>
+    10
+  </wsrm:MessageNumber>
+  <wsrm:LastMessage/>
+ </wsrm:Sequence>
+```
+
+### <a name="ackrequested-header"></a><span data-ttu-id="cfa17-148">AckRequested-Header</span><span class="sxs-lookup"><span data-stu-id="cfa17-148">AckRequested Header</span></span>
+
+<span data-ttu-id="cfa17-149">WCF verwendet `AckRequested` -Header als Keep-alive-Mechanismus.</span><span class="sxs-lookup"><span data-stu-id="cfa17-149">WCF uses `AckRequested` Header as a keep-alive mechanism.</span></span> <span data-ttu-id="cfa17-150">WCF generiert nicht das optionale `MessageNumber` Element.</span><span class="sxs-lookup"><span data-stu-id="cfa17-150">WCF does not generate the optional `MessageNumber` element.</span></span> <span data-ttu-id="cfa17-151">Nach Erhalt einer Nachricht mit einer `AckRequested` Header, enthält die `MessageNumber` -Element WCF ignoriert den `MessageNumber` der Wert des Elements, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-151">Upon receiving a message with an `AckRequested` header that contains the `MessageNumber` element, WCF ignores the `MessageNumber` element’s value, as shown in the following example.</span></span>
+
+```xml
+<wsrm:AckRequested>
+  <wsrm:Identifier>
+    urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36
+  </wsrm:Identifier>
+</wsrm:AckRequested>
+```
+
+### <a name="sequenceacknowledgement-header"></a><span data-ttu-id="cfa17-152">SequenceAcknowledgement-Header</span><span class="sxs-lookup"><span data-stu-id="cfa17-152">SequenceAcknowledgement Header</span></span>
+
+<span data-ttu-id="cfa17-153">WCF verwendet den Piggyback-Mechanismus für die im zuverlässigen WS-Messaging bereitgestellten sequenzbestätigungen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-153">WCF uses piggy-back mechanism for sequence acknowledgements provided in WS-Reliable Messaging.</span></span>
+
+- <span data-ttu-id="cfa17-154">R1401: Wenn zwei umgekehrte Sequenzen eingerichtet werden, mithilfe der `Offer` Mechanismus, der `SequenceAcknowledgement` Header kann in jede Anwendungsnachricht mit dem beabsichtigten Empfänger enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="cfa17-154">R1401: When two converse sequences are established using the `Offer` mechanism, the `SequenceAcknowledgement` header may be included in any application message transmitted to the intended recipient.</span></span>
+
+- <span data-ttu-id="cfa17-155">B1402: Wenn WCF eine Bestätigung empfangen von sequenznachrichten generieren muss (beispielsweise erfüllt ein `AckRequested` Nachricht), WCF generiert eine `SequenceAcknowledgement` Header, der den Bereich 0-0, enthält, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-155">B1402: When WCF must generate an acknowledgement prior to receiving any sequence messages (for example, to satisfy an `AckRequested` message), WCF generates a `SequenceAcknowledgement` header that contains the range 0-0, as shown in the following example.</span></span>
+
+  ```xml
+  <wsrm:SequenceAcknowledgement>
+    <wsrm:Identifier>
+      urn:uuid:addabbbf-60cb-44d3-8c5b-9e0841629a36
+    </wsrm:Identifier>
+    <wsrm:AcknowledgementRange Upper="0" Lower="0"/>
+  </wsrm:SequenceAcknowledgement>
+  ```
+
+- <span data-ttu-id="cfa17-156">B1403: WCF generiert keine `SequenceAcknowledgement` -Header mit einem `Nack` unterstützt jedoch Element `Nack` Elemente.</span><span class="sxs-lookup"><span data-stu-id="cfa17-156">B1403: WCF does not generate `SequenceAcknowledgement` headers that contain a `Nack` element but supports `Nack` elements.</span></span>
+
+### <a name="ws-reliablemessaging-faults"></a><span data-ttu-id="cfa17-157">WS-ReliableMessaging-Fehler</span><span class="sxs-lookup"><span data-stu-id="cfa17-157">WS-ReliableMessaging Faults</span></span>
+
+<span data-ttu-id="cfa17-158">Im folgenden finden eine Liste der Einschränkungen, die für die WCF-Implementierung des WS-ReliableMessaging-Fehler gelten:</span><span class="sxs-lookup"><span data-stu-id="cfa17-158">The following is a list of constraints that apply to the WCF implementation of WS-Reliable Messaging faults:</span></span>
+
+- <span data-ttu-id="cfa17-159">B1501: WCF generiert keine `MessageNumberRollover` Fehler.</span><span class="sxs-lookup"><span data-stu-id="cfa17-159">B1501: WCF does not generate `MessageNumberRollover` faults.</span></span>
+
+- <span data-ttu-id="cfa17-160">B1502:WCF-Endpunkt generiert möglicherweise `CreateSequenceRefused` wie in der Spezifikation beschrieben.</span><span class="sxs-lookup"><span data-stu-id="cfa17-160">B1502:WCF endpoint may generate `CreateSequenceRefused` faults as described in the specification.</span></span>
+
+- <span data-ttu-id="cfa17-161">B1503:when der Dienstendpunkt seine Verbindungsgrenze erreicht und keine weiteren Verbindungen verarbeiten, WCF generiert einen zusätzlichen `CreateSequenceRefused` -Fehlersubcode `netrm:ConnectionLimitReached`, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-161">B1503:When the service endpoint reaches its connection limit and cannot process new connections, WCF generates an additional `CreateSequenceRefused` fault subcode, `netrm:ConnectionLimitReached`, as shown in the following example.</span></span>
+
+  ```xml
+  <s:Envelope>
+    <s:Header>
+      <wsa:Action>
+        http://schemas.xmlsoap.org/ws/2005/08/addressing/fault
+      </wsa:Action>
+    </s:Header>
+    <s:Body>
+      <s:Fault>
+        <s:Code>
+          <s:Value>
+            s:Receiver
+          </s:Value>
+          <s:Subcode>
+            <s:Value>
+              wsrm:CreateSequenceRefused
+            </s:Value>
+            <s:Subcode>
+              <s:Value>
+                netrm:ConnectionLimitReached
+              </s:Value>
+            </s:Subcode>
+          </s:Subcode>
+        </s:Code>
+        <s:Reason>
+          <s:Text xml:lang="en">
+            [Reason]
+          </s:Text>
+        </s:Reason>
+      </s:Fault>
+    </s:Body>
+  </s:Envelope>
+  ```
+
+### <a name="ws-addressing-faults"></a><span data-ttu-id="cfa17-162">WS-Adressierungsfehler</span><span class="sxs-lookup"><span data-stu-id="cfa17-162">WS-Addressing Faults</span></span>
+
+<span data-ttu-id="cfa17-163">Da zuverlässiges WS-Messaging WS-Adressierung verwendet, kann WCF WS-Reliable-Messaging-Implementierung mit WS-Adressierungsfehler generieren.</span><span class="sxs-lookup"><span data-stu-id="cfa17-163">Because WS-Reliable Messaging uses WS-Addressing, WCF WS-Reliable Messaging implementation may generate WS-Addressing faults.</span></span> <span data-ttu-id="cfa17-164">Dieser Abschnitt behandelt die WS-Adressierungsfehler, die von WCF explizit auf der WS-Reliable Messaging-Schicht generiert:</span><span class="sxs-lookup"><span data-stu-id="cfa17-164">This section covers the WS-Addressing faults that WCF explicitly generates at the WS-Reliable Messaging layer:</span></span>
+
+- <span data-ttu-id="cfa17-165">B1601:WCF generiert den Fehler, die Nachrichtenadressierungs-Header erforderlich, wenn eine der folgenden Bedingungen zutrifft:</span><span class="sxs-lookup"><span data-stu-id="cfa17-165">B1601:WCF generates the fault Message Addressing Header Required when one of the following is true:</span></span>
+
+  - <span data-ttu-id="cfa17-166">Eine Nachricht hat keinen `Sequence`-Header und keinen `Action`-Header.</span><span class="sxs-lookup"><span data-stu-id="cfa17-166">A message is missing a `Sequence` header and an `Action` header.</span></span>
+
+  - <span data-ttu-id="cfa17-167">Eine `CreateSequence`-Nachricht hat keinen `MessageId`-Header.</span><span class="sxs-lookup"><span data-stu-id="cfa17-167">A `CreateSequence` message is missing a `MessageId` header.</span></span>
+
+  - <span data-ttu-id="cfa17-168">Eine `CreateSequence`-Nachricht hat keinen `ReplyTo`-Header.</span><span class="sxs-lookup"><span data-stu-id="cfa17-168">A `CreateSequence` message is missing a `ReplyTo` header.</span></span>
+
+- <span data-ttu-id="cfa17-169">B1602:WCF generiert den Fehler, die Aktion nicht unterstützt, als Antwort auf eine Nachricht, die nicht vorhanden ist eine `Sequence` Header und verfügt über eine `Action` Header, der nicht erkannten in der WS-ReliableMessaging-Spezifikation ist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-169">B1602:WCF generates the fault Action Not Supported in reply to a message that is missing a `Sequence` header and has an `Action` header that is not a recognized in the WS-Reliable Messaging specification.</span></span>
+
+- <span data-ttu-id="cfa17-170">B1603:WCF generiert den Fehler, der Endpunkt nicht verfügbar, um anzugeben, dass der Endpunkt die Sequenz basierend auf einer Untersuchung der keine verarbeitet die `CreateSequence` Nachricht Adressheader.</span><span class="sxs-lookup"><span data-stu-id="cfa17-170">B1603:WCF generates the fault Endpoint Unavailable to indicate that the endpoint does not process the sequence based upon examination of the `CreateSequence` message’s addressing headers.</span></span>
+
+## <a name="protocol-composition"></a><span data-ttu-id="cfa17-171">Protokollkomposition</span><span class="sxs-lookup"><span data-stu-id="cfa17-171">Protocol Composition</span></span>
+
+### <a name="composition-with-ws-addressing"></a><span data-ttu-id="cfa17-172">Komposition mit WS-Adressierung</span><span class="sxs-lookup"><span data-stu-id="cfa17-172">Composition with WS-Addressing</span></span>
+
+<span data-ttu-id="cfa17-173">WCF unterstützt zwei Versionen der WS-Adressierung: WS-Adressierung 2004/08 [WS-ADDR] und W3C WS-Adressierung 1.0 Empfehlungen [WS-ADDR-CORE] und [WS-ADDR-SOAP].</span><span class="sxs-lookup"><span data-stu-id="cfa17-173">WCF supports two versions of WS-Addressing: WS-Addressing 2004/08 [WS-ADDR] and W3C WS-Addressing 1.0 Recommendations [WS-ADDR-CORE] and [WS-ADDR-SOAP].</span></span>
+
+<span data-ttu-id="cfa17-174">Zwar erwähnt die WS-ReliableMessaging-Spezifikation nur die WS-Adressierung&#160;2004/08, schränkt jedoch die verwendete Version der WS-Adressierung nicht ein.</span><span class="sxs-lookup"><span data-stu-id="cfa17-174">While the WS-Reliable Messaging specification mentions only WS-Addressing 2004/08, it does not restrict the WS-Addressing version to be used.</span></span> <span data-ttu-id="cfa17-175">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="cfa17-175">The following is a list of constraints that apply to WCF:</span></span>
+
+- <span data-ttu-id="cfa17-176">R2101: sowohl WS-Adressierung 2004/08 und WS-Adressierung 1.0 können mit zuverlässigem WS-Messaging verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-176">R2101:Both WS-Addressing 2004/08 and WS-Addressing 1.0 can be used with WS-Reliable Messaging.</span></span>
+
+- <span data-ttu-id="cfa17-177">Einzelne R2102:A-Version der WS-Adressierung muss verwendet werden, während des gesamten eine gegebene WS-ReliableMessaging-Sequenz oder ein Paar umgekehrter Sequenzen korreliert mit der `wsrm:Offer` Mechanismus.</span><span class="sxs-lookup"><span data-stu-id="cfa17-177">R2102:A single version of WS-Addressing must be used throughout a given WS-Reliable Messaging sequence or a pair of converse sequences correlated by using the `wsrm:Offer` mechanism.</span></span>
+
+### <a name="composition-with-soap"></a><span data-ttu-id="cfa17-178">Komposition mit SOAP</span><span class="sxs-lookup"><span data-stu-id="cfa17-178">Composition with SOAP</span></span>
+
+<span data-ttu-id="cfa17-179">WCF unterstützt die Verwendung von SOAP 1.1 und SOAP 1.2 mit zuverlässigem WS-Messaging.</span><span class="sxs-lookup"><span data-stu-id="cfa17-179">WCF supports use of both SOAP 1.1 and SOAP 1.2 with WS-Reliable Messaging.</span></span>
+
+### <a name="composition-with-ws-security-and-ws-secureconversation"></a><span data-ttu-id="cfa17-180">Komposition mit WS-Sicherheit und WS-SecureConversation</span><span class="sxs-lookup"><span data-stu-id="cfa17-180">Composition with WS-Security and WS-SecureConversation</span></span>
+
+<span data-ttu-id="cfa17-181">WCF bietet Schutz für die WS-ReliableMessaging-Sequenzen unter Verwendung von sicheren Transportmethode (HTTPS), Komposition mit WS-Security und Komposition mit WS-Secure Conversation.</span><span class="sxs-lookup"><span data-stu-id="cfa17-181">WCF provides protection for WS-Reliable Messaging sequences by using secure Transport (HTTPS), composition with WS-Security, and composition with WS-Secure Conversation.</span></span> <span data-ttu-id="cfa17-182">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="cfa17-182">The following is a list of constraints that apply to WCF:</span></span>
+
+- <span data-ttu-id="cfa17-183">R2301: um die Integrität einer WS-ReliableMessaging-Sequenz sowie die Integrität und Vertraulichkeit einzelner Nachrichten zu schützen, WCF erfordert, dass WS-Secure Conversation verwendet werden muss.</span><span class="sxs-lookup"><span data-stu-id="cfa17-183">R2301:To protect the integrity of a WS-Reliable Messaging sequence in addition to the integrity and confidentiality of individual messages, WCF requires that WS-Secure Conversation must be used.</span></span>
+
+- <span data-ttu-id="cfa17-184">R2302:AWS-Secure Conversation-Sitzung muss vor der Erstellung von WS-ReliableMessaging-Sequenzen eingerichtet werden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-184">R2302:AWS-Secure Conversation session must be established prior to establishing WS-Reliable Messaging sequence(s).</span></span>
+
+- <span data-ttu-id="cfa17-185">R2303: Wenn die WS-Reliable Messaging-Sequenz-Lebensdauer der WS-Secure Conversation Sitzung überschreitet die `SecurityContextToken` hergestellt, indem Sie mithilfe von WS-Secure Conversation muss mithilfe der entsprechenden WS-Secure Conversation Renewal-Bindung erneuert werden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-185">R2303: If the WS-Reliable Messaging sequence lifetime exceeds the WS-Secure Conversation session’s lifetime, the `SecurityContextToken` established by using WS-Secure Conversation must be renewed by using the corresponding WS-Secure Conversation Renewal binding.</span></span>
+
+- <span data-ttu-id="cfa17-186">B2304:WS-Reliable Messaging-Sequenz bzw. das Paar korrelierter umgekehrter Sequenzen ist immer an eine einzelne WS-SecureConversation-Sitzung gebunden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-186">B2304:WS-Reliable Messaging sequence or a pair of correlated converse sequences are always bound to a single WS-SecureConversation session.</span></span>
+
+  <span data-ttu-id="cfa17-187">Die WCF-Quelle generiert die `wsse:SecurityTokenReference` Element im Abschnitt elementerweiterbarkeit der der `CreateSequence` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-187">The WCF source generates the `wsse:SecurityTokenReference` element in the element extensibility section of the `CreateSequence` message.</span></span>
+
+- <span data-ttu-id="cfa17-188">R2305:when mit WS-Secure Conversation verfasst eine `CreateSequence` Nachricht darf die `wsse:SecurityTokenReference` Element.</span><span class="sxs-lookup"><span data-stu-id="cfa17-188">R2305:When composed with WS-Secure Conversation, a `CreateSequence` message must contain the `wsse:SecurityTokenReference` element.</span></span>
+
+## <a name="ws-reliable-messaging-ws-policy-assertion"></a><span data-ttu-id="cfa17-189">Zuverlässige WS-Messaging WS-Richtlinienassertion</span><span class="sxs-lookup"><span data-stu-id="cfa17-189">WS-Reliable Messaging WS-Policy Assertion</span></span>
+
+<span data-ttu-id="cfa17-190">WCF verwendet die WS-Reliable-Messaging WS-Richtlinienassertion `wsrm:RMAssertion` Fähigkeiten von Endpunkten zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="cfa17-190">WCF uses WS-Reliable Messaging WS-Policy Assertion `wsrm:RMAssertion` to describe endpoints capabilities.</span></span> <span data-ttu-id="cfa17-191">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="cfa17-191">The following is a list of constraints that apply to WCF:</span></span>
+
+- <span data-ttu-id="cfa17-192">B3001: Fügt WCF `wsrm:RMAssertion` WS-Richtlinienassertion `wsdl:binding` Elemente.</span><span class="sxs-lookup"><span data-stu-id="cfa17-192">B3001: WCF attaches `wsrm:RMAssertion` WS-Policy Assertion to `wsdl:binding` elements.</span></span> <span data-ttu-id="cfa17-193">WCF unterstützt sowohl Anlagen in `wsdl:binding` und `wsdl:port` Elemente.</span><span class="sxs-lookup"><span data-stu-id="cfa17-193">WCF supports both attachments to `wsdl:binding` and `wsdl:port` elements.</span></span>
+
+- <span data-ttu-id="cfa17-194">B3002: WCF unterstützt die folgenden optionalen Eigenschaften der WS-ReliableMessaging-Assertion und unter der Kontrolle bietet, auf die WCF`ReliableMessagingBindingElement`:</span><span class="sxs-lookup"><span data-stu-id="cfa17-194">B3002: WCF supports the following optional properties of WS-Reliable Messaging assertion and provides control over them on the WCF`ReliableMessagingBindingElement`:</span></span>
+
+  - `wsrm:InactivityTimeout`
+
+  - `wsrm:AcknowledgementInterval`
+
+  <span data-ttu-id="cfa17-195">Nachfolgend finden Sie ein Beispiel:</span><span class="sxs-lookup"><span data-stu-id="cfa17-195">The following is an example.</span></span>
+
+  ```xml
+  <wsrm:RMAssertion>
+    <wsrm:InactivityTimeout Milliseconds="600000" />
+    <wsrm:AcknowledgementInterval Milliseconds="200" />
+  </wsrm:RMAssertion>
+  ```
+
+## <a name="flow-control-ws-reliable-messaging-extension"></a><span data-ttu-id="cfa17-196">Zuverlässige WS-Messaging-Erweiterung zur Ablaufsteuerung</span><span class="sxs-lookup"><span data-stu-id="cfa17-196">Flow Control WS-Reliable Messaging Extension</span></span>
+
+<span data-ttu-id="cfa17-197">WCF verwendet die WS-ReliableMessaging-Erweiterbarkeit optionales Steuerung des sequenznachrichtenflusses Nachrichtenfluss Sequenz bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-197">WCF uses WS-Reliable Messaging extensibility to provide optional additional tighter control over sequence message flow.</span></span>
+
+<span data-ttu-id="cfa17-198">Flusssteuerung aktiviert ist, durch Festlegen der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> Eigenschaft `true`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-198">Flow control is enabled by setting the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="cfa17-199">Im folgenden finden eine Liste der Einschränkungen, die für WCF gelten:</span><span class="sxs-lookup"><span data-stu-id="cfa17-199">The following is a list of constraints that apply to WCF:</span></span>
+
+- <span data-ttu-id="cfa17-200">B4001: WCF wird generiert, wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, eine `netrm:BufferRemaining` Element in der elementerweiterbarkeit des der `SequenceAcknowledgement` Header.</span><span class="sxs-lookup"><span data-stu-id="cfa17-200">B4001: When Reliable Messaging Flow Control is enabled, WCF generates a `netrm:BufferRemaining` element in the element extensibility of the `SequenceAcknowledgement` header.</span></span>
+
+- <span data-ttu-id="cfa17-201">B4002: Wenn die zuverlässige Messaging-Ablaufsteuerung aktiviert ist, WCF erfordert keine `netrm:BufferRemaining` Element vorhanden sein `SequenceAcknowledgement` -Header, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-201">B4002: When Reliable Messaging Flow Control is enabled, WCF does not require a `netrm:BufferRemaining` element to be present in `SequenceAcknowledgement` header, as shown in the following example.</span></span>
+
+  ```xml
+  <wsrm:SequenceAcknowledgement>
+    <wsrm:Identifier>
+      http://fabrikam123.com/abc
+    </wsrm:Identifier>
+    <wsrm:AcknowledgementRange Upper="1" Lower="1"/>
+    <netrm:BufferRemaining>
+      8
+    </netrm:BufferRemaining>
+  </wsrm:SequenceAcknowledgement>
+  ```
+
+- <span data-ttu-id="cfa17-202">B4003: WCF verwendet `netrm:BufferRemaining` um anzugeben, wie viele der neue Nachrichten das zuverlässige Messaging-Ziel Puffern kann.</span><span class="sxs-lookup"><span data-stu-id="cfa17-202">B4003: WCF uses `netrm:BufferRemaining` to indicate how many new messages the Reliable Messaging Destination can buffer.</span></span>
+
+- <span data-ttu-id="cfa17-203">B4004: WCF Reliable Messaging-Dienst drosselt die Anzahl der Nachrichten, die übertragen werden, wenn die zuverlässige Messaging-Zielanwendung schnell keine Nachrichten empfangen kann.</span><span class="sxs-lookup"><span data-stu-id="cfa17-203">B4004:The WCF Reliable Messaging Service throttles the number of messages transmitted when the Reliable Messaging destination application cannot receive messages quickly.</span></span> <span data-ttu-id="cfa17-204">Das zuverlässige Messaging-Ziel puffert Nachrichten, und der Wert des Elements sinkt auf&#160;0.</span><span class="sxs-lookup"><span data-stu-id="cfa17-204">The Reliable Messaging destination buffers messages and the element’s value drops to 0.</span></span>
+
+- <span data-ttu-id="cfa17-205">B4005: WCF generiert `netrm:BufferRemaining` ganzzahlige Werte zwischen 0 und 4096 einschließlich und liest Ganzzahlwerte zwischen 0 und `xs:int`des `maxInclusive` Wert (214748364) einschließlich.</span><span class="sxs-lookup"><span data-stu-id="cfa17-205">B4005: WCF generates `netrm:BufferRemaining` integer values between 0 and 4096 inclusive, and reads integer values between 0 and `xs:int`’s `maxInclusive` value 214748364 inclusive.</span></span>
+
+## <a name="message-exchange-patterns"></a><span data-ttu-id="cfa17-206">Nachrichtenaustauschmuster</span><span class="sxs-lookup"><span data-stu-id="cfa17-206">Message Exchange Patterns</span></span>
+
+<span data-ttu-id="cfa17-207">Dieser Abschnitt beschreibt WCFs-Verhalten, wenn WS-Reliable Messaging für verschiedene Nachrichtenaustauschmuster verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="cfa17-207">This section describes WCF's behavior when WS-Reliable Messaging is used for different Message Exchange Patterns.</span></span> <span data-ttu-id="cfa17-208">Für jedes Nachrichtenaustauschmuster werden die folgenden zwei Bereitstellungsszenarios erläutert:</span><span class="sxs-lookup"><span data-stu-id="cfa17-208">For each Message Exchange Pattern the following two deployments scenarios are considered:</span></span>
+
+- <span data-ttu-id="cfa17-209">Nicht Adressierbarer Initiator: Initiator befindet sich hinter der Firewall; Beantworter kann Nachrichten an den Initiator nur über HTTP-Antworten zustellen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-209">Non-Addressable Initiator: Initiator is behind firewall; Responder can deliver messages to Initiator only on HTTP responses.</span></span>
+
+- <span data-ttu-id="cfa17-210">Adressierbarer Initiator: Initiator und Beantworter können HTTP-Anforderungen gesendet werden. Anders gesagt können zwei entgegengesetzte HTTP-Verbindungen hergestellt werden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-210">Addressable Initiator: Initiator and Responder both can be sent HTTP requests; in other words, two converse HTTP connections can be established.</span></span>
+
+### <a name="one-way-non-addressable-initiator"></a><span data-ttu-id="cfa17-211">Unidirektionaler, nicht adressierbarer Initiator</span><span class="sxs-lookup"><span data-stu-id="cfa17-211">One-way, Non-addressable Initiator</span></span>
+
+#### <a name="binding"></a><span data-ttu-id="cfa17-212">Bindung</span><span class="sxs-lookup"><span data-stu-id="cfa17-212">Binding</span></span>
+
+<span data-ttu-id="cfa17-213">WCF bietet ein unidirektionales Nachrichtenaustauschmuster unter Verwendung einer Sequenz über einen HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="cfa17-213">WCF provides a one-way message exchange pattern using one sequence over one HTTP channel.</span></span> <span data-ttu-id="cfa17-214">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten vom RMS zum RMD und die HTTP-Antwort zur Übertragung aller Nachrichten vom RMD zum RMS.</span><span class="sxs-lookup"><span data-stu-id="cfa17-214">WCF uses the HTTP requests to transmit all messages from the RMS to the RMD and the HTTP response to transmit all messages from the RMD to the RMS.</span></span>
+
+#### <a name="createsequence-exchange"></a><span data-ttu-id="cfa17-215">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-215">CreateSequence Exchange</span></span>
+
+<span data-ttu-id="cfa17-216">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht ohne Angebot.</span><span class="sxs-lookup"><span data-stu-id="cfa17-216">The WCF Initiator generates a `CreateSequence` message with no offer.</span></span> <span data-ttu-id="cfa17-217">Der WCF-Beantworter stellt sicher die `CreateSequence` kein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-217">The WCF Responder ensures the `CreateSequence` has no offer before creating a sequence.</span></span> <span data-ttu-id="cfa17-218">Der WCF-Beantworter reagiert auf die `CreateSequence` Anforderungen, bei denen eine `CreateSequenceResponse` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-218">The WCF Responder replies to the `CreateSequence` request with a `CreateSequenceResponse` message.</span></span>
+
+#### <a name="sequenceacknowledgement"></a><span data-ttu-id="cfa17-219">SequenceAcknowledgement</span><span class="sxs-lookup"><span data-stu-id="cfa17-219">SequenceAcknowledgement</span></span>
+
+<span data-ttu-id="cfa17-220">Der WCF-Initiator erstellt Bestätigungen als Antwort alle Nachrichten mit Ausnahme der `CreateSequence` -Nachrichten und Fehlernachrichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-220">The WCF Initiator processes acknowledgements on the reply of all messages except the `CreateSequence` message and fault messages.</span></span> <span data-ttu-id="cfa17-221">Der WCF-Beantworter generiert eine eigenständige Bestätigung in der Antwort auf Sequenzen und `AckRequested` Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-221">The WCF Responder always generates a stand-alone acknowledgement in the response to both sequence and `AckRequested` messages.</span></span>
+
+#### <a name="terminatesequence-message"></a><span data-ttu-id="cfa17-222">TerminateSequence-Nachricht</span><span class="sxs-lookup"><span data-stu-id="cfa17-222">TerminateSequence message</span></span>
+
+<span data-ttu-id="cfa17-223">WCF behandelt `TerminateSequence` als einen unidirektionalen Vorgang, was bedeutet der HTTP-Antwort hat, leerem Textbereich und dem HTTP 202-Statuscode.</span><span class="sxs-lookup"><span data-stu-id="cfa17-223">WCF treats `TerminateSequence` as a one-way operation, meaning the HTTP response has an empty body and HTTP 202 status code.</span></span>
+
+### <a name="one-way-addressable-initiator"></a><span data-ttu-id="cfa17-224">Unidirektionaler, adressierbarer Initiator</span><span class="sxs-lookup"><span data-stu-id="cfa17-224">One Way, Addressable Initiator</span></span>
+
+#### <a name="binding"></a><span data-ttu-id="cfa17-225">Bindung</span><span class="sxs-lookup"><span data-stu-id="cfa17-225">Binding</span></span>
+
+<span data-ttu-id="cfa17-226">WCF bietet ein unidirektionales Nachrichtenaustauschmuster, die mit einer einzigen Sequenz über einen eingehenden und einen ausgehenden Http-Kanal.</span><span class="sxs-lookup"><span data-stu-id="cfa17-226">WCF provides a one-way message exchange pattern using one sequence over an inbound and an outbound Http channel.</span></span> <span data-ttu-id="cfa17-227">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-227">WCF uses the HTTP requests to transmit all messages.</span></span> <span data-ttu-id="cfa17-228">Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.</span><span class="sxs-lookup"><span data-stu-id="cfa17-228">All HTTP responses have an empty body and HTTP 202 status code.</span></span>
+
+#### <a name="createsequence-exchange"></a><span data-ttu-id="cfa17-229">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-229">CreateSequence Exchange</span></span>
+
+<span data-ttu-id="cfa17-230">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht ohne Angebot.</span><span class="sxs-lookup"><span data-stu-id="cfa17-230">The WCF Initiator generates a `CreateSequence` message with no offer.</span></span> <span data-ttu-id="cfa17-231">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` kein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-231">The WCF Responder ensures that the `CreateSequence` has no offer before creating a sequence.</span></span> <span data-ttu-id="cfa17-232">Der WCF-Beantworter überträgt die `CreateSequenceResponse` Nachricht in einer HTTP-Anforderung adressiert wird, mit der `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="cfa17-232">The WCF Responder transmits the `CreateSequenceResponse` message on an HTTP request addressed with the `ReplyTo` endpoint reference.</span></span>
+
+### <a name="duplex-addressable-initiator"></a><span data-ttu-id="cfa17-233">Adressierbarer Duplex-Initiator</span><span class="sxs-lookup"><span data-stu-id="cfa17-233">Duplex, Addressable Initiator</span></span>
+
+#### <a name="binding"></a><span data-ttu-id="cfa17-234">Bindung</span><span class="sxs-lookup"><span data-stu-id="cfa17-234">Binding</span></span>
+
+<span data-ttu-id="cfa17-235">WCF bietet ein vollständig asynchrones bidirektionales Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="cfa17-235">WCF provides a fully asynchronous two-way message exchange pattern using two sequences over an inbound and an outbound HTTP channel.</span></span> <span data-ttu-id="cfa17-236">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-236">WCF uses the HTTP requests to transmit all messages.</span></span> <span data-ttu-id="cfa17-237">Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.</span><span class="sxs-lookup"><span data-stu-id="cfa17-237">All HTTP responses have an empty body and HTTP 202 status code.</span></span>
+
+#### <a name="createsequence-exchange"></a><span data-ttu-id="cfa17-238">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-238">CreateSequence Exchange</span></span>
+
+<span data-ttu-id="cfa17-239">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot.</span><span class="sxs-lookup"><span data-stu-id="cfa17-239">The WCF Initiator generates a `CreateSequence` message with an offer.</span></span> <span data-ttu-id="cfa17-240">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-240">The WCF Responder ensures that the `CreateSequence` has an offer before creating a sequence.</span></span> <span data-ttu-id="cfa17-241">WCF sendet die `CreateSequenceResponse` behoben die HTTP-Anforderung die `CreateSequence`des `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="cfa17-241">WCF sends the `CreateSequenceResponse` on the HTTP request addressed to the `CreateSequence`’s `ReplyTo` endpoint reference.</span></span>
+
+#### <a name="sequence-lifetime"></a><span data-ttu-id="cfa17-242">Sequenzlebensdauer</span><span class="sxs-lookup"><span data-stu-id="cfa17-242">Sequence Lifetime</span></span>
+
+<span data-ttu-id="cfa17-243">WCF behandelt die beiden Sequenzen als eine vollduplexsitzung.</span><span class="sxs-lookup"><span data-stu-id="cfa17-243">WCF treats the two sequences as one fully duplex session.</span></span>
+
+<span data-ttu-id="cfa17-244">Nach dem Generieren eines Fehlers, der eine Sequenz einen Fehler an, erwartet, dass WCF den Remoteendpunkt für beide Sequenzen auslöst.</span><span class="sxs-lookup"><span data-stu-id="cfa17-244">Upon generating a fault that faults one sequence, WCF expects the remote endpoint to fault both sequences.</span></span> <span data-ttu-id="cfa17-245">Nach dem Lesen eines Fehlers, der eine Sequenz einen Fehler, Fehler WCF für beide Sequenzen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-245">Upon reading a fault that faults one sequence, WCF faults both sequences.</span></span>
+
+<span data-ttu-id="cfa17-246">WCF kann seine ausgehende Sequenz schließen und zum Verarbeiten von Nachrichten in seiner eingehenden Sequenz fortsetzen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-246">WCF can close its outbound sequence and continue to process messages on its inbound sequence.</span></span> <span data-ttu-id="cfa17-247">Im Gegensatz dazu kann WCF das Schließen der eingehenden Sequenz und weiter Nachrichten in seiner ausgehenden Sequenz senden.</span><span class="sxs-lookup"><span data-stu-id="cfa17-247">Conversely, WCF can process the close of the inbound sequence and continue to send messages on its outbound sequence.</span></span>
+
+### <a name="request-reply-non-addressable-initiator"></a><span data-ttu-id="cfa17-248">Nicht adressierbarer Anforderung-Antwort-Initiator</span><span class="sxs-lookup"><span data-stu-id="cfa17-248">Request-Reply, Non-Addressable Initiator</span></span>
+
+#### <a name="binding"></a><span data-ttu-id="cfa17-249">Bindung</span><span class="sxs-lookup"><span data-stu-id="cfa17-249">Binding</span></span>
+
+<span data-ttu-id="cfa17-250">WCF stellt einen unidirektionalen und Anforderung-Antwort-Nachrichtenaustauschmuster unter Verwendung zweier Sequenzen über einen HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="cfa17-250">WCF provides a one-way and request-reply message exchange pattern using two sequences over one HTTP channel.</span></span> <span data-ttu-id="cfa17-251">WCF HTTP-Anforderungen verwendet, um die anforderungssequenznachrichten zu übertragen und die HTTP-Antworten verwendet, um die Antwortsequenznachrichten zu übertragen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-251">WCF uses the HTTP requests to transmit the request sequence’s messages and uses the HTTP responses to transmit the reply sequence’s messages.</span></span>
+
+#### <a name="createsequence-exchange"></a><span data-ttu-id="cfa17-252">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-252">CreateSequence Exchange</span></span>
+
+<span data-ttu-id="cfa17-253">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot.</span><span class="sxs-lookup"><span data-stu-id="cfa17-253">The WCF Initiator generates a `CreateSequence` message with an offer.</span></span> <span data-ttu-id="cfa17-254">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-254">The WCF Responder ensures that the `CreateSequence` has an offer before creating a sequence.</span></span> <span data-ttu-id="cfa17-255">Der WCF-Beantworter reagiert auf die `CreateSequence` Anforderungen, bei denen eine `CreateSequenceResponse` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-255">The WCF Responder replies to the `CreateSequence` request with a `CreateSequenceResponse` message.</span></span>
+
+#### <a name="one-way-message"></a><span data-ttu-id="cfa17-256">Unidirektionale Nachricht</span><span class="sxs-lookup"><span data-stu-id="cfa17-256">One-way Message</span></span>
+
+<span data-ttu-id="cfa17-257">Um ein unidirektionales Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine eigenständige `SequenceAcknowledgement` -Nachricht in der HTTP-Antwort.</span><span class="sxs-lookup"><span data-stu-id="cfa17-257">To complete a one-way message exchange protocol successfully, the WCF Initiator transmits a request sequence message on the HTTP request and receives a standalone `SequenceAcknowledgement` message on the HTTP response.</span></span> <span data-ttu-id="cfa17-258">Die `SequenceAcknowledgement`-Nachricht muss die Nachrichtenübertragung bestätigen.</span><span class="sxs-lookup"><span data-stu-id="cfa17-258">The `SequenceAcknowledgement` must acknowledge the message transmitted.</span></span>
+
+<span data-ttu-id="cfa17-259">Der WCF-Beantworter kann mit einer Bestätigung, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP 202-Statuscode auf die Anforderung antworten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-259">The WCF Responder can reply to the request with an acknowledgement, a fault, or a response with an empty body and HTTP 202 status code.</span></span>
+
+#### <a name="two-way-messages"></a><span data-ttu-id="cfa17-260">Bidirektionale Nachrichten</span><span class="sxs-lookup"><span data-stu-id="cfa17-260">Two Way Messages</span></span>
+
+<span data-ttu-id="cfa17-261">Um eine zwei-Wege-Nachrichtenaustauschprotokoll erfolgreich abgeschlossen haben, den WCF-Initiator eine anforderungssequenznachricht in der HTTP-Anforderung sendet und empfängt eine antwortsequenznachricht in der HTTP-Antwort.</span><span class="sxs-lookup"><span data-stu-id="cfa17-261">To complete a two way message exchange protocol successfully, the WCF Initiator transmits a request sequence message on the HTTP request and receives a reply sequence message on the HTTP response.</span></span> <span data-ttu-id="cfa17-262">Die Antwort muss eine `SequenceAcknowledgement` enthalten, die die Übertragung der Anforderungssequenznachricht bestätigt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-262">The response must carry a `SequenceAcknowledgement` acknowledging the request sequence message transmitted.</span></span>
+
+<span data-ttu-id="cfa17-263">Der WCF-Beantworter kann mit einer Anwendungsantwort, einem Fehler oder eine Antwort mit leerem Textbereich und dem HTTP 202-Statuscode auf die Anforderung antworten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-263">The WCF Responder can reply to the request with an application reply, a fault or a response with an empty body and HTTP 202 status code.</span></span>
+
+<span data-ttu-id="cfa17-264">Aufgrund des Vorhandenseins unidirektionaler Nachrichten und des zeitlichen Ablaufs von Anwendungsantworten verfügen die Sequenznummern der Anforderungssequenznachricht und der Antwortsequenznachricht über keine Korrelation.</span><span class="sxs-lookup"><span data-stu-id="cfa17-264">Because of the presence of one-way messages and the timing of application replies, the request sequence message’s sequence number and the response message’s sequence number have no correlation.</span></span>
+
+#### <a name="retrying-replies"></a><span data-ttu-id="cfa17-265">Wiederholen von Antworten</span><span class="sxs-lookup"><span data-stu-id="cfa17-265">Retrying Replies</span></span>
+
+<span data-ttu-id="cfa17-266">WCF basiert auf HTTP-Anforderung-Antwort-Korrelation für bidirektionale Nachrichtenaustauschprotokoll.</span><span class="sxs-lookup"><span data-stu-id="cfa17-266">WCF relies on HTTP request-reply correlation for two-way message exchange protocol correlation.</span></span> <span data-ttu-id="cfa17-267">Aus diesem Grund wird der WCF-Initiator nicht beendet eine anforderungssequenznachricht wiederholen, wenn die anforderungssequenznachricht bestätigt wird, sondern wenn die HTTP-Antwort eine Bestätigung, die Meldung für den Benutzer oder den Fehler enthält.</span><span class="sxs-lookup"><span data-stu-id="cfa17-267">Because of this, the WCF Initiator does not stop retrying a request sequence message when the request sequence message is acknowledged but rather when the HTTP response carries an acknowledgement, user message, or fault.</span></span> <span data-ttu-id="cfa17-268">Der WCF-Beantworter wiederholt die Antworten auf den HTTP-Anforderungsabschnitt der Anforderung mit der die Antwort korreliert ist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-268">The WCF Responder retries replies on the HTTP request leg of the request to which the reply is correlated.</span></span>
+
+#### <a name="lastmessage-exchange"></a><span data-ttu-id="cfa17-269">LastMessage-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-269">LastMessage Exchange</span></span>
+
+<span data-ttu-id="cfa17-270">Der WCF-Initiator generiert und überträgt eine letzte Nachricht ohne Text auf den HTTP-Anforderungsabschnitt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-270">The WCF Initiator generates and transmits an empty bodied last message on the HTTP request leg.</span></span> <span data-ttu-id="cfa17-271">WCF erfordert eine Antwort ignoriert jedoch diese Antwortnachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-271">WCF requires a response but ignores the actual response message.</span></span> <span data-ttu-id="cfa17-272">Der WCF-Beantworter reagiert auf die anforderungssequenz leere letzte Nachricht mit der Antwortsequenz leere letzte Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-272">The WCF Responder replies to the request sequence’s empty-bodied last message with the reply sequence’s empty-bodied last message.</span></span>
+
+<span data-ttu-id="cfa17-273">Wenn der WCF-Beantworter eine letzte Nachricht empfängt, in dem der Aktions-URI nicht ist `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`, WCF-Antworten mit einer letzten Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-273">If the WCF Responder receives a last message in which the action URI is not `http://schemas.xmlsoap.org/ws/2005/02/rm/LastMessage`, WCF replies with a last message.</span></span> <span data-ttu-id="cfa17-274">Im Fall eines bidirektionalen Nachrichtenaustauschprotokolls enthält die letzte Nachricht die Anwendungsnachricht, im Falle eines unidirektionalen Nachrichtenaustauschprotokolls ist die letzte Nachricht leer.</span><span class="sxs-lookup"><span data-stu-id="cfa17-274">In the case of a two-way message exchange protocol, the last message carries the application message; in the case of a one-way message exchange protocol, the last message is empty.</span></span>
+
+<span data-ttu-id="cfa17-275">Der WCF-Beantworter erfordert keine Bestätigung für die Antwortsequenz leere letzte Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-275">The WCF Responder does not require an acknowledgement for the reply sequence’s empty-bodied last message.</span></span>
+
+#### <a name="terminatesequence-exchange"></a><span data-ttu-id="cfa17-276">TerminateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-276">TerminateSequence Exchange</span></span>
+
+<span data-ttu-id="cfa17-277">Wenn alle Anforderungen eine gültige Antwort erhalten haben, wird der WCF-Initiator generiert und überträgt der anforderungssequenz `TerminateSequence` Nachricht auf den HTTP-Anforderungsabschnitt.</span><span class="sxs-lookup"><span data-stu-id="cfa17-277">When all requests have received a valid reply, the WCF Initiator generates and transmits the request sequence’s `TerminateSequence` message on the HTTP request leg.</span></span> <span data-ttu-id="cfa17-278">WCF erfordert eine Antwort ignoriert jedoch diese Antwortnachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-278">WCF requires a response but ignores the actual response message.</span></span> <span data-ttu-id="cfa17-279">Der WCF-Beantworter reagiert auf der anforderungssequenz `TerminateSequence` Nachricht mit der Antwortsequenz `TerminateSequence` Nachricht.</span><span class="sxs-lookup"><span data-stu-id="cfa17-279">The WCF Responder replies to the request sequence’s `TerminateSequence` message with the reply sequence’s `TerminateSequence` message.</span></span>
+
+<span data-ttu-id="cfa17-280">In einer normalen Abschlusssequenz enthalten beide `TerminateSequence`-Nachrichten einen vollständigen Bereich von `SequenceAcknowledgement`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-280">In a normal shutdown sequence, both `TerminateSequence` messages carry a full range `SequenceAcknowledgement`.</span></span>
+
+### <a name="requestreply-addressable-initiator"></a><span data-ttu-id="cfa17-281">Adressierbarer Anforderung/Antwort-Initiator</span><span class="sxs-lookup"><span data-stu-id="cfa17-281">Request/Reply, Addressable Initiator</span></span>
+
+#### <a name="binding"></a><span data-ttu-id="cfa17-282">Bindung</span><span class="sxs-lookup"><span data-stu-id="cfa17-282">Binding</span></span>
+
+<span data-ttu-id="cfa17-283">WCF bietet ein Anforderung-Antwort-Nachrichtenaustauschmuster, die Verwendung zweier Sequenzen über einen eingehenden und einen ausgehenden HTTP-Kanal.</span><span class="sxs-lookup"><span data-stu-id="cfa17-283">WCF provides a request-reply message exchange pattern using two sequences over an inbound and an outbound HTTP channel.</span></span> <span data-ttu-id="cfa17-284">WCF verwendet die HTTP-Anforderungen zur Übertragung aller Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="cfa17-284">WCF uses the HTTP requests to transmit all messages.</span></span> <span data-ttu-id="cfa17-285">Alle HTTP-Antworten haben einen leeren Textbereich und den HTTP-Statuscode&#160;202.</span><span class="sxs-lookup"><span data-stu-id="cfa17-285">All HTTP responses have an empty body and HTTP 202 status code.</span></span>
+
+#### <a name="createsequence-exchange"></a><span data-ttu-id="cfa17-286">CreateSequence-Austausch</span><span class="sxs-lookup"><span data-stu-id="cfa17-286">CreateSequence Exchange</span></span>
+
+<span data-ttu-id="cfa17-287">Der WCF--Initiator generiert eine `CreateSequence` -Nachricht mit einem Angebot.</span><span class="sxs-lookup"><span data-stu-id="cfa17-287">The WCF Initiator generates a `CreateSequence` message with an offer.</span></span> <span data-ttu-id="cfa17-288">Der WCF-Beantworter stellt sicher, dass die `CreateSequence` ein Angebot vor dem Erstellen einer Sequenz aufweist.</span><span class="sxs-lookup"><span data-stu-id="cfa17-288">The WCF Responder ensures that the `CreateSequence` has an offer before creating a sequence.</span></span> <span data-ttu-id="cfa17-289">WCF sendet die `CreateSequenceResponse` behoben die HTTP-Anforderung die `CreateSequence`des `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="cfa17-289">WCF sends the `CreateSequenceResponse` on the HTTP request addressed to the `CreateSequence`’s `ReplyTo` endpoint reference.</span></span>
+
+#### <a name="requestreply-correlation"></a><span data-ttu-id="cfa17-290">Anforderung/Antwort-Korrelation</span><span class="sxs-lookup"><span data-stu-id="cfa17-290">Request/Reply Correlation</span></span>
+
+<span data-ttu-id="cfa17-291">Der WCF-Initiator wird sichergestellt, alle anwendungsanforderungsnachrichten eine `MessageId` und `ReplyTo` Endpunktverweis.</span><span class="sxs-lookup"><span data-stu-id="cfa17-291">The WCF Initiator ensures all application request messages bear a `MessageId` and a `ReplyTo` endpoint reference.</span></span> <span data-ttu-id="cfa17-292">Der WCF--Initiator wendet den `CreateSequence` Nachricht `ReplyTo` Endpunktverweis für jede anwendungsanforderungsnachricht an.</span><span class="sxs-lookup"><span data-stu-id="cfa17-292">The WCF Initiator applies the `CreateSequence` message’s `ReplyTo` endpoint reference on each application request message.</span></span> <span data-ttu-id="cfa17-293">Der WCF-Beantworter erfordert, dass eingehende Anforderungsnachrichten beachten einer `MessageId` und `ReplyTo`.</span><span class="sxs-lookup"><span data-stu-id="cfa17-293">The WCF Responder requires that incoming request messages bear a `MessageId` and a `ReplyTo`.</span></span> <span data-ttu-id="cfa17-294">Der WCF-Beantworter stellt sicher, dass der Endpunktverweis-URIS der Endpunktverweise der `CreateSequence` und aller anwendungsanforderungsnachrichten identisch sind.</span><span class="sxs-lookup"><span data-stu-id="cfa17-294">The WCF Responder ensures that the endpoint reference’s URI of both the `CreateSequence` and all application request messages are identical.</span></span>
