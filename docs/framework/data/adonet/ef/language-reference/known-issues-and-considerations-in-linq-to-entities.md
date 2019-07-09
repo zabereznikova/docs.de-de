@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539824"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662147"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bekannte Probleme von und Überlegungen zu LINQ to Entities
 Dieser Abschnitt enthält Informationen zu bekannten Problemen mit LINQ to Entities-Abfragen.  
@@ -35,7 +35,7 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen mit LINQ to Entit
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Fehlende Sortierung  
- Beim Projizieren von Spalten in einen anonymen Typ geht die Sortierung in einigen Abfragen verloren, die für eine [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]-Datenbank mit dem Kompatibilitätsgrad "80" ausgeführt werden.  Dies kann vorkommen, wenn ein Spaltenname in der Sortierliste einem Spaltennamen im Selektor entspricht, wie im folgenden Beispiel dargestellt:  
+ Beim Projizieren von Spalten in einen anonymen Typ führt dazu, dass Informationen zur Reihenfolge der bei einigen Abfragen verloren, die für eine SQL Server 2005-Datenbank, legen Sie auf dem Kompatibilitätsgrad "80" ausgeführt werden.  Dies kann vorkommen, wenn ein Spaltenname in der Sortierliste einem Spaltennamen im Selektor entspricht, wie im folgenden Beispiel dargestellt:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  

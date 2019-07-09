@@ -2,12 +2,12 @@
 title: Bekannte Probleme in SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489536"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662261"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
@@ -21,7 +21,7 @@ In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framew
  Wenn ein Wert, der nicht `null` ist, als erstes Argument und 0 als zweites Argument an `RIGHT(nvarchar(max)`, 0`)` oder `RIGHT(varchar(max)`, 0`)` übergeben wird, wird der Wert `NULL` anstelle einer Zeichenfolge, die `empty` ist, zurückgegeben.  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS- und OUTER APPLY-Operatoren  
- CROSS- und OUTER APPLY-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen liefert die Abfragepipeline möglicherweise eine Transact-SQL-Anweisung, die CROSS APPLY- und/oder OUTER APPLY-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen älter als [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
+ Cross- und OUTER APPLY Operatoren wurden in SQL Server 2005 eingeführt. In einigen Fällen liefert die Abfragepipeline möglicherweise eine Transact-SQL-Anweisung, die CROSS APPLY- und/oder OUTER APPLY-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen vor SQL Server 2005, die diese Operatoren nicht unterstützen, können keine solche Abfragen auf diesen Back-End-Anbietern ausgeführt werden.  
   
  Dies sind einige typische Szenarios, die möglicherweise zum Auftreten von CROSS APPLY- und/oder OUTER APPLY-Operatoren in der Ausgabeabfrage führen:  
   
@@ -36,7 +36,7 @@ In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framew
 - Eine Abfrage, die über ein DEREF-Konstrukt über einem REF-Konstrukt verfügt.  
   
 ## <a name="skip-operator"></a>SKIP-Operator  
- Bei Verwendung von [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], Verwendung von SKIP mit ORDER BY auf Nichtschlüsselspalten möglicherweise falsche Ergebnisse zurück. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Der Grund dafür ist die Übersetzung von SKIP für [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Z. B. in der folgenden Abfrage ist mehr als fünf Zeilen übersprungen werden Wenn `E.NonKeyColumn` Werte doppelt enthält:  
+ Wenn Sie SQL Server 2000 verwenden, ist nach der Verwendung von SKIP mit ORDER BY auf Nichtschlüsselspalten möglicherweise falsche Ergebnisse zurück. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Dies liegt an der Übersetzung von SKIP für SQL Server 2000. Z. B. in der folgenden Abfrage ist mehr als fünf Zeilen übersprungen werden Wenn `E.NonKeyColumn` Werte doppelt enthält:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

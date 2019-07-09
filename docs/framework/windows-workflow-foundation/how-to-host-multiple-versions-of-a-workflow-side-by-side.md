@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85792aea8a72ffc0c9b579473332756c6ca3bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64756025"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663839"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Vorgehensweise: Paralleles Hosten mehrerer Workflowversionen
 
@@ -27,11 +27,11 @@ In diesem Schritt des Lernprogramms werden die `WriteLine`-Aktivitäten im Workf
 
 - [Aktualisieren von workflows](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-    - [StateMachine-Workflow aktualisieren](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [StateMachine-Workflow aktualisieren](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-    - [So aktualisieren Sie die Flussdiagramm-workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [So aktualisieren Sie die Flussdiagramm-workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-    - [Aktualisieren Sie den sequenziellen workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Aktualisieren Sie den sequenziellen workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
 - [So aktualisieren Sie WorkflowVersionMap, um die vorherigen workflowversionen einzuschließen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
@@ -68,7 +68,7 @@ In diesem Schritt des Lernprogramms werden die `WriteLine`-Aktivitäten im Workf
 
 ### <a name="BKMK_UpdateWorkflows"></a> Aktualisieren von workflows
 
- In diesem Abschnitt werden die Workflowdefinitionen aktualisiert. Die beiden `WriteLine`-Aktivitäten, die Feedback zum Schätzwert des Benutzers geben, werden aktualisiert, und es wird eine neue `WriteLine`-Aktivität hinzugefügt, die zusätzliche Informationen zum Spiel bereitstellt, nachdem die Zahl geschätzt wurde.
+In diesem Abschnitt werden die Workflowdefinitionen aktualisiert. Die beiden `WriteLine`-Aktivitäten, die Feedback zum Schätzwert des Benutzers geben, werden aktualisiert, und es wird eine neue `WriteLine`-Aktivität hinzugefügt, die zusätzliche Informationen zum Spiel bereitstellt, nachdem die Zahl geschätzt wurde.
 
 #### <a name="BKMK_UpdateStateMachine"></a> StateMachine-Workflow aktualisieren
 

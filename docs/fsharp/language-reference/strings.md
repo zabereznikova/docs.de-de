@@ -2,12 +2,12 @@
 title: Zeichenfolgen
 description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
 ms.date: 07/05/2019
-ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec895723cc6d21a701a27b5d70d053bb681ce2b3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610162"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660595"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
@@ -32,7 +32,7 @@ Trennzeichen für Zeichenfolgenliterale dient das Anführungszeichen ("). Der um
 |Umgekehrter Schrägstrich|`\\`|
 |Anführungszeichen|`\"`|
 |Apostrophe|`\'`|
-|Unicodezeichen|`\DDD` (, in denen `D` gibt einen Dezimalwert Ziffer; Wertebereich 000 - 255, z. B. `\231` = "Ç")|
+|Unicodezeichen|`\DDD` (, in denen `D` gibt die Dezimalzahl an Ziffern, Bereich von 000 - 255, z. B. `\231` = "Ç")|
 |Unicodezeichen|`\xHH` (wobei `H` gibt an, eine hexadezimale Ziffer, Bereich von 00: FF, z. B. `\xE7` = "Ç")|
 |Unicodezeichen|`\uHHHH` (UTF-16) (wobei `H` gibt an, eine hexadezimale Ziffer; Bereich 0000 - FFFF;  z. B. `\u00E7` = "Ç")|
 |Unicodezeichen|`\U00HHHHHH` (UTF-32) (wobei `H` gibt an, eine hexadezimale Ziffer; Bereich 000000 - 10FFFF;  z. B. `\U0001F47D` = "👽")|

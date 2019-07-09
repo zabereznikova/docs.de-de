@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052585"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661907"
 ---
 # <a name="local-type-inference-visual-basic"></a>Lokaler Typrückschluss (Visual Basic)
 Visual Basic-Compiler verwendet *Typrückschluss* um zu bestimmen, die die Datentypen für lokale Variablen deklariert, ohne eine `As` Klausel. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab. Dadurch können Sie Variablen zu deklarieren, ohne explizit einen Typ, wie im folgenden Beispiel gezeigt. Als Ergebnis die Deklarationen sowohl `num1` und `num2` sind stark typisiert, als ganze Zahlen.  
@@ -65,7 +65,7 @@ Visual Basic-Compiler verwendet *Typrückschluss* um zu bestimmen, die die Daten
   
  `Option Infer Off`  
   
- Wenn Sie einen Wert für nicht angeben `Option Infer` in Ihrem Code ist die Standardeinstellung des Compilers `Option Infer On`. Für Projekte von aktualisierten [!INCLUDE[vb_orcas_long](~/includes/vb-orcas-long-md.md)] oder früher, die Standardeinstellung des Compilers ist `Option Infer Off`.  
+ Wenn Sie einen Wert für nicht angeben `Option Infer` in Ihrem Code ist die Standardeinstellung des Compilers `Option Infer On`. 
   
  Wenn der in einer Datei für `Option Infer` festgelegte Wert mit dem in der IDE oder in der Befehlszeile festgelegten Wert im Konflikt steht, hat der Wert in der Datei Vorrang.  
   

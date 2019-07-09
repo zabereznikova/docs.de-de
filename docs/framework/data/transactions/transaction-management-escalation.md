@@ -2,12 +2,12 @@
 title: Eskalation der Transaktionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630567"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662460"
 ---
 # <a name="transaction-management-escalation"></a>Eskalation der Transaktionsverwaltung
 Windows umfasst eine Reihe von Diensten und Modulen, die zusammen einen Transaktions-Manager bilden. Unter der Eskalation der Transaktionsverwaltung wird die Übertragung einer Transaktion von einer Komponente zu einer anderen Komponente des Transaktions-Managers verstanden.  
@@ -25,7 +25,7 @@ Windows umfasst eine Reihe von Diensten und Modulen, die zusammen einen Transakt
   
 - Mindestens eine dauerhafte Ressource, die keine Einphasenbenachrichtigungen unterstützt, ist in der Transaktion eingetragen.  
   
-- Mindestens zwei permanente Ressourcen, die Einphasenbenachrichtigungen unterstützen, sind in der Transaktion eingetragen. Beispielsweise wird durch das Eintragen einer einzelnen Verbindung mit [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] die Transaktion nicht höher gestuft. Wenn jedoch eine zweite Verbindung mit einer [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)]-Datenbank hergestellt und die Datenbank daher eingetragen wird, erkennt die <xref:System.Transactions>-Infrastruktur, dass eine zweite dauerhafte Ressource in der Transaktion vorhanden ist und eskaliert diese zu einer MSDTC-Transaktion.  
+- Mindestens zwei permanente Ressourcen, die Einphasenbenachrichtigungen unterstützen, sind in der Transaktion eingetragen. Beispielsweise bewirkt das Eintragen einer einzelnen Verbindungs mit SQL Server 2005 eine Transaktion höher gestuft wird, nicht. Jedes Mal, wenn Sie jedoch eine zweite Verbindung mit einer SQL Server 2005-Datenbank, wodurch die Datenbank eingetragen wird, öffnen die <xref:System.Transactions> Infrastruktur erkennt, dass sie die zweite dauerhafte Ressource in der Transaktion, und diese zu einer MSDTC-Transaktion eskaliert.  
   
 - Daraufhin wird eine Anforderung erzeugt, um die Transaktion an eine andere Anwendungsdomäne oder einen anderen Prozess zu "marshallen". Zum Beispiel die Serialisierung des Transaktionsobjekts über eine Anwendungsdomänengrenze hinweg. Das Transaktionsobjekt wird als Wert gemarshallt, und dies bedeutet, dass das Transaktionsobjekt serialisiert wird, sobald es über eine Anwendungsdomänengrenze (auch im gleichen Prozess) hinweg übergeben werden soll. Sie können Transaktionsobjekte übergeben, indem Sie eine Remotemethode aufrufen, die ein <xref:System.Transactions.Transaction>-Objekt als Parameter übernimmt, oder Sie können versuchen, auf eine Remotekomponente zuzugreifen, die von einer Transaktion bedient wird. Dadurch wird das Transaktionsobjekt serialisiert und genauso eskaliert, wie in dem Fall, in dem die Transaktion über eine Anwendungsdomäne hinweg serialisiert wird. Es wird verteilt, und der lokale Transaktions-Manager ist nicht mehr geeignet.  
   

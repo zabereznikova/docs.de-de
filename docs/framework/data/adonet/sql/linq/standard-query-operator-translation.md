@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610554"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661873"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 
@@ -198,13 +198,13 @@ Weitere Informationen über das Mapping zu diesen Datums- und Uhrzeittypen von S
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000-Unterstützung
 
-Die folgenden [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] Einschränkungen (verglichen mit Microsoft SQL Server 2005) Auswirkungen auf [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen.
+Die folgenden SQL Server 2000-Einschränkungen (verglichen mit Microsoft SQL Server 2005) Auswirkungen auf [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply-Operator und Outer Apply-Operator
 
-Diese Operatoren sind in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] nicht verfügbar. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht eine Reihe von erneuten Schreibvorgängen, um sie durch entsprechende Joins zu ersetzen.
+Diese Operatoren sind nicht verfügbar, in SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht eine Reihe von erneuten Schreibvorgängen, um sie durch entsprechende Joins zu ersetzen.
 
-`Cross Apply` und `Outer Apply` werden für Beziehungsnavigation erzeugt. Der Satz von Abfragen, für den solche erneuten Schreibzugriffe möglich sind, ist nicht klar definiert. Aus diesem Grund umfasst der minimale für [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] unterstützte Abfragesatz jene Elemente, die keine Beziehungsnavigation beinhalten.
+`Cross Apply` und `Outer Apply` werden für Beziehungsnavigation erzeugt. Der Satz von Abfragen, für den solche erneuten Schreibzugriffe möglich sind, ist nicht klar definiert. Aus diesem Grund ist der minimale Satz von Abfragen, der für SQL Server 2000 unterstützt wird die Gruppe, die keine Beziehungsnavigation beinhalten.
 
 ### <a name="text--ntext"></a>text / ntext
 
@@ -214,11 +214,11 @@ Für diese Einschränkung ist keine Lösung verfügbar. Sie können insbesondere
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Von verschachtelten Abfragen ausgelöstes Verhalten
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (durch SP4) weist einige eigenheiten auf, die von verschachtelten Abfragen ausgelöst werden. Der Satz von SQL-Abfragen, der diese Eigenheiten auslöst, ist nicht klar definiert. Aus diesem Grund keine definieren den Satz von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen, die SQL Server-Ausnahmen führen können.
+Binder für SQL Server 2000 (durch SP4) weist einige eigenheiten auf, die von verschachtelten Abfragen ausgelöst werden. Der Satz von SQL-Abfragen, der diese Eigenheiten auslöst, ist nicht klar definiert. Aus diesem Grund keine definieren den Satz von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen, die SQL Server-Ausnahmen führen können.
 
 ### <a name="skip-and-take-operators"></a>Skip-Operator und Take-Operator
 
-<xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen hinsichtlich der Verwendung in Abfragen mit [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] auf. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen auf, wenn sie für Abfragen in SQL Server 2000 verwendet werden. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
 
 ## <a name="object-materialization"></a>Objektmaterialisierung
 

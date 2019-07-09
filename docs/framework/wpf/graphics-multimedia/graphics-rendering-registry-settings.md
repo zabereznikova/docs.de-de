@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762732"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663158"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen für das Rendern von Grafiken, die sich auf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen auswirken.  
@@ -33,7 +33,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**Option zum Deaktivieren der Hardwarebeschleunigung**|Gibt an, ob die Hardwarebeschleunigung aktiviert werden soll|  
-|**Maximaler Wert für Multisampling**|Gibt den Multisamplinggrad für das Antialiasing von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Inhalten an|  
+|**Maximaler Wert für Multisampling**|Gibt den multisamplinggrad für das Antialiasing von 3D-Inhalt Grad.|  
 |**Einstellung für das erforderliche Videotreiberdatum**|Gibt an, ob das System die Hardwarebeschleunigung für Treiber deaktiviert, die vor November 2004 veröffentlicht wurden|  
 |**Option zum Verwenden des Referenzrasters**|Gibt an, ob [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] das Referenzraster verwendet werden soll|  
   
@@ -57,9 +57,9 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- Mit dem **maximalen Wert für Multisampling** können Sie die maximal Menge für das Antialiasing von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Inhalten anpassen. Verwenden Sie diese Ebene, um das [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Antialiasing in [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] zu deaktivieren oder es in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] zu aktivieren.  
+ Die **maximaler Wert für Multisampling** können Sie die Höchstmenge für das Antialiasing von 3D-Inhalt anpassen. Verwenden Sie diese Ebene So deaktivieren Sie 3D Antialiasing in [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] oder aktivieren sie im [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
   
- Der **maximale Wert für Multisampling** ist ein DWORD-Wert, der zwischen 0 und 16 liegt. Der Wert 0 bedeutet, dass bei 3D-Inhalten das Multisample-Antialiasing deaktiviert wird. Der Wert 16 versucht, bis zu 16-faches Multisample-Antialiasing zu verwenden, sofern dies von der Grafikkarte unterstützt wird. Bitte beachten Sie, dass dieser Wert des Registrierungsschlüssels auf XPDM-Computern viel zusätzlichen Grafikspeicher benötigt, die Leistung des [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Renderings beeinträchtigen und zu Renderingfehlern und Stabilitätsproblemen führen kann.  
+ Der **maximale Wert für Multisampling** ist ein DWORD-Wert, der zwischen 0 und 16 liegt. Der Wert 0 bedeutet, dass bei 3D-Inhalten das Multisample-Antialiasing deaktiviert wird. Der Wert 16 versucht, bis zu 16-faches Multisample-Antialiasing zu verwenden, sofern dies von der Grafikkarte unterstützt wird. Beachten Sie, dass dieser Wert des Registrierungsschlüssels auf XPDM-Computern Einstellung Anwendungen eine große Menge von zusätzlichen Speicher verwenden führt, die Leistung des 3D-Rendering beeinträchtigen, und hat das Potenzial, der Rendering-Fehler und Stabilität einführen Probleme.  
   
  Wenn dieser Registrierungsschlüssel nicht festgelegt ist, wird [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für XPDM-Treiber auf den Standardwert 0 und für WDDM-Treiber auf den Standardwert 4 gesetzt.  
   

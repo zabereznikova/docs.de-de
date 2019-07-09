@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489942"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662165"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Gibt die Auflistung, die in verwendete [wählen](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) Anweisungen.  
@@ -96,7 +96,7 @@ LOB.Customers
 >  Im Gegensatz zu in Transact-SQL, besteht keine Notwendigkeit für Unnest-Schritt im [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS`- und `OUTER APPLY`-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen älter als [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
+>  `CROSS` und `OUTER APPLY` Operatoren wurden in SQL Server 2005 eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen vor SQL Server 2005, die diese Operatoren nicht unterstützen, können keine solche Abfragen auf diesen Back-End-Anbietern ausgeführt werden.  
 >   
 >  Typische Szenarios, in denen `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren in der Ausgabeabfrage vorhanden sein können, sind beispielsweise korrelierte Unterabfragen mit Paging, AnyElement über einer korrelierten Unterabfrage oder über einer durch Navigation erzeugten Auflistung, LINQ-Abfragen, die Elementselektoren akzeptierende Gruppierungsmethoden verwenden, Abfragen, für die ein `CROSS APPLY` oder ein `OUTER APPLY` explizit angegeben wurden oder Abfragen, die ein `DEREF`-Konstrukt über einem `REF`-Konstrukt enthalten.  
   

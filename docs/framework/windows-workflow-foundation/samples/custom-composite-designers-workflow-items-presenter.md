@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881922"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662868"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation
 
@@ -45,7 +45,7 @@ Der Code für dieses Beispiel zeigt Folgendes:
   - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> ist eine Vorlage, die bereitgestellt werden kann, um das Layout der Elemente in der Auflistung zu bestimmen. In diesem Fall wird ein horizontaler Stapelbereich verwendet.
 
   Dies wird im folgenden Codebeispiel gezeigt.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ Der Code für dieses Beispiel zeigt Folgendes:
 
 - Führen Sie eine Zuordnung von `DesignerAttribute` zum `Parallel`-Typ aus, und geben Sie dann die gemeldeten Attribute aus.
 
-    - Registrieren Sie zuerst alle standardmäßigen Designer.
+  - Registrieren Sie zuerst alle standardmäßigen Designer.
 
     Nachfolgend ist das Codebeispiel angegeben.
 
@@ -82,7 +82,7 @@ Der Code für dieses Beispiel zeigt Folgendes:
     RegisterCustomMetadata()
     ```
 
-    - Überschreiben Sie dann "Parallel" in der `RegisterCustomMetadata`-Methode.
+  - Überschreiben Sie dann "Parallel" in der `RegisterCustomMetadata`-Methode.
 
     Im folgenden Code wird dies in C# und Visual Basic veranschaulicht.
 

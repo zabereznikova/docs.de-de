@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: bedb6df564e4301ec8009992ec0ec5c51de729e0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910823"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661896"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zurückgeben oder Überspringen von Elementen in einer Sequenz
 Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimmte Anzahl von Elementen in einer Sequenz zurückzugeben und den Rest zu überspringen.  
@@ -49,9 +49,9 @@ Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimm
  Aufgrund der Sortierungseinschränkungen in SQL versucht [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die Sortierung des Arguments des <xref:System.Linq.Queryable.Take%2A>-Operators oder des <xref:System.Linq.Queryable.Skip%2A>-Operators auf das Operatorergebnis zu verlagern.  
   
 > [!NOTE]
->  Die Übersetzung weicht für [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] und [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)] ab. Wenn Sie planen, <xref:System.Linq.Queryable.Skip%2A> mit einer komplexeren Abfrage einzusetzen, verwenden Sie [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+>  Übersetzung weicht für SQL Server 2000 und SQL Server 2005 zur Verfügung. Wenn Sie planen, verwenden Sie <xref:System.Linq.Queryable.Skip%2A> mit einer komplexeren Abfrage einzusetzen, verwenden Sie SQL Server 2005.  
   
- Beachten Sie die folgende [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage für [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]:  
+ Beachten Sie Folgendes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfrage für SQL Server 2000:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  

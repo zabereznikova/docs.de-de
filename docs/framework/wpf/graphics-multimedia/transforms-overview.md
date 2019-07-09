@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 7f5fad56d00e9a7e33843222a81593a90bf7e733
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28d990bc2ea043fa1770054877148f1f09acefd0
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651902"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662627"
 ---
 # <a name="transforms-overview"></a>Übersicht über Transformationen
-In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen zu drehen, skalieren, verschieben (übersetzen) und Neigen <xref:System.Windows.FrameworkElement> Objekte.  
+Dieses Thema beschreibt, wie der 2D <xref:System.Windows.Media.Transform> Klassen zu drehen, skalieren, verschieben (übersetzen) und Neigen <xref:System.Windows.FrameworkElement> Objekte.  
 
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Was ist eine Transformation?  
@@ -45,7 +45,7 @@ In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../..
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>Transformationsklassen  
- Windows Presentation Foundation (WPF) bietet die folgenden [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen für gemeinsame Transformationsvorgänge:  
+ Windows Presentation Foundation (WPF) bietet die folgende 2-D <xref:System.Windows.Media.Transform> Klassen für gemeinsame Transformationsvorgänge:  
   
 |Klasse|Beschreibung|Beispiel|Darstellung|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../..
 |<xref:System.Windows.Media.TransformGroup>|Gruppiert mehrere <xref:System.Windows.Media.TransformGroup> Objekte in einem einzelnen <xref:System.Windows.Media.Transform> , dass Sie dann anwenden können, um Eigenschaften zu transformieren.|[Anwenden mehrerer Transformationen auf ein Objekt](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Erstellt benutzerdefinierte Transformationen, die nicht von dem anderen bereitgestellt werden <xref:System.Windows.Media.Transform> Klassen. Bei Verwendung einer <xref:System.Windows.Media.MatrixTransform>, eine Matrix direkt bearbeitet.|[Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) bietet auch [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Transformationen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Media3D.Transform3D>-Klasse.  
+ Windows Presentation Foundation (WPF) bietet auch 3D-Transformationen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Media3D.Transform3D>-Klasse.  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>Allgemeine Transformationseigenschaften  

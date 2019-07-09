@@ -14,28 +14,31 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 4ef97af17893fa7a4e85d09e989539f7f5b32a36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627369"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664063"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
 Dieses Thema beschreibt die Gründe, warum Anwendungsentwickler und Komponentenautoren in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] benutzerdefinierte Abhängigkeitseigenschaften erstellen möchten, und beschreibt die Implementierungsmaßnahmen und -optionen, die die Leistung, Verwendbarkeit oder Vielseitigkeit der Eigenschaft verbessern können.
 
 <a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>Vorraussetzungen
 
 In diesem Thema wird vorausgesetzt, dass Sie sich mit Abhängigkeitseigenschaften aus Sicht von vorhandenen Abhängigkeitseigenschaften von Consumern in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassen auskennen, und dass Sie das Thema [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] vertraut sein und wissen, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen geschrieben werden.
 
 <a name="whatis"></a>
+
 ## <a name="what-is-a-dependency-property"></a>Was ist eine Abhängigkeitseigenschaft?
 
 Sie können eine Eigenschaft aktivieren, die normalerweise eine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Eigenschaft wäre, um die Verwendung von Stilen, Datenbindung, Vererbung, Animationen und Standardwerten zu unterstützen, indem Sie sie als Abhängigkeitseigenschaft implementieren. Abhängigkeitseigenschaften sind Eigenschaften, die bei registriert sind die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Eigenschaftensystem durch Aufruf der <xref:System.Windows.DependencyProperty.Register%2A> Methode (oder <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>), und, verfügen über eine <xref:System.Windows.DependencyProperty> Feld "ID". Abhängigkeitseigenschaften können nur verwendet werden <xref:System.Windows.DependencyObject> Typen jedoch <xref:System.Windows.DependencyObject> ist sehr weit oben in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Klassenhierarchie, damit die Mehrzahl der in verfügbaren Klassen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Abhängigkeitseigenschaften unterstützen kann. Weitere Informationen zu Abhängigkeitseigenschaften und zur Terminologie und den Konventionen für die Beschreibung in [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
+
 ## <a name="examples-of-dependency-properties"></a>Beispiele für Abhängigkeitseigenschaften
 
 Beispiele für Abhängigkeitseigenschaften, die auf implementiert werden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Klassen umfassen die <xref:System.Windows.Controls.Control.Background%2A> -Eigenschaft, die <xref:System.Windows.FrameworkElement.Width%2A> -Eigenschaft, und die <xref:System.Windows.Controls.TextBox.Text%2A> neben vielen anderen-Eigenschaft. Jede Abhängigkeitseigenschaft, die von einer Klasse verfügbar gemacht werden, hat ein entsprechendes öffentliche statische Feld vom Typ <xref:System.Windows.DependencyProperty> für dieselbe Klasse verfügbar gemacht werden. Es handelt sich um den Bezeichner für die Abhängigkeitseigenschaft. Der Name des Bezeichners wird nach einer Konvention gewählt: Der Name der Abhängigkeitseigenschaft mit der angefügten Zeichenfolge `Property`. Z. B. das entsprechende <xref:System.Windows.DependencyProperty> Bezeichnerfeld für die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft <xref:System.Windows.Controls.Control.BackgroundProperty>. Der Bezeichner speichert die Informationen zur Abhängigkeitseigenschaft aus, wie er registriert wurde, und der Bezeichner wird dann später für andere Vorgänge im Zusammenhang mit der Abhängigkeitseigenschaft, wie ein Aufruf verwendet <xref:System.Windows.DependencyObject.SetValue%2A>.
@@ -43,6 +46,7 @@ Beispiele für Abhängigkeitseigenschaften, die auf implementiert werden [!INCLU
 Wie in [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) erwähnt, sind alle Abhängigkeitseigenschaften in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (mit Ausnahme der meisten angefügten Eigenschaften) aufgrund der „Wrapper“-Implementierung auch [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Eigenschaften. Daher können Sie über Code Abhängigkeitseigenschaften abrufen oder festlegen, indem Sie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Accessoren aufrufen, die die Wrapper in der Art definieren, in der Sie auch andere [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Eigenschaften verwenden würden. Als Consumer von geltenden Abhängigkeitseigenschaften, Sie in der Regel verwenden Sie nicht die <xref:System.Windows.DependencyObject> Methoden <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A>, die den Verbindungspunkt zum zugrundeliegenden Eigenschaftensystem handelt sind. Vielmehr die vorhandene Implementierung von der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Eigenschaften haben bereits aufgerufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> innerhalb der `get` und `set` Wrapper-Implementierung der Eigenschaft, verwenden das Bezeichnerfeld entsprechend . Wenn Sie eine benutzerdefinierte Abhängigkeitseigenschaft selbst implementieren, definieren Sie den Wrapper auf ähnliche Weise.
 
 <a name="backing_with_dp"></a>
+
 ## <a name="when-should-you-implement-a-dependency-property"></a>Wann sollten Sie eine Abhängigkeitseigenschaft implementieren?
 
 Bei der Implementierung einer Eigenschaft für eine Klasse, solange Ihre Klasse abgeleitet <xref:System.Windows.DependencyObject>, Sie haben die Möglichkeit zum Sichern der Eigenschaft mit einer <xref:System.Windows.DependencyProperty> Bezeichner und somit zu eine Abhängigkeitseigenschaft zu erleichtern. Es ist nicht immer notwendig oder angemessen, Ihre Eigenschaft in eine Abhängigkeitseigenschaft umzuwandeln. Es hängt von den Anforderungen Ihres Szenarios ab. Manchmal ist die normale Technik des Sicherns der Eigenschaft mit einem privaten Feld ausreichend. Sie sollten Ihre Eigenschaft allerdings als Abhängigkeitseigenschaft implementieren, wenn Sie möchten, dass Ihre Eigenschaft eine oder mehrere der folgenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Funktionen unterstützt:
@@ -66,6 +70,7 @@ Bei der Implementierung einer Eigenschaft für eine Klasse, solange Ihre Klasse 
 Wenn Sie diese Szenarios untersuchen, sollten Sie auch bedenken, ob Sie Ihr Szenario erreichen können, indem Sie die Metadaten einer vorhandenen Abhängigkeitseigenschaft überschreiben, anstatt eine völlig neue Eigenschaft zu implementieren. Ob die Überschreibung von Metadaten sinnvoll ist hängt von Ihrem Szenario ab und wie sehr dieses Szenario der Implementierung vorhandener [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Abhängigkeitseigenschaften und -Klassen ähnelt. Weitere Informationen zum Überschreiben der Metadaten von vorhandenen Eigenschaften finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).
 
 <a name="checklist"></a>
+
 ## <a name="checklist-for-defining-a-dependency-property"></a>Prüfliste für die Definition einer Abhängigkeitseigenschaft
 
 Das Definieren einer Abhängigkeitseigenschaft besteht aus vier unterschiedlichen Konzepten. Diese Konzepte sind nicht unbedingt aufeinanderfolgende Schritte, da einige von ihnen am Ende als einzelne Codezeilen in der Implementierung kombiniert werden:
@@ -79,6 +84,7 @@ Das Definieren einer Abhängigkeitseigenschaft besteht aus vier unterschiedliche
 - Definieren Sie eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-„Wrapper“-Eigenschaft, deren Name mit dem Namen der Abhängigkeitseigenschaft übereinstimmt. Implementieren Sie die `get`- und `set`-Accessoren der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-„Wrapper“-Eigenschaft, um eine Verbindung mit der Abhängigkeitseigenschaft herzustellen, die sie sichert.
 
 <a name="registering"></a>
+
 ### <a name="registering-the-property-with-the-property-system"></a>Registrieren der Eigenschaft im Eigenschaftensystem
 
 Damit Ihre Eigenschaft zu einer Abhängigkeitseigenschaft wird, müssen Sie diese Eigenschaft in einer Tabelle im Eigenschaftensystem registrieren und einen eindeutigen Bezeichner angeben. Dieser wird als Qualifizierer für spätere Vorgänge im Eigenschaftensystem verwendet. Bei diesen Vorgängen kann es sich um interne Vorgänge oder um Ihr eigenes durch Code aufgerufenes Eigenschaftensystem [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] handeln. Um die Eigenschaft registrieren, rufen Sie die <xref:System.Windows.DependencyProperty.Register%2A> Methode innerhalb des Texts der Klasse (innerhalb der Klasse, aber außerhalb von Memberdefinitionen). Das Bezeichnerfeld wird ebenfalls bereitgestellt, durch die <xref:System.Windows.DependencyProperty.Register%2A> -Methodenaufruf, als Rückgabewert. Der Grund, die die <xref:System.Windows.DependencyProperty.Register%2A> Aufruf erfolgt außerhalb von anderen Definitionen ist, da Sie diesen Rückgabewert verwenden, um zu erstellen und zuzuweisen eine `public` `static` `readonly` -Feld des Typs <xref:System.Windows.DependencyProperty> als Teil Ihrer Klasse. Das Feld wird zum Bezeichner für Ihre Abhängigkeitseigenschaft.
@@ -87,6 +93,7 @@ Damit Ihre Eigenschaft zu einer Abhängigkeitseigenschaft wird, müssen Sie dies
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
 
 <a name="nameconventions"></a>
+
 ### <a name="dependency-property-name-conventions"></a>Namenskonventionen für Abhängigkeitseigenschaften
 
 Es gibt Namenskonventionen für Abhängigkeitseigenschaften, die Sie bis auf bestimmte Ausnahmefälle befolgen müssen.
@@ -99,6 +106,7 @@ Geben Sie einem Bezeichnerfeld beim Erstellen den Namen der Eigenschaft bei der 
 > Die übliche Implementierung ist das Definieren der Abhängigkeitseigenschaft im Text einer Klasse. Es ist aber auch möglich, eine Abhängigkeitseigenschaft im statischen Konstruktor der Klasse zu definieren. Diese Vorgehensweise kann sinnvoll sein, wenn Sie mehr als eine Codezeile benötigen, um die Abhängigkeitseigenschaft zu initialisieren.
 
 <a name="wrapper1"></a>
+
 ### <a name="implementing-the-wrapper"></a>Implementieren des „Wrappers“
 
 Sollte Ihre Wrapper-Implementierung aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> in die `get` -Implementierung und <xref:System.Windows.DependencyObject.SetValue%2A> in die `set` Implementierung (die ursprüngliche Registrierungs- und sind hier dargestellt zu aus Gründen der Übersichtlichkeit).
@@ -119,6 +127,7 @@ In diesem Fall gemäß der Konvention der Namen der Wrapper-Eigenschaft muss ide
 - Die aktuelle Implementierung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Ladeprogramms umgeht die Wrapper komplett und verlässt sich beim Verarbeiten von Attributwerten auf die Benennungskonvention. Weitere Informationen finden Sie unter [Laden von XAML und Abhängigkeitseigenschaften](xaml-loading-and-dependency-properties.md).
 
 <a name="metadata"></a>
+
 ### <a name="property-metadata-for-a-new-dependency-property"></a>Eigenschaftsmetadaten für eine neue Abhängigkeitseigenschaft
 
 Wenn Sie eine Abhängigkeitseigenschaft registrieren, wird bei der Registrierung über das Eigenschaftensystem ein Metadatenobjekt erstellt, das Merkmale der Eigenschaft speichert. Viele dieser Merkmale verfügen über Standardwerte, die festgelegt werden, wenn die Eigenschaft, mit einfachen Signaturen von registriert ist <xref:System.Windows.DependencyProperty.Register%2A>. Andere Signaturen von <xref:System.Windows.DependencyProperty.Register%2A> ermöglichen es Ihnen, die Metadaten angeben, wie Sie die Eigenschaft registrieren, werden soll. Die häufigste Art von Metadaten für Abhängigkeitseigenschaften ist ein Standardwert, der für jede neue Instanz angegeben wird, die diese Eigenschaft verwendet.
@@ -131,13 +140,13 @@ Für <xref:System.Windows.FrameworkPropertyMetadata>, Sie können auch Optionsfl
 
 - Wenn Ihre Eigenschaft (oder Änderungen an deren Werten) wirkt sich auf die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], und insbesondere wirkt sich auf wie das Layoutsystem oder rendert, sollten Ihr Element auf einer Seite legen Sie eine oder mehrere der folgenden Flags: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Gibt an, dass eine Änderung dieser Eigenschaft eine Änderung an erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendern, in denen das enthaltende Objekt möglicherweise mehr oder weniger Platz innerhalb des übergeordneten Elements. Für die Eigenschaft „Breite“ sollte beispielsweise dieses Flag festgelegt sein.
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Gibt an, dass eine Änderung dieser Eigenschaft eine Änderung an erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendern, in denen das enthaltende Objekt möglicherweise mehr oder weniger Platz innerhalb des übergeordneten Elements. Für die Eigenschaft „Breite“ sollte beispielsweise dieses Flag festgelegt sein.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Gibt an, dass eine Änderung dieser Eigenschaft eine Änderung an erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendern, die in der Regel eine Änderung in den vorgesehenen Platz ist nicht erforderlich, aber gibt an, dass die Positionierung innerhalb des Bereichs geändert wurde. Für die Eigenschaft „Ausrichtung“ sollte beispielsweise dieses Flag festgelegt sein.
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Gibt an, dass eine Änderung dieser Eigenschaft eine Änderung an erfordert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendern, die in der Regel eine Änderung in den vorgesehenen Platz ist nicht erforderlich, aber gibt an, dass die Positionierung innerhalb des Bereichs geändert wurde. Für die Eigenschaft „Ausrichtung“ sollte beispielsweise dieses Flag festgelegt sein.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Gibt an, dass eine andere Änderung, die aufgetreten ist keine Auswirkung auf Layout und Maße, aber eine andere Rendering erfordert. Ein Beispiel wäre eine Eigenschaft, die eine Farbe eines vorhandenen Elements ändert, z.B. „Hintergrund“.
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Gibt an, dass eine andere Änderung, die aufgetreten ist keine Auswirkung auf Layout und Maße, aber eine andere Rendering erfordert. Ein Beispiel wäre eine Eigenschaft, die eine Farbe eines vorhandenen Elements ändert, z.B. „Hintergrund“.
 
-    - Diese Flags werden in Metadaten häufig als ein Protokoll für Ihre eigenen Überschreibungsimplementierungen von Eigenschaftensystem oder Layoutrückrufen verwendet. Beispielsweise ist es möglich, Sie müssen möglicherweise ein <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> Rückruf, der aufgerufen wird <xref:System.Windows.UIElement.InvalidateArrange%2A> Wenn eine Eigenschaft der Instanz Änderung eines Werts berichtet und <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> als `true` in seinen Metadaten.
+  - Diese Flags werden in Metadaten häufig als ein Protokoll für Ihre eigenen Überschreibungsimplementierungen von Eigenschaftensystem oder Layoutrückrufen verwendet. Beispielsweise ist es möglich, Sie müssen möglicherweise ein <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> Rückruf, der aufgerufen wird <xref:System.Windows.UIElement.InvalidateArrange%2A> Wenn eine Eigenschaft der Instanz Änderung eines Werts berichtet und <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> als `true` in seinen Metadaten.
 
 - Manche Eigenschaften können Auswirkungen auf die Merkmale des Renderings des übergeordneten Elements haben, sowohl über und unter den Änderungen der oben genannten benötigten Größe. Ein Beispiel ist die <xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A> Eigenschaft, die im Flussdokumentmodell, verwendet, in dem Änderungen an dieser Eigenschaft das allgemeine Rendering des Flussdokuments ändern können, das den Absatz enthält. Verwendung <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange> oder <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure> um ähnliche Fälle in Ihren eigenen Eigenschaften zu identifizieren.
 
@@ -150,21 +159,25 @@ Für <xref:System.Windows.FrameworkPropertyMetadata>, Sie können auch Optionsfl
 - Legen Sie die <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> Flag, das anzeigt, wenn Ihre Abhängigkeitseigenschaft ermittelt oder von Navigation Journaling-Diensten verwendet werden soll. Ein Beispiel ist die <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> Eigenschaft; ausgewähltes Element in einer Auswahl Kontrolle beibehalten werden soll, wenn die Journaling-Historie navigiert wird.
 
 <a name="RODP"></a>
+
 ## <a name="read-only-dependency-properties"></a>Schreibgeschützte Abhängigkeitseigenschaften
 
 Sie können eine Abhängigkeitseigenschaft definieren, die schreibgeschützt ist. Allerdings unterscheiden sich die Szenarios, warum Sie eine Eigenschaft als schreibgeschützt definieren sollen. Dies ist auch beim Registrieren mit dem Eigenschaftensystem und Verfügbar machen des Bezeichners der Fall. Weitere Informationen finden Sie unter [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md).
 
 <a name="CTDP"></a>
+
 ## <a name="collection-type-dependency-properties"></a>Abhängigkeitseigenschaften vom Auflistungstyp
 
 Bei Abhängigkeitseigenschaften vom Auflistungstyp gibt es zusätzliche Implementierungsprobleme, die man berücksichtigen sollte. Weitere Informationen finden Sie unter [Abhängigkeitseigenschaften vom Auflistungstyp](collection-type-dependency-properties.md).
 
 <a name="SecurityC"></a>
+
 ## <a name="dependency-property-security-considerations"></a>Überlegungen zur Sicherheit von Abhängigkeitseigenschaften
 
 Abhängigkeitseigenschaften sollten als öffentliche Eigenschaften deklariert werden. Bezeichnerfelder für Abhängigkeitseigenschaften sollten als öffentliche statische Felder deklariert werden. Auch wenn Sie versuchen, andere Zugriffsebenen zu deklarieren (z.B. geschützt), kann auf eine Abhängigkeitseigenschaft über den Bezeichner in Kombination mit dem Eigenschaftensystem [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zugegriffen werden. Sogar auf ein geschütztes Bezeichnerfeld kann möglicherweise Metadaten zur berichterstellung oder Wert Bestimmung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] werden, die Teil des Eigenschaftensystems, z. B. <xref:System.Windows.LocalValueEnumerator>. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
 
 <a name="DPCtor"></a>
+
 ## <a name="dependency-properties-and-class-constructors"></a>Abhängigkeitseigenschaften und Klassenkonstruktoren
 
 Es ist ein allgemeines Prinzip für das Programmieren von verwaltetem Code (oft durch Codeanalysetools wie FxCop erzwungen), dass Klassenkonstruktoren keine virtuellen Methoden aufrufen dürfen. Der Grund hierfür ist, dass Konstruktoren als Basisinitialisierung eines abgeleiteten Klassenkonstruktors aufgerufen werden können. Außerdem erfolgt der Eintritt in die virtuelle Methode über den Konstruktor möglicherweise bei einem unvollständigen Initialisierungszustand der erstellten Objektinstanz. Beim Ableiten von der Klasse, die bereits von abgeleitet <xref:System.Windows.DependencyObject>, sollten Sie bedenken, dass das Eigenschaftensystem selbst macht virtuelle Methoden intern aufruft. Diese virtuellen Methoden sind Teil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Dienste für das Eigenschaftensystem. Das Überschreiben der Methoden ermöglicht abgeleiteten Klassen,beim Festlegen von Werten teilzunehmen. Sie sollten die Werte der Abhängigkeitseigenschaft innerhalb von Klassenkonstruktoren nicht festlegen, solange Sie keinem sehr spezifischen Konstruktormuster folgen, um potentielle Probleme bei der Initialisierung der Runtime zu vermeiden. Weitere Informationen finden Sie unter [Sichere Konstruktormuster für DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md).

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642882"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663564"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitgestellt werden, sondern nutzt auch die Sicherheitsfeatures der zugrundeliegenden Plattform, die das Betriebssystem enthält, die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], und [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
@@ -132,7 +132,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 - **LocalIntranet**. Für Anwendungen, die gestartet werden, aus der **Lokales Intranet** Zone. Für einen moderaten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, uneingeschränkter Zugriff auf die Benutzeroberfläche und Dateidialogfelder, eingeschränkte Reflektion sowie eingeschränkter Zugriff auf Umgebungsvariablen. Berechtigungen für kritische Ressourcen wie die Registrierung werden nicht bereitgestellt.  
   
-- **Internet**. Für Anwendungen, die gestartet werden, aus der **Internet** oder **vertrauenswürdige Sites** Zone. Für einen eingeschränkten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, Öffnen von Dateien sowie eingeschränkter Zugriff auf die Benutzeroberfläche. Im Grunde isolieren diese Berechtigungssätze die Anwendungen vom Clientcomputer.  
+- **Internet**. Für Anwendungen, die gestartet werden, aus der **Internet** oder **vertrauenswürdige Sites** Zone. Für einen eingeschränkten Zugriff auf die Ressourcen des Clientcomputers wird eine Teilmenge von Berechtigungen gewährt. Dazu zählen isolierter Speicher, Öffnen von Dateien sowie eingeschränkter Zugriff auf die Benutzeroberfläche. Durch diese Berechtigung wird im Wesentlichen isoliert Anwendungen auf dem Clientcomputer festgelegt.  
   
  Anwendungen, die aus der **nicht vertrauenswürdige Sites** Zone werden keine Berechtigungen erteilt [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] überhaupt. Daher gibt es für diese Anwendungen keinen vordefinierten Berechtigungssatz.  
   
@@ -149,7 +149,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Zum Ausführen dieser [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] muss der zugrunde liegende [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Code mehr Funktionalität ausführen, als der aufrufenden [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] zur Verfügung steht. Dazu zählen:  
   
-- Erstellen eines Fensterhandles (hWnd) für das Rendering  
+- Erstellen eines Fensterhandles (HWND) für das rendering  
   
 - Verteilen von Nachrichten  
   
@@ -157,7 +157,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Unter dem Gesichtspunkt der Sicherheit wäre die Gewährung des direkten Zugriffs auf diese Vorgänge für die im Sicherheitssandkasten ausgeführte Anwendung eine Katastrophe.  
   
- Zum Glück bietet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] einen Ausweg aus dieser Lage, indem es diesen Vorgängen die Ausführung mit erhöhten Rechten im Namen der im Sicherheitssandkasten ausgeführten Anwendung erlaubt. Während alle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Vorgänge anhand der eingeschränkten Sicherheitsberechtigungen der Internetzone der [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]-Anwendungsdomäne überprüft werden, wird [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (wie anderen Systembibliotheken) ein Berechtigungssatz gewährt, der alle möglichen Berechtigungen enthält.  
+ Zum Glück bietet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] einen Ausweg aus dieser Lage, indem es diesen Vorgängen die Ausführung mit erhöhten Rechten im Namen der im Sicherheitssandkasten ausgeführten Anwendung erlaubt. Während alle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Vorgänge anhand der eingeschränkten Zone Sicherheitsberechtigungen der Anwendungsdomäne, der überprüft, die [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (wie anderen Systembibliotheken) erhält einen Berechtigungssatz auf, die alle möglichen enthält. Berechtigungen.
   
  Dies setzt voraus, dass [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] erhöhte Rechte eingeräumt werden und gleichzeitig verhindert wird, dass diese Berechtigungen vom Berechtigungssatz der Internetzone der Hostanwendungsdomäne gesteuert werden.  
   
@@ -174,7 +174,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
 ### <a name="clickonce-deployment"></a>ClickOnce-Bereitstellung  
  [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] ist eine umfangreiche bereitstellungstechnologie, die mit .NET Framework enthalten ist und die Integration mit [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) ausführliche Informationen). Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen können mit [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] bereitgestellt werden, während im Browser gehostete Anwendungen mit [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bereitgestellt werden müssen.  
   
- Mit [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bereitgestellte Anwendungen werden durch die Codezugriffssicherheit ([!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]) mit einer weiteren Sicherheitsebene ausgestattet; im Grunde fordern mit [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] bereitgestellte Anwendungen nur die von ihnen benötigten Berechtigungen an. Diese Berechtigungen werden nur gewährt, wenn sie nicht höher sind als die Berechtigungen im Berechtigungssatz für die Zone, von der die Anwendung bereitgestellt wird. Durch die Reduzierung des Berechtigungssatzes auf die benötigten Berechtigungen (selbst wenn diese niedriger sind als die Berechtigungen im Berechtigungssatz der Startzone) wird die Anzahl der Ressourcen, auf welche die Anwendung zugreifen kann, auf ein absolutes Minimum reduziert. Dadurch wird der mögliche Schaden für den Clientcomputer reduziert, falls die Anwendung gehackt wird.  
+ Mit [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bereitgestellte Anwendungen werden durch die Codezugriffssicherheit ([!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]) mit einer weiteren Sicherheitsebene ausgestattet; im Grunde fordern mit [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] bereitgestellte Anwendungen nur die von ihnen benötigten Berechtigungen an. Diese Berechtigungen werden nur gewährt, wenn sie nicht höher sind als die Berechtigungen im Berechtigungssatz für die Zone, von der die Anwendung bereitgestellt wird. Durch verringern den Satz von Berechtigungen, die erforderlich sind, auch wenn sie kleiner als die durch die Berechtigung für den Start der Zone sind festgelegt, die Anzahl der Ressourcen an, dass die Anwendung den Zugriff auf ein absolutes Minimum reduziert wird. Dadurch wird der mögliche Schaden für den Clientcomputer reduziert, falls die Anwendung gehackt wird.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Sicherheitsrelevante Methode  
@@ -208,7 +208,6 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlegendes zur Sicherheit in Microsoft Internet Explorer 6 unter Windows XP SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [Codezugriffssicherheit](../misc/code-access-security.md)
 - [Sicherheit](security-wpf.md)
 - [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](wpf-partial-trust-security.md)

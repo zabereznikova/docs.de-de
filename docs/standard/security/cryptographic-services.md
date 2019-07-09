@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690531"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663990"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -207,19 +207,19 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 - Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.
 
-    Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:
 
-    - Die Nachricht wurde nicht geändert.
+  - Die Nachricht wurde nicht geändert.
 
-    - Der Absender der Nachricht (Alice) ist authentisch.
+  - Der Absender der Nachricht (Alice) ist authentisch.
 
-    Damit dieses System funktioniert, muss Alice den originalen Hashwert geheim halten. Nur Bob darf ihn kennen.
+  Damit dieses System funktioniert, muss Alice den originalen Hashwert geheim halten. Nur Bob darf ihn kennen.
 
 - Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob und platziert die Haschnachricht auf ihrer öffentlich zugänglichen Website.
 
-    Mit dieser Methode wird eine Manipulation der Nachricht verhindert, da jeder an einer Änderung des Hashwerts gehindert wird. Obwohl die Nachricht und deren Hash von jedem gelesen werden kann, kann der Hashwert nur von Alice geändert werden. Ein Angreifer, der die Identität von Alice annehmen will, müsste Zugriff auf die Website von Alice haben.
+  Mit dieser Methode wird eine Manipulation der Nachricht verhindert, da jeder an einer Änderung des Hashwerts gehindert wird. Obwohl die Nachricht und deren Hash von jedem gelesen werden kann, kann der Hashwert nur von Alice geändert werden. Ein Angreifer, der die Identität von Alice annehmen will, müsste Zugriff auf die Website von Alice haben.
 
 Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten von Alice lesen, da sie als Klartext übertragen werden. Vollständige Sicherheit ist in der Regel nur mit digitalen Signaturen (Signieren von Nachrichten) und Verschlüsselung möglich.
 

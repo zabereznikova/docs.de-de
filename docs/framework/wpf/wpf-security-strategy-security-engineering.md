@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663249"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663344"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF-Sicherheitsstrategie – Sicherheitsentwicklung
 Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird. Ein Schlüsselelement der Trustworthy Computing-Initiative ist der [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] ist ein Entwicklungsverfahren, das in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Erstellung von sicherem Code zu erleichtern. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Messbarkeit und zusätzlichen Strukturen kombinieren, darunter:  
@@ -71,13 +71,13 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
   
 - **Prefix/Prefast**: Findet Schwachstellen des Sicherheit und häufige Sicherheitsprobleme in nicht verwaltetem Code, z. B. Pufferüberläufe, Probleme bei Formatzeichenfolgen von Format und Überprüfung von Fehlern an.  
   
-- **Gesperrte APIs**: Durchsucht den Quellcode um die versehentliche Verwendung von Funktionen zu identifizieren, die für Sicherheitsprobleme, z. B. bekannt sind `strcpy`. Nach der Erkennung werden diese Funktionen durch Alternativen ersetzt, die mehr Sicherheit bieten.  
+- **Gesperrte APIs**: Durchsucht den Quellcode um die versehentliche Verwendung von Funktionen zu identifizieren, die für Sicherheitsprobleme, z. B. bekannt sind `strcpy`. Nachdem identifiziert, werden diese Funktionen durch alternativen ersetzt, die sicherer sind.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Testverfahren  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet eine Reihe von Techniken zum Testen der Sicherheit, darunter:  
   
-- **Whiteboxtests**: Tester Anzeigen von Quellcode und entwickeln dann exploittests  
+- **Whiteboxtests**: Tester Anzeigen von Quellcode und entwickeln dann exploittests.
   
 - **Blackboxtests**: Tester versuchen, die zum Suchen Sicherheitsexploits, indem Sie APIs und Funktionen untersuchen und dann versuchen, das Produkt anzugreifen.  
   
