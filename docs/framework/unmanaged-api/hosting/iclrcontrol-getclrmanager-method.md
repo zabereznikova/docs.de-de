@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d97d75eb5fab396530a6f48314e96c8d47d06439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86299a1f64120b3ca0ec858975b824b7e7288af9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656490"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773262"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager-Methode
 Ruft einen Schnittstellenzeiger auf eine Instanz eines der Managertypen, mit denen des Hosts so konfigurieren Sie die common Language Runtime (CLR) ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCLRManager (  
     [in]  REFIID  riid,  
     [out] void  **ppObject  

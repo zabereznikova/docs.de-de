@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 976679e4b6e6bba7288756616db639ed61472591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605445"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778380"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines ActiveX-Steuerelements in WPF
 Um verbesserte Interaktion mit Browsern zu aktivieren, können Sie [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] -Steuerelemente in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierten Anwendung. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie hosten können die [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] als ein Steuerelement auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite.
@@ -37,7 +37,7 @@ Um verbesserte Interaktion mit Browsern zu aktivieren, können Sie [!INCLUDE[TLA
 
 ## <a name="creating-the-project"></a>Erstellen des Projekts
 
-#### <a name="to-create-and-set-up-the-project"></a>So erstellen und richten Sie das Projekt ein
+### <a name="to-create-and-set-up-the-project"></a>So erstellen und richten Sie das Projekt ein
 
 1. Erstellen einer WPF-Anwendungsprojekt mit dem Namen `HostingAxInWpf`.
 
@@ -62,7 +62,7 @@ Um verbesserte Interaktion mit Browsern zu aktivieren, können Sie [!INCLUDE[TLA
 ## <a name="creating-the-activex-control"></a>Erstellen das ActiveX-Steuerelement
  [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] generiert automatisch ein <xref:System.Windows.Forms.AxHost> Wrapperklasse für ein [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] steuern, wenn das Steuerelement, einer Entwurfsoberfläche hinzugefügt wird. Die folgende Prozedur erstellt eine verwaltete Assembly mit dem Namen AxInterop.WMPLib.dll.
 
-#### <a name="to-create-the-activex-control"></a>Beim Erstellen des ActiveX-Steuerelements
+### <a name="to-create-the-activex-control"></a>Beim Erstellen des ActiveX-Steuerelements
 
 1. Öffnen Sie WmpAxControl.vb oder WmpAxControl.cs im Windows Forms-Designer an.
 
@@ -74,7 +74,7 @@ Um verbesserte Interaktion mit Browsern zu aktivieren, können Sie [!INCLUDE[TLA
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Hosten das ActiveX-Steuerelement auf einer WPF-Seite
 
-#### <a name="to-host-the-activex-control"></a>Zum Hosten des ActiveX-Steuerelements
+### <a name="to-host-the-activex-control"></a>Zum Hosten des ActiveX-Steuerelements
 
 1. Fügen Sie in HostingAxInWpf-Projekt einen Verweis auf die generierte [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] Interop-Assembly.
 

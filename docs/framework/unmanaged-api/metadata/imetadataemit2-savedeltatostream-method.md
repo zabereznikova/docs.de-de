@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31bed2019eef5a37e1086624afdae3e8f2c58632
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 270fdecb6afbf252b7d0531cab0f18dded44298d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927230"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777120"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream-Methode
 Speichert Änderungen aus der aktuellen Sitzung mit bearbeiten und fortfahren, in den angegebenen Stream.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SaveDeltaToStream (  
     [in] IStream     *pIStream,   
     [in] DWORD       dwSaveFlags  
@@ -41,7 +41,7 @@ HRESULT SaveDeltaToStream (
  [in] Ein Schnittstellenzeiger auf den schreibbaren Datenstrom an, um Änderungen zu speichern.  
   
  `dwSaveFlags`  
- [in]: Reserviert Dieser Wert muss 0 (null) sein.  
+ [in] Reserviert. Dieser Wert muss 0 (null) sein.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

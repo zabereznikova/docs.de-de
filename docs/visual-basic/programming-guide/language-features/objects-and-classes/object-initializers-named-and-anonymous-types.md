@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649775"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783239"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Objektinitialisierer: Benannte und anonyme Typen (Visual Basic)
 Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit einem einzelnen Ausdruck angeben. Sie können zum Erstellen von Instanzen benannter Typen und von anonymen Typen verwendet werden.  
@@ -32,7 +32,7 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
  Die Anforderungen und die Ergebnisse der beiden Deklarationen sind nicht identisch. Für `namedCust`, `Customer` -Klasse, verfügt eine `Name` Eigenschaft muss bereits vorhanden sein, und die Deklaration erstellt eine Instanz dieser Klasse. Für `anonymousCust`, definiert der Compiler eine neue Klasse, die eine Eigenschaft, eine Zeichenfolge mit dem Namen `Name`, und erstellt eine neue Instanz dieser Klasse.  
   
 ## <a name="named-types"></a>Benannte Typen  
- Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen, und legen Sie dann die Werte der Eigenschaften, die einige oder alle in einer einzigen Anweisung. Der Compiler Ruft den entsprechenden Konstruktor für die Anweisung: der Standardkonstruktor, wenn keine Argumente angegeben werden, oder einen parametrisierten Konstruktor, wenn ein oder mehrere Argumente gesendet werden. Danach werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in denen sie in der Initialisiererliste dargestellt werden.  
+ Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen, und legen Sie dann die Werte der Eigenschaften, die einige oder alle in einer einzigen Anweisung. Der Compiler Ruft den entsprechenden Konstruktor für die Anweisung: der parameterlose Konstruktor, wenn keine Argumente angegeben werden, oder einen parametrisierten Konstruktor, wenn ein oder mehrere Argumente gesendet werden. Danach werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in denen sie in der Initialisiererliste dargestellt werden.  
   
  Jede Initialisierung in der Initialisiererliste besteht die Zuweisung von einem Anfangswert auf einen Member der Klasse ab. Wenn die Klasse definiert ist, werden die Namen und Datentypen der Elemente bestimmt. In den folgenden Beispielen wird die `Customer` Klasse muss vorhanden sein und müssen haben Mitglieder mit dem Namen `Name` und `City` , können Werte akzeptieren.  
   
@@ -42,7 +42,7 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Jede dieser Deklarationen entspricht im folgenden Beispiel, das erstellt eine `Customer` -Objekt mit dem Standardkonstruktor, und gibt dann die Anfangswerte für die `Name` und `City` Eigenschaften mithilfe einer `With` -Anweisung.  
+ Jede dieser Deklarationen entspricht im folgenden Beispiel, das erstellt eine `Customer` -Objekt mit dem parameterlosen Konstruktor, und gibt dann die Anfangswerte für die `Name` und `City` Eigenschaften mithilfe einer `With` -Anweisung.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   

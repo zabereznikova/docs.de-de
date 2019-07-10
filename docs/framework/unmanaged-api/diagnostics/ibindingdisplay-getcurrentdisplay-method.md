@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 472e06c3a00762a7bb012fbcb525d8e0b3a9271a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d075aeeb904469613999829a1444511d069b9918
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599519"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775977"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay-Methode
 Gibt die aktuelle Bindungsanzeigeinformationen zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCurrentDisplay (  
     [out, retval] SAFEARRAY(struct BindingDisplayTabControl) *display  
 );  

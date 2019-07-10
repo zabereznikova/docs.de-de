@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a88adec508d80a40ec044e5011d3115e197e334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d034f15db8f3d452a055c127bb7095667c089ffe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000544"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772053"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW-Funktion
 Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen Hashalgorithmus ab. Der Pfad zur Assemblydatei muss als Unicode-Zeichenfolge angegeben werden.  
@@ -30,7 +30,7 @@ Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen H
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetHashFromAssemblyFileW (  
     [in]  LPCWSTR   wszFilePath,  
     [in, out] unsigned int   *piHashAlg,  

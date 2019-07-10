@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29c5f96bab374d6e2d43424370bff2a4a2ab6df3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee3a0c27d350dec8e9f3e9448174d978c7d50e81
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986578"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775684"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged-Methode
 Ruft einen Wert, der angibt, ob von dieser vom Prozess verwiesen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) ist bekannt, dass verwalteter Code haben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsManaged (  
     [out] BOOL   *pbManaged  
 );  

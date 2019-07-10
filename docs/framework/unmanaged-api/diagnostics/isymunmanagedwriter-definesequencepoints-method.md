@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969168"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777296"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints-Methode
 Definiert eine Gruppe von Sequenzpunkten in der aktuellen Methode. Jede Startzeile und die Anfangsspalte definieren den Start einer Anweisung innerhalb einer Methode. Jede Zeile endet und die Endspalte definieren eine Anweisung innerhalb einer Methode. Die Arrays sollten in aufsteigender Reihenfolge der Offsets sortiert werden. Der Offset wird immer vom Anfang der Methode, in Byte gemessen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineSequencePoints(  
     [in] ISymUnmanagedDocumentWriter*  document,  
     [in] ULONG32 spCount,  

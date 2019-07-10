@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1585acce8bba0dff327c961f5e32ef6b46794401
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bd07411acd074bf5a25148110dbdf28a004551a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986023"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777247"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace-Methode
 Öffnet einen neuen Namespace. Rufen Sie diese Methode vor dem Definieren von Methoden und Variablen, die einen Namespace zu belegen. Namespaces können geschachtelt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT OpenNamespace(  
     [in] const WCHAR *name);  
 ```  

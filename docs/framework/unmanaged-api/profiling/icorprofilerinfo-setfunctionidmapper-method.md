@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cbbe85a99d0c78bd3d95ee654bdc13e376d017d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4eefbb100b215cf4ac98352f37488b21cde49d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772140"
 ---
 # <a name="icorprofilerinfosetfunctionidmapper-method"></a>ICorProfilerInfo::SetFunctionIDMapper-Methode
 Gibt die vom Profiler implementierte Funktion an, die aufgerufen wird, um die `FunctionID`-Werte alternativen Werten zuzuordnen, die an die Funktionseinstiegs-/-exithooks des Profilers übergeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetFunctionIDMapper (  
     [in] FunctionIDMapper *pFunc);  
 ```  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96c013cd3e45e4ede0cbc9f42bf511a2eb3fc12d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d305aa59c1b9e9e1225b30f12e36fc689d584db1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777555"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778884"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA-Methode
 Ruft ab, die relative virtuelle Adresse (RVA) sowie die Implementierung der Methode oder des Felds, die durch das angegebene Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRVA (  
    [in]  mdToken     tk,   
    [out] ULONG       *pulCodeRVA,   

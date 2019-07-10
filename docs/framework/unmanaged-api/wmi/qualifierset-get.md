@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596977"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782574"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get-Funktion
 Ruft den angegebenen benannten Qualifizierer ab.  
@@ -30,7 +30,7 @@ Ruft den angegebenen benannten Qualifizierer ab.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT QualifierSet_Get (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -53,7 +53,7 @@ HRESULT QualifierSet_Get (
 [in] Der Name des Qualifizierers, deren Wert angefordert wird.
 
 `lFlags`   
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`   
 [out] Bei erfolgreicher Ausführung den richtigen Typ und Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, die `VARIANT` verweist `pVal` wird nicht geändert. Wenn dieser Parameter ist `null`, der Parameter wird ignoriert.

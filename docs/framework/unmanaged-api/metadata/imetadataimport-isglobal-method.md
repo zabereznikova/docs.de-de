@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b956ac1717ffcb73e819e985450249754f80af2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777441"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778800"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal-Methode
 Ruft einen Wert ab, der angibt, ob für das durch das angegebene Metadatentoken dargestellte Feld, die Methode oder den Typ der globale Bereich gilt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsGlobal (  
    [in]  mdToken     pd,  
    [out] int         *pbGlobal  

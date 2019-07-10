@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753023"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)
 
@@ -51,7 +51,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 ## <a name="creating-an-interface"></a>Erstellen einer Schnittstelle
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>So erstellen Sie das Schnittstellenprojekt mit Typäquivalenz
+### <a name="to-create-the-type-equivalence-interface-project"></a>So erstellen Sie das Schnittstellenprojekt mit Typäquivalenz
 
 1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**.
 
@@ -61,7 +61,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 4. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf einen gültigen Speicherort auf dem Entwicklungscomputer fest, z.B. auf `C:\TypeEquivalenceSample`. Dieser Speicherort wird auch in einem späteren Schritt in dieser exemplarischen Vorgehensweise verwendet.
 
-5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **<Neu...>**. Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
+5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **<Neu...>** . Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
 
 6. Öffnen Sie die ISampleInterface.vb-Datei. Fügen Sie den folgenden Code zur Klasse „ISampleInterface“ hinzu, um die ISampleInterface-Schnittstelle zu erstellen.
 
@@ -96,7 +96,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 ## <a name="creating-a-runtime-class"></a>Erstellen einer Runtime-Klasse
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>So erstellen Sie das Runtime-Projekt mit Typäquivalenz
+### <a name="to-create-the-type-equivalence-runtime-project"></a>So erstellen Sie das Runtime-Projekt mit Typäquivalenz
 
 1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**.
 
@@ -106,7 +106,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 4. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Kompilieren**. Legen Sie den Ausgabepfad auf denselben Speicherort fest, den Sie im Projekt „TypeEquivalenceInterface“ verwendet haben, z.B. auf `C:\TypeEquivalenceSample`.
 
-5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **<Neu...>**. Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
+5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **<Neu...>** . Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
 
 6. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Verweis hinzufügen**. Klicken Sie auf die Registerkarte **Durchsuchen**, und navigieren Sie zum Ausgabeordner für den Pfad. Wählen Sie die Datei „TypeEquivalenceInterface.dll“ aus, und klicken Sie auf **OK**.
 
@@ -142,7 +142,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 ## <a name="creating-a-client-project"></a>Erstellen eines Clientprojekts
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>So erstellen Sie das Clientprojekt mit Typäquivalenz
+### <a name="to-create-the-type-equivalence-client-project"></a>So erstellen Sie das Clientprojekt mit Typäquivalenz
 
 1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**.
 
@@ -181,7 +181,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 ## <a name="modifying-the-interface"></a>Ändern der Schnittstelle
 
-#### <a name="to-modify-the-interface"></a>So ändern Sie die Schnittstelle
+### <a name="to-modify-the-interface"></a>So ändern Sie die Schnittstelle
 
 1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Öffnen**, und klicken Sie auf **Projekt/Projektmappe**.
 
@@ -201,7 +201,7 @@ Da die primäre Funktion des Einbettens von Typen die Unterstützung des Einbett
 
 ## <a name="modifying-the-runtime-class"></a>Ändern der Runtime-Klasse
 
-#### <a name="to-modify-the-runtime-class"></a>So ändern Sie die Runtime-Klasse
+### <a name="to-modify-the-runtime-class"></a>So ändern Sie die Runtime-Klasse
 
 1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Öffnen**, und klicken Sie auf **Projekt/Projektmappe**.
 

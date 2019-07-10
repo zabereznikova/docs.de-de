@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3dbfca942d61cd5667293d11f358f06bd000fa2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050180"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777746"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory-Methode
 Ruft das Verzeichnis, das die aktuelle common Language Runtime (CLR enthält) ab. Diese Methode wird nur für die Verwendung von Out-of-Process-Debugger unterstützt. Wenn aus einer anderen Komponente aufgerufen wird, wird er E_NOTIMPL zurückgeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCORSystemDirectory (  
     [out] LPWSTR      szBuffer,   
     [in]  DWORD       cchBuffer,   

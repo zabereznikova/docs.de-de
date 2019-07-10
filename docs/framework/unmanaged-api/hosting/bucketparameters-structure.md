@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946761"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773879"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters-Struktur
 Speichert den Typnamen eines Ereignisses und die Parameter für die aktuelle Ausnahme, die dem Ereignis zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _BucketParameters {  
     BOOL  fInited;                    
     WCHAR pszEventTypeName[255];      

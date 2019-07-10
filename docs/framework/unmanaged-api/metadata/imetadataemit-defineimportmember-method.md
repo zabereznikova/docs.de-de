@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8851b3090685b19c4a7ef711d5adab232e46872e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 341972629e18213536919fe53bfae94613b4d6e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665033"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777641"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember-Methode
 Erstellt einen Verweis auf den angegebenen Member eines Typs oder ein Modul, das außerhalb des aktuellen Bereichs definiert ist, und definiert ein Token für diesen Verweis.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineImportMember (   
     [in]  IMetaDataAssemblyImport  *pAssemImport,   
     [in]  const void               *pbHashValue,   

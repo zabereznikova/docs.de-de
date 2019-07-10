@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776520"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags-Enumeration
 Enthält Werte, die den Typ der Überprüfung angeben, die in einem Aufruf ausgeführt werden, sollte die [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 enum ValidatorFlags {  
     VALIDATOR_EXTRA_VERBOSE =       0x00000001,  
     VALIDATOR_SHOW_SOURCE_LINES =   0x00000002,  

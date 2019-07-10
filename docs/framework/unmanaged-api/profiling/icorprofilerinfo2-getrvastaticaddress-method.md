@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c2d1aee741ac54e861f7068d883731745ca7788
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc7b6d1a27faf7bde46305f9c98d98351e6261b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584311"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782270"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress-Methode
 Ruft die Adresse des statischen Felds angegebene relative virtuelle Adresse (RVA).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRVAStaticAddress(  
     [in] ClassID classId,  
     [in] mdFieldDef fieldToken,  

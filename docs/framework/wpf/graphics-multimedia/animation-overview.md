@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663867"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780143"
 ---
 # <a name="animation-overview"></a>Übersicht über Animationen
 
@@ -242,7 +242,7 @@ Die folgende Tabelle zeigt mehrere allgemeine Animationstypen und einige Eigensc
 
 Alle Animationstypen erben von der <xref:System.Windows.Media.Animation.Timeline> Klasse; daher werden alle Animationen spezialisierte Typen von Zeitachsen. Ein <xref:System.Windows.Media.Animation.Timeline> definiert einen Zeitabschnitt. Sie können angeben, die *Zeitsteuerungsverhalten* einer Zeitachse: die <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, wie oft sie wiederholt werden und sogar wie schnell die Zeit.
 
-Da eine Animation ist eine <xref:System.Windows.Media.Animation.Timeline>, es stellt auch einen Zeitabschnitt dar. Eine Animation auch Ausgabewerte berechnet, während ihr die angegebenen Zeitabschnitt durchlaufen (oder <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Während die Animation durchlaufen oder „abgespielt“ wird, wird die ihr zugeordnete Eigenschaft aktualisiert.
+Da eine Animation ist eine <xref:System.Windows.Media.Animation.Timeline>, es stellt auch einen Zeitabschnitt dar. Eine Animation auch Ausgabewerte berechnet, über die angegebenen Zeitabschnitt wechselt (oder <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Während die Animation durchlaufen oder „abgespielt“ wird, wird die ihr zugeordnete Eigenschaft aktualisiert.
 
 Drei häufig verwendete Zeitsteuerungseigenschaften sind <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, und <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
@@ -321,7 +321,7 @@ Die <xref:System.Windows.Media.Animation.DoubleAnimation> im vorherigen Beispiel
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Da die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> wurde nicht geändert werden, von seinem Standardwert, d.h. <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, behält die Animation Endwert 0 bei, wenn sie endet. Aus diesem Grund die <xref:System.Windows.UIElement.Opacity%2A> der Rechteck bleibt bei 0, nachdem die Animation endet. Setzen Sie die <xref:System.Windows.UIElement.Opacity%2A> des Rechtecks auf einen anderen Wert Code keine Auswirkung, haben wird angezeigt, da die Animation immer noch beeinträchtigt die <xref:System.Windows.UIElement.Opacity%2A> Eigenschaft.
+Da die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> wurde nicht geändert werden, von seinem Standardwert, d.h. <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, behält die Animation den Endwert 0 (null), wenn sie endet. Aus diesem Grund die <xref:System.Windows.UIElement.Opacity%2A> der Rechteck bleibt bei 0, nachdem die Animation endet. Setzen Sie die <xref:System.Windows.UIElement.Opacity%2A> des Rechtecks auf einen anderen Wert Code keine Auswirkung, haben wird angezeigt, da die Animation immer noch beeinträchtigt die <xref:System.Windows.UIElement.Opacity%2A> Eigenschaft.
 
 Eine Möglichkeit, die Kontrolle über eine animierte Eigenschaft im Code ist die Verwendung der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode, und geben Sie null für den <xref:System.Windows.Media.Animation.AnimationTimeline> Parameter. Weitere Informationen und ein Beispiel finden Sie unter [Festlegen einer Eigenschaft nach Animation mit einem Storyboard](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
@@ -372,7 +372,7 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 |[Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)|Beschreibt, wie das Zeitsteuerungssystem verwendet die <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Klassen, die Ihnen beim Erstellen von Animationen ermöglichen.|
 |[Tipps und Tricks zu Animationen](animation-tips-and-tricks.md)|Hier sind hilfreiche Tipps zum Beheben von Problemen mit Animationfen, z.B. Leistungsprobleme aufgelistet.|
 |[Übersicht über benutzerdefinierte Animationen](custom-animations-overview.md)|Beschreibt, wie das Animationssystem mit Keyframes, Animationsklassen oder Pro-Frame-Rückrufen erweitert werden kann.|
-|Übersicht über From/To/By-Animationen|Beschreibt, wie Sie eine Animation erstellen, die zwischen zwei Werten wechselt.|
+|[Übersicht über From/To/By-Animationen](from-to-by-animations-overview.md)|Beschreibt, wie Sie eine Animation erstellen, die zwischen zwei Werten wechselt.|
 |[Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)|Beschreibt das Erstellen einer Animation mit mehreren Zielwerten, einschließlich der Möglichkeit, die Interpolationsmethode zu steuern.|
 |[Beschleunigungsfunktionen](easing-functions.md)|Erklärt, wie mathematische Formeln auf die Animationen angewendet werden, um ein realistisches Verhalten, z.B. Sprungeffekte zu erreichen.|
 |[Übersicht über Pfadanimationen](path-animations-overview.md)|Beschreibt das Verschieben oder Drehen eines Objekts entlang eines komplexen Pfads.|

@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655130"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742551"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (C#)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für den Datenzugriff mithilfe von gespeicherten Prozeduren bereit. Dieser Ansatz wird oft von Datenbankadministratoren verwendet, um den Zugriff auf den Datenspeicher einzuschränken.  
@@ -17,7 +17,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
  Für die Zwecke dieser exemplarischen Vorgehensweise verwenden Sie zwei Methoden, die von gespeicherten Prozeduren in der Northwind-Beispieldatenbank zugeordnet wurden: CustOrdersDetail und CustOrderHist. Die Zuordnung tritt auf, wenn Sie das SQLMetal-Befehlszeilentool ausführen, um eine C#-Datei zu generieren. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen weiter unten in dieser exemplarischen Vorgehensweise.  
   
- Diese exemplarische Vorgehensweise basiert nicht auf [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Entwickler, die mit Visual Studio können auch die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Funktionalität einer gespeicherten Prozedur zu implementieren. Finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ In dieser exemplarischen Vorgehensweise beruht nicht auf den Object Relational Designer. Entwickler, die mithilfe von Visual Studio können O/R-Designer auch verwenden, um Funktionalität einer gespeicherten Prozedur zu implementieren. Finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -101,7 +101,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-create-the-database-connection"></a>So erstellen Sie die Datenbankverbindung  
   
-1. In **Projektmappen-Explorer**, mit der rechten Maustaste **"Form1.cs"**, und klicken Sie dann auf **Ansichtscode**.  
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste **"Form1.cs"** , und klicken Sie dann auf **Ansichtscode**.  
   
 2. Geben Sie den folgenden Code in die `Form1`-Klasse ein:  
   
@@ -112,7 +112,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-set-up-the-user-interface"></a>So richten Sie die Benutzeroberfläche ein  
   
-1. Wechseln Sie zurück zur der Windows Forms-Designer (**Form1.cs]**).  
+1. Wechseln Sie zurück zur der Windows Forms-Designer (**Form1.cs]** ).  
   
 2. Klicken Sie im Menü **Ansicht** auf **Toolbox**.  
   
@@ -127,9 +127,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 4. Mit der rechten Maustaste **label1**, und klicken Sie dann auf **Eigenschaften**.  
   
-5. Ändern der **Text** Eigenschaft **label1** zu **Enter OrderID:**.  
+5. Ändern der **Text** Eigenschaft **label1** zu **Enter OrderID:** .  
   
-6. Für die gleiche Weise **label2**, ändern Sie die **Text** Eigenschaft aus **label2** zu **Enter CustomerID:**.  
+6. Für die gleiche Weise **label2**, ändern Sie die **Text** Eigenschaft aus **label2** zu **Enter CustomerID:** .  
   
 7. Ändern Sie in die gleiche Weise die **Text** -Eigenschaft für **"Button1"** zu **Bestelldetails**.  
   

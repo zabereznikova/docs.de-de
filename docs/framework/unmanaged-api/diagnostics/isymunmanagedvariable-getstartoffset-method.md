@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dbe5b4e57f21970b518e4974707175f4bdcf02a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797513"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778228"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset-Methode
 Ruft den Anfangsoffset dieser Variablen in seinem übergeordneten Element ab. Wenn dies eine lokale Variable innerhalb eines Bereichs ist, greift der Anfangsoffset innerhalb der Offsets für den Bereich definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51d7cd273aa7a8799a1aac90d828ec81a7670906
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d2f5ad2afb2e73acead82369782f142aa10aac3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603268"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782708"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver-Funktion
 Lädt eine Typbibliothek und verwendet die angegebene [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) intern referenzierte Typbibliotheken aufgelöst.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LoadTypeLibWithResolver(  
     [in]  LPCOLESTR           szFile,  
     [in]  REGKIND             regkind,  

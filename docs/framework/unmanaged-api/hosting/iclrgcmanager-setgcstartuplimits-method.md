@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aff2c73eeb3360d4ed21c349e3b85194c73b6ec
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 8b25f73e9af77faadbc691255cb3139498f5d25c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380268"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779706"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits-Methode
 Legt die Größe der eine Garbage Collection-Segment und die maximale Größe der Garbage Collection-Systems die Generation 0 fest.  
@@ -32,7 +32,7 @@ Legt die Größe der eine Garbage Collection-Segment und die maximale Größe de
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimits (  
     [in] DWORD SegmentSize,   
     [in] DWORD MaxGen0Size  

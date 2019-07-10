@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 386e15ba3b1b392efccae159d7131bb2c69b0267
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 102349461456f971a2fdeaf2783630c1b88dbd6b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607192"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778626"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
 Durchläuft die verwalteten Frames im Stapel für den angegebenen Thread und sendet die Informationen an den Profiler in einem Rückruf.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DoStackSnapshot(  
     [in] ThreadID thread,  
     [in] StackSnapshotCallback *callback,  
