@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41378b314b91f42fca9d1039d3011b5eaafe502
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12f16b9bc87ea65e2699ec902d717b08d3155b95
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598352"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756178"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound-Methode
 Benachrichtigt den Profiler, dass der Suchphase der Ausnahmebehandlung einen Handler für die Ausnahme gefunden, die ausgelöst wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 RESULT ExceptionSearchCatcherFound(  
     [in] FunctionID functionId);  
 ```  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd903cb4a9ce664b7a1c958a3fef0c639d6845d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045317"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772326"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC-Enumeration
 Enthält Werte, mit denen das Verhalten während der Generierung von Metadaten beeinflusst wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorSetENC {  
   
     MDSetENCOn                  = 0x00000001,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f763151f4e450c48eb9304936541243af06bdca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1d8d76084bcf0b5951c6431c6f21f352406050b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645603"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737373"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>ICorDebugAssembly::EnumerateModules-Methode
 Ruft einen Enumerator ab, für die Module, die innerhalb der `ICorDebugAssembly`.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateModules (  
     [out] ICorDebugModuleEnum **ppModules  
 );  

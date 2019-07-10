@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906372"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769794"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories-Enumeration
 Beschreibt die Kategorien von Funktionen, die der Host blockieren kann, Ausführen in teilweise vertrauenswürdigen Code.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     eNoCategory               = 0,  
     eSynchronization          = 0x1,  

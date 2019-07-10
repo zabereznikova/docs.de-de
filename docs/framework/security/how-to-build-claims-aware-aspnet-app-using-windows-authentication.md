@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwe
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650408"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742497"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung
 ## <a name="applies-to"></a>Gilt für  
@@ -56,7 +56,7 @@ ms.locfileid: "64650408"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
+### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
 1. Starten Sie Visual Studio, klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650408"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Schritt 2: Konfigurieren der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
  In diesem Schritt fügen Sie einen Konfigurationseintrag zur Konfigurationsdatei *Web.config* hinzu und ändern die Datei *Default.aspx*, damit diese die Informationen zu den Ansprüchen eines Kontos anzeigt.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
 1. Ersetzen Sie in der Datei *Default.aspx* des Projekts **TestApp** das vorhandene Markup durch das folgende Markup:  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650408"
 ## <a name="step-3--test-your-solution"></a>Schritt 3: Testen Ihrer Projektmappe  
  In diesem Schritt testen Sie Ihre ASP.NET Web Forms-Anwendung und überprüfen, ob Ansprüche dargestellt werden, wenn sich ein Benutzer mit der Windows-Authentifizierung anmeldet.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
 1. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Ihnen sollte *Default.aspx* angezeigt werden, und Ihr Windows-Kontoname (einschließlich des Domänennamens) sollte bereits als der authentifizierte Benutzer oben rechts auf der Seite angezeigt werden. Die Seite sollte eine Tabelle enthalten, die mit den Ansprüchen gefüllt ist, die von Ihrem Windows-Konto abgerufen wurden.

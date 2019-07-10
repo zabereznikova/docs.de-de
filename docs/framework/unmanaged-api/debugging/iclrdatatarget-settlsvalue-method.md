@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0be35772b10d89f90da5b33f47aa781034b13a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34c0ab32d18d5aeeb81befa736cc42b678b11fb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698082"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738547"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue-Methode
 Legt einen Wert in den lokalen Threadspeicher (TLS) des angegebenen Threads im Zielprozess. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime (CLR) aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetTLSValue (  
     [in] ULONG32            threadID,  
     [in] ULONG32            index,  

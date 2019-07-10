@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3aac7e24fa9cd03350aebf5f441063bcedfaed04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961290"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741031"
 ---
 # <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP-Struktur
 
@@ -30,7 +30,7 @@ Definiert eine IL-Adresszuordnung an.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 typedef struct
 {
     ULONG32 ilOffset;

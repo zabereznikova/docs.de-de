@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daf674c0340998c0fd518e0f1af721bbe9ff653c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ab4560774edce49341c86dd9446e38701db7fa62
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490468"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769832"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen-Funktion
 Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
@@ -32,7 +32,7 @@ Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/ice
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DestroyICeeFileGen (  
     [in] ICeeFileGen  **ceeFileGen  
 );  
