@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b617e29e2df22b59114c8b978daa645de1cc6176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781953fe5bf209f195ef4887dff45e1902741f0c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905254"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775309"
 ---
-# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="35dab-102">IMetaDataAssemblyEmit::DefineManifestResource-Methode</span><span class="sxs-lookup"><span data-stu-id="35dab-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
-<span data-ttu-id="35dab-103">Erstellt eine `ManifestResource`-Struktur, die Metadaten für die angegebene Manifestressource enthält, und gibt das zugeordnete Metadatentoken zurück.</span><span class="sxs-lookup"><span data-stu-id="35dab-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinemanifestresource-method"></a><span data-ttu-id="34251-102">IMetaDataAssemblyEmit::DefineManifestResource-Methode</span><span class="sxs-lookup"><span data-stu-id="34251-102">IMetaDataAssemblyEmit::DefineManifestResource Method</span></span>
+<span data-ttu-id="34251-103">Erstellt eine `ManifestResource`-Struktur, die Metadaten für die angegebene Manifestressource enthält, und gibt das zugeordnete Metadatentoken zurück.</span><span class="sxs-lookup"><span data-stu-id="34251-103">Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35dab-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="35dab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34251-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="34251-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineManifestResource (  
     [in] LPCWSTR                szName,   
     [in] mdToken                tkImplementation,   
@@ -39,34 +39,34 @@ HRESULT DefineManifestResource (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="35dab-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="35dab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="34251-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="34251-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="35dab-106">[in] Der Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="35dab-106">[in] The name of the resource.</span></span>  
+ <span data-ttu-id="34251-106">[in] Der Name der Ressource.</span><span class="sxs-lookup"><span data-stu-id="34251-106">[in] The name of the resource.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="35dab-107">[in] Ein Metadatentoken des Typs `mdtFile` oder `mdtAssemblyRef` , der dem Ressourcenanbieter zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="35dab-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="35dab-108">Ein NULL-Wert gibt an, dass die Datei, in der die Metadaten eingebettet ist, der Ressourcenanbieter ist.</span><span class="sxs-lookup"><span data-stu-id="35dab-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
+ <span data-ttu-id="34251-107">[in] Ein Metadatentoken des Typs `mdtFile` oder `mdtAssemblyRef` , der dem Ressourcenanbieter zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="34251-107">[in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider.</span></span> <span data-ttu-id="34251-108">Ein NULL-Wert gibt an, dass die Datei, in der die Metadaten eingebettet ist, der Ressourcenanbieter ist.</span><span class="sxs-lookup"><span data-stu-id="34251-108">A NULL value indicates that the file in which the metadata is embedded is the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="35dab-109">[in] Der Offset auf den Anfang der Ressource in der Datei.</span><span class="sxs-lookup"><span data-stu-id="35dab-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="35dab-110">Für Ressourcen in eigenständigen Dateien wird dies immer 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="35dab-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="35dab-111">Wenn die Ressource in einer PE (portable ausführbare Datei)-Datei eingebettet ist, ist dies ein Offset von der Ressource ein BLOB, der an der in der Headerdatei cor.h angegebenen Position beginnt.</span><span class="sxs-lookup"><span data-stu-id="35dab-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
+ <span data-ttu-id="34251-109">[in] Der Offset auf den Anfang der Ressource in der Datei.</span><span class="sxs-lookup"><span data-stu-id="34251-109">[in] The offset to the beginning of the resource within the file.</span></span> <span data-ttu-id="34251-110">Für Ressourcen in eigenständigen Dateien wird dies immer 0 (null) sein.</span><span class="sxs-lookup"><span data-stu-id="34251-110">For resources in standalone files, this will always be zero.</span></span> <span data-ttu-id="34251-111">Wenn die Ressource in einer PE (portable ausführbare Datei)-Datei eingebettet ist, ist dies ein Offset von der Ressource ein BLOB, der an der in der Headerdatei cor.h angegebenen Position beginnt.</span><span class="sxs-lookup"><span data-stu-id="34251-111">If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="35dab-112">[in] Eine bitweise Kombination der Flagwerte, die eigenschaftseinstellungen für die Definition der Ressource angeben.</span><span class="sxs-lookup"><span data-stu-id="35dab-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
+ <span data-ttu-id="34251-112">[in] Eine bitweise Kombination der Flagwerte, die eigenschaftseinstellungen für die Definition der Ressource angeben.</span><span class="sxs-lookup"><span data-stu-id="34251-112">[in] A bitwise combination of flag values that specify property settings for the resource definition.</span></span>  
   
  `pmdmr`  
- <span data-ttu-id="35dab-113">[out] Ein Zeiger auf die zurückgegebenen Metadaten-Token.</span><span class="sxs-lookup"><span data-stu-id="35dab-113">[out] A pointer to the returned metadata token.</span></span>  
+ <span data-ttu-id="34251-113">[out] Ein Zeiger auf die zurückgegebenen Metadaten-Token.</span><span class="sxs-lookup"><span data-stu-id="34251-113">[out] A pointer to the returned metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="35dab-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="35dab-114">Remarks</span></span>  
- <span data-ttu-id="35dab-115">Eine `ManifestResource` Metadatenstruktur muss definiert werden, für jede Ressource, die in jeder der die Dateien der Assembly implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="35dab-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34251-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="34251-114">Remarks</span></span>  
+ <span data-ttu-id="34251-115">Eine `ManifestResource` Metadatenstruktur muss definiert werden, für jede Ressource, die in jeder der die Dateien der Assembly implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="34251-115">One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35dab-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="35dab-116">Requirements</span></span>  
- <span data-ttu-id="35dab-117">**Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35dab-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34251-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="34251-116">Requirements</span></span>  
+ <span data-ttu-id="34251-117">**Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34251-117">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35dab-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="35dab-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="34251-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="34251-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="35dab-119">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="35dab-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="34251-119">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="34251-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="35dab-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35dab-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="34251-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34251-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35dab-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="35dab-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34251-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="34251-121">See also</span></span>
 
-- [<span data-ttu-id="35dab-122">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="35dab-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="34251-122">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="34251-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

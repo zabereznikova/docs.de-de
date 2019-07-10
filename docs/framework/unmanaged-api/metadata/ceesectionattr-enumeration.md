@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c317524cefd7ed654e76bdd7051cdcd7653062db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61fc71c2ab0a9107f5e9fbb354fe0f8c2fb0dace
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905894"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776339"
 ---
-# <a name="ceesectionattr-enumeration"></a><span data-ttu-id="d2034-102">CeeSectionAttr-Enumeration</span><span class="sxs-lookup"><span data-stu-id="d2034-102">CeeSectionAttr Enumeration</span></span>
-<span data-ttu-id="d2034-103">Enthält Werte, die Attribute eines Abschnitts für die Verwendung durch Angeben der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="d2034-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="ceesectionattr-enumeration"></a><span data-ttu-id="f0a6a-102">CeeSectionAttr-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f0a6a-102">CeeSectionAttr Enumeration</span></span>
+<span data-ttu-id="f0a6a-103">Enthält Werte, die Attribute eines Abschnitts für die Verwendung durch Angeben der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="f0a6a-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2034-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d2034-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0a6a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f0a6a-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum  {  
     sdNone      = 0,  
     sdReadOnly  = IMAGE_SCN_CNT_INITIALIZED_DATA |  
@@ -39,24 +39,24 @@ typedef enum  {
 } CeeSectionAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d2034-105">Member</span><span class="sxs-lookup"><span data-stu-id="d2034-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f0a6a-105">Member</span><span class="sxs-lookup"><span data-stu-id="f0a6a-105">Members</span></span>  
   
-|<span data-ttu-id="d2034-106">Member</span><span class="sxs-lookup"><span data-stu-id="d2034-106">Member</span></span>|<span data-ttu-id="d2034-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d2034-107">Description</span></span>|  
+|<span data-ttu-id="f0a6a-106">Member</span><span class="sxs-lookup"><span data-stu-id="f0a6a-106">Member</span></span>|<span data-ttu-id="f0a6a-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f0a6a-107">Description</span></span>|  
 |------------|-----------------|  
-|`sdNone`|<span data-ttu-id="d2034-108">Abschnitt besitzt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="d2034-108">Section has no attributes.</span></span>|  
-|`sdReadOnly`|<span data-ttu-id="d2034-109">Abschnitt initialisierte Daten enthält, die nur können nicht aktualisiert gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="d2034-109">Section contains initialized data that can be only read, not updated.</span></span>|  
-|`sdReadWrite`|<span data-ttu-id="d2034-110">Abschnitt initialisierte Daten enthält, die gelesen oder aktualisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="d2034-110">Section contains initialized data that can be read or updated.</span></span>|  
-|`sdExecute`|<span data-ttu-id="d2034-111">Abschnitt enthält die ausführbaren Code, der gelesen und ausgeführt werden darf.</span><span class="sxs-lookup"><span data-stu-id="d2034-111">Section contains executable code that is allowed to be read and executed.</span></span>|  
+|`sdNone`|<span data-ttu-id="f0a6a-108">Abschnitt besitzt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="f0a6a-108">Section has no attributes.</span></span>|  
+|`sdReadOnly`|<span data-ttu-id="f0a6a-109">Abschnitt initialisierte Daten enthält, die nur können nicht aktualisiert gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="f0a6a-109">Section contains initialized data that can be only read, not updated.</span></span>|  
+|`sdReadWrite`|<span data-ttu-id="f0a6a-110">Abschnitt initialisierte Daten enthält, die gelesen oder aktualisiert werden können.</span><span class="sxs-lookup"><span data-stu-id="f0a6a-110">Section contains initialized data that can be read or updated.</span></span>|  
+|`sdExecute`|<span data-ttu-id="f0a6a-111">Abschnitt enthält die ausführbaren Code, der gelesen und ausgeführt werden darf.</span><span class="sxs-lookup"><span data-stu-id="f0a6a-111">Section contains executable code that is allowed to be read and executed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d2034-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d2034-112">Requirements</span></span>  
- <span data-ttu-id="d2034-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2034-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0a6a-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f0a6a-112">Requirements</span></span>  
+ <span data-ttu-id="f0a6a-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0a6a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2034-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d2034-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f0a6a-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f0a6a-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d2034-115">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d2034-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f0a6a-115">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="f0a6a-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d2034-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2034-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f0a6a-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0a6a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2034-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2034-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0a6a-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f0a6a-117">See also</span></span>
 
-- [<span data-ttu-id="d2034-118">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="d2034-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="f0a6a-118">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="f0a6a-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

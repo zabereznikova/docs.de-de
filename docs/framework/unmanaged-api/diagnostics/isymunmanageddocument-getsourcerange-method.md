@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59420cfd29c3228aece9fc5ae02b950db6099ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 981048c10be27900f011afeab55d1c5eb523f734
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939855"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776680"
 ---
-# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="f47e9-102">ISymUnmanagedDocument::GetSourceRange-Methode</span><span class="sxs-lookup"><span data-stu-id="f47e9-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
-<span data-ttu-id="f47e9-103">Gibt den angegebenen Bereich der eingebetteten Quelle in den angegebenen Puffer zurück.</span><span class="sxs-lookup"><span data-stu-id="f47e9-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="f47e9-104">Der Puffer muss groß genug für die Quelle sein.</span><span class="sxs-lookup"><span data-stu-id="f47e9-104">The buffer must be large enough to hold the source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="1ccb4-102">ISymUnmanagedDocument::GetSourceRange-Methode</span><span class="sxs-lookup"><span data-stu-id="1ccb4-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
+<span data-ttu-id="1ccb4-103">Gibt den angegebenen Bereich der eingebetteten Quelle in den angegebenen Puffer zurück.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="1ccb4-104">Der Puffer muss groß genug für die Quelle sein.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-104">The buffer must be large enough to hold the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f47e9-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f47e9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ccb4-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="1ccb4-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSourceRange(  
     [in]  ULONG32  startLine,  
     [in]  ULONG32  startColumn,  
@@ -41,31 +41,31 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f47e9-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="f47e9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ccb4-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="1ccb4-106">Parameters</span></span>  
  `startLine`  
- <span data-ttu-id="f47e9-107">[in] Die Anfangszeile im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="f47e9-107">[in] The starting line in the current document.</span></span>  
+ <span data-ttu-id="1ccb4-107">[in] Die Anfangszeile im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-107">[in] The starting line in the current document.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="f47e9-108">[in] Die Anfangsspalte im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="f47e9-108">[in] The starting column in the current document.</span></span>  
+ <span data-ttu-id="1ccb4-108">[in] Die Anfangsspalte im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-108">[in] The starting column in the current document.</span></span>  
   
  `endLine`  
- <span data-ttu-id="f47e9-109">[in] Die letzte Zeile im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="f47e9-109">[in] The final line in the current document.</span></span>  
+ <span data-ttu-id="1ccb4-109">[in] Die letzte Zeile im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-109">[in] The final line in the current document.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="f47e9-110">[in] Die letzte Spalte im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="f47e9-110">[in] The final column in the current document.</span></span>  
+ <span data-ttu-id="1ccb4-110">[in] Die letzte Spalte im aktuellen Dokument.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-110">[in] The final column in the current document.</span></span>  
   
  `cSourceBytes`  
- <span data-ttu-id="f47e9-111">[in] Die Größe der Quelle, in Bytes.</span><span class="sxs-lookup"><span data-stu-id="f47e9-111">[in] The size of the source, in bytes.</span></span>  
+ <span data-ttu-id="1ccb4-111">[in] Die Größe der Quelle, in Bytes.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-111">[in] The size of the source, in bytes.</span></span>  
   
  `pcSourceBytes`  
- <span data-ttu-id="f47e9-112">[out] Ein Zeiger auf eine Variable, die Größe der Datenquelle empfängt.</span><span class="sxs-lookup"><span data-stu-id="f47e9-112">[out] A pointer to a variable that receives the source size.</span></span>  
+ <span data-ttu-id="1ccb4-112">[out] Ein Zeiger auf eine Variable, die Größe der Datenquelle empfängt.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-112">[out] A pointer to a variable that receives the source size.</span></span>  
   
  `source`  
- <span data-ttu-id="f47e9-113">[out] Die Größe und die Länge des angegebenen Bereichs des Quelldokuments, in Bytes.</span><span class="sxs-lookup"><span data-stu-id="f47e9-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
+ <span data-ttu-id="1ccb4-113">[out] Die Größe und die Länge des angegebenen Bereichs des Quelldokuments, in Bytes.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f47e9-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="f47e9-114">Return Value</span></span>  
- <span data-ttu-id="f47e9-115">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="f47e9-115">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1ccb4-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1ccb4-114">Return Value</span></span>  
+ <span data-ttu-id="1ccb4-115">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="1ccb4-115">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f47e9-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f47e9-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ccb4-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1ccb4-116">See also</span></span>
 
-- [<span data-ttu-id="f47e9-117">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f47e9-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="1ccb4-117">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1ccb4-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

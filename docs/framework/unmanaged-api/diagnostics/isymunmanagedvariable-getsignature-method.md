@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cc616246812bb9643388d8ad57cf84bc387b55e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abd4bb00f5c1e703740462f1709407616ac8a8e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797500"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778240"
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="5331f-102">ISymUnmanagedVariable::GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="5331f-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="5331f-103">Ruft die Signatur dieser Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="5331f-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="94a70-102">ISymUnmanagedVariable::GetSignature-Methode</span><span class="sxs-lookup"><span data-stu-id="94a70-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="94a70-103">Ruft die Signatur dieser Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="94a70-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5331f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5331f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94a70-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="94a70-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSignature(  
     [in]  ULONG32  cSig,  
     [out] ULONG32  *pcSig,  
@@ -37,22 +37,22 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5331f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5331f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94a70-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="94a70-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="5331f-106">[in] Die Länge des Puffers verweist die `sig` Parameter.</span><span class="sxs-lookup"><span data-stu-id="5331f-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="94a70-106">[in] Die Länge des Puffers verweist die `sig` Parameter.</span><span class="sxs-lookup"><span data-stu-id="94a70-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="5331f-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Signatur enthalten, die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="5331f-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="94a70-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Signatur enthalten, die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="94a70-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="5331f-108">[out] Der Puffer, in dem die Signatur gespeichert.</span><span class="sxs-lookup"><span data-stu-id="5331f-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="94a70-108">[out] Der Puffer, in dem die Signatur gespeichert.</span><span class="sxs-lookup"><span data-stu-id="94a70-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5331f-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="5331f-109">Return Value</span></span>  
- <span data-ttu-id="5331f-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="5331f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="94a70-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="94a70-109">Return Value</span></span>  
+ <span data-ttu-id="94a70-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="94a70-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5331f-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5331f-111">Requirements</span></span>  
- <span data-ttu-id="5331f-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5331f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94a70-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="94a70-111">Requirements</span></span>  
+ <span data-ttu-id="94a70-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="94a70-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5331f-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5331f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94a70-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="94a70-113">See also</span></span>
 
-- [<span data-ttu-id="5331f-114">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5331f-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="94a70-114">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="94a70-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

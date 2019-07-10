@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7613bc744ad4c2e172fc4f6dd7bf282fb3d9072c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7cb58593a30b855c9fabf55a6ca0a50886dc371f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992757"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779485"
 ---
-# <a name="igcthreadcontrolsuspensionstarting-method"></a><span data-ttu-id="0c3ee-102">IGCThreadControl::SuspensionStarting-Methode</span><span class="sxs-lookup"><span data-stu-id="0c3ee-102">IGCThreadControl::SuspensionStarting Method</span></span>
-<span data-ttu-id="0c3ee-103">Benachrichtigt den Host, dass die Laufzeit eine Threadunterbrechung für eine Garbagecollection oder einer anderen Unterbrechung beginnt.</span><span class="sxs-lookup"><span data-stu-id="0c3ee-103">Notifies the host that the runtime is beginning a thread suspension for a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolsuspensionstarting-method"></a><span data-ttu-id="3b249-102">IGCThreadControl::SuspensionStarting-Methode</span><span class="sxs-lookup"><span data-stu-id="3b249-102">IGCThreadControl::SuspensionStarting Method</span></span>
+<span data-ttu-id="3b249-103">Benachrichtigt den Host, dass die Laufzeit eine Threadunterbrechung für eine Garbagecollection oder einer anderen Unterbrechung beginnt.</span><span class="sxs-lookup"><span data-stu-id="3b249-103">Notifies the host that the runtime is beginning a thread suspension for a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0c3ee-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0c3ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b249-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3b249-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SuspensionStarting ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0c3ee-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0c3ee-105">Remarks</span></span>  
- <span data-ttu-id="0c3ee-106">Darf nicht verlegt werden alle Threads, während die `SuspensionStarting` Rückruf.</span><span class="sxs-lookup"><span data-stu-id="0c3ee-106">Do not reschedule any threads during the `SuspensionStarting` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b249-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3b249-105">Remarks</span></span>  
+ <span data-ttu-id="3b249-106">Darf nicht verlegt werden alle Threads, während die `SuspensionStarting` Rückruf.</span><span class="sxs-lookup"><span data-stu-id="3b249-106">Do not reschedule any threads during the `SuspensionStarting` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0c3ee-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0c3ee-107">Requirements</span></span>  
- <span data-ttu-id="0c3ee-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c3ee-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b249-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3b249-107">Requirements</span></span>  
+ <span data-ttu-id="3b249-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b249-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c3ee-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0c3ee-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3b249-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3b249-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0c3ee-110">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0c3ee-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3b249-110">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="3b249-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0c3ee-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c3ee-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3b249-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b249-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c3ee-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0c3ee-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b249-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3b249-112">See also</span></span>
 
-- [<span data-ttu-id="0c3ee-113">IGCThreadControl-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0c3ee-113">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+- [<span data-ttu-id="3b249-113">IGCThreadControl-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3b249-113">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

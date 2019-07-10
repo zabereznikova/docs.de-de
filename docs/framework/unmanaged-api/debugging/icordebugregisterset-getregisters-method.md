@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b417685361126951470571e2440cc842ab1c94fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daee6c46c247bcd21073f779cada8c843947a949
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782908"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747250"
 ---
-# <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="6a36b-102">ICorDebugRegisterSet::GetRegisters-Methode</span><span class="sxs-lookup"><span data-stu-id="6a36b-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
-<span data-ttu-id="6a36b-103">Ruft den Wert jedes Register (auf dem Computer, die gerade Code ausführt) ab, das durch die Bitmaske angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="6a36b-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  
+# <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="eb329-102">ICorDebugRegisterSet::GetRegisters-Methode</span><span class="sxs-lookup"><span data-stu-id="eb329-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
+<span data-ttu-id="eb329-103">Ruft den Wert jedes Register (auf dem Computer, die gerade Code ausführt) ab, das durch die Bitmaske angegeben ist.</span><span class="sxs-lookup"><span data-stu-id="eb329-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a36b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6a36b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb329-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="eb329-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetRegisters (  
     [in] ULONG64       mask,   
     [in] ULONG32       regCount,  
@@ -38,31 +38,31 @@ HRESULT GetRegisters (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a36b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6a36b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eb329-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="eb329-105">Parameters</span></span>  
  `mask`  
- <span data-ttu-id="6a36b-106">[in] Eine Bitmaske, die angibt, welche Register Werte abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="6a36b-106">[in] A bit mask that specifies which register values are to be retrieved.</span></span> <span data-ttu-id="6a36b-107">Jedes Bit entspricht einer registrieren.</span><span class="sxs-lookup"><span data-stu-id="6a36b-107">Each bit corresponds to a register.</span></span> <span data-ttu-id="6a36b-108">Wenn ein bit auf 1 festgelegt ist, wird der Wert des Registers abgerufen. Andernfalls wird der Wert des Registers nicht abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="6a36b-108">If a bit is set to one, the register's value is retrieved; otherwise, the register's value is not retrieved.</span></span>  
+ <span data-ttu-id="eb329-106">[in] Eine Bitmaske, die angibt, welche Register Werte abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="eb329-106">[in] A bit mask that specifies which register values are to be retrieved.</span></span> <span data-ttu-id="eb329-107">Jedes Bit entspricht einer registrieren.</span><span class="sxs-lookup"><span data-stu-id="eb329-107">Each bit corresponds to a register.</span></span> <span data-ttu-id="eb329-108">Wenn ein bit auf 1 festgelegt ist, wird der Wert des Registers abgerufen. Andernfalls wird der Wert des Registers nicht abgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="eb329-108">If a bit is set to one, the register's value is retrieved; otherwise, the register's value is not retrieved.</span></span>  
   
  `regCount`  
- <span data-ttu-id="6a36b-109">[in] Die Anzahl der Registerwerte abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="6a36b-109">[in] The number of register values to be retrieved.</span></span>  
+ <span data-ttu-id="eb329-109">[in] Die Anzahl der Registerwerte abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="eb329-109">[in] The number of register values to be retrieved.</span></span>  
   
  `regBuffer`  
- <span data-ttu-id="6a36b-110">[out] Ein Array von `CORDB_REGISTER` Objekte, von denen jede einen Wert eines Registers empfängt.</span><span class="sxs-lookup"><span data-stu-id="6a36b-110">[out] An array of `CORDB_REGISTER` objects, each of which receives a value of a register.</span></span>  
+ <span data-ttu-id="eb329-110">[out] Ein Array von `CORDB_REGISTER` Objekte, von denen jede einen Wert eines Registers empfängt.</span><span class="sxs-lookup"><span data-stu-id="eb329-110">[out] An array of `CORDB_REGISTER` objects, each of which receives a value of a register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6a36b-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6a36b-111">Remarks</span></span>  
- <span data-ttu-id="6a36b-112">Die Größe des Arrays sollte gleich der Anzahl der Bits, die auf einen in der Bitmaske festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="6a36b-112">The size of the array should be equal to the number of bits set to one in the bit mask.</span></span> <span data-ttu-id="6a36b-113">Die `regCount` Parameter gibt die Anzahl der Elemente im Puffer, der die Registerwerte empfängt.</span><span class="sxs-lookup"><span data-stu-id="6a36b-113">The `regCount` parameter specifies the number of elements in the buffer that will receive the register values.</span></span> <span data-ttu-id="6a36b-114">Wenn die `regCount` Wert ist zu klein für die Anzahl von Registern der Maske, die höhere nummerierten Register aus dem Satz gekürzt.</span><span class="sxs-lookup"><span data-stu-id="6a36b-114">If the `regCount` value is too small for the number of registers indicated by the mask, the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="6a36b-115">Wenn die `regCount` Wert ist zu groß ist, die nicht verwendeten `regBuffer` Elemente nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="6a36b-115">If the `regCount` value is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eb329-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="eb329-111">Remarks</span></span>  
+ <span data-ttu-id="eb329-112">Die Größe des Arrays sollte gleich der Anzahl der Bits, die auf einen in der Bitmaske festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="eb329-112">The size of the array should be equal to the number of bits set to one in the bit mask.</span></span> <span data-ttu-id="eb329-113">Die `regCount` Parameter gibt die Anzahl der Elemente im Puffer, der die Registerwerte empfängt.</span><span class="sxs-lookup"><span data-stu-id="eb329-113">The `regCount` parameter specifies the number of elements in the buffer that will receive the register values.</span></span> <span data-ttu-id="eb329-114">Wenn die `regCount` Wert ist zu klein für die Anzahl von Registern der Maske, die höhere nummerierten Register aus dem Satz gekürzt.</span><span class="sxs-lookup"><span data-stu-id="eb329-114">If the `regCount` value is too small for the number of registers indicated by the mask, the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="eb329-115">Wenn die `regCount` Wert ist zu groß ist, die nicht verwendeten `regBuffer` Elemente nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="eb329-115">If the `regCount` value is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
   
- <span data-ttu-id="6a36b-116">Wenn die Bitmaske ein Registers angibt, der nicht verfügbar ist, `GetRegisters` gibt einen unbestimmten Wert für diese registrieren.</span><span class="sxs-lookup"><span data-stu-id="6a36b-116">If the bit mask specifies a register that is unavailable, `GetRegisters` returns an indeterminate value for that register.</span></span>  
+ <span data-ttu-id="eb329-116">Wenn die Bitmaske ein Registers angibt, der nicht verfügbar ist, `GetRegisters` gibt einen unbestimmten Wert für diese registrieren.</span><span class="sxs-lookup"><span data-stu-id="eb329-116">If the bit mask specifies a register that is unavailable, `GetRegisters` returns an indeterminate value for that register.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a36b-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6a36b-117">Requirements</span></span>  
- <span data-ttu-id="6a36b-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a36b-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb329-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eb329-117">Requirements</span></span>  
+ <span data-ttu-id="eb329-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb329-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a36b-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6a36b-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eb329-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb329-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6a36b-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a36b-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eb329-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb329-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a36b-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a36b-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="eb329-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb329-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a36b-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6a36b-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb329-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eb329-122">See also</span></span>
 
-- [<span data-ttu-id="6a36b-123">ICorDebugRegisterSet-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a36b-123">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [<span data-ttu-id="6a36b-124">ICorDebugRegisterSet2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a36b-124">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="eb329-123">ICorDebugRegisterSet-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="eb329-123">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="eb329-124">ICorDebugRegisterSet2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="eb329-124">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

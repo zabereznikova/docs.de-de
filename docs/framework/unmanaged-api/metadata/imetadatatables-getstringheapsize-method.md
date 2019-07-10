@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fe6559eca2fef1c9481c8996b19ffb8a08c6019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b842fb4d0853f473ae8e237a42e800cf0af8dc11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049751"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781390"
 ---
-# <a name="imetadatatablesgetstringheapsize-method"></a><span data-ttu-id="b6d87-102">IMetaDataTables::GetStringHeapSize-Methode</span><span class="sxs-lookup"><span data-stu-id="b6d87-102">IMetaDataTables::GetStringHeapSize Method</span></span>
-<span data-ttu-id="b6d87-103">Ruft die Größe in Bytes, der dem String-Heap an.</span><span class="sxs-lookup"><span data-stu-id="b6d87-103">Gets the size, in bytes, of the string heap.</span></span>  
+# <a name="imetadatatablesgetstringheapsize-method"></a><span data-ttu-id="71aa6-102">IMetaDataTables::GetStringHeapSize-Methode</span><span class="sxs-lookup"><span data-stu-id="71aa6-102">IMetaDataTables::GetStringHeapSize Method</span></span>
+<span data-ttu-id="71aa6-103">Ruft die Größe in Bytes, der dem String-Heap an.</span><span class="sxs-lookup"><span data-stu-id="71aa6-103">Gets the size, in bytes, of the string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6d87-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6d87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71aa6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="71aa6-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetStringHeapSize (  
     [out] ULONG   *pcbStrings  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6d87-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b6d87-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71aa6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="71aa6-105">Parameters</span></span>  
  `pcbStrings`  
- <span data-ttu-id="b6d87-106">[out] Ein Zeiger auf die Größe in Bytes, der dem String-Heap.</span><span class="sxs-lookup"><span data-stu-id="b6d87-106">[out] A pointer to the size, in bytes, of the string heap.</span></span>  
+ <span data-ttu-id="71aa6-106">[out] Ein Zeiger auf die Größe in Bytes, der dem String-Heap.</span><span class="sxs-lookup"><span data-stu-id="71aa6-106">[out] A pointer to the size, in bytes, of the string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6d87-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b6d87-107">Requirements</span></span>  
- <span data-ttu-id="b6d87-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6d87-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71aa6-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="71aa6-107">Requirements</span></span>  
+ <span data-ttu-id="71aa6-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71aa6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6d87-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b6d87-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="71aa6-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="71aa6-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6d87-110">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="b6d87-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="71aa6-110">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="71aa6-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b6d87-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6d87-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="71aa6-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71aa6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6d87-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6d87-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71aa6-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="71aa6-112">See also</span></span>
 
-- [<span data-ttu-id="b6d87-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b6d87-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="b6d87-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b6d87-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="71aa6-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="71aa6-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="71aa6-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="71aa6-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe99a00ca96270d1f35812d48e78cc6bd0a051ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778735"
 ---
-# <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="cbf6c-102">StrongNameCompareAssemblies-Funktion</span><span class="sxs-lookup"><span data-stu-id="cbf6c-102">StrongNameCompareAssemblies Function</span></span>
-<span data-ttu-id="cbf6c-103">Bestimmt, ob sich zwei Assemblys nur durch die Signaturen ihrer starken Namen unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
+# <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="8aa2a-102">StrongNameCompareAssemblies-Funktion</span><span class="sxs-lookup"><span data-stu-id="8aa2a-102">StrongNameCompareAssemblies Function</span></span>
+<span data-ttu-id="8aa2a-103">Bestimmt, ob sich zwei Assemblys nur durch die Signaturen ihrer starken Namen unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
   
- <span data-ttu-id="cbf6c-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-104">This function has been deprecated.</span></span> <span data-ttu-id="cbf6c-105">Verwenden der [ICLRStrongName:: StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-105">Use the [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) method instead.</span></span>  
+ <span data-ttu-id="8aa2a-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-104">This function has been deprecated.</span></span> <span data-ttu-id="8aa2a-105">Verwenden der [ICLRStrongName:: StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-105">Use the [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cbf6c-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="cbf6c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8aa2a-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="8aa2a-106">Syntax</span></span>  
   
-```  
+```cpp  
 BOOLEAN StrongNameCompareAssemblies (  
     [in]  LPCWSTR   wszAssembly1,  
     [in]  LPCWSTR   wszAssembly2,  
@@ -38,40 +38,40 @@ BOOLEAN StrongNameCompareAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cbf6c-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="cbf6c-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8aa2a-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="8aa2a-107">Parameters</span></span>  
  `wszAssembly1`  
- <span data-ttu-id="cbf6c-108">[in] Der Pfad zu die erste Assembly.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-108">[in] The path to the first assembly.</span></span>  
+ <span data-ttu-id="8aa2a-108">[in] Der Pfad zu die erste Assembly.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-108">[in] The path to the first assembly.</span></span>  
   
  `wszAssembly2`  
- <span data-ttu-id="cbf6c-109">[in] Der Pfad für die zweite Assembly.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-109">[in] The path to the second assembly.</span></span>  
+ <span data-ttu-id="8aa2a-109">[in] Der Pfad für die zweite Assembly.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-109">[in] The path to the second assembly.</span></span>  
   
  `pdwResult`  
- <span data-ttu-id="cbf6c-110">[out] Eine der folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="cbf6c-110">[out] One of the following values:</span></span>  
+ <span data-ttu-id="8aa2a-110">[out] Eine der folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="8aa2a-110">[out] One of the following values:</span></span>  
   
-- <span data-ttu-id="cbf6c-111">`SN_CMP_DIFFERENT` (0): Gibt an, dass die Assemblys mit unterschiedliche Daten enthalten.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-111">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
+- <span data-ttu-id="8aa2a-111">`SN_CMP_DIFFERENT` (0): Gibt an, dass die Assemblys mit unterschiedliche Daten enthalten.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-111">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
   
-- <span data-ttu-id="cbf6c-112">`SN_CMP_IDENTICAL` (1) – gibt an, dass die Assemblys identisch, einschließlich ihrer Signaturen und die Prüfsumme sind.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-112">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
+- <span data-ttu-id="8aa2a-112">`SN_CMP_IDENTICAL` (1) – gibt an, dass die Assemblys identisch, einschließlich ihrer Signaturen und die Prüfsumme sind.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-112">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
   
-- <span data-ttu-id="cbf6c-113">`SN_CMP_SIGONLY` (2): Gibt an, dass die Assemblys nur durch die Signatur und der Prüfsumme unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-113">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
+- <span data-ttu-id="8aa2a-113">`SN_CMP_SIGONLY` (2): Gibt an, dass die Assemblys nur durch die Signatur und der Prüfsumme unterscheiden.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-113">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cbf6c-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="cbf6c-114">Return Value</span></span>  
- <span data-ttu-id="cbf6c-115">`true` Bei erfolgreichem Abschluss; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-115">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8aa2a-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="8aa2a-114">Return Value</span></span>  
+ <span data-ttu-id="8aa2a-115">`true` Bei erfolgreichem Abschluss; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-115">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cbf6c-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cbf6c-116">Requirements</span></span>  
- <span data-ttu-id="cbf6c-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbf6c-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8aa2a-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8aa2a-116">Requirements</span></span>  
+ <span data-ttu-id="8aa2a-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8aa2a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cbf6c-118">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="cbf6c-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="8aa2a-118">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="8aa2a-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="cbf6c-119">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="cbf6c-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8aa2a-119">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="8aa2a-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cbf6c-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbf6c-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8aa2a-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8aa2a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cbf6c-121">Hinweise</span><span class="sxs-lookup"><span data-stu-id="cbf6c-121">Remarks</span></span>  
- <span data-ttu-id="cbf6c-122">Die Signatur einer Assembly mit starkem Namen bestehen Textnamen, Version, Kultur und öffentliches Schlüsseltoken der Assembly ab.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-122">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8aa2a-121">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8aa2a-121">Remarks</span></span>  
+ <span data-ttu-id="8aa2a-122">Die Signatur einer Assembly mit starkem Namen bestehen Textnamen, Version, Kultur und öffentliches Schlüsseltoken der Assembly ab.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-122">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
   
- <span data-ttu-id="cbf6c-123">Wenn die `StrongNameCompareAssemblies` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.</span><span class="sxs-lookup"><span data-stu-id="cbf6c-123">If the `StrongNameCompareAssemblies` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="8aa2a-123">Wenn die `StrongNameCompareAssemblies` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.</span><span class="sxs-lookup"><span data-stu-id="8aa2a-123">If the `StrongNameCompareAssemblies` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cbf6c-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cbf6c-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8aa2a-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8aa2a-124">See also</span></span>
 
-- [<span data-ttu-id="cbf6c-125">StrongNameCompareAssemblies-Methode</span><span class="sxs-lookup"><span data-stu-id="cbf6c-125">StrongNameCompareAssemblies Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [<span data-ttu-id="cbf6c-126">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="cbf6c-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="8aa2a-125">StrongNameCompareAssemblies-Methode</span><span class="sxs-lookup"><span data-stu-id="8aa2a-125">StrongNameCompareAssemblies Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [<span data-ttu-id="8aa2a-126">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8aa2a-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
