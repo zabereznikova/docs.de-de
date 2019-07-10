@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040585"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746506"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom-Funktion
 Bestimmt, ob die aktuelle Klasse oder Instanz aus einer angegebenen übergeordneten Klasse abgeleitet ist.
@@ -30,7 +30,7 @@ Bestimmt, ob die aktuelle Klasse oder Instanz aus einer angegebenen übergeordne
     
 ## <a name="syntax"></a>Syntax  
   
-```
+```cpp
 HRESULT InheritsFrom (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -53,7 +53,7 @@ HRESULT InheritsFrom (
 
 Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
-|Konstante  |Wert  |Beschreibung  |
+|Konstante  |Wert  |Description  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | Das aktuelle Objekt erbt `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | Das aktuelle Objekt erbt nicht von `wszAncestor`. |

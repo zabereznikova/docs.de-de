@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 8ce30d60b05e600e4f6906221d4c360c7ad8c396
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586683"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743467"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Datenabruf und CUD-Operationen in n-schichtigen Anwendungen (LINQ to SQL)
 Wenn Sie Entitätsobjekte wie Customers oder Orders über ein Netzwerk an einen Client serialisieren, werden diese Entitäten von ihrem Datenkontext getrennt. Änderungen oder Verknüpfungen mit anderen Objekten werden vom Datenkontext nicht mehr verfolgt. Dies stellt kein Problem dar, solange die Clients die Daten nur lesen. Es ist außerdem relativ einfach, Clients zu ermöglichen, einer Datenbank neue Zeilen hinzuzufügen. Wenn Ihre Anwendung jedoch voraussetzt, dass Clients Daten aktualisieren oder löschen sollen, müssen Sie die Entitäten an einen neuen Datenkontext anfügen, bevor Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> aufrufen. Wenn Sie eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten verwenden, müssen Sie außerdem eine Möglichkeit schaffen, der Datenbank sowohl die ursprüngliche als auch die geänderte Entität bereitzustellen. Die `Attach`-Methoden werden bereitgestellt, um es Ihnen zu ermöglichen, Entitäten in einen neuen Datenkontext einzufügen, nachdem sie getrennt wurden.  
   
  Auch wenn Sie anstelle von Proxy-Objekte Serialisieren der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Entitäten, Sie müssen trotzdem erstellen Sie eine Entität auf der Datenzugriffsebene (DAL), und fügen Sie ihn an einen neuen <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, um die Daten in der Datenbank zu übermitteln.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist spielt wie Entitäten serialisiert werden. Weitere Informationen zur Verwendung der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] und SQLMetal-Tools zum Generieren von Klassen, die serialisierbar sind, mithilfe von Windows Communication Foundation (WCF), finden Sie unter [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist spielt wie Entitäten serialisiert werden. Weitere Informationen zur Verwendung der Object Relational Designer und SQLMetal-Tools zum Generieren von Klassen, die serialisierbar sind, mithilfe von Windows Communication Foundation (WCF) finden Sie unter [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Rufen Sie die `Attach`-Methoden nur für neue oder deserialisierte Entitäten auf. Die einzige Möglichkeit, eine Entität von ihrem ursprünglichen Datenkontext zu trennen, besteht darin, sie zu serialisieren. Wenn Sie versuchen, eine nicht getrennte Entität an einen neuen Datenkontext anzufügen, und diese Entität noch über verzögerte Ladeprogramme aus dem vorherigen Datenkontext verfügt, löst [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Ausnahme aus. Eine Entität mit verzögerten Ladenprogrammen aus zwei unterschiedlichen Datenkontexten könnte unerwünschte Ergebnisse hervorbringen, wenn Sie Einfüge-, Aktualisierungs- und Löschvorgänge für diese Entität ausführen. Weitere Informationen zu verzögerten Ladeprogrammen finden Sie unter [verzögertes im Vergleich zu den sofortigen Laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

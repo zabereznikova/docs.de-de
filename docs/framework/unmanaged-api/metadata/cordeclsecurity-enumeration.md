@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5409d1b89ba3e50c4ae17ed5aa6bf063cf6c93cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046032"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767005"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity-Enumeration
 Gibt die Sicherheitsaktionen an, die mit deklarativer Sicherheit ausgeführt werden können.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDeclSecurity {  
   
     dclActionMask               =   0x001f,  

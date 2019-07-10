@@ -2,21 +2,21 @@
 title: Erstellen des Objektmodells
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032442"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743575"
 ---
 # <a name="creating-the-object-model"></a>Erstellen des Objektmodells
 Sie können Ihr Objektmodell aus einer vorhandenen Datenbank erstellen und dieses in seinem Standardzustand verwenden. Sie können auch zahlreiche Aspekte des Modells und seines Verhaltens anpassen.  
   
- Wenn Sie Visual Studio verwenden, können Sie die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Erstellen des Objektmodells.  
+ Wenn Sie Visual Studio verwenden, können Sie den Object Relational Designer, um das Objektmodell zu erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- Beschreibt die Verwendung des SQLMetal-Befehlszeilentools. Enthält auch einen Link zu der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] für Visual Studio-Benutzer  
+ Beschreibt die Verwendung des SQLMetal-Befehlszeilentools. Enthält auch einen Link zu den Object Relational Designer für Visual Studio-Benutzer  
   
  [Vorgehensweise: Generieren des Objektmodells als externe Datei](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  Beschreibt, wie anstelle der attributbasierten Zuordnung eine externe Zuordnungsdatei generiert wird.  

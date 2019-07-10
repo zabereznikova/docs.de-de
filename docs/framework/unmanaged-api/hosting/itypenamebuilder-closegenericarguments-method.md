@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db8523c5e1e46d8b85026cfe2243dae4b4a5b9ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d12ba882af2547c4d83a669af4e09db30375e47f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778344"
 ---
 # <a name="itypenamebuilderclosegenericarguments-method"></a>ITypeNameBuilder::CloseGenericArguments-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CloseGenericArguments ( );  
 ```  
   

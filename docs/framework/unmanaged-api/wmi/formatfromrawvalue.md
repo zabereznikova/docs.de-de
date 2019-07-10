@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609047"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746699"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue-Funktion
 Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist. 
@@ -30,7 +30,7 @@ Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohda
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 
@@ -77,7 +77,7 @@ Die vorherigen Werte kann ORed mit einem der folgenden Flags, die Skalierung mö
 
 Die folgenden Werte werden von dieser Funktion zurückgegeben:
 
-|Konstante  |Wert  |Beschreibung  |
+|Konstante  |Wert  |Description  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | Der Funktionsaufruf ist erfolgreich. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Ein erforderliches Argument ist nicht vorhanden oder falsch. | 

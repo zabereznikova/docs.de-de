@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: da37dc2ff08f127e17cd4e6f7cbeab88f2c8d5e9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 788388b93a00cf5393174d35b8a160b4991da3bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583453"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743727"
 ---
 # <a name="working-with-data-definition-language"></a>Arbeiten mit der Datendefinitionssprache
 Ab .NET Framework, Version 4, die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Datendefinitionssprache (DDL) unterstützt. Dadurch wird das Erstellen oder Löschen einer Datenbankinstanz auf Grundlage der Verbindungszeichenfolge und der Metadaten des Speichermodells (SSDL) ermöglicht.  
@@ -34,7 +34,7 @@ Ab .NET Framework, Version 4, die [!INCLUDE[adonet_ef](../../../../../includes/a
   
 ## <a name="procedures"></a>Verfahren  
   
-#### <a name="to-define-a-database-based-on-the-existing-model"></a>So definieren Sie eine Datenbank auf Grundlage des vorhandenen Modells  
+### <a name="to-define-a-database-based-on-the-existing-model"></a>So definieren Sie eine Datenbank auf Grundlage des vorhandenen Modells  
   
 1. Erstellen Sie eine Konsolenanwendung.  
   

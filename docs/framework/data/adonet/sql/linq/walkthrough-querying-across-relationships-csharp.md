@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618023"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742647"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)
 Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* um fremdschlüsselbeziehungen in der Datenbank darzustellen.  
@@ -31,7 +31,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
 ## <a name="mapping-relationships-across-tables"></a>Zuordnen von Beziehungen über Tabellen hinweg  
  Erstellen Sie nach der Definition der `Customer`-Klasse die Definition der `Order`-Entitätsklasse, die den folgenden Code enthält. Dieser gibt an, dass `Order.Customer` ein Fremdschlüssel zu `Customer.CustomerID` ist.  
   
-#### <a name="to-add-the-order-entity-class"></a>So fügen Sie die Order-Entitätsklasse hinzu  
+### <a name="to-add-the-order-entity-class"></a>So fügen Sie die Order-Entitätsklasse hinzu  
   
 - Geben Sie den folgenden Code nach der `Customer`-Klasse ein, oder fügen Sie ihn ein:  
   
@@ -40,7 +40,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
 ## <a name="annotating-the-customer-class"></a>Hinzufügen von Anmerkungen zu einer Customer-Klasse  
  In diesem Schritt fügen Sie der `Customer`-Klasse Anmerkungen hinzu, um deren Beziehung zur `Order`-Klasse anzugeben. (Diese Ergänzung ist nicht unbedingt erforderlich, da die Definition der Beziehungen in beide Richtungen zum Erstellen der Verbindung ausreicht. Mithilfe dieser Anmerkung können Sie jedoch leicht in allen Richtungen zwischen den Objekten navigieren.)  
   
-#### <a name="to-annotate-the-customer-class"></a>So fügen Sie der Customer-Klasse Anmerkungen hinzu  
+### <a name="to-annotate-the-customer-class"></a>So fügen Sie der Customer-Klasse Anmerkungen hinzu  
   
 - Geben Sie den folgenden Code in die `Customer`-Klasse ein, oder fügen Sie ihn ein:  
   
@@ -49,7 +49,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Erstellen und Ausführen einer Abfrage über die Customer-Order-Beziehung  
  Sie können nun direkt auf die `Order`-Objekte zugreifen, und zwar von den `Customer`-Objekten aus oder in umgekehrter Richtung. Sie brauchen nicht in der eine explizite *Join* zwischen Kunden und Bestellungen.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>So greifen Sie mithilfe von Customer-Objekten auf Order-Objekte zu  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>So greifen Sie mithilfe von Customer-Objekten auf Order-Objekte zu  
   
 1. Ändern Sie die `Main`-Methode durch das Eingeben oder Einfügen des folgenden Codes in die Methode:  
   
@@ -67,7 +67,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
   
  In den folgenden Schritten erstellen Sie `Customers` als Tabelle mit strikter Typbindung und Zuordnung zur Customers-Tabelle in der Datenbank.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>So erstellen Sie die striktre Typbindung für das DataContext-Objekt  
+### <a name="to-strongly-type-the-datacontext-object"></a>So erstellen Sie die striktre Typbindung für das DataContext-Objekt  
   
 1. Fügen Sie den folgenden Code oberhalb der Deklaration der `Customer`-Klasse hinzu.  
   

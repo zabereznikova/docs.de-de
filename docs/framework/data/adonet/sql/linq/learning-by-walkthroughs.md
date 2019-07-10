@@ -2,18 +2,18 @@
 title: Lernen durch exemplarische Vorgehensweisen
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582920"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743035"
 ---
 # <a name="learning-by-walkthroughs"></a>Lernen durch exemplarische Vorgehensweisen
 Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation stellt mehrere exemplarische Vorgehensweisen bereit. Dieser Abschnitt behandelt allgemeine Aspekte der exemplarischen Vorgehensweisen (einschließlich Fehlerbehebung) und bietet Links zu Vorgehensweisen für Einsteiger, die mehr über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfahren möchten.  
   
 > [!NOTE]
->  Die exemplarischen Vorgehensweisen in diesem Abschnitt zu den ersten Schritten machen Sie mit dem grundlegenden Code vertraut, der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie unterstützt. In der Praxis verwenden Sie in der Regel [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] und Windows Forms-Projekte, um Ihre [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen zu implementieren. Die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]-Dokumentation stellt Beispiele und exemplarische Vorgehensweisen für diesen Zweck bereit.  
+>  Die exemplarischen Vorgehensweisen in diesem Abschnitt zu den ersten Schritten machen Sie mit dem grundlegenden Code vertraut, der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie unterstützt. In der Praxis werden Sie in der Regel die Object Relational Designer und Windows Forms-Projekten verwenden, um Implementieren Ihrer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen. Die O/R-Designer-Dokumentation enthält Beispiele und exemplarische Vorgehensweisen zu diesem Zweck an.  
   
 ## <a name="getting-started-walkthroughs"></a>Exemplarische Vorgehensweisen zu den ersten Schritten  
  In diesem Abschnitt sind mehrere exemplarische Vorgehensweisen verfügbar. Diese exemplarischen Vorgehensweisen basieren auf der Beispieldatenbank Northwind und präsentieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionen umfassend und mit minimaler Komplexität.  
@@ -57,7 +57,7 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 2. Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-3. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Eigenschaften**.  
+3. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)** , und klicken Sie dann auf **Eigenschaften**.  
   
 4. Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie Sie möchten melden Sie sich an den Server.  
   
@@ -83,9 +83,9 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 1. Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-2. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **beenden**.  
+2. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)** , und klicken Sie dann auf **beenden**.  
   
-3. Mit der rechten Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Neustart**.  
+3. Mit der rechten Maustaste **SQL Server (SQLEXPRESS)** , und klicken Sie dann auf **Neustart**.  
   
 ## <a name="see-also"></a>Siehe auch
 
