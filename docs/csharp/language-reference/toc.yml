@@ -19,16 +19,13 @@
                 - name: Integrale numerische Typen
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: Numerische Gleitkommatypen
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: double
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struct
                   href: keywords/struct.md
             - name: Verweistypen
@@ -55,8 +52,6 @@
               items:
                 - name: Tabelle integrierter Typen
                   href: keywords/built-in-types-table.md
-                - name: Tabelle für Gleitkommatypen
-                  href: keywords/floating-point-types-table.md
                 - name: Tabelle der Werttypen
                   href: keywords/value-types-table.md
                 - name: Tabelle für Standardwerte
