@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7f8cccf8d583645982eb37f6afcb553914679ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782391"
 ---
-# <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="108bc-102">IMetaDataImport::GetFieldProps-Methode</span><span class="sxs-lookup"><span data-stu-id="108bc-102">IMetaDataImport::GetFieldProps Method</span></span>
-<span data-ttu-id="108bc-103">Ruft Metadaten ab, die dem Feld zugeordnet sind, auf das durch das angegebene FieldDef-Token verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="108bc-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  
+# <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="f80ba-102">IMetaDataImport::GetFieldProps-Methode</span><span class="sxs-lookup"><span data-stu-id="f80ba-102">IMetaDataImport::GetFieldProps Method</span></span>
+<span data-ttu-id="f80ba-103">Ruft Metadaten ab, die dem Feld zugeordnet sind, auf das durch das angegebene FieldDef-Token verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="f80ba-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="108bc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="108bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f80ba-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f80ba-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFieldProps (  
    [in]  mdFieldDef        mb,   
    [out] mdTypeDef         *pClass,  
@@ -45,50 +45,50 @@ HRESULT GetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="108bc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="108bc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f80ba-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f80ba-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="108bc-106">[in] Ein FieldDef-Token, das Feld zum Abrufen der zugehörigen Metadaten für darstellt.</span><span class="sxs-lookup"><span data-stu-id="108bc-106">[in] A FieldDef token that represents the field to get associated metadata for.</span></span>  
+ <span data-ttu-id="f80ba-106">[in] Ein FieldDef-Token, das Feld zum Abrufen der zugehörigen Metadaten für darstellt.</span><span class="sxs-lookup"><span data-stu-id="f80ba-106">[in] A FieldDef token that represents the field to get associated metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="108bc-107">[out] Ein Zeiger auf ein TypeDef-Token, das den Typ der Klasse darstellt, das Feld gehört.</span><span class="sxs-lookup"><span data-stu-id="108bc-107">[out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.</span></span>  
+ <span data-ttu-id="f80ba-107">[out] Ein Zeiger auf ein TypeDef-Token, das den Typ der Klasse darstellt, das Feld gehört.</span><span class="sxs-lookup"><span data-stu-id="f80ba-107">[out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.</span></span>  
   
  `szField`  
- <span data-ttu-id="108bc-108">[out] Der Name des Felds.</span><span class="sxs-lookup"><span data-stu-id="108bc-108">[out] The name of the field.</span></span>  
+ <span data-ttu-id="f80ba-108">[out] Der Name des Felds.</span><span class="sxs-lookup"><span data-stu-id="f80ba-108">[out] The name of the field.</span></span>  
   
  `cchField`  
- <span data-ttu-id="108bc-109">[in] Die Größe in Zeichen des Puffers für *SzField*.</span><span class="sxs-lookup"><span data-stu-id="108bc-109">[in] The size in wide characters of the buffer for *szField*.</span></span>  
+ <span data-ttu-id="f80ba-109">[in] Die Größe in Zeichen des Puffers für *SzField*.</span><span class="sxs-lookup"><span data-stu-id="f80ba-109">[in] The size in wide characters of the buffer for *szField*.</span></span>  
   
  `pchField`  
- <span data-ttu-id="108bc-110">[out] Die tatsächliche Größe des zurückgegebenen Puffers.</span><span class="sxs-lookup"><span data-stu-id="108bc-110">[out] The actual size of the returned buffer.</span></span>  
+ <span data-ttu-id="f80ba-110">[out] Die tatsächliche Größe des zurückgegebenen Puffers.</span><span class="sxs-lookup"><span data-stu-id="f80ba-110">[out] The actual size of the returned buffer.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="108bc-111">[out] Flags, die mit den Metadaten des Felds.</span><span class="sxs-lookup"><span data-stu-id="108bc-111">[out] Flags associated with the field's metadata.</span></span>  
+ <span data-ttu-id="f80ba-111">[out] Flags, die mit den Metadaten des Felds.</span><span class="sxs-lookup"><span data-stu-id="f80ba-111">[out] Flags associated with the field's metadata.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="108bc-112">[in] Ein Zeiger auf die binäre Metadatenwert, der die Felder beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="108bc-112">[in] A pointer to the binary metadata value that describes the field.</span></span>  
+ <span data-ttu-id="f80ba-112">[in] Ein Zeiger auf die binäre Metadatenwert, der die Felder beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="f80ba-112">[in] A pointer to the binary metadata value that describes the field.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="108bc-113">[out] Die Größe in Bytes der `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="108bc-113">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="f80ba-113">[out] Die Größe in Bytes der `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="f80ba-113">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="108bc-114">[out] Ein Flag, das den Wert des Felds angibt.</span><span class="sxs-lookup"><span data-stu-id="108bc-114">[out] A flag that specifies the value type of the field.</span></span>  
+ <span data-ttu-id="f80ba-114">[out] Ein Flag, das den Wert des Felds angibt.</span><span class="sxs-lookup"><span data-stu-id="f80ba-114">[out] A flag that specifies the value type of the field.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="108bc-115">[out] Ein konstanter Wert für das Feld.</span><span class="sxs-lookup"><span data-stu-id="108bc-115">[out] A constant value for the field.</span></span>  
+ <span data-ttu-id="f80ba-115">[out] Ein konstanter Wert für das Feld.</span><span class="sxs-lookup"><span data-stu-id="f80ba-115">[out] A constant value for the field.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="108bc-116">[out] Die Größe in Zeichen des `ppValue`, oder NULL, wenn keine Zeichenfolge vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="108bc-116">[out] The size in chars of `ppValue`, or zero if no string exists.</span></span>  
+ <span data-ttu-id="f80ba-116">[out] Die Größe in Zeichen des `ppValue`, oder NULL, wenn keine Zeichenfolge vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="f80ba-116">[out] The size in chars of `ppValue`, or zero if no string exists.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="108bc-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="108bc-117">Requirements</span></span>  
- <span data-ttu-id="108bc-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="108bc-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f80ba-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f80ba-117">Requirements</span></span>  
+ <span data-ttu-id="f80ba-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f80ba-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="108bc-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="108bc-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f80ba-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f80ba-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="108bc-120">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="108bc-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f80ba-120">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="f80ba-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="108bc-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="108bc-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f80ba-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f80ba-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="108bc-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="108bc-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f80ba-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f80ba-122">See also</span></span>
 
-- [<span data-ttu-id="108bc-123">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="108bc-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="108bc-124">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="108bc-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f80ba-123">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f80ba-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f80ba-124">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f80ba-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

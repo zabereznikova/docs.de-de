@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f12243571262ad7511795c48721617932fc6b30b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd75fa12a95478a65d93eb07a32acf4cfd8b9632
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645106"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782083"
 ---
-# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="28ce4-102">IMetaDataTables2::GetMetaDataStorage-Methode</span><span class="sxs-lookup"><span data-stu-id="28ce4-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
-<span data-ttu-id="28ce4-103">Ruft ab, die Größe und den Inhalt der Metadaten im angegebenen Abschnitt gespeichert.</span><span class="sxs-lookup"><span data-stu-id="28ce4-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
+# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="5a1bf-102">IMetaDataTables2::GetMetaDataStorage-Methode</span><span class="sxs-lookup"><span data-stu-id="5a1bf-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
+<span data-ttu-id="5a1bf-103">Ruft ab, die Größe und den Inhalt der Metadaten im angegebenen Abschnitt gespeichert.</span><span class="sxs-lookup"><span data-stu-id="5a1bf-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28ce4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="28ce4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a1bf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5a1bf-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetMetaDataStorage (  
    [in, out] const void   **ppvMd,  
    [out] ULONG   *pcbMd  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="28ce4-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="28ce4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a1bf-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5a1bf-105">Parameters</span></span>  
  `ppvMd`  
- <span data-ttu-id="28ce4-106">[in, out] Ein Zeiger auf ein Metadatenabschnitt.</span><span class="sxs-lookup"><span data-stu-id="28ce4-106">[in, out] A pointer to a metadata section.</span></span>  
+ <span data-ttu-id="5a1bf-106">[in, out] Ein Zeiger auf ein Metadatenabschnitt.</span><span class="sxs-lookup"><span data-stu-id="5a1bf-106">[in, out] A pointer to a metadata section.</span></span>  
   
  `pcbMd`  
- <span data-ttu-id="28ce4-107">[out] Die Größe des Metadatenstreams, der.</span><span class="sxs-lookup"><span data-stu-id="28ce4-107">[out] The size of the metadata stream.</span></span>  
+ <span data-ttu-id="5a1bf-107">[out] Die Größe des Metadatenstreams, der.</span><span class="sxs-lookup"><span data-stu-id="5a1bf-107">[out] The size of the metadata stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="28ce4-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="28ce4-108">Requirements</span></span>  
- <span data-ttu-id="28ce4-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28ce4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a1bf-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5a1bf-108">Requirements</span></span>  
+ <span data-ttu-id="5a1bf-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5a1bf-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="28ce4-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="28ce4-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5a1bf-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5a1bf-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="28ce4-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="28ce4-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5a1bf-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="5a1bf-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="28ce4-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28ce4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5a1bf-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a1bf-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28ce4-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="28ce4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a1bf-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a1bf-113">See also</span></span>
 
-- [<span data-ttu-id="28ce4-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="28ce4-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="28ce4-115">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="28ce4-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="5a1bf-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5a1bf-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="5a1bf-115">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5a1bf-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

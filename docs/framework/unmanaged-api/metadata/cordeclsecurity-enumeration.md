@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5409d1b89ba3e50c4ae17ed5aa6bf063cf6c93cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046032"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767005"
 ---
-# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="87594-102">CorDeclSecurity-Enumeration</span><span class="sxs-lookup"><span data-stu-id="87594-102">CorDeclSecurity Enumeration</span></span>
-<span data-ttu-id="87594-103">Gibt die Sicherheitsaktionen an, die mit deklarativer Sicherheit ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="87594-103">Specifies the security actions that can be performed using declarative security.</span></span>  
+# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="bafca-102">CorDeclSecurity-Enumeration</span><span class="sxs-lookup"><span data-stu-id="bafca-102">CorDeclSecurity Enumeration</span></span>
+<span data-ttu-id="bafca-103">Gibt die Sicherheitsaktionen an, die mit deklarativer Sicherheit ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="bafca-103">Specifies the security actions that can be performed using declarative security.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87594-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="87594-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bafca-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bafca-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDeclSecurity {  
   
     dclActionMask               =   0x001f,  
@@ -56,39 +56,39 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="87594-105">Member</span><span class="sxs-lookup"><span data-stu-id="87594-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bafca-105">Member</span><span class="sxs-lookup"><span data-stu-id="bafca-105">Members</span></span>  
   
-|<span data-ttu-id="87594-106">Member</span><span class="sxs-lookup"><span data-stu-id="87594-106">Member</span></span>|<span data-ttu-id="87594-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="87594-107">Description</span></span>|  
+|<span data-ttu-id="bafca-106">Member</span><span class="sxs-lookup"><span data-stu-id="bafca-106">Member</span></span>|<span data-ttu-id="bafca-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="bafca-107">Description</span></span>|  
 |------------|-----------------|  
-|`dclActionMask`|<span data-ttu-id="87594-108">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-108">Reserved.</span></span>|  
-|`dclActionNil`|<span data-ttu-id="87594-109">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-109">Reserved.</span></span>|  
-|`dclRequest`|<span data-ttu-id="87594-110">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-110">Reserved.</span></span>|  
-|`dclDemand`|<span data-ttu-id="87594-111">Allen Aufrufern einer höheren Ebene in der Aufrufliste muss die vom aktuellen Berechtigungsobjekt angegebene Berechtigung erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="87594-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
-|`dclAssert`|<span data-ttu-id="87594-112">Der aufrufende Code kann die durch das aktuelle Berechtigungsobjekt identifizierte Ressource zugreifen, selbst wenn Aufrufern einer höheren Ebene im Stapel nicht die Berechtigung zum Zugriff auf die Ressource erteilt wurde</span><span class="sxs-lookup"><span data-stu-id="87594-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
-|`dclDeny`|<span data-ttu-id="87594-113">Auch wenn diese Berechtigung für den Zugriff erteilt wurde, wird Aufrufern, der Zugriff auf die durch das aktuelle Berechtigungsobjekt angegebene Ressource verweigert.</span><span class="sxs-lookup"><span data-stu-id="87594-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
-|`dclPermitOnly`|<span data-ttu-id="87594-114">Nur auf die durch dieses Berechtigungsobjekt angegebenen Ressourcen kann zugegriffen werden, selbst wenn dem Code die Berechtigung für den Zugriff auf andere Ressourcen gewährt wurde.</span><span class="sxs-lookup"><span data-stu-id="87594-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
-|`dclLinktimeCheck`|<span data-ttu-id="87594-115">Der direkte Aufrufer muss die angegebene Berechtigung für einen bestimmten Zeitraum erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="87594-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
-|`dclInheritanceCheck`|<span data-ttu-id="87594-116">Die abgeleitete Klasse erbt von einer anderen Klasse oder eine Methode überschreibt muss die angegebene Berechtigung erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="87594-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
-|`dclRequestMinimum`|<span data-ttu-id="87594-117">Der Aufrufer kann für die minimalen Berechtigungen für den auszuführenden Code anfordern.</span><span class="sxs-lookup"><span data-stu-id="87594-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="87594-118">Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="87594-118">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestOptional`|<span data-ttu-id="87594-119">Der Aufrufer kann für zusätzliche Berechtigungen anfordern, die optional sind (zur Ausführung nicht erforderlich).</span><span class="sxs-lookup"><span data-stu-id="87594-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="87594-120">Diese Anforderung lehnt implizit alle anderen nicht speziell angeforderten Berechtigungen ab.</span><span class="sxs-lookup"><span data-stu-id="87594-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="87594-121">Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="87594-121">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestRefuse`|<span data-ttu-id="87594-122">Die Anforderung des Aufrufers für Berechtigungen, die missbraucht werden könnten, wird nicht gewährt werden.</span><span class="sxs-lookup"><span data-stu-id="87594-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="87594-123">Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="87594-123">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclPrejitGrant`|<span data-ttu-id="87594-124">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-124">Reserved.</span></span>|  
-|`dclPrejitDenied`|<span data-ttu-id="87594-125">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-125">Reserved.</span></span>|  
-|`dclNonCasDemand`|<span data-ttu-id="87594-126">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-126">Reserved.</span></span>|  
-|`dclNonCasLinkDemand`|<span data-ttu-id="87594-127">Dem unmittelbaren Aufrufer muss die angegebene Berechtigung erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="87594-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
-|`dclNonCasInheritance`|<span data-ttu-id="87594-128">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-128">Reserved.</span></span>|  
-|`dclLinkDemandChoice`|<span data-ttu-id="87594-129">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-129">Reserved.</span></span>|  
-|`dclInheritanceDemandChoice`|<span data-ttu-id="87594-130">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-130">Reserved.</span></span>|  
-|`dclDemandChoice`|<span data-ttu-id="87594-131">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-131">Reserved.</span></span>|  
-|`dclMaximumValue`|<span data-ttu-id="87594-132">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="87594-132">Reserved.</span></span>|  
+|`dclActionMask`|<span data-ttu-id="bafca-108">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-108">Reserved.</span></span>|  
+|`dclActionNil`|<span data-ttu-id="bafca-109">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-109">Reserved.</span></span>|  
+|`dclRequest`|<span data-ttu-id="bafca-110">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-110">Reserved.</span></span>|  
+|`dclDemand`|<span data-ttu-id="bafca-111">Allen Aufrufern einer höheren Ebene in der Aufrufliste muss die vom aktuellen Berechtigungsobjekt angegebene Berechtigung erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="bafca-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
+|`dclAssert`|<span data-ttu-id="bafca-112">Der aufrufende Code kann die durch das aktuelle Berechtigungsobjekt identifizierte Ressource zugreifen, selbst wenn Aufrufern einer höheren Ebene im Stapel nicht die Berechtigung zum Zugriff auf die Ressource erteilt wurde</span><span class="sxs-lookup"><span data-stu-id="bafca-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
+|`dclDeny`|<span data-ttu-id="bafca-113">Auch wenn diese Berechtigung für den Zugriff erteilt wurde, wird Aufrufern, der Zugriff auf die durch das aktuelle Berechtigungsobjekt angegebene Ressource verweigert.</span><span class="sxs-lookup"><span data-stu-id="bafca-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
+|`dclPermitOnly`|<span data-ttu-id="bafca-114">Nur auf die durch dieses Berechtigungsobjekt angegebenen Ressourcen kann zugegriffen werden, selbst wenn dem Code die Berechtigung für den Zugriff auf andere Ressourcen gewährt wurde.</span><span class="sxs-lookup"><span data-stu-id="bafca-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
+|`dclLinktimeCheck`|<span data-ttu-id="bafca-115">Der direkte Aufrufer muss die angegebene Berechtigung für einen bestimmten Zeitraum erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="bafca-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
+|`dclInheritanceCheck`|<span data-ttu-id="bafca-116">Die abgeleitete Klasse erbt von einer anderen Klasse oder eine Methode überschreibt muss die angegebene Berechtigung erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="bafca-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
+|`dclRequestMinimum`|<span data-ttu-id="bafca-117">Der Aufrufer kann für die minimalen Berechtigungen für den auszuführenden Code anfordern.</span><span class="sxs-lookup"><span data-stu-id="bafca-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="bafca-118">Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="bafca-118">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestOptional`|<span data-ttu-id="bafca-119">Der Aufrufer kann für zusätzliche Berechtigungen anfordern, die optional sind (zur Ausführung nicht erforderlich).</span><span class="sxs-lookup"><span data-stu-id="bafca-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="bafca-120">Diese Anforderung lehnt implizit alle anderen nicht speziell angeforderten Berechtigungen ab.</span><span class="sxs-lookup"><span data-stu-id="bafca-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="bafca-121">Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="bafca-121">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestRefuse`|<span data-ttu-id="bafca-122">Die Anforderung des Aufrufers für Berechtigungen, die missbraucht werden könnten, wird nicht gewährt werden.</span><span class="sxs-lookup"><span data-stu-id="bafca-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="bafca-123">Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="bafca-123">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclPrejitGrant`|<span data-ttu-id="bafca-124">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-124">Reserved.</span></span>|  
+|`dclPrejitDenied`|<span data-ttu-id="bafca-125">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-125">Reserved.</span></span>|  
+|`dclNonCasDemand`|<span data-ttu-id="bafca-126">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-126">Reserved.</span></span>|  
+|`dclNonCasLinkDemand`|<span data-ttu-id="bafca-127">Dem unmittelbaren Aufrufer muss die angegebene Berechtigung erteilt worden sein.</span><span class="sxs-lookup"><span data-stu-id="bafca-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
+|`dclNonCasInheritance`|<span data-ttu-id="bafca-128">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-128">Reserved.</span></span>|  
+|`dclLinkDemandChoice`|<span data-ttu-id="bafca-129">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-129">Reserved.</span></span>|  
+|`dclInheritanceDemandChoice`|<span data-ttu-id="bafca-130">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-130">Reserved.</span></span>|  
+|`dclDemandChoice`|<span data-ttu-id="bafca-131">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-131">Reserved.</span></span>|  
+|`dclMaximumValue`|<span data-ttu-id="bafca-132">Reserviert.</span><span class="sxs-lookup"><span data-stu-id="bafca-132">Reserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="87594-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="87594-133">Requirements</span></span>  
- <span data-ttu-id="87594-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87594-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bafca-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="bafca-133">Requirements</span></span>  
+ <span data-ttu-id="bafca-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bafca-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87594-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="87594-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="bafca-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="bafca-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="87594-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87594-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bafca-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bafca-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87594-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="87594-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bafca-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bafca-137">See also</span></span>
 
-- [<span data-ttu-id="87594-138">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="87594-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="bafca-138">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="bafca-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
