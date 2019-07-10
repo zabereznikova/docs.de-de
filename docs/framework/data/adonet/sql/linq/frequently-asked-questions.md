@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610585"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743540"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
@@ -53,7 +53,7 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] stellt mehrere Tools zum Überprüfen des generierten SQL-Codes bereit. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie unter [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Gespeicherte Prozedur gibt unerwartete Ergebnisse zurück  
- F. Der Rückgabewert einer gespeicherten Prozedur wird durch `MAX()` berechnet. Wenn die gespeicherte Prozedur auf die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]-Oberfläche gezogen wird, ist der Rückgabewert nicht richtig.  
+ F. Der Rückgabewert einer gespeicherten Prozedur wird durch `MAX()` berechnet. Wenn ich die gespeicherte Prozedur auf die Oberfläche des O/R-Designer ziehen, ist der Rückgabewert nicht richtig.  
   
  A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet zwei Möglichkeiten, von der Datenbank generierte Werte mithilfe gespeicherter Prozeduren zurückzugeben:  
   
@@ -107,7 +107,7 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
 ## <a name="multiple-dbml-files"></a>Mehrere DBML-Dateien  
  F. Bei Verwendung mehrerer DBML-Dateien, die einige Tabellen gemeinsam nutzen, wird ein Compilerfehler ausgegeben.  
   
- A. Legen Sie die **Kontext Namespace** und **Entity Namespace** Eigenschaften aus der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] auf einen unterschiedlichen Wert für jede DBML-Datei. Durch diese Lösung werden Konflikte zwischen Namen und Namespace vermieden.  
+ A. Legen Sie die **Kontext Namespace** und **Entity Namespace** Eigenschaften aus den Object Relational Designer auf einen unterschiedlichen Wert für jede DBML-Datei. Durch diese Lösung werden Konflikte zwischen Namen und Namespace vermieden.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Vermeiden, dass von der Datenbank generierte Werte bei Einfüge- oder Updatevorgängen explizit festgelegt werden  
  F. Bei einer Datenbanktabelle mit einer `DateCreated`-Spalte wird die Spalte standardmäßig auf SQL `Getdate()` festgelegt. Beim Versuch, mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einen neuen Datensatz einzufügen, wird der Wert auf `NULL` festgelegt. Erwartungsgemäß sollte der Wert auf den Datenbankstandard festgelegt werden.  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>Fehler bei der Verwendung von SQL Compact 3.5  
  F. Ziehen von Tabellen aus einer SQL Server Compact 3.5-Datenbank wird eine Fehlermeldung angezeigt.  
   
- A. Die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact 3.5, werden nicht unterstützt werden, aber die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Runtime tut. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.  
+ A. Der Object Relational Designer werden die SQL Server Compact 3.5, nicht unterstützt, aber die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Runtime tut. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Fehler in Vererbungsbeziehungen  
- F. Wenn die Vererbungsform aus der Toolbox in [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Verbinden von zwei Entitäten verwendet wird, treten Fehler auf.  
+ F. Ich habe die vererbungsform aus der Toolbox in den Object Relational Designer Verbindung von zwei Entitäten verwendet, aber ich erhalte Fehler.  
   
  A. Es reicht nicht aus, die Beziehung zu erstellen. Sie müssen Informationen wie Unterscheidungsspalte, Basisklassen-Diskriminatorwert und Diskriminatorwert der abgeleiteten Klasse angeben.  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. Überprüfen Sie den <xref:System.Data.Linq.Mapping.UpdateCheck>-Standardwert (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), um zu bestimmen, ob dieses der richtige Wert für die Anwendung ist.  
   
     > [!CAUTION]
-    >  Bei Verwendung der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in Visual Studio Ihre Änderungen überschrieben werden.  
+    >  Wenn Sie den Object Relational Designer in Visual Studio verwenden, dass Ihre Änderungen überschrieben werden.  
   
 ## <a name="aptca"></a>APTCA  
  F. Ist System.Data.Linq für die Verwendung durch teilweise vertrauenswürdigen Code markiert?  
