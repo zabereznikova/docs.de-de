@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777727"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782362"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps-Methode
 Ruft ab, in den Metadaten für eine angegebenen Member-Definition, einschließlich Name, binäre Signatur und relative virtuelle Adresse des gespeicherten Informationen dem <xref:System.Type> Member vom angegebenen Metadatentoken verwiesen wird. Dies ist eine einfache Hilfsmethode: Wenn *mb* MethodDef, dann ist **GetMethodProps** aufgerufen, wenn *mb* ist ein FieldDef, **GetFieldProps** wird aufgerufen. Finden Sie unter diesen anderen Methoden für Details. 
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMemberProps (  
    [in]  mdToken           mb,   
    [out] mdTypeDef         *pClass,  

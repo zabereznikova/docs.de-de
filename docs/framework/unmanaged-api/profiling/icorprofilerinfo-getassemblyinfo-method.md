@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad4ebe4e1255ce13974063eef3d0a4feeb5dd92b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b410ef46e96f75d98ee750c760b19d2a77eec2b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049621"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780219"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo-Methode
 Akzeptiert eine Assembly-ID und gibt den Namen der Assembly und die ID ihres Manifestmoduls zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAssemblyInfo(  
     [in]  AssemblyID  assemblyId,  
     [in]  ULONG       cchName,  
@@ -45,7 +45,7 @@ HRESULT GetAssemblyInfo(
  [in] Der Bezeichner der Assembly.  
   
  `cchName`  
- [in] Die Länge von `szName` als Anzahl von Zeichen.   
+ [in] Die Länge von `szName` als Anzahl von Zeichen.  
   
  `pcchName`  
  [out] Ein Zeiger auf die Gesamtzeichenanzahl des Assemblynamens.  

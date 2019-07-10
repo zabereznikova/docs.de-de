@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcd65f231ab0e05da0ec152b05878233558f2cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792183"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772057"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual Basic
 Mit Visual Basic können Sie leistungsstarke benutzerdefinierte Steuerelemente durch Erstellen *Vererbung*. Durch Vererbung können Sie Steuerelemente erstellen, die die gesamte Funktionalität der standardmäßigen Windows Forms-Steuerelemente, aber auch benutzerdefinierte Funktionen enthalten. In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit dem Namen `ValueButton`. Diese Schaltfläche erbt die Funktionalität der standardmäßigen Windows Forms <xref:System.Windows.Forms.Button> steuern und macht eine benutzerdefinierte Eigenschaft namens `ButtonValue`.  
@@ -26,7 +26,7 @@ Mit Visual Basic können Sie leistungsstarke benutzerdefinierte Steuerelemente d
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Geben Sie beim Erstellen des Projekts den Namen an, um den Stammnamespace, Assemblynamen und Projektnamen festzulegen und sicherzustellen, dass sich die Standardkomponente im richtigen Namespace befindet.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>So erstellen Sie die „ValueButtonLib“-Steuerelementbibliothek und das „ValueButton“-Steuerelement  
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>So erstellen Sie die „ValueButtonLib“-Steuerelementbibliothek und das „ValueButton“-Steuerelement  
   
 1. Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.  
   
@@ -54,7 +54,7 @@ Mit Visual Basic können Sie leistungsstarke benutzerdefinierte Steuerelemente d
 ## <a name="adding-a-property-to-your-inherited-control"></a>Hinzufügen einer Eigenschaft zum geerbten Steuerelement  
  Eine Verwendungsmöglichkeit von geerbten Windows Forms-Steuerelementen ist das Erstellen von Steuerelementen, die in Aussehen und Verhalten mit den standardmäßigen Windows Forms-Steuerelementen identisch sind, aber benutzerdefinierte Eigenschaften verfügbar machen. In diesem Abschnitt fügen Sie eine Eigenschaft namens `ButtonValue` zum Steuerelement hinzu.  
   
-#### <a name="to-add-the-value-property"></a>So fügen Sie die Value-Eigenschaft hinzu  
+### <a name="to-add-the-value-property"></a>So fügen Sie die Value-Eigenschaft hinzu  
   
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **ValueButton.vb**, und klicken Sie im Kontextmenü auf **Code anzeigen**.  
   
@@ -84,13 +84,13 @@ Mit Visual Basic können Sie leistungsstarke benutzerdefinierte Steuerelemente d
 ## <a name="testing-your-control"></a>Testen des Steuerelements  
  Steuerelemente sind keine eigenständigen Projekte. Sie müssen in einem Container gehostet werden. Sie müssen ein Testprojekt erstellen, in dem das Steuerelement getestet werden kann. Sie müssen das Steuerelement auch für das Testprojekt zugänglich machen, indem Sie es erstellen (Kompilieren). In diesem Abschnitt erstellen Sie das Steuerelement und testen es in einem Windows Form.  
   
-#### <a name="to-build-your-control"></a>So erstellen Sie das Steuerelement  
+### <a name="to-build-your-control"></a>So erstellen Sie das Steuerelement  
   
 1. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
   
      Der Build sollte ohne Compilerfehler oder Warnungen erfolgreich sein.  
   
-#### <a name="to-create-a-test-project"></a>So Erstellen Sie ein Testprojekt  
+### <a name="to-create-a-test-project"></a>So Erstellen Sie ein Testprojekt  
   
 1. Zeigen Sie im Menü **Datei** mit der Maus auf **Hinzufügen**, und klicken Sie dann auf **Neues Projekt**, um das Dialogfeld **Neues Projekt hinzufügen** zu öffnen.  
   
@@ -106,9 +106,9 @@ Mit Visual Basic können Sie leistungsstarke benutzerdefinierte Steuerelemente d
   
 7. Klicken Sie auf die Registerkarte mit der Bezeichnung **Projekte**. Ihr `ValueButtonLib`-Projekt wird unter **Projektname** aufgelistet. Doppelklicken Sie auf das Projekt, um den Verweis auf das Testprojekt hinzuzufügen.  
   
-8. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Test,**, und wählen Sie dann **Erstellen** aus.  
+8. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Test,** , und wählen Sie dann **Erstellen** aus.  
   
-#### <a name="to-add-your-control-to-the-form"></a>So fügen Sie dem Formular ein Steuerelement hinzu  
+### <a name="to-add-your-control-to-the-form"></a>So fügen Sie dem Formular ein Steuerelement hinzu  
   
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Form1.vb**, und wählen Sie im Kontextmenü **Designer anzeigen** aus.  
   
