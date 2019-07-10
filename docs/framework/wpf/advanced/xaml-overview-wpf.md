@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: e0d277eb039c1fb1668f292d83ab9e7dbe4be70e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457537"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762325"
 ---
 # <a name="xaml-overview-wpf"></a>Übersicht über die XAML (WPF)
 Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwenden können. Dieses Thema beschreibt speziell XAML entsprechend der Implementierung durch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML selbst geht über das in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementierte Sprachkonzept hinaus.  
@@ -64,7 +64,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
 ### <a name="property-element-syntax"></a>Eigenschaftenelement-syntax  
  Einige Eigenschaften eines Objektelements können nicht in Attributsyntax angegeben werden, da die Objekte oder Informationen, die für den Eigenschaftswert benötigt werden, nicht hinreichend innerhalb der durch Anführungszeichen und Zeichenfolgen beschränkten Attributsyntax ausgedrückt werden können. Für solche Fälle kann eine andere Syntax, die Eigenschaftenelement-Syntax genannt wird, verwendet werden.  
   
- Die Syntax für das Starttag des Eigenschaftenelements lautet `<`*Typname*`.`*Eigenschaftenname*`>`. Im Allgemeinen ist der Inhalt dieses Tags ein Objektelement des Typs, den die Eigenschaft als Wert annimmt. Nachdem der Inhalt angegeben ist, müssen Sie das Eigenschaftenelement mit einem Endtag schließen. Die Syntax für das Endtag lautet `</`*Typname*`.`*Eigenschaftenname*`>`.  
+ Die Syntax für das Starttag des Eigenschaftenelements lautet `<`*Typname*`.`*Eigenschaftenname*`>`. Im Allgemeinen ist der Inhalt dieses Tags ein Objektelement des Typs, der die Eigenschaft als Wert annimmt. Nach dem Angeben des Inhalts, müssen Sie das Eigenschaftenelement mit einem Endtag schließen. Die Syntax für das Endtag lautet `</`*Typname*`.`*Eigenschaftenname*`>`.  
   
  Wenn Attributsyntax möglich ist, ist deren Verwendung in der Regel bequemer und ermöglicht ein kompakteres Markup, aber das ist oft nur eine Frage des Stils, keine technische Einschränkung. Das folgende Beispiel zeigt die Festlegung derselben Eigenschaften wie im vorherigen Attributsyntax-Beispiel, aber dieses Mal unter Verwendung von Eigenschaftenelement-Syntax für alle Eigenschaften des `Button`-Elements.  
   
@@ -208,7 +208,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung des XAML-Prozessors schließt eine Infrastruktur ein, der die WPF-Kernassemblys bekannt sind. Ihr ist bekannt, dass die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Kernassemblys die Typen enthalten, welche die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Zuordnungen zum XAML-Standardnamespace unterstützen. Dies wird durch eine Konfiguration ermöglicht, die Teil Ihrer Projekt-Builddatei und des WPF-Builds und -Projektsystems ist. Daher ist die Deklaration des XAML-Namespaces als Standard-`xmlns` das Einzige, was benötigt wird, um auf XAML-Elemente zu verweisen, die aus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Assemblys stammen.  
   
 ### <a name="the-x-prefix"></a>Das Präfix x:  
- Im vorherigen Beispiel zum Stammelement wurde das Präfix `x:` verwendet, um den XAML-Namespaces [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] zuzuordnen, also der dedizierte XAML-Namespace, der XAML-Sprachkonstrukte unterstützt. Dieses `x:`-Präfix wird für die Zuordnung des XAML-Namespaces in den Vorlagen für Projekte, in Beispielen und in der Dokumentation im gesamten [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] verwendet. Der XAML-Namespace für die XAML-Sprache enthält verschiedene Programmierkonstrukte, die Sie häufig in XAML verwenden werden. Im folgenden finden Sie eine Liste der häufigsten `x:`-Präfix-Programmierkonstrukte, die Sie verwenden werden:  
+ Im vorherigen Beispiel zum Stammelement wurde das Präfix `x:` verwendet, um den XAML-Namespaces [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] zuzuordnen, also der dedizierte XAML-Namespace, der XAML-Sprachkonstrukte unterstützt. Dieses `x:`-Präfix wird für die Zuordnung des XAML-Namespaces in den Vorlagen für Projekte, in Beispielen und in der Dokumentation im gesamten [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] verwendet. Der XAML-Namespace für die XAML-Sprache enthält verschiedene Programmierkonstrukte, mit denen Sie sehr häufig in Ihrem XAML verwenden. Im folgenden finden Sie eine Liste der häufigsten `x:`-Präfix-Programmierkonstrukte, die Sie verwenden werden:  
   
 - [x:Key](../../xaml-services/x-key-directive.md): Legt einen eindeutigen Schlüssel für jede Ressource in einem <xref:System.Windows.ResourceDictionary> (oder in ähnlichen Wörterbuchkonzepten in anderen Frameworks). `x:Key` wird wahrscheinlich für 90 % der Verwendungen von `x:` im Markup einer normalen WPF-Anwendung verantwortlich zeigen.  
   

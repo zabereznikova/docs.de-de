@@ -8,15 +8,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760376"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf-Operator (Visual Basic)
-Erstellt eine Instanz eines Delegaten, die auf bestimmte Prozedur verweist.  
+Erstellt eine Delegatinstanz, die auf bestimmte Prozedur verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,10 +26,10 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Teile  
  `procedurename`  
- Erforderlich. Gibt an, wie durch den Delegaten für die neu erstellte Prozedur verwiesen werden.  
+ Erforderlich. Gibt an, wie durch den neu erstellten Delegaten verwiesen werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `AddressOf` Operator erstellt eine zu delegierende Funktion, die auf die angegebene Funktion zeigt `procedurename`. Wenn ist die angegebene Prozedur an, dass eine Instanzmethode klicken Sie dann den Funktionsdelegaten auf die Instanz und die Methode verweist. Klicken Sie dann beim Aufrufen der Funktionsdelegaten wird die angegebene Methode der angegebenen Instanz aufgerufen.  
+ Die `AddressOf` Operator erstellt einen Delegaten, der auf die Sub oder Funktion anhand des zeigt `procedurename`. Wenn die angegebene Prozedur ist, dass eine Instanzmethode klicken Sie dann den Delegaten auf die Instanz und die Methode verweist. Klicken Sie dann, wenn der Delegat aufgerufen wird, wird die angegebene Methode der angegebenen Instanz aufgerufen.  
   
  Die `AddressOf` Operator kann verwendet werden, wie der Operand eines Delegatkonstruktors oder in einem Kontext, in dem der Typ des Delegaten vom Compiler bestimmt werden kann, verwendet werden.  
   

@@ -2,12 +2,12 @@
 title: Zuordnung zwischen JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9049e622803396126890d4c88b9fee2a100f17c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636436"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747740"
 ---
 # <a name="mapping-between-json-and-xml"></a>Zuordnung zwischen JSON und XML
 Die von der <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> erzeugten Reader und Writer stellen eine XML API über JSON (JavaScript Object Notation)-Inhalte bereit. JSON codiert Daten mit einer Teilmenge der Objektliterale von JavaScript. Der Reader und Writer, die von dieser Factory erzeugten werden auch verwendet, wenn JSON-Inhalt wird gesendet oder Empfangen von Windows Communication Foundation (WCF)-Anwendungen, die mit der <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> oder <xref:System.ServiceModel.WebHttpBinding>.
@@ -38,7 +38,7 @@ Um dieses JSON-Dokument mit einem der oben erwähnten Reader zu lesen, verwenden
 Wenn die JSON-Nachricht im Beispiel wird von WCF empfangen und protokolliert, werden Sie darüber hinaus das vorstehende Protokoll Folgendes XML-Fragment angezeigt.
 
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Zuordnung zwischen JSON und dem XML-Infoset
-Formal, die Zuordnung zwischen JSON wie im ist [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (außer mit gewissen Einschränkungen gelockert und andere Einschränkungen hinzugefügt wurden) und die XML-Infoset (und nicht Text-XML-) als beschriebenen [XML-Informationen Legen Sie](https://go.microsoft.com/fwlink/?LinkId=98809) . Finden Sie unter diesem Thema finden Sie die Definitionen der *Informationselemente* und Feldern in [eckigen Klammern].
+Formal, die Zuordnung zwischen JSON wie im ist [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (außer mit gewissen Einschränkungen gelockert und andere Einschränkungen hinzugefügt wurden) und die XML-Infoset (und nicht Text-XML-) als beschriebenen [XML-Informationen Legen Sie](https://go.microsoft.com/fwlink/?LinkId=98809). Finden Sie unter diesem Thema finden Sie die Definitionen der *Informationselemente* und Feldern in [eckigen Klammern].
 
 Ein leeres JSON-Dokument wird ein leeres XML-Dokument zugeordnet, und ein leeres XML-Dokument wird ein leeres JSON-Dokument zugeordnet. Klicken Sie auf die Zuordnung von XML zu JSON sind Leerzeichen vorhergehende und nachfolgende Leerzeichen nach dem Dokument nicht zulässig.
 
@@ -48,7 +48,7 @@ Beispiel: Das folgende Dokument:
 
 ```xml
 <?xml version="1.0"?>
-<root type="number">42</root>`
+<root type="number">42</root>
 ```
 
 als auch für das folgende Element:
@@ -141,30 +141,32 @@ Sowohl im JSON-Stammelement als auch in den inneren Elementen definiert das JSON
 |`number`|1 oder mehr CIIs|Eine JSON-Code `number` umgeben sein (JSON RFC, Abschnitt 2.4), durch ein Leerzeichen. Jedes Zeichen in der Anzahl/Leerraum-Kombination ist ein Zeichen, das dem [Character Code] dem im CII entspricht.<br /><br /> Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.<br /><br /> `<root type="number">    42</root>`<br /><br /> Das JSON-Fragment lautet    42.<br /><br /> (Leerzeichen werden beibehalten.)|
 |`boolean`|4 oder 5 CIIs (entspricht `true` oder `false`), die möglicherweise von weiteren Leerraum CIIs umgeben.|Eine CII-Folge, die der Zeichenfolge TRUE entspricht, wird dem Literal `true` zugeordnet, und eine CII-Folge, die der Zeichenfolge FALSE entspricht, wird dem Literal `false` zugeordnet. Umgebenden Leerzeichen werden beibehalten.<br /><br /> Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> Der JSON-Fragement lautet `false`.|
 |`null`|Keine Elemente zulässig.|Das Literal `null`. Von JSON zu XML-Zuordnung die `null` gesetzt werden kann, durch ein Leerzeichen ('ws' im Abschnitt 2), die nicht in XML ist.<br /><br /> Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.<br /><br /> `<root type="null"/>`<br /><br /> oder<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> In beiden Fällen lautet das JSON-Fragement `Null`.|
-|`object`|0 oder mehr EIIs.|Eine `begin-object` (linke geschweifte Klammer) wie in Abschnitt&amp;#160;2.2 des JSON RFC definiert, gefolgt von einem Memberdatensatz für jedes EII, wie an späterer Stelle näher beschrieben wird. Wenn mehr als ein EII vorhanden ist, werden die Memberdatensätze durch Trennzeichen (Kommas) voneinander getrennt. Abgeschlossen wird die Angabe durch ein end-object (rechte geschweifte Klammer).<br /><br /> Beispiel: Das folgende Element wird die JSON-Fragment zugeordnet.<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> Der JSON-Fragement lautet `{"type1":"aaa","type2":"bbb"}`.<br /><br /> Wenn das Attribut für den Datenvertragstyp in der Zuordnung von XML zu JSON angegeben wird, dann wird am Anfang ein zusätzlicher Memberdatensatz hinzugefügt. Der Name ist das [local Name] der Datenvertragstypattributs ("\_\_Typ"), und sein Wert ist das Attribut mit dem Wert der [normalized]. Umgekehrt gilt für eine JSON-Code für XML-Zuordnung, wenn der Name für die ersten memberdatensatzes dem [local Name] der Datenvertragtypattributs ist (, also "\_\_Typ"), eine entsprechende Datenvertragtypattributs ist vorhanden, im zugeordneten XML jedoch ein zugehöriges EII ist nicht vorhanden. Beachten Sie, dass dieser Memberdatensatz als erster Datensatz im JSON-Objekt enthalten sein muss, damit diese spezielle Zuordnung erfolgen kann. Dies stellt eine Abweichung von der üblichen JSON-Verarbeitung dar, in der die Reihenfolge von Memberdatensätzen nicht von Bedeutung ist.<br /><br /> Beispiel:<br /><br /> Das folgende JSON-Fragment wird XML zugeordnet.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> Der folgende Code stellt das XML dar:<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> Beachten Sie, dass die \_ \_typsaii ist vorhanden, aber es gibt keine \_ \_EII geben.<br /><br /> Wenn die Reihenfolge in JSON umgekehrt wird, wie im folgenden Beispiel gezeigt,<br /><br /> {"name":"John","\_\_type":"Person"}<br /><br /> lautet das entsprechende XML wie folgt:<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> D. h. \__Typ mehr besondere Bedeutung und Maps auf einem EII, wie gewohnt müssen nicht AII.<br /><br /> Für das [normalized value]-Element von AII gelten für die Verwendung von Escapezeichen bei der Zuordnung zu JSON-Werten die gleichen Regeln wie bei der Zuordnung zu JSON-Zeichenfolgen. Diese Regeln sind in der Zeile "string" dieser Tabelle angegeben.<br /><br /> Beispiel:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> aus dem vorigen Beispiel kann dem folgenden JSON zugeordnet werden.<br /><br /> `{"__type":"\\abc"}`<br /><br /> Klicken Sie auf eine Zuordnung von XML zu JSON-des-Element eines EII [Name des lokalen] darf nicht sein "\_\_Typ".<br /><br /> Leerzeichen (`ws`) wird nie auf XML zu JSON-Zuordnung für die Objekte generiert und von JSON zu XML-Zuordnung ignoriert.<br /><br /> Beispiel: Das folgende JSON-Fragment ordnet einem XML-Element.<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> Das XML-Element wird im folgenden Code dargestellt.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
-|array|0 oder mehr EIIs|Ein begin-Array (linke eckige Klammer) entsprechend Abschnitt&amp;#160;2.3 des JSON&amp;#160;RFC, gefolgt von einem Arraydatensatz für jedes EII, wie an späterer Stelle näher beschrieben wird. Wenn mehr als ein EII vorhanden ist, werden die Arraydatensätze durch Trennzeichen (Kommas) voneinander getrennt. Abgeschlossen wird dies durch ein end-Array.<br /><br /> Beispiel: Das folgende XML-Element wird einem JSON-Fragment zugeordnet.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> Das JSON-Fragment lautet ["aaa","bbb"]<br /><br /> Leerzeichen (`ws`) wird nie auf XML zu JSON-Zuordnung für Arrays generiert und von JSON zu XML-Zuordnung ignoriert.<br /><br /> Beispiel: Ein JSON-Fragment.<br /><br />`["aaa", "bbb"]`<br /><br /> Das XML-Element, das ihm zugeordnet wird.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
+|`object`|0 oder mehr EIIs.|Eine `begin-object` (linke geschweifte Klammer) wie in Abschnitt&#160;2.2 des JSON RFC definiert, gefolgt von einem Memberdatensatz für jedes EII, wie an späterer Stelle näher beschrieben wird. Wenn mehr als ein EII vorhanden ist, werden die Memberdatensätze durch Trennzeichen (Kommas) voneinander getrennt. Abgeschlossen wird die Angabe durch ein end-object (rechte geschweifte Klammer).<br /><br /> Beispiel: Das folgende Element wird die JSON-Fragment zugeordnet.<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> Der JSON-Fragement lautet `{"type1":"aaa","type2":"bbb"}`.<br /><br /> Wenn das Attribut für den Datenvertragstyp in der Zuordnung von XML zu JSON angegeben wird, dann wird am Anfang ein zusätzlicher Memberdatensatz hinzugefügt. Der Name ist das [local Name] der Datenvertragstypattributs ("\_\_Typ"), und sein Wert ist das Attribut mit dem Wert der [normalized]. Umgekehrt gilt für eine JSON-Code für XML-Zuordnung, wenn der Name für die ersten memberdatensatzes dem [local Name] der Datenvertragtypattributs ist (, also "\_\_Typ"), eine entsprechende Datenvertragtypattributs ist vorhanden, im zugeordneten XML jedoch ein zugehöriges EII ist nicht vorhanden. Beachten Sie, dass dieser Memberdatensatz als erster Datensatz im JSON-Objekt enthalten sein muss, damit diese spezielle Zuordnung erfolgen kann. Dies stellt eine Abweichung von der üblichen JSON-Verarbeitung dar, in der die Reihenfolge von Memberdatensätzen nicht von Bedeutung ist.<br /><br /> Beispiel:<br /><br /> Das folgende JSON-Fragment wird XML zugeordnet.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> Der folgende Code stellt das XML dar:<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> Beachten Sie, dass die \_ \_typsaii ist vorhanden, aber es gibt keine \_ \_EII geben.<br /><br /> Wenn die Reihenfolge in JSON umgekehrt wird, wie im folgenden Beispiel gezeigt,<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> lautet das entsprechende XML wie folgt:<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> D. h. \__Typ mehr besondere Bedeutung und Maps auf einem EII, wie gewohnt müssen nicht AII.<br /><br /> Für das [normalized value]-Element von AII gelten für die Verwendung von Escapezeichen bei der Zuordnung zu JSON-Werten die gleichen Regeln wie bei der Zuordnung zu JSON-Zeichenfolgen. Diese Regeln sind in der Zeile "string" dieser Tabelle angegeben.<br /><br /> Beispiel:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> aus dem vorigen Beispiel kann dem folgenden JSON zugeordnet werden.<br /><br /> `{"__type":"\\abc"}`<br /><br /> Klicken Sie auf eine Zuordnung von XML zu JSON-des-Element eines EII [Name des lokalen] darf nicht sein "\_\_Typ".<br /><br /> Leerzeichen (`ws`) wird nie auf XML zu JSON-Zuordnung für die Objekte generiert und von JSON zu XML-Zuordnung ignoriert.<br /><br /> Beispiel: Das folgende JSON-Fragment ordnet einem XML-Element.<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> Das XML-Element wird im folgenden Code dargestellt.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
+|array|0 oder mehr EIIs|Ein begin-Array (linke eckige Klammer) entsprechend Abschnitt&#160;2.3 des JSON&#160;RFC, gefolgt von einem Arraydatensatz für jedes EII, wie an späterer Stelle näher beschrieben wird. Wenn mehr als ein EII vorhanden ist, werden die Arraydatensätze durch Trennzeichen (Kommas) voneinander getrennt. Abgeschlossen wird dies durch ein end-Array.<br /><br /> Beispiel: Das folgende XML-Element wird einem JSON-Fragment zugeordnet.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> Die JSON-Fragment lautet `["aaa","bbb"]`<br /><br /> Leerzeichen (`ws`) wird nie auf XML zu JSON-Zuordnung für Arrays generiert und von JSON zu XML-Zuordnung ignoriert.<br /><br /> Beispiel: Ein JSON-Fragment.<br /><br />`["aaa", "bbb"]`<br /><br /> Das XML-Element, das ihm zugeordnet wird.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
 
 Memberdatensätze werden wie folgt verarbeitet:
 
-- Das [local name]-Element des inneren Elements wird entsprechend Abschnitt&amp;#160;2.2 des JSON&amp;#160;RFC dem `string`-Teil des `member` zugeordnet.
+- Das [local name]-Element des inneren Elements wird entsprechend Abschnitt&#160;2.2 des JSON&#160;RFC dem `string`-Teil des `member` zugeordnet.
 
 Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.
 
-`<root type="object"/>`
-
-`<myLocalName type="string">aaa</myLocalName>`
-
-`</root >`
+```xml
+<root type="object"/>
+<myLocalName type="string">aaa</myLocalName>
+</root >
+```
 
 Das folgende JSON-Fragment wird angezeigt:
 
-`{"myLocalName":"aaa"}`
+```json
+{"myLocalName":"aaa"}
+```
 
-- Bei der Zuordnung von XML zu JSON müssen Zeichen, denen in JSON ein Escapezeichen vorangestellt werden muss, Escapezeichen zugeordnet werden. Alle anderen Zeichen werden Zeichen zugeordnet, denen kein Escapezeichen voransteht. Das Zeichen "/" ist ein Sonderfall. Ihm wird ein Escapezeichen vorangestellt, obwohl dies nicht notwendig ist. (Bei der Zuordnung von JSON zu XML muss ihm kein Escapezeichen vorangestellt werden.) Dies ist erforderlich, damit das ASP.NET&amp;#160;AJAX-Format für `DateTime`-Daten in JSON unterstützt wird.
+- Bei der Zuordnung von XML zu JSON müssen Zeichen, denen in JSON ein Escapezeichen vorangestellt werden muss, Escapezeichen zugeordnet werden. Alle anderen Zeichen werden Zeichen zugeordnet, denen kein Escapezeichen voransteht. Das Zeichen "/" ist ein Sonderfall. Ihm wird ein Escapezeichen vorangestellt, obwohl dies nicht notwendig ist. (Bei der Zuordnung von JSON zu XML muss ihm kein Escapezeichen vorangestellt werden.) Dies ist erforderlich, damit das ASP.NET&#160;AJAX-Format für `DateTime`-Daten in JSON unterstützt wird.
 
 - Bei einer Zuordnung von JSON zu XML werden alle Zeichen (einschließlich der Zeichen ohne Escapezeichen, falls erforderlich) zur Bildung eines `string`-Werts herangezogen, der ein [local name]-Element ergibt.
 
-- Innere Elemente [children] werden entsprechend dem `JSON Type Attribute` ebenso wie beim `Root JSON Element` dem Wert in Abschnitt&amp;#160;2.2 zugeordnet. Es sind mehrere Schachtelungsebenen von EIIs (einschließlich der Schachtelung innerhalb von Arrays) zulässig.
+- Innere Elemente [children] werden entsprechend dem `JSON Type Attribute` ebenso wie beim `Root JSON Element` dem Wert in Abschnitt&#160;2.2 zugeordnet. Es sind mehrere Schachtelungsebenen von EIIs (einschließlich der Schachtelung innerhalb von Arrays) zulässig.
 
 Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.
 
@@ -181,7 +183,9 @@ Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.
 
 Das folgende JSON-Fragment resultiert aus dieser Zuordnung:
 
-`{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`
+```json
+{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}
+```
 
 > [!NOTE]
 > Die vorangehende Zuordnung umfasst keinen XML-Codierungsschritt. WCF unterstützt daher nur JSON-Dokumente, in dem alle Zeichen im Namen der Schlüssel für gültige Zeichen in XML-Elementnamen sind. Z. B. das JSON-Dokument {"<": "a"} wird nicht unterstützt werden, da < ist kein gültiger Name für ein XML-Element.
@@ -192,7 +196,7 @@ Arraydatensätze werden wie folgt verarbeitet:
 
 - [local name] des inneren Elements lautet "item".
 
-- Das [children]-Element des inneren Elements wird entsprechend dem JSON-Attribut ebenso wie beim JSON-Stammelement dem Wert in Abschnitt&amp;#160;2.3 zugeordnet. Es sind mehrere Schachtelungsebenen von EIIs (einschließlich der Schachtelung innerhalb von Objekten) zulässig.
+- Das [children]-Element des inneren Elements wird entsprechend dem JSON-Attribut ebenso wie beim JSON-Stammelement dem Wert in Abschnitt&#160;2.3 zugeordnet. Es sind mehrere Schachtelungsebenen von EIIs (einschließlich der Schachtelung innerhalb von Objekten) zulässig.
 
 Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.
 
@@ -208,7 +212,9 @@ Beispiel: Das folgende Element wird einem JSON-Fragment zugeordnet.
 
 Nachfolgend wird das JSON-Fragment dargestellt.
 
-`["myValue1",2,[true,null]]`
+```json
+["myValue1",2,[true,null]]
+```
 
 ## <a name="see-also"></a>Siehe auch
 

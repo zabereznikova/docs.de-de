@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995994"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752208"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort-Methode
 Bricht ab, der Berechnung, die dieses ICorDebugEval Objekt derzeit ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
