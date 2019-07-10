@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645590"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737355"
 ---
-# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="ea19a-102">ICorDebugAssembly::GetAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="ea19a-102">ICorDebugAssembly::GetAppDomain Method</span></span>
-<span data-ttu-id="ea19a-103">Ruft einen Schnittstellenzeiger auf die Anwendungsdomäne, der diesen `ICorDebugAssembly` Instanz.</span><span class="sxs-lookup"><span data-stu-id="ea19a-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
+# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="94bb8-102">ICorDebugAssembly::GetAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="94bb8-102">ICorDebugAssembly::GetAppDomain Method</span></span>
+<span data-ttu-id="94bb8-103">Ruft einen Schnittstellenzeiger auf die Anwendungsdomäne, der diesen `ICorDebugAssembly` Instanz.</span><span class="sxs-lookup"><span data-stu-id="94bb8-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea19a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ea19a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94bb8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="94bb8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAppDomain (  
     [out] ICorDebugAppDomain  **ppAppDomain  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea19a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ea19a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94bb8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="94bb8-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="ea19a-106">[out] Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="ea19a-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
+ <span data-ttu-id="94bb8-106">[out] Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="94bb8-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ea19a-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ea19a-107">Remarks</span></span>  
- <span data-ttu-id="ea19a-108">Wenn diese Assembly die Systemassembly `GetAppDomain` gibt null zurück.</span><span class="sxs-lookup"><span data-stu-id="ea19a-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94bb8-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="94bb8-107">Remarks</span></span>  
+ <span data-ttu-id="94bb8-108">Wenn diese Assembly die Systemassembly `GetAppDomain` gibt null zurück.</span><span class="sxs-lookup"><span data-stu-id="94bb8-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea19a-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ea19a-109">Requirements</span></span>  
- <span data-ttu-id="ea19a-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea19a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94bb8-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="94bb8-109">Requirements</span></span>  
+ <span data-ttu-id="94bb8-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94bb8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea19a-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ea19a-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="94bb8-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94bb8-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ea19a-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea19a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="94bb8-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94bb8-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ea19a-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea19a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="94bb8-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94bb8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

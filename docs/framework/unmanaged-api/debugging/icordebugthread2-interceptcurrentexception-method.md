@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01b883a5c6dd0cff119ff09747d32c607ac7ec60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a59476728280e42f45c416b614e6a721efaf26c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968297"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765249"
 ---
-# <a name="icordebugthread2interceptcurrentexception-method"></a><span data-ttu-id="f81a5-102">ICorDebugThread2::InterceptCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="f81a5-102">ICorDebugThread2::InterceptCurrentException Method</span></span>
-<span data-ttu-id="f81a5-103">Kann einen Debugger für diesen Thread die aktuelle Ausnahme abzufangen.</span><span class="sxs-lookup"><span data-stu-id="f81a5-103">Allows a debugger to intercept the current exception on this thread.</span></span>  
+# <a name="icordebugthread2interceptcurrentexception-method"></a><span data-ttu-id="4b0f9-102">ICorDebugThread2::InterceptCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="4b0f9-102">ICorDebugThread2::InterceptCurrentException Method</span></span>
+<span data-ttu-id="4b0f9-103">Kann einen Debugger für diesen Thread die aktuelle Ausnahme abzufangen.</span><span class="sxs-lookup"><span data-stu-id="4b0f9-103">Allows a debugger to intercept the current exception on this thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f81a5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f81a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b0f9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4b0f9-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT InterceptCurrentException (  
     [in] ICorDebugFrame  *pFrame  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f81a5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f81a5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4b0f9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4b0f9-105">Parameters</span></span>  
  `pFrame`  
- <span data-ttu-id="f81a5-106">[in] Ein Zeiger auf einen ICorDebugFrame, die den aktiven Stapelrahmen darstellt.</span><span class="sxs-lookup"><span data-stu-id="f81a5-106">[in] A pointer to an ICorDebugFrame that represents the active stack frame.</span></span>  
+ <span data-ttu-id="4b0f9-106">[in] Ein Zeiger auf einen ICorDebugFrame, die den aktiven Stapelrahmen darstellt.</span><span class="sxs-lookup"><span data-stu-id="4b0f9-106">[in] A pointer to an ICorDebugFrame that represents the active stack frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f81a5-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f81a5-107">Remarks</span></span>  
- <span data-ttu-id="f81a5-108">Die `InterceptCurrentException` -Methode zwischen ein Ausnahmerückruf aufgerufen werden kann ([ICorDebugManagedCallback:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) oder [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) und die zugehörigen Aufruf von [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).</span><span class="sxs-lookup"><span data-stu-id="f81a5-108">The `InterceptCurrentException` method can be called between an exception callback ([ICorDebugManagedCallback::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) or [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) and the associated call to [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4b0f9-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4b0f9-107">Remarks</span></span>  
+ <span data-ttu-id="4b0f9-108">Die `InterceptCurrentException` -Methode zwischen ein Ausnahmerückruf aufgerufen werden kann ([ICorDebugManagedCallback:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) oder [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) und die zugehörigen Aufruf von [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).</span><span class="sxs-lookup"><span data-stu-id="4b0f9-108">The `InterceptCurrentException` method can be called between an exception callback ([ICorDebugManagedCallback::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) or [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) and the associated call to [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f81a5-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f81a5-109">Requirements</span></span>  
- <span data-ttu-id="f81a5-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f81a5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b0f9-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4b0f9-109">Requirements</span></span>  
+ <span data-ttu-id="4b0f9-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b0f9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f81a5-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f81a5-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4b0f9-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4b0f9-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f81a5-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f81a5-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4b0f9-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4b0f9-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f81a5-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f81a5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="4b0f9-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b0f9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

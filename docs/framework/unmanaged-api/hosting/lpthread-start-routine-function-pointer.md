@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a81e78c0a34f766e1598dd27506f62bd3132f348
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490161"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768348"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="ea4b9-102">LPTHREAD_START_ROUTINE-Funktionszeiger</span><span class="sxs-lookup"><span data-stu-id="ea4b9-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
-<span data-ttu-id="ea4b9-103">Zeigt auf eine Funktion, die den Host benachrichtigt, dass eine Threadausführung begonnen hat.</span><span class="sxs-lookup"><span data-stu-id="ea4b9-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
+# <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="570a8-102">LPTHREAD_START_ROUTINE-Funktionszeiger</span><span class="sxs-lookup"><span data-stu-id="570a8-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
+<span data-ttu-id="570a8-103">Zeigt auf eine Funktion, die den Host benachrichtigt, dass eine Threadausführung begonnen hat.</span><span class="sxs-lookup"><span data-stu-id="570a8-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
   
- <span data-ttu-id="ea4b9-104">Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="ea4b9-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="570a8-104">Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="570a8-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea4b9-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="ea4b9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="570a8-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="570a8-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
     [in] LPVOID lpThreadParameter  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea4b9-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="ea4b9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="570a8-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="570a8-106">Parameters</span></span>  
  `lpThreadParameter`  
- <span data-ttu-id="ea4b9-107">[in] Ein Zeiger auf den Code, der Ausführung gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="ea4b9-107">[in] A pointer to the code that has started executing.</span></span>  
+ <span data-ttu-id="570a8-107">[in] Ein Zeiger auf den Code, der Ausführung gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="570a8-107">[in] A pointer to the code that has started executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ea4b9-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ea4b9-108">Remarks</span></span>  
- <span data-ttu-id="ea4b9-109">Die Funktion, die die `LPTHREAD_START_ROUTINE` ist eine Callback-Funktion und muss vom Writer der hostanwendung implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="ea4b9-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="570a8-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="570a8-108">Remarks</span></span>  
+ <span data-ttu-id="570a8-109">Die Funktion, die die `LPTHREAD_START_ROUTINE` ist eine Callback-Funktion und muss vom Writer der hostanwendung implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="570a8-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea4b9-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ea4b9-110">Requirements</span></span>  
- <span data-ttu-id="ea4b9-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea4b9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="570a8-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="570a8-110">Requirements</span></span>  
+ <span data-ttu-id="570a8-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="570a8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea4b9-112">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ea4b9-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="570a8-112">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="570a8-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ea4b9-113">**Bibliothek:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="ea4b9-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="570a8-113">**Bibliothek:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="570a8-113">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="ea4b9-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea4b9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="570a8-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="570a8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea4b9-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ea4b9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="570a8-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="570a8-115">See also</span></span>
 
-- [<span data-ttu-id="ea4b9-116">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="ea4b9-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="570a8-116">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="570a8-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
