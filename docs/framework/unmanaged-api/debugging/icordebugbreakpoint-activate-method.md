@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ac37df58762dac4e3a6161361cafd8ea87e2657
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f056e4ae233e70223755c1961cd3ee5da68ec90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645382"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745177"
 ---
-# <a name="icordebugbreakpointactivate-method"></a><span data-ttu-id="084fc-102">ICorDebugBreakpoint::Activate-Methode</span><span class="sxs-lookup"><span data-stu-id="084fc-102">ICorDebugBreakpoint::Activate Method</span></span>
-<span data-ttu-id="084fc-103">Legt den aktiven Zustand dieses `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="084fc-103">Sets the active state of this `ICorDebugBreakpoint`.</span></span>  
+# <a name="icordebugbreakpointactivate-method"></a><span data-ttu-id="3a108-102">ICorDebugBreakpoint::Activate-Methode</span><span class="sxs-lookup"><span data-stu-id="3a108-102">ICorDebugBreakpoint::Activate Method</span></span>
+<span data-ttu-id="3a108-103">Legt den aktiven Zustand dieses `ICorDebugBreakpoint`.</span><span class="sxs-lookup"><span data-stu-id="3a108-103">Sets the active state of this `ICorDebugBreakpoint`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="084fc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="084fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a108-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3a108-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Activate (  
     [in] BOOL bActive  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="084fc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="084fc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a108-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3a108-105">Parameters</span></span>  
  `bActive`  
- <span data-ttu-id="084fc-106">[in] Legen Sie diesen Wert auf `true` an den Status als aktiv ist; andernfalls legen Sie diesen Wert auf `false`.</span><span class="sxs-lookup"><span data-stu-id="084fc-106">[in] Set this value to `true` to specify the state as active; otherwise, set this value to `false`.</span></span>  
+ <span data-ttu-id="3a108-106">[in] Legen Sie diesen Wert auf `true` an den Status als aktiv ist; andernfalls legen Sie diesen Wert auf `false`.</span><span class="sxs-lookup"><span data-stu-id="3a108-106">[in] Set this value to `true` to specify the state as active; otherwise, set this value to `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="084fc-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="084fc-107">Requirements</span></span>  
- <span data-ttu-id="084fc-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="084fc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a108-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3a108-107">Requirements</span></span>  
+ <span data-ttu-id="3a108-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a108-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="084fc-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="084fc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3a108-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a108-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="084fc-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="084fc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3a108-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a108-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="084fc-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="084fc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3a108-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a108-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

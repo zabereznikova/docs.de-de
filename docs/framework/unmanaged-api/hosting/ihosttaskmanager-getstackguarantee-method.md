@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea1c1f998febccbc80fb10cef5a8dfd229e1987e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 739670fb84eb0145fd8bf8073f453518487c38b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749573"
 ---
-# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="df3c6-102">IHostTaskManager::GetStackGuarantee-Methode</span><span class="sxs-lookup"><span data-stu-id="df3c6-102">IHostTaskManager::GetStackGuarantee Method</span></span>
-<span data-ttu-id="df3c6-103">Ruft die Menge an Stapelspeicher, der garantiert verfügbar, sobald ein Stack-Vorgang abgeschlossen wird, aber vor dem Endtag eines Prozesses ab.</span><span class="sxs-lookup"><span data-stu-id="df3c6-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
+# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="825b1-102">IHostTaskManager::GetStackGuarantee-Methode</span><span class="sxs-lookup"><span data-stu-id="825b1-102">IHostTaskManager::GetStackGuarantee Method</span></span>
+<span data-ttu-id="825b1-103">Ruft die Menge an Stapelspeicher, der garantiert verfügbar, sobald ein Stack-Vorgang abgeschlossen wird, aber vor dem Endtag eines Prozesses ab.</span><span class="sxs-lookup"><span data-stu-id="825b1-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df3c6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="df3c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="825b1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="825b1-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetStackGuarantee(  
     [out] ULONG *pGuarantee  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="df3c6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="df3c6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="825b1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="825b1-105">Parameters</span></span>  
  `pGuarantee`  
- <span data-ttu-id="df3c6-106">[out] Ein Zeiger auf die Anzahl der Bytes, die verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="df3c6-106">[out] A pointer to the number of bytes that are available.</span></span>  
+ <span data-ttu-id="825b1-106">[out] Ein Zeiger auf die Anzahl der Bytes, die verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="825b1-106">[out] A pointer to the number of bytes that are available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df3c6-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="df3c6-107">Requirements</span></span>  
- <span data-ttu-id="df3c6-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df3c6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="825b1-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="825b1-107">Requirements</span></span>  
+ <span data-ttu-id="825b1-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="825b1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df3c6-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="df3c6-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="825b1-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="825b1-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="df3c6-110">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="df3c6-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="825b1-110">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="825b1-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="df3c6-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df3c6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="825b1-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="825b1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df3c6-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="df3c6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="825b1-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="825b1-112">See also</span></span>
 
-- [<span data-ttu-id="df3c6-113">IHostTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="df3c6-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="825b1-113">IHostTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="825b1-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
