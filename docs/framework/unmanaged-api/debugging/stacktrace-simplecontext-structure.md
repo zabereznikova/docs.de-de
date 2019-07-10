@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986530"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752502"
 ---
-# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="d21a0-102">StackTrace_SimpleContext-Struktur</span><span class="sxs-lookup"><span data-stu-id="d21a0-102">StackTrace_SimpleContext Structure</span></span>
-<span data-ttu-id="d21a0-103">Stellt einen einfachen Kontext bereit, der statt einer vollständigen `CONTEXT`-Struktur verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="d21a0-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
+# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="dfc4f-102">StackTrace_SimpleContext-Struktur</span><span class="sxs-lookup"><span data-stu-id="dfc4f-102">StackTrace_SimpleContext Structure</span></span>
+<span data-ttu-id="dfc4f-103">Stellt einen einfachen Kontext bereit, der statt einer vollständigen `CONTEXT`-Struktur verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="dfc4f-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d21a0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d21a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfc4f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="dfc4f-104">Syntax</span></span>  
   
-```  
+```cpp  
 struct StackTrace_SimpleContext  
 {  
     ULONG64 StackOffset;       // ESP on x86  
@@ -38,25 +38,25 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d21a0-105">Member</span><span class="sxs-lookup"><span data-stu-id="d21a0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dfc4f-105">Member</span><span class="sxs-lookup"><span data-stu-id="dfc4f-105">Members</span></span>  
   
-|<span data-ttu-id="d21a0-106">Member</span><span class="sxs-lookup"><span data-stu-id="d21a0-106">Member</span></span>|<span data-ttu-id="d21a0-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d21a0-107">Description</span></span>|  
+|<span data-ttu-id="dfc4f-106">Member</span><span class="sxs-lookup"><span data-stu-id="dfc4f-106">Member</span></span>|<span data-ttu-id="dfc4f-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dfc4f-107">Description</span></span>|  
 |------------|-----------------|  
-|`StackOffset`|<span data-ttu-id="d21a0-108">Der Stapelzeiger oder der EINGABETASTE Stapelzeiger (ESP) auf X86 Plattformen.</span><span class="sxs-lookup"><span data-stu-id="d21a0-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
-|`FrameOffset`|<span data-ttu-id="d21a0-109">Die Frameoffset oder die EBP-Register auf X86 Plattformen.</span><span class="sxs-lookup"><span data-stu-id="d21a0-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
-|`InstructionOffset`|<span data-ttu-id="d21a0-110">Der Anweisungszeiger oder der EINGABETASTE Anweisungszeiger (EIP) auf X86 Plattformen.</span><span class="sxs-lookup"><span data-stu-id="d21a0-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
+|`StackOffset`|<span data-ttu-id="dfc4f-108">Der Stapelzeiger oder der EINGABETASTE Stapelzeiger (ESP) auf X86 Plattformen.</span><span class="sxs-lookup"><span data-stu-id="dfc4f-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
+|`FrameOffset`|<span data-ttu-id="dfc4f-109">Die Frameoffset oder die EBP-Register auf X86 Plattformen.</span><span class="sxs-lookup"><span data-stu-id="dfc4f-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
+|`InstructionOffset`|<span data-ttu-id="dfc4f-110">Der Anweisungszeiger oder der EINGABETASTE Anweisungszeiger (EIP) auf X86 Plattformen.</span><span class="sxs-lookup"><span data-stu-id="dfc4f-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d21a0-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d21a0-111">Remarks</span></span>  
- <span data-ttu-id="d21a0-112">Da die Funktionen der Aufrufliste-Ablaufverfolgung in der Regel nur die Adresse, Frameoffset und Stapeladresse zurückgeben müssen, können Sie optional mithilfe der `SimpleContext` Struktur anstelle einer großen `CONTEXT` Struktur.</span><span class="sxs-lookup"><span data-stu-id="d21a0-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dfc4f-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dfc4f-111">Remarks</span></span>  
+ <span data-ttu-id="dfc4f-112">Da die Funktionen der Aufrufliste-Ablaufverfolgung in der Regel nur die Adresse, Frameoffset und Stapeladresse zurückgeben müssen, können Sie optional mithilfe der `SimpleContext` Struktur anstelle einer großen `CONTEXT` Struktur.</span><span class="sxs-lookup"><span data-stu-id="dfc4f-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d21a0-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d21a0-113">Requirements</span></span>  
- <span data-ttu-id="d21a0-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d21a0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfc4f-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dfc4f-113">Requirements</span></span>  
+ <span data-ttu-id="dfc4f-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfc4f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d21a0-115">**Header:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="d21a0-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="dfc4f-115">**Header:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="dfc4f-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="d21a0-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d21a0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dfc4f-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfc4f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d21a0-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d21a0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfc4f-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dfc4f-117">See also</span></span>
 
-- [<span data-ttu-id="d21a0-118">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="d21a0-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="d21a0-119">Debuggen</span><span class="sxs-lookup"><span data-stu-id="d21a0-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="dfc4f-118">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="dfc4f-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="dfc4f-119">Debuggen</span><span class="sxs-lookup"><span data-stu-id="dfc4f-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
