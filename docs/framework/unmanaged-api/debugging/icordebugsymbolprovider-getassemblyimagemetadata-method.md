@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0be0722db374ff49541b3c4b68f295774f34163e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d96aa82e9fd8b651ab005cba4945f6977c1e3d3a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953451"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771501"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider::GetAssemblyImageMetadata-Methode
 Gibt die Metadaten aus einer zusammengeführten Assembly zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAssemblyImageMetadata(  
    [out] ICorDebugMemoryBuffer** ppMemoryBuffer  
 );  

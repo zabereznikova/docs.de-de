@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771646"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Der Windows Forms-Designer bietet Ihnen viele Layouttools, um dies zu erreichen. Einer der wichtigsten Faktoren ist die <xref:System.Windows.Forms.Design.Behavior.SnapLine> Feature.  
@@ -53,7 +53,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.  
   
-#### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
+### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
 1. Erstellen Sie ein Windows-basierten Anwendung mit dem Namen "SnaplineExample" (**Datei** > **neu** > **Projekt**  >  **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
   
@@ -62,7 +62,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>Abstand und Ausrichtung von Steuerelementen, die mithilfe von Ausrichtungslinien  
  Ausrichtungslinien bieten Ihnen eine präzise und intuitive Möglichkeit zum Ausrichten von Steuerelementen im Formular. Sie werden angezeigt, wenn Sie ein ausgewähltes Steuerelement oder Steuerelemente in der Nähe von einer Position verschieben, die an ein anderes Steuerelement oder eine Gruppe von Steuerelementen ausgerichtet würden. Ihre Auswahl wird die vorgeschlagene Position "eingerastet" werden, wie Sie es hinter die anderen Steuerelemente verschoben werden.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>So ordnen Sie Steuerelemente mithilfe von Ausrichtungslinien an  
+### <a name="to-arrange-controls-using-snaplines"></a>So ordnen Sie Steuerelemente mithilfe von Ausrichtungslinien an  
   
 1. Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular.  
   
@@ -85,7 +85,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="aligning-to-form-and-container-margins"></a>Ausrichten von Form und die Ränder des Containers  
  Ausrichtungslinien können Sie das Formular und Container Rand auf konsistente Weise Ausrichten von Steuerelementen.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Zum Ausrichten von Steuerelementen, Form und Container Rand  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Zum Ausrichten von Steuerelementen, Form und Container Rand  
   
 1. Wählen Sie eine der der <xref:System.Windows.Forms.Button> steuert und verschieben Sie es in der Nähe der rechten Rand des Formulars, bis eine Ausrichtungslinie angezeigt wird. Der Abstand der Ausrichtungslinie vom rechten Rand ist die Summe des Steuerelements <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft und des Formulars <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaftswerte.  
   
@@ -107,7 +107,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="aligning-to-grouped-controls"></a>Gruppierte Steuerelemente ausrichten  
  Mithilfe von Ausrichtungslinien zum Ausrichten von gruppierter Steuerelementen sowie Steuerelemente in einem <xref:System.Windows.Forms.GroupBox> Steuerelement.  
   
-#### <a name="to-align-to-grouped-controls"></a>Um auf gruppierte Steuerelemente auszurichten.  
+### <a name="to-align-to-grouped-controls"></a>Um auf gruppierte Steuerelemente auszurichten.  
   
 1. Wählen Sie zwei der Steuerelemente im Formular aus. Verschieben Sie die Auswahl, und beachten Sie die Ausrichtungslinien, die zwischen der Auswahl und den anderen Steuerelementen angezeigt werden.  
   
@@ -120,7 +120,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>Verwenden von Ausrichtungslinien zum Platzieren eines Steuerelements durch seine Größe Gliedern  
  Mit Ausrichtungslinien können Sie ausrichten steuert, wenn Sie zuerst diese in einem Formular platzieren.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>So verwenden Sie Ausrichtungslinien, um ein Steuerelement zu platzieren, Gliedern von seiner Größe  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>So verwenden Sie Ausrichtungslinien, um ein Steuerelement zu platzieren, Gliedern von seiner Größe  
   
 1. Klicken Sie in der **Toolbox**auf das Symbol des <xref:System.Windows.Forms.Button> -Steuerelements. Ziehen Sie es nicht auf das Formular.  
   
@@ -137,7 +137,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>Mithilfe von Ausrichtungslinien beim Ziehen eines Steuerelements aus der Toolbox  
  Ausrichtungslinien können Sie ausrichten, Steuerelemente, wenn Sie sie aus ziehen die **Toolbox** auf das Formular.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>So verwenden Sie Ausrichtungslinien, wenn ein Steuerelement aus der Toolbox ziehen.  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>So verwenden Sie Ausrichtungslinien, wenn ein Steuerelement aus der Toolbox ziehen.  
   
 1. Ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular, jedoch werden keine Loslassen der Maustaste.  
   
@@ -150,7 +150,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="resizing-controls-using-snaplines"></a>Ändern der Größe von Steuerelementen mithilfe von Ausrichtungslinien  
  Ausrichtungslinien können Sie Steuerelemente ausrichten, wie Sie ihre Größe zu ändern.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Zum Ändern der Größe eines Steuerelements mithilfe von Ausrichtungslinien  
+### <a name="to-resize-a-control-using-snaplines"></a>Zum Ändern der Größe eines Steuerelements mithilfe von Ausrichtungslinien  
   
 1. Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular.  
   
@@ -163,7 +163,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="aligning-a-label-to-a-controls-text"></a>Ausrichten von einer Bezeichnung auf den Text eines Steuerelements  
  Einige Steuerelemente verfügen über eine Ausrichtungslinien zum Ausrichten von anderen Steuerelementen angezeigten Text.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Eine Bezeichnung für den Text eines Steuerelements ausgerichtet.  
+### <a name="to-align-a-label-to-a-controls-text"></a>Eine Bezeichnung für den Text eines Steuerelements ausgerichtet.  
   
 1. Ziehen Sie ein <xref:System.Windows.Forms.TextBox> -Steuerelement aus der **Toolbox** auf das Formular. Beim Ablegen der <xref:System.Windows.Forms.TextBox> steuern, auf das Formular, klicken Sie auf das Smarttag-Symbol aus, und wählen Sie die **Festlegen von Text in textBox1** Option. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="using-snaplines-with-keyboard-navigation"></a>Mithilfe von Ausrichtungslinien Tastaturnavigation  
  Mit Ausrichtungslinien können Sie ausrichten steuert, wenn Sie sie mithilfe der Pfeiltasten der Tastatur angeordnet sind.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>So verwenden Sie Ausrichtungslinien Tastaturnavigation  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>So verwenden Sie Ausrichtungslinien Tastaturnavigation  
   
 1. Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular. Platzieren Sie es in der oberen linken Ecke des Formulars.  
   
@@ -199,7 +199,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="snaplines-and-layout-panels"></a>Ausrichtungslinien und LayoutPanel-Elemente  
  Ausrichtungslinien sind in Layoutbereichen deaktiviert.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Um Ausrichtungslinien selektiv zu deaktivieren.  
+### <a name="to-selectively-disable-snaplines"></a>Um Ausrichtungslinien selektiv zu deaktivieren.  
   
 1. Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.  
   
@@ -214,13 +214,13 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 ## <a name="disabling-snaplines"></a>Deaktivieren von Ausrichtungslinien  
  Ausrichtungslinien sind standardmäßig aktiviert. Sie können Ausrichtungslinien selektiv deaktivieren, oder deaktivieren sie in der entwurfsumgebung.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Um Ausrichtungslinien selektiv zu deaktivieren.  
+### <a name="to-selectively-disable-snaplines"></a>Um Ausrichtungslinien selektiv zu deaktivieren.  
   
 - Drücken Sie die ALT-Taste, und zwar ein Steuerelement am Rand des Formulars verschieben.  
   
      Beachten Sie, dass keine Ausrichtungslinien angezeigt werden, und das Steuerelement wird an alle potenziellen Ausrichtungspositionen nicht ausgerichtet.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>So deaktivieren Sie die Ausrichtungslinien, die in der entwurfsumgebung  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>So deaktivieren Sie die Ausrichtungslinien, die in der entwurfsumgebung  
   
 1. Von der **Tools** öffnen die **Optionen** Dialogfeld. Öffnen Sie im Dialogfeld Windows Forms-Designer. Weitere Informationen finden Sie unter [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   

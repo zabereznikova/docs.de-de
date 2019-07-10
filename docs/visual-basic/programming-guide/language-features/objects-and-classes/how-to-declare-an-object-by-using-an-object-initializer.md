@@ -7,17 +7,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 850e20fe8b5b6bfd392c80c87950a81a1a8a5c24
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755196"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)
 Objektinitialisierer ermöglichen Sie deklarieren und instanziieren Sie eine Instanz einer Klasse in einer einzigen Anweisung. Darüber hinaus können Sie eine oder mehrere Member der Instanz zur gleichen Zeit, initialisieren, ohne einen parametrisierten Konstruktor aufzurufen.  
   
- Wenn Sie einen Objektinitialisierer verwenden, um eine Instanz eines benannten Typs erstellen, wird der Standardkonstruktor für die Klasse aufgerufen, gefolgt von der Initialisierung der angegebenen Member in der Reihenfolge, in die Sie angeben.  
+ Wenn Sie einen Objektinitialisierer verwenden, um eine Instanz eines benannten Typs erstellen, wird der parameterlose Konstruktor für die Klasse aufgerufen, gefolgt von der Initialisierung der angegebenen Member in der Reihenfolge, in die Sie angeben.  
   
  Das folgende Verfahren zeigt, wie zum Erstellen einer Instanz von einem `Student` Klasse auf drei verschiedene Arten. Die Klasse verfügt über Vorname, Nachname und Jahr Klasseneigenschaften, u. a. Jede dieser drei Deklarationen erstellt eine neue Instanz der `Student`, mit der Eigenschaft `First` legen Sie auf "Michael,"-Eigenschaft `Last` "Tucker" festgelegt, und alle anderen Elemente auf ihre Standardwerte festgelegt. Das Ergebnis jeder Deklaration in der Prozedur entspricht im folgenden Beispiel, das einen Objektinitialisierer nicht verwendet.  
   

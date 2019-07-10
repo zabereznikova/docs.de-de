@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771664"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel
 
@@ -55,7 +55,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 
  Das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement kann Größe und Umbruch seiner untergeordneten Steuerelemente ändern, wenn sich die Abmessungen des übergeordneten Formulars ändern.
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>So ordnen Sie Steuerelemente mithilfe eines FlowLayoutPanels horizontal und vertikal an.
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>So ordnen Sie Steuerelemente mithilfe eines FlowLayoutPanels horizontal und vertikal an.
 
 1. Ziehen Sie ein <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.
 
@@ -76,7 +76,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="changing-flow-direction"></a>Ändern der Flussrichtung
  Mithilfe der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> -Eigenschaft können Sie die Richtung ändern, in der Steuerelemente angeordnet werden. Sie können die untergeordneten Steuerelemente von links nach rechts, rechts nach links, oben nach unten oder unten nach oben anordnen.
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>So ändern Sie die Flussrichtung in einem FlowLayoutPanel
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>So ändern Sie die Flussrichtung in einem FlowLayoutPanel
 
 1. Ändern Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>-Eigenschaft des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements in <xref:System.Windows.Forms.FlowDirection.TopDown>. Beachten Sie, dass die untergeordneten Steuerelemente je nach Höhe des Steuerelements in einer oder mehreren Spalten neu angeordnet werden.
 
@@ -85,7 +85,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="inserting-flow-breaks"></a>Einfügen von Flussumbrüchen
  Das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement stellt für seine untergeordneten Steuerelemente eine FlowBreak-Eigenschaft bereit. Wenn Sie den Wert der FlowBreak-Eigenschaft auf `true` festlegen, ordnet das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement andere Steuerelemente nicht mehr in der aktuellen Flussrichtung an und bricht diese auch nicht mehr in die nächste Zeile oder Spalte um.
 
-#### <a name="to-insert-flow-breaks"></a>So fügen Sie Flussumbrüche ein
+### <a name="to-insert-flow-breaks"></a>So fügen Sie Flussumbrüche ein
 
 1. Ändern Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel> -Eigenschaft des <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> -Steuerelements in <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
@@ -96,7 +96,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Positionieren von Steuerelementen durch Andocken und Verankern
  Das Andock- und Verankerungsverhalten von untergeordneten Steuerelementen unterscheidet sich vom Verhalten in anderen Containersteuerelementen. Sowohl das Andocken als auch das Verankern erfolgt relativ zum größten Steuerelement in der Flussrichtung.
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>So positionieren Sie Steuerelemente durch Andocken und Verankern
+### <a name="to-position-controls-using-docking-and-anchoring"></a>So positionieren Sie Steuerelemente durch Andocken und Verankern
 
 1. Vergrößern Sie das <xref:System.Windows.Forms.FlowLayoutPanel> , bis alle <xref:System.Windows.Forms.Button> -Steuerelemente in einer Spalte angeordnet sind.
 
@@ -115,7 +115,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 
  Die <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft ermöglicht Ihnen, den Abstand zwischen Steuerelementen zu steuern.
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>So ordnen Sie Steuerelemente mithilfe der Eigenschaften „Padding“ und „Margin“ an
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>So ordnen Sie Steuerelemente mithilfe der Eigenschaften „Padding“ und „Margin“ an
 
 1. Ändern Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel> -Eigenschaft des <xref:System.Windows.Forms.Control.Dock%2A> -Steuerelements in <xref:System.Windows.Forms.DockStyle.Fill>. Wenn das Formular groß genug ist, werden die <xref:System.Windows.Forms.Button> -Steuerelemente in die erste Spalte des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements verschoben.
 
@@ -126,7 +126,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Einfügen von Steuerelementen durch Doppelklicken in der Toolbox
  Sie können Ihr <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement auffüllen, indem Sie in der **Toolbox**auf Steuerelemente doppelklicken.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>So fügen Sie Steuerelemente durch Doppelklicken in der Toolbox ein
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>So fügen Sie Steuerelemente durch Doppelklicken in der Toolbox ein
 
 1. Doppelklicken Sie auf das Symbol des <xref:System.Windows.Forms.Button> -Steuerelements in der **Toolbox**. Beachten Sie, dass ein neues <xref:System.Windows.Forms.Button> -Steuerelement im <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement angezeigt wird.
 
@@ -135,7 +135,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Einfügen eines Steuerelements durch Zeichnen seiner Kontur
  Sie können ein Steuerelement in ein <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement einfügen und seine Größe angeben, indem Sie in einer Zelle seine Kontur zeichnen.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>So fügen Sie ein Steuerelement ein, indem Sie seine Kontur zeichnen
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>So fügen Sie ein Steuerelement ein, indem Sie seine Kontur zeichnen
 
 1. Klicken Sie in der **Toolbox**auf das Symbol des <xref:System.Windows.Forms.Button> -Steuerelements. Ziehen Sie es nicht auf das Formular.
 
@@ -148,7 +148,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="inserting-controls-using-the-insertion-bar"></a>Einfügen von Steuerelementen mithilfe der Einfügemarke
  Sie können Steuerelemente an einer bestimmten Position in einem <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement einfügen. Wenn Sie ein Steuerelement in den Clientbereich eines <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements ziehen, wird eine Einfügemarke angezeigt, um anzuzeigen, wo das Steuerelement eingefügt wird.
 
-#### <a name="to-insert-a-control-using-the-caret"></a>So fügen Sie ein Steuerelement mit der Einfügemarke ein
+### <a name="to-insert-a-control-using-the-caret"></a>So fügen Sie ein Steuerelement mit der Einfügemarke ein
 
 1. Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement, und zeigen Sie auf den Abstand zwischen zwei <xref:System.Windows.Forms.Button> -Steuerelementen. Beachten Sie, dass eine Einfügemarke angezeigt wird, der angibt, wo, die <xref:System.Windows.Forms.Button> platziert werden beim Ablegen ist der <xref:System.Windows.Forms.FlowLayoutPanel> Steuerelement. Bevor Sie das neue <xref:System.Windows.Forms.Button> -Steuerelement auf dem <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement ablegen, bewegen Sie den Mauszeiger umher, um zu verfolgen, wie sich die Einfügemarke bewegt.
 
@@ -157,7 +157,7 @@ Wenn Sie fertig sind, müssen Sie einen Überblick über die Rolle diese wichtig
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element
  Sie können auf Ihrem Formular vorhandene Steuerelemente einem neuen <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement zuordnen.
 
-#### <a name="to-reparent-existing-controls"></a>So weisen Sie vorhandene Steuerelemente einem anderen übergeordneten Steuerelement zu
+### <a name="to-reparent-existing-controls"></a>So weisen Sie vorhandene Steuerelemente einem anderen übergeordneten Steuerelement zu
 
 1. Ziehen Sie drei <xref:System.Windows.Forms.Button> -Steuerelemente aus der **Toolbox** auf das Formular. Positionieren Sie sie nahe beieinander, ohne sie aber auszurichten.
 

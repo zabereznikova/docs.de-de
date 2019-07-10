@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e1edb1d25a62a9a689c397339740e563d986c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700224"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757218"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid-Methode
 Ruft einen Wert, der angibt, ob das durch diesen ICorDebugHeapValue dargestellte Objekt gültig ist.  
@@ -31,7 +31,7 @@ Ruft einen Wert, der angibt, ob das durch diesen ICorDebugHeapValue dargestellte
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsValid (  
     [out] BOOL    *pbValid  
 );  

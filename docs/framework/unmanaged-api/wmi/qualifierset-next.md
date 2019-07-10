@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8b96957467b0acb100f7eea137b3294a60e208a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ac5cc8633881749bdc167e1b3925a83f7adf3b3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000193"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760299"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next-Funktion
 Ruft den nächsten Qualifizierer in einer Enumeration ab, die durch einen Aufruf der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)-Funktion gestartet wurde.   
@@ -30,7 +30,7 @@ Ruft den nächsten Qualifizierer in einer Enumeration ab, die durch einen Aufruf
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT QualifierSet_Next (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 

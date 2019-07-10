@@ -2,12 +2,12 @@
 title: Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661864"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742748"
 ---
 # <a name="troubleshooting"></a>Problembehandlung
 Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen auftreten können, und enthalten Vorschläge dazu, wie diese Probleme vermieden bzw. deren Auswirkungen auf andere Weise verringert werden können.  
@@ -26,7 +26,7 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
  Um einen Namen für eine Eingabedatei anzugeben, fügen Sie den Namen der Befehlszeile als Eingabedatei hinzu. Die Angabe des Dateinamens in der Verbindungszeichenfolge (mithilfe der Option **/conn** ) wird nicht unterstützt. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Klassenbibliotheksprojekte  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] erstellt in der Datei `app.config` des Projekts eine Verbindungszeichenfolge. In Klassenbibliotheksprojekten wird die Datei `app.config` nicht verwendet. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet die in den Entwurfszeitdateien bereitgestellte Verbindungszeichenfolge. Wenn Sie den Wert in `app.config` ändern, wird die Datenbank, mit der die Anwendung eine Verbindung herstellt, nicht geändert.  
+ Der Object Relational Designer erstellt eine Verbindungszeichenfolge in der `app.config` -Datei des Projekts. In Klassenbibliotheksprojekten wird die Datei `app.config` nicht verwendet. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet die in den Entwurfszeitdateien bereitgestellte Verbindungszeichenfolge. Wenn Sie den Wert in `app.config` ändern, wird die Datenbank, mit der die Anwendung eine Verbindung herstellt, nicht geändert.  
   
 ## <a name="cascade-delete"></a>Kaskadierendes Delete  
  Kaskadierte Löschvorgänge werden von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt bzw. erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, führen Sie eines der folgenden Verfahren aus:  

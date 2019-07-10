@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591566"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755163"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objekte und Klassen in Visual Basic
 
@@ -28,7 +28,7 @@ Um die Beziehung zwischen einem Objekt und seiner Klasse zu verstehen, stellen S
 
 Sie müssen ein Objekt erstellen, bevor Sie auf seine Member zugreifen können.
 
-#### <a name="to-create-an-object-from-a-class"></a>Erstellen eines Objekts aus einer Klasse
+### <a name="to-create-an-object-from-a-class"></a>Erstellen eines Objekts aus einer Klasse
 
 1. Ermitteln Sie, in welcher Klasse Sie ein Objekt erstellen möchten.
 
@@ -135,7 +135,7 @@ Elemente, die mit dem Schlüsselwort `Shared` deklariert werden, sind *freigegeb
 
 #### <a name="accessing-nonshared-members"></a>Zugreifen auf nicht freigegebene Member
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Zugriff auf einen nicht freigegebenen Member eines Objekts
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Zugriff auf einen nicht freigegebenen Member eines Objekts
 
 1. Stellen Sie sicher, dass das Objekt aus seiner Klasse erstellt und einer Objektvariablen zugewiesen wurde.
 
@@ -151,7 +151,7 @@ Elemente, die mit dem Schlüsselwort `Shared` deklariert werden, sind *freigegeb
 
 #### <a name="accessing-shared-members"></a>Zugreifen auf freigegebene Member
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Zugriff auf einen freigegebenen Member eines Objekts
+##### <a name="to-access-a-shared-member-of-an-object"></a>Zugriff auf einen freigegebenen Member eines Objekts
 
 - Führen Sie den Klassennamen mit dem *Memberzugriffsoperator* (`.`) und dann den Membernamen an. Sie sollten einen `Shared`-Member des Objekts immer direkt über den Klassennamen aufrufen.
 
@@ -204,7 +204,7 @@ Wenn Klassen von grundlegenderen Klassen abgeleitet werden, wird von einer *hier
 
 Im folgenden Beispiel nehmen wir an, Sie möchten eine besondere Art eines <xref:System.Windows.Forms.Button>-Elements definieren, das wie ein normales <xref:System.Windows.Forms.Button>-Element agiert, aber auch eine Methode zur Verfügung stellt, die die Vordergrund- und Hintergrundfarben umkehrt.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Definieren einer Klasse, die von einer bereits vorhandenen Klasse abgeleitet wird
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Definieren einer Klasse, die von einer bereits vorhandenen Klasse abgeleitet wird
 
 1. Verwenden Sie eine [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md) zur Definition einer Klasse, aus der das benötigte Objekt erstellt werden soll.
 
@@ -239,7 +239,7 @@ Im folgenden Beispiel nehmen wir an, Sie möchten eine besondere Art eines <xref
 
 Abgeleitete Klassen erben Member aus der Klasse, auf der sie basieren. So können Sie die Komplexität beim Vordringen in einer Klassenhierarchie steigern. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-#### <a name="compiling-the-code"></a>Kompilieren des Codes
+### <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Achten Sie darauf, dass der Compiler die Klasse aufrufen kann, von der Ihre neue Klasse abgeleitet werden soll. Dies kann das vollständige Qualifizieren des Namens beinhalten, wie im vorherigen Beispiel, oder das Identifizieren des Namespace in einer [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Wenn sich die Klasse in einem anderen Projekt befindet, müssen Sie möglicherweise einen Verweis auf das Projekt hinzufügen. Weitere Informationen finden Sie unter [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project).
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663564"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756761"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitgestellt werden, sondern nutzt auch die Sicherheitsfeatures der zugrundeliegenden Plattform, die das Betriebssystem enthält, die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], und [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
@@ -140,14 +140,14 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  ![Das Diagramm, das CAS-Berechtigungssätze anzeigt.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Die Einschränkungen des Sicherheitssandkastens der Internetzone gelten in gleicher Weise für jeden Code, den eine [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] aus einer Systembibliothek importiert (einschließlich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]). Dadurch wird sichergestellt, dass jedes Bit des Codes (selbst [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]) gesperrt wird. Unglücklicherweise muss eine [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] jedoch, um ausgeführt zu werden, Funktionalität ausführen, die mehr Berechtigungen erfordert, als im Rahmen des Sicherheitssandkastens der Internetzone gewährt werden.  
+ Die Einschränkungen der sicherheitssandkastens der Internetzone gelten auch für Code, der eine XBAP aus einer Systembibliothek importiert einschließlich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Dadurch wird sichergestellt, dass jedes Bit des Codes (selbst [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]) gesperrt wird. Leider muss ausgeführt werden, eine XBAP Funktionalität ausführen, die mehr Berechtigungen als durch die sicherheitssandkastens der Internetzone erforderlich sind.  
   
- Nehmen Sie beispielsweise eine [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]-Anwendung, die die folgende Seite enthält:  
+ Betrachten Sie eine XBAP-Anwendung, die die folgende Seite enthält:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Zum Ausführen dieser [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] muss der zugrunde liegende [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Code mehr Funktionalität ausführen, als der aufrufenden [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] zur Verfügung steht. Dazu zählen:  
+ Zum Ausführen dieser XBAP, die die zugrunde liegende [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Code mehr Funktionalität als der aufrufenden XBAP, zur Verfügung steht ausführen, einschließlich:  
   
 - Erstellen eines Fensterhandles (HWND) für das rendering  
   
@@ -157,7 +157,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Unter dem Gesichtspunkt der Sicherheit wäre die Gewährung des direkten Zugriffs auf diese Vorgänge für die im Sicherheitssandkasten ausgeführte Anwendung eine Katastrophe.  
   
- Zum Glück bietet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] einen Ausweg aus dieser Lage, indem es diesen Vorgängen die Ausführung mit erhöhten Rechten im Namen der im Sicherheitssandkasten ausgeführten Anwendung erlaubt. Während alle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Vorgänge anhand der eingeschränkten Zone Sicherheitsberechtigungen der Anwendungsdomäne, der überprüft, die [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (wie anderen Systembibliotheken) erhält einen Berechtigungssatz auf, die alle möglichen enthält. Berechtigungen.
+ Zum Glück bietet [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] einen Ausweg aus dieser Lage, indem es diesen Vorgängen die Ausführung mit erhöhten Rechten im Namen der im Sicherheitssandkasten ausgeführten Anwendung erlaubt. Während alle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Vorgänge anhand der eingeschränkten Zone Sicherheitsberechtigungen der Anwendungsdomäne der XBAP, überprüft [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (wie anderen Systembibliotheken) erhält einen Berechtigungssatz auf, die alle möglichen Berechtigungen enthält.
   
  Dies setzt voraus, dass [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] erhöhte Rechte eingeräumt werden und gleichzeitig verhindert wird, dass diese Berechtigungen vom Berechtigungssatz der Internetzone der Hostanwendungsdomäne gesteuert werden.  
   
@@ -166,7 +166,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Die **Assert** im Wesentlichen wird verhindert, dass die erforderlichen uneingeschränkten Berechtigungen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] durch das Internet beschränkt Berechtigungen der Internetzone der [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
+ Die **Assert** im Wesentlichen wird verhindert, dass die erforderlichen uneingeschränkten Berechtigungen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] durch das Internet beschränkt Berechtigungen der XBAP Internetzone.  
   
  Aus plattformsicht [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ist verantwortlich für die Verwendung von **Assert** ordnungsgemäß; eine falsche Verwendung von **Assert** könnte schädlichen Code die Möglichkeit für die rechteerweiterung aktivieren. Daher ist es wichtig, nur aufzurufen **Assert** bei Bedarf, und um sicherzustellen, dass diese Sandbox Einschränkungen bleiben. Beispielsweise darf im Sicherheitssandkasten ausgeführter Code zwar keine beliebigen Dateien öffnen, aber Schriftarten verwenden. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ermöglicht Anwendungen die Sandbox schriftartfunktion zu verwenden, durch den Aufruf **Assert**, und für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zum Lesen von Dateien, die bekanntermaßen diese Schriftarten für die Sandbox-Anwendung enthalten.  
   
@@ -178,11 +178,11 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Sicherheitsrelevante Methode  
- Für den [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Code, der mithilfe von Berechtigungen den Sicherheitssandkasten der Internetzone für [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]-Anwendungen aktiviert, muss stets das höchstmögliche Maß an Sicherheitsüberwachung und -kontrolle gelten. Um diese Anforderung zu erleichtern, bietet .NET Framework Unterstützung für die Verwaltung von Code, der Rechte erhöht. Insbesondere die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] ermöglicht Ihnen das Identifizieren Code, der Rechte erhöht, und markieren Sie sie mit der <xref:System.Security.SecurityCriticalAttribute>; Code nicht mit markiert <xref:System.Security.SecurityCriticalAttribute> wird *transparent* mit dieser Methode. Umgekehrt wird verhindert, dass verwalteter Code, der nicht mit dem <xref:System.Security.SecurityCriticalAttribute> gekennzeichnet ist, die Rechte erhöht.  
+ Die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Code, der Berechtigungen den Sicherheitssandkasten der Internetzone zu aktivieren, für die XBAP-Anwendungen aufrechterhalten werden müssen, das höchste Maß an sicherheitsüberwachung und-Kontrolle verwendet. Um diese Anforderung zu erleichtern, bietet .NET Framework Unterstützung für die Verwaltung von Code, der Rechte erhöht. Insbesondere die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] ermöglicht Ihnen das Identifizieren Code, der Rechte erhöht, und markieren Sie sie mit der <xref:System.Security.SecurityCriticalAttribute>; Code nicht mit markiert <xref:System.Security.SecurityCriticalAttribute> wird *transparent* mit dieser Methode. Umgekehrt wird verhindert, dass verwalteter Code, der nicht mit dem <xref:System.Security.SecurityCriticalAttribute> gekennzeichnet ist, die Rechte erhöht.  
   
  Die sicherheitsrelevante Methode ermöglicht die Organisation von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Code, der Rechte erhöht *sicherheitskritischen Kernel*, mit der Rest transparent dargestellt wird. Durch das Isolieren von sicherheitskritischem Code kann die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Entwicklungsteam auf eine zusätzliche Sicherheitsanalyse und Quellcodekontrolle Sicherheitsmaßnahme auf dem sicherheitskritischen Kernel Standardsicherheitsmaßnahmen (finden Sie unter [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](wpf-security-strategy-security-engineering.md)).  
   
- Beachten Sie, dass .NET Framework vertrauenswürdigen Code erweitern lässt die [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] Sicherheitssandkasten der Internetzone, da Entwickler verwaltete Assemblys zu schreiben, die mit markiert sind <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) und auf der Benutzer den globalen Assemblycache (GAC) bereitgestellt. Das Kennzeichnen einer Assembly mit dem APTCA-Attribut ist ein extrem kritischer Sicherheitsvorgang, da jeder Code, auch bösartiger Code aus dem Internet, diese Assembly aufrufen kann. Bei diesem Vorgang sind äußerste Vorsicht und die Verwendung bewährter Methoden ein absolutes Muss. Die Benutzer müssen zuerst angeben, dass sie dieser Software vertrauen, bevor sie installiert werden kann.  
+ Beachten Sie, dass .NET Framework vertrauenswürdigem Code zum Erweitern der XBAP Sicherheitssandkasten der Internetzone, da Entwickler verwaltete Assemblys zu schreiben, die mit markiert sind erlaubt <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) und auf der Benutzer den globalen Assemblycache (GAC) bereitgestellt. Das Kennzeichnen einer Assembly mit dem APTCA-Attribut ist ein extrem kritischer Sicherheitsvorgang, da jeder Code, auch bösartiger Code aus dem Internet, diese Assembly aufrufen kann. Bei diesem Vorgang sind äußerste Vorsicht und die Verwendung bewährter Methoden ein absolutes Muss. Die Benutzer müssen zuerst angeben, dass sie dieser Software vertrauen, bevor sie installiert werden kann.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer-Sicherheit  

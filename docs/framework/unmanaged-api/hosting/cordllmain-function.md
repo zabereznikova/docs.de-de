@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c509f475d5bf0105ece9791ee3e51d21c298a31f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666920"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755659"
 ---
 # <a name="cordllmain-function"></a>\_CorDllMain-Funktion
 
@@ -29,7 +29,7 @@ Initialisiert die common Language Runtime (CLR), sucht den verwalteten Einstiegs
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOL STDMETHODCALLTYPE _CorDllMain (  
    [in] HINSTANCE hInst,  
    [in] DWORD     dwReason,  

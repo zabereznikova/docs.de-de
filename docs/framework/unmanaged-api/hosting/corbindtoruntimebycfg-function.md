@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07d2f08792b6fdea28bd56045de8da30ab552a4f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767965"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg-Funktion
 Lädt die common Language Runtime (CLR) in einen Prozess mit Versionsinformationen, die aus einer XML-Datei gelesen wird.  
@@ -30,7 +30,7 @@ Lädt die common Language Runtime (CLR) in einen Prozess mit Versionsinformation
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CorBindToRuntimeByCfg (  
     [in]  IStream     *pCfgStream,  
     [in]  DWORD        reserved,  
