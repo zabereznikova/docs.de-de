@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a3d06f72ed7163a414ef12e9bec650d8b20783
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986686"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774285"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget-Schnittstelle
 Bietet Methoden, die einen Zähler zu steuern, Auflisten von Prozessen und einen Debugger, der mit einem Remoteziel für Macintosh Silverlight verknüpft zugeordneten Arbeitsspeicher freizugeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 class ICoreClrDebugTarget {  
       HRESULT EnumProcesses (  
           [out] DWORD*                    pcProcs,  
