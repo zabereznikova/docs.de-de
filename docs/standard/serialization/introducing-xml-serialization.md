@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933691"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772550"
 ---
 # <a name="introducing-xml-serialization"></a>Einführung in die XML-Serialisierung
 
@@ -133,7 +133,7 @@ Folgende Punkte sollten bei der Verwendung der **XmlSerializer**-Klasse berücks
 
 - Es können nur öffentliche Eigenschaften und Felder serialisiert werden. Eigenschaften müssen über öffentliche Accessoren (get- und set-Methoden) verfügen. Wenn nicht öffentliche Daten serialisiert werden müssen, verwenden Sie die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse statt der XML-Serialisierung.
 
-- Eine Klasse muss über einen Standardkonstruktor verfügen, damit sie von **XmlSerializer** serialisiert wird.
+- Eine Klasse muss einen parameterlosen Konstruktor von serialisiert werden haben **XmlSerializer**.
 
 - Methoden können nicht serialisiert werden.
 
