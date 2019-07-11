@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782485"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783085"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey-Funktion
 Stellt sicher, dass der Clientschlüssel die richtige Sicherheit aufweist.  
@@ -30,7 +30,7 @@ Stellt sicher, dass der Clientschlüssel die richtige Sicherheit aufweist.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 LONG VerifyClientKey(); 
 ```  
 
@@ -38,7 +38,7 @@ LONG VerifyClientKey();
 
 Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist `ERROR_SUCCESS` (0).
 
-Wenn die Funktion fehlschlägt, wird der Rückgabewert ist ein ungleich NULL-Fehlercode in definiert *"Winerror.h"*.
+Wenn die Funktion fehlschlägt, wird der Rückgabewert ist ein ungleich NULL-Fehlercode in definiert *"Winerror.h"* .
 
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
