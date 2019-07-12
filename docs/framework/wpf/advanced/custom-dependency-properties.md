@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664063"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860245"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -87,7 +87,7 @@ Das Definieren einer Abhängigkeitseigenschaft besteht aus vier unterschiedliche
 
 ### <a name="registering-the-property-with-the-property-system"></a>Registrieren der Eigenschaft im Eigenschaftensystem
 
-Damit Ihre Eigenschaft zu einer Abhängigkeitseigenschaft wird, müssen Sie diese Eigenschaft in einer Tabelle im Eigenschaftensystem registrieren und einen eindeutigen Bezeichner angeben. Dieser wird als Qualifizierer für spätere Vorgänge im Eigenschaftensystem verwendet. Bei diesen Vorgängen kann es sich um interne Vorgänge oder um Ihr eigenes durch Code aufgerufenes Eigenschaftensystem [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] handeln. Um die Eigenschaft registrieren, rufen Sie die <xref:System.Windows.DependencyProperty.Register%2A> Methode innerhalb des Texts der Klasse (innerhalb der Klasse, aber außerhalb von Memberdefinitionen). Das Bezeichnerfeld wird ebenfalls bereitgestellt, durch die <xref:System.Windows.DependencyProperty.Register%2A> -Methodenaufruf, als Rückgabewert. Der Grund, die die <xref:System.Windows.DependencyProperty.Register%2A> Aufruf erfolgt außerhalb von anderen Definitionen ist, da Sie diesen Rückgabewert verwenden, um zu erstellen und zuzuweisen eine `public` `static` `readonly` -Feld des Typs <xref:System.Windows.DependencyProperty> als Teil Ihrer Klasse. Das Feld wird zum Bezeichner für Ihre Abhängigkeitseigenschaft.
+Damit Ihre Eigenschaft zu einer Abhängigkeitseigenschaft wird, müssen Sie diese Eigenschaft in einer Tabelle im Eigenschaftensystem registrieren und einen eindeutigen Bezeichner angeben. Dieser wird als Qualifizierer für spätere Vorgänge im Eigenschaftensystem verwendet. Bei diesen Vorgängen kann das interne Vorgänge oder Ihren eigenen Code aufgerufenes Eigenschaftensystem APIs. Um die Eigenschaft registrieren, rufen Sie die <xref:System.Windows.DependencyProperty.Register%2A> Methode innerhalb des Texts der Klasse (innerhalb der Klasse, aber außerhalb von Memberdefinitionen). Das Bezeichnerfeld wird ebenfalls bereitgestellt, durch die <xref:System.Windows.DependencyProperty.Register%2A> -Methodenaufruf, als Rückgabewert. Der Grund, die die <xref:System.Windows.DependencyProperty.Register%2A> Aufruf erfolgt außerhalb von anderen Definitionen ist, da Sie diesen Rückgabewert verwenden, um zu erstellen und zuzuweisen eine `public` `static` `readonly` -Feld des Typs <xref:System.Windows.DependencyProperty> als Teil Ihrer Klasse. Das Feld wird zum Bezeichner für Ihre Abhängigkeitseigenschaft.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ Bei Abhängigkeitseigenschaften vom Auflistungstyp gibt es zusätzliche Implemen
 
 ## <a name="dependency-property-security-considerations"></a>Überlegungen zur Sicherheit von Abhängigkeitseigenschaften
 
-Abhängigkeitseigenschaften sollten als öffentliche Eigenschaften deklariert werden. Bezeichnerfelder für Abhängigkeitseigenschaften sollten als öffentliche statische Felder deklariert werden. Auch wenn Sie versuchen, andere Zugriffsebenen zu deklarieren (z.B. geschützt), kann auf eine Abhängigkeitseigenschaft über den Bezeichner in Kombination mit dem Eigenschaftensystem [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zugegriffen werden. Sogar auf ein geschütztes Bezeichnerfeld kann möglicherweise Metadaten zur berichterstellung oder Wert Bestimmung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] werden, die Teil des Eigenschaftensystems, z. B. <xref:System.Windows.LocalValueEnumerator>. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
+Abhängigkeitseigenschaften sollten als öffentliche Eigenschaften deklariert werden. Bezeichnerfelder für Abhängigkeitseigenschaften sollten als öffentliche statische Felder deklariert werden. Auch wenn Sie versuchen, andere Zugriffsebenen (z.B. geschützt) deklarieren, kann eine Abhängigkeitseigenschaft immer durch den Bezeichner in Kombination mit dem Eigenschaftensystem APIs zugegriffen werden. Sogar auf ein geschütztes Bezeichnerfeld kann möglicherweise Metadaten zur berichterstellung oder Wert Bestimmung APIs, die Teil des Eigenschaftensystems, z. B. <xref:System.Windows.LocalValueEnumerator>. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
 
 <a name="DPCtor"></a>
 

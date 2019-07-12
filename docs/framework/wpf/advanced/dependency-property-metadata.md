@@ -7,18 +7,18 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: a4b2edce76bc5ab97e644ec8dbdf045931e87786
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66628e8cc1e56bff2227721d6f6b3e511be7453e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663432"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860058"
 ---
 # <a name="dependency-property-metadata"></a>Metadaten für Abhängigkeitseigenschaften
 Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystem enthält ein Metadatenberichtssystem, das die Berichtsmöglichkeiten mithilfe von Reflektion oder allgemeinen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Merkmalen weit übertrifft. Metadaten für eine Abhängigkeitseigenschaft können auch eindeutig durch die Klasse zugewiesen werden, die eine Abhängigkeitseigenschaft definiert, sie können geändert werden, wenn die Abhängigkeitseigenschaft zu einer anderen Klasse hinzugefügt wird, und sie können gezielt von allen abgeleiteten Klassen überschrieben werden, die die Abhängigkeitseigenschaft von der definierenden Basisklasse erben.  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Dieses Thema setzt voraus, dass Sie Abhängigkeitseigenschaften vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klassen aus Sicht eines Kunden verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema folgen zu können, sollten Sie zudem mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vertraut sein und wissen, wie Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen schreiben.  
   
 <a name="dp_metadata_contents"></a>   
@@ -44,7 +44,7 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Überschreiben von Metadaten und Ableiten einer Klasse  
  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystem verfügt über Funktionen zum Ändern einiger Merkmale von Abhängigkeitseigenschaften, ohne dass sie vollständig neu implementiert werden müssen. Dies geschieht durch das Erstellen einer anderen Instanz von Metadaten für die Abhängigkeitseigenschaft, wie sie auf einem bestimmten Typ vorhanden ist. Beachten Sie, dass die meisten vorhandenen Abhängigkeitseigenschaften keine virtuellen Eigenschaften sind. Ihre „Neuimplementierung“ in geerbten Klassen könnte also nur das Shadowing des vorhandenen Elements erreicht werden.  
   
- Wenn das Szenario, das Sie für eine Abhängigkeitseigenschaft auf einem Typ umsetzen möchten, durch eine Änderung der Eigenschaften vorhandener Abhängigkeitseigenschaften nicht erreicht werden kann, müssen Sie möglicherweise eine abgeleitete Klasse erstellen und dann auf die abgeleitete Klasse eine benutzerdefinierte Abhängigkeitseigenschaft deklarieren. Eine benutzerdefinierte Abhängigkeitseigenschaft verhält sich genauso wie die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] definierten Abhängigkeitseigenschaften. Weitere Informationen zu benutzerdefinierten Abhängigkeitseigenschaften finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).  
+ Wenn das Szenario, das Sie für eine Abhängigkeitseigenschaft auf einem Typ umsetzen möchten, durch eine Änderung der Eigenschaften vorhandener Abhängigkeitseigenschaften nicht erreicht werden kann, müssen Sie möglicherweise eine abgeleitete Klasse erstellen und dann auf die abgeleitete Klasse eine benutzerdefinierte Abhängigkeitseigenschaft deklarieren. Eine benutzerdefinierte Abhängigkeitseigenschaft verhält sich ebenso wie Abhängigkeitseigenschaften von definiert die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] APIs. Weitere Informationen zu benutzerdefinierten Abhängigkeitseigenschaften finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).  
   
  Ein wichtiges Merkmal einer Abhängigkeitseigenschaft, das überschrieben werden kann, ist der Werttyp. Wenn Sie eine Abhängigkeitseigenschaft erben, die ungefähr das erforderliche Verhalten, aber einen anderen Typ aufweist, müssen Sie eine benutzerdefinierte Abhängigkeitseigenschaft implementieren und die Eigenschaften möglicherweise über die Typkonvertierung oder eine andere Implementierung auf Ihrer Klasse verknüpfen. Darüber hinaus kann nicht ersetzt eine vorhandene <xref:System.Windows.ValidateValueCallback>, da dieser Rückruf im Registrierungsfeld selbst und nicht innerhalb der Metadaten vorhanden ist.  
   
@@ -58,7 +58,7 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ### <a name="overriding-metadata"></a>Überschreiben von Metadaten  
  Metadaten werden in erster Linie überschrieben, damit Sie die verschiedenen, von Metadaten abgeleiteten Verhaltensweisen ändern können, die auf die Abhängigkeitseigenschaft, so wie sie auf Ihrem Typ vorhanden ist, angewendet werden. Die Gründe hierfür werden ausführlicher im Abschnitt [Metadaten](#dp_metadata_contents) erläutert. Weitere Informationen und Codebeispiele finden Sie unter [Überschreiben von Metadaten für eine Abhängigkeitseigenschaft](how-to-override-metadata-for-a-dependency-property.md).  
   
- Eigenschaftenmetadaten kann für eine Abhängigkeitseigenschaft während des Registrierungsaufrufs bereitgestellt werden (<xref:System.Windows.DependencyProperty.Register%2A>). In vielen Fällen stellen Sie jedoch typspezifische Metadaten für Ihre Klasse bereit, wenn sie die Abhängigkeitseigenschaft erbt. Sie erreichen dies durch den Aufruf der <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> Methode.  Ein Beispiel von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], <xref:System.Windows.FrameworkElement> Klasse ist der Typ, der zuerst registriert die <xref:System.Windows.UIElement.Focusable%2A> Abhängigkeitseigenschaft. Aber die <xref:System.Windows.Controls.Control> Klasse überschreibt die Metadaten für die Abhängigkeitseigenschaft, geben Sie eine eigene anfängliche-Wert, der Änderung von `false` zu `true`, und verwendet andernfalls die ursprüngliche <xref:System.Windows.UIElement.Focusable%2A> Implementierung.  
+ Eigenschaftenmetadaten kann für eine Abhängigkeitseigenschaft während des Registrierungsaufrufs bereitgestellt werden (<xref:System.Windows.DependencyProperty.Register%2A>). In vielen Fällen stellen Sie jedoch typspezifische Metadaten für Ihre Klasse bereit, wenn sie die Abhängigkeitseigenschaft erbt. Sie erreichen dies durch den Aufruf der <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> Methode.  Ein Beispiel von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -APIs, die <xref:System.Windows.FrameworkElement> Klasse ist der Typ, der zuerst registriert die <xref:System.Windows.UIElement.Focusable%2A> Abhängigkeitseigenschaft. Aber die <xref:System.Windows.Controls.Control> Klasse überschreibt die Metadaten für die Abhängigkeitseigenschaft, geben Sie eine eigene anfängliche-Wert, der Änderung von `false` zu `true`, und verwendet andernfalls die ursprüngliche <xref:System.Windows.UIElement.Focusable%2A> Implementierung.  
   
  Wenn Sie Metadaten überschreiben, werden die verschiedenen Metadateneigenschaften entweder zusammengeführt oder ersetzt.  
   

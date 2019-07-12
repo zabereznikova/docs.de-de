@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: cbae3011634fb6c6b68e477a10931a1ef13c3f55
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: c9e94eef6caf5b4c9a64623d5c578af89acc616a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610365"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859928"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interaktion zwischen WPF und Win32
 Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Code und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Code. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie allerdings bereits erheblichen Aufwand für [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Code betrieben haben, kann es effektiver sein, zumindest einen Teil dieses Codes wiederzuverwenden.  
@@ -29,7 +29,7 @@ Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[T
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF-Interaktionsprojekte  
- Bei [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] handelt es sich um verwalteten Code, doch die meisten vorhandenen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Programme werden in nicht verwaltetem [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] geschrieben.  Sie können [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] nicht über ein echtes, nicht verwaltetes Programm aufrufen. Jedoch mithilfe der `/clr` -Option mit der [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] -Compiler, Sie können eine gemischte verwaltetem Programm, in dem Sie nahtlos verwalteter und nicht verwalteter API-Aufrufe mischen, erstellen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] APIs sind verwalteten Code, aber die meisten vorhandenen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programme sind in nicht verwalteten geschrieben [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Sie können nicht aufrufen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] APIs über ein echtes, nicht verwaltetes Programm. Jedoch mithilfe der `/clr` -Option mit der [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] -Compiler, Sie können eine gemischte verwaltetem Programm, in dem Sie nahtlos verwalteter und nicht verwalteter API-Aufrufe mischen, erstellen.  
   
  Eine Schwierigkeit auf Projektebene besteht darin, dass Sie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Dateien nicht in ein [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]-Projekt kompilieren können.  Dieses Problem lässt sich durch verschiedene Verfahren zur Projektaufteilung kompensieren.  
   
@@ -89,7 +89,7 @@ Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[T
   
 <a name="hosting_an_hwnd"></a>   
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Hosten eines Microsoft Win32-Fensters in WPF  
- Entscheidend für das Hosten einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Fensters in anderem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt ist die <xref:System.Windows.Interop.HwndHost> Klasse. Diese Klasse umschließt das Fenster mit einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Element, das einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementstruktur hinzugefügt werden kann. <xref:System.Windows.Interop.HwndHost> unterstützt auch [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , mit denen Sie Aufgaben wie der Verarbeitung von Meldungen für das gehostete Fenster. Die grundlegende Prozedur lautet wie folgt:  
+ Entscheidend für das Hosten einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Fensters in anderem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt ist die <xref:System.Windows.Interop.HwndHost> Klasse. Diese Klasse umschließt das Fenster mit einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Element, das einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementstruktur hinzugefügt werden kann. <xref:System.Windows.Interop.HwndHost> unterstützt auch die APIs, mit denen Sie Aufgaben wie das Verarbeiten von Nachrichten für das gehostete Fenster ausführen können. Die grundlegende Prozedur lautet wie folgt:  
   
 1. Erstellen Sie eine Elementstruktur für eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung (durch Code oder Markup möglich). Suchen Sie einen geeigneten und zulässigen Punkt in der Elementstruktur, an dem die <xref:System.Windows.Interop.HwndHost>-Implementierung als untergeordnetes Element hinzugefügt werden kann. In den nachfolgenden Schritten wird dieses Element als reservierendes Element bezeichnet.  
   

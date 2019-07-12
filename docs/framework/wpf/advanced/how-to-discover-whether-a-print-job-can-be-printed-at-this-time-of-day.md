@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619446"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859719"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Vorgehensweise: Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann
 Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie haben die Start- und einer Uhrzeit-Eigenschaften, die festgelegt werden können, um sie zu bestimmten Zeiten des Tages nicht verfügbar zu machen. Dieses Feature kann z. B. verwendet werden, um einen Drucker, für die exklusive Verwendung von einer bestimmten Abteilung nach 17: 00 Uhr zu reservieren. Diese Abteilung müsste eine andere Warteschlange Wartung des Druckers als andere Abteilungen verwenden. Die Warteschlange für die anderen Abteilungen würden nach 17 Uhr nicht verfügbar ist, festgelegt werden, während die Warteschlange für die bevorzugte-Abteilung festgelegt werden konnte, werden jederzeit zur Verfügung stehen.  
   
  Darüber hinaus können der Druckaufträge selbst festgelegt werden, nur innerhalb einer angegebenen Zeitspanne druckbaren sein.  
   
- Die <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> Klassen verfügbar gemacht, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework kann Remote geprüft, ob ein bestimmter Druckauftrag zum aktuellen Zeitpunkt auf eine bestimmte Warteschlange drucken kann.  
+ Die <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> in .NET Framework-APIs von Microsoft verfügbar gemachten Klassen bieten eine Möglichkeit, Remote geprüft, ob ein bestimmter Druckauftrag zum aktuellen Zeitpunkt auf eine bestimmte Warteschlange drucken kann.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Beispiel, das bei einem Druckauftrag Problemdiagnose kann.  
@@ -54,7 +54,7 @@ Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie hab
  Die beiden Überladungen, der die **ReportAvailabilityAtThisTime** Methode sind identisch, mit Ausnahme des Datentyps übergebenen, sodass nur die <xref:System.Printing.PrintQueue> Version wird unten angezeigt.  
   
 > [!NOTE]
->  Die Tatsache, dass die Methoden, mit Ausnahme des Typs identisch sind, wirft die Frage, warum das Beispiel eine generische Methode keine erstellt **ReportAvailabilityAtThisTime\<T >**. Der Grund dafür besteht darin, dass eine solche Methode würde zu einer Klasse eingeschränkt werden, die die **StartTimeOfDay** und **UntilTimeOfDay enthält** Eigenschaften, die die Methode aufruft, jedoch eine generische Methode kann nur beschränkt werden ein Single-Klasse und die einzige Klasse, die sowohl <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> in die Vererbung ist Baum <xref:System.Printing.PrintSystemObject> der über keine solche Eigenschaften verfügt.  
+>  Die Tatsache, dass die Methoden, mit Ausnahme des Typs identisch sind, wirft die Frage, warum das Beispiel eine generische Methode keine erstellt **ReportAvailabilityAtThisTime\<T >** . Der Grund dafür besteht darin, dass eine solche Methode würde zu einer Klasse eingeschränkt werden, die die **StartTimeOfDay** und **UntilTimeOfDay enthält** Eigenschaften, die die Methode aufruft, jedoch eine generische Methode kann nur beschränkt werden ein Single-Klasse und die einzige Klasse, die sowohl <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> in die Vererbung ist Baum <xref:System.Printing.PrintSystemObject> der über keine solche Eigenschaften verfügt.  
   
  Die **ReportAvailabilityAtThisTime** -Methode (im folgenden Codebeispiel dargestellt) beginnt, durch die Initialisierung einer <xref:System.Boolean> Sentinelvariable, die `true`. Wird zum zurückgesetzt `false`, wenn die Warteschlange nicht verfügbar ist.  
   

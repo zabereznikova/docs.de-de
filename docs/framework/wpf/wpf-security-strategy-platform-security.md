@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d7b76365178c78d2b20b9541d5e52a605158a77
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756761"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859827"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitgestellt werden, sondern nutzt auch die Sicherheitsfeatures der zugrundeliegenden Plattform, die das Betriebssystem enthält, die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], und [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
@@ -41,7 +41,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 - /GS-Kompilierung  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
   
 #### <a name="gs-compilation"></a>/GS-Kompilierung  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] bietet Schutz durch das erneute Kompilieren vieler zentraler Systembibliotheken, einschließlich aller [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Abhängigkeiten wie die [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], um das Risiko von Pufferüberläufen zu verringern. Dies wird mit dem /GS-Parameter und dem C/C++-Befehlszeilencompiler erreicht. Obwohl Pufferüberläufe ausdrücklich vermieden werden sollten, ist die Kompilierung mit /GS ein Beispiel für eine tiefgreifende Verteidigungsmaßnahme gegen potenzielle Sicherheitslücken, die versehentlich oder böswillig durch Pufferüberläufe erzeugt werden.  
@@ -196,11 +196,11 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 - Zahlreiche Sicherheitsdialogfelder auf manchen Websites  
   
- In einigen Fällen versuchten nicht vertrauenswürdige Websites, Benutzer durch Spoofing der Installationsbenutzeroberfläche [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] oder wiederholtes Anzeigen eines [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)]-Installationsdialogfelds zu täuschen, obwohl der Benutzer den Vorgang bereits abgebrochen hatte. Mit diesen Techniken ist es möglich, eine große Anzahl von Benutzern zu schlechten Entscheidungen zu verleiten, die zur Installation von Spyware-Anwendungen führen.  
+ In einigen Fällen versuchten nicht vertrauenswürdige Websites versucht, Benutzer dazu bringen, durch spoofing der Installationsbenutzeroberfläche [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] oder Microsoft ActiveX-Installation ein Dialogfeld, wiederholt angezeigt, obwohl der Benutzer den Vorgang abgebrochen haben. Mit diesen Techniken ist es möglich, eine große Anzahl von Benutzern zu schlechten Entscheidungen zu verleiten, die zur Installation von Spyware-Anwendungen führen.  
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] enthält mehrere Features, um diese Art von Problemen rund um das Prinzip der Benutzerinitiierung zu minimieren. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] erkennt, wenn ein Benutzer vor einer Aktion auf einen Link oder, die geklickt hat so genannte *benutzerinitiierung*, und behandelt den Vorgang anders als eine ähnliche Aktion stattdessen durch das Skript auf einer Seite ausgeführt wird. Als Beispiel [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] umfasst eine **Popup-Blocker** ermittelt, dass klickt ein Benutzer eine Schaltfläche aus, bevor auf der Seite ein Popup erstellt. Auf diese Weise kann [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] die meisten unschädlichen Popups zulassen und gleichzeitig die Popups verhindern, die Benutzer weder anfordern noch wünschen. Blockierte Popups werden unter der neuen aufgefangen **Informationsleiste**, dadurch kann der Benutzer die Blockierung überschreiben und das Popup anzeigen.  
   
- Die gleiche benutzerinitiierung Logik gilt auch für **öffnen**/**speichern** Sicherheitshinweise. [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)]-Installationsdialogfelder werden immer unter der Informationsleiste erfasst, sofern es sich nicht um das Upgrade eines bereits installierten Steuerelements handelt. All diese Maßnahmen sorgen für eine Benutzererfahrung mit mehr Sicherheit und Kontrolle und bieten Schutz vor Websites, die den Benutzer belästigen und zur Installation von unerwünschter oder schädlicher Software verleiten wollen.  
+ Die gleiche benutzerinitiierung Logik gilt auch für **öffnen**/**speichern** Sicherheitshinweise. ActiveX--Installationsdialogfelder werden immer unter der Informationsleiste aufgefangen, es sei denn, sie ein Upgrade von einer bereits installierten Steuerelements darstellen. All diese Maßnahmen sorgen für eine Benutzererfahrung mit mehr Sicherheit und Kontrolle und bieten Schutz vor Websites, die den Benutzer belästigen und zur Installation von unerwünschter oder schädlicher Software verleiten wollen.  
   
  Diese Funktionen schützen auch die Kunden, die mit [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] zu Websites wechseln, auf denen sie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen herunterladen und installieren können. Hauptgrund dafür ist die bessere Benutzererfahrung, die [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] ermöglicht und die weniger Gelegenheit zum Installieren schädlicher oder undurchsichtiger Anwendungen bietet, und zwar ungeachtet der zum Erstellen verwendeten Technologie (einschließlich [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]). [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] erweitert durch die Verwendung von [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] diese Schutzmaßnahmen noch und vereinfacht damit das Herunterladen der zugehörigen Anwendungen über das Internet. Da [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] innerhalb eines Sicherheitssandkastens der Internetzone ausgeführt werden, können sie nahtlos gestartet werden. Andererseits setzen eigenständige [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen volle Vertrauenswürdigkeit voraus, um ausgeführt werden zu können. Für diese Anwendungen zeigt [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] beim Startvorgang ein Sicherheitsdialogfeld an, um auf die Verwendung der zusätzlichen Sicherheitsanforderungen der Anwendung hinzuweisen. Da dies vom Benutzer initiiert werden muss, unterliegt der Vorgang außerdem der Benutzerinitiierungslogik und kann kann abgebrochen werden.  
   

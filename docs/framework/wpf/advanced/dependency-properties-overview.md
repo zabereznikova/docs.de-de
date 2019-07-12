@@ -14,18 +14,18 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052936"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860174"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
 Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#Properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Abhängigkeitseigenschaften und CLR-Eigenschaften
@@ -78,7 +78,7 @@ Das Abrufen eines Eigenschaftswerts besteht auch im Grunde aus einem Aufruf der 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Sie können auch die [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] des Eigenschaftensystems, <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A>, direkt aufrufen. Dies ist üblicherweise nicht erforderlich, wenn Sie vorhandene Eigenschaften verwenden (die Wrapper sind besser geeignet und stellen eine bessere Verfügbarkeit der Eigenschaft für Entwicklungswerkzeuge bereit). Das Aufrufen von [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ist jedoch geeignet für bestimmte Szenarios.
+Sie können auch das Eigenschaftensystem APIs aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt. Dies ist nicht erforderlich, wenn Sie vorhandene Eigenschaften (die Wrapper sind besser geeignet und bieten bessere Offenlegung der Eigenschaft für die Entwicklertools) verwenden, aber die APIs direkt aufrufen eignet sich für bestimmte Szenarien.
 
 Eigenschaften können auch in XAML festgelegt und später über den Code (über die CodeBehind-Datei) darauf zugegriffen werden. Weitere Informationen finden Sie unter [CodeBehind und XAML in WPF](code-behind-and-xaml-in-wpf.md).
 

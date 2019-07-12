@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 61e7f6d29cf9275004238ca776d5af9bf027004f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833933"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859918"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt sind, nicht in Koordination mit dem Listenerobjekt zerstört werden, die die Quelle der Handler zugeordnet. Diese Situation kann zu Arbeitsspeicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, indem Sie eine dedizierte Manager-Klasse für bestimmte Ereignisse bereitstellen und Implementieren einer Schnittstelle zum Listener für das betreffende Ereignis. Dieses Entwurfsmuster wird als bezeichnet die *Muster für schwache Ereignisse*.  
@@ -21,7 +21,7 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
   
  Diese Methode erstellt einen starken Verweis aus der Ereignisquelle in den Ereignislistener. Normalerweise wird das Anhängen eines ereignishandlers für einen Listener die Überwachung für die eine Lebensdauer haben, die von der Quelle der Objektlebensdauer beeinflusst ist (es sei denn, der Ereignishandler explizit entfernt wird). Unter bestimmten Umständen Sie sollten jedoch die Objektlebensdauer des Listeners, der durch andere Faktoren gesteuert werden, wie z. B., ob er zurzeit an der visuellen Struktur der Anwendung und nicht von der Lebensdauer der Quelle gehört. Wenn die Lebensdauer der Energiequelle Objekt die Objektlebensdauer des Listeners, der erweitert wird, wird das normale Ereignismuster zu einem Speicherverlust führt: der Listener ist länger als vorgesehen aktiv bleiben.  
   
- Das Muster für schwache Ereignisse soll dieses Memory Leak Problem zu beheben. Das Muster für schwache Ereignisse kann verwendet werden, wenn ein Listener für ein Ereignis registrieren muss, aber der Listener ist nicht explizit bekannt beim Aufheben der Registrierung. Das Muster für schwache Ereignisse kann auch verwendet werden, wenn die Objektlebensdauer der Quelle des Listeners nützlich Objektlebensdauer überschreitet. (In diesem Fall *nützlich* wird bestimmt, indem Sie Sie.) Das Muster für schwache Ereignisse ermöglicht den Listener, um sich anzumelden und das Ereignis empfangen, ohne Auswirkungen auf die Objekteigenschaften für die Lebensdauer des Listeners in keiner Weise. Aktiviert ist, wird der implizite Verweis aus der Quelle nicht ermittelt werden, ob der Listener für die Garbagecollection ist. Der Verweis ist, einen schwachen Verweis, also die Benennung von am schwachen Ereignismuster und die zugehörigen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Der Listener kann Garbage gesammelt, oder andernfalls zerstört, und die Quelle kann weiterhin ohne Beibehaltung Handlerverweise auf ein jetzt zerstörte-Objekt.  
+ Das Muster für schwache Ereignisse soll dieses Memory Leak Problem zu beheben. Das Muster für schwache Ereignisse kann verwendet werden, wenn ein Listener für ein Ereignis registrieren muss, aber der Listener ist nicht explizit bekannt beim Aufheben der Registrierung. Das Muster für schwache Ereignisse kann auch verwendet werden, wenn die Objektlebensdauer der Quelle des Listeners nützlich Objektlebensdauer überschreitet. (In diesem Fall *nützlich* wird bestimmt, indem Sie Sie.) Das Muster für schwache Ereignisse ermöglicht den Listener, um sich anzumelden und das Ereignis empfangen, ohne Auswirkungen auf die Objekteigenschaften für die Lebensdauer des Listeners in keiner Weise. Aktiviert ist, wird der implizite Verweis aus der Quelle nicht ermittelt werden, ob der Listener für die Garbagecollection ist. Der Verweis ist daher die Benennung von am schwachen Ereignismuster und den zugehörigen APIs einen schwachen Verweis. Der Listener kann Garbage gesammelt, oder andernfalls zerstört, und die Quelle kann weiterhin ohne Beibehaltung Handlerverweise auf ein jetzt zerstörte-Objekt.  
   
 ## <a name="who-should-implement-the-weak-event-pattern"></a>Wer sollte das Muster für schwache Ereignisse implementieren?  
  Implementieren der Muster für schwache Ereignisse ist in erster Linie für Autoren von Steuerelementen interessant. Als Autor eines Steuerelements sind Sie größtenteils verantwortlich für das Verhalten und die Kapselung der das Steuerelement und die Auswirkungen, die sie für Anwendungen in der er eingefügt wird. Dies schließt-Verhalten des Steuerelements Lebensdauer, insbesondere die Behandlung des Problems beschrieben Memory Leak.  

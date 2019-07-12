@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 4f8ee4b31c135595770338831c23d8a0f419e8cd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610496"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857008"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Initialisierung für Objektelemente außerhalb einer Objektstruktur
 Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Initialisierung werden für Prozesse zurückgestellt, die sich in der Regel darauf verlassen, dass das Element entweder mit einer logischen Struktur oder einer visuellen Struktur verbunden wird. Dieses Thema beschreibt die Schritte, die möglicherweise erforderlich sind, um ein Element zu initialisieren, das nicht mit einer dieser Strukturen verbunden ist.  
@@ -33,7 +33,7 @@ Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  Wenn das Element Sie Eigenschaften festlegen, wird eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleiteten Klasse, anschließend Sie die Versionen der Klasse der rufen <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> anstatt <xref:System.ComponentModel.ISupportInitialize>.  
   
 ### <a name="sample-code"></a>Beispielcode  
- Das folgende Beispiel ist Beispielcode für eine Konsolenanwendung, die Rendering- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] und <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> einer losen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei veranschaulicht die richtige Platzierung von <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> um andere API-Aufrufe, die angepasst werden Eigenschaften, die das Rendering auswirken.  
+ Das folgende Beispiel ist Beispielcode für eine Konsolenanwendung, die verwendet wird, Rendern von APIs und <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> einer losen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei veranschaulicht die richtige Platzierung von <xref:System.Windows.FrameworkElement.BeginInit%2A> und <xref:System.Windows.FrameworkElement.EndInit%2A> um andere API-Aufrufe, die Eigenschaften anpassen, auf das Rendering auswirken.  
   
  Das Beispiel veranschaulicht nur die Hauptfunktion. Die Funktionen `Rasterize` und `Save` (nicht dargestellt) sind Hilfsfunktionen, die die Verarbeitung und E/A erledigen.  
   

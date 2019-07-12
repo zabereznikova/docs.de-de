@@ -11,19 +11,19 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 28d1481b71979936bb16a2ecfb1140d85a674ef7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054990"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860144"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse-Operator (Visual Basic)
 Führt eine verkürzte einschließende logischen Disjunktion zweier Ausdrücke.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb
 result = expression1 OrElse expression2  
 ```  
   
@@ -49,7 +49,8 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Datentypen  
- Die `OrElse` Operator ist definiert, nur für die [Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konvertiert alle Operanden nach Bedarf `Boolean` und führt den Vorgang, die vollständig in `Boolean`. Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ. Dies kann zu unerwartetem Verhalten führen. Z. B. `5 OrElse 12` führt `–1` bei der Konvertierung in `Integer`.  
+ Die `OrElse` Operator ist definiert, nur für die [Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konvertiert alle Operanden nach Bedarf `Boolean` vor der Auswertung des Ausdrucks. Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ, `False` wird `0` und `True` wird `-1`.
+Weitere Informationen finden Sie unter [booleschen Typkonvertierungen](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>Überladen  
  Die [oder-Operator](../../../visual-basic/language-reference/operators/or-operator.md) und [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur des Verhaltens neu definiert, wenn ein Operand den Typ dieser Klasse hat oder Struktur. Das Überladen der `Or` und `IsTrue` Operatoren beeinflusst das Verhalten von der `OrElse` Operator. Wenn Ihr Code verwendet `OrElse` für eine Klasse oder Struktur, die Überladungen `Or` und `IsTrue`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

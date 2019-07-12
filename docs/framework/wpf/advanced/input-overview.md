@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610476"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857057"
 ---
 # <a name="input-overview"></a>Übersicht über die Eingabe
 <a name="introduction"></a> Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Subsystem bietet eine leistungsstarke [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] zum Abrufen von Eingabe aus einer Vielzahl von Geräten, einschließlich der Maus, Tastatur, Touch- und Stift. In diesem Thema werden die Dienste beschrieben, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden sowie die Architektur des Eingabesystems.
@@ -58,7 +58,7 @@ ms.locfileid: "67610476"
  Die <xref:System.Windows.Input.Mouse> und <xref:System.Windows.Input.Keyboard> Klassen werden im weiteren Verlauf dieser Übersicht behandelt.
 
 ### <a name="stylus-input"></a>Stifteingabe
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über integrierte Unterstützung für die <xref:System.Windows.Input.Stylus>.  Die <xref:System.Windows.Input.Stylus> ist eine Stifteingabe, durch die [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen können der Stift als Maus behandeln, mit der Maus-API, aber [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht auch eine Stift-Geräteabstraktion, die einem Modell ähnlich der Tastatur und Maus zu verwenden.  Alle dem Stift zugehörigen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] enthalten den Begriff „Stylus“ (Stift oder Tablettstift).
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über integrierte Unterstützung für die <xref:System.Windows.Input.Stylus>.  Die <xref:System.Windows.Input.Stylus> ist eine Stifteingabe, durch die [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen können der Stift als Maus behandeln, mit der Maus-API, aber [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht auch eine Stift-Geräteabstraktion, die einem Modell ähnlich der Tastatur und Maus zu verwenden.  Alle dem Stift zugehörigen APIs das Wort "Stift" enthalten ist.
 
  Da der Stift als Maus fungieren kann, können Anwendungen, die nur die Mauseingabe unterstützen, noch immer ein gewisses Maß an automatischer Unterstützung für den Stift erhalten. Wenn der Stift auf diese Weise verwendet wird, bekommt die Anwendung die Gelegenheit, das entsprechende Stiftereignis zu behandeln und behandelt dann das entsprechende Mausereignis. Darüber hinaus sind Dienste auf höherer Ebene (z.B. Freihandeingabe) noch immer über die Stift-Geräteabstraktion verfügbar.  Weitere Informationen zur Freihandeingabe finden Sie unter [Erste Schritte mit Freihandeingaben](getting-started-with-ink.md).
 
@@ -354,7 +354,7 @@ ms.locfileid: "67610476"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Mausaufzeichnung
- Insbesondere Mausgeräte verfügen über modale Eigenschaften, die als Mausaufzeichnung bekannt sind. Die Mausaufzeichnung wird verwendet, um einen vorübergehenden Eingabestatus beizubehalten, wenn ein Drag & Drop-Vorgang gestartet wird, damit andere Vorgänge, einschließlich die nominale Position auf dem Bildschirm, nicht unbedingt auftreten. Während des Ziehens kann der Benutzer nicht klicken, ohne dass der Drag & Drop-Vorgang abgebrochen wird. Darum sind die meisten Mouseover-Cues nicht geeignet, während die Mausaufzeichnung durch die Drag-Quelle gehalten wird. Das Eingabesystem macht [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] verfügbar, was den Status der Mausaufzeichnung bestimmen kann, sowie [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], was die Mausaufzeichnung auf ein bestimmtes Element erzwingen oder den Status der Mausaufzeichnung löschen kann. Weitere Informationen zu Drag & Drop-Vorgängen finden Sie unter [Übersicht über Drag & Drop](drag-and-drop-overview.md).
+ Insbesondere Mausgeräte verfügen über modale Eigenschaften, die als Mausaufzeichnung bekannt sind. Die Mausaufzeichnung wird verwendet, um einen vorübergehenden Eingabestatus beizubehalten, wenn ein Drag & Drop-Vorgang gestartet wird, damit andere Vorgänge, einschließlich die nominale Position auf dem Bildschirm, nicht unbedingt auftreten. Während des Ziehens kann der Benutzer nicht klicken, ohne dass der Drag & Drop-Vorgang abgebrochen wird. Darum sind die meisten Mouseover-Cues nicht geeignet, während die Mausaufzeichnung durch die Drag-Quelle gehalten wird. Das Eingabesystem macht APIs, die den Status der mausaufzeichnung bestimmen kann, sowie APIs, die mausaufzeichnung auf ein bestimmtes Element erzwingen oder den Status der mausaufzeichnung löschen können. Weitere Informationen zu Drag & Drop-Vorgängen finden Sie unter [Übersicht über Drag & Drop](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Befehle

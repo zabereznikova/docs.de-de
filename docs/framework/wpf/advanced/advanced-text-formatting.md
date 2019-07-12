@@ -9,15 +9,15 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: ef07e1acd250ceeb7c0e30f8a78dd8d7b196fdcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ed6dd33efd5fdc5e2c61df4173bec5cc2f0d807
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655543"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859697"
 ---
 # <a name="advanced-text-formatting"></a>Erweiterte Textformatierung
-Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zum Einschließen von Text in Ihrer Anwendung. Layout und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Controls.TextBlock>, geben Sie die häufigsten und allgemeinsten Elemente für die Textdarstellung. Zeichnen von [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bieten eine Möglichkeit zum Einschließen von formatierten Texts in Zeichnungen bereit. Auf der höchsten Ebene [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine erweiterbare textformatierungs-Engine, um jeden Aspekt der Textdarstellung an, wie z. B. Speicherverwaltung für Text, die formatierungsverwaltung des Lauftexts und die Verwaltung eingebetteter Objekte steuern.  
+Die Windows Presentation Foundation (WPF) bietet eine Reihe robuste APIs zum Einschließen von Text in Ihrer Anwendung. Layout und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-APIs, wie z. B. <xref:System.Windows.Controls.TextBlock>, geben Sie die häufigsten und allgemeinsten Elemente für die Textdarstellung. Zeichnen von APIs, wie z. B. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bieten eine Möglichkeit zum Einschließen von formatierten Texts in Zeichnungen bereit. Auf der höchsten Ebene [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine erweiterbare textformatierungs-Engine, um jeden Aspekt der Textdarstellung an, wie z. B. Speicherverwaltung für Text, die formatierungsverwaltung des Lauftexts und die Verwaltung eingebetteter Objekte steuern.  
   
  Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] textformatierung. Der Schwerpunkt liegt auf Clientimplementierung und Verwendung von der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] textformatierungs-Engine.  
   
@@ -25,8 +25,8 @@ Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INC
 >  Alle Codebeispiele in diesem Dokument finden Sie in der [Advanced Text Formatting Sample](https://go.microsoft.com/fwlink/?LinkID=159965).  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>Vorraussetzungen  
- In diesem Thema wird davon ausgegangen, dass Sie mit der höheren Ebene vertraut sind [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Textdarstellung verwendet. Die meisten Benutzerszenarios erfordern nicht die erweiterten textformatierungs- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] in diesem Thema erläutert. Eine Einführung in die verschiedenen Text- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ In diesem Thema wird davon ausgegangen, dass Sie mit der für die Textdarstellung verwendet APIs höherer Ebene vertraut sind. Die meisten Szenarios ist die erweiterte textformatierung-APIs, die in diesem Thema erläuterten nicht erforderlich. Eine Einführung in den anderen Text-APIs, finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Erweiterte Textformatierung  

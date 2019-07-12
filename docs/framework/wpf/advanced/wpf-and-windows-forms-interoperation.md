@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2e0ee85a7edd07e7372b04c3a26a06416fb39d9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662275"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859869"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interaktion zwischen WPF und Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bieten zwei verschiedene Architekturen zum Erstellen von Anwendungsschnittstellen. Die <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Namespace enthält Klassen, die üblichsten interoperations-Szenarios zu ermöglichen. Die zwei wichtigsten Klassen, die interoperations-Funktionalität zu implementieren sind <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost>. In diesem Thema wird beschrieben, welche Interoperations-Szenarios unterstützt werden und welche nicht.  
@@ -35,7 +35,7 @@ ms.locfileid: "64662275"
   
 - Es kann ein Master-/Detailformular hosten, das aus einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Master und einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Detailformular besteht.  
   
-- Es kann ein oder mehrere [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)]-Steuerelemente hosten.  
+- Es kann ein oder mehrere ActiveX-Steuerelemente hosten.  
   
 - Es kann ein oder mehrere zusammengesetzte Steuerelemente hosten.  
   

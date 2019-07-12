@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: a1a3d422ea4d9766e6a9f8dda079c3739be4a626
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b60b3964ff8e1b1f05b6c0820c63ec06d9ea0f4c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663662"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859654"
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 
@@ -23,7 +23,7 @@ Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und
 
 Im Idealfall ist der Prozess der Serialisierung und Deserialisierung eines Dokuments aus dem Speicher und wieder zurück für die Anwendung transparent.  Die Anwendung ruft die Write-Methode des Serialisierungsprogramms auf, um das Dokument zu speichern. Die Read-Methode des Deserialisierungsprogramms greift dagegen auf den Datenspeicher zu und erstellt die ursprüngliche Instanz im Speicher neu.  Das jeweilige Format, in dem die Daten gespeichert werden, ist für die Anwendung normalerweise nicht relevant, solange der Serialisierungs- und Deserialisierungsprozess das Dokument wieder in seiner ursprünglichen Form erstellt.
 
-Oft bieten Anwendungen mehrere Serialisierungsoptionen, die dem Benutzer die Speicherung von Dokumenten auf ein anderes Medium oder in ein anderes Format ermöglichen.  So kann eine Anwendung z.B. „Speichern unter“-Optionen anbieten, um ein Dokument in eine Datenträgerdatei, Datenbank oder einen Webdienst zu speichern.  Entsprechend können verschiedene Serialisierungsprogramme das Dokument in verschiedenen Formaten speichern, wie etwa HTML, RTF, XML, XPS oder das Format eines Drittanbieters.  Für die Anwendung wird eine Schnittstelle definiert, die die Details des Speichermediums innerhalb der Implementierung jedes einzelnen Serialisierungsprogramms isoliert.  Zusätzlich zu den Vorteilen der Kapselung von Speicherdetails, .NET Framework <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] einige weitere wichtigen Funktionen bereitzustellen.
+Oft bieten Anwendungen mehrere Serialisierungsoptionen, die dem Benutzer die Speicherung von Dokumenten auf ein anderes Medium oder in ein anderes Format ermöglichen.  So kann eine Anwendung z.B. „Speichern unter“-Optionen anbieten, um ein Dokument in eine Datenträgerdatei, Datenbank oder einen Webdienst zu speichern.  Entsprechend können verschiedene Serialisierungsprogramme das Dokument in verschiedenen Formaten speichern, wie etwa HTML, RTF, XML, XPS oder das Format eines Drittanbieters.  Für die Anwendung wird eine Schnittstelle definiert, die die Details des Speichermediums innerhalb der Implementierung jedes einzelnen Serialisierungsprogramms isoliert.  Zusätzlich zu den Vorteilen der Kapselung von Speicherdetails, .NET Framework <xref:System.Windows.Documents.Serialization> APIs bieten einige weitere wichtigen Funktionen.
 
 ### <a name="features-of-net-framework-30-document-serializers"></a>Funktionen der Dokumentserialisierungsprogramme von .NET Framework 3.0
 

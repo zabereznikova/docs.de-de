@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611724"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860024"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Gemeinsame Verwendung von Nachrichtenschleifen zwischen Win32 und WPF
 In diesem Thema wird beschrieben, wie eine Nachrichtenschleife für die Interoperation mit implementieren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], entweder durch Nutzung vorhandener message Loop-Präsenz im <xref:System.Windows.Threading.Dispatcher> oder erstellen eine separate Nachrichtenschleife für den [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] -Seite der interoperation Code.  
@@ -20,7 +20,7 @@ In diesem Thema wird beschrieben, wie eine Nachrichtenschleife für die Interope
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher und der Nachrichtenschleife  
  Ein normales Szenario für die Unterstützung von Interoperabilität und Tastatur zu implementieren ist <xref:System.Windows.Interop.IKeyboardInputSink>, oder um eine Unterklasse von Klassen, die bereits implementieren <xref:System.Windows.Interop.IKeyboardInputSink>, z. B. <xref:System.Windows.Interop.HwndSource> oder <xref:System.Windows.Interop.HwndHost>. Tastaturunterstützung für die Senke behandelt jedoch nicht alle möglichen Nachrichten Schleife Anforderungen, die Sie möglicherweise beim Senden und Empfangen von Nachrichten über die Grenzen der interoperation. Um eine Nachricht Anwendungsarchitektur, zu formalisieren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet die <xref:System.Windows.Interop.ComponentDispatcher> Klasse, die für eine Meldungsschleife, führen ein einfaches Protokoll definiert.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> ist eine statische Klasse, die mehrere Elemente verfügbar macht. Der Bereich der einzelnen Methoden ist implizit an den aufrufenden Thread gebunden. Eine Nachrichtenschleife muss aufgerufen werden, einige davon [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] in kritischen Zeiten (wie im nächsten Abschnitt definiert).  
+ <xref:System.Windows.Interop.ComponentDispatcher> ist eine statische Klasse, die mehrere Elemente verfügbar macht. Der Bereich der einzelnen Methoden ist implizit an den aufrufenden Thread gebunden. Eine Meldungsschleife muss einige dieser APIs zu einem bestimmten Zeitpunkt aufrufen, (wie im nächsten Abschnitt definiert).  
   
  <xref:System.Windows.Interop.ComponentDispatcher> bietet Ereignisse, denen anderen Komponenten (z. B. die Tastatursenke) überwachen können. Die <xref:System.Windows.Threading.Dispatcher> -Klasse ruft die entsprechende <xref:System.Windows.Interop.ComponentDispatcher> Methoden in der entsprechenden Reihenfolge. Der Code ist verantwortlich für den Aufruf, wenn Sie Ihre eigene Nachrichtenschleife implementieren, <xref:System.Windows.Interop.ComponentDispatcher> Methoden auf ähnliche Weise.  
   
