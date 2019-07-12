@@ -4,12 +4,12 @@ description: Erfahren Sie mehr darüber, wie .NET Core versucht, die Kompatibili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736556"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Auswerten von Breaking Changes in .NET Core
 
@@ -107,7 +107,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - **✔️ Hinzufügen eines Konstruktors zu einer Klasse, zusammen mit einem Standardkonstruktor (ohne Parameter), wenn die Klasse zuvor keine Konstruktoren hatte**
 
-   Das Hinzufügen eines Konstruktors zu einer Klasse, die bisher keine Konstruktoren hatte, *ohne* den Standardkonstruktor hinzuzufügen, ist jedoch nicht zulässig.
+   Das Hinzufügen eines Konstruktors zu einer Klasse, die bisher keine Konstruktoren hatte, *ohne* den parameterlosen Konstruktor hinzuzufügen, ist jedoch nicht zulässig.
 
 - **✔️ Ändern eines Members von [abstrakt](../../csharp/language-reference/keywords/abstract.md) zu [virtuell](../../csharp/language-reference/keywords/virtual.md)**
 
@@ -174,7 +174,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Dies unterbricht vorhandene Clients, die an die vorherige Überladung gebunden waren. Wenn eine Klasse beispielsweise eine einzelne Version einer Methode hat, die <xref:System.UInt32> akzeptiert, wird ein vorhandener Consumer erfolgreich an diese Überladung gebunden, wenn ein <xref:System.Int32>-Wert übergeben wird. Wenn Sie jedoch eine Überladung hinzufügen, die <xref:System.Int32> akzeptiert, bindet sich der Compiler beim Neukompilieren oder beim Verwenden der späten Bindung an die neue Überladung. Wenn dies ein anderes Verhalten zur Folge hat, ist dies ein Breaking Change.
 
-- **❌ Hinzufügen eines Konstruktors zu einer Klasse, die bisher keine Konstruktoren hatte, ohne den Standardkonstruktor hinzuzufügen**
+- **❌ Hinzufügen eines Konstruktors zu einer Klasse, die bisher keine Konstruktoren hatte, ohne den parameterlosen Konstruktor hinzuzufügen**
 
 - **❌️ Hinzufügen von [readonly](../../csharp/language-reference/keywords/readonly.md) zu einem Feld**
 

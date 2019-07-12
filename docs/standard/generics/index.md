@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423954"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766827"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -83,7 +83,7 @@ ms.locfileid: "66423954"
   
 - *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz*bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
-- *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen Standardkonstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
+- *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen parameterlosen Konstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
   
 - Eine *generische Methodendefinition* ist eine Methode mit zwei Parameterlisten: eine Liste der generischen Typparameter und eine Liste der formalen Parameter. Typparameter können als Rückgabetyp oder als Typen der formalen Parameter auftreten, wie im folgenden Code dargestellt.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "66423954"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Generische Sammlungen in .NET](../../../docs/standard/generics/collections.md)|Beschreibt generische Auflistungsklassen und andere generische Auflistungstypen in .NET.|  
 |[Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Beschreibt generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.|  

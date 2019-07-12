@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504003"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802317"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -62,10 +62,10 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 |\n|Zeilenwechsel|0x000A|  
 |\r|Wagenrücklauf|0x000D|  
 |\t|Horizontaler Tabulator|0x0009|  
-|\U|Unicode-Escapesequenz (UTF-32)|`\U00nnnnnn` (z. B. `\U0001F47D` = "&#x1F47D;")|  
-|\u|Unicode-Escapesequenz (UTF-16)|`\unnnn` (z. B. `\u0041` = "A")|  
 |\v|Vertikaler Tabulator|0x000B|  
-|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|`\x0041` oder `\x41` = "A"|  
+|\u|Unicode-Escapesequenz (UTF-16)|`\uHHHH` (Bereich: 0000 - FFFF; Beispiel: `\u00E7` = "ç")|  
+|\U|Unicode-Escapesequenz (UTF-32)|`\U00HHHHHH` (Bereich: 000000 - 10FFFF; Beispiel: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|`\xH[H][H][H]` (Bereich: 0 - FFFF; Beispiel: `\x00E7` or `\x0E7` oder `\xE7` = "ç")|  
   
 > [!WARNING]
 >  Wenn Sie die Escapesequenz `\x` verwenden, weniger als vier Hexadezimalziffern angeben und es sich bei den Zeichen, die der Escapesequenz unmittelbar folgen, um gültige Hexadezimalziffern handelt (z. B. 0–9, A–F und a–f), werden diese als Teil der Escapesequenz interpretiert. Die Angabe `\xA1` erzeugt beispielsweise den Wert "&#161;", der dem Codepunkt U+00A1 entspricht. Wenn das nächste Zeichen jedoch „A“ oder „a“ ist, wird die Escapesequenz stattdessen als `\xA1A` interpretiert und erzeugt den Wert "&#x0A1A;", der dem Codepunkt U+0A1A entspricht. In solchen Fällen können Fehlinterpretationen vermieden werden, indem Sie alle vier Hexadezimalziffern (z. B. `\x00A1`) angeben.  
