@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 0e5e2252225c824dfbc9d799b29a16ab6206eb3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1137052c13571cf31fdf98512f2fe62533387e80
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630666"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802250"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "64630666"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stellt ein einheitliches Objektmodell zur Verfügung, das allen [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Frameworks ermöglicht, komplexe, umfangreiche Funktionalität einfach und leicht automatisierbar bereitzustellen.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wurde als Nachfolger von [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]entwickelt. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] ist ein vorhandenes Framework, das zum Bereitstellen einer Lösung für den Zugriff auf Steuerelemente und Anwendungen entwickelt wurde. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] wurde nicht im Hinblick auf Testautomatisierung entwickelt, obwohl es diese Rolle aufgrund der sehr ähnlichen Anforderungen hinsichtlich Zugriff und Automatisierung übernommen hat. Neben der Bereitstellung von verbesserten Zugriffslösungen wurde[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]insbesondere für stabile Funktionalität bei automatisierten Tests entwickelt. Beispielsweise wird in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] eine einzelne Schnittstelle zum Bereitstellen von Benutzeroberflächeninformationen und zum Erfassen der erforderlichen Informationen für AT-Produkte verwendet. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sind die beiden Modelle getrennt.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wurde als Nachfolger von Microsoft Active Accessibility entwickelt. Active Accessibility ist ein vorhandenes Framework bieten eine Lösung für Steuerelemente und Anwendungen zugegriffen werden kann. Active Accessibility wurde nicht testautomatisierung Bedenken entwickelt, auch wenn sie diese Rolle aufgrund der sehr ähnlichen Anforderungen hinsichtlich Zugriff und Automatisierung entwickelt. Neben der Bereitstellung von verbesserten Zugriffslösungen wurde[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]insbesondere für stabile Funktionalität bei automatisierten Tests entwickelt. Beispielsweise nutzt Active Accessibility eine einzelne Schnittstelle zum Bereitstellen von Informationen über die Benutzeroberfläche und zum Sammeln der erforderlichen Informationen für AT Produkte; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] trennt die beiden Modelle.  
   
  Sowohl ein Anbieter als auch ein Client müssen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] implementieren, damit es als automatisiertes Testtool eingesetzt werden kann. Benutzeroberflächenautomatisierungs-Anbieter sind Anwendungen, wie zum Beispiel Microsoft Word, Excel und andere Anwendungen oder Steuerelemente von Drittanbietern, die auf dem [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] -Betriebssystem basieren. Benutzeroberflächenautomatisierungs-Clients schließen automatisierte Testskripts und Hilfstechnologieanwendungen ein.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "64630666"
   
 - Inspect.exe ist eine [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] -Anwendung, die verwendet werden kann, zum Sammeln von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Informationen für Anbieter und Client-Entwicklung und Debuggen. Inspect.exe befindet sich auf die [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
-- MSAABridge macht [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Informationen für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Clients verfügbar. Das Hauptziel der Überbrückung zwischen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] und [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] ist, vorhandenen [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Clients die Interaktion mit Frameworks zu ermöglichen, in denen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]implementiert ist.  
+- MSAABridge macht [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Informationen zu Active Accessibility-Clients. Das Hauptziel der Überbrückung [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] vorhandener Active Accessibility-Clients können die Möglichkeit, die Interaktion mit Frameworks, die implementiert hat, ist für Active Accessibility [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Sicherheit  

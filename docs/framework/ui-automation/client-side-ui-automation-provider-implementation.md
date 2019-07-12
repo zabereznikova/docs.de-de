@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647213"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802225"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementierung eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647213"
   
  Ältere Steuerelemente, wie jene in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] , unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]jedoch nicht direkt. Diese Steuerelemente erhalten Informationen stattdessen von Anbietern, die im Clientprozess vorhanden sind und Informationen über Steuerelemente mithilfe von prozessübergreifender Kommunikation erlangen, z. B. durch das Überwachen von Windows-Meldungen von und zu den Steuerelementen. Solche clientseitigen Anbieter werden manchmal als Proxys bezeichnet.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Stellt Anbieter für Standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelemente. Zusätzlich ermöglicht ein Fallbackanbieter teilweise [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für alle Steuerelemente, die ihre Informationen nicht von einem anderen serverseitigen Anbieter oder Proxy erhalten, sondern über eine [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] -Implementierung verfügen. Diese Anbieter werden automatisch geladen und sind für Clientanwendungen verfügbar.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Stellt Anbieter für Standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelemente. Darüber hinaus ein fallbackanbieter teilweise [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für alle Steuerelemente, die nicht von einem anderen serverseitigen Anbieter bereitgestellt wird oder der Proxy verfügt jedoch über eine Microsoft Active Accessibility-Implementierung. Diese Anbieter werden automatisch geladen und sind für Clientanwendungen verfügbar.  
   
  Weitere Informationen zur Unterstützung für [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelementen, finden Sie unter [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   

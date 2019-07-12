@@ -7,40 +7,40 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 29a6b897115c5f2f3ae8d7e4ec708be59dc0d85b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c8d23b5172cdcfcb009d85c6260c7c68d679bdb
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033214"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802324"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] war die vorherige Lösung zum Ermöglichen des Zugriffs auf Clientanwendungen. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Zugriffsmodell für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] und richtet sich an die Bedürfnisse von Hilfstechnologieprodukten und automatisierte Testtools. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet gegenüber [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]viele Verbesserungen.  
+ Microsoft Active Accessibility war die vorherige Lösung zum Herstellen von Anwendungen zugegriffen werden kann. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Zugriffsmodell für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] und richtet sich an die Bedürfnisse von Hilfstechnologieprodukten und automatisierte Testtools. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet viele Verbesserungen für Active Accessibility.  
   
- In diesem Thema werden die wesentlichen Features von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sowie die Unterschiede dieser Features zu [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]erläutert.  
+ Dieses Thema enthält die wichtigsten Funktionen der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] und erläutert, wie diese Funktionen von Active Accessibility unterscheiden.  
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>Programmiersprachen  
-<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] basiert auf der [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] mit Unterstützung für duale Schnittstellen und ist daher in C/C++ programmierbar [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)], und Skriptsprachen. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (einschließlich der clientseitigen Anbieterbibliothek für Standardsteuerelemente) wird in verwaltetem Code geschrieben und Benutzeroberflächenautomatisierungs-Clientanwendungen werden am einfachsten so programmiert mit c# oder Visual Basic .NET. Benutzeroberflächenautomatisierungs-Anbieter, die Schnittstellenimplementierungen darstellen, können in verwaltetem Code oder in C/C++ geschrieben werden.  
+< active Accessibility basiert auf der [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] mit Unterstützung für duale Schnittstellen und ist daher in C programmierbar /C++, [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)], und Skriptsprachen. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (einschließlich der clientseitigen Anbieterbibliothek für Standardsteuerelemente) wird in verwaltetem Code geschrieben und Benutzeroberflächenautomatisierungs-Clientanwendungen werden am einfachsten so programmiert mit c# oder Visual Basic .NET. Benutzeroberflächenautomatisierungs-Anbieter, die Schnittstellenimplementierungen darstellen, können in verwaltetem Code oder in C/C++ geschrieben werden.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Unterstützung in der Windows Presentation Foundation  
- Windows Presentation Foundation (WPF) ist das neue Modell zum Erstellen von Benutzeroberflächen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente bieten keine systemeigene Unterstützung für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Sie unterstützen jedoch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die die überbrückende Unterstützung für [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Clients umfasst. Nur speziell für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] geschriebene Clients können die Barrierefreiheitsfeatures von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]optimal nutzen, z. B. die umfangreiche Unterstützung für Text.  
+ Windows Presentation Foundation (WPF) ist das neue Modell zum Erstellen von Benutzeroberflächen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente bieten keine native Unterstützung für Active Accessibility; Sie unterstützen jedoch [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die überbrückende Unterstützung für Active Accessibility-Clients. Nur speziell für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] geschriebene Clients können die Barrierefreiheitsfeatures von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]optimal nutzen, z. B. die umfangreiche Unterstützung für Text.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Server und Clients  
- In [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]können Server und Clients direkt miteinander kommunizieren, hauptsächlich durch die Implementierung des Servers von `IAccessible`.  
+ In der Active Accessibility, Servern und Clients direkt miteinander kommunizieren, hauptsächlich durch die Implementierung des Servers der `IAccessible`.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]liegt ein Kerndienst zwischen Server (auch als Anbieter bezeichnet) und Client. Der Kerndienst führt Aufrufe an die von Anbietern implementierten Schnittstellen aus und bietet zusätzliche Dienste, z. B. das Generieren eindeutiger Laufzeitbezeichner für Elemente. Clientanwendungen verwenden Bibliotheksfunktionen zum Aufrufen des [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Diensts.  
   
- Benutzeroberflächenautomatisierungs-Anbieter können Informationen zu [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Clients bereitstellen, während [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Server Informationen zu Clientanwendungen für die Automatisierung der Benutzeroberfläche bereitstellen können. Da [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] jedoch nicht so viele Informationen wie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bereitstellt, sind die beiden Modelle nicht vollständig kompatibel.  
+ Benutzeroberflächenautomatisierungs-Anbieter können Informationen zu Active Accessibility-Clients bereitstellen, und Benutzeroberflächenautomatisierungs-Clientanwendungen Informationen Active Accessibility-Server bereitstellen. Aber weil Active Accessibility nicht so viele Informationen wie verfügbar macht [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], die beiden Modelle sind nicht vollständig kompatibel.  
   
 <a name="UI_Elements_compare"></a>   
 ## <a name="ui-elements"></a>Benutzeroberflächenelemente  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] stellt [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente entweder als `IAccessible` -Schnittstelle oder als untergeordneten Bezeichner dar. Es ist schwierig, zwei `IAccessible` -Zeiger zu vergleichen, um festzustellen, ob sie auf dasselbe Element verweisen.  
+ Active Accessibility stellt [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente entweder als eine `IAccessible` Schnittstelle oder als untergeordneten Bezeichner. Es ist schwierig, zwei `IAccessible` -Zeiger zu vergleichen, um festzustellen, ob sie auf dasselbe Element verweisen.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]wird jedes Element als <xref:System.Windows.Automation.AutomationElement> -Objekt dargestellt. Der Vergleich erfolgt mithilfe des Gleichheitsoperators oder der <xref:System.Windows.Automation.AutomationElement.Equals%2A> -Methode, die beide die eindeutigen Laufzeitbezeichner der Elemente vergleichen.  
   
@@ -48,27 +48,27 @@ ms.locfileid: "62033214"
 ## <a name="tree-views-and-navigation"></a>Strukturansichten und Navigation  
  Die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente auf dem Bildschirm können als Baumstruktur betrachtet werden, wobei der Desktop den Stamm, die Anwendungsfenster direkt untergeordnete Elemente und Elemente in Anwendungen weitere Nachfolger darstellen.  
   
- In [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]werden viele Automatisierungselemente, die für Endbenutzer nicht relevant sind, in der Struktur verfügbar gemacht. Clientanwendungen müssen alle Elemente betrachten, um die erforderlichen Elemente zu ermitteln.  
+ In der Active Accessibility werden viele Automatisierungselemente, die für Endbenutzer nicht relevant sind in der Struktur verfügbar gemacht. Clientanwendungen müssen alle Elemente betrachten, um die erforderlichen Elemente zu ermitteln.  
   
  Benutzeroberflächenautomatisierungs-Clientanwendungen betrachten die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] über eine gefilterte Ansicht. Die Ansicht enthält nur relevante Elemente: Elemente, die dem Benutzer Informationen bieten oder die Interaktion ermöglichen. Es sind vordefinierte Ansichten verfügbar, die nur Steuerelemente und nur Inhaltselemente enthalten. Zusätzlich können Anwendungen benutzerdefinierte Ansichten definieren. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] vereinfacht die Beschreibung der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] für den Benutzer und unterstützt die Benutzer bei der Interaktion mit der Anwendung.  
   
- Die Navigation zwischen Elementen in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]erfolgt entweder räumlich (z. B. beim Wechsel zum Element, das auf der linken Seite des Bildschirms liegt), logisch (z. B. beim Wechsel zum nächsten Menüelement oder zum nächsten Element in der Aktivierreihenfolge eines Dialogfelds) oder hierarchisch (z. B. beim Wechsel zum ersten untergeordneten Element in einem Container oder vom untergeordneten zum übergeordneten Element). Die hierarchische Navigation erweist sich durch die Tatsache als kompliziert, dass untergeordnete Elemente nicht immer Objekte sind, die `IAccessible`implementieren.  
+ Navigation zwischen Elementen in der Active Accessibility ist entweder räumlich (z. B., Umstellung auf das Element, das auf der linken Seite des Bildschirms liegt), logisch (z. B. beim Wechsel zum nächsten Menüelement oder das nächste Element in der Aktivierreihenfolge innerhalb eines Dialogfelds) oder hierarchische () Beispiel: das Verschieben des ersten untergeordnete Elements in einem Container oder vom untergeordneten zum übergeordneten). Die hierarchische Navigation erweist sich durch die Tatsache als kompliziert, dass untergeordnete Elemente nicht immer Objekte sind, die `IAccessible`implementieren.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sind alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente <xref:System.Windows.Automation.AutomationElement> -Objekte, die dieselbe grundlegende Funktionalität unterstützen. (Aus Sicht des Anbieters sind sie Objekte, die eine von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> geerbte Schnittstelle implementieren.) Die Navigation erfolgt überwiegend hierarchisch: von übergeordneten zu untergeordneten Elementen sowie von einem gleichgeordneten Element zum nächsten. (Die Navigation zwischen gleichgeordneten Elementen weist ein logisches Element auf, da sie möglicherweise der Aktivierreihenfolge folgt.) Sie können mithilfe der <xref:System.Windows.Automation.TreeWalker>-Klasse von einem beliebigen Startpunkt aus über eine beliebige gefilterte Ansicht der Struktur navigieren. Sie können auch mithilfe der <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> und <xref:System.Windows.Automation.AutomationElement.FindAll%2A>zu bestimmten untergeordneten Elementen oder Nachfolgerelementen navigieren. Es ist z. B. ganz einfach, alle Elemente in einem Dialogfeld abzurufen, die ein bestimmtes Steuerelementmuster unterstützen.  
   
- Die Navigation in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ist konsistenter als bei der [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Einige Elemente wie Dropdownlisten und Popupfenster werden in der [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Struktur zweimal angezeigt und die Navigation von diesen Elementen kann möglicherweise zu unerwarteten Ergebnissen führen. Es ist eigentlich nicht möglich, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] für ein Grundleistensteuerelement ordnungsgemäß zu implementieren. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht die erneute Zuordnung zu übergeordneten Elementen und die Neupositionierung, sodass ein Element ungeachtet der Hierarchie, die sich durch den Besitz von Fenstern ergibt, an eine beliebige Stelle in der Struktur platziert werden kann.  
+ Navigation im [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ist konsistenter als bei Active Accessibility. Einige Elemente wie Dropdownlisten und Popupfenster angezeigt wird, zweimal in der Active Accessibility-Struktur und Navigation von diesen möglicherweise unerwartete Ergebnisse. Es ist eigentlich nicht möglich, die Active Accessibility für ein Grundleistensteuerelement ordnungsgemäß zu implementieren. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht die erneute Zuordnung zu übergeordneten Elementen und die Neupositionierung, sodass ein Element ungeachtet der Hierarchie, die sich durch den Besitz von Fenstern ergibt, an eine beliebige Stelle in der Struktur platziert werden kann.  
   
 <a name="Roles_and_Control_Types"></a>   
 ## <a name="roles-and-control-types"></a>Rollen und Steuerelementtypen  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] verwendet die `accRole` -Eigenschaft (`IAccessible::get_actRole`) zum Abrufen einer Beschreibung der Rolle des Elements in der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], z. B. ROLE_SYSTEM_SLIDER oder ROLE_SYSTEM_MENUITEM. Die Rolle eines Elements ist der wichtigste Anhaltspunkt für seine verfügbaren Funktionen. Die Interaktion mit einem Steuerelement wird mithilfe fester Methoden wie `IAccessible::accSelect` und `IAccessible::accDoDefaultAction`erreicht. Die Interaktion zwischen der Clientanwendung und der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ist durch die Möglichkeiten von `IAccessible`beschränkt.  
+ Active Accessibility verwendet die `accRole` Eigenschaft (`IAccessible::get_actRole`) eine Beschreibung der Rolle des Elements im Abrufen der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], z. B. ROLE_SYSTEM_SLIDER oder ROLE_SYSTEM_MENUITEM. Die Rolle eines Elements ist der wichtigste Anhaltspunkt für seine verfügbaren Funktionen. Die Interaktion mit einem Steuerelement wird mithilfe fester Methoden wie `IAccessible::accSelect` und `IAccessible::accDoDefaultAction`erreicht. Die Interaktion zwischen der Clientanwendung und der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ist durch die Möglichkeiten von `IAccessible`beschränkt.  
   
  Im Gegensatz dazu entkoppelt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] den Steuerelementtyp des Elements (durch die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> -Eigenschaft beschrieben) größtenteils von dessen zu erwartender Funktionalität. Die Funktionalität wird durch die Steuerelementmuster bestimmt, die vom Anbieter durch Implementieren spezieller Schnittstellen unterstützt werden. Steuerelementmuster können kombiniert werden, um sämtliche Funktionen zu beschreiben, die von einem bestimmten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Element unterstützt werden. Einige Anbieter müssen ein bestimmtes Steuerelementmuster unterstützen. Der Anbieter für ein Kontrollkästchen muss z. B. ein Toggle-Steuerelementmuster unterstützen. Andere Anbieter müssen mindestens einen Satz von Steuerelementmustern unterstützen. Eine Schaltfläche muss z. B. entweder „Toggle“ oder „Invoke“ unterstützen. Wieder andere Anbieter unterstützen überhaupt keine Steuerelementmuster. Ein Bereich, der z. B. nicht vergrößert, verkleinert, verschoben oder angedockt werden kann, besitzt keine Steuerelementmuster.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unterstützt benutzerdefinierte Steuerelemente, die durch die <xref:System.Windows.Automation.ControlType.Custom> -Eigenschaft gekennzeichnet sind und von der <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> -Eigenschaft beschrieben werden können.  
   
- Die folgende Tabelle veranschaulicht die Zuordnung von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Rollen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementtypen.  
+ Die folgende Tabelle zeigt die Zuordnung von Rollen Active Accessibility [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Steuerelementtypen.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Rolle|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementtyp|  
+|Active Accessibility-Rolle|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementtyp|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|Schaltfläche|  
 |ROLE_SYSTEM_CLIENT|Kalender|  
@@ -114,9 +114,9 @@ ms.locfileid: "62033214"
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>Zustände und Eigenschaften  
- In [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]unterstützen Elemente einen gemeinsamen Satz von Eigenschaften und einige dieser Eigenschaften (z. B. `accState`) müssen in Abhängigkeit von der Rolle des Elements sehr unterschiedliche Dinge beschreiben. Server müssen alle Methoden von `IAccessible` implementieren, die eine Eigenschaft zurückgeben, auch solche Methoden, die für das Element nicht relevant sind.  
+ In Active Accessibility unterstützen Elemente einen gemeinsamen Satz von Eigenschaften und einige Eigenschaften (z. B. `accState`) muss abhängig von der Rolle des Elements sehr unterschiedliche Dinge beschreiben. Server müssen alle Methoden von `IAccessible` implementieren, die eine Eigenschaft zurückgeben, auch solche Methoden, die für das Element nicht relevant sind.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definiert viele weitere Eigenschaften, von denen einige den Zuständen in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]entsprechen. Manche beziehen sich auf alle Elemente, während andere nur für Steuerelementtypen und Steuerelementmuster gelten. Eigenschaften werden durch eindeutige Bezeichner unterschieden, und die meisten Eigenschaften können über eine einzelne Methode, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, abgerufen werden. Viele Eigenschaften können auch leicht über die <xref:System.Windows.Automation.AutomationElement.Current%2A> - und <xref:System.Windows.Automation.AutomationElement.Cached%2A> - Eigenschaftenaccessoren abgerufen werden.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definiert viele weitere Eigenschaften, von die einige Status in der Active Accessibility entsprechen. Manche beziehen sich auf alle Elemente, während andere nur für Steuerelementtypen und Steuerelementmuster gelten. Eigenschaften werden durch eindeutige Bezeichner unterschieden, und die meisten Eigenschaften können über eine einzelne Methode, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, abgerufen werden. Viele Eigenschaften können auch leicht über die <xref:System.Windows.Automation.AutomationElement.Current%2A> - und <xref:System.Windows.Automation.AutomationElement.Cached%2A> - Eigenschaftenaccessoren abgerufen werden.  
   
  Ein Benutzeroberflächenautomatisierungs-Anbieter muss keine irrelevanten Eigenschaften implementieren, sondern kann einfach einen `null` -Wert für alle nicht unterstützten Eigenschaften zurückgeben. Darüber hinaus kann der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kerndienst einige Eigenschaften aus dem Standardfenster abrufen. Diese werden dann mit Eigenschaften vereinigt, die vom Anbieter explizit implementiert wurden.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62033214"
   
  Die folgende Tabelle zeigt die Übereinstimmung zwischen Eigenschaften der beiden Modelle.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Eigenschaftenaccessor|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften-ID|Hinweise|  
+|Active Accessibility-Eigenschaftenaccessor|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften-ID|Hinweise|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> oder <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` hat Vorrang, wenn beide vorhanden sind.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -135,9 +135,9 @@ ms.locfileid: "62033214"
 |`get_accDescription`|Nicht unterstützt in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Die`accDescription` hatte in MSAA keine eindeutige Spezifikation, was dazu geführt hat, dass Anbieter unterschiedliche Arten von Informationen in dieser Eigenschaft platziert haben.|  
 |`get_accHelpTopic`|Nicht unterstützt in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]||  
   
- Die folgende Tabelle zeigt, welche [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften den [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Zustandskonstanten entsprechen.  
+ Die folgende Tabelle zeigt die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften entsprechen Active Accessibility-Status-Konstanten.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Zustand|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Löst Zustandsänderung aus?|  
+|Active Accessibility-Status|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Löst Zustandsänderung aus?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
 |STATE_SYSTEM_CHECKED|Für Kontrollkästchen ist dies <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Für Optionsfelder ist dies <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|J|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|J|  
@@ -158,21 +158,21 @@ ms.locfileid: "62033214"
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
 |STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|J|  
   
- Die folgenden Zustände wurden entweder von den meisten [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Steuerelementservern nicht implementiert oder verfügen in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]über keine Entsprechung.  
+ Die folgenden Zustände wurden entweder von den meisten Active Accessibility nicht implementiert steuerserver verwendet werden, oder haben keine Entsprechung in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Zustand|Hinweise|  
+|Active Accessibility-Status|Hinweise|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_ANIMATED|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_EXTSELECTABLE|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
-|STATE_SYSTEM_MARQUEED|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
-|STATE_SYSTEM_SELFVOICING|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
+|STATE_SYSTEM_EXTSELECTABLE|Von Active Accessibility-Servern verbreitet nicht weit.|  
+|STATE_SYSTEM_MARQUEED|Von Active Accessibility-Servern verbreitet nicht weit.|  
+|STATE_SYSTEM_SELFVOICING|Von Active Accessibility-Servern verbreitet nicht weit.|  
 |STATE_SYSTEM_TRAVERSED|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_ALERT_HIGH|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
-|STATE_SYSTEM_ALERT_MEDIUM|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
-|STATE_SYSTEM_ALERT_LOW|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
-|STATE_SYSTEM_FLOATING|Von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Servern nicht umfassend implementiert|  
+|STATE_SYSTEM_ALERT_HIGH|Von Active Accessibility-Servern verbreitet nicht weit.|  
+|STATE_SYSTEM_ALERT_MEDIUM|Von Active Accessibility-Servern verbreitet nicht weit.|  
+|STATE_SYSTEM_ALERT_LOW|Von Active Accessibility-Servern verbreitet nicht weit.|  
+|STATE_SYSTEM_FLOATING|Von Active Accessibility-Servern verbreitet nicht weit.|  
 |STATE_SYSTEM_HOTTRACKED|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
@@ -180,11 +180,11 @@ ms.locfileid: "62033214"
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>Ereignisse  
- Der Ereignismechanismus in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]beruht im Gegensatz zum Mechanismus in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]nicht auf dem Windows-Ereignisrouting (das eng mit Fensterhandles verbunden ist) und erfordert von der Clientanwendung keine Einrichtung von Hooks. Abonnements von Ereignissen können nicht nur auf bestimmte Ereignisse, sondern auch auf bestimmte Teile der Struktur abgestimmt werden. Anbieter können zudem das Auslösen von Ereignissen optimieren, indem sie verfolgen, wofür Ereignisse aufgeführt werden.  
+ Der Ereignismechanismus in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], im Gegensatz zu dem in Active Accessibility, basiert nicht auf Windows-Ereignisrouting (das eng mit Fensterhandles verbunden ist) und erfordert keine die Clientanwendung, die Einrichtung von Hooks. Abonnements von Ereignissen können nicht nur auf bestimmte Ereignisse, sondern auch auf bestimmte Teile der Struktur abgestimmt werden. Anbieter können zudem das Auslösen von Ereignissen optimieren, indem sie verfolgen, wofür Ereignisse aufgeführt werden.  
   
  Es ist für Clients außerdem einfacher, die Elemente abzurufen, die Ereignisse auslösen, da diese direkt an den Ereignisrückruf übergeben werden. Eigenschaften des Elements werden automatisch vorab abgerufen, wenn eine Cacheanforderung aktiv gewesen ist, als der Client das Ereignis abonniert hat.  
   
- In der folgende Tabelle wird die Übereinstimmung von [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -WinEvents und [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignissen veranschaulicht.  
+ Die folgende Tabelle zeigt die Übereinstimmung von Active Accessibility-WinEvents und [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ereignisse.  
   
 |WinEvent|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisbezeichner|  
 |--------------|--------------------------------------------------------------------------------------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "62033214"
 |EVENT_OBJECT_LOCATIONCHANGE|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> -Eigenschaftenänderung|  
 |EVENT_OBJECT_NAMECHANGE|<xref:System.Windows.Automation.AutomationElement.NameProperty> -Eigenschaftenänderung|  
 |EVENT_OBJECT_PARENTCHANGE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
-|EVENT_OBJECT_REORDER|Nicht einheitlich verwendet in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ist kein direkt entsprechendes Ereignis definiert.|  
+|EVENT_OBJECT_REORDER|Nicht einheitlich verwendet in der Active Accessibility. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ist kein direkt entsprechendes Ereignis definiert.|  
 |EVENT_OBJECT_SELECTION|<xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>|  
 |EVENT_OBJECT_SELECTIONADD|<xref:System.Windows.Automation.SelectionItemPattern.ElementAddedToSelectionEvent>|  
 |EVENT_OBJECT_SELECTIONREMOVE|<xref:System.Windows.Automation.SelectionItemPattern.ElementRemovedFromSelectionEvent>|  
