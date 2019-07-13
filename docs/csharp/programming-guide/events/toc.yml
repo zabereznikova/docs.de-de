@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: 'Vorgehensweise: Implementieren von Schnittstellenereignissen'
       href: how-to-implement-interface-events.md
-    - name: 'Vorgehensweise: Verwenden eines Wörterbuchs zum Speichern von Ereignisinstanzen'
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: 'Vorgehensweise: Implementieren von benutzerdefinierten Ereigniszugriffsmethoden'
       href: how-to-implement-custom-event-accessors.md
