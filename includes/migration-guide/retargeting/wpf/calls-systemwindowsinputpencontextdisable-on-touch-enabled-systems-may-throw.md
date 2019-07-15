@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3cd5052dffcb059c240a310e0b89384f28409264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0778285ef1b5702bd79743038a1bd21ba04612d6
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234462"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804314"
 ---
 ### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a>Aufrufe von System.Windows.Input.PenContext.Disable auf touchfähigen Systemen können eine ArgumentException auslösen
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234462"
 |Bereich|Microsoft Edge|
 |Version|4.6.1|
 |Typ|Neuzuweisung|
+

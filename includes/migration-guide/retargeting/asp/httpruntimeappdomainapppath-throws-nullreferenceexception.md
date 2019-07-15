@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e7154919d6a09a04e650d5546feb2ae6c6cc912f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d6c658f306dd4792e3cb5dbdc9471043ca95a071
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234936"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859183"
 ---
 ### <a name="httpruntimeappdomainapppath-throws-a-nullreferenceexception"></a>HttpRuntime.AppDomainAppPath löst NullReferenceException aus
 
@@ -16,3 +16,4 @@ ms.locfileid: "59234936"
 |Version|4.6.2|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Web.HttpRuntime.AppDomainAppPath?displayProperty=nameWithType></li></ul>|
+

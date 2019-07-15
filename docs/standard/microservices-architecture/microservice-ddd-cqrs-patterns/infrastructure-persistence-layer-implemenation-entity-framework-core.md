@@ -2,12 +2,12 @@
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778051"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -21,7 +21,7 @@ Entity Framework Core (EF Core) ist eine einfache, erweiterbare und plattformüb
 
 Da in der Microsoft-Dokumentation bereits eine Einführung in EF Core verfügbar ist, werden nachfolgend nur die Links zu diesen Informationen aufgelistet.
 
-#### <a name="additional-resources"></a>Zusätzliche Ressourcen
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,12 +230,12 @@ builder.RegisterType<OrderRepository>()
 
 Beachten Sie, dass eine Verwendung der Singleton-Lebensdauer für das Repository zu ernsthaften Parallelitätsproblemen führen könnte, wenn Ihr DbContext auf eine bereichsbezogene (InstancePerLifetimeScope) Lebensdauer festgelegt ist (die Standardlebensdauer für einen DbContext).
 
-#### <a name="additional-resources"></a>Zusätzliche Ressourcen
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Implementieren der Muster Repository und Arbeitseinheit in eine ASP.NET MVC-Anwendung** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain (Implementierungsstrategien für das Repositorymuster mit Entity Framework, Dapper und Chain)** \
+- **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain (Implementierungsstrategien für das Repositorymuster mit Entity Framework, Dapper und Chain)**  \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
 - **Cesar de la Torre. Vergleich der Lebensdauer: ASP.NET Core-IoC-Containerdienste vs. Autofac-IoC-Containerinstanzbereiche** \
@@ -447,24 +447,24 @@ Zusätzlich zum Kapseln der Filterlogik kann die Spezifikation die Form der zur�
 
 Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, ist es in Ordnung, sie innerhalb des Repositorys zum Erstellen eines Ergebnissatzes zu verwenden. Sie können die Verwendung dieses Ansatzes oben bei der List-Methode sehen, die intermediäre IQueryable-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
 
-#### <a name="additional-resources"></a>Zusätzliche Ressourcen
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Tabellenzuordnung** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Use HiLo to generate keys with Entity Framework Core (Verwenden von Hi/Lo zum Generieren von Schlüsseln mit Entity Framework Core)** \
+- **Use HiLo to generate keys with Entity Framework Core (Verwenden von Hi/Lo zum Generieren von Schlüsseln mit Entity Framework Core)**  \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **Unterstützungsfelder** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Encapsulated Collections in Entity Framework Core (Gekapselte Auflistungen in Entity Framework Core)** \
+- **Steve Smith. Encapsulated Collections in Entity Framework Core (Gekapselte Auflistungen in Entity Framework Core)**  \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
-- **Shadow Properties (Schatteneigenschaften)** \
+- **Shadow Properties (Schatteneigenschaften)**  \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **The Specification pattern (Spezifikationsmuster)** \
+- **The Specification pattern (Spezifikationsmuster)**  \
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]

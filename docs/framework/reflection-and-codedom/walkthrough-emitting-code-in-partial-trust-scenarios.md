@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690310"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742463"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
@@ -57,7 +57,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
   
  Im folgenden Verfahren wird eine Sandbox-Anwendungsdomäne erstellt, die Code mit teilweiser Vertrauenswürdigkeit ausführt, um Szenarios zu testen, in denen ausgegebener Code nur auf öffentliche Member öffentlicher Typen zugreifen kann. In einem späteren Verfahren wird beschrieben, wie Sie <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> hinzufügen, um Szenarios zu testen, in denen ausgegebener Code auf nicht öffentliche Typen und Member in Assemblys zugreifen kann, denen die gleichen oder geringere Berechtigungen erteilt wurden.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit  
+#### <a name="to-create-an-application-domain-with-partial-trust"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit  
   
 1. Erstellen Sie einen Berechtigungssatz, der den Assemblys in der Sandkastenanwendungsdomäne gewährt wird. In diesem Fall wird der Berechtigungssatz der Internetzone verwendet.  
   
@@ -87,7 +87,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
 > [!NOTE]
 >  Um Rechteerweiterungen zu verhindern, werden beim Erstellen anonym gehosteter dynamischer Methoden Stapelinformationen für die ausgebende Assembly einbezogen. Wenn die Methode aufgerufen wird, werden die Stapelinformationen überprüft. Daher ist eine anonym gehostete dynamische Methode, die über voll vertrauenswürdigen Code aufgerufen wird, auf die Vertrauensebene der ausgebenden Assembly beschränkt.  
   
-##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit und eingeschränktem Memberzugriff  
+#### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit und eingeschränktem Memberzugriff  
   
 1. Erstellen Sie ein neues <xref:System.Security.Permissions.ReflectionPermission>-Objekt mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA)-Flag, und fügen Sie die Berechtigung mit der <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType>-Methode dem Berechtigungssatz hinzu.  
   
@@ -184,7 +184,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
 <a name="Example"></a>   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Das folgende Codebeispiel veranschaulicht die Verwendung des <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>-Flags, um anonym gehosteten dynamischen Methoden das Überspringen von JIT-Sichtbarkeitsprüfungen zu ermöglichen, wenn der Zielmember die gleiche oder eine geringere Vertrauensebene aufweist als die Assembly, die den Code ausgibt.  
   
  Im Beispiel wird eine `Worker`-Klasse definiert, die über die Grenzen der Anwendungsdomäne hinweg gemarshallt werden kann. Die Klasse verfügt über zwei `AccessPrivateMethod`-Methodenüberladungen, die dynamische Methoden ausgeben und ausführen. Die erste Überladung gibt eine dynamische Methode (mit oder ohne JIT-Sichtbarkeitsprüfungen) aus, die die private `PrivateMethod`-Methode der `Worker`-Klasse aufruft. Die zweite Überladung gibt eine dynamische Methode aus, die auf eine `internal`-Eigenschaft (`Friend`-Eigenschaft in Visual Basic) der <xref:System.String>-Klasse zugreift.  

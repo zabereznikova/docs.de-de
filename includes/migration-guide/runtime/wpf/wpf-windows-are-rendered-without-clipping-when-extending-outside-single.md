@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3b7309347c643d89a28331c6ef3cac36085a969a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2e974d277d6659aaada321b2a7e7a604df78a7bd
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234198"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858531"
 ---
 ### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>WPF-Fenster werden ohne Clipping gerendert, wenn diese die Größe eines einzelnen Monitors überschreiten
 
@@ -15,3 +15,4 @@ ms.locfileid: "59234198"
 |Bereich|Gering|
 |Version|4.6|
 |Typ|Laufzeit|
+

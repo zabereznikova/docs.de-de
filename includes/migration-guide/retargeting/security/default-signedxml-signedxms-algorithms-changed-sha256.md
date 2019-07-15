@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: db076d6799e4de5b8610cf9c1aac79b5386a7229
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 12ba683655319e42368f9f2a6cf7bf70e1dbd77d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236499"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859037"
 ---
 ### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>Die Standardalgorithmen SignedXML und SignedXMS wurden in SHA-256 geändert
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236499"
 |Version|4.7.1|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Security.Cryptography.Pkcs.CmsSigner?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.SignedXml?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.Reference?displayProperty=nameWithType></li></ul>|
+

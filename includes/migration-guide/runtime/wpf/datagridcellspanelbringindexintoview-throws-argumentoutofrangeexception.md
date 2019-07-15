@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1a1fc91ea2bb81e0f94b64323085ccf99072a1f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e8fcd496b9c1921753ad0e1c2632f29bc5036956
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236046"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802508"
 ---
 ### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>DataGridCellsPanel.BringIndexIntoView löst ArgumentOutOfRangeException aus
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236046"
 |Version|4.6.2|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
+

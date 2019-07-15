@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423878"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773663"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Vorgehensweise: Implementieren von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen
 Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -53,14 +53,14 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="creating-the-component"></a>Erstellen der Komponente  
  Der erste Schritt besteht darin, die Komponente zu erstellen, die das ereignisbasierte asynchrone Muster implementiert.  
   
-#### <a name="to-create-the-component"></a>So erstellen Sie die Komponente  
+### <a name="to-create-the-component"></a>So erstellen Sie die Komponente  
   
 - Erstellen Sie eine Klasse namens `PrimeNumberCalculator`, die von <xref:System.ComponentModel.Component> erbt.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definieren von öffentlichen asynchronen Ereignissen und Delegaten  
  Die Komponente kommuniziert mit Clients mithilfe von Ereignissen. Das Ereignis _MethodName_**Completed** warnt Clients bei Abschluss eines asynchronen Tasks, und das Ereignis _MethodName_**ProgressChanged** informiert Clients über den Fortschritt eines asynchronen Tasks.  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>So definieren Sie asynchrone Ereignisse für Clients der Komponente  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>So definieren Sie asynchrone Ereignisse für Clients der Komponente  
   
 1. Importieren Sie die Namespaces <xref:System.Threading?displayProperty=nameWithType> und <xref:System.Collections.Specialized?displayProperty=nameWithType> am Anfang der Datei.  
   
@@ -85,7 +85,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="checkpoint"></a>Checkpoint  
  An diesem Punkt können Sie die Komponente erstellen.  
   
-#### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
+### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
   
 - Kompilieren Sie die Komponente.  
   
@@ -101,7 +101,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="defining-private-delegates"></a>Definieren von privaten Delegaten  
  Die asynchronen Aspekte der Komponente `PrimeNumberCalculator` werden intern mit einem speziellen Delegaten, dem sogenannten <xref:System.Threading.SendOrPostCallback>, implementiert. Ein <xref:System.Threading.SendOrPostCallback> stellt eine Rückrufmethode dar, die für einen <xref:System.Threading.ThreadPool>-Thread ausgeführt wird. Die Rückrufmethode muss über eine Signatur verfügen, die einen einzelnen Parameter vom Typ <xref:System.Object> enthält, was bedeutet, dass Sie den Status zwischen Delegaten in einer Wrapperklasse übergeben müssen. Weitere Informationen finden Sie unter <xref:System.Threading.SendOrPostCallback>.  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>So implementieren Sie internes asynchrones Verhalten der Komponente  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>So implementieren Sie internes asynchrones Verhalten der Komponente  
   
 1. Deklarieren und erstellen Sie die <xref:System.Threading.SendOrPostCallback>-Delegate in der Klasse `PrimeNumberCalculator`. Erstellen Sie die <xref:System.Threading.SendOrPostCallback>-Objekte in der Hilfsprogrammmethode `InitializeDelegates`.  
   
@@ -132,7 +132,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="implementing-public-events"></a>Implementieren von öffentlichen Ereignissen  
  Komponenten, die das ereignisbasierte asynchrone Muster implementieren, kommunizieren mit Clients mithilfe von Ereignissen. Diese Ereignisse werden auf dem richtigen Thread mithilfe der Klasse <xref:System.ComponentModel.AsyncOperation> aufgerufen.  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>So lösen Sie Ereignisse für die Komponente Ihres Clients aus  
+### <a name="to-raise-events-to-your-components-clients"></a>So lösen Sie Ereignisse für die Komponente Ihres Clients aus  
   
 1. Implementieren Sie öffentliche Ereignisse für die Meldung an Clients. Sie benötigen ein Ereignis, um den Fortschritt, und eins, um den Abschluss zu melden.  
   
@@ -146,7 +146,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
   
  Die Signatur `CompletionMethod` muss alle Zustände enthalten, die erforderlich sind, um das Ergebnis des asynchronen Vorgangs zu beschreiben. Sie umfasst den Zustand für die Zahl, für die mit diesem bestimmten asynchronen Vorgang geprüft wurde, ob sie eine Primzahl ist, und den Wert ihres ersten Divisors, wenn es sich nicht um eine Primzahl handelt. Außerdem enthält Sie den Zustand, der alle aufgetretenen Ausnahmen beschreibt, und die entsprechende <xref:System.ComponentModel.AsyncOperation> für diesen bestimmten Task.  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>So schließen Sie einen asynchronen Vorgang ab  
+### <a name="to-complete-an-asynchronous-operation"></a>So schließen Sie einen asynchronen Vorgang ab  
   
 - Implementieren Sie die Abschlussmethode. Sie nutzt sechs Parameter, die zum Ausfüllen von `CalculatePrimeCompletedEventArgs` verwendet werden, welches durch den `CalculatePrimeCompletedEventHandler` des Clients an den Client zurückgegeben wird. Das Task-ID-Token des Clients wird aus der internen Auflistung entfernt, und die Lebensdauer des asynchronen Vorgangs wird mit einem Aufruf von <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> beendet. <xref:System.ComponentModel.AsyncOperation> marshallt den Aufruf des Threads bzw. des Kontexts, der für das Anwendungsmodell geeignet ist.  
   
@@ -156,7 +156,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="checkpoint"></a>Checkpoint  
  An diesem Punkt können Sie die Komponente erstellen.  
   
-#### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
+### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
   
 - Kompilieren Sie die Komponente.  
   
@@ -178,7 +178,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 > [!NOTE]
 >  Die Fortschrittsmeldung wird in der `BuildPrimeNumberList`-Methode implementiert. Auf schnellen Computern können `ProgressChanged`-Ereignisse in rascher Folge ausgelöst werden. Der Clientthread, für den diese Ereignisse ausgelöst werden, muss diese Situation verarbeiten können. Der Code der Benutzeroberfläche erhält möglicherweise eine Flut von Meldungen, die er nicht bewältigen kann, sodass keine Reaktion mehr erfolgt. Eine Beispiel-Benutzeroberfläche, die diese Situation behandelt, finden Sie unter [Vorgehensweise: Implementieren eines Clients des ereignisbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>So führen Sie die asynchrone Berechnung der Primzahl aus  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>So führen Sie die asynchrone Berechnung der Primzahl aus  
   
 1. Implementieren Sie die Hilfsprogrammmethode `TaskCanceled`. Diese überprüft die Auflistung der Tasklebensdauer für die angegebene Task-ID und gibt `true` zurück, wenn die Task-ID nicht gefunden wird.  
   
@@ -210,7 +210,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="checkpoint"></a>Checkpoint  
  An diesem Punkt können Sie die Komponente erstellen.  
   
-#### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
+### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
   
 - Kompilieren Sie die Komponente.  
   
@@ -221,7 +221,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
   
  Sie brechen einen bestimmten ausstehenden Vorgang ab, indem Sie <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> für die entsprechende <xref:System.ComponentModel.AsyncOperation>-Klasse aufrufen. Dadurch wird dieser Vorgang beendet, und alle nachfolgenden Aufrufe für <xref:System.ComponentModel.AsyncOperation> werden eine Ausnahme auslösen.  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>So implementieren Sie die Funktionen zum Starten und Abbrechen  
+### <a name="to-implement-start-and-cancel-functionality"></a>So implementieren Sie die Funktionen zum Starten und Abbrechen  
   
 1. Implementieren Sie die `CalculatePrimeAsync`-Methode. Stellen Sie sicher, dass das vom Client bereitgestellte Token (Task-ID) in Bezug auf alle Tokens der derzeit ausstehenden Tasks eindeutig ist. Wenn der Client ein nicht eindeutiges Token übergibt, löst `CalculatePrimeAsync` eine Ausnahme aus. Andernfalls wird das Token zur Task-ID-Auflistung hinzugefügt.  
   
@@ -236,7 +236,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 ## <a name="checkpoint"></a>Checkpoint  
  An diesem Punkt können Sie die Komponente erstellen.  
   
-#### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
+### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
   
 - Kompilieren Sie die Komponente.  
   

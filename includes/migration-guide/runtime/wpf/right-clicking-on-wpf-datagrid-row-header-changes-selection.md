@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8332aca6e72346c92e80ce28979b83eec496b0e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b36bc1ed9c35722478bdb31b82a79bed1a18914
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804032"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858634"
 ---
 ### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Bei einem Rechtsklick auf einen Zeilenheader des WPF-DataGrid-Steuerelements wird die DataGrid-Auswahl geändert
 
@@ -16,3 +16,4 @@ ms.locfileid: "59804032"
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|
+

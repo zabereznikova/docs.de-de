@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214740"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663010"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
@@ -29,35 +29,35 @@ In diesem Artikel:
 
 * [CLS-Kompatibilitätsregeln](#cls-compliance-rules)
 
-    * [Typen und Typmembersignaturen](#types-and-type-member-signatures)
+  * [Typen und Typmembersignaturen](#types-and-type-member-signatures)
 
-    * [Namenskonventionen ](#naming-conventions)
+  * [Namenskonventionen](#naming-conventions)
 
-    * [Typkonvertierung](#type-conversion)
+  * [Typkonvertierung](#type-conversion)
 
-    * [Arrays](#arrays)
+  * [Arrays](#arrays)
 
-    * [Schnittstellen](#interfaces)
+  * [Schnittstellen](#interfaces)
 
-    * [Enumerationen](#enumerations)
+  * [Enumerationen](#enumerations)
 
-    * [Typmember im Allgemeinen](#type-members-in-general)
+  * [Typmember im Allgemeinen](#type-members-in-general)
 
-    * [Memberzugriff](#member-accessibility)
+  * [Memberzugriff](#member-accessibility)
 
-    * [Generische Typen und Member](#generic-types-and-members)
+  * [Generische Typen und Member](#generic-types-and-members)
 
-    * [Konstruktoren](#constructors)
+  * [Konstruktoren](#constructors)
 
-    * [Eigenschaften](#properties)
+  * [Eigenschaften](#properties)
 
-    * [Ereignisse](#events)
+  * [Ereignisse](#events)
 
-    * [Overloads](#overloads)
+  * [Überladungen](#overloads)
 
-    * [Ausnahmen](#exceptions)
+  * [Ausnahmen](#exceptions)
 
-    * [Attribute](#attributes)
+  * [Attribute](#attributes)
 
 * [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute)
 
@@ -184,9 +184,9 @@ Schnittstellen | [Schnittstellen](#interfaces) | CLS-kompatible Schnittstellen d
 Member | [Typmember im Allgemeinen](#type-members-in-general) | Globale static-Felder und Methoden sind nicht CLS-kompatibel. | 36
 Member | -- | Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist). | 13
 Member | [Typmember im Allgemeinen](#type-members-in-general) | Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention. | 15
-Namenskonventionen  | [Namenskonventionen ](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
-Überladen | [Namenskonventionen ](#naming-conventions) | Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich. | 5
-Überladen | [Namenskonventionen ](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (nach Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
+Namenskonventionen | [Namenskonventionen](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
+Überladen | [Namenskonventionen](#naming-conventions) | Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich. | 5
+Überladen | [Namenskonventionen](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (nach Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
 Überladen | [Overloads](#overloads) | Nur Eigenschaften und Methoden können überladen werden. | 37
 Überladen | [Overloads](#overloads) |Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können. | 38
 Überladen | -- | Wenn mindestens zwei CLS-kompatible Methoden, die in einem Typ deklariert werden, den gleichen Namen und für einen bestimmten Satz von Typinstanziierungen die gleichen Parameter und Rückgabetypen nutzen, dann müssen alle diese Methoden bei diesen Typinstanziierungen semantisch gleichwertig sein. | 48
@@ -315,7 +315,7 @@ Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyp
 
 Das [allgemeine Typsystem](common-type-system.md) von .NET enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.
 
-CLS-kompatibler Typ | Beschreibung
+CLS-kompatibler Typ | BESCHREIBUNG
 ------------------ | -----------
 [Byte](xref:System.Byte) | Ganze 8-Bit-Zahl ohne Vorzeichen
 [Int16](xref:System.Int16) | Ganze 16-Bit-Zahl mit Vorzeichen
@@ -323,15 +323,15 @@ CLS-kompatibler Typ | Beschreibung
 [Int64](xref:System.Int64) | 64-Bit-Ganzzahl mit Vorzeichen
 [Single](xref:System.Single) | Gleitkommawert mit einfacher Genauigkeit
 [Double](xref:System.Double) | Gleitkommawert mit doppelter Genauigkeit
-[Boolesch](xref:System.Boolean) | TRUE- oder FALSE-Werttyp
+[Boolean](xref:System.Boolean) | TRUE- oder FALSE-Werttyp
 [Char](xref:System.Char) | UTF-16-codierte Codeeinheit
 [Decimal](xref:System.Decimal) | Dezimalzahl ohne Gleitkomma
 [IntPtr](xref:System.IntPtr) | Zeiger oder Handle einer Plattform-definierten Größe
-[Zeichenfolge](xref:System.String) | Sammlung von null, einem oder mehreren Char-Objekten
+[String](xref:System.String) | Sammlung von null, einem oder mehreren Char-Objekten
 
 Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.
 
-Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
+Nicht kompatibler Typ | BESCHREIBUNG | CLS-kompatible Alternative
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Ganzzahliger 8-Bit-Datentyp mit Vorzeichen | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16-Bit-Ganzzahl ohne Vorzeichen | [Int32](xref:System.Int32)
@@ -583,7 +583,7 @@ public class ArrayHelper
 
 Für CLS-kompatible abstrakte Klassen (also Klassen, die in C# als `abstract` markiert sind), müssen alle Member der Klasse auch CLS-kompatibel sein.
 
-### <a name="naming-conventions"></a>Namenskonventionen 
+### <a name="naming-conventions"></a>Namenskonventionen
 
 Da bei einigen Programmiersprachen die Groß- und Kleinschreibung nicht beachtet werden muss, müssen Bezeichner (wie die Namen von Namespaces, Typen und Membern) durch mehr als die Groß-/Kleinschreibung unterschieden werden. Zwei Bezeichner gelten als äquivalent, wenn ihre kleingeschriebenen Zuordnungen identisch sind. Im folgenden C#-Beispiel werden zwei öffentliche Klassen definiert: `Person` und `person`. Da sie sich nur durch die Groß-/Kleinschreibung unterscheiden, markiert der C#-Compiler sie als nicht CLS-kompatibel.
 
@@ -1307,11 +1307,11 @@ Bei CLS-kompatiblen Enumerationen müssen die folgenden Regeln beachtet werden:
 
 * Es gibt zwei Arten von Enumerationen.
 
-    * Eine Enumeration, die einen Satz wechselseitig exklusiver, benannter ganzzahliger Werte darstellt. Dieser Typ der Enumeration wird durch das Fehlen des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
+  * Eine Enumeration, die einen Satz wechselseitig exklusiver, benannter ganzzahliger Werte darstellt. Dieser Typ der Enumeration wird durch das Fehlen des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
 
-    * Eine Enumeration, die einen Satz von Bitflags darstellt, die zum Generieren eines unbenannten Werts kombiniert werden können. Dieser Typ der Enumeration wird durch das Vorhandensein des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
+  * Eine Enumeration, die einen Satz von Bitflags darstellt, die zum Generieren eines unbenannten Werts kombiniert werden können. Dieser Typ der Enumeration wird durch das Vorhandensein des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
 
- Weitere Informationen finden Sie in der Dokumentation zur [Enum](xref:System.Enum)-Struktur.
+Weitere Informationen finden Sie in der Dokumentation zur [Enum](xref:System.Enum)-Struktur.
 
 * Der Wert einer Enumeration wird nicht auf den Bereich der angegebenen Werte beschränkt. Das heißt, der Wertebereich einer Enumeration ist der Bereich des zugrunde liegenden Werts. Sie können die `Enum.IsDefined`-Methode verwenden, um zu bestimmen, ob ein angegebener Wert ein Member einer Enumeration ist.
 
@@ -2564,7 +2564,7 @@ End Structure
 
 Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können nur die folgenden Typen verfügbar machen:
 
-* [Boolesch](xref:System.Boolean)
+* [Boolean](xref:System.Boolean)
 
 * [Byte](xref:System.Byte)
 
@@ -2580,9 +2580,9 @@ Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können n
 
 * [Single](xref:System.Single)
 
-* [Zeichenfolge](xref:System.String)
+* [String](xref:System.String)
 
-* [Typ](xref:System.Type)
+* [Type](xref:System.Type)
 
 * Ein Enumerationstyp, dessen zugrunde liegender Typ `Byte`, `Int16`, `Int32` oder `Int64` ist.
 
