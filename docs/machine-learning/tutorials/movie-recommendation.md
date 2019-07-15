@@ -3,15 +3,15 @@ title: 'Tutorial: Erstellen eines Programms zur Filmempfehlung (Matrixfaktorisie
 description: Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von ML.NET in einer .NET Core-Konsolenanwendung ein Filmempfehlungssystem erstellen. Für die Schritte verwenden Sie C# und Visual Studio 2019.
 author: briacht
 ms.author: johalex
-ms.date: 05/06/2019
+ms.date: 07/09/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 512c8d663835da77c05fb24926ff85c56afd11ca
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: bf04f5a098bd2c378a2b73d7684eb74e16feb728
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66725416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779038"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Erstellen eines Programms zur Filmempfehlung mithilfe der Matrixfaktorisierung mit ML.NET
 
@@ -56,7 +56,7 @@ Es gibt mehrere Möglichkeiten, ein Empfehlungssystem umzusetzen. Beispielsweise
 
 3. Installieren Sie die NuGet-Pakete **Microsoft.ML** und **Microsoft.ML.Recommender**:
 
-    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach **Microsoft.ML**, und wählen Sie das **1.0.0**-Paket in der Liste und anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.Recommender v0.12.0**.
+    Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach **Microsoft.ML**, und wählen Sie das Paket in der Liste und anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen. Wiederholen Sie diese Schritte für **Microsoft.ML.Recommender**.
 
 4. Fügen Sie am Anfang der Datei *Program.cs* die folgenden `using`-Anweisungen hinzu:
 
@@ -350,7 +350,7 @@ Sie müssen das Modell zuerst speichern, um damit Vorhersagen in Endbenutzeranwe
 Erstellen Sie die `SaveModel()`-Methode mit dem folgenden Code direkt nach der `UseModelForSinglePrediction()`-Methode:
 
 ```csharp
-public static void SaveModel(MLContext mlContext, ITransformer model)
+public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
 {
 
 }
