@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424039"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859559"
 ---
 # <a name="value-types-table-c-reference"></a>Tabelle der Werttypen (C#-Referenz)
 
@@ -21,21 +21,20 @@ In der folgenden Tabelle sind die Werttypen in C# angegeben:
 |Werttyp|Kategorie|Typsuffix|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boolesch||
-|[byte](../builtin-types/integral-numeric-types.md)|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`byte`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
 |[char](char.md)|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)
-)||
-|[decimal](decimal.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|M oder m|
-|[double](double.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|D oder d|
+|`decimal`|Numerisch, [Gleitkomma](../builtin-types/floating-point-numeric-types.md)|M oder m|
+|`double`|Numerisch, [Gleitkomma](../builtin-types/floating-point-numeric-types.md)|D oder d|
 |[enum](enum.md)|Enumeration||
-|[float](float.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|F oder f|
-|[int](../builtin-types/integral-numeric-types.md)|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
-|[long](../builtin-types/integral-numeric-types.md)|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|L oder l|
-|[sbyte](../builtin-types/integral-numeric-types.md)|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
-|[short](../builtin-types/integral-numeric-types.md)|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`float`|Numerisch, [Gleitkomma](../builtin-types/floating-point-numeric-types.md)|F oder f|
+|`int`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`long`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|L oder l|
+|`sbyte`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`short`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|Eine benutzerdefinierte Struktur||
-|[uint](../builtin-types/integral-numeric-types.md)|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|U oder u|
-|[ulong](../builtin-types/integral-numeric-types.md)|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|
-|[ushort](../builtin-types/integral-numeric-types.md)|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`uint`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|U oder u|
+|`ulong`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|
+|`ushort`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>Anmerkungen
 
