@@ -2,12 +2,12 @@
 title: Modernisieren von vorhandenen .NET Anwendungen mit Azure Cloud und Windows-Container (2. Auflage)
 description: Informationen Sie zum übertragen und verschieben und modernisieren vorhandene Anwendungen zu Azure Cloud und Container mit diesem e-Book.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870601"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern (2. Auflage)
 
@@ -98,7 +98,7 @@ Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der ei
 | **Vorteile**|
 | <li>Kein Code überarbeiten, werden keine neuen <li> Geringster Aufwand für eine schnelle Migration. <li> Kleinster gemeinsamen Nenner, der in Azure unterstützt wird. <li> Grundlegende Verfügbarkeitsgarantien. <li> Nach dem Wechsel in die Cloud ist es einfacher, noch mehr zu modernisieren. | <li> Keine Neuentwurf <li> Änderungen der minimalen Code-Konfiguration <li> Verbesserte Bereitstellung und DevOps-Agilität beim Release aufgrund von Containern. <li> Höhere Dichte und niedrigere Bereitstellungskosten. <li> Portabilität von Apps und Abhängigkeiten. <li> Die Flexibilität der hostziele: Methoden für PaaS oder IaaS | <li> Architekt für die Cloud, erhalten Sie die größten Vorteile aus der Cloud, aber neuer Code ist erforderlich. <li> Cloudnative Microservicesansätze. <li> Moderne unternehmenskritische Anwendungen, cloudrobust überaus skalierbarer <li> Vollständig verwaltete Dienste. <li> Optimiert für die Skalierung. <li> Optimiert für autonome Agilität durch Subsysteme. <li> Basiert auf Bereitstellung und DevOps. |
 | **Herausforderungen** |
-| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Wenig verwaltet wird: Ohne Betriebssystem oder Middleware Patchen; ggf. infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwenden werden. | <li> Das containerisieren ist ein zusätzlicher Schritt in der Lernkurve für Entwickler und IT-Betrieb <li> DevOps und CI/CD-Pipelines ist, in der Regel "muss" für diesen Ansatz. Wenn dies nicht der derzeit in der die Kultur der Organisation, möglicherweise eine zusätzliche Herausforderung| <li> Erfordert eine Neugestaltung für native Cloud-apps und Microservice-Architekturen und in der Regel erfordert erhebliche Code coderefactoring oder Neuerstellung beim modernisieren (erhöhter Zeit- und Kostenaufwand) <li> DevOps und CI/CD-Pipelines ist, in der Regel "muss" für diesen Ansatz. Wenn dies nicht der derzeit in der die Kultur der Organisation, möglicherweise eine zusätzliche Herausforderung|
+| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Wenig verwaltet wird: Ohne Betriebssystem oder Middleware Patchen; ggf. infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwenden werden. | <li> Das containerisieren ist ein zusätzlicher Schritt in der Lernkurve für Entwickler und IT-Betrieb <li> DevOps und CI/CD-Pipelines sind in der Regel "ein muss" für diesen Ansatz. Wenn dies nicht der derzeit in der die Kultur der Organisation, möglicherweise eine zusätzliche Herausforderung| <li> Erfordert eine Neugestaltung für native Cloud-apps und Microservice-Architekturen und in der Regel erfordert erhebliche Code coderefactoring oder Neuerstellung beim modernisieren (erhöhter Zeit- und Kostenaufwand)|
 > **Tabelle 1-1.** Vorteile und Herausforderungen von Modernisierungspfaden für vorhandene .NET-Anwendungen und -Dienste
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Schlüsseltechnologien und -architekturen nach Reifegrad
