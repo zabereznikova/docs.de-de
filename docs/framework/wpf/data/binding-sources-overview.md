@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 99f01983a575e9c6f96fdb66590e9d762eb882f7
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505562"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238439"
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.  
@@ -24,7 +24,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 |--------------------|-----------------|  
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekte|Sie können eine Bindung an die öffentlichen Eigenschaften, Untereigenschaften und Indexer aller [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekte herstellen. Die Bindungs-Engine verwendet die [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Reflektion, um die Werte der Eigenschaften abzurufen. Sie können auch Objekte, die implementieren <xref:System.ComponentModel.ICustomTypeDescriptor> oder über einen registrierten <xref:System.ComponentModel.TypeDescriptionProvider> funktionieren auch mit der Bindungs-Engine.<br /><br /> Weitere Informationen zum Implementieren einer Klasse, die als Bindungsquelle dienen kann, finden Sie weiter unten in diesem Thema unter [Implementieren einer Klasse als Bindungsquelle](#classes).|  
 |Dynamische Objekte|Sie können an verfügbare Eigenschaften und Indexer eines Objekts, das implementiert binden die <xref:System.Dynamic.IDynamicMetaObjectProvider> Schnittstelle. Wenn Sie auf den Member im Code zugreifen können, kann daran eine Bindung erfolgen. Wenn Sie z. B. mithilfe eines dynamischen Objekts auf einen Member im Code über `someObjet.AProperty` zugreifen können, können Sie durch Festlegen des Bindungspfads auf `AProperty` eine Bindung herstellen.|  
-|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]-Objekte|Sie können an ADO.NET-Objekte binden, wie z. B. <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> implementiert die <xref:System.ComponentModel.IBindingList> -Schnittstelle, die änderungsbenachrichtigungen bereitstellt, die die Bindungs-Engine überwacht.|  
+|ADO.NET-Objekte|Sie können an ADO.NET-Objekte binden, wie z. B. <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> implementiert die <xref:System.ComponentModel.IBindingList> -Schnittstelle, die änderungsbenachrichtigungen bereitstellt, die die Bindungs-Engine überwacht.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Objekte|Sie binden und führen Sie `XPath` Abfragen für ein <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, oder <xref:System.Xml.XmlElement>. Eine bequeme Möglichkeit, Zugriff auf [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten, die Bindungsquelle im Markup ist die Verwendung einer <xref:System.Windows.Data.XmlDataProvider> Objekt. Weitere Informationen finden Sie unter [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Sie können auch zum Binden einer <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XDocument>, oder binden Sie an die Ergebnisse der Abfragen, die auf Objekte dieser Typen ausführen, indem Sie mit LINQ to XML. Ist eine bequeme Möglichkeit, LINQ to XML auf XML-Daten verwenden, die die Bindungsquelle im Markup ist die Verwendung einer <xref:System.Windows.Data.ObjectDataProvider> Objekt. Weitere Informationen finden Sie unter [Binden an XDocument, XElement oder LINQ für XML-Abfrageergebnisse](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
 |<xref:System.Windows.DependencyObject>-Objekte|Können Sie Bindung mit Abhängigkeitseigenschaften aller <xref:System.Windows.DependencyObject>. Ein Beispiel finden Sie unter [Binden der Eigenschaften von zwei Steuerelementen](how-to-bind-the-properties-of-two-controls.md).|  
   

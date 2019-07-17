@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 8903b6a47aa2800ef4fa4fba2cd2537d2b3896e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6d594a3d92a7b666e52c92221d60956e718b42
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033240"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237541"
 ---
 # <a name="accessibility"></a>Zugriff
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "62033240"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Barrierefreiheit-Framework für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Es deckt den Bedarf an Hilfstechnologieprodukten und automatisierten Testframeworks durch Bereitstellen von programmgesteuertem Zugriff auf Informationen über die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Zusätzlich können Entwickler des Steuerelements und von Anwendungen durch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ihre Produkte zugänglich machen.  
   
- In dieser Dokumentation wird die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-[!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] beschrieben. Informationen zum Programmieren für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in C++ finden Sie unter [UI Automation for Win32 Applications (Benutzeroberflächenautomatisierung für Win32-Anwendungen)](/windows/desktop/winauto/windows-automation-api-portal).  
+ Diese Dokumentation beschreibt die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -API für verwalteten Code. Informationen zum Programmieren für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in C++ finden Sie unter [UI Automation for Win32 Applications (Benutzeroberflächenautomatisierung für Win32-Anwendungen)](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Bewährte Methoden für Eingabehilfen](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

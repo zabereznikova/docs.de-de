@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610343"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238485"
 ---
 # <a name="wpf-architecture"></a>WPF-Architektur
 Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (WPF)-Klassenhierarchie. Es behandelt die meisten der wichtigsten Subsysteme von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und beschreibt, wie sie interagieren. Es werden auch einige der durch die Architekten von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] getroffenen Entscheidungen erläutert.  
@@ -64,7 +64,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  Ist ein System einmal definiert, besteht der nächste Schritt darin, Pixel auf den Bildschirm zu zeichnen. Die <xref:System.Windows.Media.Visual> -Klasse bietet für das Erstellen einer Struktur von visuellen Objekten, jeweils optional zeichenanweisungen und Metadaten zur Vorgehensweise bei diesen Anweisungen (Clipping, Transformation usw.) rendern. <xref:System.Windows.Media.Visual> fungiert als extrem Schlank und flexibel, sodass die meisten Features keine öffentliche API Offenlegung und stützen sich stark auf geschützte Rückruffunktionen.  
   
- <xref:System.Windows.Media.Visual> ist der Einstiegspunkt in die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Kompositionssystem. <xref:System.Windows.Media.Visual> ist der Punkt-Verbindung zwischen diesen beiden Subsystemen: die verwaltete [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] und dem nicht verwalteten Milcore.  
+ <xref:System.Windows.Media.Visual> ist der Einstiegspunkt in die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Kompositionssystem. <xref:System.Windows.Media.Visual> ist der Punkt-Verbindung zwischen diesen beiden Subsystemen, die verwaltete API und dem nicht verwalteten Milcore.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zeigt Daten an, indem es die vom nicht verwalteten Milcore verwalteten Datenstrukturen durchläuft. Diese Strukturen, die man Kompositionsknoten nennt, stellen eine hierarchische Anzeige-Struktur mit Rendering-Anweisungen in jedem Knoten dar. Auf diese Struktur, die auf der rechten Seite der folgenden Abbildung dargestellt ist, kann nur über ein Nachrichtenprotokoll zugegriffen werden.  
   

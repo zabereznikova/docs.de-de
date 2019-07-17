@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611943"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238452"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimieren der Leistung: Nutzen der Vorteile der Hardware
 Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software. Dieses Thema enthält Informationen über diese Renderingpipelines, die Ihnen bei Ihren Entscheidungen zur leistungsoptimierung von Anwendungen helfen.  
@@ -30,7 +30,7 @@ Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ### <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken  
  Es kann sehr schwierig sein, die Hardwarekonfiguration vorherzusagen, die Ihre Anwendung ausgeführt wird. Möglicherweise möchten jedoch einen Entwurf zu berücksichtigen, der können Ihre Anwendung nahtlos Features wechseln, wenn Sie auf andere Hardware ausgeführt, sodass sie alle Vorteile der einzelnen Konfigurationen anderer Hardware nutzen kann.  
   
- Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Funktionen, um die Grafik-Funktion von einem System zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , mit der eine Anwendung die Renderingebene für die Funktion Abfragen können. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit abhängig von der von der Hardware unterstützten Renderingebene ausführen.  
+ Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Funktionen, um die Grafik-Funktion von einem System zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine API, die einer Anwendung auf die Ebene der Funktion Abfragen ermöglicht. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit abhängig von der von der Hardware unterstützten Renderingebene ausführen.  
   
  Die Funktionen der Grafikhardware, die sich am stärksten auf die Renderingebenen auswirken, sind:  
   

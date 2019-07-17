@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703425"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238609"
 ---
 # <a name="focus-overview"></a>Fokus - Übersicht
 In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibt es zwei Hauptkonzepte, die den Fokus betreffen: Tastaturfokus und logischer Fokus.  Tastaturfokus bezieht sich auf das Element, das Tastatureingaben empfängt, und der logische Fokus bezieht sich auf das Element in einem Fokusbereich, der Fokus besitzt.  Diese Konzepte werden in dieser Übersicht ausführlich erläutert.  Für das Erstellen von komplexen Anwendungen, die über mehrere Bereiche verfügen, in denen Fokus abgerufen werden kann, ist es wichtig den Unterschied der Konzepte zu verstehen.  
@@ -82,7 +82,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Programmgesteuertes Navigieren des Fokus  
- Zusätzliche [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] zum Arbeiten mit Fokus sind <xref:System.Windows.UIElement.MoveFocus%2A> und <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ Zusätzliche API zum Arbeiten mit Fokus sind <xref:System.Windows.UIElement.MoveFocus%2A> und <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> Ändert den Fokus auf das nächste Element in der Anwendung.  Ein <xref:System.Windows.Input.TraversalRequest> wird verwendet, um die Richtung anzugeben.   Die <xref:System.Windows.Input.FocusNavigationDirection> übergeben <xref:System.Windows.UIElement.MoveFocus%2A> gibt an, die verschiedenen Richtungen des Fokus verschoben werden kann, wie z. B. <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> und <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   

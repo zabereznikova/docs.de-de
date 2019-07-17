@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610518"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238533"
 ---
 # <a name="freezable-objects-overview"></a>Übersicht über Freezable-Objekte
 In diesem Thema wird beschrieben, wie effektiv verwenden und erstellen Sie <xref:System.Windows.Freezable> -Objekte, die spezielle Funktionen bereitstellen, die Leistung der Anwendung verbessern können. Beispiele für freezable-Objekte sind Pinsel, Stifte, Transformationen, Geometrien und Animationen.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  Sie müssen auch beachten, dass für den Zugriff auf und Schreiben von Datenmembern, die keine Abhängigkeitseigenschaften sind die folgenden Regeln:  
   
-- Am Anfang jeder [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , ohne Abhängigkeitseigenschaft die Datenmember liest, rufen Sie die <xref:System.Windows.Freezable.ReadPreamble%2A> Methode.  
+- Rufen Sie am Anfang jeder API, die nicht als Abhängigkeitseigenschaft Datenmember liest, die <xref:System.Windows.Freezable.ReadPreamble%2A> Methode.  
   
 - Rufen Sie am Anfang jeder API, die nicht als Abhängigkeitseigenschaft Datenmember schreibt, die <xref:System.Windows.Freezable.WritePreamble%2A> Methode. (Nachdem Sie aufgerufen haben <xref:System.Windows.Freezable.WritePreamble%2A> in einer API müssen Sie keine stellen einen zusätzlichen Aufruf <xref:System.Windows.Freezable.ReadPreamble%2A> , wenn Sie auch ohne Abhängigkeiten eigenschaftsdatenmember lesen.)  
   

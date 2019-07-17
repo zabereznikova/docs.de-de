@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bb3737ca879f3687b25b021348da0c50f663c58e
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860196"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238669"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
 Anwendungsentwickler, die mit Windows Presentation Foundation (WPF) haben ein neues umfassendes Set an drucken und drucksystemverwaltung APIs, mit Microsoft .NET Framework. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Im Zentrum dieser neuen Funktionen stehen das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dateiformat und der [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Druckpfad.  
@@ -69,7 +69,7 @@ Anwendungsentwickler, die mit Windows Presentation Foundation (WPF) haben ein ne
  ![Screenshot zeigt, dass das System die XPS-Druckpfad.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Einfacher XPS-Druck  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiert sowohl eine einfache als auch eine erweiterte [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Für diese Anwendungen, die keine umfangreichen drucken oder Zugriff auf die vollständige XPS-Funktion erfordern ist festgelegt ist, einfache druckunterstützung verfügbar. Die einfache Druckunterstützung wird über ein Druckdialogfeld-Steuerelement verfügbar gemacht, das nur minimale Konfiguration erfordert und eine vertraute [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bietet. Viele XPS-Funktionen sind mit diesem vereinfachten Druckmodell verfügbar.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiert sowohl eine einfache und erweiterte-API. Für diese Anwendungen, die keine umfangreichen drucken oder Zugriff auf die vollständige XPS-Funktion erfordern ist festgelegt ist, einfache druckunterstützung verfügbar. Die einfache Druckunterstützung wird über ein Druckdialogfeld-Steuerelement verfügbar gemacht, das nur minimale Konfiguration erfordert und eine vertraute [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bietet. Viele XPS-Funktionen sind mit diesem vereinfachten Druckmodell verfügbar.  
   
 #### <a name="printdialog"></a>PrintDialog  
  Die <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Steuerelement bietet einen einzigen Einstiegspunkt für [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], Konfiguration und XPS-Auftragsübermittlung. Informationen zum Instanziieren und Verwenden des Steuerelements finden Sie unter [Aufrufen eines Druckdialogfelds](how-to-invoke-a-print-dialog.md).  

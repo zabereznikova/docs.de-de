@@ -7,18 +7,18 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663402"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238546"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassen verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verstehen und wissen, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen geschrieben werden.  
   
 <a name="intro"></a>   
@@ -43,7 +43,7 @@ ms.locfileid: "64663402"
   
 2. **Aktive Animationen oder Animationen mit einem Halteverhalten.** Damit eine Animation einer Eigenschaft eine praktische Auswirkung hat, muss sie Vorrang vor dem (nicht animierten) Basiswert haben können, selbst wenn dieser Wert lokal festgelegt wurde. Weitere Informationen finden Sie unter [Koersion, Animationen und Basiswert](#animations) weiter unten in diesem Thema.  
   
-3. **Lokaler Wert.** Ein lokaler Wert festgelegt werden kann, über die Vorteile der Eigenschaft "Wrapper", was auch Einstellung als ein Attribut oder Eigenschaftenelement in entspricht [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], oder durch einen Aufruf der <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] mithilfe einer Eigenschaft einer bestimmten Instanz. Wenn Sie einen lokalen Wert mithilfe einer Bindung oder eine Ressource festlegen, haben diese jeweils Vorrang, als ob ein direkter Wert festgelegt wurde.  
+3. **Lokaler Wert.** Ein lokaler Wert festgelegt werden kann, über die Vorteile der Eigenschaft "Wrapper", was auch Einstellung als ein Attribut oder Eigenschaftenelement in entspricht [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], oder durch einen Aufruf der <xref:System.Windows.DependencyObject.SetValue%2A> API über eine Eigenschaft einer bestimmten Instanz. Wenn Sie einen lokalen Wert mithilfe einer Bindung oder eine Ressource festlegen, haben diese jeweils Vorrang, als ob ein direkter Wert festgelegt wurde.  
   
 4. **TemplatedParent-Vorlageneigenschaften.** Ein Element verfügt über eine <xref:System.Windows.FrameworkElement.TemplatedParent%2A> , wenn es als Teil einer Vorlage erstellt wurde (eine <xref:System.Windows.Controls.ControlTemplate> oder <xref:System.Windows.DataTemplate>). Weitere Informationen dazu, wann dies zutrifft, finden Sie unter [TemplatedParent](#templatedparent) weiter unten in diesem Thema. Innerhalb der Vorlage gilt die folgende Rangfolge:  
   

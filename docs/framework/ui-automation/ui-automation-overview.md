@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802228"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237337"
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "67802228"
   
 |Komponente|Beschreibung|  
 |---------------|-----------------|  
-|Anbieter- [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll und UIAutomationTypes.dll)|Eine Reihe von Schnittstellendefinitionen, die von Benutzeroberflächenautomatisierungs-Anbietern implementiert werden, sowie Objekte, die Informationen über [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente bereitstellen und auf Programmeingaben reagieren.|  
+|Ressourcenanbieter-API (UIAutomationProvider.dll und UIAutomationTypes.dll)|Eine Reihe von Schnittstellendefinitionen, die von Benutzeroberflächenautomatisierungs-Anbietern implementiert werden, sowie Objekte, die Informationen über [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente bereitstellen und auf Programmeingaben reagieren.|  
 |Client-API (UIAutomationClient.dll und UIAutomationTypes.dll)|Eine Reihe von Typen für verwalteten Code, der es Benutzeroberflächenautomatisierungs-Clientanwendungen ermöglicht, Informationen über [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] abzurufen und Eingaben an Steuerelemente zu senden.|  
 |UiAutomationCore.dll|Der zugrunde liegende Code (gelegentlich als [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Code bezeichnet), der die Kommunikation zwischen Anbietern und Clients verwaltet.|  
 |UIAutomationClientsideProviders.dll|Ein Satz von Benutzeroberflächenautomatisierungs-Anbietern für Standard-Legacysteuerelemente. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente verfügen über systemeigene Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Diese Unterstützung steht Clientanwendungen automatisch zur Verfügung.|  
