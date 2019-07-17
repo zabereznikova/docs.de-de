@@ -207,8 +207,6 @@
               href: keywords/await.md
             - name: sizeof
               href: keywords/sizeof.md
-            - name: nameof
-              href: keywords/nameof.md
         - name: Zugriffsschlüsselwörter
           items:
             - name: Basis
@@ -333,6 +331,8 @@
         - name: '::-Operator'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: nameof-Operator
+          href: operators/nameof.md
         - name: new-Operator
           href: operators/new-operator.md
         - name: stackalloc-Operator
